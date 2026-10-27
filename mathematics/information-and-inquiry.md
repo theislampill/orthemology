@@ -238,6 +238,223 @@ The saturated observables are exactly the functions $`c+\sum_B f_B(x_B)`$. Thus 
 The hypotheses identify the application boundary. A fixed terminal coordinate uses the fixed-root formula; directed-only gates, clean auxiliary slots, restoration of other coordinates, reset or noisy gates, hidden state-dependent control, and parallel scheduling specify different problems. The formal source separately proves the visited-set bound, connected-witness synthesis and local character identity. The Walsh geometry, whole-word semantic correspondence, continuous lower bound and saturation arguments above remain ordinary mathematical proofs rather than new kernel claims. [21–22], [30]
 
 
+### 2.5 Quantifying the information lost by a moment summary
+
+Exact closure answers whether the required expectations can be recovered. When a proposed reduction omits part of the required observable space, there is also an exact answer to how much prediction error it necessarily permits. The answer supplies both an approximation that attains the best uniform error and two indistinguishable reference laws that prevent any decoder from improving it. This concerns uncertainty about a law on a fixed finite state space; it is not a claim about the memory needed to store one fully observed state. [1, Theorem 1][1]
+
+#### Exact error and a pair of indistinguishable laws
+
+Let $`X`$ be finite and nonempty, and let $`\mathcal V\subseteq\mathbb R^X`$ be a linear space containing the constant function one. Choose a basis $`1,\phi_1,\ldots,\phi_d`$ and retain only
+
+```math
+m_{\mathcal V}(\lambda)
+  =\bigl(\mathbb E_\lambda\phi_1,\ldots,
+          \mathbb E_\lambda\phi_d\bigr),
+\qquad \lambda\in\Delta(X).
+```
+
+The mass coordinate is already known to equal one. For a required real function $`f`$, put
+
+```math
+\delta_{\mathcal V}(f)
+  =\min_{g\in\mathcal V}\|f-g\|_\infty.
+```
+
+**Theorem 1C — Sharp recovery error from retained moments.** On the full probability simplex,
+
+```math
+\begin{aligned}
+\delta_{\mathcal V}(f)
+&=\frac12\max_{\substack{\lambda,\lambda'\in\Delta(X)\\
+           m_{\mathcal V}(\lambda)=m_{\mathcal V}(\lambda')}}
+       \left|\mathbb E_\lambda f-\mathbb E_{\lambda'}f\right|\\
+&=\inf_\psi\sup_{\lambda\in\Delta(X)}
+       \left|\mathbb E_\lambda f-
+                 \psi\bigl(m_{\mathcal V}(\lambda)\bigr)\right|.
+\end{aligned}
+```
+
+The decoder $`\psi`$ ranges over all real-valued functions on the attained summary image. It need not be linear or continuous. In particular, exact recovery for every law is possible if and only if $`f\in\mathcal V`$.
+
+**Proof.** If two laws have the same retained moments, then for every $`g\in\mathcal V`$,
+
+```math
+\left|\mathbb E_\lambda f-\mathbb E_{\lambda'}f\right|
+ =\left|\mathbb E_\lambda(f-g)-\mathbb E_{\lambda'}(f-g)\right|
+ \leq2\|f-g\|_\infty.
+```
+
+Also, $`\mathbb E_\lambda g`$ is an affine function of the retained moments, with error at most $`\|f-g\|_\infty`$ for every law. A best approximation exists because this is a finite-dimensional approximation problem. These observations give the two upper bounds.
+
+Finite-dimensional norm duality, equivalently the finite linear-programming dual below, gives
+
+```math
+\delta_{\mathcal V}(f)
+ =\max\left\{\sum_{x\in X}v(x)f(x):
+        v\perp\mathcal V,\ \sum_{x\in X}|v(x)|\leq1\right\}.
+```
+
+If the maximum is positive, a maximizer has $`\|v\|_1=1`$: a smaller norm could be scaled up to increase the positive objective. Orthogonality to the constant gives $`\sum_xv(x)=0`$, so the positive and negative parts each have mass $`1/2`$. Thus $`\lambda=2v_+`$ and $`\lambda'=2v_-`$ are probability laws. They have equal retained moments and their required expectations differ by $`2\delta_{\mathcal V}(f)`$. Any decoder returns the same number on their common summary, so its error on at least one law is at least half that separation. This proves both lower bounds. If the defect is zero, a best approximation equals $`f`$ and all equalities follow directly. $`\square`$
+
+Nonlinear decoding therefore cannot improve the **uniform** optimum for this linear moment record and full-law contract. It can still choose a more informative answer on a particular fibre, and the theorem does not compare this record with arbitrary nonlinear encoders. Nor does it make the full-simplex necessity statement valid on a smaller justified family of laws. The approximation/moment-matching duality has the established antecedent identified in the source's comparison with Han, Jiao and Weissman; this finite application makes no new general duality claim. [1, “Sharp information loss” and Appendix C, P1][1]
+
+#### Finite certificates and a particular retained record
+
+Let $`\Phi`$ have basis evaluations as its rows, including the constant row. The approximation problem has the explicit finite form
+
+```math
+\begin{gathered}
+\min_{a\in\mathbb R^{d+1},\ t\geq0}t,\\
+-t\leq f(x)-\sum_{j=0}^{d}a_j\phi_j(x)\leq t
+\quad(x\in X),\qquad \phi_0=1.
+\end{gathered}
+```
+
+Only $`t`$ is constrained to be nonnegative; the approximation coefficients are unrestricted. A matching countermodel problem maximizes
+
+```math
+\frac12\sum_{x\in X}\bigl(\lambda(x)-\lambda'(x)\bigr)f(x)
+```
+
+subject to $`\Phi\lambda=\Phi\lambda'`$, nonnegative law entries and unit mass for both laws. Interchanging the two laws supplies either sign. Theorem 1C proves that its optimum equals the approximation optimum. Rational finite data admit rational optimal certificates; an approximate optimizer can propose coefficients and laws, while their stated inequalities, normalization and objective equality require their own exact verification. No execution is needed for the general proof above. [1, “An executable specification”][1]
+
+For a particular attained record $`y`$, the compatible laws form the nonempty compact polytope
+
+```math
+\mathcal P(y)=\{\lambda\in\Delta(X):m_{\mathcal V}(\lambda)=y\}.
+```
+
+For a declared failure observable $`b\in[0,1]^X`$, its lowest and highest compatible risks are
+
+```math
+\underline r(y)=\min_{\lambda\in\mathcal P(y)}\mathbb E_\lambda b,
+\qquad
+\overline r(y)=\max_{\lambda\in\mathcal P(y)}\mathbb E_\lambda b.
+```
+
+Both are finite linear programs. Their midpoint minimizes the largest absolute error on this fibre, with error $`(\overline r(y)-\underline r(y))/2`$: the two endpoint laws force that lower bound, and the midpoint is within it of every value between the endpoints. A positive global defect can coexist with a local upper risk small enough for the declared task. Conversely, a universal guarantee must survive every attained fibre. For any such bounded observable, the constant prediction $`1/2`$ gives $`\delta_{\mathcal V}(b)\leq1/2`$; equality entails compatible laws with risks zero and one. [1, Theorem 1 and “Local certificates”][1]
+
+These intervals are conditional on the supplied state space, observable and actual uncertainty set. Noisy moment estimates must be represented by constraints that contain the possible true moments, such as interval constraints on $`\Phi\lambda`$, rather than equated to exact data. A numerical risk bound is useful only when the actual reference law is covered. It supplies neither the semantic validity of the failure observable nor an independent warrant for the source model.
+
+#### A lower bound even when approximate answers are allowed
+
+Return to the complete-graph pairwise sign dynamics of §2.4, on $`X=\{-1,+1\}^n`$, with $`n\geq2`$ and a nonnegative integer horizon $`h`$ counting elementary updates. The already proved exact horizon law requires the nonconstant characters with $`1\leq|S|\leq\min(n,h+1)`$. Write their number as
+
+```math
+m_h=\sum_{k=1}^{\min(n,h+1)}\binom nk,
+\qquad b_S=(1-\chi_S)/2.
+```
+
+Each $`b_S`$ is the negative-sign event for an admitted terminal unary readout. Suppose the retained record consists of linear moments whose span together with constants has dimension $`d+1`$, with a separate arbitrary decoder for each required event probability. Thus $`d`$ counts informative coordinates independently of the known mass.
+
+**Proposition 1D — Approximate linear-moment memory.** If every required $`\mathbb E_\lambda b_S`$ can be recovered with absolute error at most $`\epsilon`$ for every law, where $`0\leq\epsilon\leq1/2`$, then
+
+```math
+d\geq m_h(1-4\epsilon^2).
+```
+
+**Proof.** Equip functions on $`X`$ with the normalized uniform-law inner product, and let $`P`$ be orthogonal projection onto the retained space $`\mathcal V`$, including constants. The selected Walsh characters are orthonormal and orthogonal to the constant. Their projections therefore use only the $`d`$-dimensional nonconstant part of $`\mathcal V`$. Bessel's inequality gives
+
+```math
+\sum_S\|P\chi_S\|_2^2\leq d,
+\qquad
+\sum_S\|\chi_S-P\chi_S\|_2^2\geq m_h-d.
+```
+
+If $`d\geq m_h`$, the claimed bound is immediate. Otherwise some character has squared projection error at least $`1-d/m_h`$. Best uniform approximation error is at least best normalized $`L^2`$ approximation error. Since constants belong to $`\mathcal V`$,
+
+```math
+\delta_{\mathcal V}(b_S)=\tfrac12\delta_{\mathcal V}(\chi_S).
+```
+
+Theorem 1C applies to the corresponding arbitrary decoder and yields
+
+```math
+\epsilon\geq\frac12\sqrt{1-d/m_h}.
+```
+
+Rearranging proves the result. $`\square`$
+
+The integer coordinate count requires the ceiling of the displayed bound. For eight slots and horizon at least seven, $`m_h=255`$. Error at most $`0.1`$ on every required event probability therefore needs at least $`245`$ linear moment coordinates, even with nonlinear decoders. At zero error the bound gives $`d\geq m_h`$; at error $`1/2`$ it permits the constant predictions. Intermediate tolerances are necessary bounds, not claimed exact optima. The approximate theorem concerns linear moment acquisition. The stronger allowance of arbitrary **continuous encoders** in the exact theorem of §2.4 does not extend to this approximate statement. [1, Proposition 4][1]
+
+#### Applying the defect to a future inquiry
+
+For a fixed finite horizon, §2.2 supplies the branch-probability and terminal-numerator functions that must be evaluated on the initial law. Theorem 1C can be applied to each of those functions relative to the actually retained space. A finite declared family $`\mathcal Q`$ of normalized questions has uniform defect $`\max_{f\in\mathcal Q}\delta_{\mathcal V}(f)`$. Taking the maximum over an unrestricted linear span would be inappropriate: scaling any missing function would make its nonzero error unbounded. Likewise, a small error for branch numerators is not automatically a small error for conditional answers. [1, “A continuation-sensitive discharge condition”][1]
+
+To make the latter distinction quantitative, suppose a branch has probability $`p\geq\beta>0`$ and an event numerator $`0\leq N\leq p`$. Assume estimates obey $`|\widehat N-N|\leq\epsilon_N`$ and $`|\widehat p-p|\leq\epsilon_p\lt{}\beta`$. Put $`q=N/p`$. Then
+
+```math
+\left|q-\mathrm{clip}_{[0,1]}
+                  \left(\frac{\widehat N}{\widehat p}\right)\right|
+\leq\frac{\epsilon_N+\epsilon_p}{\beta-\epsilon_p}.
+```
+
+Indeed $`\widehat p\geq\beta-\epsilon_p>0`$, and
+
+```math
+|\widehat N-q\widehat p|
+\leq|\widehat N-N|+q|p-\widehat p|
+\leq\epsilon_N+\epsilon_p.
+```
+
+Division by the positive lower bound and the fact that clipping cannot increase distance to $`q\in[0,1]`$ prove the assertion. The positive margin is a substantive premise. Section 3.2 separately explains why a null event does not select a unique limiting posterior. [1, “Conditional estimates must retain conditioning margins”][1]
+
+The resulting options are precise. Retain enough observables for exact recovery; retain a smaller record with a proved task-specific error; acquire missing information through an admitted operation; or reduce the promised future question family. Section 9.2 gives the existing rank argument for the extra continuous coordinates needed for selected expected values on a fixed positive fibre. For a future contract, the required rows must first include its admitted continuation functions, as in §2.2. Neither that coordinate count nor the defect is a price for acquiring the information. A retrievable archive contributes only the information that the declared operations can actually recover, and a risk bound does not replace the independent premises for permission, source authenticity or epistemic warrant.
+
+### 2.6 What a reduction must preserve for the next inquiry
+
+A record can correctly show how an earlier obligation was handled while omitting information needed for an admitted future question. Conversely, a sufficient predictive statistic can omit a source or version condition required for the legitimate use of its answer. The historical record, the future predictive contract and the conditions for an actually usable proof are distinct. Sections 9.4–9.5 already give the robust-certificate and accessible-evidence arguments; the continuation result supplies the additional question of which future quantities survive a reduction. [1, “What changes in witnessed discharge”][1]
+
+Fix the finite model, its declared action–observation instruments and a finite horizon. Let $`W_h`$ be the span of the actual required branch-probability and terminal-numerator functions, as in §2.2, and let $`\mathcal V`$ be the linear span of the constants and the currently retained moment functions. Exact recovery after the reduction is equivalent to
+
+```math
+W_h\subseteq\mathcal V.
+```
+
+This is the existing predictive criterion applied to the retained space. If containment fails, at least one actual generating question lies outside $`\mathcal V`$; otherwise their span would be contained in it. Theorem 1C supplies two laws with the same retained record and different answers to that question, together with the exact best uniform error. A smaller declared question family or a quantified error tolerance can be sufficient for a different contract. The contract cannot promise the unchanged family at exact accuracy merely by recording that the old representation was transferred, superseded or discharged.
+
+The missing information need not be the entire discarded record. Retaining the existing moments, the exact minimum number of additional **continuous real statistics of the law**, over the full simplex, is
+
+```math
+a_{\min}=\dim(\mathcal V+W_h)-\dim\mathcal V.
+```
+
+For sufficiency, extend a basis of $`\mathcal V`$ to a basis of $`\mathcal V+W_h`$ using functions in $`W_h`$ and retain their expectations. For necessity, let $`\Phi`$ and $`H`$ have bases of $`\mathcal V`$ and $`W_h`$ as rows. The rank calculation already used in §9.2 gives
+
+```math
+\mathrm{rank}(H|_{\ker\Phi})
+ =\mathrm{rank}\,\begin{bmatrix}\Phi\\H\end{bmatrix}
+        -\mathrm{rank}\,\Phi
+ =a_{\min}.
+```
+
+Because $`\Phi`$ includes the constant row, these kernel directions preserve mass. At a strictly positive law, a small open neighbourhood in a subspace on which this restricted map is injective stays within one retained-moment fibre. The continuous-coordinate obstruction proved in §9.2 therefore requires at least $`a_{\min}`$ added coordinates for any scheme that works on the full simplex. The basis construction works on boundary laws as well. This applies the existing rank mechanism to the continuation rows; it introduces no additional topological assumption or new proof of invariance of domain. If the rank is zero, no supplement is needed. [1, Proposition 9][1]
+
+The count presumes access to the stated statistics of a law. It is neither the number of measurements needed to estimate them nor the price of a permitted query. An admitted retrieval operation can make an archived component part of the accessible information, while a hash or historical pointer with no usable retrieval path supplies no such access. [Source Context and Reacquisition, §§6.5 and 7.3](../epistemology/source-context-and-reacquisition.md#65-information-preserved-and-access-preserved) gives an explicit example in which equally authentic retained witnesses leave different future acquisition costs. An operational reduction must consequently be interpreted at its actual model and contract version, available statistic, future menu, horizon and error scope; algebraic contraction alone does not establish these application premises.
+
+There is a further distinction between meeting a reference-model requirement and being able to establish that fact from the retained record. Let $`\mathcal M`$ be a finite family of continuation protocols whose feasibility and permission premises have been separately supplied, and let $`b_c\in[0,1]^X`$ be each protocol's reference-model failure observable. For a risk threshold $`\epsilon`$, define
+
+```math
+\mathcal L_\epsilon(\lambda)
+ =\{c\in\mathcal M:\mathbb E_\lambda b_c\leq\epsilon\},
+\qquad
+\widehat{\mathcal L}_\epsilon(y)
+ =\{c\in\mathcal M:
+       \sup_{\mu\in\mathcal P(y)}\mathbb E_\mu b_c\leq\epsilon\}.
+```
+
+If the actual reference law $`\lambda`$ belongs to the declared uncertainty set $`\mathcal P(y)`$, then $`\widehat{\mathcal L}_\epsilon(y)\subseteq\mathcal L_\epsilon(\lambda)`$, since the supremum includes that law. This is the risk-specific application of the robust-completion intersection in §9.4, rather than a replacement definition of physical or logical possibility. The premise that the uncertainty set contains the actual law remains independent evidence, and the risk inequality does not supply permission.
+
+The inclusion can be strict. On the complete-graph sign system, let $`\lambda_+`$ and $`\lambda_-`$ be uniform on the two opposite full-parity classes. Their proper-subset moments agree. The accumulating pairwise continuation from §2.4 has terminal failure observable $`b=(1-\chi_{\{1,\ldots,n\}})/2`$, with expectations zero and one respectively. If the actual law is $`\lambda_+`$ but the retained record consists only of proper-subset moments, both laws remain compatible. For $`0\leq\epsilon\lt{}1`$, this continuation meets the actual reference-model risk bound but cannot be certified from that record. Its actual modelled capability has not disappeared; the available information does not establish it. The same pair gives the hidden-reference-game argument in [Collective Inquiry, §5.2](collective-inquiry-and-strategic-coordination.md#52-a-hidden-interaction-changes-the-equilibrium). [1, “Objective possibilities versus certifiable possibilities”][1]
+
+A historical witness can therefore remain traceable while the operative summary loses a future distinction. In the other direction, a summary that preserves all declared probabilities may omit a provenance or source-version distinction required for a complete admissible output, as §9.4's same-action/different-certificate example shows. A transfer of custody is not itself a proof that a still-relevant issue has been resolved. These comparisons concern the declared representation and evidence contracts, not whether a subject actually believes or knows the decoded proposition.
+
+These constraints admit constructive alternatives. A full joint-law record always suffices, and a predictive-state record based on the required continuation span preserves the exact contract without retaining every historical detail. A justified restricted law family, shorter horizon or narrower menu can reduce the cost. The source also retains Rudary and Singh’s nonlinear predictive-state examples of exponential compression for deterministic binary predictions; that contract does not encode all arbitrary joint laws on the full simplex assumed here. It identifies Baisero and Amato’s reward-predictive representations as close prior art for adding consequence observables to a prediction model. These positive comparisons prevent a general claim that nonlinearity never helps or that adding consequence functions is itself a new general principle. [1, Appendix C, P8–P9][1]
+
+The positive repair is correspondingly targeted. Form the pulled-back function for the newly required continuation. Its finite approximation or compatible-fibre program can establish the declared error or risk bound. If the uniform defect exceeds the permitted prediction tolerance, the dual supplies an indistinguishable pair on which no common answer meets that tolerance. Added information must distinguish this pair to meet the same uniform contract. Where the declared service supplies the needed access, a repair can retain a missing observable, use a justified informative query, or restore an accessible archive; alternatively, it can revise the affected future menu. A separating query for one pair is not by itself a proof of adequacy for every compatible law; the resulting record must still meet the actual contract. [1, “An implementable certify–refine rule”][1]
+
+Under fixed finite instruments, adding a missing observable strictly increases the retained span, and taking its continuation closure terminates after finitely many strict increases by §2.2. This is termination of a finite algebraic construction, not a guarantee that the required observations can be acquired or that real-world inquiry and restoration terminate. Expanding a menu can increase the required rank within an analysis that already parameterizes that menu; changing the analysis itself is a separate revision. Restricting the menu can lower the information burden while losing useful opportunities, whose value is not their number or their rank. Full-law coverage, exactness, the future menu, reacquisition and memory capacity are consequently explicit premises in any preservation promise. Optimizing retained information, later queries, permitted continuations and tolerated error under a justified model remains a further problem. [1, Corollary 5 and “The next substantive frontier”][1]
+
 ## 3. The information hidden between target and audit marginals
 
 Let target $`\Theta`$, source type $`T`$, report $`Y`$, and verifier $`V`$ be binary. The target and type are independent and uniform. The report is $`9/10`$-accurate for a good source and $`1/2`$-accurate for a bad source. The verifier is $`4/5`$-accurate and conditionally independent of the report given $`(\Theta,T)`$. Define
@@ -1581,7 +1798,7 @@ These seven public formal bodies were inspected at source level. Their transitiv
 
 ### References
 
-1. Orthemology. *Continuation-Complete Orthings: Sharp information loss, minimal predictive memory, and safe strategic composition*, “Continuation completion, including observations and feedback,” Theorem 2 and proof. [Exact source][1].
+1. Orthemology. *Continuation-Complete Orthings: Sharp information loss, minimal predictive memory, and safe strategic composition*, finite predictive closure, sharp moment recovery, approximate memory and continuation-preserving reduction, treated in §§2.2–2.6. Its reduction identities and strategic arguments are treated in [Physical Realisation, §5.4](physical-realisation-and-continuation.md#54-what-an-eliminated-variable-can-leave-behind) and [Collective Inquiry, §5](collective-inquiry-and-strategic-coordination.md#5-strategically-sufficient-information-and-hard-coordination). [Exact source][1].
 2. Orthemology. *Audit-aware continuation: exact predictive state and posterior-only tensor test*. [Exact final result][2]. Its final independent review binds that version separately.
 3. Orthemology. *Posterior continuation is insufficient for expected inquiry value*. [Exact final result][3]. Its later independent review establishes the scoped ordinary-proof disposition despite the earlier pending-review sentence.
 4. Orthemology. *Finite-audit Fisher descent: exact criterion and sharp cardinality threshold*. [Complete proof source][4].

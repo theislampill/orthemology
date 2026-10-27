@@ -498,6 +498,8 @@ Call a subtree $`U\subseteq T`$ **rooted and pruned** when it contains the empty
 
 **Proof.** The prefixes of a computable path form a decidable rooted pruned subtree. A decidable subtree is computably enumerable. Given an enumeration of a rooted pruned $`U`$, start at the empty word and wait until either of the two children of the current word appears. Pruning makes each wait finite. Commit to the first enumerated child and repeat. Prefix closure and $`U\subseteq T`$ make every commitment lawful. This constructs a computable path. $`\square`$
 
+In this construction each search must restart the enumeration from its beginning or consult retained earlier emissions as well as new ones. A computably enumerable subtree need not be enumerated in prefix order. For example, the pruned subtree $`\{0^n:n=0,1,2,\ldots\}`$ can be enumerated without repetition in the order $`\epsilon,00,0,000,0000,\ldots`$. A procedure that selects 0 when it is emitted and then waits only for a newly emitted immediate child misses the already emitted 00 and waits forever. Restarting or retaining output finds that child and preserves the proof's finite-wait conclusion. This clarifies the operation of the existing effective search; it adds no hypothesis of prefix-ordered enumeration. [Collective diagnosis and committed continuation, §4.4][continuation-reassessment]
+
 The procedure is uniform in a supplied valid enumeration. It is not a procedure that discovers such an enumeration from every positive tree, or decides that an arbitrary enumeration has the required properties. In particular the tree of section 9.2 has no such witness despite having an explicit mathematical path and a finite planner.
 
 The natural viability core is
@@ -777,3 +779,5 @@ The present synthesis preserves the positive pruned-witness criterion, finite pl
 [renewal-jockusch-soare]: https://msp.org/pjm/1972/40-3/pjm-v40-n3-p09-s.pdf
 [renewal-gasarch]: https://www.cs.umd.edu/~gasarch/COURSES/752/S22/notes/rcombsur.pdf
 [renewal-cenzer-remmel]: https://people.clas.ufl.edu/cenzer/files/Closed-Sets-Book-2017.pdf
+
+[continuation-reassessment]: https://github.com/theislampill/orthemology/blob/9601ce1e2390dc178cff608dc71e85982faae504/research/t20-v6-20261012/sources/93ce02f68f9c20543e8790a4180bd6f5c72520b101456b5b8f50c69f24a92f16/RESULT.md

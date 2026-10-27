@@ -269,6 +269,119 @@ A source-monitoring component may know a bit *b* while an action component sees 
 
 This does not prove that distributed cognition is formally irreducible. A finite architecture can be represented by a product-state transition system retaining every local state, channel, shared cause and local-policy restriction. Such a flattening preserves its traces. The error is to discard those restrictions or add an oracle. Multiple copies of the same bit also do not become independent evidence merely because they occupy different components. [5, §3][r5]
 
+### 2.4 Exact comparison across a continuum of evaluation weights
+
+The endpoint test in §2.1 decides how one affine score comparison varies over an interval. A compound question can require more. One alternative may have to outrank a second while remaining below a third; a decision may depend on a tie or a disjunction of several comparisons. Such a Boolean target can be false at both endpoints and true between them. The following treatment gives the full finite procedure and its proof, then separates the resulting determination from the justification of the evaluation rule. [6, §§1–8][r6]
+
+#### What a declared class determines
+
+Let a base structure D interpret a language of alternatives, criteria, measurements, provenance and feasible consequences. An enriched structure N additionally interprets the evaluation and comparison symbols needed by a target sentence φ. A specified admissibility condition B determines the class
+
+```math
+\mathcal E_B(D)=\{N:\mathrm{red}(N)=D\text{ and }B(D,N)\}.
+```
+
+Here equality of reducts means the same carriers and interpretations of all base symbols. An alternative formulation using isomorphic bases must transport the relevant alternatives and target. D alone does not interpret a sentence containing the added symbols. The well-typed relative claim is
+
+```math
+D\models_B\varphi
+\quad\Longleftrightarrow\quad
+N\models\varphi\text{ for every }N\in\mathcal E_B(D).
+```
+
+If two admissible expansions give opposite truth values to φ, one refutes each of the two universal claims for φ and its negation. Conversely, in classical bivalent semantics, failure of both universal claims supplies those two witnesses. This converse concerns truth throughout the specified class. Failure to find a proof, or agreement in an incomplete sample, does not establish it. [6, §2][r6]
+
+| Admissible expansions over the same base | What is determined |
+|---|---|
+| None | Both universal statements are vacuous; the substantive finding is that this regime admits no extension over D. It is not a verdict that both opposite judgments hold in the actual case. |
+| Exactly one | Every closed target has a fixed truth value within that class. Stipulating one extension supplies no independent authority for it. |
+| Several, agreeing on φ | The target is determined although the whole enrichment need not be unique. |
+| Several, disagreeing on φ | Neither φ nor its negation follows throughout the class; the opposing expansions witness the dependence. |
+
+A stronger independently warranted condition can restrict the class. If B′ implies B, its extensions form a subset of the old extensions. Every conclusion holding throughout the old class therefore holds throughout the new one. The new class must still be checked for nonemptiness, and previous disagreement can disappear. There is no inference that all restrictions are arbitrary or that a well-supported theory could never determine the evaluation. [6, §2][r6]
+
+The interpretation of the base also matters. A citation count may be recorded descriptively, while interpreting it as provenance quality or justificatory strength requires calibration. Selecting criteria, choosing their orientation and classifying defeaters can already involve evaluation. Such disclosed mixed assumptions can legitimately support a relative comparison; they cannot simultaneously be treated as evidence that purely descriptive premises have failed to determine a normative conclusion. A declaration that a column is descriptive does not settle its meaning. [6, §1][r6]
+
+#### A positive trade-off class and its strategic effect
+
+Fix rational two-coordinate profiles e(a) for the alternatives used by a finite target formula, orientations o₁ and o₂ each equal to 1 or −1, and rational bounds with $`0\lt{}\ell\le u\lt{}1`$. For this comparison the admissible weights are **every real α in the entire closed interval** $`I=[\ell,u]`$, with no additional unexpressed restriction. Define
+
+```math
+s_\alpha(a)=\alpha o_1e_1(a)+(1-\alpha)o_2e_2(a).
+```
+
+Each score induces a complete weak order and its strict part. Because both weights are strictly positive, a weak improvement in both oriented coordinates with a strict improvement in at least one gives a strictly higher score: the score difference is a sum of two nonnegative weighted differences with at least one positive term. Thus the class imposes a substantive comparison restriction; it is not a collection of completely unconstrained truth assignments. Its linearity, orientation and particular priority bounds nevertheless require their own justification. Nonlinear evaluation, lexicographic priority or a more tightly justified bridge defines a different class. [6, §1][r6]
+
+The effect can reach an equilibrium without any change of physical consequences. Take two players choosing 0 or 1. A player's own action 0 yields the profile (1,0), and action 1 yields (0,1), regardless of the opponent. Both maximize the same positively oriented α score. If α exceeds 1/2, action 0 is each player's unique best response against every opponent mixture, so (0,0) is the unique equilibrium. Below 1/2, (1,1) is uniquely selected. At 1/2 both actions have equal payoff against every opponent, so every mixed profile is Nash. The game skeleton is unchanged; the evaluation differs. This proves dependence in the specified example, not that evaluation is arbitrary, nonnatural or incapable of independent warrant. [6, §4][r6]
+
+An exclusion from the feasible set is a different operation from a low payoff for a feasible move. Likewise, a transition's stability is different from its maximizing an independently supplied evaluation. Section 7.2 supplies the positive finite-ascent result, its entry bound and the separate closure and pointwise-fixation requirements; a fixed-point label alone supplies none of those premises.
+
+#### The complete finite calculation
+
+The target grammar consists of Boolean constants, negation, finite conjunction and finite disjunction, applied to strict or weak comparisons of the scores. After subtracting scores, each atomic occurrence has the form $`a_j\alpha+b_j>0`$ or $`a_j\alpha+b_j\ge0`$, with rational coefficients. For example, with the orientations absorbed into a profile difference d, its comparison function is $`d_2+\alpha(d_1-d_2)`$. Let k be the number of atomic occurrences; repeated atoms may be counted again. [6, §6][r6]
+
+Collect the endpoints and all in-range roots of the nonconstant affine expressions:
+
+```math
+R=\{\ell,u\}\cup
+\left\{-\frac{b_j}{a_j}:
+a_j\ne0,\quad
+\ell\le-\frac{b_j}{a_j}\le u\right\}.
+```
+
+Deduplicate and order these rational points as $`r_1\lt{}\cdots\lt{}r_m`$. Let S contain every point in R and the rational midpoint of every adjacent open interval $`(r_i,r_{i+1})`$. If the original interval is a singleton, R and S each consist of that one point.
+
+**Theorem 3A — Exact sign-cell comparison.** For every target in the stated grammar, its truth values on S are exactly its truth values over the full real interval I. There are at most $`2k+3`$ representatives. Consequently the procedure decides whether the target is always true, always false, or takes both truth values in this declared class. In the last case it supplies rational witnesses for both values. [6, §6][r6]
+
+**Proof.** Consider an open interval between adjacent points of R. Every nonconstant affine expression has no root in this interval. Its strict sign is constant there: a change between positive and negative, or between zero and nonzero, would require its unique root in the interval. A constant expression also has constant truth value; in particular, the identically zero expression makes a strict comparison false and a weak comparison true. Thus every atomic comparison is constant on the open interval.
+
+Boolean constants are constant as well. Negation preserves constancy, and conjunction and disjunction of formulas constant on that same interval remain constant. Structural induction on the finite target formula therefore proves that its value throughout each open interval equals its value at the chosen midpoint. Evaluating every point of R separately retains the distinction between equality and strict preference, including roots at the original endpoints.
+
+Every point of I lies either in R or in one of these open intervals. Hence every realized truth value is observed at a representative. Conversely every representative belongs to I, so the procedure introduces no unrealized value. All roots included in R and all chosen midpoints are rational. Each nonconstant atomic occurrence contributes at most one root, so $`m\le k+2`$. There are m point representatives and $`m-1`$ open-interval representatives, giving $`2m-1\le2k+3`$. For a singleton interval m is one and the same count gives one representative. ∎
+
+This proof covers zero slopes, repeated roots, roots equal to either endpoint, strict and weak atoms, constant targets and degenerate intervals. It assumes exact rational input arithmetic and the specified grammar. It does not assume that a sufficiently dense grid eventually becomes a proof, and its representative bound is not a claim about optimal query complexity or unrestricted implementation running time. The nonempty interval is a theorem hypothesis; the empty-extension case above is a separate question about the regime being used.
+
+#### Why endpoints and open intervals alone are insufficient
+
+One realization of the source's narrow-interior control uses three actual profiles with both orientations positive:
+
+```math
+e(x)=(1,0),\qquad
+e(a)=(49/100,49/100),\qquad
+e(b)=(51/100,51/100).
+```
+
+On $`I=[1/4,3/4]`$, the target “x strictly outranks a and b strictly outranks x” holds exactly when $`49/100\lt{}\alpha\lt{}51/100`$. It is false at both original endpoints and true at α = 1/2. The two roots produce four distinct cut points and seven representatives, including the middle interval. Endpoint-only inspection would give the wrong invariance verdict. The three-profile realization makes explicit how this Boolean target belongs to the score-comparison grammar; it is an expository construction of the source's control, not a reported empirical example. [6, §6][r6]
+
+Root points have an independent role. For profiles (1,0) and (0,1), the target that neither strictly outranks the other holds exactly at α = 1/2. In the same interval it is false on both open cells and true at the separating root. Checking only open-interval representatives would miss it. At a root, replacing a weak comparison with a strict one can therefore change the entire target. The proof's separate treatment of points is necessary for this grammar.
+
+The procedure's positive conclusion is exact at its declared scope. If every representative makes the target true, the proof extends that value to every admitted real weight; it is not merely an estimate of frequent agreement. If two representatives disagree, their explicit parameter values exhibit the failure of determination. Neither outcome establishes that the chosen class exhausts every substantively admissible evaluation.
+
+#### Canonical choice is a separate question
+
+A unique expansion, a unique truth value for one target, a choice respecting the base's symmetries, and explicit definability in the base language are different requirements. Multiple weights can give the same dominance verdict without fixing the weights themselves. A singleton bridge can fix every target while leaving the bridge's substantive justification open. Parameter-free definability requires invariance under the base's automorphisms, but that necessary condition is not asserted to be sufficient in arbitrary structures. [6, §5][r6]
+
+For a concrete symmetry control, take alternatives a and b and two otherwise indistinguishable criteria with profiles (1,0) and (0,1). In this example a, b, 1 and 2 are metalanguage labels, not distinguished constants that the base's automorphisms must fix. Simultaneously swapping the alternatives and criteria preserves the base, and the interval [1/4,3/4] is closed under the corresponding weight change $`\alpha\mapsto1-\alpha`$. A covariant rule choosing a single alternative at this base would have to choose a point fixed by that swap. Neither alternative is fixed. Such a single-winner rule is impossible under those premises.
+
+The failure does not extend to every canonical output. Equal weights are fixed by the swap, produce a weak ordering with a tie, and permit the invariant chosen set {a,b}. Naming a preferred alternative or adding an independently warranted priority changes the relevant structure or admissibility condition. A target formula that explicitly asks about one named alternative is also a different object from an unnamed canonical selection rule. The general fixed-point account of natural selectors is given in [Objective Normativity, §8.10](../foundations/objective-normativity-and-corrective-cognition.md#810-structural-covariance-content-recoding-and-semantic-identification); the present example specifies its distinct selection target.
+
+There is also a positive uniqueness result. For a positive integer q, a normalized weight vector fixed by every permutation of q indistinguishable criteria must give all coordinates the same weight: the transposition of any two coordinates forces their equality. Since the weights sum to one, each equals $`1/q`$. This proves uniqueness under the symmetry condition. It does not establish that the criteria are actually exchangeable or that equal importance is substantively correct. [6, §5][r6]
+
+The source's comparison with Beth definability concerns a first-order theory across its models, where the relevant implicit determination supports explicit definability. A unique enrichment over one selected D, or a unique target in this finite application, does not by itself satisfy that global hypothesis. The cited Buss discussion's standard-versus-nonstandard-model warning belongs to that inherited comparison. Neither an arbitrary-structure converse from automorphism invariance nor a new proof of a definability theorem is claimed here. [6, §5][r6]
+
+#### What the result establishes about an application
+
+The target-factorization criterion in Proposition 1 has a positive general use: equal recorded profiles need agree only on the target to be recovered, not on every omitted feature. A readout is defined first on attained profiles; extending it to an unattained input requires a permissible default target value. The present theorem supplies an effective decision for a restricted family because its syntax and arithmetic allow the complete finite partition. Set-theoretic determination in an arbitrary family does not by itself supply such a procedure. [6, §7][r6]
+
+The relevant family must be specified separately for each application. The interval ranking problem and the constructed game above give exact instances of dependence on evaluation. Prediction under a model family or threshold is a conditional instance whose admissible models need their own rationale; its uncertainty need not be moral uncertainty. Hidden-provenance inference likewise needs a fixed observation map and genuinely admissible acquisition histories. Once copying is known, the false independent-source model is excluded rather than retained as a rival normative judgment. The likelihood-ratio positive case in §2.1 instead supplies a sufficient statistic for a fixed model, prior, loss and tie rule. None of these cases gives a complete class of morally possible worlds or a theory of original intentional sourcehood. [6, §7][r6]
+
+Syntactically permitted expansions, epistemically live models and metaphysically possible structures are not interchangeable. A pair of formally different predicate assignments is a counterexample within a class that admits them. It is not thereby a metaphysically adequate impersonal rival to a richer source argument. Conversely, an independently justified naturalist account may constrain evaluative interpretation more strongly than this interval class does. Showing disagreement in the weaker class does not refute that stronger account; its additional premises must be assessed at their own scope.
+
+The source's philosophical comparisons retain those distinctions. Its Hume discussion concerns making a transition to an ought-relation explicit, not deriving an unrestricted new-word prohibition. In classical logic p entails $`p\lor O`$, whatever ethical vocabulary occurs in O, and $`O\lor\neg O`$ is true in every bivalent interpretation. These simple controls defeat a purely syntactic test while leaving substantive questions about justified moral inference open. Moore's question about the analysis of goodness is different from variation of α in this model; the latter proves no indefinability of good. Jackson and Pettit's moral functionalism is a positive example of a proposal for stronger determining constraints, cited in the source through a publication record and authored abstract rather than a complete adjudication. No global anti-naturalist or non-supervenience conclusion follows. These are attributed comparisons from the public study, not fresh full readings of the primary works. [6, §8][r6]
+
+Finally, a reported research implementation is evidence at its own scope. The public source describes exact-fraction evaluation, a restricted syntax, recomputation and a sequence of finite checks, including a later repair of Boolean/integer certificate equality. Those historical observations are not rerun here and are not kernel or empirical validation of the philosophical application. Binding input content by a digest does not authenticate its author or justify its normative interpretation. The ordinary sign-cell proof establishes the continuous-domain claim under its hypotheses. A higher-dimensional polytope procedure, an unrestricted input parser, global metaphysical supervenience and machine-certified normative authority remain outside it. [6, §§6–9][r6]
+
+
 ## 3. The finite strategic model and its limits
 
 ### 3.1 A game is additional structure
@@ -2940,6 +3053,43 @@ These distinctions support concrete limits on interpretation. The reanalysis doe
 
 The connection with sections 8–10 is therefore about the evidence needed for a claim. Identical final-judgment laws can conceal different evidence-use mechanisms in the mathematical countermodels; distinct empirical outcome definitions and cluster structures can also change what a numerical comparison supports. Neither observation invalidates the original study as a whole, and neither supplies a new empirical validation of the chapter's exact-law theorems. The useful positive result is an explicit separation of outcome, estimand, weighting, dependence and mechanism so that each inference can be assessed on its own evidence.
 
+### 10.5 Incomplete records of a fixed outcome
+
+A recorded correct answer, a completed finite run and a successful whole inquiry can be different outcomes. The reassessment linking collective diagnosis with committed continuation makes this distinction precise at an original deadline. Fix the task, required components, evidential conditions and deadline before classifying the cases. If success requires their conjunction, an observed failure of one required component makes the whole outcome a failure even when another component is unrecorded. If no required component is known to have failed but the record cannot establish the conjunction, the case remains unresolved. A later repair can be a real success at its later task without changing what occurred by the original deadline. [12, §5][r12]
+
+This distinction is between an outcome and the evidence for it. Missing recording alone establishes neither incompetence nor action without permission. Conversely, an unknown component cannot cancel a known failure of another required component. Calling every recorded favorable output a whole-task success changes the target; calling every unresolved case a demonstrated failure changes what the evidence establishes.
+
+For a nonempty fixed cohort of N cases, let S be the number with established whole-task success, F those with an established failure of the conjunction, and U the unresolved cases. Thus
+
+```math
+N=S+F+U,\qquad N>0.
+```
+
+Assume the established classifications are sound for that fixed factual outcome. Each unresolved case has a binary actual outcome, even though the available record does not determine it. If z is the number of unresolved cases that actually succeeded, then $`0\le z\le U`$ and the cohort's actual success fraction is $`p=(S+z)/N`$. Therefore
+
+```math
+\frac{S}{N}\le p\le\frac{S+U}{N}.
+```
+
+The proof uses only the number of unclassified outcomes. With unrestricted binary completions, setting all unresolved outcomes to failure or all to success attains the two endpoints. The possible fractions between them are discrete for a fixed finite cohort; the displayed interval is their exact lower and upper envelope, not a claim that every real point in it is attained. Extra constraints on the missing cases can tighten the bounds. When U is zero, the recorded cohort fraction is determined. Sampling uncertainty about a different population is a separate question, so these bounds are not a confidence interval. [12, §5][r12]
+
+For two cohorts a and b, write their corresponding bounds as $`p_a\in[L_a,H_a]`$ and $`p_b\in[L_b,H_b]`$. Subtracting gives the sound outer bounds
+
+```math
+L_a-H_b\le p_a-p_b\le H_a-L_b.
+```
+
+Attaining an endpoint requires a **jointly feasible** completion: a completion attaining $`L_a`$ must be compatible with one attaining $`H_b`$ for the lower endpoint, and conversely for the upper endpoint. Separate marginal attainability does not suffice. For example, suppose each cohort consists of one unresolved case and a justified constraint makes their outcomes equal to the same unknown bit. Each marginal permits both zero and one, but their difference is always zero. Combining opposite marginal endpoints would invent an impossible completion. If the two cohorts' admitted completion sets instead form the full product, the endpoint combinations are available. This simple control makes the source's joint-feasibility qualification explicit; it is an expository construction, not a reported dataset. [12, §5][r12]
+
+These calculations concern incomplete records of an already fixed factual outcome. They do not establish a causal treatment effect between the cohorts. [Recognition, Warrant, Defeat and Restoration, §9.6](../epistemology/recognition-warrant-and-restoration.md#96-what-a-comparative-study-can-identify) addresses the further question of beneficial within-unit change when two potential-outcome marginals are identified under the required comparative assumptions. Its joint-outcome bounds should not be substituted for missing-record bounds, or used to certify a wider restoration conjunction from a proxy alone.
+
+The source's empirical comparisons show why the outcome has to remain fixed. Its inherited same-data comparison of 15 dyads reports mean sensitivities of 4.15 for immediate discussion and 3.44 for private-vote-first, with $`t(14)=2.704`$, $`p=.0171`$ and a reported 95% interval of 0.147–1.278 for the contrast. This is positive, source-reported evidence of a procedure-relative difference at that study's scope. Missing private responses in the immediate-discussion condition leave individual contribution unidentified. The Gaussian mechanism pair in §8 is an explanatory nonidentification control, not a fitted assertion about those participants. No new cohort or empirical reanalysis is supplied here. [12, §5][r12]
+
+The same reassessment credits Pan's reported finite onward construction and RepliBench's finite construction-role renewal while preserving the non-chain baseline log, incomplete final startup observation, discrepant figure rates, untested further generation and shared inference support in the respective reports. These limits leave the positive finite capabilities intact. Duplicate author-hosted and arXiv PDF witnesses do not become independent corroboration, and different studies cannot be combined into one demonstrated lineage possessing every desired property. The archived group-score reanalysis in §10.4 likewise has its own cohort, outcome and reading scope. None of these observations is made into a new execution or a proof of indefinite supported continuation. [12, §5][r12]
+
+The mathematical continuation result provides a separate exact boundary. [Measure, Computability and Finite Warrant, §§9.1–9.3 and 9.7](measure-computability-and-finite-warrant.md#91-finite-success-and-an-indefinitely-continuing-policy) gives a finite planner at every requested horizon whose corrected plans converge coordinatewise, yet no computable irrevocable infinite lineage exists. Recomputing a provisional plan does not revise an already enacted causal past. The positive repair supplies an effectively accessible pruned region, with the required common support and permission premises preserved. Observed finite success, sound retrospective correction and supported indefinite continuation therefore each retain their own positive content and their own further conditions. [12, §4][r12]
+
+
 ## 11. Scientific interpretation and remaining questions
 
 The results distinguish four objects often conflated in discussion of collective intelligence: the evidence available somewhere in a group; the information available to each response; the joint mechanism producing an outcome; and the observations from which an investigator tries to identify that mechanism.
@@ -2969,13 +3119,13 @@ The numbered project sources below identify public research editions. They estab
 3. Orthemology project. *Five state evidence control*. Ordinary mathematical construction. [Exact public edition][r3].
 4. *Epistemic Tuples and Intra-Agential Equilibrium: A formal thesis on evidentiary profiles, cognitive faculties, mixed epistemic policies, and equilibrium*. Public text extraction of the manuscript. The original PDF is a distinct edition and is not newly authenticated or reproduced here. [Exact public extraction][r4].
 5. Orthemology public research. *Epistemic tuples and equilibrium as a typed restoration test domain*, especially the corrected scalarization, local-information, finite-game, vector-equilibrium, team-concavity and temporal arguments. [Exact public edition][r5].
-6. Orthemology public research. *Relative normative-gap disclosure with an exact continuous-weight checker*, §§1–4. The later definability and checker sections remain outside this chapter's incorporation claim. [Exact public edition][r6].
+6. Orthemology public research. *Relative normative-gap disclosure with an exact continuous-weight checker*. Relative admissibility, exact sign-cell comparison, canonicity and philosophical limits, and finite ascent are treated in §§2.1, 2.4 and 7.2. Original prototype, execution and primary-reading claims retain their separate scopes. [Exact public edition][r6].
 7. Orthemology public research. *Graded Representations, Witnessed Revision, and Inquiry Landscapes: A conditional mathematical extension of Orthemology*, §8 and reference appendix. Research draft, 8 September 2026. [Exact public edition][r7].
 8. Orthemology public research. *Continuation-Complete Orthings: Sharp information loss, minimal predictive memory, and safe strategic composition*, the pairwise-parity and strategic-composition sections. Research supplement, 8 September 2026. [Exact public edition][r8].
 9. Orthemology public research. *A bounded information consequence for coordination explanations*. Ordinary-mathematics result, 4 October 2026. [Exact public edition][r9].
 10. Orthemology public research. *A sharp error budget for finite coordination modes*. Ordinary-mathematics corollary. [Exact public edition][r10].
 11. Orthemology public research. *What final answers can identify about collective evidence use*. Complete constituent of the public mathematical compendium, 5 October 2026, including its finite and sequential discrimination results. The other constituent works are separate. [Exact public edition][r11].
-12. Orthemology public research. *Collective diagnosis and committed continuation*, §§1–3 on answer-only adaptation, linked information, inquiry value and recalibration, 11 October 2026. The independent computability branch is separate. [Exact public edition][r12].
+12. Orthemology public research. *Collective diagnosis and committed continuation*, 11 October 2026. Adaptive inquiry, linked information, recalibration and incomplete outcome records are treated in §§8.3 and 9–10.5; the committed-continuation arguments are developed in [Measure, Computability and Finite Warrant, §§9.1–9.3 and 9.7](measure-computability-and-finite-warrant.md#91-finite-success-and-an-indefinitely-continuing-policy). Original empirical and execution claims retain their stated evidence scopes. [Exact public edition][r12].
 13. John F. Nash, Jr. “Equilibrium Points in N-Person Games.” *Proceedings of the National Academy of Sciences* 36, no. 1 (1950): 48–49. [doi:10.1073/pnas.36.1.48][nash].
 14. Shizuo Kakutani. “A Generalization of Brouwer's Fixed Point Theorem.” *Duke Mathematical Journal* 8, no. 3 (1941): 457–459. [doi:10.1215/S0012-7094-41-00838-4][kakutani].
 15. Dov Monderer and Lloyd S. Shapley. “Potential Games.” *Games and Economic Behavior* 14 (1996): 124–143. The ordinal-potential definition and finite-improvement result used here are in §2, especially Lemma 2.3. [Primary paper][potential].

@@ -398,6 +398,60 @@ A new PDE theorem would have an operational consequence here if it provided a de
 No such method-specific practical advantage is established by the residual proposition alone. It does, however, turn an open-ended claim about “computation in fluids” into a testable path: certify a finite-time approximation, bound the actual measurement functional, show separated observable sets, and account for the controls that select them.
 
 
+### 5.4 What an eliminated variable can leave behind
+
+A reduction can change the information needed to continue an experiment even when it preserves the present reported value. The issue is especially visible when an omitted variable influences a retained variable's later evolution. The continuation source gives two elementary calculations: eliminating a variable can leave an exact memory term, while averaging a nonlinear flow can leave a covariance term. They identify additional quantities a reduction must retain or control; they do not establish a physical processor or a new global PDE theorem. [CONT]
+
+Consider the scalar system, with fixed real coefficients and $`\varepsilon>0`$,
+
+```math
+\dot x=-ax+bxy,\qquad
+\varepsilon\dot y=-y+cx^2.
+```
+
+On any interval where its solution exists, multiply the second equation by $`e^{t/\varepsilon}`$ and integrate. The exact result is
+
+```math
+y(t)=e^{-t/\varepsilon}y(0)
+     +\frac c\varepsilon\int_0^t
+              e^{-(t-s)/\varepsilon}x(s)^2\,ds.
+```
+
+The initial value and the convolution are still present after substituting this expression into the equation for $`x`$. Thus removing the explicit coordinate $`y`$ can replace a state variable by a dependence on history; it does not remove that variable's effect. The dependency is already visible at the initial time: two states with the same $`x(0)`$ and different $`y(0)`$ have different initial $`x`$ velocities whenever $`bx(0)\ne0`$. A special model or a narrower output contract can remove that dependency, but its removal needs an argument.
+
+The formal algebraic substitution $`\varepsilon=0`$ instead yields $`y=cx^2`$ and
+
+```math
+\dot x=-ax+bcx^3.
+```
+
+That is a singular-limit proposal, requiring its own approximation hypotheses and error analysis. Neither this formal substitution nor the exact convolution justifies simply deleting the coupling and keeping $`\dot x=-ax`$. Lower state dimension can accompany a higher effective polynomial degree. Those two quantities are also distinct from the tensor degree of an episode record. This calculation illustrates the memory issue studied by reduced-order methods; the elementary identity, rather than an imported approximation theorem, is the argument used here. [CONT, “Why eliminating a component can create a new obligation”][CONT]
+
+A corresponding exact averaging identity holds for a finite family of smooth incompressible Navier–Stokes solutions $`u^s`$ on a common spatial domain and time interval, with the same viscosity $`\nu>0`$. Let $`\pi_s\geq0`$ be fixed weights summing to one, and average the pressures and forces with those same weights. Define
+
+```math
+\bar u=\sum_s\pi_su^s,
+\qquad
+R=\sum_s\pi_s(u^s-\bar u)\otimes(u^s-\bar u).
+```
+
+Expanding the products and using $`\sum_s\pi_s(u^s-\bar u)=0`$ gives
+
+```math
+\sum_s\pi_su^s\otimes u^s=\bar u\otimes\bar u+R.
+```
+
+For a divergence-free vector field $`v`$, componentwise differentiation gives $`\nabla\cdot(v\otimes v)=(v\cdot\nabla)v`$, with $`(\nabla\cdot R)_i=\sum_j\partial_jR_{ij}`$. Taking the fixed weighted average of the equations therefore yields
+
+```math
+\partial_t\bar u+(\bar u\cdot\nabla)\bar u
+ =\nu\Delta\bar u-\nabla\bar p+\bar f-\nabla\cdot R.
+```
+
+The mean record alone need not determine this covariance. At one time, an ensemble concentrated on a single field and an ensemble with compensating fluctuations can have the same mean and different second moments. The displayed evolution therefore retains a term that must be determined, represented or bounded under any proposed mean-only closure. The identity is conditional on the smooth solutions and fixed averaging weights; it neither proves that such solutions exist globally nor supplies a closure approximation. It makes no use of a blowup claim. [CONT]
+
+The methodological consequence is common to both calculations. A learned feature map or numerical discovery procedure may propose a useful reduction, while a separate argument establishes what that reduction preserves and with what error. The source's comparison with its supplied Euler draft separates numerical discovery, spline representation, interval certification and stability analysis; its outstanding certification conditions remain part of that historical comparison. The finite moment-error theorem in [Information and Inquiry, §2.5](information-and-inquiry.md#25-quantifying-the-information-lost-by-a-moment-summary) provides one exact model-bound way to expose or bound a missing observable. It does not turn a finite model into a verified model of a fluid, an agent or a person. The finite-horizon residual estimate in §5.2 addresses a different question and retains its own hypotheses. [CONT]
+
 ## 6. What must cross the boundary
 
 ### 6.1 A cut bounds fresh information
@@ -1012,6 +1066,8 @@ The channel, residual, continuation, export, packing, parity, evidence, support,
 
 External references below support particular definitions, reported experiments, methodological connections and historical attributions. The use of an abstract or a theorem statement does not imply a complete independent verification of its paper. The Navier–Stokes report's full 166-page proof and Lean development, and the cited physical experiments, are not independently verified or reproduced here.
 
+[CONT] Orthemology, *Continuation-Complete Orthings: Sharp information loss, minimal predictive memory, and safe strategic composition*, 8 September 2026, “From fluid reduction to an Orthemological obligation.” [Exact public source][CONT]. Section 5.4 derives its elementary elimination and averaging identities and preserves the source-relative status of its discovery/certification comparison. The other continuation results are treated in Information and Inquiry and Collective Inquiry.
+
 ### Physical channels, processors and representation
 
 The proposed case/type terminology is attributed by the Third Edition to the Orthemology project’s research-stage *Orthemic Core Formalization—Orthing, Episodes, Metaorthemes, Pathway Adequacy*, at historical Git commit `f50dc1aee52356cc6adbef342387576b02afc124`. Section 9 states the relevant definitions and their limits; this historical attribution supplies no independent empirical validation [LM].
@@ -1094,3 +1150,5 @@ The proposed case/type terminology is attributed by the Third Edition to the Ort
 [FLP]: https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf
 [TUR]: https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf
 [HOEF]: https://doi.org/10.1080/01621459.1963.10500830
+
+[CONT]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/theory/lineages/h-continuation/continuation_complete_orthing.md
