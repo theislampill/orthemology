@@ -1812,6 +1812,25 @@ class Pmr007DuplicateAliasTests(unittest.TestCase):
         (self.repo / ".git" / "objects" / oid[:2] / oid[2:]).unlink()
         self.assertTrue(self.validator.validate_pmr007_deep_snapshot(self.repo))
 
+    def test_original_blob_contents_must_match_even_when_type_and_size_match(self):
+        import zlib
+
+        self.delete_selected()
+        self.assertEqual(self.validator.validate_pmr007_deep_snapshot(self.repo), [])
+        path = self.selection[0]["alias"]
+        oid = _duplicate_fixture_git(self.repo, "rev-parse", self.baseline + ":" + path).decode().strip()
+        original = self.bodies[path]
+        changed = original[:-1] + (b"X" if original[-1:] != b"X" else b"Y")
+        raw = b"blob " + str(len(changed)).encode() + b"\0" + changed
+        # A valid loose object at the original name can retain type and size
+        # while its complete body no longer authenticates to that name.
+        object_path = self.repo / ".git" / "objects" / oid[:2] / oid[2:]
+        object_path.unlink()
+        object_path.write_bytes(zlib.compress(raw))
+        metadata = _duplicate_fixture_git(self.repo, "cat-file", "--batch-check", data=(oid + "\n").encode())
+        self.assertEqual(metadata, (oid + " blob " + str(len(original)) + "\n").encode())
+        self.assertTrue(self.validator.validate_pmr007_deep_snapshot(self.repo))
+
     def test_unlisted_snapshot_member_is_rejected(self):
         self.delete_selected()
         (self.repo / self.prefix / "unlisted-public-fixture.txt").write_text("unexpected\n")

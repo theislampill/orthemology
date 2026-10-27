@@ -443,6 +443,58 @@ def permitted_historical_status_pin(repo, row, body):
                     or source.get("public_sha256") != identity):
                 return False
             source.update(repository_revision=TYPED_PROSE_REVISION, git_blob=blob)
+        if candidate == expected:
+            return True  # Preserve the exact typed-prose form.
+        # These current consumer bodies have changed, while their T20 evidence
+        # identities still denote the original BASE bodies. The finite duplicate
+        # class supplies the only other admissible historical routes.
+        consumer_paths = {
+            "tests/test_ar8r_v11_reconciliation.py":
+                ("30b8c5ff2679423af0d8231852fd2dd826f91972db891cc461894709d9840606", 91370),
+            "docs/project-closure/ar8r-v11/post-merge-proposals/PMR007-DEEP-A-AP-ADOPTION-BOUNDARY-CORRECTION.md":
+                ("327fd8a2e5ea986f785270f3713e6e034975ecbea9bda2cf5bca04ef374112b6", 1977),
+            "scripts/validate_ar8r_reconciliation.py":
+                ("84cd7f17f9961142e76f76fa427bb49aaf4b29fdc8d9d5056c3c53e8c8c20669", 168547),
+        }
+        aliases = pmr007_deep_duplicate_paths(repo)
+        selected = [r for r in expected["objects"]
+                    if r.get("repository_path") in aliases | consumer_paths.keys()]
+        if (len(aliases) != 824 or len(selected) != 587
+                or len({r["repository_path"] for r in selected}) != 587
+                or sum(r["repository_path"] in aliases for r in selected) != 584):
+            return False
+        revision = "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c"
+        objects = subprocess.run(
+            ["git", "--no-replace-objects", "cat-file", "--batch"], cwd=repo,
+            input="".join(revision + ":" + r["repository_path"] + "\n" for r in selected).encode(),
+            capture_output=True, check=False)
+        if objects.returncode:
+            return False
+        offset = 0
+        for source in selected:
+            path, identity, size = (source["repository_path"], source["source_sha256"], source["source_bytes"])
+            if (source.get("disposition") != "REUSE" or source.get("public_sha256") != identity
+                    or source.get("public_bytes") != size
+                    or (path in consumer_paths and consumer_paths[path] != (identity, size))):
+                return False
+            end = objects.stdout.find(b"\n", offset)
+            if end < 0:
+                return False
+            header = objects.stdout[offset:end].decode("ascii").split()
+            if len(header) != 3 or header[1:] != ["blob", str(size)]:
+                return False
+            original_body = objects.stdout[end + 1:end + 1 + size]
+            offset = end + 2 + size
+            blob = hashlib.sha1(b"blob " + str(size).encode() + b"\0" + original_body).hexdigest()
+            if (len(original_body) != size or objects.stdout[offset - 1:offset] != b"\n"
+                    or hashlib.sha256(original_body).hexdigest() != identity or blob != header[0]):
+                return False
+            source.update(repository_revision=revision, git_blob=blob,
+                          publication_basis=("exact_existing_public_git_blob; current_consumer_has_distinct_identity"
+                              if path in consumer_paths else
+                              "exact_existing_public_git_blob; retained_counterpart_qualified_by_snapshot_validator"))
+        if offset != len(objects.stdout):
+            return False
         return candidate == expected
     except (KeyError, TypeError, ValueError):
         return False

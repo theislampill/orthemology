@@ -304,7 +304,7 @@ def pmr007_deep_duplicate_paths(repo: Path = ROOT) -> set[str]:
                 raise ValueError("pmr007-deep-alias-hash-mismatch:" + alias)
 
     # These native Git operations inspect only the finite public path set and
-    # object metadata. They do not execute source files, fetch, or read holds.
+    # its complete original objects. They do not execute, fetch, or read holds.
     environment = dict(os.environ, GIT_NO_LAZY_FETCH="1", GIT_TERMINAL_PROMPT="0")
     command = ["git", "--no-replace-objects", "-c", "core.fsmonitor=false"]
     result = subprocess.run(
@@ -325,14 +325,29 @@ def pmr007_deep_duplicate_paths(repo: Path = ROOT) -> set[str]:
         if (original is None or original[:2] != ("100644", "blob")
                 or originals.get(canonical) != original):
             raise ValueError("pmr007-deep-original-git-identity-mismatch:" + alias)
-        objects[original[2]] = str(sizes[alias])
+        objects[original[2]] = (sizes[alias], members[alias.removeprefix(PMR007_DEEP_PREFIX + "/")])
     result = subprocess.run(
-        command + ["cat-file", "--batch-check"], cwd=repo,
+        command + ["cat-file", "--batch"], cwd=repo,
         input=("\n".join(sorted(objects)) + "\n").encode("ascii"),
         capture_output=True, check=False, env=environment,
     )
-    expected = [[oid, "blob", objects[oid]] for oid in sorted(objects)]
-    if result.returncode or [line.split() for line in result.stdout.decode("ascii").splitlines()] != expected:
+    if result.returncode:
+        raise ValueError("pmr007-deep-original-git-objects-unavailable")
+    position = 0
+    for oid, (size, expected_sha256) in sorted(objects.items()):
+        header = (oid + " blob " + str(size) + "\n").encode("ascii")
+        if result.stdout[position:position + len(header)] != header:
+            raise ValueError("pmr007-deep-original-git-objects-unavailable")
+        position += len(header)
+        body = result.stdout[position:position + size]
+        position += size
+        raw = b"blob " + str(size).encode("ascii") + b"\0" + body
+        if (len(body) != size or result.stdout[position:position + 1] != b"\n"
+                or hashlib.sha256(body).hexdigest() != expected_sha256
+                or hashlib.sha1(raw).hexdigest() != oid):
+            raise ValueError("pmr007-deep-original-git-content-mismatch:" + oid)
+        position += 1
+    if position != len(result.stdout):
         raise ValueError("pmr007-deep-original-git-objects-unavailable")
     return set(duplicates)
 

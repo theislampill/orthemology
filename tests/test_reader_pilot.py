@@ -961,7 +961,8 @@ class HistoricalMetadataPinTests(unittest.TestCase):
 
     def prior_to_typed_pins(self):
         """Build the exact prior form before testing its earlier pin sequence."""
-        value = json.loads((ROOT / self.manifest_path).read_bytes())
+        value = json.loads(subprocess.check_output(
+            ["git", "show", "1beacf590a4f11079039582b42d98d63c563378b:" + self.manifest_path], cwd=ROOT))
         for path, blob in self.TYPED_PINS:
             row = next(r for r in value["objects"] if r.get("repository_path") == path)
             self.assertEqual((row["repository_revision"], row["git_blob"]),
@@ -1061,7 +1062,12 @@ class HistoricalMetadataPinTests(unittest.TestCase):
             row = next(r for r in expected["objects"] if r.get("repository_path") == path)
             row.update(repository_revision=self.TYPED_REVISION, git_blob=blob)
         actual = json.loads((ROOT / self.manifest_path).read_bytes())
-        self.assertEqual(actual, expected, "historical owner metadata changed outside the finite bindings")
+        # Receive the exact earlier form independently. The later 587-row
+        # extension has its own whole-document and native-object controls.
+        prior = json.loads(subprocess.check_output(
+            ["git", "show", "1beacf590a4f11079039582b42d98d63c563378b:" + self.manifest_path], cwd=ROOT))
+        self.assertEqual(prior, expected, "earlier historical owner metadata changed outside its finite bindings")
+        self.assertTrue(self.permitted(prior), "the earlier complete ordered pin form must remain admitted")
         self.assertTrue(self.permitted(actual), "the complete current ordered pin form must be admitted")
 
     def test_fisher_pin_follows_all_prior_pins_without_resetting_the_manifest(self):
@@ -1169,6 +1175,80 @@ class HistoricalMetadataPinTests(unittest.TestCase):
                    "repository_revision" not in r)
         row["repository_revision"] = "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c"
         self.assertFalse(self.permitted(value))
+
+
+class SnapshotProjectionPinTests(unittest.TestCase):
+    """The manifest can route the finite duplicate class without changing its evidence."""
+    @classmethod
+    def setUpClass(cls):
+        HistoricalMetadataPinTests.setUpClass()
+        cls.mod = HistoricalMetadataPinTests.mod
+        cls.owner = HistoricalMetadataPinTests.row
+        cls.path = HistoricalMetadataPinTests.manifest_path
+        cls.original = json.loads(subprocess.check_output(
+            ['git', 'show', '1beacf590a4f11079039582b42d98d63c563378b:' + cls.path], cwd=ROOT))
+        cls.current = json.loads((ROOT / cls.path).read_bytes())
+        cls.before = {r['source_sha256']:r for r in cls.original['objects']}
+        cls.after = {r['source_sha256']:r for r in cls.current['objects']}
+        cls.changed = [s for s in cls.before if cls.before[s] != cls.after[s]]
+
+    def permitted(self, value):
+        return self.mod.permitted_historical_status_pin(ROOT, self.owner, json.dumps(value).encode())
+
+    def test_exact_complete_extension_preserves_every_original_identity(self):
+        self.assertEqual(len(self.before), 28478)
+        self.assertEqual(self.before.keys(), self.after.keys())
+        self.assertEqual(len(self.changed), 587)
+        self.assertEqual({k:v for k,v in self.original.items() if k!='objects'},
+                         {k:v for k,v in self.current.items() if k!='objects'})
+        aliases = self.mod.pmr007_deep_duplicate_paths(ROOT)
+        duplicate_rows = [s for s in self.changed if self.after[s]['repository_path'] in aliases]
+        self.assertEqual(len(aliases), 824)
+        self.assertEqual(len(duplicate_rows), 584)
+        self.assertEqual({self.after[s]['repository_path'] for s in set(self.changed)-set(duplicate_rows)}, {
+            'tests/test_ar8r_v11_reconciliation.py', 'scripts/validate_ar8r_reconciliation.py',
+            'docs/project-closure/ar8r-v11/post-merge-proposals/PMR007-DEEP-A-AP-ADOPTION-BOUNDARY-CORRECTION.md'})
+        for source in self.changed:
+            old, new = self.before[source], self.after[source]
+            self.assertEqual({k:v for k,v in old.items() if k!='publication_basis'},
+                             {k:v for k,v in new.items() if k not in ('repository_revision','git_blob','publication_basis')})
+            self.assertEqual(new['repository_revision'], '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')
+            original = subprocess.check_output(['git', '--no-replace-objects', 'show',
+                new['repository_revision'] + ':' + new['repository_path']], cwd=ROOT)
+            self.assertEqual(hashlib.sha256(original).hexdigest(), source)
+            self.assertEqual(len(original), new['source_bytes'])
+            self.assertEqual(hashlib.sha1(b'blob ' + str(len(original)).encode() + b'\0' + original).hexdigest(), new['git_blob'])
+        self.assertTrue(self.permitted(self.current))
+
+    def test_extension_rejects_identity_role_route_and_incomplete_pin_changes(self):
+        sample = self.changed[0]
+        for field, value in (('source_sha256','0'*64), ('public_sha256','0'*64),
+                ('source_bytes',1), ('public_bytes',1), ('repository_revision','HEAD'),
+                ('git_blob','0'*40), ('disposition','PROJECT'), ('role','reclassified'),
+                ('publication_basis','unreviewed'), ('repository_path','README.md')):
+            with self.subTest(field=field):
+                candidate = deepcopy(self.current)
+                next(r for r in candidate['objects'] if r['source_sha256']==sample)[field] = value
+                self.assertFalse(self.permitted(candidate))
+        missing = deepcopy(self.current)
+        next(r for r in missing['objects'] if r['source_sha256']==sample).pop('git_blob')
+        self.assertFalse(self.permitted(missing))
+
+    def test_extension_rejects_unrelated_rows_and_excluded_snapshot_metadata(self):
+        aliases = self.mod.pmr007_deep_duplicate_paths(ROOT)
+        excluded = [r for r in self.current['objects'] if r.get('repository_path','').startswith(
+            'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-ap/')
+            and r['repository_path'] not in aliases]
+        self.assertEqual(len(excluded), 3)
+        for source in excluded:
+            with self.subTest(path=source['repository_path']):
+                candidate = deepcopy(self.current)
+                next(r for r in candidate['objects'] if r['source_sha256']==source['source_sha256'])['repository_revision'] = \
+                    '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'
+                self.assertFalse(self.permitted(candidate))
+        unrelated = deepcopy(self.current)
+        next(r for r in unrelated['objects'] if r['source_sha256'] not in self.changed)['role'] = 'reclassified'
+        self.assertFalse(self.permitted(unrelated))
 
 
 class TwelfthCollectionCoverageTests(unittest.TestCase):
