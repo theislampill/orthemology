@@ -99,7 +99,11 @@ The [learning route](APPLICATIONS.md#learning-without-silently-changing-the-anal
 
 **Question:** If two descriptions evaluate to the same object, may a proof or type certificate be moved from one description to the other?
 
+Current exposition: [Opaque representations and typing][typed-t13-opaque-current]; [The atom/application bridge][typed-t13-bridge-current].
+
 The [opaque-atom study][t13-opaque] supplies a negative example for a particular representation at a particular type. The [atom/application bridge][t13-bridge] shows a positive, separately specified repair for closed conversion. Neither result by itself answers whether *any* proof exists of every semantically true identity.
+
+Current exposition: [The historical residual identity question][typed-t13-residual-current]; [Full-rule separation and the closed criterion][typed-t14-separation-current].
 
 The next stage asks that stronger question. The [historical I/SKK note][t13-residual] distinguishes a semantic witness from a missing direct introduction rule; the [Fourteenth full-rule development][t14-separation] then proves noninhabitation through every rule, not just the obvious route. The [separate HasE development][t14-repair] restores the missed typed identity with two stated extensionality rules while retaining the old judgments and a `Raw`-carrier obstruction.
 
@@ -255,13 +259,17 @@ This connects **semantic fidelity (8)** with **type-theoretic completion (9)** a
 [t12-integer]: ../../experiments/orthemology-v5-successors/source-store/6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md
 [t12-clarification]: ../../experiments/orthemology-v5-successors/source-store/32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68/OBSERVATION_ROUTE_CLARIFICATION_v1.md
 
-[t13-opaque]: ../../experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md
+[t13-opaque]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md
+[typed-t13-opaque-current]: ../../logic/encodings-and-witnesses.md#103-equal-evaluation-need-not-preserve-a-supplied-typing
 
-[t13-bridge]: ../../experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
+[t13-bridge]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
+[typed-t13-bridge-current]: ../../logic/encodings-and-witnesses.md#104-what-the-bridge-repairs
 
-[t13-residual]: ../../experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+[t13-residual]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+[typed-t13-residual-current]: ../../logic/encodings-and-witnesses.md#105-the-identity-question-that-packing-leaves-open
 
-[t14-separation]: ../../experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+[t14-separation]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+[typed-t14-separation-current]: ../../logic/encodings-and-witnesses.md#107-full-rule-separation-and-the-exact-closed-criterion
 
 [t14-repair]: ../../experiments/orthemology-v5-successors/source-store/4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51/ExtensionalRepairTheorems.lean
 

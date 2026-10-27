@@ -299,7 +299,7 @@ The following lineage asks when a representation preserves a typing certificate,
 
 ### Opaque atoms and prescribed typing
 
-**Opaque atoms and fixed polynomial semantic incompleteness.** [Read the complete written proof][t13-opaque] · [Thirteenth source owner][t13-group].
+**Opaque atoms and fixed polynomial semantic incompleteness.** [Read the current exposition][typed-t13-opaque-current] · [Exact historical proof][t13-opaque] · [Thirteenth source owner][t13-group].
 
 A structured polynomial and an opaque atom can evaluate to exactly the same raw program while only the structured representation is typable at the selected polymorphic identity type. The proof replaces one whole opaque label in every possible derivation and uses a singleton conversion-class interpretation to force a contradiction. It covers the unchanged typing rules, including finite import and dependent identity elimination, rather than reporting that a search found no proof.
 
@@ -307,7 +307,7 @@ The positive structured representation remains available. Thus this is **failure
 
 ### The atom/application bridge
 
-**A hypothetical atom application conversion bridge.** [Read the written design and proofs][t13-bridge].
+**A hypothetical atom application conversion bridge.** [Read the current design and proofs][typed-t13-bridge-current] · [Exact historical source][t13-bridge].
 
 The single added conversion schema exposes an application hidden inside an atom: `atom(app(r,s))` is convertible to `app(atom(r),atom(s))`. In the separately copied `HasPlus` judgement it supports closed packing and makes closed polynomial conversion exactly match raw conversion of evaluations. The paper supplies a mutual soundness argument using the original `F/G` interpretation, including newly formed types; it does not simply reuse a theorem whose input still expects old `Has` evidence.
 
@@ -315,7 +315,7 @@ This is a constructive answer to the preceding representation problem, with a re
 
 ### The historical I/S KK question
 
-**Residual identity completeness feasibility.** [Read the historical note][t13-residual] · [Later full-rule resolution][t14-separation].
+**Residual identity completeness feasibility.** [Read the current treatment of the historical question][typed-t13-residual-current] · [Exact historical note][t13-residual] · [Current full-rule resolution][typed-t14-separation-current] · [Exact later written source][t14-separation].
 
 The note constructs a formed identity type between `I` and `S K K` at the polymorphic identity-function carrier. The original semantics admits a proof witness, while direct identity introduction is blocked because the endpoints are not raw-convertible. The note correctly stops short of ruling out all derivations: elimination or dependent `J` could, in principle, supply a different route.
 
@@ -323,7 +323,7 @@ Its attempted shortcut—strengthen only the identity interpretation while keepi
 
 ### Full-rule identity separation
 
-**Intensional identity separation and closed identity conversion.** [Read the complete paper][t14-separation] · [Later formal declarations][t14-separation-lean] · [Exact formal-suite owner][t14-suite].
+**Intensional identity separation and closed identity conversion.** [Read the current full-rule proof and criterion][typed-t14-separation-current] · [Exact historical paper][t14-separation] · [Later formal declarations][t14-separation-lean] · [Exact formal-suite owner][t14-suite].
 
 A coherent saturated-set interpretation makes every type relation refine raw conversion, including its context and substitution behaviour. Checking all typing constructors—particularly finite imports, both binders and both coordinates of `J`—then excludes **every** inhabitant of the selected `I/S K K` identity type in both `Has` and `HasPlus`. The unchanged original `F/G` interpretation still admits that type's semantic witness. This is incompleteness of those exact syntactic judgements for that semantic target, not unsoundness of the original semantics.
 
@@ -1551,10 +1551,14 @@ The [original source/kernel review](../../experiments/orthemology-v5-successors/
 [t12-scope]: ../../experiments/orthemology-v5-successors/source-store/fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1/VERIFICATION_SCOPE.md
 [t12-identity]: ../../experiments/orthemology-v5-successors/source-store/ec29806cb3087a8a707341d352bbbf8c818a536ce0083a8e6cf75a6b75d3e7bb/CHECKPOINT_IDENTITY.json
 
-[t13-opaque]: ../../experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md
-[t13-bridge]: ../../experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
-[t13-residual]: ../../experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
-[t14-separation]: ../../experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+[t13-opaque]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md
+[typed-t13-opaque-current]: ../../logic/encodings-and-witnesses.md#103-equal-evaluation-need-not-preserve-a-supplied-typing
+[t13-bridge]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
+[typed-t13-bridge-current]: ../../logic/encodings-and-witnesses.md#104-what-the-bridge-repairs
+[t13-residual]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+[typed-t13-residual-current]: ../../logic/encodings-and-witnesses.md#105-the-identity-question-that-packing-leaves-open
+[t14-separation]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+[typed-t14-separation-current]: ../../logic/encodings-and-witnesses.md#107-full-rule-separation-and-the-exact-closed-criterion
 [t14-certificates]: ../../experiments/orthemology-v5-successors/source-store/2c16dbf40f6a945785b51ddc230a0e1f78004fe716a0412492b4345be8c95734/Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md
 [t14-separation-lean]: ../../experiments/orthemology-v5-successors/source-store/48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c/IntensionalIdentityTheorems.lean
 [t14-repair]: ../../experiments/orthemology-v5-successors/source-store/4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51/ExtensionalRepairTheorems.lean

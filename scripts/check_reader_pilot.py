@@ -25,6 +25,7 @@ from resolve_t20_v6_source import (
     historical_source_bytes, HISTORICAL_PROSE_REVISIONS, HISTORICAL_PROSE_DISPOSITIONS,
     MEDIATOR_PROSE, MEDIATOR_GUIDE, mediator_guide_source_bytes, readonly_git_diff,
     ORIGINAL_HISTORICAL_PROSE_PATHS, FISHER_AUDIT, FISHER_PROSE_REVISION,
+    TYPED_PROSE, TYPED_PROSE_REVISION, TYPED_GUIDES, typed_guide_source_bytes,
 )
 
 
@@ -426,6 +427,18 @@ def permitted_historical_status_pin(repo, row, body):
             return False
         source.update(repository_revision=HISTORICAL_PROSE_REVISION,
                       git_blob="e1bad4344f949d9ddbe32ca6c4e6bd4158515a86")
+        if candidate == expected:
+            return True  # Preserve the exact Fisher and legacy-test code form.
+        for path, (blob, identity, size) in TYPED_PROSE.items():
+            selected = [r for r in expected["objects"] if r["source_sha256"] == identity]
+            if len(selected) != 1:
+                return False
+            source = selected[0]
+            if (source.get("disposition") != "REUSE" or source.get("repository_path") != path
+                    or source.get("source_bytes") != size or source.get("public_bytes") != size
+                    or source.get("public_sha256") != identity):
+                return False
+            source.update(repository_revision=TYPED_PROSE_REVISION, git_blob=blob)
         return candidate == expected
     except (KeyError, TypeError, ValueError):
         return False
@@ -440,11 +453,14 @@ REFACTOR_EDIT_PATHS = {
     ".github/workflows/validate.yml", ".github/workflows/reader-refactor-snapshot.yml",
     "scripts/reader_census.py", "scripts/check_reader_pilot.py",
     "tests/test_reader_census.py", "tests/test_reader_pilot.py",
+    "tests/test_internal_references.py",
     # Exact existing integrity owners changed for the finite history contract;
     # this does not admit any new source path or predecessor modification.
     "scripts/resolve_t20_v6_source.py", "scripts/validate_t20_v6_projection.py",
     "tests/test_t20_v6_projection.py", "scripts/validate_v5_successors.py",
     "tests/test_v5_twentieth_data.py",
+    # Current reference consumers for the same four exact typed prose identities.
+    "scripts/validate_repo.py", "scripts/validate_internal_references.py",
     # Existing source-display integrity owner and its focused regression tests;
     # scholarly bodies still require their exact source/work/review admission.
     "scripts/validate_math_source.py", "tests/test_math_source_validator.py",
@@ -614,9 +630,10 @@ def check_historical_sources(repo, baseline_rows, owners, cross, additions):
     paths = {row["path"] for row in declared}
     original = set(ORIGINAL_HISTORICAL_PROSE_PATHS)
     mediator = original | set(MEDIATOR_PROSE)
+    fisher = mediator | {FISHER_AUDIT}
     if (len(paths) != len(declared) or paths not in
-            (original, mediator, mediator | {FISHER_AUDIT})):
-        return {}, ["historical-source: expected exactly the original five, mediator seven or Fisher eight path dispositions"]
+            (original, mediator, fisher, fisher | set(TYPED_PROSE))):
+        return {}, ["historical-source: expected exactly the original five, mediator seven, Fisher eight or typed twelve path dispositions"]
     admitted, errors = {}, []
     sources = cross.get("sources", {})
     for binding in declared:
@@ -699,7 +716,8 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                       for status, path in zip(values[::2], values[1::2])
                       if path not in editable and not
                       ((status == "D" and path in HISTORICAL_PROSE and path in historical_paths)
-                       or (status == "M" and path == MEDIATOR_GUIDE and path in navigation_paths)))
+                        or (status == "M" and path in {MEDIATOR_GUIDE, *TYPED_GUIDES}
+                            and path in navigation_paths)))
     return list(dict.fromkeys(errors))
 
 
@@ -733,6 +751,12 @@ def check(repo, owners, cross):
             navigation[MEDIATOR_GUIDE] = mediator_guide_source_bytes(repo, allow_original=True)
         except (ValueError, OSError) as exc:
             fail("navigation-source", MEDIATOR_GUIDE + ": " + str(exc))
+    for path in TYPED_GUIDES:
+        if path in indexed:
+            try:
+                navigation[path] = typed_guide_source_bytes(repo, path, allow_original=True)
+            except (ValueError, OSError) as exc:
+                fail("navigation-source", path + ": " + str(exc))
     errors.extend(check_corpus_currentness(repo, owners["baseline"]["commit"], additions,
                                           historical, navigation))
     errors.extend(check_collection_dispositions(rows, owners, cross))

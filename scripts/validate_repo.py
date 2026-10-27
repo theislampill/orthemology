@@ -257,9 +257,21 @@ def _selector_hash(value, length=64):
 
 
 def _public_successor_bytes(row, root):
-    """A typed selector never excuses missing or changed public source bytes."""
+    """Authenticate current bytes or the four exact incorporated prose originals."""
     if not _successor_source_identity(row) or row['public_path'] is None:
         return None
+    from resolve_t20_v6_source import (
+        TYPED_PROSE, TYPED_PROSE_REVISION, TYPED_V5_SOURCE_IDS, historical_source_bytes,
+    )
+    if row['public_path'] in TYPED_PROSE:
+        name = row['public_path']
+        if row['id'] != TYPED_V5_SOURCE_IDS[name] or row['projection'] != 'EXACT':
+            return None
+        try:
+            raw = historical_source_bytes(root, name, TYPED_PROSE_REVISION, TYPED_PROSE[name][0])
+        except (ValueError, OSError):
+            return None
+        return raw if len(raw) == row['public_bytes'] and hashlib.sha256(raw).hexdigest() == row['public_sha256'] else None
     path = os.path.join(root, *row['public_path'].split('/'))
     if os.path.commonpath((os.path.realpath(root), os.path.realpath(path))) != os.path.realpath(root):
         return None

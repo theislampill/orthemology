@@ -75,6 +75,43 @@ HISTORICAL_PROSE[FISHER_AUDIT] = (
 HISTORICAL_PROSE_REVISIONS[FISHER_AUDIT] = FISHER_PROSE_REVISION
 HISTORICAL_PROSE_DISPOSITIONS[FISHER_AUDIT] = 'ADD_EXACT'
 
+# Four fully incorporated prose bodies; their formal/review components remain
+# current, separate obligations. These literals extend only the finite route.
+TYPED_PROSE_REVISION = 'a7ff0e33d1a299db640041c46b1af81ca70851f6'
+TYPED_PROSE_IDENTITIES = {
+    't13-opaque': ('b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236',
+        'OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md', 'ab7ccee9a98d5a88b8b79a6f0d6a010298bf3204',
+        26969, 'identity-src-18324561d5a479234e08'),
+    't13-residual': ('7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e',
+        'RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md', '0692dd6d775e0391498c97c5b77e8c83cf32eb41',
+        11482, 'identity-src-36405a21fb515a544d13'),
+    't13-bridge': ('02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe',
+        'HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md', 'a4d90c7d566d79394ca4755bf1d792e810d66880',
+        19906, 'identity-src-210a260c6b65330bbabb'),
+    't14-separation': ('5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a',
+        'Intensional_Identity_Separation_and_Closed_Identity_Conversion.md', '4920e71de4ac0c17fa8a93f02cd891d65ea8ad74',
+        48239, 'identity-src-ae495071a75fcc65a509'),
+}
+TYPED_SOURCE_KEYS = {key: 'experiments/orthemology-v5-successors/source-store/' + row[0] + '/' + row[1]
+                     for key, row in TYPED_PROSE_IDENTITIES.items()}
+TYPED_PROSE = {TYPED_SOURCE_KEYS[key]: (row[2], row[0], row[3])
+               for key, row in TYPED_PROSE_IDENTITIES.items()}
+TYPED_V5_SOURCE_IDS = {TYPED_SOURCE_KEYS[key]: row[4] for key, row in TYPED_PROSE_IDENTITIES.items()}
+HISTORICAL_PROSE.update(TYPED_PROSE)
+HISTORICAL_PROSE_REVISIONS.update({path: TYPED_PROSE_REVISION for path in TYPED_PROSE})
+HISTORICAL_PROSE_DISPOSITIONS.update({path: 'REUSE' for path in TYPED_PROSE})
+
+TYPED_GUIDES = {
+    'experiments/orthemology-v5-successors/groups/t13-identity/README.md': (
+        '0d228b107878098508dc31368517ac07fe688dff',
+        '9492d888f684355f2f72f15e1da7ddca3525b2523e3a670c2da25d811c6eaf96', 7880,
+        {'t13-opaque': 1, 't13-residual': 2, 't13-bridge': 1}),
+    'experiments/orthemology-v5-successors/groups/t14-identity/README.md': (
+        '09ea18f06905c0e5116375b2163737cf380755eb',
+        'bd58d620ac8a0dd0bbd8a3eb51e0c254b73cf14ae795a48dc19c347ee69b9961', 16523,
+        {'t14-separation': 5}),
+}
+
 MEDIATOR_GUIDE = 'experiments/orthemology-v5-successors/groups/t12-written/README.md'
 MEDIATOR_GUIDE_BLOB = '7c6a9bfdeaf8372d3ea73ff8a06f4aefb17ef838'
 MEDIATOR_GUIDE_SHA256 = 'e86297f6ff2e0b8abce4fd8d1fe66e57c64e43e83ecec664422b4ed7abf3440e'
@@ -101,6 +138,8 @@ def historical_source_bytes(root, path, revision, git_blob):
         require_mediator_context(root)
     elif path == FISHER_AUDIT:
         require_fisher_context(root)
+    elif path in TYPED_PROSE:
+        require_typed_context(root)
     blob, identity, size = binding
 
     def git(*args):
@@ -215,6 +254,135 @@ def _regular_current_bytes(root, path):
     if not stat.S_ISREG(entry.st_mode) or entry.st_mode & 0o111:
         raise ValueError('current reading dependency is not regular nonexecutable data')
     return target.read_bytes()
+
+
+def typed_guide_source_bytes(root, path, *, allow_original=False):
+    """Return one original guide after authenticating its exact link adaptation."""
+    if path not in TYPED_GUIDES:
+        raise ValueError('unqualified typed guide')
+    blob, identity, size, replacements = TYPED_GUIDES[path]
+
+    def git(*args):
+        result = subprocess.run(['git', '--no-replace-objects', '--literal-pathspecs', *args],
+                                cwd=root, capture_output=True, check=False)
+        if result.returncode:
+            raise ValueError('required typed guide objects unavailable')
+        return result.stdout
+
+    expected = ('100644 blob ' + blob + '\t' + path + '\0').encode()
+    if (git('cat-file', '-t', TYPED_PROSE_REVISION) != b'commit\n'
+            or git('ls-tree', '-z', TYPED_PROSE_REVISION, '--', path) != expected):
+        raise ValueError('typed guide original path, blob or mode differs')
+    original = git('cat-file', 'blob', blob)
+    actual_blob = hashlib.sha1(b'blob ' + str(len(original)).encode() + b'\0' + original).hexdigest()
+    if (len(original), digest(original), actual_blob) != (size, identity, blob):
+        raise ValueError('typed guide original identity differs')
+    adapted = original
+    for key, count in replacements.items():
+        source = TYPED_SOURCE_KEYS[key]
+        old = ('../../source-store/' + source.split('/source-store/', 1)[1]).encode()
+        new = ('https://github.com/theislampill/orthemology/blob/' + TYPED_PROSE_REVISION + '/' + source).encode()
+        if original.count(old) != count:
+            raise ValueError('typed guide original link count differs')
+        adapted = adapted.replace(old, new)
+    current = _regular_current_bytes(root, path)
+    if current != adapted and not (allow_original and current == original):
+        raise ValueError('typed guide is not its exact navigation adaptation')
+    adapted_blob = hashlib.sha1(b'blob ' + str(len(adapted)).encode() + b'\0' + adapted).hexdigest()
+    indexed = git('ls-files', '--stage', '-z', '--', path)
+    choices = {('100644 ' + oid + ' 0\t' + path + '\0').encode(): body
+               for oid, body in ((blob, original), (adapted_blob, adapted))}
+    if indexed not in choices:
+        raise ValueError('typed guide index is absent, conflicted or unqualified')
+    if git('cat-file', 'blob', indexed.split()[1].decode()) != choices[indexed]:
+        raise ValueError('typed guide staged object differs or is unavailable')
+    return original
+
+
+def require_typed_context(root):
+    """Bind prose history to current logic without retiring distinct evidence.
+
+    This authenticates current owner records and bytes, not the mathematics,
+    original review validity, formal replay, custody or permission to remove.
+    """
+    root = pathlib.Path(root)
+    try:
+        owners = json.loads(_regular_current_bytes(root,
+            'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json'))
+        cross = json.loads(_regular_current_bytes(root,
+            'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json'))
+        expected = [dict(path=path, repository_revision=TYPED_PROSE_REVISION,
+            git_blob=TYPED_PROSE[path][0], role='historical-source',
+            reading_source='consolidated-encodings-and-witnesses', basis='scientific-consolidation-review')
+            for path in TYPED_PROSE]
+        bindings = [r for r in owners['historical_source_bindings'] if r['path'] in TYPED_PROSE]
+        if len(bindings) != 4 or any(bindings.count(row) != 1 for row in expected):
+            raise ValueError('all four exact typed prose dispositions are required')
+        for key, path, role in (
+            ('consolidated-encodings-and-witnesses', 'logic/encodings-and-witnesses.md', 'work-source'),
+            ('scientific-consolidation-review', 'docs/scientific-consolidation-review.md', 'review')):
+            selected = [r for r in owners['source_additions'] if r['key'] == key]
+            if len(selected) != 1:
+                raise ValueError('missing or duplicate current typed reading owner')
+            admission, source = selected[0], cross['sources'][key]
+            current = _regular_current_bytes(root, path)
+            oid = hashlib.sha1(b'blob ' + str(len(current)).encode() + b'\0' + current).hexdigest()
+            if (admission['path'] != path or source['path'] != path or admission['role'] != role
+                    or admission['mode'] != '100644' or admission['git_oid'] != oid
+                    or admission['bytes'] != len(current) or admission['sha256'] != digest(current)
+                    or source['sha256'] != digest(current)):
+                raise ValueError('current typed scholarship or review edition differs')
+            if role == 'work-source' and 'scientific-consolidation-review' not in admission['supporting_source_keys']:
+                raise ValueError('current typed work has lost its review owner')
+        result_ids = {
+            't13-opaque': ['T13-OPAQUE-REPRESENTATION'],
+            't13-residual': ['T13-RESIDUAL-HAS', 'T13-RESIDUAL-PLUS'],
+            't13-bridge': ['T13-ATOM-APPLICATION-BRIDGE'],
+            't14-separation': ['T14-CLOSED-PLUS-IDENTITY', 'T14-I-SKK-HAS', 'T14-I-SKK-PLUS'],
+        }
+        for key, path in TYPED_SOURCE_KEYS.items():
+            source = cross['sources'][key]
+            works = [w for w in cross['works'] if w.get('key') == key]
+            if len(works) != 1:
+                raise ValueError('typed original work identity is absent or duplicated')
+            work = works[0]
+            forms = [{'source': key, 'relationship': 'historical-source'}]
+            source_keys, support = [key], []
+            if key == 't14-separation':
+                forms.append({'source': 't14-separation-lean', 'relationship': 'formal-component'})
+                source_keys.append('t14-separation-lean')
+                support = ['t14-written-review', 't14-review', 't14-suite']
+            all_forms = [f for w in cross['works'] for f in w.get('reading_forms', [])
+                         if f.get('source') == key]
+            relation = {'from': key, 'to': 'consolidated-encodings-and-witnesses',
+                        'kind': 'logical-content-incorporated-historical-source-retained',
+                        'basis': 'scientific-consolidation-review'}
+            relations = [r for r in cross['relations'] if r.get('from') == key
+                         and r.get('kind') == relation['kind']]
+            if (source['path'] != path or source['sha256'] != TYPED_PROSE[path][1]
+                    or work['source_keys'] != source_keys or work['reading_forms'] != forms
+                    or work['supporting_source_keys'] != support or work['existing_result_ids'] != result_ids[key]
+                    or all_forms != [forms[0]] or relations != [relation]
+                    or any(key in j.get('source_keys', []) for j in cross['reader_journeys'])):
+                raise ValueError('typed source, current reading or retained component relationship differs')
+        retained = {
+            't14-separation-lean': ('48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c', 'IntensionalIdentityTheorems.lean'),
+            't14-written-review': ('996107254670edb11d47dddc03ce0b6dd4fe045ae41b6d73b2079f3c827862f1', 'Orthemology_Fourteenth_Checkpoint_Verification_v1_20261005.json'),
+            't14-review': ('e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb', 'Orthemology_Fourteenth_Completion_Verification_v1_20261005.json'),
+        }
+        for key, (identity, name) in retained.items():
+            source = cross['sources'][key]
+            if (source['path'] != 'experiments/orthemology-v5-successors/source-store/' + identity + '/' + name
+                    or source['sha256'] != identity):
+                raise ValueError('distinct typed formal or review source identity differs')
+        suite = cross['sources']['t14-suite']
+        if (suite['path'] != 'experiments/orthemology-v5-successors/suites/t14-identity.json'
+                or suite['sha256'] != 'c71afd9b7487ee8f14a6ae9d32a4eb90f427f6ad37c69ada645665aadf731386'):
+            raise ValueError('distinct typed suite identity differs')
+        for path in TYPED_GUIDES:
+            typed_guide_source_bytes(root, path)
+    except (KeyError, TypeError, UnicodeError) as error:
+        raise ValueError('malformed typed current-owner contract') from error
 
 
 def mediator_guide_source_bytes(root, *, allow_original=False):

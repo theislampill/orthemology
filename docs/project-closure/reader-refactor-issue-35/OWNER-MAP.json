@@ -804,6 +804,38 @@
       "role": "historical-source",
       "reading_source": "consolidated-information-and-inquiry",
       "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "ab7ccee9a98d5a88b8b79a6f0d6a010298bf3204",
+      "role": "historical-source",
+      "reading_source": "consolidated-encodings-and-witnesses",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "0692dd6d775e0391498c97c5b77e8c83cf32eb41",
+      "role": "historical-source",
+      "reading_source": "consolidated-encodings-and-witnesses",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "a4d90c7d566d79394ca4755bf1d792e810d66880",
+      "role": "historical-source",
+      "reading_source": "consolidated-encodings-and-witnesses",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "4920e71de4ac0c17fa8a93f02cd891d65ea8ad74",
+      "role": "historical-source",
+      "reading_source": "consolidated-encodings-and-witnesses",
+      "basis": "scientific-consolidation-review"
     }
   ]
 }

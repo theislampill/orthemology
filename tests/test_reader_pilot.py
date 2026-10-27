@@ -947,6 +947,29 @@ class ReaderFixtureReferenceTests(unittest.TestCase):
 
 class HistoricalMetadataPinTests(unittest.TestCase):
     """Historical source custody survives an authorised current-index addition."""
+    TYPED_REVISION = "a7ff0e33d1a299db640041c46b1af81ca70851f6"
+    TYPED_PINS = (
+        ("experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md",
+         "ab7ccee9a98d5a88b8b79a6f0d6a010298bf3204"),
+        ("experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md",
+         "0692dd6d775e0391498c97c5b77e8c83cf32eb41"),
+        ("experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md",
+         "a4d90c7d566d79394ca4755bf1d792e810d66880"),
+        ("experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md",
+         "4920e71de4ac0c17fa8a93f02cd891d65ea8ad74"),
+    )
+
+    def prior_to_typed_pins(self):
+        """Build the exact prior form before testing its earlier pin sequence."""
+        value = json.loads((ROOT / self.manifest_path).read_bytes())
+        for path, blob in self.TYPED_PINS:
+            row = next(r for r in value["objects"] if r.get("repository_path") == path)
+            self.assertEqual((row["repository_revision"], row["git_blob"]),
+                             (self.TYPED_REVISION, blob))
+            del row["repository_revision"]
+            del row["git_blob"]
+        return value
+
     @classmethod
     def setUpClass(cls):
         spec = importlib.util.spec_from_file_location("reader_metadata_pin", MODULE)
@@ -1007,7 +1030,8 @@ class HistoricalMetadataPinTests(unittest.TestCase):
         # Preserve the exact original document, adding only the separately
         # qualified four prose bindings, three mediator/evidence bindings,
         # two math-code evidence bindings, the Fisher ADD_EXACT binding,
-        # the legacy guide-test code binding, and the two old pins.
+        # the legacy guide-test code binding, the two old pins, and the four
+        # exact typed-prose bindings introduced after that ordered form.
         for path in HistoricalProseReaderTests.PATHS:
             for row in expected["objects"]:
                 if row.get("repository_path") == path:
@@ -1033,12 +1057,16 @@ class HistoricalMetadataPinTests(unittest.TestCase):
         ):
             row = next(r for r in expected["objects"] if r.get("repository_path") == path)
             row.update(repository_revision=revision, git_blob=blob)
+        for path, blob in self.TYPED_PINS:
+            row = next(r for r in expected["objects"] if r.get("repository_path") == path)
+            row.update(repository_revision=self.TYPED_REVISION, git_blob=blob)
         actual = json.loads((ROOT / self.manifest_path).read_bytes())
         self.assertEqual(actual, expected, "historical owner metadata changed outside the finite bindings")
+        self.assertTrue(self.permitted(actual), "the complete current ordered pin form must be admitted")
 
     def test_fisher_pin_follows_all_prior_pins_without_resetting_the_manifest(self):
         path = "research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md"
-        value = json.loads((ROOT / self.manifest_path).read_bytes())
+        value = self.prior_to_typed_pins()
         legacy = next(r for r in value["objects"]
                       if r.get("repository_path") == "tests/test_v5_twentieth_data.py")
         legacy.pop("repository_revision")
@@ -1068,7 +1096,7 @@ class HistoricalMetadataPinTests(unittest.TestCase):
 
     def test_legacy_guide_code_pin_follows_fisher_without_resetting_prior_forms(self):
         path = "tests/test_v5_twentieth_data.py"
-        value = json.loads((ROOT / self.manifest_path).read_bytes())
+        value = self.prior_to_typed_pins()
         row = next(r for r in value["objects"] if r.get("repository_path") == path)
         self.assertEqual((row["disposition"], row["repository_revision"], row["git_blob"]),
                          ("REUSE", "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
@@ -1494,14 +1522,29 @@ class IdentityLineageCoverageTests(unittest.TestCase):
         cls.catalogue = "docs/reader/PAPER-CATALOGUE.md"
         cls.text = (ROOT / cls.catalogue).read_text()
         cls.baseline = cls.owners["baseline"]["commit"]
+        cls.historical_routes = {
+            cls.cross["sources"][key]["path"]: (
+                "https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/"
+                + cls.cross["sources"][key]["path"], "../../logic/encodings-and-witnesses.md#" + anchor)
+            for key, anchor in {
+                "t13-opaque": "103-equal-evaluation-need-not-preserve-a-supplied-typing",
+                "t13-residual": "105-the-identity-question-that-packing-leaves-open",
+                "t13-bridge": "104-what-the-bridge-repairs",
+                "t14-separation": "107-full-rule-separation-and-the-exact-closed-criterion",
+            }.items()
+        }
         cls.members = set()
         for group in ("t13-identity", "t14-identity"):
             path = "experiments/orthemology-v5-successors/groups/" + group + "/README.md"
             raw = subprocess.check_output(["git", "show", cls.baseline + ":" + path], cwd=ROOT).decode()
             for _, href in cls.mod.markdown_index(raw)["links"]:
                 if "source-store/" in href and href.endswith((".md", ".lean")):
-                    target = cls.mod.resolve_reader_link(ROOT, path, href)
-                    cls.members.add(target[0])
+                    # The original owner defines all seven identities even when
+                    # a qualified prose occurrence is read through exact history.
+                    target = posixpath.normpath(posixpath.join(posixpath.dirname(path), href))
+                    if not target.startswith("experiments/orthemology-v5-successors/source-store/"):
+                        raise ValueError("Original identity owner has an unexpected source route")
+                    cls.members.add(target)
         cls.results = json.loads(subprocess.check_output([
             "git", "show", cls.baseline + ":docs/provenance/v5-successors/RESULT_STATUS.json"], cwd=ROOT))
 
@@ -1525,6 +1568,12 @@ class IdentityLineageCoverageTests(unittest.TestCase):
                     continue
                 _, level, start = selected[0]
                 end = next((h[2] for h in page["headings"] if h[2] > start and h[1] <= level), page["line_count"])
+                if member in self.historical_routes:
+                    links = {href for line, href in page["links"] if start <= line < end}
+                    original, current = self.historical_routes[member]
+                    if original in links and current in links:
+                        reachable = True
+                    continue
                 for line, href in page["links"]:
                     if start <= line < end:
                         target = self.mod.resolve_reader_link(ROOT, self.catalogue, href)
@@ -1555,9 +1604,16 @@ class IdentityLineageCoverageTests(unittest.TestCase):
         self.assertEqual(self.routes(self.text, self.cross), [])
         for member in sorted(self.members):
             # Alter every use of this source target, not its visible link label.
-            href = "../../" + member
+            href = self.historical_routes.get(member, ("../../" + member,))[0]
             altered = self.text.replace(href, "../../README.md")
             with self.subTest(source=member):
+                self.assertNotEqual(altered, self.text)
+                self.assertIn("missing-route: " + member, self.routes(altered, self.cross))
+
+    def test_each_migrated_prose_work_retains_a_direct_current_reading_route(self):
+        for member, (_, current) in self.historical_routes.items():
+            with self.subTest(source=member):
+                altered = self.text.replace(current, "../../README.md")
                 self.assertNotEqual(altered, self.text)
                 self.assertIn("missing-route: " + member, self.routes(altered, self.cross))
 

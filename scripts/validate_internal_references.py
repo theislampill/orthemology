@@ -31,6 +31,7 @@ from validate_repo import (load_source_map, original_packet_locator,
                            load_successor_source_map, successor_packet_locator,
                            successor_origin_document, markdown_link_targets,
                            strip_markdown_math)
+from resolve_t20_v6_source import TYPED_PROSE, TYPED_PROSE_REVISION, historical_source_bytes
 import os
 import re
 import subprocess
@@ -179,6 +180,14 @@ def _committed_plans():
 
 
 def _resolves(src, cited):
+    # These four canonical source identities have a qualified current reading
+    # and an exact original Git route. A present corrupt copy still fails.
+    if cited in TYPED_PROSE:
+        try:
+            historical_source_bytes(ROOT, cited, TYPED_PROSE_REVISION, TYPED_PROSE[cited][0])
+            return True
+        except (ValueError, OSError):
+            return False
     if os.path.exists(os.path.join(ROOT, cited)):
         return True
     directory = os.path.dirname(src)

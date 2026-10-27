@@ -169,9 +169,13 @@ These entries preserve **twelve existing result scopes across six works**, not t
 
 ### Equal evaluation need not preserve a supplied certificate
 
+Current exposition: [Opaque representations and typing][typed-t13-opaque-current].
+
 **`T13-OPAQUE-REPRESENTATION`.** The [opaque-atom paper][t13-opaque] gives an exposed polynomial `p` and a whole opaque atom `q` whose raw evaluations are literally equal, but only `p` has the specified polymorphic identity type. The proof covers every original typing rule through whole-label replacement and its stated side conditions. The opaque `q` can still have type `Raw`; the failure concerns its prescribed representation at the specified target.
 
 The discarded-loop corollary shows that having a finite typable representative modulo raw conversion does not suffice for that opaque representation. This is **not** a counterexample to forward subject reduction, and it does not show that no other inhabitant exists. Its evidence is ordinary written mathematics; no new Lean status is assigned here.
+
+Current exposition: [The atom/application bridge][typed-t13-bridge-current].
 
 **`T13-ATOM-APPLICATION-BRIDGE`.** The [bridge paper][t13-bridge] defines a separate copied eighteen-rule `HasPlus` judgment using one extra polynomial-conversion equation:
 
@@ -183,7 +187,11 @@ For closed polynomials, its enlarged polynomial conversion is equivalent to raw 
 
 ### An open all-rule question acquires a later resolution
 
+Current exposition: [The historical residual identity question][typed-t13-residual-current].
+
 **Historical scopes `T13-RESIDUAL-HAS` and `T13-RESIDUAL-PLUS`.** Both refer to one [residual-identity note][t13-residual], not two papers. With `A` the polymorphic identity carrier, let `B` express typed identity between `atom(I)` and `atom(SKK)` at `A`. The note supplies formation and an original `F/G` semantic witness. It explicitly does **not** conclude all-rule noninhabitation merely because direct identity introduction fails.
+
+Current exposition: [Full-rule separation and the closed criterion][typed-t14-separation-current].
 
 **Later scopes `T14-I-SKK-HAS` and `T14-I-SKK-PLUS`.** The [full-rule written development][t14-separation] and its [specified formal component][t14-separation-lean] establish that **every** polynomial fails that exact identity typing in the respective old judgments. The alternate interpretation coherently transports types, contexts and substitutions and covers all eighteen constructors, including finite import, universal types and identity elimination. The original `F/G` semantic witness remains. This proves the stated incompleteness relative to that semantics, not unsoundness of the rules.
 
@@ -476,13 +484,17 @@ The positive result is an exact syntactic/semantic preservation theorem for a sp
 
 [t14-group]: ../../experiments/orthemology-v5-successors/groups/t14-identity/README.md
 
-[t13-opaque]: ../../experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md
+[t13-opaque]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md
+[typed-t13-opaque-current]: ../../logic/encodings-and-witnesses.md#103-equal-evaluation-need-not-preserve-a-supplied-typing
 
-[t13-bridge]: ../../experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
+[t13-bridge]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
+[typed-t13-bridge-current]: ../../logic/encodings-and-witnesses.md#104-what-the-bridge-repairs
 
-[t13-residual]: ../../experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+[t13-residual]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+[typed-t13-residual-current]: ../../logic/encodings-and-witnesses.md#105-the-identity-question-that-packing-leaves-open
 
-[t14-separation]: ../../experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+[t14-separation]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+[typed-t14-separation-current]: ../../logic/encodings-and-witnesses.md#107-full-rule-separation-and-the-exact-closed-criterion
 
 [t14-separation-lean]: ../../experiments/orthemology-v5-successors/source-store/48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c/IntensionalIdentityTheorems.lean
 

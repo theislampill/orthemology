@@ -13312,7 +13312,7 @@
       "reading_forms": [
         {
           "source": "t13-opaque",
-          "relationship": "authored-source"
+          "relationship": "historical-source"
         }
       ],
       "placement": [
@@ -13338,7 +13338,7 @@
       "reading_forms": [
         {
           "source": "t13-bridge",
-          "relationship": "authored-source"
+          "relationship": "historical-source"
         }
       ],
       "placement": [
@@ -13364,7 +13364,7 @@
       "reading_forms": [
         {
           "source": "t13-residual",
-          "relationship": "authored-source"
+          "relationship": "historical-source"
         }
       ],
       "placement": [
@@ -13392,7 +13392,7 @@
       "reading_forms": [
         {
           "source": "t14-separation",
-          "relationship": "authored-source"
+          "relationship": "historical-source"
         },
         {
           "source": "t14-separation-lean",
@@ -22927,6 +22927,30 @@
     {
       "from": "fisher",
       "to": "consolidated-information-and-inquiry",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "t13-opaque",
+      "to": "consolidated-encodings-and-witnesses",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "t13-residual",
+      "to": "consolidated-encodings-and-witnesses",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "t13-bridge",
+      "to": "consolidated-encodings-and-witnesses",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "t14-separation",
+      "to": "consolidated-encodings-and-witnesses",
       "kind": "logical-content-incorporated-historical-source-retained",
       "basis": "scientific-consolidation-review"
     }

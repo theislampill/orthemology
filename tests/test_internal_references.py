@@ -23,7 +23,7 @@ SENTINEL = DOCS + "/future/SYNTHETIC-PLANNED-OUTPUT.json"
 PLAN = Path(DOCS) / "superpowers/plans/synthetic-internal-reference-plan.md"
 
 
-def run_command(command, cwd, *, check=True):
+def run_command(command, cwd, *, check=True, env=None):
     return subprocess.run(
         command,
         cwd=cwd,
@@ -31,6 +31,7 @@ def run_command(command, cwd, *, check=True):
         encoding="utf-8",
         capture_output=True,
         check=check,
+        env=env,
     )
 
 
@@ -102,6 +103,10 @@ def run_validator(root=ROOT):
         [sys.executable, str(validator)],
         root,
         check=False,
+        # Supply the unchanged production resolver as an import dependency.
+        # The fixture-local validator and validate_repo remain first on sys.path;
+        # dependency source files are not added to the miniature citation corpus.
+        env={**os.environ, "PYTHONPATH": str(ROOT / "scripts")},
     )
 
 

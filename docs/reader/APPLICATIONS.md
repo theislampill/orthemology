@@ -51,6 +51,8 @@ To apply it, establish the conditional-independence cut and account for side inf
 
 ## Choosing an equality contract for a proof-carrying representation
 
+Current exposition: [The atom/application bridge][typed-t13-bridge-current].
+
 The [identity work sequence](PAPER-CATALOGUE.md#identity-representations-and-finite-proof) gives a concrete design comparison. An exposed polynomial and an opaque atom can evaluate to the same raw term yet differ in whether they carry the specified type certificate. Replacing one with the other therefore needs more than evaluation equality. The [bridge construction][t13-bridge] supplies one particular closed-conversion remedy; it does not preserve every proof claim by declaration.
 
 A second question concerns `I` and `SKK`. The original semantics agrees at the selected polymorphic carrier, but the old derivation rules do not inhabit the corresponding identity. The [typed HasE repair][t14-repair] is a separately named way to derive that identity while keeping raw conversion and the old judgments unchanged. A tool using the repair would have to identify its rule set, check its side conditions and retain that distinction in exchanged certificates. The reader guide proposes no runtime implementation or automatic migration.
@@ -281,7 +283,8 @@ A translation that needs rule-construction history should retain the [explicit o
 [app-writeback]: ../../applications/agentic-runtime/HERMES-WRITEBACK-ADOPTION-PROFILE.yaml
 [app-collective]: ../../applications/agentic-runtime/COLLECTIVE-SOMNUS-TRANSCLUSION-PROFILE.yaml
 
-[t13-bridge]: ../../experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
+[t13-bridge]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
+[typed-t13-bridge-current]: ../../logic/encodings-and-witnesses.md#104-what-the-bridge-repairs
 
 [t14-repair]: ../../experiments/orthemology-v5-successors/source-store/4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51/ExtensionalRepairTheorems.lean
 

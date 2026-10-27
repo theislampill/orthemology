@@ -317,14 +317,17 @@ def _sources(bundle, root):
                     'CUSTODY_ONLY source has public payload')
             continue
         digest(row['public_sha256']); integer(row['public_bytes'])
-        path = path_in(root, row['public_path'], exists=row['public_path'] != _source.MEDIATOR_COORDINATION)
+        historical = {_source.MEDIATOR_COORDINATION: 'T12-SOURCE-COORDINATION',
+                      **_source.TYPED_V5_SOURCE_IDS}
+        path = path_in(root, row['public_path'], exists=row['public_path'] not in historical)
         prefix = AREA + '/source-store/' + row['public_sha256'] + '/'
         require(row['public_path'].startswith(prefix), 'Wrong public source content-addressed path')
-        if row['public_path'] == _source.MEDIATOR_COORDINATION:
-            require(row['id'] == 'T12-SOURCE-COORDINATION' and row['projection'] == 'EXACT',
-                    'Wrong finite mediator source role')
-            raw = _source.historical_source_bytes(root, _source.MEDIATOR_COORDINATION,
-                _source.MEDIATOR_PROSE_REVISION, _source.MEDIATOR_PROSE[_source.MEDIATOR_COORDINATION][0])
+        if row['public_path'] in historical:
+            name = row['public_path']
+            require(row['id'] == historical[name] and row['projection'] == 'EXACT',
+                    'Wrong finite historical prose source role')
+            raw = _source.historical_source_bytes(root, name,
+                _source.HISTORICAL_PROSE_REVISIONS[name], _source.HISTORICAL_PROSE[name][0])
         else:
             raw = path.read_bytes()
         require(len(raw) == row['public_bytes'] and hashlib.sha256(raw).hexdigest() == row['public_sha256'],
@@ -373,11 +376,14 @@ def _allowlist(bundle, root, sources):
         keys(row, {'path', 'sha256', 'bytes', 'kind', 'source_ids'})
         enum(row['kind'], {'SOURCE', 'AUTHORED', 'METADATA', 'VALIDATOR', 'TEST'})
         refs(row['source_ids'], sources, 'allowlist source')
-        path = path_in(root, name, exists=name != _source.MEDIATOR_COORDINATION)
-        if name == _source.MEDIATOR_COORDINATION:
-            require(row['kind'] == 'SOURCE' and row['source_ids'] == ['T12-SOURCE-COORDINATION'],
-                    'Wrong finite mediator allowlist role')
-            raw = _source.historical_source_bytes(root, name, _source.MEDIATOR_PROSE_REVISION, _source.MEDIATOR_PROSE[name][0])
+        historical = {_source.MEDIATOR_COORDINATION: 'T12-SOURCE-COORDINATION',
+                      **_source.TYPED_V5_SOURCE_IDS}
+        path = path_in(root, name, exists=name not in historical)
+        if name in historical:
+            require(row['kind'] == 'SOURCE' and row['source_ids'] == [historical[name]],
+                    'Wrong finite historical prose allowlist role')
+            raw = _source.historical_source_bytes(root, name,
+                _source.HISTORICAL_PROSE_REVISIONS[name], _source.HISTORICAL_PROSE[name][0])
             if not path.exists():
                 authenticated_absent.add(name)
         elif name == _source.MEDIATOR_GUIDE:
@@ -385,6 +391,12 @@ def _allowlist(bundle, root, sources):
                     and row['sha256'] == _source.MEDIATOR_GUIDE_SHA256 and row['bytes'] == _source.MEDIATOR_GUIDE_BYTES,
                     'Original guide allowlist identity changed')
             raw = _source.mediator_guide_source_bytes(root)
+        elif name in _source.TYPED_GUIDES:
+            _, identity, size, _ = _source.TYPED_GUIDES[name]
+            require(row['kind'] == 'AUTHORED' and row['source_ids'] == []
+                    and row['sha256'] == identity and row['bytes'] == size,
+                    'Original typed guide allowlist identity changed')
+            raw = _source.typed_guide_source_bytes(root, name)
         else:
             raw = path.read_bytes()
         require(hashlib.sha256(raw).hexdigest() == digest(row['sha256']) and len(raw) == integer(row['bytes']),

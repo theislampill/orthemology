@@ -11,7 +11,10 @@ BASE = 'fd0903d99d657c35e32fddcc8864d2a77930cf40'
 PROV = 'docs/provenance/v5-successors/'
 sys.path.insert(0, str(ROOT / 'scripts'))
 import validate_v5_successors as validator
-from resolve_t20_v6_source import MEDIATOR_GUIDE, mediator_guide_source_bytes
+from resolve_t20_v6_source import (
+    MEDIATOR_GUIDE, mediator_guide_source_bytes, TYPED_GUIDES,
+    typed_guide_source_bytes, TYPED_PROSE, TYPED_PROSE_REVISION, historical_source_bytes,
+)
 
 
 def read(name):
@@ -82,6 +85,15 @@ class TwentiethDataTests(unittest.TestCase):
             if old['path'] == MEDIATOR_GUIDE:
                 self.assertEqual(current[old['path']], old)
                 raw = mediator_guide_source_bytes(ROOT)
+                actual_bytes = len(raw)
+            elif old['path'] in TYPED_GUIDES:
+                self.assertEqual(current[old['path']], old)
+                raw = typed_guide_source_bytes(ROOT, old['path'])
+                actual_bytes = len(raw)
+            elif old['path'] in TYPED_PROSE:
+                self.assertEqual(current[old['path']], old)
+                raw = historical_source_bytes(ROOT, old['path'], TYPED_PROSE_REVISION,
+                                              TYPED_PROSE[old['path']][0])
                 actual_bytes = len(raw)
             else:
                 raw = path.read_bytes()

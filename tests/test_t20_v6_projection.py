@@ -655,7 +655,8 @@ class MediatorOwnerMigrationTests(unittest.TestCase):
         # Keep this fixture at its independently qualified seven-path scope.
         self.owners['historical_source_bindings'] = [
             r for r in self.owners['historical_source_bindings']
-            if r['path'] != FisherOwnerMigrationTests.PATH]
+            if r['path'] != FisherOwnerMigrationTests.PATH
+            and r['path'] not in self.resolver.TYPED_PROSE]
         for name in (self.COORD, self.APPROX):
             self.owners['historical_source_bindings'] = [r for r in self.owners['historical_source_bindings']
                                                         if r['path'] != name]
@@ -910,6 +911,10 @@ class FisherOwnerMigrationTests(unittest.TestCase):
                         '100644,7c6a9bfdeaf8372d3ea73ff8a06f4aefb17ef838,' +
                         MediatorOwnerMigrationTests.GUIDE], cwd=self.root, check=True)
         self.owners = json.loads((self.root / self.OWNER).read_bytes())
+        # This pre-existing fixture retains its independently qualified eight paths.
+        self.owners['historical_source_bindings'] = [r for r in self.owners['historical_source_bindings']
+                                                     if r['path'] not in self.resolver.TYPED_PROSE]
+        self.put(self.OWNER, json.dumps(self.owners).encode())
         self.cross = json.loads((self.root / self.CROSS).read_bytes())
         self.additions = {r['path']: r for r in self.owners['source_additions']}
         self.row = dict(source_sha256=self.SHA, source_bytes=29666,
@@ -1311,6 +1316,427 @@ class ReadOnlyPreservedRootDiffTests(unittest.TestCase):
             self._git("config", "core.splitIndex", "false")
         self._diff_observation = {"unsupported_cases": observed,
                                   "restored_fixture_index": index.read_bytes() == original}
+
+
+
+class TypedProseOwnerMigrationTests(unittest.TestCase):
+    """Four prose identities migrate; original proofs, reviews and roles survive."""
+
+    REV = 'a7ff0e33d1a299db640041c46b1af81ca70851f6'
+    OWNER = 'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json'
+    CROSS = 'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json'
+    CHAPTER = 'logic/encodings-and-witnesses.md'
+    REVIEW = 'docs/scientific-consolidation-review.md'
+    WORK = 'consolidated-encodings-and-witnesses'
+    ITEMS = {
+        't13-opaque': ('b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236',
+            'OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md', 'ab7ccee9a98d5a88b8b79a6f0d6a010298bf3204',
+            26969, 'identity-src-18324561d5a479234e08', '103-equal-evaluation-need-not-preserve-a-supplied-typing'),
+        't13-residual': ('7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e',
+            'RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md', '0692dd6d775e0391498c97c5b77e8c83cf32eb41',
+            11482, 'identity-src-36405a21fb515a544d13', '105-the-identity-question-that-packing-leaves-open'),
+        't13-bridge': ('02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe',
+            'HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md', 'a4d90c7d566d79394ca4755bf1d792e810d66880',
+            19906, 'identity-src-210a260c6b65330bbabb', '104-what-the-bridge-repairs'),
+        't14-separation': ('5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a',
+            'Intensional_Identity_Separation_and_Closed_Identity_Conversion.md', '4920e71de4ac0c17fa8a93f02cd891d65ea8ad74',
+            48239, 'identity-src-ae495071a75fcc65a509', '107-full-rule-separation-and-the-exact-closed-criterion'),
+    }
+    GUIDES = {
+        'experiments/orthemology-v5-successors/groups/t13-identity/README.md':
+            {'t13-opaque': 1, 't13-residual': 2, 't13-bridge': 1},
+        'experiments/orthemology-v5-successors/groups/t14-identity/README.md':
+            {'t14-separation': 5},
+    }
+
+    @classmethod
+    def setUpClass(cls):
+        import importlib.util
+        import subprocess
+        import check_reader_pilot
+        import resolve_t20_v6_source
+        cls.reader, cls.resolver = check_reader_pilot, resolve_t20_v6_source
+        cls.project = projection.ROOT
+        spec = importlib.util.spec_from_file_location('typed_v5_owner',
+            pathlib.Path(cls.resolver.__file__).with_name('validate_v5_successors.py'))
+        cls.v5 = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.v5)
+        cls.paths = {k: 'experiments/orthemology-v5-successors/source-store/' + row[0] + '/' + row[1]
+                     for k, row in cls.ITEMS.items()}
+        cls.owners_original = json.loads((cls.project / cls.OWNER).read_bytes())
+        cls.cross_original = json.loads((cls.project / cls.CROSS).read_bytes())
+        cls.earlier = [r for r in cls.owners_original['historical_source_bindings']
+                       if r['path'] not in cls.paths.values()]
+        if len(cls.earlier) != 8:
+            raise ValueError('This fixture requires the eight preserved earlier bindings')
+        cls.bindings = cls.earlier + [dict(path=cls.paths[key], repository_revision=cls.REV,
+            git_blob=row[2], role='historical-source', reading_source=cls.WORK,
+            basis='scientific-consolidation-review') for key, row in cls.ITEMS.items()]
+        cls.original = {}
+        cls.object_data = {}
+
+        def acquire(oid, kind):
+            if oid not in cls.object_data:
+                body = subprocess.check_output(['git', '--no-replace-objects', 'cat-file', kind, oid],
+                                               cwd=cls.project)
+                cls.object_data[oid] = (kind, body)
+            return cls.object_data[oid][1]
+
+        def acquire_path(revision, path):
+            attributes = subprocess.check_output(['git', '--no-replace-objects', 'ls-tree', '-z',
+                revision, '--', '.gitattributes'], cwd=cls.project)
+            if attributes:
+                metadata, name = attributes.rstrip(b'\0').split(b'\t')
+                mode, kind, oid = metadata.decode().split()
+                if mode != '100644' or kind != 'blob' or name != b'.gitattributes':
+                    raise ValueError('unsafe fixture Git attributes dependency')
+                acquire(oid, kind)
+            acquire(revision, 'commit')
+            tree = subprocess.check_output(['git', '--no-replace-objects', 'rev-parse', revision + '^{tree}'],
+                                           cwd=cls.project).decode().strip()
+            parts = path.split('/')
+            for index, part in enumerate(parts):
+                acquire(tree, 'tree')
+                entry = subprocess.check_output(['git', '--no-replace-objects', '--literal-pathspecs',
+                    'ls-tree', '-z', tree, '--', part], cwd=cls.project)
+                metadata, actual = entry.rstrip(b'\0').split(b'\t')
+                mode, kind, oid = metadata.decode().split()
+                if actual.decode() != part:
+                    raise ValueError('wrong fixture Git path')
+                if index == len(parts) - 1:
+                    if mode != '100644' or kind != 'blob':
+                        raise ValueError('fixture original must be regular data')
+                    return acquire(oid, kind), oid
+                if kind != 'tree':
+                    raise ValueError('fixture path ancestor is not a tree')
+                tree = oid
+
+        for row in cls.bindings:
+            body, oid = acquire_path(row['repository_revision'], row['path'])
+            if oid != row['git_blob']:
+                raise ValueError('fixture source blob differs')
+            cls.original[row['path']] = body
+        cls.guide_original = {}
+        cls.guide_blobs = {}
+        for path in [*cls.GUIDES, cls.resolver.MEDIATOR_GUIDE]:
+            cls.guide_original[path], cls.guide_blobs[path] = acquire_path(cls.REV, path)
+        cls.old_manifest, cls.old_manifest_blob = acquire_path(cls.REV, projection.MANIFEST)
+        cls.current_manifest = json.loads((cls.project / projection.MANIFEST).read_bytes())
+        cls.source_map = json.loads((cls.project / 'docs/provenance/v5-successors/SOURCE_MAP.json').read_bytes())
+        cls.projection_map = json.loads((cls.project / 'docs/provenance/v5-successors/PUBLIC_PROJECTION.json').read_bytes())
+        cls.current_bodies = {p: (cls.project / p).read_bytes() for p in (
+            cls.CHAPTER, cls.REVIEW, 'epistemology/recognition-warrant-and-restoration.md',
+            'mathematics/information-and-inquiry.md', 'mathematics/collective-inquiry-and-strategic-coordination.md')}
+
+    def setUp(self):
+        from copy import deepcopy
+        import subprocess
+        self.tmp = tempfile.TemporaryDirectory(prefix='typed-owner-')
+        self.addCleanup(self.tmp.cleanup)
+        self.root = pathlib.Path(self.tmp.name)
+        subprocess.run(['git', 'init', '-q', str(self.root)], check=True)
+        for oid, (kind, body) in self.object_data.items():
+            got = subprocess.check_output(['git', 'hash-object', '-t', kind, '-w', '--stdin'],
+                                          cwd=self.root, input=body).decode().strip()
+            self.assertEqual(got, oid)
+        for path, body in {**self.current_bodies, **self.original}.items():
+            self.put(path, body)
+        self.owners = deepcopy(self.owners_original)
+        self.cross = deepcopy(self.cross_original)
+        self.owners['historical_source_bindings'] = deepcopy(self.bindings)
+        for key in self.ITEMS:
+            work = next(w for w in self.cross['works'] if w['key'] == key)
+            form = next(f for f in work['reading_forms'] if f['source'] == key)
+            form['relationship'] = 'historical-source'
+            relation = {'from': key, 'to': self.WORK,
+                        'kind': 'logical-content-incorporated-historical-source-retained',
+                        'basis': 'scientific-consolidation-review'}
+            self.cross['relations'] = [r for r in self.cross['relations']
+                if not (r.get('from') == key and r.get('kind') == relation['kind'])] + [relation]
+        self.write_context()
+        self.guides = {}
+        for path, members in self.GUIDES.items():
+            body = self.guide_original[path]
+            for key, count in members.items():
+                old = ('../../source-store/' + self.paths[key].split('/source-store/', 1)[1]).encode()
+                self.assertEqual(body.count(old), count)
+                body = body.replace(old, self.original_url(key).encode())
+            self.guides[path] = body
+        path = self.resolver.MEDIATOR_GUIDE
+        old = ('../../source-store/' + self.resolver.MEDIATOR_COORDINATION.split('/source-store/', 1)[1]).encode()
+        url = ('https://github.com/theislampill/orthemology/blob/' + self.REV + '/' +
+               self.resolver.MEDIATOR_COORDINATION).encode()
+        self.guides[path] = self.guide_original[path].replace(old, url)
+        for path, body in self.guides.items():
+            self.put(path, body)
+        for row in self.bindings:
+            self.stage(row['path'], row['git_blob'])
+        for path, blob in self.guide_blobs.items():
+            self.stage(path, blob)
+        self.rows = {key: dict(source_sha256=row[0], source_bytes=row[3], disposition='REUSE',
+            repository_path=self.paths[key], public_sha256=row[0], public_bytes=row[3],
+            repository_revision=self.REV, git_blob=row[2]) for key, row in self.ITEMS.items()}
+        public = set(self.paths.values()) | {self.resolver.MEDIATOR_COORDINATION}
+        self.bundle = dict(sources=[deepcopy(r) for r in self.source_map['sources'] if r.get('public_path') in public],
+            reviews=[], projection_reviews=[], public_allowlist=[deepcopy(r) for r in self.projection_map['allowlist']
+                if r['path'] in public | set(self.guides)])
+
+    def put(self, path, body):
+        target = self.root / path
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(body)
+        target.chmod(0o644)
+
+    def stage(self, path, blob, mode='100644'):
+        import subprocess
+        subprocess.run(['git', 'update-index', '--add', '--cacheinfo', mode + ',' + blob + ',' + path],
+                       cwd=self.root, check=True)
+
+    def write_context(self):
+        self.put(self.OWNER, (json.dumps(self.owners) + '\n').encode())
+        self.put(self.CROSS, (json.dumps(self.cross) + '\n').encode())
+
+    def original_url(self, key):
+        return 'https://github.com/theislampill/orthemology/blob/' + self.REV + '/' + self.paths[key]
+
+    def reject(self, key, row=None):
+        selected = self.rows[key] if row is None else row
+        self.assertTrue(projection.check_object(self.root, selected))
+        with self.assertRaises((ValueError, OSError)):
+            self.resolver.source_bytes(self.root, selected)
+
+    def test_exact_four_public_sources_authenticate_present(self):
+        for key, spec in self.ITEMS.items():
+            with self.subTest(source=key):
+                body = self.original[self.paths[key]]
+                self.assertEqual((len(body), hashlib.sha256(body).hexdigest()), (spec[3], spec[0]))
+                try:
+                    actual = self.resolver.source_bytes(self.root, self.rows[key])
+                except (ValueError, OSError) as error:
+                    self.fail('exact typed source owner route rejected: ' + str(error))
+                self.assertEqual(actual, body)
+                self.assertEqual(projection.check_object(self.root, self.rows[key]), [])
+        # Physical bytes never substitute for the required exact history object.
+        key = 't13-opaque'
+        blob = self.ITEMS[key][2]
+        (self.root / '.git/objects' / blob[:2] / blob[2:]).unlink()
+        self.assertTrue((self.root / self.paths[key]).is_file())
+        self.reject(key)
+
+    def test_only_four_typed_absences_use_exact_objects_without_writes(self):
+        for key in self.ITEMS:
+            (self.root / self.paths[key]).unlink()
+        before = (self.root / '.git/index').read_bytes()
+        for key in self.ITEMS:
+            self.assertEqual(self.resolver.source_bytes(self.root, self.rows[key]), self.original[self.paths[key]])
+            self.assertEqual(projection.check_object(self.root, self.rows[key]), [])
+            self.assertFalse((self.root / self.paths[key]).exists())
+        self.assertEqual((self.root / '.git/index').read_bytes(), before)
+        self.assertTrue(all((self.root / r['path']).is_file() for r in self.earlier))
+
+    def test_wrong_typed_identity_revision_role_and_alias_are_rejected(self):
+        for key in self.ITEMS:
+            for field, wrong in [('repository_revision', 'HEAD'), ('repository_revision', projection.BASE),
+                    ('git_blob', '0' * 40), ('source_sha256', '0' * 64), ('public_sha256', '0' * 64),
+                    ('source_bytes', 1), ('public_bytes', 1), ('disposition', 'ADD_EXACT'),
+                    ('repository_path', self.paths[key].replace('.md', '_alias.md'))]:
+                with self.subTest(source=key, field=field):
+                    self.reject(key, dict(self.rows[key], **{field: wrong}))
+
+    def test_present_typed_corruption_symlink_and_executable_cannot_fall_back(self):
+        for key in self.ITEMS:
+            path = self.paths[key]
+            target = self.root / path
+            for kind in ('bytes', 'symlink', 'executable', 'directory'):
+                with self.subTest(source=key, kind=kind):
+                    try:
+                        if kind == 'bytes': target.write_bytes(self.original[path] + b'wrong\n')
+                        elif kind == 'executable': target.chmod(0o755)
+                        else:
+                            target.unlink()
+                            if kind == 'symlink': target.symlink_to('absent-original')
+                            else: target.mkdir()
+                        self.reject(key)
+                    finally:
+                        if target.is_symlink(): target.unlink()
+                        elif target.is_dir(): target.rmdir()
+                        self.put(path, self.original[path])
+
+    def test_staged_wrong_blob_mode_and_conflict_reject_present_typed_prose(self):
+        import subprocess
+        wrong = subprocess.check_output(['git', 'hash-object', '-w', '--stdin'], cwd=self.root,
+                                        input=b'wrong typed staged body\n').decode().strip()
+        for key, spec in self.ITEMS.items():
+            path = self.paths[key]
+            for mode, blob in [('100644', wrong), ('100755', spec[2]), ('120000', wrong)]:
+                with self.subTest(source=key, mode=mode):
+                    self.stage(path, blob, mode)
+                    self.reject(key)
+            subprocess.run(['git', 'update-index', '--force-remove', '--', path], cwd=self.root, check=True)
+            entries = ''.join('100644 ' + oid + ' ' + stage + '\t' + path + '\n'
+                for oid, stage in [(spec[2], '1'), (wrong, '2'), (spec[2], '3')])
+            subprocess.run(['git', 'update-index', '--index-info'], cwd=self.root,
+                           input=entries.encode(), check=True)
+            self.reject(key)
+            subprocess.run(['git', 'update-index', '--force-remove', '--', path], cwd=self.root, check=True)
+            self.stage(path, spec[2])
+
+    def test_changed_current_logic_or_review_rejects_the_typed_family(self):
+        for path in (self.CHAPTER, self.REVIEW):
+            try:
+                self.put(path, self.current_bodies[path] + b'changed edition\n')
+                for key in self.ITEMS: self.reject(key)
+            finally:
+                self.put(path, self.current_bodies[path])
+
+    def test_incomplete_family_formal_role_and_support_loss_reject_history(self):
+        from copy import deepcopy
+        original_owners, original_cross = deepcopy(self.owners), deepcopy(self.cross)
+        for fault in ('missing-source', 'duplicate-source', 'authored-form', 'formal-role', 'support', 'support-identity'):
+            self.owners, self.cross = deepcopy(original_owners), deepcopy(original_cross)
+            work = next(w for w in self.cross['works'] if w['key'] == 't14-separation')
+            if fault == 'missing-source': self.owners['historical_source_bindings'].pop()
+            elif fault == 'duplicate-source': self.owners['historical_source_bindings'].append(deepcopy(self.bindings[-1]))
+            elif fault == 'authored-form': work['reading_forms'][0]['relationship'] = 'authored-source'
+            elif fault == 'formal-role': work['reading_forms'][1]['relationship'] = 'historical-source'
+            elif fault == 'support': work['supporting_source_keys'].remove('t14-suite')
+            else: self.cross['sources']['t14-separation-lean']['sha256'] = '0' * 64
+            self.write_context()
+            with self.subTest(fault=fault):
+                for key in self.ITEMS: self.reject(key)
+        self.owners, self.cross = original_owners, original_cross
+        self.write_context()
+
+    def test_only_literal_typed_guide_adaptations_preserve_original_evidence(self):
+        for path in self.GUIDES:
+            self.assertEqual(self.resolver.typed_guide_source_bytes(self.root, path), self.guide_original[path])
+            for body in (self.guide_original[path], self.guides[path] + b'changed prose\n',
+                         self.guides[path].replace(self.REV.encode(), b'HEAD', 1)):
+                try:
+                    self.put(path, body)
+                    for key in self.ITEMS: self.reject(key)
+                finally:
+                    self.put(path, self.guides[path])
+            self.stage(path, self.guide_blobs[path], '100755')
+            for key in self.ITEMS: self.reject(key)
+            self.stage(path, self.guide_blobs[path])
+
+    def test_v5_keeps_exact_source_and_allowlist_rows_for_typed_absence(self):
+        from copy import deepcopy
+        original = deepcopy(self.bundle)
+        sources, _, _ = self.v5._sources(self.bundle, self.root)
+        self.v5._allowlist(self.bundle, self.root, sources)
+        for key in self.ITEMS: (self.root / self.paths[key]).unlink()
+        sources, _, _ = self.v5._sources(self.bundle, self.root)
+        self.v5._allowlist(self.bundle, self.root, sources)
+        self.assertEqual(self.bundle, original)
+        self.assertTrue(all(not (self.root / self.paths[k]).exists() for k in self.ITEMS))
+        row = next(r for r in self.bundle['sources'] if r['id'] == self.ITEMS['t13-opaque'][4])
+        row['id'] = 'wrong-source-identity'
+        with self.assertRaises(ValueError): self.v5._sources(self.bundle, self.root)
+        self.bundle = deepcopy(original)
+        sources, _, _ = self.v5._sources(self.bundle, self.root)
+        allowed = next(r for r in self.bundle['public_allowlist'] if r['path'] == self.paths['t13-opaque'])
+        allowed['kind'] = 'AUTHORED'
+        with self.assertRaises(ValueError): self.v5._allowlist(self.bundle, self.root, sources)
+
+    def test_reader_admits_exact_twelve_present_sources_and_rejects_partial_or_extra(self):
+        from copy import deepcopy
+        indexed = {r['path']: dict(kind='blob', mode='100644', git_oid=r['git_blob'],
+                                  bytes=len(self.original[r['path']])) for r in self.bindings}
+        additions = {r['path']: r for r in self.owners['source_additions']}
+        admitted, errors = self.reader.check_historical_sources(self.root, indexed, self.owners, self.cross, additions)
+        self.assertEqual(errors, [])
+        self.assertEqual(set(admitted), {r['path'] for r in self.bindings})
+        self.assertTrue(all((self.root / path).is_file() for path in admitted))
+        for variant in (self.bindings[:-1], self.earlier + self.bindings[-1:],
+                        self.bindings + [deepcopy(self.bindings[-1])]):
+            altered = dict(self.owners, historical_source_bindings=variant)
+            self.assertTrue(self.reader.check_historical_sources(self.root, indexed, altered, self.cross, additions)[1])
+
+    def test_manifest_accepts_only_complete_four_exact_revision_blob_additions(self):
+        from copy import deepcopy
+        manifest = deepcopy(self.current_manifest)
+        for key, spec in self.ITEMS.items():
+            row = next(r for r in manifest['objects'] if r['source_sha256'] == spec[0])
+            row.update(repository_revision=self.REV, git_blob=spec[2])
+        baseline = dict(path=projection.MANIFEST, git_oid=self.old_manifest_blob)
+        self.assertTrue(self.reader.permitted_historical_status_pin(self.root, baseline, json.dumps(manifest).encode()))
+        for fault in ('partial', 'identity', 'role', 'count'):
+            changed = deepcopy(manifest)
+            row = next(r for r in changed['objects'] if r['source_sha256'] == self.ITEMS['t13-opaque'][0])
+            if fault == 'partial': del row['repository_revision']
+            elif fault == 'identity': row['public_sha256'] = '0' * 64
+            elif fault == 'role': row['role'] = 'formal_component'
+            else: changed['counts']['objects'] = -1
+            with self.subTest(fault=fault):
+                self.assertFalse(self.reader.permitted_historical_status_pin(self.root, baseline, json.dumps(changed).encode()))
+
+    def test_reader_pages_reach_current_logic_and_exact_historical_witnesses(self):
+        pages = {'APPLICATIONS.md': ['t13-bridge'],
+                 'CURRENT-FRONTIERS.md': ['t13-residual', 't14-separation'],
+                 'PAPER-CATALOGUE.md': list(self.ITEMS), 'RESEARCH-ATLAS.md': list(self.ITEMS),
+                 'RESULT-INDEX.md': list(self.ITEMS)}
+        anchors = self.reader.markdown_index(self.current_bodies[self.CHAPTER].decode())['anchors']
+        for page, keys in pages.items():
+            text = (self.project / 'docs/reader' / page).read_text()
+            links = [href for _, href in self.reader.markdown_index(text)['links']]
+            for key in keys:
+                with self.subTest(page=page, source=key):
+                    self.assertIn(self.ITEMS[key][5], anchors)
+                    self.assertTrue('../../' + self.CHAPTER + '#' + self.ITEMS[key][5] in links,
+                                    'missing current logic route: ' + page + ': ' + key)
+                    self.assertTrue(self.original_url(key) in links,
+                                    'missing exact historical witness: ' + page + ': ' + key)
+                    self.assertFalse('../../' + self.paths[key] in links,
+                                     'physical original still required by reader page: ' + page + ': ' + key)
+
+    def test_canonical_reference_resolution_requires_exact_typed_history(self):
+        import validate_internal_references as references
+        previous = references.ROOT
+        references.ROOT = str(self.root)
+        try:
+            for key in self.ITEMS:
+                path = self.paths[key]
+                with self.subTest(source=key):
+                    self.assertTrue(references._resolves('docs/reader/PAPER-CATALOGUE.md', path))
+                    (self.root / path).unlink()
+                    self.assertTrue(references._resolves('docs/reader/PAPER-CATALOGUE.md', path),
+                                    'canonical typed source reference still requires the physical body')
+                    self.put(path, self.original[path] + b'changed source\n')
+                    self.assertFalse(references._resolves('docs/reader/PAPER-CATALOGUE.md', path))
+                    self.put(path, self.original[path])
+                    self.assertFalse(references._resolves('docs/reader/PAPER-CATALOGUE.md',
+                        path.replace('.md', '_unqualified.md')))
+            self.put(self.CHAPTER, self.current_bodies[self.CHAPTER] + b'changed current edition\n')
+            for key in self.ITEMS:
+                self.assertFalse(references._resolves('docs/reader/PAPER-CATALOGUE.md', self.paths[key]))
+        finally:
+            references.ROOT = previous
+
+    def test_retained_companion_link_uses_the_exact_original_typed_source(self):
+        import validate_repo as repository
+        from copy import deepcopy
+        companion = ('experiments/orthemology-v5-successors/source-store/'
+            '2c16dbf40f6a945785b51ddc230a0e1f78004fe716a0412492b4345be8c95734/'
+            'Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md')
+        self.put(companion, (self.project / companion).read_bytes())
+        target = self.ITEMS['t14-separation'][1]
+        sources = self.source_map['sources']
+        self.assertTrue(repository.successor_packet_locator(self.root / companion, target, sources, self.root))
+        path = self.paths['t14-separation']
+        (self.root / path).unlink()
+        self.assertTrue(repository.successor_packet_locator(self.root / companion, target, sources, self.root),
+                        'retained companion reference still requires the physical typed prose')
+        selected = next(r for r in sources if r.get('public_path') == path)
+        self.assertEqual(repository._public_successor_bytes(selected, self.root), self.original[path])
+        wrong = deepcopy(selected)
+        wrong['id'] = 'wrong-typed-origin-source'
+        self.assertIsNone(repository._public_successor_bytes(wrong, self.root))
+        self.assertFalse(repository.successor_packet_locator(self.root / companion,
+            target.replace('.md', '_unqualified.md'), sources, self.root))
+        self.put(path, self.original[path] + b'changed original\n')
+        self.assertFalse(repository.successor_packet_locator(self.root / companion, target, sources, self.root))
 
 
 if __name__ == '__main__':

@@ -18,6 +18,7 @@ from resolve_t20_v6_source import (
     HISTORICAL_PROSE, HISTORICAL_PROSE_PUBLIC_PATHS, HISTORICAL_PROSE_REVISION,
     historical_source_bytes, source_bytes, MEDIATOR_GUIDE, mediator_guide_source_bytes,
     HISTORICAL_PROSE_REVISIONS, MEDIATOR_APPROXIMATION, FISHER_AUDIT, readonly_git_diff,
+    TYPED_GUIDES, typed_guide_source_bytes,
 )
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -193,6 +194,13 @@ def check_preserved_roots(root, objects):
         guide_authenticated = True
     except (ValueError, OSError):
         pass  # A guide change is never excused when this finite check fails.
+    typed_guides_authenticated = set()
+    for path in TYPED_GUIDES:
+        try:
+            typed_guide_source_bytes(root, path, allow_original=True)
+            typed_guides_authenticated.add(path)
+        except (ValueError, OSError):
+            pass  # No exception for a changed, missing or unsafe guide.
     protected = ['experiments/orthemology-v5', 'experiments/orthemology-v5-continuations',
                  'experiments/orthemology-v5-successors', 'docs/provenance/v5-consolidation',
                  'docs/provenance/v5-research-continuations', 'docs/provenance/v5-successors',
@@ -209,7 +217,8 @@ def check_preserved_roots(root, objects):
             if result.returncode or len(changes) % 2:
                 raise ValueError('protected baseline comparison unavailable')
             if any(not ((status == 'D' and path in authenticated) or
-                        (status == 'M' and path == MEDIATOR_GUIDE and guide_authenticated))
+                        (status == 'M' and path == MEDIATOR_GUIDE and guide_authenticated) or
+                        (status == 'M' and path in typed_guides_authenticated))
                    for status, path in zip(changes[::2], changes[1::2])):
                 errors.append('preserved v5 or prior T20 baseline changed')
         except (ValueError, UnicodeError):

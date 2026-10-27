@@ -86,6 +86,8 @@ The [agentic-runtime profiles][app-runtime-outlines] explicitly remain unimpleme
 
 ## Identity obstructions, repairs and later checkers
 
+Current exposition: [The historical residual identity question][typed-t13-residual-current]; [Full-rule separation and the closed criterion][typed-t14-separation-current].
+
 The [Thirteenth residual note][t13-residual] really did leave the all-inhabitant `I/SKK` question unresolved. That is historical, not the last word on the exact target. The [Fourteenth written development][t14-separation] and its [formal component][t14-separation-lean] address the all-rule obstruction in both original judgments. A reader should not be sent back to prove that same negative result simply because the earlier note retains a pending header.
 
 The [separate HasE extension][t14-repair] advances a different target: deriving the missed typed identity through its explicitly added rules. It does not adopt that judgment as the operational calculus, establish universal completeness or remove the `Raw` obstruction. **The useful next application question is which judgment and equality notion the task actually needs**, not whether the old derivation rules secretly changed.
@@ -214,9 +216,11 @@ The remaining broad questions concern universes, unrestricted rules, frontend/se
 [app-coupling]: ../../applications/latent-state-orthing/UPDATE-COUPLING.yaml
 [app-runtime-outlines]: ../../applications/agentic-runtime/README.md
 
-[t13-residual]: ../../experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+[t13-residual]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+[typed-t13-residual-current]: ../../logic/encodings-and-witnesses.md#105-the-identity-question-that-packing-leaves-open
 
-[t14-separation]: ../../experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+[t14-separation]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+[typed-t14-separation-current]: ../../logic/encodings-and-witnesses.md#107-full-rule-separation-and-the-exact-closed-criterion
 
 [t14-separation-lean]: ../../experiments/orthemology-v5-successors/source-store/48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c/IntensionalIdentityTheorems.lean
 
