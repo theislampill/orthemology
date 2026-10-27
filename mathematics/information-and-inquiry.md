@@ -666,6 +666,53 @@ Thus the phenomenon is not restricted to binary targets or quadratic loss.
 
 Three outcomes are minimal for this particular value-loss obstruction. With two distinct posterior columns the weights are determined; with coincident columns the expected value of every finite function of the posterior is fixed and risk improvement is zero. A single feasible outcome also gives zero improvement. This is a theorem for one fixed audit, finite posterior risk, and constant cost, not for arbitrary fresh experiments, outcome-dependent costs, or adaptive policies. The posterior matrix $`Q=\Pr(\Theta\mid D)`$ and the target law are fixed here; the forward channel $`\Pr(D\mid\Theta)`$ generally varies with $`w`$. [3]
 
+### 5.3 What changes when the future inquiry menu changes
+
+The fixed-audit calculation holds one inquiry repertoire constant. An inquiry can also change which later inquiries are feasible. The formalisation source separates that change from the truth of its result and supplies a bounded way to compare its consequences. [FORM, §7][FORM]
+
+Fix an analysis $`A`$ and a full environment state $`z`$ that can include available information, access rights, resources, governing conditions and retained history. Let $`\gamma_A(z)`$ describe the historical inquiry graph. Independently define a universe $`\mathscr J_A`$ of finitely described actions or bounded contingent plans, with a declared feasibility predicate, and put
+
+```math
+\mathcal L_A(z)
+ =\{q\in\mathscr J_A:\mathrm{Feas}_A(z,q)=1\}.
+```
+
+The historical graph, the currently feasible menu and an agent's estimate $`\widehat{\mathcal L}_A(z)`$ are different objects. They can be related by substantive rules; their separate definitions do not require statistical independence. The menu can be infinite even when each plan has a finite description. The risk-based distinction between actual and certifiable options in §2.6 is one specialised instance of the information question, with permission and physical feasibility still supplied separately.
+
+A plan's typed shape cannot generally determine its eligibility. Two source-access plans can have the same argument roles while one has the required permission and the other lacks it. Their shapes agree and their feasibility values differ. Two individually feasible plans can also compete for an exclusive resource, as the support criterion in [Collective Inquiry, §5.3](collective-inquiry-and-strategic-coordination.md#53-independent-feasibility-is-a-support-property) proves. The menu is therefore neither a set of tensor degrees nor a vector space closed under arbitrary combination.
+
+Let an admitted closure action carry $`z`$ to $`z'`$ while $`A`$ stays fixed. A publication, for example, can remove the opportunity for a particular actor's independent discovery *before seeing that disclosure*, while enabling learning, another proof or a new investigation. That change does not require a new analysis. If inquiry identities are comparable in a common universe, the definitions
+
+```math
+C=\mathcal L_A(z)\setminus\mathcal L_A(z'),
+\qquad
+N=\mathcal L_A(z')\setminus\mathcal L_A(z)
+```
+
+give the exact identity $`\mathcal L_A(z')=(\mathcal L_A(z)\setminus C)\cup N`$. This records a set change. Causal attribution requires a justified comparison of alternative transitions from the relevant pre-state; the identity alone establishes neither causation nor harm. A change of analysis or inquiry identity needs its own comparison maps. [FORM, “Landscape evolution with a fixed analysis”][FORM]
+
+For a chosen horizon $`h`$, let $`\mathscr J_A^h`$ be the admitted plan family and $`J_A(z,q)`$ a bounded real value, with costs, uncertainty and whose interests count explicitly fixed. Include a stop option of value zero and define
+
+```math
+\mathrm{Opt}_{A,h}(z)
+ =\sup\bigl(\{0\}\cup
+ \{J_A(z,q):q\in\mathcal L_A(z)\cap\mathscr J_A^h\}\bigr).
+```
+
+Boundedness and the stop option make this a finite nonnegative value; no maximising plan is assumed to exist in an infinite menu. With a deterministic successor $`F_A(z,a)`$, an immediate reward can be joined to the prospective value as
+
+```math
+\mathrm{Tot}_{A,h}(z,a)
+ =R_A^{\mathrm{imm}}(z,a)
+  +\mathrm{Opt}_{A,h}(F_A(z,a)).
+```
+
+A stochastic or set-valued successor needs a declared expectation, worst-case or other comparison rule. Incomparable objectives can instead retain an attainable-value set or partial order. None of these evaluations removes a hard admissibility requirement.
+
+**Correctness leaves future option value undetermined.** Take an initial menu whose best option has value $`6`$. Two admissible closures establish the same true theorem and have equal immediate reward. A thin closure leaves only a reconstruction option valued $`2`$; an expository closure leaves a transferable-mechanism option valued $`10`$. Their prospective changes are $`-4`$ and $`+4`$. Correctness is identical, while future value differs; interchanging the two successor assignments reverses the comparison without changing correctness. This finite countermodel establishes that correctness does not determine prospective value under the declared data. Its numbers are not measurements of researchers, communities or AI-assisted mathematics. The publication-race example in [Collective Inquiry, §3.3](collective-inquiry-and-strategic-coordination.md#33-changing-inquiry-can-change-incentives) adds a separate incentive structure to this distinction. [FORM, Proposition 7.2][FORM]
+
+Cardinality also fails to determine the value. Removing an option valued $`2`$ while retaining a maximiser valued $`6`$ gives a strict menu contraction with unchanged optimum. Replacing a two-option menu of values $`1,2`$ by one option valued $`10`$ gives fewer options and a larger optimum. The second comparison changes the menu or its state-dependent values; deleting options alone while keeping every retained value fixed cannot increase a supremum. Thus the conclusion is compatible with ordinary value monotonicity under set inclusion. Closing a refuted or dominated route can remove waste without sacrificing the best available value. The appropriate comparison concerns the stated values, costs and constraints, rather than a universal requirement to keep the largest number of questions open. [FORM, Proposition 7.3][FORM]
+
 ## 6. The categorical Fisher dynamics of the full source
 
 Assume $`r,k\geq2`$ and every joint cell is positive. Write
@@ -1212,6 +1259,22 @@ Two related comparisons preserve the same exact temporal scope. With menus and s
 
 These arguments explain how information, evidence and temporal obligations fit together without identifying them. Finite selection assumes an admissibility relation; temporal certification assumes an adequate transition model; evidence transport assumes its semantic and authority premises. None supplies the others by relabelling a successful output.
 
+
+#### Retained history and the status of a disposition
+
+Certificate-path eligibility and historical traceability answer different questions. Proposition 13 concerns what a final certificate actually discharges under its semantic and authority premises. A reduction can also be required to preserve what earlier obligations were, how their statuses changed and which issues remain live elsewhere. The formalisation source gives a finite preservation argument for that additional contract. [FORM, §6][FORM]
+
+Write a modelled state as $`z=(x,B,\mathscr H)`$, where $`x`$ is the active representation, $`B`$ the current obligation records and $`\mathscr H`$ the retained history. A transition has a witness binding the actual input and output, their analysis and representation versions, and the operation's parameters and affected obligations. Call the witness **record-valid** when it retains every old obligation's identity and previous status in the new history, and each old live obligation either persists, has explicitly linked successor obligations, or receives an explicit authorised disposition. A replacement must leave a successor to trace, unless a separate terminal disposition supplies the endpoint. Historical entries and their links are extended faithfully rather than silently overwritten. The declared preservation checks and hard constraints remain premises.
+
+A resolution entry must refer to its resolution grounds; a transfer identifies its destination and transfer witness; supersession retains its lineage. “Deferred”, “assigned”, “risk accepted” and “transferred” do not mean “proved resolved”. An issue can leave one active record while remaining live elsewhere. **Semantic validity** additionally requires the substantive truth and applicability of the witness's claims, including its authority and grounds. A complete-looking record cannot produce these facts merely by having the right fields.
+
+**Finite history preservation.** Along a finite sequence of record-valid transitions, every initially recorded obligation remains addressable in the final retained history and has a finite trace of persistence, replacement or disposition. If every substantive disposition made along the sequence is also semantically valid, none of those dispositions is unwarranted relative to the declared contract. This does not retrospectively validate an earlier assertion merely because the initial history contains it.
+
+**Proof.** At zero transitions the initial records and their existing statuses supply the claim. For one transition it is exactly the retention and coverage premise. For the induction step, an already terminal entry and its witness remain in the extended history. A current live record persists, is linked to its successors, or receives its declared endpoint; the new witness retains its predecessor links. Applying this reasoning to every current descendant extends the trace for each initial obligation. After finitely many transitions the history still addresses the original entries and the finite sequence of their changes. The semantic conclusion uses the validity of each substantive link; its mere presence proves no such validity. ∎ [FORM, Theorem 6.5][FORM]
+
+This preservation rule allows genuine active simplification. A guarded contraction can replace an active tensor $`x`$ by $`C_{j,\varphi}x`$ after the required disposition is justified, while the old state, obligation records and witness remain faithfully retained or referenced in history. The active degree can fall while the retained record grows. Conversely, changing a status coefficient can leave every tensor degree unchanged. The contraction and fibre counterexample in [Tensor Moments, §1.3](tensor-moments-and-corrective-dynamics.md#13-degree-shifts-contractions-and-a-higher-order-distinction) shows why degree reduction alone cannot establish a valid disposition.
+
+Addressability does not itself provide an authenticated, permitted and affordable retrieval operation. [Source Context and Reacquisition, §§6.5–7.3](../epistemology/source-context-and-reacquisition.md#65-information-preserved-and-access-preserved) treats that further access question. Nor does a fully traceable history ensure that the active summary preserves the future observables of §2.6. A retained false claim remains a false claim available for later appraisal; representing it again at a higher level does not change its truth. The record-validity conditions are an explicit model of a proposed history-preserving process, not universal reflective conditions on every warranted belief.
 
 ### 9.5 Which missing evidence must survive, and what does completion cost?
 
@@ -1794,6 +1857,8 @@ The selected formal sources [35–41] distinguish a generic dominated-readout th
 
 These seven public formal bodies were inspected at source level. Their transitive dependency closure, including the imported restoration-countability bridge and Mathlib modules, was not newly read or built for this edition. The predecessor records compilation, axiom-readback and independent copied-source review at their original bounded scopes; source inspection, printed proof-check commands and this exposition's ordinary proofs are not fresh kernel execution or receipt of every historical raw log. In particular the statistical sample bounds, philosophical interpretation and the whole two-source incorporation are not added to a kernel certificate by association. The existing source/adoption and accepted-edition boundaries remain.
 
+Section 5.3 and the retained-history argument in §9.4 incorporate the corresponding bounded constructions in [FORM], *Graded Representations, Witnessed Revision, and Inquiry Landscapes*, version 1 research draft, 8 September 2026. The option values are constructed countermodels; the history theorem is conditional on actual record retention and the separately stated semantic premises. The finite typed representation and future-quotient application appear in [Tensor Moments, §§1.1–1.4](tensor-moments-and-corrective-dynamics.md#11-finite-typed-words-and-their-declared-meaning), while the dynamical estimates appear in [Physical Realisation, §§5.5–5.6](physical-realisation-and-continuation.md#55-coupled-estimates-and-a-residual-error-floor). These mathematical components do not establish a production schema, a completed empirical programme, or the unfinished original N-person theory.
+
 **Edition status:** new source-bound consolidated exposition. The companion review record binds the exact text, source population, independent findings, corrections, and proposed predecessor retirement. Review of this exposition does not confer owner acceptance or silently amend an accepted paper. None of those records is needed to follow the mathematical arguments above.
 
 ### References
@@ -1887,3 +1952,5 @@ Repository references identify exact public source editions, not mutable current
 [39]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-continuations/source-store/7551d3dbf744250a840e0cbb224654a6d8973da353aaa1f6cede18d64ea47a4d.lean
 [40]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-continuations/source-store/16f467976b9d30b5fe1bfa5997e7378dcf391e989d17aaed4e69224da0686261.lean
 [41]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-continuations/source-store/75d8ceba960b2ae9698515d20e05badd9257fcab10a8a60bf295aad36eb21395.lean
+
+[FORM]: https://github.com/theislampill/orthemology/blob/28679eaed33ee48cf0c5d15ba6dc3b27aac9067b/theory/lineages/h-formalisation/orthing_formalisation_v1.md

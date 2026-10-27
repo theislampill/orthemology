@@ -452,6 +452,240 @@ The mean record alone need not determine this covariance. At one time, an ensemb
 
 The methodological consequence is common to both calculations. A learned feature map or numerical discovery procedure may propose a useful reduction, while a separate argument establishes what that reduction preserves and with what error. The source's comparison with its supplied Euler draft separates numerical discovery, spline representation, interval certification and stability analysis; its outstanding certification conditions remain part of that historical comparison. The finite moment-error theorem in [Information and Inquiry, §2.5](information-and-inquiry.md#25-quantifying-the-information-lost-by-a-moment-summary) provides one exact model-bound way to expose or bound a missing observable. It does not turn a finite model into a verified model of a fluid, an agent or a person. The finite-horizon residual estimate in §5.2 addresses a different question and retains its own hypotheses. [CONT]
 
+### 5.5 Coupled estimates and a residual error floor
+
+The finite-horizon estimate in §5.2 controls discrepancy using an accumulated growth bound. A different question is whether damping can keep a discrepancy inside a fixed admissible neighbourhood while the model remains valid. Two estimates may answer that question jointly even when neither controls all its coupling terms alone. The formalisation source isolates this mechanism, a strict residual barrier and the concentration estimate needed to absorb a local loss. The following arguments retain their conditional analytic scope. They require an actual dynamical model and valid estimates for its declared quantities; an order of preferred corrections does not itself supply a vector field or a gradient flow. [FORM, “A dynamical realisation is an extra declaration” and Theorems 10.1–10.2][FORM]
+
+#### Combining two valid estimates
+
+Let $`X(t),Y(t)\geq0`$ be differentiable on a common interval starting at zero. Suppose constants $`a,d>0`$ and $`b,c\geq0`$ give
+
+```math
+\frac12\dot X\leq-aX+bY,
+\qquad
+\frac12\dot Y\leq cX-dY.
+```
+
+**Weighted damping criterion.** A positive weight $`\lambda`$ makes both coefficients strictly dissipative in the combined estimate for $`V=X+\lambda Y`$ exactly when $`ad>bc`$. For any such weight,
+
+```math
+\gamma=\min\{a-\lambda c,\ d-b/\lambda\}>0,
+\qquad
+V(t)\leq e^{-2\gamma t}V(0).
+```
+
+**Proof.** Adding the first inequality to $`\lambda`$ times the second gives
+
+```math
+\frac12\dot V
+\leq-(a-\lambda c)X-(\lambda d-b)Y.
+```
+
+The two coefficients are positive precisely when $`\lambda>b/d`$ and, if $`c>0`$, $`\lambda\lt{}a/c`$. For $`c>0`$ these conditions define a nonempty open interval exactly when $`ad>bc`$. For $`c=0`$, any $`\lambda>b/d`$ works, and $`ad>bc=0`$ already holds. This includes $`b=c=0`$, when any positive weight works. Dividing the second coefficient by $`\lambda`$ yields the displayed $`\gamma`$ and $`\dot V\leq-2\gamma V`$. Multiplication by $`e^{2\gamma t}`$ and integration proves the bound on the interval where the estimates hold. In particular, $`X\leq V`$ and $`Y\leq V/\lambda`$. ∎
+
+The necessity statement concerns this combination with two positive coefficients. If $`ad\leq bc`$, sharper estimates or an additional relation between $`X`$ and $`Y`$ may still control the actual system. If an application independently requires $`\lambda\leq1`$, the feasible interval must also intersect $`(0,1]`$; $`ad>bc`$ alone does not ensure that additional restriction. [FORM, Theorem 10.1][FORM]
+
+The product of gains matters even when one coupling is small. For the separate linear system
+
+```math
+\begin{pmatrix}\dot x\\\dot y\end{pmatrix}
+=
+\begin{pmatrix}-1&K\\\varepsilon&-1\end{pmatrix}
+\begin{pmatrix}x\\y\end{pmatrix},
+\qquad K,\varepsilon>0,
+```
+
+the characteristic equation is $`(\mu+1)^2-K\varepsilon=0`$. Its eigenvalues are $`-1\pm\sqrt{K\varepsilon}`$, so $`K\varepsilon>1`$ gives an exponentially growing mode. For any positive $`\varepsilon`$, however small, a sufficiently large $`K`$ has this effect. Thus a claim of weak feedback needs a bound on the interacting gains. This example does not identify its signal variables with the energy quantities above, physical frequency scales or stages of inquiry; any such interpretation needs its own model. [FORM, Counterexample 10.6][FORM]
+
+#### A residual gives a range of admissible radii
+
+Suppose $`E(t)\geq0`$ is continuous and $`E(t)^2`$ is differentiable. In a declared regime, including any first contact with the proposed boundary, assume
+
+```math
+\frac12\frac{d}{dt}E^2
+\leq-aE^2+bE^3+rE,
+\qquad a>0,\quad b,r\geq0.
+```
+
+Here the constants belong to this estimate; they need not equal the coefficients of the preceding two-level system.
+
+**Strict residual barrier.** If an admissible radius $`\delta>0`$ satisfies
+
+```math
+b\delta+\frac r\delta\lt{}a,
+\qquad E(0)\lt{}\delta,
+```
+
+then $`E(t)\lt{}\delta`$ for as long as the trajectory exists and the boundary-valid estimate applies.
+
+**Proof.** If a first contact $`E(t_*)=\delta`$ occurred, continuity and the strict initial inequality would give $`E(t)\lt{}\delta`$ immediately before $`t_*`$. The left derivative of $`E^2`$ at contact would therefore be nonnegative. Differentiability and the assumed inequality instead give
+
+```math
+\frac12(E^2)'(t_*)
+\leq-\delta^2\left(a-b\delta-\frac r\delta\right)
+\lt{}0,
+```
+
+a contradiction. The proof never divides by $`E`$ and therefore also permits zero error away from the boundary. ∎
+
+When $`b,r>0`$ and every positive radius is otherwise admissible, the coefficient inequality admits a radius exactly when $`a>2\sqrt{br}`$. Indeed,
+
+```math
+b\delta+\frac r\delta\geq2\sqrt{br},
+```
+
+with equality at $`\delta_{\mathrm{opt}}=\sqrt{r/b}`$. Equivalently, multiplying the strict inequality by $`\delta>0`$ gives $`b\delta^2-a\delta+r\lt{}0`$. Under $`a>2\sqrt{br}`$, its two positive roots and the admissible interval are
+
+```math
+\delta_\pm=\frac{a\pm\sqrt{a^2-4br}}{2b},
+\qquad
+\delta_-\lt{}\delta\lt{}\delta_+.
+```
+
+The radius $`\delta_{\mathrm{opt}}`$ minimises the left-hand side; it is not the smallest permitted radius. At $`a=2\sqrt{br}`$ the strict margin vanishes, so this argument supplies no strict barrier. That failure is not a proof that an actual trajectory escapes. Any further admissibility restriction must be intersected with the displayed open interval. A usable radius must also satisfy the initial condition $`E(0)\lt{}\delta`$. [FORM, Theorem 10.2 and Corollary 10.3][FORM]
+
+The degenerate cases are also explicit. With $`r=0`$ and $`b>0`$, the allowed radii are $`0\lt{}\delta\lt{}a/b`$. With $`b=0`$ and $`r>0`$, they are $`\delta>r/a`$. With $`b=r=0`$, every positive admissible radius works. A persistent nonzero residual therefore prevents arbitrarily small radii from satisfying this certificate. For the source's abstract example $`a=3,b=r=1`$, the choice $`\delta=1`$ leaves strict margin $`1`$; with $`a=b=r=1`$ no positive radius works. These are illustrative constants, not estimates for a measured device or a fluid solution. [FORM, “Residuals impose a nonzero error scale”][FORM]
+
+#### An exceptional region needs a concentration bound
+
+Suppose a contribution to a low-order estimate obeys
+
+```math
+Q(f)\leq-aX+(a+b)M_B,
+\qquad a>0,\quad b\geq0,
+```
+
+where $`X,Y,M_B\geq0`$ and $`M_B`$ measures the contribution concentrated in an exceptional region. An additional bound with $`m_0,m_1\geq0`$,
+
+```math
+M_B\leq m_0X+m_1Y,
+```
+
+immediately gives
+
+```math
+Q(f)\leq-\alpha X+\beta Y,
+\qquad
+\alpha=a-(a+b)m_0,
+\quad \beta=(a+b)m_1.
+```
+
+This follows by substitution and collection of coefficients. The resulting low-order damping is positive only if $`a>(a+b)m_0`$. If $`\tfrac12\dot X\leq Q(f)`$ actually holds and there is also an estimate $`\tfrac12\dot Y\leq cX-dY`$ with $`c\geq0,d>0`$, the preceding weighted argument applies when $`\alpha>0`$ and
+
+```math
+\bigl[a-(a+b)m_0\bigr]d
+>(a+b)m_1c.
+```
+
+This last condition is the direct composition of the source's local-loss substitution and two-level criterion. It exposes the quantitative dependency between concentration control and compensating damping; it does not infer either estimate from the label “exceptional.” [FORM, Theorem 10.1 and Proposition 10.4][FORM]
+
+Region size alone cannot supply the needed bound in an unrestricted $`L^2`$ class. For any measurable region $`B`$ of positive finite Lebesgue measure,
+
+```math
+f=\frac{\mathbf1_B}{\sqrt{|B|}}
+\quad\Longrightarrow\quad
+\|f\|_2^2=\int_B|f|^2=1.
+```
+
+All the mass is concentrated in $`B`$, however small its measure. Additional regularity or a justified higher-norm estimate may restrict concentration, but that restriction must be supplied quantitatively. A small count of unresolved issues likewise does not establish a concentration law for an epistemic risk functional. [FORM, Proposition 10.4][FORM]
+
+#### Retaining the trajectory, scale and clock
+
+The strict barrier controls an existing trajectory. It does not itself extend the trajectory or identify the controlled error with the whole state. For a finite-dimensional autonomous equation $`\dot z=F(z)`$ with $`F`$ locally Lipschitz on an open domain $`U`$, remaining in one compact set $`K\subset U`$ supplies a separate continuation argument: if a maximal forward time were finite, boundedness of $`F`$ on $`K`$ would make the trajectory Cauchy as that time approached. Its limit would lie in $`K`$, and local existence there would extend the solution. An error bound around an unbounded reference, a bound near an excluded domain boundary, or an infinite-dimensional estimate need not provide these hypotheses. [FORM, “Continuation is separate from invariance”][FORM]
+
+Even a constant normalised profile can conceal growth in the original state and clock. For
+
+```math
+\dot x=x^2,\qquad x(0)=x_0>0,
+```
+
+separation of variables gives
+
+```math
+x(t)=\frac{x_0}{1-x_0t},
+\qquad 0\leq t\lt{}1/x_0.
+```
+
+Set $`s=-\log(1-x_0t)`$ and $`\widehat x=e^{-s}x/x_0`$. Direct substitution yields
+
+```math
+\widehat x(s)=1\quad(s\geq0),
+\qquad
+t(s)=\frac{1-e^{-s}}{x_0}\longrightarrow\frac1{x_0}.
+```
+
+The rescaled profile remains constant for every rescaled time, while the original variable becomes unbounded at finite original time. This does not contradict compact containment of the original state in its original dynamical domain: that containment is absent. A conclusion about the physical process must retain the reconstruction scale and clock as well as the normalised profile. [FORM, Counterexample 10.8][FORM]
+
+For the communication problem of §5.2, a controlled energy or error radius becomes useful only through a justified bound on the measured output and a separation margin between selectable experiments. For a sequence of operations, invariance also leaves open whether a permitted successor exists and whether the target is eventually reached. These analytic arguments establish no physical implementation, numerical concentration law for inquiry, or permission to offset a violated hard constraint with a better value elsewhere. They provide conditional mechanisms for controlling a declared dynamical discrepancy. [FORM]
+
+### 5.6 Transient amplification and transport of a stability claim
+
+A component can be amplified for a time even when its background influence decays. A bound proved for one model also needs additional uniform premises before it controls a family of models. The formalisation source separates these questions from the strict damping and barrier results of §5.5. [FORM, §10][FORM]
+
+#### An exact transient-amplification calculation
+
+Consider the declared scalar system
+
+```math
+\dot b=-\lambda b,
+\qquad
+\dot f=(-d+\kappa b)f,
+\qquad b(0)=B>0,
+\quad \lambda,d,\kappa>0.
+```
+
+The first equation gives $`b(t)=Be^{-\lambda t}`$. Substitution into the second and integration give
+
+```math
+f(t)=f(0)\exp\!\left[-dt+
+       \frac{\kappa B}{\lambda}(1-e^{-\lambda t})\right].
+```
+
+For $`f(0)\ne0`$, the logarithmic derivative of its magnitude is $`-d+\kappa Be^{-\lambda t}`$. If $`\kappa B>d`$, it is initially positive and changes sign once, at
+
+```math
+t_{\mathrm{peak}}=\frac1\lambda\log\frac{\kappa B}{d}.
+```
+
+The magnitude grows until that time and then decays to zero, since the positive term in the exponent remains bounded while $`-dt`$ tends to minus infinity. If $`\kappa B\leq d`$, the magnitude is nonincreasing from the start; if $`f(0)=0`$, it stays zero. This is finite transient amplification in an explicitly solved two-component model. It establishes neither an infinite cross-scale cascade nor finite-time blowup. Its variables, gains and timescale interpretation must be identified before it describes a physical or epistemic system; frequency, update time and inquiry level are not interchangeable labels. [FORM, “Fast/slow coupling and amplification”][FORM]
+
+#### A common barrier for a model family
+
+Let $`\theta\in[0,1]`$ index models whose errors satisfy the boundary-valid differential inequality of §5.5 with constants $`a_\theta>0`$ and $`b_\theta,r_\theta\geq0`$. Suppose one radius $`\delta>0`$ is admissible for every member, their initial errors are below that radius, and a common $`\gamma>0`$ satisfies
+
+```math
+a_\theta-b_\theta\delta-\frac{r_\theta}{\delta}
+ \geq\gamma
+\qquad(\theta\in[0,1]).
+```
+
+At a first contact with $`E_\theta=\delta`$, the same calculation gives $`\tfrac12(E_\theta^2)'\leq-\delta^2\gamma\lt{}0`$, contradicting first contact. The same radius therefore works for every family member while its trajectory and estimates exist. This is a uniform version of the existing barrier proof; it does not create a common existence time, a continuous branch of profiles, an invertible linearisation or convergence at an endpoint. [FORM, Proposition 10.9][FORM]
+
+The elementary family
+
+```math
+\dot x=-(1-2\theta)x,
+\qquad
+x(t)=e^{(2\theta-1)t}x(0)
+```
+
+shows the missing premise. Nonzero solutions decay for $`\theta\lt{}1/2`$, remain constant at $`\theta=1/2`$ and grow for $`\theta>1/2`$. Solving or stabilising the first endpoint supplies no uniform positive damping margin for the family. Removing forcing, adding viscosity or changing an experimental regime likewise needs the relevant model-specific estimates; introducing a parameter alone does not transport the result.
+
+#### The property certified by an approximation
+
+The finite-horizon output bound of §5.2 is one instance of a general property-specific margin calculation. Let $`g:X\to\mathbb R`$ be $`K`$-Lipschitz on a metric space, with $`K\geq0`$. Suppose the actual target $`x`$ and an explicit surrogate $`s`$ satisfy $`d(x,s)\leq\varepsilon`$, and a certified evaluation gives $`g(s)\geq m-\eta`$, with $`\varepsilon,\eta\geq0`$. Then
+
+```math
+g(x)\geq g(s)-K\,d(x,s)
+      \geq m-\eta-K\varepsilon.
+```
+
+In particular, $`g(x)>0`$ follows from $`m>\eta+K\varepsilon`$. The first inequality is the Lipschitz condition and the second substitutes the certified bounds. Small representation error alone does not preserve an arbitrary predicate: even the sign of a real coordinate can change across an arbitrarily small neighbourhood of zero when no positive margin is present. [FORM, Proposition 9.2][FORM]
+
+The claim and its target determine which bridge is needed. As in §5.4, a search procedure may propose a candidate, a spline may become the explicit reference on which residuals and constants are certified, and a separate theorem may establish a true solution near that reference. Certification can bypass the original search object once the reference is fixed. A claim about that original object instead requires its own matched bound. A derivation conditional on hypotheses and certificates establishing those hypotheses for the actual target are both needed for the instantiated conclusion; checked component lemmas do not supply missing application premises. This preserves the source's distinction among numerical discovery, certified reference and target solution, without asserting that its cited Euler or Navier–Stokes programmes have completed their remaining proofs. [FORM, §9][FORM]
+
+Finite flow/reset composition also retains its own scope. The induction in §7.1 applies once each continuous segment preserves its declared safe set and each enabled reset sends its safe guard into the successor safe set; §8.1 gives an explicit nonvacuous example. To cover every finite physical time, an execution must additionally exclude unhandled accumulation of infinitely many events or provide an admissible continuation there. The finite-degree history example in [Tensor Moments, §1.4](tensor-moments-and-corrective-dynamics.md#14-representation-changes-and-future-relevant-reductions) exhibits that boundary. Stability and target correctness remain separate as well: the two attracting signs in §8.1 preserve different logical states, and an application must supply the target and readout that distinguish them. The truth-calibration argument in [Objective Normativity, §7](../foundations/objective-normativity-and-corrective-cognition.md#7-truth-calibrated-revision-on-a-finite-network) makes the corresponding distinction for a correction score. [FORM, Propositions 10.9–10.10 and final stability control][FORM]
+
 ## 6. What must cross the boundary
 
 ### 6.1 A cut bounds fresh information
@@ -1068,6 +1302,10 @@ External references below support particular definitions, reported experiments, 
 
 [CONT] Orthemology, *Continuation-Complete Orthings: Sharp information loss, minimal predictive memory, and safe strategic composition*, 8 September 2026, “From fluid reduction to an Orthemological obligation.” [Exact public source][CONT]. Section 5.4 derives its elementary elimination and averaging identities and preserves the source-relative status of its discovery/certification comparison. The other continuation results are treated in Information and Inquiry and Collective Inquiry.
 
+[FORM] Orthemology, *Graded Representations, Witnessed Revision, and Inquiry Landscapes: A conditional mathematical extension of Orthemology*, version 1 research draft, 8 September 2026. [Exact public source][FORM]. Section 5.5 develops the source's Theorems 10.1–10.2, Corollary 10.3, Proposition 10.4 and Counterexamples 10.6 and 10.8, including their strict hypotheses, degenerate cases and continuation limits. The displayed concentration-and-damping condition is an explicit algebraic composition of its two estimates. The source relates these abstract mechanisms to an uploaded Euler manuscript; no PDE-specific constants, full proof, formal development or physical application of that manuscript is independently verified here. The source's broader representation, witnessed-history and inquiry-landscape arguments remain distinct from this bounded treatment.
+
+Section 5.6 also develops [FORM]'s exact transient-amplification model, uniform-parameter barrier and general surrogate-margin calculation. Its discussion of search, certified reference and target solution retains the source-relative reading limits of that research draft. The finite flow/reset and stability-versus-target arguments are connected to the existing proofs in §§7–8; the infinite-event degree example is stated in Tensor Moments. No new fluid proof, numerical certification or execution of the source's historical checks is claimed.
+
 ### Physical channels, processors and representation
 
 The proposed case/type terminology is attributed by the Third Edition to the Orthemology project’s research-stage *Orthemic Core Formalization—Orthing, Episodes, Metaorthemes, Pathway Adequacy*, at historical Git commit `f50dc1aee52356cc6adbef342387576b02afc124`. Section 9 states the relevant definitions and their limits; this historical attribution supplies no independent empirical validation [LM].
@@ -1152,3 +1390,5 @@ The proposed case/type terminology is attributed by the Third Edition to the Ort
 [HOEF]: https://doi.org/10.1080/01621459.1963.10500830
 
 [CONT]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/theory/lineages/h-continuation/continuation_complete_orthing.md
+
+[FORM]: https://github.com/theislampill/orthemology/blob/28679eaed33ee48cf0c5d15ba6dc3b27aac9067b/theory/lineages/h-formalisation/orthing_formalisation_v1.md

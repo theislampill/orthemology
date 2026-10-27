@@ -55,6 +55,188 @@ The finite sum defining $`hp`$ makes every equation meaningful. Whether a soluti
 
 The background measure results used below are classical: one-dimensional Hamburger and Stieltjes existence, Carleman determinacy, the multivariate Carleman existence theorem, the compact algebraic-set moment theorem, and Haviland's representation theorem. Their precise roles are cited at the point of use. Most of the chapter consists of direct arguments linking those results to the specified dynamics.
 
+### 1.1 Finite typed words and their declared meaning
+
+The full moment record above belongs to a product of grades. A different construction represents a finite structured record in an algebraic tensor algebra. Keeping these constructions distinct prevents a false inference from the finite support of an episode description to the finite support of its entire moment sequence. The formalisation source develops the following optional encoding of a declared view; it does not identify an episode, a person or a worldly process with a tensor. [FORM, §§2–4][FORM]
+
+Fix an analysis and representation declaration. Let $`D`$ be the selected set of episode tokens and $`\xi:D\to\mathscr D`$ a supplied finite record view. A finite reference to an equation, a person or an infinite candidate family need not enumerate its referent. The view records the distinctions required by its contract: occurrence and version, analysis and task, evidence and its order, actor and authority, claims and unresolved obligations, and relevant handoff or successor relations. Empty, absent, inapplicable, unknown and unsupported entries remain distinct whenever the contract distinguishes them. A missing finite view calls for a restricted domain or a partial encoder; it is not made finite by silently discarding unavailable material. No addition operation on the set $`D`$ is presumed.
+
+Let $`\mathcal T`$ be a set of role types and $`V_\tau`$ a real vector space for each type. Put
+
+```math
+V=\bigoplus_{\tau\in\mathcal T}V_\tau,
+\qquad
+T(V)=\bigoplus_{n\geq0}V^{\otimes n},
+\qquad V^{\otimes0}=\mathbb R.
+```
+
+For a finite ordered word $`w=(\tau_1,\ldots,\tau_n)`$, write $`V_w=V_{\tau_1}\otimes\cdots\otimes V_{\tau_n}`$. The empty word contributes $`\mathbb R`$. Distribution over algebraic direct sums gives
+
+```math
+T(V)\cong\bigoplus_{w\in\mathcal T^*}V_w.
+```
+
+Multiplication concatenates ordered factors. For a linear map $`f:V\to\mathcal B`$ into an associative unital real algebra, define its extension on a pure word by
+
+```math
+\widetilde f(v_1\otimes\cdots\otimes v_n)
+ =f(v_1)\cdots f(v_n),
+\qquad \widetilde f(1)=1_{\mathcal B}.
+```
+
+Multilinearity makes this well-defined on each tensor power, and linear extension over finite sums gives an algebra map. Every algebra extension must have these values on the spanning pure words, proving uniqueness. This universal property extends a supplied linear map; it does not provide an episode-composition operation on the set $`D`$.
+
+A declaration can restrict admissible words to $`\mathcal W`$ and use $`H=\bigoplus_{w\in\mathcal W}V_w`$. Without closure of $`\mathcal W`$ under concatenation, this is a graded subspace and need not be a subalgebra. The admitted encodings within $`H`$ need not form a vector subspace either.
+
+A multi-degree counts how often each type occurs. Its component is the **direct sum of all words with those counts**, rather than one silently sorted tensor product. For example, actor–evidence–claim and evidence–actor–claim have the same counts and occupy different word summands. Permuting factors gives a linear isomorphism between the corresponding spaces. Treating the roles as interchangeable requires an additional semantic argument.
+
+For any supplied map $`\rho:D\to H`$, let $`P_w`$ be the word projection and define
+
+```math
+S(e)=\{w:P_w\rho(e)\ne0\},
+\qquad
+N(e)=\max\bigl(\{0\}\cup\{|w|:w\in S(e)\}\bigr).
+```
+
+**Finite word decomposition.** Each $`\rho(e)`$ has the unique expression
+
+```math
+\rho(e)=\sum_{w\in S(e)}j_wP_w\rho(e),
+\qquad |S(e)|\lt{}\infty,
+\quad N(e)\lt{}\infty,
+```
+
+where $`j_w`$ is inclusion into the direct sum.
+
+**Proof.** An algebraic direct-sum element has finitely many nonzero coordinates. Its independent summands make those coordinates unique. The finite set of their finite word lengths has a maximum, with the stated zero convention when the support is empty. ∎
+
+This is a consequence of the chosen codomain, not an empirical discovery about episodes. A nonzero scalar has degree zero; the zero element has empty support and $`N=0`$ by convention. Selected interaction occurrences and nonzero algebraic support also differ: zero coefficients or cancellation can remove a component. An ambient language admitting all finite lengths does not prove that the actual range of $`\rho`$ has unbounded degree. Coefficient count, tensor rank, stored-record size, number of players and derivative order are separate quantities. [FORM, Proposition 3.2][FORM]
+
+### 1.2 A faithful finite record channel
+
+Choose an injective finite atomisation $`\mathrm{At}:\mathscr D\to\mathcal P_{\mathrm{fin}}(X_{\mathrm{rec}})`$. An atom records its typed field path and value, including container markers, ordered-sequence indices, and the identities and versions of references. Distinct occurrences have distinct paths or occurrence identifiers, so equal list entries do not disappear through set deduplication. Fixing or normalising map-key order belongs to the declaration.
+
+In the free vector space on these atoms, put
+
+```math
+V_{\mathrm{rec}}=\mathbb R^{(X_{\mathrm{rec}})},
+\qquad
+\eta(d)=\sum_{a\in\mathrm{At}(d)}[a]_{\mathrm{rec}}.
+```
+
+Every retained atom has coefficient one. This record channel has tensor degree one even when it contains many fields.
+
+A separate interaction extractor supplies finitely many occurrences $`r`$. Each has a relation signature $`\lambda(r)`$, a finite arity $`n_r`$, ordered argument values $`v_{r,j}`$, an occurrence identifier and a real coefficient $`a_r`$. Give each argument its own tagged role type $`(\lambda(r),j,\tau_{r,j})`$ and use free basis vectors carrying both the occurrence identifier and its value. Define
+
+```math
+\iota(e)=\sum_r a_r
+ \bigotimes_{j=1}^{n_r}
+ [r,v_{r,j}]_{(\lambda(r),j,\tau_{r,j})},
+\qquad
+\rho(e)=\eta(\xi(e))+\iota(e).
+```
+
+The record type is disjoint from every interaction-role type. The occurrence identifier preserves incidence across the factors; it is metadata for the chosen occurrence, not another semantic argument. Its omission needs justification if multiplicity or identity matters. The extractor must supply the relations; co-occurrence alone does not create a support or authority relation.
+
+**Faithfulness to the declared view.** Under the finite-view and injective-atomisation hypotheses, $`\rho(e)`$ is well-defined with finite word support and determines $`\xi(e)`$ exactly. If $`\xi`$ is injective on $`D`$, then so is $`\rho`$.
+
+**Proof.** Both displayed sums contain finitely many finite tensors. Projection onto the distinguished record summand removes the interaction channel and leaves $`\eta(\xi(e))`$. Independence of the record basis recovers precisely its retained atom set. Injective atomisation then reconstructs $`\xi(e)`$. An injective view consequently separates the original selected tokens. ∎
+
+The disjoint positive record channel matters: even signed interaction coefficients cannot cancel its atoms. For example, take a nonempty record and unit-coefficient interactions: two evidence-to-claim occurrences add two coefficients in one degree-two word component; an actor–evidence–claim occurrence adds degree three, and a configuration–evidence–claim–route occurrence adds degree four. Along with the record channel these have degree profile $`\{1,2,3,4\}`$. An unresolved obligation can remain a tagged record atom throughout; no degree change is needed merely to change its status. [FORM, Proposition 4.1 and worked finite view][FORM]
+
+This construction establishes preservation of the declared record, with no claim of compression or efficient storage. The ambient basis can be very large or infinite across episodes. Equality of reference identifiers does not authenticate their referents. A record containing a false conclusion is just as encodable as a record containing a true one. Mapping that record injectively into a disjoint set of higher-level appraisal objects preserves its identity and leaves the conclusion false. Thus injective encoding or reification supplies no truth upgrade. A new appraisal needs its own grounds. Nor does informal conversational activity automatically satisfy the separate domain conditions for a canonical episode record, an ecology registration or a game declaration. These boundaries concern the proposed representation, not a universal reflective requirement on ordinary knowers. [FORM, §§4 and 12][FORM]
+
+### 1.3 Degree shifts, contractions and a higher-order distinction
+
+Let $`H=\bigoplus_{n\geq0}H_n`$ be any algebraic graded real vector space, with negative-index spaces interpreted as zero. For a **linear** map $`D:H\to H`$, define
+
+```math
+D^{[k]}v=\sum_{n\geq0}P_{n+k}D(P_nv),
+\qquad k\in\mathbb Z.
+```
+
+Then $`D^{[k]}`$ shifts degree by $`k`$ and
+
+```math
+Dv=\sum_{k\in\mathbb Z}D^{[k]}v
+```
+
+is pointwise locally finite. To prove this, fix $`v`$. It has finite input-degree support; each of the finitely many vectors $`D(P_nv)`$ has finite output-degree support. Only the finite set of differences between these input and output degrees contributes. Summing their projections recovers $`Dv`$. No uniform bound on the shifts for every possible $`v`$ is required. Conversely, an arbitrary proposed family of degree-shifting maps does not define this algebraic sum without pointwise local finiteness, unless a separate completion and convergence rule is supplied. A state-dependent or guarded revision may be nonlinear or partial, so this linear decomposition cannot simply be assigned to it. [FORM, Proposition 6.1][FORM]
+
+A contraction of an ordered tensor slot requires a specified covector:
+
+```math
+C_{j,\varphi}(v_1\otimes\cdots\otimes v_n)
+ =\varphi(v_j)
+   v_1\otimes\cdots\widehat{v_j}\cdots\otimes v_n.
+```
+
+Its output word must also be admitted if the operation is to remain inside a restricted representation space. The covector cannot be chosen as a nonzero real linear functional invariant under **every** invertible basis change. If $`\ell\circ g=\ell`$ for all $`g\in\mathrm{GL}(W)`$, taking $`g=2\mathrm{id}_W`$ gives $`2\ell=\ell`$, hence $`\ell=0`$. A declared free basis does supply the useful augmentation $`[x]\mapsto1`$; that added structure is precisely what probability marginalisation uses. The basis-copy discussion in [Received Actuality, §10.7](../foundations/received-actuality-and-intrinsic-necessity.md#107-an-invariant-average-need-not-identify-any-individual) likewise keeps basis-relative operations and their transported interpretation together. [FORM, Proposition 6.2][FORM]
+
+An algebraically valid contraction need not preserve a required target. Take a nonzero $`v`$ and distinct basis vectors $`d_0,d_1`$ with $`\varphi(d_0)=\varphi(d_1)=1`$. Both $`v\otimes d_0`$ and $`v\otimes d_1`$ contract to $`v`$. Any target distinguishing the two originals therefore fails the fibre criterion already proved in [Physical Realisation, §9.3](physical-realisation-and-continuation.md#93-lossless-abstraction-is-target-relative). Calling the operation a discharge does not alter the collision. [FORM, Counterexample 6.3][FORM]
+
+Parity gives a useful positive calculation of exactly which tensor component is lost. For $`n\geq2`$ and $`x\in\{0,1\}^n`$, let
+
+```math
+P_\pm(x)=2^{-n}\bigl(1\pm(-1)^{x_1+\cdots+x_n}\bigr).
+```
+
+These are probability laws uniform on the two parity classes. Summing over any missing coordinate cancels the alternating term, so every proper-subset marginal is the corresponding uniform law. Their parity expectations are nevertheless $`+1`$ and $`-1`$. If $`v_0,v_1`$ is the basis of $`\mathbb R^2`$ and laws are represented by their coefficient tensors, expansion gives
+
+```math
+P_+-P_-=2^{1-n}(v_0-v_1)^{\otimes n}.
+```
+
+This nonzero tensor has rank one and order $`n`$. Augmentation $`\varepsilon(v_0)=\varepsilon(v_1)=1`$ annihilates one factor of the difference, and therefore every proper marginal annihilates it. The sign covector $`\psi(v_0)=1,\ \psi(v_1)=-1`$ instead detects the difference through $`\psi^{\otimes n}`$. For any fixed marginal order $`r`$, choose $`n>\max\{r,1\}`$: the retained marginals agree while parity differs, excluding an exact decoder for both laws. A single target-specific parity statistic still suffices. Thus the result constrains the permitted representation family; it does not require unbounded actual episode degree or large tensor rank. [FORM, Theorem 5.1 and Corollary 5.2][FORM]
+
+The stronger continuation question is already developed in [Information and Inquiry, §2.4](information-and-inquiry.md#24-how-a-constrained-action-graph-changes-the-necessary-information): permitted pairwise operations and their graph determine when a hidden character becomes observable. The parity calculation here isolates the contraction mechanism without asserting a comparative advantage over relations, hypergraphs or another adequate representation.
+
+### 1.4 Representation changes and future-relevant reductions
+
+For type-preserving linear isomorphisms $`g_\tau:V_\tau\to V'_\tau`$, the induced tensor map satisfies
+
+```math
+T(g)|_{V_w}=g_{\tau_1}\otimes\cdots\otimes g_{\tau_n}.
+```
+
+It preserves word types and degrees. A passive representation change has the stronger, checkable condition $`\rho'=T(g)\rho`$ on the admitted domain. Free-basis relabelling satisfies it when the encoder and its interpretation are transported together. An arbitrary change in the analysis, target or authority is not made passive by the existence of a linear isomorphism. Similarly, representing a workflow composition by tensor multiplication would require $`\rho(e\circ f)=\rho(e)\rho(f)`$ wherever composition is defined, or another explicit intertwining law. Shared evidence, aliases and duplicate obligations can defeat that equation. The free-record construction establishes no such blanket homomorphism. [FORM, §4][FORM]
+
+The existing attained-image fibre criterion applies to the entire intended continuation contract. Let $`r:D\to Y`$ be a reduction, $`F:D\to D`$ a deterministic update, $`q:D\to Z`$ a required target and $`\ell:D\to\mathcal P(\mathscr J)`$ the declared set of feasible future inquiries. Applying that criterion to $`r\circ F`$, $`q`$ and $`\ell`$ gives reduced maps on $`r(D)`$ exactly when all three are constant on every fibre of $`r`$:
+
+```math
+\bar F\circ r=r\circ F,
+\qquad
+\bar q\circ r=q,
+\qquad
+\bar\ell\circ r=\ell.
+```
+
+The same finite induction as the exact-continuation proof in [Physical Realisation, §7.1](physical-realisation-and-continuation.md#71-the-exact-induction) then gives
+
+```math
+r(F^m(d))=\bar F^{\,m}(r(d)),
+\qquad
+q(F^m(d))=\bar q(\bar F^{\,m}(r(d))),
+\qquad
+\ell(F^m(d))=\bar\ell(\bar F^{\,m}(r(d)))
+```
+
+for every finite $`m`$. The first equation follows by iterating the commuting update equation; substitution gives the other two. This is an application of those factorisation and induction arguments, without a finiteness assumption on $`D`$ and without an effective algorithm being inferred. Probabilistic and nondeterministic updates need their own compatible contracts. The finite instrument construction in [Information and Inquiry, §§2.1–2.4](information-and-inquiry.md#2-finite-instruments-and-exact-predictive-states) supplies substantially stronger computational and memory results under its stated premises. [FORM, Theorem 11.2][FORM]
+
+A present target can be constant on a collapsed pair while a later target separates the pair. The export counterexample in [Physical Realisation, §6.2](physical-realisation-and-continuation.md#62-a-one-bit-export-can-lose-a-two-step-state) supplies an operational instance. Future adequacy therefore declares a target family and horizon; it does not demand preservation of every possible distinction forever. Active degree reduction and the truth of a recorded disposition are also different from retaining the relevant history, as [Information and Inquiry, §9.4](information-and-inquiry.md#94-selecting-a-valid-certificate-rather-than-recovering-a-state) makes explicit.
+
+An orbit reduction is a useful special case. If a group acts on $`D`$ and $`F(gd)=gF(d)`$, then $`[d]\mapsto[F(d)]`$ is well-defined: representatives $`d'=gd`$ have outputs in the same orbit. A target descends exactly when it is constant on each orbit. A differentiable gauge or slice still needs its own regularity conditions, and a change of analysis need not be such a symmetry. [FORM, Proposition 10.7][FORM]
+
+Finally, finite support at every stage does not supply a state after infinitely many structural changes. The source gives events at times $`t_m=1-2^{-m}`$ with increasing tensor degree. To make the retained-history issue explicit, take a nonzero generator $`v`$ and retain each new grade as
+
+```math
+s_m=\sum_{j=1}^{m}v^{\otimes j}.
+```
+
+Every $`s_m`$ lies in the algebraic direct sum. Its prospective coordinatewise limit has a nonzero component in every positive grade and lies outside that direct sum. Thus a finite-stage encoding and a finite-transition preservation proof do not provide an admissible state at the accumulation time. One must exclude such unhandled accumulation or supply a different state space and a justified continuation. This explicit history sum spells out the source's finite-support boundary; it neither declares a topology for all episode encodings nor equates formal degree growth with a physical singularity. [FORM, §10, “Hybrid safety and the infinite-event boundary”][FORM]
+
+The source's conditional synthesis now has a concrete reading across the chapters. Under one compatible set of declarations, the encoder gives finite typed support, the retained-history theorem keeps the obligation lineage, and the inquiry-menu definition supplies the prospective feasible set. Wherever the additional finite-game premises hold, [Collective Inquiry, §3.2](collective-inquiry-and-strategic-coordination.md#32-existence-is-conditional-stability) supplies a mixed equilibrium; an adequate quotient gives the finite continuation identities above. These conclusions follow from their respective hypotheses, without identifying their different objects. They do not imply that an equilibrium is played, a recorded conclusion is true, the menu improves or infinite-time execution exists. Probability marginalisation here and mixed-payoff contraction in [Collective Inquiry, §3.1](collective-inquiry-and-strategic-coordination.md#31-a-game-is-additional-structure) are actual uses of multilinear structure. A comparative advantage still needs a target-preserving calculation or measured benefit at a declared cost; mere encodability, including the degree-one record construction, establishes none. [FORM, Theorem 11.3 and “What would make tensor structure substantively useful?”][FORM]
+
 ## 2. Finite channels: exact tensor closure and its limits
 
 ### 2.1 Fisher gradient descent produces a moment hierarchy
@@ -1319,6 +1501,8 @@ The public Orthemology proofs cited in the text authenticate the particular stat
 
 
 
+[FORM] Orthemology, *Graded Representations, Witnessed Revision, and Inquiry Landscapes: A conditional mathematical extension of Orthemology*, version 1 research draft, 8 September 2026. [Exact public source][FORM]. Sections 1.1–1.4 develop its finite typed-record construction, degree-shift and contraction arguments, parity calculation and continuation boundaries. The source itself distinguishes these elementary conditional results from the production extractor, semantic interpretation and empirical comparison still needed for an application. The explicit history sum clarifies its infinite-event example. These finite record tensors are separate from the moment hierarchies studied in the rest of this chapter; neither construction completes the original unfinished N-person programme.
+
 [activation-source]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/research/t20-v6-20261012/research-v6/type_collective/cumulative_damping_prose/ACTIVATION_BOUNDARY.md
 [coercive-source]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/research/t20-v6-20261012/sources/204f63e544b1afd9538230f95f8ebfbc613b9847c579dfb901de6d10e40ebb10/coercive-square-positivity-20261010__RESULT.md
 [computed-separator-review-source]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/research/t20-v6-20261012/sources/8e026e569b52b6495050111ce92a063291d298c6e496a13775c5fa222dc99ff6/COMPUTED_SEPARATOR_REVIEW.md
@@ -1350,3 +1534,5 @@ The public Orthemology proofs cited in the text authenticate the particular stat
 [tensor-review-source]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/research/t20-v6-20261012/sources/448ace340a04d56aaa26b1cab0d7f720dcda56c3fe1a37bdff76c8375c30ad07/tensor-realizability-independent-review-20261010__REVIEW.md
 [tensor-source]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md
 [valid-initial-escape-source]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/research/t20-v6-20261012/sources/c6dc162591a6827b8ae09a3b0be902ee53573435ae5b4f4ecfb1fc66ed835ada/RESULT.md
+
+[FORM]: https://github.com/theislampill/orthemology/blob/28679eaed33ee48cf0c5d15ba6dc3b27aac9067b/theory/lineages/h-formalisation/orthing_formalisation_v1.md

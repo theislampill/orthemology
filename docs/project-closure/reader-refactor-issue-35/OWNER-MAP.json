@@ -586,9 +586,9 @@
       "key": "consolidated-information-and-inquiry",
       "path": "mathematics/information-and-inquiry.md",
       "mode": "100644",
-      "git_oid": "8c8303533f37b7749a969ac810c3927b14d44d34",
-      "bytes": 192909,
-      "sha256": "371b7eaf8cf46839a85a9d79565cb5500931a61cb514a9c61f4b5081883e48c4",
+      "git_oid": "c7ae70e93252b02492594b55c075e713e12ca279",
+      "bytes": 204140,
+      "sha256": "b41b56326e861a39c5dd643d636c6f430c74048c5ff1f2df0cc7265fc1866935",
       "role": "work-source",
       "work_keys": [
         "information-retained-by-inquiry"
@@ -601,9 +601,9 @@
       "key": "scientific-consolidation-review",
       "path": "docs/scientific-consolidation-review.md",
       "mode": "100644",
-      "git_oid": "0baa6ecf991985357944f2b3490659c0bfd5a7ad",
-      "bytes": 318137,
-      "sha256": "68bf906d69c5a6f667e8c6e99c4979a91150c7815de29791601d6b0fb6c91450",
+      "git_oid": "ea8099f10c884907317d62962957c2fe6af8fe60",
+      "bytes": 328979,
+      "sha256": "a42e787651e7e546cd2a1deaa41474b20551cb2d93173207d5e7668e69f03f09",
       "role": "review",
       "work_keys": [
         "received-actuality-and-intrinsic-necessity",
@@ -669,9 +669,9 @@
       "key": "consolidated-tensor-moments",
       "path": "mathematics/tensor-moments-and-corrective-dynamics.md",
       "mode": "100644",
-      "bytes": 127878,
-      "sha256": "90d9691356d113368206331b083108854a3a1d3e11c8015d0dcb18194f002c97",
-      "git_oid": "cbeb1f4d22bed60a8ba57d435af937cc608a0fdd",
+      "bytes": 147508,
+      "sha256": "296c902168e8ebb28da0ff062ae89d400a11adf654b566530ca0ec71716ece37",
+      "git_oid": "588661d151f9a5e800dc678140487f6c24ec6b40",
       "role": "work-source",
       "work_keys": [
         "tensor-moments-and-corrective-dynamics"
@@ -744,9 +744,9 @@
       "key": "consolidated-physical-realisation-and-continuation",
       "path": "mathematics/physical-realisation-and-continuation.md",
       "mode": "100644",
-      "git_oid": "cb554d4cdab165a117d48254815552e2f4deb98f",
-      "bytes": 112804,
-      "sha256": "c1f79e853bef1c3e719cff7e01d11ca7fcd6be934317a777b03cfb4951cdf3dc",
+      "git_oid": "5ae642ad9d5bad1762266b308f9455d5db903698",
+      "bytes": 130600,
+      "sha256": "82cf374aa1e28bf5eec76da3b5f449484fe0bf12657d2521fc1259c3e9a608ed",
       "role": "work-source",
       "work_keys": [
         "physical-realisation-and-continuation"
