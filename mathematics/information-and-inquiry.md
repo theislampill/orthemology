@@ -1451,6 +1451,134 @@ The same discipline governs a proof carried across versions. A proof of $`(q_0,\
 
 Persistence is indispensable. If a proof requires $`p,q`$, a test obtaining $`p`$ expires $`q`$, and a test obtaining $`q`$ expires $`p`$, then the union of all historically returned tokens is $`\{p,q\}`$ but no reachable active inventory from the empty state contains both. The full-transcript criterion would be false for that model. Expiry, consumption, defeat, source withdrawal or changing permissions must be represented in an expanded state before a new Bellman theorem is applied; simple set subtraction and monotone accumulation cannot be inherited without proof.
 
+#### Exact predicate decisions as a zero-checking-price case
+
+A useful specialization asks whether a proposed revision meets a fixed admission rule. Fix a transition $`x\to y`$, a bounded target $`T`$, a finite nonempty set $`C`$ of compatible situations, and a supplied Boolean predicate $`g:C\to\{0,1\}`$. For example, $`g(w)=1`$ can mean that the transition is authorised, feasible and preferred under $`T`$ in situation $`w`$. Hard constraints act as vetoes. Preference can be a strict partial or lexicographic order; a scalar loss comparison is optional. No numerical weighting or gradient is required. The evidence procedure cannot choose the target or fill in an unspecified preference. Minimising answer length alone, for instance, can favour an empty answer over fulfilment of a request. [42]
+
+Let $`\mathcal Q`$ be a finite menu of authorised probes with known deterministic response maps $`h:C\to Y_h`$ and fixed finite prices $`c_h>0`$. Probes leave the situation unchanged or operate on resettable copies; their meanings, prices and availability remain fixed. The actual situation $`w_*`$ is assumed to lie in $`C`$. Protocols are deterministic, observations are exact, and a run pays the sum of its probe prices. The supplied tables for $`g`$ and the responses do not themselves reveal $`w_*`$ or establish probe reliability. Unrepresented noise, drift and unreliable observations lie outside this model.
+
+A transcript leaves a nonempty residual $`S\subseteq C`$. Uniform soundness permits a Boolean answer $`b`$ only when $`g(w)=b`$ throughout $`S`$. Otherwise a protocol may inquire or report unresolved; an empty residual signals model inconsistency. The optimization below requires a decision on **every** remaining situation, so an always-unresolved protocol does not qualify. Put $`S_{h,a}=\{w\in S:h(w)=a\}`$ and define
+
+```math
+V_g(S)=
+\begin{cases}
+0,& |g(S)|=1,\\[3pt]
+\displaystyle\min_{\substack{h\in\mathcal Q\\|h(S)|>1}}
+\left(c_h+\max_{a\in h(S)}V_g(S_{h,a})\right),& |g(S)|>1,
+\end{cases}
+\qquad \min\varnothing=+\infty.
+```
+
+Every child of an informative probe is a nonempty proper subset of $`S`$, so this recurrence is well founded. It is the predicate-decision specialization of Theorem 15, with **zero terminal checking price**. To see the specialization precisely, use the chosen initial compatible set as the scenario space, give each observed response its identified token $`(h,a)`$, and admit a model-relative derivation for each consistent partial response assignment whose compatible situations all have the same $`g`$-label. Both labels are goal conclusions, and all these terminal derivations have price zero. The collection is finite. A terminal derivation is eligible exactly when the current residual is monochromatic. The supplied model tables and their interpretation are premises of these derivations, rather than conclusions certified by their availability.
+
+After a probe has been used, its response is constant on every later residual, so repeating it cannot help. An unused probe constant on the current residual also leaves that residual and every future information possibility unchanged. Deleting either kind of probe reduces positive cost without losing a possible decision. This justifies the one-use convention of Theorem 15 and the restriction to informative probes here. It does **not** justify deleting constant-response acquisitions from the general theorem: those can supply genuinely needed evidence tokens when terminal proofs have different admission conditions. Theorem 15 therefore supplies the lower bound, attainment of every finite value, and impossibility when the value is infinite; its induction need not be repeated.
+
+In particular, write $`O(w)=(h(w))_{h\in\mathcal Q}`$. A decision is possible on every situation exactly when
+
+```math
+O(w)=O(v)\ \Longrightarrow\ g(w)=g(v).
+```
+
+Indeed, equal complete observations force an adaptive deterministic protocol to choose the same first probe, receive the same answer and then repeat that agreement at every later choice. Its terminal answer cannot distinguish opposite labels. Conversely, querying every probe leaves one complete-observation fibre; constancy of $`g`$ there supplies the answer. This is the full-transcript criterion of Theorem 15 in the present specialization. It establishes possibility, while $`V_g`$ prices that possibility. A finite value above the available budget and an infinite value are different obstructions; neither is the negative admission verdict $`g=0`$. Some branches may remain affordable when a finite worst-case optimum exceeds the budget, but they do not give a guarantee for every situation.
+
+If $`g`$ is constant on $`S`$, stop with its unique label. Otherwise, if $`V_g(S)<\infty`$, choose a minimizing probe, execute it and continue on $`S_{h,h(w_*)}`$. If the remaining budget covers $`V_g(S)`$, the recurrence ensures that every child continuation fits after paying $`c_h`$. Affording just the next probe is insufficient. A heuristic policy needs its own argument for any cost guarantee. The source compares this concrete/symbolic feedback with directed and concolic testing [42]. Here the symbolic state is a set of compatible situations, not necessarily a program path condition; program execution semantics, constraint-solving machinery and evidence that an actual execution followed the procedure remain separate requirements.
+
+This optimum prices probes alone. It excludes model construction, verification of probe reliability and computation of the inquiry policy, which may involve exponentially many residual sets. Zero terminal checking price is an explicit idealization of this specialization, not a change to the general theorem's account of actual proof checking.
+
+#### Retained records and changed questions
+
+Suppose a retained record $`r:C\to Z`$ has known, unchanged meaning and is available with no additional access cost. Its earlier acquisition cost is excluded from the additional budget. With $`C_z=\{w\in C:r(w)=z\}`$, the exact costs before and after its value is specified are
+
+```math
+V_g(C\mid r)=\max_{z\in r(C)}V_g(C_z),
+\qquad
+\text{cost after observing }z=V_g(C_z).
+```
+
+The freely observed record first selects a nonempty fibre. Theorem 15 gives an attainable optimum separately on each fibre; the worst of these values is necessary and sufficient before the record value is known. Thus a finite nonnegative budget $`\beta`$ guarantees a decision exactly when $`V_g(C\mid r)\leq\beta`$, or $`V_g(C_z)\leq\beta`$ after the particular value is observed. An inaccessible or semantically changed record does not meet these premises. [42]
+
+If the question changes to a specified predicate $`g'`$ while situations and record meanings stay fixed, substitute $`g'`$ in the formula. No new probe is needed exactly when $`g'`$ is constant on every record fibre. Earlier acceptance under $`g`$ does not establish that condition. More generally, a freely available record suffices for **every** Boolean decision on $`C`$ exactly when it is injective: an injective record identifies the situation; if $`r(w)=r(v)`$ for distinct situations, a predicate assigning them opposite labels cannot be decided from that record. For a restricted family $`\mathcal F`$, the exact condition is only
+
+```math
+r(w)=r(v)\ \Longrightarrow\quad
+\bigl(\forall f\in\mathcal F,\ f(w)=f(v)\bigr).
+```
+
+This is the target-relative fibre criterion of [Physical Realisation, §9.3](physical-realisation-and-continuation.md#93-lossless-abstraction-is-target-relative), applied to the intended future questions. Smaller records may therefore suffice, and collecting rich evidence before its eventual use is chosen remains legitimate. The same decision architecture can serve different purposes while their evidence requirements differ. When an artifact or an observation's meaning changes, a justified relation to the new situation space is additionally needed. Section 9.4's semantic-transport conditions address that separate burden: a digest can check retained bytes, but supplies neither the semantic bridge nor factual truth.
+
+#### An exact adaptive advantage
+
+The address construction in [42] gives a strict comparison under the same exact observation model. For an integer $`k\geq1`$, use the **full** domain
+
+```math
+C=\{0,1\}^{k}\times\{0,1\}^{2^k},\qquad
+\mathrm{index}(a)=\sum_{j=1}^{k}2^{k-j}a_j,\qquad
+g(a,z)=z_{\mathrm{index}(a)},
+```
+
+where the data coordinates are $`z_0,\ldots,z_{2^k-1}`$. Every address/data assignment is admitted independently. The only probes read individual bits at unit positive cost, with deterministic responses on unchanged inputs or resettable copies. Reading the $`k`$ address bits and then the selected data bit decides the output in $`k+1`$ queries.
+
+For the matching lower bound, every one of the $`n=k+2^k`$ input variables is essential. Each data bit is the output for its own address. Flipping any address bit changes the selected index; assigning different values to those two data positions witnesses essentiality of that address bit. If an essential variable labels no query node anywhere in an exact decision tree, the two witnessing inputs differing only in that variable follow the same path and reach the same answer, a contradiction. Hence the **whole tree** has at least $`n`$ internal nodes. A binary tree of depth at most $`k`$ has at most
+
+```math
+1+2+\cdots+2^{k-1}=2^k-1\lt{}k+2^k
+```
+
+internal nodes. Depth $`k`$ is impossible, and the attaining construction proves that the optimal adaptive cost is exactly $`k+1`$. This lower bound counts nodes across the entire tree; it does not say that one adaptive path queries every essential variable.
+
+A nonadaptive battery fixes all queried coordinates before receiving any answer. Omitting an essential variable makes its two witnessing inputs indistinguishable to that fixed battery. Every coordinate must therefore be included, and querying all of them attains the exact cost $`k+2^k`$. At $`k=4`$, the costs are five adaptive queries and twenty fixed queries. The separation is exponential in address length $`k`$; it concerns additive query cost, not elapsed parallel time, and promises no adaptive advantage for every task. Restricting the input domain or changing the allowed probes changes the problem.
+
+#### Revising the rule can revisit the same pair
+
+An object-level revision changes the artifact; a method-level revision changes how such revisions are judged. In this modelled process, a proposed method change must meet the predecessor's admission rule, while the evidence that remains sufficient under the successor rule must be assessed separately. The successor's declaration that it is acceptable cannot serve as its sole warrant. Composing conditional local decisions does not independently certify their premises. [42]
+
+Strict local improvement also leaves a termination question. Let the artifact be $`x\in\{0,1\}`$, and let the two methods use losses
+
+```math
+L_0(x)=x,\qquad L_1(x)=1-x,
+```
+
+with the same stipulated permissions and feasibility conditions. Suppose both displayed method/artifact changes are permitted, with no additional constraint or change cost vetoing them. Then
+
+```math
+(L_0,1)\longrightarrow(L_1,0)\longrightarrow(L_0,1)
+```
+
+satisfies strict improvement under the predecessor loss at each step:
+
+```math
+L_0(0)=0<1=L_0(1),\qquad
+L_1(1)=0<1=L_1(0).
+```
+
+The complete method/artifact pair repeats, so these permitted steps can continue indefinitely without any error in the displayed local comparisons. If the process also retains an ever-growing history, as in §9.4, that larger historical state need not repeat; the counterexample concerns the active pair. A single common well-founded order strictly decreased by every accepted transition would suffice for termination, because an infinite accepted run would give an infinite descending chain. Changing local losses supply no such order, and strict decrease of arbitrary real values alone need not be well founded. Section 9.4 obtains its distinct persistence guarantees from explicitly specified transition models and ranks; those hypotheses do not follow from local loss comparisons.
+
+#### Behavioural parity and a missing delivery-cost observation
+
+Agreement on every task output need not determine the effort required to obtain, invoke or maintain a representation. The following two-world construction makes the missing observation explicit [42]. Fix representations $`p_0,p_1`$ that, in both situations $`w_-,w_+`$, return the same fixed value $`b(u)`$ on every admitted task input $`u`$. Authorisation and feasibility also agree across the worlds. Give their delivery costs the values
+
+```math
+\begin{array}{c|cc}
+ & w_- & w_+\\\hline
+d(p_0,\cdot)&1&1\\
+d(p_1,\cdot)&0&2
+\end{array}.
+```
+
+The predicate “same task behaviour and lower delivery cost” admits $`p_1`$ precisely in $`w_-`$: $`g(w_-)=1`$ and $`g(w_+)=0`$. With $`C=\{w_-,w_+\}`$, every behaviour-only probe has equal responses in the two worlds. The full-observation criterion therefore gives $`V_g(C)=+\infty`$ for that menu, however many such task-correctness tests it contains.
+
+Now add exactly one authorised probe
+
+```math
+h_\Delta(w)=d(p_1,w)-d(p_0,w),\qquad c_{h_\Delta}=1.
+```
+
+Its responses are $`-1`$ and $`1`$. One query separates the worlds and leaves a free terminal decision, so the enlarged menu has value at most one. Any deciding protocol must use this probe, since every other response is identical across the opposite-labelled worlds; its value is therefore **exactly one**. Repeating behaviour-only probes cannot supply the missing coordinate. A probe measuring installation or invocation effort is not behaviour-only in this construction.
+
+The example stipulates an independent delivery-cost coordinate without a linking assumption from behaviour. It measures no actual representation's cost and establishes no empirical cheaper-representation claim. The contract and interface distinctions in [Physical Realisation, §§2.1–2.2](physical-realisation-and-continuation.md#21-a-contract-before-an-experiment) explain what a real replacement must preserve; [§10.5](physical-realisation-and-continuation.md#105-resources-include-the-controller) includes the controller and its own resource use. The present $`V_g`$ comparison retains its narrower accounting: model-building, policy-computation and reliability-verification costs are excluded.
+
+Finally, constructing a candidate for measurement and admitting it for use are different proposed transitions. Bounded exploration can satisfy its own purpose, permissions, costs and constraints while leaving the final adoption predicate unresolved. Specifying a decision, obtaining separating observations and pricing their continuation gives a conditional inquiry procedure; it does not select the purpose, authenticate its own premises or ensure universal convergence.
+
 ### 9.6 From finite inference rules to complete certificate frontiers
 
 The preceding theory starts with an admitted finite proof collection. It can cover **all finite derivations** of a declared finite grounded rule system, even when its dependency graph has cycles. The resulting theorem distinguishes two genuinely different checking costs: charging every occurrence in a tree and charging each shared node of a proof graph once. [26]
@@ -1845,6 +1973,8 @@ Section 2.4 incorporates the exact graph-constrained result [21] and the indepen
 
 Sections 9.5–9.6 reconcile the complete warranted-completion treatment [24], its finite support/price kernel supplement [25], and the cyclic/shared rule-compilation treatment [26]. The proofs retain the reviewed corrections: finite admitted prices are distinguished from infeasibility, failed candidate checks are not guaranteed terminal actions, raw reports stay outside the authenticated inventory, a restricted menu need not realize all acquisitions, optimal abstract choices do not identify concrete witnesses, snapshot-negative outputs preserve their scope, and pathwise worst-case cost differs from randomized expected cost. The permutation proof of the equal-price frontier bound writes out a consequence stated in the predecessor's review. The provenance, weighted-deduction and certificate/search antecedents [27–29] are acknowledged without claiming general novelty.
 
+The predicate-decision application in §9.5 comes from [42]. Its cost recurrence is the zero-terminal-price specialization of Theorem 15; the address example, changing-objective cycle and two-world delivery-cost construction retain their own stated domains and model boundaries. These ordinary arguments make no new-priority claim and supply no general concolic-testing, empirical-delivery or self-certification guarantee. The source's bibliographic attributions remain source-relative as specified in its reference entry.
+
 The exact formal source [30] proves the visited-support inequality, synthesis from a finite connected witness, the optimum under a minimum-witness premise, and the local character pullback identity. Its constructive connected-set predicate is not separately identified inside Lean with an imported graph-connectivity predicate, and its unlabelled idle constructor is harmless for an at-most horizon only. Whole physical-word correspondence, the probability-simplex/topological lower bound, fixed-root strengthening, graph counts and saturation remain written proofs. The finite support/price formalization [31] proves normalization, the inverse, necessity and persistent updating in an arbitrary linearly ordered price type with a newly adjoined infeasibility top. Its catalogue, supports and acquisitions are finite; the ambient token type need not be. It supplies original pairs, not admitted derivation objects, authentication or actual terminal execution.
 
 The predecessor reports and reviews record Lean 4.19 certification of these exact formal bodies with the standard dependencies `propext`, `Classical.choice` and `Quot.sound`, and preserve false-strengthening controls. Their historical execution claims remain bound to those sources and their recorded environments. Source inspection here is not a fresh kernel replay, an audit of cached transitive dependencies, or receipt of every historical raw log. The Bellman criterion, semantic cover, finite rule compilation, and tree/shared-graph distinction have ordinary proofs and bounded historical finite checks; they are not added to the kernel certificate by association. The earlier distinction between a finite proof and unrestricted logical or epistemic completeness remains in force. Referenced ancestor manuscripts outside the actual received population receive no new whole-document reading or replacement credit.
@@ -1908,6 +2038,8 @@ Section 5.3 and the retained-history argument in §9.4 incorporate the correspon
 40. Orthemology. *Approximate Repair Identification*. [Exact public Lean source][40], for relative-tolerance decoding, the causal countability endpoint and the no-information linear-tolerance counterexample.
 41. Orthemology. *Blind Guess Sharpness*. [Exact public Lean source][41], for the literal evaluator's exact atomic success mass.
 
+42. Orthemology. *Reflexive Revision under an Evidence Budget: Decision cost, evidence reuse, and self-application*. [Exact version 3 source][42]. Its bibliography supplies the attributions to *Knowledge and common knowledge in a distributed environment*; *Complexity measures and decision tree complexity: a survey* (also listed above as [29]); *DART: directed automated random testing*; *CUTE: a concolic unit testing engine for C*; and *Predictive testing: amplifying the effectiveness of software testing*. Those five primary bodies were not reacquired or newly verified for this addition; their source-provided metadata remain available in the linked bibliography.
+
 Repository references identify exact public source editions, not mutable current filenames. The broader works in references 1, 6, and 7 contain additional results and are not replaced in their entirety by this chapter.
 
 [1]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/theory/lineages/h-continuation/continuation_complete_orthing.md
@@ -1954,3 +2086,5 @@ Repository references identify exact public source editions, not mutable current
 [41]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-continuations/source-store/75d8ceba960b2ae9698515d20e05badd9257fcab10a8a60bf295aad36eb21395.lean
 
 [FORM]: https://github.com/theislampill/orthemology/blob/28679eaed33ee48cf0c5d15ba6dc3b27aac9067b/theory/lineages/h-formalisation/orthing_formalisation_v1.md
+
+[42]: https://github.com/theislampill/orthemology/blob/c1a30e5ab19c2160e469b0632d3bdad48ad4b0e8/theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex
