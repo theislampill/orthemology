@@ -201,6 +201,69 @@ The retained contingency-need premise is
 
 The proof does not establish its philosophical premise. Worlds must represent genuine alternatives for the same bearer, and whole receipt must express the intended existential dependence. Arbitrarily chosen histories or a weaker dependence predicate do not receive that interpretation merely from the proof's validity. Conversely, re-proving the conditional implication would not strengthen the already developed philosophical warrant. [Direct anti-brute return, “Application to ContingencyNeed”; affirmative intrinsic-necessity argument, §7][s3] [Affirmative intrinsic-necessity argument][s1]
 
+### 7.1 A distinct temporal criterion for a particular bearer's necessity
+
+The intrinsic-adequacy argument above asks what makes an actual productive original sufficient in the relevant respect. A temporal potentialist argument has a different starting point and a narrower conclusion. It can exclude the whole-history absence of one actual bearer under explicit witness and preservation premises, without establishing that bearer's intrinsic sufficiency or freedom from reception. The *Mathematical Companion*, entry 10, gives the conditional argument; its public *Sixteenth Report* discusses the proposed modal and historical premises. [Temporal criterion][temporal-companion] [Public philosophical report][temporal-report]
+
+Fix an actual particular $`g`$. Let $`E(g)`$ mean that $`g`$ exists **somewhere in a complete history**. It does not mean that $`g`$ is present now, lives forever, or retains a current capacity. Let $`T`$ be a nonempty linearly ordered set of actual times and $`A(g)\subseteq T`$ the nonempty set of times at which that same bearer is present. Tenseless existence in an eternalist account is not, merely by definition, presence at every time.
+
+Let $`W(t,q)`$ say that a potentiality actually possessed at time $`t`$ adequately witnesses the metaphysical possibility $`q`$. The possessor may be plural, and the potentiality joint, extrinsic or iterated. The argument does not identify every possessed disposition with a usable unmasked power. Its assumptions concern the manifestation's whole-history content:
+
+1. **Coverage for this absence claim:** $`\Diamond\neg E(g)`$ implies $`W(t,\neg E(g))`$ for some actual time $`t`$.
+2. **Strict past preservation:** if $`s\in A(g)`$ and $`s<t`$, then $`\neg W(t,\neg E(g))`$.
+3. **Present-and-past preservation**, when assumed, strengthens the second premise by replacing $`s<t`$ with $`s\leq t`$.
+
+Coverage is a substantive modal claim, even when stated for only one proposition. Naming the required instance does not warrant it. The preservation rationale is that a power possessed after a settled presence cannot adequately witness a manifestation in which that bearer was absent from the whole history. Extending this rationale to a presence simultaneous with the power's possession is an additional premise, not an equality case already contained in strict past preservation.
+
+**Witness-location lemma.** Under coverage and strict past preservation,
+
+```math
+\Diamond\neg E(g)\Longrightarrow
+\exists t\in T\ \forall s\in A(g)\quad t\leq s.
+```
+
+With present-and-past preservation, the last inequality is strict.
+
+**Proof.** Coverage supplies a witnessing $`t`$. If an actual presence $`s`$ were strictly earlier, strict preservation would prohibit that witness. Linearity therefore gives $`t\leq s`$ for every actual presence. Under the stronger preservation law, $`s\leq t`$ is prohibited, so linearity gives $`t<s`$. $`\square`$
+
+Two sufficient criteria now follow.
+
+**First-time criterion.** Suppose $`T`$ has a least element $`t_0`$, $`g`$ is present at $`t_0`$, coverage holds, and present-and-past preservation holds. Every proposed witness time $`t`$ satisfies $`t_0\leq t`$, so the actual presence at $`t_0`$ excludes it. Hence $`\neg\Diamond\neg E(g)`$, or $`\Box E(g)`$ under modal duality. The conclusion concerns this actual particular. It does not require $`g`$ to survive beyond $`t_0`$; necessary existence somewhere in each complete history is compatible with a finite lifetime in each history.
+
+Strict preservation alone leaves a possible witness location at $`t_0`$ unexcluded. It does not prove that a witness there exists, but it does not prove that none can exist. Adding a targeted exclusion of a first-time absence witness is enough to close this boundary; claiming that there is no earlier time is not enough. The proof needs no S5 axiom, reverse-accessibility principle, necessary modal truth bearer, or thesis that all initial entities are one being.
+
+**Coinitial same-bearer criterion.** Suppose instead that
+
+```math
+\forall t\in T\ \exists s\in A(g)\quad s\lt{}t.
+```
+
+Then coverage and strict past preservation already imply $`\Box E(g)`$: every witness time has an earlier actual presence of this very bearer. This is coinitiality of the bearer's presence set in the actual order. It does not require an uninterrupted lifetime, a first instant, or infinite age in a particular metric. It is a sufficient criterion, not a claimed necessary characterisation of necessary existence.
+
+The same-bearer condition cannot be replaced with the statement that at every time **some** suitable bearer exists. The bearers may differ. Under suitable coverage, their plurality might support necessity of a nonempty history while leaving the absence of each particular open. The quantifier distinction is the same one already used in this chapter's passage from a resource to its bearer.
+
+A finite elapsed-time bound also does not imply a least time. The order $`(0,1]`$ has bounded length and no first element. If $`g`$ is present only at $`1`$, a witness time before that presence is not excluded by either preservation rule. If the same $`g`$ is instead present coinitially throughout this order, the second criterion applies. Thus the relevant facts are the temporal order and this bearer's presence, not an age label alone. No cosmological model is inferred from this mathematical example.
+
+### 7.2 Witness coverage, settled actuality and the primary arguments
+
+Kimpton-Nye's *Can Hardcore Actualism Validate S5?* develops a powers-based account in which iteration reaches beyond immediate manifestations. Its positive rationale for initial powers is that later capacities and their ultimate manifestations should be accounted for through actually possessed powers, rather than arrive independently of every initial capacity. If its unrestricted possibility clause includes $`\neg E(g)`$ with the adequate temporal-witness meaning stipulated in section 7.1, it entails the whole-history-absence coverage premise by substitution. Logical availability of that instance must be distinguished from independent warrant for the clause and its application.
+
+The further initial-powers argument requires witnesses to occupy an initial or origin-enabling role. A retrospective potentiality concerning an already completed origin need not enable that origin, so the existence of such a witness does not itself establish that stronger role. Iteration supplies a positive explanatory rationale for initial coverage; deriving it requires the appropriate role and connection premises. The first-time discussion also distinguishes preserving an earlier settled segment from fixing the witness's present. The criterion above declares its coverage and preservation assumptions explicitly, including the stronger present-and-past rule where needed. [Kimpton-Nye, accepted manuscript, especially the first-time and initial-potentiality discussions][temporal-kimpton-nye]
+
+Werner's *Potentialism and S5* makes a stronger temporal preservation condition explicit: its Triviality condition fixes both present and past, and its Stability condition preserves the relevant earlier modal content. Its distinction between possessors and the objects constituting a content also matters. Reference to an actual object in a modal proposition does not alone make that object the necessary possessor or ground of the potentiality. These conditions provide a precise primary comparison for the strict-versus-nonstrict inequality above; they do not independently establish that the chosen actual bearer satisfies the coverage premise. [Werner, temporal conditions and first-time discussion][temporal-werner]
+
+The conditional argument's positive rationale is content directed. If real possibilities require actually possessed witnesses, and every eligible witness preserves the relevant settled presence, the absence claim has no available witnessing time. This is more specific than attaching necessity to an unexplained original. Its application nevertheless requires warrants for the modal coverage thesis, the content-wide preservation rule and the same bearer's actual temporal condition. Present inability to change an already completed past is weaker than the claim that every metaphysical alternative preserves an actual initial segment.
+
+A formal model can show that these premises entail the conclusion and can expose the first-time equality gap. It cannot decide whether the premises give the right account of metaphysical possibility. If they receive basic or explanatory warrant, the local conclusion can inherit it without an exhaustive refutation of every rival cosmology. Conversely, merely challenging an opponent to describe a bearerless world does not establish the required positive premises. The route is different from the earlier productive and recipient-exhaustiveness arguments and cannot borrow their still-disputed modal coverage without argument.
+
+### 7.3 Necessary existence, actual contribution and intrinsic adequacy
+
+Suppose a bearer satisfying either temporal criterion also **actually productively contributes** to the admitted correction. Then the correction has one actual necessary productive participant. This adds a local causal-history premise to the modal result. A potentiality to contribute, or a potentiality for another subject's potentiality, is not already actual participation in this token correction.
+
+The conclusion does not make the correction necessary, make this bearer contribute in every alternative, make it the sole necessary existent, or make it independently supply every productive respect. Nor does it establish strict uncausability or a recipient-free intrinsic mode. Essential truthfulness and actual disclosure also require their separate premise packages, as in section 12; they are not consequences of temporal necessity alone. A bearer can be necessarily existent under the temporal premises while still depending productively or explanatorily on something else, unless that dependence is independently excluded.
+
+This keeps the criterion compatible with the stronger argument developed in sections 1–6. If an alleged original is explicitly granted complete nonreceived adequacy in the selected respect, a rival that gives it received adequacy changes that premise. But the temporal criterion by itself makes no such grant. Actual originality, essential nonreceipt and intrinsic existential sufficiency must each be stated at the respect and modal strength needed by the further conclusion. Neither a temporal proof nor a label of necessity supplies them automatically.
+
 ## 8. The brute-original challenge
 
 The strongest recorded rival permits an actual, concrete, intrinsically qualified B with unreceived productive powers. B has no external existential requisite, never produced itself, and may have no temporal beginning. It adequately supplies the received effects under discussion. Nevertheless, B could have been absent, and its own obtaining has no sufficient intrinsic or external account. This proposal distinguishes sufficiency for effects from sufficiency for the source's existence. It should not be weakened into production by nothing or efficient self-production. [Direct anti-brute return, “The strongest rival and fair adjudication”][s3]
@@ -281,6 +344,20 @@ The affirmative comparison must consequently identify its proper standard. A too
 No identity-preserving transformation is required by this argument. To judge a proposed bearer inadequate for an unrestricted role is different from claiming that this very bearer could acquire every qualification while remaining the same individual. The judgment can exclude a candidate rather than describe its repair. Equally, the positive attribute and its mode of realization must be distinguished: the comparison does not, merely by naming knowledge or power, establish a particular creaturely realization, a complete theory of agency or one numerical original. It also does not show that more activity or greater product quantity is invariably better. Standing qualification, fitting exercise and the appropriateness of an occasion retain the separate roles already stated in sections 9.2 and 12.4. The resulting defense of the comparison preserves the affirmative pure-perfection appraisal while exposing the premise that a serious rival must actually contest.
 
 A rival already credited with standing solo capacity does not need that capacity added by concentration. Its live question is whether its **actual joint manifestation** constitutes foreign completion of appropriate original efficacy. Conversely, an internally completed intention or a valued cooperative end does not establish entire actual original provision. The strongest rival retains distinct intrinsic powers and exercises, narrow efficient nonreceipt, primitive cognition and a conditional account of coordinated means. These are real credits. They do not yet establish complete original perfection, unrestricted sovereignty or the particular wisdom of every proposed undertaking. [Consolidation of powers and eligibility][u-concentration] [Public source-unity judgment][u-judgment]
+
+### 9.4 Nature unity and productive explanation
+
+Two primary comparisons clarify the positive unity argument without reducing it to a bare objection to plurality. O'Connor's *And This All Men Call God* begins its relevant discussion with an ultimate necessary being whose aseity is distinguished from the status of a necessary emanation. It argues that the character of such a being should form an intelligible intrinsic unity, rather than a collection of traits whose conjunction remains unexplained. This is a positive demand on the relation between necessity and nature. It does not make numerical identity follow merely from the word *unity*, or prove that every difference of intrinsic character is an optional external attachment. [O'Connor 2004, pp. 419–423][unity-oconnor-2004]
+
+In *Is God's Necessity Necessary? Replies to Senor, Oppy, McCann, and Almeida*, O'Connor further considers the connection between necessary existence and intrinsic nature, including the inadequacy of treating existence as an ontologically prior bare item to which a nature is subsequently attached. The comparison motivates a principled account of why the relevant nature is necessarily instantiated. It also exposes the additional work required when distinct intrinsic characters are said to be contingently attached to an otherwise common necessary basis. The existence of a distinction does not by itself establish that attachment model. [O'Connor 2010, pp. 311–313][unity-oconnor-2010]
+
+The present productive argument should therefore identify the resource doing the explanatory work. If proposed members are wholly derivative in the relevant adequacy, redescribing their mutual arrangement as a unified nature does not supply that adequacy. If their intrinsic natures already include nonreceived adequate resources, the rival has granted originals whose joint operation must be assessed at that stronger level. The argument cannot move between these cases by treating every distinction as a separable part, or every unified description as a single numerically identical bearer. A numerical conclusion requires its own nonduplication and dependence premises.
+
+Aquinas's *Sententia libri Metaphysicae* VIII, lectio 5 provides a useful different comparison. Matter and form are unified as potency and act; their unity does not require a further linking entity of the same kind. The discussion nevertheless retains the agent that brings potency to act in generation. It also allows a cause that sustains a substance without a process of motion in the relevant immaterial cases. Thus an intrinsic account of why a thing is one does not in that text abolish every productive explanation of its being. [Aquinas, VIII.5, especially nn. 5, 10 and 13][unity-aquinas]
+
+For the current question, the distinction is between an account of the unity of an actual composite and an adequate source of its actuality. A productive cause of the composite need not, by that description alone, lie outside every constituent; that stronger claim needs the relevant dependence facts. What remains excluded is an alleged act whose availability already presupposes the whole actuality it is meant to supply. This respects both the positive intrinsic-unity account and the independent productive question. It neither turns the historical comparison into an endorsement of every surrounding metaphysical commitment nor treats intrinsic unity as an unexplained substitute for productive adequacy.
+
+These comparisons are incorporated from the complete public derived *Sixteenth Report*, whose original private document has not been received here. The temporal criterion and these unity discussions retain their separate argument roles. Current primary inspection covers the specified passages; it is not a rereading of either author's whole work or a reconstruction of the report's historical research session.
 
 ## 10. From actual provision to a common connected source
 
@@ -1468,3 +1545,11 @@ The public Orthemology bodies below are retained in [the immutable source revisi
 Orthemology. *The Epistemological Architecture of Sound Reason*, especially §§6–6.3. Exact public Git blob `d7fa4425d014225940cbbbe86983f8d9a3dc3da5`, in the [public source edition][pf-sound-reason]. Section 12.14 reconstructs its full attribute argument, distinguishing its affirmative Atharī position from broad unverified comparative or historical claims. Its unattributed classical quotations and detailed rival-school attributions are not newly authenticated primary passages. The other source arguments cited in §§10 and 12 retain their own, independently stated primary-source scopes.
 
 [pf-sound-reason]: https://github.com/theislampill/orthemology/commit/a7ff0e33d1a299db640041c46b1af81ca70851f6
+
+[temporal-companion]: https://github.com/theislampill/orthemology/blob/7b385e4116b052a0132dd740d07b918d3103f648/experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md
+[temporal-report]: https://github.com/theislampill/orthemology/blob/7b385e4116b052a0132dd740d07b918d3103f648/experiments/orthemology-v5-successors/source-store/a59f7555e3f32f6869c55c28013a7dc94ee14a744494cf9e4a34eccf9770de78/SIXTEENTH_REPORT.md
+[temporal-kimpton-nye]: https://kclpure.kcl.ac.uk/ws/files/118521154/Can_Hardcore_Actualism_Validate_S5_Accepted_ms_PPR.pdf
+[temporal-werner]: https://www.cambridge.org/core/journals/canadian-journal-of-philosophy/article/potentialism-and-s5/772A658E5CD05549DF0D6BC1852E58BF/share/524c38aa70b49ac562945b7acf962dc756cd4089
+[unity-oconnor-2004]: https://toconnor.org/wp-content/uploads/2018/07/OConnor_And-this-All-Men-Call-God-2004.pdf
+[unity-oconnor-2010]: https://toconnor.org/wp-content/uploads/2021/04/OConnor_IsGodsNecessity10.pdf
+[unity-aquinas]: https://www.corpusthomisticum.org/cmp07.html

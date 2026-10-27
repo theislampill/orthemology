@@ -571,9 +571,9 @@
       "key": "consolidated-foundations",
       "path": "foundations/received-actuality-and-intrinsic-necessity.md",
       "mode": "100644",
-      "git_oid": "c0facf5d58b376d06fd9a21aac95fe1fa1107e27",
-      "bytes": 291804,
-      "sha256": "f79164fe6418e56b61aa5ce9f8da971934d3744aec40a012cdb9fed778e5b155",
+      "git_oid": "f2ac7daa4b929896843dfea08426420e1d8c845a",
+      "bytes": 307379,
+      "sha256": "a892e9e736ce05a873dd07dda90229cb29ca79041b0d236eea4337064e58cba9",
       "role": "work-source",
       "work_keys": [
         "received-actuality-and-intrinsic-necessity"
@@ -601,9 +601,9 @@
       "key": "scientific-consolidation-review",
       "path": "docs/scientific-consolidation-review.md",
       "mode": "100644",
-      "git_oid": "265021c3d4894620ab97f9a8071503a5c212355c",
-      "bytes": 268797,
-      "sha256": "9dad153c38cce37cf7c906bd6d270b7c804e46c8f1db4a40f09728c7c6203713",
+      "git_oid": "8c060d83ae5d285b61561580052546f4cb8a38c0",
+      "bytes": 305443,
+      "sha256": "54a9bad9e06974e4a574f8bc1da5ccb678cd7eaa5c6612143ee27cd108b935cc",
       "role": "review",
       "work_keys": [
         "received-actuality-and-intrinsic-necessity",
@@ -615,7 +615,8 @@
         "common-repair-and-geometric-obstructions",
         "objective-normativity-and-corrective-cognition",
         "source-context-and-reacquisition",
-        "measure-computability-and-finite-warrant"
+        "measure-computability-and-finite-warrant",
+        "physical-realisation-and-continuation"
       ],
       "supporting_source_keys": []
     },
@@ -638,9 +639,9 @@
       "key": "consolidated-encodings-and-witnesses",
       "path": "logic/encodings-and-witnesses.md",
       "mode": "100644",
-      "git_oid": "e3e48b5655167cc829a4cf16449afd7ba666f96b",
-      "bytes": 151105,
-      "sha256": "1c15fb30066720a73f9367fc7c3db7caeb380d8d81bd78378cfc36e797998241",
+      "git_oid": "ba828b48e2dbe68c39cdbf66ec1040f5f86c5f59",
+      "bytes": 180774,
+      "sha256": "423ea2d46aee29010cb07754be022fa7d33d603dbd2784703f48818f52e657d9",
       "role": "work-source",
       "work_keys": [
         "encodings-and-witnesses"
@@ -653,9 +654,9 @@
       "key": "consolidated-collective-inquiry",
       "path": "mathematics/collective-inquiry-and-strategic-coordination.md",
       "mode": "100644",
-      "git_oid": "f8c89ad5154aac6ea175d777a3e3e861d160c64c",
-      "bytes": 286085,
-      "sha256": "8f2da0400b751a66d7f6c35d307e30370300ce9bd97879200a2d7c85b6e6a7cd",
+      "git_oid": "1b0ff40267a2115c291f7d1102b7e1ca84fd447b",
+      "bytes": 319927,
+      "sha256": "9dfc902b96013595e3f9f85d3f01f7f199acf24167b6d5cc573cee0f5568bc5d",
       "role": "work-source",
       "work_keys": [
         "collective-inquiry-and-strategic-coordination"
@@ -713,9 +714,9 @@
       "key": "consolidated-source-context-and-reacquisition",
       "path": "epistemology/source-context-and-reacquisition.md",
       "mode": "100644",
-      "git_oid": "44997453e9499706c6c7491c4a198f25758dc840",
-      "bytes": 81721,
-      "sha256": "c057d7b15f40784ac9a638373ac21830c62eac2414822b36b4cdbdb288088c1d",
+      "git_oid": "6fe13de0682e9b860076f230dae7b51ebac9c8bc",
+      "bytes": 88486,
+      "sha256": "b8c5e9a8f10f794dd69e7b151265077af5c9dcbf5473b8629a0cb8df1c871fa4",
       "role": "work-source",
       "work_keys": [
         "source-context-and-reacquisition"
@@ -728,12 +729,27 @@
       "key": "consolidated-measure-computability-and-finite-warrant",
       "path": "mathematics/measure-computability-and-finite-warrant.md",
       "mode": "100644",
-      "git_oid": "ccf2e82779539172cbe461e09747ad447c7075f1",
-      "bytes": 49336,
-      "sha256": "ecef4a5caf06945c13774f957146e59b771f3344b01947f4b7b317078788c4db",
+      "git_oid": "a53f5f88adfc956cea263c5a054c33bcd05b9c9b",
+      "bytes": 89427,
+      "sha256": "9bab4c4bac7feeaea9ec96e7df3db3dae8564dbe114e7e879fafae1983a70b50",
       "role": "work-source",
       "work_keys": [
         "measure-computability-and-finite-warrant"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "consolidated-physical-realisation-and-continuation",
+      "path": "mathematics/physical-realisation-and-continuation.md",
+      "mode": "100644",
+      "git_oid": "c8aa58d09110d7ed1365875910a64f34e4794471",
+      "bytes": 107457,
+      "sha256": "883a4702cbdadf24dfa51e77aaf46a56ad95a81596bc7613cb2c4573035b2b19",
+      "role": "work-source",
+      "work_keys": [
+        "physical-realisation-and-continuation"
       ],
       "supporting_source_keys": [
         "scientific-consolidation-review"

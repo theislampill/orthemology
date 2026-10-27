@@ -439,6 +439,17 @@ These four existing IDs keep their original formal component scope. Repeated nam
 
 The positive result is an exact syntactic/semantic preservation theorem for a specified grammar, not “every formalisation is correct”. The normalisation witness preserves the same source term across its positive typing and negative raw-representation statements. Later identity and restricted-checker entries retain their separate questions and calculi.
 
+## Physical communication and stateful continuation
+
+| Result or construction | Exact scope and reading route |
+|---|---|
+| Robust binary communication through a linear system | [Section 4.2](../../mathematics/physical-realisation-and-continuation.md#42-an-exact-binary-threshold-for-a-linear-system): under the stated energy bound and closed noise balls, the top observation-Gramian eigenvalue gives the strict necessary and sufficient separation threshold. |
+| A common decoder for uncertain or nonlinear channels | [Section 4.3](../../mathematics/physical-realisation-and-continuation.md#43-nonlinearity-and-common-calibration): uniform margins and an explicitly admitted signed-amplitude family give sufficient certificates; optimising that certificate does not prove every uncertified channel impossible. |
+| A finite-horizon fluid residual bound | [Section 5.2](../../mathematics/physical-realisation-and-continuation.md#52-a-residual-estimate-on-a-fixed-finite-horizon): the stated smooth reference, residual and observation norms yield an output-error bound, not a solution of unrestricted Navier–Stokes regularity. |
+| Minimum fresh alphabet for a finite continuation contract | [Section 6.3](../../mathematics/physical-realisation-and-continuation.md#63-a-minimum-for-a-finite-continuation-contract): the largest number of future-behaviour classes in a retained-information fibre is the exact abstract alphabet minimum, with a separate effective finite-input version. |
+| A robust continuous parity realisation | [Section 8](../../mathematics/physical-realisation-and-continuation.md#8-a-robust-stateful-witness): bounded disturbance, reset and readout margins support stateful parity and transfers in both directions with the digital realisation. |
+| Maintained continuation without a specified original host | [Section 10.4](../../mathematics/physical-realisation-and-continuation.md#104-a-conditional-autonomy-theorem): every active realisation excludes that host from its full indispensable support and one implementable causal policy satisfies the campaign, invariance, progress and termination obligations. |
+
 [twelfth]: ../../experiments/orthemology-v5-successors/groups/t12-written/README.md
 [coordination]: ../../mathematics/collective-inquiry-and-strategic-coordination.md#6-complete-coordination-records-across-a-growing-horizon
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md

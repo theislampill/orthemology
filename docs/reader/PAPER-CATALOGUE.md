@@ -39,6 +39,7 @@ These directly readable treatments contain the arguments and proofs reconciled f
 - [Common repair and the geometry of coherent forecasts](../../mathematics/common-repair-and-geometric-obstructions.md): quadratic and smooth rigidity, generalized means, minimax limits, coupled polynomial repair and counterexamples to local or score-only criteria.
 - [Source Context, Reacquisition, and Bounded Handoff](../../epistemology/source-context-and-reacquisition.md): exact open-fragment effects, role-sensitive source dependence, lawful reacquisition costs, interval and whole-card access, and a conditional responsibility argument.
 - [Measure, computability and finite warrant](../../mathematics/measure-computability-and-finite-warrant.md): diffuse versus largest-atom deficits, complete computability thresholds, exact finite-state procedures, compact effective access, strict finite certificates and the equality obstruction.
+- [Physical realisation and continuation](../../mathematics/physical-realisation-and-continuation.md): exact robust-bit thresholds, finite-horizon residual bounds, the minimum fresh information for continuation, approximate and stochastic transfer, a continuous parity construction, compatible composition and maintained progress under one causal policy.
 
 The [incorporation and review record](../scientific-consolidation-review.md) states the exact reviewed editions, source-replacement scope, failed findings and remaining physical-removal gates.
 
@@ -174,11 +175,13 @@ The manuscript’s broader programme includes joint-support and minimal-cut anal
 
 **The Last Moat, Third Edition: Physical Realisability, Cross-Substrate Communication, and Holarchic Agency.** [Root TeX manuscript][last-moat] · [Edition 3 changes and evidence ledger][last-moat-changes].
 
+**Current complete treatment:** [Physical realisation and continuation](../../mathematics/physical-realisation-and-continuation.md) reconciles the main manuscript and its substantive components, with the proofs, counterexamples and declared historical limits in one readable work. The [root TeX manuscript][last-moat] and [edition changes][last-moat-changes] retain their original scientific and historical roles; incorporation does not confer source-removal permission.
+
 This is **one componentised manuscript**. Its root includes twenty-two [TeX components](../../theory/lineages/h-moat-e3/), all retained in the crosswalk as components, not twenty-two additional papers. The root and included files belong together for authoring; this catalogue does not assert that a governed PDF or a freshly verified build exists for it.
 
 The work asks when an organised process can preserve a specified stateful contract while replacing its original host. It distinguishes behavioural realisation from copying weights, the joint realisation from each constituent, and role/classification claims from evidence maturity. Its introduction and revision ledger describe a useful paired contrast: a declared parity-memory witness supplies two models and state-preserving handovers, whereas two individually correct processors and a correct packet channel can still fail continuation if the exported information omits consequential hidden state.
 
-The mathematical witness covers its stipulated model; recorded simulations are not a laboratory migration. The source’s literature discussion is distinct from newly performed experiments, and its own revision ledger rejects an unsupported blanket absence claim about alternative processors. No personal conscious identity or support-free agency is inferred here. Component identities are fully bound, but this entry does not claim fresh substantive reading of every included section.
+The mathematical witness covers its stipulated model; recorded simulations are not a laboratory migration. The source’s literature discussion is distinct from newly performed experiments, and its own revision ledger rejects an unsupported blanket absence claim about alternative processors. No personal conscious identity or support-free agency is inferred here. The earlier catalogue reading covered the introduction and revision ledger. The later independent scientific comparison reads all twenty-three components: twenty scientific bodies are completely incorporated and three apparatus components are accounted at their own roles in the current treatment and its supporting review. That received comparison does not establish a new physical experiment, historical execution or source-removal permission.
 
 ### Epistemic profiles and intra-agential equilibrium
 

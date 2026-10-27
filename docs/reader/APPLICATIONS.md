@@ -254,6 +254,12 @@ An agent adapting a proof to a new context can use the [raw substitution theorem
 
 A translation that needs rule-construction history should retain the [explicit old-rule tree](PAPER-CATALOGUE.md#typed-telescopes-with-derived-heterogeneous-soundness), not promise to recover it from an erased Prop proof. The [recursive-All comparison](PAPER-CATALOGUE.md#recursive-dependent-all-with-two-distinct-binder-sorts) broadens admissible retained trees without changing the nucleus's earlier restriction. These are proof-level capabilities; delivering a parser or serialised certificate transformer remains a separate engineering obligation. A term's correct outputs alone do not discharge the [source representation question](PAPER-CATALOGUE.md#an-identity-application-without-a-normal-unapplied-source).
 
+## Replacing a physical support while preserving the task
+
+Use [Physical realisation and continuation](../../mathematics/physical-realisation-and-continuation.md) to state what the replacement must retain: outputs, internal state, pending effects, admissible inputs, timing and resource budgets. A successful message transfer can still lose the information needed for the next action; the [two-step export example](../../mathematics/physical-realisation-and-continuation.md#62-a-one-bit-export-can-lose-a-two-step-state) makes that failure explicit.
+
+First identify future-behaviour classes conditional on retained side information. Then check the actual encoder, channel and initialiser, the joint resources of composed mechanisms, and a single policy that maintains progress. The [digital/continuous parity construction](../../mathematics/physical-realisation-and-continuation.md#8-a-robust-stateful-witness) is a worked mathematical witness with explicit disturbance margins. Empirical deployment needs its own calibrated device and held-out observations; the theorem alone supplies neither a physical experiment nor an identification of personal or conscious continuity.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md

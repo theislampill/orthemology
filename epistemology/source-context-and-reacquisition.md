@@ -59,6 +59,43 @@ This restriction has practical limits. A reader who recognises a passage, posses
 
 The complete initial holdings include the extraction, identities, retained evidence, old task results, order and coverage dictionaries, costs, permissions, and any observable selection of a retained packet. Complete read responses include contextual text, outside values, witness metadata, statuses, lengths, timing when observable, and any authentication outputs on which a policy may branch. The cost theorem will require agreement of these whole observations in its comparison sources. Authenticity alone does not make a response uninformative about an uncovered target.
 
+### 1.3 Whole attributed readings and the identity of a printed occurrence
+
+A concrete interpretive case shows why keeping individual alternatives is weaker than keeping their attributed combinations. The public derived *Sixteenth Report* examines the object pronouns in words 4, 5 and 6 of Qur'an 48:9 under its specified tokenisation: *wa-tuʿazzirūhu*, *wa-tuwaqqirūhu* and *wa-tusabbiḥūhu*. Its two complete extracted antecedent rows are
+
+```math
+(\text{Messenger},\text{Messenger},\text{God}),
+\qquad
+(\text{God},\text{God},\text{God}).
+```
+
+These are source-relative attributed readings. They are not a verdict on every admissible interpretation of the Arabic or a certificate of a translation's general fluency. [Public Sixteenth Report, source-read case][attributed-report]
+
+The electronic primary passages support the following distinctions between an author's own exposition, an attributed view and an incomplete report. The printed-witness details in the final column are **historical observations reported by the public report**; those print copies have not been newly collated for this chapter.
+
+| Passage and role | Antecedent information retained | Reported printed occurrence and remaining limit |
+|---|---|---|
+| Al-Qurṭubī's own exposition; his reports of al-Qushayrī and al-Ḍaḥḥāk | His exposition is the split row. Al-Qushayrī is reported as selecting the unified row; al-Ḍaḥḥāk is attributed the split view. | Dār al-Kutub al-Miṣriyya, first edition, vol. 16, pp. 266–267; the reported inspected colophon says 1947. The precise identity of the cited al-Qushayrī remains unresolved. |
+| Ibn ʿAṭiyya's reports | He assigns the unified view to some interpreters and the split view to the majority. These are his labels, not independently counted populations. | Dār al-Kutub al-ʿIlmiyya, first edition 1422/2001, edited by ʿAbd al-Salām ʿAbd al-Shāfī Muḥammad, vol. 5, p. 129, as reported from the inspected copy. |
+| Ibn ʿĀshūr's argument and a separate report attributed to Ibn ʿAbbās | His own argument gives the unified row. The separate report assigns the first two pronouns to the Messenger; its third coordinate is unspecified. | Dār al-Tūnisiyya, vol. 26, p. 156. The report treats 1404/1984 as catalogue dating, not a date established by the inspected title page or blank verso. |
+| Al-Zamakhsharī's argument | He argues for God as antecedent and explains support through God's religion and Messenger. | The reported Beirut vol. 4, p. 334 has second-person *tāʾ* prefixes in the large verse quotation and third-person *yāʾ* prefixes in the small base lemmata. The held digital lemmata use *tāʾ*; p. 335 reports that alternative anonymously. |
+
+The present bounded electronic readings are the relevant passages in [al-Qurṭubī][attributed-qurtubi], [Ibn ʿAṭiyya][attributed-atiyya], [Ibn ʿĀshūr][attributed-ashur] and [al-Zamakhsharī][attributed-zamakhshari]. They establish what those retrieved electronic occurrences say at this scope. They do not authenticate an unreceived physical copy, prove that every provider reproduces the same edition, or repeat the earlier printed inspection.
+
+The distinction between complete and partial reports is substantive. Ibn ʿĀshūr's report of the first two antecedents does not acquire a third coordinate merely because another author supplies one, or because the complete rows collected elsewhere happen to agree at that coordinate. Retaining it as $`(\text{Messenger},\text{Messenger},?)`$ preserves what was actually attributed. Likewise an author's report of another interpreter's selection is not automatically that author's own adoption, and a label such as *majority* is not a newly measured count of independent witnesses.
+
+For the two **complete** rows alone, write $`M`$ for Messenger and $`G`$ for God. The retained relation is
+
+```math
+R=\{(M,M,G),(G,G,G)\}.
+```
+
+Its coordinate marginals are $`\{M,G\},\{M,G\},\{G\}`$. Their Cartesian product has four rows and adds the unsupported mixtures $`(M,G,G)`$ and $`(G,M,G)`$. This is an elementary instance of losing a joint constraint when retaining only marginal alternatives. In this small complete-row relation, the marginals together with the coupling condition that the first two coordinates agree recover $`R`$ exactly. That positive compression is a calculation on the declared relation; it neither completes an incomplete attributed row nor proves a general linguistic rule that the two pronouns must share an antecedent.
+
+Occurrence identity also reaches below the level of antecedent assignment. Fixed third-person object suffixes can support the same antecedent analysis even when the full verb forms differ in their subject prefixes. The reported large quotation and small lemmata in al-Zamakhsharī must therefore remain distinct printed occurrences. In the same reported witness, footnote 1 lies below the rule and has a single-letter signature whose signer remains unresolved. The catalogue gives 1947, while the inspected title establishes neither edition number nor impression date. No particular reciter attribution or explanation of the variation follows from those observations. Importing a named reading from another passage would add evidence not supplied by this occurrence record.
+
+The resulting discipline is positive as well as restrictive: preserve the full attributed row, leave missing coordinates missing, bind wording to its actual carrier occurrence, and distinguish exposition, quotation, reported view and editorial note. The finite fixture described by the report tests its frozen interpretation and role records; it does not prove those interpretations true. Nor does this case by itself satisfy the observation-locality assumptions needed by the later read-cost lower bound. It illustrates what an adequate source witness must retain before that abstract calculation can be applied.
+
 ## 2. Exact effects of open fragments
 
 A concrete source-context configuration is a finite nonempty stack, written top first:
@@ -706,6 +743,8 @@ The joined application review [9] separately records the exact two-card comparis
 
 ### 10.3 The actual-source boundary
 
+**Edition scope.** The next two paragraphs record the boundary of the earlier seven-body consolidation. Section 1.3 now adds the complete public report's attributed-row case and bounded fresh electronic primary readings. Its print-collation details remain source-reported; the earlier captures and printed witnesses have not been newly reacquired.
+
 The source predecessors describe a bounded inspection of an electronic historical witness and a supplied analytical role extraction. That public account supplies a reported occurrence-fidelity control. Its full-page alternative was available during the reported inspection, and the synthetic service replacement is not attributed to that actual page. The first combined identity-and-role read is also distinct from the later role-only model.
 
 This chapter has read the public argument and review bodies. It has not reacquired the primary captures, repeated a printed collation, verified a translator's production chain, or obtained specialist certification of the linguistic analysis. The separate printed-source collation, source capsule, wording controls, and related later occurrence studies are outside this seven-body consolidation. Their status is not changed by this exposition.
@@ -763,3 +802,9 @@ The first seven references are the complete public prose bodies consolidated her
 [pricing-doi]: https://doi.org/10.1145/2770870
 
 
+
+[attributed-report]: https://github.com/theislampill/orthemology/blob/7b385e4116b052a0132dd740d07b918d3103f648/experiments/orthemology-v5-successors/source-store/a59f7555e3f32f6869c55c28013a7dc94ee14a744494cf9e4a34eccf9770de78/SIXTEENTH_REPORT.md
+[attributed-qurtubi]: https://quran.ksu.edu.sa/tafseer/qortobi/sura48-aya9.html
+[attributed-atiyya]: https://quranpedia.net/surah/1/48/book/350
+[attributed-ashur]: https://tafsir.app/ibn-aashoor/48/9
+[attributed-zamakhshari]: https://tafsir.app/kashaf/48/9

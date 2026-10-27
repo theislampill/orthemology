@@ -237,6 +237,12 @@ The [raw-index substitution work](PAPER-CATALOGUE.md#literal-substitution-in-the
 
 This connects **semantic fidelity (8)** with **type-theoretic completion (9)** and **effective representation (10)**. Exact syntax and code equations support reusing a derivation through substitution and contextual J; an erased proof does not automatically retain the construction history needed by another translation. The [normalisation boundary](PAPER-CATALOGUE.md#an-identity-application-without-a-normal-unapplied-source) adds a concrete discriminator: a typed source can return every argument like an identity yet have no raw-convertible finite-source representative. Target inhabitation, source convertibility, PER equality and the existence of a serialised checker are different claims. The positive theorems remain useful precisely because the translation contract specifies which is preserved.
 
+## Physical influence, information and continued operation
+
+A channel that carries a signal and a system that continues a stateful task have different obligations. [Physical realisation and continuation](../../mathematics/physical-realisation-and-continuation.md) joins avenues 4, 7 and 8 by specifying the input, output, memory, timing and resource contract before changing physical support. Its linear-channel result has a sharp energy/noise boundary; its continuous parity example supplies an explicit robust stateful construction and transfers in both directions.
+
+The [continuation quotient](../../mathematics/physical-realisation-and-continuation.md#63-a-minimum-for-a-finite-continuation-contract) connects this work to information sufficiency: after fixing retained side information, distinct future-behaviour classes require distinct fresh messages. The positive minimum also needs an admitted target initialiser. The [viability and progress argument](../../mathematics/physical-realisation-and-continuation.md#104-a-conditional-autonomy-theorem) then requires one implementable causal policy to maintain the full contract. A sequence of separately feasible replacements does not supply that common policy.
+
 [main]: ../../manuscript/orthemma-ortheme-systems-revised-draft.md
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

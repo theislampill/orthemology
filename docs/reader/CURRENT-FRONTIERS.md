@@ -192,6 +192,12 @@ The [Eleventh work sequence](PAPER-CATALOGUE.md#typed-contexts-substitution-and-
 
 The remaining broad questions concern universes, unrestricted rules, frontend/serialised proof transformation and adoption of a specified calculus; none follows from sharing a namespace. The same sequence proves a source-Conv-preserving finite-reification obstruction without claiming that the identity target is uninhabited. Later identity calculi and specialised complete checkers must therefore be compared at their actual targets, not treated as inconsistent global answers to one undifferentiated “completion” question.
 
+## From a continuation theorem to a calibrated physical realisation
+
+The [complete physical treatment](../../mathematics/physical-realisation-and-continuation.md) proves precise positive channel, state-transfer and maintained-progress results. Its remaining research questions concern actual common decoders under uncertainty, measured residual/error margins, effective descriptions of continuation classes, joint resource compatibility and a policy that realises all required obligations together. These are distinct gaps; an observed output match does not settle them all.
+
+The [experimental programme](../../mathematics/physical-realisation-and-continuation.md#12-tests-that-can-change-the-claims) distinguishes channel, memory, transfer, compositional and process-continuation targets. Historical numerical or symbolic examples remain historical observations. No new physical trial, unrestricted fluid theorem, general discovery algorithm or theory of numerical personal identity is claimed by the consolidation.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md
