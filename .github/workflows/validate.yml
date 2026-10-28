@@ -18,6 +18,34 @@ jobs:
         run: python scripts/provision_ci_infrastructure.py
       - name: Install exact version-locked dependencies (requirements-ci.lock.txt; no live web checks anywhere in CI)
         run: pip install --quiet -r requirements-ci.lock.txt
+      - name: Source-alias admission and evidence controls
+        env:
+          PYTHONPATH: scripts
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          python -B tests/test_source_alias_absence_population.py
+          python -B tests/test_source_alias_absence_boundary.py
+          python -B tests/test_source_alias_absence_evidence.py
+      - name: Combined public source-alias absence and exact restoration
+        id: source_alias_absence
+        if: github.event_name == 'pull_request'
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: setsid --wait python -B scripts/check_source_alias_absence.py run
+      - name: Receive bounded source-alias evidence
+        if: ${{ always() && github.event_name == 'pull_request' && steps.source_alias_absence.outcome != 'skipped' }}
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -B scripts/check_source_alias_absence.py export
+      - name: Preserve bounded source-alias evidence
+        if: ${{ always() && github.event_name == 'pull_request' && steps.source_alias_absence.outcome != 'skipped' }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: r0002-source-alias-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/r0002-source-alias-receipts/
+          if-no-files-found: error
+          include-hidden-files: false
+          archive: true
       - name: Dependency lock consistency
         run: |
           python tests/test_dependency_lock.py
