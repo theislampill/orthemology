@@ -85,6 +85,12 @@ Use substantive subject names. Internal programme acronyms, tranche numbers, che
 
 Judge the net effect: does the change improve, correct or extend a coherent treatment, and does it retire superseded material where permitted? File-count growth is not evidence of research progress. A small index into fragmented sources is not intellectual consolidation.
 
+### Final repository necessity and reduction
+
+Category C requires a positive reason for an individual file to remain in the intended final repository: an indispensable scientific proof, executable module, reproducibility asset or continuing operating function. A historical validator, reader, research-stage report or bookkeeping dependency does not by itself establish that necessity. Keep migration-dependent files unresolved until the obsolete consumer is migrated or retired. Integrate substantive scientific contributions into their coherent scholarly destinations, and qualify redundant copies and administration for retirement separately.
+
+Report classification decisions and actual file-count reduction separately. Show original files removed, new files added and the current total. An emerging final-file estimate must identify the necessary units it counts and the unresolved populations it excludes. Do not concatenate indispensable executable modules or discard evidence to improve a numerical target.
+
 ### Scientific authority and editions
 
 Preserve accepted editions, their necessary proofs and exact acceptance scope. Make a material scholarly revision reviewable as an explicit successor edition or change; never silently rewrite an accepted paper or frozen proof evidence. Preserve the predecessor in Git and satisfy any independent evidence-custody obligation before replacement-dependent removal. Do not rewrite Git history.

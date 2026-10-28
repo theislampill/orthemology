@@ -49990,15 +49990,11 @@
       "member": "integration-proof-audit/AUDIT_REPORT.md",
       "original_sha256": "d273379bf57b358879840251d374cf2f596e91efa1e6bcb94674b48cf95eceed",
       "original_bytes": 8223,
-      "path": "docs/provenance/v5-research-continuations/notes/0da619bf120570139cb2708ea79ba2a05bf20f8be6718f1e21fc3140632610d6.md",
-      "sha256": "0da619bf120570139cb2708ea79ba2a05bf20f8be6718f1e21fc3140632610d6",
-      "bytes": 8524,
-      "projection": "DERIVED",
-      "derivation": {
-        "method": "Executor-reviewed navigation-only projection: original links become text, packet path separators are spaced, private local locators are removed and the inherited-evidence notice is added. Mathematical prose and source notices are retained. The exact original and unified diff remain in private custody.",
-        "diff_sha256": "c082d0517ed494aacc676282c2015e4017e0b856e3913be187f1e6956d35de99",
-        "review_status": "REVIEWED"
-      }
+      "path": null,
+      "sha256": null,
+      "bytes": null,
+      "projection": "CUSTODY_ONLY",
+      "derivation": null
     },
     {
       "id": "src-d6f6fa5be51464c0-19959b254f455160",
@@ -50182,15 +50178,11 @@
       "member": "root-research/CONTINUUM_RESTORATION_OBSTRUCTION.md",
       "original_sha256": "568722c7990224bc7bf04b678960bf965f48930e2720433417eb19b0e863a804",
       "original_bytes": 14985,
-      "path": "docs/provenance/v5-research-continuations/notes/4878fd0a4cf6c952af7cdbcb7e8a386c2730ff9986b74b8e39bf9b5077815b0f.md",
-      "sha256": "4878fd0a4cf6c952af7cdbcb7e8a386c2730ff9986b74b8e39bf9b5077815b0f",
-      "bytes": 15286,
-      "projection": "DERIVED",
-      "derivation": {
-        "method": "Executor-reviewed navigation-only projection: original links become text, packet path separators are spaced, private local locators are removed and the inherited-evidence notice is added. Mathematical prose and source notices are retained. The exact original and unified diff remain in private custody.",
-        "diff_sha256": "9f6c590a7655bf4d7ebb9592cc19223fa65a97683ebb302635722e9cdeb72d5a",
-        "review_status": "REVIEWED"
-      }
+      "path": null,
+      "sha256": null,
+      "bytes": null,
+      "projection": "CUSTODY_ONLY",
+      "derivation": null
     },
     {
       "id": "src-d6f6fa5be51464c0-0db7b48d6cb946d7",
@@ -50230,15 +50222,11 @@
       "member": "root-research/INTEGRATED_BINARY_EXPERIMENT.md",
       "original_sha256": "78ea8c73247033b6bb10276e666f107f402de404a53f6b46b02f74ab1c4f99d5",
       "original_bytes": 5300,
-      "path": "docs/provenance/v5-research-continuations/notes/b0672a56d007c718a42a7ee6fdc875c915630ad95dff5cfbae7f7e9a419d5349.md",
-      "sha256": "b0672a56d007c718a42a7ee6fdc875c915630ad95dff5cfbae7f7e9a419d5349",
-      "bytes": 5601,
-      "projection": "DERIVED",
-      "derivation": {
-        "method": "Executor-reviewed navigation-only projection: original links become text, packet path separators are spaced, private local locators are removed and the inherited-evidence notice is added. Mathematical prose and source notices are retained. The exact original and unified diff remain in private custody.",
-        "diff_sha256": "496e78eae4980542f07fee6624801b93af09432b4eb5b787de7ca178f45c5b64",
-        "review_status": "REVIEWED"
-      }
+      "path": null,
+      "sha256": null,
+      "bytes": null,
+      "projection": "CUSTODY_ONLY",
+      "derivation": null
     },
     {
       "id": "src-d6f6fa5be51464c0-ba1ceae53311cff1",
@@ -50326,15 +50314,11 @@
       "member": "root-research/STATISTICAL_REPAIR_BRIDGE.md",
       "original_sha256": "319c5218757b9a1b90ed0166ce997ab0000070ea45504fa179a85fd2d00b656c",
       "original_bytes": 6379,
-      "path": "docs/provenance/v5-research-continuations/notes/002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e.md",
-      "sha256": "002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e",
-      "bytes": 6680,
-      "projection": "DERIVED",
-      "derivation": {
-        "method": "Executor-reviewed navigation-only projection: original links become text, packet path separators are spaced, private local locators are removed and the inherited-evidence notice is added. Mathematical prose and source notices are retained. The exact original and unified diff remain in private custody.",
-        "diff_sha256": "e0c71ef5fe032e3137ef813ea8a18680180250f73f13df578872358652dbbd37",
-        "review_status": "REVIEWED"
-      }
+      "path": null,
+      "sha256": null,
+      "bytes": null,
+      "projection": "CUSTODY_ONLY",
+      "derivation": null
     },
     {
       "id": "src-d6f6fa5be51464c0-1220be6b610f82b2",
@@ -50422,15 +50406,11 @@
       "member": "source-bridges/LOCAL_REPAIR_RIGIDITY.md",
       "original_sha256": "1b5f23140702c57c5a72bcdd7844f1183508ee6aa55f85330ad4fbdcbdb04fb3",
       "original_bytes": 13057,
-      "path": "docs/provenance/v5-research-continuations/notes/a9eb8521054eb3769ff424037f438ae38f0f0c113d73624efc9d05dea3b35483.md",
-      "sha256": "a9eb8521054eb3769ff424037f438ae38f0f0c113d73624efc9d05dea3b35483",
-      "bytes": 13358,
-      "projection": "DERIVED",
-      "derivation": {
-        "method": "Executor-reviewed navigation-only projection: original links become text, packet path separators are spaced, private local locators are removed and the inherited-evidence notice is added. Mathematical prose and source notices are retained. The exact original and unified diff remain in private custody.",
-        "diff_sha256": "24f8bb5f859f9b86da836d8a6e53a63c023870b088945be8ecde33f3ff6f9d56",
-        "review_status": "REVIEWED"
-      }
+      "path": null,
+      "sha256": null,
+      "bytes": null,
+      "projection": "CUSTODY_ONLY",
+      "derivation": null
     },
     {
       "id": "src-d6f6fa5be51464c0-93d4adcbccdac483",

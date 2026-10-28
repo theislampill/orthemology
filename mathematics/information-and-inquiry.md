@@ -1795,6 +1795,94 @@ Indeed, (31) bounds failure at opportunity *t* by *δ*<sub>t</sub>. For every *T
 
 The availability and target-preservation premises matter. Equation (32) does not make harmful exploration harmless or grant access to a sensor. It concerns the correctness of issued actions at the declared opportunities. If every recurring disturbance itself counts as a bad physical state, infinitely many disturbances already prevent eventual uninterrupted physical coherence. Sampling and interstage latency must likewise be classified by the actual target contract.
 
+#### A shared feedback controller with literal score targets
+
+The preceding estimator assumes that the required observations can be acquired through licensed actions. A concrete two-standard experiment connects that information contract to an actual sequence of repairs [43–44]. It specializes the common-history controller in [Collective Inquiry, §7.11](collective-inquiry-and-strategic-coordination.md#711-controlled-observations-and-eventual-correctness) to the same quadratic score used above. The standard, action target and observation law have explicit, separate roles.
+
+Fix one disturbance $`0\lt{}\epsilon\leq1/4`$ for the **entire run**, and let the two possible standards be
+
+```math
+\alpha_0=\frac12-\epsilon,
+\qquad \alpha_1=\frac12+\epsilon.
+```
+
+The true index $`\theta\in\{0,1\}`$ is unknown to the controller. Action $`a\in\{0,1\}`$ issues the coherent forecast
+
+```math
+c_a=(q_a,1-q_a),
+\qquad q_a=\frac12+\alpha_a\epsilon.
+```
+
+Its target is the actual pair of inequalities
+
+```math
+L_{\alpha_\theta}(c_a,v_i)
+\leq L_{\alpha_\theta}(b_\epsilon,v_i)
+\quad(i=0,1),
+```
+
+called `BinaryGood` in the predecessor. Coherence follows from the displayed bounds on $`\epsilon`$ and $`\alpha_a`$. When $`a=\theta`$, equation (26) gives the strictly positive improvement $`\alpha_\theta(1-\alpha_\theta)\epsilon^2`$ at both truth vertices. When $`a\ne\theta`$, the distance between the issued center and the correct center is $`2\epsilon^2`$, exceeding the necessary $`\epsilon^2/2`$ bound in Lemma 19. Consequently
+
+```math
+\operatorname{BinaryGood}(\theta,a)
+\quad\Longleftrightarrow\quad a=\theta.
+```
+
+Thus the action target is derived from the loss. It is not an extra declaration that two unrelated labels count as good. At $`\epsilon=0`$ the centers coincide and both labels are accepted; the strict positivity hypothesis is necessary for this identification.
+
+After each action, the controller receives a fresh Boolean observation with Bernoulli($`\alpha_\theta`$) law. Both actions are permitted, and this law is the same for either chosen action. In particular the eventual correct action continues to provide distinguishing information. The coupling between the sensor parameter and the scoring standard, freshness of the observations, and permission to use the actions are premises of this mathematical experiment. Frequencies alone do not authenticate them in an application.
+
+**The common controller and its generated history.** One realization uses the normalized independent product of Bernoulli($`\alpha_\theta`$) variables indexed by action and sample number. On the next use of action $`a`$, consume its first unused stack entry. The history at time $`t`$ contains exactly the $`t`$ acquired action/observation pairs; the sum of the two stack counts is $`t`$. Given a finite history, a fixed parameter-independent tie rule chooses a maximizer of
+
+```math
+\Lambda_t(j)
+=\prod_{s\lt{}t}
+  \alpha_j^{Y_s}(1-\alpha_j)^{1-Y_s},
+\qquad j\in\{0,1\},
+```
+
+and issues action $`a_t=j`$. At time zero the empty products are one, so the fixed tie rule supplies the initial action. The true $`\theta`$ indexes the probability law used to assess the policy; it is not an input to this decision rule.
+
+Induction on the acquired history establishes both nonanticipation and its law. The next choice is a function of the recorded prefix. Altering an unacquired stack entry cannot change that choice. The chosen next coordinate is fresh and independent of the acquired coordinates, with the stipulated Bernoulli law. Therefore every consistent length-$`t`$ action/observation history has the product probability specified by the controller and observation kernels. Because those kernels are action-independent here, the acquired observations themselves have the ordinary independent Bernoulli product law. This connects the policy to its generated observations rather than assuming that a theorem about a different path law transfers to it.
+
+Each candidate support is the singleton containing its matching repair. A support block is therefore one repair action in this example. The completed-block clock and the issued-repair clock coincide. In a model with several physical actions per block, that identification would require the separate queue and clock argument given in Collective Inquiry; no such multi-action or continuous-time claim is being imported here.
+
+**Eventual repair and its ordinary expected-error bound.** The common controller eventually issues only `BinaryGood` repairs almost surely under either true standard. A direct affinity argument also bounds its expected number of wrong repairs in this specified model. Put
+
+```math
+\rho
+=\sqrt{\alpha_0\alpha_1}
+ +\sqrt{(1-\alpha_0)(1-\alpha_1)}
+=\sqrt{1-4\epsilon^2}\lt{}1.
+```
+
+Under true index $`\theta`$, a wrong choice at time $`t`$ requires $`\Lambda_t(1-\theta)\geq\Lambda_t(\theta)`$, regardless of how ties are resolved. All likelihood factors are positive. Markov's inequality applied to the square root of their ratio, followed by the generated product law, gives
+
+```math
+\begin{aligned}
+P_\theta(a_t\ne\theta)
+&\leq \mathbb E_\theta
+   \sqrt{\frac{\Lambda_t(1-\theta)}{\Lambda_t(\theta)}}
+=\rho^t,\\
+\mathbb E_\theta\sum_{t\geq0}\mathbf 1\{a_t\ne\theta\}
+&\leq \sum_{t\geq0}\rho^t
+=\frac1{1-\rho}
+=\frac{1+\sqrt{1-4\epsilon^2}}{4\epsilon^2}
+\leq\frac1{2\epsilon^2}.
+\end{aligned}
+```
+
+The first expectation factors because only fresh acquired observations enter the likelihood. The second line uses monotone convergence for a nonnegative sum. A nonnegative count with finite expectation is finite almost surely, proving the eventual score conclusion. Time zero is included: its error is zero or one for a given true model according to the fixed tie choice, and the bound $`\rho^0=1`$ covers both cases.
+
+This is an ordinary mathematical calculation for the specified common policy and generated law. The predecessor's reported formal endpoint establishes almost-sure eventual repair; its displayed expected-action comparison was not presented as a separately kernel-linked result. The calculation here does not change that historical execution boundary. Likewise the finite-sample lower bound (28) concerns the error of one repair after an observation budget, whereas the last display concerns a cumulative action-error count. Their inverse-square dependence on the fixed separation has a common information source, but the performance quantities and their quantifiers remain different.
+
+**What changes the conclusion.** The source audit isolates the needed premises with substantive countercontrols [44]. If the sensor-to-standard coupling is flipped, the same likelihood rule learns $`1-\theta`$ and eventually issues score-wrong repairs under the intended standard. If both standards instead give the same observation law, the matching singleton actions do not distinguish them; full support by itself supplies no information. Independence is also stronger than correct one-coordinate marginals. Set every stack entry equal to one persistent Bernoulli bit. Each coordinate has the declared marginal, but after any positive number of observations the likelihood rule follows that bit. At $`\epsilon=1/4`$, its eventual error probability is $`1/4`$ under either standard. That infinite constant-tape conclusion is an ordinary calculation; the predecessor's exact-rational controls check finite instances and repeated choices. Its flipped-coupling result has a separately reported compiled-theorem scope.
+
+The audit also rejects source changes that consult the first unused stack entry, reverse the generated sensor's hidden-model index, or collapse both output labels to a single forecast. These affect respectively the acquired-history contract, the sensor/score coupling, and the literal target calculation. Its strictly intermediate finite-error observations concern the tested positive prefix lengths; they do not override the deterministic time-zero tie case.
+
+Within this example $`\epsilon`$ and the two candidate standards remain fixed. Varying $`\epsilon`$ across the family does not describe a drifting true standard or Proposition 21's shrinking within-run disturbance schedule. Early wrong actions are permitted. Almost-sure eventual correctness gives neither correctness on every tape, a deterministic last-error deadline, nor a finite certificate that the last error has occurred. Exact real likelihood comparison defines a measurable mathematical policy; the source's noncomputable definitions supply no extracted executable controller or physical sampler. Rational instances allow exact comparison, but no new implementation or numerical-noise guarantee is supplied here. Sensor authentication, normative authority and application-level action permissions remain independent obligations.
+
+
 #### Finite harmful probing and eventual exact repair
 
 Now fix a deterministic sequence $`0<\epsilon_t\leq1/4`$ tending to zero. At each round, one shared measurable controller chooses either a **Probe**, which returns a fresh Bernoulli(*α*) result and is target-bad, or **Repair**(*q*), with 0 ≤ *q* ≤ 1. Given the observed history and chosen repair, the subsequent repair-feedback kernel is independent of *α*. Controller randomization is parameter-independent. Histories, actions and kernels are standard Borel; only the permitted observations carry parameter information.
@@ -1989,6 +2077,17 @@ These seven public formal bodies were inspected at source level. Their transitiv
 
 Section 5.3 and the retained-history argument in §9.4 incorporate the corresponding bounded constructions in [FORM], *Graded Representations, Witnessed Revision, and Inquiry Landscapes*, version 1 research draft, 8 September 2026. The option values are constructed countermodels; the history theorem is conditional on actual record retention and the separately stated semantic premises. The finite typed representation and future-quotient application appear in [Tensor Moments, §§1.1–1.4](tensor-moments-and-corrective-dynamics.md#11-finite-typed-words-and-their-declared-meaning), while the dynamical estimates appear in [Physical Realisation, §§5.5–5.6](physical-realisation-and-continuation.md#55-coupled-estimates-and-a-residual-error-floor). These mathematical components do not establish a production schema, a completed empirical programme, or the unfinished original N-person theory.
 
+### Generated binary experiment: source and audit boundary
+
+The fixed-disturbance example in §9.7 incorporates the complete public mathematical benchmark *One exact composition of score repair and controlled restoration* [43] and its independent composition audit [44]. The earlier geometry, statistical and continuum incorporations remain distinct; this addition does not count those already incorporated sources again. The new ordinary affinity calculation concerns the stated common likelihood policy and acquired-history law, and confers no new kernel-execution status.
+
+The predecessor identifies `IntegratedBinary.good_iff_same`, `IntegratedBinary.supports_self_verifying`, `IntegratedBinary.canonical_repairs_eventually_good`, `infinite_product_coordinate_law`, `infinite_product_coordinates_independent`, and `IntegratedBinary.generated_experiment_eventually_repairs` as its source endpoints. The last endpoint has the disturbance and its interval hypotheses, the true index identifying the law, and a fixed initial choice. The reported dependency chain proves its literal target relation, normalization, coordinate laws, independence and selector maximization. It does not treat the unknown true index or an unacquired observation as a controller input. The eventual event is measurable because `selectedRepair` and the actual score predicate are measurable and the eventual-event formula uses countable unions and intersections. This is a sufficient full-support two-model result; a complete general necessity or zero-support classification has a separate scope.
+
+The audit reports fresh compilation of eleven copied modules under Lean 4.19.0 and pinned Mathlib: the three root modules `ProductObservationLaw`, `IntegratedBinaryRestoration` and `GeneratedBinaryExperiment`, plus eight full-support control modules. The ten-module causal closure and `BlindGuessSharpness` are eleven **retained prerequisites**, whose earlier fresh objects, sources and receipts were checked rather than rebuilt. Its 107 declaration type/axiom readbacks include definitions and instances; they are not 107 separately proved theorems. The reported axioms are `propext`, `Classical.choice` and `Quot.sound`. It also reports thirteen independent theorem controls, a final-signature guard and three rejected source mutations. The finite rational controls cover both fixed Boolean list orders, are distinct from the measure-theoretic eventual result and are not extracted execution of the noncomputable selector.
+
+Those are historical source-report claims, preserved at their original scope. This consolidation did not rerun the compiler, inspect every original raw log or regenerate prerequisite objects. The audit's failed attempt to evaluate a noncomputable finite-set list remains a failed development attempt, not accepted proof evidence. Its positive logs and expected-rejection logs retain their different roles. The accepted-record names are `REPLAY_RESULT.json`, `AXIOM_READBACK.json`, `CONTROL_RESULT.json`, `FINITE_CONTROLS.json` and `RETAINED_PREREQUISITES.json`; their recorded original-packet locators and the source's seal `cb19cd28f4d7f033a22a16c1f6cd6896607d0fbe44681f13d6a140e462cba4e1` are custody identities, not portable commands or newly acquired archives. Reproduction would require the actual pinned prerequisites and source-order checks; no such reproduction is asserted here. Independent model-assisted review remains separate from external peer review, novelty, canonical adoption and release acceptance.
+
+
 **Edition status:** new source-bound consolidated exposition. The companion review record binds the exact text, source population, independent findings, corrections, and proposed predecessor retirement. Review of this exposition does not confer owner acceptance or silently amend an accepted paper. None of those records is needed to follow the mathematical arguments above.
 
 ### References
@@ -2040,6 +2139,9 @@ Section 5.3 and the retained-history argument in §9.4 incorporate the correspon
 
 42. Orthemology. *Reflexive Revision under an Evidence Budget: Decision cost, evidence reuse, and self-application*. [Exact version 3 source][42]. Its bibliography supplies the attributions to *Knowledge and common knowledge in a distributed environment*; *Complexity measures and decision tree complexity: a survey* (also listed above as [29]); *DART: directed automated random testing*; *CUTE: a concolic unit testing engine for C*; and *Predictive testing: amplifying the effectiveness of software testing*. Those five primary bodies were not reacquired or newly verified for this addition; their source-provided metadata remain available in the linked bibliography.
 
+43. Orthemology. *One exact composition of score repair and controlled restoration*. [Complete public projected benchmark][43], for the two fixed standards, literal score target and generated common feedback controller.
+44. Orthemology. *Generated binary experiment: independent composition audit*. [Complete public projected audit][44], preserving its coupled-sensor and dependence controls, historical proof boundary and failed development attempt.
+
 Repository references identify exact public source editions, not mutable current filenames. The broader works in references 1, 6, and 7 contain additional results and are not replaced in their entirety by this chapter.
 
 [1]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/theory/lineages/h-continuation/continuation_complete_orthing.md
@@ -2088,3 +2190,6 @@ Repository references identify exact public source editions, not mutable current
 [FORM]: https://github.com/theislampill/orthemology/blob/28679eaed33ee48cf0c5d15ba6dc3b27aac9067b/theory/lineages/h-formalisation/orthing_formalisation_v1.md
 
 [42]: https://github.com/theislampill/orthemology/blob/c1a30e5ab19c2160e469b0632d3bdad48ad4b0e8/theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex
+
+[43]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/docs/provenance/v5-research-continuations/notes/b0672a56d007c718a42a7ee6fdc875c915630ad95dff5cfbae7f7e9a419d5349.md
+[44]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/docs/provenance/v5-research-continuations/notes/0da619bf120570139cb2708ea79ba2a05bf20f8be6718f1e21fc3140632610d6.md

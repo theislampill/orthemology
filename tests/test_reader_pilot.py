@@ -7069,5 +7069,182 @@ class RoundsParentNavigationTests(unittest.TestCase):
         self.assertTrue(any(e.startswith("baseline-source: " + self.profile) for e in errors), errors)
 
 
+class ContinuationOwnerEditionTests(unittest.TestCase):
+    """The four existing owners change only as one exact staged/readable edition."""
+    PATHS = (
+        "docs/provenance/v5-research-continuations/EVIDENCE_BINDINGS.json",
+        "docs/provenance/v5-research-continuations/README.md",
+        "docs/provenance/v5-research-continuations/SOURCE_MAP.json",
+        "experiments/orthemology-v5-continuations/registry.json",
+    )
+
+    def setUp(self):
+        ReaderPilotTests.setUp(self)
+        self.original = {path: ("Synthetic original owner %d.\n" % number).encode()
+                         for number, path in enumerate(self.PATHS)}
+        self.current = {path: ("Synthetic consolidated owner %d.\n" % number).encode()
+                        for number, path in enumerate(self.PATHS)}
+        for path, body in self.original.items():
+            node = self.repo / path
+            node.parent.mkdir(parents=True, exist_ok=True)
+            node.write_bytes(body)
+            self.cross["sources"][path] = {
+                "path": path, "sha256": hashlib.sha256(body).hexdigest(),
+                "read_scope": "Synthetic exact continuation discovery owner.",
+            }
+        self.owners["collections"].extend([
+            {"key": "continuation-docs", "include": ["docs/provenance/v5-research-continuations/"],
+             "owners": list(self.PATHS[:3])},
+            {"key": "continuation-data", "include": ["experiments/orthemology-v5-continuations/"],
+             "owners": [self.PATHS[3]]},
+        ])
+        self.git("add", "--", *self.PATHS)
+        self.git("commit", "-qm", "Synthetic original continuation owners")
+        self.base = self.git("rev-parse", "HEAD").strip()
+        self.owners["baseline"]["commit"] = self.base
+        # Only the finite edition identities change for this synthetic repository.
+        # Native stage queries, ordinary reads, and all three reader gates are real.
+        self.mod.CONTINUATION_OWNER_ORIGINAL = self.identities(self.original)
+        self.mod.CONTINUATION_OWNER_CURRENT = self.identities(self.current)
+
+    def git(self, *args, input=None):
+        return subprocess.check_output(["git", "--no-replace-objects", "--literal-pathspecs", *args],
+                                       cwd=self.repo, input=input, stderr=subprocess.DEVNULL).decode()
+
+    @staticmethod
+    def identities(bodies):
+        return {path: (hashlib.sha1(b"blob " + str(len(body)).encode() + b"\0" + body).hexdigest(),
+                       hashlib.sha256(body).hexdigest(), len(body))
+                for path, body in bodies.items()}
+
+    def edition(self, bodies, *, stage=True):
+        for path, body in bodies.items():
+            (self.repo / path).write_bytes(body)
+            self.cross["sources"][path]["sha256"] = hashlib.sha256(body).hexdigest()
+        if stage:
+            self.git("add", "--", *self.PATHS)
+
+    def check(self):
+        return self.mod.check(self.repo, self.owners, self.cross)
+
+    def rejected(self, *, currentness=False):
+        before = (self.repo / ".git/index").read_bytes()
+        errors = self.check()
+        self.assertTrue(errors, "An incomplete or unregistered owner edition was accepted")
+        if currentness:
+            self.assertTrue(any(e.startswith("corpus-currentness:") for e in errors), errors)
+        self.assertEqual((self.repo / ".git/index").read_bytes(), before)
+
+    def test_original_four_owner_edition_remains_accepted(self):
+        before = (self.repo / ".git/index").read_bytes()
+        self.assertEqual(self.check(), [])
+        self.assertEqual((self.repo / ".git/index").read_bytes(), before)
+
+    def test_complete_current_edition_crosses_all_three_original_census_gates(self):
+        self.edition(self.current)
+        before = (self.repo / ".git/index").read_bytes()
+        self.assertEqual(self.check(), [])
+        self.assertEqual((self.repo / ".git/index").read_bytes(), before)
+
+    def test_original_index_cannot_authorize_current_worktree(self):
+        self.edition(self.current, stage=False)
+        self.rejected(currentness=True)
+
+    def test_current_index_cannot_authorize_original_worktree(self):
+        self.edition(self.current)
+        self.edition(self.original, stage=False)
+        self.rejected(currentness=True)
+
+    def test_each_mixed_worktree_owner_is_rejected(self):
+        for path in self.PATHS:
+            with self.subTest(path=path):
+                self.edition(self.current)
+                (self.repo / path).write_bytes(self.original[path])
+                self.rejected(currentness=True)
+
+    def test_each_mixed_staged_owner_is_rejected(self):
+        for path in self.PATHS:
+            with self.subTest(path=path):
+                self.edition(self.current)
+                self.git("reset", "-q", self.base, "--", path)
+                self.rejected(currentness=True)
+
+    def test_tampered_worktree_cannot_refresh_its_source_hash(self):
+        self.edition(self.current)
+        path = self.PATHS[0]
+        body = self.current[path] + b"Unregistered owner change.\n"
+        (self.repo / path).write_bytes(body)
+        self.cross["sources"][path]["sha256"] = hashlib.sha256(body).hexdigest()
+        self.rejected(currentness=True)
+
+    def test_tampered_stage_cannot_hide_behind_exact_current_bytes(self):
+        self.edition(self.current)
+        path = self.PATHS[2]
+        (self.repo / path).write_bytes(self.current[path] + b"Unregistered staged owner.\n")
+        self.git("add", "--", path)
+        (self.repo / path).write_bytes(self.current[path])
+        self.rejected(currentness=True)
+
+    def test_staged_mode_missing_and_conflicted_owners_are_rejected(self):
+        path = self.PATHS[1]
+        for fault in ("mode", "missing", "conflict"):
+            with self.subTest(fault=fault):
+                self.edition(self.current)
+                if fault == "mode":
+                    self.git("update-index", "--chmod=+x", "--", path)
+                elif fault == "missing":
+                    self.git("update-index", "--force-remove", "--", path)
+                else:
+                    oid = self.identities(self.current)[path][0]
+                    self.git("update-index", "--index-info", input=(
+                        "0 " + "0" * 40 + "\t" + path + "\n" +
+                        "100644 " + oid + " 1\t" + path + "\n" +
+                        "100644 " + oid + " 2\t" + path + "\n").encode())
+                self.rejected()
+
+    def test_nonordinary_worktree_owners_are_rejected(self):
+        import os
+        path = self.PATHS[1]
+        node = self.repo / path
+        for fault in ("executable", "symlink", "hardlink", "directory"):
+            with self.subTest(fault=fault):
+                self.edition(self.current)
+                other = self.repo / ("ordinary-fixture-" + fault)
+                if fault == "executable":
+                    node.chmod(0o755)
+                elif fault == "symlink":
+                    other.write_bytes(self.current[path]); node.unlink(); node.symlink_to(other)
+                elif fault == "hardlink":
+                    os.link(node, other)
+                else:
+                    node.unlink(); node.mkdir()
+                self.rejected()
+                if fault == "directory":
+                    node.rmdir()
+                elif fault == "symlink":
+                    node.unlink(); other.unlink()
+                elif fault == "hardlink":
+                    other.unlink()
+                node.write_bytes(self.current[path]); node.chmod(0o644)
+
+    def test_owner_deletion_and_adjacent_unregistered_addition_are_not_modifications(self):
+        self.edition(self.current)
+        path = self.PATHS[0]
+        (self.repo / path).unlink()
+        self.git("add", "--", path)
+        self.rejected(currentness=True)
+        self.edition(self.current)
+        extra = "docs/provenance/v5-research-continuations/UNREGISTERED.json"
+        (self.repo / extra).write_bytes(b"Synthetic unregistered source.\n")
+        self.git("add", "--", extra)
+        self.rejected(currentness=True)
+
+    def test_current_edition_cannot_replace_the_original_census(self):
+        self.edition(self.current)
+        self.git("commit", "-qm", "Synthetic changed census is not an original edition")
+        self.owners["baseline"]["commit"] = self.git("rev-parse", "HEAD").strip()
+        self.rejected()
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -32,7 +32,7 @@ CONTINUATION_COPY_COUNT = 258
 CONTINUATION_COPY_EXCLUDED = 'b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183'
 CONTINUATION_COPY_METADATA = {
     'docs/provenance/v5-research-continuations/SOURCE_MAP.json':
-        (5990901, 'a6c2c87082f27c8560cfb4790059cc242effb5f45e3f7bdf30adf8b722b808c7'),
+        (5987769, '610fcbd8b9a46cf2d6fdd6a162721ec2dd63402ba08b341f3ed974bf20ccdd72'),
     'docs/provenance/v5-successors/SOURCE_MAP.json':
         (4978847, 'db90ad110ccc9c6a63454cf91ecec4605eed7fe243d18883d3cf501c58cb4883'),
     'docs/provenance/v5-successors/PRESERVATION.json':

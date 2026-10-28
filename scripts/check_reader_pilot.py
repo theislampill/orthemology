@@ -14,6 +14,7 @@ import os
 from pathlib import Path
 import posixpath
 import re
+import stat
 import subprocess
 import sys
 from urllib.parse import unquote, urlsplit
@@ -937,7 +938,91 @@ def check_historical_sources(repo, baseline_rows, owners, cross, additions):
     return admitted, errors
 
 
-def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths=(), navigation_paths=()):
+CONTINUATION_OWNER_PATHS = (
+    "docs/provenance/v5-research-continuations/EVIDENCE_BINDINGS.json",
+    "docs/provenance/v5-research-continuations/README.md",
+    "docs/provenance/v5-research-continuations/SOURCE_MAP.json",
+    "experiments/orthemology-v5-continuations/registry.json",
+)
+CONTINUATION_OWNER_ORIGINAL = {
+    CONTINUATION_OWNER_PATHS[0]: ("1c4ab596107c4573e5b6b8ec053551edb0123e37",
+        "eea355a54d547170b57b48d66263a0527f783d84c076fe30bcb6f192ae51d56b", 2216593),
+    CONTINUATION_OWNER_PATHS[1]: ("14f2a432915bb24800c80ec4dbab37cf37bdf149",
+        "ee7df681b2545e99a9f951b6a6916f45d9ad898af60ef69735505aa482bd3fb7", 44289),
+    CONTINUATION_OWNER_PATHS[2]: ("0f565ab802d53fae8a3a929e65f291e3dade7242",
+        "a6c2c87082f27c8560cfb4790059cc242effb5f45e3f7bdf30adf8b722b808c7", 5990901),
+    CONTINUATION_OWNER_PATHS[3]: ("d90b5647de1cf290d3b7dbe20a805983c75f0fcf",
+        "51e2cea236dd0a880c7243b2f9ccbd558c6c70f16f03ec0efa274f19d3d105ff", 192971),
+}
+CONTINUATION_OWNER_CURRENT = {
+    CONTINUATION_OWNER_PATHS[0]: ("87f561f1c1e745d08cadb4352658e98d9da04955",
+        "96025b64f060e5ac3dd548b0b3fcbc540dc04ee34224aae44d40b6d69e6a6888", 2206473),
+    CONTINUATION_OWNER_PATHS[1]: ("0fbf17f4e2636a5fbbf82fb98c12e9a6e89f92ce",
+        "efd73809fa13a9fcc90c2dcfd96e52a57b388edf8b12dafb78d3cecfb37bb5e6", 44618),
+    CONTINUATION_OWNER_PATHS[2]: ("3248f1deef2cc05e919d960e015a493697ad5dd1",
+        "610fcbd8b9a46cf2d6fdd6a162721ec2dd63402ba08b341f3ed974bf20ccdd72", 5987769),
+    CONTINUATION_OWNER_PATHS[3]: ("0c9f94758962a12e6106285c03c7701bd1ab9316",
+        "ed43c4141fed52d5900be64c01cc4ca9a0fe961cbcd75dd15b201462d26ba74b", 191011),
+}
+
+
+def check_continuation_owner_edition(repo, baseline_rows):
+    """Bind four existing owners to one exact original or consolidated edition."""
+    if not set(CONTINUATION_OWNER_PATHS).intersection(baseline_rows):
+        return {}, []
+    try:
+        for path in CONTINUATION_OWNER_PATHS:
+            blob, _, size = CONTINUATION_OWNER_ORIGINAL[path]
+            row = baseline_rows.get(path, {})
+            if (row.get("kind"), row.get("mode"), row.get("git_oid"), row.get("bytes")) != (
+                    "blob", "100644", blob, size):
+                raise ValueError("original census identity differs: " + path)
+        # This fixed metadata query has its own native scope; it is not a diff
+        # request covered by HeldReaderDiffBoundary and requests no blob bodies.
+        staged = subprocess.run(
+            ["git", "--no-replace-objects", "--literal-pathspecs", "ls-files", "--stage", "-z",
+             "--", *CONTINUATION_OWNER_PATHS], cwd=repo, capture_output=True, check=False)
+        if staged.returncode:
+            raise ValueError("could not inspect the four staged owners")
+        edition = None
+        for candidate in (CONTINUATION_OWNER_ORIGINAL, CONTINUATION_OWNER_CURRENT):
+            expected = b"".join(("100644 " + candidate[path][0] + " 0\t" + path + "\0").encode()
+                                for path in CONTINUATION_OWNER_PATHS)
+            if staged.stdout == expected:
+                edition = candidate
+                break
+        if edition is None:
+            raise ValueError("staged owners are not one complete accepted edition")
+        for ancestor in (Path(repo), *Path(repo).parents):
+            if ancestor.is_symlink():
+                raise ValueError("continuation owner root contains a symlink")
+        for path in CONTINUATION_OWNER_PATHS:
+            blob, identity, size = edition[path]
+            node = safe_path(repo, path)
+            fd = os.open(node, os.O_RDONLY | os.O_NOFOLLOW)
+            with os.fdopen(fd, "rb") as stream:
+                before = os.fstat(stream.fileno())
+                if (not stat.S_ISREG(before.st_mode) or before.st_nlink != 1
+                        or before.st_mode & 0o111 or before.st_size != size):
+                    raise ValueError("owner is not an ordinary exact-sized file: " + path)
+                body = stream.read()
+                after = os.fstat(stream.fileno())
+            fields = ("st_dev", "st_ino", "st_mode", "st_nlink", "st_size", "st_mtime_ns", "st_ctime_ns")
+            if any(getattr(before, name) != getattr(after, name) for name in fields):
+                raise ValueError("owner changed during the ordinary read: " + path)
+            actual_blob = hashlib.sha1(b"blob " + str(len(body)).encode() + b"\0" + body).hexdigest()
+            if (actual_blob, hashlib.sha256(body).hexdigest(), len(body)) != (blob, identity, size):
+                raise ValueError("worktree and staged owner editions differ: " + path)
+        if edition is CONTINUATION_OWNER_ORIGINAL:
+            return {}, []
+        return {path: {"path": path, "kind": "blob", "mode": "100644", "git_oid": edition[path][0],
+                       "bytes": edition[path][2]} for path in CONTINUATION_OWNER_PATHS}, []
+    except (ValueError, OSError) as exc:
+        return {}, ["continuation-owner: " + str(exc)]
+
+
+def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths=(), navigation_paths=(),
+                            continuation_owners=()):
     """New/changed tracked sources cannot disappear behind a frozen census.
 
     Compare the index and actual worktree separately with the approved commit.
@@ -999,6 +1084,8 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                         or (status == "D" and path in allowed_duplicates)
                         or (status == "D" and path in (continuation_paths or ()))
                         or (status == "M" and path in rounds_navigation)
+                         or (status == "M" and path in CONTINUATION_OWNER_PATHS
+                             and path in continuation_owners)
                         or (status == "M" and path in {MEDIATOR_GUIDE, *TYPED_GUIDES}
                             and path in navigation_paths)))
     return list(dict.fromkeys(errors))
@@ -1024,6 +1111,8 @@ def check(repo, owners, cross):
         fail("baseline", str(exc))
         return errors
     indexed = {row["path"]: row for row in rows}
+    continuation_owners, continuation_errors = check_continuation_owner_edition(repo, indexed)
+    errors.extend(continuation_errors)
     additions, addition_errors = check_source_additions(repo, indexed, owners, cross)
     errors.extend(addition_errors)
     historical, historical_errors = check_historical_sources(repo, indexed, owners, cross, additions)
@@ -1046,7 +1135,7 @@ def check(repo, owners, cross):
             except (ValueError, OSError) as exc:
                 fail("navigation-source", path + ": " + str(exc))
     errors.extend(check_corpus_currentness(repo, owners["baseline"]["commit"], additions,
-                                          historical, navigation))
+                                          historical, navigation, continuation_owners))
     errors.extend(check_collection_dispositions(rows, owners, cross))
     errors.extend(check_collection_result_routes(repo, owners, cross))
     if owners["baseline"].get("tree"):
@@ -1086,7 +1175,7 @@ def check(repo, owners, cross):
             fail("owner", str(group.get("key")) + " has no discovery owner")
         discovered_owners.update(group.get("owners", []))
     for path in sorted(discovered_owners):
-        row = indexed.get(path)
+        row = continuation_owners.get(path) or indexed.get(path)
         if not row or row["kind"] != "blob" or row["mode"] not in ("100644", "100755"):
             fail("owner", str(path) + " is not a regular pinned discovery owner")
             continue
@@ -1121,7 +1210,7 @@ def check(repo, owners, cross):
         else:
             raw = b"blob " + str(len(body)).encode("ascii") + b"\0" + body
             oid = (hashlib.sha1(raw) if len(row["git_oid"]) == 40 else hashlib.sha256(raw)).hexdigest()
-            if oid != row["git_oid"]:
+            if oid != continuation_owners.get(path, row)["git_oid"]:
                 fail("baseline-source" if path in indexed else "source-addition",
                      path + " differs from the independently bound source")
             mode = ("100644" if path in historical else
