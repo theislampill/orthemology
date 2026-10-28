@@ -13,8 +13,10 @@ import hashlib
 import importlib.util
 import json
 import math
+import os
 from pathlib import Path
 import re
+import stat
 import subprocess
 from urllib.parse import urlsplit, urlunsplit
 
@@ -51,6 +53,35 @@ BASELINE_ANCHOR = {
     'legacy_overlay': {'path': FROZEN_ROOTS[1] + '/SIXTH_FINAL_OVERLAY.json',
                        'sha256': '879879eaffdf04396577d113abb2d224b53e07e20a15f23c3f5b785b2291bd89'},
     'git_required': True,
+}
+# These four present owners have a reviewed current edition while their frozen
+# predecessor inventory remains immutable. Change CURRENT only with a reviewed
+# complete four-owner edition; no runtime descriptor can supply these pins.
+PRESERVATION_OWNER_PATHS = (
+    'docs/provenance/v5-research-continuations/EVIDENCE_BINDINGS.json',
+    'docs/provenance/v5-research-continuations/README.md',
+    'docs/provenance/v5-research-continuations/SOURCE_MAP.json',
+    'experiments/orthemology-v5-continuations/registry.json',
+)
+PRESERVATION_OWNER_ORIGINAL = {
+    PRESERVATION_OWNER_PATHS[0]: ('1c4ab596107c4573e5b6b8ec053551edb0123e37',
+        'eea355a54d547170b57b48d66263a0527f783d84c076fe30bcb6f192ae51d56b', 2216593),
+    PRESERVATION_OWNER_PATHS[1]: ('14f2a432915bb24800c80ec4dbab37cf37bdf149',
+        'ee7df681b2545e99a9f951b6a6916f45d9ad898af60ef69735505aa482bd3fb7', 44289),
+    PRESERVATION_OWNER_PATHS[2]: ('0f565ab802d53fae8a3a929e65f291e3dade7242',
+        'a6c2c87082f27c8560cfb4790059cc242effb5f45e3f7bdf30adf8b722b808c7', 5990901),
+    PRESERVATION_OWNER_PATHS[3]: ('d90b5647de1cf290d3b7dbe20a805983c75f0fcf',
+        '51e2cea236dd0a880c7243b2f9ccbd558c6c70f16f03ec0efa274f19d3d105ff', 192971),
+}
+PRESERVATION_OWNER_CURRENT = {
+    PRESERVATION_OWNER_PATHS[0]: ('5cfa2ce0b0363b619a9a251210488abb67afe9bf',
+        '362bce501372d14f0bf41eaf4da826196f82fc71f17914ac0d7797815859a39e', 2198377),
+    PRESERVATION_OWNER_PATHS[1]: ('3a9e1c79325e9440490a4194e97a4d344f24b910',
+        '4905d6ddfdec60592065228783f45e8498f9f3f31c86dd6cb586e38465840d43', 45022),
+    PRESERVATION_OWNER_PATHS[2]: ('b19eb3a6eba59b918562c9e2a132f4cc1c54e8d9',
+        'a4de062f1423c26c65e16dda3e5a9abe415cb3b4d21281dc5e4aa94681dea9c2', 5985263),
+    PRESERVATION_OWNER_PATHS[3]: ('4ef7e206658bad9a05485b234be9fb25260ea32a',
+        '961a0d106b95b1f553a962c843468b842fa3c67b53781ecaa443ed1b1de4b6dd', 189443),
 }
 FRESH = {'NOT_RUN', 'BLOCKED_EXTERNAL_INPUT', 'BLOCKED_TOOLCHAIN', 'RESOURCE_INCONCLUSIVE',
          'FAILED', 'FINITE_ONLY', 'FRESH_KERNEL_COMPONENTS', 'QUALIFIED_DECLARED_SUITE'}
@@ -234,6 +265,85 @@ def _inventory_paths(root, roots):
     return found
 
 
+def _preservation_owner_git(root, *args):
+    """One fixed index query or one of four fixed public historical blobs."""
+    index_query = ('ls-files', '--stage', '-z', '--', *PRESERVATION_OWNER_PATHS)
+    historical_queries = {('cat-file', 'blob', row[0]) for row in PRESERVATION_OWNER_ORIGINAL.values()}
+    require(args == index_query or args in historical_queries, 'Unqualified preservation owner Git request')
+    environment = {key: value for key, value in os.environ.items() if not key.startswith('GIT_')}
+    environment.update(GIT_NO_LAZY_FETCH='1', GIT_TERMINAL_PROMPT='0', GIT_ALLOW_PROTOCOL='',
+                       GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=os.devnull,
+                       GIT_CONFIG_SYSTEM=os.devnull, GIT_OPTIONAL_LOCKS='0')
+    try:
+        result = subprocess.run(
+            ['git', '--no-replace-objects', '--literal-pathspecs', '-c', 'core.fsmonitor=false',
+             '-c', 'protocol.allow=never', *args], cwd=root, env=environment,
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False, timeout=60)
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        raise ValueError('Preservation historical Git request unavailable') from exc
+    require(result.returncode == 0, 'Preservation historical Git request failed')
+    return result.stdout
+
+
+def _preservation_owner_body(root, name, binding):
+    """Read an admitted current owner as stable ordinary nonexecutable data."""
+    blob, identity, size = binding
+    node = path_in(root, name)
+    descriptor = os.open(node, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
+    with os.fdopen(descriptor, 'rb') as stream:
+        before = os.fstat(stream.fileno())
+        require(stat.S_ISREG(before.st_mode) and before.st_nlink == 1
+                and not before.st_mode & 0o111 and before.st_size == size,
+                'Preservation owner is not an ordinary exact-sized file: ' + name)
+        body = stream.read()
+        after = os.fstat(stream.fileno())
+    fields = ('st_dev', 'st_ino', 'st_mode', 'st_nlink', 'st_size', 'st_mtime_ns', 'st_ctime_ns')
+    require(all(getattr(before, field) == getattr(after, field) for field in fields),
+            'Preservation owner changed during its read: ' + name)
+    actual_blob = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+    require((actual_blob, hashlib.sha256(body).hexdigest(), len(body)) == (blob, identity, size),
+            'Preservation worktree and staged owner editions differ: ' + name)
+    return body
+
+
+def _preservation_owner_bytes(root, files):
+    """Keep the historical inventory while requiring one complete live edition.
+
+    All four index entries and ordinary current bodies pass before the first
+    historical request. Original owners retain the ordinary inventory branch.
+    Only this fixed current edition receives the four fixed original bodies.
+    """
+    for name in PRESERVATION_OWNER_PATHS:
+        blob, identity, size = PRESERVATION_OWNER_ORIGINAL[name]
+        require(files.get(name) == {'path': name, 'bytes': size, 'sha256': identity, 'git_blob_sha1': blob},
+                'Preservation owner original inventory identity differs: ' + name)
+    root = Path(root).absolute()
+    require(all(not node.is_symlink() for node in (root, *root.parents)),
+            'Preservation owner root contains a symlink')
+    staged = _preservation_owner_git(root, 'ls-files', '--stage', '-z', '--', *PRESERVATION_OWNER_PATHS)
+    edition = None
+    for candidate in (PRESERVATION_OWNER_ORIGINAL, PRESERVATION_OWNER_CURRENT):
+        expected = b''.join(('100644 ' + candidate[name][0] + ' 0\t' + name + '\0').encode('utf-8')
+                            for name in PRESERVATION_OWNER_PATHS)
+        if staged == expected:
+            edition = candidate
+            break
+    require(edition is not None, 'Preservation staged owners are not one complete accepted edition')
+    for name in PRESERVATION_OWNER_PATHS:
+        _preservation_owner_body(root, name, edition[name])
+    if edition is PRESERVATION_OWNER_ORIGINAL:
+        return {}
+    originals = {}
+    for name in PRESERVATION_OWNER_PATHS:
+        blob, identity, size = PRESERVATION_OWNER_ORIGINAL[name]
+        body = _preservation_owner_git(root, 'cat-file', 'blob', blob)
+        actual_blob = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+        require((actual_blob, hashlib.sha256(body).hexdigest(), len(body)) == (blob, identity, size),
+                'Preservation historical owner bytes differ: ' + name)
+        originals[name] = body
+    return originals
+
+
 def _preservation(bundle, root, anchor):
     bound, inventory = bundle['baseline_binding'], bundle['preservation']
     keys(bound, {'schema', 'base_commit', 'base_tree', 'preservation_sha256', 'legacy_registry', 'legacy_overlay'})
@@ -252,11 +362,16 @@ def _preservation(bundle, root, anchor):
     files = indexed(inventory['files'], 'path')
     present = _inventory_paths(root, FROZEN_ROOTS)
     require(files and present <= set(files), 'Frozen preservation file-set changed')
+    # Explicit fixture anchors keep their original test seam; the CLI and the
+    # continuation preservation consumer always use the pinned production anchor.
+    owner_bytes = _preservation_owner_bytes(root, files) if anchor == BASELINE_ANCHOR else {}
     for name, row in files.items():
         keys(row, {'path', 'bytes', 'sha256', 'git_blob_sha1'})
         integer(row['bytes']); digest(row['sha256'])
         require(re.fullmatch('[0-9a-f]{40}', row['git_blob_sha1']), 'Invalid baseline Git blob identity')
-        if name in present:
+        if name in owner_bytes:
+            raw = owner_bytes[name]
+        elif name in present:
             raw = path_in(root, name).read_bytes()
         else:
             try:

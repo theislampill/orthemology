@@ -1687,6 +1687,55 @@ L_\alpha(c,v_i)=(q-i)^2. \quad\text{(26)}\quad
 
 Thus a known standard permits the exact repair *q* = *r*<sub>α</sub>, with common improvement *D*<sub>α</sub>. It is strictly positive in the interior, and zero at the endpoint standards 0 and 1.
 
+**The same calculation for an arbitrary binary disturbance.** The earlier integration probe [45] starts from an arbitrary incoherent input $`x=(x_1,x_2)`$, rather than the particular $`b_\epsilon`$. Put
+
+```math
+\Delta=x_1+x_2-1\ne0,\qquad
+r_\alpha(x)=x_1-(1-\alpha)\Delta,\qquad
+k_\alpha=\alpha(1-\alpha).
+```
+
+For either truth vertex, write $`u=x_1-i`$. The other input error is $`\Delta-u`$, and
+
+```math
+\alpha u^2+(1-\alpha)(\Delta-u)^2
+ =\bigl(u-(1-\alpha)\Delta\bigr)^2+k_\alpha\Delta^2.
+```
+
+Thus $`L_\alpha(x,v_i)=(r_\alpha(x)-i)^2+k_\alpha\Delta^2`$, while a coherent output still has loss $`(q-i)^2`$. Since $`0\le q\le1`$, the complete set of weak improvements at both truth vertices is exactly
+
+```math
+\left[
+ 1-\sqrt{(1-r_\alpha(x))^2+k_\alpha\Delta^2},
+ \ \sqrt{r_\alpha(x)^2+k_\alpha\Delta^2}
+\right]\cap[0,1].
+```
+
+Both endpoint inequalities are needed. If $`r_\alpha(x)\in[a,1-a]`$ for $`0\lt{}a\le1/2`$, a member of this interval satisfies
+
+```math
+|q-r_\alpha(x)|\le\frac{k_\alpha\Delta^2}{2a},
+\qquad
+\widehat\alpha=\frac{q-x_1+\Delta}{\Delta},
+\qquad
+|\widehat\alpha-\alpha|
+ \le\frac{k_\alpha|\Delta|}{2a}
+ \le\frac{|\Delta|}{8a}.
+```
+
+For $`q\ge r_\alpha(x)`$, subtracting the zero-vertex losses gives
+$`2r_\alpha(x)(q-r_\alpha(x))+(q-r_\alpha(x))^2\le k_\alpha\Delta^2`$.
+For $`q\le r_\alpha(x)`$, the one-vertex inequality gives the corresponding
+linear coefficient $`2(1-r_\alpha(x))`$. Both coefficients are at least
+$`2a`$. Dropping the nonnegative square proves the first bound; the exact
+identity $`q-r_\alpha(x)=\Delta(\widehat\alpha-\alpha)`$ proves the decoder
+bound for either sign of the nonzero disturbance. In the particular family
+$`x=b_\epsilon`$, one has $`\Delta=\epsilon`$ and
+$`r_\alpha(x)=1/2+\alpha\epsilon\in[1/2,3/4]`$. Taking $`a=1/4`$ gives the
+bound in the next lemma. The more general formula does not by itself supply
+an observation model, a uniform statistical rate over arbitrary inputs, or
+a dynamic restoration theorem.
+
 **Lemma 19 — A good repair decodes the standard.** Every good repair satisfies
 
 ```math
@@ -1704,6 +1753,43 @@ If *q* ≥ *r*<sub>α</sub>, goodness at *i* = 0 gives
 If *q* < *r*<sub>α</sub>, goodness at *i* = 1 gives the same inequality with the linear term $`2(1-r_\alpha)(r_\alpha-q)`$. Since 1/2 ≤ *r*<sub>α</sub> ≤ 3/4, the relevant linear coefficient is at least 1/2. Discarding the nonnegative square proves the first bound; $`\alpha(1-\alpha)\leq1/4`$ and division by *ε* prove the rest. The calculation also holds for endpoint standards and for real *q* before imposing coherence. ∎
 
 Let *G*<sub>α,ε</sub> be the set of good coherent repairs. If two standards are separated by more than *ε*, their good-repair sets are disjoint: an output in their intersection would, by (27), decode within *ε*/2 of both. Equation (27) is a **necessary** condition. An arbitrary estimate within *ε*/2 need not produce a good repair; a separate sufficient bound is given below.
+
+**Checking the exact target rather than only its decoder.** The source audits
+[46–47] distinguish three boundaries by literal loss calculations. At
+$`\alpha=1/2`$, $`\epsilon=1/4`$ and $`q=21/32`$, the center is $`r_\alpha=5/8`$.
+The decoded error is exactly $`1/8=\epsilon/2`$, so the necessary bound (27)
+holds. Nevertheless the zero-vertex excess loss is
+
+```math
+q^2-\bigl(r_\alpha^2+D_\alpha\bigr)
+ =\frac{441-400-16}{1024}
+ =\frac{25}{1024}>0.
+```
+
+This output is not good. The sufficient tolerance used in (30) consequently
+cannot be replaced by the larger necessary decoder radius.
+
+A fixed disturbance also leaves genuine common repair cells. At
+$`\epsilon=1/4`$, the input losses are
+$`1/4+5\alpha/16`$ at the zero vertex and $`1/4-3\alpha/16`$ at the one vertex.
+The following two source controls therefore follow by direct substitution:
+
+| Fixed output | Admitted standards | Input loss minus output loss at the two vertices |
+|---|---|---|
+| $`q=5/8`$ | $`\alpha\in[9/20,7/12]`$ | $`(20\alpha-9)/64`$ and $`(7-12\alpha)/64`$ |
+| $`q=9/16`$ | $`\alpha\in[1/4,5/16]`$ | $`(80\alpha-17)/256`$ and $`(15-48\alpha)/256`$ |
+
+Each displayed pair is nonnegative throughout its stated interval. One
+constant output can thus repair a nontrivial interval of standards at a
+fixed positive disturbance; no exact limiting identification follows until
+the shrinking-disturbance premise is supplied. At $`\epsilon=0`$,
+$`q=1/2`$ is a common weak repair for every standard. At an endpoint standard
+and within the admitted disturbance range, $`D_\alpha=0`$ and the two weak
+inequalities force $`q=r_\alpha`$, so strict improvement at both vertices is
+impossible there. The interior strict-repair construction and these weak
+endpoint statements have different domains. These computations explain
+the controls; they do not claim a new execution of the historical audit
+fixtures.
 
 #### A finite-sample lower bound and the meaning of a fresh observation
 
@@ -1757,7 +1843,81 @@ which gives the exponential bound and (29). ∎
 
 The first expression in (28) is an exact formula for a universal **lower bound**, not an assertion that it is the optimal testing risk. The finite Bernoulli experiment's actual optimal testing risk can be obtained from its binomial probabilities, including exact rational arithmetic for rational parameters; no new numerical experiment is asserted here. The alternatives vary with *ε*. This is a local minimax result, not a pointwise rate for every fixed standard or a general empirical law of cognition.
 
+The testing reduction includes private randomization of arbitrary
+cardinality. On each finite word $`w`$, let $`K_w`$ be one probability
+law on real repair outputs, shared by both standards. The probability
+of accepting the minus hypothesis is then
+$`K_w(G_{\alpha_-,\epsilon})\in[0,1]`$. Applying the finite testing
+bound to these acceptance probabilities and integrating the failure
+events gives the same repair lower bound. No finite list of random
+seeds is required. A parameter-dependent output kernel would instead
+give the algorithm information absent from the experiment.
+
+The initial formal source [46] treats those real-valued randomized
+tests on the finite word space and proves the bound by one quarter of the squared affinity for $`0\le\epsilon\le1/2`$. The affinity calculation
+and $`1-\sqrt{1-u}\ge u/2`$ remain valid on that wider interval.
+Its literal repair bridge uses $`0\lt{}\epsilon\le1/4`$, the same
+output law $`K_w`$ under both standards, and measurable acceptance
+sets. Allowing every real repair output strengthens the obstruction
+relative to restricting outputs to $`[0,1]`$; it does not provide a
+positive coherent-output construction. The square-root and
+exponential refinements proved above remain ordinary mathematics
+in the historical audit's division of formal and informal results.
+
 Copies do not increase the sample count. If *k* records are functions of *N* original fresh outcomes and independent randomness, they remain a postprocessing of the same experiment, so (28) counts *N*, not *k*. A provenance label alone establishes neither authenticity nor independence. Additional conditionally informative observations must be evaluated using their actual conditional law.
+
+**Conditional information in acquired feedback.** The integration probe
+[45] also points to the adaptive version of the copied-record distinction.
+It has a precise finite-horizon form. Consider two candidate standards
+and $`n`$ acquisition stages. The initial information has the same
+law under both. Given the complete acquired history $`h`$, the
+action-choice kernel is shared. The acquired feedback, including any
+informative provenance field, has conditional laws
+$`K_0(\,\cdot\,\mid h,a)`$ and $`K_1(\,\cdot\,\mid h,a)`$.
+Suppose these laws are mutually absolutely continuous and their
+likelihood ratios have a jointly measurable version
+$`r(y\mid h,a)=dK_0/dK_1`$. Standard Borel histories with the stated
+measurable kernels provide the usual setting; an unmodeled side
+channel is additional information.
+
+Induction through the successive conditional kernels gives the
+likelihood ratio of the complete acquired transcript:
+
+```math
+\frac{dP_0^{H_n}}{dP_1^{H_n}}
+ =\prod_{t=0}^{n-1}r(Y_t\mid H_t,A_t).
+```
+
+The common initial and action-choice factors cancel. Taking the
+logarithm, integrating under the first law, and conditioning each
+summand on its acquired history and chosen action gives
+
+```math
+D(P_0^{H_n}\Vert P_1^{H_n})
+ =\sum_{t=0}^{n-1}
+    \mathbb E_0
+    D\!\left(K_0(\,\cdot\,\mid H_t,A_t)
+       \Vert K_1(\,\cdot\,\mid H_t,A_t)\right).
+```
+
+The identity is valid as an extended nonnegative entropy. For each
+conditional ratio, its negative log part under the first law is
+bounded in integral by
+$`\int_{\{r\lt{}1\}}-r\log r\,dK_1\le1/e`$.
+Thus a finite sum introduces no undefined cancellation even if a
+positive part has infinite expectation. This supplies the elementary
+justification for the logarithm and conditional-expectation argument.
+
+A deterministic copy of an already acquired record has the same
+conditional point law under both standards and contributes zero to
+this sum. A shared random formatting or copying rule likewise has
+zero conditional divergence. A genuinely additional sensor
+observation is governed by its actual conditional law; matching
+one-time marginals does not establish freshness or independence.
+This identity describes the full transcript experiment. It does not
+assign an independent-sample interpretation to an arbitrary adaptive
+channel, authenticate provenance, or replace the stipulated Bernoulli
+experiment in (28).
 
 #### Positive correction when acquiring information preserves the target
 
@@ -1772,6 +1932,20 @@ D_\alpha-2|d|-d^2
 &\geq \epsilon^2(A/2-A^2/256)>0.
 \end{aligned} \quad\text{(30)}\quad
 ```
+
+The causal source audit [47] also records the corresponding pointwise
+sufficient tolerance. At one fixed interior standard, put
+$`k=\alpha(1-\alpha)`$. If
+$`|\widehat\alpha-\alpha|\le k\epsilon/4`$, then
+$`d=\epsilon(\widehat\alpha-\alpha)`$ satisfies
+$`|d|\le k\epsilon^2/4`$. The same two loss comparisons give improvement
+at each vertex of at least
+$`\epsilon^2(k/2-k^2/256)>0`$.
+Also $`|\widehat\alpha-\alpha|\le\min(\alpha,1-\alpha)/16`$,
+so the estimate is interior and the issued output is coherent.
+The uniform constant $`A=a(1-a)`$ used in (30) makes this condition
+available without knowing the exact interior standard. Neither
+sufficient bound is the necessary decoder radius (27).
 
 Clipping cannot increase error when the true parameter is in the clipping interval. The Bernoulli concentration bound therefore gives
 
@@ -1938,6 +2112,47 @@ The atom argument uses only one direction of (33). Its general content can be st
 
 For a finite reference this is the proof following (34). For the latter case, write $`\nu=\sum_j\nu_j`$ with each component finite. Positive mass of a readout fibre under *ν* entails positive mass under some component. Each component contributes countably many such fibres, so their union is countable. This countable-sum condition is often called *s-finiteness*; it must be established for any proposed component construction. ∎
 
+**A common readout and a finite reference are mathematical premises.**
+The generic source theorem [46] does not need the success subsets themselves
+to be measurable if their mass is interpreted as outer measure. If
+$`E_\theta\subseteq F\cap\{Z=\theta\}`$ has positive outer mass, the containing
+measurable fibre must have positive actual mass. Domination then gives
+positive reference mass, and the same countability argument applies.
+Calling this quantity a probability of success requires a measurable event;
+the eventual score events above have that additional property. Likewise,
+an arbitrary component representation is not enough: the sum of reference
+components must actually be s-finite. An uncountable index in a formal
+statement does not remove that explicit requirement.
+
+Two countermodels isolate these conditions. On a one-point probability
+space with the same point law for every real parameter, the
+parameter-indexed map $`Z_\theta(\omega)=\theta`$ would report exact
+identification with probability one for every parameter. There is no
+single readout with those values. This is why the readout in Lemma 23 must
+be shared, just as the repair policy must be shared.
+
+Alternatively, let the observation itself equal the real parameter, with
+actual law $`\delta_\theta`$ and shared readout $`Z(x)=x`$. Real counting
+measure dominates every such point law, since its only null set is the
+empty set, but it is not s-finite. To prove the failure, each finite
+measure has only countably many positive singleton masses; a countable
+sum of finite measures therefore does too. Domination of every
+$`\delta_\theta`$ would require a positive mass at every real singleton,
+which is impossible for such a sum. In particular
+$`\delta_\theta`$ is not dominated by Lebesgue measure, which assigns
+$`\{\theta\}`$ mass zero. Exact parameter revelation changes the
+information contract instead of contradicting the countability theorem.
+
+One-way domination must also be kept separate from equivalence. The two
+laws $`\delta_0`$ and $`\delta_1`$ are both dominated by
+$`(\delta_0+\delta_1)/2`$ but are mutually singular. One observed symbol
+identifies this finite hidden class exactly. This is compatible with a
+countable positive-success set, while it defeats the two-model
+almost-sure impossibility argument that needs mutual tail absolute
+continuity. Actual zero probabilities are therefore allowed by the
+common-reference lemma without being allowed by every later use of
+two-way transfer.
+
 A useful observation-model condition follows. Suppose informative outputs use one **common countable alphabet** *Y*, and choose a probability *r* with positive mass on every element. An artificial environment can return *r* at each probe, while using the same controller and parameter-independent nonprobe feedback. Whatever the actual parameter-dependent probe kernels, including history dependence and zeros, each finite actual prefix law is absolutely continuous in the required direction with respect to this reference. The killed-continuation proof then gives domination on *F*, and Lemma 23 applies.
 
 The reference need not be a possible true standard. Adaptive real-valued choices of query are allowed when they are actions of the shared controller and all observations, including timing, satisfy the stated kernel contract. Alphabets that are separately countable for different parameters but have uncountable union do not supply a common countable alphabet. An unrecorded parameter-revealing side channel invalidates the model.
@@ -1981,6 +2196,37 @@ Restrict (37) to *B*<sub>N</sub> and push it through the measurable trace functi
 Finally, the nondecreasing integer counter is bounded exactly when only finitely many increments occur, which is exactly eventual absence of queries. Combining this with eventual goodness makes the target “eventually no query and every output good” a single tail event. Lemma 19 supplies the exact limiting readout for shrinking disturbances, and Lemma 23 proves the conclusion. ∎
 
 This proof establishes domination of observed executions on the finite-query event. It makes no claim that the unused infinite actual oracle law is dominated by the infinite fair-coin law. Nor does an artificial reference sensor provide evidence that a real source is authentic. Probability language requires normalized input laws. The underlying domination and positive-mass argument can be formulated for more general measures under the same marginal domination; the corresponding formal endpoints have their own explicit premises, recorded in §11.
+
+The boundary cases in the causal audit [47] make the reference construction
+concrete. For $`N=0`$, the finite-word space has one empty word of reference
+mass one, and the entire no-query execution is a function of its initial
+state. Two different deterministic unused oracle tapes therefore give the
+same trace from that state. For an infinite unused Bernoulli tape, the
+sample-mean limit is instead the tape's parameter almost surely; the
+events of different limits separate the raw laws. Keeping that tape in
+the observed object would assert domination of information the evaluator
+never acquired.
+
+Common marginal domination is equally substantive. If the initial state
+is set to the true parameter itself, a no-query evaluator can keep that
+state and issue $`q_t=1/2+\alpha\epsilon_t`$ forever. Its initial marginals
+are the point laws $`\delta_\alpha`$. The preceding singleton argument
+shows that a continuum of these marginals admits no common s-finite
+dominating measure, and hence no common probability reference of the
+kind required in Theorem 24. Dependence between an admissible seed and
+its oracle is permitted; parameter information inserted through
+inadmissible seed marginals is a different operation.
+
+The final target remains the eventual conjunction of no query and good
+output. Boundedness of the integer query counter and eventual absence of
+increments are equivalent, including the zero-query case; combining
+their eventual index with the eventual-goodness index gives one common
+tail. Replacing conjunction by disjunction would accept a permanently
+bad no-query policy. Similarly, reading an unused bit, failing to count a
+query, or using a degenerate reference that gives some finite words mass
+zero removes a premise of the locality or domination proof. The audit's
+rejected source mutations test these particular interfaces; they are not
+positive proofs of the altered statements.
 
 #### Approximate scores and the scale at which the obstruction changes
 
@@ -2088,6 +2334,80 @@ The audit reports fresh compilation of eleven copied modules under Lean 4.19.0 a
 Those are historical source-report claims, preserved at their original scope. This consolidation did not rerun the compiler, inspect every original raw log or regenerate prerequisite objects. The audit's failed attempt to evaluate a noncomputable finite-set list remains a failed development attempt, not accepted proof evidence. Its positive logs and expected-rejection logs retain their different roles. The accepted-record names are `REPLAY_RESULT.json`, `AXIOM_READBACK.json`, `CONTROL_RESULT.json`, `FINITE_CONTROLS.json` and `RETAINED_PREREQUISITES.json`; their recorded original-packet locators and the source's seal `cb19cd28f4d7f033a22a16c1f6cd6896607d0fbe44681f13d6a140e462cba4e1` are custody identities, not portable commands or newly acquired archives. Reproduction would require the actual pinned prerequisites and source-order checks; no such reproduction is asserted here. Independent model-assisted review remains separate from external peer review, novelty, canonical adoption and release acceptance.
 
 
+### From the integration probe to the causal countability endpoint
+
+The ordinary research probe *Local correction geometry → information cost
+→ persistent restoration* [45] proposed a composition problem, with
+constants, quantifiers and the adaptive finite-probe proof still open in
+that note. Its arbitrary-input identity and interior decoder estimate
+are proved in §9.7 above. Theorem 20 supplies the later explicit
+finite-confidence constants for the specified Bernoulli experiment,
+not a pointwise rate at every fixed standard. Theorem 22 supplies the
+observed-trace argument through deterministic prefixes. Proposition 21
+supplies the target-preserving positive construction. Their common
+output and loss must remain the same when these results are composed;
+the action, observation and permission hypotheses remain additional
+premises. The probe's request to investigate primary literature and a
+real application was a research duty, not an assertion that either was
+completed. Its original date, pending wording and lack of a kernel or
+priority claim retain that historical meaning.
+
+The complete public *Independent fresh proof-spine audit* [46] and
+*Causal finite-query restoration: independent audit* [47] explain which
+parts of that progression were reported as formal proofs. Their
+populations are different:
+
+| Historical source stage | Reported positive scope | Boundary that remains |
+|---|---|---|
+| Initial fresh proof spine | Four modules: `StatisticalRepair`, `CountableIdentification`, `RepairObstruction` and `RepairTestingBridge`; a separate five-module snapshot adds `RestorationCountability`. | The finite formal testing result is the bound by one quarter of the squared affinity. The stronger square-root bound, exponential simplification, sample complexity, concentration construction and adaptive postprocessing reduction are ordinary arguments. |
+| Generic and applied countability | A shared measurable readout with an s-finite common reference; literal eventual score inequalities imply convergence, and a restricted-domination premise gives countability. | The generic result permits an outer-measure reading of success. The initial applied theorem does not construct the controller, its observed law, the finite-probe event or the domination proof. |
+| Later causal/query-chain closure | Ten copied modules; actual Boolean-query locality, finite-word trace domination, seed/oracle correlation and one measurable eventual score/no-query event. | Its exact-restoration endpoint uses common probability seed marginals. The dominated-marginal extension proved here and the later additive-tolerance successor have separate scopes. This report does not certify that later successor. |
+
+The initial applied theorem uses a real-indexed measure family. An
+application on the open parameter interval can extend that family
+harmlessly outside the interval; this typing choice neither adds a
+physical standard nor proves the observed-law construction. The
+probability interpretation still needs normalized actual laws and
+measurable success events.
+
+The first audit reports twelve independent boundary theorems, an
+additional event-measurability lemma, three deliberately rejected
+extensions and 6,797 exact-rational checks. Its zero-sample control has
+exact randomized testing risk $`1/2`$; the weaker formal lower bound
+$`1/4`$ is not an exact-risk formula. Its refreshed snapshot records the
+correction from an unused raw-oracle path to the observable trace and
+from a sigma-finite label to the explicit s-finite hypothesis. The
+initial snapshot and failed audit-control drafts retain their earlier
+status. The original four-, five- and refreshed-snapshot compilations
+and the separately named immutable replay are separate execution
+records, not populations to add as newly proved theorems.
+
+The causal audit reports type and axiom readback for 100 named
+declarations, including definitions and instances, an explicit final
+signature guard, eighteen boundary theorems and four rejected source
+mutations. Its finite controls report 244,944 prefix/lasso checks across
+5,832 three-state Boolean-query controllers, including 34,992 checks
+with zero query budget; 44,880 exact-rational strict-repair cases; and
+two opposite correlated joint laws with all sixteen finite joint
+events. These finite populations supplement its general proof. The
+package-root, formatting-option and control-elaboration development
+failures remain failed attempts, distinct from the accepted terminal
+receipts and intended negative results.
+
+Both reports describe their pinned Lean 4.19.0/Mathlib environments,
+audit-local custom objects and standard axiom dependencies
+`propext`, `Classical.choice` and `Quot.sound`. They report no `sorryAx`
+or new source axiom in the inspected targets. This paragraph preserves
+their claims; it does not reproduce a toolchain bootstrap, a fresh
+kernel replay, dependency-cache validation or receipt of every
+original log. Their manifests, exact commands, object hashes,
+readbacks and negative fixtures remain historical reproducibility
+records at the pinned source editions. The mathematical proofs and
+counterexamples needed for this chapter appear above. No original
+private source, general arbitrary-sensor realization, normative
+authority, effective deployment, external peer review or canonical
+adoption follows from those reported checks.
+
 **Edition status:** new source-bound consolidated exposition. The companion review record binds the exact text, source population, independent findings, corrections, and proposed predecessor retirement. Review of this exposition does not confer owner acceptance or silently amend an accepted paper. None of those records is needed to follow the mathematical arguments above.
 
 ### References
@@ -2142,6 +2462,10 @@ Those are historical source-report claims, preserved at their original scope. Th
 43. Orthemology. *One exact composition of score repair and controlled restoration*. [Complete public projected benchmark][43], for the two fixed standards, literal score target and generated common feedback controller.
 44. Orthemology. *Generated binary experiment: independent composition audit*. [Complete public projected audit][44], preserving its coupled-sensor and dependence controls, historical proof boundary and failed development attempt.
 
+45. Orthemology. *Local correction geometry → information cost → persistent restoration*. [Complete public projected integration probe][45], begun 30 September 2026. Its candidate status, research duties and original evidence limits are retained in §11; the general binary identity and decoder are proved in §9.7.
+46. Orthemology. *Independent fresh proof-spine audit*. [Complete public projected audit][46], 30 September 2026. Initial and extension snapshots, ordinary adaptive-observation reasoning, counterexamples and formal ceilings retain their separate historical scopes.
+47. Orthemology. *Causal finite-query restoration: independent audit*. [Complete public projected audit][47]. The ten-module exact causal/query closure, correlated-law controls and finite checks are distinct from the later additive-tolerance successor.
+
 Repository references identify exact public source editions, not mutable current filenames. The broader works in references 1, 6, and 7 contain additional results and are not replaced in their entirety by this chapter.
 
 [1]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/theory/lineages/h-continuation/continuation_complete_orthing.md
@@ -2193,3 +2517,8 @@ Repository references identify exact public source editions, not mutable current
 
 [43]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/docs/provenance/v5-research-continuations/notes/b0672a56d007c718a42a7ee6fdc875c915630ad95dff5cfbae7f7e9a419d5349.md
 [44]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/docs/provenance/v5-research-continuations/notes/0da619bf120570139cb2708ea79ba2a05bf20f8be6718f1e21fc3140632610d6.md
+
+[45]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/docs/provenance/v5-research-continuations/notes/c2ad91390d3bb80c2e1d0a371494b146222aa7c4d6608abef0dff703d83f111b.md
+[46]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/docs/provenance/v5-research-continuations/notes/f2d0dc0727817a58c17361252a3c2be4c020cc4d287b627535e742e3b276efef.md
+[47]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/docs/provenance/v5-research-continuations/notes/4568e570dee3bc029c65f4208c8d1e969578096d3aef529df0a1609173c7b4fa.md
+

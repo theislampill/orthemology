@@ -16,6 +16,45 @@ from resolve_t20_v6_source import lean_imports, validate_graph
 from validate_repo import preserved_t20_detector_text
 from test_repo_validator_corpus import changed_bytes, run_validator
 
+def _reader_fixture_entries(repo, revision, paths):
+    """Read only the real historical blobs consumed by this reader fixture.
+
+    The production whole-tree census is unchanged. Missing objects and wrong
+    native identities remain errors; no size or entry is synthesized.
+    """
+    import subprocess
+    if (not isinstance(revision, str) or len(revision) != 40
+            or any(char not in '0123456789abcdef' for char in revision)):
+        raise ValueError('fixture requires an exact commit identity')
+    selected = sorted(paths)
+    if (not selected or len(selected) != len(set(selected))
+            or any(not isinstance(path, str) or not path or path.startswith('/')
+                   or '\\' in path or '\0' in path
+                   or any(part in ('', '.', '..') for part in path.split('/'))
+                   for path in selected)):
+        raise ValueError('fixture requires finite ordinary relative paths')
+    def git(*args):
+        result = subprocess.run(['git', '--no-replace-objects', '--literal-pathspecs', *args],
+                                cwd=repo, capture_output=True, check=False)
+        if result.returncode:
+            raise ValueError('required pinned fixture Git objects are unavailable')
+        return result.stdout
+    if git('rev-parse', '--verify', revision + '^{commit}').decode().strip() != revision:
+        raise ValueError('fixture requires the exact native commit')
+    rows = []
+    for path in selected:
+        body = git('ls-tree', '-l', '-z', revision, '--', path)
+        if not body.endswith(b'\0') or body.count(b'\0') != 1:
+            raise ValueError('fixture requires one native entry for each selected path')
+        metadata, actual_path = body[:-1].split(b'\t', 1)
+        mode, kind, oid, size = metadata.decode('ascii').split()
+        if actual_path.decode('utf-8') != path or mode != '100644' or kind != 'blob':
+            raise ValueError('fixture historical path, kind or mode differs')
+        rows.append({'path': path, 'mode': mode, 'kind': kind,
+                     'git_oid': oid, 'bytes': int(size)})
+    return rows
+
+
 
 class CompleteValidationTests(unittest.TestCase):
     """Exercise the real inventory and gate, with read-only corrupted overlays."""
@@ -627,7 +666,9 @@ class MediatorOwnerMigrationTests(unittest.TestCase):
         projection_rows = json.loads((projection.ROOT /
             'docs/provenance/v5-successors/PUBLIC_PROJECTION.json').read_bytes())['allowlist']
         cls.allowlist = [r for r in projection_rows if r['path'] in (cls.COORD, cls.GUIDE)]
-        cls.indexed = {r['path']: r for r in cls.reader.entries_at(projection.ROOT, cls.REV)}
+        cls.indexed = {r['path']: r for r in _reader_fixture_entries(
+            projection.ROOT, cls.REV,
+            set(cls.resolver.ORIGINAL_HISTORICAL_PROSE_PATHS) | set(cls.BLOBS))}
 
     def setUp(self):
         from copy import deepcopy
@@ -655,8 +696,7 @@ class MediatorOwnerMigrationTests(unittest.TestCase):
         # Keep this fixture at its independently qualified seven-path scope.
         self.owners['historical_source_bindings'] = [
             r for r in self.owners['historical_source_bindings']
-            if r['path'] != FisherOwnerMigrationTests.PATH
-            and r['path'] not in self.resolver.TYPED_PROSE]
+            if r['path'] in set(self.resolver.ORIGINAL_HISTORICAL_PROSE_PATHS) | set(self.BLOBS)]
         for name in (self.COORD, self.APPROX):
             self.owners['historical_source_bindings'] = [r for r in self.owners['historical_source_bindings']
                                                         if r['path'] != name]
@@ -887,7 +927,9 @@ class FisherOwnerMigrationTests(unittest.TestCase):
             cls.objects = projection.ROOT / cls.objects
         cls.original = subprocess.check_output(
             ['git', 'show', cls.REV + ':' + cls.PATH], cwd=projection.ROOT)
-        cls.indexed = {r['path']: r for r in cls.reader.entries_at(projection.ROOT, cls.REV)}
+        cls.indexed = {r['path']: r for r in _reader_fixture_entries(
+            projection.ROOT, cls.REV, set(cls.resolver.ORIGINAL_HISTORICAL_PROSE_PATHS)
+            | set(MediatorOwnerMigrationTests.BLOBS) | {cls.PATH})}
 
     def setUp(self):
         import subprocess
@@ -913,7 +955,8 @@ class FisherOwnerMigrationTests(unittest.TestCase):
         self.owners = json.loads((self.root / self.OWNER).read_bytes())
         # This pre-existing fixture retains its independently qualified eight paths.
         self.owners['historical_source_bindings'] = [r for r in self.owners['historical_source_bindings']
-                                                     if r['path'] not in self.resolver.TYPED_PROSE]
+            if r['path'] in set(self.resolver.ORIGINAL_HISTORICAL_PROSE_PATHS)
+            | set(MediatorOwnerMigrationTests.BLOBS) | {self.PATH}]
         self.put(self.OWNER, json.dumps(self.owners).encode())
         self.cross = json.loads((self.root / self.CROSS).read_bytes())
         self.additions = {r['path']: r for r in self.owners['source_additions']}
@@ -1366,7 +1409,8 @@ class TypedProseOwnerMigrationTests(unittest.TestCase):
         cls.owners_original = json.loads((cls.project / cls.OWNER).read_bytes())
         cls.cross_original = json.loads((cls.project / cls.CROSS).read_bytes())
         cls.earlier = [r for r in cls.owners_original['historical_source_bindings']
-                       if r['path'] not in cls.paths.values()]
+                       if r['path'] in set(cls.resolver.ORIGINAL_HISTORICAL_PROSE_PATHS)
+                       | set(MediatorOwnerMigrationTests.BLOBS) | {FisherOwnerMigrationTests.PATH}]
         if len(cls.earlier) != 8:
             raise ValueError('This fixture requires the eight preserved earlier bindings')
         cls.bindings = cls.earlier + [dict(path=cls.paths[key], repository_revision=cls.REV,

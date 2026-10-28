@@ -1758,6 +1758,53 @@ After a seed and prefix have been fixed, send the process to a common absorbing 
 
 Integrating that common nonnegative continuation probability against the two equivalent prefix measures transfers positivity of $`F(U,N)`$ to model λ. If some $`a\in U`$ were outside G<sub>λ</sub>, this event would contain infinitely many errors under λ, contradicting restoration. Thus $`U\subseteq G_\lambda`$ for every $`\lambda\in E_\theta(U)`$. This proves necessity for the fixed θ, and then for every model. Keeping the common seed in the prefix also proves the claim for seeded randomization without presuming a general policy-realization theorem. $`\square`$
 
+**Why the private-seed rule has a common behavioral form.** The ordinary
+source review [53] also describes the reduction from a common private seed
+to a common distribution of next actions at each fully observed history.
+In this finite, full-support model the reduction can be proved directly,
+without a general disintegration theorem.
+
+For a finite history $`h=((a_s,y_s))_{s\lt{}N}`$, let
+
+```math
+C_h=\{z:\pi(z,h_s)=a_s\text{ for every }s\lt{}N\},
+\qquad
+\ell_\theta(h)=\prod_{s\lt{}N}P_{\theta,a_s}(y_s).
+```
+
+The joint-prefix formula just used says
+$`\Pr_\theta(z\in D,h)=\rho(D\cap C_h)\ell_\theta(h)`$
+for every measurable seed set $`D`$. The likelihood factor is constant
+over the compatible seeds. If $`\rho(C_h)>0`$, it is positive under every
+model, and cancellation gives
+
+```math
+\Pr_\theta(z\in D\mid h)
+ =\frac{\rho(D\cap C_h)}{\rho(C_h)},\qquad
+\kappa(a\mid h)
+ =\frac{\rho(C_h\cap\{z:\pi(z,h)=a\})}{\rho(C_h)}.
+```
+
+Neither expression depends on the true model. For
+$`\rho(C_h)=0`$, the history has probability zero under every model;
+choose any fixed distribution $`\kappa(\,\cdot\,\mid h)`$ there. The
+action alphabet is finite, so these expressions give a probability
+vector at every history. Induction on history length shows that
+sampling each next action from this vector, followed by its stipulated
+fresh observation, reproduces all finite action/observation-history
+laws of the seeded policy. The equality extends to their generated
+infinite-history laws.
+
+The result concerns the law of the observed interaction, not identity
+of private seeds or internal state. It uses the full remembered history
+including the controller's own actions, a parameter-independent seed
+law and the stated conditional observation law. A parameter-correlated
+seed or omitted private feedback would invalidate the factorization.
+The construction gives neither a bounded-memory implementation nor
+advance access to the current action's observation. The broader
+continuous-space obstruction below keeps its own explicit common
+measurable policy and continuation-kernel assumptions.
+
 #### A constructive policy with the correct physical clock
 
 Choose one nonempty self-verifying set U<sub>λ</sub> for each candidate λ, and fix an ordering of its elements. Its ordered list is a plan. At a completed-plan boundary, compute the acquired likelihood
@@ -1938,6 +1985,19 @@ The recursion refers only to smaller nonempty supports. A symbol impossible unde
 
 There is also a finite bottom-up test for this definition. After deciding smaller supports, retain precisely those actions in $`\Gamma(B)`$ for which every nonempty strict successor is certified. For each $`\sigma\in B`$, require either an available progress witness or a nonempty available action set that is self-verifying among *B*. This is equivalent to the list definition: a progress witness gives a singleton list; a self-verifying set can be listed in any fixed order. Conversely, each certified list supplies its progress witness or its underlying self-verifying set, and all its actions survive the continuation test. This is a combinatorial equivalence, without a policy-necessity conclusion. Equality and positivity of supplied exact probabilities are required operations; no general algorithm for comparing arbitrary represented real numbers follows. [36]
 
+For the self-verifying branch of this bottom-up test, let $`A_B`$
+be the retained licensed actions after checking all strict successors.
+Apply the greatest-set deletion calculation of §7.11 with rival
+family $`B`$ and starting set $`G_\sigma\cap A_B`$. Its proof is
+combinatorial: every self-verifying subset survives each contracting
+iterate, and the final fixed point is itself self-verifying when
+nonempty. It uses equality of supplied observation vectors, not
+positivity of every symbol. Thus zero probabilities do not invalidate
+this greatest-kernel subroutine. They do change the stochastic
+necessity argument, which additionally needs the recursive exits
+treated in §7.13. This is the explicit greatest-kernel step requested
+by the support-elimination review [53].
+
 #### One policy, with immediate interruption
 
 Choose one witnessing list for every certified support and every live candidate, with a fixed tie rule. This is a finite collection of finite choices. At entry to a support *B*, reset the within-phase likelihoods to one. At each completed-plan boundary, choose a live candidate maximizing the likelihood of the observations acquired since this phase began, and load its list. During a plan, retain the remaining suffix rather than recomputing the plan after each observation.
@@ -1949,6 +2009,20 @@ The rule uses the supplied laws and acquired observations; it does not take the 
 On every feasible consistent history, induction shows that the current support is certified. Continuing observations preserve the support and its licensed suffix; a strict nonempty successor is certified by requirement 2 and receives a new licensed plan. Every issued action therefore belongs to the current menu. Under a true $`\theta\in B_0`$, the next symbol has positive P<sub>θ,a</sub> probability almost surely, so the support retains θ at every time outside a single null event. Every strict change then lowers $`|B|-1`$, allowing at most $`|B_0|-1`$ changes.
 
 This is a policy in the stated physical experiment. The probability of any consistent finite acquired history under θ is the product of its selected-action observation probabilities, obtained by induction from the conditional acquisition law. On an exit, that product includes the exit-triggering symbol; it is neither discarded nor renormalized. Finite-history probabilities determine the law on infinite histories. No extra law-equality or independent policy-realization premise is supplied. [37–38]
+
+There are two invariants in this argument. A decreasing analysis rank
+bounds how often phases can change; it does not alone prevent a removed
+model from reappearing. For example, ranks $`2,1,0`$ and live sets
+$`\{\theta,\lambda\},\{\theta,\eta\},\{\theta,\lambda\}`$ preserve the
+true model and strictly decrease rank while reintroducing
+$`\lambda`$. The actual update $`B[a,y]\subseteq B`$ rules this out:
+induction makes every later support a subset of every earlier one.
+Together with positive-probability retention of $`\theta`$, it gives
+the support persistence used by the recursive proof. This is the
+additional premise identified by the earlier generic-controller review
+[53]. It says nothing about inclusion between permission menus:
+$`\Gamma(B[a,y])`$ may differ nonmonotonically from $`\Gamma(B)`$,
+which is why an exit must interrupt the old plan.
 
 #### A survival-affinity estimate
 
@@ -2023,7 +2097,119 @@ C_{B,\theta}
  \lt{}\infty.
 ```
 
+The direction of this charge comparison matters [53]. Saying that a
+positive charge implies a bad planned block would still permit assigning
+zero charge to every block. It would give no bound on executed errors.
+Here the charge is instead the number of bad occurrences in the complete
+plan. If the executed prefix has length $`e\le\ell`$, its count is
+
+```math
+\sum_{i=1}^{e}\mathbf 1\{a_i\notin G_\theta\}
+ \le
+\sum_{i=1}^{\ell}\mathbf 1\{a_i\notin G_\theta\}.
+```
+
+All discarded summands are nonnegative. The exit-producing action lies
+in the executed prefix and is included on the left; repeated actions
+are counted at each occurrence. Thus the charge actually dominates the
+physical bad-action count. Positivity of a charge, correct candidate
+selection and count domination are separate statements.
+
 The conclusion also covers a phase that never exits. The proof neither assumes phase termination nor requires all candidates to be identified. It bounds precisely the actions that violate the true target. [37–38]
+
+#### Resetting likelihoods while retaining the probability of an exit
+
+The phase proof above bounds actual errors directly. A complementary
+identity explains the earlier source's generated-process calculation
+[53]. It distinguishes an unnormalized history calculation from an
+expectation under the actual probability law.
+
+Write a controller state as $`x=(s,h)`$, with one of the finitely many public phases $`s`$ and
+its within-phase acquired history $`h`$. A selected finite plan produces
+a stopped observation record $`r`$ with probability
+$`p_\theta(r\mid x)`$. These probabilities sum to one over all
+continuing and exiting records. The shared update $`T(x,r)`$ either
+extends the same phase history or enters a successor phase with empty
+within-phase history. It retains the exit record when counting actual
+actions, even though it resets the likelihood memory. The true
+$`\theta`$ indexes the observation law used in the analysis, not the
+selector or public update.
+
+The transition kernel is
+
+```math
+K_\theta(x,x')
+ =\sum_{\{r:T(x,r)=x'\}}p_\theta(r\mid x).
+```
+
+It is normalized on the countable state space of finite histories.
+The generated trajectory law has finite-cylinder probabilities given
+by products of these kernel entries from the declared initial state.
+For a nonnegative finite current-state charge $`c_\theta(x)`$, put
+$`V_0(x)=0`$ and
+
+```math
+V_{n+1}(x)
+ =c_\theta(x)+\sum_r p_\theta(r\mid x)V_n(T(x,r)).
+```
+
+Backward integration, or induction on $`n`$ using those cylinder
+probabilities, gives
+$`V_n(x)=\mathbb E_{\theta,x}\sum_{j=0}^{n-1}c_\theta(X_j)`$.
+Because the observation alphabet and each selected plan are finite, a
+fixed finite horizon from one state has only finitely many possible
+record sequences. With finite current-state charges, every $`V_n(x)`$
+is therefore finite; no uniform bound over all states is needed for
+this finite-horizon identity.
+
+The convention charges states zero through $`n-1`$ for $`n`$
+selections; it does not silently omit the initial selection or add a
+terminal one.
+
+Let $`m_\theta(s,h)`$ be the true-model mass of the within-phase
+history under its actually selected actions, with
+$`m_\theta(s,\varnothing)=1`$. For a continuing record,
+$`m_\theta(T(x,r))=m_\theta(x)p_\theta(r\mid x)`$.
+For a reset record the successor's new local empty-history mass is
+one. Define $`U_n(x)=m_\theta(x)V_n(x)`$. Multiplying the recurrence
+therefore gives exactly
+
+```math
+\begin{aligned}
+U_{n+1}(x)
+={}&m_\theta(x)c_\theta(x)
+ +\sum_{\text{continuing }r}U_n(T(x,r))\\
+ &+\sum_{\text{reset }r}
+       m_\theta(x)p_\theta(r\mid x)U_n(T(x,r)).
+\end{aligned}
+```
+
+This is the unnormalized reset recurrence. It weights each
+successor's reset-at-empty-history cost by the full exit mass.
+There is no division by $`m_\theta(x)`$. If that mass is zero, every
+continuing extension also has zero mass and every reset term carries
+a zero prefactor, so the identity still holds. The equality is an
+inductive relation between the two calculations, not an inference
+from calling both of them a process.
+
+On an actually continuing prefix, every observed symbol preserves the
+current support. All survival indicators are therefore one, so the killed
+and full likelihoods agree on that prefix; the killed calculation is zero
+on an excluded continuation.
+
+Conditioning a continuing observation on survival would replace
+its original probability by a normalized value and would change this
+recurrence. The partially revealing probe below displays the lost
+information. With the actual generated law, a uniform finite bound
+on the finite-prefix expected charges passes to the total charge by
+monotone convergence. If charges are nonnegative integers, finite
+total expectation implies finitely many positive charges almost
+surely. A physical-action conclusion additionally needs the
+stopped-prefix domination just proved, true-model retention along
+positive exits, and the nonempty-block clock argument below.
+This generic identity does not equate every historical implementation
+with the particular policy of this section or supply a new kernel
+execution receipt.
 
 #### The complete physical-time guarantee
 
@@ -2067,6 +2253,56 @@ These intervals cover the physical action clock and *T*<sub>*j*</sub> tends to i
 Markov's inequality gives the count tail. Finite expectation of this nonnegative extended integer count implies that it is finite almost surely. A finite set of bad physical times has a finite maximum, which proves eventual target goodness. The controller continues to issue actions; no finite zero-error stopping declaration or observable final-error certificate follows. $`\square`$
 
 The source's canonical policy theorem has this finite expected physical-cost interface. The ordinary proof above supplies a direct phase calculation and the displayed support-chain bound; it is not a fresh execution of the source's formal development or a claim that two historical implementations have identical whole-state laws. [38]
+
+#### Completed episode records and the information available at an action
+
+The last step has two different obligations: reconstruct the physical
+action stream correctly, and show that its decisions use only information
+available at their physical times. The staged source review [53]
+separates them.
+
+A recorded transition must retain the old phase, selected candidate
+and stopped observation record. Reconstructing the executed block
+from the new phase after a reset can select a different plan and
+discard the action that caused the exit. With the old record, the
+block is exactly the executed prefix, including that exit action and
+excluding the abandoned suffix. The initial placeholder has no
+completed action. Every later recorded block is nonempty on the
+specified probability-one event, so concatenation covers the physical
+clock; a total decoder's fallback outside that event affects none of
+these almost-sure conclusions. These are the record and clock
+properties used in the preceding count argument.
+
+Measurability in finitely many completed episode records alone is
+weaker than action-time nonanticipation. If one episode contains two
+actions, its completed record also contains the observation after the
+second action. A measurable function of that record can inspect this
+later observation when choosing a purported first action. It is still
+episode-record measurable. Thus a result that the first $`t+1`$
+completed records determine physical action $`t`$ does not by itself
+prove that only the first $`t`$ acquired physical observations are
+used.
+
+The policy constructed here supplies the additional invariant
+directly. Start with its fixed initial support, empty likelihood
+history and nonempty chosen queue. Given the same finite sequence
+of acquired physical action/observation pairs, induction reconstructs
+the same current support, within-phase likelihoods and residual queue.
+The fixed tie rule chooses the same replacement plan whenever a
+boundary is reached. Hence the next action is the same queue head
+before its observation is received. After that observation, the
+support update either retains the suffix or discards it immediately
+and loads the new plan. Changing observations beyond this acquired
+physical prefix cannot affect the action being issued. This proves
+the physical-clock information property for this history policy,
+in addition to the measurable decoding and eventual-goodness
+argument.
+
+The earlier decoder review correctly left that stronger inference
+open for the endpoint it actually inspected. The acquired-history
+construction in this section provides an ordinary proof of the
+needed property for its own policy; it does not retrospectively add
+a causality theorem to the earlier formal decoder's statement.
 
 #### Positive cases and necessary boundaries
 
@@ -3110,6 +3346,98 @@ The stochastic-transfer and recovery sections are ordinary mathematical consolid
 
 The learning sections likewise preserve the exact memory, observation, objective and permission hypotheses of their public sources. The common-objective specialization invokes the cited theorem within its stated model; it is not a newly implemented general synthesis procedure. The finite probes remain inspectable historical evidence, while the complete ordinary proofs above establish the stated mathematical conclusions.
 
+### Staged restoration reviews and the scope of their conclusions
+
+The complete public *Independent read of controlled-information
+restoration draft* [53] records six successive mathematical and
+specification readings on 30 September 2026. The first reviewer is
+identified as the source/intentionality bridge contributor, distinct
+from the controlled-restoration author. Those readings are not
+reported as fresh independent kernel compilations. Their conclusions
+belong to the versions and interfaces actually read.
+
+The initial finite positive-law reading supports the ordinary
+necessity and sufficiency arguments now in §7.11: recurrent good
+actions must sustain the needed discrimination; full-prefix transfer
+uses deterministic cuts; and the common seed has the behavioral
+reduction proved above. It retains full support, fresh controlled
+observations, common licensing, finite model/action/observation sets
+and unrestricted memory. The asymmetric good-action example, the
+singular-revelation counterexample and the absence of a finite
+last-error declaration preserve the source's limits. Its
+continuous-space discussion requires the explicit measurable,
+standard Borel and common-continuation hypotheses stated in the
+broader obstruction. The geometry-to-control composition requires
+the same issued output, target and sample contract as the
+[binary-repair treatment](information-and-inquiry.md#97-unknown-standards-the-information-needed-for-persistent-repair).
+
+The second reading identifies the greatest-kernel lemma needed by
+the support-elimination argument. The contracting monotone deletion
+proof and survival of every self-verifying subset are explicit in
+§7.11. The recursive support construction in §7.12 separately
+accounts for all positive exits, uses unnormalized continuing
+likelihoods and preserves the support-dependent menu. Hardcoding an
+acquired prefix into a continuation remains justified only because
+the model is fixed, future acquisitions are fresh, and the relevant
+state and permissions are represented. Omitted plant state,
+exhausted resources, changing versions and unrestricted
+history-dependent permissions remain outside that argument.
+
+The third reading inspects a canonical support-block selector whose
+inputs are the supplied finite family, support family, fixed initial
+candidate and already-used stack prefixes. Its theorem concludes
+eventual nonempty good **blocks** under declared joint independence,
+correct marginal laws and full support. The ordinary block-to-action
+argument and the later explicit queue construction have their own
+premises. That historical read does not certify the full ordinary
+iff, zero-support recursion, finite memory or an actual sensor and
+permission model.
+
+The fourth reading exposes two genuine missing implications:
+decreasing rank does not imply permanent exclusion without support
+inclusion, and positive charged cost implying badness does not
+establish domination of executed bad actions. Both distinctions are
+proved explicitly in §7.12. The guarded successor preserves true-model membership along
+positive-probability exits from live phases; it need not place the true
+model in irrelevant analysis phases. The same reading leaves open the binding
+between a finite-tree reset calculation and an actual infinite path
+law. The fifth reading checks the later six-module seal
+`generated-qualification-20260930T214115Z`, containing
+`ResetTrajectory`, `ResetFutureCost`, `MarkovCharge`,
+`ResetExpectation`, `TrajectoryBudget` and
+`GeneratedLiveController`. It reports the generated Markov law,
+the history-mass-times-normalized-cost identity, the zero-mass
+case and exact current-state charge indexing. The reset calculation
+above makes that identity readable without asserting a fresh formal
+replay. `RecursivePhaseExtraction` and `StoppedSupportUpdate`
+were inspected outside that earlier seal and are not silently added
+to its six-source population.
+
+The sixth reading checks eight principal extraction, recorded-prefix
+and decoder sources against the separate seal
+`action-decoder-qualification-20260930T221510Z`. It retains
+the old execution record on reset, the empty initial placeholder,
+nonempty later prefixes, the initial-record cost adjustment and the
+total decoder's irrelevant fallback on the proved event. It supports
+measurable physical eventual goodness and executed-charge transfer.
+It expressly distinguishes that endpoint from physical-action
+nonanticipation, as explained above. Later policy-law endpoints in
+references 38–43 and their existing chapter proofs retain their
+separate qualification; this historical sequence is not a new
+combined source closure.
+
+Finite expected error count and almost-sure eventual goodness never
+become a claim of integrable final-error time; the explicit late
+single-error example in §7.12 separates them. Analysis potentials,
+costs and probability laws may be indexed by the true model, while
+the selector and public state update must remain common. None of
+these readings supplies source authenticity, normative authority,
+original representation, consciousness or an ultimate bearer. The
+report's dates, named seals and source-hash lists remain historical
+provenance; the author's builds and another reviewer's kernel replays
+are different evidence. The present additions preserve and explain
+those distinctions without executing the historical controls.
+
 ## References and source editions
 
 The numbered project sources below identify public research editions. They establish attribution and allow comparison of the inherited statements and corrections. The arguments required for this chapter are given above; ordinary reading does not require reconstructing those historical files. Source extraction is distinguished from the unretrieved original PDF, and a section citation does not claim incorporation of an entire larger work.
@@ -3174,6 +3502,8 @@ The numbered project sources below identify public research editions. They estab
 51. Orthemology public research. *Synchronisation deficit and provenance-innovation rank balance*, revised public proposal. [Public source edition][synchronisation-source]. Exact Git object: `360478ec98f93ca4d0281023fb86ed42287fbc32`. The finite-dimensional argument, old-recovery correction, counterexamples and application limits are incorporated in §1.4; the zero-row qualification is made explicit there.
 52. Orthemology public research. *Provenance-root nonmultiplicity under copying and synchronisation*. [Public source edition][lineage-source]. Exact Git object: `37cdc615db920ea2eb559b338a9b68acacdc4fac`. The lineage invariant and controls are incorporated in §1.4. Its historical checker counts remain source-reported execution evidence, not a fresh run or a new general theorem.
 
+53. Orthemology public research. *Independent read of controlled-information restoration draft*. [Complete public projected review][restoration-staged-review], 30 September 2026. Six sequential mathematical/specification readings distinguish the ordinary finite criterion, support elimination, canonical blocks, reset budgets, generated expected charges and physical decoding; they are not fresh kernel replays.
+
 [synchronisation-source]: https://github.com/theislampill/orthemology/commit/a7ff0e33d1a299db640041c46b1af81ca70851f6
 [lineage-source]: https://github.com/theislampill/orthemology/commit/a7ff0e33d1a299db640041c46b1af81ca70851f6
 
@@ -3214,3 +3544,6 @@ The numbered project sources below identify public research editions. They estab
 [signed-companion]: https://github.com/theislampill/orthemology/blob/7b385e4116b052a0132dd740d07b918d3103f648/experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md
 [signed-report]: https://github.com/theislampill/orthemology/blob/7b385e4116b052a0132dd740d07b918d3103f648/experiments/orthemology-v5-successors/source-store/a59f7555e3f32f6869c55c28013a7dc94ee14a744494cf9e4a34eccf9770de78/SIXTEENTH_REPORT.md
 [empirical-pescetelli]: https://journals.sagepub.com/doi/10.1177/26339137251372605
+
+[restoration-staged-review]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/docs/provenance/v5-research-continuations/notes/deb77eb74e9172f964247172725074e94633de9a76fe30d62e4788ef06bb399d.md
+

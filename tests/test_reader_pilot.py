@@ -2501,8 +2501,24 @@ class ContinuationGeometryRoutesTests(unittest.TestCase):
                 continue
             _, level, start = heading[0]
             end = next((h[2] for h in page["headings"] if h[2] > start and h[1] <= level),page["line_count"])
-            targets = {href.split("#", 1)[0] for line,href in page["links"] if start <= line < end}
-            if "../../" + path not in targets:
+            links = {href for line,href in page["links"] if start <= line < end}
+            migrated = [(key, row) for key, row in ContinuationNoteReaderMigrationTests.NOTES.items()
+                        if path == "docs/provenance/v5-research-continuations/notes/" + row[0] + ".md"]
+            if migrated:
+                key, row = migrated[0]
+                relation = {"from": key, "to": row[4],
+                    "kind": "logical-content-incorporated-historical-source-retained",
+                    "basis": "scientific-consolidation-review"}
+                historical = "https://github.com/theislampill/orthemology/blob/" + ContinuationNoteReaderMigrationTests.REV + "/" + path
+                if (works[0]["key"] != row[3] or works[0]["source_keys"] != [key]
+                        or works[0]["reading_forms"] != [{"source": key, "relationship": "historical-source"}]
+                        or works[0].get("supporting_source_keys") != list(row[7])
+                        or [r for r in cross["relations"] if r.get("from") == key] != [relation]
+                        or cross["sources"].get(row[4], {}).get("path") != row[5]
+                        or "../../" + row[5] + "#" + row[6] not in links
+                        or historical not in links or "../../" + path in links):
+                    errors.append("source:" + member)
+            elif "../../" + path not in {href.split("#", 1)[0] for href in links}:
                 errors.append("source:" + member)
         return errors
 
@@ -2521,7 +2537,10 @@ class ContinuationGeometryRoutesTests(unittest.TestCase):
         self.assertEqual(self.errors(self.cross, self.text), [])
         for member,path in self.expected.items():
             replacement = next(v for v in self.expected.values() if v != path)
-            changed = self.text.replace("../../"+path, "../../"+replacement)
+            migrated = [row for row in ContinuationNoteReaderMigrationTests.NOTES.values()
+                        if path == "docs/provenance/v5-research-continuations/notes/" + row[0] + ".md"]
+            original = "../../" + migrated[0][5] + "#" + migrated[0][6] if migrated else "../../" + path
+            changed = self.text.replace(original, "../../"+replacement)
             self.assertNotEqual(changed,self.text)
             self.assertIn("source:" + member,self.errors(self.cross,changed))
 
@@ -7244,6 +7263,262 @@ class ContinuationOwnerEditionTests(unittest.TestCase):
         self.git("commit", "-qm", "Synthetic changed census is not an original edition")
         self.owners["baseline"]["commit"] = self.git("rev-parse", "HEAD").strip()
         self.rejected()
+
+
+class ContinuationNoteReaderMigrationTests(unittest.TestCase):
+    """Four incorporated readers keep exact historical identity and current science.
+
+    The command double below checks Python validation against exact public note
+    bodies. It is not native Git, restoration, custody or deletion evidence.
+    """
+
+    REV = 'a7ff0e33d1a299db640041c46b1af81ca70851f6'
+    OWNER = 'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json'
+    CROSS = 'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json'
+    REVIEW = 'docs/scientific-consolidation-review.md'
+    NOTES = {
+        'continuation-note-41': (
+            'a9eb8521054eb3769ff424037f438ae38f0f0c113d73624efc9d05dea3b35483',
+            'ae198b6530ccb5cdce3e15616d939575f7878d28', 13358,
+            'continuation-local-rigidity', 'consolidated-common-repair',
+            'mathematics/common-repair-and-geometric-obstructions.md',
+            '2-quadratic-repair-exact-compatibility-and-quantitative-separation',
+            ('continuation-note-40',)),
+        'continuation-note-37': (
+            '002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e',
+            '2804e7b196437dd437f0099b15aa45a76249e63b', 6680,
+            'continuation-statistical-repair', 'consolidated-information-and-inquiry',
+            'mathematics/information-and-inquiry.md',
+            'a-finite-sample-lower-bound-and-the-meaning-of-a-fresh-observation',
+            ('continuation-note-34',)),
+        'continuation-note-28': (
+            '4878fd0a4cf6c952af7cdbcb7e8a386c2730ff9986b74b8e39bf9b5077815b0f',
+            'f419024deb2a40bf50f7315cdf2dfdde9ede77f6', 15286,
+            'continuation-finite-query', 'consolidated-information-and-inquiry',
+            'mathematics/information-and-inquiry.md',
+            'finite-harmful-probing-and-eventual-exact-repair',
+            ('continuation-note-34',)),
+        'continuation-note-31': (
+            'b0672a56d007c718a42a7ee6fdc875c915630ad95dff5cfbae7f7e9a419d5349',
+            '937f0464dcaa515f1c002a8b36add0c4cb511b42', 5601,
+            'continuation-binary-experiment', 'consolidated-information-and-inquiry',
+            'mathematics/information-and-inquiry.md',
+            'a-shared-feedback-controller-with-literal-score-targets',
+            ('continuation-note-34', 'continuation-note-1')),
+    }
+
+    @classmethod
+    def setUpClass(cls):
+        import check_reader_pilot
+        import resolve_t20_v6_source
+        cls.reader, cls.resolver = check_reader_pilot, resolve_t20_v6_source
+        cls.original_owners = json.loads((ROOT / cls.OWNER).read_bytes())
+        cls.original_cross = json.loads((ROOT / cls.CROSS).read_bytes())
+        cls.catalogue = (ROOT / 'docs/reader/PAPER-CATALOGUE.md').read_text()
+        cls.paths = {key: 'docs/provenance/v5-research-continuations/notes/' + row[0] + '.md'
+                     for key, row in cls.NOTES.items()}
+        cls.current = {path: (ROOT / path).read_bytes()
+                       for path in {cls.REVIEW, *(row[5] for row in cls.NOTES.values())}}
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(prefix='continuation-note-reader-')
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.owners = deepcopy(self.original_owners)
+        self.cross = deepcopy(self.original_cross)
+        for path, body in self.current.items():
+            self.put(path, body)
+        self.save()
+
+    def put(self, path, body):
+        node = self.root / path
+        node.parent.mkdir(parents=True, exist_ok=True)
+        node.write_bytes(body)
+        node.chmod(0o644)
+
+    def save(self):
+        self.put(self.OWNER, json.dumps(self.owners).encode())
+        self.put(self.CROSS, json.dumps(self.cross).encode())
+
+    def context(self):
+        gate = getattr(self.resolver, 'require_continuation_note_context', None)
+        self.assertTrue(callable(gate), 'the exact four-note historical context is not implemented')
+        return gate(self.root)
+
+    def original(self, key):
+        row = self.NOTES[key]
+        body = subprocess.check_output(
+            ['git', '--no-replace-objects', 'cat-file', 'blob', row[1]], cwd=ROOT)
+        self.assertEqual((len(body), hashlib.sha256(body).hexdigest()), (row[2], row[0]))
+        return body
+
+    def resolve(self, key, *, stage=b'', tree_mode='100644', unavailable=False,
+                historical_body=None, revision=None, blob=None):
+        from unittest.mock import patch
+        row, path = self.NOTES[key], self.paths[key]
+        original = self.original(key)
+        command_body = original if historical_body is None else historical_body
+        prefix = ['git', '--no-replace-objects', '--literal-pathspecs']
+        answers = {
+            ('cat-file', '-t', self.REV): b'commit\n',
+            ('ls-tree', '-z', self.REV, '--', path):
+                (tree_mode + ' blob ' + row[1] + '\t' + path + '\0').encode(),
+            ('cat-file', 'blob', row[1]): command_body,
+            ('ls-files', '--stage', '-z', '--', path): stage,
+        }
+
+        def command(args, *, cwd, capture_output, check):
+            if (Path(cwd) != self.root or list(args[:3]) != prefix
+                    or tuple(args[3:]) not in answers or capture_output is not True or check is not False):
+                raise AssertionError('unexpected historical command outside the four-note Python fixture')
+            return subprocess.CompletedProcess(args, 1 if unavailable else 0,
+                b'' if unavailable else answers[tuple(args[3:])], b'')
+
+        with patch.object(self.resolver.subprocess, 'run', command):
+            return self.resolver.historical_source_bytes(
+                self.root, path, self.REV if revision is None else revision,
+                row[1] if blob is None else blob)
+
+    def test_exact_four_note_context_accepts_current_scholarship(self):
+        self.context()
+
+    def test_four_catalogue_sections_reach_current_treatments_and_exact_history(self):
+        page = self.reader.markdown_index(self.catalogue)
+        for key, row in self.NOTES.items():
+            with self.subTest(source=key):
+                works = [w for w in self.cross['works'] if w['key'] == row[3]]
+                self.assertEqual(len(works), 1)
+                work = works[0]
+                self.assertEqual(work['source_keys'], [key])
+                self.assertEqual(work['reading_forms'], [{'source': key, 'relationship': 'historical-source'}])
+                fragment = work['catalogue_entry'].partition('#')[2]
+                selected = [h for h in page['headings'] if h[0] == fragment]
+                self.assertEqual(len(selected), 1)
+                _, level, start = selected[0]
+                end = next((h[2] for h in page['headings'] if h[2] > start and h[1] <= level), page['line_count'])
+                links = {href for line, href in page['links'] if start <= line < end}
+                self.assertIn('../../' + row[5] + '#' + row[6], links)
+                self.assertIn('https://github.com/theislampill/orthemology/blob/' + self.REV + '/' + self.paths[key], links)
+                self.assertNotIn('../../' + self.paths[key], links)
+                self.assertIn(row[6], self.reader.markdown_index(self.current[row[5]].decode())['anchors'])
+
+    def test_missing_duplicate_partial_or_fifth_historical_binding_is_rejected(self):
+        self.context()
+        original = deepcopy(self.owners)
+        for fault in ('missing-note', 'duplicate-note', 'missing-earlier', 'fifth-note'):
+            with self.subTest(fault=fault):
+                self.owners = deepcopy(original)
+                rows = self.owners['historical_source_bindings']
+                if fault == 'missing-note':
+                    rows[:] = [r for r in rows if r['path'] != self.paths['continuation-note-31']]
+                elif fault == 'duplicate-note':
+                    rows.append(deepcopy(next(r for r in rows if r['path'] == self.paths['continuation-note-31'])))
+                elif fault == 'missing-earlier':
+                    rows.pop(0)
+                else:
+                    row = deepcopy(next(r for r in rows if r['path'] == self.paths['continuation-note-31']))
+                    row['path'] = 'docs/provenance/v5-research-continuations/notes/' + '0' * 64 + '.md'
+                    rows.append(row)
+                self.save()
+                with self.assertRaises(ValueError):
+                    self.context()
+
+    def test_each_note_requires_its_exact_owner_and_incorporation(self):
+        self.context()
+        original_owners, original_cross = deepcopy(self.owners), deepcopy(self.cross)
+        for key, item in self.NOTES.items():
+            for fault in ('revision', 'blob', 'reading-owner', 'source-path', 'source-hash',
+                          'work-source', 'reading-form', 'support', 'missing-relation',
+                          'duplicate-relation', 'wrong-destination', 'wrong-basis', 'wrong-kind', 'journey'):
+                with self.subTest(source=key, fault=fault):
+                    self.owners, self.cross = deepcopy(original_owners), deepcopy(original_cross)
+                    binding = next(r for r in self.owners['historical_source_bindings'] if r['path'] == self.paths[key])
+                    work = next(w for w in self.cross['works'] if w['key'] == item[3])
+                    relation = next(r for r in self.cross['relations'] if r.get('from') == key)
+                    if fault == 'revision': binding['repository_revision'] = 'HEAD'
+                    elif fault == 'blob': binding['git_blob'] = '0' * 40
+                    elif fault == 'reading-owner': binding['reading_source'] = 'consolidated-encodings-and-witnesses'
+                    elif fault == 'source-path': self.cross['sources'][key]['path'] += '.wrong'
+                    elif fault == 'source-hash': self.cross['sources'][key]['sha256'] = '0' * 64
+                    elif fault == 'work-source': work['source_keys'] = [item[4]]
+                    elif fault == 'reading-form': work['reading_forms'][0]['relationship'] = 'retained-source-reading-projection'
+                    elif fault == 'support': work['supporting_source_keys'] = []
+                    elif fault == 'missing-relation': self.cross['relations'].remove(relation)
+                    elif fault == 'duplicate-relation': self.cross['relations'].append(deepcopy(relation))
+                    elif fault == 'wrong-destination': relation['to'] = 'consolidated-encodings-and-witnesses'
+                    elif fault == 'wrong-basis': relation['basis'] = key
+                    elif fault == 'wrong-kind': relation['kind'] = 'related-source'
+                    else: self.cross['reader_journeys'][0]['source_keys'].append(key)
+                    self.save()
+                    with self.assertRaises(ValueError):
+                        self.context()
+
+    def test_changed_or_missing_current_chapter_and_review_are_rejected(self):
+        self.context()
+        for path, body in self.current.items():
+            with self.subTest(path=path):
+                self.put(path, body + b'\nchanged current edition\n')
+                with self.assertRaises(ValueError):
+                    self.context()
+                self.put(path, body)
+                (self.root / path).unlink()
+                with self.assertRaises((ValueError, OSError)):
+                    self.context()
+                self.put(path, body)
+
+    def test_absent_and_exact_present_notes_use_exact_history_without_recreation(self):
+        self.context()
+        for key in self.NOTES:
+            with self.subTest(source=key):
+                node = self.root / self.paths[key]
+                self.assertFalse(node.exists())
+                self.assertEqual(self.resolve(key), self.original(key))
+                self.assertFalse(node.exists(), 'historical validation must not recreate a note')
+                self.put(self.paths[key], self.original(key))
+                self.assertEqual(self.resolve(key), self.original(key))
+
+    def test_wrong_present_note_mode_and_symlink_cannot_fall_back(self):
+        self.context()
+        for key in self.NOTES:
+            with self.subTest(source=key):
+                path = self.paths[key]
+                node = self.root / path
+                self.put(path, self.original(key) + b'wrong edition\n')
+                with self.assertRaises(ValueError): self.resolve(key)
+                self.put(path, self.original(key))
+                node.chmod(0o755)
+                with self.assertRaises(ValueError): self.resolve(key)
+                node.unlink()
+                target = node.with_suffix('.exact-fixture')
+                target.write_bytes(self.original(key))
+                node.symlink_to(target)
+                with self.assertRaises(ValueError): self.resolve(key)
+                node.unlink()
+
+    def test_wrong_history_and_index_cannot_be_hidden_by_absence(self):
+        self.context()
+        for key, row in self.NOTES.items():
+            with self.subTest(source=key):
+                path = self.paths[key]
+                for kwargs in (
+                    {'revision': 'HEAD'}, {'blob': '0' * 40}, {'tree_mode': '100755'},
+                    {'stage': ('100644 ' + '0' * 40 + ' 0\t' + path + '\0').encode()},
+                    {'stage': ('100755 ' + row[1] + ' 0\t' + path + '\0').encode()},
+                    {'stage': ('100644 ' + row[1] + ' 1\t' + path + '\0').encode()},
+                    {'unavailable': True}, {'historical_body': self.original(key) + b'corrupted object\n'},
+                ):
+                    with self.subTest(fault=tuple(kwargs)), self.assertRaises(ValueError):
+                        self.resolve(key, **kwargs)
+
+    def test_reader_note_history_does_not_create_new_t20_public_forms(self):
+        self.context()
+        for key, row in self.NOTES.items():
+            with self.subTest(source=key):
+                public = dict(repository_path=self.paths[key], repository_revision=self.REV,
+                    git_blob=row[1], disposition='REUSE', source_sha256=row[0],
+                    source_bytes=row[2], public_sha256=row[0], public_bytes=row[2])
+                with self.assertRaises(ValueError):
+                    self.resolver.source_bytes(self.root, public)
 
 
 if __name__ == "__main__":

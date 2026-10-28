@@ -58,7 +58,7 @@ use the final-sixth selectors below for current developments.
 
 ## Retained proofs and reviews
 
-Each item links to the public projection of the named original archive member. Exact archive and original/public hashes are in the source map.
+Where a contribution has been incorporated, the link opens its current scholarly treatment. Other links open the public projection of the named original archive member. Original archive and member identities remain in the source map; the works and scientific consolidation record pin historical public editions.
 
 - `866c6ff6e74a`: [STATUS_MAP.md](notes/f3a3bb02cfa49054a46d4ff108ac0f8f603b78b10a4799952b6a336de2a16226.md)
 - `d6f6fa5be514`: [README_CONTINUATION.md](notes/168bb8d5b3961ad044667f86ad8864d6d2207a80467aaba496d30ed37868e455.md)
@@ -66,9 +66,9 @@ Each item links to the public projection of the named original archive member. E
 - `d6f6fa5be514`: [block-rigidity-review/anchored-family-delta/sources/DEPENDENCY_BLOCK_SMOOTH_CLASSIFICATION.md](notes/fbf8481b03ad278b916bebf337cf340f44597697764f7e9a6fffe219f2707805.md)
 - `d6f6fa5be514`: [block-rigidity-review/anchored-family-delta/sources/LOCAL_SMOOTH_APPROXIMATE_IFF.md](notes/e46c8d347ed1864c6c65270b0b7e90eef0146815804bb9f783fa465cd3fbc8bc.md)
 - `d6f6fa5be514`: [block-rigidity-review/anchored-family-delta/sources/block_classification_before_review_delta.md](notes/b0ec9163de7f6deb49f44bb10ef1f279151ee78a30b9d2dd7ca9736d8bb62750.md)
-- `d6f6fa5be514`: [causal-query-audit/AUDIT_REPORT.md](notes/4568e570dee3bc029c65f4208c8d1e969578096d3aef529df0a1609173c7b4fa.md)
+- `d6f6fa5be514`: [causal-query-audit/AUDIT_REPORT.md — incorporated treatment](../../../mathematics/information-and-inquiry.md#finite-harmful-probing-and-eventual-exact-repair)
 - `d6f6fa5be514`: [common-observation-audit/AUDIT_REPORT.md](notes/ad15c28206a020cc7c063c17309d6bd3c05e182377a398c7507875523df7feb4.md)
-- `d6f6fa5be514`: [fresh-proof-audit/AUDIT_REPORT.md](notes/f2d0dc0727817a58c17361252a3c2be4c020cc4d287b627535e742e3b276efef.md)
+- `d6f6fa5be514`: [fresh-proof-audit/AUDIT_REPORT.md — incorporated treatment](../../../mathematics/information-and-inquiry.md#finite-harmful-probing-and-eventual-exact-repair)
 - `d6f6fa5be514`: [generated-process-audit/AUDIT_REPORT.md](notes/1b7488aeafc74b7115479a8cf73c0abf04d89c3924109aa922ee6099e32be2d8.md)
 - `d6f6fa5be514`: [generic-query-audit/AUDIT_REPORT.md](notes/9e00aaaaa63828e05d252e134dc225e2718461540301138a30567fbb63a24eb9.md)
 - `d6f6fa5be514`: [geometry-proof-audit/AUDIT_REPORT.md](notes/4f3d54cd93718e479f1485c182058bcd5ee40c13e4b9f598e4a011e6a92adaa0.md)
@@ -92,7 +92,7 @@ Each item links to the public projection of the named original archive member. E
 - `d6f6fa5be514`: [root-research/DEPENDENCY_BLOCK_NORM_RIGIDITY.md](notes/55dc1c64cb207d0a4425ec989aab9c94a65490bda4191814fa4a055d5e148aab.md)
 - `d6f6fa5be514`: [root-research/FIRST_ORDER_REPAIR_REGRET.md](notes/a972fc4836f42db0ca2275134ba70388eb52b7e8e53937dac969995907f052ce.md)
 - `d6f6fa5be514`: [root-research/INTEGRATED_BINARY_EXPERIMENT.md — integrated treatment](../../../mathematics/information-and-inquiry.md#a-shared-feedback-controller-with-literal-score-targets)
-- `d6f6fa5be514`: [root-research/INTEGRATION_PROBE.md](notes/c2ad91390d3bb80c2e1d0a371494b146222aa7c4d6608abef0dff703d83f111b.md)
+- `d6f6fa5be514`: [root-research/INTEGRATION_PROBE.md — incorporated treatment](../../../mathematics/information-and-inquiry.md#finite-harmful-probing-and-eventual-exact-repair)
 - `d6f6fa5be514`: [root-research/PRIMARY_SOURCE_REGISTER.md](notes/fb515ce0b7056862dff09dc1fcc5ff7aa8ad192889748cc90f62b9d47cd83b96.md)
 - `d6f6fa5be514`: [root-research/README.md](notes/b5150cb34c158dfec81cb9a738c02396946dfb2fc8aee0f9abb56b7cecd56347.md)
 - `d6f6fa5be514`: [root-research/REPRESENTATION_TRANSPORT_BOUNDARY.md](notes/752593a77fa180409da3bf6aa55816508362669bb055233a79ba775cd55bdd5a.md)
@@ -108,7 +108,7 @@ Each item links to the public projection of the named original archive member. E
 - `d6f6fa5be514`: [source-bridges/NUDGE_COMPARISON.md](notes/1a5d94a8d7a2bca031de09dafcb3fc929797b94488d10836ddb696b0e6a1be0d.md)
 - `d6f6fa5be514`: [source-bridges/PRIOR_ART_AND_SCOPE.md](notes/45ffbb9679d23bd16a43b4930ec615bb55f4c0c56705e5a0c90f0fec425a2a3e.md)
 - `d6f6fa5be514`: [source-bridges/README.md](notes/8d488257ab63bc62f631a9a156b080f4c75509b7e9703782ac0bfd3a89043ae5.md)
-- `d6f6fa5be514`: [source-bridges/REVIEW_DYNAMIC.md](notes/deb77eb74e9172f964247172725074e94633de9a76fe30d62e4788ef06bb399d.md)
+- `d6f6fa5be514`: [source-bridges/REVIEW_DYNAMIC.md — incorporated treatment](../../../mathematics/collective-inquiry-and-strategic-coordination.md#staged-restoration-reviews-and-the-scope-of-their-conclusions)
 - `d6f6fa5be514`: [source-bridges/SMOOTH_SCORE_RIGIDITY.md](notes/3d1c584a1b91f4d0190605cd73d1cba8ae3bf631e461865de301b4711928d9be.md)
 - `d6f6fa5be514`: [source-bridges/SOURCE_BRIDGE_SYNTHESIS.md](notes/21f9e48328bfbf843b5f0371168f84c51768dec6260b3798fca4a461900aa006.md)
 - `d6f6fa5be514`: [source-bridges/evidence/block_classification_before_review_delta.md](notes/b0ec9163de7f6deb49f44bb10ef1f279151ee78a30b9d2dd7ca9736d8bb62750.md)

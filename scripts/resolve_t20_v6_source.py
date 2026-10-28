@@ -32,7 +32,7 @@ CONTINUATION_COPY_COUNT = 258
 CONTINUATION_COPY_EXCLUDED = 'b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183'
 CONTINUATION_COPY_METADATA = {
     'docs/provenance/v5-research-continuations/SOURCE_MAP.json':
-        (5987769, '610fcbd8b9a46cf2d6fdd6a162721ec2dd63402ba08b341f3ed974bf20ccdd72'),
+        (5985263, 'a4de062f1423c26c65e16dda3e5a9abe415cb3b4d21281dc5e4aa94681dea9c2'),
     'docs/provenance/v5-successors/SOURCE_MAP.json':
         (4978847, 'db90ad110ccc9c6a63454cf91ecec4605eed7fe243d18883d3cf501c58cb4883'),
     'docs/provenance/v5-successors/PRESERVATION.json':
@@ -118,6 +118,42 @@ HISTORICAL_PROSE.update(TYPED_PROSE)
 HISTORICAL_PROSE_REVISIONS.update({path: TYPED_PROSE_REVISION for path in TYPED_PROSE})
 HISTORICAL_PROSE_DISPOSITIONS.update({path: 'REUSE' for path in TYPED_PROSE})
 
+# Four already incorporated continuation notes migrate only their reader route.
+# Their original source/work identities and distinct formal support stay owned
+# by the existing crosswalk; these are not new T20 public manifest forms.
+CONTINUATION_READER_REVISION = 'a7ff0e33d1a299db640041c46b1af81ca70851f6'
+CONTINUATION_READER_NOTES = {
+    'continuation-note-41': (
+        'a9eb8521054eb3769ff424037f438ae38f0f0c113d73624efc9d05dea3b35483',
+        'ae198b6530ccb5cdce3e15616d939575f7878d28', 13358,
+        'continuation-local-rigidity', 'consolidated-common-repair',
+        ('continuation-note-40',)),
+    'continuation-note-37': (
+        '002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e',
+        '2804e7b196437dd437f0099b15aa45a76249e63b', 6680,
+        'continuation-statistical-repair', 'consolidated-information-and-inquiry',
+        ('continuation-note-34',)),
+    'continuation-note-28': (
+        '4878fd0a4cf6c952af7cdbcb7e8a386c2730ff9986b74b8e39bf9b5077815b0f',
+        'f419024deb2a40bf50f7315cdf2dfdde9ede77f6', 15286,
+        'continuation-finite-query', 'consolidated-information-and-inquiry',
+        ('continuation-note-34',)),
+    'continuation-note-31': (
+        'b0672a56d007c718a42a7ee6fdc875c915630ad95dff5cfbae7f7e9a419d5349',
+        '937f0464dcaa515f1c002a8b36add0c4cb511b42', 5601,
+        'continuation-binary-experiment', 'consolidated-information-and-inquiry',
+        ('continuation-note-34', 'continuation-note-1')),
+}
+CONTINUATION_READER_PATHS = {
+    key: 'docs/provenance/v5-research-continuations/notes/' + row[0] + '.md'
+    for key, row in CONTINUATION_READER_NOTES.items()}
+CONTINUATION_READER_PROSE = {
+    CONTINUATION_READER_PATHS[key]: (row[1], row[0], row[2])
+    for key, row in CONTINUATION_READER_NOTES.items()}
+HISTORICAL_PROSE.update(CONTINUATION_READER_PROSE)
+HISTORICAL_PROSE_REVISIONS.update({path: CONTINUATION_READER_REVISION
+                                  for path in CONTINUATION_READER_PROSE})
+
 TYPED_GUIDES = {
     'experiments/orthemology-v5-successors/groups/t13-identity/README.md': (
         '0d228b107878098508dc31368517ac07fe688dff',
@@ -137,7 +173,8 @@ MEDIATOR_GUIDE_BYTES = 18763
 # The inherited duplicate is a path obligation, not an extra manifest object.
 HISTORICAL_PROSE_PUBLIC_PATHS = tuple(
     path for path in HISTORICAL_PROSE
-    if path != 'research/t20-live-20261009/checkpoints/CP20/necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md')
+    if path != 'research/t20-live-20261009/checkpoints/CP20/necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md'
+    and path not in CONTINUATION_READER_PROSE)
 
 
 def historical_source_bytes(root, path, revision, git_blob):
@@ -157,6 +194,8 @@ def historical_source_bytes(root, path, revision, git_blob):
         require_fisher_context(root)
     elif path in TYPED_PROSE:
         require_typed_context(root)
+    elif path in CONTINUATION_READER_PROSE:
+        require_continuation_note_context(root)
     blob, identity, size = binding
 
     def git(*args):
@@ -203,6 +242,76 @@ def historical_source_bytes(root, path, revision, git_blob):
         if target.read_bytes() != body:
             raise ValueError('present historical source differs from its pinned edition')
     return body
+
+
+def require_continuation_note_context(root):
+    """Bind exactly four historical note readers to their incorporated science.
+
+    The current chapters and review remain mandatory. This preserves original
+    work/source ownership and support; it grants no new science, custody,
+    restoration or permission to delete a note or its formal components.
+    """
+    root = pathlib.Path(root)
+    try:
+        owners = json.loads(_regular_current_bytes(root,
+            'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json'))
+        cross = json.loads(_regular_current_bytes(root,
+            'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json'))
+        bindings = owners['historical_source_bindings']
+        fields = {'path', 'repository_revision', 'git_blob', 'role', 'reading_source', 'basis'}
+        if (not isinstance(bindings, list)
+                or any(not isinstance(row, dict) or set(row) != fields for row in bindings)
+                or len(bindings) != len(HISTORICAL_PROSE)
+                or {row['path'] for row in bindings} != set(HISTORICAL_PROSE)):
+            raise ValueError('the exact earlier twelve and four continuation note bindings are required')
+        for key, row in CONTINUATION_READER_NOTES.items():
+            path = CONTINUATION_READER_PATHS[key]
+            expected = dict(path=path, repository_revision=CONTINUATION_READER_REVISION,
+                git_blob=row[1], role='historical-source', reading_source=row[4],
+                basis='scientific-consolidation-review')
+            if [binding for binding in bindings if binding['path'] == path] != [expected]:
+                raise ValueError('the exact continuation note owner binding is required')
+        for key, path, role in (
+            ('consolidated-common-repair', 'mathematics/common-repair-and-geometric-obstructions.md', 'work-source'),
+            ('consolidated-information-and-inquiry', 'mathematics/information-and-inquiry.md', 'work-source'),
+            ('scientific-consolidation-review', 'docs/scientific-consolidation-review.md', 'review')):
+            selected = [row for row in owners['source_additions'] if row['key'] == key]
+            if len(selected) != 1:
+                raise ValueError('missing or duplicate current continuation reading owner')
+            admission, source = selected[0], cross['sources'][key]
+            current = _regular_current_bytes(root, path)
+            oid = hashlib.sha1(b'blob ' + str(len(current)).encode() + b'\0' + current).hexdigest()
+            if (admission['path'] != path or source['path'] != path or admission['role'] != role
+                    or admission['mode'] != '100644' or admission['git_oid'] != oid
+                    or admission['bytes'] != len(current) or admission['sha256'] != digest(current)
+                    or source['sha256'] != digest(current)):
+                raise ValueError('current continuation scholarship or review edition differs')
+            if role == 'work-source' and 'scientific-consolidation-review' not in admission['supporting_source_keys']:
+                raise ValueError('current continuation work has lost its review owner')
+        for key, row in CONTINUATION_READER_NOTES.items():
+            source = cross['sources'][key]
+            works = [work for work in cross['works'] if work['key'] == row[3]]
+            expected_form = {'source': key, 'relationship': 'historical-source'}
+            relation = {'from': key, 'to': row[4],
+                        'kind': 'logical-content-incorporated-historical-source-retained',
+                        'basis': 'scientific-consolidation-review'}
+            if (len(works) != 1 or works[0]['role'] != 'research-note'
+                    or works[0]['source_keys'] != [key]
+                    or works[0]['reading_forms'] != [expected_form]
+                    or works[0]['supporting_source_keys'] != list(row[5])
+                    or any(support not in cross['sources'] for support in row[5])
+                    or source['path'] != CONTINUATION_READER_PATHS[key] or source['sha256'] != row[0]
+                    or not isinstance(source.get('read_scope'), str) or not source['read_scope'].strip()
+                    or [name for name, item in cross['sources'].items()
+                        if item['path'] == CONTINUATION_READER_PATHS[key]] != [key]
+                    or [work['key'] for work in cross['works'] if key in work['source_keys']] != [row[3]]
+                    or [form for work in cross['works'] for form in work.get('reading_forms', [])
+                        if form.get('source') == key] != [expected_form]
+                    or [r for r in cross['relations'] if r.get('from') == key] != [relation]
+                    or any(key in journey.get('source_keys', []) for journey in cross['reader_journeys'])):
+                raise ValueError('continuation note reader identity, history or support differs')
+    except (KeyError, TypeError, UnicodeError) as exc:
+        raise ValueError('invalid current continuation note owner bindings') from exc
 
 
 def require_fisher_context(root):
