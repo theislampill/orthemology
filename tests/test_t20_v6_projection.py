@@ -1421,7 +1421,20 @@ class TypedProseOwnerMigrationTests(unittest.TestCase):
         for path in [*cls.GUIDES, cls.resolver.MEDIATOR_GUIDE]:
             cls.guide_original[path], cls.guide_blobs[path] = acquire_path(cls.REV, path)
         cls.old_manifest, cls.old_manifest_blob = acquire_path(cls.REV, projection.MANIFEST)
-        cls.current_manifest = json.loads((cls.project / projection.MANIFEST).read_bytes())
+        # This isolated fixture owns the twelve prose bindings above. Pin its
+        # manifest form before later snapshot migrations, whose independent
+        # source objects and snapshot owners are intentionally outside it.
+        cls.current_manifest = json.loads(subprocess.check_output(
+            ['git', '--no-replace-objects', 'show',
+             '1beacf590a4f11079039582b42d98d63c563378b:' + projection.MANIFEST], cwd=cls.project))
+        for key, item in cls.ITEMS.items():
+            row = next(r for r in cls.current_manifest['objects'] if r['source_sha256'] == item[0])
+            if (row.get('repository_path'), row.get('repository_revision'), row.get('git_blob')) != (
+                    cls.paths[key], cls.REV, item[2]):
+                raise ValueError('typed fixture predecessor binding differs')
+            # The positive test must actually add all four bindings.
+            del row['repository_revision']
+            del row['git_blob']
         cls.source_map = json.loads((cls.project / 'docs/provenance/v5-successors/SOURCE_MAP.json').read_bytes())
         cls.projection_map = json.loads((cls.project / 'docs/provenance/v5-successors/PUBLIC_PROJECTION.json').read_bytes())
         cls.current_bodies = {p: (cls.project / p).read_bytes() for p in (
