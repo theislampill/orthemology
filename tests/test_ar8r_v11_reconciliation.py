@@ -1666,9 +1666,12 @@ def _load_duplicate_fixture_module(name, path):
 
 
 def _duplicate_fixture_git(repo, *args, data=None):
+    # Corruption controls intentionally manipulate loose objects. Automatic
+    # maintenance must neither repack them nor outlive fixture cleanup.
     return subprocess.run(
         ["git", "--no-replace-objects", "-c", "core.hooksPath=/dev/null",
-         "-c", "commit.gpgSign=false", *args], cwd=repo,
+         "-c", "commit.gpgSign=false", "-c", "gc.auto=0",
+         "-c", "maintenance.auto=false", *args], cwd=repo,
         input=data, capture_output=True, check=True,
     ).stdout
 
@@ -1727,6 +1730,34 @@ class Pmr007DuplicateAliasTests(unittest.TestCase):
                 PMR007_DEEP_HISTORY=self.baseline)
             patch.start()
             self.addCleanup(patch.stop)
+
+    def test_fixture_git_keeps_loose_objects_under_aggressive_auto_gc(self):
+        import os
+
+        path = self.selection[0]["alias"]
+        oid = _duplicate_fixture_git(self.repo, "rev-parse", self.baseline + ":" + path).decode().strip()
+        object_path = self.repo / ".git" / "objects" / oid[:2] / oid[2:]
+        self.assertTrue(object_path.is_file())
+        # Exercise real native auto-maintenance with an aggressive inherited
+        # threshold. The fixture must preserve its intentionally loose objects
+        # for missing-object and same-size-corruption controls.
+        inherited = {
+            "GIT_CONFIG_COUNT": "4",
+            "GIT_CONFIG_KEY_0": "gc.auto",
+            "GIT_CONFIG_VALUE_0": "1",
+            "GIT_CONFIG_KEY_1": "maintenance.auto",
+            "GIT_CONFIG_VALUE_1": "true",
+            "GIT_CONFIG_KEY_2": "gc.autoDetach",
+            "GIT_CONFIG_VALUE_2": "false",
+            "GIT_CONFIG_KEY_3": "maintenance.autoDetach",
+            "GIT_CONFIG_VALUE_3": "false",
+        }
+        with mock.patch.dict(os.environ, inherited):
+            _duplicate_fixture_git(self.repo, "-c", "user.name=Bounded fixture",
+                "-c", "user.email=fixture@example.invalid", "commit", "--allow-empty",
+                "-qm", "Exercise automatic fixture maintenance")
+        self.assertTrue(object_path.is_file(), "automatic maintenance packed the loose fixture object")
+        self.assertEqual(list((self.repo / ".git" / "objects" / "pack").glob("*.pack")), [])
 
     def delete_selected(self):
         for row in self.selection:
