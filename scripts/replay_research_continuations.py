@@ -128,10 +128,10 @@ def replay(root, suite_id, lean_bin, mathlib, output, timeout=300):
         rows={r['module']:r for r in suite['modules']};fingerprints={}
         official={r['module']:r for r in suite['official_imports']}
         for name in suite['module_order']:
-            row=rows[name];original=root/sources[row['source_id']]['path']
-            contract.require(contract.sha(original)==hashes[name],'Source changed before staging')
+            row=rows[name];body=contract.source_bytes(root,sources[row['source_id']])
+            contract.require(hashlib.sha256(body).hexdigest()==hashes[name],'Source changed before staging')
             relative=Path(*name.split('.')).with_suffix('.lean')
-            staged=src/relative;staged.parent.mkdir(parents=True,exist_ok=True);staged.write_bytes(original.read_bytes())
+            staged=src/relative;staged.parent.mkdir(parents=True,exist_ok=True);staged.write_bytes(body)
             obj=(build/relative).with_suffix('.olean');obj.parent.mkdir(parents=True,exist_ok=True)
             dependencies={d:fingerprints[d] if d in rows else official[d] for d in row['imports']}
             fp=hashlib.sha256(json.dumps({'module':name,'source':hashes[name],'dependencies':dependencies,'pins':suite['pins']},sort_keys=True).encode()).hexdigest()
@@ -149,7 +149,7 @@ def replay(root, suite_id, lean_bin, mathlib, output, timeout=300):
         text=run_process([lean,'-j1','--root='+str(src),audit],src,env,logs/'readback.log',timeout)
         receipt['readbacks']=parse_readback(text,targets)
         receipt['readback_log_sha256']=contract.sha(logs/'readback.log')
-        receipt['post_source_hashes']={m['module']:contract.sha(root/sources[m['source_id']]['path']) for m in suite['modules']}
+        receipt['post_source_hashes']={m['module']:hashlib.sha256(contract.source_bytes(root,sources[m['source_id']])).hexdigest() for m in suite['modules']}
         contract.require(hashes==receipt['post_source_hashes'] and receipt['suite_sha256']==contract.sha(suite_path),'Inputs changed during replay')
         receipt.update(status='FRESH_KERNEL_COMPONENTS',exit_code=0,kernel_verified=True)
         contract.validate_receipt(receipt,suite,suite_path,sources)

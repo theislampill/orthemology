@@ -1187,7 +1187,8 @@ class SnapshotProjectionPinTests(unittest.TestCase):
         cls.path = HistoricalMetadataPinTests.manifest_path
         cls.original = json.loads(subprocess.check_output(
             ['git', 'show', '1beacf590a4f11079039582b42d98d63c563378b:' + cls.path], cwd=ROOT))
-        cls.current = json.loads((ROOT / cls.path).read_bytes())
+        cls.current = json.loads(subprocess.check_output(
+            ['git', 'show', '7719a7e58400b1e72809738063720492d43609c0:' + cls.path], cwd=ROOT))
         cls.before = {r['source_sha256']:r for r in cls.original['objects']}
         cls.after = {r['source_sha256']:r for r in cls.current['objects']}
         cls.changed = [s for s in cls.before if cls.before[s] != cls.after[s]]
@@ -1249,6 +1250,82 @@ class SnapshotProjectionPinTests(unittest.TestCase):
         unrelated = deepcopy(self.current)
         next(r for r in unrelated['objects'] if r['source_sha256'] not in self.changed)['role'] = 'reclassified'
         self.assertFalse(self.permitted(unrelated))
+
+
+class BulkConsumerProjectionPinTests(unittest.TestCase):
+    """Changed current consumers retain three exact original T20 evidence bodies."""
+    PINS = {
+        'scripts/validate_research_continuations.py':
+            ('5157341400df0d327cb39f698838ac8ba49f82eb6bf71c8e40f84f670b3e55f7', 29272, 'ef5422f8e877f628e8aedbe61dc4dd2af614cb0a'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/PMR007-ROUNDS11-20-ADOPTION-BOUNDARY-CORRECTION.md':
+            ('66cc0fbc5ab06ab0dfffdb1e6fe1845775cfa0f12233f7517d12042ae16d9486', 1354, '6240db1cb6e2f844506a989ee2cfa14783c6d6d6'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/README.md':
+            ('d20707cf0d24dd5b2b966f2b1f3640ec7672092ef8a19b57f60fc61897cd6b50', 4073, '9628152cf22670418bc2c88aa13e496047fba40c'),
+    }
+
+    @classmethod
+    def setUpClass(cls):
+        HistoricalMetadataPinTests.setUpClass()
+        cls.mod = HistoricalMetadataPinTests.mod
+        cls.owner = HistoricalMetadataPinTests.row
+        cls.path = HistoricalMetadataPinTests.manifest_path
+        cls.prior = json.loads(subprocess.check_output(
+            ['git', 'show', '7719a7e58400b1e72809738063720492d43609c0:' + cls.path], cwd=ROOT))
+        cls.current = json.loads((ROOT / cls.path).read_bytes())
+
+    def permitted(self, value):
+        return self.mod.permitted_historical_status_pin(ROOT, self.owner, json.dumps(value).encode())
+
+    def test_current_three_owner_extension_preserves_complete_original_identities(self):
+        before = {r['source_sha256']: r for r in self.prior['objects']}
+        after = {r['source_sha256']: r for r in self.current['objects']}
+        self.assertEqual(len(before), 28478)
+        self.assertEqual(before.keys(), after.keys())
+        self.assertEqual({k for k in before if before[k] != after[k]}, {p[0] for p in self.PINS.values()})
+        self.assertEqual({k: v for k, v in self.prior.items() if k != 'objects'},
+                         {k: v for k, v in self.current.items() if k != 'objects'})
+        for path, (identity, size, blob) in self.PINS.items():
+            old, new = before[identity], after[identity]
+            self.assertEqual({k: v for k, v in old.items() if k != 'publication_basis'},
+                             {k: v for k, v in new.items() if k not in ('repository_revision', 'git_blob', 'publication_basis')})
+            self.assertEqual(new['repository_path'], path)
+            self.assertEqual(new['repository_revision'], '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')
+            self.assertEqual(new['git_blob'], blob)
+            original = subprocess.check_output(['git', '--no-replace-objects', 'show',
+                new['repository_revision'] + ':' + path], cwd=ROOT)
+            self.assertEqual(len(original), size)
+            self.assertEqual(hashlib.sha256(original).hexdigest(), identity)
+            self.assertEqual(hashlib.sha1(b'blob ' + str(size).encode() + b'\0' + original).hexdigest(), blob)
+            self.assertNotEqual((ROOT / path).read_bytes(), original)
+        self.assertTrue(self.permitted(self.current))
+
+    def test_preceding_587_row_form_remains_admissible(self):
+        self.assertTrue(self.permitted(self.prior))
+
+    def test_new_owner_identity_and_route_faults_are_rejected(self):
+        sample = self.PINS['scripts/validate_research_continuations.py'][0]
+        for field, value in (('source_sha256', '0' * 64), ('public_sha256', '0' * 64),
+                ('source_bytes', 1), ('public_bytes', 1), ('repository_revision', 'HEAD'),
+                ('git_blob', '0' * 40), ('disposition', 'PROJECT'), ('role', 'reclassified'),
+                ('publication_basis', 'unreviewed'), ('repository_path', 'README.md')):
+            with self.subTest(field=field):
+                candidate = deepcopy(self.current)
+                next(r for r in candidate['objects'] if r['source_sha256'] == sample)[field] = value
+                self.assertFalse(self.permitted(candidate))
+        for identity, _, _ in self.PINS.values():
+            candidate = deepcopy(self.current)
+            next(r for r in candidate['objects'] if r['source_sha256'] == identity).pop('git_blob')
+            self.assertFalse(self.permitted(candidate))
+
+    def test_partial_pin_set_and_unrelated_changes_are_rejected(self):
+        candidate = deepcopy(self.current)
+        identity = self.PINS['scripts/validate_research_continuations.py'][0]
+        i = next(i for i, row in enumerate(candidate['objects']) if row['source_sha256'] == identity)
+        candidate['objects'][i] = deepcopy(next(r for r in self.prior['objects'] if r['source_sha256'] == identity))
+        self.assertFalse(self.permitted(candidate))
+        candidate = deepcopy(self.current)
+        next(r for r in candidate['objects'] if r['source_sha256'] not in {p[0] for p in self.PINS.values()})['role'] = 'reclassified'
+        self.assertFalse(self.permitted(candidate))
 
 
 class TwelfthCollectionCoverageTests(unittest.TestCase):
@@ -6563,6 +6640,320 @@ class ReadOnlyCurrentnessDiffTests(unittest.TestCase):
         self.node.write_bytes(self.original)
         self.assertNotEqual(self._snapshot()["logical_entries"], self.initial["logical_entries"])
         self._require_read_only(self.rejection)
+
+
+
+
+class ContinuationCollectionRelocationTests(unittest.TestCase):
+    """A moved reading form stays explicit in its destination collection."""
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("relocated_collection_reader", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.mod)
+        folder = Path("docs/project-closure/reader-refactor-issue-35")
+        cls.owners = json.loads((ROOT / folder / "OWNER-MAP.json").read_text())
+        cls.cross = json.loads((MODULE.parent.parent / folder / "CROSSWALK.json").read_text())
+        cls.rows = cls.mod.entries_at(ROOT, cls.owners["baseline"]["commit"])
+        cls.paths = (
+            "experiments/orthemology-v5-successors/source-store/"
+            "98c1923c5c9ef77094ca28a63c32866fae56ae04b7a1597da59874935d9b1167/IndexedObserver.lean",
+            "experiments/orthemology-v5-successors/source-store/"
+            "73b3cb0b813ff303a6735c3cf8ac3c8dbbc1ed5c5dd335d4e0c239b8ddb23cc3/IndexedRuntime.lean",
+        )
+
+    def test_relocated_primary_forms_have_explicit_successor_dispositions(self):
+        self.assertEqual(self.mod.check_collection_dispositions(self.rows, self.owners, self.cross), [])
+        items = self.cross["collection_dispositions"]["v5-successors"]["items"]
+        for path in self.paths:
+            self.assertEqual([row for row in items if row["path"] == path], [
+                {"path": path, "role": "formal-component", "work": "continuation-indexed-observer"}])
+
+    def test_neither_relocated_primary_form_can_hide_in_support(self):
+        self.assertEqual(self.mod.check_collection_dispositions(self.rows, self.owners, self.cross), [])
+        for path in self.paths:
+            with self.subTest(path=path):
+                altered = deepcopy(self.cross)
+                record = altered["collection_dispositions"]["v5-successors"]
+                record["items"] = [row for row in record["items"] if row["path"] != path]
+                errors = self.mod.check_collection_dispositions(self.rows, self.owners, altered)
+                self.assertIn("collection-coverage: v5-successors has extra paths or omitted work sources", errors)
+
+
+class RoundsParentNavigationTests(unittest.TestCase):
+    """Current custody wording must not replace the original source identity."""
+    PARENT = "docs/project-closure/ar8r-v11/post-merge-proposals/README.md"
+    PREFIX = "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20"
+    ORIGINAL_REVISION = "a7ff0e33d1a299db640041c46b1af81ca70851f6"
+    OLD_PARAGRAPH = (
+        b"The `pmr007-rounds11-20` directory is an exact, public-safe copy of the final sanitized "
+        b"repository-update proposal recovered from the authenticated research thread. Its internal "
+        b"files are preserved without correction so their original hashes remain testable."
+    )
+    NEW_PARAGRAPH = (
+        b"The original `pmr007-rounds11-20` import is the exact, public-safe copy of the final sanitized "
+        b"repository-update proposal recovered from the authenticated research thread. Its complete "
+        b"131-file edition is retained at Git commit `a7ff0e33d1a299db640041c46b1af81ca70851f6`. "
+        b"The current snapshot preserves its unchanged 130-row hash manifest and requires its 32 "
+        b"distinct or context-dependent members; 98 exact same-relative copies may resolve through "
+        b"`pmr007-deep-a-bk` under the finite snapshot gate. The existing rounds adoption-boundary "
+        b"correction records those current routes and their limits; original source bytes and hashes "
+        b"remain testable."
+    )
+
+    @classmethod
+    def setUpClass(cls):
+        cls.original = subprocess.check_output(
+            ["git", "--no-replace-objects", "cat-file", "blob", cls.ORIGINAL_REVISION + ":" + cls.PARENT],
+            cwd=ROOT)
+        if (len(cls.original) != 4073 or hashlib.sha256(cls.original).hexdigest() !=
+                "d20707cf0d24dd5b2b966f2b1f3640ec7672092ef8a19b57f60fc61897cd6b50"
+                or cls.original.count(cls.OLD_PARAGRAPH) != 1):
+            raise AssertionError("The independent original parent fixture has changed")
+        cls.adapted = cls.original.replace(cls.OLD_PARAGRAPH, cls.NEW_PARAGRAPH, 1)
+        if (len(cls.adapted) != 4459 or hashlib.sha256(cls.adapted).hexdigest() !=
+                "40e644bd7f9eb9728756364a348d2c08e6199578dbd056a466ebe1f6e5a15e78"):
+            raise AssertionError("The reviewed parent adaptation fixture has changed")
+        tree = subprocess.check_output([
+            "git", "--no-replace-objects", "--literal-pathspecs", "ls-tree", "-r", "-z",
+            cls.ORIGINAL_REVISION, "--", cls.PREFIX], cwd=ROOT)
+        cls.members = [entry.split(b"\t", 1)[1].decode() for entry in tree.split(b"\0") if entry]
+        if len(cls.members) != 131:
+            raise AssertionError("The original parent fixture requires its finite 131-entry edition")
+
+    def setUp(self):
+        spec = importlib.util.spec_from_file_location("rounds_parent_reader", MODULE)
+        self.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(self.mod)
+        self.tmp = tempfile.TemporaryDirectory(prefix="rounds-parent-navigation-")
+        self.addCleanup(self.tmp.cleanup)
+        self.repo = Path(self.tmp.name)
+        self.target = self.repo / self.PARENT
+        self.target.parent.mkdir(parents=True)
+        self.target.write_bytes(self.original)
+        for path in self.members:
+            target = self.repo / path
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(b"Synthetic public member; no scientific evidence.\n")
+        self.profile = "fixture-publication.yaml"
+        (self.repo / self.profile).write_text("artifacts: []\n")
+        self.git("init", "-q")
+        self.git("add", ".")
+        self.git("-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid",
+                 "commit", "-qm", "Synthetic public parent navigation fixture")
+        self.baseline = self.git("rev-parse", "HEAD").decode().strip()
+        # Only the native fixture's commit coordinate changes. Original bytes,
+        # expected transformation, source hashes and every Git operation are real.
+        self.mod.PMR007_ROUNDS_PARENT_REVISION = self.baseline
+        self.owners = {
+            "schema": "orthemology-reader-owner-map-v1",
+            "baseline": {"commit": self.baseline},
+            "external_body_admissions": [],
+            "collections": [
+                {"key": "parent", "include": ["docs/"], "owners": [self.PARENT]},
+                {"key": "profile", "include": [self.profile], "owners": [self.profile]},
+            ],
+            "publication_profile": self.profile,
+        }
+        self.cross = {
+            "schema": "orthemology-reader-crosswalk-v1", "coverage_stage": "representative-pilot",
+            "sources": {
+                "parent": {"path": self.PARENT, "sha256": hashlib.sha256(self.original).hexdigest(),
+                           "read_scope": "Original public custody owner; no scientific credit."},
+                "profile": {"path": self.profile, "sha256": hashlib.sha256(b"artifacts: []\n").hexdigest(),
+                            "read_scope": "Synthetic publication owner."},
+            },
+            "works": [
+                {"key": "one", "title": "Fixture one", "role": "supporting-reference", "source_keys": ["parent"]},
+                {"key": "two", "title": "Fixture two", "role": "supporting-reference", "source_keys": ["parent"]},
+            ],
+            "probes": [
+                {"key": "recognition-correction", "works": ["one"], "sources": ["parent"]},
+                {"key": "tensor-geometry", "works": ["two"], "sources": ["parent"]},
+                {"key": "cross-avenue", "works": ["one", "two"], "sources": ["parent"]},
+            ],
+        }
+
+    def git(self, *args, input=None):
+        return subprocess.check_output(["git", "--no-replace-objects", "--literal-pathspecs", *args],
+                                       cwd=self.repo, input=input, stderr=subprocess.STDOUT)
+
+    def source(self):
+        gate = getattr(self.mod, "pmr007_rounds_parent_source_bytes", None)
+        self.assertTrue(callable(gate), "The finite parent README navigation owner is missing")
+        return gate(self.repo)
+
+    def reader(self):
+        return self.mod.check(self.repo, self.owners, self.cross)
+
+    def test_exact_adaptation_preserves_both_owner_and_source_identity(self):
+        self.target.write_bytes(self.adapted)
+        before = (self.repo / ".git/index").read_bytes()
+        self.assertEqual(self.reader(), [])
+        self.assertEqual(self.source(), self.original)
+        self.assertEqual((self.repo / ".git/index").read_bytes(), before)
+        self.git("add", "--", self.PARENT)
+        before = (self.repo / ".git/index").read_bytes()
+        self.assertEqual(self.reader(), [])
+        self.assertEqual((self.repo / ".git/index").read_bytes(), before)
+
+    def test_original_wording_is_valid_while_the_original_edition_is_present(self):
+        self.assertEqual(self.source(), self.original)
+        self.assertEqual(self.reader(), [])
+
+    def test_unrelated_prose_changes_are_not_navigation(self):
+        self.target.write_bytes(self.adapted)
+        self.assertEqual(self.source(), self.original)
+        for body in (self.adapted + b"\nUnreviewed addition.\n",
+                     self.adapted.replace(b"not adopted repository theory", b"adopted repository theory", 1),
+                     self.adapted.replace(b"98 exact same-relative", b"99 exact same-relative", 1)):
+            with self.subTest(body_sha=hashlib.sha256(body).hexdigest()):
+                self.target.write_bytes(body)
+                with self.assertRaises(ValueError):
+                    self.source()
+                self.assertTrue(any(e.startswith("navigation-source:") for e in self.reader()))
+
+    def test_current_parent_missing_mode_and_symlink_changes_fail(self):
+        self.target.write_bytes(self.adapted)
+        self.assertEqual(self.source(), self.original)
+        self.target.chmod(0o755)
+        with self.assertRaises(ValueError):
+            self.source()
+        self.target.chmod(0o644)
+        self.target.unlink()
+        with self.assertRaises((ValueError, OSError)):
+            self.source()
+        other = self.repo / "ordinary-public-readme.md"
+        other.write_bytes(self.adapted)
+        self.target.symlink_to(other)
+        with self.assertRaises(ValueError):
+            self.source()
+        self.target.unlink()
+        self.target.write_bytes(self.adapted)
+        directory = self.target.parent
+        moved = self.repo / "ordinary-public-directory"
+        directory.rename(moved)
+        directory.symlink_to(moved, target_is_directory=True)
+        with self.assertRaises(ValueError):
+            self.source()
+
+    def test_bad_staged_blob_cannot_hide_behind_the_exact_worktree(self):
+        self.target.write_bytes(self.adapted + b"\nUnreviewed staged change.\n")
+        self.git("add", "--", self.PARENT)
+        self.target.write_bytes(self.adapted)
+        before = (self.repo / ".git/index").read_bytes()
+        with self.assertRaises(ValueError):
+            self.source()
+        self.assertTrue(any(e.startswith("navigation-source:") for e in self.reader()))
+        self.assertEqual((self.repo / ".git/index").read_bytes(), before)
+
+    def test_staged_mode_removal_and_conflict_are_rejected(self):
+        self.target.write_bytes(self.adapted)
+        self.assertEqual(self.source(), self.original)
+        original_blob = self.git("rev-parse", self.baseline + ":" + self.PARENT).decode().strip()
+        for fault in ("mode", "missing", "conflict"):
+            with self.subTest(fault=fault):
+                self.git("reset", "-q", self.baseline, "--", self.PARENT)
+                if fault == "mode":
+                    self.git("update-index", "--chmod=+x", "--", self.PARENT)
+                elif fault == "missing":
+                    self.git("update-index", "--force-remove", "--", self.PARENT)
+                else:
+                    self.git("update-index", "--index-info", input=(
+                        "0 " + "0" * 40 + "\t" + self.PARENT + "\n" +
+                        "100644 " + original_blob + " 1\t" + self.PARENT + "\n" +
+                        "100644 " + original_blob + " 2\t" + self.PARENT + "\n").encode())
+                with self.assertRaises(ValueError):
+                    self.source()
+
+    def test_unavailable_staged_object_is_rejected(self):
+        self.target.write_bytes(self.adapted)
+        self.git("add", "--", self.PARENT)
+        self.assertEqual(self.source(), self.original)
+        oid = self.git("rev-parse", ":" + self.PARENT).decode().strip()
+        (self.repo / ".git/objects" / oid[:2] / oid[2:]).unlink()
+        with self.assertRaises(ValueError):
+            self.source()
+
+    def test_same_size_corrupted_original_object_is_rejected(self):
+        import zlib
+        self.target.write_bytes(self.adapted)
+        self.assertEqual(self.source(), self.original)
+        oid = self.git("rev-parse", self.baseline + ":" + self.PARENT).decode().strip()
+        target = self.repo / ".git/objects" / oid[:2] / oid[2:]
+        altered = b"!" + self.original[1:]
+        target.unlink()
+        target.write_bytes(zlib.compress(b"blob " + str(len(altered)).encode() + b"\0" + altered))
+        with self.assertRaises(ValueError):
+            self.source()
+
+    def test_wrong_original_revision_and_original_path_identity_are_rejected(self):
+        self.target.write_bytes(self.adapted)
+        self.assertEqual(self.source(), self.original)
+        for revision in ("HEAD", "0" * 40):
+            with self.subTest(revision=revision):
+                self.mod.PMR007_ROUNDS_PARENT_REVISION = revision
+                with self.assertRaises(ValueError):
+                    self.source()
+        self.mod.PMR007_ROUNDS_PARENT_REVISION = self.baseline
+        self.git("add", "--", self.PARENT)
+        self.git("-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid",
+                 "commit", "-qm", "Different current reading is not the original source")
+        self.mod.PMR007_ROUNDS_PARENT_REVISION = self.git("rev-parse", "HEAD").decode().strip()
+        with self.assertRaises(ValueError):
+            self.source()
+
+    def test_original_tree_mode_cannot_be_hidden_by_an_ordinary_current_file(self):
+        self.assertEqual(self.source(), self.original)
+        self.target.chmod(0o755)
+        self.git("add", "--", self.PARENT)
+        self.git("-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid",
+                 "commit", "-qm", "Wrong original tree mode")
+        self.mod.PMR007_ROUNDS_PARENT_REVISION = self.git("rev-parse", "HEAD").decode().strip()
+        self.target.chmod(0o644)
+        self.target.write_bytes(self.adapted)
+        self.git("reset", "-q", self.baseline, "--", self.PARENT)
+        with self.assertRaises(ValueError):
+            self.source()
+
+    def test_incomplete_worktree_edition_requires_current_adapted_wording(self):
+        self.assertEqual(self.source(), self.original)
+        (self.repo / self.members[0]).unlink()
+        with self.assertRaises(ValueError):
+            self.source()
+        self.target.write_bytes(self.adapted)
+        self.assertEqual(self.source(), self.original)
+
+    def test_incomplete_index_edition_requires_staged_adapted_wording(self):
+        self.target.write_bytes(self.adapted)
+        self.assertEqual(self.source(), self.original)
+        self.git("update-index", "--force-remove", "--", self.members[0])
+        with self.assertRaises(ValueError):
+            self.source()
+        self.git("add", "--", self.PARENT)
+        self.assertEqual(self.source(), self.original)
+
+    def test_current_hash_refresh_cannot_replace_original_source_identity(self):
+        self.target.write_bytes(self.adapted)
+        self.cross["sources"]["parent"]["sha256"] = hashlib.sha256(self.adapted).hexdigest()
+        self.assertTrue(any(e.startswith("source-drift: parent") for e in self.reader()))
+
+    def test_discovery_owner_baseline_must_still_match_the_original(self):
+        self.target.write_bytes(self.adapted)
+        self.git("add", "--", self.PARENT)
+        self.git("-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid",
+                 "commit", "-qm", "Different discovery baseline")
+        self.owners["baseline"]["commit"] = self.git("rev-parse", "HEAD").decode().strip()
+        errors = self.reader()
+        self.assertTrue(any(e.startswith("owner: " + self.PARENT) for e in errors), errors)
+        self.assertTrue(any(e.startswith("baseline-source: " + self.PARENT) for e in errors), errors)
+
+    def test_unrelated_discovery_owner_remains_strict(self):
+        self.target.write_bytes(self.adapted)
+        (self.repo / self.profile).write_text("artifacts: []\n# Unreviewed source change.\n")
+        errors = self.reader()
+        self.assertTrue(any(e.startswith("owner: " + self.profile) for e in errors), errors)
+        self.assertTrue(any(e.startswith("baseline-source: " + self.profile) for e in errors), errors)
 
 
 if __name__ == "__main__":

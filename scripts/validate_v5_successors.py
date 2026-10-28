@@ -250,13 +250,19 @@ def _preservation(bundle, root, anchor):
             'Changed preservation baseline')
     require(inventory['roots'] == FROZEN_ROOTS, 'Changed preservation roots')
     files = indexed(inventory['files'], 'path')
-    require(files and set(files) == _inventory_paths(root, FROZEN_ROOTS), 'Frozen preservation file-set changed')
+    present = _inventory_paths(root, FROZEN_ROOTS)
+    require(files and present <= set(files), 'Frozen preservation file-set changed')
     for name, row in files.items():
         keys(row, {'path', 'bytes', 'sha256', 'git_blob_sha1'})
         integer(row['bytes']); digest(row['sha256'])
         require(re.fullmatch('[0-9a-f]{40}', row['git_blob_sha1']), 'Invalid baseline Git blob identity')
-        path = path_in(root, name)
-        raw = path.read_bytes()
+        if name in present:
+            raw = path_in(root, name).read_bytes()
+        else:
+            try:
+                raw = _source.continuation_copy_bytes(root, name, row['sha256'], row['bytes'])
+            except (ValueError, OSError) as exc:
+                raise ValueError('Frozen preservation missing or invalid current copy: ' + name) from exc
         require(len(raw) == row['bytes'] and hashlib.sha256(raw).hexdigest() == row['sha256'],
                 'Frozen preservation bytes changed: ' + name)
         require(hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest() == row['git_blob_sha1'],

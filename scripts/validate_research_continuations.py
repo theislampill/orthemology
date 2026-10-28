@@ -3,9 +3,15 @@
 from __future__ import annotations
 import argparse
 import hashlib
+import importlib.util
 import json
 from pathlib import Path, PurePosixPath
 import re
+
+_source_spec = importlib.util.spec_from_file_location(
+    '_continuation_source_helpers', Path(__file__).with_name('resolve_t20_v6_source.py'))
+_source = importlib.util.module_from_spec(_source_spec)
+_source_spec.loader.exec_module(_source)
 
 AREA = 'experiments/orthemology-v5-continuations'
 PROV = 'docs/provenance/v5-research-continuations'
@@ -68,6 +74,20 @@ def path_in(root, name, exists=True):
         require(not current.is_symlink(), 'Symlink path: '+name)
     if exists: require(target.is_file(), 'Missing regular file: '+name)
     return target
+
+
+def source_bytes(root, row):
+    """Preserve source-ID identity while using a qualified absent current copy."""
+    path = path_in(root, row['path'], exists=False)
+    if not path.exists() and row['path'].startswith(_source.CONTINUATION_COPY_ROOT) and path.suffix == '.lean':
+        return _source.continuation_copy_bytes(root, row['path'], row['sha256'], row['bytes'], source=row)
+    require(path.is_file(), 'Missing regular file: ' + row['path'])
+    if path.suffix == '.lean':
+        require(not path.stat().st_mode & 0o111, 'Executable Lean source')
+    body = path.read_bytes()
+    require((len(body), hashlib.sha256(body).hexdigest()) == (row['bytes'], row['sha256']),
+            'Source digest/size mismatch: ' + row['id'])
+    return body
 
 
 def read_json(path):
@@ -197,7 +217,7 @@ def validate_suite(suite, sources, root, parsed_sources=None):
         source=sources[row['source_id']]
         require(source['path'] is not None and source['path'].endswith('.lean'),'Custom module has no projected Lean source')
         if source['path'] not in parsed_sources:
-            text=path_in(root,source['path']).read_text(encoding='utf-8');check_lean(text)
+            text=source_bytes(root,source).decode('utf-8');check_lean(text)
             parsed_sources[source['path']]=(lean_imports(text),declared_targets(text))
         imports,declared=parsed_sources[source['path']]
         require(row['imports']==imports,'Source/import mismatch: '+name)
@@ -369,8 +389,8 @@ def _validate(root):
             continue
         digest(row['sha256']);require(type(row['bytes']) is int and row['bytes']>=0,'Invalid byte count')
         if row['path'] not in checked_files:
-            p=path_in(root,row['path']);require(p.suffix in {'.lean','.md','.json','.py','.txt','.yaml','.p02'},'Forbidden public source type')
-            raw=p.read_bytes();check_public_text(raw.decode('utf-8'))
+            p=path_in(root,row['path'],exists=False);require(p.suffix in {'.lean','.md','.json','.py','.txt','.yaml','.p02'},'Forbidden public source type')
+            raw=source_bytes(root,row);check_public_text(raw.decode('utf-8'))
             checked_files[row['path']]=(len(raw),hashlib.sha256(raw).hexdigest())
         require(checked_files[row['path']]==(row['bytes'],row['sha256']),'Source digest/size mismatch: '+row['id'])
         if row['projection']=='EXACT':

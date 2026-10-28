@@ -22,6 +22,23 @@ PREFIX = 'research/t20-v6-20261012'
 PUBLIC = {'ADD_EXACT', 'PROJECT', 'REUSE'}
 CURRENT_GRAPH_SHA256 = 'ce15fabe3966d210aadbbf51b0d1213c45d6f9397a3dfebbaa66257afc32b5ff'
 
+# A finite current-copy class, separate from historical prose recovery. Its
+# members are derived from existing frozen maps, not a second path catalogue.
+CONTINUATION_COPY_ROOT = 'experiments/orthemology-v5-continuations/source-store/'
+CONTINUATION_RETAINED_ROOT = 'experiments/orthemology-v5-successors/source-store/'
+CONTINUATION_COPY_BASE = 'a7ff0e33d1a299db640041c46b1af81ca70851f6'
+CONTINUATION_LEGACY_BASE = '19de267cd41d2a5eeeb3eaf0b91562f706e2a916'
+CONTINUATION_COPY_COUNT = 258
+CONTINUATION_COPY_EXCLUDED = 'b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183'
+CONTINUATION_COPY_METADATA = {
+    'docs/provenance/v5-research-continuations/SOURCE_MAP.json':
+        (5990901, 'a6c2c87082f27c8560cfb4790059cc242effb5f45e3f7bdf30adf8b722b808c7'),
+    'docs/provenance/v5-successors/SOURCE_MAP.json':
+        (4978847, 'db90ad110ccc9c6a63454cf91ecec4605eed7fe243d18883d3cf501c58cb4883'),
+    'docs/provenance/v5-successors/PRESERVATION.json':
+        (379708, 'cd81d3b80d5183c1c01b637207d0afefd2b143ce4ee346808ca473a15eea6c4a'),
+}
+
 
 # Exactly reviewed historical-only prose, not a suffix/directory exemption.
 # Ordinary reading uses the existing recognition chapter; original identities
@@ -582,6 +599,134 @@ def digest(body):
     return hashlib.sha256(body).hexdigest()
 
 
+def _continuation_git(root, *args):
+    result = subprocess.run(['git', '--no-replace-objects', '--literal-pathspecs', *args],
+                            cwd=root, capture_output=True, check=False)
+    if result.returncode:
+        raise ValueError('continuation copy Git identity unavailable')
+    return result.stdout
+
+
+def _continuation_object(root, kind, identity):
+    body = _continuation_git(root, 'cat-file', kind, identity)
+    header = kind.encode() + b' ' + str(len(body)).encode() + b'\0'
+    if hashlib.sha1(header + body).hexdigest() != identity:
+        raise ValueError('continuation copy Git object bytes differ')
+    return body
+
+
+def _continuation_copy_catalog(root):
+    root = pathlib.Path(root)
+    if root.is_symlink() or not root.is_dir():
+        raise ValueError('continuation copy requires an ordinary repository root')
+    documents = {}
+    for path, expected in CONTINUATION_COPY_METADATA.items():
+        body = _regular_current_bytes(root, path)
+        if (len(body), digest(body)) != expected:
+            raise ValueError('continuation copy frozen metadata differs')
+        documents[path] = json.loads(body)
+    legacy = documents['docs/provenance/v5-research-continuations/SOURCE_MAP.json']['sources']
+    successor = documents['docs/provenance/v5-successors/SOURCE_MAP.json']['sources']
+    preservation = documents['docs/provenance/v5-successors/PRESERVATION.json']
+    if preservation['base_commit'] != CONTINUATION_LEGACY_BASE:
+        raise ValueError('continuation copy original version differs')
+    preserved = {row['path']: row for row in preservation['files']}
+    originals, retained = collections.defaultdict(list), collections.defaultdict(dict)
+    for row in legacy:
+        path = row.get('path') or ''
+        if re.fullmatch(re.escape(CONTINUATION_COPY_ROOT) + r'[0-9a-f]{64}\.lean', path):
+            originals[path].append(row)
+    for row in successor:
+        path = row.get('public_path') or ''
+        if re.fullmatch(re.escape(CONTINUATION_RETAINED_ROOT) + r'[0-9a-f]{64}/[^/]+\.lean', path):
+            identity = path[len(CONTINUATION_RETAINED_ROOT):].split('/')[0]
+            if (row.get('projection') == 'EXACT' and row.get('derivation') is None
+                    and row.get('original_sha256') == row.get('public_sha256') == identity
+                    and row.get('original_bytes') == row.get('public_bytes')):
+                retained[identity][path] = row
+    result = {}
+    for path, records in originals.items():
+        identity = path[len(CONTINUATION_COPY_ROOT):-5]
+        copies = retained.get(identity, {})
+        if len(copies) != 1:
+            continue
+        canonical, copy = next(iter(copies.items()))
+        size = copy['public_bytes']
+        if any(row.get('projection') != 'EXACT' or row.get('derivation') is not None
+               or row.get('original_sha256') != identity or row.get('sha256') != identity
+               or row.get('original_bytes') != size or row.get('bytes') != size for row in records):
+            raise ValueError('continuation copy source-ID identity differs')
+        inventory = preserved.get(path, {})
+        blob = inventory.get('git_blob_sha1')
+        if ((inventory.get('bytes'), inventory.get('sha256')) != (size, identity)
+                or not re.fullmatch('[0-9a-f]{40}', blob or '')):
+            raise ValueError('continuation copy original inventory differs')
+        result[path] = {'canonical': canonical, 'sha256': identity, 'bytes': size,
+                        'blob': blob, 'sources': records, 'legacy_tree': preservation['base_tree']}
+    excluded = CONTINUATION_COPY_ROOT + CONTINUATION_COPY_EXCLUDED + '.lean'
+    if len(result) != CONTINUATION_COPY_COUNT + 1 or excluded not in result:
+        raise ValueError('continuation copy finite class differs')
+    del result[excluded]
+    return result
+
+
+def _continuation_bound_bytes(root, path, binding):
+    root = pathlib.Path(root)
+    canonical, blob = binding['canonical'], binding['blob']
+    for revision, names in ((CONTINUATION_LEGACY_BASE, (path,)),
+                            (CONTINUATION_COPY_BASE, (path, canonical))):
+        commit = _continuation_object(root, 'commit', revision)
+        if revision == CONTINUATION_LEGACY_BASE and not commit.startswith(
+                ('tree ' + binding['legacy_tree'] + '\n').encode()):
+            raise ValueError('continuation copy original tree differs')
+        expected = {('100644 blob ' + blob + '\t' + name).encode() for name in names}
+        actual = set(_continuation_git(root, 'ls-tree', '-z', revision, '--', *names).split(b'\0')) - {b''}
+        if actual != expected:
+            raise ValueError('continuation copy original or retained mode/blob differs')
+    original = _continuation_object(root, 'blob', blob)
+    body = _regular_current_bytes(root, canonical)
+    if (len(body), digest(body)) != (binding['bytes'], binding['sha256']) or original != body:
+        raise ValueError('continuation retained copy or original Git bytes differ')
+    indexed = collections.defaultdict(list)
+    for raw in _continuation_git(root, 'ls-files', '--stage', '-z', '--', path, canonical).split(b'\0'):
+        if raw:
+            metadata, name = raw.split(b'\t', 1)
+            indexed[name.decode()].append(metadata.decode())
+    expected = ['100644 ' + blob + ' 0']
+    if indexed[path] not in ([], expected) or indexed[canonical] != expected:
+        raise ValueError('continuation copy staged identity differs')
+    target = root
+    for part in path.split('/'):
+        target = target / part
+        if target.is_symlink():
+            raise ValueError('continuation original path contains a symlink')
+    if os.path.lexists(target) and _regular_current_bytes(root, path) != body:
+        raise ValueError('present continuation original differs')
+    return body
+
+
+def continuation_copy_bytes(root, path, identity=None, size=None, source=None):
+    """Authenticate an exact current copy; never recover arbitrary missing files."""
+    if not re.fullmatch(re.escape(CONTINUATION_COPY_ROOT) + r'[0-9a-f]{64}\.lean', path):
+        raise ValueError('unqualified continuation copy path')
+    binding = _continuation_copy_catalog(root).get(path)
+    if (binding is None or (identity is not None and identity != binding['sha256'])
+            or (size is not None and size != binding['bytes'])
+            or (source is not None and source not in binding['sources'])):
+        raise ValueError('unqualified continuation copy or source-ID binding')
+    return _continuation_bound_bytes(root, path, binding)
+
+
+def continuation_duplicate_paths(root):
+    """Return only actual absences authenticated by the finite current-copy rule."""
+    result = set()
+    for path, binding in _continuation_copy_catalog(root).items():
+        if not os.path.lexists(pathlib.Path(root) / path):
+            _continuation_bound_bytes(root, path, binding)
+            result.add(path)
+    return result
+
+
 def source_bytes(root, row):
     path = pathlib.PurePosixPath(row['repository_path'])
     if path.is_absolute() or '..' in path.parts or '\\' in str(path):
@@ -593,6 +738,16 @@ def source_bytes(root, row):
                 or row.get('source_sha256') != identity or row.get('source_bytes') != size):
             raise ValueError('historical public source owner differs')
         body = historical_source_bytes(root, str(path), row.get('repository_revision'), row.get('git_blob'))
+    elif str(path).startswith(CONTINUATION_COPY_ROOT) and str(path).endswith('.lean'):
+        if row.get('repository_revision') is not None:
+            raise ValueError('current continuation copy cannot use historical reuse')
+        if not os.path.lexists(root / path):
+            if (row.get('disposition') != 'REUSE' or row.get('source_sha256') != row.get('public_sha256')
+                    or row.get('source_bytes') != row.get('public_bytes')):
+                raise ValueError('continuation public source identity differs')
+            body = continuation_copy_bytes(root, str(path), row['public_sha256'], row['public_bytes'])
+        else:
+            body = _regular_current_bytes(root, str(path))
     elif row.get('repository_revision'):
         if row['repository_revision'] != HISTORICAL_PROSE_REVISION:
             raise ValueError('invalid pinned historical reuse')

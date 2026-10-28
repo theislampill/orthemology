@@ -19,6 +19,7 @@ from resolve_t20_v6_source import (
     historical_source_bytes, source_bytes, MEDIATOR_GUIDE, mediator_guide_source_bytes,
     HISTORICAL_PROSE_REVISIONS, MEDIATOR_APPROXIMATION, FISHER_AUDIT, readonly_git_diff,
     TYPED_GUIDES, typed_guide_source_bytes,
+    CONTINUATION_COPY_ROOT, continuation_duplicate_paths,
 )
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -136,7 +137,8 @@ def check_object(root, row):
         path = root / relative
         if path.is_symlink() or not path.resolve().is_relative_to(root.resolve()):
             raise ValueError('source symlink or escaped root')
-        if relative.as_posix() in HISTORICAL_PROSE:
+        if (relative.as_posix() in HISTORICAL_PROSE
+                or (relative.as_posix().startswith(CONTINUATION_COPY_ROOT) and relative.suffix == '.lean')):
             body = source_bytes(root, row)
         elif row.get('repository_revision') is not None:
             if disposition != 'REUSE' or row['repository_revision'] != BASE:
@@ -207,6 +209,7 @@ def check_preserved_roots(root, objects):
                  'research/t20-live-20261009']
     # Check both boundaries: a staged M/T/A must not disappear behind a
     # combined worktree D or an unstaged return to original bytes.
+    copy_authenticated = None
     for cached in (True, False):
         result = readonly_git_diff(root,
             ['git', '--no-replace-objects', 'diff', *(['--cached'] if cached else []),
@@ -216,7 +219,12 @@ def check_preserved_roots(root, objects):
             changes = result.stdout.decode('utf-8').rstrip('\0').split('\0') if result.stdout else []
             if result.returncode or len(changes) % 2:
                 raise ValueError('protected baseline comparison unavailable')
+            if copy_authenticated is None and any(
+                    status == 'D' and path.startswith(CONTINUATION_COPY_ROOT)
+                    for status, path in zip(changes[::2], changes[1::2])):
+                copy_authenticated = continuation_duplicate_paths(root)
             if any(not ((status == 'D' and path in authenticated) or
+                        (status == 'D' and path in (copy_authenticated or ())) or
                         (status == 'M' and path == MEDIATOR_GUIDE and guide_authenticated) or
                         (status == 'M' and path in typed_guides_authenticated))
                    for status, path in zip(changes[::2], changes[1::2])):

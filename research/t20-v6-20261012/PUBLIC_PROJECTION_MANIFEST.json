@@ -103323,7 +103323,9 @@
       "repository_path": "scripts/validate_research_continuations.py",
       "public_sha256": "5157341400df0d327cb39f698838ac8ba49f82eb6bf71c8e40f84f670b3e55f7",
       "public_bytes": 29272,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_git_blob; current_consumer_has_distinct_identity",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "ef5422f8e877f628e8aedbe61dc4dd2af614cb0a"
     },
     {
       "source_sha256": "5157607ff0b831cb9ba6e36ef12f890c974cdde78267038744b4b33a32b9aa2b",
@@ -132286,7 +132288,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/PMR007-ROUNDS11-20-ADOPTION-BOUNDARY-CORRECTION.md",
       "public_sha256": "66cc0fbc5ab06ab0dfffdb1e6fe1845775cfa0f12233f7517d12042ae16d9486",
       "public_bytes": 1354,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_git_blob; current_consumer_has_distinct_identity",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "6240db1cb6e2f844506a989ee2cfa14783c6d6d6"
     },
     {
       "source_sha256": "66d1c7806d56a60b90fa90118abbdee06786c7bdaa43850babf1c8394ae78d1b",
@@ -273123,7 +273127,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/README.md",
       "public_sha256": "d20707cf0d24dd5b2b966f2b1f3640ec7672092ef8a19b57f60fc61897cd6b50",
       "public_bytes": 4073,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_git_blob; current_consumer_has_distinct_identity",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "9628152cf22670418bc2c88aa13e496047fba40c"
     },
     {
       "source_sha256": "d20e01929a7e764c3c43e1dfb006ca8dda0727f865f931d61cf6f9808f175ce1",

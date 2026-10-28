@@ -352,4 +352,225 @@ class ActualEvidenceAssociationTests(unittest.TestCase):
             self.validate_override({self.receipt:[]})
 
 
+class ContinuationCopyTests(unittest.TestCase):
+    """Current-copy behavior under real synthetic Git and filesystem changes."""
+
+    @classmethod
+    def setUpClass(cls):
+        spec=importlib.util.spec_from_file_location('continuation_copy_resolver', SCRIPT.with_name('resolve_t20_v6_source.py'))
+        cls.resolver=importlib.util.module_from_spec(spec);spec.loader.exec_module(cls.resolver)
+        spec=importlib.util.spec_from_file_location('continuation_copy_validator', SCRIPT)
+        cls.legacy=importlib.util.module_from_spec(spec);spec.loader.exec_module(cls.legacy)
+
+    def git(self,*args):
+        import subprocess
+        return subprocess.check_output(['git','--no-replace-objects','-c','user.name=Fixture',
+            '-c','user.email=fixture@example.invalid',*args],cwd=self.root,stderr=subprocess.DEVNULL)
+
+    def setUp(self):
+        self.tmp=tempfile.TemporaryDirectory(prefix='continuation-copy-fixture-');self.addCleanup(self.tmp.cleanup)
+        self.root=Path(self.tmp.name);self.git('init','-q')
+        self.body=b'namespace Demo\ntheorem ok : True := True.intro\nend Demo\n'
+        self.excluded_body=b'namespace Held\ntheorem keep : True := True.intro\nend Held\n'
+        self.identity=hashlib.sha256(self.body).hexdigest()
+        self.excluded=hashlib.sha256(self.excluded_body).hexdigest()
+        self.original=AREA+'/source-store/'+self.identity+'.lean'
+        self.retained='experiments/orthemology-v5-successors/source-store/'+self.identity+'/DifferentStorageName.lean'
+        self.excluded_original=AREA+'/source-store/'+self.excluded+'.lean'
+        self.source={'id':'source-a','origin':ORIGIN,'member':'src/Proof.lean',
+            'original_sha256':self.identity,'original_bytes':len(self.body),'path':self.original,
+            'sha256':self.identity,'bytes':len(self.body),'projection':'EXACT','derivation':None}
+        excluded=dict(self.source,id='source-b',member='src/Held.lean',original_sha256=self.excluded,
+            original_bytes=len(self.excluded_body),path=self.excluded_original,
+            sha256=self.excluded,bytes=len(self.excluded_body))
+        legacy={'sources':[self.source,excluded]}
+        self.legacy_map=PROV+'/SOURCE_MAP.json'
+        self.successor_map='docs/provenance/v5-successors/SOURCE_MAP.json'
+        self.preservation='docs/provenance/v5-successors/PRESERVATION.json'
+        put(self.root,self.legacy_map,legacy)
+        for path,body in [(self.original,self.body),(self.excluded_original,self.excluded_body)]:
+            target=self.root/path;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(body)
+        self.git('add','.');self.git('commit','-qm','Synthetic original')
+        legacy_commit=self.git('rev-parse','HEAD').decode().strip()
+        legacy_tree=self.git('rev-parse','HEAD^{tree}').decode().strip()
+        inventory=[]
+        for path in [self.original,self.excluded_original,self.legacy_map]:
+            body=(self.root/path).read_bytes()
+            inventory.append({'path':path,'bytes':len(body),'sha256':hashlib.sha256(body).hexdigest(),
+                'git_blob_sha1':self.git('rev-parse','HEAD:'+path).decode().strip()})
+        successor=[]
+        for source,name in [(self.source,'DifferentStorageName.lean'),(excluded,'Held.lean')]:
+            path='experiments/orthemology-v5-successors/source-store/'+source['sha256']+'/'+name
+            target=self.root/path;target.parent.mkdir(parents=True,exist_ok=True)
+            target.write_bytes((self.root/source['path']).read_bytes())
+            successor.append({'id':'new-'+source['id'],'original_sha256':source['sha256'],
+                'original_bytes':source['bytes'],'public_path':path,'public_sha256':source['sha256'],
+                'public_bytes':source['bytes'],'projection':'EXACT','derivation':None})
+        put(self.root,self.successor_map,{'sources':successor,'reviews':[]})
+        put(self.root,self.preservation,{'schema':'orthemology-v5-preservation-v1',
+            'base_commit':legacy_commit,'base_tree':legacy_tree,
+            'roots':[AREA,PROV],'files':inventory})
+        self.git('add','.');self.git('commit','-qm','Synthetic retained copies')
+        base=self.git('rev-parse','HEAD').decode().strip()
+        metadata={name:(len((self.root/name).read_bytes()),hashlib.sha256((self.root/name).read_bytes()).hexdigest())
+                  for name in [self.legacy_map,self.successor_map,self.preservation]}
+        self.base=base
+        pins={'CONTINUATION_COPY_BASE':base,'CONTINUATION_LEGACY_BASE':legacy_commit,
+              'CONTINUATION_COPY_COUNT':1,'CONTINUATION_COPY_EXCLUDED':self.excluded,
+              'CONTINUATION_COPY_METADATA':metadata}
+        self.copy_pins=pins
+        for module in {self.resolver,getattr(self.legacy,'_source',self.resolver)}:
+            for name,value in pins.items():
+                context=patch.object(module,name,value,create=True);context.start();self.addCleanup(context.stop)
+        self.row={'source_sha256':self.identity,'source_bytes':len(self.body),'disposition':'REUSE',
+                  'repository_path':self.original,'public_sha256':self.identity,'public_bytes':len(self.body)}
+
+    def absent(self):
+        (self.root/self.original).unlink()
+
+    def test_absent_original_returns_exact_retained_current_body(self):
+        self.absent()
+        try:
+            body=self.resolver.source_bytes(self.root,self.row)
+        except OSError as exc:
+            self.fail('Qualified missing original did not resolve its exact current copy: '+type(exc).__name__)
+        self.assertEqual(body,self.body)
+        self.assertFalse((self.root/self.original).exists())
+
+    def test_absent_legacy_source_keeps_original_source_id_and_bytes(self):
+        self.absent()
+        before=deepcopy(self.source)
+        self.assertEqual(self.legacy.source_bytes(self.root,self.source),self.body)
+        self.assertEqual(self.source,before)
+
+    def test_present_corrupt_original_is_not_masked_by_retained_copy(self):
+        (self.root/self.original).write_bytes(b'X'*len(self.body))
+        with self.assertRaises(ValueError):self.resolver.source_bytes(self.root,self.row)
+
+    def test_present_executable_original_is_rejected(self):
+        (self.root/self.original).chmod(0o755)
+        with self.assertRaises(ValueError):self.resolver.source_bytes(self.root,self.row)
+
+    def test_missing_or_corrupt_retained_copy_is_rejected(self):
+        self.absent();target=self.root/self.retained
+        for replacement in [None,b'X'*len(self.body)]:
+            with self.subTest(replacement=replacement is None):
+                if replacement is None:target.unlink()
+                else:target.write_bytes(replacement)
+                with self.assertRaises((ValueError,OSError)):self.resolver.source_bytes(self.root,self.row)
+
+    def test_symlinked_retained_file_or_parent_is_rejected(self):
+        self.absent();target=self.root/self.retained
+        other=self.root/'outside.lean';other.write_bytes(self.body)
+        target.unlink();target.symlink_to(other)
+        with self.assertRaises((ValueError,OSError)):self.resolver.source_bytes(self.root,self.row)
+        target.unlink();target.write_bytes(self.body)
+        directory=target.parent;replacement=self.root/'replacement';directory.rename(replacement);directory.symlink_to(replacement,target_is_directory=True)
+        with self.assertRaises((ValueError,OSError)):self.resolver.source_bytes(self.root,self.row)
+
+    def test_staged_change_cannot_hide_behind_original_absence(self):
+        (self.root/self.original).write_bytes(b'X'*len(self.body));self.git('add',self.original);self.absent()
+        with self.assertRaises(ValueError):self.resolver.source_bytes(self.root,self.row)
+
+    def test_staged_retained_mode_change_is_rejected(self):
+        self.absent();self.git('update-index','--chmod=+x',self.retained)
+        with self.assertRaises(ValueError):self.resolver.source_bytes(self.root,self.row)
+
+    def test_staged_deletion_of_original_is_accepted(self):
+        self.absent();self.git('rm','--cached','-q','--',self.original)
+        self.assertEqual(self.resolver.source_bytes(self.root,self.row),self.body)
+
+    def test_unknown_or_excluded_original_has_no_fallback(self):
+        self.absent()
+        for path,body in [(AREA+'/source-store/'+'0'*64+'.lean',self.body),
+                          (self.excluded_original,self.excluded_body)]:
+            target=self.root/path
+            if target.exists():target.unlink()
+            row=dict(self.row,repository_path=path,source_sha256=hashlib.sha256(body).hexdigest(),
+                     source_bytes=len(body),public_sha256=hashlib.sha256(body).hexdigest(),public_bytes=len(body))
+            with self.subTest(path=path):
+                with self.assertRaises((ValueError,OSError)):self.resolver.source_bytes(self.root,row)
+
+    def test_changed_source_id_or_member_cannot_rebind_missing_original(self):
+        self.absent()
+        for key,value in [('id','new-id'),('member','src/Rebound.lean'),('origin','b'*64)]:
+            row=dict(self.source,**{key:value})
+            with self.subTest(field=key):
+                with self.assertRaises(ValueError):self.legacy.source_bytes(self.root,row)
+
+    def test_changed_frozen_metadata_rejects_absent_copy(self):
+        self.absent();path=self.root/self.legacy_map
+        path.write_bytes(path.read_bytes()+b' ')
+        with self.assertRaises(ValueError):self.resolver.source_bytes(self.root,self.row)
+
+    def test_same_size_corrupted_original_git_object_is_rejected(self):
+        import zlib
+        self.absent();blob=self.git('rev-parse','HEAD:'+self.original).decode().strip()
+        loose=self.root/'.git/objects'/blob[:2]/blob[2:]
+        loose.chmod(0o600)
+        loose.write_bytes(zlib.compress(b'blob '+str(len(self.body)).encode()+b'\0'+b'X'*len(self.body)))
+        with self.assertRaises(ValueError):self.resolver.source_bytes(self.root,self.row)
+
+    def test_projection_metadata_cannot_change_disposition_or_identity(self):
+        self.absent()
+        for key,value in [('disposition','PROJECT'),('source_sha256','0'*64),('source_bytes',len(self.body)+1),
+                          ('repository_revision',self.git('rev-parse','HEAD').decode().strip())]:
+            with self.subTest(field=key):
+                with self.assertRaises(ValueError):self.resolver.source_bytes(self.root,dict(self.row,**{key:value}))
+
+
+    def owner(self, name):
+        sys.path.insert(0,str(SCRIPT.parent))
+        spec=importlib.util.spec_from_file_location('copy_gate_'+name,SCRIPT.with_name(name+'.py'))
+        module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        for target in {getattr(module,'_source',self.resolver),sys.modules.get('resolve_t20_v6_source',self.resolver)}:
+            for key,value in self.copy_pins.items():
+                context=patch.object(target,key,value,create=True);context.start();self.addCleanup(context.stop)
+        return module
+
+    def test_t20_object_gate_consumes_the_same_current_copy(self):
+        gate=self.owner('validate_t20_v6_projection');self.absent()
+        self.assertEqual(gate.check_object(self.root,self.row),[])
+
+    def test_t20_preserved_root_gate_admits_only_authenticated_deletion(self):
+        gate=self.owner('validate_t20_v6_projection');self.absent()
+        with patch.object(gate,'HISTORICAL_PROSE',{}),patch.object(gate,'BASE',self.base):
+            self.assertEqual(gate.check_preserved_roots(self.root,{}),[])
+            (self.root/self.original).write_bytes(b'X'*len(self.body));self.git('add',self.original);self.absent()
+            self.assertTrue(gate.check_preserved_roots(self.root,{}))
+
+    def test_reader_currentness_gate_keeps_staged_change_visible(self):
+        gate=self.owner('check_reader_pilot');self.absent()
+        self.assertEqual(gate.check_corpus_currentness(self.root,self.base),[])
+        (self.root/self.original).write_bytes(b'X'*len(self.body));self.git('add',self.original);self.absent()
+        self.assertTrue(gate.check_corpus_currentness(self.root,self.base))
+
+    def test_frozen_preservation_keeps_rows_and_rejects_extra_members(self):
+        gate=self.owner('validate_v5_successors');inventory=json.loads((self.root/self.preservation).read_bytes())
+        metadata={'path':self.legacy_map,'sha256':hashlib.sha256((self.root/self.legacy_map).read_bytes()).hexdigest()}
+        bound={'schema':'orthemology-v5-baseline-binding-v1','base_commit':inventory['base_commit'],
+            'base_tree':inventory['base_tree'],'preservation_sha256':hashlib.sha256((self.root/self.preservation).read_bytes()).hexdigest(),
+            'legacy_registry':metadata,'legacy_overlay':metadata}
+        anchor=dict(bound,git_required=True);anchor.pop('schema')
+        bundle={'baseline_binding':bound,'preservation':inventory,'registry':{
+            'records':{'PRESERVATION':{'sha256':bound['preservation_sha256']}},
+            'baseline_commit':bound['base_commit'],'baseline_tree':bound['base_tree']}}
+        before=deepcopy(bundle);self.absent()
+        try:
+            preserved=gate._preservation(bundle,self.root,anchor)
+        except ValueError as exc:
+            self.fail('Qualified current copy did not preserve the frozen inventory: '+str(exc))
+        self.assertEqual(set(preserved),{r['path'] for r in inventory['files']})
+        self.assertEqual(bundle,before)
+        (self.root/AREA/'source-store/extra.lean').write_bytes(b'extra')
+        with self.assertRaises(ValueError):gate._preservation(bundle,self.root,anchor)
+
+    def test_immutable_reference_resolves_only_exact_current_copy(self):
+        gate=self.owner('validate_internal_references');self.absent()
+        with patch.object(gate,'ROOT',str(self.root)):
+            self.assertTrue(gate._resolves('preserved.md',self.original))
+            (self.root/self.retained).write_bytes(b'X'*len(self.body))
+            self.assertFalse(gate._resolves('preserved.md',self.original))
+
+
 if __name__=='__main__':unittest.main(verbosity=2)

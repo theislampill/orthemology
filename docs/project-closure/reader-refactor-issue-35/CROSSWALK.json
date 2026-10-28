@@ -2710,12 +2710,12 @@
       "read_scope": "Definition/theorem-name scan and the complete accompanying model specification; no exhaustive proof reread or compile."
     },
     "sixth-upstream-formal": {
-      "path": "experiments/orthemology-v5-continuations/source-store/ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3.lean",
+      "path": "experiments/orthemology-v5-successors/source-store/ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3/UPSTREAM_GROUND.lean",
       "sha256": "ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3",
       "read_scope": "Formal-component identity and relationship established by the complete FORMAL_RESULTS owner; no fresh proof replay."
     },
     "sixth-source-identity": {
-      "path": "experiments/orthemology-v5-continuations/source-store/45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503.lean",
+      "path": "experiments/orthemology-v5-successors/source-store/45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503/SourceIdentity.original.lean",
       "sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
       "read_scope": "Unchanged imported formal component, identified by the upstream/sourcehood owners; not a separate newly proved work."
     },
@@ -3920,7 +3920,7 @@
       "read_scope": "Run 10: complete public integration record read. Its dated replay, aggregate or environment observations remain inherited evidence, not execution by this refactor; private participant inputs and full logs were not imported."
     },
     "controller-module-GlobalParitySufficiency": {
-      "path": "experiments/orthemology-v5-continuations/source-store/4a93ef96999718cc4fc6ac566da899c6f9938d5a8cbce269d8ee20a3f459d9a3.lean",
+      "path": "experiments/orthemology-v5-successors/source-store/4a93ef96999718cc4fc6ac566da899c6f9938d5a8cbce269d8ee20a3f459d9a3/GlobalParitySufficiency.lean",
       "sha256": "4a93ef96999718cc4fc6ac566da899c6f9938d5a8cbce269d8ee20a3f459d9a3",
       "read_scope": "Exact declaration statements computed_region_iff_common_parity_policy inspected; not full dependency proof reading or a fresh compilation."
     },
@@ -3935,12 +3935,12 @@
       "read_scope": "Exact declaration statements generated_actual_badCount_common_positive_exponential_moments, generated_actual_badCount_exists_common_exponential_range inspected; not full dependency proof reading or a fresh compilation."
     },
     "controller-module-FullControllerCanonicalLaw": {
-      "path": "experiments/orthemology-v5-continuations/source-store/47df70da9ffde6c5c8f4e7e443e7d4d7389b36001ebd60d15d5c9cb60b2ff1b3.lean",
+      "path": "experiments/orthemology-v5-successors/source-store/47df70da9ffde6c5c8f4e7e443e7d4d7389b36001ebd60d15d5c9cb60b2ff1b3/FullControllerCanonicalLaw.lean",
       "sha256": "47df70da9ffde6c5c8f4e7e443e7d4d7389b36001ebd60d15d5c9cb60b2ff1b3",
       "read_scope": "Exact declaration statements full_phase_runtime_canonical_history_law, full_phase_computed_tolerance_output_parity inspected; not full dependency proof reading or a fresh compilation."
     },
     "controller-module-FiniteMealyCompiler": {
-      "path": "experiments/orthemology-v5-continuations/source-store/0742f4d15f2c93d322afe45cd293882946c1d875726290674a907e94d3757a9c.lean",
+      "path": "experiments/orthemology-v5-successors/source-store/0742f4d15f2c93d322afe45cd293882946c1d875726290674a907e94d3757a9c/FiniteMealyCompiler.lean",
       "sha256": "0742f4d15f2c93d322afe45cd293882946c1d875726290674a907e94d3757a9c",
       "read_scope": "Exact declaration statements compiled_runtime_law inspected; not full dependency proof reading or a fresh compilation."
     },
@@ -4305,12 +4305,12 @@
       "read_scope": "Original title, scope and source-map member inspected for supporting role; not a fresh independent review or exhaustive recheck of its arguments."
     },
     "continuation-raw-tape-proof": {
-      "path": "experiments/orthemology-v5-continuations/source-store/82b3e06719e80fe4e1f0a77fd72e157bfc30ef3b42992b3e6a5587b859404e3b.lean",
+      "path": "experiments/orthemology-v5-successors/source-store/82b3e06719e80fe4e1f0a77fd72e157bfc30ef3b42992b3e6a5587b859404e3b/RawPrefixDeviation.lean",
       "sha256": "82b3e06719e80fe4e1f0a77fd72e157bfc30ef3b42992b3e6a5587b859404e3b",
       "read_scope": "Named declaration statements, explicit inputs and surrounding documentation examined; exact source identity retained, no fresh Lean compilation or complete proof-body audit."
     },
     "continuation-raw-tape-any-threshold": {
-      "path": "experiments/orthemology-v5-continuations/source-store/29942f882e2e223ddabd7bf19d1b4dbf5deb0ec3b7287c1868c315d505d46182.lean",
+      "path": "experiments/orthemology-v5-successors/source-store/29942f882e2e223ddabd7bf19d1b4dbf5deb0ec3b7287c1868c315d505d46182/RawUnrestrictedDeviation.lean",
       "sha256": "29942f882e2e223ddabd7bf19d1b4dbf5deb0ec3b7287c1868c315d505d46182",
       "read_scope": "Named declaration statements, explicit inputs and surrounding documentation examined; exact source identity retained, no fresh Lean compilation or complete proof-body audit."
     },
@@ -4325,27 +4325,27 @@
       "read_scope": "Original title, scope and source-map member inspected for supporting role; not a fresh independent review or exhaustive recheck of its arguments."
     },
     "continuation-affine-tail-proof": {
-      "path": "experiments/orthemology-v5-continuations/source-store/7f58b3c0270925b452c97ebeaaaa9383f7958f2c0c0b4fc6b578a7cde01ef4f7.lean",
+      "path": "experiments/orthemology-v5-successors/source-store/7f58b3c0270925b452c97ebeaaaa9383f7958f2c0c0b4fc6b578a7cde01ef4f7/TailMoments.lean",
       "sha256": "7f58b3c0270925b452c97ebeaaaa9383f7958f2c0c0b4fc6b578a7cde01ef4f7",
       "read_scope": "Named declaration statements, explicit inputs and surrounding documentation examined; exact source identity retained, no fresh Lean compilation or complete proof-body audit."
     },
     "continuation-original-prefix-law": {
-      "path": "experiments/orthemology-v5-continuations/source-store/1547d34d2a53302e070e7a02131f242f9cb1d80f6aa0f96fc478844f630703a3.lean",
+      "path": "experiments/orthemology-v5-successors/source-store/1547d34d2a53302e070e7a02131f242f9cb1d80f6aa0f96fc478844f630703a3/ConditionalContinuationLaw.lean",
       "sha256": "1547d34d2a53302e070e7a02131f242f9cb1d80f6aa0f96fc478844f630703a3",
       "read_scope": "Named declaration statements, explicit inputs and surrounding documentation examined; exact source identity retained, no fresh Lean compilation or complete proof-body audit."
     },
     "continuation-original-seed-posterior": {
-      "path": "experiments/orthemology-v5-continuations/source-store/adc48e40e89c35782be3f30eafb0a62bb6100de48bf853a84e081631da8092e0.lean",
+      "path": "experiments/orthemology-v5-successors/source-store/adc48e40e89c35782be3f30eafb0a62bb6100de48bf853a84e081631da8092e0/MarkovSeedPosterior.lean",
       "sha256": "adc48e40e89c35782be3f30eafb0a62bb6100de48bf853a84e081631da8092e0",
       "read_scope": "Named declaration statements, explicit inputs and surrounding documentation examined; exact source identity retained, no fresh Lean compilation or complete proof-body audit."
     },
     "continuation-actual-cost-moments": {
-      "path": "experiments/orthemology-v5-continuations/source-store/8b4014de8d7ae893631060dbe780cce434bccbce16524e6303e2c692f3fce46b.lean",
+      "path": "experiments/orthemology-v5-successors/source-store/8b4014de8d7ae893631060dbe780cce434bccbce16524e6303e2c692f3fce46b/ActualCostMoments.lean",
       "sha256": "8b4014de8d7ae893631060dbe780cce434bccbce16524e6303e2c692f3fce46b",
       "read_scope": "Named declaration statements, explicit inputs and surrounding documentation examined; exact source identity retained, no fresh Lean compilation or complete proof-body audit."
     },
     "continuation-actual-stopped-tail": {
-      "path": "experiments/orthemology-v5-continuations/source-store/a55e4106c813ee266475198cadd3b93a90b2256b9d486468b5405d993b27bb4b.lean",
+      "path": "experiments/orthemology-v5-successors/source-store/a55e4106c813ee266475198cadd3b93a90b2256b9d486468b5405d993b27bb4b/ActualTotalCostTail.lean",
       "sha256": "a55e4106c813ee266475198cadd3b93a90b2256b9d486468b5405d993b27bb4b",
       "read_scope": "Named declaration statements, explicit inputs and surrounding documentation examined; exact source identity retained, no fresh Lean compilation or complete proof-body audit."
     },
@@ -4375,12 +4375,12 @@
       "read_scope": "Complete retained review read, including actual physical charge, residual-tree execution, nonmonotone support menus, action-compatible histories, zero likelihood and policy-before-model quantifiers; not replayed."
     },
     "continuation-literal-index-proof": {
-      "path": "experiments/orthemology-v5-continuations/source-store/98c1923c5c9ef77094ca28a63c32866fae56ae04b7a1597da59874935d9b1167.lean",
+      "path": "experiments/orthemology-v5-successors/source-store/98c1923c5c9ef77094ca28a63c32866fae56ae04b7a1597da59874935d9b1167/IndexedObserver.lean",
       "sha256": "98c1923c5c9ef77094ca28a63c32866fae56ae04b7a1597da59874935d9b1167",
       "read_scope": "Named declaration statements, explicit inputs and surrounding documentation examined; exact source identity retained, no fresh Lean compilation or complete proof-body audit."
     },
     "continuation-scheduled-runtime-proof": {
-      "path": "experiments/orthemology-v5-continuations/source-store/73b3cb0b813ff303a6735c3cf8ac3c8dbbc1ed5c5dd335d4e0c239b8ddb23cc3.lean",
+      "path": "experiments/orthemology-v5-successors/source-store/73b3cb0b813ff303a6735c3cf8ac3c8dbbc1ed5c5dd335d4e0c239b8ddb23cc3/IndexedRuntime.lean",
       "sha256": "73b3cb0b813ff303a6735c3cf8ac3c8dbbc1ed5c5dd335d4e0c239b8ddb23cc3",
       "read_scope": "Named declaration statements, explicit inputs and surrounding documentation examined; exact source identity retained, no fresh Lean compilation or complete proof-body audit."
     },
@@ -32031,6 +32031,16 @@
           "path": "experiments/orthemology-v5-successors/source-store/ff965ced70da20159e1e13e6754f2d64a9044c5c16e2ef4aec2341693699ab00/ASSESSMENT.md",
           "role": "work-source",
           "work": "t20-historical-universal-source"
+        },
+        {
+          "path": "experiments/orthemology-v5-successors/source-store/98c1923c5c9ef77094ca28a63c32866fae56ae04b7a1597da59874935d9b1167/IndexedObserver.lean",
+          "role": "formal-component",
+          "work": "continuation-indexed-observer"
+        },
+        {
+          "path": "experiments/orthemology-v5-successors/source-store/73b3cb0b813ff303a6735c3cf8ac3c8dbbc1ed5c5dd335d4e0c239b8ddb23cc3/IndexedRuntime.lean",
+          "role": "formal-component",
+          "work": "continuation-indexed-observer"
         }
       ],
       "supporting_population": {

@@ -35,6 +35,7 @@ from validate_repo import (load_source_map, original_packet_locator,
                            strip_markdown_math)
 from resolve_t20_v6_source import (
     TYPED_PROSE, TYPED_PROSE_REVISION, historical_source_bytes, HISTORICAL_PROSE_REVISION,
+    CONTINUATION_COPY_ROOT, continuation_copy_bytes,
 )
 from validate_ar8r_reconciliation import (
     PMR007_DEEP_PREFIX, _pmr007_deep_original_members,
@@ -273,6 +274,12 @@ def _resolves(src, cited):
             return False
     if os.path.exists(os.path.join(ROOT, cited)):
         return True
+    if cited.startswith(CONTINUATION_COPY_ROOT) and cited.endswith('.lean'):
+        try:
+            continuation_copy_bytes(ROOT, cited)
+            return True
+        except (ValueError, OSError):
+            return False
     directory = os.path.dirname(src)
     while True:
         if os.path.exists(os.path.normpath(os.path.join(ROOT, directory, cited))):

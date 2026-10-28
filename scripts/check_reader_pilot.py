@@ -10,6 +10,7 @@ import argparse
 from collections import Counter
 import hashlib
 import json
+import os
 from pathlib import Path
 import posixpath
 import re
@@ -22,6 +23,8 @@ import yaml
 
 from validate_ar8r_reconciliation import (
     PMR007_DEEP_PREFIX, pmr007_deep_duplicate_paths,
+    PMR007_ROUNDS_PREFIX, PMR007_ROUNDS_FORMALIZATION,
+    pmr007_rounds_duplicate_paths, pmr007_rounds_formalization_navigation,
 )
 
 from resolve_t20_v6_source import (
@@ -30,6 +33,7 @@ from resolve_t20_v6_source import (
     MEDIATOR_PROSE, MEDIATOR_GUIDE, mediator_guide_source_bytes, readonly_git_diff,
     ORIGINAL_HISTORICAL_PROSE_PATHS, FISHER_AUDIT, FISHER_PROSE_REVISION,
     TYPED_PROSE, TYPED_PROSE_REVISION, TYPED_GUIDES, typed_guide_source_bytes,
+    CONTINUATION_COPY_ROOT, continuation_duplicate_paths,
 )
 
 
@@ -312,6 +316,102 @@ def permitted_contributor_navigation(repo, row, body):
             and b"\n## Reader maintenance\n" in body[len(before):])
 
 
+PMR007_ROUNDS_PARENT = "docs/project-closure/ar8r-v11/post-merge-proposals/README.md"
+PMR007_ROUNDS_PARENT_REVISION = "a7ff0e33d1a299db640041c46b1af81ca70851f6"
+
+
+def pmr007_rounds_parent_source_bytes(repo):
+    """Authenticate one current custody adaptation and return its original source.
+
+    This does not admit a missing snapshot member. The existing finite snapshot
+    and formalization gates own that decision. Original directory wording is
+    valid only while the corresponding current/index edition remains present.
+    """
+    repo = Path(repo)
+    path = PMR007_ROUNDS_PARENT
+    revision = PMR007_ROUNDS_PARENT_REVISION
+    blob = "9628152cf22670418bc2c88aa13e496047fba40c"
+    identity = "d20707cf0d24dd5b2b966f2b1f3640ec7672092ef8a19b57f60fc61897cd6b50"
+    if not isinstance(revision, str) or not re.fullmatch(r"[0-9a-f]{40}", revision):
+        raise ValueError("rounds parent requires its exact original revision")
+
+    def git(*args):
+        result = subprocess.run(
+            ["git", "--no-replace-objects", "--literal-pathspecs", "-c", "core.fsmonitor=false", *args],
+            cwd=repo, capture_output=True, check=False,
+            env=dict(os.environ, GIT_NO_LAZY_FETCH="1", GIT_TERMINAL_PROMPT="0", GIT_OPTIONAL_LOCKS="0"))
+        if result.returncode:
+            raise ValueError("rounds parent original or staged Git objects unavailable")
+        return result.stdout
+
+    expected = ("100644 blob " + blob + "\t" + path + "\0").encode()
+    if (git("cat-file", "-t", revision) != b"commit\n"
+            or git("ls-tree", "-z", revision, "--", path) != expected):
+        raise ValueError("rounds parent original path, blob or mode differs")
+    original = git("cat-file", "blob", blob)
+    original_blob = hashlib.sha1(b"blob " + str(len(original)).encode() + b"\0" + original).hexdigest()
+    if (len(original), hashlib.sha256(original).hexdigest(), original_blob) != (4073, identity, blob):
+        raise ValueError("rounds parent original source identity differs")
+    old = (
+        b"The `pmr007-rounds11-20` directory is an exact, public-safe copy of the final sanitized "
+        b"repository-update proposal recovered from the authenticated research thread. Its internal "
+        b"files are preserved without correction so their original hashes remain testable."
+    )
+    new = (
+        b"The original `pmr007-rounds11-20` import is the exact, public-safe copy of the final sanitized "
+        b"repository-update proposal recovered from the authenticated research thread. Its complete "
+        b"131-file edition is retained at Git commit `a7ff0e33d1a299db640041c46b1af81ca70851f6`. "
+        b"The current snapshot preserves its unchanged 130-row hash manifest and requires its 32 "
+        b"distinct or context-dependent members; 98 exact same-relative copies may resolve through "
+        b"`pmr007-deep-a-bk` under the finite snapshot gate. The existing rounds adoption-boundary "
+        b"correction records those current routes and their limits; original source bytes and hashes "
+        b"remain testable."
+    )
+    if original.count(old) != 1:
+        raise ValueError("rounds parent original paragraph count differs")
+    adapted = original.replace(old, new, 1)
+    current_path = safe_path(repo, path)
+    current = current_path.read_bytes()
+    if current_path.stat().st_mode & 0o111 or current not in (original, adapted):
+        raise ValueError("rounds parent is not its exact ordinary navigation adaptation")
+    adapted_blob = hashlib.sha1(b"blob " + str(len(adapted)).encode() + b"\0" + adapted).hexdigest()
+    indexed = git("ls-files", "--stage", "-z", "--", path)
+    choices = {("100644 " + oid + " 0\t" + path + "\0").encode(): body
+               for oid, body in ((blob, original), (adapted_blob, adapted))}
+    if indexed not in choices:
+        raise ValueError("rounds parent index is missing, conflicted or has an unqualified edition/mode")
+    if git("cat-file", "blob", indexed.split()[1].decode()) != choices[indexed]:
+        raise ValueError("rounds parent staged object identity differs")
+
+    # Presence metadata only: original wording may not describe an incomplete
+    # edition as an exact current directory. This grants no absence fallback.
+    members = [row for row in git("ls-tree", "-r", "-z", revision, "--", PMR007_ROUNDS_PREFIX).split(b"\0") if row]
+    if len(members) != 131:
+        raise ValueError("rounds parent original edition membership differs")
+    original_stages = set()
+    complete_worktree = True
+    for row in members:
+        metadata, member = row.split(b"\t", 1)
+        mode, kind, oid = metadata.decode("ascii").split()
+        member = member.decode("utf-8")
+        if (mode != "100644" or kind != "blob" or not re.fullmatch(r"[0-9a-f]{40}", oid)
+                or not member.startswith(PMR007_ROUNDS_PREFIX + "/")):
+            raise ValueError("rounds parent original edition metadata differs")
+        original_stages.add((mode + " " + oid + " 0\t" + member).encode())
+        try:
+            node = safe_path(repo, member)
+            complete_worktree = complete_worktree and not node.stat().st_mode & 0o111
+        except (ValueError, OSError):
+            complete_worktree = False
+    staged_members = set(git("ls-files", "--stage", "-z", "--", PMR007_ROUNDS_PREFIX).split(b"\0"))
+    if not complete_worktree and current != adapted:
+        raise ValueError("rounds parent current wording requires its complete original edition")
+    if not original_stages.issubset(staged_members) and choices[indexed] != adapted:
+        raise ValueError("rounds parent staged wording requires its complete original edition")
+    return original
+
+
+
 def permitted_historical_status_pin(repo, row, body):
     """Admit exact navigation and finite historical-source bindings, not identities.
 
@@ -495,6 +595,42 @@ def permitted_historical_status_pin(repo, row, body):
                               "exact_existing_public_git_blob; retained_counterpart_qualified_by_snapshot_validator"))
         if offset != len(objects.stdout):
             return False
+        if candidate == expected:
+            return True  # Preserve the exact 587-row snapshot form.
+        # The two further copy migrations change these three original owners.
+        # Only their original evidence routes may change; every other field and
+        # every unrelated object must still equal an already admitted form.
+        further_consumers = {
+            "scripts/validate_research_continuations.py":
+                ("5157341400df0d327cb39f698838ac8ba49f82eb6bf71c8e40f84f670b3e55f7", 29272,
+                 "ef5422f8e877f628e8aedbe61dc4dd2af614cb0a"),
+            "docs/project-closure/ar8r-v11/post-merge-proposals/PMR007-ROUNDS11-20-ADOPTION-BOUNDARY-CORRECTION.md":
+                ("66cc0fbc5ab06ab0dfffdb1e6fe1845775cfa0f12233f7517d12042ae16d9486", 1354,
+                 "6240db1cb6e2f844506a989ee2cfa14783c6d6d6"),
+            "docs/project-closure/ar8r-v11/post-merge-proposals/README.md":
+                ("d20707cf0d24dd5b2b966f2b1f3640ec7672092ef8a19b57f60fc61897cd6b50", 4073,
+                 "9628152cf22670418bc2c88aa13e496047fba40c"),
+        }
+        for path, (identity, size, blob) in further_consumers.items():
+            matches = [r for r in expected["objects"] if r.get("repository_path") == path]
+            if len(matches) != 1:
+                return False
+            source = matches[0]
+            if (source.get("disposition") != "REUSE" or source.get("source_sha256") != identity
+                    or source.get("public_sha256") != identity or source.get("source_bytes") != size
+                    or source.get("public_bytes") != size):
+                return False
+            entry = subprocess.run(["git", "--no-replace-objects", "--literal-pathspecs",
+                "ls-tree", "-z", revision, "--", path], cwd=repo, capture_output=True, check=False)
+            original = subprocess.run(["git", "--no-replace-objects", "cat-file", "blob",
+                revision + ":" + path], cwd=repo, capture_output=True, check=False)
+            if (entry.returncode or original.returncode
+                    or entry.stdout != ("100644 blob " + blob + "\t" + path + "\0").encode()
+                    or len(original.stdout) != size or hashlib.sha256(original.stdout).hexdigest() != identity
+                    or hashlib.sha1(b"blob " + str(size).encode() + b"\0" + original.stdout).hexdigest() != blob):
+                return False
+            source.update(repository_revision=revision, git_blob=blob,
+                          publication_basis="exact_existing_public_git_blob; current_consumer_has_distinct_identity")
         return candidate == expected
     except (KeyError, TypeError, ValueError):
         return False
@@ -512,6 +648,8 @@ REFACTOR_EDIT_PATHS = {
     "scripts/validate_ar8r_reconciliation.py", "tests/test_ar8r_v11_reconciliation.py",
     "docs/project-closure/ar8r-v11/SHA256SUMS",
     "docs/project-closure/ar8r-v11/post-merge-proposals/PMR007-DEEP-A-AP-ADOPTION-BOUNDARY-CORRECTION.md",
+    "docs/project-closure/ar8r-v11/post-merge-proposals/PMR007-ROUNDS11-20-ADOPTION-BOUNDARY-CORRECTION.md",
+    "docs/project-closure/ar8r-v11/post-merge-proposals/README.md",
     "tests/test_reader_census.py", "tests/test_reader_pilot.py",
     "tests/test_internal_references.py",
     # Exact existing integrity owners changed for the finite history contract;
@@ -519,6 +657,9 @@ REFACTOR_EDIT_PATHS = {
     "scripts/resolve_t20_v6_source.py", "scripts/validate_t20_v6_projection.py",
     "tests/test_t20_v6_projection.py", "scripts/validate_v5_successors.py",
     "tests/test_v5_twentieth_data.py",
+    # Existing source-ID and replay owners for the finite continuation copies.
+    "scripts/validate_research_continuations.py", "scripts/replay_research_continuations.py",
+    "tests/test_research_continuations.py",
     # Current reference consumers for the same four exact typed prose identities.
     "scripts/validate_repo.py", "scripts/validate_internal_references.py",
     # Existing source-display integrity owner and its focused regression tests;
@@ -757,7 +898,8 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
     """
     errors = []
     editable = REFACTOR_EDIT_PATHS | set(admitted_paths)
-    duplicate_paths = None
+    duplicate_paths = {}
+    continuation_paths = None
     for cached in (True, False):
         result = readonly_git_diff(repo,
             ["git", "diff", *(["--cached"] if cached else []),
@@ -772,20 +914,41 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                 raise ValueError("malformed tracked change")
         except (UnicodeError, ValueError):
             return ["corpus-currentness: a tracked change has an unrepresentable path or status"]
-        if duplicate_paths is None and any(
-                status == "D" and path.startswith(PMR007_DEEP_PREFIX + "/")
+        for prefix, qualify in ((PMR007_DEEP_PREFIX, pmr007_deep_duplicate_paths),
+                                (PMR007_ROUNDS_PREFIX, pmr007_rounds_duplicate_paths)):
+            if prefix not in duplicate_paths and any(
+                    status == "D" and path.startswith(prefix + "/")
+                    for status, path in zip(values[::2], values[1::2])):
+                try:
+                    duplicate_paths[prefix] = qualify(Path(repo))
+                except (ValueError, OSError, UnicodeError) as exc:
+                    errors.append("corpus-currentness: duplicate evidence: " + str(exc))
+                    duplicate_paths[prefix] = set()
+        rounds_navigation = set()
+        if any((status == "D" and path.startswith(PMR007_ROUNDS_PREFIX + "/"))
+               or (status == "M" and path == PMR007_ROUNDS_FORMALIZATION)
+               for status, path in zip(values[::2], values[1::2])):
+            try:
+                rounds_navigation.add(pmr007_rounds_formalization_navigation(Path(repo), indexed=cached))
+            except (ValueError, OSError, UnicodeError) as exc:
+                errors.append("corpus-currentness: rounds navigation: " + str(exc))
+        if continuation_paths is None and any(
+                status == "D" and path.startswith(CONTINUATION_COPY_ROOT)
                 for status, path in zip(values[::2], values[1::2])):
             try:
-                duplicate_paths = pmr007_deep_duplicate_paths(Path(repo))
+                continuation_paths = continuation_duplicate_paths(Path(repo))
             except (ValueError, OSError, UnicodeError) as exc:
-                errors.append("corpus-currentness: duplicate evidence: " + str(exc))
-                duplicate_paths = set()
+                errors.append("corpus-currentness: continuation copy evidence: " + str(exc))
+                continuation_paths = set()
+        allowed_duplicates = set().union(*duplicate_paths.values())
         errors.extend("corpus-currentness: " + path +
                       " requires source-baseline and work/support disposition review"
                       for status, path in zip(values[::2], values[1::2])
                       if path not in editable and not
                       ((status == "D" and path in HISTORICAL_PROSE and path in historical_paths)
-                        or (status == "D" and path in (duplicate_paths or ()))
+                        or (status == "D" and path in allowed_duplicates)
+                        or (status == "D" and path in (continuation_paths or ()))
+                        or (status == "M" and path in rounds_navigation)
                         or (status == "M" and path in {MEDIATOR_GUIDE, *TYPED_GUIDES}
                             and path in navigation_paths)))
     return list(dict.fromkeys(errors))
@@ -816,6 +979,11 @@ def check(repo, owners, cross):
     historical, historical_errors = check_historical_sources(repo, indexed, owners, cross, additions)
     errors.extend(historical_errors)
     navigation = {}
+    if PMR007_ROUNDS_PARENT in indexed:
+        try:
+            navigation[PMR007_ROUNDS_PARENT] = pmr007_rounds_parent_source_bytes(repo)
+        except (ValueError, OSError) as exc:
+            fail("navigation-source", PMR007_ROUNDS_PARENT + ": " + str(exc))
     if MEDIATOR_GUIDE in indexed:
         try:
             navigation[MEDIATOR_GUIDE] = mediator_guide_source_bytes(repo, allow_original=True)
@@ -873,7 +1041,8 @@ def check(repo, owners, cross):
             fail("owner", str(path) + " is not a regular pinned discovery owner")
             continue
         try:
-            body = safe_path(repo, path).read_bytes()
+            body = (navigation[path] if path == PMR007_ROUNDS_PARENT and path in navigation
+                    else safe_path(repo, path).read_bytes())
             raw = b"blob " + str(len(body)).encode("ascii") + b"\0" + body
             digest = (hashlib.sha1(raw) if len(row["git_oid"]) == 40 else hashlib.sha256(raw)).hexdigest()
             if (digest != row["git_oid"]
