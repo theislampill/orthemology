@@ -458,7 +458,7 @@ class ReaderPilotTests(unittest.TestCase):
         ]
         self.reject(self.check(owners=owners, cross=cross), "rendering-target")
 
-    def ci_owner_fixture(self):
+    def ci_owner_fixture(self, *, hosted=False):
         path = self.repo / ".github/workflows/validate.yml"
         path.parent.mkdir(parents=True)
         before = ("name: validate\npermissions:\n  contents: read\njobs:\n"
@@ -474,6 +474,11 @@ class ReaderPilotTests(unittest.TestCase):
                 "          python -B tests/test_reader_pilot.py\n"
                 "          python -B -O tests/test_reader_pilot.py\n"
                 "          python -B scripts/check_reader_pilot.py\n")
+        if hosted:
+            anchor = "      - name: Repository hygiene + honesty checks\n"
+            before = before.replace(anchor,
+                "      - name: Dependency lock consistency\n"
+                "        run: python scripts/validate_dependency_lock.py\n" + anchor)
         path.write_text(before)
         self.git("add", ".github/workflows/validate.yml")
         self.git("commit", "-qm", "fixture operational CI owner")
@@ -492,6 +497,100 @@ class ReaderPilotTests(unittest.TestCase):
         path, owners, before, candidate, step = self.ci_owner_fixture()
         self.assertNotEqual(candidate, before)
         self.assertEqual(self.check(owners=owners), [])
+
+    def hosted_ci_owner_fixture(self):
+        path, owners, before, candidate, reader_step = self.ci_owner_fixture(hosted=True)
+        # Exercise the actual published workflow block, independently of any
+        # checker constant. This input contains no source or proof execution.
+        workflow = (ROOT / ".github/workflows/validate.yml").read_text()
+        start = "      - name: Source-alias admission and evidence controls\n"
+        anchor = "      - name: Dependency lock consistency\n"
+        self.assertEqual(workflow.count(start), 1)
+        self.assertEqual(workflow.count(anchor), 1)
+        addition = workflow[workflow.index(start):workflow.index(anchor)]
+        self.assertEqual(addition.count("      - name: "), 4)
+        candidate = candidate.replace(anchor, addition + anchor)
+        path.write_text(candidate)
+        return path, owners, before, candidate, addition
+
+    def test_exact_hosted_absence_ci_addition_keeps_prior_reader_form(self):
+        path, owners, before, candidate, addition = self.hosted_ci_owner_fixture()
+        path.write_text(candidate.replace(addition, "", 1))
+        self.assertEqual(self.check(owners=owners), [])
+        path.write_text(candidate)
+        self.assertEqual(self.check(owners=owners), [])
+
+    def test_hosted_absence_ci_admission_rejects_weakened_controls(self):
+        path, owners, before, candidate, addition = self.hosted_ci_owner_fixture()
+        changes = (
+            ("setsid --wait python", "setsid python"),
+            ("scripts/check_source_alias_absence.py run\n",
+             "scripts/check_source_alias_absence.py run || true\n"),
+            ("if: github.event_name == 'pull_request'", "if: always()"),
+            ("always() && github.event_name", "github.event_name"),
+            ("include-hidden-files: false", "include-hidden-files: true"),
+            ("if-no-files-found: error", "if-no-files-found: warn"),
+            ("archive: true", "archive: false"),
+            ("${{ runner.temp }}/r0002-source-alias-receipts/", "${{ github.workspace }}/"),
+            ("actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+             "actions/upload-artifact@v7"),
+            ("contents: read", "contents: write"),
+            ("python scripts/validate_repo.py", "true"),
+            ("python -B scripts/check_reader_pilot.py\n",
+             "python -B scripts/check_reader_pilot.py || true\n"),
+        )
+        for old, new in changes:
+            with self.subTest(control=old):
+                self.assertIn(old, candidate)
+                path.write_text(candidate.replace(old, new, 1))
+                self.reject(self.check(owners=owners), "owner")
+
+    def test_hosted_absence_ci_admission_rejects_missing_duplicate_or_reordered_steps(self):
+        path, owners, before, candidate, addition = self.hosted_ci_owner_fixture()
+        markers = (
+            "      - name: Source-alias admission and evidence controls\n",
+            "      - name: Combined public source-alias absence and exact restoration\n",
+            "      - name: Receive bounded source-alias evidence\n",
+            "      - name: Preserve bounded source-alias evidence\n",
+        )
+        offsets = [addition.index(marker) for marker in markers] + [len(addition)]
+        steps = [addition[a:b] for a, b in zip(offsets, offsets[1:])]
+        alterations = (
+            addition + addition,
+            "".join(steps[1:]),
+            steps[1] + steps[0] + steps[2] + steps[3],
+            steps[0] + steps[1] + steps[3] + steps[2],
+        )
+        for changed in alterations:
+            with self.subTest(block=changed):
+                path.write_text(candidate.replace(addition, changed, 1))
+                self.reject(self.check(owners=owners), "owner")
+
+    def test_hosted_absence_support_paths_have_a_finite_operational_boundary(self):
+        scripts = (
+            "check_source_alias_absence.py", "source_alias_absence_boundary.py",
+            "source_alias_absence_context.py", "source_alias_absence_continuations.py",
+            "source_alias_absence_evidence.py", "source_alias_absence_guard.py",
+            "source_alias_absence_metadata.py", "source_alias_absence_population.py",
+            "source_alias_absence_reader.py",
+        )
+        tests = ("test_source_alias_absence_boundary.py", "test_source_alias_absence_evidence.py",
+                 "test_source_alias_absence_population.py")
+        for directory, names in (("scripts", scripts), ("tests", tests)):
+            for name in names:
+                node = self.repo / directory / name
+                node.parent.mkdir(parents=True, exist_ok=True)
+                node.write_text("# Fixture engineering support, not a scholarly source.\n")
+                self.git("add", "--", str(node.relative_to(self.repo)))
+        self.assertEqual(self.check(), [])
+        for directory in ("scripts", "tests"):
+            # A similar filename is still an unadmitted fixture source.
+            unexpected = self.repo / directory / "source_alias_absence_unreviewed.py"
+            unexpected.write_text("# Fixture unreviewed research software.\n")
+            self.git("add", "--", str(unexpected.relative_to(self.repo)))
+            self.reject(self.check(), "corpus-currentness")
+            self.git("reset", "--", str(unexpected.relative_to(self.repo)))
+            unexpected.unlink()
 
     def test_ci_owner_extension_cannot_remove_an_existing_gate(self):
         path, owners, before, candidate, step = self.ci_owner_fixture()

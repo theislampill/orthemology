@@ -267,7 +267,7 @@ def check_collection_result_routes(repo, owners, cross):
 
 
 def permitted_reader_ci_addition(repo, row, body):
-    """Admit exactly the reviewed additive CI step, not mutable science owners.
+    """Admit the two reviewed additive operational CI increments.
 
     Every original workflow byte, gate and permission must survive. This
     narrowly scoped operational change is not a free-form hash exemption.
@@ -289,8 +289,48 @@ def permitted_reader_ci_addition(repo, row, body):
         b"          python -B scripts/check_reader_pilot.py\n"
     )
     before = original.stdout
-    return (before.count(anchor) == 1 and addition not in before
-            and body == before.replace(anchor, addition + anchor, 1))
+    if before.count(anchor) != 1 or addition in before:
+        return False
+    reader_candidate = before.replace(anchor, addition + anchor, 1)
+    if body == reader_candidate:
+        return True
+    # The hosted absence increment has its own finite, independently reviewed
+    # transaction and evidence boundary. Every original workflow byte and the
+    # complete earlier reader block must survive this second exact insertion.
+    absence_anchor = b"      - name: Dependency lock consistency\n"
+    absence_addition = (
+        b"      - name: Source-alias admission and evidence controls\n"
+        b"        env:\n"
+        b"          PYTHONPATH: scripts\n"
+        b"          PYTHONDONTWRITEBYTECODE: \"1\"\n"
+        b"        run: |\n"
+        b"          python -B tests/test_source_alias_absence_population.py\n"
+        b"          python -B tests/test_source_alias_absence_boundary.py\n"
+        b"          python -B tests/test_source_alias_absence_evidence.py\n"
+        b"      - name: Combined public source-alias absence and exact restoration\n"
+        b"        id: source_alias_absence\n"
+        b"        if: github.event_name == 'pull_request'\n"
+        b"        env:\n"
+        b"          PYTHONDONTWRITEBYTECODE: \"1\"\n"
+        b"        run: setsid --wait python -B scripts/check_source_alias_absence.py run\n"
+        b"      - name: Receive bounded source-alias evidence\n"
+        b"        if: ${{ always() && github.event_name == 'pull_request' && steps.source_alias_absence.outcome != 'skipped' }}\n"
+        b"        env:\n"
+        b"          PYTHONDONTWRITEBYTECODE: \"1\"\n"
+        b"        run: python -B scripts/check_source_alias_absence.py export\n"
+        b"      - name: Preserve bounded source-alias evidence\n"
+        b"        if: ${{ always() && github.event_name == 'pull_request' && steps.source_alias_absence.outcome != 'skipped' }}\n"
+        b"        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2\n"
+        b"        with:\n"
+        b"          name: r0002-source-alias-evidence-${{ github.run_id }}-${{ github.run_attempt }}\n"
+        b"          path: ${{ runner.temp }}/r0002-source-alias-receipts/\n"
+        b"          if-no-files-found: error\n"
+        b"          include-hidden-files: false\n"
+        b"          archive: true\n"
+    )
+    return (reader_candidate.count(absence_anchor) == 1
+            and absence_addition not in reader_candidate
+            and body == reader_candidate.replace(absence_anchor, absence_addition + absence_anchor, 1))
 
 
 
@@ -644,6 +684,16 @@ REFACTOR_EDIT_PATHS = {
     "README.md", "STATUS.md", "CONTRIBUTING.md",
     ".github/workflows/validate.yml", ".github/workflows/reader-refactor-snapshot.yml",
     "scripts/reader_census.py", "scripts/check_reader_pilot.py",
+    # Reviewed hosted absence transaction helpers and focused controls. This
+    # finite engineering-support population adds no source/work denominator;
+    # similarly named files still require their own disposition review.
+    "scripts/check_source_alias_absence.py", "scripts/source_alias_absence_boundary.py",
+    "scripts/source_alias_absence_context.py", "scripts/source_alias_absence_continuations.py",
+    "scripts/source_alias_absence_evidence.py", "scripts/source_alias_absence_guard.py",
+    "scripts/source_alias_absence_metadata.py", "scripts/source_alias_absence_population.py",
+    "scripts/source_alias_absence_reader.py",
+    "tests/test_source_alias_absence_boundary.py", "tests/test_source_alias_absence_evidence.py",
+    "tests/test_source_alias_absence_population.py",
     # Existing integrity owners for the finite A-AP duplicate retirement.
     "scripts/validate_ar8r_reconciliation.py", "tests/test_ar8r_v11_reconciliation.py",
     "docs/project-closure/ar8r-v11/SHA256SUMS",
