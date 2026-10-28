@@ -2485,9 +2485,15 @@ class ContinuationControllerRoutesTests(ContinuationGeometryRoutesTests):
         owner = json.loads((self.directory / "OWNER-MAP.json").read_text())
         rows = json.loads(subprocess.check_output(["git","show",owner["baseline"]["commit"]+
             ":docs/provenance/v5-research-continuations/SOURCE_MAP.json"],cwd=ROOT))["sources"]
-        actual_module = {v["path"] for v in rows if v["member"].endswith("/FullControllerCanonicalLaw.lean") and v.get("path")}
+        actual_module = {(v["sha256"], Path(v["member"]).name) for v in rows
+                         if v["member"].endswith("/FullControllerCanonicalLaw.lean") and v.get("path")}
         self.assertEqual(len(actual_module), 1)
-        self.assertTrue(actual_module <= paths)
+        digest, filename = actual_module.pop()
+        retained = f"experiments/orthemology-v5-successors/source-store/{digest}/{filename}"
+        self.assertIn(retained, paths)
+        self.assertEqual({self.cross["sources"][k]["sha256"] for k in all_keys
+                          if self.cross["sources"][k]["path"] == retained}, {digest})
+        self.assertEqual(hashlib.sha256((ROOT / retained).read_bytes()).hexdigest(), digest)
 
 
 class ContinuationPriorRoutesTests(ContinuationGeometryRoutesTests):
@@ -2754,13 +2760,21 @@ class ContinuationCollectionCompletionTests(unittest.TestCase):
 
     def test_original_restart_and_actual_cost_keep_their_proof_interfaces(self):
         expected = {
-            "continuation-observed-restart": "1547d34d2a53302e070e7a02131f242f9cb1d80f6aa0f96fc478844f630703a3.lean",
-            "continuation-generated-cost": "8b4014de8d7ae893631060dbe780cce434bccbce16524e6303e2c692f3fce46b.lean",
+            "continuation-observed-restart": (
+                "1547d34d2a53302e070e7a02131f242f9cb1d80f6aa0f96fc478844f630703a3",
+                "ConditionalContinuationLaw.lean"),
+            "continuation-generated-cost": (
+                "8b4014de8d7ae893631060dbe780cce434bccbce16524e6303e2c692f3fce46b",
+                "ActualCostMoments.lean"),
         }
-        for key, filename in expected.items():
-            paths = {self.cross["sources"][s]["path"] for s in self.work[key]["supporting_source_keys"]}
-            self.assertTrue(any(p.endswith(filename) for p in paths), key)
-            self.assertFalse(any(filename in w["title"] for w in self.cross["works"]))
+        for key, (digest, filename) in expected.items():
+            retained = f"experiments/orthemology-v5-successors/source-store/{digest}/{filename}"
+            sources = [self.cross["sources"][s] for s in self.work[key]["supporting_source_keys"]
+                       if self.cross["sources"][s]["path"] == retained]
+            self.assertEqual(len(sources), 1, key)
+            self.assertEqual(sources[0]["sha256"], digest)
+            self.assertEqual(hashlib.sha256((ROOT / retained).read_bytes()).hexdigest(), digest)
+            self.assertFalse(any(digest + ".lean" in w["title"] for w in self.cross["works"]))
 
     def test_shared_collection_records_and_future_agenda_are_not_proofs(self):
         self.assertIn("continuation-corpus-reference", self.work)
