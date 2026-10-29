@@ -2617,6 +2617,143 @@ Both density envelopes matter. A pure endpoint prior has zero empirical post-acq
 The density theorem does not cover uncontrolled singular endpoint tails, holes in the positive lower envelope, unbounded slowly varying factors, changing α, informative extra feedback or control-dependent sampling. The Beta continuous-CDF maximizer argument is not imported across atoms; no exact Bayes selector or computable argmax is asserted for this larger class. An α-revealing seed would permit the exact report qα everywhere and defeat the universal lower bound, which is why the independent-information contract is substantive. These statistical guarantees authenticate neither a scoring source nor any normative or metaphysical authority.
 
 
+### 9.9 Common observations, acquired-history laws and physical action time
+
+The preceding impossibility results use several different comparisons of probability laws. Their directions and their observable objects matter. A reference measure that dominates every model supports a countability argument; a nonzero measure dominated by every model transfers all of their almost-sure requirements to common paths. A construction with the right one-time marginals is still insufficient to realize a causal controller. This section makes those interfaces explicit and connects them to the controlled-restoration proof in [Collective Inquiry, §7.11](collective-inquiry-and-strategic-coordination.md#711-controlled-observations-and-eventual-correctness). The argument uses the public common-observation, necessity, generated-process and physical-clock sources cited below; their execution reports retain their separate historical scopes.
+
+#### A common lower reference and compatible eventual targets
+
+Let $`\nu_\theta`$ be probability laws on one measurable complete-path space $`\Omega`$, and let $`X_t:\Omega\to A`$ be one common measurable sequence of action readouts. Fix measurable target sets $`G_\theta\subseteq A`$. Suppose there is a nonzero measure $`\mu`$ such that
+
+
+```math
+\mu\ll\nu_\theta\quad\text{for every }\theta,
+\qquad
+\nu_\theta(E_\theta)=1,\qquad
+E_\theta=\{\exists N\ \forall t\ge N:\ X_t\in G_\theta\}.
+```
+
+
+
+**Proposition — Common-path target obstruction.** If the model family is finite, then $`\bigcap_\theta G_\theta\ne\varnothing`$. The same conclusion holds for an arbitrary model family when the action set $`A`$ is finite.
+
+For a finite family, absolute continuity makes every $`E_\theta`$ conull for $`\mu`$. Their finite intersection is conull and nonempty, since $`\mu`$ is nonzero. On a path in that intersection, take the maximum of the finitely many tail cutoffs; any later action belongs to every target. For finite $`A`$ and an arbitrary family, if the total intersection were empty, choose for each $`a\in A`$ one model whose target rejects it. This gives a finite subfamily with empty intersection, contradicting the first case. No uniform cutoff over all paths has been used. [common-observation-review], [common-observation-source]
+
+This is the opposite direction of domination from Lemma 23. There the actual restricted laws are dominated by one upper reference, and disjoint positive-mass readout events give a countability bound. An upper reference alone cannot impose compatible targets: the two Dirac laws at 0 and 1 are both dominated by their mixture, and the common readout $`X_t(\omega)=\omega`$ succeeds forever at the disjoint singleton targets. A zero lower reference would also be vacuous. The common readout is substantive: allowing a different constant action map for each model would replace one controller by a collection of model-informed controllers.
+
+There is a useful compactness extension. Let $`A`$ be a metric space with its Borel sets, let every $`G_\theta`$ be closed, and suppose that for some compact $`K\subseteq A`$ the common action sequence is eventually in $`K`$ almost everywhere for $`\mu`$. For each finite set of models, the preceding finite-intersection argument supplies a point in $`K`$ and all of those targets. The closed subsets $`K\cap G_\theta`$ therefore have the finite intersection property. Compactness gives
+
+
+```math
+K\cap\bigcap_\theta G_\theta\ne\varnothing.
+```
+
+
+This establishes compatible target values, not that the controller ever visits their total intersection. For $`K=[0,1]`$, $`G_n=[0,1/(n+1)]`$ and $`X_t=1/(t+1)`$, every individual target eventually contains the sequence, but the total intersection is $`\{0\}`$ and the sequence never reaches it. Without finite actions or a compact confinement condition, even compatibility can fail: on $`A=\mathbb N`$, take $`G_n=\{a:a\ge n\}`$ and $`X_t=t`$.
+
+The lower-reference assumption concerns complete paths. Consistent references on every finite observation prefix do not suffice. Compare the all-one Dirac sequence with independent fair bits. On each finite prefix, the all-one Dirac law is a nonzero common lower reference, but the complete all-one path has probability zero under the fair law. The controller that outputs 0 until the first observed zero and 1 thereafter succeeds eventually at $`\{0\}`$ in the Dirac model and at $`\{1\}`$ in the fair model. Thus prefix domination must be joined to an appropriate continuation argument before it can support a tail impossibility. This is precisely the role of the killed continuations in Theorem 22 and in the controlled-restoration necessity proof.
+
+#### Recurrence gives a positive event, not an observable last exit
+
+For a finite action set and an infinite issued-action sequence, define its exact recurrent set
+
+
+```math
+U_\infty=\{a:\ \forall N\ \exists t\ge N,\ X_t=a\}.
+```
+
+
+It is nonempty. There are finitely many possible nonempty values $`U`$, and the events $`E_U=\{U_\infty=U\}`$ partition the path space. Under a probability law some $`E_U`$ has positive probability. Every action outside such a $`U`$ occurs only finitely often on $`E_U`$, so
+
+
+```math
+E_U=\bigcup_{N\ge0}F(U,N),\qquad
+F(U,N)=E_U\cap\{\forall t\ge N:\ X_t\in U\}.
+```
+
+
+Some deterministic $`N`$ therefore gives a positive-probability event $`F(U,N)`$. Under eventual target success, a positive such cell can be chosen with $`U\subseteq G_\theta`$. [recurrence-review], [recurrence-scope]
+
+The exact recurrent-set condition is needed when concluding that a rival must accept every member of $`U`$. An arbitrary superset may contain actions that are never used. Strict positivity of the chosen cell is also needed for transfer; mere nonnegative probability says nothing. Finiteness of $`A`$ cannot be omitted from this selection: the sequence $`X_t=t`$ uses every natural-number action only once. Finally, $`N`$ is selected from a countable cover after establishing positive probability. It is neither a policy-observable final probe nor a stopping time, and no deterministic bound on all last errors follows.
+
+The substantive next step is an actual-law comparison. In the finite full-support model, a rival agreeing with the source on every action in $`U`$ has equivalent seed-and-prefix laws at each fixed $`N`$ and the same continuation after the process is killed on leaving $`U`$. That transfers positive mass of $`F(U,N)`$. The recurrence argument supplies the event; it does not supply those law identities. The controlled-restoration theorem consequently has one common policy before its universal model quantifier. Model-specific successful policies cannot discharge it. [necessity-proof], [micro-equivalence-review]
+
+#### Binding the causal simulator to the acquired experiment
+
+The causal oracle method gives another route to the same finite-information transfer. Its input representation must first be shown to generate the controller's actual experiment. Take finite action and observation alphabets, a model-independent private seed $`R`$ with law $`\rho`$, and a common measurable causal policy $`\pi(R,h)`$. The action is chosen from the acquired history before the next observation is revealed. With fresh feedback law $`P_{\theta,a}`$, a finite history $`h=((a_s,y_s))_{s<n}`$ has, for every measurable seed set $`D`$, the joint probability
+
+
+```math
+\Pr_\theta(R\in D,H_n=h)
+ =\rho(D\cap C_h)\prod_{s\lt{}n}P_{\theta,a_s}(y_s),
+\qquad
+C_h=\{r:\ \pi(r,h_s)=a_s\text{ for every }s\lt{}n\}.
+```
+
+
+The product uses every acquired observation with its multiplicity. Its proof is induction on the history length, using the conditional law of the fresh observation at the newly selected action. Equality of this formula for every finite history yields equality of the generated infinite-history laws on their product sigma algebra. Equality of one-time marginals would not do so. [seeded-necessity-review], [necessity-proof]
+
+For a comparison between models agreeing on $`U`$, represent feedback from actions in $`U`$ by common independent stacks, indexed by the action and its use count. Represent feedback outside $`U`$ by an independent sequence of rows in $`Y^A`$, drawing a new row at each outside-$`U`$ query and reading only its chosen-action coordinate. The private seed and the inside-$`U`$ stacks have one common law; the outside rows carry the model difference. Different requests consume different coordinates. The current action is fixed before the new outside row is read. Applying the joint-cylinder calculation shows that the simulated acquired histories have the stipulated controlled-feedback law under each model.
+
+It would be incorrect to condition a freshness argument on an enlarged state that already contains future stack values and then call the next coordinate independent of that entire state. The cylinder proof conditions on what the policy has acquired. The common stacks may be packaged with the simulator's seed for a measure comparison, but that packaging grants the controller no access to their unread entries.
+
+For strictly positive finite row laws $`p`$ and $`q`$, let
+$`c=\min_w q(w)/p(w)>0`$; necessarily $`c\le1`$. On the first $`n`$ outside rows their density ratio is at least $`c^n`$. Prefix locality then gives, for a measurable successful trace event restricted to at most $`n`$ outside queries,
+
+
+```math
+\Pr_q(B\cap F_n)\ \ge\ c^n\Pr_p(B\cap F_n),
+```
+
+
+provided the common seed law and the same causal readout are used. The unbounded finite-query event is the countable union of the $`F_n`$. Positive mass on it lies in some bounded piece and transfers to the actual rival law. No single positive lower constant is asserted for that whole union, and no absolute continuity of the complete infinite outside tapes is required. [generic-query-review]
+
+The qualitative transfer has a broader countable-alphabet form. Let the oracle alphabet $`Y`$ be nonempty and countable with its discrete sigma algebra, and let the evaluator state space be arbitrary measurable. Measurable transitions for each fixed symbol give a jointly measurable transition at this countable interface. Prefix locality factors the trace restricted to $`F_n`$ through the common initial state and the first $`n`$ oracle symbols. An actual full-support iid rival gives strictly positive mass to every finite word. On the countable word space its only null subset is empty, so every source finite-prefix law is absolutely continuous with respect to that rival prefix law. With the same independent seed measure in both product inputs, the stated SFinite hypotheses—countable sums of finite measures—permit the product, restriction and measurable-pushforward steps. They yield domination of bounded-query trace laws and, by the countable union over $`n`$, of finite-query trace laws. A positive source event in this region therefore has positive mass under the actual rival. No positive minimum likelihood ratio is asserted over an infinite word population; the finite $`c^n`$ bound above is a stronger quantitative special case. Probability language additionally requires normalized input laws. The audited primitive also states an outer-measure-set transfer; the tail-event applications here use measurable events and do not rely on that stronger interface. [generic-query-review]
+
+A trace space may contain malformed records that the evaluator never produces, such as a constant action record paired with an ever-growing outside-query counter. Let $`B`$ be the measurable tail event expressing the required action property, and let $`F_n`$ be the measurable event of at most $`n`$ outside queries in the trace. Prove from the evaluator's action/counter invariant that generated source runs in $`B`$ have finitely many such queries. Under the actual source trace law this gives $`\Pr_p(B)=\Pr_p(B\cap\bigcup_n F_n)`$. Positive source mass then lies in some measurable $`B\cap F_n`$. Transfer that bounded piece and push it through the established measurable action readout; the actual-law identity gives positive rival probability to the same observable tail property. This argument never forms the image of the evaluator as a measurable set. A relation proved only on generated runs is used to establish the source-law equality, not imposed on every element of the ambient trace space. [seeded-necessity-review]
+
+Theorem 24's common upper-reference construction permits correlated actual seed/oracle laws when their seed marginals are appropriately dominated. That theorem does not by itself prove transfer to a specified rival. Equal seed marginals and equal observation marginals do not determine the joint acquired law: let $`R`$ and $`Y`$ be fair independent bits in one model and let $`Y=1-R`$ in another. Both marginals agree, but $`\Pr(R=Y)`$ changes from $`1/2`$ to zero. The product feedback construction above is a sufficient actual-law premise; a replacement with correlations must prove the required joint or conditional comparison.
+
+These interfaces also delimit the policy theorem's permissions claim. For one fixed common menu $`\Gamma`$, the full-support theorem applies to the restricted targets $`G_\theta\cap\Gamma`$. Its queue construction is legal at every finite history, including histories the policy never reaches, because every chosen plan is nonempty and lies in $`\Gamma`$. An out-of-menu default is harmless only when the construction proves it is never used. Early target errors can still be permitted actions. A changing menu needs a different invariant. Likewise, a zero-probability revealing observation can allow one bad probe followed by correct repair forever even when the recurrent good sets themselves are indistinguishable; it invalidates the full-support necessity argument, rather than contradicting it. [static-license-review], [seeded-necessity-review]
+
+#### From finite blocks to a measurable physical action stream
+
+A macro-process whose outcomes are finite action lists must be connected to physical time. For a path of lists $`B_0,B_1,\ldots`$, define
+
+
+```math
+L_0=0,\qquad L_n=\sum_{j\lt{}n}|B_j|.
+```
+
+
+Assume $`L_n\to\infty`$. For each physical time $`t`$, choose the least index $`k`$ with $`L_{k+1}>t`$ and read entry $`t-L_k`$ of $`B_k`$. Minimality ensures $`L_k\le t<L_{k+1}`$, so the entry exists. This concatenates the actual lists in order, including when some lists are empty. If every action in $`B_j`$ is good for all $`j\ge N`$, every physical action at time $`t\ge L_N`$ is good. No uniform upper bound on block lengths is required. Unbounded cumulative length is essential: an infinite sequence of empty blocks satisfies eventual block goodness vacuously and issues no infinite action stream. [physical-flattening-review]
+
+A fixed finite-prefix decoder has a stronger contract. Suppose $`A`$ is countable and $`B_j`$ are measurable finite-list random variables. Define a total decoder $`D_t`$ by concatenating only $`B_0,\ldots,B_t`$, taking entry $`t`$ if it exists and a fixed default otherwise. It is measurable: the finite tuple of lists ranges over a countable discrete space, and each output fibre is a countable union of measurable tuple fibres. If every block is nonempty, then $`L_{t+1}\ge t+1`$, so $`D_t`$ agrees with the physical concatenation for every $`t`$. Pointwise nonemptiness almost surely for each $`j`$ suffices, by taking the countable intersection of those probability-one events. [measurable-physical-review]
+
+Mere unbounded cumulative length does not justify this particular prefix budget. With blocks $`(0),(),(1),(),(2),(),\ldots`$ and default 99, the full concatenation has action 1 at physical time 1, while $`D_1`$ sees only $`(0),()`$ and returns 99. The pathwise flattening lemma remains true; the proposed decoder is the part that fails. One can instead use a suitably measurable first-crossing construction, or prove the stronger nonemptiness premise before using $`D_t`$. The two constructions must not be identified without that proof.
+
+A decoder measurable in completed block records is not thereby causal at each physical action. A two-action block's completed record can contain the observation obtained after its second action; a function of that record could inspect it when selecting a purported first action. Physical nonanticipation therefore needs a further invariant: the next issued action is determined by the common seed and the already acquired physical history. The queue reconstruction in [Collective Inquiry, §7.12](collective-inquiry-and-strategic-coordination.md#712-recursive-restoration-with-zero-observation-probabilities) proves this for its policy by induction on that history. It does not retroactively enlarge the earlier decoder's measurable-function theorem.
+
+#### Planned costs, observed exits and realized error counts
+
+The finite generated-process argument and its recursive successor count different objects. A planned block is a proposed list; a realized record must say how much of it was executed, which observations were acquired and whether an exit changed the next phase. A state-only reset can forget the exit observation and cannot recover its acquisition law merely from the new phase label. The recorded construction retains that observation and the executed prefix. When an observation changes the surviving support and hence the permitted menu, its old suffix may need to be abandoned. This differs from the fixed full-support queue in Collective Inquiry §7.11, whose proof deliberately completes a nonempty plan before replanning. [generated-process-review], [recursive-action-review]
+
+With zero observation probabilities, truth retention is a statement about positive-probability outcomes: updating the candidate support by the observed feedback cannot remove the true model on such a transition. A strict decrease of the finite surviving support bounds the number of such support changes. These facts support the recursive construction, but the stopped-outcome law must still account for its exit mass as well as its nonexit trajectories. An unnormalized killed law is not a normalized law of complete outcomes.
+
+For a physical error conclusion, let $`C_j`$ be the nonnegative integer number of bad actions in the realized $`j`$th record, counted with multiplicity. If the generated law proves
+
+
+```math
+\sum_j\mathbb E[C_j]<\infty,
+```
+
+
+monotone convergence gives finite expectation of $`\sum_j C_j`$, hence $`\sum_jC_j<\infty`$ almost surely. There are therefore only finitely many records containing bad actions. Together with unbounded physical length and eventual block goodness, this proves finitely many actual errors. The integer count is load-bearing: the real charges $`2^{-j}`$ have a finite sum and are positive at every index. Nor does an almost-surely finite count alone establish a finite expected count.
+
+Indexing matters when the record of a just-completed block is stored in its successor state. The initial state may carry an empty placeholder; the first $`n`$ executed plans then correspond to the next $`n`$ records, rather than the first $`n`$ state labels. If every post-initial record is nonempty almost surely, discard the placeholder and use the countable-intersection argument before applying the fixed decoder. A planned-cost bound can replace the realized-count bound only after an explicit inequality and this index correspondence have been proved.
+
+These are mathematical interfaces between a process law, its records and the action stream it actually generates. They do not supply a new execution receipt, an expected-time guarantee absent from the hypotheses, or a real sensor model. The common-observation and physical-time conclusions sharpen what a restoration argument must establish; they do not authenticate a normative target or identify the source of its authority.
+
 ## 10. Assumptions, negative results, and open scope
 
 The positive-fibre and Fisher theorems quantify over the full strictly positive joint-law family. On a constrained reachable family, use its actual differences; the density proof may fail. For example, with three audit outcomes, a binary target, fixed weights $`w_j=1/3`$, and $`J=p_{1,1}`$, equation (12) has $`\dot w=0`$. The section is invariant and its signature is injective, so the flow descends there despite conditional dependence at fixed $`q`$. This does not contradict the full-domain rigidity theorem.
@@ -2758,6 +2895,12 @@ adoption follows from those reported checks.
 
 **Edition status:** new source-bound consolidated exposition. The companion review record binds the exact text, source population, independent findings, corrections, and proposed predecessor retirement. Review of this exposition does not confer owner acceptance or silently amend an accepted paper. None of those records is needed to follow the mathematical arguments above.
 
+### Common-path and physical-action interfaces
+
+Section 9.9 incorporates the [common-observation proof and controls][common-observation-review], its [compactness extension][common-observation-source], the [ordinary necessity proof][necessity-proof] and the [seeded actual-law review][seeded-necessity-review]. The recurrence selection is also documented in the [independent recurrence review][recurrence-review] and its [formal scope note][recurrence-scope]. The [generic query review][generic-query-review] supports the finite-query transfer with its product-law premise; the more permissive common upper-reference theorem in §9.7 retains its different conclusion.
+
+The [policy-equivalence review][micro-equivalence-review] and [static-menu review][static-license-review] are reconciled with the already developed controlled-restoration theorem in Collective Inquiry §7.11. The [generated-process review][generated-process-review], [recursive-action review][recursive-action-review], [pathwise flattening review][physical-flattening-review] and [measurable decoder review][measurable-physical-review] distinguish planned blocks, stopped outcomes, recorded acquisitions and physical actions. The proofs above preserve their nonempty-block, freshness, true-retention and index conditions. The [root review][root-cold-review] and [formalization register][formalization-scope] retain the finite-model and standard-Borel boundaries of their respective arguments; an ordinary statistical passage is not certified by a neighboring formal module. Source code, historical target counts and execution logs remain independently scoped evidence, not newly executed tests or new incorporation credit for results already present in the accepted works.
+
 ### References
 
 1. Orthemology. *Continuation-Complete Orthings: Sharp information loss, minimal predictive memory, and safe strategic composition*, finite predictive closure, sharp moment recovery, approximate memory and continuation-preserving reduction, treated in §§2.2–2.6. Its reduction identities and strategic arguments are treated in [Physical Realisation, §5.4](physical-realisation-and-continuation.md#54-what-an-eliminated-variable-can-leave-behind) and [Collective Inquiry, §5](collective-inquiry-and-strategic-coordination.md#5-strategically-sufficient-information-and-hard-coordination). [Exact source][1].
@@ -2892,3 +3035,19 @@ Repository references identify exact public source editions, not mutable current
 [t4-recovery-introduction]: https://github.com/theislampill/orthemology/blob/0e92ccbd8c16190ad6b18e6e61cd86db07d47202/docs/provenance/v5-research-continuations/notes/c8dc35d9a1f4ae42417737923ca5bc276d80d60a0865655a34b55de83570d6ee.md
 [t4-recovery-status]: https://github.com/theislampill/orthemology/blob/0e92ccbd8c16190ad6b18e6e61cd86db07d47202/docs/provenance/v5-research-continuations/notes/32266a84e5e96404970a7420dc690e71db78323281fd10805a899c6ca67b52e2.md
 [t4-report-review]: https://github.com/theislampill/orthemology/blob/0e92ccbd8c16190ad6b18e6e61cd86db07d47202/docs/provenance/v5-research-continuations/notes/9412522bec33bc12a790e1610d328b160a00cf25eea03126ec219f01abc5e5ac.md
+
+[common-observation-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/ad15c28206a020cc7c063c17309d6bd3c05e182377a398c7507875523df7feb4.md
+[generated-process-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/1b7488aeafc74b7115479a8cf73c0abf04d89c3924109aa922ee6099e32be2d8.md
+[generic-query-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/9e00aaaaa63828e05d252e134dc225e2718461540301138a30567fbb63a24eb9.md
+[micro-equivalence-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/673111801ec83a2118743de3cd851f7a3db8e6c9580750f3fe766a9626b0f498.md
+[static-license-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/bd5e18cb3616a7ead45cc407da8ebe72274358edcd12459f4109ad155e2f53b2.md
+[necessity-proof]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/50cf2306b486db59fd7a2ecf77d07b3b54c3e486745f0b7308cb091de1c3ec61.md
+[recurrence-scope]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/1f97b7f6e879f4ebe42b26620aac0c75095345f4ec65bfe2979ecd32aa538dbf.md
+[measurable-physical-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/e6be2257c2dabfd15057f1c59603518d1ba20976068579bd31512ec1f5bfafce.md
+[physical-flattening-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/ad4909aa4015f759a7494c5a0b5ddfa0c4ccaaf6d14ad7c89386db53e01385d6.md
+[recurrence-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/63494364aeb423cecee01e1b347a4dfed7e2c4b544c90d456465520378810d40.md
+[recursive-action-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/18c1e07537712caaadf60d6bf8f25272aaf8c1767722bd56b3b5f1ed7258ee73.md
+[common-observation-source]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/71899f46c0346c901fd19697436beaa511b9814f879835604bbe23264d062aeb.md
+[root-cold-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/51c98ce4cbc011f1e4d4d2af7fa9a34319f53713b876977bc9b16c74f0e258dc.md
+[seeded-necessity-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/890c6bc8949f630878e9d3de6bed22c7070d0b4f0d7c43d7fa96f4c7a6d91607.md
+[formalization-scope]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e.md

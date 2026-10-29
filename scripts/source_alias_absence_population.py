@@ -118,3 +118,27 @@ def derive_required(repo: Path, classes: list[dict]) -> list[str]:
     for path in required:
         public_identity(repo, path, originals[path])
     return required
+
+
+def derive_checkpoint_classes(repo: Path) -> list[dict]:
+    """Separate checkpoint87 fixture population; inherited B1180 is unchanged."""
+    repo = Path(repo).resolve()
+    sys.path.insert(0, str(repo / 'scripts'))
+    source = importlib.import_module('resolve_t20_v6_source')
+    require(Path(source.__file__).resolve() == repo / 'scripts/resolve_t20_v6_source.py',
+            'Checkpoint population consumer imported from another checkout')
+    rows = []
+    for alias, binding in source._checkpoint_copy_catalog().items():
+        canonical = binding['canonical']
+        body = source.checkpoint_copy_bytes(repo, alias)
+        original = ('100644', 'blob', binding['blob'], binding['bytes'])
+        identity = public_identity(repo, canonical, original)
+        require(public_identity(repo, alias, original) == identity,
+                'Checkpoint fixture requires every exact original alias present')
+        require((len(body), hashlib.sha256(body).hexdigest()) ==
+                (identity['bytes'], identity['sha256']), 'Checkpoint resolver and population differ')
+        rows.append(dict(alias=alias, canonical=canonical, cohort='checkpoint87', **identity))
+    aliases = {r['alias'] for r in rows}; retained = {r['canonical'] for r in rows}
+    require(len(rows) == len(aliases) == 87 and len(retained) == 85 and not aliases & retained,
+            'Checkpoint finite population differs')
+    return sorted(rows, key=lambda row: row['alias'])

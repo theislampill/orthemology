@@ -434,6 +434,91 @@ This is an elementary composition of the exact-potential argument with a warrant
 The converse holds at the same scope: if the pulled-back potentials differ by a constant on a component, every corresponding edge within it has the same increment. Hence a cross-version check can be reduced to a forest once both versions' exactness and the state correspondence are established. This reduces the mathematical comparison burden without replacing semantic validation. If the meaning of a state, loss, unit or target has changed, equality of the numbers is not sameness of the standard. An omitted transition can also invalidate a claimed whole-graph certificate without contradicting any earlier finite calculation. Actual truth calibration, function, authority and uptake therefore remain the separate questions in §7.2.
 
 
+### 7.4 Corrective compatibility, norm selection and intellectual ownership
+
+The distinction between exact correction and warranted correction can be sharpened by the common-repair theorems. They establish a genuine restriction on possible standards. Under the fixed additive, positive-curvature assumptions on a categorical simplex with at least three outcomes, common local repair at every interior baseline forces the generators to agree up to positive scale and affine terms. This conclusion is not inserted as a premise: it follows from their shared tangent projection and the way distinct coordinates can vary across coherent contexts. Even the universal availability of a strict common local nudge has that consequence in this setting. [Common Repair, §§4.2 and 5.2](../mathematics/common-repair-and-geometric-obstructions.md#42-a-categorical-rigidity-theorem)
+
+The operational requirement itself still needs justification. Objective correctness, coherence and the claim that each actual standard permits some correction do not entail that one correction must work across every unresolved standard. The demand for universally available standard-blind correction is stronger. Once independently defended, it excludes a mathematically specified class of incompatible pluralities and narrows the normative question. Its force should neither be erased as a mere restatement nor enlarged into a derivation of every normative premise. The source comparison develops this distinction, including the positive and negative consequences below. [S33]
+
+#### What a compatibility class fixes
+
+The classification does not select the actual score. Every singleton class passes a common-repair requirement. On a general finite hull, the higher-rank theorem permits different positive scales on different constrained dependency blocks and leaves free coordinates unrestricted. Those freedoms can change comparisons among coherent alternatives while preserving the same local corrective access.
+
+For an explicit example, take a product of two three-outcome simplices with truth $`(e_1,e_1)`$ and loss
+
+
+```math
+L_a((x,y),(v,w))=a_1\|x-v\|^2+a_2\|y-w\|^2,
+\qquad a_1,a_2>0.
+```
+
+
+The coherent reports $`(e_2,e_1)`$ and $`(e_1,e_2)`$ have losses $`2a_1`$ and $`2a_2`$. Their ranking reverses when the relative block scales reverse. Within each block the tangent projection is unchanged by positive scaling, so the common local repair condition persists. Corrective compatibility has constrained the geometry without fixing every normative tradeoff. A separately warranted symmetry or substantive score axiom can impose further restrictions; that extra warrant remains part of the argument.
+
+The scope is equally important on the positive side. If every member of an arbitrary family has universal joint correctability with one fixed anchor under the higher-rank block theorem's hypotheses, the anchor projection repairs them all. The conclusion follows from the exact structural relation to that anchor. It does not follow from an abstract principle that pairwise intersecting repair sets have a common point. Binary constrained blocks have their own classification, and the three-outcome proof cannot be imported merely by making three encoded copies of a two-state problem. [Common Repair, §§4.4–6](../mathematics/common-repair-and-geometric-obstructions.md#44-the-general-higher-rank-theorem)
+
+Nor can context identity be omitted. A family of context-dependent generators can agree with a fixed score near each local baseline without being one fixed globally equivalent generator. The earlier temporal-transport result similarly requires an independently warranted correspondence of states and units. Under an injective affine encoding, transporting the score by composition preserves its Bregman comparisons; duplicated coordinate weights add, while perturbations off the encoded image introduce a new problem. These are concrete restrictions on applying a norm across contexts. They do not by themselves identify the norm with anyone's intellectual state.
+
+#### Causal access to a norm and authority for it
+
+For the binary weighted quadratic family, the coherent projection of an input $`(x,y)`$ has first coordinate
+
+
+```math
+t=\alpha x+(1-\alpha)(1-y),
+\qquad c=(t,1-t).
+```
+
+
+At $`(x,y)=(1/2+\varepsilon,1/2)`$ this becomes
+$`t=1/2+\alpha\varepsilon`$. An exact projection therefore determines $`\alpha`$, and a merely accepted repair supplies the less exact norm readout proved in [Common Repair, §2.4](../mathematics/common-repair-and-geometric-obstructions.md#24-exact-binary-repair-cells-and-the-information-they-encode). Increasingly precise correction requires correspondingly adequate dependence on the norm parameter. Two models with identical complete available input and private-randomness laws cannot make the same controller satisfy disjoint repair requirements.
+
+A complete algebraic implementation uses two input channels with gains $`\alpha`$ and $`1-\alpha`$, carrying $`x`$ and $`1-y`$, and a summing operation. This shows how the parameter can enter a correction mechanism through its constitution. It does not require an internally stored sentence declaring the norm correct. A physical gain network is only an idealized realization of that algebra; exact real arithmetic is not a claim about the precision of an actual device.
+
+Two further questions remain. Choosing $`\alpha`$ after the output solely to make that output count as correct changes the target contract and supplies no correction under the original unresolved standards. Fixing $`\alpha`$ as a causally effective parameter does explain the output, but its presence alone does not justify its normative authority. A source account must explain why that parameter is the correct standard and, if relevant, whose understanding it expresses. An impersonal proposal that supplies the same causal alignment must be assessed with that full structure granted, rather than refuted by deleting its parameter and observing that the impoverished mechanism fails.
+
+#### Endogenous functional standards and their explanatory burden
+
+Organizational theories offer a substantive candidate for making some standards nonarbitrary within a system. Mossio, Saborido and Moreno connect a trait's contribution to maintaining an organization with the organization's production or maintenance of that trait. Their account distinguishes a trait needed in a particular maintenance regime from one indispensable across the available regimes. The resulting functional assessment must be evaluated at those organizational and environmental conditions; extension to epistemic or moral authority requires a further argument. [P29]
+
+Kolchinsky and Wolpert instead quantify the causal relevance of system–environment correlations by comparing viability under interventions that scramble them. Their negative-entropy proposal retains an analyst-specified viability function, system boundary, initial distribution and timescale. They explicitly distinguish low entropy from preserving a particular identity and discuss alternative viability measures. This provides a precise intervention-based account of information relevance while leaving its application to original understanding and categorical authority open. [P30]
+
+These accounts change the comparison required of an intellectual-source argument. It must explain why internally maintained, nonaccidental corrective organization is inadequate for the intended kind of representation or authority. The mere availability of a mathematical description is not such an explanation. Conversely, calling the organization endogenous does not settle which of its criteria is warranted. For any chosen real $`r`$, the update
+
+
+```math
+\alpha_{t+1}=\frac{\alpha_t+r}{2}
+\quad\text{has}\quad
+\alpha_t-r=2^{-t}(\alpha_0-r).
+```
+
+
+Each choice of $`r`$ yields a unique globally attracting fixed point. Convergence and uniqueness therefore leave the choice of warranted target undecided. If a further criterion justifies the update law, that criterion belongs in the explanation.
+
+Mutual maintenance must also be typed through time. The dynamics $`x_{t+1}=y_t`$ and $`y_{t+1}=x_t`$, under suitable external conditions, exhibit a causal feedback relation between successive states. They do not say that one particular state wholly produces or authorizes itself in the same respect. A prohibition on complete same-token self-grounding cannot be applied to cross-time organization merely because both descriptions use a circular diagram. The substantive grounding argument must identify which dependence is alleged and what would make it vicious.
+
+A limited result constrains an attempted ascent from survival normativity to a necessary ground. Suppose an action is valued solely by the probability that its bearer continues to exist. If every admitted intervention preserves that existence with probability one, every action receives value one. Such a value function cannot distinguish truthful from false representation or fitting from unfitting selection. When necessary existence is invoked, this argument applies only if the admitted interventions lie within the modal range of that necessity claim. A richer criterion concerning a particular organization, flourishing, fitting relations or effects on dependent beings adds substantive content.
+
+This is not a refutation of a negative-entropy viability measure, which is not the same function as bare existence. Nor does it refute an account that independently grounds goodness in a necessary nature. It identifies a missing premise in the narrower inference from necessary survival alone to substantive wisdom. Biological function, identity preservation and the normative character of an ultimate ground cannot be interchanged without argument.
+
+#### Original understanding and the identity of its bearer
+
+Semantic nonderivativeness and causal independence concern different relations. An original intentional state, in the relevant sense, does not acquire all of its aboutness from another subject's interpretation. That does not entail that its bearer is uncaused or metaphysically independent. Searle's distinction between intrinsic and derived intentionality explicitly combines intrinsic intentional states with their causal realization in biological organisms. His position supplies a concrete rival to treating a causal-to-semantic transfer principle as common ground. [P31]
+
+A serious alternative can consequently grant actual thinkers, original understanding and correct norm-sensitive action while placing those states in dependent subjects. It owes an adequate realization and grounding account. A positive intellectual-source argument owes a relation making the relevant content a state of the proposed ultimate bearer itself, rather than merely an effect sustained in another being. The common-repair theorem supplies neither theory merely by describing the precision of a successful correction.
+
+There is nevertheless a valid positive hosting conditional. Let the intended modal range be fixed. Assume that one and the same representational particular $`r`$ exists throughout that range; that $`r`$ essentially has one constitutive intellectual host $`h`$; and that hosting $`r`$ entails $`h`$'s existence. Then $`h`$ exists throughout the range. The proof applies the latter two premises at every world at which the first guarantees $`r`$. The conclusion is necessary existence relative to that range.
+
+The work lies in the premises and their identity conditions. A necessary normative truth, a proposition type, an everywhere available repair law and one necessarily existing representational particular are different objects. Even $`\forall w\,\exists r`$ with the required content does not give $`\exists r\,\forall w`$ for one particular. An independently identified host must also be shown to be the same being as an independently proposed ultimate ground. Those steps cannot be obtained by renaming a norm parameter or by repeating a universal theorem.
+
+Minimal subjecthood should be preserved when it has actually been established. If a defended constitutive account makes the admitted original understanding a subject's understanding, an assignment that grants precisely that understanding while denying every subject is inconsistent with the account. But this modest positive conclusion does not yet establish practical agency, unrestricted knowledge, stable wisdom, truthful disclosure or the identity of a revealed source. Those are further claims, addressed by their distinct arguments elsewhere in this work.
+
+#### What would advance the source argument
+
+The repaired mathematical interface makes the remaining philosophical alternatives sharper. A constitutive argument could show that the selected objective content is intrinsically representational in the proposed ground and requires an intellectual host. A bearer-identity argument could connect an independently established host to that ground. A common intervention could distinguish uptake or ownership at the relevant bearer and episode, provided both candidates have warranted implementation maps for the same manipulation. An abductive comparison could show why intellectual hosting, normative integration and efficacious selection explain the actual facts better than impersonal essential structure together with dependent minds. Such a comparison must compare explanatory laws and unresolved premises, not merely count predicates. Finally, a source-conditional argument can proceed from authenticated content, identified reference and warranted recipient uptake while preserving that conditional scope. [S33]
+
+An experiment that changes information about $`\alpha`$ is not automatically an intervention on original understanding or on acting because an outcome is fitting. It may establish the causal access requirement while leaving those interpretations alike. Conversely, the strengthened corrective geometry is genuine explanatory material for an affirmative source argument: it narrows the structures that could realize integrated correction and prevents an incompatible standard plurality from being assumed harmless. The further intellectual, teleological and source arguments in §§4–6 and 9–12 must be assessed with those gains and these remaining obligations both intact.
+
 ## 8. What interventions can distinguish
 
 A functional explanation may have consequences that ordinary observation cannot distinguish. A useful intervention must discriminate the competing explanations through the complete response relevant to the inquiry. Merely distinguishing a surface action can leave its target, source attribution, or normative mode unsettled. [S10]
@@ -1255,6 +1340,8 @@ The modern comparisons also retain edition limits. Smith's 2025 author manuscrip
 
 The exact public-source citations identify inherited arguments, corrected propositions, and source-specific appraisals. They confer no new owner adoption, and their historical holds are not silently converted to scientific acceptance. Conversely, an older source's incomplete common-premise argument is not made the governing verdict for a later affirmative argument with different premises. The mathematical results and philosophical reasoning needed for this chapter are present in the chapter itself.
 
+The corrective-source argument in §7.4 incorporates the complete public synthesis [S33] while retaining its distinction between compatibility, causal access, authority, original representation and bearer identity. The organizational conditions in P29, the viability-definition and identity limitations in P30, and the intrinsic/derived intentionality and biological-realization discussion in P31 were checked in the cited primary texts at those bounded portions. This does not constitute a fresh assessment of their entire research programmes or a new experimental result.
+
 ## References
 
 ### Primary literature
@@ -1314,6 +1401,12 @@ The exact public-source citations identify inherited arguments, corrected propos
 **P27.** Minyoung Huh, Brian Cheung, Tongzhou Wang and Phillip Isola. *The Platonic Representation Hypothesis*. arXiv:2405.07987v1 (13 May 2024), §2 preliminaries and §6. [Inspected preprint](https://arxiv.org/html/2405.07987v1). The cited scope is the kernel definition, convergence hypothesis and stated limitations, not a new experiment or a claim of universal convergence.
 
 **P28.** W. Sun and colleagues. *Learning produces an orthogonalized state machine in the hippocampus*. *Nature* (2025), [doi:10.1038/s41586-024-08548-w](https://www.nature.com/articles/s41586-024-08548-w). The abstract and published model-comparison account support the limited empirical attribution in §8.10; no complete experimental replication or fresh data analysis is claimed.
+
+**P29.** Matteo Mossio, Cristian Saborido and Alvaro Moreno. “An Organizational Account of Biological Functions.” *British Journal for the Philosophy of Science* 60(4) (2009): 813–841, especially §§4–6. [Primary article](https://www.ias-research.net/wp-content/uploads/2019/02/Mossio_25592036.pdf). [DOI](https://doi.org/10.1093/bjps/axp036).
+
+**P30.** Artemy Kolchinsky and David H. Wolpert. “Semantic information, autonomous agency and non-equilibrium statistical physics.” *Interface Focus* 8 (2018): 20180041, §§1.2, 4 and 5. [Author-hosted primary article](https://artemyk.github.io/assets/pdf/papers/Kolchinsky_Wolpert_2018_Semantic%20information,%20autonomous%20agency%20and%20non-equilibrium%20statistical%20physics.pdf). [DOI](https://doi.org/10.1098/rsfs.2018.0041).
+
+**P31.** John R. Searle. “Intentionality and its place in nature.” *Synthese* 61 (1984): 3–16, opening distinctions and biological-realization argument. [Primary article](https://www.newdualism.org/papers/J.Searle/Searle-Synthese-1984.pdf).
 
 ### Public research arguments
 
@@ -1385,3 +1478,6 @@ The following subject descriptions identify the public Orthemology arguments use
 
 
 **S32.** Orthemology public research. *Norm provenance, correction vectors and truth-connected function*. Exact Git object `e07ad6ae52dae67a8b2a341fe5e2c9377a1c9713`, with public intake correction `98781176fe14912cb0ee6d1c541793e4bb906aab` and proposal-status note `c2817d65685bac1984ab631ff0966b406c9afe31`, in the [public source edition](https://github.com/theislampill/orthemology/commit/a7ff0e33d1a299db640041c46b1af81ca70851f6). The vector and its countermodels are source-relative assessment proposals. Sections 7.2–7.3 supply the complete necessary mathematical arguments and retain the source, function, bearer, recipient and execution distinctions. No new execution of the absent historical checker or complete formal certificate is claimed.
+
+
+**S33.** Orthemology public research. *What the new repair theorems contribute to the source/intentionality frontier*. [Exact public source edition](https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/21f9e48328bfbf843b5f0371168f84c51768dec6260b3798fca4a461900aa006.md). Exact Git object `b5f6e9140796030880f6dbc723514bfb393d23c2`. Section 7.4 incorporates its compatibility, causal-access, endogenous-function, modal-hosting and bearer-identity arguments, preserving the distinct bridge choices and negative findings. The mathematical antecedents are proved in Common Repair and Information and Inquiry; this synthesis establishes no new kernel result, empirical implementation or source adoption.

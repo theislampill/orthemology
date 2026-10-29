@@ -7256,7 +7256,7 @@ class ContinuationOwnerEditionTests(unittest.TestCase):
         self.git("add", "--", path)
         self.rejected(currentness=True)
         self.edition(self.current)
-        extra = "docs/provenance/v5-research-continuations/UNREGISTERED.json"
+        extra = "/".join(("docs", "provenance", "v5-research-continuations", "UNREGISTERED.json"))
         (self.repo / extra).write_bytes(b"Synthetic unregistered source.\n")
         self.git("add", "--", extra)
         self.rejected(currentness=True)

@@ -56,6 +56,8 @@ p=\frac{t}{1+t}\bar v+\frac1{1+t}y
 
 Every displayed weight is positive. In particular, if numbers $`q_j\geq0`$ have $`\sum_j\lambda_jq_j=0`$, each $`q_j`$ is zero. Several rigidity proofs below depend on this implication; replacing relative interior by an arbitrary boundary point would lose it.
 
+**Two interior conditions.** Relative interior in this argument is intrinsic to the affine hull. It supplies positive weights even when listed truths coincide; a duplicate contributes another positive weight without increasing the tangent rank. It does not imply interiority in each ambient coordinate. For example, the singleton hull $`\{0\}`$ has relative interior $`\{0\}`$, while its coordinate is on the boundary of $`[0,1]`$. The smooth results below separately exclude constant coordinates when they need derivatives on $`(0,1)`$. Counting encoded coordinates or repeated truth rows cannot replace that hypothesis. [finite-hull-review], [hull-interface-review]
+
 ### 1.3 Bregman losses and two identities
 
 For a differentiable strictly convex potential $`F`$, use the truth-first Bregman convention
@@ -144,6 +146,8 @@ Its strictly positive barycentric average is zero, so every term is zero. The ve
 Conversely, if the projected vector is common, relative interior makes $`p+\varepsilon z\in C`$ for all sufficiently small $`\varepsilon`$. Its difference from $`b_\varepsilon`$ is $`W`$-normal to $`T`$. Pythagorean expansion proves (6). Since $`h\notin T`$, the normal vector is nonzero. The implication from strict to weak repair is immediate. $`\square`$
 
 There is no asserted uniform positive gain over an infinite family of matrices. The common feasible scale is geometric, but the positive numbers $`\|Q_Wh\|_W^2`$ may have infimum zero.
+
+The feasible scale is also directionwise. With $`p`$ and the common projected direction $`z`$ fixed, a relative ball around $`p`$ contains $`p+\varepsilon z`$ for sufficiently small $`\varepsilon`$. No positive radius works uniformly over an unbounded collection of directions: already on a nondegenerate interval, scaling a nonzero tangent direction eventually takes its endpoint outside the interval at any fixed positive $`\varepsilon`$. The theorem quantifies over each fixed direction before choosing its scale. [root-cold-review]
 
 Universal directionwise repair is equivalent to equality of the projection operators. All projections already agree on $`T`$, so it is enough to compare their action on directions spanning $`\mathbb R^n/T`$. This is a sufficient finite test set, not a theorem that a particular query count is minimal.
 
@@ -336,6 +340,41 @@ The operator $`P_TH_F(p)`$ restricted to $`T`$ is positive definite. Absorbing t
 $`\xi=O(\varepsilon+\eta)=O(\varepsilon)`$.
 Divide the original inequalities by $`\varepsilon`$ and apply (1) to recover (16).
 
+There is an equivalent finite-state proof of the needed linear bound that makes the assumptions especially visible. For $`H=H_F(p)`$ and $`\xi\in T`$, put
+
+
+```math
+\Phi(\xi)=\sum_j\max\{(p-v_j)^\top H\xi,0\}.
+```
+
+
+If $`\Phi(\xi)=0`$, every displayed derivative is nonpositive. Its positive barycentric average is zero, so all are zero. Since the vectors $`p-v_j`$ span $`T`$, this implies $`\xi^\top H\xi=0`$ and hence $`\xi=0`$. When $`T\ne\{0\}`$, compactness of its unit sphere gives a constant $`\kappa>0`$ with $`\Phi(\xi)\ge\kappa\|\xi\|`$. For $`T=\{0\}`$ the displacement is already zero.
+
+After the preceding localization, the finitely many differentiable loss comparisons have remainders bounded by $`\delta\|\xi\|+o(\varepsilon)`$, with $`\delta`$ as small as required. The approximate inequalities therefore give
+
+
+```math
+\kappa\|\xi\|
+ \le C\varepsilon+m\eta+m\delta\|\xi\|+o(\varepsilon).
+```
+
+
+Choose $`m\delta<\kappa/2`$ and absorb that term. This proves $`\|\xi\|=O(\varepsilon+\eta)`$ directly from the complete collection of truth-state inequalities. It explains why a bound on average regret, or on a single truth state, cannot replace the argument. [smooth-robustness-review]
+
+For a precise control on the tempting square-root inference, let
+$`\varepsilon_k=k^{-4}`$, $`\eta_k=k^{-6}`$ and $`d_k=k^{-3}`$. Then
+$`\eta_k/\varepsilon_k\to0`$ and $`d_k^2=\eta_k`$, while
+$`d_k/\varepsilon_k=k\to\infty`$. A quadratic regret bound by itself would permit this displacement. The coherence constraint is equally essential to the linear coercivity: at $`p=(1/3,1/3,1/3)`$, the point $`c=p-d\mathbf1`$ satisfies
+
+
+```math
+\|c-e_j\|^2-\|p-e_j\|^2=3d^2
+\quad\text{for every }j,
+```
+
+
+although $`\|c-p\|`$ is of first order in $`d`$. This positive subprobability vector is outside the sum-one hull. Nor can zero barycentric weights support the step from a zero weighted average to vanishing of every derivative. These controls identify the exact proof premises; they are not counterexamples within those premises. Linear-scale tolerance also changes the question. For the unscaled quadratic matrices $`I`$ and $`\operatorname{diag}(1,2,2)`$, let $`b=p+\varepsilon e_1`$ at an interior simplex point. For either matrix and each truth vertex, the excess loss from leaving the report at $`p`$ is $`-2\varepsilon(p_1-v_{j1})-\varepsilon^2\le2\varepsilon`$. Thus tolerance $`2\varepsilon`$ admits the unchanged baseline despite the nonproportional standards. Its ratio to $`\varepsilon`$ is two, so it does not satisfy the sublinear assumption.
+
 ### 4.2 A categorical rigidity theorem
 
 **Theorem 3 — Universal categorical repair.** Let $`C`$ be the categorical simplex with $`n\geq3`$, and let the fixed additive generators satisfy (14). The following are equivalent:
@@ -419,6 +458,8 @@ on every nonsingleton block. No proportionality is required on a free singleton.
 
 Only the attained coordinate intervals occur in (22); the theorem supplies no information about parts of a generator that the truth hull never visits. Nor does it classify rank-one constrained blocks.
 
+For a supplied finite truth list, the tangent space, its coordinate dependencies and the ranks of its blocks are finite linear-algebra data. That observation makes the structural hypothesis checkable from exact truth coordinates; it does not give a decision procedure for the identities between arbitrary smooth functions in (22). It also gives no automatic numerical robustness: an arbitrarily small perturbation can remove an exact linear dependence. Approximate data require an error model and a separately proved stability result. The earlier block-classification source records a then-unresolved rank-one case; the explicit treatment in Section 6 supplies the later mathematics and is not withdrawn by that historical status. [block-classification-pre-review]
+
 ### 4.5 One anchor can serve an arbitrary family
 
 Under the hypotheses of Theorem 4, let $`G`$ be fixed and let $`\{F_k\}_{k\in K}`$ be any family. If every pair $`(F_k,G)`$ has universal local common repair, (22) holds separately for each $`k`$. The one $`G`$-minimizer constructed above then strictly improves every $`F_k`$ and $`G`$. Its existence scale depends on the anchor and the local geometry, not on the cardinality of $`K`$.
@@ -438,6 +479,10 @@ $`\eta_\varepsilon=\sum_{k,j}|\Delta_{k,j}(\varepsilon)|`$
 is nonnegative, is $`o(\varepsilon)`$, and bounds every excess.
 
 This is an existential tolerance statement. It does not give exact repair, does not satisfy every prescribed $`o(\varepsilon)`$ allowance, and need not yield $`o(\varepsilon^2)`$ error. Necessity works for an arbitrary family by fixing one standard at a time; this sufficiency argument uses finiteness.
+
+The regularity and family quantifiers in this proof are independent. Continuous second derivatives of the generator make each forecast-loss difference differentiable at the interior baseline, which is enough for the $`o(\varepsilon)`$ remainder used here. They do not by themselves give a quadratic remainder bound for that forecast-loss difference. A stronger estimate needs corresponding control of its derivative. Likewise, pointwise vanishing of a family of remainders does not bound their supremum: the elementary array $`r_n(k)=1`$ when $`n=k`$ and zero otherwise tends to zero for each fixed $`n`$ as $`k\to\infty`$, but $`\sup_n r_n(k)=1`$. This array is a control on the exchange of quantifiers, not a claimed realization by an infinite smooth score family. The exact anchored result in §4.5 avoids this issue through structural proportionality, not through a hidden uniform Taylor estimate. [approximate-iff-source], [hull-interface-review]
+
+The [local approximate source][approximate-iff-source] also reports a sharper binary control: a quadratic and a complement-symmetric quartic generator have the same Hessian tangent projection along the coherent line, yet common exact repair fails on a perturbation interval. The reported control excludes every allowance $`\eta\le\varepsilon^2/100`$, hence every prescribed $`o(\varepsilon^2)`$ allowance eventually. Its quartic forecast losses are nonconvex, so this report does not contradict the convex-forecast-loss midpoint result discussed below. The selected source does not give the defining quartic polynomial; the threshold is preserved here as an attributed source report, not a newly rederived numerical theorem. Its exact formal control and original verification evidence retain that separate verification role.
 
 ### 5.2 Universal nudges versus an individual endpoint
 
@@ -496,6 +541,8 @@ b+\frac2{33}d=(139/330,191/660,191/660)
 is coherent, so the common nudge points toward a coherent target. Yet no common weak coherent endpoint exists. If $`c_0+c_1+c_2=1`$, the $`I`$-loss at truth $`e_0`$ forces
 $`(1-c_0)^2\leq33/100`$.
 Averaging the second loss over $`e_1,e_2`$, and minimizing over $`c_1,c_2`$ with their sum fixed, forces $`c_0^2\leq17/100`$. Their sum implies $`c_0^2+(1-c_0)^2\leq1/2`$, hence $`c_0=1/2`$, contradicting $`c_0^2\leq17/100`$.
+
+The displayed coherent endpoint itself illustrates the failure of continuing a short nudge without checking the full loss: its unscaled $`I`$-loss at $`e_0`$ exceeds that of $`b`$ by $`68/9075`$. A negative initial derivative ensures an improving initial segment, not improvement at every point on that ray. In higher codimension, two distinct Hessian-normal subspaces may also share a nonzero vector; the categorical argument uses their being lines. [nudge-review]
 
 Konek's analysis of common improvements under epistemic and practical scoring standards is an important antecedent [6]. The distinction here is between an initial derivative and a complete endpoint, together with the stated universal quantifiers; it is not a claim that common-descent analysis began with this exposition.
 
@@ -565,6 +612,18 @@ D_{F\circ L}(x,y)
 Calling the left side a Bregman divergence additionally requires convexity of $`F\circ L`$. Affine $`L`$ makes the remainder vanish. Nonlinear injectivity does not. With $`L(x)=x^2`$ on the positive line and $`F(z)=z^2/2`$, the remainder is $`y^2(x-y)^2`$; at $`x=2,y=1`$, the pulled-back loss is $`9/2`$, while the divergence of the composite potential is $`11/2`$.
 
 Any transport of a repair theorem must therefore specify the truth set, feasible forecasts, disturbances, and the whole transformed loss. Additive separability need not survive a general coordinate change. Curved representational divergences provide a broader setting for this distinction [8]; equation (29) is the exact elementary identity needed here.
+
+**Repeated coordinates and the transported domain.** For an injective affine encoding $`\phi(x)=Mx+a`$, the exact identity just established is
+
+
+```math
+D_{F'\circ\phi}(v,b)=D_{F'}(\phi(v),\phi(b)).
+```
+
+
+The truth population, forecast, candidate repair set and allowed perturbations must all be transported by the same map. If coordinate $`x_i`$ is repeated in several encoded slots and the encoded potential is quadratic with slot weights $`w_\ell`$, its pullback gives $`x_i`$ the combined weight $`\sum_{\ell:\,\ell\text{ repeats }i}w_\ell`$. Equal weights per slot can therefore produce unequal weights per original coordinate. Replacing that pullback by an unweighted source score changes the standard.
+
+An off-image perturbation that makes two copies disagree introduces a forecast absent from the source problem. The identity does not authorize an equivalence for that enlarged intervention domain. In particular, three slots encoding only two genuine truth states do not satisfy the three-outcome premise of Theorem 3. Faithful transport preserves the actual joint hull and its tangent dependencies; it does not replace them by a product hull or by a larger categorical simplex. These facts connect the representation boundary here to the norm-identity requirement in §5.4. [source-bridge-synthesis]
 
 ## 6. Rank-one blocks and comparison of means
 
@@ -1446,6 +1505,12 @@ The exposition preserves both positive constructions and negative results. The f
 7. Mika Meitz and Alexander Shapiro. “Minimax asymptotics.” arXiv:2504.11269v1 (2025), Proposition 2.3. [Primary preprint][7].
 8. Frank Nielsen. “Curved representational Bregman divergences and their applications.” arXiv:2504.05654v5, Sections 2 and 4. [Primary preprint][8].
 
+**Nearest-result attribution.** The received [primary-literature comparison][literature-scope] identifies several antecedents that constrain interpretation of the results. [Joyce, *Accuracy and Coherence*](https://fitelson.org/topics/joyce_2009.pdf), §§10–12, already distinguishes one dominator for each legitimate score from a dominator common to all scores. [Schervish, Seidenfeld and Kadane, *Proper Scoring Rules, Dominated Forecasts, and Coherence*](https://www.stat.cmu.edu/tr/tr865/tr865.pdf) supplies the single-score dominance/coherence ancestry with explicit regularity and boundary distinctions. That report is theirs, not Predd's. The separate [Predd and collaborators paper, *Probabilistic Coherence and Proper Scoring Rules*](https://www.princeton.edu/~kulkarni/Papers/Journals/j071_2009_PreSeirLieOshKulPoo_TransIT.pdf), establishes the Bregman-projection mechanism used in single-score coherent dominance. Common-correction quantifiers and projection sufficiency are therefore not introduced here.
+
+[Leitgeb and Pettigrew, *An Objective Justification of Bayesianism I*](https://fitelson.org/coherence/leitgeb_pettigrew.pdf), derives score restrictions under its Euclidean inaccuracy conditions; the present compatibility classification does not independently select the quadratic form. [Pettigrew, *Aggregating Incoherent Agents Who Disagree*](https://doi.org/10.1007/s11229-017-1613-7), gives the complementary-symmetry condition in the published Theorem 12(iii), and his [2018 replies](https://research-information.bris.ac.uk/files/165202389/PPR_replies.pdf), manuscript p. 16 and footnote 8, give the arithmetic correction for complementary binary forecasts. The binary quadratic/log example in §4.3 is a specialization of that prior mechanism. The latter argument's convex forecast losses must not be conflated with mere convexity of the Bregman generator.
+
+Two differently scoped comparisons also matter. [Forbes, *Compatible Weighted Proper Scoring Rules*](https://arxiv.org/pdf/1311.1131), studies compatibility of baseline maximization, which is not the common statewise coherent-endpoint condition used here. [Kelley, *A Contextual Accuracy Dominance Argument for Probabilism*](https://doi.org/10.1111/phpr.70098), treats arbitrary opinion sets through scorable contexts; the finite-dimensional local theorems here do not subsume that programme. These bibliographic comparisons retain the received review's exact distinctions and edition cautions. The comparison records a pending check of Konek's published correction and distinguishes Pettigrew's published theorem numbering from the earlier draft; it does not supply a completed new collation of either. They are not a new systematic primary-literature review or a certificate of global originality.
+
 ### 12.2 Public mathematical predecessors
 
 The following citations identify the public mathematical source edition underlying this exposition. Their historical filenames authenticate the sources; the definitions, proofs and scientific organization of this chapter stand on their own.
@@ -1479,6 +1544,8 @@ The following received Lean sources provide formal statements and proofs for the
 | Rational optimal margins and actual gain binding | [Coupling certificates][formal-lp], `CouplingLPValues.coupled_primal`, coupled_dual_upper, product_primal, product_dual_upper, coefficientG_binding and coefficientF_binding |
 
 The source bodies have been inspected in preparing this exposition. No new kernel execution or complete formalization of all the general smooth theorems is asserted here. The formal dependencies and independent review records retain their own evidential roles; incorporating a prose argument does not by itself justify removing them.
+
+The [geometry proof review][geometry-proof-review], [finite-hull review][finite-hull-review], [nudge review][nudge-review] and [smooth robustness review][smooth-robustness-review] supply separate checks on orientation, finite truth populations, universal-versus-pointwise quantifiers and sublinear tolerance. Their proof explanations and countercontrols are incorporated at the relevant arguments above. The [formalization scope][formalization-scope] distinguishes particular kernel targets from the ordinary diagonal-stabilizer and higher-rank classification arguments. Historical successful compilation, mutation rejection or finite-enumeration reports concern those original targets and receipts. They do not establish that this assembled exposition has been executed, nor that every general theorem or philosophical application is kernel-certified.
 
 [1]: https://doi.org/10.1016/0041-5553(67)90040-7
 [2]: https://sites.math.washington.edu/~rtr/papers/rtr020-ElemVectors.pdf
@@ -1520,3 +1587,15 @@ The source bodies have been inspected in preparing this exposition. No new kerne
 [formal-geometry]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-continuations/source-store/6aed37421110678ab4ce732ee00ba61dc97397ffadc5f16941169309d1ccc44e.lean
 [formal-product]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-continuations/source-store/eb26c550b7ab1aaa3f74a29ffe945d8d00c84913b0cb8b588b3f88420b89bc13.lean
 [formal-lp]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-continuations/source-store/bcbdbaca18e8c2f5ab3c25e38b19587b128e215719ae3d9fc7823d7823935ed2.lean
+
+[approximate-iff-source]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/e46c8d347ed1864c6c65270b0b7e90eef0146815804bb9f783fa465cd3fbc8bc.md
+[block-classification-pre-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/b0ec9163de7f6deb49f44bb10ef1f279151ee78a30b9d2dd7ca9736d8bb62750.md
+[geometry-proof-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/4f3d54cd93718e479f1485c182058bcd5ee40c13e4b9f598e4a011e6a92adaa0.md
+[finite-hull-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/3efb043df2749e965a70ae815003952d0f7e3c1d203d4e04e04e24fd0892a20c.md
+[hull-interface-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/5c9fcd3012d9c41bc951cf78e2ccc29591ab8151a0037e6cd0ff07cabb0e54f4.md
+[nudge-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/36bf84b786280660b3ec4a5e3a110f04d98598cdbe49e7680a438de344a0dd06.md
+[smooth-robustness-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/1fa9f620cbab16c728d931520d777e8ef25090c52520dca39144ed43e2790459.md
+[root-cold-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/51c98ce4cbc011f1e4d4d2af7fa9a34319f53713b876977bc9b16c74f0e258dc.md
+[formalization-scope]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e.md
+[literature-scope]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/45ffbb9679d23bd16a43b4930ec615bb55f4c0c56705e5a0c90f0fec425a2a3e.md
+[source-bridge-synthesis]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/21f9e48328bfbf843b5f0371168f84c51768dec6260b3798fca4a461900aa006.md

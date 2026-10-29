@@ -1834,7 +1834,7 @@ class ContinuationOwnerRootMigrationTests(unittest.TestCase):
                             GIT_CONFIG_SYSTEM=os.devnull, GIT_OPTIONAL_LOCKS='0',
                             GIT_TERMINAL_PROMPT='0', GIT_NO_LAZY_FETCH='1', GIT_ALLOW_PROTOCOL='')
         self._git('init', '-q')
-        self.extra = 'docs/provenance/v5-research-continuations/unqualified-owner-control.md'
+        self.extra = '/'.join(('docs', 'provenance', 'v5-research-continuations', 'unqualified-owner-control.md'))
         for name, body in self.original.items():
             self._put(name, body)
         self._put(self.extra, b'unrelated protected fixture\n')
@@ -1915,6 +1915,193 @@ class ContinuationOwnerRootMigrationTests(unittest.TestCase):
         self._git('add', '--', name)
         self._put(name, self.current[name])
         self._gate(['preserved v5 or prior T20 baseline changed'])
+
+
+
+class CheckpointCopyMigrationTests(unittest.TestCase):
+    """Real finite public bodies in isolated Git/index and reference fixtures.
+
+    The original a7ff identities authenticate read-only before fixture creation.
+    Each synthetic commit then carries exactly those same 172 public objects.
+    No historical Python wrapper is executed or treated as currently qualified.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        import resolve_t20_v6_source as source
+        cls.source = source
+        if not callable(getattr(source, '_checkpoint_copy_catalog', None)):
+            raise AssertionError('finite checkpoint copy route is not implemented')
+        cls.catalog = source._checkpoint_copy_catalog()
+        if len(cls.catalog) != 87:
+            raise AssertionError('checkpoint fixture population differs')
+        cls.bodies = {}
+        for alias, binding in cls.catalog.items():
+            body = source.checkpoint_copy_bytes(projection.ROOT, alias)
+            cls.bodies[alias] = body
+            previous = cls.bodies.setdefault(binding['canonical'], body)
+            if previous != body:
+                raise AssertionError('retained fixture body conflicts')
+
+    def setUp(self):
+        import os
+        self.tmp = tempfile.TemporaryDirectory(prefix='checkpoint-copy-')
+        self.addCleanup(self.tmp.cleanup)
+        self.repo = pathlib.Path(self.tmp.name)
+        self.git_env = {k:v for k,v in os.environ.items() if not k.startswith('GIT_')}
+        self.git_env.update(GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=os.devnull,
+                            GIT_CONFIG_SYSTEM=os.devnull, GIT_OPTIONAL_LOCKS='0',
+                            GIT_TERMINAL_PROMPT='0', GIT_NO_LAZY_FETCH='1',
+                            GIT_NO_REPLACE_OBJECTS='1', GIT_ALLOW_PROTOCOL='')
+        self.environment = patch.dict(os.environ, self.git_env, clear=True)
+        self.environment.start(); self.addCleanup(self.environment.stop)
+        self._git('init', '-q')
+        for name, body in self.bodies.items():
+            self._put(name, body)
+        self.extra = self.source.CHECKPOINT_COPY_ROOT + 'CP99/unqualified-fixture.md'
+        self._put(self.extra, b'unrelated protected fixture\n')
+        self._git('add', '--', *self.bodies, self.extra)
+        self._git('-c', 'user.name=Fixture', '-c', 'user.email=fixture@example.invalid',
+                  'commit', '-qm', 'authentic public checkpoint objects in isolated fixture')
+        self.baseline = self._git('rev-parse', 'HEAD').decode().strip()
+        self.base_patch = patch.object(self.source, 'CHECKPOINT_COPY_BASE', self.baseline)
+        self.base_patch.start(); self.addCleanup(self.base_patch.stop)
+        self.alias = next(iter(self.catalog))
+        self.canonical = self.catalog[self.alias]['canonical']
+
+    def _git(self, *args, input=None):
+        import subprocess
+        return subprocess.run(
+            ['git', '--no-replace-objects', '--literal-pathspecs',
+             '-c', 'core.hooksPath=/dev/null', '-c', 'core.fsmonitor=false',
+             '-c', 'core.untrackedCache=false', '-c', 'gc.auto=0',
+             '-c', 'maintenance.auto=false', '-c', 'protocol.allow=never',
+             '-c', 'init.templateDir=', *args], cwd=self.repo, env=self.git_env,
+            input=input, capture_output=True, check=True).stdout
+
+    def _put(self, name, body):
+        target=self.repo/name; target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(body); target.chmod(0o644)
+
+    def _gate(self):
+        before=(self.repo/'.git/index').read_bytes()
+        with patch.object(projection, 'BASE', self.baseline), \
+             patch.object(projection, 'HISTORICAL_PROSE', {}), \
+             patch.object(projection, 'TYPED_GUIDES', {}), \
+             patch.object(projection, 'mediator_guide_source_bytes',
+                          side_effect=ValueError('no unrelated guide population in fixture')):
+            result=projection.check_preserved_roots(self.repo,{})
+        self.assertEqual((self.repo/'.git/index').read_bytes(),before,
+                         'checkpoint check wrote the active fixture index')
+        return result
+
+    def _reject(self, alias=None):
+        with self.assertRaises((ValueError,OSError)):
+            self.source.checkpoint_copy_bytes(self.repo,alias or self.alias)
+
+    def _row(self, alias):
+        binding=self.catalog[alias]
+        return {'repository_path':alias,'repository_revision':None,'disposition':'REUSE',
+                'git_blob':binding['blob'],'source_sha256':binding['sha256'],
+                'public_sha256':binding['sha256'],'source_bytes':binding['bytes'],
+                'public_bytes':binding['bytes']}
+
+    def test_all_87_present_absent_and_staged_absent_keep_exact_bytes(self):
+        self.assertEqual(self._gate(),[])
+        for alias in self.catalog:
+            self.assertEqual(self.source.source_bytes(self.repo,self._row(alias)),self.bodies[alias])
+            (self.repo/alias).unlink()
+        self.assertEqual(self.source.checkpoint_duplicate_paths(self.repo),set(self.catalog))
+        self.assertEqual(self._gate(),[])
+        self._git('add','-u','--',*self.catalog)
+        self.assertEqual(self._gate(),[])
+        for alias in self.catalog:
+            self.assertEqual(self.source.source_bytes(self.repo,self._row(alias)),self.bodies[alias])
+
+    def test_present_corruption_cannot_fall_back_to_a_correct_retained_copy(self):
+        self._put(self.alias,b'X'+self.bodies[self.alias][1:]); self._reject()
+        self.assertTrue(self._gate())
+
+    def test_wrong_missing_or_executable_counterpart_rejects_absent_alias(self):
+        (self.repo/self.alias).unlink()
+        target=self.repo/self.canonical
+        self._put(self.canonical,b'X'+self.bodies[self.canonical][1:]);self._reject()
+        self._put(self.canonical,self.bodies[self.canonical]);target.chmod(0o755);self._reject()
+        target.unlink();self._reject();self.assertTrue(self._gate())
+
+    def test_leaf_ancestor_and_dangling_alias_symlinks_never_mean_absence(self):
+        target=self.repo/self.alias;target.unlink()
+        target.symlink_to(self.repo/self.canonical);self._reject();target.unlink()
+        target.symlink_to(self.repo/'missing-fixture');self._reject();target.unlink()
+        parent=target.parent; moved=parent.with_name(parent.name+'-moved-fixture')
+        parent.rename(moved);parent.symlink_to(moved,target_is_directory=True)
+        self._reject()
+
+    def test_staged_alias_tamper_cannot_hide_under_worktree_absence(self):
+        self._put(self.alias,b'X'+self.bodies[self.alias][1:]);self._git('add','--',self.alias)
+        (self.repo/self.alias).unlink();self._reject();self.assertTrue(self._gate())
+
+    def test_staged_retained_tamper_cannot_hide_under_exact_worktree(self):
+        self._put(self.canonical,b'X'+self.bodies[self.canonical][1:]);self._git('add','--',self.canonical)
+        self._put(self.canonical,self.bodies[self.canonical]);(self.repo/self.alias).unlink()
+        self._reject();self.assertTrue(self._gate())
+
+    def test_unmerged_or_wrong_mode_index_is_rejected(self):
+        binding=self.catalog[self.alias];(self.repo/self.alias).unlink()
+        self._git('update-index','--cacheinfo','100755',binding['blob'],self.alias);self._reject()
+        self._git('update-index','--force-remove','--',self.alias)
+        records=''.join('100644 '+binding['blob']+' '+str(stage)+'\t'+self.alias+'\n'
+                        for stage in (1,2,3)).encode()
+        self._git('update-index','--index-info',input=records);self._reject();self.assertTrue(self._gate())
+
+    def test_unknown_paths_and_changed_population_fail_before_git(self):
+        with patch.object(self.source,'_continuation_git',side_effect=AssertionError('unlisted path reached Git')):
+            for name in (self.extra,self.alias+'.other','../'+self.alias,'/'+self.alias,self.alias.replace('/','\\'),None):
+                with self.subTest(path=name):self._reject(name) if name else self.assertRaises(
+                    ValueError,self.source.checkpoint_copy_bytes,self.repo,name)
+            with patch.object(self.source,'CHECKPOINT_COPY_MEMBERS',self.source.CHECKPOINT_COPY_MEMBERS[:-1]):
+                self._reject()
+
+    def test_source_row_requires_exact_current_copy_identity_and_role(self):
+        for field,value in [('git_blob','0'*40),('source_sha256','0'*64),('public_sha256','0'*64),
+                            ('source_bytes',0),('public_bytes',0),('disposition','ADD_EXACT'),
+                            ('repository_revision',self.baseline),
+                            ('repository_path','./'+self.alias),
+                            ('repository_path',self.alias.replace('/','//',1))]:
+            with self.subTest(field=field):
+                row=self._row(self.alias);row[field]=value
+                with self.assertRaises(ValueError):self.source.source_bytes(self.repo,row)
+
+    def test_unrelated_staged_changes_are_not_checkpoint_deletion_allowances(self):
+        (self.repo/self.alias).unlink()
+        self._put(self.extra,b'changed unrelated source\n');self._git('add','--',self.extra)
+        self._put(self.extra,b'unrelated protected fixture\n')
+        self.assertTrue(self._gate())
+
+    def test_missing_pinned_commit_rejects_even_present_exact_bodies(self):
+        with patch.object(self.source,'CHECKPOINT_COPY_BASE','0'*40):self._reject()
+
+    def test_root_and_relative_references_authenticate_before_exists(self):
+        import validate_internal_references as references
+        local=self.alias.rsplit('/',1)[0]+'/citation.md'
+        relative=self.alias.rsplit('/',1)[1]
+        with patch.object(references,'ROOT',str(self.repo)):
+            for absent in (False,True):
+                if absent:(self.repo/self.alias).unlink()
+                self.assertTrue(references._resolves('docs/reader/PAPER-CATALOGUE.md',self.alias))
+                self.assertTrue(references._resolves(local,relative))
+            self._put(self.alias,b'X'+self.bodies[self.alias][1:])
+            self.assertFalse(references._resolves('docs/reader/PAPER-CATALOGUE.md',self.alias))
+            self.assertFalse(references._resolves(local,relative))
+
+    def test_replacement_restores_exact_fixture_identity_vector(self):
+        before=self._git('ls-files','--stage','-z')
+        for alias in self.catalog:(self.repo/alias).unlink()
+        self._git('add','-u','--',*self.catalog);self.assertEqual(self._gate(),[])
+        for alias in self.catalog:self._put(alias,self.bodies[alias])
+        self._git('add','--',*self.catalog)
+        self.assertEqual(self._git('ls-files','--stage','-z'),before)
+        self.assertEqual(self._gate(),[])
 
 
 if __name__ == '__main__':

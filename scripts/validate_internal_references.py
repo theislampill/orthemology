@@ -36,6 +36,7 @@ from validate_repo import (load_source_map, original_packet_locator,
 from resolve_t20_v6_source import (
     TYPED_PROSE, TYPED_PROSE_REVISION, historical_source_bytes, HISTORICAL_PROSE_REVISION,
     CONTINUATION_COPY_ROOT, continuation_copy_bytes,
+    CHECKPOINT_COPY_PATHS, checkpoint_copy_bytes,
 )
 from validate_ar8r_reconciliation import (
     PMR007_DEEP_PREFIX, _pmr007_deep_original_members,
@@ -260,7 +261,29 @@ def _historical_projection_reference(src, cited):
         return False
 
 
+def _checkpoint_reference(src, cited):
+    """Authenticate a finite root/source-relative coordinate before exists()."""
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for candidate in candidates:
+        if candidate in CHECKPOINT_COPY_PATHS:
+            try:
+                checkpoint_copy_bytes(ROOT, candidate)
+                return True
+            except (ValueError, OSError):
+                return False
+    return None
+
+
 def _resolves(src, cited):
+    checkpoint = _checkpoint_reference(src, cited)
+    if checkpoint is not None:
+        return checkpoint
     historical = _historical_projection_reference(src, cited)
     if historical is not None:
         return historical

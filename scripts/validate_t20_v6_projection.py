@@ -22,6 +22,7 @@ from resolve_t20_v6_source import (
     HISTORICAL_PROSE_REVISIONS, MEDIATOR_APPROXIMATION, FISHER_AUDIT, readonly_git_diff,
     TYPED_GUIDES, typed_guide_source_bytes,
     CONTINUATION_COPY_ROOT, continuation_duplicate_paths,
+    CHECKPOINT_COPY_PATHS, checkpoint_duplicate_paths,
 )
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -215,6 +216,7 @@ def check_preserved_roots(root, objects):
     # combined worktree D or an unstaged return to original bytes.
     copy_authenticated = None
     owner_authenticated = None
+    checkpoint_authenticated = None
     for cached in (True, False):
         result = readonly_git_diff(root,
             ['git', '--no-replace-objects', 'diff', *(['--cached'] if cached else []),
@@ -228,6 +230,10 @@ def check_preserved_roots(root, objects):
                     status == 'D' and path.startswith(CONTINUATION_COPY_ROOT)
                     for status, path in zip(changes[::2], changes[1::2])):
                 copy_authenticated = continuation_duplicate_paths(root)
+            if checkpoint_authenticated is None and any(
+                    status == 'D' and path in CHECKPOINT_COPY_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                checkpoint_authenticated = checkpoint_duplicate_paths(root)
             if owner_authenticated is None and any(
                     status == 'M' and path in continuation_owners.PRESERVATION_OWNER_PATHS
                     for status, path in zip(changes[::2], changes[1::2])):
@@ -246,6 +252,7 @@ def check_preserved_roots(root, objects):
                     pass  # No modification allowance for an unqualified edition.
             if any(not ((status == 'D' and path in authenticated) or
                         (status == 'D' and path in (copy_authenticated or ())) or
+                        (status == 'D' and path in (checkpoint_authenticated or ())) or
                         (status == 'M' and path == MEDIATOR_GUIDE and guide_authenticated) or
                         (status == 'M' and path in typed_guides_authenticated) or
                         (status == 'M' and path in (owner_authenticated or ())))
