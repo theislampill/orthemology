@@ -117,12 +117,17 @@ def successor_packet_freeze(pkt_dir, packet):
     """
     profiles = {
         "experiments/episode-reification/": (
-            "scripts/generate_fixtures.py",
-            {"README.md", "scripts/generate_fixtures.py", "tests/test_smoke.py"}),
+            "experiments/episode-reification/scripts/generate_fixtures.py",
+            {"experiments/episode-reification/README.md",
+             "experiments/episode-reification/scripts/generate_fixtures.py",
+             "experiments/episode-reification/tests/test_smoke.py"}),
         "experiments/episode-reification-v2/": (
-            "scripts/generate_cases.py",
-            {"README.md", "scripts/generate_cases.py", "tests/test_smoke.py",
-             "harness/run_er.py", "analysis/analyze_er2.py"}),
+            "experiments/episode-reification-v2/scripts/generate_cases.py",
+            {"experiments/episode-reification-v2/README.md",
+             "experiments/episode-reification-v2/scripts/generate_cases.py",
+             "experiments/episode-reification-v2/tests/test_smoke.py",
+             "experiments/episode-reification-v2/harness/run_er.py",
+             "experiments/episode-reification-v2/analysis/analyze_er2.py"}),
     }
     packet_path = packet.get("path")
     if packet_path not in profiles:
@@ -137,6 +142,11 @@ def successor_packet_freeze(pkt_dir, packet):
         raise PacketFreezeError("source revision and packet tree must be full Git identities")
     if not isinstance(successors, dict) or set(successors) != allowed:
         raise PacketFreezeError("consumer successor file scope is incomplete or widened")
+    # Public bindings use complete repository coordinates. Only the exact
+    # admitted scope is converted to the original packet-relative hash format.
+    successors = {path.removeprefix(packet_path): identity for path, identity in successors.items()}
+    allowed = {path.removeprefix(packet_path) for path in allowed}
+    generator = generator.removeprefix(packet_path)
     actual_tree = _git_bytes("rev-parse", "--verify", revision + ":" + packet_path.rstrip("/")).strip().decode("ascii")
     if actual_tree != tree:
         raise PacketFreezeError("original packet tree does not match its admitted source")

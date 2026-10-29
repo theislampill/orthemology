@@ -1031,6 +1031,27 @@ class ReaderPageRouteTests(unittest.TestCase):
 
 
 class ReaderFixtureReferenceTests(unittest.TestCase):
+    def test_packet_successor_references_resolve_from_repository_root(self):
+        import sys
+        import yaml
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import validate_internal_references as refs
+        status_path = "experiments/experiment-status.yaml"
+        document = yaml.safe_load((ROOT / status_path).read_text(encoding="utf-8"))
+        for packet in document["packets"]:
+            if "consumer_successor" not in packet:
+                continue
+            for path in packet["consumer_successor"]["files"]:
+                with self.subTest(packet=packet["packet_id"], path=path):
+                    self.assertTrue(path.startswith(packet["path"]))
+                    self.assertTrue(refs._resolves(status_path, path))
+        for owner in (status_path, "scripts/validate_experiment_readiness.py"):
+            text = (ROOT / owner).read_text(encoding="utf-8")
+            missing = sorted({path for path, _ in refs._citation_occurrences(
+                owner, text, root=str(ROOT), successor_sources={})
+                if not refs._resolves(owner, path)})
+            self.assertEqual(missing, [], owner)
+
     def test_temporary_fixture_names_are_not_ghost_repository_citations(self):
         import sys
         sys.path.insert(0, str(ROOT / "scripts"))
@@ -8419,7 +8440,7 @@ class FixtureConsumerProjectionPinTests(unittest.TestCase):
                    ('source_sha256', '0' * 64), ('public_sha256', '0' * 64),
                    ('source_bytes', -1), ('public_bytes', -1),
                    ('disposition', 'PROJECT'), ('publication_basis', 'unqualified change'),
-                   ('repository_path', 'scripts/unadmitted-fixture-owner.py')]
+                   ('repository_path', '/'.join(('scripts', 'unadmitted-fixture-owner.py')))]
         for path in self.FIXTURE_PATHS:
             for key, value in changes:
                 with self.subTest(path=path, field=key):

@@ -32,11 +32,11 @@ packets:
     source_revision: a7ff0e33d1a299db640041c46b1af81ca70851f6
     source_tree: 37bfca73f448f524ef6b94bfe78dbe08cb061a28
     files:
-      README.md: 7ea04abc91a0964525d1257181dc08f4e412d4780b1f2b32e0f09179edaf40eb
-      scripts/generate_cases.py: 3b449a7580426fdf89f85612018473f92c3c2c274d4eea47e7046d1bcfe1bc89
-      tests/test_smoke.py: 65d2195b2723b00fb750f14b5487f6b267aa0132400eac96cdf2a1baac819dab
-      harness/run_er.py: 15af564935d25d8d43a6007d88377cbea76d785437dffaf1260ef57a305d7666
-      analysis/analyze_er2.py: 0a9b691158bdd5d9590ca50f5501dbe9057880e7720b16df1a40cd5923da11a2
+      experiments/episode-reification-v2/README.md: 7ea04abc91a0964525d1257181dc08f4e412d4780b1f2b32e0f09179edaf40eb
+      experiments/episode-reification-v2/scripts/generate_cases.py: 3b449a7580426fdf89f85612018473f92c3c2c274d4eea47e7046d1bcfe1bc89
+      experiments/episode-reification-v2/tests/test_smoke.py: 65d2195b2723b00fb750f14b5487f6b267aa0132400eac96cdf2a1baac819dab
+      experiments/episode-reification-v2/harness/run_er.py: 15af564935d25d8d43a6007d88377cbea76d785437dffaf1260ef57a305d7666
+      experiments/episode-reification-v2/analysis/analyze_er2.py: 0a9b691158bdd5d9590ca50f5501dbe9057880e7720b16df1a40cd5923da11a2
   required_remaining_gates: [owner execution authorization and spend, external preregistration (owner/external act)]
   run_exists: false
   licensed: nothing — no result, no adoption, no empirical claim
@@ -75,9 +75,9 @@ packets:
     source_revision: a7ff0e33d1a299db640041c46b1af81ca70851f6
     source_tree: 4f8f0ab50dd230b04a714671e56776446d7fcf0a
     files:
-      README.md: e27914d286579b38c1ad480618498dd8968d85464c06b7f6e26b73577e823bc7
-      scripts/generate_fixtures.py: 9c39be153165e8d1c5a074243fc5f4ba467862ccc0d433bb42e7471230e4b929
-      tests/test_smoke.py: 8678c6b1e7c5287e153503441ad825f618bb65fb3311d827199e4da509e9b2ad
+      experiments/episode-reification/README.md: e27914d286579b38c1ad480618498dd8968d85464c06b7f6e26b73577e823bc7
+      experiments/episode-reification/scripts/generate_fixtures.py: 9c39be153165e8d1c5a074243fc5f4ba467862ccc0d433bb42e7471230e4b929
+      experiments/episode-reification/tests/test_smoke.py: 8678c6b1e7c5287e153503441ad825f618bb65fb3311d827199e4da509e9b2ad
   required_remaining_gates: [superseded — do not run; see ER-2]
   run_exists: false
   licensed: nothing
