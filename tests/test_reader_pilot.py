@@ -1363,35 +1363,94 @@ class BulkConsumerProjectionPinTests(unittest.TestCase):
     }
 
     # Independently admitted coordinate additions; all original row fields stay exact.
-    COORDINATE_PINS = {
-        'docs/provenance/v5-research-continuations/notes/002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e.md':
-            ('002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e', 6680,
-             '2804e7b196437dd437f0099b15aa45a76249e63b', 'a7ff0e33d1a299db640041c46b1af81ca70851f6'),
-        'docs/provenance/v5-research-continuations/notes/34c1f25cd1144b386ff4c70a2fbfacc7da2a0fc87f5cd78b430badf260ab49f6.md':
-            ('34c1f25cd1144b386ff4c70a2fbfacc7da2a0fc87f5cd78b430badf260ab49f6', 1017,
-             '6bcd9f7c0faea3fe3037c1f188288555312517b1', 'b4d58482ae00f138782276ee5c4034c48bb2df19'),
-        'docs/provenance/v5-research-continuations/notes/36bf84b786280660b3ec4a5e3a110f04d98598cdbe49e7680a438de344a0dd06.md':
-            ('36bf84b786280660b3ec4a5e3a110f04d98598cdbe49e7680a438de344a0dd06', 7718,
-             'f43d9ffc34ad19eb1e4d14cb1a176a916d408a36', 'd0abc116b51f04c064fc60ebbdd511b63a795f45'),
-        'docs/provenance/v5-research-continuations/notes/4878fd0a4cf6c952af7cdbcb7e8a386c2730ff9986b74b8e39bf9b5077815b0f.md':
-            ('4878fd0a4cf6c952af7cdbcb7e8a386c2730ff9986b74b8e39bf9b5077815b0f', 15286,
-             'f419024deb2a40bf50f7315cdf2dfdde9ede77f6', 'a7ff0e33d1a299db640041c46b1af81ca70851f6'),
-        'docs/provenance/v5-research-continuations/notes/71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e.md':
-            ('71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e', 16844,
-             '75bb17ddd69e37db6530357307078d056b97ec16', 'd0abc116b51f04c064fc60ebbdd511b63a795f45'),
-        'docs/provenance/v5-research-continuations/notes/7d3cbeb8bcacdb5d28cb457801ba41de9b21f91542866fe5c5f13a4a632dadd9.md':
-            ('7d3cbeb8bcacdb5d28cb457801ba41de9b21f91542866fe5c5f13a4a632dadd9', 14328,
-             '07a1df58ff170334e07261c93af8345093b0f160', 'b4d58482ae00f138782276ee5c4034c48bb2df19'),
-        'docs/provenance/v5-research-continuations/notes/9438fdcbea8747c7e5599483096eca9541cfdf673d6a96866c019c5ced06519a.md':
-            ('9438fdcbea8747c7e5599483096eca9541cfdf673d6a96866c019c5ced06519a', 11145,
-             '80e45c60c8f4e71a8191f906d04afd4ab0384b06', 'b4d58482ae00f138782276ee5c4034c48bb2df19'),
-        'docs/provenance/v5-research-continuations/notes/b092780b29dd9fa00ac276142b090a5b8b88da79da9c278268264669e08f3d8c.md':
-            ('b092780b29dd9fa00ac276142b090a5b8b88da79da9c278268264669e08f3d8c', 29013,
-             '4e69862256f3014f8e94d528b13ff0f63dd7f3eb', 'b4d58482ae00f138782276ee5c4034c48bb2df19'),
-        'experiments/orthemology-v5-continuations/registry.json':
-            ('51e2cea236dd0a880c7243b2f9ccbd558c6c70f16f03ec0efa274f19d3d105ff', 192971,
-             'd90b5647de1cf290d3b7dbe20a805983c75f0fcf', '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
-    }
+    COORDINATE_PINS = {'docs/provenance/v5-research-continuations/notes/002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e.md': ('002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e',
+                                                                                                                             6680,
+                                                                                                                             '2804e7b196437dd437f0099b15aa45a76249e63b',
+                                                                                                                             'a7ff0e33d1a299db640041c46b1af81ca70851f6'),
+     'docs/provenance/v5-research-continuations/notes/34c1f25cd1144b386ff4c70a2fbfacc7da2a0fc87f5cd78b430badf260ab49f6.md': ('34c1f25cd1144b386ff4c70a2fbfacc7da2a0fc87f5cd78b430badf260ab49f6',
+                                                                                                                             1017,
+                                                                                                                             '6bcd9f7c0faea3fe3037c1f188288555312517b1',
+                                                                                                                             'b4d58482ae00f138782276ee5c4034c48bb2df19'),
+     'docs/provenance/v5-research-continuations/notes/36bf84b786280660b3ec4a5e3a110f04d98598cdbe49e7680a438de344a0dd06.md': ('36bf84b786280660b3ec4a5e3a110f04d98598cdbe49e7680a438de344a0dd06',
+                                                                                                                             7718,
+                                                                                                                             'f43d9ffc34ad19eb1e4d14cb1a176a916d408a36',
+                                                                                                                             'd0abc116b51f04c064fc60ebbdd511b63a795f45'),
+     'docs/provenance/v5-research-continuations/notes/4878fd0a4cf6c952af7cdbcb7e8a386c2730ff9986b74b8e39bf9b5077815b0f.md': ('4878fd0a4cf6c952af7cdbcb7e8a386c2730ff9986b74b8e39bf9b5077815b0f',
+                                                                                                                             15286,
+                                                                                                                             'f419024deb2a40bf50f7315cdf2dfdde9ede77f6',
+                                                                                                                             'a7ff0e33d1a299db640041c46b1af81ca70851f6'),
+     'docs/provenance/v5-research-continuations/notes/71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e.md': ('71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e',
+                                                                                                                             16844,
+                                                                                                                             '75bb17ddd69e37db6530357307078d056b97ec16',
+                                                                                                                             'd0abc116b51f04c064fc60ebbdd511b63a795f45'),
+     'docs/provenance/v5-research-continuations/notes/7d3cbeb8bcacdb5d28cb457801ba41de9b21f91542866fe5c5f13a4a632dadd9.md': ('7d3cbeb8bcacdb5d28cb457801ba41de9b21f91542866fe5c5f13a4a632dadd9',
+                                                                                                                             14328,
+                                                                                                                             '07a1df58ff170334e07261c93af8345093b0f160',
+                                                                                                                             'b4d58482ae00f138782276ee5c4034c48bb2df19'),
+     'docs/provenance/v5-research-continuations/notes/9438fdcbea8747c7e5599483096eca9541cfdf673d6a96866c019c5ced06519a.md': ('9438fdcbea8747c7e5599483096eca9541cfdf673d6a96866c019c5ced06519a',
+                                                                                                                             11145,
+                                                                                                                             '80e45c60c8f4e71a8191f906d04afd4ab0384b06',
+                                                                                                                             'b4d58482ae00f138782276ee5c4034c48bb2df19'),
+     'docs/provenance/v5-research-continuations/notes/b092780b29dd9fa00ac276142b090a5b8b88da79da9c278268264669e08f3d8c.md': ('b092780b29dd9fa00ac276142b090a5b8b88da79da9c278268264669e08f3d8c',
+                                                                                                                             29013,
+                                                                                                                             '4e69862256f3014f8e94d528b13ff0f63dd7f3eb',
+                                                                                                                             'b4d58482ae00f138782276ee5c4034c48bb2df19'),
+     'experiments/episode-reification-v2/README.md': ('cf660c095bf11d03bec1f13d36eaf994226b63329dbd53f31a714d7899767da4',
+                                                      1561,
+                                                      '62c5a4b3b4af1d0860a0d9b6184a0f5604670836',
+                                                      '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+     'experiments/episode-reification-v2/analysis/analyze_er2.py': ('448d7f598916a94855dd6e1060361f7686240ab542caef1a44b8fb9637026f3b',
+                                                                    10418,
+                                                                    '2addf30dab7b3b6f4f094a37250bd11f50718cc2',
+                                                                    '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+     'experiments/episode-reification-v2/harness/run_er.py': ('bd84fdfa3d8973b39f04a9dc0014f3dc1b5574caf61ed7643ca78ae782455d20',
+                                                              7347,
+                                                              'c4fa618a88160e0b4da89644abb3e9a49d49626a',
+                                                              '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+     'experiments/episode-reification-v2/scripts/generate_cases.py': ('d4ae498ed5b992ec366a752300a949ba64a3d90ce01c63c28392dacbe9827aa3',
+                                                                      8526,
+                                                                      '7eab184f0ff3cdc4869600528ceae1665865e9b8',
+                                                                      '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+     'experiments/episode-reification-v2/tests/test_smoke.py': ('41517fa67f0998e92ccbaff09843bac86b20a7144a9c7016927fb4bc4d6f412f',
+                                                                8543,
+                                                                '4da6e02cdf9777b74afa2f6a2d19f236d8a9ccab',
+                                                                '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+     'experiments/episode-reification/README.md': ('ca21e76e775fe1637098aa90b6e6544fa732ef4a82c874de5aab6cbf6f4451b6',
+                                                   1197,
+                                                   '28f48c3f8ef3c56bca366fbf6fac0b9bf54a4f40',
+                                                   '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+     'experiments/episode-reification/scripts/generate_fixtures.py': ('7ce757842bf2e9fa87a23004675d147687009b1a84a4cf3fc08908f227d45564',
+                                                                      8187,
+                                                                      '2d971fd8c236334a9a2069e48cc53333d141b7c1',
+                                                                      '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+     'experiments/episode-reification/tests/test_smoke.py': ('3606f98b6f2072c5a39fbb24e3d4728b4e9b047b82c65f7d4b8187ef3d010c1c',
+                                                             5936,
+                                                             '9c74297fd87351299f1223624d8b8e50c76ffd45',
+                                                             '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+     'experiments/experiment-status.yaml': ('88e59fdfc9e1e4a3ab751fef6e2f6bc1c5a644fc5863bf679b35c2ceb56cf2b2',
+                                            6886,
+                                            'eb979d8fd40710cbe9adeabd1c76c3571c4f22d6',
+                                            '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+     'experiments/orthemology-v5-continuations/registry.json': ('51e2cea236dd0a880c7243b2f9ccbd558c6c70f16f03ec0efa274f19d3d105ff',
+                                                                192971,
+                                                                'd90b5647de1cf290d3b7dbe20a805983c75f0fcf',
+                                                                '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+     'scripts/generate_current_state.py': ('a64b60308dd916505e0e10ce585e3e08c5f20172560b0c1e7deda0e086e830de',
+                                           8057,
+                                           '84429a260b6084fce35dd0934a9fd6c72efc3a09',
+                                           '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+     'scripts/validate_experiment_readiness.py': ('3c7db3b6a05c9c21a1ef255f083b24842ddebee0512ea61a4a074d9c88f1346b',
+                                                  10208,
+                                                  'dcb5c2a61e443a8d704b8e9516c1abe444ade712',
+                                                  '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+     'scripts/validate_negative_fixtures.py': ('6631cc99253d14a78b91022b95b646dba48bae1f34a0b86390fbd3e4dd85d92b',
+                                               7429,
+                                               '5521fbfea42ff7e20a85fdd8c31ee4b85d1bdfc5',
+                                               '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+     'tests/schema-negative/NEGATIVE-FIXTURES.json': ('b342240297511473b5c5568d4662de413d1f69fef20a7a55dc59c24657e7580b',
+                                                      10709,
+                                                      'a002ee8e159a7678e6c704323ca62670cc389880',
+                                                      '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
 
     @classmethod
     def setUpClass(cls):
@@ -8290,6 +8349,208 @@ class Next24HistoricalMigrationTests(unittest.TestCase):
             self.assertFalse(references._resolves(self.REVIEW,
                 '../docs/provenance/v5-research-continuations/notes/unqualified-relative.md'))
 
+
+
+
+class FixtureConsumerProjectionPinTests(unittest.TestCase):
+    """Current fixture readers keep their exact original public evidence."""
+    FIXTURE_PATHS = ('experiments/episode-reification-v2/README.md',
+     'experiments/episode-reification-v2/analysis/analyze_er2.py',
+     'experiments/episode-reification-v2/harness/run_er.py',
+     'experiments/episode-reification-v2/scripts/generate_cases.py',
+     'experiments/episode-reification-v2/tests/test_smoke.py',
+     'experiments/episode-reification/README.md',
+     'experiments/episode-reification/scripts/generate_fixtures.py',
+     'experiments/episode-reification/tests/test_smoke.py',
+     'experiments/experiment-status.yaml',
+     'scripts/generate_current_state.py',
+     'scripts/validate_experiment_readiness.py',
+     'scripts/validate_negative_fixtures.py',
+     'tests/schema-negative/NEGATIVE-FIXTURES.json')
+
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location('fixture_pin_reader', MODULE)
+        cls.reader = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.reader)
+        cls.pins = BulkConsumerProjectionPinTests.COORDINATE_PINS
+        if len(cls.pins) != 22 or len(cls.FIXTURE_PATHS) != 13:
+            raise AssertionError('complete independently admitted coordinate population required')
+        document = json.loads((ROOT / 'research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json').read_text())
+        selected = [deepcopy(row) for row in document['objects'] if row.get('repository_path') in cls.pins]
+        if len(selected) != 22:
+            raise AssertionError('original coordinate population missing or repeated')
+        unrelated = next(deepcopy(row) for row in document['objects'] if row.get('repository_path') not in cls.pins)
+        # This bounded fixture keeps complete real rows and one unrelated row.
+        # The separate full-manifest test retains its 28,478-identity assertion.
+        cls.base = dict(document, objects=selected + [unrelated])
+        for row in selected:
+            row.pop('repository_revision', None)
+            row.pop('git_blob', None)
+
+    def candidate(self, paths):
+        value = deepcopy(self.base)
+        for row in value['objects']:
+            path = row.get('repository_path')
+            if path in paths:
+                identity, size, blob, revision = self.pins[path]
+                self.assertEqual((row['source_sha256'], row['source_bytes'], row['public_sha256'], row['public_bytes']),
+                                 (identity, size, identity, size))
+                row.update(repository_revision=revision, git_blob=blob)
+        return value
+
+    def test_complete_current_extension_and_previous_nine_admit(self):
+        gate = self.reader._permitted_projection_consumer_pins
+        older = set(self.pins) - set(self.FIXTURE_PATHS)
+        self.assertEqual(len(older), 9)
+        self.assertTrue(gate(self.base, self.candidate(older)))
+        self.assertTrue(gate(self.base, self.candidate(set(self.pins))))
+
+    def test_partial_fixture_groups_and_unjoined_extension_reject(self):
+        gate = self.reader._permitted_projection_consumer_pins
+        self.assertFalse(gate(self.base, self.candidate(set(self.FIXTURE_PATHS))))
+        for path in self.FIXTURE_PATHS:
+            with self.subTest(missing=path):
+                self.assertFalse(gate(self.base, self.candidate(set(self.pins) - {path})))
+
+    def test_each_identity_field_role_and_unrelated_drift_reject(self):
+        gate = self.reader._permitted_projection_consumer_pins
+        changes = [('git_blob', '0' * 40), ('repository_revision', '0' * 40),
+                   ('source_sha256', '0' * 64), ('public_sha256', '0' * 64),
+                   ('source_bytes', -1), ('public_bytes', -1),
+                   ('disposition', 'PROJECT'), ('publication_basis', 'unqualified change'),
+                   ('repository_path', 'scripts/unadmitted-fixture-owner.py')]
+        for path in self.FIXTURE_PATHS:
+            for key, value in changes:
+                with self.subTest(path=path, field=key):
+                    candidate = self.candidate(set(self.pins))
+                    row = next(row for row in candidate['objects'] if row.get('repository_path') == path)
+                    row[key] = value
+                    self.assertFalse(gate(self.base, candidate))
+        candidate = self.candidate(set(self.pins))
+        candidate['objects'][-1]['publication_basis'] = 'unrelated drift'
+        self.assertFalse(gate(self.base, candidate))
+        candidate = self.candidate(set(self.pins))
+        candidate['objects'].append(deepcopy(candidate['objects'][0]))
+        self.assertFalse(gate(self.base, candidate))
+
+    def test_original_public_rows_resolve_as_inert_exact_native_bytes(self):
+        import validate_t20_v6_projection as projection
+        import resolve_t20_v6_source as resolver
+        candidate = self.candidate(set(self.pins))
+        for row in candidate['objects']:
+            if row.get('repository_path') in self.FIXTURE_PATHS:
+                with self.subTest(path=row['repository_path']):
+                    body = resolver.source_bytes(ROOT, row)
+                    self.assertEqual((hashlib.sha256(body).hexdigest(), len(body)),
+                                     (row['source_sha256'], row['source_bytes']))
+                    self.assertEqual(projection.check_object(ROOT, row), [])
+
+
+
+class FixtureConsumerEditionTests(unittest.TestCase):
+    """An old public view never hides corrupt or mixed current consumers."""
+    STATUS = 'experiments/experiment-status.yaml'
+
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location('fixture_edition_reader', MODULE)
+        cls.reader = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.reader)
+        cls.paths = FixtureConsumerProjectionPinTests.FIXTURE_PATHS
+        cls.original = {path: subprocess.check_output(
+            ['git', 'show', '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c:' + path], cwd=ROOT)
+            for path in cls.paths}
+        cls.current = {path: (ROOT / path).read_bytes() for path in cls.paths}
+        cls.objects = subprocess.check_output(
+            ['git', 'rev-parse', '--path-format=absolute', '--git-path', 'objects'], cwd=ROOT).decode().strip()
+
+    def fixture(self, current=True, baseline=False):
+        directory = tempfile.TemporaryDirectory(prefix='fixture-consumer-edition-')
+        self.addCleanup(directory.cleanup)
+        repo = Path(directory.name)
+        subprocess.run(['git', 'init', '-q'], cwd=repo, check=True)
+        (repo / '.git/objects/info/alternates').write_text(self.objects + '\n')
+        for path, body in self.original.items():
+            target = repo / path
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(body)
+        subprocess.run(['git', 'add', '--', *self.paths], cwd=repo, check=True)
+        revision = None
+        if baseline:
+            subprocess.run(['git', '-c', 'user.name=Fixture test', '-c',
+                            'user.email=fixture-test@example.invalid', 'commit', '-qm',
+                            'Original public fixture consumers'], cwd=repo, check=True)
+            revision = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=repo).decode().strip()
+        if current:
+            for path, body in self.current.items():
+                (repo / path).write_bytes(body)
+            subprocess.run(['git', 'add', '--', *self.paths], cwd=repo, check=True)
+        return repo, revision
+
+    def edition(self, repo):
+        gate = getattr(self.reader, 'check_fixture_consumer_edition', None)
+        self.assertTrue(callable(gate), 'the original public view needs an authenticated current edition')
+        index = (repo / '.git/index').read_bytes()
+        result = gate(repo)
+        self.assertEqual((repo / '.git/index').read_bytes(), index)
+        return result
+
+    def test_complete_original_and_current_editions_keep_original_status(self):
+        original, _ = self.fixture(current=False)
+        self.assertEqual(self.edition(original), ({}, None, []))
+        current, _ = self.fixture()
+        owners, status, errors = self.edition(current)
+        self.assertEqual(errors, [])
+        self.assertEqual(set(owners), set(self.paths))
+        self.assertEqual(status, self.original[self.STATUS])
+        self.assertNotEqual(status, self.current[self.STATUS])
+
+    def test_each_current_body_and_a_mixed_edition_are_rejected(self):
+        repo, _ = self.fixture()
+        for path in self.paths:
+            with self.subTest(path=path):
+                target = repo / path
+                target.write_bytes(self.current[path] + b'\ncorrupt fixture successor\n')
+                owners, status, errors = self.edition(repo)
+                self.assertEqual((owners, status), ({}, None))
+                self.assertTrue(errors)
+                target.write_bytes(self.current[path])
+        target = repo / self.paths[0]
+        target.write_bytes(self.original[self.paths[0]])
+        subprocess.run(['git', 'add', '--', self.paths[0]], cwd=repo, check=True)
+        self.assertTrue(self.edition(repo)[2])
+
+    def test_staged_body_mode_symlink_and_absence_cannot_hide_behind_history(self):
+        for fault in ('staged', 'mode', 'symlink', 'missing'):
+            with self.subTest(fault=fault):
+                repo, _ = self.fixture()
+                path = self.paths[0]
+                target = repo / path
+                if fault == 'staged':
+                    target.write_bytes(self.current[path] + b'\nwrong staged body\n')
+                    subprocess.run(['git', 'add', '--', path], cwd=repo, check=True)
+                    target.write_bytes(self.current[path])
+                elif fault == 'mode':
+                    target.chmod(0o755)
+                elif fault == 'symlink':
+                    target.unlink()
+                    target.symlink_to(repo / self.paths[1])
+                else:
+                    target.unlink()
+                owners, status, errors = self.edition(repo)
+                self.assertEqual((owners, status), ({}, None))
+                self.assertTrue(errors)
+
+    def test_real_census_comparison_requires_the_complete_qualified_edition(self):
+        repo, baseline = self.fixture(baseline=True)
+        owners, status, errors = self.edition(repo)
+        self.assertEqual(errors, [])
+        self.assertEqual(status, self.original[self.STATUS])
+        before = self.reader.check_corpus_currentness(repo, baseline)
+        self.assertEqual(len(before), 13)
+        self.assertEqual(self.reader.check_corpus_currentness(
+            repo, baseline, fixture_owners=owners), [])
 
 if __name__ == "__main__":
     unittest.main()

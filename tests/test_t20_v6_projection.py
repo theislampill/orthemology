@@ -1990,6 +1990,10 @@ class CheckpointCopyMigrationTests(unittest.TestCase):
             previous = cls.bodies.setdefault(binding['canonical'], body)
             if previous != body:
                 raise AssertionError('retained fixture body conflicts')
+            if 'prior_canonical' in binding:
+                former = binding['prior_canonical']
+                if cls.bodies.setdefault(former, body) != body:
+                    raise AssertionError('former provider fixture body conflicts')
 
     def setUp(self):
         import os
@@ -2150,6 +2154,127 @@ class CheckpointCopyMigrationTests(unittest.TestCase):
         self._git('add','--',*self.catalog)
         self.assertEqual(self._git('ls-files','--stage','-z'),before)
         self.assertEqual(self._gate(),[])
+
+    def test_all_twelve_retargets_keep_bytes_with_both_original_coordinates_absent(self):
+        import os
+        import validate_internal_references as references
+        chains = [(alias, row) for alias, row in self.catalog.items() if 'prior_canonical' in row]
+        self.assertEqual(len(chains), 12)
+        original_index = (self.repo / '.git/index').read_bytes()
+        with patch.object(references, 'ROOT', str(self.repo)):
+            for alias, row in chains:
+                former = row['prior_canonical']
+                with self.subTest(alias=alias):
+                    try:
+                        for name in (alias, former):
+                            (self.repo / name).unlink()
+                            self.assertFalse(os.path.lexists(self.repo / name))
+                        for staged in (False, True):
+                            if staged:
+                                self._git('update-index', '--force-remove', '--', alias, former)
+                            before = (self.repo / '.git/index').read_bytes()
+                            self.assertEqual(self.source.checkpoint_copy_bytes(self.repo, alias), self.bodies[alias])
+                            self.assertTrue(references._resolves(alias, alias))
+                            self.assertTrue(references._resolves(alias, pathlib.PurePosixPath(alias).name))
+                            self.assertFalse(os.path.lexists(self.repo / alias))
+                            self.assertFalse(os.path.lexists(self.repo / former))
+                            self.assertEqual((self.repo / '.git/index').read_bytes(), before)
+                    finally:
+                        for name in (alias, former):
+                            self._put(name, self.bodies[name])
+                        (self.repo / '.git/index').write_bytes(original_index)
+
+    def test_all_twelve_former_provider_corruptions_are_rejected(self):
+        import os
+        import validate_internal_references as references
+        chains = [(alias, row) for alias, row in self.catalog.items() if 'prior_canonical' in row]
+        self.assertEqual(len(chains), 12)
+        original_index = (self.repo / '.git/index').read_bytes()
+        with patch.object(references, 'ROOT', str(self.repo)):
+            for alias, row in chains:
+                former = row['prior_canonical']
+                for fault in ('body', 'mode', 'staged-body-under-absence'):
+                    with self.subTest(alias=alias, fault=fault):
+                        try:
+                            if fault == 'mode':
+                                (self.repo / former).chmod(0o755)
+                            else:
+                                self._put(former, self.bodies[former] + b'wrong former provider\n')
+                            if fault == 'staged-body-under-absence':
+                                self._git('add', '--', former)
+                                for name in (alias, former):
+                                    (self.repo / name).unlink()
+                                    self.assertFalse(os.path.lexists(self.repo / name))
+                            before = (self.repo / '.git/index').read_bytes()
+                            self._reject(alias)
+                            self.assertFalse(references._resolves(alias, alias))
+                            self.assertFalse(references._resolves(alias, pathlib.PurePosixPath(alias).name))
+                            self.assertEqual((self.repo / '.git/index').read_bytes(), before)
+                            if fault == 'staged-body-under-absence':
+                                for name in (alias, former):
+                                    self.assertFalse(os.path.lexists(self.repo / name))
+                        finally:
+                            for name in (alias, former):
+                                self._put(name, self.bodies[name])
+                            (self.repo / '.git/index').write_bytes(original_index)
+
+    def test_retarget_catalog_binds_each_former_and_final_coordinate_before_git(self):
+        import hashlib
+        members = self.source.CHECKPOINT_COPY_RETARGETS
+        self.assertEqual(len(members), 12)
+        alternative = next(row[2] for row in members if row[2] != members[0][2])
+        variants = (
+            members[:-1],
+            ((members[0][0], members[1][1], *members[0][2:]), *members[1:]),
+            ((members[0][0], members[0][1], alternative, *members[0][3:]), *members[1:]),
+            ((members[0][0], members[0][1], members[0][1], *members[0][3:]), *members[1:]),
+            ((*members[0][:3], '0' * 40, *members[0][4:]), *members[1:]),
+        )
+        with patch.object(self.source, '_continuation_git', side_effect=AssertionError('bad retarget reached Git')):
+            for changed in variants:
+                self.assertNotEqual(changed, members)
+                digest = hashlib.sha256(json.dumps(changed, separators=(',', ':')).encode()).hexdigest()
+                with patch.object(self.source, 'CHECKPOINT_COPY_RETARGETS', changed), \
+                     patch.object(self.source, 'CHECKPOINT_COPY_RETARGETS_SHA256', digest):
+                    with self.assertRaises(ValueError):
+                        self.source._checkpoint_copy_catalog()
+
+    def _reader_currentness(self):
+        import check_reader_pilot as reader
+        before = (self.repo / '.git/index').read_bytes()
+        result = reader.check_corpus_currentness(self.repo, self.baseline)
+        self.assertEqual((self.repo / '.git/index').read_bytes(), before,
+                         'reader currentness changed the raw fixture index')
+        return result
+
+    def test_reader_currentness_authenticates_present_and_both_absence_states(self):
+        self.assertEqual(self._reader_currentness(), [])
+        for path in self.catalog:
+            (self.repo / path).unlink()
+        self.assertEqual(self._reader_currentness(), [])
+        self._git('add', '-u', '--', *self.catalog)
+        self.assertEqual(self._reader_currentness(), [])
+
+    def test_reader_currentness_rejects_retained_body_and_index_tampering(self):
+        (self.repo / self.alias).unlink()
+        self._put(self.canonical, b'X' + self.bodies[self.canonical][1:])
+        self.assertTrue(self._reader_currentness())
+        self._git('add', '--', self.canonical)
+        self._put(self.canonical, self.bodies[self.canonical])
+        self.assertTrue(self._reader_currentness())
+
+    def test_reader_currentness_rejects_present_alias_and_unrelated_changes(self):
+        self._put(self.alias, b'X' + self.bodies[self.alias][1:])
+        self.assertTrue(self._reader_currentness())
+        self._git('add', '--', self.alias)
+        (self.repo / self.alias).unlink()
+        self.assertTrue(self._reader_currentness())
+        self._put(self.alias, self.bodies[self.alias])
+        self._git('add', '--', self.alias)
+        (self.repo / self.extra).unlink()
+        self.assertTrue(self._reader_currentness())
+
+
 
 
 class PublicReaderNoteProjectionTests(unittest.TestCase):
@@ -2345,6 +2470,251 @@ class PublicProjectionConsumerManifestTests(unittest.TestCase):
             else: candidate['objects'][-1]['unrelated'] = True
             with self.subTest(fault=fault):
                 self.assertFalse(self.permitted(candidate))
+
+
+
+class CheckpointRecordCopyMigrationTests(unittest.TestCase):
+    """Keep original coordinates for76 dated records and their five original-context dependencies with exact retained bytes.
+
+    The shared fixture helpers and contrary methods below are unchanged from
+    the earlier87 class. Their byte reader and rows are bound to this separate
+    finite record class. Twelve former providers have separately authenticated routes.
+    """
+
+    CONTEXT_SOURCE = 'research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/MANIFEST.json'
+    CONTEXT_MEMBERS = (
+        ('independent-review/CertificateFrontier.lean', '208cf6e6250c6ff50d0b03575a6ae7926b70d1ed', '5e799995b95e37105dff8dfe10e5ba78dfe44034334353bcf66107069e8a67e0', 12278),
+        ('independent-review/Controls.lean', '1c6b8900e600c63e30f0aa83f49f7db8211a7cdf', '7d49f0df7d1b5eb633e6edebf17bc0a967eeff1718b9e1cc3fcab1513afb5132', 2410),
+        ('independent-review/mutations/CostBlind.lean', '01cef9257fc16b90c16ae14ca9e65aef41cdd787', 'c05bf6d3207aeeaa7dddc222092c73d44f73ecc5eab5c8d465485a9a540d5776', 227),
+        ('independent-review/mutations/CurrentCost.lean', '9ad7316c3906603cd262cb781736078b18cd14a5', '876039d480a1415531f1f099679c5094327caf35c7933a36550e09692de1e83d', 249),
+        ('independent-review/mutations/InfinitePrice.lean', 'ffa13821c157cd943b1bcb5f6aa514c917f198b1', '0b2d8b2584f48d343d753a373161e28f93c397982ce9ab4c098b8daf16db31fe', 293),
+    )
+
+    setUp = CheckpointCopyMigrationTests.setUp
+    _git = CheckpointCopyMigrationTests._git
+    _put = CheckpointCopyMigrationTests._put
+    _gate = CheckpointCopyMigrationTests._gate
+
+    @classmethod
+    def setUpClass(cls):
+        import resolve_t20_v6_source as source
+        cls.source = source
+        cls.catalog = source._checkpoint_record_copy_catalog()
+        if len(cls.catalog) != 76:
+            raise AssertionError('record fixture population differs')
+        cls.bodies = {}
+        for alias, binding in cls.catalog.items():
+            body = source.checkpoint_record_copy_bytes(projection.ROOT, alias)
+            cls.bodies[alias] = body
+            if cls.bodies.setdefault(binding['canonical'], body) != body:
+                raise AssertionError('retained record body conflicts')
+        for relative, blob, identity, size in cls.CONTEXT_MEMBERS:
+            path = str(pathlib.PurePosixPath(cls.CONTEXT_SOURCE).parent / relative)
+            binding = dict(canonical=path, blob=blob, sha256=identity, bytes=size, mode='100644')
+            body = source._checkpoint_bound_bytes(projection.ROOT, path, binding)
+            if cls.bodies.setdefault(path, body) != body:
+                raise AssertionError('original-context fixture body conflicts')
+        manifest = json.loads((projection.ROOT / projection.MANIFEST).read_bytes())
+        cls.public_rows = [r for r in manifest['objects'] if r.get('repository_path') in cls.catalog]
+        if len(cls.public_rows) != 14:
+            raise AssertionError('existing public record population differs')
+
+    def _reject(self, alias=None):
+        with self.assertRaises((ValueError, OSError)):
+            self.source.checkpoint_record_copy_bytes(self.repo, alias or self.alias)
+
+    def _row(self, alias):
+        binding = self.catalog[alias]
+        return dict(repository_path=alias, disposition='REUSE',
+                    source_sha256=binding['sha256'], public_sha256=binding['sha256'],
+                    source_bytes=binding['bytes'], public_bytes=binding['bytes'])
+
+    def test_all_76_present_absent_and_staged_absent_keep_exact_bytes(self):
+        self.assertEqual(self._gate(), [])
+        for alias in self.catalog:
+            self.assertEqual(self.source.source_bytes(self.repo, self._row(alias)), self.bodies[alias])
+            (self.repo / alias).unlink()
+        self.assertEqual(self.source.checkpoint_record_duplicate_paths(self.repo), set(self.catalog))
+        self.assertEqual(self._gate(), [])
+        self._git('add', '-u', '--', *self.catalog)
+        self.assertEqual(self._gate(), [])
+        for alias in self.catalog:
+            self.assertEqual(self.source.source_bytes(self.repo, self._row(alias)), self.bodies[alias])
+
+    def test_fourteen_existing_projection_rows_resolve_their_original_identities(self):
+        before = (self.repo / '.git/index').read_bytes()
+        for row in self.public_rows:
+            with self.subTest(path=row['repository_path']):
+                self.assertEqual(check_object(self.repo, row), [])
+                (self.repo / row['repository_path']).unlink()
+                self.assertEqual(check_object(self.repo, row), [])
+                self.assertEqual(self.source.source_bytes(self.repo, row), self.bodies[row['repository_path']])
+        self.assertEqual((self.repo / '.git/index').read_bytes(), before)
+        self._git('add', '-u', '--', *(r['repository_path'] for r in self.public_rows))
+        self.assertEqual(self._gate(), [])
+
+    def test_unknown_paths_and_changed_record_population_fail_before_git(self):
+        with patch.object(self.source, '_continuation_git', side_effect=AssertionError('unlisted record reached Git')):
+            for name in (self.extra, self.alias+'.other', '../'+self.alias, '/'+self.alias,
+                         self.alias.replace('/', '\\')):
+                with self.subTest(path=name): self._reject(name)
+            with self.assertRaises(ValueError):
+                self.source.checkpoint_record_copy_bytes(self.repo, None)
+            with patch.object(self.source, 'CHECKPOINT_RECORD_COPY_MEMBERS',
+                              self.source.CHECKPOINT_RECORD_COPY_MEMBERS[:-1]):
+                self._reject()
+
+    test_present_corruption_cannot_fall_back_to_a_correct_retained_copy = CheckpointCopyMigrationTests.test_present_corruption_cannot_fall_back_to_a_correct_retained_copy
+    test_wrong_missing_or_executable_counterpart_rejects_absent_alias = CheckpointCopyMigrationTests.test_wrong_missing_or_executable_counterpart_rejects_absent_alias
+    test_leaf_ancestor_and_dangling_alias_symlinks_never_mean_absence = CheckpointCopyMigrationTests.test_leaf_ancestor_and_dangling_alias_symlinks_never_mean_absence
+    test_staged_alias_tamper_cannot_hide_under_worktree_absence = CheckpointCopyMigrationTests.test_staged_alias_tamper_cannot_hide_under_worktree_absence
+    test_staged_retained_tamper_cannot_hide_under_exact_worktree = CheckpointCopyMigrationTests.test_staged_retained_tamper_cannot_hide_under_exact_worktree
+    test_unmerged_or_wrong_mode_index_is_rejected = CheckpointCopyMigrationTests.test_unmerged_or_wrong_mode_index_is_rejected
+    test_source_row_requires_exact_current_copy_identity_and_role = CheckpointCopyMigrationTests.test_source_row_requires_exact_current_copy_identity_and_role
+    test_unrelated_staged_changes_are_not_checkpoint_deletion_allowances = CheckpointCopyMigrationTests.test_unrelated_staged_changes_are_not_checkpoint_deletion_allowances
+    test_missing_pinned_commit_rejects_even_present_exact_bodies = CheckpointCopyMigrationTests.test_missing_pinned_commit_rejects_even_present_exact_bodies
+    test_root_and_relative_references_authenticate_before_exists = CheckpointCopyMigrationTests.test_root_and_relative_references_authenticate_before_exists
+    test_replacement_restores_exact_fixture_identity_vector = CheckpointCopyMigrationTests.test_replacement_restores_exact_fixture_identity_vector
+
+
+    def test_five_manifest_dependencies_keep_the_original_source_context(self):
+        import os
+        import validate_internal_references as references
+        source = self.CONTEXT_SOURCE
+        canonical = self.catalog[source]['canonical']
+        with patch.object(references, 'ROOT', str(self.repo)):
+            for state in ('present', 'unstaged-absence', 'staged-absence'):
+                if state == 'unstaged-absence':
+                    (self.repo / source).unlink()
+                elif state == 'staged-absence':
+                    self._git('update-index', '--force-remove', '--', source)
+                self.assertEqual(os.path.lexists(self.repo / source), state == 'present')
+                self.assertEqual(self.source.checkpoint_record_copy_bytes(self.repo, source), self.bodies[source])
+                for relative, blob, identity, size in self.CONTEXT_MEMBERS:
+                    original = str(pathlib.PurePosixPath(source).parent / relative)
+                    body = (self.repo / original).read_bytes()
+                    self.assertEqual((self.source.digest(body), len(body)), (identity, size))
+                    self.assertTrue(references._resolves(source, relative))
+                    self.assertFalse(references._resolves(canonical, relative))
+                self.assertEqual(self._gate(), [])
+
+    _reader_currentness = CheckpointCopyMigrationTests._reader_currentness
+    test_reader_currentness_authenticates_present_and_both_absence_states = CheckpointCopyMigrationTests.test_reader_currentness_authenticates_present_and_both_absence_states
+    test_reader_currentness_rejects_retained_body_and_index_tampering = CheckpointCopyMigrationTests.test_reader_currentness_rejects_retained_body_and_index_tampering
+    test_reader_currentness_rejects_present_alias_and_unrelated_changes = CheckpointCopyMigrationTests.test_reader_currentness_rejects_present_alias_and_unrelated_changes
+
+
+
+
+class CheckpointPackageCopyMigrationTests(unittest.TestCase):
+    """Preserve exact inert sources for26 reviewed obsolete package locations."""
+
+    setUp = CheckpointCopyMigrationTests.setUp
+    _git = CheckpointCopyMigrationTests._git
+    _put = CheckpointCopyMigrationTests._put
+    _gate = CheckpointCopyMigrationTests._gate
+
+    @classmethod
+    def setUpClass(cls):
+        import resolve_t20_v6_source as source
+        cls.source = source
+        cls.catalog = source._checkpoint_package_copy_catalog()
+        if len(cls.catalog) != 26:
+            raise AssertionError('package fixture population differs')
+        cls.bodies = {}
+        for alias, binding in cls.catalog.items():
+            body = source.checkpoint_package_copy_bytes(projection.ROOT, alias)
+            cls.bodies[alias] = body
+            if cls.bodies.setdefault(binding['canonical'], body) != body:
+                raise AssertionError('retained package body conflicts')
+        manifest = json.loads((projection.ROOT / projection.MANIFEST).read_bytes())
+        if any(r.get('repository_path') in cls.catalog for r in manifest['objects']):
+            raise AssertionError('package aliases acquired a public projection role')
+        providers = {r['canonical'] for r in cls.catalog.values()}
+        cls.public_rows = [r for r in manifest['objects'] if r.get('repository_path') in providers]
+        if len(cls.public_rows) != 13:
+            raise AssertionError('existing public provider population differs')
+
+    def _reject(self, alias=None):
+        with self.assertRaises((ValueError, OSError)):
+            self.source.checkpoint_package_copy_bytes(self.repo, alias or self.alias)
+
+    def _row(self, alias):
+        binding = self.catalog[alias]
+        return dict(repository_path=alias, disposition='REUSE',
+                    source_sha256=binding['sha256'], public_sha256=binding['sha256'],
+                    source_bytes=binding['bytes'], public_bytes=binding['bytes'])
+
+    def test_all_26_present_absent_and_staged_absent_keep_exact_inert_bytes(self):
+        self.assertEqual(self._gate(), [])
+        for alias in self.catalog:
+            self.assertEqual(self.source.checkpoint_package_copy_bytes(self.repo, alias), self.bodies[alias])
+            (self.repo / alias).unlink()
+        self.assertEqual(self.source.checkpoint_package_duplicate_paths(self.repo), set(self.catalog))
+        self.assertEqual(self._gate(), [])
+        self._git('add', '-u', '--', *self.catalog)
+        self.assertEqual(self._gate(), [])
+        for alias in self.catalog:
+            self.assertEqual(self.source.checkpoint_package_copy_bytes(self.repo, alias), self.bodies[alias])
+
+    def test_thirteen_existing_provider_rows_remain_exact_when_all_aliases_are_absent(self):
+        before = (self.repo / '.git/index').read_bytes()
+        for alias in self.catalog:
+            (self.repo / alias).unlink()
+        for row in self.public_rows:
+            with self.subTest(path=row['repository_path']):
+                self.assertEqual(check_object(self.repo, row), [])
+                self.assertEqual(self.source.source_bytes(self.repo, row), self.bodies[row['repository_path']])
+        self.assertEqual((self.repo / '.git/index').read_bytes(), before)
+        self._git('add', '-u', '--', *self.catalog)
+        self.assertEqual(self._gate(), [])
+
+    def test_unknown_paths_and_changed_package_population_fail_before_git(self):
+        with patch.object(self.source, '_continuation_git', side_effect=AssertionError('unlisted package reached Git')):
+            for name in (self.extra, self.alias + '.other', '../' + self.alias,
+                         '/' + self.alias, self.alias.replace('/', '\\')):
+                with self.subTest(path=name):
+                    self._reject(name)
+            with self.assertRaises(ValueError):
+                self.source.checkpoint_package_copy_bytes(self.repo, None)
+            with patch.object(self.source, 'CHECKPOINT_PACKAGE_COPY_MEMBERS',
+                              self.source.CHECKPOINT_PACKAGE_COPY_MEMBERS[:-1]):
+                self._reject()
+
+    def test_historical_byte_route_does_not_admit_new_public_projection_rows(self):
+        for alias in self.catalog:
+            (self.repo / alias).unlink()
+            row = self._row(alias)
+            with self.subTest(path=alias):
+                self.assertEqual(self.source.checkpoint_package_copy_bytes(self.repo, alias), self.bodies[alias])
+                self.assertEqual(check_object(self.repo, row), ['missing or unsafe public source'])
+                with self.assertRaises((ValueError, OSError)):
+                    self.source.source_bytes(self.repo, row)
+
+    def test_historical_python_bodies_are_never_compiled_or_executed(self):
+        historical = [p for p in self.catalog if p.endswith('.py')]
+        self.assertEqual(len(historical), 21)
+        with patch('builtins.compile', side_effect=AssertionError('historical source compiled')), \
+             patch('builtins.exec', side_effect=AssertionError('historical source executed')):
+            for alias in historical:
+                with self.subTest(path=alias):
+                    self.assertEqual(self.source.checkpoint_package_copy_bytes(self.repo, alias), self.bodies[alias])
+
+    test_present_corruption_cannot_fall_back_to_a_correct_retained_copy = CheckpointCopyMigrationTests.test_present_corruption_cannot_fall_back_to_a_correct_retained_copy
+    test_wrong_missing_or_executable_counterpart_rejects_absent_alias = CheckpointCopyMigrationTests.test_wrong_missing_or_executable_counterpart_rejects_absent_alias
+    test_leaf_ancestor_and_dangling_alias_symlinks_never_mean_absence = CheckpointCopyMigrationTests.test_leaf_ancestor_and_dangling_alias_symlinks_never_mean_absence
+    test_staged_alias_tamper_cannot_hide_under_worktree_absence = CheckpointCopyMigrationTests.test_staged_alias_tamper_cannot_hide_under_worktree_absence
+    test_staged_retained_tamper_cannot_hide_under_exact_worktree = CheckpointCopyMigrationTests.test_staged_retained_tamper_cannot_hide_under_exact_worktree
+    test_unmerged_or_wrong_mode_index_is_rejected = CheckpointCopyMigrationTests.test_unmerged_or_wrong_mode_index_is_rejected
+    test_unrelated_staged_changes_are_not_checkpoint_deletion_allowances = CheckpointCopyMigrationTests.test_unrelated_staged_changes_are_not_checkpoint_deletion_allowances
+    test_missing_pinned_commit_rejects_even_present_exact_bodies = CheckpointCopyMigrationTests.test_missing_pinned_commit_rejects_even_present_exact_bodies
+    test_root_and_relative_references_authenticate_before_exists = CheckpointCopyMigrationTests.test_root_and_relative_references_authenticate_before_exists
+    test_replacement_restores_exact_fixture_identity_vector = CheckpointCopyMigrationTests.test_replacement_restores_exact_fixture_identity_vector
+
+    _reader_currentness = CheckpointCopyMigrationTests._reader_currentness
+    test_reader_currentness_authenticates_present_and_both_absence_states = CheckpointCopyMigrationTests.test_reader_currentness_authenticates_present_and_both_absence_states
+    test_reader_currentness_rejects_retained_body_and_index_tampering = CheckpointCopyMigrationTests.test_reader_currentness_rejects_retained_body_and_index_tampering
+    test_reader_currentness_rejects_present_alias_and_unrelated_changes = CheckpointCopyMigrationTests.test_reader_currentness_rejects_present_alias_and_unrelated_changes
 
 
 

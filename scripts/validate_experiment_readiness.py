@@ -12,6 +12,7 @@ import io
 import os
 import re
 import sys
+import subprocess
 
 try:
     import yaml
@@ -54,7 +55,9 @@ def read(rel):
     return io.open(p, encoding="utf-8").read() if os.path.exists(p) else ""
 
 
-def packet_freeze(pkt_dir):
+def packet_freeze(pkt_dir, packet=None):
+    if packet and "consumer_successor" in packet:
+        return successor_packet_freeze(pkt_dir, packet)
     # collect files first, then filter — sorted(os.walk(...)) exhausts the
     # generator before any dirs[:] pruning could take effect, so a stray
     # __pycache__/.pyc must be excluded by PATH, not by live pruning.
@@ -73,6 +76,135 @@ def packet_freeze(pkt_dir):
         h.update(io.open(full, "rb").read() + b"\x00")
     return h.hexdigest()
 
+
+
+class PacketFreezeError(ValueError):
+    """An original edition or its declared consumer successor is not authentic."""
+
+
+def _git_bytes(*args):
+    result = subprocess.run(["git", *args], cwd=ROOT, capture_output=True,
+                            env=dict(os.environ, GIT_NO_LAZY_FETCH="1"))
+    if result.returncode:
+        raise PacketFreezeError("required frozen public Git object is unavailable locally")
+    return result.stdout
+
+
+def _blob_id(body):
+    return hashlib.sha1(b"blob " + str(len(body)).encode("ascii") + b"\0" + body).hexdigest()
+
+
+
+def _packet_bytes(pkt_dir, relative):
+    path = pkt_dir
+    for part in relative.split("/"):
+        if part in ("", ".", ".."):
+            raise PacketFreezeError("unsafe packet path")
+        path = os.path.join(path, part)
+        if os.path.islink(path):
+            raise PacketFreezeError("symlink cannot stand in for a frozen packet input: " + relative)
+    return io.open(path, "rb").read()
+
+
+def successor_packet_freeze(pkt_dir, packet):
+    """Recompute the original freeze and separately authenticate current readers.
+
+    Changed reader/generator bodies come from the exact original Git edition
+    for the historical freeze only. Current successors are separately bound
+    by SHA-256. All other original inputs retain byte identity, including any
+    separate scoring input. Public fixture bytes may be generated in memory;
+    a still-present loose copy must agree too. No network or status repinning.
+    """
+    profiles = {
+        "experiments/episode-reification/": (
+            "scripts/generate_fixtures.py",
+            {"README.md", "scripts/generate_fixtures.py", "tests/test_smoke.py"}),
+        "experiments/episode-reification-v2/": (
+            "scripts/generate_cases.py",
+            {"README.md", "scripts/generate_cases.py", "tests/test_smoke.py",
+             "harness/run_er.py", "analysis/analyze_er2.py"}),
+    }
+    packet_path = packet.get("path")
+    if packet_path not in profiles:
+        raise PacketFreezeError("consumer successor is not an admitted public episode packet")
+    generator, allowed = profiles[packet_path]
+    binding = packet["consumer_successor"]
+    if not isinstance(binding, dict) or set(binding) != {"source_revision", "source_tree", "files"}:
+        raise PacketFreezeError("consumer successor requires its exact source and file binding")
+    revision, tree, successors = (binding["source_revision"], binding["source_tree"], binding["files"])
+    if not all(isinstance(value, str) and re.fullmatch(r"[0-9a-f]{40}", value)
+               for value in (revision, tree)):
+        raise PacketFreezeError("source revision and packet tree must be full Git identities")
+    if not isinstance(successors, dict) or set(successors) != allowed:
+        raise PacketFreezeError("consumer successor file scope is incomplete or widened")
+    actual_tree = _git_bytes("rev-parse", "--verify", revision + ":" + packet_path.rstrip("/")).strip().decode("ascii")
+    if actual_tree != tree:
+        raise PacketFreezeError("original packet tree does not match its admitted source")
+    rows = {}
+    raw = _git_bytes("ls-tree", "-rz", revision, "--", packet_path)
+    for entry in raw.split(b"\0"):
+        if not entry:
+            continue
+        meta, full = entry.split(b"\t", 1)
+        mode, kind, oid = meta.decode("ascii").split()
+        full = full.decode("utf-8")
+        if mode != "100644" or kind != "blob" or not full.startswith(packet_path):
+            raise PacketFreezeError("original packet contains an unsupported source entry")
+        relative = full[len(packet_path):]
+        if relative in rows:
+            raise PacketFreezeError("duplicate original packet source path")
+        rows[relative] = oid
+    if not rows or not allowed <= set(rows) or "FREEZE-HASH.txt" not in rows:
+        raise PacketFreezeError("incomplete original packet source population")
+    source_bytes = {}
+    for relative, expected in successors.items():
+        if not isinstance(expected, str) or not re.fullmatch(r"[0-9a-f]{64}", expected):
+            raise PacketFreezeError("invalid successor SHA-256 binding")
+        try:
+            body = _packet_bytes(pkt_dir, relative)
+        except OSError as exc:
+            raise PacketFreezeError("missing current consumer: " + relative) from exc
+        if hashlib.sha256(body).hexdigest() != expected:
+            raise PacketFreezeError("changed current consumer: " + relative)
+        source_bytes[relative] = body
+    namespace = {"__name__": "episode_public_renderer",
+                 "__file__": os.path.join(pkt_dir, generator)}
+    exec(compile(source_bytes[generator], generator, "exec"), namespace)
+    rendered = namespace["public_files"]()
+    if not isinstance(rendered, dict) or any(not isinstance(k, str) or not isinstance(v, str)
+                                             for k, v in rendered.items()):
+        raise PacketFreezeError("public generator did not return complete text renderings")
+    public = {"fixtures/" + rel: text.encode("utf-8") for rel, text in rendered.items()}
+    original_public = {rel for rel in rows if rel.startswith("fixtures/") and rel != "fixtures/KEYS.json"}
+    if set(public) != original_public:
+        raise PacketFreezeError("public rendering population differs from the original edition")
+    for relative, body in public.items():
+        if _blob_id(body) != rows[relative]:
+            raise PacketFreezeError("public rendering differs from the original edition: " + relative)
+        present = os.path.join(pkt_dir, relative)
+        if os.path.lexists(present) and _packet_bytes(pkt_dir, relative) != body:
+            raise PacketFreezeError("present public copy disagrees with its generator: " + relative)
+    current = set()
+    for base, dirs, names in os.walk(pkt_dir):
+        dirs[:] = [d for d in dirs if d != "__pycache__"]
+        for name in names:
+            if not name.endswith((".pyc", ".pyo")):
+                current.add(os.path.relpath(os.path.join(base, name), pkt_dir).replace("\\", "/"))
+    if current - set(rows) or set(rows) - current - set(public):
+        raise PacketFreezeError("current packet has extra files or missing non-public inputs")
+    h = hashlib.sha256()
+    for relative, oid in sorted(rows.items()):
+        if relative in successors:
+            body = _git_bytes("cat-file", "blob", oid)
+        elif relative in public:
+            body = public[relative]
+        else:
+            body = _packet_bytes(pkt_dir, relative)
+        if _blob_id(body) != oid:
+            raise PacketFreezeError("original packet input changed: " + relative)
+        if relative != "FREEZE-HASH.txt":
+            h.update(relative.encode("utf-8") + b"\0" + body + b"\0")
+    return h.hexdigest()
 
 def main():
     idx = yaml.safe_load(read("experiments/experiment-status.yaml"))
@@ -112,8 +244,12 @@ def main():
             ln = ln.strip()
             if len(ln) == 64 and all(c in "0123456789abcdef" for c in ln):
                 recorded = ln
-        check("%s freeze hash recomputes" % pid, recorded == packet_freeze(pdir),
-              "recorded=%s computed=%s" % (recorded[:12], packet_freeze(pdir)[:12]))
+        try:
+            computed = packet_freeze(pdir, p)
+            check("%s freeze hash recomputes" % pid, recorded == computed,
+                  "recorded=%s computed=%s" % (recorded[:12], computed[:12]))
+        except (PacketFreezeError, OSError) as exc:
+            check("%s freeze hash recomputes" % pid, False, str(exc))
         check("%s index freeze hash matches the packet file" % pid,
               p.get("freeze_hash") == recorded)
 
@@ -143,7 +279,7 @@ def main():
         check("%s carries a correction note" % pid, bool(p.get("correction_note")))
         check("%s (historical) is not classified READY_TO_RUN" % pid,
               p["readiness_state"] != "READY_TO_RUN", p["readiness_state"])
-        freeze_checks(pid, p)  # byte-frozen preservation still verified
+        freeze_checks(pid, p)  # original frozen edition still verified
 
     # only CURRENT (non-historical) packets may hold READY_TO_RUN
     bad_ready = [pid for pid, p in packets.items()

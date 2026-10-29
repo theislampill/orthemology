@@ -68758,7 +68758,9 @@
       "repository_path": "experiments/episode-reification/tests/test_smoke.py",
       "public_sha256": "3606f98b6f2072c5a39fbb24e3d4728b4e9b047b82c65f7d4b8187ef3d010c1c",
       "public_bytes": 5936,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "9c74297fd87351299f1223624d8b8e50c76ffd45"
     },
     {
       "source_sha256": "3606fad549a69b7d443126ed5cc7517ec4060a6ecb9c2d897d94120376f04c09",
@@ -77081,7 +77083,9 @@
       "repository_path": "scripts/validate_experiment_readiness.py",
       "public_sha256": "3c7db3b6a05c9c21a1ef255f083b24842ddebee0512ea61a4a074d9c88f1346b",
       "public_bytes": 10208,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "dcb5c2a61e443a8d704b8e9516c1abe444ade712"
     },
     {
       "source_sha256": "3c80ceaa7da96868e97211190e9c685c99e9ffebec5790cfd77621302c652409",
@@ -83489,7 +83493,9 @@
       "repository_path": "experiments/episode-reification-v2/tests/test_smoke.py",
       "public_sha256": "41517fa67f0998e92ccbaff09843bac86b20a7144a9c7016927fb4bc4d6f412f",
       "public_bytes": 8543,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "4da6e02cdf9777b74afa2f6a2d19f236d8a9ccab"
     },
     {
       "source_sha256": "415336d97fa18e256f1c77100f628f4dbc68e6b99c5d46e98b429a7c5214f298",
@@ -87668,7 +87674,9 @@
       "repository_path": "experiments/episode-reification-v2/analysis/analyze_er2.py",
       "public_sha256": "448d7f598916a94855dd6e1060361f7686240ab542caef1a44b8fb9637026f3b",
       "public_bytes": 10418,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "2addf30dab7b3b6f4f094a37250bd11f50718cc2"
     },
     {
       "source_sha256": "448e992cee2be3250777bd41b383c0eef437c46d0d604c586c15aa138dce59e9",
@@ -131417,7 +131425,9 @@
       "repository_path": "scripts/validate_negative_fixtures.py",
       "public_sha256": "6631cc99253d14a78b91022b95b646dba48bae1f34a0b86390fbd3e4dd85d92b",
       "public_bytes": 7429,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "5521fbfea42ff7e20a85fdd8c31ee4b85d1bdfc5"
     },
     {
       "source_sha256": "6632f29b8ce88d127649f0346c38d90c0f7cb164ec4657bfabb5a4729080b129",
@@ -161746,7 +161756,9 @@
       "repository_path": "experiments/episode-reification/scripts/generate_fixtures.py",
       "public_sha256": "7ce757842bf2e9fa87a23004675d147687009b1a84a4cf3fc08908f227d45564",
       "public_bytes": 8187,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "2d971fd8c236334a9a2069e48cc53333d141b7c1"
     },
     {
       "source_sha256": "7ce912d8c31a9eb82162eaf7a1aabb857644a11576ac0792f2413843694e9d3c",
@@ -177851,7 +177863,9 @@
       "repository_path": "experiments/experiment-status.yaml",
       "public_sha256": "88e59fdfc9e1e4a3ab751fef6e2f6bc1c5a644fc5863bf679b35c2ceb56cf2b2",
       "public_bytes": 6886,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "eb979d8fd40710cbe9adeabd1c76c3571c4f22d6"
     },
     {
       "source_sha256": "88e7aa5eb4f1bed37339d1d0261187e952446045ad73b6269cd431d01868152c",
@@ -215842,7 +215856,9 @@
       "repository_path": "scripts/generate_current_state.py",
       "public_sha256": "a64b60308dd916505e0e10ce585e3e08c5f20172560b0c1e7deda0e086e830de",
       "public_bytes": 8057,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "84429a260b6084fce35dd0934a9fd6c72efc3a09"
     },
     {
       "source_sha256": "a64ee9a8e138284b20c847da31542717b3d1e003fe6fe93d84f3f2c5af93ee53",
@@ -232564,7 +232580,9 @@
       "repository_path": "tests/schema-negative/NEGATIVE-FIXTURES.json",
       "public_sha256": "b342240297511473b5c5568d4662de413d1f69fef20a7a55dc59c24657e7580b",
       "public_bytes": 10709,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "a002ee8e159a7678e6c704323ca62670cc389880"
     },
     {
       "source_sha256": "b3471385b8b0f5a15cad23e90fc8f3425dde6730a86930da9518b7dce2723090",
@@ -246154,7 +246172,9 @@
       "repository_path": "experiments/episode-reification-v2/harness/run_er.py",
       "public_sha256": "bd84fdfa3d8973b39f04a9dc0014f3dc1b5574caf61ed7643ca78ae782455d20",
       "public_bytes": 7347,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "c4fa618a88160e0b4da89644abb3e9a49d49626a"
     },
     {
       "source_sha256": "bd864e09dc92454788988b77e9d23b8ef235c66e189b7a4c5368abefe9369243",
@@ -262557,7 +262577,9 @@
       "repository_path": "experiments/episode-reification/README.md",
       "public_sha256": "ca21e76e775fe1637098aa90b6e6544fa732ef4a82c874de5aab6cbf6f4451b6",
       "public_bytes": 1197,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "28f48c3f8ef3c56bca366fbf6fac0b9bf54a4f40"
     },
     {
       "source_sha256": "ca24ba496731e7b761e332756e84b8b7e2479d862991b5d55510724df6d4ad9d",
@@ -269666,7 +269688,9 @@
       "repository_path": "experiments/episode-reification-v2/README.md",
       "public_sha256": "cf660c095bf11d03bec1f13d36eaf994226b63329dbd53f31a714d7899767da4",
       "public_bytes": 1561,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "62c5a4b3b4af1d0860a0d9b6184a0f5604670836"
     },
     {
       "source_sha256": "cf67141f01bb8ff366b6937d0d5f7317a7d57e6941bc3f93f18db3ebdc717e6b",
@@ -276767,7 +276791,9 @@
       "repository_path": "experiments/episode-reification-v2/scripts/generate_cases.py",
       "public_sha256": "d4ae498ed5b992ec366a752300a949ba64a3d90ce01c63c28392dacbe9827aa3",
       "public_bytes": 8526,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "7eab184f0ff3cdc4869600528ceae1665865e9b8"
     },
     {
       "source_sha256": "d4b35f5df84ac81ba60269636184bf35deeab05b5262b2b37bc187a4330a8176",

@@ -38,6 +38,9 @@ from resolve_t20_v6_source import (
     NEXT24_PROSE, NEXT24_SUPPORT_PROSE, NEXT24_PUBLIC_PROSE,
     CONTINUATION_COPY_ROOT, continuation_duplicate_paths,
     PUBLIC_READER_NOTE_PATHS, CONTINUATION_REGISTRY_PATH, CONTINUATION_REGISTRY_REVISION,
+    CHECKPOINT_COPY_PATHS, checkpoint_duplicate_paths,
+    CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths,
+    CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_duplicate_paths,
 )
 
 
@@ -456,8 +459,170 @@ def pmr007_rounds_parent_source_bytes(repo):
 
 
 
+# Exact original and independently reviewed public fixture-consumer editions.
+# These bindings change no source/public identity or scientific disposition.
+FIXTURE_CONSUMER_REVISION = "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c"
+FIXTURE_STATUS_PATH = "experiments/experiment-status.yaml"
+FIXTURE_CONSUMER_ORIGINAL = {'experiments/episode-reification-v2/README.md': ('62c5a4b3b4af1d0860a0d9b6184a0f5604670836',
+                                                  'cf660c095bf11d03bec1f13d36eaf994226b63329dbd53f31a714d7899767da4',
+                                                  1561),
+ 'experiments/episode-reification-v2/analysis/analyze_er2.py': ('2addf30dab7b3b6f4f094a37250bd11f50718cc2',
+                                                                '448d7f598916a94855dd6e1060361f7686240ab542caef1a44b8fb9637026f3b',
+                                                                10418),
+ 'experiments/episode-reification-v2/harness/run_er.py': ('c4fa618a88160e0b4da89644abb3e9a49d49626a',
+                                                          'bd84fdfa3d8973b39f04a9dc0014f3dc1b5574caf61ed7643ca78ae782455d20',
+                                                          7347),
+ 'experiments/episode-reification-v2/scripts/generate_cases.py': ('7eab184f0ff3cdc4869600528ceae1665865e9b8',
+                                                                  'd4ae498ed5b992ec366a752300a949ba64a3d90ce01c63c28392dacbe9827aa3',
+                                                                  8526),
+ 'experiments/episode-reification-v2/tests/test_smoke.py': ('4da6e02cdf9777b74afa2f6a2d19f236d8a9ccab',
+                                                            '41517fa67f0998e92ccbaff09843bac86b20a7144a9c7016927fb4bc4d6f412f',
+                                                            8543),
+ 'experiments/episode-reification/README.md': ('28f48c3f8ef3c56bca366fbf6fac0b9bf54a4f40',
+                                               'ca21e76e775fe1637098aa90b6e6544fa732ef4a82c874de5aab6cbf6f4451b6',
+                                               1197),
+ 'experiments/episode-reification/scripts/generate_fixtures.py': ('2d971fd8c236334a9a2069e48cc53333d141b7c1',
+                                                                  '7ce757842bf2e9fa87a23004675d147687009b1a84a4cf3fc08908f227d45564',
+                                                                  8187),
+ 'experiments/episode-reification/tests/test_smoke.py': ('9c74297fd87351299f1223624d8b8e50c76ffd45',
+                                                         '3606f98b6f2072c5a39fbb24e3d4728b4e9b047b82c65f7d4b8187ef3d010c1c',
+                                                         5936),
+ 'experiments/experiment-status.yaml': ('eb979d8fd40710cbe9adeabd1c76c3571c4f22d6',
+                                        '88e59fdfc9e1e4a3ab751fef6e2f6bc1c5a644fc5863bf679b35c2ceb56cf2b2',
+                                        6886),
+ 'scripts/generate_current_state.py': ('84429a260b6084fce35dd0934a9fd6c72efc3a09',
+                                       'a64b60308dd916505e0e10ce585e3e08c5f20172560b0c1e7deda0e086e830de',
+                                       8057),
+ 'scripts/validate_experiment_readiness.py': ('dcb5c2a61e443a8d704b8e9516c1abe444ade712',
+                                              '3c7db3b6a05c9c21a1ef255f083b24842ddebee0512ea61a4a074d9c88f1346b',
+                                              10208),
+ 'scripts/validate_negative_fixtures.py': ('5521fbfea42ff7e20a85fdd8c31ee4b85d1bdfc5',
+                                           '6631cc99253d14a78b91022b95b646dba48bae1f34a0b86390fbd3e4dd85d92b',
+                                           7429),
+ 'tests/schema-negative/NEGATIVE-FIXTURES.json': ('a002ee8e159a7678e6c704323ca62670cc389880',
+                                                  'b342240297511473b5c5568d4662de413d1f69fef20a7a55dc59c24657e7580b',
+                                                  10709)}
+FIXTURE_CONSUMER_CURRENT = {'experiments/episode-reification-v2/README.md': ('c183888b63c7e73b6a17fb4f1c398906eca3f317',
+                                                  '7ea04abc91a0964525d1257181dc08f4e412d4780b1f2b32e0f09179edaf40eb',
+                                                  2405),
+ 'experiments/episode-reification-v2/analysis/analyze_er2.py': ('b44531cd3eb4e4530d5d6ca733b0fecff51ad8a1',
+                                                                '0a9b691158bdd5d9590ca50f5501dbe9057880e7720b16df1a40cd5923da11a2',
+                                                                11120),
+ 'experiments/episode-reification-v2/harness/run_er.py': ('e10f76b5412c6a793deaff17aa68fc0068444700',
+                                                          '15af564935d25d8d43a6007d88377cbea76d785437dffaf1260ef57a305d7666',
+                                                          7263),
+ 'experiments/episode-reification-v2/scripts/generate_cases.py': ('e43f016e6a12594c29deef253cf1ba65d86462be',
+                                                                  '3b449a7580426fdf89f85612018473f92c3c2c274d4eea47e7046d1bcfe1bc89',
+                                                                  9631),
+ 'experiments/episode-reification-v2/tests/test_smoke.py': ('2e143f2c2d07f1683c6ec86b08529c085c979973',
+                                                            '65d2195b2723b00fb750f14b5487f6b267aa0132400eac96cdf2a1baac819dab',
+                                                            9060),
+ 'experiments/episode-reification/README.md': ('2732cd09c8895c22b5fbce4b00a326826da6cb19',
+                                               'e27914d286579b38c1ad480618498dd8968d85464c06b7f6e26b73577e823bc7',
+                                               1900),
+ 'experiments/episode-reification/scripts/generate_fixtures.py': ('be7dd10d2f60ad16c4cf9df2ea3316d778b0c8fc',
+                                                                  '9c39be153165e8d1c5a074243fc5f4ba467862ccc0d433bb42e7471230e4b929',
+                                                                  8675),
+ 'experiments/episode-reification/tests/test_smoke.py': ('c92237319812ec5adb1f3de28dc692efcdf13018',
+                                                         '8678c6b1e7c5287e153503441ad825f618bb65fb3311d827199e4da509e9b2ad',
+                                                         6005),
+ 'experiments/experiment-status.yaml': ('85b070e26b99e0be84df00dedafcc0d544896a45',
+                                        '004528603f98ec584dc523ba536afaf1d258576be82b80e343f0e35fbefc870c',
+                                        8073),
+ 'scripts/generate_current_state.py': ('121d31f0ca3d2b8821c4cd1252b1831b8348b53c',
+                                       '49c28230be2def0930c1e71ee117adc2b3a36260aa3369dd3f9f7b8cec2a084d',
+                                       8007),
+ 'scripts/validate_experiment_readiness.py': ('b475604fc81e1e2c413c4acbb4de14140c01d087',
+                                              '15542ccb422bdd9ebaa61606cb571362587c14ce6c22caa4eeaf6d3d1144ff5e',
+                                              17261),
+ 'scripts/validate_negative_fixtures.py': ('5c64a4cffa037eb604d519033181c88539e7d78b',
+                                           '8e3ff766e20c981628a19fc5d809343a873bfce773885af6197d972a335ea321',
+                                           9037),
+ 'tests/schema-negative/NEGATIVE-FIXTURES.json': ('20b6e5801823e87db6b5fb1638d0e3992eee36e6',
+                                                  'b229103cc93bb15d046cb15a1794d99d0cb40200fbc8fe9ac7ceff358c88d3e9',
+                                                  108213)}
+
+
+def check_fixture_consumer_edition(repo, baseline_rows=None):
+    """Authenticate one complete thirteen-owner edition and its old status view.
+
+    The current public consumers are distinct from their original T20 evidence.
+    An exact historical status body serves the original discovery/crosswalk role
+    only after every staged and present successor has independently bound bytes.
+    No missing, executable, symlinked, hardlinked or mixed edition is admitted.
+    """
+    repo = Path(repo)
+    paths = sorted(FIXTURE_CONSUMER_ORIGINAL)
+    if baseline_rows is not None and not set(paths).intersection(baseline_rows):
+        return {}, None, []
+    try:
+        if baseline_rows is not None:
+            for path in paths:
+                blob, _, size = FIXTURE_CONSUMER_ORIGINAL[path]
+                row = baseline_rows.get(path, {})
+                if (row.get('kind'), row.get('mode'), row.get('git_oid'), row.get('bytes')) != (
+                        'blob', '100644', blob, size):
+                    raise ValueError('original fixture-consumer census differs: ' + path)
+        command = ['git', '--no-replace-objects', '--literal-pathspecs',
+                   'ls-files', '--stage', '-z', '--', *paths]
+        staged = subprocess.run(command, cwd=repo, capture_output=True, check=False)
+        if staged.returncode:
+            raise ValueError('could not inspect staged fixture consumers')
+        edition = None
+        for candidate in (FIXTURE_CONSUMER_ORIGINAL, FIXTURE_CONSUMER_CURRENT):
+            expected = b''.join(('100644 ' + candidate[path][0] + ' 0\t' + path + '\0').encode()
+                                for path in paths)
+            if staged.stdout == expected:
+                edition = candidate
+                break
+        if edition is None:
+            raise ValueError('staged fixture consumers are not one complete admitted edition')
+        for ancestor in (repo, *repo.parents):
+            if ancestor.is_symlink():
+                raise ValueError('fixture consumer root contains a symlink')
+        for path in paths:
+            blob, identity, size = edition[path]
+            node = safe_path(repo, path)
+            fd = os.open(node, os.O_RDONLY | os.O_NOFOLLOW)
+            with os.fdopen(fd, 'rb') as stream:
+                start = os.fstat(stream.fileno())
+                if (not stat.S_ISREG(start.st_mode) or start.st_nlink != 1
+                        or start.st_mode & 0o111 or start.st_size != size):
+                    raise ValueError('fixture consumer is not an ordinary exact-sized file: ' + path)
+                body = stream.read()
+                finish = os.fstat(stream.fileno())
+            fields = ('st_dev', 'st_ino', 'st_mode', 'st_nlink', 'st_size', 'st_mtime_ns', 'st_ctime_ns')
+            if any(getattr(start, field) != getattr(finish, field) for field in fields):
+                raise ValueError('fixture consumer changed during its read: ' + path)
+            oid = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+            if (oid, hashlib.sha256(body).hexdigest(), len(body)) != (blob, identity, size):
+                raise ValueError('present and staged fixture consumer editions differ: ' + path)
+        repeated = subprocess.run(command, cwd=repo, capture_output=True, check=False)
+        if repeated.returncode or repeated.stdout != staged.stdout:
+            raise ValueError('fixture consumer index changed during qualification')
+        if edition is FIXTURE_CONSUMER_ORIGINAL:
+            return {}, None, []
+        blob, identity, size = FIXTURE_CONSUMER_ORIGINAL[FIXTURE_STATUS_PATH]
+        tree = subprocess.run(['git', '--no-replace-objects', '--literal-pathspecs',
+            'ls-tree', '-z', FIXTURE_CONSUMER_REVISION, '--', FIXTURE_STATUS_PATH],
+            cwd=repo, capture_output=True, check=False)
+        original = subprocess.run(['git', '--no-replace-objects', 'cat-file', 'blob',
+            FIXTURE_CONSUMER_REVISION + ':' + FIXTURE_STATUS_PATH],
+            cwd=repo, capture_output=True, check=False)
+        if (tree.returncode or original.returncode
+                or tree.stdout != ('100644 blob ' + blob + '\t' + FIXTURE_STATUS_PATH + '\0').encode()
+                or (hashlib.sha1(b'blob ' + str(len(original.stdout)).encode() + b'\0' + original.stdout).hexdigest(),
+                    hashlib.sha256(original.stdout).hexdigest(), len(original.stdout)) != (blob, identity, size)):
+            raise ValueError('original experiment-status evidence is unavailable or differs')
+        owners = {path: {'path': path, 'kind': 'blob', 'mode': '100644',
+                        'git_oid': edition[path][0], 'bytes': edition[path][2]} for path in paths}
+        return owners, original.stdout, []
+    except (ValueError, OSError) as exc:
+        return {}, None, ['fixture-consumer: ' + str(exc)]
+
+
 def _permitted_projection_consumer_pins(original, candidate):
-    """Admit whole seven-row and two-row historical coordinate migrations."""
+    """Admit only complete previously reviewed coordinate migrations."""
     from copy import deepcopy
     import validate_v5_successors as owners
     earlier = {
@@ -469,7 +634,10 @@ def _permitted_projection_consumer_pins(original, candidate):
     next24 = {
         path: (*HISTORICAL_PROSE[path], HISTORICAL_PROSE_REVISIONS[path])
         for path in NEXT24_PUBLIC_PROSE}
-    for bindings in (earlier, next24, dict(earlier, **next24)):
+    fixtures = {path: (*binding, FIXTURE_CONSUMER_REVISION)
+                for path, binding in FIXTURE_CONSUMER_ORIGINAL.items()}
+    combined = dict(earlier, **next24)
+    for bindings in (earlier, next24, combined, dict(combined, **fixtures)):
         expected = deepcopy(original)
         try:
             for path, (blob, identity, size, revision) in bindings.items():
@@ -1067,7 +1235,7 @@ def check_continuation_owner_edition(repo, baseline_rows):
 
 
 def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths=(), navigation_paths=(),
-                            continuation_owners=()):
+                            continuation_owners=(), fixture_owners=()):
     """New/changed tracked sources cannot disappear behind a frozen census.
 
     Compare the index and actual worktree separately with the approved commit.
@@ -1104,6 +1272,21 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                 except (ValueError, OSError, UnicodeError) as exc:
                     errors.append("corpus-currentness: duplicate evidence: " + str(exc))
                     duplicate_paths[prefix] = set()
+        # Exact finite aliases retain original identity and a present, unchanged
+        # provider. A class qualifier admits actual absences only; neither a
+        # staged modification nor a corrupt present alias gains an allowance.
+        for key, population, qualify in (
+                ("checkpoint-copy", CHECKPOINT_COPY_PATHS, checkpoint_duplicate_paths),
+                ("checkpoint-record", CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths),
+                ("checkpoint-package", CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_duplicate_paths)):
+            if key not in duplicate_paths and any(
+                    status == "D" and path in population
+                    for status, path in zip(values[::2], values[1::2])):
+                try:
+                    duplicate_paths[key] = qualify(Path(repo))
+                except (ValueError, OSError, UnicodeError) as exc:
+                    errors.append("corpus-currentness: " + key + " evidence: " + str(exc))
+                    duplicate_paths[key] = set()
         rounds_navigation = set()
         if any((status == "D" and path.startswith(PMR007_ROUNDS_PREFIX + "/"))
                or (status == "M" and path == PMR007_ROUNDS_FORMALIZATION)
@@ -1131,6 +1314,8 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                         or (status == "M" and path in rounds_navigation)
                          or (status == "M" and path in CONTINUATION_OWNER_PATHS
                              and path in continuation_owners)
+                         or (status == "M" and path in FIXTURE_CONSUMER_ORIGINAL
+                             and path in fixture_owners)
                         or (status == "M" and path in {MEDIATOR_GUIDE, *TYPED_GUIDES}
                             and path in navigation_paths)))
     return list(dict.fromkeys(errors))
@@ -1158,11 +1343,15 @@ def check(repo, owners, cross):
     indexed = {row["path"]: row for row in rows}
     continuation_owners, continuation_errors = check_continuation_owner_edition(repo, indexed)
     errors.extend(continuation_errors)
+    fixture_owners, fixture_status, fixture_errors = check_fixture_consumer_edition(repo, indexed)
+    errors.extend(fixture_errors)
     additions, addition_errors = check_source_additions(repo, indexed, owners, cross)
     errors.extend(addition_errors)
     historical, historical_errors = check_historical_sources(repo, indexed, owners, cross, additions)
     errors.extend(historical_errors)
     navigation = {}
+    if fixture_status is not None:
+        navigation[FIXTURE_STATUS_PATH] = fixture_status
     if PMR007_ROUNDS_PARENT in indexed:
         try:
             navigation[PMR007_ROUNDS_PARENT] = pmr007_rounds_parent_source_bytes(repo)
@@ -1180,7 +1369,7 @@ def check(repo, owners, cross):
             except (ValueError, OSError) as exc:
                 fail("navigation-source", path + ": " + str(exc))
     errors.extend(check_corpus_currentness(repo, owners["baseline"]["commit"], additions,
-                                          historical, navigation, continuation_owners))
+                                          historical, navigation, continuation_owners, fixture_owners))
     errors.extend(check_collection_dispositions(rows, owners, cross))
     errors.extend(check_collection_result_routes(repo, owners, cross))
     if owners["baseline"].get("tree"):
@@ -1225,7 +1414,7 @@ def check(repo, owners, cross):
             fail("owner", str(path) + " is not a regular pinned discovery owner")
             continue
         try:
-            body = (navigation[path] if path == PMR007_ROUNDS_PARENT and path in navigation
+            body = (navigation[path] if path in (PMR007_ROUNDS_PARENT, FIXTURE_STATUS_PATH) and path in navigation
                     else safe_path(repo, path).read_bytes())
             raw = b"blob " + str(len(body)).encode("ascii") + b"\0" + body
             digest = (hashlib.sha1(raw) if len(row["git_oid"]) == 40 else hashlib.sha256(raw)).hexdigest()

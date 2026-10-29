@@ -37,6 +37,8 @@ from resolve_t20_v6_source import (
     HISTORICAL_PROSE, HISTORICAL_PROSE_REVISIONS, historical_source_bytes, HISTORICAL_PROSE_REVISION,
     CONTINUATION_COPY_ROOT, continuation_copy_bytes,
     CHECKPOINT_COPY_PATHS, checkpoint_copy_bytes,
+    CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_copy_bytes,
+    CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_copy_bytes,
 )
 from validate_ar8r_reconciliation import (
     PMR007_DEEP_PREFIX, _pmr007_deep_original_members,
@@ -271,6 +273,18 @@ def _checkpoint_reference(src, cited):
             break
         directory = os.path.dirname(directory)
     for candidate in candidates:
+        if candidate in CHECKPOINT_PACKAGE_COPY_PATHS:
+            try:
+                checkpoint_package_copy_bytes(ROOT, candidate)
+                return True
+            except (ValueError, OSError):
+                return False
+        if candidate in CHECKPOINT_RECORD_COPY_PATHS:
+            try:
+                checkpoint_record_copy_bytes(ROOT, candidate)
+                return True
+            except (ValueError, OSError):
+                return False
         if candidate in CHECKPOINT_COPY_PATHS:
             try:
                 checkpoint_copy_bytes(ROOT, candidate)

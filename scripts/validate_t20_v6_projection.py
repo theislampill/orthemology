@@ -23,6 +23,8 @@ from resolve_t20_v6_source import (
     TYPED_GUIDES, typed_guide_source_bytes,
     CONTINUATION_COPY_ROOT, continuation_duplicate_paths,
     CHECKPOINT_COPY_PATHS, checkpoint_duplicate_paths,
+    CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths,
+    CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_duplicate_paths,
     CONTINUATION_REGISTRY_PATH,
 )
 
@@ -143,6 +145,7 @@ def check_object(root, row):
             raise ValueError('source symlink or escaped root')
         if (relative.as_posix() in HISTORICAL_PROSE
                 or relative.as_posix() == CONTINUATION_REGISTRY_PATH
+                or relative.as_posix() in CHECKPOINT_RECORD_COPY_PATHS
                 or (relative.as_posix().startswith(CONTINUATION_COPY_ROOT) and relative.suffix == '.lean')):
             body = source_bytes(root, row)
         elif row.get('repository_revision') is not None:
@@ -219,6 +222,8 @@ def check_preserved_roots(root, objects):
     copy_authenticated = None
     owner_authenticated = None
     checkpoint_authenticated = None
+    record_authenticated = None
+    package_authenticated = None
     for cached in (True, False):
         result = readonly_git_diff(root,
             ['git', '--no-replace-objects', 'diff', *(['--cached'] if cached else []),
@@ -236,6 +241,14 @@ def check_preserved_roots(root, objects):
                     status == 'D' and path in CHECKPOINT_COPY_PATHS
                     for status, path in zip(changes[::2], changes[1::2])):
                 checkpoint_authenticated = checkpoint_duplicate_paths(root)
+            if record_authenticated is None and any(
+                    status == 'D' and path in CHECKPOINT_RECORD_COPY_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                record_authenticated = checkpoint_record_duplicate_paths(root)
+            if package_authenticated is None and any(
+                    status == 'D' and path in CHECKPOINT_PACKAGE_COPY_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                package_authenticated = checkpoint_package_duplicate_paths(root)
             if owner_authenticated is None and any(
                     status == 'M' and path in continuation_owners.PRESERVATION_OWNER_PATHS
                     for status, path in zip(changes[::2], changes[1::2])):
@@ -255,6 +268,8 @@ def check_preserved_roots(root, objects):
             if any(not ((status == 'D' and path in authenticated) or
                         (status == 'D' and path in (copy_authenticated or ())) or
                         (status == 'D' and path in (checkpoint_authenticated or ())) or
+                        (status == 'D' and path in (record_authenticated or ())) or
+                        (status == 'D' and path in (package_authenticated or ())) or
                         (status == 'M' and path == MEDIATOR_GUIDE and guide_authenticated) or
                         (status == 'M' and path in typed_guides_authenticated) or
                         (status == 'M' and path in (owner_authenticated or ())))

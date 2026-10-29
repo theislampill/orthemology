@@ -12,18 +12,18 @@ canonical fact-atom list (stable fact IDs) into both arms:
   fixtures/KEYS.json                   — hidden scoring truth (archetype,
       defect/remedy categories, closure legitimacy, supporting fact IDs)
 
+public_files() returns only the 60 public renderings in memory. The CLI
+requires an explicit output directory; scoring keys require a separate flag.
 Case IDs are neutral (C01..C20). The defect must be INFERABLE (e.g. a
 reference-data date outside a stated refresh interval), never stated.
 """
+import argparse
 import io
 import json
 import os
 import random
 
 SEED = 20260733
-HERE = os.path.dirname(os.path.abspath(__file__))
-FIX = os.path.join(HERE, "..", "fixtures")
-
 SUBJECTS = [("valve assembly VA-%d", "acceptance check"),
             ("survey plot SP-%d", "boundary check"),
             ("firmware image FW-%d", "release check"),
@@ -127,29 +127,59 @@ def render_treatment(case_id, facts):
                       for a in facts[1:]]}
 
 
-def main():
+def public_cases():
+    """Return only public facts; no key file is opened, serialized or returned."""
     rng = random.Random(SEED)
-    keys = []
-    n = 0
+    cases = {}
     for arch in ("A1", "A2", "A3", "A4", "A5"):
         for variant in range(4):
-            n += 1
-            cid = "C%02d" % n
-            facts, key = facts_for(arch, rng, variant)
-            d = os.path.join(FIX, cid)
-            os.makedirs(d, exist_ok=True)
-            io.open(os.path.join(d, "facts.json"), "w", encoding="utf-8", newline="\n").write(
-                json.dumps({"case": cid, "facts": facts}, indent=2, ensure_ascii=False) + "\n")
-            io.open(os.path.join(d, "baseline-record.md"), "w", encoding="utf-8", newline="\n").write(
-                render_baseline(cid, facts))
-            io.open(os.path.join(d, "treatment-record.json"), "w", encoding="utf-8", newline="\n").write(
-                json.dumps(render_treatment(cid, facts), indent=2, ensure_ascii=False) + "\n")
+            cid = "C%02d" % (len(cases) + 1)
+            cases[cid] = facts_for(arch, rng, variant)[0]
+    return cases
+
+
+def public_files():
+    """Render the original public bytes without a permanent fixture directory."""
+    files = {}
+    for cid, facts in public_cases().items():
+        files[cid + "/facts.json"] = json.dumps(
+            {"case": cid, "facts": facts}, indent=2, ensure_ascii=False) + "\n"
+        files[cid + "/baseline-record.md"] = render_baseline(cid, facts)
+        files[cid + "/treatment-record.json"] = json.dumps(
+            render_treatment(cid, facts), indent=2, ensure_ascii=False) + "\n"
+    return files
+
+
+def scoring_keys():
+    """Explicit scoring-side regeneration; never called by prompt assembly."""
+    rng = random.Random(SEED)
+    keys = []
+    for arch in ("A1", "A2", "A3", "A4", "A5"):
+        for variant in range(4):
+            cid = "C%02d" % (len(keys) + 1)
+            key = facts_for(arch, rng, variant)[1]
             keys.append({"case": cid, "archetype": arch, **key})
-    io.open(os.path.join(FIX, "KEYS.json"), "w", encoding="utf-8", newline="\n").write(
-        json.dumps({"schema": "orthemology-er2-keys-v1",
-                    "note": "HIDDEN scoring truth — never loaded by the prompt-assembly path",
-                    "keys": keys}, indent=2, ensure_ascii=False) + "\n")
-    print("rendered %d cases" % n)
+    return json.dumps({"schema": "orthemology-er2-keys-v1",
+                       "note": "HIDDEN scoring truth — never loaded by the prompt-assembly path",
+                       "keys": keys}, indent=2, ensure_ascii=False) + "\n"
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output-dir", required=True,
+                        help="explicit destination for the generated public renderings")
+    parser.add_argument("--include-scoring-keys", action="store_true",
+                        help="also regenerate scoring truth; never use it as prompt input")
+    args = parser.parse_args()
+    files = public_files()
+    if args.include_scoring_keys:
+        files["KEYS.json"] = scoring_keys()
+    for relative, text in files.items():
+        path = os.path.join(args.output_dir, relative)
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with io.open(path, "w", encoding="utf-8", newline="\n") as stream:
+            stream.write(text)
+    print("rendered %d cases" % len(public_cases()))
 
 
 if __name__ == "__main__":

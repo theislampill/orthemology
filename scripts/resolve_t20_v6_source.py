@@ -228,6 +228,386 @@ CHECKPOINT_COPY_PATHS = frozenset(CHECKPOINT_COPY_ROOT + checkpoint + '/' + memb
 # Exactly reviewed historical-only prose, not a suffix/directory exemption.
 # Ordinary reading uses the existing recognition chapter; original identities
 # and the duplicate CP20 proof occurrence remain independently authenticated.
+# Finite recorded outputs whose exact bytes survive at named public providers.
+# Requested coordinates retain their historical context; this grants no replay,
+# scientific acceptance, independent review, category credit or deletion right.
+CHECKPOINT_RECORD_COPY_MEMBERS = (
+    ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/identification-review/results/INDEPENDENT_METRICS_V2.json',
+     'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/identification-review/results/INDEPENDENT_METRICS.json',
+     'f89629abfbaea7adb57d146681d26a4c94ea5c33', 'fbdc2e9d069dd57b7989b1ae41e37f8190f7eb7194b06ba9339a2eccd871fbf7', 517),
+    ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/wise-determination/results/TRANSPORT_PARENT_REPLAY.json',
+     'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/wise-determination/review/transport_results.json',
+     'ddeff05d24dd5c1378367a5a9e473d8fea250ffb', 'c2fdf5f473ae028e809ab067e584b44cdd7855e94391c8175c503979f91d40a0', 3507),
+    ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/results/AUTHOR_FINAL_MANIFEST.json',
+     'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/MANIFEST.json',
+     '5ce74ffe98f18124374a1c1bf969490b660780d2', '43681d0c2d070e30200afb7b3dc557396150bff9c8012e75bd0a72328a27a974', 5653),
+    ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/grouped-mixture-identification/MANIFEST.json',
+     'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/grouped-mixture-review/frozen/MANIFEST.json',
+     '205957502d0d172596cf3628bfbe7331e323da03', 'baf29c6df8ba1047782a03f794409bf03a0bfe8394f04845bb2b876b6bcc75f6', 1575),
+    ('research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/catalogue-mixture-review/frozen/MANIFEST.json',
+     'research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/catalogue-mixture-sampling/MANIFEST.json',
+     '2da194a85f3b2419b9e1bb205b64cee5be6e681c', '4cc3ee6c2eef3ea291e020bd3a62638694c2ed3f492ad32519cb4fb3a3932ea1', 1943),
+    ('research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/catalogue-mixture-review/frozen/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/catalogue-mixture-sampling/results/exact_controls.json',
+     '3452881ca5ebbd9ce22c0e25a93067966efb9ab6', '54cd8bd22eb688c1c05b84cdf2b3819166a029bcf0f291eb7078db3d595c33ed', 11956),
+    ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/crossed-code-root-review/frozen/CORNER_SIGNATURE_CONTROL.json',
+     'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/root-next-operations/CORNER_SIGNATURE_CONTROL.json',
+     '00c82ce302c5b7d85af9d2846a6df398a65bb845', 'bc816be61d1f3fcfcead9dcc30eb9a58f3be38c8c327a6d96d4771fe30e0e430', 1358),
+    ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/crossed-code-root-review/frozen/CROSSED_INTERIOR_DETERMINANT.json',
+     'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/root-next-operations/CROSSED_INTERIOR_DETERMINANT.json',
+     '7b190db98563735d9b254df2453c9ef27acd017f', '2d504a2e2d242e07eb5777272137b353df684ea4fa3a07169f2fcebdc44ac073', 1049),
+    ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity-review/replayed_appendix_controls/results/efficiency_controls.json',
+     'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity/results/efficiency_controls.json',
+     '52a020ceb243df65252d2eb30a04eb2129f74ebf', '1f410340c77564bf6d9aad1a3e6af66afb04275694fadb4d379e0f32b8b0ffc2', 1152),
+    ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity-review/replayed_author_controls/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity/results/exact_controls.json',
+     'ca94905c40853d27de21c96d92ea33af1b8b6747', '1115ba405c6e115f15cc0b7c748a307e2335f2cb4d106cd6a03bf502aab8e596', 1173),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/global-calibration-ambiguity/MANIFEST.json',
+     'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity/MANIFEST.json',
+     '6d41bffbe287a5e17e7ed1a9001fa3e4a8a8c641', '819b9c5eda8de1fd35b34714d24964ce02d4a41b5c6419413bcd8d82a6febe6c', 3611),
+    ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/multi-root-adaptive-review/author_replay/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/multi-root-adaptive-bound/results/exact_controls.json',
+     'ca9cecbe23b26560841153ef24f2ea027d9cb14c', 'abcc9a3e3660314a3364da1c5262de222193ca692c538d04708a198d5e9ab6b4', 13356),
+    ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/results/NEGATIVE_CONTROLS.json',
+     'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/results/NEGATIVE_CONTROLS.json',
+     '3ffffeaeab27cd14f5025e21de0e8bc5298aa326', '489ea390807acce019accb27190abf7525c65241469f6496bd14ad5782c0fadf', 621),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/grouped-calibration-invariants-review/replayed_author_controls/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/grouped-calibration-invariants/results/exact_controls.json',
+     '049869ebf8b1d428518448e3964244b9f1890637', '6d6a436a6f318ff39e9bc457a5bb7ebba384d559af68a855fe3a9d8b439d7c22', 2809),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/independent/INDEPENDENT_CONTROLS.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/INDEPENDENT_CONTROLS.json',
+     'cdbfd3383a0496b14ee46d08cb49bbe02ee77c3c', 'c4f01971fcc1b5c31a4a36bd47642554221ba4217f38355e07bd45a2667aa353', 857),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction/results/review_verification.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/VERIFICATION.json',
+     '53b1194884c22420c89aad38cd6fb9eeff0e5870', '9d7fff67839a3f665517cfb813359e64e4d91498d55df453e38f5bda315f254f', 412),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/author_replay/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction/results/exact_controls.json',
+     'e37fa1d113849f5f5e89685ba0556ceb4b975e0c', '86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6', 1156),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/author/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction/results/exact_controls.json',
+     'e37fa1d113849f5f5e89685ba0556ceb4b975e0c', '86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6', 1156),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/results/review_verification.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/FINAL_VERIFICATION.json',
+     '0fdf9089c56ded8c5a48801b27529b4311c8e27c', 'b5e520b7b0edb4e8e68843e80c3d6d7760337e8283dd33753b557cf7772d6ad8', 676),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/results/exact_controls.json',
+     'c650b2ed1a53b797ccf8380720426f4d322193d4', '5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1', 1076),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/results/exact_controls.json',
+     'c650b2ed1a53b797ccf8380720426f4d322193d4', '5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1', 1076),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/results/exact_controls.json',
+     'c650b2ed1a53b797ccf8380720426f4d322193d4', '5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1', 1076),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/results/panel_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/results/panel_controls.json',
+     '95b534ad24631d7ae3d8add40591b286ea6c101d', '4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7', 535),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/results/panel_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/results/panel_controls.json',
+     '95b534ad24631d7ae3d8add40591b286ea6c101d', '4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7', 535),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/results/panel_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/results/panel_controls.json',
+     '95b534ad24631d7ae3d8add40591b286ea6c101d', '4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7', 535),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/SOURCE_BINDINGS.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/SOURCE_BINDINGS.json',
+     'fc8c70e78349328bc98d6318db713e832558b905', 'd295a32a9051db9540980bda48781dcd10e66a3bf9a6ec453f2f976edbe8eb17', 11953),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/stable-grouped-invariants-review/author_replay/results/GRID_WITNESS.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/stable-grouped-invariants/results/GRID_WITNESS.json',
+     'dc111a35fa2e38278f17eea3fe10d3ae269b55ee', '521dc54a035408817863d03ad46ce871e47a402b5d056d25dc9916384fe03677', 2447),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/stable-grouped-invariants-review/author_replay/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/stable-grouped-invariants/results/exact_controls.json',
+     '9b27582b15b5729a63fe7a6e4fd2df85f94b3e7c', '3a79888324acb7199f2ee2517e12a1732895da39d6d65b0fb4b143a52c04e000', 22831),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/bounded-interaction-detection/results/review_verification.json',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/bounded-interaction-detection-review/VERIFICATION.json',
+     'e2fa18ef4cf9f8bfd5279e0fa5e41960e5a93313', '1f5f1448377d8ede1137eedfbdaaa09d26d66cd234b7f4ef29bfe094864ab202', 249),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/bounded-interaction-detection-review/author_replay/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/bounded-interaction-detection/results/exact_controls.json',
+     '7e52bb4f0dd7f160f30eb3955403eca7caab2794', '74df7532deff48971dcf342ecaa5a21b0bfb4626a6b6853fceb2dd627f20bba2', 1120),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/dependent-gate-transport-review/replay/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/dependent-gate-transport/results/exact_controls.json',
+     '82b17f1be444762f878b42d51bd80de8e18afca8', 'cb68c4936ac039a7046a411d717078e1212006fbabb0fd8620ef98bf679779db', 18639),
+    ('research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/dependent-gate-transport/SOURCE_BINDINGS.json',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/dependent-gate-transport/SOURCE_BINDINGS.json',
+     'b672e95b7f86cc8d5f3c78353e1041bbe5e2608e', 'd0168bae91d619e795e50326caaf91e6a19df0e5cb84f8b1e1562a53646c5c0a', 6234),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/dependent-gate-transport/results/final_review_verification.json',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/same-threshold-replay/results/predecessor_verification.json',
+     '8d804c7a822234df208caa44f61835c70cdd3b59', 'bebb17eace4e5bed8431fa6d8daed38d92c53ec568c7557cf22b2eac60e1c817', 556),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/finite-hypergraph-calibration-review/packaging_addendum/author_replay/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/finite-hypergraph-calibration/results/exact_controls.json',
+     'a7ff78d1b08b12d9a1116cf6ef8a66b0017f1d02', 'e5b43da0d25414ed320013046f4186f7e7b14c1e511f65b9a94ea3564557e8b4', 2125),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/finite-hypergraph-calibration-review/packaging_addendum/author_snapshot/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/finite-hypergraph-calibration/results/exact_controls.json',
+     'a7ff78d1b08b12d9a1116cf6ef8a66b0017f1d02', 'e5b43da0d25414ed320013046f4186f7e7b14c1e511f65b9a94ea3564557e8b4', 2125),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/finite-hypergraph-calibration-review/packaging_addendum/author_snapshot/SOURCE_BINDINGS.json',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/finite-hypergraph-calibration/SOURCE_BINDINGS.json',
+     'e3b50fec923b60d8d834d0940fa43765135ade04', '2c1facf6e9e5cd35a4cdc3bc3e522f5a9a510b85b8e4f7a8f4a379fdcbaa750e', 5010),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/same-threshold-replay-review/replay/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/same-threshold-replay/results/exact_controls.json',
+     '9eed1cbf88853aafd60ab5ac7f1ef5e1a3f2bf04', '060ed3aae850901e96d00a59b2b42f10e7c3e933628cd97e7503b8368b656596', 3717),
+    ('research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/same-threshold-replay/SOURCE_BINDINGS.json',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/same-threshold-replay/SOURCE_BINDINGS.json',
+     '36381587fa5fadb645f0fc3fc0e630f8d74d9287', 'adfbc884c980593876b941e3b8c7327ac5294623a0e5d4463001aa556d5e7a7c', 7996),
+    ('research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/AUTHOR_CONTROLS_STRENGTHENED_RERUN.json',
+     'research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/arbitrary-face-replay-design/CONTROLS_OUTPUT.json',
+     '78e0d13f8dcce7f7d3343332e5a72a0a39ec7a95', '9af0caefa09b181bb9d3141836a8b21d3a40ac4e4f41734b3d5184bfe180e209', 3417),
+    ('research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/REVIEW_RECEIPT.json',
+     'research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/REVIEW_RECEIPT.json',
+     '3ae4653929b83f93853c40bf7377143412f3623a', 'f6932faa5f49ffbe6b11826eeb4e25de79a3bc196203ccf8e2c9ebf1785f5f34', 6949),
+    ('research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/SOURCE_BINDING_RERUN.json',
+     'research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/arbitrary-face-replay-design/SOURCE_CHECK_OUTPUT.json',
+     'af883751854a8c24805119ca40c9f7eb7ffea779', '11ba8909fdfbac2214f9a0252341431d6165ca9be4a4c504952f8f2c8d023cbf', 6393),
+    ('research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/arbitrary-face-replay-design/MANIFEST.json',
+     'research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/arbitrary-face-replay-design/MANIFEST.json',
+     '9c10ee19195f460e96a0a8e8655d00ae03b6a5f9', 'e454504588064ed84b4565fbc4656075c456a34b3f812973f1c96c5d4d83af3f', 2503),
+    ('research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/finite-replay-sampling-lower-bound/results/final_review_verification.json',
+     'research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/FINAL_VERIFICATION.json',
+     'b3ee5d543c199d184afbe0b40ee554e42cd992f7', '69a7bae07a7de7751ab9ac7199e379acf66a3023b96ba08147d2d8de83eac0c3', 4556),
+    ('research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/author_snapshot/MANIFEST.json',
+     'research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/finite-replay-sampling-lower-bound/MANIFEST.json',
+     'e554982ab2e0b4149b420c6662335e84693a084b', '3f7db7a3045f45135af93f82130791635cb56c808caf9aae89d137966095fa23', 1664),
+    ('research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/author_snapshot/SOURCE_BINDINGS.json',
+     'research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/finite-replay-sampling-lower-bound/SOURCE_BINDINGS.json',
+     'c355d37cfa9b2749089df9e24b26fffdedc325a8', 'f642a4a2214d76d50edfbaad21d8356a02e0f723ac8db304d92dd205abd6375a', 9703),
+    ('research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/author_snapshot/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/finite-replay-sampling-lower-bound/results/exact_controls.json',
+     'fc54186c5c1b9e6d93b8a09550d1aa7e9126b4c8', '3eadf7e16d2c499d9b405f3186a4ccee9072ab34e4b6f0b3776bcc4bb0037ac2', 25985),
+    ('research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/adaptive-two-face-corollary-review/AUTHOR_CONTROLS_RERUN.json',
+     'research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/adaptive-two-face-corollary/CONTROLS_OUTPUT.json',
+     'e94c7aa821a0cf4a6b3662c6e8a39beea5a161d1', 'f8d4044b165117ecdacc79cbb5b2bea8326f17e30fcf8dac16ce5731508612aa', 1466),
+    ('research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/qualitative-tensor-transport-review/INDEPENDENT_PROBE_RESULTS.json',
+     'research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/qualitative-tensor-transport-review/INDEPENDENT_RUN_OUTPUT.json',
+     'bc1526e355a6b1c068b6253ba4416b36d5cadcaa', '327b28c4e2847191c37c46d25c1687edd448dcd8a6df6d0170f4aa2d0c786509', 1590),
+    ('research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/qualitative-tensor-transport-review/REPLAY_RUN_OUTPUT.json',
+     'research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/qualitative-tensor-transport/RUN_OUTPUT.json',
+     '1730b8a3ce4d9270dd811b8ea1c9745c7d7ef742', '8b2328daae9ff60292316e651f07f34382b399ac002673e59e165d6eee226a7e', 2934),
+    ('research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/qualitative-tensor-transport-review/reviewed_snapshot/CONTROL_RESULTS.json',
+     'research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/qualitative-tensor-transport/RUN_OUTPUT.json',
+     '1730b8a3ce4d9270dd811b8ea1c9745c7d7ef742', '8b2328daae9ff60292316e651f07f34382b399ac002673e59e165d6eee226a7e', 2934),
+    ('research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/qualitative-tensor-transport-review/reviewed_snapshot/RUN_OUTPUT.json',
+     'research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/qualitative-tensor-transport/RUN_OUTPUT.json',
+     '1730b8a3ce4d9270dd811b8ea1c9745c7d7ef742', '8b2328daae9ff60292316e651f07f34382b399ac002673e59e165d6eee226a7e', 2934),
+    ('research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/qualitative-tensor-transport/CONTROL_RESULTS.json',
+     'research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/qualitative-tensor-transport/RUN_OUTPUT.json',
+     '1730b8a3ce4d9270dd811b8ea1c9745c7d7ef742', '8b2328daae9ff60292316e651f07f34382b399ac002673e59e165d6eee226a7e', 2934),
+    ('research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/full-face-threshold-kl-review/CONTROL_RESULTS.json',
+     'research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/full-face-threshold-kl-review/checks.stdout.json',
+     'b7d50e8f8b35f2912347f47e76ca066ce103942f', 'c501ee9cbc1019f4d89c15d36d2a27fa24465ae16be0b84e03deaf7052a2aab8', 6894),
+    ('research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate-review/AUTHOR_CONTROL_RESULTS.json',
+     'research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate/CONTROL_RESULTS.json',
+     '4d85a649faae154ccf545eebfd9ce1ea2b502e25', 'a3e4120b7146789bf5f076c1a3fe1ec6d98752a1719fcc9b7f5ab36bbc62c97f', 2459),
+    ('research/t20-live-20261009/checkpoints/CP10/t20-next-frontier-20261008/retained-skyline-likelihood/CONTROL_RESULTS.json',
+     'research/t20-live-20261009/checkpoints/CP10/t20-next-frontier-20261008/retained-skyline-likelihood/check_stdout.json',
+     '28a07bddc742bcbd9829be94a0b18864ae412204', '9d593577eda951f90327228cdc079ef22c0a776206c5063350e8cfcc686255df', 6899),
+    ('research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/baseline-skyline-moments-review/source-rerun/CONTROL_RESULTS.json',
+     'research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/baseline-skyline-moments/CONTROL_RESULTS.json',
+     '18a13c923a3036aabd93a3f7b6c4da8373cbbfca', '83094e37c1749ed43c2363eba0d8914f18b946558e15cba0ddfbe211859abc41', 19923),
+    ('research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/full-skyline-log-squared-review/author_replay/CONTROL_RESULTS.json',
+     'research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/full-skyline-log-squared/CONTROL_RESULTS.json',
+     '9ac1c9e6794ec548dc89e2c8e707ee886bd8effb', '6de20900a23a8578bfe57dfab63f2147c517c5a8cd606a74ff02b4646c3a5211', 52456),
+    ('research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/full-skyline-reverse-kl-review/author_replay/CONTROL_RESULTS.json',
+     'research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/full-skyline-reverse-kl/CONTROL_RESULTS.json',
+     '073296a01b255a9c1d670571222b791fe43d820d', '68e99ec9eb962d4922ccd6b3a9cad981c770d0edd461e83dbaace1c3d0802ddc', 11873),
+    ('research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/skyline-likelihood-score-review/author_replay/CONTROL_RESULTS.json',
+     'research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/skyline-likelihood-score/CONTROL_RESULTS.json',
+     'd9c5d2355a9a036c5d7961ddd6de5907da008aec', 'fc4e65e6f42844a9c886881a60b95fcccefa8a10defe48a26d733f31ad8cdab9', 10323),
+    ('research/t20-live-20261009/checkpoints/CP12/t20-next-frontier-20261008/finite-geometric-score-review/author_replay/CONTROL_RESULTS.json',
+     'research/t20-live-20261009/checkpoints/CP12/t20-next-frontier-20261008/finite-geometric-score/CONTROL_RESULTS.json',
+     'b8a6d1ddc6371a90dee82c725d11b30d331622ba', 'c799b4ef7dafaa5daba4f7c81c22372a68ce33f2dc49d3453f383087c029faf6', 6659),
+    ('research/t20-live-20261009/checkpoints/CP12/t20-next-frontier-20261008/sharp-skyline-information-review/author_replay/CONTROL_RESULTS.json',
+     'research/t20-live-20261009/checkpoints/CP12/t20-next-frontier-20261008/sharp-skyline-information/CONTROL_RESULTS.json',
+     '673208ce24f8a47e474c17d95c9f050a98cb08cb', 'bbcce6cec92d9009bf9fcfa79f66bc3c7135e3fb231a3202c4eff2cde4197d04', 9891),
+    ('research/t20-live-20261009/checkpoints/CP12/t20-next-frontier-20261008/sharp-skyline-information-review/author_replay_pre_freeze/CONTROL_RESULTS.json',
+     'research/t20-live-20261009/checkpoints/CP12/t20-next-frontier-20261008/sharp-skyline-information/CONTROL_RESULTS.json',
+     '673208ce24f8a47e474c17d95c9f050a98cb08cb', 'bbcce6cec92d9009bf9fcfa79f66bc3c7135e3fb231a3202c4eff2cde4197d04', 9891),
+    ('research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/MANIFEST.json',
+     'research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-grounding-source/MANIFEST.json',
+     '7bae2d8c9d92c318654f8e264f15f5c9f2595592', '94756f946b2e9c0aca406de2bed11471fb62f40fbbd939a9faeea590ea11c6a0', 3874),
+    ('research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/READING_LEDGER.json',
+     'research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-grounding-source/READING_LEDGER.json',
+     '02c3d956bf363702185c02162281aeb426a2c5c8', '02520251152c138d53157583461112a0613f9ba8893917a2b1ee52cbdf8f0e9e', 7167),
+    ('research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/SOURCE_EXTRACTION_CHECK.json',
+     'research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-grounding-source/SOURCE_EXTRACTION_CHECK.json',
+     '4f407fadee5f03d5fb32a0f20c35738759fcf356', '749121d3e535ade49a942db72b54b8797d6856dcac85bf9982f676b0a18e7295', 11785),
+    ('research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-identity-transport-review/AUTHOR_REPLAY.json',
+     'research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-identity-transport/CONTROL_RESULTS.json',
+     'c8841f04eeacee47b36fb5a1a393aa3c9a860948', 'f740b49863794c4319a508f152a30c17270a96b4ec58925ff57a0ea5da40a676', 2531),
+    ('research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-identity-transport-review/INDEPENDENT_RUN.stdout.json',
+     'research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-identity-transport-review/INDEPENDENT_RESULTS.json',
+     '0dab1dbe0f299ff87e5b5a9de5f673a6de1727f8', '124bdd9bd4923a9e6f6cc72e73849a77a1d24a7c47f391bb824011d6d784181a', 2541),
+    ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/compilation-replay/CHECK_RESULTS.json',
+     'research/t20-live-20261009/checkpoints/CP23/certificate-compilation-boundary-20261009/CHECK_RESULTS.json',
+     'fe26c132e95bf846f430684ad47c5ef25fbd6117', 'b61b2037c1c51e740d62bfff9f1fbf163beeaf8cedf4a2a50d273c108e632193', 693),
+    ('research/t20-live-20261009/checkpoints/CP23/certificate-compilation-boundary-20261009/review/parent-sanity-replay.json',
+     'research/t20-live-20261009/checkpoints/CP23/certificate-compilation-boundary-20261009/review/SANITY_RESULTS.json',
+     'a4897484b5e22af8cabc21e27ed4f045ab014e62', '99c3b0d71e34d8e0c14293d82af499cdacd77fffd2089070603167079aa45c8d', 419),
+    ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/discrimination-replay/CHECK_RESULTS.json',
+     'research/t20-live-20261009/supplement/S01/warranted-discrimination-research-20261009/CHECK_RESULTS.json',
+     '3a72114f350daf55cd10f27de132be3456fcf327', '429fc2e93da069d5ac61b7527860f74ecb83e73e9d780e6caf85a51b9e60a602', 813),
+    ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/CHECK_RESULTS.json',
+     'research/t20-live-20261009/supplement/S01/warranted-discrimination-research-20261009/CHECK_RESULTS.json',
+     '3a72114f350daf55cd10f27de132be3456fcf327', '429fc2e93da069d5ac61b7527860f74ecb83e73e9d780e6caf85a51b9e60a602', 813),
+    ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/BINDING.json',
+     'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/BINDING.json',
+     '3b1fae41d0ae0f62c081c14329dc1348e85a4ab3', '4641da2105a959860230f681a1813d935b36f05886197479f4b520de63175053', 4685),
+    ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/CHECK_RESULTS.json',
+     'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/CHECK_RESULTS.json',
+     '483b7c4a04b4c5891293de42f47e006a19a03c2f', '8b9f27b9a7274f3c5cba2b95458694e48989a72aa2b899048148762ea52ca0d5', 714),
+    ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/MANIFEST.json',
+     'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/MANIFEST.json',
+     'c1fb9b0fa36e286d68cd397ce051ded6023d651b', '5e07ae5129e8191288c901a919f54821ba5123636110655e23f2114dc5d2a58a', 6735),
+    ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/MANIFEST.json',
+     'research/t20-live-20261009/supplement/S01/warranted-discrimination-research-20261009/MANIFEST.json',
+     '93f23708fafd1cf214a60b4d06c4b71e86fdc0fd', 'a09fda18d1dd4e524d18278447ca3dfef267561a89e466e0f82b8dcfd5a77c31', 2313),
+    ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/SOURCES.json',
+     'research/t20-live-20261009/supplement/S01/warranted-discrimination-research-20261009/SOURCES.json',
+     '317bde77327463310dfdd08bf4a4cab95011f477', '188bbf65c49669cae64022a810f5a35b4b846cd0a91497865e62811edda82b25', 4350),
+)
+CHECKPOINT_RECORD_COPY_CATALOG_SHA256 = 'b7d996ff4bbbbeb8000d9bd1d87449fd760b5a7a3a0563f328dbcd24da0ca85c'
+CHECKPOINT_RECORD_COPY_PATHS = frozenset(row[0] for row in CHECKPOINT_RECORD_COPY_MEMBERS)
+
+
+# Exactly12 previous checkpoint providers now have an exact surviving body.
+# The original87 catalog stays intact. Both the prior coordinate and final
+# provider must authenticate; a corrupt present or staged intermediate fails.
+CHECKPOINT_COPY_RETARGETS = (
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction-review/author_replay/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/author_replay/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction/results/exact_controls.json',
+     'e37fa1d113849f5f5e89685ba0556ceb4b975e0c', '86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6', 1156),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/author/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/author/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction/results/exact_controls.json',
+     'e37fa1d113849f5f5e89685ba0556ceb4b975e0c', '86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6', 1156),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/independent/INDEPENDENT_CONTROLS.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/independent/INDEPENDENT_CONTROLS.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/INDEPENDENT_CONTROLS.json',
+     'cdbfd3383a0496b14ee46d08cb49bbe02ee77c3c', 'c4f01971fcc1b5c31a4a36bd47642554221ba4217f38355e07bd45a2667aa353', 857),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction/results/review_verification.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction/results/review_verification.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/VERIFICATION.json',
+     '53b1194884c22420c89aad38cd6fb9eeff0e5870', '9d7fff67839a3f665517cfb813359e64e4d91498d55df453e38f5bda315f254f', 412),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/results/exact_controls.json',
+     'c650b2ed1a53b797ccf8380720426f4d322193d4', '5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1', 1076),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/results/panel_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/results/panel_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/results/panel_controls.json',
+     '95b534ad24631d7ae3d8add40591b286ea6c101d', '4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7', 535),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/SOURCE_BINDINGS.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/SOURCE_BINDINGS.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/SOURCE_BINDINGS.json',
+     'fc8c70e78349328bc98d6318db713e832558b905', 'd295a32a9051db9540980bda48781dcd10e66a3bf9a6ec453f2f976edbe8eb17', 11953),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/results/exact_controls.json',
+     'c650b2ed1a53b797ccf8380720426f4d322193d4', '5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1', 1076),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/results/panel_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/results/panel_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/results/panel_controls.json',
+     '95b534ad24631d7ae3d8add40591b286ea6c101d', '4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7', 535),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/results/exact_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/results/exact_controls.json',
+     'c650b2ed1a53b797ccf8380720426f4d322193d4', '5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1', 1076),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/results/panel_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/results/panel_controls.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/results/panel_controls.json',
+     '95b534ad24631d7ae3d8add40591b286ea6c101d', '4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7', 535),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor/results/review_verification.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/results/review_verification.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/FINAL_VERIFICATION.json',
+     '0fdf9089c56ded8c5a48801b27529b4311c8e27c', 'b5e520b7b0edb4e8e68843e80c3d6d7760337e8283dd33753b557cf7772d6ad8', 676),
+)
+CHECKPOINT_COPY_RETARGETS_SHA256 = '275cdaf159464f7a2dfbff36766742c7944c277cc1fe721e8200e61ebb740eee'
+
+
+# Exactly26 redundant historical package locations, including inert Python
+# source. Earlier public bodies preserve their original logical coordinates.
+# These paths receive no new public projection or historical execution route.
+CHECKPOINT_PACKAGE_COPY_MEMBERS = (
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction-review/REVIEW_RECEIPT.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/REVIEW_RECEIPT.json',
+     'c1c324d726adbf696717420bbbd89052b518ebd6', '7731d7ada9d6a4d1ceb456a6af3b90e934f47941ccfd532a73b879af9356a945', 27623),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction-review/SOURCE_AUDIT.md',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/SOURCE_AUDIT.md',
+     'e50227b67176b6e5d9033aa9136839e741835e75', '53ecce4670674ef4a8368dc6fb444f737b3d874fb90d81f0fac1c71206cf80d0', 5588),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction-review/SOURCE_BINDINGS.json',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/SOURCE_BINDINGS.json',
+     'f05ded2b1580127f42508393f81333d4b2027045', '50b9873dbcc23cb9c9049b69bae22d107bed6873a1a6af8fa33639fa00ad3661', 1126),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction-review/author_replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/author_replay/exact_controls.py',
+     '4f78222a0ab2d0e4cb4972cb62e110436cc817ed', '92cd73364482270d5acb49190a4f5eb893c4f646aa052281fb2fdbe21c1c2b70', 5030),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction-review/independent_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/independent_controls.py',
+     'a261bcd23a0263de2df88b14016a58984c234f8a', 'ed2d1faf38772231440c05dc440068abe4849f5a5474a21d890bf6d0502aa1ba', 6836),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/author/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/author/exact_controls.py',
+     '4f78222a0ab2d0e4cb4972cb62e110436cc817ed', '92cd73364482270d5acb49190a4f5eb893c4f646aa052281fb2fdbe21c1c2b70', 5030),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/independent/independent_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/independent/independent_controls.py',
+     'a261bcd23a0263de2df88b14016a58984c234f8a', 'ed2d1faf38772231440c05dc440068abe4849f5a5474a21d890bf6d0502aa1ba', 6836),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction-review/verify_review.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/verify_review.py',
+     '445665c976901908dbe8d46738819eb947112d53', '3f60c392d2e416c7549e4c76befdc8f48fd137a74509857dcc6495c8c8396e1c', 2224),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction/SOURCE_AUDIT.md',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction/SOURCE_AUDIT.md',
+     '4f3879a877879ded9f98efd1e6d5fdbb2ab35c19', '7bf7d837c61ed3c6ef6ecb08270b3b0d345754fb54afcda091aefb96e0d7648a', 6410),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction/exact_controls.py',
+     '4f78222a0ab2d0e4cb4972cb62e110436cc817ed', '92cd73364482270d5acb49190a4f5eb893c4f646aa052281fb2fdbe21c1c2b70', 5030),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction/verify_evidence.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction/verify_evidence.py',
+     '269db84bfcc44d45f7e3c5316d938bff1113a001', '2f1771287858cca17a987faeacb917bc42eed68f98eb62147520b2aa46746d56', 1959),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/exact_controls.py',
+     '4bcf6cd4a98548c23e03a82987bf6ccfad57f1a9', '9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c', 4780),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/panel_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/panel_controls.py',
+     'a5b7dfe4518398e7d2cf88ee71b70cc904290365', '0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b', 2826),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/exact_controls.py',
+     '4bcf6cd4a98548c23e03a82987bf6ccfad57f1a9', '9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c', 4780),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/panel_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/panel_controls.py',
+     'a5b7dfe4518398e7d2cf88ee71b70cc904290365', '0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b', 2826),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/verify_evidence.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/verify_evidence.py',
+     '9c92a346d92a803c528220689b02bdbdd212bd10', '8f41b467eb27f7dea863074e5886f477d0cc02f613a82dbea6e45a4a3d007093', 2252),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/independent_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/independent_controls.py',
+     '3bd644ae543ef3386cd0331ae9cf3f7b32f7578c', 'cb032a4ca085796e45fc7517d08a02da476a3c78ff46fead87700f9b1c35ea8e', 8975),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/independent_panel_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/independent_panel_controls.py',
+     'eb2ac2d153a63b4bddbbec2be44ed31c75b9a070', '748bab6b1445f3740d80e630516a78caf9c4924424bd646a793e0918d31b6c5f', 5498),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/exact_controls.py',
+     '4bcf6cd4a98548c23e03a82987bf6ccfad57f1a9', '9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c', 4780),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/panel_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/panel_controls.py',
+     'a5b7dfe4518398e7d2cf88ee71b70cc904290365', '0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b', 2826),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/verify_review.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/verify_review.py',
+     'b0f1bb39f6ac54624f66b07031c73b692c261b42', '2de38a98bb5ddd27073affa3e2341b9ab3cbb81634efb21f964a93619d454900', 3634),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor/SOURCE_AUDIT.md',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/SOURCE_AUDIT.md',
+     '659eebbe5efe9d41589672e9f1cb028522d4db8c', '439a9c0e893dbee30a2e24ea555788251e76fee7e5dd060cfa88049156edf8b6', 6901),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/exact_controls.py',
+     '4bcf6cd4a98548c23e03a82987bf6ccfad57f1a9', '9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c', 4780),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor/panel_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/panel_controls.py',
+     'a5b7dfe4518398e7d2cf88ee71b70cc904290365', '0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b', 2826),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor/verify_evidence.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/verify_evidence.py',
+     '9c92a346d92a803c528220689b02bdbdd212bd10', '8f41b467eb27f7dea863074e5886f477d0cc02f613a82dbea6e45a4a3d007093', 2252),
+    ('research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/finite-panel-replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/finite-panel-replay/exact_controls.py',
+     '113536080a802c627b68618c3820132e057c30a8', '04cffc5e5d694deb58f64e69f60479afd4a847234b75616c9f5c702d18e72a8b', 4176),
+)
+CHECKPOINT_PACKAGE_COPY_CATALOG_SHA256 = '344218868b9d7a6cfe55e1468bc37649a0ba9f5bcce78bb40ecbbed4bd5df392'
+CHECKPOINT_PACKAGE_COPY_PATHS = frozenset(row[0] for row in CHECKPOINT_PACKAGE_COPY_MEMBERS)
+
+
 HISTORICAL_PROSE_REVISION = '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'
 HISTORICAL_PROSE = {
     'research/t20-live-20261009/checkpoints/CP19/necessary-truth-operative-basing-20261009/REPORT.md':
@@ -1409,6 +1789,37 @@ def continuation_duplicate_paths(root):
     return result
 
 
+def _checkpoint_retarget_catalog(original):
+    """Bind12 former providers to existing exact record routes without recursion."""
+    encoded = json.dumps(CHECKPOINT_COPY_RETARGETS, separators=(',', ':')).encode()
+    if (len(CHECKPOINT_COPY_RETARGETS) != 12
+            or hashlib.sha256(encoded).hexdigest() != CHECKPOINT_COPY_RETARGETS_SHA256):
+        raise ValueError('checkpoint retarget finite class differs')
+    records = _checkpoint_record_members()
+    result = {path: dict(binding) for path, binding in original.items()}
+    seen, former = set(), set()
+    for alias, prior, canonical, blob, identity, size in CHECKPOINT_COPY_RETARGETS:
+        if (not all(isinstance(value, str) for value in (alias, prior, canonical, blob, identity))
+                or alias in seen or prior in former or prior == canonical):
+            raise ValueError('checkpoint retarget coordinates differ')
+        binding = original.get(alias)
+        expected = {'canonical': canonical, 'blob': blob, 'sha256': identity,
+                    'bytes': size, 'mode': '100644'}
+        if (binding is None or binding['canonical'] != prior
+                or (binding['blob'], binding['sha256'], binding['bytes'], binding['mode'])
+                    != (blob, identity, size, '100644')
+                or records.get(prior) != expected):
+            raise ValueError('checkpoint former provider or exact record binding differs')
+        seen.add(alias)
+        former.add(prior)
+        result[alias].update(canonical=canonical, prior_canonical=prior)
+    kept = {binding['canonical'] for binding in result.values()}
+    if (len(seen) != 12 or len(former) != 12 or len(kept) != 73
+            or kept & (set(result) | set(records))):
+        raise ValueError('checkpoint retarget retained population differs')
+    return result
+
+
 def _checkpoint_copy_catalog():
     """The exact public snapshot class; no path discovery or basename fallback."""
     encoded = json.dumps(CHECKPOINT_COPY_MEMBERS, separators=(',', ':')).encode()
@@ -1436,7 +1847,7 @@ def _checkpoint_copy_catalog():
     kept = {row['canonical'] for row in result.values()}
     if len(result) != 87 or len(kept) != 85 or set(result) & kept:
         raise ValueError('checkpoint copy retained population differs')
-    return result
+    return _checkpoint_retarget_catalog(result)
 
 
 def _checkpoint_bound_bytes(root, path, binding):
@@ -1480,6 +1891,19 @@ def _checkpoint_bound_bytes(root, path, binding):
         raise ValueError('checkpoint copy public dependency is unavailable') from exc
 
 
+def _checkpoint_copy_bound_bytes(root, path, binding):
+    """Authenticate a retargeted original together with its former provider.
+
+    A former provider may be absent or staged absent only under the same
+    original-history, exact-current-body, ordinary-mode and index checks as
+    any other finite alias. Its corruption cannot be hidden by a good endpoint.
+    """
+    prior = binding.get('prior_canonical')
+    if prior is not None:
+        _checkpoint_bound_bytes(root, prior, binding)
+    return _checkpoint_bound_bytes(root, path, binding)
+
+
 def checkpoint_copy_bytes(root, path, identity=None, size=None):
     """Read a finite exact copy at its original checkpoint coordinate.
 
@@ -1492,13 +1916,129 @@ def checkpoint_copy_bytes(root, path, identity=None, size=None):
     if (binding is None or (identity is not None and identity != binding['sha256'])
             or (size is not None and size != binding['bytes'])):
         raise ValueError('checkpoint copy requested identity differs')
-    return _checkpoint_bound_bytes(root, path, binding)
+    return _checkpoint_copy_bound_bytes(root, path, binding)
 
 
 def checkpoint_duplicate_paths(root):
     """Return actual absences only after authenticating the complete finite class."""
     result = set()
     for path, binding in _checkpoint_copy_catalog().items():
+        _checkpoint_copy_bound_bytes(root, path, binding)
+        if not os.path.lexists(pathlib.Path(root) / path):
+            result.add(path)
+    return result
+
+
+def _checkpoint_record_members():
+    """Validate exactly76 inert record bindings independently of provider roles."""
+    encoded = json.dumps(CHECKPOINT_RECORD_COPY_MEMBERS, separators=(',', ':')).encode()
+    if (len(CHECKPOINT_RECORD_COPY_MEMBERS) != 76
+            or hashlib.sha256(encoded).hexdigest() != CHECKPOINT_RECORD_COPY_CATALOG_SHA256):
+        raise ValueError('checkpoint record finite class differs')
+    result = {}
+    for alias, canonical, blob, identity, size in CHECKPOINT_RECORD_COPY_MEMBERS:
+        for path in (alias, canonical):
+            if (not isinstance(path, str) or not path.startswith('research/t20-live-20261009/')
+                    or '\\' in path or '\0' in path or ':' in path
+                    or any(p in ('', '.', '..', '.git') for p in path.split('/'))
+                    or not path.endswith('.json')):
+                raise ValueError('checkpoint record coordinate differs')
+        if (not alias.startswith(CHECKPOINT_COPY_ROOT) or alias in result or alias == canonical
+                or not re.fullmatch(r'[0-9a-f]{40}', blob)
+                or not re.fullmatch(r'[0-9a-f]{64}', identity)
+                or not isinstance(size, int) or isinstance(size, bool) or size <= 0):
+            raise ValueError('checkpoint record identity differs')
+        result[alias] = {'canonical': canonical, 'blob': blob, 'sha256': identity,
+                         'bytes': size, 'mode': '100644'}
+    kept = {row['canonical'] for row in result.values()}
+    if len(result) != 76 or len(kept) != 65 or set(result) & kept:
+        raise ValueError('checkpoint record retained population differs')
+    return result
+
+
+def _checkpoint_record_copy_catalog():
+    """Keep original logical contexts and all surviving earlier-class providers."""
+    result = _checkpoint_record_members()
+    kept = {row['canonical'] for row in result.values()}
+    earlier = _checkpoint_copy_catalog()
+    earlier_kept = {row['canonical'] for row in earlier.values()}
+    if set(result) & (set(earlier) | earlier_kept) or kept & set(earlier):
+        raise ValueError('checkpoint record retained population differs')
+    return result
+
+
+def checkpoint_record_copy_bytes(root, path, identity=None, size=None):
+    """Return exact recorded bytes while the caller retains its original path."""
+    if not isinstance(path, str) or path not in CHECKPOINT_RECORD_COPY_PATHS:
+        raise ValueError('unqualified checkpoint record path')
+    binding = _checkpoint_record_copy_catalog().get(path)
+    if (binding is None or (identity is not None and identity != binding['sha256'])
+            or (size is not None and size != binding['bytes'])):
+        raise ValueError('checkpoint record requested identity differs')
+    return _checkpoint_bound_bytes(root, path, binding)
+
+
+def checkpoint_record_duplicate_paths(root):
+    """Authenticate the complete record class before admitting exact absences."""
+    result = set()
+    for path, binding in _checkpoint_record_copy_catalog().items():
+        _checkpoint_bound_bytes(root, path, binding)
+        if not os.path.lexists(pathlib.Path(root) / path):
+            result.add(path)
+    return result
+
+
+def _checkpoint_package_copy_catalog():
+    """Receive the exact26 additional members of five reviewed duplicate packages."""
+    encoded = json.dumps(CHECKPOINT_PACKAGE_COPY_MEMBERS, separators=(',', ':')).encode()
+    if (len(CHECKPOINT_PACKAGE_COPY_MEMBERS) != 26
+            or hashlib.sha256(encoded).hexdigest() != CHECKPOINT_PACKAGE_COPY_CATALOG_SHA256):
+        raise ValueError('checkpoint package finite class differs')
+    result = {}
+    for alias, canonical, blob, identity, size in CHECKPOINT_PACKAGE_COPY_MEMBERS:
+        for path in (alias, canonical):
+            if (not isinstance(path, str) or not path.startswith(CHECKPOINT_COPY_ROOT)
+                    or '\\' in path or '\0' in path or ':' in path
+                    or any(p in ('', '.', '..', '.git') for p in path.split('/'))
+                    or not path.endswith(('.py', '.md', '.json'))):
+                raise ValueError('checkpoint package coordinate differs')
+        if (alias in result or alias == canonical
+                or not re.fullmatch(r'[0-9a-f]{40}', blob)
+                or not re.fullmatch(r'[0-9a-f]{64}', identity)
+                or not isinstance(size, int) or isinstance(size, bool) or size <= 0):
+            raise ValueError('checkpoint package identity differs')
+        result[alias] = {'canonical': canonical, 'blob': blob, 'sha256': identity,
+                         'bytes': size, 'mode': '100644'}
+    kept = {row['canonical'] for row in result.values()}
+    earlier = {**_checkpoint_copy_catalog(), **_checkpoint_record_copy_catalog()}
+    earlier_kept = {row['canonical'] for row in earlier.values()}
+    suffixes = collections.Counter(pathlib.PurePosixPath(path).suffix for path in result)
+    if (len(result) != 26 or len(kept) != 26 or set(result) & kept
+            or suffixes != {'.py': 21, '.md': 3, '.json': 2}
+            or set(result) & (set(earlier) | earlier_kept) or kept & set(earlier)):
+        raise ValueError('checkpoint package retained population differs')
+    return result
+
+
+def checkpoint_package_copy_bytes(root, path, identity=None, size=None):
+    """Return inert source bytes at their requested original historical coordinate.
+
+    No source is imported, compiled or executed, and no new public projection
+    row is admitted by this byte route. Historical replay remains separate.
+    """
+    if not isinstance(path, str) or path not in CHECKPOINT_PACKAGE_COPY_PATHS:
+        raise ValueError('unqualified checkpoint package path')
+    binding = _checkpoint_package_copy_catalog().get(path)
+    if (binding is None or (identity is not None and identity != binding['sha256'])
+            or (size is not None and size != binding['bytes'])):
+        raise ValueError('checkpoint package requested identity differs')
+    return _checkpoint_bound_bytes(root, path, binding)
+
+
+def checkpoint_package_duplicate_paths(root):
+    """Admit exact26 absences only after authenticating the whole package class."""
+    result = set()
+    for path, binding in _checkpoint_package_copy_catalog().items():
         _checkpoint_bound_bytes(root, path, binding)
         if not os.path.lexists(pathlib.Path(root) / path):
             result.add(path)
@@ -1550,6 +2090,16 @@ def source_bytes(root, row):
                 or row.get('source_sha256') != identity or row.get('source_bytes') != size):
             raise ValueError('historical public source owner differs')
         body = historical_source_bytes(root, str(path), row.get('repository_revision'), row.get('git_blob'))
+    elif str(path) in CHECKPOINT_RECORD_COPY_PATHS:
+        binding = _checkpoint_record_copy_catalog()[str(path)]
+        if (row['repository_path'] != str(path) or row.get('disposition') != 'REUSE'
+                or row.get('repository_revision') is not None or row.get('git_blob') is not None
+                or row.get('source_sha256') != binding['sha256']
+                or row.get('public_sha256') != binding['sha256']
+                or row.get('source_bytes') != binding['bytes']
+                or row.get('public_bytes') != binding['bytes']):
+            raise ValueError('checkpoint record public identity or role differs')
+        body = checkpoint_record_copy_bytes(root, str(path), row['public_sha256'], row['public_bytes'])
     elif str(path) in CHECKPOINT_COPY_PATHS:
         binding = _checkpoint_copy_catalog()[str(path)]
         if (row['repository_path'] != str(path)
