@@ -2502,14 +2502,16 @@ class ContinuationGeometryRoutesTests(unittest.TestCase):
             _, level, start = heading[0]
             end = next((h[2] for h in page["headings"] if h[2] > start and h[1] <= level),page["line_count"])
             links = {href for line,href in page["links"] if start <= line < end}
-            migrated = [(key, row) for key, row in ContinuationNoteReaderMigrationTests.NOTES.items()
-                        if path == "docs/provenance/v5-research-continuations/notes/" + row[0] + ".md"]
+            migrated = [(key, row, family.REV)
+                        for family in (ContinuationNoteReaderMigrationTests, T4NoteReaderMigrationTests)
+                        for key, row in family.NOTES.items() if row[3] is not None
+                        and path == "docs/provenance/v5-research-continuations/notes/" + row[0] + ".md"]
             if migrated:
-                key, row = migrated[0]
+                key, row, revision = migrated[0]
                 relation = {"from": key, "to": row[4],
                     "kind": "logical-content-incorporated-historical-source-retained",
                     "basis": "scientific-consolidation-review"}
-                historical = "https://github.com/theislampill/orthemology/blob/" + ContinuationNoteReaderMigrationTests.REV + "/" + path
+                historical = "https://github.com/theislampill/orthemology/blob/" + revision + "/" + path
                 if (works[0]["key"] != row[3] or works[0]["source_keys"] != [key]
                         or works[0]["reading_forms"] != [{"source": key, "relationship": "historical-source"}]
                         or works[0].get("supporting_source_keys") != list(row[7])
@@ -2537,8 +2539,9 @@ class ContinuationGeometryRoutesTests(unittest.TestCase):
         self.assertEqual(self.errors(self.cross, self.text), [])
         for member,path in self.expected.items():
             replacement = next(v for v in self.expected.values() if v != path)
-            migrated = [row for row in ContinuationNoteReaderMigrationTests.NOTES.values()
-                        if path == "docs/provenance/v5-research-continuations/notes/" + row[0] + ".md"]
+            migrated = [row for family in (ContinuationNoteReaderMigrationTests, T4NoteReaderMigrationTests)
+                        for row in family.NOTES.values() if row[3] is not None
+                        and path == "docs/provenance/v5-research-continuations/notes/" + row[0] + ".md"]
             original = "../../" + migrated[0][5] + "#" + migrated[0][6] if migrated else "../../" + path
             changed = self.text.replace(original, "../../"+replacement)
             self.assertNotEqual(changed,self.text)
@@ -7313,6 +7316,12 @@ class ContinuationNoteReaderMigrationTests(unittest.TestCase):
         import resolve_t20_v6_source
         cls.reader, cls.resolver = check_reader_pilot, resolve_t20_v6_source
         cls.original_owners = json.loads((ROOT / cls.OWNER).read_bytes())
+        # Keep the accepted sixteen-path fixture distinct from the later T4 extension.
+        earlier = (set(cls.resolver.ORIGINAL_HISTORICAL_PROSE_PATHS)
+                   | set(cls.resolver.MEDIATOR_PROSE) | {cls.resolver.FISHER_AUDIT}
+                   | set(cls.resolver.TYPED_PROSE) | set(cls.resolver.CONTINUATION_READER_PROSE))
+        cls.original_owners['historical_source_bindings'] = [row
+            for row in cls.original_owners['historical_source_bindings'] if row['path'] in earlier]
         cls.original_cross = json.loads((ROOT / cls.CROSS).read_bytes())
         cls.catalogue = (ROOT / 'docs/reader/PAPER-CATALOGUE.md').read_text()
         cls.paths = {key: 'docs/provenance/v5-research-continuations/notes/' + row[0] + '.md'
@@ -7519,6 +7528,221 @@ class ContinuationNoteReaderMigrationTests(unittest.TestCase):
                     source_bytes=row[2], public_sha256=row[0], public_bytes=row[2])
                 with self.assertRaises(ValueError):
                     self.resolver.source_bytes(self.root, public)
+
+
+
+
+class T4NoteReaderMigrationTests(unittest.TestCase):
+    """Ten exact reader aliases: six works and four support-only originals.
+
+    The inherited byte controls test Python admission using a command adapter;
+    genuine Git qualification is a separate fixture and custody is not inferred.
+    """
+
+    REV = 'b4d58482ae00f138782276ee5c4034c48bb2df19'
+    OWNER = ContinuationNoteReaderMigrationTests.OWNER
+    CROSS = ContinuationNoteReaderMigrationTests.CROSS
+    REVIEW = ContinuationNoteReaderMigrationTests.REVIEW
+    NOTES = {'continuation-note-83': ('285a7061f8f090946e27e5ff6bd7597b7a0f0472100c7e4b3cb57ea5ac12f6a7',
+                          '40d509699e094815d445af4b3fb63cbb1079c4b0',
+                          6182,
+                          'continuation-beta-budget',
+                          'consolidated-information-and-inquiry',
+                          'mathematics/information-and-inquiry.md',
+                          'a-sharp-beta-prior-lifetime-boundary',
+                          ('continuation-note-88', 'continuation-note-86')),
+ 'continuation-note-84': ('3b7cdb283b858339136beb1e0d62cbd32adce0ee9f0562db8961a9f819f52000',
+                          'a12e7f7c10894591e1b1e13c26ba99377492563d',
+                          2966,
+                          'continuation-reporting-clock',
+                          'consolidated-information-and-inquiry',
+                          'mathematics/information-and-inquiry.md',
+                          'a-declared-deterministic-reporting-clock',
+                          ('continuation-note-85', 'continuation-note-90')),
+ 'continuation-note-85': ('3b8f7d96fa99674b73cb8f822cc3291d455c52879b2f1110630be67660883317',
+                          '9715b8685253581e9187c44b2b4a4d81ad74ae73',
+                          8219,
+                          'continuation-beta-rates',
+                          'consolidated-information-and-inquiry',
+                          'mathematics/information-and-inquiry.md',
+                          'finite-horizon-rates-and-an-exact-bayes-existence-statement',
+                          ('continuation-note-83', 'continuation-note-90')),
+ 'continuation-note-86': ('196728a62cb7bdb24160b33c0ae3627a822f8b2b031fe033e275d6d284efa7df',
+                          'af853c549ee6b1b320cf38e14358ded327f9dced',
+                          10906,
+                          'continuation-all-policy-cost',
+                          'consolidated-information-and-inquiry',
+                          'mathematics/information-and-inquiry.md',
+                          'pointwise-finite-expectation-and-an-unavoidable-endpoint-cost',
+                          ('continuation-note-89',)),
+ 'continuation-note-87': ('7d3cbeb8bcacdb5d28cb457801ba41de9b21f91542866fe5c5f13a4a632dadd9',
+                          '07a1df58ff170334e07261c93af8345093b0f160',
+                          14328,
+                          'continuation-endpoint-density',
+                          'consolidated-information-and-inquiry',
+                          'mathematics/information-and-inquiry.md',
+                          'endpoint-density-robustness-with-atoms-handled-separately',
+                          ('continuation-note-85', 'continuation-note-90')),
+ 'continuation-note-88': ('826c824188b79a5e734c77f4aaa24f5ecf15d1a73e7af0d68ad8b8955bb674ab',
+                          'fbd42a9270e356e4c361695ea28df58aaba773c9',
+                          6121,
+                          None,
+                          'consolidated-information-and-inquiry',
+                          'mathematics/information-and-inquiry.md',
+                          'a-sharp-beta-prior-lifetime-boundary',
+                          None),
+ 'continuation-note-89': ('575700cb383a6f0849e2a952ba6652e6de75920eb74ebcb9a7eb0ed21517a696',
+                          '9be9a40bb2d6b3a4e94d6e06ae8e68b8b3198bda',
+                          5443,
+                          None,
+                          'consolidated-information-and-inquiry',
+                          'mathematics/information-and-inquiry.md',
+                          'pointwise-finite-expectation-and-an-unavoidable-endpoint-cost',
+                          None),
+ 'continuation-note-92': ('b092780b29dd9fa00ac276142b090a5b8b88da79da9c278268264669e08f3d8c',
+                          '4e69862256f3014f8e94d528b13ff0f63dd7f3eb',
+                          29013,
+                          'continuation-markov',
+                          'consolidated-collective-inquiry',
+                          'mathematics/collective-inquiry-and-strategic-coordination.md',
+                          '714-stateful-learning-with-revealing-observations',
+                          ('continuation-note-96', 'continuation-note-97')),
+ 'continuation-note-96': ('34c1f25cd1144b386ff4c70a2fbfacc7da2a0fc87f5cd78b430badf260ab49f6',
+                          '6bcd9f7c0faea3fe3037c1f188288555312517b1',
+                          1017,
+                          None,
+                          'consolidated-collective-inquiry',
+                          'mathematics/collective-inquiry-and-strategic-coordination.md',
+                          'exact-computation-and-reduction-to-the-earlier-models',
+                          None),
+ 'continuation-note-97': ('9438fdcbea8747c7e5599483096eca9541cfdf673d6a96866c019c5ced06519a',
+                          '80e45c60c8f4e71a8191f906d04afd4ab0384b06',
+                          11145,
+                          None,
+                          'consolidated-collective-inquiry',
+                          'mathematics/collective-inquiry-and-strategic-coordination.md',
+                          'deterministic-scheduling-without-resetting-away-progress',
+                          None)}
+    SUPPORT_USERS = {'continuation-note-83': ['continuation-beta-rates'],
+ 'continuation-note-84': [],
+ 'continuation-note-85': ['continuation-endpoint-density', 'continuation-reporting-clock'],
+ 'continuation-note-86': ['continuation-beta-budget'],
+ 'continuation-note-87': [],
+ 'continuation-note-88': ['continuation-beta-budget'],
+ 'continuation-note-89': ['continuation-all-policy-cost'],
+ 'continuation-note-92': [],
+ 'continuation-note-96': ['continuation-markov'],
+ 'continuation-note-97': ['continuation-markov']}
+
+    @classmethod
+    def setUpClass(cls):
+        import check_reader_pilot
+        import resolve_t20_v6_source
+        cls.reader, cls.resolver = check_reader_pilot, resolve_t20_v6_source
+        cls.original_owners = json.loads((ROOT / cls.OWNER).read_bytes())
+        cls.original_cross = json.loads((ROOT / cls.CROSS).read_bytes())
+        cls.catalogue = (ROOT / 'docs/reader/PAPER-CATALOGUE.md').read_text()
+        cls.paths = {key: 'docs/provenance/v5-research-continuations/notes/' + row[0] + '.md'
+                     for key, row in cls.NOTES.items()}
+        cls.current = {path: (ROOT / path).read_bytes()
+                       for path in {cls.REVIEW, *(row[5] for row in cls.NOTES.values())}}
+
+    setUp = ContinuationNoteReaderMigrationTests.setUp
+    put = ContinuationNoteReaderMigrationTests.put
+    save = ContinuationNoteReaderMigrationTests.save
+    original = ContinuationNoteReaderMigrationTests.original
+    resolve = ContinuationNoteReaderMigrationTests.resolve
+
+    def context(self):
+        gate = getattr(self.resolver, 'require_t4_note_context', None)
+        self.assertTrue(callable(gate), 'the exact T4 historical context is not implemented')
+        return gate(self.root)
+
+    def test_exact_ten_alias_context_requires_current_scholarship(self):
+        self.context()
+
+    def test_six_work_routes_and_four_support_roles_reach_current_treatments(self):
+        self.context()
+        page = self.reader.markdown_index(self.catalogue)
+        for key, row in self.NOTES.items():
+            with self.subTest(source=key):
+                works = [w for w in self.cross['works'] if key in w['source_keys']]
+                forms = [form for w in self.cross['works'] for form in w.get('reading_forms', [])
+                         if form.get('source') == key]
+                users = sorted(w['key'] for w in self.cross['works']
+                               if key in w.get('supporting_source_keys', []))
+                self.assertEqual(users, self.SUPPORT_USERS[key])
+                if row[3] is None:
+                    self.assertEqual(works, [])
+                    self.assertEqual(forms, [])
+                else:
+                    self.assertEqual([w['key'] for w in works], [row[3]])
+                    self.assertEqual(forms, [{'source': key, 'relationship': 'historical-source'}])
+                    fragment = works[0]['catalogue_entry'].partition('#')[2]
+                    heading = [h for h in page['headings'] if h[0] == fragment]
+                    self.assertEqual(len(heading), 1)
+                    _, level, start = heading[0]
+                    end = next((h[2] for h in page['headings'] if h[2] > start and h[1] <= level), page['line_count'])
+                    links = {href for line, href in page['links'] if start <= line < end}
+                    self.assertIn('../../' + row[5] + '#' + row[6], links)
+                    self.assertIn('https://github.com/theislampill/orthemology/blob/' + self.REV + '/' + self.paths[key], links)
+                    self.assertNotIn('../../' + self.paths[key], links)
+                self.assertIn(row[6], self.reader.markdown_index(self.current[row[5]].decode())['anchors'])
+
+    def test_partial_extra_duplicate_or_live_residual_cannot_enter_the_finite_population(self):
+        from unittest.mock import patch
+        self.context()
+        original = deepcopy(self.owners)
+        for fault in ('partial25', 'extra27', 'duplicate27', 'missing-earlier', 'residual-substitution'):
+            with self.subTest(fault=fault):
+                self.owners = deepcopy(original)
+                rows = self.owners['historical_source_bindings']
+                selected = next(r for r in rows if r['path'] == self.paths['continuation-note-88'])
+                if fault == 'partial25': rows.remove(selected)
+                elif fault == 'duplicate27': rows.append(deepcopy(selected))
+                elif fault == 'missing-earlier': rows.pop(0)
+                elif fault == 'residual-substitution':
+                    selected['path'] = 'docs/provenance/v5-research-continuations/notes/9412522bec33bc12a790e1610d328b160a00cf25eea03126ec219f01abc5e5ac.md'
+                else:
+                    rows.append(dict(selected, path='docs/provenance/v5-research-continuations/notes/' + '0' * 64 + '.md'))
+                self.save()
+                with self.assertRaises(ValueError): self.context()
+                with patch.object(self.reader.subprocess, 'run', side_effect=AssertionError('native access before finite gate')):
+                    admitted, errors = self.reader.check_historical_sources(self.root, {}, self.owners, self.cross, {})
+                self.assertEqual(admitted, {})
+                self.assertTrue(any('expected exactly' in error for error in errors), errors)
+
+    def test_each_alias_preserves_its_exact_work_or_support_ownership(self):
+        self.context()
+        initial_owner, initial_cross = deepcopy(self.owners), deepcopy(self.cross)
+        for key, row in self.NOTES.items():
+            faults = ('revision', 'blob', 'source-hash', 'relation', 'role', 'support', 'journey')
+            for fault in faults:
+                with self.subTest(source=key, fault=fault):
+                    self.owners, self.cross = deepcopy(initial_owner), deepcopy(initial_cross)
+                    binding = next(r for r in self.owners['historical_source_bindings'] if r['path'] == self.paths[key])
+                    relation = next(r for r in self.cross['relations'] if r.get('from') == key)
+                    if fault == 'revision': binding['repository_revision'] = 'HEAD'
+                    elif fault == 'blob': binding['git_blob'] = '0' * 40
+                    elif fault == 'source-hash': self.cross['sources'][key]['sha256'] = '0' * 64
+                    elif fault == 'relation': relation['to'] = 'consolidated-encodings-and-witnesses'
+                    elif fault == 'journey': self.cross['reader_journeys'][0]['source_keys'].append(key)
+                    elif row[3] is None:
+                        work = next(w for w in self.cross['works'] if w['key'] == self.SUPPORT_USERS[key][0])
+                        if fault == 'role': work['reading_forms'].append({'source': key, 'relationship': 'historical-source'})
+                        else: work['supporting_source_keys'].remove(key)
+                    else:
+                        work = next(w for w in self.cross['works'] if w['key'] == row[3])
+                        if fault == 'role': work['reading_forms'][0]['relationship'] = 'retained-source-reading-projection'
+                        else: work['supporting_source_keys'] = []
+                    self.save()
+                    with self.assertRaises(ValueError): self.context()
+
+    test_changed_or_missing_current_chapter_and_review_are_rejected = ContinuationNoteReaderMigrationTests.test_changed_or_missing_current_chapter_and_review_are_rejected
+    test_absent_and_exact_present_notes_use_exact_history_without_recreation = ContinuationNoteReaderMigrationTests.test_absent_and_exact_present_notes_use_exact_history_without_recreation
+    test_wrong_present_note_mode_and_symlink_cannot_fall_back = ContinuationNoteReaderMigrationTests.test_wrong_present_note_mode_and_symlink_cannot_fall_back
+    test_wrong_history_and_index_cannot_be_hidden_by_absence = ContinuationNoteReaderMigrationTests.test_wrong_history_and_index_cannot_be_hidden_by_absence
+    test_reader_note_history_does_not_create_new_t20_public_forms = ContinuationNoteReaderMigrationTests.test_reader_note_history_does_not_create_new_t20_public_forms
 
 
 if __name__ == "__main__":

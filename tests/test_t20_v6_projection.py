@@ -1796,5 +1796,126 @@ class TypedProseOwnerMigrationTests(unittest.TestCase):
         self.assertFalse(repository.successor_packet_locator(self.root / companion, target, sources, self.root))
 
 
+class ContinuationOwnerRootMigrationTests(unittest.TestCase):
+    """Exercise the real protected-root gate with exact four-owner editions.
+
+    The synthetic Git baseline contains authentic public historical owners.
+    Only unrelated historical-prose and guide populations are excluded from
+    this fixture; the owner primitive, index and both diff calls remain real.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        import validate_v5_successors as owners
+        cls.owners = owners
+        cls.paths = tuple(owners.PRESERVATION_OWNER_PATHS)
+        cls.current = {
+            name: owners._preservation_owner_body(
+                projection.ROOT, name, owners.PRESERVATION_OWNER_CURRENT[name])
+            for name in cls.paths
+        }
+        # All current ordinary bodies authenticate before any historical read.
+        cls.original = {}
+        for name in cls.paths:
+            blob, sha, size = owners.PRESERVATION_OWNER_ORIGINAL[name]
+            body = owners._preservation_owner_git(projection.ROOT, 'cat-file', 'blob', blob)
+            actual_blob = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+            if (actual_blob, hashlib.sha256(body).hexdigest(), len(body)) != (blob, sha, size):
+                raise ValueError('fixture historical owner identity differs')
+            cls.original[name] = body
+
+    def setUp(self):
+        import os
+        self.tmp = tempfile.TemporaryDirectory(prefix='continuation-root-owner-')
+        self.addCleanup(self.tmp.cleanup)
+        self.repo = pathlib.Path(self.tmp.name)
+        self.git_env = {key: value for key, value in os.environ.items() if not key.startswith('GIT_')}
+        self.git_env.update(GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=os.devnull,
+                            GIT_CONFIG_SYSTEM=os.devnull, GIT_OPTIONAL_LOCKS='0',
+                            GIT_TERMINAL_PROMPT='0', GIT_NO_LAZY_FETCH='1', GIT_ALLOW_PROTOCOL='')
+        self._git('init', '-q')
+        self.extra = 'docs/provenance/v5-research-continuations/unqualified-owner-control.md'
+        for name, body in self.original.items():
+            self._put(name, body)
+        self._put(self.extra, b'unrelated protected fixture\n')
+        self._git('add', '--', *self.paths, self.extra)
+        self._git('-c', 'user.name=Fixture', '-c', 'user.email=fixture@example.invalid',
+                  'commit', '-qm', 'exact historical owners in isolated fixture')
+        self.baseline = self._git('rev-parse', 'HEAD').decode().strip()
+
+    def _git(self, *args):
+        import subprocess
+        return subprocess.run(
+            ['git', '--no-replace-objects', '--literal-pathspecs',
+             '-c', 'core.hooksPath=/dev/null', '-c', 'core.fsmonitor=false',
+             '-c', 'core.untrackedCache=false', '-c', 'gc.auto=0',
+             '-c', 'maintenance.auto=false', '-c', 'protocol.allow=never',
+             '-c', 'init.templateDir=', *args],
+            cwd=self.repo, env=self.git_env, capture_output=True, check=True).stdout
+
+    def _put(self, name, body):
+        node = self.repo / name
+        node.parent.mkdir(parents=True, exist_ok=True)
+        node.write_bytes(body)
+        node.chmod(0o644)
+
+    def _use_current(self):
+        for name, body in self.current.items():
+            self._put(name, body)
+        self._git('add', '--', *self.paths)
+
+    def _snapshot(self):
+        return {
+            'raw_index': (self.repo / '.git/index').read_bytes(),
+            'logical_entries': self._git('ls-files', '--stage', '-z'),
+            'bodies': {name: (self.repo / name).read_bytes() for name in (*self.paths, self.extra)},
+        }
+
+    def _gate(self, expected):
+        before = self._snapshot()
+        with patch.object(projection, 'BASE', self.baseline), \
+             patch.object(projection, 'HISTORICAL_PROSE', {}), \
+             patch.object(projection, 'TYPED_GUIDES', {}), \
+             patch.object(projection, 'mediator_guide_source_bytes',
+                          side_effect=ValueError('no mediator population in this fixture')):
+            result = projection.check_preserved_roots(self.repo, {})
+        self.assertEqual(result, expected)
+        self.assertEqual(self._snapshot(), before, 'protected-root check changed the fixture or index')
+
+    def test_original_owner_edition_needs_no_modification_allowance(self):
+        self._gate([])
+
+    def test_complete_current_owner_edition_is_accepted(self):
+        self._use_current()
+        self._gate([])
+
+    def test_mixed_original_current_owner_edition_is_rejected(self):
+        self._use_current()
+        name = self.paths[0]
+        self._put(name, self.original[name])
+        self._git('add', '--', name)
+        self._gate(['preserved v5 or prior T20 baseline changed'])
+
+    def test_current_owner_worktree_tamper_is_rejected(self):
+        self._use_current()
+        name = self.paths[0]
+        self._put(name, self.current[name] + b'\nunqualified worktree edit\n')
+        self._gate(['preserved v5 or prior T20 baseline changed'])
+
+    def test_unrelated_protected_modification_is_not_an_owner_allowance(self):
+        self._use_current()
+        self._put(self.extra, b'unqualified protected change\n')
+        self._git('add', '--', self.extra)
+        self._gate(['preserved v5 or prior T20 baseline changed'])
+
+    def test_staged_owner_tamper_cannot_hide_behind_current_worktree(self):
+        self._use_current()
+        name = self.paths[0]
+        self._put(name, self.current[name] + b'\nunqualified staged edit\n')
+        self._git('add', '--', name)
+        self._put(name, self.current[name])
+        self._gate(['preserved v5 or prior T20 baseline changed'])
+
+
 if __name__ == '__main__':
     unittest.main()

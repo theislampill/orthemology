@@ -28,9 +28,9 @@ use the final-sixth selectors below for current developments.
 | T3-RECURSION | [Zero-support licensed policy equivalence](notes/2c0b1012a0b757999ce3e820da3320c655d53e421f0926844ccccd3c588e174c.md) | FORMAL |
 | T3-SEMANTICS | [Actual indexed source to scheduled runtime](notes/2c0b1012a0b757999ce3e820da3320c655d53e421f0926844ccccd3c588e174c.md) | FORMAL |
 | T3-GEOMETRY | [Exact rank-one and joint-hull boundaries](notes/2c0b1012a0b757999ce3e820da3320c655d53e421f0926844ccccd3c588e174c.md) | MIXED |
-| T4-MARKOV | [Support-changing observed-state controller](notes/c8dc35d9a1f4ae42417737923ca5bc276d80d60a0865655a34b55de83570d6ee.md) | ORDINARY |
+| T4-MARKOV | [Support-changing observed-state controller](../../../mathematics/collective-inquiry-and-strategic-coordination.md#714-stateful-learning-with-revealing-observations) | ORDINARY |
 | T4-ENDPOINT | [Literal endpoint P02 program](notes/c8dc35d9a1f4ae42417737923ca5bc276d80d60a0865655a34b55de83570d6ee.md) | ORDINARY |
-| T4-PRIOR | [Beta-prior cost boundary](notes/c8dc35d9a1f4ae42417737923ca5bc276d80d60a0865655a34b55de83570d6ee.md) | ORDINARY |
+| T4-PRIOR | [Beta-prior cost boundary](../../../mathematics/information-and-inquiry.md#a-sharp-beta-prior-lifetime-boundary) | ORDINARY |
 | T5-GLOBAL | [Global observed-state hidden-parity iff](notes/41043e9904470990c9f40c10a4335798d3421e7ff8691c893375cccd6c4a30ac.md) | FORMAL |
 | T5-SCC | [Public SCC region agrees with semantic winner](notes/50b2d9021fb63e3bd9b36b3d7d423f0366cf046ffc8b1f4a816cc8cb851fb942.md) | FORMAL |
 | T5-RECORD | [Explicit mathematical policy record](notes/a0be5d8b4c7a37db88ea3e022481d78b3d20d097fb1d17008fac07861b38d367.md) | FORMAL |
@@ -147,21 +147,21 @@ Where a contribution has been incorporated, the link opens its current scholarly
 - `db6ccdc793a0`: [tranche3/root-research/README.md](notes/95a1f02e3b781d58a3262744be547088975f93342c9360ef39df70051f476e48.md)
 - `d0d3dffa3947`: [README.md](notes/c8dc35d9a1f4ae42417737923ca5bc276d80d60a0865655a34b55de83570d6ee.md)
 - `d0d3dffa3947`: [STATUS_INDEX.md](notes/32266a84e5e96404970a7420dc690e71db78323281fd10805a899c6ca67b52e2.md)
-- `d0d3dffa3947`: [research/beta-budget/BETA_PRIOR_BUDGET_BOUNDARY.md](notes/285a7061f8f090946e27e5ff6bd7597b7a0f0472100c7e4b3cb57ea5ac12f6a7.md)
-- `d0d3dffa3947`: [research/beta-rates/DETERMINISTIC_REPORT_CLOCK_COROLLARY.md](notes/3b7cdb283b858339136beb1e0d62cbd32adce0ee9f0562db8961a9f819f52000.md)
-- `d0d3dffa3947`: [research/beta-rates/FINITE_HORIZON_BETA_RATES.md](notes/3b8f7d96fa99674b73cb8f822cc3291d455c52879b2f1110630be67660883317.md)
-- `d0d3dffa3947`: [research/continuum/freeze-fresh-continuum-v1/FRESH_CONTINUUM_PROOF.md](notes/196728a62cb7bdb24160b33c0ae3627a822f8b2b031fe033e275d6d284efa7df.md)
-- `d0d3dffa3947`: [research/endpoint-density-rates/ENDPOINT_DENSITY_ROBUSTNESS.md](notes/7d3cbeb8bcacdb5d28cb457801ba41de9b21f91542866fe5c5f13a4a632dadd9.md)
-- `d0d3dffa3947`: [research/independent-review/beta-budget/FRESH_REVIEW.md](notes/826c824188b79a5e734c77f4aaa24f5ecf15d1a73e7af0d68ad8b8955bb674ab.md)
-- `d0d3dffa3947`: [research/independent-review/continuum/FRESH_REVIEW.md](notes/575700cb383a6f0849e2a952ba6652e6de75920eb74ebcb9a7eb0ed21517a696.md)
+- `d0d3dffa3947`: [research/beta-budget/BETA_PRIOR_BUDGET_BOUNDARY.md — incorporated treatment](../../../mathematics/information-and-inquiry.md#a-sharp-beta-prior-lifetime-boundary)
+- `d0d3dffa3947`: [research/beta-rates/DETERMINISTIC_REPORT_CLOCK_COROLLARY.md — incorporated treatment](../../../mathematics/information-and-inquiry.md#a-declared-deterministic-reporting-clock)
+- `d0d3dffa3947`: [research/beta-rates/FINITE_HORIZON_BETA_RATES.md — incorporated treatment](../../../mathematics/information-and-inquiry.md#finite-horizon-rates-and-an-exact-bayes-existence-statement)
+- `d0d3dffa3947`: [research/continuum/freeze-fresh-continuum-v1/FRESH_CONTINUUM_PROOF.md — incorporated treatment](../../../mathematics/information-and-inquiry.md#pointwise-finite-expectation-and-an-unavoidable-endpoint-cost)
+- `d0d3dffa3947`: [research/endpoint-density-rates/ENDPOINT_DENSITY_ROBUSTNESS.md — incorporated treatment](../../../mathematics/information-and-inquiry.md#endpoint-density-robustness-with-atoms-handled-separately)
+- `d0d3dffa3947`: [research/independent-review/beta-budget/FRESH_REVIEW.md — incorporated treatment](../../../mathematics/information-and-inquiry.md#a-sharp-beta-prior-lifetime-boundary)
+- `d0d3dffa3947`: [research/independent-review/continuum/FRESH_REVIEW.md — incorporated treatment](../../../mathematics/information-and-inquiry.md#pointwise-finite-expectation-and-an-unavoidable-endpoint-cost)
 - `d0d3dffa3947`: [research/independent-review/integrated-report/FRESH_REVIEW.md](notes/9412522bec33bc12a790e1610d328b160a00cf25eea03126ec219f01abc5e5ac.md)
-- `d0d3dffa3947`: [research/independent-review/markov-support/FRESH_REVIEW.md](notes/e9d10938606929f7f64512e650c2a428388844ddfcad1ba6f5c58d97444d95d2.md)
-- `d0d3dffa3947`: [research/independent-review/markov-support/source/SUPPORT_CHANGING_MARKOV_THEOREM.md](notes/b092780b29dd9fa00ac276142b090a5b8b88da79da9c278268264669e08f3d8c.md)
-- `d0d3dffa3947`: [research/independent-review/parity/FRESH_REVIEW.md](notes/4698db33ea1d4e8670d0496e52de19f92dbc8665087d6ffbf88f54c3da56f2cc.md)
-- `d0d3dffa3947`: [research/independent-review/pd-embedding/FRESH_REVIEW.md](notes/efb018e75afe764c7acee58f0ca391df5b3ed0c77b59aaeb50027f1e8f00956d.md)
-- `d0d3dffa3947`: [research/independent-review/round-robin/FRESH_REVIEW.md](notes/2d04cd0598a7933cd502289ab8b89fb02023902257d4514ec748f0a29922b257.md)
-- `d0d3dffa3947`: [research/markov-author/COMPUTABLE_ALLOWANCE.md](notes/34c1f25cd1144b386ff4c70a2fbfacc7da2a0fc87f5cd78b430badf260ab49f6.md)
-- `d0d3dffa3947`: [research/markov-author/DETERMINISTIC_ROUND_ROBIN.md](notes/9438fdcbea8747c7e5599483096eca9541cfdf673d6a96866c019c5ced06519a.md)
+- `d0d3dffa3947`: [research/independent-review/markov-support/FRESH_REVIEW.md — incorporated treatment](../../../mathematics/collective-inquiry-and-strategic-coordination.md#714-stateful-learning-with-revealing-observations)
+- `d0d3dffa3947`: [research/independent-review/markov-support/source/SUPPORT_CHANGING_MARKOV_THEOREM.md — incorporated treatment](../../../mathematics/collective-inquiry-and-strategic-coordination.md#714-stateful-learning-with-revealing-observations)
+- `d0d3dffa3947`: [research/independent-review/parity/FRESH_REVIEW.md — incorporated treatment](../../../mathematics/collective-inquiry-and-strategic-coordination.md#hidden-priorities-and-recurrent-fairness)
+- `d0d3dffa3947`: [research/independent-review/pd-embedding/FRESH_REVIEW.md — incorporated treatment](../../../mathematics/collective-inquiry-and-strategic-coordination.md#posterior-determinism-as-a-law-preserving-visible-state-construction)
+- `d0d3dffa3947`: [research/independent-review/round-robin/FRESH_REVIEW.md — incorporated treatment](../../../mathematics/collective-inquiry-and-strategic-coordination.md#deterministic-scheduling-without-resetting-away-progress)
+- `d0d3dffa3947`: [research/markov-author/COMPUTABLE_ALLOWANCE.md — incorporated treatment](../../../mathematics/collective-inquiry-and-strategic-coordination.md#exact-computation-and-reduction-to-the-earlier-models)
+- `d0d3dffa3947`: [research/markov-author/DETERMINISTIC_ROUND_ROBIN.md — incorporated treatment](../../../mathematics/collective-inquiry-and-strategic-coordination.md#deterministic-scheduling-without-resetting-away-progress)
 - `769dc45d15ba`: [REPORT.md](notes/41043e9904470990c9f40c10a4335798d3421e7ff8691c893375cccd6c4a30ac.md)
 - `769dc45d15ba`: [candidate-v1/POLICY_DESIGN.md](notes/90f70c242dd4a18c748fab2e202aed5c9393fd8c9b0297a4a9bd552f69144d4d.md)
 - `769dc45d15ba`: [candidate-v1/README.md](notes/8ca27b780c7771472a8adb4c80f6b2053389ca30bdf48c2debe21f55099064cf.md)

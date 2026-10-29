@@ -34,7 +34,7 @@ from resolve_t20_v6_source import (
     MEDIATOR_PROSE, MEDIATOR_GUIDE, mediator_guide_source_bytes, readonly_git_diff,
     ORIGINAL_HISTORICAL_PROSE_PATHS, FISHER_AUDIT, FISHER_PROSE_REVISION,
     TYPED_PROSE, TYPED_PROSE_REVISION, TYPED_GUIDES, typed_guide_source_bytes,
-    CONTINUATION_READER_PROSE,
+    CONTINUATION_READER_PROSE, T4_READER_PROSE, T4_READER_SUPPORT_PROSE,
     CONTINUATION_COPY_ROOT, continuation_duplicate_paths,
 )
 
@@ -886,8 +886,9 @@ def check_historical_sources(repo, baseline_rows, owners, cross, additions):
     fisher = mediator | {FISHER_AUDIT}
     typed = fisher | set(TYPED_PROSE)
     if (len(paths) != len(declared) or paths not in
-            (original, mediator, fisher, typed, typed | set(CONTINUATION_READER_PROSE))):
-        return {}, ["historical-source: expected exactly the original five, mediator seven, Fisher eight, typed twelve or continuation sixteen path dispositions"]
+            (original, mediator, fisher, typed, typed | set(CONTINUATION_READER_PROSE),
+              typed | set(CONTINUATION_READER_PROSE) | set(T4_READER_PROSE))):
+        return {}, ["historical-source: expected exactly the original five, mediator seven, Fisher eight, typed twelve, continuation sixteen or T4 twenty-six path dispositions"]
     admitted, errors = {}, []
     sources = cross.get("sources", {})
     for binding in declared:
@@ -929,7 +930,9 @@ def check_historical_sources(repo, baseline_rows, owners, cross, additions):
                             "basis": binding["basis"]}
                 relations = [r for r in cross.get("relations", []) if r.get("from") == key
                              and r.get("kind") == expected["kind"]]
-                if forms != [{"source": key, "relationship": "historical-source"}] or relations != [expected]:
+                expected_forms = ([] if path in T4_READER_SUPPORT_PROSE else
+                                  [{"source": key, "relationship": "historical-source"}])
+                if forms != expected_forms or relations != [expected]:
                     raise ValueError("reader source lacks its exact historical/incorporation relationship")
                 if any(key in j.get("source_keys", []) for j in cross.get("reader_journeys", [])):
                     raise ValueError("an ordinary journey still requires this physical source")
@@ -957,14 +960,14 @@ CONTINUATION_OWNER_ORIGINAL = {
         "51e2cea236dd0a880c7243b2f9ccbd558c6c70f16f03ec0efa274f19d3d105ff", 192971),
 }
 CONTINUATION_OWNER_CURRENT = {
-    CONTINUATION_OWNER_PATHS[0]: ("5cfa2ce0b0363b619a9a251210488abb67afe9bf",
-        "362bce501372d14f0bf41eaf4da826196f82fc71f17914ac0d7797815859a39e", 2198377),
-    CONTINUATION_OWNER_PATHS[1]: ("3a9e1c79325e9440490a4194e97a4d344f24b910",
-        "4905d6ddfdec60592065228783f45e8498f9f3f31c86dd6cb586e38465840d43", 45022),
-    CONTINUATION_OWNER_PATHS[2]: ("b19eb3a6eba59b918562c9e2a132f4cc1c54e8d9",
-        "a4de062f1423c26c65e16dda3e5a9abe415cb3b4d21281dc5e4aa94681dea9c2", 5985263),
-    CONTINUATION_OWNER_PATHS[3]: ("4ef7e206658bad9a05485b234be9fb25260ea32a",
-        "961a0d106b95b1f553a962c843468b842fa3c67b53781ecaa443ed1b1de4b6dd", 189443),
+    CONTINUATION_OWNER_PATHS[0]: ("238d6aa0f68257e4180c0db3ad1f279bc4f9a7f8",
+        "95c758b7e1b022efbd306ee8ee44869fab48e685ee04a0e4ade5b3b04b81494e", 2177125),
+    CONTINUATION_OWNER_PATHS[1]: ("69a7f17b506fbd4aed360220fc6c1f25f1190fdb",
+        "41ac1f9730fb7d80638d14d31e9200ba7cc4c31b82834be3146600f76fae28e3", 45982),
+    CONTINUATION_OWNER_PATHS[2]: ("bbbe4896d5ccc02d4e8dc179ac66321fbfa43451",
+        "d65e5e79cf6be367f3d22296403d30be96b191ed1f68be1ca95ccff5b7676133", 5976495),
+    CONTINUATION_OWNER_PATHS[3]: ("b6eb53dc78c9a0de19731beddeac85a1ad32cca7",
+        "fe3aee5865d95224e2bbd8a17e00a3b2f8bfe2a55cab99ba46b002f35b87dad2", 185327),
 }
 
 

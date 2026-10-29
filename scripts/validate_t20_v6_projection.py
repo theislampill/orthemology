@@ -14,6 +14,8 @@ import sys
 import subprocess
 from functools import lru_cache
 
+import validate_v5_successors as continuation_owners
+
 from resolve_t20_v6_source import (
     HISTORICAL_PROSE, HISTORICAL_PROSE_PUBLIC_PATHS, HISTORICAL_PROSE_REVISION,
     historical_source_bytes, source_bytes, MEDIATOR_GUIDE, mediator_guide_source_bytes,
@@ -176,6 +178,8 @@ def check_preserved_roots(root, objects):
     The original bodies and both proof occurrences authenticate before an
     absence can be admitted. Changed bytes, modes, renames or other removals
     are not historical-source dispositions. All source-universe rows remain.
+    A complete authenticated current continuation-owner edition has its
+    separate M-only admission; its original public bodies remain pinned.
     """
     errors, authenticated = [], set()
     for path, (blob, identity, size) in HISTORICAL_PROSE.items():
@@ -210,6 +214,7 @@ def check_preserved_roots(root, objects):
     # Check both boundaries: a staged M/T/A must not disappear behind a
     # combined worktree D or an unstaged return to original bytes.
     copy_authenticated = None
+    owner_authenticated = None
     for cached in (True, False):
         result = readonly_git_diff(root,
             ['git', '--no-replace-objects', 'diff', *(['--cached'] if cached else []),
@@ -223,10 +228,27 @@ def check_preserved_roots(root, objects):
                     status == 'D' and path.startswith(CONTINUATION_COPY_ROOT)
                     for status, path in zip(changes[::2], changes[1::2])):
                 copy_authenticated = continuation_duplicate_paths(root)
+            if owner_authenticated is None and any(
+                    status == 'M' and path in continuation_owners.PRESERVATION_OWNER_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                owner_authenticated = set()
+                try:
+                    # The projection gate needs these four literal owner
+                    # descriptors, not a replacement preservation inventory.
+                    original_owners = {
+                        path: {'path': path, 'bytes': size, 'sha256': identity,
+                               'git_blob_sha1': blob}
+                        for path, (blob, identity, size) in
+                        continuation_owners.PRESERVATION_OWNER_ORIGINAL.items()}
+                    owner_authenticated = set(
+                        continuation_owners._preservation_owner_bytes(root, original_owners))
+                except (ValueError, OSError):
+                    pass  # No modification allowance for an unqualified edition.
             if any(not ((status == 'D' and path in authenticated) or
                         (status == 'D' and path in (copy_authenticated or ())) or
                         (status == 'M' and path == MEDIATOR_GUIDE and guide_authenticated) or
-                        (status == 'M' and path in typed_guides_authenticated))
+                        (status == 'M' and path in typed_guides_authenticated) or
+                        (status == 'M' and path in (owner_authenticated or ())))
                    for status, path in zip(changes[::2], changes[1::2])):
                 errors.append('preserved v5 or prior T20 baseline changed')
         except (ValueError, UnicodeError):

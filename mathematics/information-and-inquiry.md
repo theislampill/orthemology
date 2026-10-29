@@ -4,7 +4,7 @@
 
 ### Abstract
 
-A representation can preserve every conditional answer to an inquiry while losing the probabilities, values, or geometric dynamics associated with those answers. We develop these distinctions in related finite models. Invariant observable spaces give exact predictive states, including their admissible cones and a sharp continuous-coordinate bound. A synchronized tensor construction, together with a separate feasibility test, characterizes the weaker equivalence of all posterior answers. For a fixed audit, missing information forms an affine fibre of audit weights. This gives an exact expected-value criterion and a three-outcome example that reverses the preferred inquiry decision. For the categorical Fisher metric of the full joint law, we derive a different criterion, prove descent of maximal source trajectories, and establish a sharp threshold: with more audit outcomes than target states, every globally descending smooth objective is target-marginal-only on the signature image. Gram-determinant objectives show why the strict inequality is necessary. Finally, we determine the supplementary information required by finite, expected-value, and full-metric contracts, distinguish selecting a valid certificate from identifying a state, and give complete finite proofs for model-bound temporal guarantees and versioned evidence transport. Graph-constrained parity operations make the action dependence explicit: the exact connecting-tree cost determines which moments a finite horizon can reveal. For proof-producing inquiry, residual evidence supports and terminal checking prices give a canonical continuation summary and an exact finite completion criterion. Finite grounded rules compile that summary even in the presence of cycles, while shared proof graphs expose a limit of intermediate cost-only pruning. When the governing quadratic standard is unknown, shrinking disturbances impose a decoding requirement on every good repair. This yields finite-sample lower and upper bounds, and a countability obstruction to eventual exact correction when informative acts are target-bad. Common-reference and actual causal-oracle proofs identify the information premise precisely; sublinear tolerance and atomic blind guessing delimit the result.
+A representation can preserve every conditional answer to an inquiry while losing the probabilities, values, or geometric dynamics associated with those answers. We develop these distinctions in related finite models. Invariant observable spaces give exact predictive states, including their admissible cones and a sharp continuous-coordinate bound. A synchronized tensor construction, together with a separate feasibility test, characterizes the weaker equivalence of all posterior answers. For a fixed audit, missing information forms an affine fibre of audit weights. This gives an exact expected-value criterion and a three-outcome example that reverses the preferred inquiry decision. For the categorical Fisher metric of the full joint law, we derive a different criterion, prove descent of maximal source trajectories, and establish a sharp threshold: with more audit outcomes than target states, every globally descending smooth objective is target-marginal-only on the signature image. Gram-determinant objectives show why the strict inequality is necessary. Finally, we determine the supplementary information required by finite, expected-value, and full-metric contracts, distinguish selecting a valid certificate from identifying a state, and give complete finite proofs for model-bound temporal guarantees and versioned evidence transport. Graph-constrained parity operations make the action dependence explicit: the exact connecting-tree cost determines which moments a finite horizon can reveal. For proof-producing inquiry, residual evidence supports and terminal checking prices give a canonical continuation summary and an exact finite completion criterion. Finite grounded rules compile that summary even in the presence of cycles, while shared proof graphs expose a limit of intermediate cost-only pruning. When the governing quadratic standard is unknown, shrinking disturbances impose a decoding requirement on every good repair. This yields finite-sample lower and upper bounds, and a countability obstruction to eventual exact correction when informative acts are target-bad. Common-reference and actual causal-oracle proofs identify the information premise precisely; sublinear tolerance and atomic blind guessing delimit the result. For a fixed positive disturbance, a complementary cost theory separates pointwise eventual repair from uniform and prior-averaged budgets. It gives exact Beta endpoint thresholds, finite-horizon rates and deterministic reporting-clock criteria, and extends those rates to controlled endpoint densities with separately handled atoms.
 
 This is a consolidated exposition of the source mathematics cited below. Its proofs are ordinary mathematical arguments; computational corroboration, kernel certification, empirical interpretation, literature priority, and owner adoption are distinct. The edition and review boundary appears at the end.
 
@@ -2273,6 +2273,350 @@ The model connects latent-parameter identification, metric-sensitive correction,
 
 
 
+### 9.8 Literal repair with a fixed disturbance: counts, priors and reporting clocks
+
+The shrinking target in §9.7 can force an output to identify its hidden standard exactly. A fixed positive disturbance gives a different statistical problem: an interval of estimates can repair a given interior standard. One empirical policy then makes only finitely many mistakes at each fixed model, while its expected count necessarily becomes unbounded near the endpoints. Averaging over an unknown but fixed standard introduces a further distinction. Under a Beta prior, the endpoint powers decide whether a finite expected lifetime count is possible; changing the declared reporting clock changes that threshold. The same rate argument extends to a precisely specified class of nonconjugate priors. These conclusions concern the literal repair event, not the magnitude of the excess loss. [48–54]
+
+#### The experiment and the accepted intervals
+
+Fix $`0<\varepsilon\leq1/4`$. Draw or fix one $`\alpha\in[0,1]`$ and retain it throughout the experiment. Conditional on α, receipts are independent Bernoulli(α) bits. At index n, including n=0, a common measurable policy issues a report after exactly n receipts. Its report is a function $`Q_n(R,w)`$ of the acquired word w and a private seed R with one law independent of both the parameter and the randomness generating the receipts. In a prior experiment the full law is $`\rho(dR)\mu(d\alpha)P_\alpha(dy)`$. Marginal independence of R from α alone would not establish the conditional arguments below. Reports neither alter the passive receipts nor receive an additional correctness label. There is no abstention or extra uncounted acquisition.
+
+The two all-truth excesses are
+
+```math
+D_0(\alpha,\varepsilon,q)=q^2-\frac14-\alpha\varepsilon(1+\varepsilon),
+\qquad
+D_1(\alpha,\varepsilon,q)=(1-q)^2-\frac14+\alpha\varepsilon(1-\varepsilon).
+```
+
+A weak repair is coherent and has both excesses nonpositive; equality is accepted. A strict repair has both negative. Write f(α,q) for the weak-failure indicator, counting an incoherent output as a failure if the interface permits it, and put
+
+```math
+C_\alpha=\mathbb E_\alpha\sum_{n\geq0} f(\alpha,Q_n(R,Y_1\cdots Y_n)).
+```
+
+This is an extended nonnegative expected **number** of incorrect reports. It is neither accumulated excess magnitude nor an expected last-error time. [48–49]
+
+At α=0 the unique weak repair is $`q_0=1/2`$; at α=1 it is $`q_1=1/2+\varepsilon`$. Both facts follow by intersecting the two square inequalities with coherence. Strict endpoint repair is impossible. At an interior α, the report $`q_\alpha=1/2+\varepsilon\alpha`$ has both excesses equal to $`-\varepsilon^2\alpha(1-\alpha)<0`$. The endpoint reports instead obey
+
+```math
+D_1(\alpha,\varepsilon,q_0)=\alpha\varepsilon(1-\varepsilon)>0
+\quad(\alpha>0),
+\qquad
+D_0(\alpha,\varepsilon,q_1)=(1-\alpha)\varepsilon(1+\varepsilon)>0
+\quad(\alpha<1).
+```
+
+Any report accepted for at least one parameter lies in $`[1/2,1/2+\varepsilon]`$. For q in that interval, acceptance is exactly α in $`[\ell(q),u(q)]`$, where
+
+```math
+\ell(q)=\frac{q^2-1/4}{\varepsilon(1+\varepsilon)},
+\qquad
+u(q)=\frac{1/4-(1-q)^2}{\varepsilon(1-\varepsilon)}.
+```
+
+Direct substitution gives $`0\leq\ell\leq u\leq1`$; clipping is unnecessary for these nonempty intervals. Writing $`q=1/2+x`$ shows
+
+```math
+u\leq R_0\ell,\qquad R_0=\frac{1+\varepsilon}{1-\varepsilon}>1.
+```
+
+For the reflected parameter $`\beta=1-\alpha`$, write $`q=1/2+\varepsilon-z`$. The accepted β interval has endpoints
+
+```math
+\ell_1=\frac{z(1-2\varepsilon+z)}{\varepsilon(1-\varepsilon)},
+\quad
+u_1=\frac{z(1+2\varepsilon-z)}{\varepsilon(1+\varepsilon)},
+\quad
+u_1\leq R_1\ell_1,
+\quad
+R_1=\frac{(1+2\varepsilon)(1-\varepsilon)}{(1-2\varepsilon)(1+\varepsilon)}>1.
+```
+
+Thus one accepted report covers only a bounded multiplicative interval at either endpoint. An endpoint report accepts only that endpoint. These are prior-free geometric facts. At ε=0 the constant report 1/2 repairs every parameter, so the positive-disturbance hypothesis cannot be dropped. [50–51,54]
+
+#### Pointwise finite expectation and an unavoidable endpoint cost
+
+Take $`q_0=1/2`$ and, after n≥1 receipts, use $`q_n=1/2+\varepsilon h_n`$, where hₙ is their empirical mean. Put $`v=\alpha(1-\alpha)`$. For an interior parameter, deviation $`|h_n-\alpha|\leq v\varepsilon/4`$ gives a coherent strict repair. Indeed, writing $`m=v\varepsilon^2`$ and $`d=\varepsilon(h_n-\alpha)`$, the two excesses are
+
+```math
+-m+(1+2\alpha\varepsilon)d+d^2,
+\qquad
+-m-(1-2\alpha\varepsilon)d+d^2.
+```
+
+Here $`|d|\leq m/4`$, $`d^2\leq|d|`$ and both linear coefficients have absolute value at most 2, so each excess is at most $`-m/4`$.
+
+For centered independent Bernoulli variables, expansion of the fourth moment leaves only fourfold and paired indices. It gives
+
+```math
+\mathbb E(h_n-\alpha)^4
+=\frac{nv(1-3v)+3n(n-1)v^2}{n^4}
+\leq\frac{v}{n^3}+\frac{3v^2}{n^2}.
+```
+
+Markov's inequality and the repair radius bound the post-acquisition failure probability by
+
+```math
+\min\left(1,\frac{A}{n^3}+\frac{B}{n^2}\right),
+\qquad A=\frac{256}{v^3\varepsilon^4},\quad B=\frac{768}{v^2\varepsilon^4}.
+```
+
+Let $`K=1/(v\varepsilon^2)\geq64`$ and $`N=\lceil28K\rceil`$. Bounding the first N terms by one and the decreasing tails by integrals gives
+
+```math
+\sum_{n\geq1}\Pr_\alpha(\text{failure at }n)
+\leq N+\frac{A}{2N^2}+\frac{B}{N}
+\leq\left(28+\frac1{64}+\frac1{98}+\frac{192}{7}\right)K<56K.
+```
+
+The initial report contributes at most one. Consequently
+
+```math
+C_\alpha\leq1+\frac{56}{\alpha(1-\alpha)\varepsilon^2}
+\qquad(0<\alpha<1).
+```
+
+Tonelli justifies summing these probabilities without independence of the errors across reporting times. Finite expectation implies almost-sure eventual weak repair, and the same radius argument gives eventual strict repair in the interior. For this clock the exact endpoint weak costs are $`(C_0,C_1)=(0,1)`$. The displayed interior bound is uniform on every compact interval $`[\eta,1-\eta]`$ with η>0. This is the retained empirical learner and sharper ordinary bound, not a new learner inferred from a simulation. [48–49]
+
+The divergence of the bound near an endpoint is not merely an artifact of that learner. Suppose first that an arbitrary common policy eventually repairs α=0 almost surely. On the counterfactual all-zero history let
+
+```math
+E_N=\{r:Q_n(r,0^n)=q_0\text{ for every }n\geq N\}.
+```
+
+Endpoint uniqueness implies $`\rho(E_N)\uparrow1`$. These are measurable seed events, not observable stopping events. For each n≥N, the report on E_N fails at every α>0 whenever the acquired prefix is all zeros. Independence gives
+
+```math
+C_\alpha\geq\rho(E_N)\sum_{n\geq N}(1-\alpha)^n
+=\rho(E_N)\frac{(1-\alpha)^N}{\alpha}.
+```
+
+Taking α down to zero with N fixed, then increasing N, proves
+
+```math
+\liminf_{\alpha\downarrow0}\alpha C_\alpha\geq1.
+```
+
+The corresponding endpoint-one correctness premise gives $`\liminf_{\alpha\uparrow1}(1-\alpha)C_\alpha\geq1`$. No finite expected settling time at an endpoint is assumed.
+
+A related finite-parameter inequality requires only a finite endpoint cost. Put $`p_n=\rho(Q_n(R,0^n)=q_0)`$. Endpoint uniqueness gives $`C_0=\sum_n(1-p_n)`$, while causality gives $`C_\alpha\geq\sum_n(1-\alpha)^np_n`$. If C₀ is finite, the subtracted series is finite and
+
+```math
+C_\alpha\geq\frac1\alpha-C_0,
+\qquad C_\alpha+C_0\geq\frac1\alpha.
+```
+
+If C₀ is infinite the latter extended sum inequality already holds; no infinity-minus-infinity subtraction is used. Reflection gives $`C_\alpha+C_1\geq1/(1-\alpha)`$.
+
+For an arbitrary fixed policy, α↦Cα is lower semicontinuous. For a fixed report, failure is a strict positive violation of a continuous polynomial, or parameter-independent incoherence. Its indicator is therefore lower semicontinuous. For each finite word w, the weight $`\alpha^{\#1(w)}(1-\alpha)^{\#0(w)}`$ is continuous and nonnegative, so its product with that indicator remains lower semicontinuous, including at zero word mass. Fatou on the common seed space, finite word/horizon sums and then the supremum over finite horizons yield
+
+```math
+C_a\leq\liminf_{\alpha\to a}C_\alpha.
+```
+
+If C₀ is infinite, this inequality forces interior costs to diverge near zero. If C₀ is finite, the paired trade-off does. The symmetric argument applies at one. **Every common always-issued policy therefore has unscaled expected cost tending to infinity at both endpoints**, even without endpoint correctness. This excludes a uniform finite bound on any parameter family accumulating at an excluded endpoint: its policy table still defines the hypothetical endpoint experiment. The scaled constants above retain their endpoint-correctness premises. [48–49]
+
+#### Two minimax pairs and the exact initial report
+
+The initial report is part of the experiment, so two commonly conflated examples must be kept separate.
+
+| Models | Policy | Expected lifetime failures |
+|---|---|---|
+| $`\{0,1/2\}`$ | Initially report $`1/2+\varepsilon/2`$; thereafter use that report after at least one receipt equal to 1 has been observed and use $`q_0`$ otherwise | $`(1,1)`$ |
+| $`\{0,1/2\}`$ | The same post-acquisition rule, initially reporting $`q_0`$ | $`(0,2)`$ |
+| $`\{0,1\}`$ | Initially randomize fairly between $`q_0,q_1`$; use the exact endpoint report after the first receipt | $`(1/2,1/2)`$ |
+
+For the first pair, $`C_0+C_{1/2}\geq2`$ gives minimax cost at least 1 even for arbitrary independent-seed real-report policies. The first policy attains it: the zero source has just the initial error; the half source has an error at n≥1 exactly on an all-zero prefix, and $`\sum_{n\geq1}2^{-n}=1`$. Changing only the initial report to q₀ removes the zero-source error but adds a half-source error. For the endpoint pair, no initial report repairs both models, so the two initial failure probabilities sum to at least 1. The fair choice attains randomized minimax 1/2. A deterministic initial report has minimax 1 instead. These are different model pairs and different policies. [48–49]
+
+The recovered endpoint-code review separately reports a 59-byte incremental program and a 105-byte prefix program with stated cache, receipt and rational-readout adapters and ordinary pair $`(0,2)`$. Their statement-transition meter excludes arithmetic, acquisition, codecs, host time and bit complexity. The mathematical initial-report modification above is not a claim that those exact programs implement the minimax variant, nor does their recovered source/execution identity restore the missing formal closure. [57]
+
+#### A sharp Beta-prior lifetime boundary
+
+Now draw α once from Beta(a,b), with a,b>0. Its density is $`\alpha^{a-1}(1-\alpha)^{b-1}/B(a,b)`$. Conditional receipts are iid, but the mixed process is exchangeable and generally not an iid fair coin. For example, the uniform-prior probability of two zeros is 1/3, not 1/4. Let $`C_{a,b}=\int C_\alpha\,\mathrm{Beta}(a,b)(d\alpha)`$.
+
+**Theorem (finite Beta-averaged budget).** There exists a common always-issued policy with $`C_{a,b}<\infty`$ if and only if a>1 and b>1. If either shape is at most one, every such policy has infinite expected lifetime literal failures. The necessary direction makes no endpoint-correctness assumption. [50–51]
+
+After n≥1 zero receipts the posterior is Beta(a,b+n). If F is its CDF, then for R≥1 and z∈[0,1], substitution gives
+
+```math
+F(z/R)=R^{-a}K_n\int_0^z x^{a-1}(1-x/R)^{b+n-1}\,dx
+\geq R^{-a}F(z),
+```
+
+because b+n−1≥0. The positive normalizing constant Kₙ is finite even for an integrable endpoint singularity. Since $`\ell\geq u/R_0`$, an accepted interval has posterior mass at most $`1-R_0^{-a}`$. Every issued report therefore fails with conditional probability at least $`R_0^{-a}`$ after that prefix. Conditioning on the fixed acquired word leaves the seed independent of α, so the same bound holds after averaging arbitrary private randomization. Reflection gives lower failure probability $`R_1^{-b}`$ after n ones.
+
+The two extreme-prefix events are disjoint for n≥1, with unconditional probabilities
+
+```math
+M_0(n)=\frac{B(a,b+n)}{B(a,b)}=\mathbb E(1-\alpha)^n,
+\qquad
+M_1(n)=\frac{B(a+n,b)}{B(a,b)}=\mathbb E\alpha^n.
+```
+
+Thus every policy obeys
+
+```math
+p_n\geq R_0^{-a}M_0(n)+R_1^{-b}M_1(n).
+```
+
+Tonelli and the geometric series give
+
+```math
+C_{a,b}\geq
+R_0^{-a}\mathbb E\frac{1-\alpha}{\alpha}
++R_1^{-b}\mathbb E\frac{\alpha}{1-\alpha}.
+```
+
+The first Beta integral diverges exactly when a≤1, and the second exactly when b≤1. For a,b>1 the displayed finite lower bound is $`R_0^{-a}b/(a-1)+R_1^{-b}a/(b-1)`$. For a=b=1 and ε=1/4, $`R_0^{-1}=3/5`$ and $`R_1^{-1}=5/9`$, giving the exact lower bound $`(52/45)(H_{N+1}-1)`$ over indices 1 through N. The n=0 extreme events coincide and must not be counted twice; the posterior CDF scaling also need not hold there when a complementary exponent is negative.
+
+For sufficiency, integrate the retained empirical bound using
+
+```math
+\mathbb E\frac1{\alpha(1-\alpha)}
+=(a+b-1)\left(\frac1{a-1}+\frac1{b-1}\right).
+```
+
+It gives
+
+```math
+C_{a,b}^{\rm emp}\leq1+
+\frac{56}{\varepsilon^2}(a+b-1)
+\left(\frac1{a-1}+\frac1{b-1}\right)<\infty.
+```
+
+This proves both directions. Nevertheless the empirical learner has finitely many failures almost surely under **every** proper Beta prior, since it does so at every fixed interior α and the prior has no endpoint atoms. Almost-sure finite count and finite prior expectation are different statements. Neither implies a bound on the time of the last error. [50–51]
+
+#### Finite-horizon rates and an exact Bayes existence statement
+
+The same experiment admits matching all-policy lower and empirical upper orders. For every n≥1 there are finite c,C>0 depending on a,b,ε, but not the policy or n, such that
+
+```math
+p_n(\pi)\geq c(n^{-a}+n^{-b})\quad\text{for every policy }\pi,
+\qquad
+p_n({\rm emp})\leq C(n^{-a}+n^{-b}).
+```
+
+Here the empirical learner needs neither prior shape. For completeness the concentration and integration arguments are given explicitly. At $`q_h=1/2+\varepsilon h`$, for h∈[0,1], the changes from qα in D₀ and D₁ have absolute values at most $`(3/2)\varepsilon|h-\alpha|`$ and $`\varepsilon|h-\alpha|`$. Hence the radius $`r=v\varepsilon/4`$ suffices. For $`X=Y-\alpha`$, $`\mathbb EX=0`$, $`|X|\leq1`$, and $`\mathbb E|X|^k\leq v`$ for every integer k≥2. Using $`k!\geq2\cdot3^{k-2}`$, for 0≤λ<3,
+
+```math
+\mathbb E e^{\lambda X}
+\leq1+\frac{v\lambda^2}{2(1-\lambda/3)}
+\leq\exp\!\left(\frac{v\lambda^2}{2(1-\lambda/3)}\right).
+```
+
+The same bound holds for −X. Independence, exponential Markov inequality and $`\lambda=r/(v+r/3)<3`$ yield
+
+```math
+\Pr(|h_n-\alpha|\geq r)
+\leq2\exp\!\left(-\frac{nr^2}{2(v+r/3)}\right)
+\leq2\exp\!\left(-\frac{nv\varepsilon^2}{33}\right).
+```
+
+The last inequality follows from $`r^2/[2(v+r/3)]=v\varepsilon^2/[32(1+\varepsilon/12)]`$ and ε≤1/4. This fixed-index estimate can exceed one at small n without invalidating the bound.
+
+Put $`t=\varepsilon^2/66`$ and $`K(s)=\max(1,2^{1-s})`$. On α≤1/2, v≥α/2 and $`(1-\alpha)^{b-1}\leq K(b)`$; reflect the other half. Extending nonnegative integrals to [0,∞) gives
+
+```math
+p_n({\rm emp})\leq\frac{2}{B(a,b)}
+\left[\frac{K(b)\Gamma(a)}{(tn)^a}
++\frac{K(a)\Gamma(b)}{(tn)^b}\right].
+```
+
+For a lower bound put $`k(s)=\min(1,2^{1-s})`$ and restrict M₀(n) to $`0\leq\alpha\leq1/(n+1)`$. On this interval $`(1-\alpha)^{b-1}\geq k(b)`$ and $`(1-\alpha)^n\geq[n/(n+1)]^n\geq e^{-1}`$. Therefore
+
+```math
+M_0(n)\geq\frac{e^{-1}k(b)2^{-a}}{aB(a,b)}n^{-a},
+\qquad
+M_1(n)\geq\frac{e^{-1}k(a)2^{-b}}{bB(a,b)}n^{-b}.
+```
+
+Combining these with the posterior lower bound proves the positive constant c without a gamma-ratio limit or asymptotic exchange. Every lower bound holds even for a horizon-dependent policy, while one horizon-independent empirical policy supplies all the upper bounds. [52]
+
+Writing $`H_N(s)=\sum_{n=1}^N n^{-s}`$ and $`m=\min(a,b)`$, the optimal expected count through N is $`\Theta(H_N(a)+H_N(b))`$: it grows as $`\Theta(N^{1-m})`$ for m<1, $`\Theta(\log(N+1))`$ for m=1, and $`\Theta(1)`$ for m>1. If a,b>1, the optimal expected future count over n>N has order $`N^{1-a}+N^{1-b}`$; otherwise every policy has infinite expected tail after every deterministic cutoff. These are unconditional original-prior expectations, not bounds asserted uniformly over every realized posterior.
+
+The empirical policy is optimal **in order**, not necessarily in leading constant or exact risk. An exact Bayes minimizer nevertheless exists in this passive experiment. After a word of length n with k ones, the posterior is Beta(a+k,b+n−k). Its continuous CDF F makes the success function $`F(u(q))-F(\ell(q))`$ continuous on the compact report interval. Choose its least maximizer, which exists because the nonempty maximizer set is compact. There are only countably many finite histories, so this deterministic selection is measurable. Randomization cannot exceed the maximum, and reports cannot affect later receipts. Conditional expectation and Tonelli therefore show that the same policy minimizes every per-index risk, every finite-horizon sum, every prescribed tail and the extended lifetime count. An infinite lifetime minimum can be vacuous; the finite-horizon conclusion remains substantive. This is an ordinary existence result, not a certified numerical argmax algorithm. Approximate maximization does not automatically preserve exact literal correctness. [52]
+
+#### A declared deterministic reporting clock
+
+Suppose instead that evaluated report j sees exactly nⱼ receipts, where (nⱼ) is a fixed deterministic nondecreasing sequence of positive integers. Charge every declared evaluation, including repeated nⱼ. Apply the all-n lower and upper bounds separately to each report. Independence between errors is unnecessary. A finite expected total evaluated-report count is possible exactly when
+
+```math
+\sum_j(n_j^{-a}+n_j^{-b})<\infty,
+\qquad\text{equivalently}\qquad
+\sum_j n_j^{-\min(a,b)}<\infty.
+```
+
+The empirical learner witnesses sufficiency; the lower bound excludes every common independently randomized policy when the sum diverges. If $`n_j\asymp j^\gamma`$, the condition is $`\gamma m>1`$. For $`n_j\asymp j^\gamma[\log(j+1)]^p`$ it is γm>1, or γm=1 with pm>1; it fails when γm<1 or at equality with pm≤1. Assume the schedule is eventually positive and nondecreasing; finitely many initial terms do not matter. A geometrically increasing receipt count works for every proper Beta prior. For the uniform prior, the schedule $`j[\log(j+1)]^p`$ works exactly when p>1, whereas linear acquisition cannot give a finite budget. [53]
+
+This trades more acquisitions for fewer evaluated reports. It does not remove the costs of intervening reports if a physical interface still requires their evaluation. A data-dependent acquisition time changes the posterior-history events and needs another proof; fixed-index concentration is not a stopping-time theorem. A bounded schedule repeated infinitely often cannot satisfy the criterion.
+
+#### Endpoint-density robustness, with atoms handled separately
+
+The rate conclusion is not confined to Beta conjugacy. Suppose one fixed prior has the decomposition
+
+```math
+\mu=p_0\delta_0+p_1\delta_1
++f_0(\alpha)\mathbf1_{(0,\delta)}\,d\alpha
++f_1(\alpha)\mathbf1_{(1-\delta,1)}\,d\alpha+\nu,
+```
+
+where 0<δ<1/2, ν is any finite nonnegative measure supported on [δ,1−δ], the total mass is one, and for some a,b>0 and finite positive constants,
+
+```math
+m_0\alpha^{a-1}\leq f_0(\alpha)\leq M_0\alpha^{a-1},
+\qquad
+m_1(1-\alpha)^{b-1}\leq f_1(\alpha)\leq M_1(1-\alpha)^{b-1}
+```
+
+almost everywhere on the respective punctured endpoint neighborhoods. The interior may contain atoms or singular continuous mass, including an affine Cantor measure. There is no additional unspecified singular mass near either endpoint. The constants concern this fixed prior, not a uniform class of priors. [54]
+
+The geometric ingredient is a prior-free missing-mass bound. For s>0, R≥1, t>0 and $`0\leq\ell\leq u\leq R\ell`$,
+
+```math
+\int_{(0,t)\setminus[\ell,u]}x^{s-1}\,dx
+\geq\frac{R^{-s}t^s}{s}.
+```
+
+If u≤t, multiplying the excluded mass by s gives $`\ell^s+t^s-u^s\geq t^s-(1-R^{-s})u^s\geq R^{-s}t^s`$. If u>t and ℓ<t, the excluded interval (0,ℓ) has mass at least $`(t/R)^s/s`$. If ℓ≥t the entire interval is excluded. Empty acceptance sets also satisfy the inequality. The upper complement when u<t is essential: the claim ℓ≥t/R for every report would be false.
+
+Set $`t=\delta/(n+1)`$. On the zero prefix and 0<α<t, the likelihood is at least e⁻¹. Fixing a seed fixes the report, so the lower density envelope and missing-mass lemma give an **unnormalized joint** failure-and-zero-prefix mass at least $`e^{-1}m_0R_0^{-a}t^a/a`$. The same inequality holds for every seed; the product law and Tonelli justify averaging. Reflection gives the one-prefix mass, and disjointness for n≥1 permits addition:
+
+```math
+p_n(\pi)\geq c_0n^{-a}+c_1n^{-b},
+\quad
+c_0=\frac{e^{-1}m_0R_0^{-a}\delta^a}{a2^a},
+\quad
+c_1=\frac{e^{-1}m_1R_1^{-b}\delta^b}{b2^b}.
+```
+
+No conjugate posterior or optimal selector is needed. Endpoint atoms cannot weaken this lower bound, but they invalidate a tempting conditional shortcut. For $`\mu=(99/100)\delta_0+(1/100)\mathrm{Uniform}[0,1]`$, reporting q₀ after n zeros has posterior failure probability
+
+```math
+\frac{1/[100(n+1)]}{99/100+1/[100(n+1)]}\longrightarrow0.
+```
+
+A positive constant conditional failure bound copied from the Beta posterior lemma would therefore be wrong. The unnormalized tail calculation is what survives. [54]
+
+For the upper bound put $`\kappa=\varepsilon^2/33`$. At α=0 or 1 the empirical learner is exact after the first receipt, so its n≥1 endpoint-atom cost is zero. On (0,δ), $`\alpha(1-\alpha)\geq(1-\delta)\alpha`$, and the concentration estimate integrates to $`2M_0\Gamma(a)[\kappa(1-\delta)n]^{-a}`$. Reflect the other endpoint. If $`w=\nu([\delta,1-\delta])`$ and $`h=\kappa\delta(1-\delta)>0`$, the interior contribution is at most $`2w e^{-hn}`$. Thus
+
+```math
+p_n({\rm emp})\leq A_0n^{-a}+A_1n^{-b}+2we^{-hn},
+\qquad
+A_0=\frac{2M_0\Gamma(a)}{[\kappa(1-\delta)]^a},
+\quad
+A_1=\frac{2M_1\Gamma(b)}{[\kappa(1-\delta)]^b}.
+```
+
+This integrates a uniform pointwise bound against the entire interior measure; no density or finite atomic support is required there. With r=⌈a⌉, $`e^{-hn}\leq r!h^{-r}n^{-r}\leq r!h^{-r}n^{-a}`$ for n≥1, yielding a finite polynomial upper constant for all n.
+
+Consequently the same optimal cumulative orders, finite-budget iff a,b>1, deterministic-cutoff tail orders and deterministic reporting-clock criterion hold. They give an upper rate for the empirical or optimal policy, not for every policy: an always-wrong policy can have risk one. The empirical learner is eventually accepted almost surely under every prior in this class, including those with infinite expected count. Endpoints are exact after one receipt; at each interior α the strong law eventually places hₙ in its positive repair radius. Integrating the probability-one conclusion is legitimate.
+
+Both density envelopes matter. A pure endpoint prior has zero empirical post-acquisition cost and cannot be assigned arbitrary positive lower tail powers. Lower comparability alone cannot control the upper rate: adding a uniform component to a prior with faster endpoint powers preserves those weaker lower bounds but introduces the critical uniform-prior risk. A full-prior inverse-moment slogan is also false in the presence of atoms. For $`\mu=(1/2)\delta_0+(1/2)\mathrm{Beta}(2,2)`$, the interior integral of $`1/[\alpha(1-\alpha)]`$ is 3, while its full extended integral is infinite. The endpoint atom has zero actual post-acquisition error cost. It must not be inserted into a zero-variance upper formula as if the formula's infinite value were an error count. [54]
+
+The density theorem does not cover uncontrolled singular endpoint tails, holes in the positive lower envelope, unbounded slowly varying factors, changing α, informative extra feedback or control-dependent sampling. The Beta continuous-CDF maximizer argument is not imported across atoms; no exact Bayes selector or computable argmax is asserted for this larger class. An α-revealing seed would permit the exact report qα everywhere and defeat the universal lower bound, which is why the independent-information contract is substantive. These statistical guarantees authenticate neither a scoring source nor any normative or metaphysical authority.
+
+
 ## 10. Assumptions, negative results, and open scope
 
 The positive-fibre and Fisher theorems quantify over the full strictly positive joint-law family. On a constrained reachable family, use its actual differences; the density proof may fail. For example, with three audit outcomes, a binary target, fixed weights $`w_j=1/3`$, and $`J=p_{1,1}`$, equation (12) has $`\dot w=0`$. The section is invariant and its signature is injective, so the flow descends there despite conditional dependence at fixed $`q`$. This does not contradict the full-domain rigidity theorem.
@@ -2322,6 +2666,10 @@ The selected formal sources [35–41] distinguish a generic dominated-readout th
 These seven public formal bodies were inspected at source level. Their transitive dependency closure, including the imported restoration-countability bridge and Mathlib modules, was not newly read or built for this edition. The predecessor records compilation, axiom-readback and independent copied-source review at their original bounded scopes; source inspection, printed proof-check commands and this exposition's ordinary proofs are not fresh kernel execution or receipt of every historical raw log. In particular the statistical sample bounds, philosophical interpretation and the whole two-source incorporation are not added to a kernel certificate by association. The existing source/adoption and accepted-edition boundaries remain.
 
 Section 5.3 and the retained-history argument in §9.4 incorporate the corresponding bounded constructions in [FORM], *Graded Representations, Witnessed Revision, and Inquiry Landscapes*, version 1 research draft, 8 September 2026. The option values are constructed countermodels; the history theorem is conditional on actual record retention and the separately stated semantic premises. The finite typed representation and future-quotient application appear in [Tensor Moments, §§1.1–1.4](tensor-moments-and-corrective-dynamics.md#11-finite-typed-words-and-their-declared-meaning), while the dynamical estimates appear in [Physical Realisation, §§5.5–5.6](physical-realisation-and-continuation.md#55-coupled-estimates-and-a-residual-error-floor). These mathematical components do not establish a production schema, a completed empirical programme, or the unfinished original N-person theory.
+
+Section 9.8 consolidates the fixed-disturbance continuum proof and its independent ordinary review [48–49], the Beta lifetime boundary and its separate review [50–51], the finite-horizon and deterministic-clock sources [52–53], and the endpoint-density proof [54]. It preserves the empirical learner's sharper pointwise constant, all-policy endpoint quantifiers, initial-report distinctions, seed independence and restrictions on priors and clocks. The elementary proofs are supplied in the subject treatment, so their scientific content does not require reconstruction of a historical research packet.
+
+These references are exact public navigation-only projections. The original private texts and their custody diffs are distinct editions. The recovery introduction and status index [55–56] distinguish recovered source identity, retained predecessor evidence, fresh ordinary review and unavailable earlier formal closures. Their pending-review wording and later source-bound reviews retain their original scopes. In particular, the rate and density sources' separate successor reviews are described by the recovery indexes and integrated-report review; those statements do not claim that every original review archive or raw output has been received or re-executed for this edition. The integrated report's recovered endpoint-program identities and bounded meter remain separate from the ordinary minimax policy variants [57]. No missing fourth formal closure, historical-priority verdict or normative-source authority is supplied by the new synthesis. The historical finite controls corroborate their stated source versions; independent qualification of this new exposition is its own obligation.
 
 ### Generated binary experiment: source and audit boundary
 
@@ -2466,6 +2814,17 @@ adoption follows from those reported checks.
 46. Orthemology. *Independent fresh proof-spine audit*. [Complete public projected audit][46], 30 September 2026. Initial and extension snapshots, ordinary adaptive-observation reasoning, counterexamples and formal ceilings retain their separate historical scopes.
 47. Orthemology. *Causal finite-query restoration: independent audit*. [Complete public projected audit][47]. The ten-module exact causal/query closure, correlated-law controls and finite checks are distinct from the later additive-tolerance successor.
 
+48. Orthemology public research. *Continuum literal-repair cost boundary: fresh recovery successor*. Complete public projected proof, including the fourth-moment constant, endpoint semicontinuity argument and distinct minimax pairs. [Exact public edition][continuum-cost].
+49. Orthemology public research. *Fresh independent review of continuum literal-repair costs*. Complete projected ordinary review of the exact recovered proof, with its finite controls and missing-formal-evidence limits. [Exact public edition][continuum-cost-review].
+50. Orthemology public research. *A sharp Beta-prior boundary for finite expected literal mistakes*. Complete public projected derivation, preserving the passive fixed-parameter clock and all-policy quantifiers. [Exact public edition][beta-budget].
+51. Orthemology public research. *Fresh independent review: Beta-prior finite-mistake boundary*. Complete projected ordinary review, including real-shape CDF scaling, seed conditioning, the initial-prefix countercontrols and the inherited empirical upper. [Exact public edition][beta-budget-review].
+52. Orthemology public research. *Optimal finite-horizon growth under Beta uncertainty*. Complete public projected proof of the rate comparison, concentration estimate and exact Bayes existence statement. [Exact public edition][beta-rates].
+53. Orthemology public research. *The exact deterministic reporting-clock trade-off*. Complete public projected corollary, with repeated evaluations and the adaptive-clock exclusion. [Exact public edition][report-clock].
+54. Orthemology public research. *Endpoint-density robustness of the literal-failure rates*. Complete public projected proof for two-sided punctured-endpoint density envelopes, arbitrary compact-interior measure and separately handled endpoint atoms. [Exact public edition][endpoint-density].
+55. Orthemology public research. *Fourth research recovery return*. Public projected recovery introduction. Its index describes a broader source population than the mathematical bodies integrated in §9.8; indexing is not scientific proof or a new receipt. [Exact public edition][t4-recovery-introduction].
+56. Orthemology public research. *Recovery evidence status*. Public projected status index distinguishing fresh ordinary review, recovered source custody and unavailable original formal closures. [Exact public edition][t4-recovery-status].
+57. Orthemology public research. *Final integrated fourth-tranche claim review*. Public projected review of a separately frozen 21-page report, its text companion and source membership. Its original report identities and source-specific scope are not reassigned to the present work. [Exact public edition][t4-report-review].
+
 Repository references identify exact public source editions, not mutable current filenames. The broader works in references 1, 6, and 7 contain additional results and are not replaced in their entirety by this chapter.
 
 [1]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/theory/lineages/h-continuation/continuation_complete_orthing.md
@@ -2522,3 +2881,14 @@ Repository references identify exact public source editions, not mutable current
 [46]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/docs/provenance/v5-research-continuations/notes/f2d0dc0727817a58c17361252a3c2be4c020cc4d287b627535e742e3b276efef.md
 [47]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/docs/provenance/v5-research-continuations/notes/4568e570dee3bc029c65f4208c8d1e969578096d3aef529df0a1609173c7b4fa.md
 
+
+[continuum-cost]: https://github.com/theislampill/orthemology/blob/0e92ccbd8c16190ad6b18e6e61cd86db07d47202/docs/provenance/v5-research-continuations/notes/196728a62cb7bdb24160b33c0ae3627a822f8b2b031fe033e275d6d284efa7df.md
+[continuum-cost-review]: https://github.com/theislampill/orthemology/blob/0e92ccbd8c16190ad6b18e6e61cd86db07d47202/docs/provenance/v5-research-continuations/notes/575700cb383a6f0849e2a952ba6652e6de75920eb74ebcb9a7eb0ed21517a696.md
+[beta-budget]: https://github.com/theislampill/orthemology/blob/0e92ccbd8c16190ad6b18e6e61cd86db07d47202/docs/provenance/v5-research-continuations/notes/285a7061f8f090946e27e5ff6bd7597b7a0f0472100c7e4b3cb57ea5ac12f6a7.md
+[beta-budget-review]: https://github.com/theislampill/orthemology/blob/0e92ccbd8c16190ad6b18e6e61cd86db07d47202/docs/provenance/v5-research-continuations/notes/826c824188b79a5e734c77f4aaa24f5ecf15d1a73e7af0d68ad8b8955bb674ab.md
+[beta-rates]: https://github.com/theislampill/orthemology/blob/0e92ccbd8c16190ad6b18e6e61cd86db07d47202/docs/provenance/v5-research-continuations/notes/3b8f7d96fa99674b73cb8f822cc3291d455c52879b2f1110630be67660883317.md
+[report-clock]: https://github.com/theislampill/orthemology/blob/0e92ccbd8c16190ad6b18e6e61cd86db07d47202/docs/provenance/v5-research-continuations/notes/3b7cdb283b858339136beb1e0d62cbd32adce0ee9f0562db8961a9f819f52000.md
+[endpoint-density]: https://github.com/theislampill/orthemology/blob/0e92ccbd8c16190ad6b18e6e61cd86db07d47202/docs/provenance/v5-research-continuations/notes/7d3cbeb8bcacdb5d28cb457801ba41de9b21f91542866fe5c5f13a4a632dadd9.md
+[t4-recovery-introduction]: https://github.com/theislampill/orthemology/blob/0e92ccbd8c16190ad6b18e6e61cd86db07d47202/docs/provenance/v5-research-continuations/notes/c8dc35d9a1f4ae42417737923ca5bc276d80d60a0865655a34b55de83570d6ee.md
+[t4-recovery-status]: https://github.com/theislampill/orthemology/blob/0e92ccbd8c16190ad6b18e6e61cd86db07d47202/docs/provenance/v5-research-continuations/notes/32266a84e5e96404970a7420dc690e71db78323281fd10805a899c6ca67b52e2.md
+[t4-report-review]: https://github.com/theislampill/orthemology/blob/0e92ccbd8c16190ad6b18e6e61cd86db07d47202/docs/provenance/v5-research-continuations/notes/9412522bec33bc12a790e1610d328b160a00cf25eea03126ec219f01abc5e5ac.md

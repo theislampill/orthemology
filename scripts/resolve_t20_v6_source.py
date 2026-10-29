@@ -32,7 +32,7 @@ CONTINUATION_COPY_COUNT = 258
 CONTINUATION_COPY_EXCLUDED = 'b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183'
 CONTINUATION_COPY_METADATA = {
     'docs/provenance/v5-research-continuations/SOURCE_MAP.json':
-        (5985263, 'a4de062f1423c26c65e16dda3e5a9abe415cb3b4d21281dc5e4aa94681dea9c2'),
+        (5976495, 'd65e5e79cf6be367f3d22296403d30be96b191ed1f68be1ca95ccff5b7676133'),
     'docs/provenance/v5-successors/SOURCE_MAP.json':
         (4978847, 'db90ad110ccc9c6a63454cf91ecec4605eed7fe243d18883d3cf501c58cb4883'),
     'docs/provenance/v5-successors/PRESERVATION.json':
@@ -154,6 +154,93 @@ HISTORICAL_PROSE.update(CONTINUATION_READER_PROSE)
 HISTORICAL_PROSE_REVISIONS.update({path: CONTINUATION_READER_REVISION
                                   for path in CONTINUATION_READER_PROSE})
 
+# Preserve the accepted sixteen-path contract before the T4 extension.
+CONTINUATION_READER_HISTORICAL_PATHS = tuple(HISTORICAL_PROSE)
+
+# Ten incorporated T4 reader aliases, including four support-only sources.
+# The other four integrated reviews have no CROSSWALK aliases. The three broad
+# accounts remain live; this finite admission neither absorbs nor retires them.
+T4_READER_REVISION = 'b4d58482ae00f138782276ee5c4034c48bb2df19'
+T4_READER_NOTES = {'continuation-note-83': ('285a7061f8f090946e27e5ff6bd7597b7a0f0472100c7e4b3cb57ea5ac12f6a7',
+                          '40d509699e094815d445af4b3fb63cbb1079c4b0',
+                          6182,
+                          'continuation-beta-budget',
+                          'consolidated-information-and-inquiry',
+                          ('continuation-note-88', 'continuation-note-86'),
+                          ('continuation-beta-rates',)),
+ 'continuation-note-84': ('3b7cdb283b858339136beb1e0d62cbd32adce0ee9f0562db8961a9f819f52000',
+                          'a12e7f7c10894591e1b1e13c26ba99377492563d',
+                          2966,
+                          'continuation-reporting-clock',
+                          'consolidated-information-and-inquiry',
+                          ('continuation-note-85', 'continuation-note-90'),
+                          ()),
+ 'continuation-note-85': ('3b8f7d96fa99674b73cb8f822cc3291d455c52879b2f1110630be67660883317',
+                          '9715b8685253581e9187c44b2b4a4d81ad74ae73',
+                          8219,
+                          'continuation-beta-rates',
+                          'consolidated-information-and-inquiry',
+                          ('continuation-note-83', 'continuation-note-90'),
+                          ('continuation-endpoint-density', 'continuation-reporting-clock')),
+ 'continuation-note-86': ('196728a62cb7bdb24160b33c0ae3627a822f8b2b031fe033e275d6d284efa7df',
+                          'af853c549ee6b1b320cf38e14358ded327f9dced',
+                          10906,
+                          'continuation-all-policy-cost',
+                          'consolidated-information-and-inquiry',
+                          ('continuation-note-89',),
+                          ('continuation-beta-budget',)),
+ 'continuation-note-87': ('7d3cbeb8bcacdb5d28cb457801ba41de9b21f91542866fe5c5f13a4a632dadd9',
+                          '07a1df58ff170334e07261c93af8345093b0f160',
+                          14328,
+                          'continuation-endpoint-density',
+                          'consolidated-information-and-inquiry',
+                          ('continuation-note-85', 'continuation-note-90'),
+                          ()),
+ 'continuation-note-88': ('826c824188b79a5e734c77f4aaa24f5ecf15d1a73e7af0d68ad8b8955bb674ab',
+                          'fbd42a9270e356e4c361695ea28df58aaba773c9',
+                          6121,
+                          None,
+                          'consolidated-information-and-inquiry',
+                          None,
+                          ('continuation-beta-budget',)),
+ 'continuation-note-89': ('575700cb383a6f0849e2a952ba6652e6de75920eb74ebcb9a7eb0ed21517a696',
+                          '9be9a40bb2d6b3a4e94d6e06ae8e68b8b3198bda',
+                          5443,
+                          None,
+                          'consolidated-information-and-inquiry',
+                          None,
+                          ('continuation-all-policy-cost',)),
+ 'continuation-note-92': ('b092780b29dd9fa00ac276142b090a5b8b88da79da9c278268264669e08f3d8c',
+                          '4e69862256f3014f8e94d528b13ff0f63dd7f3eb',
+                          29013,
+                          'continuation-markov',
+                          'consolidated-collective-inquiry',
+                          ('continuation-note-96', 'continuation-note-97'),
+                          ()),
+ 'continuation-note-96': ('34c1f25cd1144b386ff4c70a2fbfacc7da2a0fc87f5cd78b430badf260ab49f6',
+                          '6bcd9f7c0faea3fe3037c1f188288555312517b1',
+                          1017,
+                          None,
+                          'consolidated-collective-inquiry',
+                          None,
+                          ('continuation-markov',)),
+ 'continuation-note-97': ('9438fdcbea8747c7e5599483096eca9541cfdf673d6a96866c019c5ced06519a',
+                          '80e45c60c8f4e71a8191f906d04afd4ab0384b06',
+                          11145,
+                          None,
+                          'consolidated-collective-inquiry',
+                          None,
+                          ('continuation-markov',))}
+T4_READER_PATHS = {
+    key: 'docs/provenance/v5-research-continuations/notes/' + row[0] + '.md'
+    for key, row in T4_READER_NOTES.items()}
+T4_READER_PROSE = {T4_READER_PATHS[key]: (row[1], row[0], row[2])
+                   for key, row in T4_READER_NOTES.items()}
+T4_READER_SUPPORT_PROSE = {T4_READER_PATHS[key] for key, row in T4_READER_NOTES.items()
+                          if row[3] is None}
+HISTORICAL_PROSE.update(T4_READER_PROSE)
+HISTORICAL_PROSE_REVISIONS.update({path: T4_READER_REVISION for path in T4_READER_PROSE})
+
 TYPED_GUIDES = {
     'experiments/orthemology-v5-successors/groups/t13-identity/README.md': (
         '0d228b107878098508dc31368517ac07fe688dff',
@@ -174,7 +261,7 @@ MEDIATOR_GUIDE_BYTES = 18763
 HISTORICAL_PROSE_PUBLIC_PATHS = tuple(
     path for path in HISTORICAL_PROSE
     if path != 'research/t20-live-20261009/checkpoints/CP20/necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md'
-    and path not in CONTINUATION_READER_PROSE)
+    and path not in CONTINUATION_READER_PROSE and path not in T4_READER_PROSE)
 
 
 def historical_source_bytes(root, path, revision, git_blob):
@@ -196,6 +283,8 @@ def historical_source_bytes(root, path, revision, git_blob):
         require_typed_context(root)
     elif path in CONTINUATION_READER_PROSE:
         require_continuation_note_context(root)
+    elif path in T4_READER_PROSE:
+        require_t4_note_context(root)
     blob, identity, size = binding
 
     def git(*args):
@@ -244,6 +333,81 @@ def historical_source_bytes(root, path, revision, git_blob):
     return body
 
 
+def require_t4_note_context(root):
+    """Require ten enumerated T4 originals and their current scholarly owners.
+
+    Six aliases retain research-note identities; four retain support-only roles.
+    The three broad source accounts are outside this admission. This validates
+    a finite reading relationship, not scientific truth or permission to delete.
+    """
+    root = pathlib.Path(root)
+    try:
+        owners = json.loads(_regular_current_bytes(root,
+            'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json'))
+        cross = json.loads(_regular_current_bytes(root,
+            'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json'))
+        bindings = owners['historical_source_bindings']
+        fields = {'path', 'repository_revision', 'git_blob', 'role', 'reading_source', 'basis'}
+        if (not isinstance(bindings, list)
+                or any(not isinstance(row, dict) or set(row) != fields for row in bindings)
+                or len(bindings) != len(HISTORICAL_PROSE)
+                or {row['path'] for row in bindings} != set(HISTORICAL_PROSE)):
+            raise ValueError('the exact earlier sixteen and ten T4 bindings are required')
+        for key, row in T4_READER_NOTES.items():
+            expected = dict(path=T4_READER_PATHS[key], repository_revision=T4_READER_REVISION,
+                git_blob=row[1], role='historical-source', reading_source=row[4],
+                basis='scientific-consolidation-review')
+            if [binding for binding in bindings if binding['path'] == expected['path']] != [expected]:
+                raise ValueError('the exact T4 historical owner binding is required')
+        for key, path, role in (
+            ('consolidated-information-and-inquiry', 'mathematics/information-and-inquiry.md', 'work-source'),
+            ('consolidated-collective-inquiry', 'mathematics/collective-inquiry-and-strategic-coordination.md', 'work-source'),
+            ('scientific-consolidation-review', 'docs/scientific-consolidation-review.md', 'review')):
+            selected = [row for row in owners['source_additions'] if row['key'] == key]
+            if len(selected) != 1:
+                raise ValueError('missing or duplicate current T4 reading owner')
+            admission, source = selected[0], cross['sources'][key]
+            current = _regular_current_bytes(root, path)
+            oid = hashlib.sha1(b'blob ' + str(len(current)).encode() + b'\0' + current).hexdigest()
+            if (admission['path'] != path or source['path'] != path or admission['role'] != role
+                    or admission['mode'] != '100644' or admission['git_oid'] != oid
+                    or admission['bytes'] != len(current) or admission['sha256'] != digest(current)
+                    or source['sha256'] != digest(current)):
+                raise ValueError('current T4 scholarship or review edition differs')
+            if role == 'work-source' and 'scientific-consolidation-review' not in admission['supporting_source_keys']:
+                raise ValueError('current T4 work has lost its review owner')
+        for key, row in T4_READER_NOTES.items():
+            source = cross['sources'][key]
+            primary = [work for work in cross['works'] if key in work['source_keys']]
+            forms = [form for work in cross['works'] for form in work.get('reading_forms', [])
+                     if form.get('source') == key]
+            supported = sorted(work['key'] for work in cross['works']
+                               if key in work.get('supporting_source_keys', []))
+            expected_form = {'source': key, 'relationship': 'historical-source'}
+            if row[3] is None:
+                if primary or forms or row[5] is not None:
+                    raise ValueError('T4 support-only original acquired a work or reading form')
+            elif (len(primary) != 1 or primary[0]['key'] != row[3]
+                    or primary[0]['role'] != 'research-note' or primary[0]['source_keys'] != [key]
+                    or primary[0]['reading_forms'] != [expected_form] or forms != [expected_form]
+                    or primary[0]['supporting_source_keys'] != list(row[5])
+                    or any(support not in cross['sources'] for support in row[5])):
+                raise ValueError('T4 research-note ownership or retained support differs')
+            relation = {'from': key, 'to': row[4],
+                        'kind': 'logical-content-incorporated-historical-source-retained',
+                        'basis': 'scientific-consolidation-review'}
+            if (supported != list(row[6]) or source['path'] != T4_READER_PATHS[key]
+                    or source['sha256'] != row[0]
+                    or not isinstance(source.get('read_scope'), str) or not source['read_scope'].strip()
+                    or [name for name, item in cross['sources'].items()
+                        if item['path'] == T4_READER_PATHS[key]] != [key]
+                    or [r for r in cross['relations'] if r.get('from') == key] != [relation]
+                    or any(key in journey.get('source_keys', []) for journey in cross['reader_journeys'])):
+                raise ValueError('T4 source identity, support incidence or incorporation differs')
+    except (KeyError, TypeError, UnicodeError) as exc:
+        raise ValueError('invalid current T4 note owner bindings') from exc
+
+
 def require_continuation_note_context(root):
     """Bind exactly four historical note readers to their incorporated science.
 
@@ -261,9 +425,10 @@ def require_continuation_note_context(root):
         fields = {'path', 'repository_revision', 'git_blob', 'role', 'reading_source', 'basis'}
         if (not isinstance(bindings, list)
                 or any(not isinstance(row, dict) or set(row) != fields for row in bindings)
-                or len(bindings) != len(HISTORICAL_PROSE)
-                or {row['path'] for row in bindings} != set(HISTORICAL_PROSE)):
-            raise ValueError('the exact earlier twelve and four continuation note bindings are required')
+                or len({row['path'] for row in bindings}) != len(bindings)
+                or {row['path'] for row in bindings} not in
+                    (set(CONTINUATION_READER_HISTORICAL_PATHS), set(HISTORICAL_PROSE))):
+            raise ValueError('exact continuation sixteen or T4 twenty-six bindings are required')
         for key, row in CONTINUATION_READER_NOTES.items():
             path = CONTINUATION_READER_PATHS[key]
             expected = dict(path=path, repository_revision=CONTINUATION_READER_REVISION,
