@@ -307,7 +307,7 @@ HISTORICAL_PROSE_DISPOSITIONS.update({path: 'REUSE' for path in TYPED_PROSE})
 
 # Four already incorporated continuation notes migrate only their reader route.
 # Their original source/work identities and distinct formal support stay owned
-# by the existing crosswalk; these are not new T20 public manifest forms.
+# by the existing crosswalk; the existing public subset is enumerated below.
 CONTINUATION_READER_REVISION = 'a7ff0e33d1a299db640041c46b1af81ca70851f6'
 CONTINUATION_READER_NOTES = {
     'continuation-note-41': (
@@ -428,6 +428,19 @@ T4_READER_SUPPORT_PROSE = {T4_READER_PATHS[key] for key, row in T4_READER_NOTES.
 HISTORICAL_PROSE.update(T4_READER_PROSE)
 HISTORICAL_PROSE_REVISIONS.update({path: T4_READER_REVISION for path in T4_READER_PROSE})
 
+# These six notes already have public REUSE rows. Their original coordinates
+# can be pinned without publishing any other reader-only or held source.
+PUBLIC_READER_NOTE_PATHS = (
+    *(CONTINUATION_READER_PATHS[key] for key in
+      ('continuation-note-37', 'continuation-note-28')),
+    *(T4_READER_PATHS[key] for key in
+      ('continuation-note-87', 'continuation-note-92',
+       'continuation-note-96', 'continuation-note-97')),
+)
+HISTORICAL_PROSE_DISPOSITIONS.update({path: 'REUSE' for path in PUBLIC_READER_NOTE_PATHS})
+CONTINUATION_REGISTRY_PATH = 'experiments/orthemology-v5-continuations/registry.json'
+CONTINUATION_REGISTRY_REVISION = HISTORICAL_PROSE_REVISION
+
 TYPED_GUIDES = {
     'experiments/orthemology-v5-successors/groups/t13-identity/README.md': (
         '0d228b107878098508dc31368517ac07fe688dff',
@@ -448,7 +461,8 @@ MEDIATOR_GUIDE_BYTES = 18763
 HISTORICAL_PROSE_PUBLIC_PATHS = tuple(
     path for path in HISTORICAL_PROSE
     if path != 'research/t20-live-20261009/checkpoints/CP20/necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md'
-    and path not in CONTINUATION_READER_PROSE and path not in T4_READER_PROSE)
+    and ((path not in CONTINUATION_READER_PROSE and path not in T4_READER_PROSE)
+         or path in PUBLIC_READER_NOTE_PATHS))
 
 
 def historical_source_bytes(root, path, revision, git_blob):
@@ -1284,11 +1298,45 @@ def checkpoint_duplicate_paths(root):
     return result
 
 
+def continuation_registry_source_bytes(root, row):
+    """Keep one original public registry and its complete current owner edition.
+
+    The existing preservation owner authenticates all four present owners and
+    their index entries. The T20 row separately binds the original native Git
+    coordinate; neither edition can stand in for a failed check of the other.
+    """
+    import validate_v5_successors as owners
+    path = CONTINUATION_REGISTRY_PATH
+    blob, identity, size = owners.PRESERVATION_OWNER_ORIGINAL[path]
+    if (row.get('repository_path') != path or row.get('disposition') != 'REUSE'
+            or row.get('repository_revision') != CONTINUATION_REGISTRY_REVISION
+            or row.get('git_blob') != blob or row.get('source_sha256') != identity
+            or row.get('public_sha256') != identity
+            or row.get('source_bytes') != size or row.get('public_bytes') != size):
+        raise ValueError('continuation registry public source owner differs')
+    original_owners = {
+        name: {'path': name, 'bytes': length, 'sha256': sha, 'git_blob_sha1': oid}
+        for name, (oid, sha, length) in owners.PRESERVATION_OWNER_ORIGINAL.items()}
+    originals = owners._preservation_owner_bytes(root, original_owners)
+    _continuation_object(root, 'commit', CONTINUATION_REGISTRY_REVISION)
+    expected = ('100644 blob ' + blob + '\t' + path + '\0').encode()
+    if _continuation_git(root, 'ls-tree', '-z', CONTINUATION_REGISTRY_REVISION,
+                         '--', path) != expected:
+        raise ValueError('continuation registry historical path, mode or blob differs')
+    body = _continuation_object(root, 'blob', blob)
+    if ((len(body), digest(body)) != (size, identity)
+            or (originals and originals[path] != body)):
+        raise ValueError('continuation registry historical bytes differ')
+    return body
+
+
 def source_bytes(root, row):
     path = pathlib.PurePosixPath(row['repository_path'])
     if path.is_absolute() or '..' in path.parts or '\\' in str(path):
         raise ValueError('unsafe source path')
-    if str(path) in HISTORICAL_PROSE:
+    if str(path) == CONTINUATION_REGISTRY_PATH:
+        body = continuation_registry_source_bytes(root, row)
+    elif str(path) in HISTORICAL_PROSE:
         blob, identity, size = HISTORICAL_PROSE[str(path)]
         if (row['repository_path'] != str(path) or str(path) not in HISTORICAL_PROSE_PUBLIC_PATHS
                 or row.get('disposition') != HISTORICAL_PROSE_DISPOSITIONS[str(path)]

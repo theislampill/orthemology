@@ -36,6 +36,7 @@ from resolve_t20_v6_source import (
     TYPED_PROSE, TYPED_PROSE_REVISION, TYPED_GUIDES, typed_guide_source_bytes,
     CONTINUATION_READER_PROSE, T4_READER_PROSE, T4_READER_SUPPORT_PROSE,
     CONTINUATION_COPY_ROOT, continuation_duplicate_paths,
+    PUBLIC_READER_NOTE_PATHS, CONTINUATION_REGISTRY_PATH, CONTINUATION_REGISTRY_REVISION,
 )
 
 
@@ -454,6 +455,34 @@ def pmr007_rounds_parent_source_bytes(repo):
 
 
 
+def _permitted_projection_consumer_pins(original, candidate):
+    """Admit only seven exact historical coordinates on existing public rows."""
+    from copy import deepcopy
+    import validate_v5_successors as owners
+    expected = deepcopy(original)
+    bindings = {
+        path: (*HISTORICAL_PROSE[path], HISTORICAL_PROSE_REVISIONS[path])
+        for path in PUBLIC_READER_NOTE_PATHS}
+    bindings[CONTINUATION_REGISTRY_PATH] = (
+        *owners.PRESERVATION_OWNER_ORIGINAL[CONTINUATION_REGISTRY_PATH],
+        CONTINUATION_REGISTRY_REVISION)
+    try:
+        for path, (blob, identity, size, revision) in bindings.items():
+            rows = [r for r in expected['objects'] if r.get('repository_path') == path]
+            if len(rows) != 1:
+                return False
+            source = rows[0]
+            if (source.get('disposition') != 'REUSE'
+                    or source.get('source_sha256') != identity
+                    or source.get('public_sha256') != identity
+                    or source.get('source_bytes') != size or source.get('public_bytes') != size):
+                return False
+            source.update(repository_revision=revision, git_blob=blob)
+        return candidate == expected
+    except (KeyError, TypeError, ValueError):
+        return False
+
+
 def permitted_historical_status_pin(repo, row, body):
     """Admit exact navigation and finite historical-source bindings, not identities.
 
@@ -673,7 +702,7 @@ def permitted_historical_status_pin(repo, row, body):
                 return False
             source.update(repository_revision=revision, git_blob=blob,
                           publication_basis="exact_existing_public_git_blob; current_consumer_has_distinct_identity")
-        return candidate == expected
+        return candidate == expected or _permitted_projection_consumer_pins(expected, candidate)
     except (KeyError, TypeError, ValueError):
         return False
 

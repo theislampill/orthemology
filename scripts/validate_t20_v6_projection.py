@@ -23,6 +23,7 @@ from resolve_t20_v6_source import (
     TYPED_GUIDES, typed_guide_source_bytes,
     CONTINUATION_COPY_ROOT, continuation_duplicate_paths,
     CHECKPOINT_COPY_PATHS, checkpoint_duplicate_paths,
+    CONTINUATION_REGISTRY_PATH,
 )
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -141,6 +142,7 @@ def check_object(root, row):
         if path.is_symlink() or not path.resolve().is_relative_to(root.resolve()):
             raise ValueError('source symlink or escaped root')
         if (relative.as_posix() in HISTORICAL_PROSE
+                or relative.as_posix() == CONTINUATION_REGISTRY_PATH
                 or (relative.as_posix().startswith(CONTINUATION_COPY_ROOT) and relative.suffix == '.lean')):
             body = source_bytes(root, row)
         elif row.get('repository_revision') is not None:

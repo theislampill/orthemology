@@ -1917,6 +1917,54 @@ class ContinuationOwnerRootMigrationTests(unittest.TestCase):
         self._gate(['preserved v5 or prior T20 baseline changed'])
 
 
+    def _public_registry_row(self):
+        return dict(source_sha256='51e2cea236dd0a880c7243b2f9ccbd558c6c70f16f03ec0efa274f19d3d105ff',
+                    source_bytes=192971, disposition='REUSE',
+                    repository_path='experiments/orthemology-v5-continuations/registry.json',
+                    public_sha256='51e2cea236dd0a880c7243b2f9ccbd558c6c70f16f03ec0efa274f19d3d105ff',
+                    public_bytes=192971, repository_revision=self.baseline,
+                    git_blob='d90b5647de1cf290d3b7dbe20a805983c75f0fcf')
+
+    def _registry_projection(self, expected):
+        import resolve_t20_v6_source as source
+        row = self._public_registry_row()
+        before = (self.repo / '.git/index').read_bytes()
+        with patch.object(source, 'CONTINUATION_REGISTRY_REVISION', self.baseline, create=True), \
+             patch.object(source, 'HISTORICAL_PROSE_REVISION', self.baseline), \
+             patch.object(projection, 'BASE', self.baseline):
+            errors = check_object(self.repo, row)
+            if expected:
+                self.assertEqual(errors, [])
+                self.assertEqual(source.source_bytes(self.repo, row), self.original[row['repository_path']])
+            else:
+                self.assertTrue(errors)
+                with self.assertRaises((ValueError, OSError)):
+                    source.source_bytes(self.repo, row)
+        self.assertEqual((self.repo / '.git/index').read_bytes(), before)
+
+    def test_public_registry_original_and_current_owner_editions_resolve_original_identity(self):
+        self._registry_projection(True)
+        self._use_current()
+        self._registry_projection(True)
+
+    def test_public_registry_history_does_not_hide_missing_or_changed_current_owner(self):
+        self._use_current()
+        name = self.paths[0]
+        self._put(name, self.current[name] + b'changed owner\n')
+        self._registry_projection(False)
+        (self.repo / name).unlink()
+        self._registry_projection(False)
+
+    def test_public_registry_history_does_not_hide_staged_owner_tampering(self):
+        self._use_current()
+        name = self.paths[0]
+        self._put(name, self.current[name] + b'changed staged owner\n')
+        self._git('add', '--', name)
+        self._put(name, self.current[name])
+        self._registry_projection(False)
+
+
+
 
 class CheckpointCopyMigrationTests(unittest.TestCase):
     """Real finite public bodies in isolated Git/index and reference fixtures.
@@ -2102,6 +2150,202 @@ class CheckpointCopyMigrationTests(unittest.TestCase):
         self._git('add','--',*self.catalog)
         self.assertEqual(self._git('ls-files','--stage','-z'),before)
         self.assertEqual(self._gate(),[])
+
+
+class PublicReaderNoteProjectionTests(unittest.TestCase):
+    """Resolve six already-public notes through exact native historical owners."""
+
+    ITEMS = (
+        ('002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e',
+         '2804e7b196437dd437f0099b15aa45a76249e63b', 6680,
+         'a7ff0e33d1a299db640041c46b1af81ca70851f6'),
+        ('4878fd0a4cf6c952af7cdbcb7e8a386c2730ff9986b74b8e39bf9b5077815b0f',
+         'f419024deb2a40bf50f7315cdf2dfdde9ede77f6', 15286,
+         'a7ff0e33d1a299db640041c46b1af81ca70851f6'),
+        ('7d3cbeb8bcacdb5d28cb457801ba41de9b21f91542866fe5c5f13a4a632dadd9',
+         '07a1df58ff170334e07261c93af8345093b0f160', 14328,
+         'b4d58482ae00f138782276ee5c4034c48bb2df19'),
+        ('b092780b29dd9fa00ac276142b090a5b8b88da79da9c278268264669e08f3d8c',
+         '4e69862256f3014f8e94d528b13ff0f63dd7f3eb', 29013,
+         'b4d58482ae00f138782276ee5c4034c48bb2df19'),
+        ('34c1f25cd1144b386ff4c70a2fbfacc7da2a0fc87f5cd78b430badf260ab49f6',
+         '6bcd9f7c0faea3fe3037c1f188288555312517b1', 1017,
+         'b4d58482ae00f138782276ee5c4034c48bb2df19'),
+        ('9438fdcbea8747c7e5599483096eca9541cfdf673d6a96866c019c5ced06519a',
+         '80e45c60c8f4e71a8191f906d04afd4ab0384b06', 11145,
+         'b4d58482ae00f138782276ee5c4034c48bb2df19'),
+    )
+
+    @classmethod
+    def setUpClass(cls):
+        import subprocess
+        import resolve_t20_v6_source as source
+        cls.source = source
+        manifest = json.loads((projection.ROOT / projection.MANIFEST).read_bytes())
+        by_hash = {row['source_sha256']: row for row in manifest['objects']}
+        cls.rows, cls.bodies = {}, {}
+        for identity, blob, size, revision in cls.ITEMS:
+            path = 'docs/provenance/v5-research-continuations/notes/' + identity + '.md'
+            recorded = by_hash[identity]
+            if (('repository_revision' in recorded or 'git_blob' in recorded)
+                    and (recorded.get('repository_revision'), recorded.get('git_blob')) != (revision, blob)):
+                raise ValueError('public reader-note manifest coordinate differs')
+            row = dict(by_hash[identity], repository_revision=revision, git_blob=blob)
+            if (row['repository_path'], row['disposition'], row['source_bytes'],
+                    row['public_sha256'], row['public_bytes']) != (path, 'REUSE', size, identity, size):
+                raise ValueError('public reader-note fixture owner differs')
+            body = source.historical_source_bytes(projection.ROOT, path, revision, blob)
+            if hashlib.sha256(body).hexdigest() != identity or len(body) != size:
+                raise ValueError('public reader-note fixture body differs')
+            cls.rows[path], cls.bodies[path] = row, body
+        cls.context = {
+            path: (projection.ROOT / path).read_bytes() for path in (
+                'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json',
+                'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json',
+                'mathematics/common-repair-and-geometric-obstructions.md',
+                'mathematics/information-and-inquiry.md',
+                'mathematics/collective-inquiry-and-strategic-coordination.md',
+                'docs/scientific-consolidation-review.md')}
+        objects = subprocess.check_output(['git', 'rev-parse', '--git-path', 'objects'],
+                                          cwd=projection.ROOT, text=True).strip()
+        cls.objects = pathlib.Path(objects)
+        if not cls.objects.is_absolute():
+            cls.objects = projection.ROOT / cls.objects
+
+    def setUp(self):
+        import os
+        import subprocess
+        self.tmp = tempfile.TemporaryDirectory(prefix='public-note-projection-')
+        self.addCleanup(self.tmp.cleanup)
+        self.repo = pathlib.Path(self.tmp.name)
+        self.env = {key: value for key, value in os.environ.items() if not key.startswith('GIT_')}
+        self.env.update(GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=os.devnull,
+                        GIT_CONFIG_SYSTEM=os.devnull, GIT_OPTIONAL_LOCKS='0',
+                        GIT_TERMINAL_PROMPT='0', GIT_NO_LAZY_FETCH='1', GIT_ALLOW_PROTOCOL='')
+        subprocess.run(['git', '-c', 'init.templateDir=', 'init', '-q', str(self.repo)],
+                       env=self.env, check=True)
+        (self.repo / '.git/objects/info/alternates').write_text(str(self.objects.resolve()) + '\n')
+        for path, body in {**self.context, **self.bodies}.items():
+            target = self.repo / path
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(body)
+            target.chmod(0o644)
+        self._git('add', '--', *self.bodies)
+
+    def _git(self, *args):
+        import subprocess
+        return subprocess.run(['git', '--no-replace-objects', '--literal-pathspecs',
+                               '-c', 'core.hooksPath=/dev/null', *args],
+                              cwd=self.repo, env=self.env, capture_output=True, check=True).stdout
+
+    def _reject(self, row):
+        self.assertTrue(check_object(self.repo, row))
+        with self.assertRaises((ValueError, OSError)):
+            self.source.source_bytes(self.repo, row)
+
+    def test_six_exact_pins_resolve_present_and_absent_without_index_writes(self):
+        before = (self.repo / '.git/index').read_bytes()
+        for present in (True, False):
+            for path, row in self.rows.items():
+                if not present:
+                    (self.repo / path).unlink()
+                with self.subTest(path=path, present=present):
+                    self.assertEqual(check_object(self.repo, row), [])
+                    self.assertEqual(self.source.source_bytes(self.repo, row), self.bodies[path])
+        self.assertEqual((self.repo / '.git/index').read_bytes(), before)
+
+    def test_public_note_history_requires_exact_coordinate_role_and_identity(self):
+        row = next(iter(self.rows.values()))
+        for field, value in (('repository_revision', 'HEAD'), ('git_blob', '0' * 40),
+                             ('disposition', 'ADD_EXACT'), ('source_sha256', '0' * 64),
+                             ('public_sha256', '0' * 64), ('source_bytes', 1), ('public_bytes', 1)):
+            with self.subTest(field=field):
+                self._reject(dict(row, **{field: value}))
+        for field in ('repository_revision', 'git_blob'):
+            changed = dict(row); del changed[field]
+            with self.subTest(missing=field):
+                self._reject(changed)
+
+    def test_public_note_present_or_staged_corruption_cannot_hide_in_history(self):
+        path, row = next(iter(self.rows.items()))
+        target = self.repo / path
+        target.write_bytes(self.bodies[path] + b'changed current source\n')
+        self._reject(row)
+        self._git('add', '--', path)
+        target.unlink()
+        self._reject(row)
+
+    def test_reader_only_notes_do_not_acquire_public_source_admission(self):
+        admitted = set(self.rows)
+        other_paths = set(self.source.CONTINUATION_READER_PROSE) | set(self.source.T4_READER_PROSE)
+        with patch.object(self.source, 'historical_source_bytes',
+                          side_effect=AssertionError('reader-only source reached a body read')):
+            for path in sorted(other_paths - admitted):
+                blob, identity, size = self.source.HISTORICAL_PROSE[path]
+                row = dict(repository_path=path, disposition='REUSE', source_sha256=identity,
+                           public_sha256=identity, source_bytes=size, public_bytes=size,
+                           repository_revision=self.source.HISTORICAL_PROSE_REVISIONS[path],
+                           git_blob=blob)
+                with self.subTest(path=path):
+                    self._reject(row)
+
+
+class PublicProjectionConsumerManifestTests(unittest.TestCase):
+    """Seven coordinate additions cannot alter any source or publication identity."""
+
+    @classmethod
+    def setUpClass(cls):
+        import check_reader_pilot as reader
+        cls.reader = reader
+        cls.original = json.loads((projection.ROOT / projection.MANIFEST).read_bytes())
+        rows = {row['source_sha256']: row for row in cls.original['objects']}
+        coordinates = [(identity, revision, blob)
+                       for identity, blob, size, revision in PublicReaderNoteProjectionTests.ITEMS]
+        coordinates.append(('51e2cea236dd0a880c7243b2f9ccbd558c6c70f16f03ec0efa274f19d3d105ff',
+                            '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c',
+                            'd90b5647de1cf290d3b7dbe20a805983c75f0fcf'))
+        for identity, revision, blob in coordinates:
+            row = rows[identity]
+            if (('repository_revision' in row or 'git_blob' in row)
+                    and (row.get('repository_revision'), row.get('git_blob')) != (revision, blob)):
+                raise ValueError('public consumer manifest fixture coordinate differs')
+            row.pop('repository_revision', None)
+            row.pop('git_blob', None)
+
+    def candidate(self):
+        from copy import deepcopy
+        result = deepcopy(self.original)
+        rows = {row['source_sha256']: row for row in result['objects']}
+        for identity, blob, size, revision in PublicReaderNoteProjectionTests.ITEMS:
+            rows[identity].update(repository_revision=revision, git_blob=blob)
+        rows['51e2cea236dd0a880c7243b2f9ccbd558c6c70f16f03ec0efa274f19d3d105ff'].update(
+            repository_revision='7efc6217c090b92d65f2c4cb8b011c18eb96bf7c',
+            git_blob='d90b5647de1cf290d3b7dbe20a805983c75f0fcf')
+        return result
+
+    def permitted(self, candidate):
+        gate = getattr(self.reader, '_permitted_projection_consumer_pins', None)
+        return bool(gate and gate(self.original, candidate))
+
+    def test_complete_seven_coordinates_preserve_original_manifest_identities(self):
+        self.assertTrue(self.permitted(self.candidate()))
+
+    def test_partial_or_changed_publication_cannot_claim_consumer_pin_extension(self):
+        for fault in ('partial', 'revision', 'role', 'identity', 'size', 'dependency', 'count', 'unrelated'):
+            candidate = self.candidate()
+            row = next(r for r in candidate['objects'] if r['source_sha256'] ==
+                       '002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e')
+            if fault == 'partial': del row['git_blob']
+            elif fault == 'revision': row['repository_revision'] = 'HEAD'
+            elif fault == 'role': row['role'] = 'formal_component'
+            elif fault == 'identity': row['public_sha256'] = '0' * 64
+            elif fault == 'size': row['public_bytes'] += 1
+            elif fault == 'dependency': row['required_dependencies'] = ['0' * 64]
+            elif fault == 'count': candidate['counts']['REUSE'] += 1
+            else: candidate['objects'][-1]['unrelated'] = True
+            with self.subTest(fault=fault):
+                self.assertFalse(self.permitted(candidate))
+
 
 
 if __name__ == '__main__':

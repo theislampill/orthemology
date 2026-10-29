@@ -7521,12 +7521,37 @@ class ContinuationNoteReaderMigrationTests(unittest.TestCase):
 
     def test_reader_note_history_does_not_create_new_t20_public_forms(self):
         self.context()
+        from unittest.mock import patch
+        manifest = json.loads((ROOT / 'research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json').read_bytes())
+        public_rows = {row.get('repository_path'): row for row in manifest['objects']
+                       if row.get('disposition') in ('REUSE', 'ADD_EXACT', 'PROJECT')}
+        # These six already-published identities retain REUSE. Their genuine
+        # present/absent Git route is exercised by the projection tests; this
+        # reader fixture has no Git history and cannot prove their rejection.
+        existing = {
+            '002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e',
+            '4878fd0a4cf6c952af7cdbcb7e8a386c2730ff9986b74b8e39bf9b5077815b0f',
+            '7d3cbeb8bcacdb5d28cb457801ba41de9b21f91542866fe5c5f13a4a632dadd9',
+            'b092780b29dd9fa00ac276142b090a5b8b88da79da9c278268264669e08f3d8c',
+            '34c1f25cd1144b386ff4c70a2fbfacc7da2a0fc87f5cd78b430badf260ab49f6',
+            '9438fdcbea8747c7e5599483096eca9541cfdf673d6a96866c019c5ced06519a',
+        }
         for key, row in self.NOTES.items():
             with self.subTest(source=key):
+                if row[0] in existing:
+                    selected = public_rows[self.paths[key]]
+                    self.assertEqual((selected['disposition'], selected['source_sha256'],
+                                      selected['public_sha256'], selected['source_bytes'],
+                                      selected['public_bytes']),
+                                     ('REUSE', row[0], row[0], row[2], row[2]))
+                    continue
+                self.assertNotIn(self.paths[key], public_rows)
                 public = dict(repository_path=self.paths[key], repository_revision=self.REV,
                     git_blob=row[1], disposition='REUSE', source_sha256=row[0],
                     source_bytes=row[2], public_sha256=row[0], public_bytes=row[2])
-                with self.assertRaises(ValueError):
+                with patch.object(self.resolver, 'historical_source_bytes',
+                                  side_effect=AssertionError('nonpublic reader source reached a body read')), \
+                     self.assertRaises(ValueError):
                     self.resolver.source_bytes(self.root, public)
 
 
