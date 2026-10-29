@@ -9,7 +9,7 @@ All nine scientific papers below are exact delivered bytes from the current 53,8
 | [Fresh histories, bounded observation and original support](../../source-store/09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab/FRESH_HISTORIES_BOUNDED_OBSERVATION_AND_ORIGINAL_SUPPORT_v4.md) | Concentration, coherent diffuse history and the conditional philosophical application. |
 | [Bounded access and diachronic coherence](../../source-store/c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942/BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md) | Resource tails, report policies, trading and quadratic forecasts. |
 | [Integer total report protocol](../../source-store/6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md) | Finite-input all-tapes total reporting, with non-tight runtime law. |
-| [Bounded coordination information](../../source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md) | Information growth, complete mediation and exact finite-alphabet capacity. |
+| [Bounded coordination information](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md) | Information growth, complete mediation and exact finite-alphabet capacity. |
 | [Finite forward interventions](../../source-store/438b0f2f0ce979da7293c22f87e16782cfb24a65cc6bbe55222454b3ccaa8b3a/FINITE_FORWARD_INTERVENTIONS_v1.md) | Finite prescribed overwrites and preservation of prehistory. |
 | [Independent concentration review](../../source-store/73bdb7a528a145fc409cf7cc6925b6210eda17808ba8e6c918ffd892f61953b8/INDEPENDENT_REVIEW_PUBLIC_v1.md) | Ordinary detailed mathematical checks and countermodels. |
 | [Quantitative and capture supplement](../../source-store/6130a832114b87dcdefbdf60841fe8785f62549ee175adf7dbf25670f880430d/QUANTITATIVE_AND_CAPTURE_PUBLIC_v1.md) | Total-variation separation and resource-sensitive capture. |
@@ -106,7 +106,7 @@ I(Y_n;S_n)≥(p/2)log n−p log(L/√(2π))−h(p). Tightness gives liminf I/log
 - A finite program description, quantized readout or instantaneous controller state is not automatically a complete mediator.
 - Uncontrolled side information contributes I(U_n;S_n); no actual physical capacity or original-coordinator existence is established.
 
-**Exact sources:** [T12-SOURCE-COORDINATION](../../source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md).
+**Exact sources:** [T12-SOURCE-COORDINATION](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md).
 
 ### T12-FINITE-MEDIATOR — Exact finite-alphabet capture capacity
 
@@ -126,7 +126,7 @@ P(Y+S∈I)≤2Φ(NL/(2√n))−1. For L>0 a retrospective encoder with N consecu
 - The construction is not a forward-causal physical coordinator or a sampler of the finitely additive law.
 - Probability-one bounded capture is impossible for finite N,L; positive fixed capture requires N of order at least √n.
 
-**Exact sources:** [T12-SOURCE-COORDINATION](../../source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md).
+**Exact sources:** [T12-SOURCE-COORDINATION](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md).
 
 ### T12-FORWARD-INTERVENTIONS — Finite forward interventions with preserved prehistory
 

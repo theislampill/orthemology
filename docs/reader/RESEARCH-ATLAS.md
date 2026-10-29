@@ -20,6 +20,7 @@ The wider research cannot be reduced to an audit checklist. The research include
 | What do the foundational arguments establish? | [Productive sourcehood](#productive-sourcehood-and-truthful-action-selection) · [necessity and original adequacy](#from-a-warranted-correction-to-its-original-adequacy) |
 | When does a representation preserve its proof obligations? | [Answers and proofs](#when-representations-preserve-answers-but-lose-proofs) · [typed identity](#exact-proof-questions-and-changing-support) |
 | What if the correct standard is uncertain? | [AR8R restoration](#restoration-when-the-correct-standard-is-itself-uncertain) · [joint feasibility across avenues](#a-connection-across-research-avenues) |
+| How much information does persistent repair require? | [Unknown standards, fresh-sample cost and finite harmful probing](../../mathematics/information-and-inquiry.md#97-unknown-standards-the-information-needed-for-persistent-repair) |
 
 ## How the principal works fit together
 
@@ -55,7 +56,7 @@ Read the [three related works](PAPER-CATALOGUE.md#recognition-and-correction), t
 
 The [tensor-moment work][tensor] studies full symmetric polynomial-moment records and their evolution under polynomial damping. Its [coercive-polynomial successor][coercive] gives a stronger written representability and continuation result under the stated all-polynomial square-positivity and regularity assumptions. This is actual conditional mathematics, not a proposal to give a metaphorical tensor shape to a mind. The complete path can identify an initial law even where the initial moment record alone does not identify a path.
 
-The [finite-audit Fisher work][fisher] supplies an actual metric and gradient system on a positive joint probability law. Retaining conditional distributions and their mixture can discard source weights needed to preserve full ambient geometric observables. The [finite-sidecar corollary][sidecar] makes that loss precise on a fixed continuous audit-weight fibre.
+The [complete Fisher development](../../mathematics/information-and-inquiry.md#6-the-categorical-fisher-dynamics-of-the-full-source) supplies an actual metric and gradient system on a positive joint probability law. Retaining conditional distributions and their mixture can discard source weights needed to preserve full ambient geometric observables. The [finite-sidecar corollary][sidecar] makes that loss precise on a fixed continuous audit-weight fibre. The [original finite-audit edition][fisher] remains available at its exact published revision.
 
 **What these works contribute:** they specify different operation-preservation contracts, show when a retained representation is sufficient, and identify information that an exact supplement must retain. They do not assert that all interpretations need the strongest contract. A posterior-only task is weaker than preserving ambient Fisher norms.
 
@@ -98,7 +99,11 @@ The [learning route](APPLICATIONS.md#learning-without-silently-changing-the-anal
 
 **Question:** If two descriptions evaluate to the same object, may a proof or type certificate be moved from one description to the other?
 
+Current exposition: [Opaque representations and typing][typed-t13-opaque-current]; [The atom/application bridge][typed-t13-bridge-current].
+
 The [opaque-atom study][t13-opaque] supplies a negative example for a particular representation at a particular type. The [atom/application bridge][t13-bridge] shows a positive, separately specified repair for closed conversion. Neither result by itself answers whether *any* proof exists of every semantically true identity.
+
+Current exposition: [The historical residual identity question][typed-t13-residual-current]; [Full-rule separation and the closed criterion][typed-t14-separation-current].
 
 The next stage asks that stronger question. The [historical I/SKK note][t13-residual] distinguishes a semantic witness from a missing direct introduction rule; the [Fourteenth full-rule development][t14-separation] then proves noninhabitation through every rule, not just the obvious route. The [separate HasE development][t14-repair] restores the missed typed identity with two stated extensionality rules while retaining the old judgments and a `Raw`-carrier obstruction.
 
@@ -232,15 +237,21 @@ The [raw-index substitution work](PAPER-CATALOGUE.md#literal-substitution-in-the
 
 This connects **semantic fidelity (8)** with **type-theoretic completion (9)** and **effective representation (10)**. Exact syntax and code equations support reusing a derivation through substitution and contextual J; an erased proof does not automatically retain the construction history needed by another translation. The [normalisation boundary](PAPER-CATALOGUE.md#an-identity-application-without-a-normal-unapplied-source) adds a concrete discriminator: a typed source can return every argument like an identity yet have no raw-convertible finite-source representative. Target inhabitation, source convertibility, PER equality and the existence of a serialised checker are different claims. The positive theorems remain useful precisely because the translation contract specifies which is preserved.
 
+## Physical influence, information and continued operation
+
+A channel that carries a signal and a system that continues a stateful task have different obligations. [Physical realisation and continuation](../../mathematics/physical-realisation-and-continuation.md) joins avenues 4, 7 and 8 by specifying the input, output, memory, timing and resource contract before changing physical support. Its linear-channel result has a sharp energy/noise boundary; its continuous parity example supplies an explicit robust stateful construction and transfers in both directions.
+
+The [continuation quotient](../../mathematics/physical-realisation-and-continuation.md#63-a-minimum-for-a-finite-continuation-contract) connects this work to information sufficiency: after fixing retained side information, distinct future-behaviour classes require distinct fresh messages. The positive minimum also needs an admitted target initialiser. The [viability and progress argument](../../mathematics/physical-realisation-and-continuation.md#104-a-conditional-autonomy-theorem) then requires one implementable causal policy to maintain the full contract. A sequence of separately feasible replacements does not supply that common policy.
+
 [main]: ../../manuscript/orthemma-ortheme-systems-revised-draft.md
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md
 [coercive]: ../../research/t20-v6-20261012/sources/204f63e544b1afd9538230f95f8ebfbc613b9847c579dfb901de6d10e40ebb10/coercive-square-positivity-20261010__RESULT.md
-[fisher]: ../../research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md
+[fisher]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md
 [sidecar]: ../../research/t20-v6-20261012/research-v6/root_math/FINITE_SIDECAR_GEOMETRY_BOUNDARY.md
-[coordination]: ../../experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md
+[coordination]: ../../mathematics/collective-inquiry-and-strategic-coordination.md#64-exact-finite-alphabet-capacity
 [join]: ../../research/t20-v6-20261012/research-v6/root_math/occurrence_feasibility_join/REPORT.md
 [avenues]: ../provenance/v5-successors/TWELVE_AVENUES.json
 [sound-basic]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md#11---basic-cognition-and-rational-reminder
@@ -254,13 +265,17 @@ This connects **semantic fidelity (8)** with **type-theoretic completion (9)** a
 [t12-integer]: ../../experiments/orthemology-v5-successors/source-store/6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md
 [t12-clarification]: ../../experiments/orthemology-v5-successors/source-store/32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68/OBSERVATION_ROUTE_CLARIFICATION_v1.md
 
-[t13-opaque]: ../../experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md
+[t13-opaque]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md
+[typed-t13-opaque-current]: ../../logic/encodings-and-witnesses.md#103-equal-evaluation-need-not-preserve-a-supplied-typing
 
-[t13-bridge]: ../../experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
+[t13-bridge]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
+[typed-t13-bridge-current]: ../../logic/encodings-and-witnesses.md#104-what-the-bridge-repairs
 
-[t13-residual]: ../../experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+[t13-residual]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+[typed-t13-residual-current]: ../../logic/encodings-and-witnesses.md#105-the-identity-question-that-packing-leaves-open
 
-[t14-separation]: ../../experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+[t14-separation]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+[typed-t14-separation-current]: ../../logic/encodings-and-witnesses.md#107-full-rule-separation-and-the-exact-closed-criterion
 
 [t14-repair]: ../../experiments/orthemology-v5-successors/source-store/4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51/ExtensionalRepairTheorems.lean
 

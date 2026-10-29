@@ -11,10 +11,14 @@ import io
 import json
 import os
 import random
+import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PKT = os.path.dirname(HERE)
-FIX = os.path.join(PKT, "fixtures")
+sys.path.insert(0, os.path.join(PKT, "scripts"))
+from generate_cases import public_cases, render_baseline, render_treatment
+
+PUBLIC_CASES = public_cases()
 
 PROBES = ("Answer about the case record above. Reply with ONLY a JSON object: "
           '{"defect_category": "none|procedure-reference-out-of-date|resolution-limit-miss|'
@@ -32,16 +36,15 @@ FORMAT_REMINDER = ("Your previous reply was not valid JSON of the required shape
 
 
 def cases():
-    return sorted(d for d in os.listdir(FIX) if d.startswith("C") and
-                  os.path.isdir(os.path.join(FIX, d)))
+    return sorted(PUBLIC_CASES)
 
 
 def payload(case, arm):
+    facts = PUBLIC_CASES[case]
     if arm == "baseline":
-        body = io.open(os.path.join(FIX, case, "baseline-record.md"), encoding="utf-8").read()
+        body = render_baseline(case, facts)
     else:
-        body = json.dumps(json.load(io.open(os.path.join(FIX, case, "treatment-record.json"),
-                                            encoding="utf-8")), indent=2)
+        body = json.dumps(render_treatment(case, facts), indent=2)
     return body + "\n\n" + PROBES
 
 

@@ -560,5 +560,802 @@
     "terminology",
     "archive",
     "repository-support"
+  ],
+  "baseline_work_population": {
+    "count": 448,
+    "keys_sha256": "70350e41b3d0273da7020e96ce7e061097989ec76819188bac738f4135f9f800",
+    "scope": "The 448 historical reader work/collection entries remain separately bound. The new public syntheses are additional expositions, not extra original discoveries or replacements for accepted paper editions."
+  },
+  "source_additions": [
+    {
+      "key": "consolidated-foundations",
+      "path": "foundations/received-actuality-and-intrinsic-necessity.md",
+      "mode": "100644",
+      "git_oid": "f2ac7daa4b929896843dfea08426420e1d8c845a",
+      "bytes": 307379,
+      "sha256": "a892e9e736ce05a873dd07dda90229cb29ca79041b0d236eea4337064e58cba9",
+      "role": "work-source",
+      "work_keys": [
+        "received-actuality-and-intrinsic-necessity"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "consolidated-information-and-inquiry",
+      "path": "mathematics/information-and-inquiry.md",
+      "mode": "100644",
+      "git_oid": "45a22c372202c97ee9b443f8dcdc47df4c5ed8dc",
+      "bytes": 366609,
+      "sha256": "4addf6b8bb334674e7d54d9fe7fcbb4869c49b1ff74d337c14c1e3d38d2f2751",
+      "role": "work-source",
+      "work_keys": [
+        "information-retained-by-inquiry"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "scientific-consolidation-review",
+      "path": "docs/scientific-consolidation-review.md",
+      "mode": "100644",
+      "git_oid": "170c371ee648cb3e6187be9b83f1712d91196821",
+      "bytes": 391889,
+      "sha256": "9b57a745aebe70463d95a7230d8f7a8ae1944256387090e3cd73cf917e7b0d32",
+      "role": "review",
+      "work_keys": [
+        "received-actuality-and-intrinsic-necessity",
+        "information-retained-by-inquiry",
+        "recognition-warrant-and-restoration",
+        "encodings-and-witnesses",
+        "collective-inquiry-and-strategic-coordination",
+        "tensor-moments-and-corrective-dynamics",
+        "common-repair-and-geometric-obstructions",
+        "objective-normativity-and-corrective-cognition",
+        "source-context-and-reacquisition",
+        "measure-computability-and-finite-warrant",
+        "physical-realisation-and-continuation"
+      ],
+      "supporting_source_keys": []
+    },
+    {
+      "key": "consolidated-recognition-and-restoration",
+      "path": "epistemology/recognition-warrant-and-restoration.md",
+      "mode": "100644",
+      "git_oid": "1f8add54ce2e7e16d4beffb35abd6e14cf453fbd",
+      "bytes": 146978,
+      "sha256": "5f75f4c144875a7db0cf930e6d946357d2b13e87e6728053ade1a8c539ff4a06",
+      "role": "work-source",
+      "work_keys": [
+        "recognition-warrant-and-restoration"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "consolidated-encodings-and-witnesses",
+      "path": "logic/encodings-and-witnesses.md",
+      "mode": "100644",
+      "git_oid": "ba828b48e2dbe68c39cdbf66ec1040f5f86c5f59",
+      "bytes": 180774,
+      "sha256": "423ea2d46aee29010cb07754be022fa7d33d603dbd2784703f48818f52e657d9",
+      "role": "work-source",
+      "work_keys": [
+        "encodings-and-witnesses"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "consolidated-collective-inquiry",
+      "path": "mathematics/collective-inquiry-and-strategic-coordination.md",
+      "mode": "100644",
+      "git_oid": "f0fba4fea76236bce4873789b86fbcbd80a82d45",
+      "bytes": 380335,
+      "sha256": "bffe462169380b9438d57fe88aae3a944d54d84454a496a6954a4265d6aab2c6",
+      "role": "work-source",
+      "work_keys": [
+        "collective-inquiry-and-strategic-coordination"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "consolidated-tensor-moments",
+      "path": "mathematics/tensor-moments-and-corrective-dynamics.md",
+      "mode": "100644",
+      "bytes": 147508,
+      "sha256": "296c902168e8ebb28da0ff062ae89d400a11adf654b566530ca0ec71716ece37",
+      "git_oid": "588661d151f9a5e800dc678140487f6c24ec6b40",
+      "role": "work-source",
+      "work_keys": [
+        "tensor-moments-and-corrective-dynamics"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "consolidated-common-repair",
+      "path": "mathematics/common-repair-and-geometric-obstructions.md",
+      "mode": "100644",
+      "bytes": 100172,
+      "sha256": "b5a0267b5fd65e69d7201293d863c0ba3c4b5b2568892333842419cf9ab41808",
+      "git_oid": "d87525cf3377aa506743a7593f105ade724dc72d",
+      "role": "work-source",
+      "work_keys": [
+        "common-repair-and-geometric-obstructions"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "consolidated-objective-normativity",
+      "path": "foundations/objective-normativity-and-corrective-cognition.md",
+      "mode": "100644",
+      "bytes": 242093,
+      "sha256": "2512e37f6143a19660c0020ab31c29e0b07ac01f4119adb24d8c52edc59379be",
+      "git_oid": "1a17e6f170e27104e755c47fb1bfcc7b836bfb80",
+      "role": "work-source",
+      "work_keys": [
+        "objective-normativity-and-corrective-cognition"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "consolidated-source-context-and-reacquisition",
+      "path": "epistemology/source-context-and-reacquisition.md",
+      "mode": "100644",
+      "git_oid": "6fe13de0682e9b860076f230dae7b51ebac9c8bc",
+      "bytes": 88486,
+      "sha256": "b8c5e9a8f10f794dd69e7b151265077af5c9dcbf5473b8629a0cb8df1c871fa4",
+      "role": "work-source",
+      "work_keys": [
+        "source-context-and-reacquisition"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "consolidated-measure-computability-and-finite-warrant",
+      "path": "mathematics/measure-computability-and-finite-warrant.md",
+      "mode": "100644",
+      "git_oid": "aff24f8e181397a1ea8c766a3795c3a71233b57a",
+      "bytes": 90461,
+      "sha256": "e6831f24d372bda849e1a6127b922b9c36ec765df51eab5a6609ff8a0345752e",
+      "role": "work-source",
+      "work_keys": [
+        "measure-computability-and-finite-warrant"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "consolidated-physical-realisation-and-continuation",
+      "path": "mathematics/physical-realisation-and-continuation.md",
+      "mode": "100644",
+      "git_oid": "5ae642ad9d5bad1762266b308f9455d5db903698",
+      "bytes": 130600,
+      "sha256": "82cf374aa1e28bf5eec76da3b5f449484fe0bf12657d2521fc1259c3e9a608ed",
+      "role": "work-source",
+      "work_keys": [
+        "physical-realisation-and-continuation"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    }
+  ],
+  "historical_source_bindings": [
+    {
+      "path": "research/t20-live-20261009/checkpoints/CP19/necessary-truth-operative-basing-20261009/REPORT.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "15e864dd9b9a31a5203f31fe9b080261afc7de4e",
+      "role": "historical-source",
+      "reading_source": "consolidated-recognition-and-restoration",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "research/t20-live-20261009/checkpoints/CP19/necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "18b3ceb2bcca924387899a9d51f3fd035967eac7",
+      "role": "historical-source",
+      "reading_source": "consolidated-recognition-and-restoration",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "research/t20-live-20261009/checkpoints/CP20/necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "18b3ceb2bcca924387899a9d51f3fd035967eac7",
+      "role": "historical-source",
+      "reading_source": "consolidated-recognition-and-restoration",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "research/t20-live-20261009/checkpoints/CP20/compound-ground-necessity-20261009/VARIABLE_SHARING_REDUCTION.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "512266ec363346b6302292f69dafad32f1e067a9",
+      "role": "historical-source",
+      "reading_source": "consolidated-recognition-and-restoration",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "research/t20-live-20261009/checkpoints/CP20/compound-ground-necessity-20261009/REPORT.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "cf657a78f972b7f98190139b2275a3381d288b66",
+      "role": "historical-source",
+      "reading_source": "consolidated-recognition-and-restoration",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "a949e7e8fdb1fcf386d3580a034d9cb14f34e7d5",
+      "role": "historical-source",
+      "reading_source": "consolidated-collective-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "research/t20-v6-20261012/research-v6/type_collective/ROBUST_FINITE_MEDIATOR_BOUND.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "8c8b327bb642570307e50ddaef35850b508a80e6",
+      "role": "historical-source",
+      "reading_source": "consolidated-collective-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "4dd0bce99ab60c34752bda1e4102341b67350c79",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "ab7ccee9a98d5a88b8b79a6f0d6a010298bf3204",
+      "role": "historical-source",
+      "reading_source": "consolidated-encodings-and-witnesses",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "0692dd6d775e0391498c97c5b77e8c83cf32eb41",
+      "role": "historical-source",
+      "reading_source": "consolidated-encodings-and-witnesses",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "a4d90c7d566d79394ca4755bf1d792e810d66880",
+      "role": "historical-source",
+      "reading_source": "consolidated-encodings-and-witnesses",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "4920e71de4ac0c17fa8a93f02cd891d65ea8ad74",
+      "role": "historical-source",
+      "reading_source": "consolidated-encodings-and-witnesses",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/a9eb8521054eb3769ff424037f438ae38f0f0c113d73624efc9d05dea3b35483.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "ae198b6530ccb5cdce3e15616d939575f7878d28",
+      "role": "historical-source",
+      "reading_source": "consolidated-common-repair",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "2804e7b196437dd437f0099b15aa45a76249e63b",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/4878fd0a4cf6c952af7cdbcb7e8a386c2730ff9986b74b8e39bf9b5077815b0f.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "f419024deb2a40bf50f7315cdf2dfdde9ede77f6",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/b0672a56d007c718a42a7ee6fdc875c915630ad95dff5cfbae7f7e9a419d5349.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "937f0464dcaa515f1c002a8b36add0c4cb511b42",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/285a7061f8f090946e27e5ff6bd7597b7a0f0472100c7e4b3cb57ea5ac12f6a7.md",
+      "repository_revision": "b4d58482ae00f138782276ee5c4034c48bb2df19",
+      "git_blob": "40d509699e094815d445af4b3fb63cbb1079c4b0",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/3b7cdb283b858339136beb1e0d62cbd32adce0ee9f0562db8961a9f819f52000.md",
+      "repository_revision": "b4d58482ae00f138782276ee5c4034c48bb2df19",
+      "git_blob": "a12e7f7c10894591e1b1e13c26ba99377492563d",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/3b8f7d96fa99674b73cb8f822cc3291d455c52879b2f1110630be67660883317.md",
+      "repository_revision": "b4d58482ae00f138782276ee5c4034c48bb2df19",
+      "git_blob": "9715b8685253581e9187c44b2b4a4d81ad74ae73",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/196728a62cb7bdb24160b33c0ae3627a822f8b2b031fe033e275d6d284efa7df.md",
+      "repository_revision": "b4d58482ae00f138782276ee5c4034c48bb2df19",
+      "git_blob": "af853c549ee6b1b320cf38e14358ded327f9dced",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/7d3cbeb8bcacdb5d28cb457801ba41de9b21f91542866fe5c5f13a4a632dadd9.md",
+      "repository_revision": "b4d58482ae00f138782276ee5c4034c48bb2df19",
+      "git_blob": "07a1df58ff170334e07261c93af8345093b0f160",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/826c824188b79a5e734c77f4aaa24f5ecf15d1a73e7af0d68ad8b8955bb674ab.md",
+      "repository_revision": "b4d58482ae00f138782276ee5c4034c48bb2df19",
+      "git_blob": "fbd42a9270e356e4c361695ea28df58aaba773c9",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/575700cb383a6f0849e2a952ba6652e6de75920eb74ebcb9a7eb0ed21517a696.md",
+      "repository_revision": "b4d58482ae00f138782276ee5c4034c48bb2df19",
+      "git_blob": "9be9a40bb2d6b3a4e94d6e06ae8e68b8b3198bda",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/b092780b29dd9fa00ac276142b090a5b8b88da79da9c278268264669e08f3d8c.md",
+      "repository_revision": "b4d58482ae00f138782276ee5c4034c48bb2df19",
+      "git_blob": "4e69862256f3014f8e94d528b13ff0f63dd7f3eb",
+      "role": "historical-source",
+      "reading_source": "consolidated-collective-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/34c1f25cd1144b386ff4c70a2fbfacc7da2a0fc87f5cd78b430badf260ab49f6.md",
+      "repository_revision": "b4d58482ae00f138782276ee5c4034c48bb2df19",
+      "git_blob": "6bcd9f7c0faea3fe3037c1f188288555312517b1",
+      "role": "historical-source",
+      "reading_source": "consolidated-collective-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/9438fdcbea8747c7e5599483096eca9541cfdf673d6a96866c019c5ced06519a.md",
+      "repository_revision": "b4d58482ae00f138782276ee5c4034c48bb2df19",
+      "git_blob": "80e45c60c8f4e71a8191f906d04afd4ab0384b06",
+      "role": "historical-source",
+      "reading_source": "consolidated-collective-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/e46c8d347ed1864c6c65270b0b7e90eef0146815804bb9f783fa465cd3fbc8bc.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "a95a68888f591e035b04baa14075445fd25325b7",
+      "role": "historical-source",
+      "reading_source": "consolidated-common-repair",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/b0ec9163de7f6deb49f44bb10ef1f279151ee78a30b9d2dd7ca9736d8bb62750.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "7d1536017f2dd2a22a2137f05c9cde0820908787",
+      "role": "historical-source",
+      "reading_source": "consolidated-common-repair",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/ad15c28206a020cc7c063c17309d6bd3c05e182377a398c7507875523df7feb4.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "848f8f45967ddc66c76550ec2b44d233ba7966e9",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/1b7488aeafc74b7115479a8cf73c0abf04d89c3924109aa922ee6099e32be2d8.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "2c9205fdd87f3702af3e238f5cfd1b6240013ee4",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/9e00aaaaa63828e05d252e134dc225e2718461540301138a30567fbb63a24eb9.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "bcf29dd85a92b76483cbeacd9a6fd63343687dc1",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/4f3d54cd93718e479f1485c182058bcd5ee40c13e4b9f598e4a011e6a92adaa0.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "d981100cdefce3b7534ce08c599b0706e5b2a231",
+      "role": "historical-source",
+      "reading_source": "consolidated-common-repair",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/3efb043df2749e965a70ae815003952d0f7e3c1d203d4e04e04e24fd0892a20c.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "4d2aafcd49f2b088cb4afebdb67846cece5f922b",
+      "role": "historical-source",
+      "reading_source": "consolidated-common-repair",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/5c9fcd3012d9c41bc951cf78e2ccc29591ab8151a0037e6cd0ff07cabb0e54f4.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "bd414fc2b16dcd53116d3ed772e27b3c792237c2",
+      "role": "historical-source",
+      "reading_source": "consolidated-common-repair",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/36bf84b786280660b3ec4a5e3a110f04d98598cdbe49e7680a438de344a0dd06.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "f43d9ffc34ad19eb1e4d14cb1a176a916d408a36",
+      "role": "historical-source",
+      "reading_source": "consolidated-common-repair",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/1fa9f620cbab16c728d931520d777e8ef25090c52520dca39144ed43e2790459.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "cbf93e2e9912045c58946dc8a936e54c2dff5b95",
+      "role": "historical-source",
+      "reading_source": "consolidated-common-repair",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/673111801ec83a2118743de3cd851f7a3db8e6c9580750f3fe766a9626b0f498.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "8cfcd82cce15b5df64f964f81b2424c97fc1bb7c",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/bd5e18cb3616a7ead45cc407da8ebe72274358edcd12459f4109ad155e2f53b2.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "dd8f4908d7a733aa8f08481da568318d458fc584",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/50cf2306b486db59fd7a2ecf77d07b3b54c3e486745f0b7308cb091de1c3ec61.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "1f0bf3a48055fed1aa24dcfbba617d855d9c3c2e",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/1f97b7f6e879f4ebe42b26620aac0c75095345f4ec65bfe2979ecd32aa538dbf.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "952acfcb7a6f7e52731ff3b26c85dd5362a0e4f1",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/e6be2257c2dabfd15057f1c59603518d1ba20976068579bd31512ec1f5bfafce.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "00dcece21824577e981a8dd1c103056fea60e0a0",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/ad4909aa4015f759a7494c5a0b5ddfa0c4ccaaf6d14ad7c89386db53e01385d6.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "4a91c34083b0df5658a437fdf86a471471524b30",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/63494364aeb423cecee01e1b347a4dfed7e2c4b544c90d456465520378810d40.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "1cc325aad1ee71001f5f4c7eb2881211d78a56df",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/18c1e07537712caaadf60d6bf8f25272aaf8c1767722bd56b3b5f1ed7258ee73.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "38e462ee8c12a50cce8fd6bccf5ca3dde2597458",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/71899f46c0346c901fd19697436beaa511b9814f879835604bbe23264d062aeb.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "75476c99f17cf81258a6066bd12e2802c9f32f99",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/51c98ce4cbc011f1e4d4d2af7fa9a34319f53713b876977bc9b16c74f0e258dc.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "772e3d5300525c24c56da93fd2574ce4d4a1e1a0",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/890c6bc8949f630878e9d3de6bed22c7070d0b4f0d7c43d7fa96f4c7a6d91607.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "d2f19e3562852bbb3fc0d849e421921949fddacb",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "75bb17ddd69e37db6530357307078d056b97ec16",
+      "role": "historical-source",
+      "reading_source": "consolidated-common-repair",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/45ffbb9679d23bd16a43b4930ec615bb55f4c0c56705e5a0c90f0fec425a2a3e.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "02390e5f62fc4f5ab97263fa548b56f412c17ce3",
+      "role": "historical-source",
+      "reading_source": "consolidated-common-repair",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/21f9e48328bfbf843b5f0371168f84c51768dec6260b3798fca4a461900aa006.md",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "b5f6e9140796030880f6dbc723514bfb393d23c2",
+      "role": "historical-source",
+      "reading_source": "consolidated-objective-normativity",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/0ba213e9f1cd5c985925864d7edcc505c3adb16fa30036338b39ad04b77ea54f.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "4de8b1921235006c37ae00945fad3e6e328d6336",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/22c70614cb4a011790e348461f3e2fbea5e13b2eeb788dcd2124560fb0ef0f07.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "d82e2625487cf0771f96f3a883170f7edd7bd919",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/236f78b5ecc313f47085a765f26ef2f0482fdaff154c2aebb7393a8c01c59236.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "3f1ebe731980b67b94945f58689999b5b4edf55d",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/251394f394fe75f9062aaa4dea33da2b3ffa3370572e14ba60e52ceb1c68a30b.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "32e1bec0ba44d1f558286b0d5878d2f482b9907e",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/3cdf7cb6582b44a2198ce9527847416ee834aa7636999871081e1677600a9f60.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "ead60afbdc6f47c99c8aa17403daab4f9f602083",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/6b796642b23d6280cfec717f7a762a55fe76a2fbc67b16f6c6b0fc1008599476.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "9bd1c1e0e30b46800c04c6dd189e40066b6ed4a6",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/767be5173842b1520af940db691120091d868677754e7b452a0c7467ece4665d.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "b64eac11f5d5efd6618219731d6fa543d3c73487",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/87cad31677966946661ca6effed55165db3505d1bca45bfa6ba2428946cca88c.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "40d69b1e5e377cab279f1d662cffcab0f1481378",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/893aabc2774f6a31df5777a9dab8cc4de2840a2f01d95691ce913f0406ab489c.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "dd884420d315600cc7273536e8b70d48e5d3c3dd",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/99847d69a9a9df978a7e596cc35b75b744e7661b72dd514d29bc3cf4d897cc6c.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "e47ed15533018067e34c25ab30a659386a02d043",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/9c7508259cb9916b1ba6b0557584cff186487d256dac3918269052b4cd5626b6.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "db0f92e4868eb7a8df168ba69f53fce74a54f65e",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/b0edcf2ebfe71957a789033dec063424e658fe8971ef28e1f2fe9a4956e5d18e.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "5f7789f7cbd38d8045e95154a00f5e2196b63134",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/b1a029f0cd442ff623d9783c15e09260cd6063bf976290010b3fba07ec0548bf.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "04a057f0604fcd9de9be11443113df5636510b19",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/b3403229c91a718f3e8c61068649590ec090d208206d9922da2270f71e956658.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "c45b5a4f02d336ff00230e07d155b043874c4eca",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/b545637a8dc1bdfda4a949dfe3a6084b469c5ef8639af8ae97b8e5fef683e0d3.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "ab2e9c125c1a65714e3a0670043f65859f299774",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/b6a6db5048293e4de7f286689ea635448ea61aec5f9a08acff0968892e10b5bb.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "ab8e4a2149efeee43a943db37d0e51eb144200b3",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/c079f7733904976a602adae47284062ad23141dd9c79b04652e3561e74692a50.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "9701a6c26c8419e2cd01db4a86a2db47af28659d",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/cab3e124b6ef2faad2c945c20d22d50e7fc2d1455367bcd4cb6dcf633908b3b9.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "885d647840476099ca58a0a9b8f0ca6474033164",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/d519d3b51e5f03f7b55db3c22c2a423bdb6cf5a702e726e4a57459e527ab8dbd.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "093d47e908d27ac854b722d059d2bf6ee14f2ce7",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/daa7e92aaeee1cc9ae5601877a01ddfbb8ce2cf9cabf3f4f693ec8a7c8a0893b.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "05d1ee82e1cea6db4639dc96147571642a9b6f19",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/e2afa027d652771010f909eb34642d5512c102a34c85a0ef90ff466b9fd7e0ae.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "1442f0674ffe32f5a50d146993d4b3ac585e07c4",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/e2cf470975d1d6f344d3dd788410c911b5d6f9d93fa528709339322bcb4d8f6b.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "0639e32fb2b0d4128e64738030a546bdb1589374",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/e40d89c1d65f9053bafc6aea41ba93af0b510586ba188e14ba5a8f6d9a50c71f.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "7e33cd9283868e0bce24c38758c0d77c2a190666",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/f0fe93679a7c062a452bd3b3b2615c886dcdf8b96579af2d1ddd2c17c6df6459.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "a9f27e973a15d6cddc4d5ccbc20457a811e21ac9",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "docs/provenance/v5-research-continuations/notes/f7f610f5225df88d97fb6a60f984a7ec976632697e2e3f7854f4777994601d4a.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "8ba4cb61febc35bffee4862c0cfa0b0ac67f3bd1",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
+      "basis": "scientific-consolidation-review"
+    }
   ]
 }

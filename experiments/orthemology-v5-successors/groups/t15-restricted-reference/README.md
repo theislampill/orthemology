@@ -6,9 +6,9 @@ These finite reference executions are separate from the complete Lean theorem, t
 
 | Reference suite | Actual completed checks |
 | --- | --- |
-| [Strict JSON reference](../../suites/t15-json-reference.json) | 22 test methods and 2 prescribed CLI examples |
-| [Univariate reference](../../suites/t15-univariate-reference.json) | 15 test methods |
-| [Runtime agreement](../../suites/t15-runtime-agreement.json) | 720 generated pairs; 720 verified Lean rows; 2160 Boolean observations |
+| [Strict JSON reference](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/t15-json-reference.json) | 22 test methods and 2 prescribed CLI examples |
+| [Univariate reference](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/t15-univariate-reference.json) | 15 test methods |
+| [Runtime agreement](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/t15-runtime-agreement.json) | 720 generated pairs; 720 verified Lean rows; 2160 Boolean observations |
 
 The runtime comparison used seed 151005 and arities 0, 1, 2, 3, 4, 5. It observed 546 equal and 174 unequal pairs, 174 checked distinguishing witnesses, and 87360 direct expression evaluations. The Lean observations came from a fresh source closure. These counts do not add independence or establish a parser/refinement theorem.
 

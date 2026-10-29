@@ -10,15 +10,42 @@ import argparse
 from collections import Counter
 import hashlib
 import json
+import os
 from pathlib import Path
 import posixpath
 import re
+import stat
 import subprocess
 import sys
 from urllib.parse import unquote, urlsplit
 
 from markdown_it import MarkdownIt
 import yaml
+
+from validate_ar8r_reconciliation import (
+    PMR007_DEEP_PREFIX, pmr007_deep_duplicate_paths,
+    PMR007_ROUNDS_PREFIX, PMR007_ROUNDS_FORMALIZATION,
+    pmr007_rounds_duplicate_paths, pmr007_rounds_formalization_navigation,
+)
+
+from resolve_t20_v6_source import (
+    HISTORICAL_PROSE, HISTORICAL_PROSE_PUBLIC_PATHS, HISTORICAL_PROSE_REVISION,
+    historical_source_bytes, HISTORICAL_PROSE_REVISIONS, HISTORICAL_PROSE_DISPOSITIONS,
+    MEDIATOR_PROSE, MEDIATOR_GUIDE, mediator_guide_source_bytes, readonly_git_diff,
+    ORIGINAL_HISTORICAL_PROSE_PATHS, FISHER_AUDIT, FISHER_PROSE_REVISION,
+    TYPED_PROSE, TYPED_PROSE_REVISION, TYPED_GUIDES, typed_guide_source_bytes,
+    CONTINUATION_READER_PROSE, T4_READER_PROSE, T4_READER_SUPPORT_PROSE,
+    SPARSE_PRIOR_PROSE, SPARSE_PRIOR_SUPPORT_PROSE,
+    NEXT24_PROSE, NEXT24_SUPPORT_PROSE, NEXT24_PUBLIC_PROSE,
+    CONTINUATION_COPY_ROOT, continuation_duplicate_paths,
+    ADMIN_RECORD_PATHS, administrative_record_bytes, administrative_record_absences,
+    ADMIN_GUIDES, ADMIN_PUBLIC_GUIDE_PATHS, ADMIN_RECORD_BASE, administrative_guide_source_bytes,
+    PUBLIC_READER_NOTE_PATHS, CONTINUATION_REGISTRY_PATH, CONTINUATION_REGISTRY_REVISION,
+    CHECKPOINT_COPY_PATHS, checkpoint_duplicate_paths,
+    CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths,
+    CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_duplicate_paths,
+    CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_duplicate_paths,
+)
 
 
 ROLES = {
@@ -251,7 +278,7 @@ def check_collection_result_routes(repo, owners, cross):
 
 
 def permitted_reader_ci_addition(repo, row, body):
-    """Admit exactly the reviewed additive CI step, not mutable science owners.
+    """Admit the two reviewed additive operational CI increments.
 
     Every original workflow byte, gate and permission must survive. This
     narrowly scoped operational change is not a free-form hash exemption.
@@ -273,8 +300,48 @@ def permitted_reader_ci_addition(repo, row, body):
         b"          python -B scripts/check_reader_pilot.py\n"
     )
     before = original.stdout
-    return (before.count(anchor) == 1 and addition not in before
-            and body == before.replace(anchor, addition + anchor, 1))
+    if before.count(anchor) != 1 or addition in before:
+        return False
+    reader_candidate = before.replace(anchor, addition + anchor, 1)
+    if body == reader_candidate:
+        return True
+    # The hosted absence increment has its own finite, independently reviewed
+    # transaction and evidence boundary. Every original workflow byte and the
+    # complete earlier reader block must survive this second exact insertion.
+    absence_anchor = b"      - name: Dependency lock consistency\n"
+    absence_addition = (
+        b"      - name: Source-alias admission and evidence controls\n"
+        b"        env:\n"
+        b"          PYTHONPATH: scripts\n"
+        b"          PYTHONDONTWRITEBYTECODE: \"1\"\n"
+        b"        run: |\n"
+        b"          python -B tests/test_source_alias_absence_population.py\n"
+        b"          python -B tests/test_source_alias_absence_boundary.py\n"
+        b"          python -B tests/test_source_alias_absence_evidence.py\n"
+        b"      - name: Combined public source-alias absence and exact restoration\n"
+        b"        id: source_alias_absence\n"
+        b"        if: github.event_name == 'pull_request'\n"
+        b"        env:\n"
+        b"          PYTHONDONTWRITEBYTECODE: \"1\"\n"
+        b"        run: setsid --wait python -B scripts/check_source_alias_absence.py run\n"
+        b"      - name: Receive bounded source-alias evidence\n"
+        b"        if: ${{ always() && github.event_name == 'pull_request' && steps.source_alias_absence.outcome != 'skipped' }}\n"
+        b"        env:\n"
+        b"          PYTHONDONTWRITEBYTECODE: \"1\"\n"
+        b"        run: python -B scripts/check_source_alias_absence.py export\n"
+        b"      - name: Preserve bounded source-alias evidence\n"
+        b"        if: ${{ always() && github.event_name == 'pull_request' && steps.source_alias_absence.outcome != 'skipped' }}\n"
+        b"        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2\n"
+        b"        with:\n"
+        b"          name: r0002-source-alias-evidence-${{ github.run_id }}-${{ github.run_attempt }}\n"
+        b"          path: ${{ runner.temp }}/r0002-source-alias-receipts/\n"
+        b"          if-no-files-found: error\n"
+        b"          include-hidden-files: false\n"
+        b"          archive: true\n"
+    )
+    return (reader_candidate.count(absence_anchor) == 1
+            and absence_addition not in reader_candidate
+            and body == reader_candidate.replace(absence_anchor, absence_addition + absence_anchor, 1))
 
 
 
@@ -300,8 +367,321 @@ def permitted_contributor_navigation(repo, row, body):
             and b"\n## Reader maintenance\n" in body[len(before):])
 
 
+PMR007_ROUNDS_PARENT = "docs/project-closure/ar8r-v11/post-merge-proposals/README.md"
+PMR007_ROUNDS_PARENT_REVISION = "a7ff0e33d1a299db640041c46b1af81ca70851f6"
+
+
+def pmr007_rounds_parent_source_bytes(repo):
+    """Authenticate one current custody adaptation and return its original source.
+
+    This does not admit a missing snapshot member. The existing finite snapshot
+    and formalization gates own that decision. Original directory wording is
+    valid only while the corresponding current/index edition remains present.
+    """
+    repo = Path(repo)
+    path = PMR007_ROUNDS_PARENT
+    revision = PMR007_ROUNDS_PARENT_REVISION
+    blob = "9628152cf22670418bc2c88aa13e496047fba40c"
+    identity = "d20707cf0d24dd5b2b966f2b1f3640ec7672092ef8a19b57f60fc61897cd6b50"
+    if not isinstance(revision, str) or not re.fullmatch(r"[0-9a-f]{40}", revision):
+        raise ValueError("rounds parent requires its exact original revision")
+
+    def git(*args):
+        result = subprocess.run(
+            ["git", "--no-replace-objects", "--literal-pathspecs", "-c", "core.fsmonitor=false", *args],
+            cwd=repo, capture_output=True, check=False,
+            env=dict(os.environ, GIT_NO_LAZY_FETCH="1", GIT_TERMINAL_PROMPT="0", GIT_OPTIONAL_LOCKS="0"))
+        if result.returncode:
+            raise ValueError("rounds parent original or staged Git objects unavailable")
+        return result.stdout
+
+    expected = ("100644 blob " + blob + "\t" + path + "\0").encode()
+    if (git("cat-file", "-t", revision) != b"commit\n"
+            or git("ls-tree", "-z", revision, "--", path) != expected):
+        raise ValueError("rounds parent original path, blob or mode differs")
+    original = git("cat-file", "blob", blob)
+    original_blob = hashlib.sha1(b"blob " + str(len(original)).encode() + b"\0" + original).hexdigest()
+    if (len(original), hashlib.sha256(original).hexdigest(), original_blob) != (4073, identity, blob):
+        raise ValueError("rounds parent original source identity differs")
+    old = (
+        b"The `pmr007-rounds11-20` directory is an exact, public-safe copy of the final sanitized "
+        b"repository-update proposal recovered from the authenticated research thread. Its internal "
+        b"files are preserved without correction so their original hashes remain testable."
+    )
+    new = (
+        b"The original `pmr007-rounds11-20` import is the exact, public-safe copy of the final sanitized "
+        b"repository-update proposal recovered from the authenticated research thread. Its complete "
+        b"131-file edition is retained at Git commit `a7ff0e33d1a299db640041c46b1af81ca70851f6`. "
+        b"The current snapshot preserves its unchanged 130-row hash manifest and requires its 32 "
+        b"distinct or context-dependent members; 98 exact same-relative copies may resolve through "
+        b"`pmr007-deep-a-bk` under the finite snapshot gate. The existing rounds adoption-boundary "
+        b"correction records those current routes and their limits; original source bytes and hashes "
+        b"remain testable."
+    )
+    if original.count(old) != 1:
+        raise ValueError("rounds parent original paragraph count differs")
+    adapted = original.replace(old, new, 1)
+    current_path = safe_path(repo, path)
+    current = current_path.read_bytes()
+    if current_path.stat().st_mode & 0o111 or current not in (original, adapted):
+        raise ValueError("rounds parent is not its exact ordinary navigation adaptation")
+    adapted_blob = hashlib.sha1(b"blob " + str(len(adapted)).encode() + b"\0" + adapted).hexdigest()
+    indexed = git("ls-files", "--stage", "-z", "--", path)
+    choices = {("100644 " + oid + " 0\t" + path + "\0").encode(): body
+               for oid, body in ((blob, original), (adapted_blob, adapted))}
+    if indexed not in choices:
+        raise ValueError("rounds parent index is missing, conflicted or has an unqualified edition/mode")
+    if git("cat-file", "blob", indexed.split()[1].decode()) != choices[indexed]:
+        raise ValueError("rounds parent staged object identity differs")
+
+    # Presence metadata only: original wording may not describe an incomplete
+    # edition as an exact current directory. This grants no absence fallback.
+    members = [row for row in git("ls-tree", "-r", "-z", revision, "--", PMR007_ROUNDS_PREFIX).split(b"\0") if row]
+    if len(members) != 131:
+        raise ValueError("rounds parent original edition membership differs")
+    original_stages = set()
+    complete_worktree = True
+    for row in members:
+        metadata, member = row.split(b"\t", 1)
+        mode, kind, oid = metadata.decode("ascii").split()
+        member = member.decode("utf-8")
+        if (mode != "100644" or kind != "blob" or not re.fullmatch(r"[0-9a-f]{40}", oid)
+                or not member.startswith(PMR007_ROUNDS_PREFIX + "/")):
+            raise ValueError("rounds parent original edition metadata differs")
+        original_stages.add((mode + " " + oid + " 0\t" + member).encode())
+        try:
+            node = safe_path(repo, member)
+            complete_worktree = complete_worktree and not node.stat().st_mode & 0o111
+        except (ValueError, OSError):
+            complete_worktree = False
+    staged_members = set(git("ls-files", "--stage", "-z", "--", PMR007_ROUNDS_PREFIX).split(b"\0"))
+    if not complete_worktree and current != adapted:
+        raise ValueError("rounds parent current wording requires its complete original edition")
+    if not original_stages.issubset(staged_members) and choices[indexed] != adapted:
+        raise ValueError("rounds parent staged wording requires its complete original edition")
+    return original
+
+
+
+# Exact original and independently reviewed public fixture-consumer editions.
+# These bindings change no source/public identity or scientific disposition.
+FIXTURE_CONSUMER_REVISION = "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c"
+FIXTURE_STATUS_PATH = "experiments/experiment-status.yaml"
+FIXTURE_CONSUMER_ORIGINAL = {'experiments/episode-reification-v2/README.md': ('62c5a4b3b4af1d0860a0d9b6184a0f5604670836',
+                                                  'cf660c095bf11d03bec1f13d36eaf994226b63329dbd53f31a714d7899767da4',
+                                                  1561),
+ 'experiments/episode-reification-v2/analysis/analyze_er2.py': ('2addf30dab7b3b6f4f094a37250bd11f50718cc2',
+                                                                '448d7f598916a94855dd6e1060361f7686240ab542caef1a44b8fb9637026f3b',
+                                                                10418),
+ 'experiments/episode-reification-v2/harness/run_er.py': ('c4fa618a88160e0b4da89644abb3e9a49d49626a',
+                                                          'bd84fdfa3d8973b39f04a9dc0014f3dc1b5574caf61ed7643ca78ae782455d20',
+                                                          7347),
+ 'experiments/episode-reification-v2/scripts/generate_cases.py': ('7eab184f0ff3cdc4869600528ceae1665865e9b8',
+                                                                  'd4ae498ed5b992ec366a752300a949ba64a3d90ce01c63c28392dacbe9827aa3',
+                                                                  8526),
+ 'experiments/episode-reification-v2/tests/test_smoke.py': ('4da6e02cdf9777b74afa2f6a2d19f236d8a9ccab',
+                                                            '41517fa67f0998e92ccbaff09843bac86b20a7144a9c7016927fb4bc4d6f412f',
+                                                            8543),
+ 'experiments/episode-reification/README.md': ('28f48c3f8ef3c56bca366fbf6fac0b9bf54a4f40',
+                                               'ca21e76e775fe1637098aa90b6e6544fa732ef4a82c874de5aab6cbf6f4451b6',
+                                               1197),
+ 'experiments/episode-reification/scripts/generate_fixtures.py': ('2d971fd8c236334a9a2069e48cc53333d141b7c1',
+                                                                  '7ce757842bf2e9fa87a23004675d147687009b1a84a4cf3fc08908f227d45564',
+                                                                  8187),
+ 'experiments/episode-reification/tests/test_smoke.py': ('9c74297fd87351299f1223624d8b8e50c76ffd45',
+                                                         '3606f98b6f2072c5a39fbb24e3d4728b4e9b047b82c65f7d4b8187ef3d010c1c',
+                                                         5936),
+ 'experiments/experiment-status.yaml': ('eb979d8fd40710cbe9adeabd1c76c3571c4f22d6',
+                                        '88e59fdfc9e1e4a3ab751fef6e2f6bc1c5a644fc5863bf679b35c2ceb56cf2b2',
+                                        6886),
+ 'scripts/generate_current_state.py': ('84429a260b6084fce35dd0934a9fd6c72efc3a09',
+                                       'a64b60308dd916505e0e10ce585e3e08c5f20172560b0c1e7deda0e086e830de',
+                                       8057),
+ 'scripts/validate_experiment_readiness.py': ('dcb5c2a61e443a8d704b8e9516c1abe444ade712',
+                                              '3c7db3b6a05c9c21a1ef255f083b24842ddebee0512ea61a4a074d9c88f1346b',
+                                              10208),
+ 'scripts/validate_negative_fixtures.py': ('5521fbfea42ff7e20a85fdd8c31ee4b85d1bdfc5',
+                                           '6631cc99253d14a78b91022b95b646dba48bae1f34a0b86390fbd3e4dd85d92b',
+                                           7429),
+ 'tests/schema-negative/NEGATIVE-FIXTURES.json': ('a002ee8e159a7678e6c704323ca62670cc389880',
+                                                  'b342240297511473b5c5568d4662de413d1f69fef20a7a55dc59c24657e7580b',
+                                                  10709)}
+FIXTURE_CONSUMER_CURRENT = {'experiments/episode-reification-v2/README.md': ('c183888b63c7e73b6a17fb4f1c398906eca3f317',
+                                                  '7ea04abc91a0964525d1257181dc08f4e412d4780b1f2b32e0f09179edaf40eb',
+                                                  2405),
+ 'experiments/episode-reification-v2/analysis/analyze_er2.py': ('b44531cd3eb4e4530d5d6ca733b0fecff51ad8a1',
+                                                                '0a9b691158bdd5d9590ca50f5501dbe9057880e7720b16df1a40cd5923da11a2',
+                                                                11120),
+ 'experiments/episode-reification-v2/harness/run_er.py': ('e10f76b5412c6a793deaff17aa68fc0068444700',
+                                                          '15af564935d25d8d43a6007d88377cbea76d785437dffaf1260ef57a305d7666',
+                                                          7263),
+ 'experiments/episode-reification-v2/scripts/generate_cases.py': ('e43f016e6a12594c29deef253cf1ba65d86462be',
+                                                                  '3b449a7580426fdf89f85612018473f92c3c2c274d4eea47e7046d1bcfe1bc89',
+                                                                  9631),
+ 'experiments/episode-reification-v2/tests/test_smoke.py': ('2e143f2c2d07f1683c6ec86b08529c085c979973',
+                                                            '65d2195b2723b00fb750f14b5487f6b267aa0132400eac96cdf2a1baac819dab',
+                                                            9060),
+ 'experiments/episode-reification/README.md': ('2732cd09c8895c22b5fbce4b00a326826da6cb19',
+                                               'e27914d286579b38c1ad480618498dd8968d85464c06b7f6e26b73577e823bc7',
+                                               1900),
+ 'experiments/episode-reification/scripts/generate_fixtures.py': ('be7dd10d2f60ad16c4cf9df2ea3316d778b0c8fc',
+                                                                  '9c39be153165e8d1c5a074243fc5f4ba467862ccc0d433bb42e7471230e4b929',
+                                                                  8675),
+ 'experiments/episode-reification/tests/test_smoke.py': ('c92237319812ec5adb1f3de28dc692efcdf13018',
+                                                         '8678c6b1e7c5287e153503441ad825f618bb65fb3311d827199e4da509e9b2ad',
+                                                         6005),
+ 'experiments/experiment-status.yaml': ('e1b4fb336a5ed3a7c890c0e50697364f965574dc', 'c52451c812bb17a8599b82adcb46944d728ba412fb4e845629ac9eece443e7bd', 8344),
+ 'scripts/generate_current_state.py': ('121d31f0ca3d2b8821c4cd1252b1831b8348b53c',
+                                       '49c28230be2def0930c1e71ee117adc2b3a36260aa3369dd3f9f7b8cec2a084d',
+                                       8007),
+ 'scripts/validate_experiment_readiness.py': ('80ca472586848f9aeee28771a2f40e07083fc556', '263222ca3869d0dd13abcf2324619e65977024f0490e309313848e2838cfcc32', 18037),
+ 'scripts/validate_negative_fixtures.py': ('5c64a4cffa037eb604d519033181c88539e7d78b',
+                                           '8e3ff766e20c981628a19fc5d809343a873bfce773885af6197d972a335ea321',
+                                           9037),
+ 'tests/schema-negative/NEGATIVE-FIXTURES.json': ('20b6e5801823e87db6b5fb1638d0e3992eee36e6',
+                                                  'b229103cc93bb15d046cb15a1794d99d0cb40200fbc8fe9ac7ceff358c88d3e9',
+                                                  108213)}
+
+
+def check_fixture_consumer_edition(repo, baseline_rows=None):
+    """Authenticate one complete thirteen-owner edition and its old status view.
+
+    The current public consumers are distinct from their original T20 evidence.
+    An exact historical status body serves the original discovery/crosswalk role
+    only after every staged and present successor has independently bound bytes.
+    No missing, executable, symlinked, hardlinked or mixed edition is admitted.
+    """
+    repo = Path(repo)
+    paths = sorted(FIXTURE_CONSUMER_ORIGINAL)
+    if baseline_rows is not None and not set(paths).intersection(baseline_rows):
+        return {}, None, []
+    try:
+        if baseline_rows is not None:
+            for path in paths:
+                blob, _, size = FIXTURE_CONSUMER_ORIGINAL[path]
+                row = baseline_rows.get(path, {})
+                if (row.get('kind'), row.get('mode'), row.get('git_oid'), row.get('bytes')) != (
+                        'blob', '100644', blob, size):
+                    raise ValueError('original fixture-consumer census differs: ' + path)
+        command = ['git', '--no-replace-objects', '--literal-pathspecs',
+                   'ls-files', '--stage', '-z', '--', *paths]
+        staged = subprocess.run(command, cwd=repo, capture_output=True, check=False)
+        if staged.returncode:
+            raise ValueError('could not inspect staged fixture consumers')
+        edition = None
+        for candidate in (FIXTURE_CONSUMER_ORIGINAL, FIXTURE_CONSUMER_CURRENT):
+            expected = b''.join(('100644 ' + candidate[path][0] + ' 0\t' + path + '\0').encode()
+                                for path in paths)
+            if staged.stdout == expected:
+                edition = candidate
+                break
+        if edition is None:
+            raise ValueError('staged fixture consumers are not one complete admitted edition')
+        for ancestor in (repo, *repo.parents):
+            if ancestor.is_symlink():
+                raise ValueError('fixture consumer root contains a symlink')
+        for path in paths:
+            blob, identity, size = edition[path]
+            node = safe_path(repo, path)
+            fd = os.open(node, os.O_RDONLY | os.O_NOFOLLOW)
+            with os.fdopen(fd, 'rb') as stream:
+                start = os.fstat(stream.fileno())
+                if (not stat.S_ISREG(start.st_mode) or start.st_nlink != 1
+                        or start.st_mode & 0o111 or start.st_size != size):
+                    raise ValueError('fixture consumer is not an ordinary exact-sized file: ' + path)
+                body = stream.read()
+                finish = os.fstat(stream.fileno())
+            fields = ('st_dev', 'st_ino', 'st_mode', 'st_nlink', 'st_size', 'st_mtime_ns', 'st_ctime_ns')
+            if any(getattr(start, field) != getattr(finish, field) for field in fields):
+                raise ValueError('fixture consumer changed during its read: ' + path)
+            oid = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+            if (oid, hashlib.sha256(body).hexdigest(), len(body)) != (blob, identity, size):
+                raise ValueError('present and staged fixture consumer editions differ: ' + path)
+        repeated = subprocess.run(command, cwd=repo, capture_output=True, check=False)
+        if repeated.returncode or repeated.stdout != staged.stdout:
+            raise ValueError('fixture consumer index changed during qualification')
+        if edition is FIXTURE_CONSUMER_ORIGINAL:
+            return {}, None, []
+        blob, identity, size = FIXTURE_CONSUMER_ORIGINAL[FIXTURE_STATUS_PATH]
+        tree = subprocess.run(['git', '--no-replace-objects', '--literal-pathspecs',
+            'ls-tree', '-z', FIXTURE_CONSUMER_REVISION, '--', FIXTURE_STATUS_PATH],
+            cwd=repo, capture_output=True, check=False)
+        original = subprocess.run(['git', '--no-replace-objects', 'cat-file', 'blob',
+            FIXTURE_CONSUMER_REVISION + ':' + FIXTURE_STATUS_PATH],
+            cwd=repo, capture_output=True, check=False)
+        if (tree.returncode or original.returncode
+                or tree.stdout != ('100644 blob ' + blob + '\t' + FIXTURE_STATUS_PATH + '\0').encode()
+                or (hashlib.sha1(b'blob ' + str(len(original.stdout)).encode() + b'\0' + original.stdout).hexdigest(),
+                    hashlib.sha256(original.stdout).hexdigest(), len(original.stdout)) != (blob, identity, size)):
+            raise ValueError('original experiment-status evidence is unavailable or differs')
+        owners = {path: {'path': path, 'kind': 'blob', 'mode': '100644',
+                        'git_oid': edition[path][0], 'bytes': edition[path][2]} for path in paths}
+        return owners, original.stdout, []
+    except (ValueError, OSError) as exc:
+        return {}, None, ['fixture-consumer: ' + str(exc)]
+
+
+def _permitted_projection_consumer_pins(original, candidate):
+    """Admit only complete previously reviewed coordinate migrations."""
+    from copy import deepcopy
+    import validate_v5_successors as owners
+    earlier = {
+        path: (*HISTORICAL_PROSE[path], HISTORICAL_PROSE_REVISIONS[path])
+        for path in PUBLIC_READER_NOTE_PATHS}
+    earlier[CONTINUATION_REGISTRY_PATH] = (
+        *owners.PRESERVATION_OWNER_ORIGINAL[CONTINUATION_REGISTRY_PATH],
+        CONTINUATION_REGISTRY_REVISION)
+    next24 = {
+        path: (*HISTORICAL_PROSE[path], HISTORICAL_PROSE_REVISIONS[path])
+        for path in NEXT24_PUBLIC_PROSE}
+    fixtures = {path: (*binding, FIXTURE_CONSUMER_REVISION)
+                for path, binding in FIXTURE_CONSUMER_ORIGINAL.items()}
+    combined = dict(earlier, **next24)
+    for bindings in (earlier, next24, combined, dict(combined, **fixtures)):
+        expected = deepcopy(original)
+        try:
+            for path, (blob, identity, size, revision) in bindings.items():
+                rows = [r for r in expected['objects'] if r.get('repository_path') == path]
+                if len(rows) != 1:
+                    break
+                source = rows[0]
+                if (source.get('disposition') != 'REUSE'
+                        or source.get('source_sha256') != identity
+                        or source.get('public_sha256') != identity
+                        or source.get('source_bytes') != size or source.get('public_bytes') != size):
+                    break
+                source.update(repository_revision=revision, git_blob=blob)
+            else:
+                if candidate == expected:
+                    return True
+        except (KeyError, TypeError, ValueError):
+            return False
+    return False
+
+
+def _permitted_administrative_guide_pins(original, candidate):
+    """Admit the exact two already-public guide coordinates as a whole group."""
+    from copy import deepcopy
+    expected = deepcopy(original)
+    try:
+        for path in ADMIN_PUBLIC_GUIDE_PATHS:
+            blob, identity, size, _ = ADMIN_GUIDES[path]
+            rows = [row for row in expected['objects'] if row.get('repository_path') == path]
+            if len(rows) != 1:
+                return False
+            source = rows[0]
+            if (source.get('disposition') != 'REUSE' or source.get('source_sha256') != identity
+                    or source.get('public_sha256') != identity or source.get('source_bytes') != size
+                    or source.get('public_bytes') != size):
+                return False
+            source.update(repository_revision=ADMIN_RECORD_BASE, git_blob=blob)
+        return candidate == expected or _permitted_projection_consumer_pins(expected, candidate)
+    except (KeyError, TypeError, ValueError):
+        return False
+
+
 def permitted_historical_status_pin(repo, row, body):
-    """Admit two exact historical navigation-body bindings, not new identities.
+    """Admit exact navigation and finite historical-source bindings, not identities.
 
     The live status index and contributor guide have authorised reader additions.
     T20 retains both original bodies at its original baseline, using the existing
@@ -338,7 +718,189 @@ def permitted_historical_status_pin(repo, row, body):
                 return False
             source.update(repository_revision="7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
                           git_blob=blob)
-        return candidate == expected
+        if candidate == expected:
+            return True  # The original two-navigation-binding contract remains valid.
+        for path in HISTORICAL_PROSE_PUBLIC_PATHS:
+            if path not in ORIGINAL_HISTORICAL_PROSE_PATHS:
+                continue
+            blob, identity, size = HISTORICAL_PROSE[path]
+            selected = [r for r in expected["objects"] if r["source_sha256"] == identity]
+            if len(selected) != 1:
+                return False
+            source = selected[0]
+            if (source.get("disposition") != "REUSE"
+                    or source.get("repository_path") != path
+                    or source.get("source_bytes") != size
+                    or source.get("public_bytes") != size
+                    or source.get("public_sha256") != identity):
+                return False
+            source.update(repository_revision=HISTORICAL_PROSE_REVISION, git_blob=blob)
+        if candidate == expected:
+            return True  # Retain the independently qualified original five-path contract.
+        extra = [(path, HISTORICAL_PROSE[path], HISTORICAL_PROSE_REVISIONS[path],
+                  HISTORICAL_PROSE_DISPOSITIONS[path]) for path in MEDIATOR_PROSE]
+        extra.append(("scripts/validate_v5_successors.py",
+                      ("62457f5f61e6e433b7714948e1b0c2545a00fbb1",
+                       "fc70d3afba7df52044a67a4d77de438e929a8e44e8b58bff4f2cc808e8f0e185", 51484),
+                      HISTORICAL_PROSE_REVISION, "REUSE"))
+        for path, (blob, identity, size), revision, disposition in extra:
+            selected = [r for r in expected["objects"] if r["source_sha256"] == identity]
+            if len(selected) != 1:
+                return False
+            source = selected[0]
+            if (source.get("disposition") != disposition or source.get("repository_path") != path
+                    or source.get("source_bytes") != size or source.get("public_bytes") != size
+                    or source.get("public_sha256") != identity):
+                return False
+            source.update(repository_revision=revision, git_blob=blob)
+        if candidate == expected:
+            return True  # Preserve the finite mediator and original-validator evidence form.
+        math_code = (
+            ("tests/test_math_source_validator.py",
+             "dcb9a7171c3f82114936c36529093674e98417ca",
+             "3c04cf4922e82d9a587b5d6c1105906cb3a18ecfb6fbb358cada239e8300a6f3", 5084),
+            ("scripts/validate_math_source.py",
+             "7a72d773ca5248b26383624ee1837448b9a2479c",
+             "3c52ed4d872e7b3a6b1a35a0d3dd6624cd4b8052736cc55a78e055731d58177a", 38178),
+        )
+        for path, blob, identity, size in math_code:
+            selected = [r for r in expected["objects"] if r["source_sha256"] == identity]
+            if len(selected) != 1:
+                return False
+            source = selected[0]
+            if (source.get("disposition") != "REUSE" or source.get("repository_path") != path
+                    or source.get("source_bytes") != size or source.get("public_bytes") != size
+                    or source.get("public_sha256") != identity):
+                return False
+            source.update(repository_revision=HISTORICAL_PROSE_REVISION, git_blob=blob)
+        if candidate == expected:
+            return True  # Preserve the exact seven-path plus math-code evidence form.
+        blob, identity, size = HISTORICAL_PROSE[FISHER_AUDIT]
+        selected = [r for r in expected["objects"] if r["source_sha256"] == identity]
+        if len(selected) != 1:
+            return False
+        source = selected[0]
+        if (source.get("disposition") != "ADD_EXACT" or source.get("repository_path") != FISHER_AUDIT
+                or source.get("source_bytes") != size or source.get("public_bytes") != size
+                or source.get("public_sha256") != identity):
+            return False
+        source.update(repository_revision=FISHER_PROSE_REVISION, git_blob=blob)
+        if candidate == expected:
+            return True  # Preserve the Fisher form before the legacy-test code pin.
+        identity = "77f9a6bb323345942a400353a614caeacb2546cc11cbde95cb082ca4acaf1a09"
+        selected = [r for r in expected["objects"] if r["source_sha256"] == identity]
+        if len(selected) != 1:
+            return False
+        source = selected[0]
+        if (source.get("disposition") != "REUSE"
+                or source.get("repository_path") != "tests/test_v5_twentieth_data.py"
+                or source.get("source_bytes") != 6819 or source.get("public_bytes") != 6819
+                or source.get("public_sha256") != identity):
+            return False
+        source.update(repository_revision=HISTORICAL_PROSE_REVISION,
+                      git_blob="e1bad4344f949d9ddbe32ca6c4e6bd4158515a86")
+        if candidate == expected:
+            return True  # Preserve the exact Fisher and legacy-test code form.
+        for path, (blob, identity, size) in TYPED_PROSE.items():
+            selected = [r for r in expected["objects"] if r["source_sha256"] == identity]
+            if len(selected) != 1:
+                return False
+            source = selected[0]
+            if (source.get("disposition") != "REUSE" or source.get("repository_path") != path
+                    or source.get("source_bytes") != size or source.get("public_bytes") != size
+                    or source.get("public_sha256") != identity):
+                return False
+            source.update(repository_revision=TYPED_PROSE_REVISION, git_blob=blob)
+        if candidate == expected:
+            return True  # Preserve the exact typed-prose form.
+        # These current consumer bodies have changed, while their T20 evidence
+        # identities still denote the original BASE bodies. The finite duplicate
+        # class supplies the only other admissible historical routes.
+        consumer_paths = {
+            "tests/test_ar8r_v11_reconciliation.py":
+                ("30b8c5ff2679423af0d8231852fd2dd826f91972db891cc461894709d9840606", 91370),
+            "docs/project-closure/ar8r-v11/post-merge-proposals/PMR007-DEEP-A-AP-ADOPTION-BOUNDARY-CORRECTION.md":
+                ("327fd8a2e5ea986f785270f3713e6e034975ecbea9bda2cf5bca04ef374112b6", 1977),
+            "scripts/validate_ar8r_reconciliation.py":
+                ("84cd7f17f9961142e76f76fa427bb49aaf4b29fdc8d9d5056c3c53e8c8c20669", 168547),
+        }
+        aliases = pmr007_deep_duplicate_paths(repo)
+        selected = [r for r in expected["objects"]
+                    if r.get("repository_path") in aliases | consumer_paths.keys()]
+        if (len(aliases) != 824 or len(selected) != 587
+                or len({r["repository_path"] for r in selected}) != 587
+                or sum(r["repository_path"] in aliases for r in selected) != 584):
+            return False
+        revision = "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c"
+        objects = subprocess.run(
+            ["git", "--no-replace-objects", "cat-file", "--batch"], cwd=repo,
+            input="".join(revision + ":" + r["repository_path"] + "\n" for r in selected).encode(),
+            capture_output=True, check=False)
+        if objects.returncode:
+            return False
+        offset = 0
+        for source in selected:
+            path, identity, size = (source["repository_path"], source["source_sha256"], source["source_bytes"])
+            if (source.get("disposition") != "REUSE" or source.get("public_sha256") != identity
+                    or source.get("public_bytes") != size
+                    or (path in consumer_paths and consumer_paths[path] != (identity, size))):
+                return False
+            end = objects.stdout.find(b"\n", offset)
+            if end < 0:
+                return False
+            header = objects.stdout[offset:end].decode("ascii").split()
+            if len(header) != 3 or header[1:] != ["blob", str(size)]:
+                return False
+            original_body = objects.stdout[end + 1:end + 1 + size]
+            offset = end + 2 + size
+            blob = hashlib.sha1(b"blob " + str(size).encode() + b"\0" + original_body).hexdigest()
+            if (len(original_body) != size or objects.stdout[offset - 1:offset] != b"\n"
+                    or hashlib.sha256(original_body).hexdigest() != identity or blob != header[0]):
+                return False
+            source.update(repository_revision=revision, git_blob=blob,
+                          publication_basis=("exact_existing_public_git_blob; current_consumer_has_distinct_identity"
+                              if path in consumer_paths else
+                              "exact_existing_public_git_blob; retained_counterpart_qualified_by_snapshot_validator"))
+        if offset != len(objects.stdout):
+            return False
+        if candidate == expected:
+            return True  # Preserve the exact 587-row snapshot form.
+        # The two further copy migrations change these three original owners.
+        # Only their original evidence routes may change; every other field and
+        # every unrelated object must still equal an already admitted form.
+        further_consumers = {
+            "scripts/validate_research_continuations.py":
+                ("5157341400df0d327cb39f698838ac8ba49f82eb6bf71c8e40f84f670b3e55f7", 29272,
+                 "ef5422f8e877f628e8aedbe61dc4dd2af614cb0a"),
+            "docs/project-closure/ar8r-v11/post-merge-proposals/PMR007-ROUNDS11-20-ADOPTION-BOUNDARY-CORRECTION.md":
+                ("66cc0fbc5ab06ab0dfffdb1e6fe1845775cfa0f12233f7517d12042ae16d9486", 1354,
+                 "6240db1cb6e2f844506a989ee2cfa14783c6d6d6"),
+            "docs/project-closure/ar8r-v11/post-merge-proposals/README.md":
+                ("d20707cf0d24dd5b2b966f2b1f3640ec7672092ef8a19b57f60fc61897cd6b50", 4073,
+                 "9628152cf22670418bc2c88aa13e496047fba40c"),
+        }
+        for path, (identity, size, blob) in further_consumers.items():
+            matches = [r for r in expected["objects"] if r.get("repository_path") == path]
+            if len(matches) != 1:
+                return False
+            source = matches[0]
+            if (source.get("disposition") != "REUSE" or source.get("source_sha256") != identity
+                    or source.get("public_sha256") != identity or source.get("source_bytes") != size
+                    or source.get("public_bytes") != size):
+                return False
+            entry = subprocess.run(["git", "--no-replace-objects", "--literal-pathspecs",
+                "ls-tree", "-z", revision, "--", path], cwd=repo, capture_output=True, check=False)
+            original = subprocess.run(["git", "--no-replace-objects", "cat-file", "blob",
+                revision + ":" + path], cwd=repo, capture_output=True, check=False)
+            if (entry.returncode or original.returncode
+                    or entry.stdout != ("100644 blob " + blob + "\t" + path + "\0").encode()
+                    or len(original.stdout) != size or hashlib.sha256(original.stdout).hexdigest() != identity
+                    or hashlib.sha1(b"blob " + str(size).encode() + b"\0" + original.stdout).hexdigest() != blob):
+                return False
+            source.update(repository_revision=revision, git_blob=blob,
+                          publication_basis="exact_existing_public_git_blob; current_consumer_has_distinct_identity")
+        return (candidate == expected or _permitted_projection_consumer_pins(expected, candidate)
+                or _permitted_administrative_guide_pins(expected, candidate))
     except (KeyError, TypeError, ValueError):
         return False
 
@@ -351,7 +913,38 @@ REFACTOR_EDIT_PATHS = {
     "README.md", "STATUS.md", "CONTRIBUTING.md",
     ".github/workflows/validate.yml", ".github/workflows/reader-refactor-snapshot.yml",
     "scripts/reader_census.py", "scripts/check_reader_pilot.py",
+    # Reviewed hosted absence transaction helpers and focused controls. This
+    # finite engineering-support population adds no source/work denominator;
+    # similarly named files still require their own disposition review.
+    "scripts/check_source_alias_absence.py", "scripts/source_alias_absence_boundary.py",
+    "scripts/source_alias_absence_context.py", "scripts/source_alias_absence_continuations.py",
+    "scripts/source_alias_absence_evidence.py", "scripts/source_alias_absence_guard.py",
+    "scripts/source_alias_absence_metadata.py", "scripts/source_alias_absence_population.py",
+    "scripts/source_alias_absence_reader.py",
+    "tests/test_source_alias_absence_boundary.py", "tests/test_source_alias_absence_evidence.py",
+    "tests/test_source_alias_absence_population.py",
+    # Existing integrity owners for the finite A-AP duplicate retirement.
+    "scripts/validate_ar8r_reconciliation.py", "tests/test_ar8r_v11_reconciliation.py",
+    "docs/project-closure/ar8r-v11/SHA256SUMS",
+    "docs/project-closure/ar8r-v11/post-merge-proposals/PMR007-DEEP-A-AP-ADOPTION-BOUNDARY-CORRECTION.md",
+    "docs/project-closure/ar8r-v11/post-merge-proposals/PMR007-ROUNDS11-20-ADOPTION-BOUNDARY-CORRECTION.md",
+    "docs/project-closure/ar8r-v11/post-merge-proposals/README.md",
     "tests/test_reader_census.py", "tests/test_reader_pilot.py",
+    "tests/test_internal_references.py",
+    # Exact existing integrity owners changed for the finite history contract;
+    # this does not admit any new source path or predecessor modification.
+    "scripts/resolve_t20_v6_source.py", "scripts/validate_t20_v6_projection.py",
+    "tests/test_t20_v6_projection.py", "scripts/validate_v5_successors.py",
+    "tests/test_v5_twentieth_data.py",
+    # Existing source-ID and replay owners for the finite continuation copies.
+    "scripts/validate_research_continuations.py", "scripts/replay_research_continuations.py",
+    "tests/test_research_continuations.py", "scripts/replay_continuation_controls.py",
+    # Current reference consumers for the same four exact typed prose identities.
+    "scripts/validate_repo.py", "scripts/validate_internal_references.py",
+    # Existing source-display integrity owner and its focused regression tests;
+    # scholarly bodies still require their exact source/work/review admission.
+    "scripts/validate_math_source.py", "tests/test_math_source_validator.py",
+    "docs/project-closure/r7e-sol/R7E-SOL-ADVERSARIAL-REPORT.md",
     "docs/current-state.yaml", "docs/provenance/RELEASE-MANIFEST.sha256",
     "docs/project-closure/HISTORICAL-STATUS-INDEX.yaml",
     "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json",
@@ -367,28 +960,409 @@ REFACTOR_EDIT_PATHS = {
 )}
 
 
-def check_corpus_currentness(repo, baseline):
+def check_source_additions(repo, baseline_rows, owners, cross):
+    """Bind finite new expositions and review support without rebasing history.
+
+    The owner map admits exact tracked objects. Existing crosswalk work/source
+    edges own their reading roles; a review table binds each exact new edition.
+    These mechanical bindings neither assess the science nor adopt its claims.
+    """
+    declared = owners.get("source_additions", [])
+    if declared == []:
+        return {}, []
+    errors, admitted, bindings = [], {}, {}
+    def fail(message):
+        errors.append("source-addition: " + message)
+    fields = {"key", "path", "mode", "git_oid", "bytes", "sha256", "role",
+              "work_keys", "supporting_source_keys"}
+    if not isinstance(declared, list):
+        return {}, ["source-addition: expected a finite list"]
+    sources = cross.get("sources", {})
+    works = cross.get("works", [])
+    paths = set()
+    for row in declared:
+        try:
+            if not isinstance(row, dict) or set(row) != fields:
+                raise ValueError("incomplete or unknown identity/relationship fields")
+            key, path = row["key"], row["path"]
+            if not isinstance(key, str) or not key or key in bindings or path in paths:
+                raise ValueError("duplicate or malformed source key/path")
+            if path in baseline_rows or path in REFACTOR_EDIT_PATHS:
+                raise ValueError("a baseline or operational path cannot masquerade as new scholarship")
+            node = safe_path(repo, path)
+            body = node.read_bytes()
+            if (row["mode"] not in ("100644", "100755")
+                    or type(row["bytes"]) is not int or row["bytes"] < 0
+                    or not isinstance(row["git_oid"], str)
+                    or not re.fullmatch(r"[0-9a-f]{40}|[0-9a-f]{64}", row["git_oid"])
+                    or not isinstance(row["sha256"], str)
+                    or not re.fullmatch(r"[0-9a-f]{64}", row["sha256"])):
+                raise ValueError("malformed exact source identity")
+            raw = b"blob " + str(len(body)).encode("ascii") + b"\0" + body
+            oid = (hashlib.sha1(raw) if len(row["git_oid"]) == 40 else hashlib.sha256(raw)).hexdigest()
+            mode = "100755" if node.stat().st_mode & 0o111 else "100644"
+            if (len(body), hashlib.sha256(body).hexdigest(), oid, mode) != (
+                    row["bytes"], row["sha256"], row["git_oid"], row["mode"]):
+                raise ValueError("path/mode/bytes/blob/SHA identity differs")
+            tracked = subprocess.run(["git", "--literal-pathspecs", "ls-files", "--stage", "-z", "--", path],
+                                     cwd=repo, capture_output=True, check=False)
+            expected = (mode + " " + oid + " 0\t" + path + "\0").encode("utf-8")
+            if tracked.returncode or tracked.stdout != expected:
+                raise ValueError("source is untracked, conflicted, or differs from its index object")
+            source = sources.get(key)
+            if (not isinstance(source, dict) or source.get("path") != path
+                    or source.get("sha256") != row["sha256"]
+                    or not isinstance(source.get("read_scope"), str) or not source["read_scope"].strip()
+                    or [k for k, v in sources.items() if isinstance(v, dict) and v.get("path") == path] != [key]):
+                raise ValueError("source key, identity or actual read scope is missing, changed or aliased")
+            for name in ("work_keys", "supporting_source_keys"):
+                values = row[name]
+                if (not isinstance(values, list) or any(not isinstance(v, str) or not v for v in values)
+                        or len(values) != len(set(values))):
+                    raise ValueError("malformed or duplicate work/support references")
+            if (row["role"] not in ("work-source", "review") or not row["work_keys"]
+                    or (row["role"] == "work-source" and
+                        (len(row["work_keys"]) != 1 or not row["supporting_source_keys"]))
+                    or (row["role"] == "review" and row["supporting_source_keys"])):
+                raise ValueError("invalid scholarly or review-support role")
+            bindings[key] = row
+            paths.add(path)
+            admitted[path] = dict(row, kind="blob")
+        except (KeyError, TypeError, ValueError, OSError, UnicodeError) as exc:
+            fail(str(row.get("key") if isinstance(row, dict) else row) + ": " + str(exc))
+
+    primary = {key: row for key, row in bindings.items() if row["role"] == "work-source"}
+    added_works = {name for row in primary.values() for name in row["work_keys"]}
+    historical = sorted(w["key"] for w in works if w.get("key") not in added_works)
+    population = owners.get("baseline_work_population", {})
+    digest = hashlib.sha256(json.dumps(historical, separators=(",", ":")).encode()).hexdigest()
+    if (not isinstance(population, dict) or population.get("count") != len(historical)
+            or population.get("keys_sha256") != digest):
+        fail("historical work denominator or identities changed")
+    for key, row in bindings.items():
+        actual_primary = [w["key"] for w in works if key in w.get("source_keys", [])]
+        actual_support = [w["key"] for w in works if key in w.get("supporting_source_keys", [])]
+        actual_reading = [w["key"] for w in works if isinstance(w.get("reading_forms", []), list)
+                          and any(isinstance(f, dict) and f.get("source") == key
+                                  for f in w.get("reading_forms", []))]
+        if row["role"] == "review":
+            if actual_primary or actual_reading or sorted(actual_support) != sorted(row["work_keys"]):
+                fail(key + ": review is not bound exactly as support to its declared works")
+            continue
+        selected = [w for w in works if w.get("key") == row["work_keys"][0]]
+        if (actual_primary != row["work_keys"] or actual_reading != row["work_keys"]
+                or actual_support or len(selected) != 1
+                or selected[0].get("role") != "synthesis" or selected[0].get("source_keys") != [key]
+                or selected[0].get("reading_forms") != [{"source": key, "relationship": "authored-synthesis"}]
+                or selected[0].get("supporting_source_keys") != row["supporting_source_keys"]):
+            fail(key + ": missing, duplicate, extra or substituted work/support relationship")
+        for support_key in row["supporting_source_keys"]:
+            support = bindings.get(support_key)
+            if (not support or support["role"] != "review"
+                    or row["work_keys"][0] not in support["work_keys"]):
+                fail(key + ": required exact review support is absent")
+                continue
+            try:
+                # The existing compact review has one ordinary table row per
+                # reviewed work: local work link, exact SHA-256, logical bytes.
+                tokens = MarkdownIt("commonmark").enable("table").parse(
+                    safe_path(repo, support["path"]).read_text(encoding="utf-8"))
+                candidates, cells = [], None
+                for token in tokens:
+                    if token.type == "tr_open":
+                        cells = []
+                    elif token.type == "inline" and cells is not None:
+                        cells.append(token)
+                    elif token.type == "tr_close" and cells is not None:
+                        links = [resolve_reader_link(repo, support["path"], t.attrGet("href"))
+                                 for t in cells[0].children or [] if t.type == "link_open"] if cells else []
+                        if (row["path"], "") in links:
+                            candidates.append((cells, links))
+                        cells = None
+                if len(candidates) != 1:
+                    raise ValueError("missing or duplicate exact reviewed-work row")
+                cells, links = candidates[0]
+                if (len(cells) < 3 or links != [(row["path"], "")]
+                        or cells[1].content != chr(96) + row["sha256"] + chr(96)
+                        or cells[2].content.replace(",", "") != str(row["bytes"])):
+                    raise ValueError("review does not bind this work's exact source identity")
+            except (ValueError, OSError, UnicodeError) as exc:
+                fail(key + ": " + str(exc))
+    return admitted, errors
+
+
+
+def check_historical_sources(repo, baseline_rows, owners, cross, additions):
+    """Bind exactly reviewed originals to history and physically readable science.
+
+    Original path identities and source/work entries stay in the frozen census.
+    This finite source-owner disposition is not scientific review, custody or
+    permission to delete. Only a validated absent original can cross currentness.
+    """
+    declared = owners.get("historical_source_bindings", [])
+    if declared == []:
+        return {}, []
+    fields = {"path", "repository_revision", "git_blob", "role", "reading_source", "basis"}
+    if (not isinstance(declared, list)
+            or any(not isinstance(row, dict) or set(row) != fields
+                   or not isinstance(row.get("path"), str) for row in declared)):
+        return {}, ["historical-source: malformed finite path dispositions"]
+    paths = {row["path"] for row in declared}
+    original = set(ORIGINAL_HISTORICAL_PROSE_PATHS)
+    mediator = original | set(MEDIATOR_PROSE)
+    fisher = mediator | {FISHER_AUDIT}
+    typed = fisher | set(TYPED_PROSE)
+    if (len(paths) != len(declared) or paths not in
+            (original, mediator, fisher, typed, typed | set(CONTINUATION_READER_PROSE),
+              typed | set(CONTINUATION_READER_PROSE) | set(T4_READER_PROSE),
+              typed | set(CONTINUATION_READER_PROSE) | set(T4_READER_PROSE) | set(NEXT24_PROSE),
+               typed | set(CONTINUATION_READER_PROSE) | set(T4_READER_PROSE) | set(NEXT24_PROSE) | set(SPARSE_PRIOR_PROSE))):
+        return {}, ["historical-source: expected exactly the original five, mediator seven, Fisher eight, typed twelve, continuation sixteen, T4 twenty-six, next24 fifty or sparse-prior seventy-five path dispositions"]
+    admitted, errors = {}, []
+    sources = cross.get("sources", {})
+    for binding in declared:
+        path = binding["path"]
+        try:
+            blob, identity, size = HISTORICAL_PROSE[path]
+            original = baseline_rows.get(path, {})
+            if (original.get("kind"), original.get("mode"), original.get("git_oid"),
+                    original.get("bytes")) != ("blob", "100644", blob, size):
+                raise ValueError("original census identity differs")
+            if binding["role"] != "historical-source":
+                raise ValueError("the original needs an explicit historical-only role")
+            current = sources.get(binding["reading_source"], {})
+            review = sources.get(binding["basis"], {})
+            scholarly = additions.get(current.get("path"), {})
+            support = additions.get(review.get("path"), {})
+            if (scholarly.get("key") != binding["reading_source"]
+                    or scholarly.get("role") != "work-source"
+                    or binding["basis"] not in scholarly.get("supporting_source_keys", [])
+                    or support.get("key") != binding["basis"] or support.get("role") != "review"):
+                raise ValueError("current scholarship and its existing review owner are required")
+            for source, admission in ((current, scholarly), (review, support)):
+                node = safe_path(repo, source["path"])
+                body = node.read_bytes()
+                mode = "100755" if node.stat().st_mode & 0o111 else "100644"
+                if (hashlib.sha256(body).hexdigest(), len(body), mode) != (
+                        admission["sha256"], admission["bytes"], admission["mode"]):
+                    raise ValueError("current scholarly or review edition differs")
+            for key, source in sources.items():
+                if source.get("path") != path:
+                    continue
+                if source.get("sha256") != identity:
+                    raise ValueError("original reader source identity differs")
+                forms = [form for work in cross.get("works", [])
+                         for form in work.get("reading_forms", [])
+                         if isinstance(form, dict) and form.get("source") == key]
+                expected = {"from": key, "to": binding["reading_source"],
+                            "kind": "logical-content-incorporated-historical-source-retained",
+                            "basis": binding["basis"]}
+                relations = [r for r in cross.get("relations", []) if r.get("from") == key
+                             and r.get("kind") == expected["kind"]]
+                expected_forms = ([] if path in T4_READER_SUPPORT_PROSE | NEXT24_SUPPORT_PROSE | SPARSE_PRIOR_SUPPORT_PROSE else
+                                  [{"source": key, "relationship": "historical-source"}])
+                if forms != expected_forms or relations != [expected]:
+                    raise ValueError("reader source lacks its exact historical/incorporation relationship")
+                if any(key in j.get("source_keys", []) for j in cross.get("reader_journeys", [])):
+                    raise ValueError("an ordinary journey still requires this physical source")
+            admitted[path] = historical_source_bytes(
+                repo, path, binding["repository_revision"], binding["git_blob"])
+        except (KeyError, TypeError, ValueError, OSError, UnicodeError) as exc:
+            errors.append("historical-source: " + path + ": " + str(exc))
+    return admitted, errors
+
+
+CONTINUATION_OWNER_PATHS = (
+    "docs/provenance/v5-research-continuations/EVIDENCE_BINDINGS.json",
+    "docs/provenance/v5-research-continuations/README.md",
+    "docs/provenance/v5-research-continuations/SOURCE_MAP.json",
+    "experiments/orthemology-v5-continuations/registry.json",
+)
+CONTINUATION_OWNER_ORIGINAL = {
+    CONTINUATION_OWNER_PATHS[0]: ("1c4ab596107c4573e5b6b8ec053551edb0123e37",
+        "eea355a54d547170b57b48d66263a0527f783d84c076fe30bcb6f192ae51d56b", 2216593),
+    CONTINUATION_OWNER_PATHS[1]: ("14f2a432915bb24800c80ec4dbab37cf37bdf149",
+        "ee7df681b2545e99a9f951b6a6916f45d9ad898af60ef69735505aa482bd3fb7", 44289),
+    CONTINUATION_OWNER_PATHS[2]: ("0f565ab802d53fae8a3a929e65f291e3dade7242",
+        "a6c2c87082f27c8560cfb4790059cc242effb5f45e3f7bdf30adf8b722b808c7", 5990901),
+    CONTINUATION_OWNER_PATHS[3]: ("d90b5647de1cf290d3b7dbe20a805983c75f0fcf",
+        "51e2cea236dd0a880c7243b2f9ccbd558c6c70f16f03ec0efa274f19d3d105ff", 192971),
+}
+CONTINUATION_OWNER_CURRENT = {'docs/provenance/v5-research-continuations/EVIDENCE_BINDINGS.json': ('d3442f385e96d16d83bdb6de3c3d22d9069a7d2d',
+                                                                      'c379b06184091ef65c71ec53836c45d82faf18edc72f0e66a5b854a9631f086c',
+                                                                      2124501),
+ 'docs/provenance/v5-research-continuations/README.md': ('25b47c9b01a2e1bff5d98b66e95968a94cbfd8ca',
+                                                         '1afc3bdde01b03fdfa58b325d2089f95d972554a1af63ce1e7ca231501c5b6f0',
+                                                         47487),
+ 'docs/provenance/v5-research-continuations/SOURCE_MAP.json': ('a98763ceb0e638bd055b77c83f7e7b9899c52930',
+                                                               'b434046568c41e56d060282975e7e7829bbed77b85bfb4e47108e9810da93384',
+                                                               5960211),
+ 'experiments/orthemology-v5-continuations/registry.json': ('d8a37112646af3922ffe6a7ee86d1ded72996b54',
+                                                            '53eff919af5543ce3750f988c0b1c10422dd3ba883f9fbfc77b4840650a86258',
+                                                            175135)}
+
+CONTINUATION_OWNER_SPARSE_PRIOR = dict(CONTINUATION_OWNER_CURRENT, **{
+    'docs/provenance/v5-research-continuations/README.md': ('b0195c6b5f1db05ff38ba01ced7390a7d46929dc', 'fc1eb9a3fb03e334670571838c045e46d16dd5a770993a796f323b0711d52b3e', 52968)})
+
+
+def check_continuation_owner_edition(repo, baseline_rows):
+    """Bind four existing owners to one exact original or consolidated edition."""
+    if not set(CONTINUATION_OWNER_PATHS).intersection(baseline_rows):
+        return {}, []
+    try:
+        for path in CONTINUATION_OWNER_PATHS:
+            blob, _, size = CONTINUATION_OWNER_ORIGINAL[path]
+            row = baseline_rows.get(path, {})
+            if (row.get("kind"), row.get("mode"), row.get("git_oid"), row.get("bytes")) != (
+                    "blob", "100644", blob, size):
+                raise ValueError("original census identity differs: " + path)
+        # This fixed metadata query has its own native scope; it is not a diff
+        # request covered by HeldReaderDiffBoundary and requests no blob bodies.
+        staged = subprocess.run(
+            ["git", "--no-replace-objects", "--literal-pathspecs", "ls-files", "--stage", "-z",
+             "--", *CONTINUATION_OWNER_PATHS], cwd=repo, capture_output=True, check=False)
+        if staged.returncode:
+            raise ValueError("could not inspect the four staged owners")
+        edition = None
+        for candidate in (CONTINUATION_OWNER_ORIGINAL, CONTINUATION_OWNER_CURRENT, CONTINUATION_OWNER_SPARSE_PRIOR):
+            expected = b"".join(("100644 " + candidate[path][0] + " 0\t" + path + "\0").encode()
+                                for path in CONTINUATION_OWNER_PATHS)
+            if staged.stdout == expected:
+                edition = candidate
+                break
+        if edition is None:
+            raise ValueError("staged owners are not one complete accepted edition")
+        for ancestor in (Path(repo), *Path(repo).parents):
+            if ancestor.is_symlink():
+                raise ValueError("continuation owner root contains a symlink")
+        for path in CONTINUATION_OWNER_PATHS:
+            blob, identity, size = edition[path]
+            node = safe_path(repo, path)
+            fd = os.open(node, os.O_RDONLY | os.O_NOFOLLOW)
+            with os.fdopen(fd, "rb") as stream:
+                before = os.fstat(stream.fileno())
+                if (not stat.S_ISREG(before.st_mode) or before.st_nlink != 1
+                        or before.st_mode & 0o111 or before.st_size != size):
+                    raise ValueError("owner is not an ordinary exact-sized file: " + path)
+                body = stream.read()
+                after = os.fstat(stream.fileno())
+            fields = ("st_dev", "st_ino", "st_mode", "st_nlink", "st_size", "st_mtime_ns", "st_ctime_ns")
+            if any(getattr(before, name) != getattr(after, name) for name in fields):
+                raise ValueError("owner changed during the ordinary read: " + path)
+            actual_blob = hashlib.sha1(b"blob " + str(len(body)).encode() + b"\0" + body).hexdigest()
+            if (actual_blob, hashlib.sha256(body).hexdigest(), len(body)) != (blob, identity, size):
+                raise ValueError("worktree and staged owner editions differ: " + path)
+        if edition is CONTINUATION_OWNER_ORIGINAL:
+            return {}, []
+        return {path: {"path": path, "kind": "blob", "mode": "100644", "git_oid": edition[path][0],
+                       "bytes": edition[path][2]} for path in CONTINUATION_OWNER_PATHS}, []
+    except (ValueError, OSError) as exc:
+        return {}, ["continuation-owner: " + str(exc)]
+
+
+def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths=(), navigation_paths=(),
+                            continuation_owners=(), fixture_owners=()):
     """New/changed tracked sources cannot disappear behind a frozen census.
 
-    The index and worktree are compared with the approved source commit.
-    Operational reader edits stay under their existing exact owners/checks;
-    new or changed corpus material needs an explicit finite baseline/coverage
-    update. This is not a source classifier or an external-literature crawl.
+    Compare the index and actual worktree separately with the approved commit.
+    A combined diff alone can hide a staged change behind worktree absence or
+    restored bytes. Operational reader edits retain their exact owners/checks;
+    new corpus material needs a finite source/work/support admission. This is
+    not a source classifier or an external-literature crawl.
     """
-    result = subprocess.run(
-        ["git", "diff", "--no-ext-diff", "--no-textconv", "--no-renames",
-         "--name-only", "-z", baseline, "--"],
-        cwd=repo, capture_output=True, check=False,
-    )
-    if result.returncode:
-        return ["corpus-currentness: could not compare the approved corpus with the tracked candidate"]
-    try:
-        paths = result.stdout.decode("utf-8").rstrip("\0").split("\0")
-    except UnicodeError:
-        return ["corpus-currentness: a tracked change has an unrepresentable path"]
-    return ["corpus-currentness: " + path +
-            " requires source-baseline and work/support disposition review"
-            for path in sorted(set(paths) - REFACTOR_EDIT_PATHS) if path]
+    errors = []
+    editable = REFACTOR_EDIT_PATHS | set(admitted_paths)
+    duplicate_paths = {}
+    continuation_paths = None
+    for cached in (True, False):
+        result = readonly_git_diff(repo,
+            ["git", "diff", *(["--cached"] if cached else []),
+             "--no-ext-diff", "--no-textconv", "--no-renames",
+             "--name-status", "-z", baseline, "--"],
+        )
+        if result.returncode:
+            return ["corpus-currentness: could not compare the approved corpus with the index/worktree candidate"]
+        try:
+            values = result.stdout.decode("utf-8").rstrip("\0").split("\0") if result.stdout else []
+            if len(values) % 2:
+                raise ValueError("malformed tracked change")
+        except (UnicodeError, ValueError):
+            return ["corpus-currentness: a tracked change has an unrepresentable path or status"]
+        for prefix, qualify in ((PMR007_DEEP_PREFIX, pmr007_deep_duplicate_paths),
+                                (PMR007_ROUNDS_PREFIX, pmr007_rounds_duplicate_paths)):
+            if prefix not in duplicate_paths and any(
+                    status == "D" and path.startswith(prefix + "/")
+                    for status, path in zip(values[::2], values[1::2])):
+                try:
+                    duplicate_paths[prefix] = qualify(Path(repo))
+                except (ValueError, OSError, UnicodeError) as exc:
+                    errors.append("corpus-currentness: duplicate evidence: " + str(exc))
+                    duplicate_paths[prefix] = set()
+        # Exact finite aliases retain original identity and a present, unchanged
+        # provider. A class qualifier admits actual absences only; neither a
+        # staged modification nor a corrupt present alias gains an allowance.
+        for key, population, qualify in (
+                ("checkpoint-copy", CHECKPOINT_COPY_PATHS, checkpoint_duplicate_paths),
+                ("checkpoint-record", CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths),
+                ("checkpoint-package", CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_duplicate_paths),
+                ("checkpoint-code", CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_duplicate_paths)):
+            if key not in duplicate_paths and any(
+                    status == "D" and path in population
+                    for status, path in zip(values[::2], values[1::2])):
+                try:
+                    duplicate_paths[key] = qualify(Path(repo))
+                except (ValueError, OSError, UnicodeError) as exc:
+                    errors.append("corpus-currentness: " + key + " evidence: " + str(exc))
+                    duplicate_paths[key] = set()
+        rounds_navigation = set()
+        if any((status == "D" and path.startswith(PMR007_ROUNDS_PREFIX + "/"))
+               or (status == "M" and path == PMR007_ROUNDS_FORMALIZATION)
+               for status, path in zip(values[::2], values[1::2])):
+            try:
+                rounds_navigation.add(pmr007_rounds_formalization_navigation(Path(repo), indexed=cached))
+            except (ValueError, OSError, UnicodeError) as exc:
+                errors.append("corpus-currentness: rounds navigation: " + str(exc))
+        if continuation_paths is None and any(
+                status == "D" and path.startswith(CONTINUATION_COPY_ROOT)
+                for status, path in zip(values[::2], values[1::2])):
+            try:
+                continuation_paths = continuation_duplicate_paths(Path(repo))
+            except (ValueError, OSError, UnicodeError) as exc:
+                errors.append("corpus-currentness: continuation copy evidence: " + str(exc))
+                continuation_paths = set()
+        administrative_paths = set()
+        if any(status == "D" and path in ADMIN_RECORD_PATHS
+               for status, path in zip(values[::2], values[1::2])):
+            try:
+                administrative_paths = administrative_record_absences(repo)
+            except (ValueError, OSError) as exc:
+                errors.append("corpus-currentness: frozen administrative evidence: " + str(exc))
+        administrative_guides = set()
+        for path in ADMIN_GUIDES:
+            if any(status == "M" and name == path for status, name in zip(values[::2], values[1::2])):
+                try:
+                    administrative_guide_source_bytes(repo, path)
+                    administrative_guides.add(path)
+                except (ValueError, OSError) as exc:
+                    errors.append("corpus-currentness: administrative guide: " + str(exc))
+        allowed_duplicates = set().union(*duplicate_paths.values())
+        errors.extend("corpus-currentness: " + path +
+                      " requires source-baseline and work/support disposition review"
+                      for status, path in zip(values[::2], values[1::2])
+                      if path not in editable and not
+                      ((status == "D" and path in HISTORICAL_PROSE and path in historical_paths)
+                        or (status == "D" and path in allowed_duplicates)
+                        or (status == "D" and path in administrative_paths)
+                        or (status == "D" and path in (continuation_paths or ()))
+                        or (status == "M" and path in rounds_navigation)
+                        or (status == "M" and path in administrative_guides)
+                         or (status == "M" and path in CONTINUATION_OWNER_PATHS
+                             and path in continuation_owners)
+                         or (status == "M" and path in FIXTURE_CONSUMER_ORIGINAL
+                             and path in fixture_owners)
+                        or (status == "M" and path in {MEDIATOR_GUIDE, *TYPED_GUIDES}
+                            and path in navigation_paths)))
+    return list(dict.fromkeys(errors))
 
 
 def check(repo, owners, cross):
@@ -410,8 +1384,42 @@ def check(repo, owners, cross):
     except (KeyError, ValueError, OSError, UnicodeError) as exc:
         fail("baseline", str(exc))
         return errors
-    errors.extend(check_corpus_currentness(repo, owners["baseline"]["commit"]))
     indexed = {row["path"]: row for row in rows}
+    continuation_owners, continuation_errors = check_continuation_owner_edition(repo, indexed)
+    errors.extend(continuation_errors)
+    fixture_owners, fixture_status, fixture_errors = check_fixture_consumer_edition(repo, indexed)
+    errors.extend(fixture_errors)
+    additions, addition_errors = check_source_additions(repo, indexed, owners, cross)
+    errors.extend(addition_errors)
+    historical, historical_errors = check_historical_sources(repo, indexed, owners, cross, additions)
+    errors.extend(historical_errors)
+    navigation = {}
+    if fixture_status is not None:
+        navigation[FIXTURE_STATUS_PATH] = fixture_status
+    if PMR007_ROUNDS_PARENT in indexed:
+        try:
+            navigation[PMR007_ROUNDS_PARENT] = pmr007_rounds_parent_source_bytes(repo)
+        except (ValueError, OSError) as exc:
+            fail("navigation-source", PMR007_ROUNDS_PARENT + ": " + str(exc))
+    if MEDIATOR_GUIDE in indexed:
+        try:
+            navigation[MEDIATOR_GUIDE] = mediator_guide_source_bytes(repo, allow_original=True)
+        except (ValueError, OSError) as exc:
+            fail("navigation-source", MEDIATOR_GUIDE + ": " + str(exc))
+    for path in ADMIN_GUIDES:
+        if path in indexed:
+            try:
+                navigation[path] = administrative_guide_source_bytes(repo, path)
+            except (ValueError, OSError) as exc:
+                fail("navigation-source", path + ": " + str(exc))
+    for path in TYPED_GUIDES:
+        if path in indexed:
+            try:
+                navigation[path] = typed_guide_source_bytes(repo, path, allow_original=True)
+            except (ValueError, OSError) as exc:
+                fail("navigation-source", path + ": " + str(exc))
+    errors.extend(check_corpus_currentness(repo, owners["baseline"]["commit"], additions,
+                                          historical, navigation, continuation_owners, fixture_owners))
     errors.extend(check_collection_dispositions(rows, owners, cross))
     errors.extend(check_collection_result_routes(repo, owners, cross))
     if owners["baseline"].get("tree"):
@@ -451,12 +1459,13 @@ def check(repo, owners, cross):
             fail("owner", str(group.get("key")) + " has no discovery owner")
         discovered_owners.update(group.get("owners", []))
     for path in sorted(discovered_owners):
-        row = indexed.get(path)
+        row = continuation_owners.get(path) or indexed.get(path)
         if not row or row["kind"] != "blob" or row["mode"] not in ("100644", "100755"):
             fail("owner", str(path) + " is not a regular pinned discovery owner")
             continue
         try:
-            body = safe_path(repo, path).read_bytes()
+            body = (navigation[path] if path in (PMR007_ROUNDS_PARENT, FIXTURE_STATUS_PATH) and path in navigation
+                    else safe_path(repo, path).read_bytes())
             raw = b"blob " + str(len(body)).encode("ascii") + b"\0" + body
             digest = (hashlib.sha1(raw) if len(row["git_oid"]) == 40 else hashlib.sha256(raw)).hexdigest()
             if (digest != row["git_oid"]
@@ -474,19 +1483,23 @@ def check(repo, owners, cross):
     for key, source in sources.items():
         try:
             path = source["path"]
-            body = safe_path(repo, path).read_bytes()
+            body = (historical[path] if path in historical else navigation[path]
+                    if path in navigation else administrative_record_bytes(repo, path)
+                    if path in ADMIN_RECORD_PATHS else safe_path(repo, path).read_bytes())
         except (KeyError, ValueError, OSError) as exc:
             fail("unsafe-source", str(key) + ": " + str(exc))
             continue
-        row = indexed.get(path)
+        row = indexed.get(path) or additions.get(path)
         if not row or row["kind"] != "blob" or row["mode"] not in ("100644", "100755"):
             fail("unsafe-source", path + " is outside the regular-file baseline")
         else:
             raw = b"blob " + str(len(body)).encode("ascii") + b"\0" + body
             oid = (hashlib.sha1(raw) if len(row["git_oid"]) == 40 else hashlib.sha256(raw)).hexdigest()
-            if oid != row["git_oid"]:
-                fail("baseline-source", path + " differs from the independently pinned source")
-            mode = "100755" if safe_path(repo, path).stat().st_mode & 0o111 else "100644"
+            if oid != continuation_owners.get(path, row)["git_oid"]:
+                fail("baseline-source" if path in indexed else "source-addition",
+                     path + " differs from the independently bound source")
+            mode = ("100644" if path in historical or path in ADMIN_RECORD_PATHS else
+                    "100755" if safe_path(repo, path).stat().st_mode & 0o111 else "100644")
             if mode != row["mode"]:
                 fail("source-mode", path + " changed executable mode")
         if hashlib.sha256(body).hexdigest() != source.get("sha256"):

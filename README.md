@@ -1,6 +1,28 @@
 # Orthemology
 
-Orthemology is a proposed theory of how concrete cases get correctly classified, handled, and audited by rule-governed processes — human, institutional, or automated.
+Orthemology is a research programme on the conditions of intelligibility, evaluation and warranted cognition. Its scholarship connects metaphysical arguments about grounding and necessary being, accounts of normativity and cognitive correction, and mathematical studies of information, inquiry, collective judgement and formal proof. Individual works state their assumptions, conclusions and scientific status.
+
+## Consolidated scholarly works
+
+These complete public expositions contain the arguments and proofs in ordinary Markdown. Open them directly; no custom retrieval software is required.
+
+| Subject | Scholarly treatment |
+|---|---|
+| Information, inquiry and certified action | [Information retained by inquiry](mathematics/information-and-inquiry.md): predictive reduction, posterior comparisons, inquiry-value counterexamples, Fisher dynamics, certificate selection and finite temporal guarantees. Graph-constrained information, exact inquiry costs and complete finite proof compilation extend the same work. |
+| Received existence, necessary being and original-source unity | [Received actuality, intrinsic necessity, and original source unity](foundations/received-actuality-and-intrinsic-necessity.md): causal intelligibility and its limits, complete original-production arguments, connected-field coverage, explanatory countermodels, centered knowledge and informed practical agency. |
+| Objective normativity, proper function and wise direction | [Objective normativity and corrective cognition](foundations/objective-normativity-and-corrective-cognition.md): complete philosophical arguments, finite calibration and intervention proofs, intrinsic reasons, actual authority, undertakings and stronger rival comparisons. |
+| Recognition, knowledge and corrective inquiry | [Recognition, warrant, defeat and restoration](epistemology/recognition-warrant-and-restoration.md): positive cognitive grounds, complete relevant-inference proofs and countermodels, necessary targets, proper function, cumulative evidence, surviving warrant and finite restoration/identification results. |
+| Logical identity, impredicative encodings and formal witnesses | [Impredicative encodings, typed identity and proof witnesses](logic/encodings-and-witnesses.md): the actual dependent calculus, compiler and fixed-witness proofs, closed-term decisions, full model constructions and their exact nonderivability boundaries. |
+| Collective inquiry, strategy and coordination | [Collective inquiry: information, strategy and coordinated judgment](mathematics/collective-inquiry-and-strategic-coordination.md): distributed evidence, scalar and vector games, coordination bounds, statistical identification, conditional restoration, information-compatible transfer, finite-memory learning and fresh-innovation limits, with their complete proofs and counterexamples. |
+| Tensor moments, realizability and corrective dynamics | [Tensor moments and corrective dynamics](mathematics/tensor-moments-and-corrective-dynamics.md): exact finite closure, coercive existence, signed and cumulative control, hidden-coordinate limits, complete countermodels and effective recovery. |
+| Coherent forecasts and common repair | [Common repair and the geometry of coherent forecasts](mathematics/common-repair-and-geometric-obstructions.md): dependency blocks, exact and approximate repair, complete minimax arguments, constructive polynomial proofs and sharp truth-geometry counterexamples. |
+| Source interpretation and the cost of reacquisition | [Source Context, Reacquisition, and Bounded Handoff](epistemology/source-context-and-reacquisition.md): exact fragment effects, original authorial roles, weighted source access, explicit resource costs and conditional bounded handoff. |
+| Measure, effective access and finite evidence | [Measure, computability and finite warrant](mathematics/measure-computability-and-finite-warrant.md): diffuse and atomic laws, exact computability limits, finite-state algorithms, compact effective access and strict finite warrant. |
+| Physical communication and stateful continuation | [Physical realisation and continuation](mathematics/physical-realisation-and-continuation.md): robust channel thresholds, retained state, digital and continuous realisations, compatible composition, viability and progress. |
+
+The [independent scientific review and incorporation record](docs/scientific-consolidation-review.md) identifies exact editions, predecessor coverage, corrected failures and remaining removal gates. These are new consolidated expositions; they do not silently amend an accepted paper or confer owner adoption. The sources below remain available during the scientific consolidation.
+
+Accepted Papers 1–10 retain their exact accepted editions and authority. Paper 11's original n-person noetic-field objective remains unfinished, alongside distinct proposed constructive-correction companions. Private controlling editions require an authorised private scholarly receiving stage and separate public-release permission; a public summary cannot substitute for their actual content.
 
 ## What to read
 
@@ -9,7 +31,7 @@ Start with a paper or a research question. Each link below opens a primary readi
 | Start here | Read | What it investigates |
 |---|---|---|
 | **The main framework** | [Manuscript](manuscript/orthemma-ortheme-systems-revised-draft.md) · [PDF](artifacts/orthemma-ortheme-systems-draft.pdf) | Correctness, evidence and correction in a concrete episode; why a correct answer and an adequate method are different achievements. |
-| **The formal reference** | [Composite PDF](artifacts/orthemic-core-reference-draft.pdf) · [Core](theory/orthemic-core-formalization.md) · [Multi-actor extension](theory/orthemic-multi-actor-conflict-note.md) | The records, verdicts and composition conditions that make the framework precise. |
+| **The formal reference** | [Composite PDF](artifacts/orthemic-core-reference-draft.pdf) · [Core](theory/orthemic-core-formalization.md) · [Collective inquiry](mathematics/collective-inquiry-and-strategic-coordination.md#1-shared-inquiry-and-distributed-access) | The records, verdicts and composition conditions that make the framework precise. |
 | **Information and composition** | [Paper PDF](theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.pdf) · [Catalogue](docs/reader/PAPER-CATALOGUE.md#information-and-composition) | What local observations determine, what they leave unknown, and when a lawful change of access can settle a question. |
 | **Inquiry and retained information** | [Continuation-complete manuscript](theory/lineages/h-continuation/continuation_complete_orthing.md) | Sharp information loss, predictive memory and what a representation must preserve for future inquiries. |
 | **Foundations and intelligibility** | [Manuscript](companion/orthability-and-the-ground-of-intelligibility.md) · [PDF](artifacts/orthability-ground-of-intelligibility-draft.pdf) | A labelled philosophical argument from genuine evaluability, with its substantive premises and later qualifications. |

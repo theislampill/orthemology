@@ -26,11 +26,26 @@ Deterministic; offline.
 import io
 import json
 import hashlib
+from functools import lru_cache
+from pathlib import Path
 
 from validate_repo import (load_source_map, original_packet_locator,
                            load_successor_source_map, successor_packet_locator,
                            successor_origin_document, markdown_link_targets,
                            strip_markdown_math)
+from resolve_t20_v6_source import (
+    HISTORICAL_PROSE, HISTORICAL_PROSE_REVISIONS, historical_source_bytes, HISTORICAL_PROSE_REVISION,
+    CONTINUATION_COPY_ROOT, continuation_copy_bytes,
+    CHECKPOINT_COPY_PATHS, checkpoint_copy_bytes,
+    CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_copy_bytes,
+    CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_copy_bytes,
+    ADMIN_RECORD_PATHS, administrative_record_bytes,
+    CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_copy_bytes,
+)
+from validate_ar8r_reconciliation import (
+    PMR007_DEEP_PREFIX, _pmr007_deep_original_members,
+    _pmr007_deep_duplicate_map, _pmr007_deep_regular_file,
+)
 import os
 import re
 import subprocess
@@ -178,9 +193,170 @@ def _committed_plans():
     return {path for path in paths if PLAN_RE.fullmatch(path)}
 
 
+PROJECTION_MANIFEST = "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json"
+
+
+@lru_cache(maxsize=1)
+def _projection_reference_rows(body):
+    """Cache parsing by complete immutable bytes, never a filesystem verdict."""
+    def unique(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError("duplicate projection metadata key")
+            result[key] = value
+        return result
+    document = json.loads(body, object_pairs_hook=unique)
+    rows = {}
+    for row in document["objects"]:
+        rows.setdefault(row.get("repository_path"), []).append(row)
+    return rows
+
+
+def _historical_projection_reference(src, cited):
+    """Resolve one original-coordinate field through its exact retained body.
+
+    This does not make an ordinary reader link elsewhere resolve through Git.
+    The reader and T20 gates independently preserve the complete manifest's
+    source universe, roles and authority; this gate authenticates the cited body.
+    """
+    if src != PROJECTION_MANIFEST or not cited.startswith(PMR007_DEEP_PREFIX + "/"):
+        return None
+    try:
+        root = Path(ROOT)
+        members = _pmr007_deep_original_members(root)
+        duplicates = _pmr007_deep_duplicate_map(members)
+        if cited not in duplicates:
+            return None  # Distinct original metadata retains ordinary path rules.
+        manifest = _pmr007_deep_regular_file(root, PROJECTION_MANIFEST)
+        selected = _projection_reference_rows(manifest.read_bytes()).get(cited, [])
+        if len(selected) != 1:
+            return False
+        row = selected[0]
+        identity = members[cited.removeprefix(PMR007_DEEP_PREFIX + "/")]
+        if (row.get("disposition") != "REUSE"
+                or row.get("repository_revision") != HISTORICAL_PROSE_REVISION
+                or row.get("source_sha256") != identity or row.get("public_sha256") != identity
+                or row.get("publication_basis") !=
+                   "exact_existing_public_git_blob; retained_counterpart_qualified_by_snapshot_validator"):
+            return False
+        current = _pmr007_deep_regular_file(root, duplicates[cited])
+        body = current.read_bytes()
+        blob = hashlib.sha1(b"blob " + str(len(body)).encode() + b"\0" + body).hexdigest()
+        if (current.stat().st_mode & 0o111 or hashlib.sha256(body).hexdigest() != identity
+                or row.get("source_bytes") != len(body) or row.get("public_bytes") != len(body)
+                or row.get("git_blob") != blob):
+            return False
+        original = subprocess.run(
+            ["git", "--no-replace-objects", "cat-file", "blob", HISTORICAL_PROSE_REVISION + ":" + cited],
+            cwd=root, capture_output=True, check=False)
+        if original.returncode or original.stdout != body:
+            return False
+        target = root
+        for part in cited.split("/"):
+            target = target / part
+            if target.is_symlink():
+                return False
+        if target.exists() and (not target.is_file() or target.stat().st_mode & 0o111
+                                or target.read_bytes() != body):
+            return False
+        return True
+    except (KeyError, TypeError, ValueError, OSError):
+        return False
+
+
+def _checkpoint_reference(src, cited):
+    """Authenticate a finite root/source-relative coordinate before exists()."""
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for candidate in candidates:
+        if candidate in CHECKPOINT_CODE_COPY_PATHS:
+            try:
+                checkpoint_code_copy_bytes(ROOT, candidate)
+                return True
+            except (ValueError, OSError):
+                return False
+        if candidate in CHECKPOINT_PACKAGE_COPY_PATHS:
+            try:
+                checkpoint_package_copy_bytes(ROOT, candidate)
+                return True
+            except (ValueError, OSError):
+                return False
+        if candidate in CHECKPOINT_RECORD_COPY_PATHS:
+            try:
+                checkpoint_record_copy_bytes(ROOT, candidate)
+                return True
+            except (ValueError, OSError):
+                return False
+        if candidate in CHECKPOINT_COPY_PATHS:
+            try:
+                checkpoint_copy_bytes(ROOT, candidate)
+                return True
+            except (ValueError, OSError):
+                return False
+    return None
+
+
+def _administrative_reference(src, cited):
+    """Resolve only enumerated frozen contracts/receipts before current exists()."""
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for path in candidates:
+        if path in ADMIN_RECORD_PATHS:
+            try:
+                administrative_record_bytes(ROOT, path)
+                return True
+            except (ValueError, OSError):
+                return False
+    return None
+
+
 def _resolves(src, cited):
+    administrative = _administrative_reference(src, cited)
+    if administrative is not None:
+        return administrative
+    # These exact incorporated originals retain immutable provenance/evidence
+    # references. Authenticate history and any present copy before ordinary
+    # existence checks; no unrelated path obtains a missing-body exemption.
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for candidate in candidates:
+        if candidate in HISTORICAL_PROSE:
+            try:
+                historical_source_bytes(ROOT, candidate, HISTORICAL_PROSE_REVISIONS[candidate],
+                                        HISTORICAL_PROSE[candidate][0])
+                return True
+            except (ValueError, OSError):
+                return False
+    checkpoint = _checkpoint_reference(src, cited)
+    if checkpoint is not None:
+        return checkpoint
+    historical = _historical_projection_reference(src, cited)
+    if historical is not None:
+        return historical
     if os.path.exists(os.path.join(ROOT, cited)):
         return True
+    if cited.startswith(CONTINUATION_COPY_ROOT) and cited.endswith('.lean'):
+        try:
+            continuation_copy_bytes(ROOT, cited)
+            return True
+        except (ValueError, OSError):
+            return False
     directory = os.path.dirname(src)
     while True:
         if os.path.exists(os.path.normpath(os.path.join(ROOT, directory, cited))):

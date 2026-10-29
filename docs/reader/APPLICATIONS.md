@@ -51,6 +51,8 @@ To apply it, establish the conditional-independence cut and account for side inf
 
 ## Choosing an equality contract for a proof-carrying representation
 
+Current exposition: [The atom/application bridge][typed-t13-bridge-current].
+
 The [identity work sequence](PAPER-CATALOGUE.md#identity-representations-and-finite-proof) gives a concrete design comparison. An exposed polynomial and an opaque atom can evaluate to the same raw term yet differ in whether they carry the specified type certificate. Replacing one with the other therefore needs more than evaluation equality. The [bridge construction][t13-bridge] supplies one particular closed-conversion remedy; it does not preserve every proof claim by declaration.
 
 A second question concerns `I` and `SKK`. The original semantics agrees at the selected polymorphic carrier, but the old derivation rules do not inhabit the corresponding identity. The [typed HasE repair][t14-repair] is a separately named way to derive that identity while keeping raw conversion and the old judgments unchanged. A tool using the repair would have to identify its rule set, check its side conditions and retain that distinction in exchanged certificates. The reader guide proposes no runtime implementation or automatic migration.
@@ -252,10 +254,16 @@ An agent adapting a proof to a new context can use the [raw substitution theorem
 
 A translation that needs rule-construction history should retain the [explicit old-rule tree](PAPER-CATALOGUE.md#typed-telescopes-with-derived-heterogeneous-soundness), not promise to recover it from an erased Prop proof. The [recursive-All comparison](PAPER-CATALOGUE.md#recursive-dependent-all-with-two-distinct-binder-sorts) broadens admissible retained trees without changing the nucleus's earlier restriction. These are proof-level capabilities; delivering a parser or serialised certificate transformer remains a separate engineering obligation. A term's correct outputs alone do not discharge the [source representation question](PAPER-CATALOGUE.md#an-identity-application-without-a-normal-unapplied-source).
 
+## Replacing a physical support while preserving the task
+
+Use [Physical realisation and continuation](../../mathematics/physical-realisation-and-continuation.md) to state what the replacement must retain: outputs, internal state, pending effects, admissible inputs, timing and resource budgets. A successful message transfer can still lose the information needed for the next action; the [two-step export example](../../mathematics/physical-realisation-and-continuation.md#62-a-one-bit-export-can-lose-a-two-step-state) makes that failure explicit.
+
+First identify future-behaviour classes conditional on retained side information. Then check the actual encoder, channel and initialiser, the joint resources of composed mechanisms, and a single policy that maintains progress. The [digital/continuous parity construction](../../mathematics/physical-realisation-and-continuation.md#8-a-robust-stateful-witness) is a worked mathematical witness with explicit disturbance margins. Empirical deployment needs its own calibrated device and held-out observations; the theorem alone supplies neither a physical experiment nor an identification of personal or conscious continuity.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md
-[coordination]: ../../experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md
+[coordination]: ../../mathematics/collective-inquiry-and-strategic-coordination.md#64-exact-finite-alphabet-capacity
 [join]: ../../research/t20-v6-20261012/research-v6/root_math/occurrence_feasibility_join/REPORT.md
 [occurrences]: ../../experiments/orthemology-v5-successors/source-store/67f405c245093546dd26c142db7fd09eea1513b9fb853521d496bca7a70e8a62/source_rows.json
 [missing]: ../../experiments/orthemology-v5-successors/source-store/8bb522943f659e2f50a97fe8987f48d851a7fc1577f020995ac43dc31ebfe115/MISSING_OUTCOME_ANALYSIS_v1.md
@@ -281,7 +289,8 @@ A translation that needs rule-construction history should retain the [explicit o
 [app-writeback]: ../../applications/agentic-runtime/HERMES-WRITEBACK-ADOPTION-PROFILE.yaml
 [app-collective]: ../../applications/agentic-runtime/COLLECTIVE-SOMNUS-TRANSCLUSION-PROFILE.yaml
 
-[t13-bridge]: ../../experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
+[t13-bridge]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
+[typed-t13-bridge-current]: ../../logic/encodings-and-witnesses.md#104-what-the-bridge-repairs
 
 [t14-repair]: ../../experiments/orthemology-v5-successors/source-store/4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51/ExtensionalRepairTheorems.lean
 

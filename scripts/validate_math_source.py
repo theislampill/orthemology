@@ -18,7 +18,9 @@ Deterministic, offline. Guards the math-source discipline the audit requires:
      exact and bidirectional;
   6. every inline-code occurrence in the seven publication sources has one
      file/locus/occurrence classification; and
-  7. the deferred publication profile is schema-valid and venue-neutral.
+  7. the deferred publication profile is schema-valid and venue-neutral; and
+  8. current scholarly Markdown math fences do not contain the raw less-than
+     followed by a letter that caused actual hosted display failures.
 
 This is a typography/consistency gate. It establishes no empirical or
 theological claim, and it does not change any symbol's meaning (Decision 0005).
@@ -31,6 +33,7 @@ import re
 import sys
 import unicodedata
 from collections import Counter
+from markdown_it import MarkdownIt
 
 try:
     import yaml
@@ -905,6 +908,60 @@ def check(name, ok, detail=""):
         FAILS.append(name)
 
 
+def validate_scholarly_display_source(root=ROOT):
+    """Reject the observed raw-HTML-like delimiter risk in current math fences.
+
+    The existing owner map supplies the current scholarly Markdown population.
+    This narrow GitHub source guard neither changes historical publication
+    inputs nor substitutes for observing actual rendered mathematics.
+    """
+    root = os.path.realpath(os.fspath(root))
+    owner_path = os.path.join(
+        root, "docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json"
+    )
+    try:
+        with open(owner_path, encoding="utf-8") as stream:
+            owner = json.load(stream)
+    except (OSError, UnicodeError, ValueError) as exc:
+        return ["scholarly source owner load: %s" % exc]
+    rows = owner.get("source_additions") if isinstance(owner, dict) else None
+    if not isinstance(rows, list) or any(not isinstance(row, dict) for row in rows):
+        return ["scholarly source owner requires source_additions records"]
+    selected = [row for row in rows if row.get("role") == "work-source"]
+    if not selected:
+        return ["scholarly source owner has no current works"]
+    issues = []
+    parser = MarkdownIt("commonmark")
+    for row in selected:
+        relative = row.get("path")
+        if (not isinstance(relative, str) or not relative or "\\" in relative
+                or "\0" in relative or relative.startswith("/")
+                or any(part in ("", ".", "..") for part in relative.split("/"))):
+            issues.append("invalid scholarly source path: %r" % relative)
+            continue
+        path = os.path.realpath(os.path.join(root, relative))
+        if os.path.commonpath((root, path)) != root:
+            issues.append("scholarly source escapes repository: " + relative)
+            continue
+        if not relative.endswith(".md"):
+            continue  # This guard concerns Markdown fences, not other formats.
+        try:
+            with open(path, encoding="utf-8") as stream:
+                text = stream.read()
+        except (OSError, UnicodeError) as exc:
+            issues.append("scholarly source load %s: %s" % (relative, exc))
+            continue
+        for token in parser.parse(text):
+            if (token.type == "fence" and token.info.strip() == "math"
+                    and re.search(r"<[A-Za-z]", token.content)):
+                issues.append(
+                    "%s:%d: literal < before a letter in displayed math; "
+                    "use an explicit TeX relation such as \\lt{}"
+                    % (relative, token.map[0] + 1)
+                )
+    return issues
+
+
 def read(rel):
     p = os.path.join(ROOT, rel)
     return io.open(p, encoding="utf-8").read() if os.path.exists(p) else ""
@@ -975,6 +1032,10 @@ def main():
           not bad_accents, "; ".join(bad_accents[:5]))
     check("every math source span translates through the strict subset",
           not bad_translate, "; ".join(bad_translate[:5]))
+
+    scholarly_display_issues = validate_scholarly_display_source(ROOT)
+    check("current scholarly math fences avoid raw HTML-like less-than operands",
+          not scholarly_display_issues, "; ".join(scholarly_display_issues[:5]))
 
     # 5. migration manifest covers every build source doc
     mig = yaml.safe_load(read("docs/math-migration-status.yaml"))

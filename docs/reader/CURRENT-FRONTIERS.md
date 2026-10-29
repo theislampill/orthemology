@@ -51,7 +51,7 @@ The [fixed-fibre sidecar result][sidecar] settles its exact contract: preserving
 
 That result does not settle all neighbouring questions. A finite discretisation changes the task to a restricted or approximate one. Posterior-answer-only preservation is weaker. A separately chosen reduced metric changes the contract. A globally continuous minimal chart across varying-rank strata is not asserted by the fixed-fibre corollary.
 
-**What advances a neighbouring question:** first specify which answers, velocities, norms or dynamics must be preserved, and which approximation is allowed. Do not infer a universal memory requirement from the strongest contract, or erase the actual geometric result merely because a noetic interpretation is not established. The [controlling source][fisher] separates these preservation levels.
+**What advances a neighbouring question:** first specify which answers, velocities, norms or dynamics must be preserved, and which approximation is allowed. Do not infer a universal memory requirement from the strongest contract, or erase the actual geometric result merely because a noetic interpretation is not established. The [current preservation analysis](../../mathematics/information-and-inquiry.md#8-preserving-one-objective-versus-preserving-an-entire-metric) separates these preservation levels; the [original finite-audit edition][fisher] remains separately available.
 
 ## Complete mediation and actual coordination
 
@@ -85,6 +85,8 @@ The [learning contract][app-coupling] requires explicit per-claim transport acro
 The [agentic-runtime profiles][app-runtime-outlines] explicitly remain unimplemented outlines. Their next work is proposal-specific source and authority verification followed by bounded implementation and testing; publishing these profiles does not satisfy it. These engineering/interpretation obligations are distinct from proving another theorem or reclassifying any original philosophical argument. The [application catalogue](PAPER-CATALOGUE.md#application-studies-contracts-and-runtime-outlines) distinguishes these proposals from supplied worked examples and mathematical contributions.
 
 ## Identity obstructions, repairs and later checkers
+
+Current exposition: [The historical residual identity question][typed-t13-residual-current]; [Full-rule separation and the closed criterion][typed-t14-separation-current].
 
 The [Thirteenth residual note][t13-residual] really did leave the all-inhabitant `I/SKK` question unresolved. That is historical, not the last word on the exact target. The [Fourteenth written development][t14-separation] and its [formal component][t14-separation-lean] address the all-rule obstruction in both original judgments. A reader should not be sent back to prove that same negative result simply because the earlier note retains a pending header.
 
@@ -190,14 +192,20 @@ The [Eleventh work sequence](PAPER-CATALOGUE.md#typed-contexts-substitution-and-
 
 The remaining broad questions concern universes, unrestricted rules, frontend/serialised proof transformation and adoption of a specified calculus; none follows from sharing a namespace. The same sequence proves a source-Conv-preserving finite-reification obstruction without claiming that the identity target is uninhabited. Later identity calculi and specialised complete checkers must therefore be compared at their actual targets, not treated as inconsistent global answers to one undifferentiated “completion” question.
 
+## From a continuation theorem to a calibrated physical realisation
+
+The [complete physical treatment](../../mathematics/physical-realisation-and-continuation.md) proves precise positive channel, state-transfer and maintained-progress results. Its remaining research questions concern actual common decoders under uncertainty, measured residual/error margins, effective descriptions of continuation classes, joint resource compatibility and a policy that realises all required obligations together. These are distinct gaps; an observed output match does not settle them all.
+
+The [experimental programme](../../mathematics/physical-realisation-and-continuation.md#12-tests-that-can-change-the-claims) distinguishes channel, memory, transfer, compositional and process-continuation targets. Historical numerical or symbolic examples remain historical observations. No new physical trial, unrestricted fluid theorem, general discovery algorithm or theory of numerical personal identity is claimed by the consolidation.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md
 [coercive]: ../../research/t20-v6-20261012/sources/204f63e544b1afd9538230f95f8ebfbc613b9847c579dfb901de6d10e40ebb10/coercive-square-positivity-20261010__RESULT.md
 [sidecar]: ../../research/t20-v6-20261012/research-v6/root_math/FINITE_SIDECAR_GEOMETRY_BOUNDARY.md
-[fisher]: ../../research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md
-[coordination]: ../../experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md
+[fisher]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md
+[coordination]: ../../mathematics/collective-inquiry-and-strategic-coordination.md#64-exact-finite-alphabet-capacity
 [join]: ../../research/t20-v6-20261012/research-v6/root_math/occurrence_feasibility_join/REPORT.md
 [qualification]: ../project-closure/reader-refactor-issue-35/PILOT-QUALIFICATION.md
 [recovery]: ../../research/t20-v6-20261012/SOURCE_RECOVERY.md
@@ -214,9 +222,11 @@ The remaining broad questions concern universes, unrestricted rules, frontend/se
 [app-coupling]: ../../applications/latent-state-orthing/UPDATE-COUPLING.yaml
 [app-runtime-outlines]: ../../applications/agentic-runtime/README.md
 
-[t13-residual]: ../../experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+[t13-residual]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+[typed-t13-residual-current]: ../../logic/encodings-and-witnesses.md#105-the-identity-question-that-packing-leaves-open
 
-[t14-separation]: ../../experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+[t14-separation]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+[typed-t14-separation-current]: ../../logic/encodings-and-witnesses.md#107-full-rule-separation-and-the-exact-closed-criterion
 
 [t14-separation-lean]: ../../experiments/orthemology-v5-successors/source-store/48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c/IntensionalIdentityTheorems.lean
 
@@ -227,6 +237,8 @@ The remaining broad questions concern universes, unrestricted rules, frontend/se
 [t15-group-followup]: ../../experiments/orthemology-v5-successors/groups/t15-identity/README.md
 
 ## From repair compatibility to justified application
+
+The complete [unknown-standard repair treatment](../../mathematics/information-and-inquiry.md#97-unknown-standards-the-information-needed-for-persistent-repair) proves the finite-sample information cost, a positive construction with target-preserving observations, and the countability obstruction when informative probing is target-bad. Its actual causal-oracle proof includes correlated seeds with commonly dominated marginals. Applying these results still requires an authenticated signal law, meaningful score and target, licensed actions and the specified physical timing; formal source inspection is distinct from a fresh kernel or deployment.
 
 The [earlier continuation works](PAPER-CATALOGUE.md#continuation-repair-geometry-and-information) have positive analytic and controlled-restoration results; they are not all merely prospective geometric models. Their exact remaining application questions concern norm identity and authority, faithful representation, available signals, licensed actions and physical execution. The [source-bridge synthesis](PAPER-CATALOGUE.md#what-repair-geometry-contributes-to-the-source-question) states its philosophical alternatives and positive hosting conditional without claiming a general theorem of an ultimate intellectual bearer.
 

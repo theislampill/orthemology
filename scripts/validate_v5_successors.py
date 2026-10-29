@@ -13,10 +13,17 @@ import hashlib
 import importlib.util
 import json
 import math
+import os
 from pathlib import Path
 import re
+import stat
 import subprocess
 from urllib.parse import urlsplit, urlunsplit
+
+_source_spec = importlib.util.spec_from_file_location(
+    '_v5_historical_source_helpers', Path(__file__).with_name('resolve_t20_v6_source.py'))
+_source = importlib.util.module_from_spec(_source_spec)
+_source_spec.loader.exec_module(_source)
 
 _spec = importlib.util.spec_from_file_location(
     '_v5_predecessor_helpers', Path(__file__).with_name('validate_research_continuations.py'))
@@ -47,6 +54,40 @@ BASELINE_ANCHOR = {
                        'sha256': '879879eaffdf04396577d113abb2d224b53e07e20a15f23c3f5b785b2291bd89'},
     'git_required': True,
 }
+# These four present owners have a reviewed current edition while their frozen
+# predecessor inventory remains immutable. Change CURRENT only with a reviewed
+# complete four-owner edition; no runtime descriptor can supply these pins.
+PRESERVATION_OWNER_PATHS = (
+    'docs/provenance/v5-research-continuations/EVIDENCE_BINDINGS.json',
+    'docs/provenance/v5-research-continuations/README.md',
+    'docs/provenance/v5-research-continuations/SOURCE_MAP.json',
+    'experiments/orthemology-v5-continuations/registry.json',
+)
+PRESERVATION_OWNER_ORIGINAL = {
+    PRESERVATION_OWNER_PATHS[0]: ('1c4ab596107c4573e5b6b8ec053551edb0123e37',
+        'eea355a54d547170b57b48d66263a0527f783d84c076fe30bcb6f192ae51d56b', 2216593),
+    PRESERVATION_OWNER_PATHS[1]: ('14f2a432915bb24800c80ec4dbab37cf37bdf149',
+        'ee7df681b2545e99a9f951b6a6916f45d9ad898af60ef69735505aa482bd3fb7', 44289),
+    PRESERVATION_OWNER_PATHS[2]: ('0f565ab802d53fae8a3a929e65f291e3dade7242',
+        'a6c2c87082f27c8560cfb4790059cc242effb5f45e3f7bdf30adf8b722b808c7', 5990901),
+    PRESERVATION_OWNER_PATHS[3]: ('d90b5647de1cf290d3b7dbe20a805983c75f0fcf',
+        '51e2cea236dd0a880c7243b2f9ccbd558c6c70f16f03ec0efa274f19d3d105ff', 192971),
+}
+PRESERVATION_OWNER_CURRENT = {'docs/provenance/v5-research-continuations/EVIDENCE_BINDINGS.json': ('d3442f385e96d16d83bdb6de3c3d22d9069a7d2d',
+                                                                      'c379b06184091ef65c71ec53836c45d82faf18edc72f0e66a5b854a9631f086c',
+                                                                      2124501),
+ 'docs/provenance/v5-research-continuations/README.md': ('25b47c9b01a2e1bff5d98b66e95968a94cbfd8ca',
+                                                         '1afc3bdde01b03fdfa58b325d2089f95d972554a1af63ce1e7ca231501c5b6f0',
+                                                         47487),
+ 'docs/provenance/v5-research-continuations/SOURCE_MAP.json': ('a98763ceb0e638bd055b77c83f7e7b9899c52930',
+                                                               'b434046568c41e56d060282975e7e7829bbed77b85bfb4e47108e9810da93384',
+                                                               5960211),
+ 'experiments/orthemology-v5-continuations/registry.json': ('d8a37112646af3922ffe6a7ee86d1ded72996b54',
+                                                            '53eff919af5543ce3750f988c0b1c10422dd3ba883f9fbfc77b4840650a86258',
+                                                            175135)}
+
+PRESERVATION_OWNER_SPARSE_PRIOR = dict(PRESERVATION_OWNER_CURRENT, **{
+    'docs/provenance/v5-research-continuations/README.md': ('b0195c6b5f1db05ff38ba01ced7390a7d46929dc', 'fc1eb9a3fb03e334670571838c045e46d16dd5a770993a796f323b0711d52b3e', 52968)})
 FRESH = {'NOT_RUN', 'BLOCKED_EXTERNAL_INPUT', 'BLOCKED_TOOLCHAIN', 'RESOURCE_INCONCLUSIVE',
          'FAILED', 'FINITE_ONLY', 'FRESH_KERNEL_COMPONENTS', 'QUALIFIED_DECLARED_SUITE'}
 INHERITED = {'NONE', 'WRITTEN_MATHEMATICS', 'CONDITIONAL_PHILOSOPHY', 'SOURCE_ASSESSMENT',
@@ -130,8 +171,8 @@ def _public_values(value):
             _public_values(item)
 
 
-def read_json(path):
-    value = _legacy.read_json(path)
+def read_json(path, *, root=None):
+    value = _legacy.read_json(path, root=root)
     _finite(value)  # JSON's 1e999 also overflows; parse_constant alone is insufficient.
     return value
 
@@ -157,8 +198,8 @@ def refs(values, owners, label, *, empty=True):
 
 def file_ref(row, root):
     keys(row, {'path', 'sha256'})
-    path = path_in(root, row['path'])
-    require(sha(path) == digest(row['sha256']), 'Changed referenced file hash: ' + row['path'])
+    path = _legacy.record_path(root, row['path'])
+    require(sha(path, root=root) == digest(row['sha256']), 'Changed referenced file hash: ' + row['path'])
     return path
 
 
@@ -200,7 +241,7 @@ def _record_files(bundle, root):
         expected = (AREA + '/suites/' + name[6:] + '.json') if name.startswith('suite:') else PROV + '/' + name + '.json'
         require(isinstance(ref, dict) and ref.get('path') == expected, 'Wrong record owner path')
         path = file_ref(ref, root)
-        require(read_json(path) == value, 'Bundle/record mismatch: ' + name)
+        require(read_json(path, root=root) == value, 'Bundle/record mismatch: ' + name)
     for field, rows in [('suite_ids', bundle['suites']), ('result_ids', bundle['results'])]:
         string_list(registry[field])
         require(set(registry[field]) == set(indexed(rows, 'id')), 'Incomplete registry ' + field)
@@ -229,6 +270,85 @@ def _inventory_paths(root, roots):
     return found
 
 
+def _preservation_owner_git(root, *args):
+    """One fixed index query or one of four fixed public historical blobs."""
+    index_query = ('ls-files', '--stage', '-z', '--', *PRESERVATION_OWNER_PATHS)
+    historical_queries = {('cat-file', 'blob', row[0]) for row in PRESERVATION_OWNER_ORIGINAL.values()}
+    require(args == index_query or args in historical_queries, 'Unqualified preservation owner Git request')
+    environment = {key: value for key, value in os.environ.items() if not key.startswith('GIT_')}
+    environment.update(GIT_NO_LAZY_FETCH='1', GIT_TERMINAL_PROMPT='0', GIT_ALLOW_PROTOCOL='',
+                       GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=os.devnull,
+                       GIT_CONFIG_SYSTEM=os.devnull, GIT_OPTIONAL_LOCKS='0')
+    try:
+        result = subprocess.run(
+            ['git', '--no-replace-objects', '--literal-pathspecs', '-c', 'core.fsmonitor=false',
+             '-c', 'protocol.allow=never', *args], cwd=root, env=environment,
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False, timeout=60)
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        raise ValueError('Preservation historical Git request unavailable') from exc
+    require(result.returncode == 0, 'Preservation historical Git request failed')
+    return result.stdout
+
+
+def _preservation_owner_body(root, name, binding):
+    """Read an admitted current owner as stable ordinary nonexecutable data."""
+    blob, identity, size = binding
+    node = path_in(root, name)
+    descriptor = os.open(node, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
+    with os.fdopen(descriptor, 'rb') as stream:
+        before = os.fstat(stream.fileno())
+        require(stat.S_ISREG(before.st_mode) and before.st_nlink == 1
+                and not before.st_mode & 0o111 and before.st_size == size,
+                'Preservation owner is not an ordinary exact-sized file: ' + name)
+        body = stream.read()
+        after = os.fstat(stream.fileno())
+    fields = ('st_dev', 'st_ino', 'st_mode', 'st_nlink', 'st_size', 'st_mtime_ns', 'st_ctime_ns')
+    require(all(getattr(before, field) == getattr(after, field) for field in fields),
+            'Preservation owner changed during its read: ' + name)
+    actual_blob = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+    require((actual_blob, hashlib.sha256(body).hexdigest(), len(body)) == (blob, identity, size),
+            'Preservation worktree and staged owner editions differ: ' + name)
+    return body
+
+
+def _preservation_owner_bytes(root, files):
+    """Keep the historical inventory while requiring one complete live edition.
+
+    All four index entries and ordinary current bodies pass before the first
+    historical request. Original owners retain the ordinary inventory branch.
+    Only this fixed current edition receives the four fixed original bodies.
+    """
+    for name in PRESERVATION_OWNER_PATHS:
+        blob, identity, size = PRESERVATION_OWNER_ORIGINAL[name]
+        require(files.get(name) == {'path': name, 'bytes': size, 'sha256': identity, 'git_blob_sha1': blob},
+                'Preservation owner original inventory identity differs: ' + name)
+    root = Path(root).absolute()
+    require(all(not node.is_symlink() for node in (root, *root.parents)),
+            'Preservation owner root contains a symlink')
+    staged = _preservation_owner_git(root, 'ls-files', '--stage', '-z', '--', *PRESERVATION_OWNER_PATHS)
+    edition = None
+    for candidate in (PRESERVATION_OWNER_ORIGINAL, PRESERVATION_OWNER_CURRENT, PRESERVATION_OWNER_SPARSE_PRIOR):
+        expected = b''.join(('100644 ' + candidate[name][0] + ' 0\t' + name + '\0').encode('utf-8')
+                            for name in PRESERVATION_OWNER_PATHS)
+        if staged == expected:
+            edition = candidate
+            break
+    require(edition is not None, 'Preservation staged owners are not one complete accepted edition')
+    for name in PRESERVATION_OWNER_PATHS:
+        _preservation_owner_body(root, name, edition[name])
+    if edition is PRESERVATION_OWNER_ORIGINAL:
+        return {}
+    originals = {}
+    for name in PRESERVATION_OWNER_PATHS:
+        blob, identity, size = PRESERVATION_OWNER_ORIGINAL[name]
+        body = _preservation_owner_git(root, 'cat-file', 'blob', blob)
+        actual_blob = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+        require((actual_blob, hashlib.sha256(body).hexdigest(), len(body)) == (blob, identity, size),
+                'Preservation historical owner bytes differ: ' + name)
+        originals[name] = body
+    return originals
+
+
 def _preservation(bundle, root, anchor):
     bound, inventory = bundle['baseline_binding'], bundle['preservation']
     keys(bound, {'schema', 'base_commit', 'base_tree', 'preservation_sha256', 'legacy_registry', 'legacy_overlay'})
@@ -245,13 +365,34 @@ def _preservation(bundle, root, anchor):
             'Changed preservation baseline')
     require(inventory['roots'] == FROZEN_ROOTS, 'Changed preservation roots')
     files = indexed(inventory['files'], 'path')
-    require(files and set(files) == _inventory_paths(root, FROZEN_ROOTS), 'Frozen preservation file-set changed')
+    present = _inventory_paths(root, FROZEN_ROOTS)
+    require(files and present <= set(files), 'Frozen preservation file-set changed')
+    # Explicit fixture anchors keep their original test seam; the CLI and the
+    # continuation preservation consumer always use the pinned production anchor.
+    owner_bytes = _preservation_owner_bytes(root, files) if anchor == BASELINE_ANCHOR else {}
     for name, row in files.items():
         keys(row, {'path', 'bytes', 'sha256', 'git_blob_sha1'})
         integer(row['bytes']); digest(row['sha256'])
         require(re.fullmatch('[0-9a-f]{40}', row['git_blob_sha1']), 'Invalid baseline Git blob identity')
-        path = path_in(root, name)
-        raw = path.read_bytes()
+        if name in owner_bytes:
+            raw = owner_bytes[name]
+        elif name in _source.HISTORICAL_PROSE:
+            # Exact incorporated originals preserve their immutable inventory rows.
+            # This finite bridge grants no general missing-source fallback.
+            blob, identity, size = _source.HISTORICAL_PROSE[name]
+            require((row['git_blob_sha1'], row['sha256'], row['bytes']) == (blob, identity, size),
+                    'Historical preservation original inventory identity differs: ' + name)
+            raw = _source.historical_source_bytes(
+                root, name, _source.HISTORICAL_PROSE_REVISIONS[name], blob)
+        elif name in _source.ADMIN_RECORD_PATHS:
+            raw = _source.administrative_record_bytes(root, name, row['sha256'], row['bytes'])
+        elif name in present:
+            raw = path_in(root, name).read_bytes()
+        else:
+            try:
+                raw = _source.continuation_copy_bytes(root, name, row['sha256'], row['bytes'])
+            except (ValueError, OSError) as exc:
+                raise ValueError('Frozen preservation missing or invalid current copy: ' + name) from exc
         require(len(raw) == row['bytes'] and hashlib.sha256(raw).hexdigest() == row['sha256'],
                 'Frozen preservation bytes changed: ' + name)
         require(hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest() == row['git_blob_sha1'],
@@ -312,10 +453,19 @@ def _sources(bundle, root):
                     'CUSTODY_ONLY source has public payload')
             continue
         digest(row['public_sha256']); integer(row['public_bytes'])
-        path = path_in(root, row['public_path'])
+        historical = {_source.MEDIATOR_COORDINATION: 'T12-SOURCE-COORDINATION',
+                      **_source.TYPED_V5_SOURCE_IDS}
+        path = path_in(root, row['public_path'], exists=row['public_path'] not in historical)
         prefix = AREA + '/source-store/' + row['public_sha256'] + '/'
         require(row['public_path'].startswith(prefix), 'Wrong public source content-addressed path')
-        raw = path.read_bytes()
+        if row['public_path'] in historical:
+            name = row['public_path']
+            require(row['id'] == historical[name] and row['projection'] == 'EXACT',
+                    'Wrong finite historical prose source role')
+            raw = _source.historical_source_bytes(root, name,
+                _source.HISTORICAL_PROSE_REVISIONS[name], _source.HISTORICAL_PROSE[name][0])
+        else:
+            raw = path.read_bytes()
         require(len(raw) == row['public_bytes'] and hashlib.sha256(raw).hexdigest() == row['public_sha256'],
                 'Changed public source hash or bytes')
         require(path.suffix.lower() not in {'.zip', '.7z', '.tar', '.gz'}, 'Private archive payload is not public source')
@@ -357,19 +507,48 @@ def _sources(bundle, root):
 
 def _allowlist(bundle, root, sources):
     rows = indexed(bundle['public_allowlist'], 'path')
+    authenticated_absent = set()
     for name, row in rows.items():
         keys(row, {'path', 'sha256', 'bytes', 'kind', 'source_ids'})
         enum(row['kind'], {'SOURCE', 'AUTHORED', 'METADATA', 'VALIDATOR', 'TEST'})
         refs(row['source_ids'], sources, 'allowlist source')
-        path = path_in(root, name)
-        require(sha(path) == digest(row['sha256']) and path.stat().st_size == integer(row['bytes']),
+        historical = {_source.MEDIATOR_COORDINATION: 'T12-SOURCE-COORDINATION',
+                      **_source.TYPED_V5_SOURCE_IDS}
+        path = path_in(root, name, exists=name not in historical)
+        if name in historical:
+            require(row['kind'] == 'SOURCE' and row['source_ids'] == [historical[name]],
+                    'Wrong finite historical prose allowlist role')
+            raw = _source.historical_source_bytes(root, name,
+                _source.HISTORICAL_PROSE_REVISIONS[name], _source.HISTORICAL_PROSE[name][0])
+            if not path.exists():
+                authenticated_absent.add(name)
+        elif name in _source.ADMIN_GUIDES:
+            _, identity, size, _ = _source.ADMIN_GUIDES[name]
+            require(row['kind'] == 'AUTHORED' and row['source_ids'] == []
+                    and row['sha256'] == identity and row['bytes'] == size,
+                    'Original administrative guide allowlist identity changed')
+            raw = _source.administrative_guide_source_bytes(root, name)
+        elif name == _source.MEDIATOR_GUIDE:
+            require(row['kind'] == 'AUTHORED' and row['source_ids'] == []
+                    and row['sha256'] == _source.MEDIATOR_GUIDE_SHA256 and row['bytes'] == _source.MEDIATOR_GUIDE_BYTES,
+                    'Original guide allowlist identity changed')
+            raw = _source.mediator_guide_source_bytes(root)
+        elif name in _source.TYPED_GUIDES:
+            _, identity, size, _ = _source.TYPED_GUIDES[name]
+            require(row['kind'] == 'AUTHORED' and row['source_ids'] == []
+                    and row['sha256'] == identity and row['bytes'] == size,
+                    'Original typed guide allowlist identity changed')
+            raw = _source.typed_guide_source_bytes(root, name)
+        else:
+            raw = path.read_bytes()
+        require(hashlib.sha256(raw).hexdigest() == digest(row['sha256']) and len(raw) == integer(row['bytes']),
                 'Changed public allowlist payload')
         if row['kind'] == 'SOURCE':
             require(bool(row['source_ids']), 'Source allowlist row has no source identity')
             require(all(sources[sid]['public_path'] == name and sources[sid]['public_sha256'] == row['sha256']
                         for sid in row['source_ids']), 'Allowlist source association mismatch')
         if path.suffix.lower() in {'.md', '.json', '.py', '.lean', '.tex', '.txt', '.yaml', '.yml', '.tsv', '.csv'}:
-            check_public_text(path.read_text(encoding='utf-8'))
+            check_public_text(raw.decode('utf-8'))
     present = set()
     for relative in [AREA + '/source-store', AREA + '/groups']:
         folder = root / relative
@@ -380,7 +559,7 @@ def _allowlist(bundle, root, sources):
                 if path.is_file():
                     present.add(path.relative_to(root).as_posix())
     covered = {name for name in rows if any(name.startswith(AREA + '/' + part + '/') for part in ['source-store', 'groups'])}
-    require(present == covered, 'Public allowlist inventory is incomplete')
+    require(present == covered - authenticated_absent, 'Public allowlist inventory is incomplete')
     for source in sources.values():
         if source['public_path'] is not None:
             require(source['public_path'] in rows and source['id'] in rows[source['public_path']]['source_ids'],
@@ -817,7 +996,7 @@ def load_bundle(root):
     require(isinstance(registry, dict) and isinstance(registry.get('records'), dict), 'Missing registry records')
     docs = {}
     for name, ref in registry['records'].items():
-        docs[name] = read_json(file_ref(ref, root))
+        docs[name] = read_json(file_ref(ref, root), root=root)
     mapping = {'sources': ('SOURCE_MAP', 'sources'), 'reviews': ('SOURCE_MAP', 'reviews'),
         'results': ('RESULT_STATUS', 'results'), 'statuses': ('RESULT_STATUS', 'statuses'),
         'bindings': ('EVIDENCE_BINDINGS', 'bindings'), 'receipts': ('EVIDENCE_BINDINGS', 'receipts'),

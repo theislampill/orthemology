@@ -11,6 +11,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 import yaml
@@ -763,22 +764,10 @@ class TestAr8rV11Reconciliation(unittest.TestCase):
         for directory, count in source_counts.items():
             self.assertEqual(sum(path.is_file() for path in directory.rglob("*")), count)
 
-        sums = PMR007_PROPOSAL / "SHA256SUMS"
-        listed = set()
-        for line in sums.read_text(encoding="utf-8").splitlines():
-            digest, relative = line.split(maxsplit=1)
-            relative = relative.lstrip("*").replace("\\", "/")
-            target = PMR007_PROPOSAL / relative
-            self.assertTrue(target.is_file(), relative)
-            self.assertEqual(hashlib.sha256(target.read_bytes()).hexdigest(), digest, relative)
-            listed.add(relative)
-        actual = {
-            path.relative_to(PMR007_PROPOSAL).as_posix()
-            for path in PMR007_PROPOSAL.rglob("*")
-            if path.is_file() and path.name != "SHA256SUMS"
-        }
-        self.assertEqual(len(listed), 130)
-        self.assertEqual(listed, actual)
+        validator = self.load_validator()
+        self.assertEqual(len((PMR007_PROPOSAL / "SHA256SUMS").read_text(encoding="utf-8").splitlines()), 130)
+        self.assertEqual(len(validator.pmr007_rounds_duplicate_paths(ROOT)), 98)
+        self.assertEqual(validator.validate_pmr007_rounds_snapshot(ROOT), [])
 
     def test_pmr007_deep_a_ap_snapshot_is_exact_and_fail_closed(self):
         self.assertTrue(PMR007_DEEP_PROPOSAL.is_dir(), "missing Deep A-AP proposal snapshot")
@@ -818,23 +807,9 @@ class TestAr8rV11Reconciliation(unittest.TestCase):
         self.assertTrue(all("PENDING" in row["owner_adoption_status"] for row in deep_rows))
         self.assertTrue(all("ZERO" in row["origin_and_novelty_ceiling"] for row in deep_rows))
 
-        listed = set()
-        for line in (PMR007_DEEP_PROPOSAL / "SHA256SUMS").read_text(encoding="utf-8").splitlines():
-            digest, relative = line.split(maxsplit=1)
-            relative = relative.lstrip("*").replace("\\", "/")
-            target = PMR007_DEEP_PROPOSAL / relative
-            self.assertTrue(target.is_file(), relative)
-            self.assertEqual(hashlib.sha256(target.read_bytes()).hexdigest(), digest, relative)
-            listed.add(relative)
-        actual = {
-            path.relative_to(PMR007_DEEP_PROPOSAL).as_posix()
-            for path in PMR007_DEEP_PROPOSAL.rglob("*")
-            if path.is_file() and path.name != "SHA256SUMS"
-        }
-        self.assertEqual(len(listed), 830)
-        self.assertEqual(listed, actual)
-
         validator = self.load_validator()
+        self.assertEqual(validator.validate_pmr007_deep_snapshot(ROOT), [])
+
         validate_deep = getattr(validator, "validate_pmr007_deep_proposal", None)
         self.assertIsNotNone(validate_deep, "missing Deep A-AP fail-closed validator")
         if validate_deep is not None:
@@ -1679,6 +1654,563 @@ class TestAr8rV11Reconciliation(unittest.TestCase):
         g = re.sub(r"\s+", " ", (PROGRAMS / "candidate-g-derivational-unification.md").read_text(encoding="utf-8")).lower()
         self.assertIn("carrier packaging", g)
         self.assertIn("explanatory compression", g)
+
+
+
+def _load_duplicate_fixture_module(name, path):
+    spec = importlib.util.spec_from_file_location(name, path)
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+def _duplicate_fixture_git(repo, *args, data=None):
+    # Corruption controls intentionally manipulate loose objects. Automatic
+    # maintenance must neither repack them nor outlive fixture cleanup.
+    return subprocess.run(
+        ["git", "--no-replace-objects", "-c", "core.hooksPath=/dev/null",
+         "-c", "commit.gpgSign=false", "-c", "gc.auto=0",
+         "-c", "maintenance.auto=false", *args], cwd=repo,
+        input=data, capture_output=True, check=True,
+    ).stdout
+
+
+class Pmr007DuplicateAliasTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        modules = mock.patch.dict(sys.modules)
+        modules.start()
+        cls.addClassCleanup(modules.stop)
+        old_path = list(sys.path)
+        cls.addClassCleanup(lambda: sys.path.__setitem__(slice(None), old_path))
+        sys.path.insert(0, str(ROOT / "scripts"))
+        cls.validator = _load_duplicate_fixture_module("validate_ar8r_reconciliation", RECONCILIATION_VALIDATOR)
+        cls.reader = _load_duplicate_fixture_module("check_reader_pilot_alias_fixture", ROOT / "scripts/check_reader_pilot.py")
+        cls.prefix = cls.validator.PMR007_DEEP_PREFIX
+        members = cls.validator._pmr007_deep_original_members(ROOT)
+        cls.selection = [{"alias": alias, "canonical": canonical}
+                         for alias, canonical in cls.validator._pmr007_deep_duplicate_map(members).items()]
+        cls.original_manifest = (ROOT / cls.prefix / "SHA256SUMS").read_text()
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(prefix="alias-synthetic-")
+        self.addCleanup(self.tmp.cleanup)
+        self.repo = Path(self.tmp.name)
+        self.bodies = {}
+        for line in self.original_manifest.splitlines():
+            digest, relative = line.split(maxsplit=1)
+            # Preserve equality classes even where an original body occurs at
+            # more than one relative path inside the source snapshot.
+            self.bodies[self.prefix + "/" + relative] = ("synthetic public evidence: " + digest + "\n").encode()
+        for row in self.selection:
+            # Same bytes for each selected alias and retained current copy.
+            self.bodies[row["canonical"]] = self.bodies[row["alias"]]
+        for path, body in self.bodies.items():
+            target = self.repo / path
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(body)
+            target.chmod(0o644)
+        lines = []
+        for line in self.original_manifest.splitlines():
+            _, relative = line.split(maxsplit=1)
+            body = self.bodies[self.prefix + "/" + relative]
+            lines.append(hashlib.sha256(body).hexdigest() + "  " + relative)
+        self.manifest = self.repo / self.prefix / "SHA256SUMS"
+        self.manifest.write_text("\n".join(lines) + "\n")
+        _duplicate_fixture_git(self.repo, "init", "-q")
+        _duplicate_fixture_git(self.repo, "-c", "user.name=Bounded fixture", "-c", "user.email=fixture@example.invalid",
+            "add", "--all")
+        _duplicate_fixture_git(self.repo, "-c", "user.name=Bounded fixture", "-c", "user.email=fixture@example.invalid",
+            "commit", "-qm", "Synthetic public alias fixture")
+        self.baseline = _duplicate_fixture_git(self.repo, "rev-parse", "HEAD").decode().strip()
+        if hasattr(self.validator, "PMR007_DEEP_MANIFEST_SHA256"):
+            patch = mock.patch.multiple(self.validator,
+                PMR007_DEEP_MANIFEST_SHA256=hashlib.sha256(self.manifest.read_bytes()).hexdigest(),
+                PMR007_DEEP_HISTORY=self.baseline)
+            patch.start()
+            self.addCleanup(patch.stop)
+
+    def test_fixture_git_keeps_loose_objects_under_aggressive_auto_gc(self):
+        import os
+
+        path = self.selection[0]["alias"]
+        oid = _duplicate_fixture_git(self.repo, "rev-parse", self.baseline + ":" + path).decode().strip()
+        object_path = self.repo / ".git" / "objects" / oid[:2] / oid[2:]
+        self.assertTrue(object_path.is_file())
+        # Exercise real native auto-maintenance with an aggressive inherited
+        # threshold. The fixture must preserve its intentionally loose objects
+        # for missing-object and same-size-corruption controls.
+        inherited = {
+            "GIT_CONFIG_COUNT": "4",
+            "GIT_CONFIG_KEY_0": "gc.auto",
+            "GIT_CONFIG_VALUE_0": "1",
+            "GIT_CONFIG_KEY_1": "maintenance.auto",
+            "GIT_CONFIG_VALUE_1": "true",
+            "GIT_CONFIG_KEY_2": "gc.autoDetach",
+            "GIT_CONFIG_VALUE_2": "false",
+            "GIT_CONFIG_KEY_3": "maintenance.autoDetach",
+            "GIT_CONFIG_VALUE_3": "false",
+        }
+        with mock.patch.dict(os.environ, inherited):
+            _duplicate_fixture_git(self.repo, "-c", "user.name=Bounded fixture",
+                "-c", "user.email=fixture@example.invalid", "commit", "--allow-empty",
+                "-qm", "Exercise automatic fixture maintenance")
+        self.assertTrue(object_path.is_file(), "automatic maintenance packed the loose fixture object")
+        self.assertEqual(list((self.repo / ".git" / "objects" / "pack").glob("*.pack")), [])
+
+    def delete_selected(self):
+        for row in self.selection:
+            (self.repo / row["alias"]).unlink()
+
+    def test_exact_canonical_copies_admit_the_entire_finite_batch(self):
+        self.assertEqual(len(self.selection), 824)
+        self.assertEqual(self.validator.validate_pmr007_deep_snapshot(self.repo), [])
+        self.delete_selected()
+        self.assertEqual(self.validator.validate_pmr007_deep_snapshot(self.repo), [])
+
+    def test_retained_copy_negative_controls(self):
+        self.delete_selected()
+        row = self.selection[0]
+        target = self.repo / row["canonical"]
+        exact = target.read_bytes()
+        cases = {}
+        target.unlink()
+        cases["missing canonical"] = self.validator.validate_pmr007_deep_snapshot(self.repo)
+        target.write_bytes(exact + b"changed")
+        cases["changed canonical"] = self.validator.validate_pmr007_deep_snapshot(self.repo)
+        target.write_bytes(exact)
+        target.chmod(0o755)
+        cases["executable canonical"] = self.validator.validate_pmr007_deep_snapshot(self.repo)
+        target.chmod(0o644)
+        target.unlink()
+        same_bytes = self.repo / "same-byte-symlink-control"
+        same_bytes.write_bytes(exact)
+        same_bytes.chmod(0o644)
+        target.symlink_to(same_bytes)
+        cases["symlink canonical"] = self.validator.validate_pmr007_deep_snapshot(self.repo)
+        target.unlink()
+        target.write_bytes(exact)
+        for name, errors in cases.items():
+            with self.subTest(name=name):
+                self.assertTrue(errors, name)
+        self.assertEqual(self.validator.validate_pmr007_deep_snapshot(self.repo), [])
+
+    def test_nonselected_missing_member_and_manifest_change_are_rejected(self):
+        self.delete_selected()
+        selected = {row["alias"] for row in self.selection}
+        other = next(path for path in self.bodies if path.startswith(self.prefix + "/") and path not in selected)
+        (self.repo / other).unlink()
+        self.assertTrue(self.validator.validate_pmr007_deep_snapshot(self.repo))
+        (self.repo / other).write_bytes(self.bodies[other])
+        exact = self.manifest.read_bytes()
+        # Reordering leaves every path/hash pair unchanged. Only the frozen
+        # manifest identity, not an unrelated missing-member error, rejects it.
+        lines = exact.splitlines(keepends=True)
+        lines[0], lines[1] = lines[1], lines[0]
+        self.manifest.write_bytes(b"".join(lines))
+        self.assertTrue(self.validator.validate_pmr007_deep_snapshot(self.repo))
+        self.manifest.write_bytes(exact)
+        self.assertEqual(self.validator.validate_pmr007_deep_snapshot(self.repo), [])
+
+    def test_present_alias_must_remain_exact(self):
+        path = self.repo / self.selection[0]["alias"]
+        path.write_bytes(path.read_bytes() + b"changed")
+        self.assertTrue(self.validator.validate_pmr007_deep_snapshot(self.repo))
+
+    def test_pinned_git_history_must_be_available(self):
+        self.delete_selected()
+        with mock.patch.object(self.validator, "PMR007_DEEP_HISTORY", "0" * 40):
+            self.assertTrue(self.validator.validate_pmr007_deep_snapshot(self.repo))
+
+    def test_original_blob_object_must_be_available(self):
+        self.delete_selected()
+        path = self.selection[0]["alias"]
+        oid = _duplicate_fixture_git(self.repo, "rev-parse", self.baseline + ":" + path).decode().strip()
+        # This is a synthetic loose object in the disposable fixture only.
+        (self.repo / ".git" / "objects" / oid[:2] / oid[2:]).unlink()
+        self.assertTrue(self.validator.validate_pmr007_deep_snapshot(self.repo))
+
+    def test_original_blob_contents_must_match_even_when_type_and_size_match(self):
+        import zlib
+
+        self.delete_selected()
+        self.assertEqual(self.validator.validate_pmr007_deep_snapshot(self.repo), [])
+        path = self.selection[0]["alias"]
+        oid = _duplicate_fixture_git(self.repo, "rev-parse", self.baseline + ":" + path).decode().strip()
+        original = self.bodies[path]
+        changed = original[:-1] + (b"X" if original[-1:] != b"X" else b"Y")
+        raw = b"blob " + str(len(changed)).encode() + b"\0" + changed
+        # A valid loose object at the original name can retain type and size
+        # while its complete body no longer authenticates to that name.
+        object_path = self.repo / ".git" / "objects" / oid[:2] / oid[2:]
+        object_path.unlink()
+        object_path.write_bytes(zlib.compress(raw))
+        metadata = _duplicate_fixture_git(self.repo, "cat-file", "--batch-check", data=(oid + "\n").encode())
+        self.assertEqual(metadata, (oid + " blob " + str(len(original)) + "\n").encode())
+        self.assertTrue(self.validator.validate_pmr007_deep_snapshot(self.repo))
+
+    def test_unlisted_snapshot_member_is_rejected(self):
+        self.delete_selected()
+        (self.repo / self.prefix / "unlisted-public-fixture.txt").write_text("unexpected\n")
+        self.assertIn("pmr007-deep-internal-sha256sums-coverage-mismatch", self.validator.validate_pmr007_deep_snapshot(self.repo))
+
+    def test_nested_unlisted_manifest_is_rejected_then_exact_cleanup_is_accepted(self):
+        self.delete_selected()
+        self.assertEqual(self.validator.validate_pmr007_deep_snapshot(self.repo), [])
+        extra = self.repo / self.prefix / "extra" / "SHA256SUMS"
+        extra.parent.mkdir()
+        extra.write_bytes(b"unlisted nested manifest fixture\n")
+        self.assertIn("pmr007-deep-internal-sha256sums-coverage-mismatch", self.validator.validate_pmr007_deep_snapshot(self.repo))
+        extra.unlink()
+        extra.parent.rmdir()
+        self.assertEqual(self.validator.validate_pmr007_deep_snapshot(self.repo), [])
+
+    def test_reader_admits_only_guarded_deletion_and_rejects_staged_wrong_blob(self):
+        self.delete_selected()
+        self.assertEqual(self.reader.check_corpus_currentness(self.repo, self.baseline), [])
+        row = self.selection[0]
+        alias = self.repo / row["alias"]
+        alias.write_bytes(b"staged wrong body\n")
+        _duplicate_fixture_git(self.repo, "add", "--", row["alias"])
+        alias.unlink()
+        errors = self.reader.check_corpus_currentness(self.repo, self.baseline)
+        self.assertTrue(any(row["alias"] in error for error in errors), errors)
+        _duplicate_fixture_git(self.repo, "reset", "-q", "HEAD", "--", row["alias"])
+        self.assertEqual(self.reader.check_corpus_currentness(self.repo, self.baseline), [])
+        (self.repo / row["canonical"]).write_bytes(b"wrong canonical\n")
+        self.assertTrue(self.reader.check_corpus_currentness(self.repo, self.baseline))
+
+    def test_expanded_targets_are_disjoint_same_relative_scientific_copies(self):
+        aliases = {row["alias"] for row in self.selection}
+        targets = {row["canonical"] for row in self.selection}
+        self.assertFalse(aliases & targets)
+        bk_prefix = self.prefix.replace("a-ap", "a-bk")
+        for row in self.selection:
+            self.assertEqual(row["canonical"], bk_prefix + row["alias"].removeprefix(self.prefix))
+        self.delete_selected()
+        for choose in (
+                lambda row: row["alias"].endswith(".py"),
+                lambda row: "/REJECTED_AND_BLOCKED_EVIDENCE/" in row["alias"]
+                    and row["alias"].endswith(".rejected-invalid")):
+            row = next(row for row in self.selection if choose(row))
+            target = self.repo / row["canonical"]
+            exact = target.read_bytes()
+            target.write_bytes(exact + b"changed retained scientific evidence\n")
+            self.assertTrue(self.validator.validate_pmr007_deep_snapshot(self.repo))
+            target.write_bytes(exact)
+            self.assertEqual(self.validator.validate_pmr007_deep_snapshot(self.repo), [])
+
+    def test_each_distinct_metadata_member_and_root_manifest_remains_required(self):
+        self.delete_selected()
+        selected = {row["alias"] for row in self.selection}
+        remainder = sorted(path for path in self.bodies
+            if path.startswith(self.prefix + "/") and path not in selected)
+        self.assertEqual(len(remainder), 6)
+        for path in remainder + [self.prefix + "/SHA256SUMS"]:
+            target = self.repo / path
+            exact = target.read_bytes()
+            target.unlink()
+            with self.subTest(path=path):
+                self.assertTrue(self.validator.validate_pmr007_deep_snapshot(self.repo))
+            target.write_bytes(exact)
+            self.assertEqual(self.validator.validate_pmr007_deep_snapshot(self.repo), [])
+
+    def test_present_scientific_alias_mode_and_symlink_cannot_use_fallback(self):
+        row = next(row for row in self.selection if row["alias"].endswith(".py"))
+        target = self.repo / row["alias"]
+        exact = target.read_bytes()
+        target.chmod(0o755)
+        self.assertTrue(self.validator.validate_pmr007_deep_snapshot(self.repo))
+        target.chmod(0o644)
+        target.unlink()
+        target.symlink_to(self.repo / row["canonical"])
+        self.assertTrue(self.validator.validate_pmr007_deep_snapshot(self.repo))
+        target.unlink()
+        target.write_bytes(exact)
+        self.assertEqual(self.validator.validate_pmr007_deep_snapshot(self.repo), [])
+
+
+class Pmr007RoundsDuplicateAliasTests(unittest.TestCase):
+    """Finite-copy behavior on real disposable files and native Git objects."""
+    @classmethod
+    def setUpClass(cls):
+        modules = mock.patch.dict(sys.modules)
+        modules.start()
+        cls.addClassCleanup(modules.stop)
+        old_path = list(sys.path)
+        cls.addClassCleanup(lambda: sys.path.__setitem__(slice(None), old_path))
+        sys.path.insert(0, str(ROOT / "scripts"))
+        cls.validator = _load_duplicate_fixture_module("validate_ar8r_reconciliation", RECONCILIATION_VALIDATOR)
+        cls.reader = _load_duplicate_fixture_module("check_reader_pilot_rounds_fixture", RECONCILIATION_VALIDATOR.with_name("check_reader_pilot.py"))
+        cls.prefix = "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20"
+        cls.canonical = cls.prefix.replace("pmr007-rounds11-20", "pmr007-deep-a-bk")
+        cls.context = "PROPOSED_ORIGIN_AND_ANCESTRY_UPDATES/PMR-007_FRONTIER_ROUND19_PRIOR_ART_AND_FAMILY_NOTE.md"
+        cls.navigation = "docs/project-closure/ar8r-v11/formalization/AR8R-PMR007-TEN-RESULT-FORMALIZATION-MAP-V11.yaml"
+        cls.original_navigation = _duplicate_fixture_git(
+            ROOT, "show", "a7ff0e33d1a299db640041c46b1af81ca70851f6:" + cls.navigation)
+        cls.original_manifest = (ROOT / cls.prefix / "SHA256SUMS").read_text()
+        cls.members = {relative: digest for digest, relative in
+                       (line.split(maxsplit=1) for line in cls.original_manifest.splitlines())}
+        other = {relative: digest for digest, relative in
+                 (line.split(maxsplit=1) for line in (ROOT / cls.canonical / "SHA256SUMS").read_text().splitlines())}
+        # Independent input oracle: the two unchanged archived hash manifests.
+        # Production derives its class from original native Git mode/blob rows.
+        cls.equal = sorted(relative for relative, digest in cls.members.items()
+                           if other.get(relative) == digest)
+        cls.selection = [relative for relative in cls.equal if relative != cls.context]
+        if len(cls.equal) != 99 or len(cls.selection) != 98:
+            raise AssertionError("Unexpected frozen rounds fixture input denominator")
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(prefix="rounds-alias-synthetic-")
+        self.addCleanup(self.tmp.cleanup)
+        self.repo = Path(self.tmp.name)
+        self.bodies = {}
+        for relative, digest in self.members.items():
+            self.bodies[self.prefix + "/" + relative] = ("synthetic public evidence: " + digest + "\n").encode()
+        for relative in self.equal:
+            self.bodies[self.canonical + "/" + relative] = self.bodies[self.prefix + "/" + relative]
+        for path, body in self.bodies.items():
+            target = self.repo / path
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(body)
+            target.chmod(0o644)
+        navigation = self.repo / self.navigation
+        navigation.parent.mkdir(parents=True, exist_ok=True)
+        navigation.write_bytes(self.original_navigation)
+        self.manifest = self.repo / self.prefix / "SHA256SUMS"
+        self.manifest.write_text("".join(hashlib.sha256(self.bodies[self.prefix + "/" + relative]).hexdigest()
+                                 + "  " + relative + "\n" for relative in self.members))
+        _duplicate_fixture_git(self.repo, "init", "-q")
+        _duplicate_fixture_git(self.repo, "add", "--all")
+        _duplicate_fixture_git(self.repo, "-c", "user.name=Bounded fixture", "-c", "user.email=fixture@example.invalid",
+                               "commit", "-qm", "Synthetic public rounds aliases")
+        self.baseline = _duplicate_fixture_git(self.repo, "rev-parse", "HEAD").decode().strip()
+        patch = mock.patch.multiple(self.validator, create=True,
+            PMR007_ROUNDS_MANIFEST_SHA256=hashlib.sha256(self.manifest.read_bytes()).hexdigest(),
+            PMR007_ROUNDS_HISTORY=self.baseline)
+        patch.start()
+        self.addCleanup(patch.stop)
+
+    def migrate_navigation(self):
+        text = self.original_navigation.decode()
+        changes = 0
+        for relative in self.selection:
+            if not relative.startswith("PROPOSED_THEOREM_FILES/"):
+                continue
+            old = "source_path: post-merge-proposals/pmr007-rounds11-20/" + relative
+            new = "source_path: post-merge-proposals/pmr007-deep-a-bk/" + relative
+            changes += text.count(old)
+            text = text.replace(old, new)
+        self.assertEqual(changes, 9)
+        (self.repo / self.navigation).write_text(text)
+
+    def delete_selected(self, migrate=True):
+        if migrate:
+            self.migrate_navigation()
+        for relative in self.selection:
+            (self.repo / self.prefix / relative).unlink()
+
+    def snapshot_issues(self):
+        return self.validator.validate_pmr007_rounds_snapshot(self.repo)
+
+    def test_reader_admits_exact_batch_and_preserves_staged_state_checks(self):
+        # Catches a missing reader admission and staged tampering hidden by absence.
+        self.assertEqual(self.reader.check_corpus_currentness(self.repo, self.baseline), [])
+        self.delete_selected()
+        self.assertEqual(self.reader.check_corpus_currentness(self.repo, self.baseline), [])
+        path = self.prefix + "/" + self.selection[0]
+        target = self.repo / path
+        target.write_bytes(b"wrong staged original\n")
+        _duplicate_fixture_git(self.repo, "add", "--", path)
+        target.unlink()
+        self.assertTrue(self.reader.check_corpus_currentness(self.repo, self.baseline))
+        _duplicate_fixture_git(self.repo, "reset", "-q", "HEAD", "--", path)
+        self.assertEqual(self.reader.check_corpus_currentness(self.repo, self.baseline), [])
+        canonical = self.canonical + "/" + self.selection[0]
+        exact = (self.repo / canonical).read_bytes()
+        (self.repo / canonical).write_bytes(b"wrong staged retained copy\n")
+        _duplicate_fixture_git(self.repo, "add", "--", canonical)
+        (self.repo / canonical).write_bytes(exact)
+        self.assertTrue(self.reader.check_corpus_currentness(self.repo, self.baseline))
+
+    def test_snapshot_admits_only_complete_exact_current_copy_class(self):
+        # Catches fallback admission without checking a retained scientific body.
+        self.assertEqual(self.snapshot_issues(), [])
+        self.delete_selected()
+        self.assertEqual(self.snapshot_issues(), [])
+        for predicate in (lambda p: p.endswith(".py"),
+                          lambda p: p.startswith("REJECTED_AND_BLOCKED_EVIDENCE/")):
+            relative = next(p for p in self.selection if predicate(p))
+            target = self.repo / self.canonical / relative
+            exact = target.read_bytes()
+            target.write_bytes(exact + b"altered scientific evidence\n")
+            self.assertTrue(self.snapshot_issues())
+            target.write_bytes(exact)
+            self.assertEqual(self.snapshot_issues(), [])
+
+    def test_current_copies_reject_missing_bytes_modes_and_symlinks(self):
+        # Catches trusting an identity label, symlink, or changed executable mode.
+        self.delete_selected()
+        self.assertEqual(self.snapshot_issues(), [])
+        target = self.repo / self.canonical / self.selection[0]
+        exact = target.read_bytes()
+        target.unlink()
+        self.assertTrue(self.snapshot_issues())
+        target.write_bytes(exact)
+        target.chmod(0o755)
+        self.assertTrue(self.snapshot_issues())
+        target.chmod(0o644)
+        target.unlink()
+        other = self.repo / "same-byte-target"
+        other.write_bytes(exact)
+        target.symlink_to(other)
+        self.assertTrue(self.snapshot_issues())
+        target.unlink()
+        target.write_bytes(exact)
+        parent = target.parent
+        moved = parent.with_name(parent.name + "-moved")
+        parent.rename(moved)
+        parent.symlink_to(moved, target_is_directory=True)
+        self.assertTrue(self.snapshot_issues())
+        parent.unlink()
+        moved.rename(parent)
+        self.assertEqual(self.snapshot_issues(), [])
+
+    def test_present_alias_cannot_use_fallback_for_corruption(self):
+        # Catches accepting a corrupt original just because a good copy exists.
+        self.assertEqual(self.snapshot_issues(), [])
+        target = self.repo / self.prefix / self.selection[0]
+        exact = target.read_bytes()
+        target.write_bytes(exact + b"changed original\n")
+        self.assertTrue(self.snapshot_issues())
+        target.write_bytes(exact)
+        target.chmod(0o755)
+        self.assertTrue(self.snapshot_issues())
+        target.chmod(0o644)
+        target.unlink()
+        target.symlink_to(self.repo / self.canonical / self.selection[0])
+        self.assertTrue(self.snapshot_issues())
+        target.unlink()
+        target.write_bytes(exact)
+        self.assertEqual(self.snapshot_issues(), [])
+
+    def test_all_distinct_members_and_current_ancestry_locator_remain_required(self):
+        # Catches accidentally widening the class to the 99th equal source or
+        # omitting unique Round 20/historical evidence.
+        self.delete_selected()
+        self.assertEqual(self.snapshot_issues(), [])
+        remaining = sorted(set(self.members) - set(self.selection))
+        self.assertEqual(len(remaining), 32)
+        for relative in remaining:
+            target = self.repo / self.prefix / relative
+            exact = target.read_bytes()
+            target.unlink()
+            with self.subTest(relative=relative):
+                self.assertTrue(self.snapshot_issues())
+            target.write_bytes(exact)
+            self.assertEqual(self.snapshot_issues(), [])
+        target = self.repo / self.prefix / self.context
+        target.unlink()
+        self.assertTrue(self.reader.check_corpus_currentness(self.repo, self.baseline))
+
+    def test_original_manifest_is_pinned_and_unlisted_members_are_rejected(self):
+        # Catches rewriting the historical denominator or omitting nested files.
+        self.delete_selected()
+        self.assertEqual(self.snapshot_issues(), [])
+        exact = self.manifest.read_bytes()
+        lines = exact.splitlines(keepends=True)
+        lines[0], lines[1] = lines[1], lines[0]
+        self.manifest.write_bytes(b"".join(lines))
+        self.assertTrue(self.snapshot_issues())
+        self.manifest.write_bytes(exact)
+        extra = self.repo / self.prefix / "extra" / "SHA256SUMS"
+        extra.parent.mkdir()
+        extra.write_bytes(b"unlisted manifest\n")
+        self.assertTrue(self.snapshot_issues())
+        extra.unlink()
+        extra.parent.rmdir()
+        self.assertEqual(self.snapshot_issues(), [])
+        self.manifest.chmod(0o755)
+        self.assertTrue(self.snapshot_issues())
+        self.manifest.chmod(0o644)
+        self.assertEqual(self.snapshot_issues(), [])
+        self.manifest.unlink()
+        self.assertTrue(self.snapshot_issues())
+
+    def test_missing_or_same_size_corrupt_original_git_object_is_rejected(self):
+        # Catches a metadata-only cat-file check that accepts same-size corruption.
+        import zlib
+        self.delete_selected()
+        self.assertEqual(self.snapshot_issues(), [])
+        path = self.prefix + "/" + self.selection[0]
+        oid = _duplicate_fixture_git(self.repo, "rev-parse", self.baseline + ":" + path).decode().strip()
+        loose = self.repo / ".git" / "objects" / oid[:2] / oid[2:]
+        compressed = loose.read_bytes()
+        original_mode = loose.stat().st_mode & 0o777
+        expanded = zlib.decompress(compressed)
+        header, payload = expanded.split(b"\0", 1)
+        changed = payload[:-1] + bytes([payload[-1] ^ 1])
+        # Git creates read-only loose objects. Replace only this owned synthetic
+        # object, preserving the original mode when the exact bytes are restored.
+        loose.unlink()
+        loose.write_bytes(zlib.compress(header + b"\0" + changed))
+        self.assertTrue(self.snapshot_issues())
+        loose.write_bytes(compressed)
+        loose.chmod(original_mode)
+        self.assertEqual(self.snapshot_issues(), [])
+        loose.unlink()
+        self.assertTrue(self.snapshot_issues())
+
+    def test_unavailable_original_history_is_rejected(self):
+        # Catches fallback to an unpinned or unavailable history.
+        self.delete_selected()
+        self.assertEqual(self.snapshot_issues(), [])
+        with mock.patch.object(self.validator, "PMR007_ROUNDS_HISTORY", "0" * 40):
+            self.assertTrue(self.snapshot_issues())
+
+    def test_absent_aliases_require_all_nine_current_formalization_routes(self):
+        # Catches a copy-only exception that leaves live source_path fields broken.
+        self.delete_selected(migrate=False)
+        self.assertTrue(self.snapshot_issues())
+        self.assertTrue(self.reader.check_corpus_currentness(self.repo, self.baseline))
+        self.migrate_navigation()
+        self.assertEqual(self.snapshot_issues(), [])
+        self.assertEqual(self.reader.check_corpus_currentness(self.repo, self.baseline), [])
+
+    def test_navigation_migration_cannot_change_science_status_or_unselected_round20(self):
+        # Catches a broad editable-path exception instead of finite route proof.
+        self.delete_selected()
+        self.assertEqual(self.snapshot_issues(), [])
+        target = self.repo / self.navigation
+        exact = target.read_bytes()
+        for old, new in ((b"owner_adoption_status: PENDING", b"owner_adoption_status: ADOPTED"),
+                         (b"source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND20",
+                          b"source_path: post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND20")):
+            self.assertIn(old, exact)
+            target.write_bytes(exact.replace(old, new))
+            self.assertTrue(self.snapshot_issues())
+            self.assertTrue(self.reader.check_corpus_currentness(self.repo, self.baseline))
+            target.write_bytes(exact)
+            self.assertEqual(self.snapshot_issues(), [])
+
+    def test_staged_navigation_is_checked_independently_of_restored_worktree(self):
+        # Catches accepting the good worktree while a different map is staged.
+        self.delete_selected()
+        _duplicate_fixture_git(self.repo, "add", "--all")
+        self.assertEqual(self.reader.check_corpus_currentness(self.repo, self.baseline), [])
+        target = self.repo / self.navigation
+        exact = target.read_bytes()
+        target.write_bytes(exact.replace(b"owner_adoption_status: PENDING", b"owner_adoption_status: ADOPTED"))
+        _duplicate_fixture_git(self.repo, "add", "--", self.navigation)
+        target.write_bytes(exact)
+        self.assertTrue(self.reader.check_corpus_currentness(self.repo, self.baseline))
+        _duplicate_fixture_git(self.repo, "add", "--", self.navigation)
+        self.assertEqual(self.reader.check_corpus_currentness(self.repo, self.baseline), [])
+        _duplicate_fixture_git(self.repo, "update-index", "--chmod=+x", "--", self.navigation)
+        self.assertTrue(self.reader.check_corpus_currentness(self.repo, self.baseline))
+
 
 
 if __name__ == "__main__":

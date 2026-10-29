@@ -29,7 +29,7 @@ For the philosophical chain, use [steps 1–11 and the disclosure qualification]
 
 ## Finite mediator
 
-**Existing entry: `T12-FINITE-MEDIATOR`.** [Collection statement and evidence scope][twelfth] · [Ordinary proof, section 5][coordination].
+**Existing entry: `T12-FINITE-MEDIATOR`.** [Collection statement and evidence scope][twelfth] · [Current proof, §6.4](../../mathematics/collective-inquiry-and-strategic-coordination.md#64-exact-finite-alphabet-capacity).
 
 Let `S` have a centred Gaussian law of variance `n > 0`, let `M` have at most `N` values, and suppose `Y` and `S` are conditionally independent given `M`. For a fixed interval `I` of length `L ≥ 0` and a positive integer `N`,
 
@@ -65,7 +65,7 @@ The successor explicitly removes the predecessor's quadratic/sum-of-squares brid
 
 ## Fisher geometry
 
-**Existing corollary: `V6-C02`.** [Contribution owner][contributions] · [Fixed-fibre corollary][sidecar] · [Controlling finite-audit source, sections 2–3 and 9][fisher] · [Existing ordinary review][sidecar-review].
+**Existing corollary: `V6-C02`.** [Contribution owner][contributions] · [Fixed-fibre corollary][sidecar] · [Complete Fisher derivation and descent proof](../../mathematics/information-and-inquiry.md#6-the-categorical-fisher-dynamics-of-the-full-source) · [Original finite-audit edition, sections 2–3 and 9][fisher] · [Existing ordinary review][sidecar-review].
 
 The full-source geometry starts from a strictly positive joint law `mu[j,i] = w[j] p[j,i]`. Its categorical Fisher metric is
 
@@ -98,7 +98,7 @@ p₃ = (3/4, 1/4)
 
 Both weight vectors `(1/4, 1/2, 1/4)` and `(1/8, 3/4, 1/8)` give the same mixture `(1/2, 1/2)`. For the stipulated objective `J = p₁,₁`, however, the negative full-source Fisher velocity of `p₁` is respectively `(-3/4, 3/4)` and `(-3/2, 3/2)`. A record can therefore preserve the conditional answers and current mixture while failing to preserve their dynamics. The source’s [section 9 control][fisher-control] supplies the example; the refactor is not claiming a new experiment.
 
-The positive classification is also useful: for the source’s ambient `C2` objective on the full strictly positive domain, with more audit outcomes than target states, its negative full-source Fisher gradient flow projects consistently to the retained signature exactly when the restricted objective is a function of the current target alone. Here “descend” means the same projected dynamics for every admissible discarded-weight representative, not merely making a loss smaller. For this case the source supplies a closed target flow. Restricted source families, other metrics and the complementary cardinality regime have different conclusions. The [classification and assumptions][fisher] must accompany any application; numerical decrease is not itself epistemic warrant.
+The positive classification is also useful: for the source’s ambient `C2` objective on the full strictly positive domain, with more audit outcomes than target states, its negative full-source Fisher gradient flow projects consistently to the retained signature exactly when the restricted objective is a function of the current target alone. Here “descend” means the same projected dynamics for every admissible discarded-weight representative, not merely making a loss smaller. For this case the source supplies a closed target flow. Restricted source families, other metrics and the complementary cardinality regime have different conclusions. The [classification and assumptions](../../mathematics/information-and-inquiry.md#7-a-sharp-threshold-for-globally-descending-objectives) must accompany any application; numerical decrease is not itself epistemic warrant.
 
 
 ## Joint feasible readings and completions
@@ -127,7 +127,7 @@ If arbitrarily long fresh blocks bind the same terminal law, every bounded termi
 
 ### Information growth and complete coordination
 
-**`T12-COORDINATION-INFORMATION`.** [Coordination paper, sections 1–4][coordination]. In the **ordinary countably additive** setting, for fixed bounded interval length `L > 0`, common terminal capture `p > 0`, and binary entropy `h(p)` in nats,
+**`T12-COORDINATION-INFORMATION`.** [Current treatment, §§6.1–6.3][coordination]. In the **ordinary countably additive** setting, for fixed bounded interval length `L > 0`, common terminal capture `p > 0`, and binary entropy `h(p)` in nats,
 
 ```text
 I(Y_n; S_n) ≥ (p/2) log n
@@ -169,9 +169,13 @@ These entries preserve **twelve existing result scopes across six works**, not t
 
 ### Equal evaluation need not preserve a supplied certificate
 
+Current exposition: [Opaque representations and typing][typed-t13-opaque-current].
+
 **`T13-OPAQUE-REPRESENTATION`.** The [opaque-atom paper][t13-opaque] gives an exposed polynomial `p` and a whole opaque atom `q` whose raw evaluations are literally equal, but only `p` has the specified polymorphic identity type. The proof covers every original typing rule through whole-label replacement and its stated side conditions. The opaque `q` can still have type `Raw`; the failure concerns its prescribed representation at the specified target.
 
 The discarded-loop corollary shows that having a finite typable representative modulo raw conversion does not suffice for that opaque representation. This is **not** a counterexample to forward subject reduction, and it does not show that no other inhabitant exists. Its evidence is ordinary written mathematics; no new Lean status is assigned here.
+
+Current exposition: [The atom/application bridge][typed-t13-bridge-current].
 
 **`T13-ATOM-APPLICATION-BRIDGE`.** The [bridge paper][t13-bridge] defines a separate copied eighteen-rule `HasPlus` judgment using one extra polynomial-conversion equation:
 
@@ -183,7 +187,11 @@ For closed polynomials, its enlarged polynomial conversion is equivalent to raw 
 
 ### An open all-rule question acquires a later resolution
 
+Current exposition: [The historical residual identity question][typed-t13-residual-current].
+
 **Historical scopes `T13-RESIDUAL-HAS` and `T13-RESIDUAL-PLUS`.** Both refer to one [residual-identity note][t13-residual], not two papers. With `A` the polymorphic identity carrier, let `B` express typed identity between `atom(I)` and `atom(SKK)` at `A`. The note supplies formation and an original `F/G` semantic witness. It explicitly does **not** conclude all-rule noninhabitation merely because direct identity introduction fails.
+
+Current exposition: [Full-rule separation and the closed criterion][typed-t14-separation-current].
 
 **Later scopes `T14-I-SKK-HAS` and `T14-I-SKK-PLUS`.** The [full-rule written development][t14-separation] and its [specified formal component][t14-separation-lean] establish that **every** polynomial fails that exact identity typing in the respective old judgments. The alternate interpretation coherently transports types, contexts and substitutions and covers all eighteen constructors, including finite import, universal types and identity elimination. The original `F/G` semantic witness remains. This proves the stated incompleteness relative to that semantics, not unsoundness of the rules.
 
@@ -351,7 +359,7 @@ The [catalogue](PAPER-CATALOGUE.md#original-v5-construction-and-convergence-fami
 
 ## Controller and actual-law result routes
 
-**T4-MARKOV:** the [full-row/support-changing ordinary construction](PAPER-CATALOGUE.md#support-changes-and-a-deterministic-repair-policy). **T5-SCC / T5-RECORD:** the [global semantic endpoint, SCC region and explicit record](PAPER-CATALOGUE.md#a-common-generated-policy-for-hidden-parity). **T5-COMPLEXITY:** the [mixed-initial-belief posterior-deterministic complexity proof](PAPER-CATALOGUE.md#why-mixed-hidden-starts-can-make-control-exponentially-hard), not a formal complexity result for every neighbouring representation.
+**T4-MARKOV:** the [stateful restoration theorem and deterministic construction](../../mathematics/collective-inquiry-and-strategic-coordination.md#714-stateful-learning-with-revealing-observations), with [source editions and the distinct hidden-parity boundary](PAPER-CATALOGUE.md#support-changes-and-a-deterministic-repair-policy). **T5-SCC / T5-RECORD:** the [global semantic endpoint, SCC region and explicit record](PAPER-CATALOGUE.md#a-common-generated-policy-for-hidden-parity). **T5-COMPLEXITY:** the [mixed-initial-belief posterior-deterministic complexity proof](PAPER-CATALOGUE.md#why-mixed-hidden-starts-can-make-control-exponentially-hard), not a formal complexity result for every neighbouring representation.
 
 **T6-COST and S6F-19 / S6F-20 / S6F-21:** the [same actual generated-cost lineage](PAPER-CATALOGUE.md#the-actual-generated-controller-has-finite-and-exponential-error-budgets), from ordinary proof through formal all moments, pointwise exponential composition and a fixed-family common open range. **S6F-22:** [Boolean source/canonical decoded law and parity](PAPER-CATALOGUE.md#a-complete-boolean-phase-source-with-a-canonical-law-bridge). **S6F-23:** [literal rational sampling and projection/defect separation](PAPER-CATALOGUE.md#exact-rational-receipts-do-not-preserve-every-physical-stream-property). The [existing result state](../provenance/v5-research-continuations/RESULT_STATUS.json) and [exact successor selection](../provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json) own evidence and adoption. Their historical fresh-component fields do not describe a new compilation in this refactor.
 
@@ -431,11 +439,22 @@ These four existing IDs keep their original formal component scope. Repeated nam
 
 The positive result is an exact syntactic/semantic preservation theorem for a specified grammar, not “every formalisation is correct”. The normalisation witness preserves the same source term across its positive typing and negative raw-representation statements. Later identity and restricted-checker entries retain their separate questions and calculi.
 
+## Physical communication and stateful continuation
+
+| Result or construction | Exact scope and reading route |
+|---|---|
+| Robust binary communication through a linear system | [Section 4.2](../../mathematics/physical-realisation-and-continuation.md#42-an-exact-binary-threshold-for-a-linear-system): under the stated energy bound and closed noise balls, the top observation-Gramian eigenvalue gives the strict necessary and sufficient separation threshold. |
+| A common decoder for uncertain or nonlinear channels | [Section 4.3](../../mathematics/physical-realisation-and-continuation.md#43-nonlinearity-and-common-calibration): uniform margins and an explicitly admitted signed-amplitude family give sufficient certificates; optimising that certificate does not prove every uncertified channel impossible. |
+| A finite-horizon fluid residual bound | [Section 5.2](../../mathematics/physical-realisation-and-continuation.md#52-a-residual-estimate-on-a-fixed-finite-horizon): the stated smooth reference, residual and observation norms yield an output-error bound, not a solution of unrestricted Navier–Stokes regularity. |
+| Minimum fresh alphabet for a finite continuation contract | [Section 6.3](../../mathematics/physical-realisation-and-continuation.md#63-a-minimum-for-a-finite-continuation-contract): the largest number of future-behaviour classes in a retained-information fibre is the exact abstract alphabet minimum, with a separate effective finite-input version. |
+| A robust continuous parity realisation | [Section 8](../../mathematics/physical-realisation-and-continuation.md#8-a-robust-stateful-witness): bounded disturbance, reset and readout margins support stateful parity and transfers in both directions with the digital realisation. |
+| Maintained continuation without a specified original host | [Section 10.4](../../mathematics/physical-realisation-and-continuation.md#104-a-conditional-autonomy-theorem): every active realisation excludes that host from its full indispensable support and one implementable causal policy satisfies the campaign, invariance, progress and termination obligations. |
+
 [twelfth]: ../../experiments/orthemology-v5-successors/groups/t12-written/README.md
-[coordination]: ../../experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md
+[coordination]: ../../mathematics/collective-inquiry-and-strategic-coordination.md#6-complete-coordination-records-across-a-growing-horizon
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md
 [coercive]: ../../research/t20-v6-20261012/sources/204f63e544b1afd9538230f95f8ebfbc613b9847c579dfb901de6d10e40ebb10/coercive-square-positivity-20261010__RESULT.md
-[fisher]: ../../research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md
+[fisher]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md
 [sidecar]: ../../research/t20-v6-20261012/research-v6/root_math/FINITE_SIDECAR_GEOMETRY_BOUNDARY.md
 [sidecar-review]: ../../research/t20-v6-20261012/research-v6/type_collective/GEOMETRY_SIDECAR_REVIEW.md
 [join]: ../../research/t20-v6-20261012/research-v6/root_math/occurrence_feasibility_join/REPORT.md
@@ -462,7 +481,7 @@ The positive result is an exact syntactic/semantic preservation theorem for a sp
 [ar8r-post]: ../project-closure/ar8r-v11/AR8R-V11-POST-MERGE-EVIDENCE-CATALOG.yaml
 [experiment-status]: ../../experiments/experiment-status.yaml
 [owner-map]: ../project-closure/reader-refactor-issue-35/OWNER-MAP.json
-[fisher-control]: ../../research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md#9-decisive-controls-and-the-connection-to-inquiry-value
+[fisher-control]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md#9-decisive-controls-and-the-connection-to-inquiry-value
 
 [t12-fresh]: ../../experiments/orthemology-v5-successors/source-store/09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab/FRESH_HISTORIES_BOUNDED_OBSERVATION_AND_ORIGINAL_SUPPORT_v4.md
 [t12-concentration-review]: ../../experiments/orthemology-v5-successors/source-store/73bdb7a528a145fc409cf7cc6925b6210eda17808ba8e6c918ffd892f61953b8/INDEPENDENT_REVIEW_PUBLIC_v1.md
@@ -476,13 +495,17 @@ The positive result is an exact syntactic/semantic preservation theorem for a sp
 
 [t14-group]: ../../experiments/orthemology-v5-successors/groups/t14-identity/README.md
 
-[t13-opaque]: ../../experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md
+[t13-opaque]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md
+[typed-t13-opaque-current]: ../../logic/encodings-and-witnesses.md#103-equal-evaluation-need-not-preserve-a-supplied-typing
 
-[t13-bridge]: ../../experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
+[t13-bridge]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
+[typed-t13-bridge-current]: ../../logic/encodings-and-witnesses.md#104-what-the-bridge-repairs
 
-[t13-residual]: ../../experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+[t13-residual]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+[typed-t13-residual-current]: ../../logic/encodings-and-witnesses.md#105-the-identity-question-that-packing-leaves-open
 
-[t14-separation]: ../../experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+[t14-separation]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+[typed-t14-separation-current]: ../../logic/encodings-and-witnesses.md#107-full-rule-separation-and-the-exact-closed-criterion
 
 [t14-separation-lean]: ../../experiments/orthemology-v5-successors/source-store/48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c/IntensionalIdentityTheorems.lean
 
@@ -536,7 +559,9 @@ The original [result/evidence owner](../provenance/v5-research-continuations/RES
 
 **Exact scope controls:** [nudge versus endpoint](PAPER-CATALOGUE.md#nudges-coherent-directions-and-full-endpoint-repairs), [cross-context identity](PAPER-CATALOGUE.md#why-standards-must-stay-the-same-across-contexts), [nonlinear score transport](PAPER-CATALOGUE.md#faithful-score-transport-is-more-than-injective-encoding), and [the countable-success/finite-query boundary](PAPER-CATALOGUE.md#a-finite-query-restoration-obstruction-and-its-positive-sharpness).
 
-[The formalisation-scope note](../../docs/provenance/v5-research-continuations/notes/71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e.md) is the named formal/ordinary distinction, not a blanket badge on all these papers.
+The complete [information-cost and persistent-repair proofs](../../mathematics/information-and-inquiry.md#97-unknown-standards-the-information-needed-for-persistent-repair) join the exact score-to-parameter decoding, finite-confidence lower bound, target-preserving positive learner, causal finite-query countability theorem, tolerance boundary and atomic sharpness. The original public prose and formal-source limits remain explicit in that treatment.
+
+[Read the incorporated treatment](../../mathematics/common-repair-and-geometric-obstructions.md#123-inspectable-formal-dependencies); [original scope register](https://github.com/theislampill/orthemology/blob/d0abc116b51f04c064fc60ebbdd511b63a795f45/docs/provenance/v5-research-continuations/notes/71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e.md) is the named formal/ordinary distinction, not a blanket badge on all these papers.
 
 ## Critical geometry and actual-law learning results
 
@@ -655,7 +680,7 @@ The source register owns these fifteen identifiers: eleven C contributions are n
 | V6-C01 | [Sharper common-likelihood conditioning and joint origin/factor error](../../research/t20-v6-20261012/research-v6/root_math/CONDITIONING_CROSS_CONTRIBUTION.md) | [Conditioning error and finite mediation](PAPER-CATALOGUE.md#conditioning-error-and-finite-mediation) | Positive normalisers, bounded common likelihood and shared ratio support; joint sum not claimed sharp; no source likelihood warrant. |
 | V6-C02 | [Continuous Fisher audit fibre versus finite sidecars](../../research/t20-v6-20261012/research-v6/root_math/FINITE_SIDECAR_GEOMETRY_BOUNDARY.md) | [Fisher geometry and retained information](PAPER-CATALOGUE.md#fisher-geometry-and-retained-information) | Strict positive fixed conditional columns and ambient source-law Fisher norm contract; not a global varying-rank chart or requirement for posterior-answer-only preservation. |
 | V6-C03 | [Residual-spectrum cost of additional moment directions](../../research/t20-v6-20261012/research-v6/root_math/APPROXIMATE_CONTINUATION_AUGMENTATION.md) | [Additional moment directions, reset quotients and hidden activation](PAPER-CATALOGUE.md#additional-moment-directions-reset-quotients-and-hidden-activation) | Fixed linear acquisition, full probability simplex, declared accessible Walsh questions; positive-error spectral bound necessary only, no bit or sample complexity theorem. |
-| V6-C04 | [Robust finite-mediator capture](../../research/t20-v6-20261012/research-v6/type_collective/ROBUST_FINITE_MEDIATOR_BOUND.md) | [Conditioning error and finite mediation](PAPER-CATALOGUE.md#conditioning-error-and-finite-mediation) | Complete conditional mediation, at most N mediator values, reference law contract; no prescribed output marginal or coherent all-horizon process. |
+| V6-C04 | [Robust finite-mediator capture](../../mathematics/collective-inquiry-and-strategic-coordination.md#65-a-sharp-approximation-error-budget) | [Conditioning error and finite mediation](PAPER-CATALOGUE.md#conditioning-error-and-finite-mediation) | Complete conditional mediation, at most N mediator values, reference law contract; no prescribed output marginal or coherent all-horizon process. |
 | V6-C05 | [Accepted source proofs with equal erasure and distinct work](../../research/t20-v6-20261012/research-v6/type_collective/ERASURE_WORK_BOUNDARY.md) | [Literal HasE independence and the limits of HasJ completion](PAPER-CATALOGUE.md#literal-hase-independence-and-the-limits-of-hasj-completion) | General fibre criterion inherited; no wall-clock, arbitrary derivation cost or actual epistemic warrant claim. |
 | V6-C06 | [Multivalued reset coordinate quotient](../../research/t20-v6-20261012/research-v6/root_math/multivalued_reset/RESULT.md) | [Additional moment directions, reset quotients and hidden activation](PAPER-CATALOGUE.md#additional-moment-directions-reset-quotients-and-hidden-activation) | Core/future-word equivalence kernel checked; quotient cardinality ordinary proof; action contract essential, no external novelty claim. |
 | V6-C07 | [Actual HasJ semantic incompleteness join](../../research/t20-v6-20261012/research-v6/type_collective/JOINT_COMPLETENESS_BOUNDARY.md) | [Literal HasE independence and the limits of HasJ completion](PAPER-CATALOGUE.md#literal-hase-independence-and-the-limits-of-hasj-completion) | Existing computability and soundness prerequisites; no semantic validity equals metaphysical truth; individual literal sources retain their own chronology. |
@@ -834,7 +859,7 @@ These are the existing source-indexed research notes. Titles and identifiers bel
 | `Specialist B round 4` | [Specialist B round 4 — fiṭrah, occlusion, reminder, and restoration](../project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-b/source-files/05_ROUND_4_FITRAH_OCCLUSION_RESTORATION.md) |
 | `Specialist B round 5` | [Specialist B round 5 — property ontology, bearer incidence, and anti-unification](../project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-b/source-files/06_ROUND_5_PROPERTY_ONTOLOGY_AND_BEARER_UNDERDETERMINATION.md) |
 | `Specialist B round 6` | [Specialist B round 6 — personal/impersonal noetic discrimination](../project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-b/source-files/07_ROUND_6_PERSONAL_IMPERSONAL_NOETIC_DISCRIMINATION.md) |
-| `Specialist B round 7` | [Specialist B round 7 — unity, common-bearer sections, identity, and plural realization](../project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-b/source-files/09_ROUND_7_UNITY_IDENTITY_AND_PLURAL_REALIZATION.md) |
+| Unity, identity and plural realization | [Current treatment and corrected guards (§§10.5–10.10)](../../foundations/received-actuality-and-intrinsic-necessity.md#105-coherent-assignments-across-locally-indexed-worlds) · Historical status: frozen, unadopted research proposal; [exact original edition](https://api.github.com/repos/theislampill/orthemology/git/blobs/d3f909c46b7b430d533c992351402faa98a50877). |
 | `Specialist B round 8` | [Specialist B round 8 — source truth, authority, recipient warrant, and execution](../project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-b/source-files/10_ROUND_8_SOURCE_RECIPIENT_WARRANT_AUTHORIZATION.md) |
 | `Specialist B round 9` | [Specialist B round 9 — Avicennian, Taymiyyan/Atharī, and formal-root anti-unification](../project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-b/source-files/11_ROUND_9_AVICENNIAN_TAYMIYYAN_FORMAL_ANTI_UNIFICATION.md) |
 | `Specialist B round 10` | [Specialist B round 10 — norm provenance, correction vectors, and truth-connected function](../project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-b/source-files/12_ROUND_10_NORM_PROVENANCE_AND_CORRECTION_VECTOR.md) |

@@ -6,10 +6,10 @@ These are candidate research records in the same Orthemology v5 programme. Origi
 
 | Suite | Recorded stages | Checked Lean targets | Source-bound controls |
 | --- | ---: | ---: | ---: |
-| [t11-substitution](../../suites/t11-substitution.json) | 38 | 35 | 35 |
-| [t11-nucleus](../../suites/t11-nucleus.json) | 54 | 47 | 47 |
-| [t11-dependent-all](../../suites/t11-dependent-all.json) | 89 | 74 | 74 |
-| [t11-normalization](../../suites/t11-normalization.json) | 55 | 24 | 24 |
+| [t11-substitution](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/t11-substitution.json) | 38 | 35 | 35 |
+| [t11-nucleus](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/t11-nucleus.json) | 54 | 47 | 47 |
+| [t11-dependent-all](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/t11-dependent-all.json) | 89 | 74 | 74 |
+| [t11-normalization](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/t11-normalization.json) | 55 | 24 | 24 |
 
 The first substitution attempt completed its original stages and Lean target audit but its adapter failed while parsing a declaration-name prefix. That failed receipt is retained under a distinct attempt ID. The single fresh retry after the reviewed parser correction supplies qualification; the repeat adds no independent scientific evidence.
 

@@ -3,7 +3,9 @@
 
 Usage:
   python analyze_er2.py --runs runs.jsonl --manifest manifest.json \
-      --keys ../fixtures/KEYS.json --facts-root ../fixtures --out report.json
+      --keys ../fixtures/KEYS.json --out report.json
+  --facts-root may name an explicit public rendering directory; omitted means
+  the unchanged seeded public fact set. Scoring truth remains a separate input.
 
 Scoring repairs (audit B6/B7):
   - completion is scored by EQUALITY: endorse_completion == closure_legitimate
@@ -37,6 +39,14 @@ def load_jsonl(path):
 
 
 def fact_ids(facts_root, case):
+    if facts_root is None:
+        import importlib.util
+        source = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                              "scripts", "generate_cases.py")
+        spec = importlib.util.spec_from_file_location("er2_public_facts", source)
+        generator = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(generator)
+        return {a["id"] for a in generator.public_cases()[case]}
     p = os.path.join(facts_root, case, "facts.json")
     return {a["id"] for a in json.load(io.open(p, encoding="utf-8"))["facts"]}
 
@@ -143,7 +153,8 @@ def main():
     ap.add_argument("--runs", required=True)
     ap.add_argument("--manifest", required=True)
     ap.add_argument("--keys", required=True)
-    ap.add_argument("--facts-root", required=True)
+    ap.add_argument("--facts-root", default=None,
+                    help="optional explicit public fixture directory; defaults to the seeded public generator")
     ap.add_argument("--rules", default=None)
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
