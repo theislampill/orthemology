@@ -73,16 +73,18 @@ PRESERVATION_OWNER_ORIGINAL = {
     PRESERVATION_OWNER_PATHS[3]: ('d90b5647de1cf290d3b7dbe20a805983c75f0fcf',
         '51e2cea236dd0a880c7243b2f9ccbd558c6c70f16f03ec0efa274f19d3d105ff', 192971),
 }
-PRESERVATION_OWNER_CURRENT = {
-    PRESERVATION_OWNER_PATHS[0]: ('238d6aa0f68257e4180c0db3ad1f279bc4f9a7f8',
-        '95c758b7e1b022efbd306ee8ee44869fab48e685ee04a0e4ade5b3b04b81494e', 2177125),
-    PRESERVATION_OWNER_PATHS[1]: ('69a7f17b506fbd4aed360220fc6c1f25f1190fdb',
-        '41ac1f9730fb7d80638d14d31e9200ba7cc4c31b82834be3146600f76fae28e3', 45982),
-    PRESERVATION_OWNER_PATHS[2]: ('bbbe4896d5ccc02d4e8dc179ac66321fbfa43451',
-        'd65e5e79cf6be367f3d22296403d30be96b191ed1f68be1ca95ccff5b7676133', 5976495),
-    PRESERVATION_OWNER_PATHS[3]: ('b6eb53dc78c9a0de19731beddeac85a1ad32cca7',
-        'fe3aee5865d95224e2bbd8a17e00a3b2f8bfe2a55cab99ba46b002f35b87dad2', 185327),
-}
+PRESERVATION_OWNER_CURRENT = {'docs/provenance/v5-research-continuations/EVIDENCE_BINDINGS.json': ('d3442f385e96d16d83bdb6de3c3d22d9069a7d2d',
+                                                                      'c379b06184091ef65c71ec53836c45d82faf18edc72f0e66a5b854a9631f086c',
+                                                                      2124501),
+ 'docs/provenance/v5-research-continuations/README.md': ('25b47c9b01a2e1bff5d98b66e95968a94cbfd8ca',
+                                                         '1afc3bdde01b03fdfa58b325d2089f95d972554a1af63ce1e7ca231501c5b6f0',
+                                                         47487),
+ 'docs/provenance/v5-research-continuations/SOURCE_MAP.json': ('a98763ceb0e638bd055b77c83f7e7b9899c52930',
+                                                               'b434046568c41e56d060282975e7e7829bbed77b85bfb4e47108e9810da93384',
+                                                               5960211),
+ 'experiments/orthemology-v5-continuations/registry.json': ('d8a37112646af3922ffe6a7ee86d1ded72996b54',
+                                                            '53eff919af5543ce3750f988c0b1c10422dd3ba883f9fbfc77b4840650a86258',
+                                                            175135)}
 FRESH = {'NOT_RUN', 'BLOCKED_EXTERNAL_INPUT', 'BLOCKED_TOOLCHAIN', 'RESOURCE_INCONCLUSIVE',
          'FAILED', 'FINITE_ONLY', 'FRESH_KERNEL_COMPONENTS', 'QUALIFIED_DECLARED_SUITE'}
 INHERITED = {'NONE', 'WRITTEN_MATHEMATICS', 'CONDITIONAL_PHILOSOPHY', 'SOURCE_ASSESSMENT',
@@ -371,6 +373,14 @@ def _preservation(bundle, root, anchor):
         require(re.fullmatch('[0-9a-f]{40}', row['git_blob_sha1']), 'Invalid baseline Git blob identity')
         if name in owner_bytes:
             raw = owner_bytes[name]
+        elif name in _source.HISTORICAL_PROSE:
+            # Exact incorporated originals preserve their immutable inventory rows.
+            # This finite bridge grants no general missing-source fallback.
+            blob, identity, size = _source.HISTORICAL_PROSE[name]
+            require((row['git_blob_sha1'], row['sha256'], row['bytes']) == (blob, identity, size),
+                    'Historical preservation original inventory identity differs: ' + name)
+            raw = _source.historical_source_bytes(
+                root, name, _source.HISTORICAL_PROSE_REVISIONS[name], blob)
         elif name in present:
             raw = path_in(root, name).read_bytes()
         else:

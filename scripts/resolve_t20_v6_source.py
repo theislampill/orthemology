@@ -30,14 +30,12 @@ CONTINUATION_COPY_BASE = 'a7ff0e33d1a299db640041c46b1af81ca70851f6'
 CONTINUATION_LEGACY_BASE = '19de267cd41d2a5eeeb3eaf0b91562f706e2a916'
 CONTINUATION_COPY_COUNT = 258
 CONTINUATION_COPY_EXCLUDED = 'b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183'
-CONTINUATION_COPY_METADATA = {
-    'docs/provenance/v5-research-continuations/SOURCE_MAP.json':
-        (5976495, 'd65e5e79cf6be367f3d22296403d30be96b191ed1f68be1ca95ccff5b7676133'),
-    'docs/provenance/v5-successors/SOURCE_MAP.json':
-        (4978847, 'db90ad110ccc9c6a63454cf91ecec4605eed7fe243d18883d3cf501c58cb4883'),
-    'docs/provenance/v5-successors/PRESERVATION.json':
-        (379708, 'cd81d3b80d5183c1c01b637207d0afefd2b143ce4ee346808ca473a15eea6c4a'),
-}
+CONTINUATION_COPY_METADATA = {'docs/provenance/v5-research-continuations/SOURCE_MAP.json': (5960211,
+                                                               'b434046568c41e56d060282975e7e7829bbed77b85bfb4e47108e9810da93384'),
+ 'docs/provenance/v5-successors/SOURCE_MAP.json': (4978847,
+                                                   'db90ad110ccc9c6a63454cf91ecec4605eed7fe243d18883d3cf501c58cb4883'),
+ 'docs/provenance/v5-successors/PRESERVATION.json': (379708,
+                                                     'cd81d3b80d5183c1c01b637207d0afefd2b143ce4ee346808ca473a15eea6c4a')}
 
 
 # Finite public document/evidence copies at distinct checkpoint coordinates.
@@ -428,6 +426,131 @@ T4_READER_SUPPORT_PROSE = {T4_READER_PATHS[key] for key, row in T4_READER_NOTES.
 HISTORICAL_PROSE.update(T4_READER_PROSE)
 HISTORICAL_PROSE_REVISIONS.update({path: T4_READER_REVISION for path in T4_READER_PROSE})
 
+# Preserve the accepted twenty-six-path contract before the next24 extension.
+T4_READER_HISTORICAL_PATHS = tuple(HISTORICAL_PROSE)
+
+# Twenty-four incorporated public originals. Three retain CROSSWALK aliases;
+# only the nudge audit and formal-scope register are T20 public-manifest forms.
+# Archive originals, execution receipts and removal authority are separate.
+NEXT24_REVISION = 'd0abc116b51f04c064fc60ebbdd511b63a795f45'
+NEXT24_NOTES = {1: ('e46c8d347ed1864c6c65270b0b7e90eef0146815804bb9f783fa465cd3fbc8bc',
+     'a95a68888f591e035b04baa14075445fd25325b7',
+     4411,
+     'consolidated-common-repair'),
+ 2: ('b0ec9163de7f6deb49f44bb10ef1f279151ee78a30b9d2dd7ca9736d8bb62750',
+     '7d1536017f2dd2a22a2137f05c9cde0820908787',
+     12456,
+     'consolidated-common-repair'),
+ 3: ('ad15c28206a020cc7c063c17309d6bd3c05e182377a398c7507875523df7feb4',
+     '848f8f45967ddc66c76550ec2b44d233ba7966e9',
+     5091,
+     'consolidated-information-and-inquiry'),
+ 4: ('1b7488aeafc74b7115479a8cf73c0abf04d89c3924109aa922ee6099e32be2d8',
+     '2c9205fdd87f3702af3e238f5cfd1b6240013ee4',
+     11570,
+     'consolidated-information-and-inquiry'),
+ 5: ('9e00aaaaa63828e05d252e134dc225e2718461540301138a30567fbb63a24eb9',
+     'bcf29dd85a92b76483cbeacd9a6fd63343687dc1',
+     6770,
+     'consolidated-information-and-inquiry'),
+ 6: ('4f3d54cd93718e479f1485c182058bcd5ee40c13e4b9f598e4a011e6a92adaa0',
+     'd981100cdefce3b7534ce08c599b0706e5b2a231',
+     9552,
+     'consolidated-common-repair'),
+ 7: ('3efb043df2749e965a70ae815003952d0f7e3c1d203d4e04e04e24fd0892a20c',
+     '4d2aafcd49f2b088cb4afebdb67846cece5f922b',
+     6124,
+     'consolidated-common-repair'),
+ 8: ('5c9fcd3012d9c41bc951cf78e2ccc29591ab8151a0037e6cd0ff07cabb0e54f4',
+     'bd414fc2b16dcd53116d3ed772e27b3c792237c2',
+     6384,
+     'consolidated-common-repair'),
+ 9: ('36bf84b786280660b3ec4a5e3a110f04d98598cdbe49e7680a438de344a0dd06',
+     'f43d9ffc34ad19eb1e4d14cb1a176a916d408a36',
+     7718,
+     'consolidated-common-repair'),
+ 10: ('1fa9f620cbab16c728d931520d777e8ef25090c52520dca39144ed43e2790459',
+      'cbf93e2e9912045c58946dc8a936e54c2dff5b95',
+      5847,
+      'consolidated-common-repair'),
+ 11: ('673111801ec83a2118743de3cd851f7a3db8e6c9580750f3fe766a9626b0f498',
+      '8cfcd82cce15b5df64f964f81b2424c97fc1bb7c',
+      9541,
+      'consolidated-information-and-inquiry'),
+ 12: ('bd5e18cb3616a7ead45cc407da8ebe72274358edcd12459f4109ad155e2f53b2',
+      'dd8f4908d7a733aa8f08481da568318d458fc584',
+      4770,
+      'consolidated-information-and-inquiry'),
+ 13: ('50cf2306b486db59fd7a2ecf77d07b3b54c3e486745f0b7308cb091de1c3ec61',
+      '1f0bf3a48055fed1aa24dcfbba617d855d9c3c2e',
+      15300,
+      'consolidated-information-and-inquiry'),
+ 14: ('1f97b7f6e879f4ebe42b26620aac0c75095345f4ec65bfe2979ecd32aa538dbf',
+      '952acfcb7a6f7e52731ff3b26c85dd5362a0e4f1',
+      4995,
+      'consolidated-information-and-inquiry'),
+ 15: ('e6be2257c2dabfd15057f1c59603518d1ba20976068579bd31512ec1f5bfafce',
+      '00dcece21824577e981a8dd1c103056fea60e0a0',
+      5605,
+      'consolidated-information-and-inquiry'),
+ 16: ('ad4909aa4015f759a7494c5a0b5ddfa0c4ccaaf6d14ad7c89386db53e01385d6',
+      '4a91c34083b0df5658a437fdf86a471471524b30',
+      5551,
+      'consolidated-information-and-inquiry'),
+ 17: ('63494364aeb423cecee01e1b347a4dfed7e2c4b544c90d456465520378810d40',
+      '1cc325aad1ee71001f5f4c7eb2881211d78a56df',
+      7100,
+      'consolidated-information-and-inquiry'),
+ 18: ('18c1e07537712caaadf60d6bf8f25272aaf8c1767722bd56b3b5f1ed7258ee73',
+      '38e462ee8c12a50cce8fd6bccf5ca3dde2597458',
+      10150,
+      'consolidated-information-and-inquiry'),
+ 19: ('71899f46c0346c901fd19697436beaa511b9814f879835604bbe23264d062aeb',
+      '75476c99f17cf81258a6066bd12e2802c9f32f99',
+      5518,
+      'consolidated-information-and-inquiry'),
+ 20: ('51c98ce4cbc011f1e4d4d2af7fa9a34319f53713b876977bc9b16c74f0e258dc',
+      '772e3d5300525c24c56da93fd2574ce4d4a1e1a0',
+      3154,
+      'consolidated-information-and-inquiry'),
+ 21: ('890c6bc8949f630878e9d3de6bed22c7070d0b4f0d7c43d7fa96f4c7a6d91607',
+      'd2f19e3562852bbb3fc0d849e421921949fddacb',
+      10678,
+      'consolidated-information-and-inquiry'),
+ 22: ('71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e',
+      '75bb17ddd69e37db6530357307078d056b97ec16',
+      16844,
+      'consolidated-common-repair'),
+ 23: ('45ffbb9679d23bd16a43b4930ec615bb55f4c0c56705e5a0c90f0fec425a2a3e',
+      '02390e5f62fc4f5ab97263fa548b56f412c17ce3',
+      9045,
+      'consolidated-common-repair'),
+ 24: ('21f9e48328bfbf843b5f0371168f84c51768dec6260b3798fca4a461900aa006',
+      'b5f6e9140796030880f6dbc723514bfb393d23c2',
+      18202,
+      'consolidated-objective-normativity')}
+NEXT24_PATHS = {
+    n: 'docs/provenance/v5-research-continuations/notes/' + row[0] + '.md'
+    for n, row in NEXT24_NOTES.items()}
+NEXT24_PROSE = {NEXT24_PATHS[n]: (row[1], row[0], row[2])
+                for n, row in NEXT24_NOTES.items()}
+NEXT24_PUBLIC_PROSE = {NEXT24_PATHS[9], NEXT24_PATHS[22]}
+NEXT24_SUPPORT_PROSE = {NEXT24_PATHS[22]}
+NEXT24_READER_ALIASES = {
+    19: ('continuation-note-27', 'continuation-common-observation', 'research-note',
+         ('continuation-note-1',), ()),
+    22: ('continuation-note-40', None, None, None,
+         ('continuation-anchor-repair', 'continuation-dependency-quadratic',
+          'continuation-local-approximate', 'continuation-local-rigidity',
+          'continuation-nudge', 'continuation-smooth-blocks',
+          'continuation-smooth-rigidity', 'continuation-source-bridge')),
+    24: ('continuation-note-48', 'continuation-source-bridge', 'synthesis',
+         ('continuation-note-40', 'continuation-note-39', 'continuation-note-35'), ()),
+}
+HISTORICAL_PROSE.update(NEXT24_PROSE)
+HISTORICAL_PROSE_REVISIONS.update({path: NEXT24_REVISION for path in NEXT24_PROSE})
+HISTORICAL_PROSE_DISPOSITIONS.update({path: 'REUSE' for path in NEXT24_PUBLIC_PROSE})
+
 # These six notes already have public REUSE rows. Their original coordinates
 # can be pinned without publishing any other reader-only or held source.
 PUBLIC_READER_NOTE_PATHS = (
@@ -462,7 +585,8 @@ HISTORICAL_PROSE_PUBLIC_PATHS = tuple(
     path for path in HISTORICAL_PROSE
     if path != 'research/t20-live-20261009/checkpoints/CP20/necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md'
     and ((path not in CONTINUATION_READER_PROSE and path not in T4_READER_PROSE)
-         or path in PUBLIC_READER_NOTE_PATHS))
+         or path in PUBLIC_READER_NOTE_PATHS)
+    and (path not in NEXT24_PROSE or path in NEXT24_PUBLIC_PROSE))
 
 
 def historical_source_bytes(root, path, revision, git_blob):
@@ -486,6 +610,8 @@ def historical_source_bytes(root, path, revision, git_blob):
         require_continuation_note_context(root)
     elif path in T4_READER_PROSE:
         require_t4_note_context(root)
+    elif path in NEXT24_PROSE:
+        require_next24_note_context(root)
     blob, identity, size = binding
 
     def git(*args):
@@ -534,6 +660,85 @@ def historical_source_bytes(root, path, revision, git_blob):
     return body
 
 
+def require_next24_note_context(root):
+    """Require exactly 50 original identities and the accepted current owners.
+
+    The two reading aliases retain research-note/synthesis roles; the scope
+    register retains its eight support relationships. No extra work, source
+    alias or manifest form is created for the other incorporated reports.
+    Original verdicts are historical evidence, not fresh execution or custody.
+    """
+    root = pathlib.Path(root)
+    try:
+        owners = json.loads(_regular_current_bytes(root,
+            'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json'))
+        cross = json.loads(_regular_current_bytes(root,
+            'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json'))
+        bindings = owners['historical_source_bindings']
+        fields = {'path', 'repository_revision', 'git_blob', 'role', 'reading_source', 'basis'}
+        if (not isinstance(bindings, list)
+                or any(not isinstance(row, dict) or set(row) != fields for row in bindings)
+                or len(bindings) != len(HISTORICAL_PROSE)
+                or {row['path'] for row in bindings} != set(HISTORICAL_PROSE)):
+            raise ValueError('the exact earlier twenty-six and next24 bindings are required')
+        for n, row in NEXT24_NOTES.items():
+            expected = dict(path=NEXT24_PATHS[n], repository_revision=NEXT24_REVISION,
+                git_blob=row[1], role='historical-source', reading_source=row[3],
+                basis='scientific-consolidation-review')
+            if [binding for binding in bindings if binding['path'] == expected['path']] != [expected]:
+                raise ValueError('the exact next24 original owner binding is required')
+        for key, path, role in (
+            ('consolidated-common-repair', 'mathematics/common-repair-and-geometric-obstructions.md', 'work-source'),
+            ('consolidated-information-and-inquiry', 'mathematics/information-and-inquiry.md', 'work-source'),
+            ('consolidated-objective-normativity', 'foundations/objective-normativity-and-corrective-cognition.md', 'work-source'),
+            ('scientific-consolidation-review', 'docs/scientific-consolidation-review.md', 'review')):
+            selected = [row for row in owners['source_additions'] if row['key'] == key]
+            if len(selected) != 1:
+                raise ValueError('missing or duplicate current next24 reading owner')
+            admission, source = selected[0], cross['sources'][key]
+            current = _regular_current_bytes(root, path)
+            oid = hashlib.sha1(b'blob ' + str(len(current)).encode() + b'\0' + current).hexdigest()
+            if (admission['path'] != path or source['path'] != path or admission['role'] != role
+                    or admission['mode'] != '100644' or admission['git_oid'] != oid
+                    or admission['bytes'] != len(current) or admission['sha256'] != digest(current)
+                    or source['sha256'] != digest(current)):
+                raise ValueError('current next24 scholarship or review edition differs')
+            if role == 'work-source' and 'scientific-consolidation-review' not in admission['supporting_source_keys']:
+                raise ValueError('current next24 work has lost its review owner')
+        for n, row in NEXT24_NOTES.items():
+            names = [key for key, value in cross['sources'].items() if value['path'] == NEXT24_PATHS[n]]
+            if n not in NEXT24_READER_ALIASES:
+                if names:
+                    raise ValueError('a history-only next24 original acquired a reader alias')
+                continue
+            key, work, role, support, users = NEXT24_READER_ALIASES[n]
+            source = cross['sources'][key]
+            primary = [item for item in cross['works'] if key in item['source_keys']]
+            forms = [form for item in cross['works'] for form in item.get('reading_forms', [])
+                     if form.get('source') == key]
+            supported = sorted(item['key'] for item in cross['works']
+                               if key in item.get('supporting_source_keys', []))
+            expected_form = {'source': key, 'relationship': 'historical-source'}
+            if work is None:
+                if primary or forms or support is not None or role is not None:
+                    raise ValueError('next24 support-only original acquired a work or reading form')
+            elif (len(primary) != 1 or primary[0]['key'] != work or primary[0]['role'] != role
+                    or primary[0]['source_keys'] != [key] or primary[0]['reading_forms'] != [expected_form]
+                    or forms != [expected_form] or primary[0]['supporting_source_keys'] != list(support)
+                    or any(name not in cross['sources'] for name in support)):
+                raise ValueError('next24 research-note/synthesis ownership or retained support differs')
+            relation = {'from': key, 'to': row[3],
+                        'kind': 'logical-content-incorporated-historical-source-retained',
+                        'basis': 'scientific-consolidation-review'}
+            if (names != [key] or source['sha256'] != row[0] or supported != list(users)
+                    or not isinstance(source.get('read_scope'), str) or not source['read_scope'].strip()
+                    or [item for item in cross['relations'] if item.get('from') == key] != [relation]
+                    or any(key in journey.get('source_keys', []) for journey in cross['reader_journeys'])):
+                raise ValueError('next24 source identity, support incidence or incorporation differs')
+    except (KeyError, TypeError, UnicodeError) as exc:
+        raise ValueError('invalid current next24 original owner bindings') from exc
+
+
 def require_t4_note_context(root):
     """Require ten enumerated T4 originals and their current scholarly owners.
 
@@ -551,9 +756,10 @@ def require_t4_note_context(root):
         fields = {'path', 'repository_revision', 'git_blob', 'role', 'reading_source', 'basis'}
         if (not isinstance(bindings, list)
                 or any(not isinstance(row, dict) or set(row) != fields for row in bindings)
-                or len(bindings) != len(HISTORICAL_PROSE)
-                or {row['path'] for row in bindings} != set(HISTORICAL_PROSE)):
-            raise ValueError('the exact earlier sixteen and ten T4 bindings are required')
+                or len({row['path'] for row in bindings}) != len(bindings)
+                or {row['path'] for row in bindings} not in
+                    (set(T4_READER_HISTORICAL_PATHS), set(HISTORICAL_PROSE))):
+            raise ValueError('the exact T4 twenty-six or next24 fifty bindings are required')
         for key, row in T4_READER_NOTES.items():
             expected = dict(path=T4_READER_PATHS[key], repository_revision=T4_READER_REVISION,
                 git_blob=row[1], role='historical-source', reading_source=row[4],
@@ -628,7 +834,8 @@ def require_continuation_note_context(root):
                 or any(not isinstance(row, dict) or set(row) != fields for row in bindings)
                 or len({row['path'] for row in bindings}) != len(bindings)
                 or {row['path'] for row in bindings} not in
-                    (set(CONTINUATION_READER_HISTORICAL_PATHS), set(HISTORICAL_PROSE))):
+                    (set(CONTINUATION_READER_HISTORICAL_PATHS), set(T4_READER_HISTORICAL_PATHS),
+                     set(HISTORICAL_PROSE))):
             raise ValueError('exact continuation sixteen or T4 twenty-six bindings are required')
         for key, row in CONTINUATION_READER_NOTES.items():
             path = CONTINUATION_READER_PATHS[key]

@@ -561,7 +561,7 @@ The original [result/evidence owner](../provenance/v5-research-continuations/RES
 
 The complete [information-cost and persistent-repair proofs](../../mathematics/information-and-inquiry.md#97-unknown-standards-the-information-needed-for-persistent-repair) join the exact score-to-parameter decoding, finite-confidence lower bound, target-preserving positive learner, causal finite-query countability theorem, tolerance boundary and atomic sharpness. The original public prose and formal-source limits remain explicit in that treatment.
 
-[The formalisation-scope note](../../docs/provenance/v5-research-continuations/notes/71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e.md) is the named formal/ordinary distinction, not a blanket badge on all these papers.
+[Read the incorporated treatment](../../mathematics/common-repair-and-geometric-obstructions.md#123-inspectable-formal-dependencies); [original scope register](https://github.com/theislampill/orthemology/blob/d0abc116b51f04c064fc60ebbdd511b63a795f45/docs/provenance/v5-research-continuations/notes/71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e.md) is the named formal/ordinary distinction, not a blanket badge on all these papers.
 
 ## Critical geometry and actual-law learning results
 

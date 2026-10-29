@@ -35,6 +35,7 @@ from resolve_t20_v6_source import (
     ORIGINAL_HISTORICAL_PROSE_PATHS, FISHER_AUDIT, FISHER_PROSE_REVISION,
     TYPED_PROSE, TYPED_PROSE_REVISION, TYPED_GUIDES, typed_guide_source_bytes,
     CONTINUATION_READER_PROSE, T4_READER_PROSE, T4_READER_SUPPORT_PROSE,
+    NEXT24_PROSE, NEXT24_SUPPORT_PROSE, NEXT24_PUBLIC_PROSE,
     CONTINUATION_COPY_ROOT, continuation_duplicate_paths,
     PUBLIC_READER_NOTE_PATHS, CONTINUATION_REGISTRY_PATH, CONTINUATION_REGISTRY_REVISION,
 )
@@ -456,31 +457,38 @@ def pmr007_rounds_parent_source_bytes(repo):
 
 
 def _permitted_projection_consumer_pins(original, candidate):
-    """Admit only seven exact historical coordinates on existing public rows."""
+    """Admit whole seven-row and two-row historical coordinate migrations."""
     from copy import deepcopy
     import validate_v5_successors as owners
-    expected = deepcopy(original)
-    bindings = {
+    earlier = {
         path: (*HISTORICAL_PROSE[path], HISTORICAL_PROSE_REVISIONS[path])
         for path in PUBLIC_READER_NOTE_PATHS}
-    bindings[CONTINUATION_REGISTRY_PATH] = (
+    earlier[CONTINUATION_REGISTRY_PATH] = (
         *owners.PRESERVATION_OWNER_ORIGINAL[CONTINUATION_REGISTRY_PATH],
         CONTINUATION_REGISTRY_REVISION)
-    try:
-        for path, (blob, identity, size, revision) in bindings.items():
-            rows = [r for r in expected['objects'] if r.get('repository_path') == path]
-            if len(rows) != 1:
-                return False
-            source = rows[0]
-            if (source.get('disposition') != 'REUSE'
-                    or source.get('source_sha256') != identity
-                    or source.get('public_sha256') != identity
-                    or source.get('source_bytes') != size or source.get('public_bytes') != size):
-                return False
-            source.update(repository_revision=revision, git_blob=blob)
-        return candidate == expected
-    except (KeyError, TypeError, ValueError):
-        return False
+    next24 = {
+        path: (*HISTORICAL_PROSE[path], HISTORICAL_PROSE_REVISIONS[path])
+        for path in NEXT24_PUBLIC_PROSE}
+    for bindings in (earlier, next24, dict(earlier, **next24)):
+        expected = deepcopy(original)
+        try:
+            for path, (blob, identity, size, revision) in bindings.items():
+                rows = [r for r in expected['objects'] if r.get('repository_path') == path]
+                if len(rows) != 1:
+                    break
+                source = rows[0]
+                if (source.get('disposition') != 'REUSE'
+                        or source.get('source_sha256') != identity
+                        or source.get('public_sha256') != identity
+                        or source.get('source_bytes') != size or source.get('public_bytes') != size):
+                    break
+                source.update(repository_revision=revision, git_blob=blob)
+            else:
+                if candidate == expected:
+                    return True
+        except (KeyError, TypeError, ValueError):
+            return False
+    return False
 
 
 def permitted_historical_status_pin(repo, row, body):
@@ -916,8 +924,9 @@ def check_historical_sources(repo, baseline_rows, owners, cross, additions):
     typed = fisher | set(TYPED_PROSE)
     if (len(paths) != len(declared) or paths not in
             (original, mediator, fisher, typed, typed | set(CONTINUATION_READER_PROSE),
-              typed | set(CONTINUATION_READER_PROSE) | set(T4_READER_PROSE))):
-        return {}, ["historical-source: expected exactly the original five, mediator seven, Fisher eight, typed twelve, continuation sixteen or T4 twenty-six path dispositions"]
+              typed | set(CONTINUATION_READER_PROSE) | set(T4_READER_PROSE),
+              typed | set(CONTINUATION_READER_PROSE) | set(T4_READER_PROSE) | set(NEXT24_PROSE))):
+        return {}, ["historical-source: expected exactly the original five, mediator seven, Fisher eight, typed twelve, continuation sixteen, T4 twenty-six or next24 fifty path dispositions"]
     admitted, errors = {}, []
     sources = cross.get("sources", {})
     for binding in declared:
@@ -959,7 +968,7 @@ def check_historical_sources(repo, baseline_rows, owners, cross, additions):
                             "basis": binding["basis"]}
                 relations = [r for r in cross.get("relations", []) if r.get("from") == key
                              and r.get("kind") == expected["kind"]]
-                expected_forms = ([] if path in T4_READER_SUPPORT_PROSE else
+                expected_forms = ([] if path in T4_READER_SUPPORT_PROSE | NEXT24_SUPPORT_PROSE else
                                   [{"source": key, "relationship": "historical-source"}])
                 if forms != expected_forms or relations != [expected]:
                     raise ValueError("reader source lacks its exact historical/incorporation relationship")
@@ -988,16 +997,18 @@ CONTINUATION_OWNER_ORIGINAL = {
     CONTINUATION_OWNER_PATHS[3]: ("d90b5647de1cf290d3b7dbe20a805983c75f0fcf",
         "51e2cea236dd0a880c7243b2f9ccbd558c6c70f16f03ec0efa274f19d3d105ff", 192971),
 }
-CONTINUATION_OWNER_CURRENT = {
-    CONTINUATION_OWNER_PATHS[0]: ("238d6aa0f68257e4180c0db3ad1f279bc4f9a7f8",
-        "95c758b7e1b022efbd306ee8ee44869fab48e685ee04a0e4ade5b3b04b81494e", 2177125),
-    CONTINUATION_OWNER_PATHS[1]: ("69a7f17b506fbd4aed360220fc6c1f25f1190fdb",
-        "41ac1f9730fb7d80638d14d31e9200ba7cc4c31b82834be3146600f76fae28e3", 45982),
-    CONTINUATION_OWNER_PATHS[2]: ("bbbe4896d5ccc02d4e8dc179ac66321fbfa43451",
-        "d65e5e79cf6be367f3d22296403d30be96b191ed1f68be1ca95ccff5b7676133", 5976495),
-    CONTINUATION_OWNER_PATHS[3]: ("b6eb53dc78c9a0de19731beddeac85a1ad32cca7",
-        "fe3aee5865d95224e2bbd8a17e00a3b2f8bfe2a55cab99ba46b002f35b87dad2", 185327),
-}
+CONTINUATION_OWNER_CURRENT = {'docs/provenance/v5-research-continuations/EVIDENCE_BINDINGS.json': ('d3442f385e96d16d83bdb6de3c3d22d9069a7d2d',
+                                                                      'c379b06184091ef65c71ec53836c45d82faf18edc72f0e66a5b854a9631f086c',
+                                                                      2124501),
+ 'docs/provenance/v5-research-continuations/README.md': ('25b47c9b01a2e1bff5d98b66e95968a94cbfd8ca',
+                                                         '1afc3bdde01b03fdfa58b325d2089f95d972554a1af63ce1e7ca231501c5b6f0',
+                                                         47487),
+ 'docs/provenance/v5-research-continuations/SOURCE_MAP.json': ('a98763ceb0e638bd055b77c83f7e7b9899c52930',
+                                                               'b434046568c41e56d060282975e7e7829bbed77b85bfb4e47108e9810da93384',
+                                                               5960211),
+ 'experiments/orthemology-v5-continuations/registry.json': ('d8a37112646af3922ffe6a7ee86d1ded72996b54',
+                                                            '53eff919af5543ce3750f988c0b1c10422dd3ba883f9fbfc77b4840650a86258',
+                                                            175135)}
 
 
 def check_continuation_owner_edition(repo, baseline_rows):

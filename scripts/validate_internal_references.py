@@ -34,7 +34,7 @@ from validate_repo import (load_source_map, original_packet_locator,
                            successor_origin_document, markdown_link_targets,
                            strip_markdown_math)
 from resolve_t20_v6_source import (
-    TYPED_PROSE, TYPED_PROSE_REVISION, historical_source_bytes, HISTORICAL_PROSE_REVISION,
+    HISTORICAL_PROSE, HISTORICAL_PROSE_REVISIONS, historical_source_bytes, HISTORICAL_PROSE_REVISION,
     CONTINUATION_COPY_ROOT, continuation_copy_bytes,
     CHECKPOINT_COPY_PATHS, checkpoint_copy_bytes,
 )
@@ -281,20 +281,30 @@ def _checkpoint_reference(src, cited):
 
 
 def _resolves(src, cited):
+    # These exact incorporated originals retain immutable provenance/evidence
+    # references. Authenticate history and any present copy before ordinary
+    # existence checks; no unrelated path obtains a missing-body exemption.
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for candidate in candidates:
+        if candidate in HISTORICAL_PROSE:
+            try:
+                historical_source_bytes(ROOT, candidate, HISTORICAL_PROSE_REVISIONS[candidate],
+                                        HISTORICAL_PROSE[candidate][0])
+                return True
+            except (ValueError, OSError):
+                return False
     checkpoint = _checkpoint_reference(src, cited)
     if checkpoint is not None:
         return checkpoint
     historical = _historical_projection_reference(src, cited)
     if historical is not None:
         return historical
-    # These four canonical source identities have a qualified current reading
-    # and an exact original Git route. A present corrupt copy still fails.
-    if cited in TYPED_PROSE:
-        try:
-            historical_source_bytes(ROOT, cited, TYPED_PROSE_REVISION, TYPED_PROSE[cited][0])
-            return True
-        except (ValueError, OSError):
-            return False
     if os.path.exists(os.path.join(ROOT, cited)):
         return True
     if cited.startswith(CONTINUATION_COPY_ROOT) and cited.endswith('.lean'):

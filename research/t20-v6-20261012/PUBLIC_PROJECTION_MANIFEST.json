@@ -69830,7 +69830,9 @@
       "repository_path": "docs/provenance/v5-research-continuations/notes/36bf84b786280660b3ec4a5e3a110f04d98598cdbe49e7680a438de344a0dd06.md",
       "public_sha256": "36bf84b786280660b3ec4a5e3a110f04d98598cdbe49e7680a438de344a0dd06",
       "public_bytes": 7718,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "f43d9ffc34ad19eb1e4d14cb1a176a916d408a36"
     },
     {
       "source_sha256": "36c0a90f6c4c5d2f512d515673f7a4cda51ec7c2dcf1d9aac81c7efbd517165a",
@@ -145876,7 +145878,9 @@
       "repository_path": "docs/provenance/v5-research-continuations/notes/71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e.md",
       "public_sha256": "71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e",
       "public_bytes": 16844,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "d0abc116b51f04c064fc60ebbdd511b63a795f45",
+      "git_blob": "75bb17ddd69e37db6530357307078d056b97ec16"
     },
     {
       "source_sha256": "711628191ce852abf2570476a5b2a700ce519c1ca8e77f98895d150d5a3f2969",

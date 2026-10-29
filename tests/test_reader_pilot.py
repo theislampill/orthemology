@@ -1362,6 +1362,37 @@ class BulkConsumerProjectionPinTests(unittest.TestCase):
             ('d20707cf0d24dd5b2b966f2b1f3640ec7672092ef8a19b57f60fc61897cd6b50', 4073, '9628152cf22670418bc2c88aa13e496047fba40c'),
     }
 
+    # Independently admitted coordinate additions; all original row fields stay exact.
+    COORDINATE_PINS = {
+        'docs/provenance/v5-research-continuations/notes/002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e.md':
+            ('002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e', 6680,
+             '2804e7b196437dd437f0099b15aa45a76249e63b', 'a7ff0e33d1a299db640041c46b1af81ca70851f6'),
+        'docs/provenance/v5-research-continuations/notes/34c1f25cd1144b386ff4c70a2fbfacc7da2a0fc87f5cd78b430badf260ab49f6.md':
+            ('34c1f25cd1144b386ff4c70a2fbfacc7da2a0fc87f5cd78b430badf260ab49f6', 1017,
+             '6bcd9f7c0faea3fe3037c1f188288555312517b1', 'b4d58482ae00f138782276ee5c4034c48bb2df19'),
+        'docs/provenance/v5-research-continuations/notes/36bf84b786280660b3ec4a5e3a110f04d98598cdbe49e7680a438de344a0dd06.md':
+            ('36bf84b786280660b3ec4a5e3a110f04d98598cdbe49e7680a438de344a0dd06', 7718,
+             'f43d9ffc34ad19eb1e4d14cb1a176a916d408a36', 'd0abc116b51f04c064fc60ebbdd511b63a795f45'),
+        'docs/provenance/v5-research-continuations/notes/4878fd0a4cf6c952af7cdbcb7e8a386c2730ff9986b74b8e39bf9b5077815b0f.md':
+            ('4878fd0a4cf6c952af7cdbcb7e8a386c2730ff9986b74b8e39bf9b5077815b0f', 15286,
+             'f419024deb2a40bf50f7315cdf2dfdde9ede77f6', 'a7ff0e33d1a299db640041c46b1af81ca70851f6'),
+        'docs/provenance/v5-research-continuations/notes/71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e.md':
+            ('71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e', 16844,
+             '75bb17ddd69e37db6530357307078d056b97ec16', 'd0abc116b51f04c064fc60ebbdd511b63a795f45'),
+        'docs/provenance/v5-research-continuations/notes/7d3cbeb8bcacdb5d28cb457801ba41de9b21f91542866fe5c5f13a4a632dadd9.md':
+            ('7d3cbeb8bcacdb5d28cb457801ba41de9b21f91542866fe5c5f13a4a632dadd9', 14328,
+             '07a1df58ff170334e07261c93af8345093b0f160', 'b4d58482ae00f138782276ee5c4034c48bb2df19'),
+        'docs/provenance/v5-research-continuations/notes/9438fdcbea8747c7e5599483096eca9541cfdf673d6a96866c019c5ced06519a.md':
+            ('9438fdcbea8747c7e5599483096eca9541cfdf673d6a96866c019c5ced06519a', 11145,
+             '80e45c60c8f4e71a8191f906d04afd4ab0384b06', 'b4d58482ae00f138782276ee5c4034c48bb2df19'),
+        'docs/provenance/v5-research-continuations/notes/b092780b29dd9fa00ac276142b090a5b8b88da79da9c278268264669e08f3d8c.md':
+            ('b092780b29dd9fa00ac276142b090a5b8b88da79da9c278268264669e08f3d8c', 29013,
+             '4e69862256f3014f8e94d528b13ff0f63dd7f3eb', 'b4d58482ae00f138782276ee5c4034c48bb2df19'),
+        'experiments/orthemology-v5-continuations/registry.json':
+            ('51e2cea236dd0a880c7243b2f9ccbd558c6c70f16f03ec0efa274f19d3d105ff', 192971,
+             'd90b5647de1cf290d3b7dbe20a805983c75f0fcf', '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+    }
+
     @classmethod
     def setUpClass(cls):
         HistoricalMetadataPinTests.setUpClass()
@@ -1380,9 +1411,19 @@ class BulkConsumerProjectionPinTests(unittest.TestCase):
         after = {r['source_sha256']: r for r in self.current['objects']}
         self.assertEqual(len(before), 28478)
         self.assertEqual(before.keys(), after.keys())
-        self.assertEqual({k for k in before if before[k] != after[k]}, {p[0] for p in self.PINS.values()})
+        expected_changes = ({p[0] for p in self.PINS.values()}
+                            | {p[0] for p in self.COORDINATE_PINS.values()})
+        self.assertEqual({k for k in before if before[k] != after[k]}, expected_changes)
         self.assertEqual({k: v for k, v in self.prior.items() if k != 'objects'},
                          {k: v for k, v in self.current.items() if k != 'objects'})
+        for path, (identity, size, blob, revision) in self.COORDINATE_PINS.items():
+            old, new = before[identity], after[identity]
+            self.assertEqual(old['repository_path'], path)
+            self.assertEqual(old['disposition'], 'REUSE')
+            self.assertEqual((old['source_sha256'], old['public_sha256'],
+                              old['source_bytes'], old['public_bytes']),
+                             (identity, identity, size, size))
+            self.assertEqual(new, dict(old, repository_revision=revision, git_blob=blob))
         for path, (identity, size, blob) in self.PINS.items():
             old, new = before[identity], after[identity]
             self.assertEqual({k: v for k, v in old.items() if k != 'publication_basis'},
@@ -2503,7 +2544,7 @@ class ContinuationGeometryRoutesTests(unittest.TestCase):
             end = next((h[2] for h in page["headings"] if h[2] > start and h[1] <= level),page["line_count"])
             links = {href for line,href in page["links"] if start <= line < end}
             migrated = [(key, row, family.REV)
-                        for family in (ContinuationNoteReaderMigrationTests, T4NoteReaderMigrationTests)
+                        for family in (ContinuationNoteReaderMigrationTests, T4NoteReaderMigrationTests, Next24HistoricalMigrationTests)
                         for key, row in family.NOTES.items() if row[3] is not None
                         and path == "docs/provenance/v5-research-continuations/notes/" + row[0] + ".md"]
             if migrated:
@@ -2539,7 +2580,7 @@ class ContinuationGeometryRoutesTests(unittest.TestCase):
         self.assertEqual(self.errors(self.cross, self.text), [])
         for member,path in self.expected.items():
             replacement = next(v for v in self.expected.values() if v != path)
-            migrated = [row for family in (ContinuationNoteReaderMigrationTests, T4NoteReaderMigrationTests)
+            migrated = [row for family in (ContinuationNoteReaderMigrationTests, T4NoteReaderMigrationTests, Next24HistoricalMigrationTests)
                         for row in family.NOTES.values() if row[3] is not None
                         and path == "docs/provenance/v5-research-continuations/notes/" + row[0] + ".md"]
             original = "../../" + migrated[0][5] + "#" + migrated[0][6] if migrated else "../../" + path
@@ -7768,6 +7809,486 @@ class T4NoteReaderMigrationTests(unittest.TestCase):
     test_wrong_present_note_mode_and_symlink_cannot_fall_back = ContinuationNoteReaderMigrationTests.test_wrong_present_note_mode_and_symlink_cannot_fall_back
     test_wrong_history_and_index_cannot_be_hidden_by_absence = ContinuationNoteReaderMigrationTests.test_wrong_history_and_index_cannot_be_hidden_by_absence
     test_reader_note_history_does_not_create_new_t20_public_forms = ContinuationNoteReaderMigrationTests.test_reader_note_history_does_not_create_new_t20_public_forms
+
+
+class Next24HistoricalMigrationTests(unittest.TestCase):
+    """Exact public native Git originals, finite owner roles and negative controls.
+
+    The literal cohort comes from the independently frozen scientific inputs.
+    Only selected public objects enter each fixture; no full checkout is made.
+    """
+    REV = 'd0abc116b51f04c064fc60ebbdd511b63a795f45'
+    OWNER = 'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json'
+    CROSS = 'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json'
+    REVIEW = 'docs/scientific-consolidation-review.md'
+    MANIFEST = 'research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json'
+    ROWS = {1: ('e46c8d347ed1864c6c65270b0b7e90eef0146815804bb9f783fa465cd3fbc8bc',
+     'a95a68888f591e035b04baa14075445fd25325b7',
+     4411,
+     'consolidated-common-repair'),
+ 2: ('b0ec9163de7f6deb49f44bb10ef1f279151ee78a30b9d2dd7ca9736d8bb62750',
+     '7d1536017f2dd2a22a2137f05c9cde0820908787',
+     12456,
+     'consolidated-common-repair'),
+ 3: ('ad15c28206a020cc7c063c17309d6bd3c05e182377a398c7507875523df7feb4',
+     '848f8f45967ddc66c76550ec2b44d233ba7966e9',
+     5091,
+     'consolidated-information-and-inquiry'),
+ 4: ('1b7488aeafc74b7115479a8cf73c0abf04d89c3924109aa922ee6099e32be2d8',
+     '2c9205fdd87f3702af3e238f5cfd1b6240013ee4',
+     11570,
+     'consolidated-information-and-inquiry'),
+ 5: ('9e00aaaaa63828e05d252e134dc225e2718461540301138a30567fbb63a24eb9',
+     'bcf29dd85a92b76483cbeacd9a6fd63343687dc1',
+     6770,
+     'consolidated-information-and-inquiry'),
+ 6: ('4f3d54cd93718e479f1485c182058bcd5ee40c13e4b9f598e4a011e6a92adaa0',
+     'd981100cdefce3b7534ce08c599b0706e5b2a231',
+     9552,
+     'consolidated-common-repair'),
+ 7: ('3efb043df2749e965a70ae815003952d0f7e3c1d203d4e04e04e24fd0892a20c',
+     '4d2aafcd49f2b088cb4afebdb67846cece5f922b',
+     6124,
+     'consolidated-common-repair'),
+ 8: ('5c9fcd3012d9c41bc951cf78e2ccc29591ab8151a0037e6cd0ff07cabb0e54f4',
+     'bd414fc2b16dcd53116d3ed772e27b3c792237c2',
+     6384,
+     'consolidated-common-repair'),
+ 9: ('36bf84b786280660b3ec4a5e3a110f04d98598cdbe49e7680a438de344a0dd06',
+     'f43d9ffc34ad19eb1e4d14cb1a176a916d408a36',
+     7718,
+     'consolidated-common-repair'),
+ 10: ('1fa9f620cbab16c728d931520d777e8ef25090c52520dca39144ed43e2790459',
+      'cbf93e2e9912045c58946dc8a936e54c2dff5b95',
+      5847,
+      'consolidated-common-repair'),
+ 11: ('673111801ec83a2118743de3cd851f7a3db8e6c9580750f3fe766a9626b0f498',
+      '8cfcd82cce15b5df64f964f81b2424c97fc1bb7c',
+      9541,
+      'consolidated-information-and-inquiry'),
+ 12: ('bd5e18cb3616a7ead45cc407da8ebe72274358edcd12459f4109ad155e2f53b2',
+      'dd8f4908d7a733aa8f08481da568318d458fc584',
+      4770,
+      'consolidated-information-and-inquiry'),
+ 13: ('50cf2306b486db59fd7a2ecf77d07b3b54c3e486745f0b7308cb091de1c3ec61',
+      '1f0bf3a48055fed1aa24dcfbba617d855d9c3c2e',
+      15300,
+      'consolidated-information-and-inquiry'),
+ 14: ('1f97b7f6e879f4ebe42b26620aac0c75095345f4ec65bfe2979ecd32aa538dbf',
+      '952acfcb7a6f7e52731ff3b26c85dd5362a0e4f1',
+      4995,
+      'consolidated-information-and-inquiry'),
+ 15: ('e6be2257c2dabfd15057f1c59603518d1ba20976068579bd31512ec1f5bfafce',
+      '00dcece21824577e981a8dd1c103056fea60e0a0',
+      5605,
+      'consolidated-information-and-inquiry'),
+ 16: ('ad4909aa4015f759a7494c5a0b5ddfa0c4ccaaf6d14ad7c89386db53e01385d6',
+      '4a91c34083b0df5658a437fdf86a471471524b30',
+      5551,
+      'consolidated-information-and-inquiry'),
+ 17: ('63494364aeb423cecee01e1b347a4dfed7e2c4b544c90d456465520378810d40',
+      '1cc325aad1ee71001f5f4c7eb2881211d78a56df',
+      7100,
+      'consolidated-information-and-inquiry'),
+ 18: ('18c1e07537712caaadf60d6bf8f25272aaf8c1767722bd56b3b5f1ed7258ee73',
+      '38e462ee8c12a50cce8fd6bccf5ca3dde2597458',
+      10150,
+      'consolidated-information-and-inquiry'),
+ 19: ('71899f46c0346c901fd19697436beaa511b9814f879835604bbe23264d062aeb',
+      '75476c99f17cf81258a6066bd12e2802c9f32f99',
+      5518,
+      'consolidated-information-and-inquiry'),
+ 20: ('51c98ce4cbc011f1e4d4d2af7fa9a34319f53713b876977bc9b16c74f0e258dc',
+      '772e3d5300525c24c56da93fd2574ce4d4a1e1a0',
+      3154,
+      'consolidated-information-and-inquiry'),
+ 21: ('890c6bc8949f630878e9d3de6bed22c7070d0b4f0d7c43d7fa96f4c7a6d91607',
+      'd2f19e3562852bbb3fc0d849e421921949fddacb',
+      10678,
+      'consolidated-information-and-inquiry'),
+ 22: ('71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e',
+      '75bb17ddd69e37db6530357307078d056b97ec16',
+      16844,
+      'consolidated-common-repair'),
+ 23: ('45ffbb9679d23bd16a43b4930ec615bb55f4c0c56705e5a0c90f0fec425a2a3e',
+      '02390e5f62fc4f5ab97263fa548b56f412c17ce3',
+      9045,
+      'consolidated-common-repair'),
+ 24: ('21f9e48328bfbf843b5f0371168f84c51768dec6260b3798fca4a461900aa006',
+      'b5f6e9140796030880f6dbc723514bfb393d23c2',
+      18202,
+      'consolidated-objective-normativity')}
+    NOTES = {
+        'continuation-note-27': ('71899f46c0346c901fd19697436beaa511b9814f879835604bbe23264d062aeb', '75476c99f17cf81258a6066bd12e2802c9f32f99', 5518, 'continuation-common-observation',
+            'consolidated-information-and-inquiry', 'mathematics/information-and-inquiry.md',
+            'a-common-lower-reference-and-compatible-eventual-targets', ('continuation-note-1',)),
+        'continuation-note-48': ('21f9e48328bfbf843b5f0371168f84c51768dec6260b3798fca4a461900aa006', 'b5f6e9140796030880f6dbc723514bfb393d23c2', 18202, 'continuation-source-bridge',
+            'consolidated-objective-normativity', 'foundations/objective-normativity-and-corrective-cognition.md',
+            '73-transporting-a-correction-scale-through-time',
+            ('continuation-note-40', 'continuation-note-39', 'continuation-note-35')),
+    }
+    ALIASES = {
+        19: ('continuation-note-27', 'continuation-common-observation', 'research-note',
+             ('continuation-note-1',), ()),
+        22: ('continuation-note-40', None, None, None,
+             ('continuation-anchor-repair', 'continuation-dependency-quadratic',
+              'continuation-local-approximate', 'continuation-local-rigidity',
+              'continuation-nudge', 'continuation-smooth-blocks',
+              'continuation-smooth-rigidity', 'continuation-source-bridge')),
+        24: ('continuation-note-48', 'continuation-source-bridge', 'synthesis',
+             ('continuation-note-40', 'continuation-note-39', 'continuation-note-35'), ()),
+    }
+
+    @classmethod
+    def setUpClass(cls):
+        import os
+        import check_reader_pilot
+        import resolve_t20_v6_source
+        import validate_v5_successors
+        cls.reader, cls.resolver, cls.successors = check_reader_pilot, resolve_t20_v6_source, validate_v5_successors
+        cls.env = dict(os.environ, GIT_NO_LAZY_FETCH='1', GIT_ALLOW_PROTOCOL='',
+                       GIT_TERMINAL_PROMPT='0', GIT_OPTIONAL_LOCKS='0',
+                       GIT_CONFIG_GLOBAL=os.devnull, GIT_CONFIG_SYSTEM=os.devnull,
+                       GIT_CONFIG_NOSYSTEM='1')
+        common = subprocess.run(['git', 'rev-parse', '--git-common-dir'], cwd=ROOT,
+                                env=cls.env, capture_output=True, check=True).stdout.decode().strip()
+        cls.object_store = (ROOT / common / 'objects').resolve()
+        cls.original_owners = json.loads((ROOT / cls.OWNER).read_bytes())
+        cls.original_cross = json.loads((ROOT / cls.CROSS).read_bytes())
+        cls.paths = {n: 'docs/provenance/v5-research-continuations/notes/' + r[0] + '.md'
+                     for n, r in cls.ROWS.items()}
+        cls.current = {r['path']: (ROOT / r['path']).read_bytes()
+                       for r in cls.original_owners['source_additions']}
+        cls.guides = (cls.resolver.MEDIATOR_GUIDE, *cls.resolver.TYPED_GUIDES)
+        cls.current.update({p: (ROOT / p).read_bytes() for p in cls.guides})
+        cls.original_manifest = json.loads((ROOT / cls.MANIFEST).read_bytes())
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.git('-c', 'init.templateDir=', 'init', '-q')
+        (self.root / '.git/objects/info/alternates').write_text(str(self.object_store) + '\n')
+        self.owners = deepcopy(self.original_owners)
+        self.cross = deepcopy(self.original_cross)
+        self.manifest = deepcopy(self.original_manifest)
+        for path, body in self.current.items():
+            self.put(path, body)
+        self.save()
+        self.git('add', '--', *self.current, self.OWNER, self.CROSS, self.MANIFEST)
+
+    def git(self, *args, check=True):
+        return subprocess.run(['git', '--no-replace-objects', '--literal-pathspecs', *args],
+                              cwd=self.root, env=self.env, check=check, capture_output=True)
+
+    def put(self, path, body):
+        target = self.root / path
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(body)
+        target.chmod(0o644)
+
+    def save(self):
+        for path, value in ((self.OWNER, self.owners), (self.CROSS, self.cross), (self.MANIFEST, self.manifest)):
+            self.put(path, (json.dumps(value, indent=2, ensure_ascii=False) + '\n').encode())
+
+    def context(self):
+        gate = getattr(self.resolver, 'require_next24_note_context', None)
+        self.assertTrue(callable(gate), 'finite next24 historical context is not implemented')
+        return gate(self.root)
+
+    def original(self, n):
+        row = self.ROWS[n]
+        body = self.git('cat-file', 'blob', row[1]).stdout
+        self.assertEqual((hashlib.sha256(body).hexdigest(), len(body)), (row[0], row[2]))
+        return body
+
+    def resolve(self, n):
+        return self.resolver.historical_source_bytes(self.root, self.paths[n], self.REV, self.ROWS[n][1])
+
+    def test_fifty_originals_require_exact_accepted_science(self):
+        rows = self.owners['historical_source_bindings']
+        self.assertEqual(len(rows), 50)
+        baseline = {}
+        for row in rows:
+            entry = self.git('ls-tree', '-z', row['repository_revision'], '--', row['path']).stdout
+            meta, name = entry.rstrip(b'\0').split(b'\t')
+            mode, kind, blob = meta.decode().split()
+            self.assertEqual(name.decode(), row['path'])
+            size = int(self.git('cat-file', '-s', blob).stdout)
+            baseline[row['path']] = dict(mode=mode, kind=kind, git_oid=blob, bytes=size)
+        before = (self.root / '.git/index').read_bytes()
+        additions = {r['path']: r for r in self.owners['source_additions']}
+        received, errors = self.reader.check_historical_sources(self.root, baseline, self.owners, self.cross, additions)
+        self.assertEqual(errors, [])
+        self.assertEqual(set(received), {r['path'] for r in rows})
+        self.assertEqual((self.root / '.git/index').read_bytes(), before)
+        self.assertTrue(all(not (self.root / r['path']).exists() for r in rows))
+
+    def test_exact_public_originals_are_received_without_recreation(self):
+        self.context()
+        before = (self.root / '.git/index').read_bytes()
+        for n in self.ROWS:
+            with self.subTest(source=n):
+                body = self.original(n)
+                self.assertEqual(self.resolve(n), body)
+                self.assertFalse((self.root / self.paths[n]).exists())
+                self.put(self.paths[n], body)
+                self.assertEqual(self.resolve(n), body)
+        self.assertEqual((self.root / '.git/index').read_bytes(), before)
+
+    def test_earlier_twenty_six_context_is_still_a_complete_accepted_population(self):
+        self.owners['historical_source_bindings'] = [
+            row for row in self.owners['historical_source_bindings']
+            if row['path'] not in set(self.paths.values())]
+        self.assertEqual(len(self.owners['historical_source_bindings']), 26)
+        self.save()
+        self.resolver.require_t4_note_context(self.root)
+        self.resolver.require_continuation_note_context(self.root)
+
+    def test_partial_extra_duplicate_and_unknown_declarations_reject_before_git(self):
+        from unittest.mock import patch
+        self.context()
+        original = deepcopy(self.owners)
+        for fault in ('partial49', 'extra51', 'duplicate51', 'unknown-substitution'):
+            with self.subTest(fault=fault):
+                self.owners = deepcopy(original)
+                rows = self.owners['historical_source_bindings']
+                if fault == 'partial49': rows.pop()
+                elif fault == 'duplicate51': rows.append(deepcopy(rows[-1]))
+                elif fault == 'extra51': rows.append(dict(rows[-1], path='unqualified-public-original.md'))
+                else: rows[-1]['path'] = 'unqualified-public-original.md'
+                self.save()
+                with patch.object(self.reader.subprocess, 'run', side_effect=AssertionError('Git before finite gate')):
+                    received, errors = self.reader.check_historical_sources(self.root, {}, self.owners, self.cross, {})
+                self.assertEqual(received, {})
+                self.assertTrue(any('expected exactly' in e for e in errors), errors)
+                with self.assertRaises(ValueError): self.context()
+
+    def test_both_manifested_originals_bind_revision_blob_and_source_identity(self):
+        self.context()
+        for n in (9, 22):
+            with self.subTest(source=n):
+                row = next(r for r in self.manifest['objects'] if r.get('repository_path') == self.paths[n])
+                self.assertEqual(self.resolver.source_bytes(self.root, row), self.original(n))
+                for field, bad in (('repository_revision', 'HEAD'), ('git_blob', '0' * 40),
+                                   ('source_sha256', '0' * 64), ('source_bytes', 0),
+                                   ('public_sha256', '0' * 64), ('public_bytes', 0),
+                                   ('disposition', 'ADD_EXACT')):
+                    with self.subTest(field=field), self.assertRaises(ValueError):
+                        self.resolver.source_bytes(self.root, dict(row, **{field: bad}))
+        ordinary = dict(next(r for r in self.manifest['objects'] if r.get('repository_path') == self.paths[9]),
+                        repository_path=self.paths[1], source_sha256=self.ROWS[1][0], source_bytes=self.ROWS[1][2],
+                        public_sha256=self.ROWS[1][0], public_bytes=self.ROWS[1][2], git_blob=self.ROWS[1][1])
+        with self.assertRaises(ValueError): self.resolver.source_bytes(self.root, ordinary)
+
+    def test_three_alias_roles_and_twenty_one_history_only_roles_remain_exact(self):
+        self.context()
+        own0, cross0 = deepcopy(self.owners), deepcopy(self.cross)
+        for n, (key, work, role, supports, users) in self.ALIASES.items():
+            for fault in ('relation', 'role', 'support', 'identity', 'journey'):
+                with self.subTest(source=n, fault=fault):
+                    self.owners, self.cross = deepcopy(own0), deepcopy(cross0)
+                    if fault == 'identity': self.cross['sources'][key]['sha256'] = '0' * 64
+                    elif fault == 'relation': next(r for r in self.cross['relations'] if r.get('from') == key)['to'] = 'consolidated-encodings-and-witnesses'
+                    elif fault == 'journey': self.cross['reader_journeys'][0]['source_keys'].append(key)
+                    elif work:
+                        item = next(w for w in self.cross['works'] if w['key'] == work)
+                        if fault == 'role': item['role'] = 'component'
+                        else: item['supporting_source_keys'] = []
+                    else:
+                        item = next(w for w in self.cross['works'] if w['key'] == users[0])
+                        if fault == 'role': item['reading_forms'].append({'source': key, 'relationship': 'historical-source'})
+                        else: item['supporting_source_keys'].remove(key)
+                    self.save()
+                    with self.assertRaises(ValueError): self.context()
+        self.owners, self.cross = deepcopy(own0), deepcopy(cross0)
+        self.cross['sources']['invented-reading-alias'] = dict(path=self.paths[1], sha256=self.ROWS[1][0], read_scope='unreviewed')
+        self.save()
+        with self.assertRaises(ValueError): self.context()
+
+    def test_wrong_owner_coordinates_and_current_science_reject(self):
+        self.context()
+        original = deepcopy(self.owners)
+        for n in self.ROWS:
+            for field, value in (('repository_revision', 'HEAD'), ('git_blob', '0' * 40),
+                                 ('role', 'work-source'), ('reading_source', 'consolidated-encodings-and-witnesses'),
+                                 ('basis', 'unreviewed')):
+                with self.subTest(source=n, field=field):
+                    self.owners = deepcopy(original)
+                    next(r for r in self.owners['historical_source_bindings'] if r['path'] == self.paths[n])[field] = value
+                    self.save()
+                    with self.assertRaises(ValueError): self.context()
+        self.owners = deepcopy(original)
+        self.save()
+        for path in ('mathematics/common-repair-and-geometric-obstructions.md',
+                     'mathematics/information-and-inquiry.md',
+                     'foundations/objective-normativity-and-corrective-cognition.md', self.REVIEW):
+            with self.subTest(current=path):
+                old = (self.root / path).read_bytes()
+                self.put(path, old + b'changed')
+                with self.assertRaises(ValueError): self.context()
+                self.put(path, old)
+
+    def test_present_corruption_modes_symlinks_and_staged_conflicts_cannot_fall_back(self):
+        self.context()
+        for n in (1, 9, 19, 22, 24):
+            path, body = self.paths[n], self.original(n)
+            target = self.root / path
+            with self.subTest(source=n):
+                self.put(path, body + b'changed')
+                with self.assertRaises(ValueError): self.resolve(n)
+                self.put(path, body)
+                target.chmod(0o755)
+                with self.assertRaises(ValueError): self.resolve(n)
+                target.unlink()
+                target.symlink_to('absent-target')
+                with self.assertRaises(ValueError): self.resolve(n)
+                target.unlink()
+                self.git('update-index', '--add', '--cacheinfo', '100755,' + self.ROWS[n][1] + ',' + path)
+                with self.assertRaises(ValueError): self.resolve(n)
+                self.git('update-index', '--force-remove', '--', path)
+                conflict = ('100644 ' + self.ROWS[n][1] + ' 1\t' + path + '\n').encode()
+                subprocess.run(['git', 'update-index', '--index-info'], input=conflict, cwd=self.root,
+                               env=self.env, capture_output=True, check=True)
+                with self.assertRaises(ValueError): self.resolve(n)
+                self.git('update-index', '--force-remove', '--', path)
+
+    def test_complete_public_coordinate_groups_admit_two_seven_or_nine_only(self):
+        base = deepcopy(self.manifest)
+        next_paths = {self.paths[n] for n in (9, 22)}
+        seven_paths = set(self.resolver.PUBLIC_READER_NOTE_PATHS) | {
+            'experiments/orthemology-v5-continuations/registry.json'}
+        self.assertEqual((len(next_paths), len(seven_paths), len(next_paths & seven_paths)), (2, 7, 0))
+        pinned = {row['repository_path']: deepcopy(row) for row in base['objects']
+                  if row.get('repository_path') in next_paths | seven_paths}
+        self.assertEqual(len(pinned), 9)
+        for row in base['objects']:
+            if row.get('repository_path') in pinned:
+                row.pop('repository_revision', None)
+                row.pop('git_blob', None)
+        def candidate(paths):
+            value = deepcopy(base)
+            for row in value['objects']:
+                path = row.get('repository_path')
+                if path in paths:
+                    row.update(repository_revision=pinned[path]['repository_revision'],
+                               git_blob=pinned[path]['git_blob'])
+            return value
+        gate = self.reader._permitted_projection_consumer_pins
+        for paths in (next_paths, seven_paths, next_paths | seven_paths):
+            with self.subTest(complete=len(paths)):
+                self.assertTrue(gate(base, candidate(paths)))
+        for paths in (set(), {self.paths[9]}, seven_paths - {next(iter(seven_paths))},
+                      seven_paths | {self.paths[9]}):
+            with self.subTest(partial=len(paths)):
+                self.assertFalse(gate(base, candidate(paths)))
+        wrong = candidate(next_paths | seven_paths)
+        selected = next(r for r in wrong['objects'] if r.get('repository_path') == self.paths[22])
+        selected['git_blob'] = '0' * 40
+        self.assertFalse(gate(base, wrong))
+        wrong = candidate(next_paths | seven_paths)
+        wrong['objects'][0]['publication_basis'] = 'unrelated edit'
+        self.assertFalse(gate(base, wrong))
+
+    def test_earlier_twenty_six_references_authenticate_history_before_existence(self):
+        from unittest.mock import patch
+        import validate_internal_references as references
+        earlier = [r for r in self.owners['historical_source_bindings']
+                   if r['path'] not in set(self.paths.values())]
+        self.assertEqual(len(earlier), 26)
+        self.context()
+        with patch.object(references, 'ROOT', str(self.root)):
+            for row in earlier:
+                path = row['path']
+                body = self.git('cat-file', 'blob', row['git_blob']).stdout
+                citations = ((self.REVIEW, '../' + path),
+                    ('docs/provenance/v5-successors/PRESERVATION.json', path))
+                for source, cited in citations:
+                    with self.subTest(path=path, citation=cited, state='absent'):
+                        self.assertTrue(references._resolves(source, cited))
+                self.put(path, body + b'changed original')
+                for source, cited in citations:
+                    with self.subTest(path=path, citation=cited, state='present-corrupt'):
+                        self.assertFalse(references._resolves(source, cited))
+                (self.root / path).unlink()
+
+    def test_historical_metadata_references_require_exact_originals(self):
+        from unittest.mock import patch
+        import validate_internal_references as references
+        self.context()
+        with patch.object(references, 'ROOT', str(self.root)):
+            for n in self.ROWS:
+                with self.subTest(source=n):
+                    self.assertTrue(references._resolves(
+                        'docs/provenance/v5-successors/PRESERVATION.json', self.paths[n]))
+            self.assertFalse(references._resolves(
+                'docs/provenance/v5-successors/PRESERVATION.json',
+                '/'.join(('docs', 'provenance', 'v5-research-continuations', 'notes', 'unqualified.md'))))
+            path = self.paths[22]
+            self.put(path, self.original(22) + b'changed')
+            self.assertFalse(references._resolves(self.MANIFEST, path))
+
+    def test_preservation_recovers_all_bound_historical_continuation_originals(self):
+        self.context()
+        files = {}
+        for row in self.owners['historical_source_bindings']:
+            path = row['path']
+            if not any(path.startswith(p + '/') for p in self.successors.FROZEN_ROOTS):
+                continue
+            body = self.git('cat-file', 'blob', row['git_blob']).stdout
+            files[path] = dict(path=path, bytes=len(body), sha256=hashlib.sha256(body).hexdigest(),
+                               git_blob_sha1=row['git_blob'])
+        self.assertEqual(len(files), 38)
+        anchor = dict(self.successors.BASELINE_ANCHOR, git_required=False)
+        inventory = dict(schema='orthemology-v5-preservation-v1', base_commit=anchor['base_commit'],
+                         base_tree=anchor['base_tree'], roots=self.successors.FROZEN_ROOTS, files=list(files.values()))
+        # The fixture has the 38 real originals in the frozen continuation roots and two legacy anchors.
+        # It deliberately uses the public explicit-fixture anchor; production four-owner
+        # authentication is qualified separately and is not bypassed by this seam.
+        for field in ('legacy_registry', 'legacy_overlay'):
+            name = anchor[field]['path']
+            body = b'bounded public fixture anchor\n'
+            self.put(name, body)
+            row = dict(path=name, bytes=len(body), sha256=hashlib.sha256(body).hexdigest(),
+                       git_blob_sha1=hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest())
+            files[name] = row
+            inventory['files'].append(row)
+            anchor[field] = dict(path=name, sha256=row['sha256'])
+        bundle = dict(baseline_binding=dict(schema='orthemology-v5-baseline-binding-v1', **{k:v for k,v in anchor.items() if k != 'git_required'}),
+                      preservation=inventory,
+                      registry=dict(records={'PRESERVATION': {'sha256': anchor['preservation_sha256']}},
+                                    baseline_commit=anchor['base_commit'], baseline_tree=anchor['base_tree']))
+        self.assertEqual(set(self.successors._preservation(bundle, self.root, anchor)), set(files))
+        wrong = deepcopy(bundle)
+        wrong['preservation']['files'][0]['sha256'] = '0' * 64
+        with self.assertRaises(ValueError): self.successors._preservation(wrong, self.root, anchor)
+        unknown = deepcopy(bundle)
+        unknown['preservation']['files'][0]['path'] = '/'.join(('docs', 'provenance', 'v5-research-continuations', 'notes', 'unqualified.md'))
+        with self.assertRaises(ValueError): self.successors._preservation(unknown, self.root, anchor)
+
+
+    def test_source_relative_historical_references_authenticate_before_existence(self):
+        from unittest.mock import patch
+        import validate_internal_references as references
+        self.context()
+        with patch.object(references, 'ROOT', self.root):
+            for n in self.ROWS:
+                path = self.paths[n]
+                citations = (
+                    (self.REVIEW, '../' + path),
+                    ('docs/provenance/v5-research-continuations/README.md',
+                     'notes/' + path.rsplit('/', 1)[1]),
+                )
+                for source, cited in citations:
+                    with self.subTest(source=n, citation=cited, state='absent'):
+                        self.assertTrue(references._resolves(source, cited))
+                self.put(path, self.original(n) + b'changed')
+                for source, cited in citations:
+                    with self.subTest(source=n, citation=cited, state='present-corrupt'):
+                        self.assertFalse(references._resolves(source, cited))
+                (self.root / path).unlink()
+            self.assertFalse(references._resolves(self.REVIEW,
+                '../docs/provenance/v5-research-continuations/notes/unqualified-relative.md'))
 
 
 if __name__ == "__main__":
