@@ -10,18 +10,18 @@ One physical suite may support several explicitly bound families. Repeated impor
 
 | Result | Evidence form | Fresh evidence | Physical suite |
 | --- | --- | --- | --- |
-| [T08-COMMON-HISTORY](#t08-common-history) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-COMMON-ORIGINAL](../../suites/D05-T08-COMMON-ORIGINAL.json) |
-| [T08-TYPED-HISTORY](#t08-typed-history) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-COMMON-ORIGINAL](../../suites/D05-T08-COMMON-ORIGINAL.json) |
-| [T08-LIFECYCLE-V4](#t08-lifecycle-v4) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-COMMON-ORIGINAL](../../suites/D05-T08-COMMON-ORIGINAL.json) |
-| [T08-CANCELLATION-V5](#t08-cancellation-v5) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-COMMON-ORIGINAL](../../suites/D05-T08-COMMON-ORIGINAL.json) |
-| [T08-MONOTONE-CLOCK-V6](#t08-monotone-clock-v6) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-COMMON-ORIGINAL](../../suites/D05-T08-COMMON-ORIGINAL.json) |
-| [T08-ACTUAL-BATCH](#t08-actual-batch) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-BATCH-ORIGINAL](../../suites/D05-T08-BATCH-ORIGINAL.json) |
-| [T08-NATIVE-TWO-BATCH](#t08-native-two-batch) | FORMAL / FINITE_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-BATCH-ORIGINAL](../../suites/D05-T08-BATCH-ORIGINAL.json) |
-| [T08-SHARED-OBSTRUCTION](#t08-shared-obstruction) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-SHARED-ORIGINAL](../../suites/D05-T08-SHARED-ORIGINAL.json) |
-| [T08-SHARED-TYPED](#t08-shared-typed) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-SHARED-ORIGINAL](../../suites/D05-T08-SHARED-ORIGINAL.json) |
-| [T08-PROTECTED-CONTROLLER](#t08-protected-controller) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-CONTROLLER-ORIGINAL](../../suites/D05-T08-CONTROLLER-ORIGINAL.json) |
-| [T08-ATTAINED-21ST](#t08-attained-21st) | FORMAL / FINITE_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-CONTROLLER-ORIGINAL](../../suites/D05-T08-CONTROLLER-ORIGINAL.json) |
-| [T08-FINITE-BAD-STORE](#t08-finite-bad-store) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-CONTROLLER-ORIGINAL](../../suites/D05-T08-CONTROLLER-ORIGINAL.json) |
+| [T08-COMMON-HISTORY](#t08-common-history) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-COMMON-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D05-T08-COMMON-ORIGINAL.json) |
+| [T08-TYPED-HISTORY](#t08-typed-history) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-COMMON-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D05-T08-COMMON-ORIGINAL.json) |
+| [T08-LIFECYCLE-V4](#t08-lifecycle-v4) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-COMMON-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D05-T08-COMMON-ORIGINAL.json) |
+| [T08-CANCELLATION-V5](#t08-cancellation-v5) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-COMMON-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D05-T08-COMMON-ORIGINAL.json) |
+| [T08-MONOTONE-CLOCK-V6](#t08-monotone-clock-v6) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-COMMON-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D05-T08-COMMON-ORIGINAL.json) |
+| [T08-ACTUAL-BATCH](#t08-actual-batch) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-BATCH-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D05-T08-BATCH-ORIGINAL.json) |
+| [T08-NATIVE-TWO-BATCH](#t08-native-two-batch) | FORMAL / FINITE_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-BATCH-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D05-T08-BATCH-ORIGINAL.json) |
+| [T08-SHARED-OBSTRUCTION](#t08-shared-obstruction) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-SHARED-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D05-T08-SHARED-ORIGINAL.json) |
+| [T08-SHARED-TYPED](#t08-shared-typed) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-SHARED-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D05-T08-SHARED-ORIGINAL.json) |
+| [T08-PROTECTED-CONTROLLER](#t08-protected-controller) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-CONTROLLER-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D05-T08-CONTROLLER-ORIGINAL.json) |
+| [T08-ATTAINED-21ST](#t08-attained-21st) | FORMAL / FINITE_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-CONTROLLER-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D05-T08-CONTROLLER-ORIGINAL.json) |
+| [T08-FINITE-BAD-STORE](#t08-finite-bad-store) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D05-T08-CONTROLLER-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D05-T08-CONTROLLER-ORIGINAL.json) |
 
 ## Replay evidence and representation
 

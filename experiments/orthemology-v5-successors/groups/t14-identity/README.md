@@ -6,7 +6,7 @@ These are candidate research records in the same Orthemology v5 programme. Origi
 
 | Suite | Recorded stages | Checked Lean targets | Source-bound controls |
 | --- | ---: | ---: | ---: |
-| [t14-identity](../../suites/t14-identity.json) | 89 | 5 | 14 |
+| [t14-identity](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/t14-identity.json) | 89 | 5 | 14 |
 
 ## All-rule I/SKK noninhabitation in HAS
 

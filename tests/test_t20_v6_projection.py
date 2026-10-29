@@ -2627,10 +2627,13 @@ class CheckpointPackageCopyMigrationTests(unittest.TestCase):
             cls.bodies[alias] = body
             if cls.bodies.setdefault(binding['canonical'], body) != body:
                 raise AssertionError('retained package body conflicts')
+            if 'prior_canonical' in binding:
+                if cls.bodies.setdefault(binding['prior_canonical'], body) != body:
+                    raise AssertionError('former package provider body conflicts')
         manifest = json.loads((projection.ROOT / projection.MANIFEST).read_bytes())
         if any(r.get('repository_path') in cls.catalog for r in manifest['objects']):
             raise AssertionError('package aliases acquired a public projection role')
-        providers = {r['canonical'] for r in cls.catalog.values()}
+        providers = {r['canonical'] for r in cls.catalog.values()} | {r['prior_canonical'] for r in cls.catalog.values() if 'prior_canonical' in r}
         cls.public_rows = [r for r in manifest['objects'] if r.get('repository_path') in providers]
         if len(cls.public_rows) != 13:
             raise AssertionError('existing public provider population differs')
@@ -2699,6 +2702,280 @@ class CheckpointPackageCopyMigrationTests(unittest.TestCase):
             for alias in historical:
                 with self.subTest(path=alias):
                     self.assertEqual(self.source.checkpoint_package_copy_bytes(self.repo, alias), self.bodies[alias])
+
+    test_present_corruption_cannot_fall_back_to_a_correct_retained_copy = CheckpointCopyMigrationTests.test_present_corruption_cannot_fall_back_to_a_correct_retained_copy
+    test_wrong_missing_or_executable_counterpart_rejects_absent_alias = CheckpointCopyMigrationTests.test_wrong_missing_or_executable_counterpart_rejects_absent_alias
+    test_leaf_ancestor_and_dangling_alias_symlinks_never_mean_absence = CheckpointCopyMigrationTests.test_leaf_ancestor_and_dangling_alias_symlinks_never_mean_absence
+    test_staged_alias_tamper_cannot_hide_under_worktree_absence = CheckpointCopyMigrationTests.test_staged_alias_tamper_cannot_hide_under_worktree_absence
+    test_staged_retained_tamper_cannot_hide_under_exact_worktree = CheckpointCopyMigrationTests.test_staged_retained_tamper_cannot_hide_under_exact_worktree
+    test_unmerged_or_wrong_mode_index_is_rejected = CheckpointCopyMigrationTests.test_unmerged_or_wrong_mode_index_is_rejected
+    test_unrelated_staged_changes_are_not_checkpoint_deletion_allowances = CheckpointCopyMigrationTests.test_unrelated_staged_changes_are_not_checkpoint_deletion_allowances
+    test_missing_pinned_commit_rejects_even_present_exact_bodies = CheckpointCopyMigrationTests.test_missing_pinned_commit_rejects_even_present_exact_bodies
+    test_root_and_relative_references_authenticate_before_exists = CheckpointCopyMigrationTests.test_root_and_relative_references_authenticate_before_exists
+    test_replacement_restores_exact_fixture_identity_vector = CheckpointCopyMigrationTests.test_replacement_restores_exact_fixture_identity_vector
+
+    _reader_currentness = CheckpointCopyMigrationTests._reader_currentness
+    test_reader_currentness_authenticates_present_and_both_absence_states = CheckpointCopyMigrationTests.test_reader_currentness_authenticates_present_and_both_absence_states
+    test_reader_currentness_rejects_retained_body_and_index_tampering = CheckpointCopyMigrationTests.test_reader_currentness_rejects_retained_body_and_index_tampering
+    test_reader_currentness_rejects_present_alias_and_unrelated_changes = CheckpointCopyMigrationTests.test_reader_currentness_rejects_present_alias_and_unrelated_changes
+
+
+
+    def test_all_ten_retargets_keep_bytes_with_both_original_coordinates_absent(self):
+        import os
+        import validate_internal_references as references
+        chains = [(alias, row) for alias, row in self.catalog.items() if 'prior_canonical' in row]
+        self.assertEqual(len(chains), 10)
+        original_index = (self.repo / '.git/index').read_bytes()
+        with patch.object(references, 'ROOT', str(self.repo)):
+            for alias, row in chains:
+                former = row['prior_canonical']
+                with self.subTest(alias=alias):
+                    try:
+                        for name in (alias, former):
+                            (self.repo / name).unlink()
+                            self.assertFalse(os.path.lexists(self.repo / name))
+                        for staged in (False, True):
+                            if staged:
+                                self._git('update-index', '--force-remove', '--', alias, former)
+                            before = (self.repo / '.git/index').read_bytes()
+                            self.assertEqual(self.source.checkpoint_package_copy_bytes(self.repo, alias), self.bodies[alias])
+                            self.assertTrue(references._resolves(alias, alias))
+                            self.assertTrue(references._resolves(alias, pathlib.PurePosixPath(alias).name))
+                            self.assertFalse(os.path.lexists(self.repo / alias))
+                            self.assertFalse(os.path.lexists(self.repo / former))
+                            self.assertEqual((self.repo / '.git/index').read_bytes(), before)
+                    finally:
+                        for name in (alias, former):
+                            self._put(name, self.bodies[name])
+                        (self.repo / '.git/index').write_bytes(original_index)
+
+    def test_all_ten_former_provider_corruptions_are_rejected(self):
+        import os
+        import validate_internal_references as references
+        chains = [(alias, row) for alias, row in self.catalog.items() if 'prior_canonical' in row]
+        self.assertEqual(len(chains), 10)
+        original_index = (self.repo / '.git/index').read_bytes()
+        with patch.object(references, 'ROOT', str(self.repo)):
+            for alias, row in chains:
+                former = row['prior_canonical']
+                for fault in ('body', 'mode', 'staged-body-under-absence'):
+                    with self.subTest(alias=alias, fault=fault):
+                        try:
+                            if fault == 'mode':
+                                (self.repo / former).chmod(0o755)
+                            else:
+                                self._put(former, self.bodies[former] + b'wrong former provider\n')
+                            if fault == 'staged-body-under-absence':
+                                self._git('add', '--', former)
+                                for name in (alias, former):
+                                    (self.repo / name).unlink()
+                                    self.assertFalse(os.path.lexists(self.repo / name))
+                            before = (self.repo / '.git/index').read_bytes()
+                            self._reject(alias)
+                            self.assertFalse(references._resolves(alias, alias))
+                            self.assertFalse(references._resolves(alias, pathlib.PurePosixPath(alias).name))
+                            self.assertEqual((self.repo / '.git/index').read_bytes(), before)
+                            if fault == 'staged-body-under-absence':
+                                for name in (alias, former):
+                                    self.assertFalse(os.path.lexists(self.repo / name))
+                        finally:
+                            for name in (alias, former):
+                                self._put(name, self.bodies[name])
+                            (self.repo / '.git/index').write_bytes(original_index)
+
+    def test_retarget_catalog_binds_each_former_and_final_coordinate_before_git(self):
+        import hashlib
+        members = self.source.CHECKPOINT_PACKAGE_RETARGETS
+        self.assertEqual(len(members), 10)
+        alternative = next(row[2] for row in members if row[2] != members[0][2])
+        variants = (
+            members[:-1],
+            ((members[0][0], members[1][1], *members[0][2:]), *members[1:]),
+            ((members[0][0], members[0][1], alternative, *members[0][3:]), *members[1:]),
+            ((members[0][0], members[0][1], members[0][1], *members[0][3:]), *members[1:]),
+            ((*members[0][:3], '0' * 40, *members[0][4:]), *members[1:]),
+        )
+        with patch.object(self.source, '_continuation_git', side_effect=AssertionError('bad retarget reached Git')):
+            for changed in variants:
+                self.assertNotEqual(changed, members)
+                digest = hashlib.sha256(json.dumps(changed, separators=(',', ':')).encode()).hexdigest()
+                with patch.object(self.source, 'CHECKPOINT_PACKAGE_RETARGETS', changed), \
+                     patch.object(self.source, 'CHECKPOINT_PACKAGE_RETARGETS_SHA256', digest):
+                    with self.assertRaises(ValueError):
+                        self.source._checkpoint_package_copy_catalog()
+
+
+class CheckpointCodeCopyMigrationTests(unittest.TestCase):
+    """Authenticate archived source bytes without executing historical programs."""
+
+    CONTEXT_RELATIONS = (
+        ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/productive-identifiability/general-roots/src/test_design_rank.py', 'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/identification-review/frozen-general-v1/test_design_rank.py', 'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/productive-identifiability/general-roots/src/design_rank.py', 'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/identification-review/frozen-general-v1/design_rank.py', '24ec8da899ff548dcbadab483dc32a58962bf456', '37cf8f723bf3813ea2fecbe04185297eae30b4d2de8618f83715329bc8c9284a', 5995),
+        ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/identification-review/frozen-v2/test_identifiability.py', 'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/productive-identifiability/src/test_identifiability.py', 'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/identification-review/frozen-v2/identifiability.py', 'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/productive-identifiability/src/identifiability.py', 'd3a3fb5d457e047adb67e29d495d9955f698d569', 'c35e212dbc24066ec3f1baf6e4fe753d5eb16e71b1318f5d307de6c805d33c3d', 7578),
+        ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/identification-review/frozen-v2/test_identifiability.py', 'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/productive-identifiability/src/test_identifiability.py', 'research/t20-live-20261009/checkpoints/CP01/recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/provision-identity/src/provision_semantics.py', 'research/t20-live-20261009/checkpoints/CP01/recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/provision-identity/src/provision_semantics.py', '1a1fd82dc9b75be5de778fc3436550865b991543', '6b06c7cec417a961052971d605b54570c34e44d3e0f0ddfc1a2021e384038268', 14477),
+        ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/identification-review/frozen-v2/test_identifiability.py', 'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/productive-identifiability/src/test_identifiability.py', 'research/t20-live-20261009/checkpoints/CP01/recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/src/reactive_context.py', 'research/t20-live-20261009/checkpoints/CP01/recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/src/reactive_context.py', '14f8836f0c8b8a7e64a7943db200311204d8a88d', 'f73cee9c0271dd2a80843a3994534e1119fca33386e59a483f3175d69880a6cc', 6736),
+        ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/single-calibration-review/frozen/test_crt_calibration.py', 'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/single-calibration-design/src/test_crt_calibration.py', 'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/single-calibration-review/frozen/crt_calibration.py', 'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/single-calibration-design/src/crt_calibration.py', '894119aece108e7fc93e6edd979e59edbcd44198', '8aa9f0b05291efdd876e9e9c2e4f04eeb09959b7b3d96adb1d6a4ee149faecec', 5074),
+        ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/gcd_decoder.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/gcd_decoder.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/countable_support.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/countable_support.py', '0d09017120146576d7d58d6760747efff05a7712', 'e6e928ce4894770b671e1b74b4c7cf2f88e5a3b767bdbd28c0dd03a6b923e2f6', 8119),
+        ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/oracle_boundaries.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/oracle_boundaries.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/countable_support.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/countable_support.py', '0d09017120146576d7d58d6760747efff05a7712', 'e6e928ce4894770b671e1b74b4c7cf2f88e5a3b767bdbd28c0dd03a6b923e2f6', 8119),
+        ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/oracle_boundaries.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/oracle_boundaries.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/gcd_decoder.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/gcd_decoder.py', '8ec47140335456b7cb1bced055f80aa86f22ba92', '3450a5cf943da435984a48bbb8e04a5c4cdb13ad7fa89bed48f18738ba70d827', 4257),
+        ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/test_countable_support.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/test_countable_support.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/countable_support.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/countable_support.py', '0d09017120146576d7d58d6760747efff05a7712', 'e6e928ce4894770b671e1b74b4c7cf2f88e5a3b767bdbd28c0dd03a6b923e2f6', 8119),
+        ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/test_gcd_decoder.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/test_gcd_decoder.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/gcd_decoder.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/gcd_decoder.py', '8ec47140335456b7cb1bced055f80aa86f22ba92', '3450a5cf943da435984a48bbb8e04a5c4cdb13ad7fa89bed48f18738ba70d827', 4257),
+        ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/test_gcd_decoder.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/test_gcd_decoder.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/countable_support.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/countable_support.py', '0d09017120146576d7d58d6760747efff05a7712', 'e6e928ce4894770b671e1b74b4c7cf2f88e5a3b767bdbd28c0dd03a6b923e2f6', 8119),
+        ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/test_oracle_boundaries.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/test_oracle_boundaries.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/oracle_boundaries.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/oracle_boundaries.py', '041fb80e6a60a25ddef3eaf67260661737fee6cf', 'f39ed4839663137b7c7863211de97fd6c33cf5b75486b5f96fd02cbc181cc060', 4206),
+        ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/noise-aware-calibration/src/test_robust_masks.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/noise-aware-review/frozen/test_robust_masks.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/noise-aware-calibration/src/robust_masks.py', 'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/noise-aware-review/frozen/robust_masks.py', '8431f617edbe9d2429c9f3705bd26c1525c67bce', '1c818590a66e5e6b7af39d46c2db849bb2bb99e758a90771218c4b2cb148efd3', 9511),
+        ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity-review/replayed_appendix_controls/efficiency_controls.py', 'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity/efficiency_controls.py', 'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity-review/replayed_appendix_controls/POLYNOMIAL_EFFICIENCY_APPENDIX.md', 'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity/POLYNOMIAL_EFFICIENCY_APPENDIX.md', '323b35e3a4827ab25416d551c84372cf88b11ed7', '4242d8cbcc9fd576266e2ee01f902b45c93e6701b5c01d07a5a0c3909f97f0f4', 7854),
+        ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity-review/replayed_author_controls/exact_controls.py', 'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity/exact_controls.py', 'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity-review/replayed_author_controls/RESULT.md', 'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity/RESULT.md', 'fd1c39b4bed42c37d997c95be9fb64b4b7d1a33b', 'ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827', 12746),
+        ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/compilation-replay/verify.py', 'research/t20-live-20261009/checkpoints/CP23/certificate-compilation-boundary-20261009/verify.py', 'research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/compilation-replay/compiler.py', 'research/t20-live-20261009/checkpoints/CP23/certificate-compilation-boundary-20261009/compiler.py', '694261f36e31caf66ec6c2e79c1bf501e45d778c', '5da2762fe31720e898165751bf53636f66a5267719e0b3687587628c48ac4714', 6557),
+        ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/compilation-replay/verify.py', 'research/t20-live-20261009/checkpoints/CP23/certificate-compilation-boundary-20261009/verify.py', 'research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/compilation-replay/compiler.py', 'research/t20-live-20261009/checkpoints/CP23/certificate-compilation-boundary-20261009/compiler.py', '694261f36e31caf66ec6c2e79c1bf501e45d778c', '5da2762fe31720e898165751bf53636f66a5267719e0b3687587628c48ac4714', 6557),
+        ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/compilation-replay/verify.py', 'research/t20-live-20261009/checkpoints/CP23/certificate-compilation-boundary-20261009/verify.py', 'research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/compilation-replay/verify.py', 'research/t20-live-20261009/checkpoints/CP23/certificate-compilation-boundary-20261009/verify.py', 'd8c2bd9d095b83b557982f27620bc4a830bedb13', 'ba6b947c758b0541ce4dc489c116c87cc6000ebc221ff23f8b5f3efd5de94f70', 10995),
+        ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/compilation-replay/verify.py', 'research/t20-live-20261009/checkpoints/CP23/certificate-compilation-boundary-20261009/verify.py', 'research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/compilation-replay/RESULT.md', 'research/t20-live-20261009/checkpoints/CP23/certificate-compilation-boundary-20261009/RESULT.md', '44931a48d2fdf8c8e521928f60103dedad49dd9b', '3d8d11d73055b62913cf36138cc0b3b273d032f8f927a885ee2af11bd8eaf459', 22505),
+    )
+
+    setUp = CheckpointCopyMigrationTests.setUp
+    _git = CheckpointCopyMigrationTests._git
+    _put = CheckpointCopyMigrationTests._put
+    _gate = CheckpointCopyMigrationTests._gate
+
+    @classmethod
+    def setUpClass(cls):
+        import resolve_t20_v6_source as source
+        cls.source = source
+        cls.catalog = source._checkpoint_code_copy_catalog()
+        if len(cls.catalog) != 52:
+            raise AssertionError('code fixture population differs')
+        cls.bodies = {}
+        for alias, binding in cls.catalog.items():
+            body = source.checkpoint_code_copy_bytes(projection.ROOT, alias)
+            cls.bodies[alias] = body
+            if cls.bodies.setdefault(binding['canonical'], body) != body:
+                raise AssertionError('retained code body conflicts')
+        for original_source, retained_source, original, retained, blob, identity, size in cls.CONTEXT_RELATIONS:
+            for path in (original, retained):
+                if path in cls.bodies:
+                    if (source.digest(cls.bodies[path]), len(cls.bodies[path])) != (identity, size):
+                        raise AssertionError('context overlaps a different code identity')
+                    continue
+                binding = dict(canonical=path, blob=blob, sha256=identity, bytes=size, mode='100644')
+                cls.bodies[path] = source._checkpoint_bound_bytes(projection.ROOT, path, binding)
+        manifest = json.loads((projection.ROOT / projection.MANIFEST).read_bytes())
+        cls.public_rows = [r for r in manifest['objects'] if r.get('repository_path') in cls.catalog]
+        if len(cls.public_rows) != 34 or {r['repository_path'] for r in cls.public_rows} != source.CHECKPOINT_CODE_PUBLIC_PATHS:
+            raise AssertionError('existing public code population differs')
+        cls.public_by_path = {r['repository_path']: r for r in cls.public_rows}
+
+    def _reject(self, alias=None):
+        with self.assertRaises((ValueError, OSError)):
+            self.source.checkpoint_code_copy_bytes(self.repo, alias or self.alias)
+
+    def _row(self, alias):
+        if alias in self.public_by_path:
+            return dict(self.public_by_path[alias])
+        binding = self.catalog[alias]
+        return dict(repository_path=alias, disposition='REUSE', role='authored_code', source_action='include',
+                    source_sha256=binding['sha256'], public_sha256=binding['sha256'],
+                    source_bytes=binding['bytes'], public_bytes=binding['bytes'])
+
+    def test_all_52_sources_keep_exact_bytes_and_references_in_three_states(self):
+        import os
+        import validate_internal_references as references
+        with patch.object(references, 'ROOT', str(self.repo)):
+            for state in ('present', 'unstaged-absence', 'staged-absence'):
+                if state == 'unstaged-absence':
+                    for alias in self.catalog:
+                        (self.repo / alias).unlink()
+                elif state == 'staged-absence':
+                    self._git('update-index', '--force-remove', '--', *self.catalog)
+                before = (self.repo / '.git/index').read_bytes()
+                expected_absent = set() if state == 'present' else set(self.catalog)
+                self.assertEqual({p for p in self.catalog if not os.path.lexists(self.repo / p)}, expected_absent)
+                for alias in self.catalog:
+                    self.assertEqual(self.source.checkpoint_code_copy_bytes(self.repo, alias), self.bodies[alias])
+                    self.assertTrue(references._resolves(alias, alias))
+                    self.assertTrue(references._resolves(alias, pathlib.PurePosixPath(alias).name))
+                self.assertEqual(self.source.checkpoint_code_duplicate_paths(self.repo), expected_absent)
+                self.assertEqual(self._gate(), [])
+                self.assertEqual({p for p in self.catalog if not os.path.lexists(self.repo / p)}, expected_absent)
+                self.assertEqual((self.repo / '.git/index').read_bytes(), before)
+
+    def test_34_actual_rows_preserve_identity_and_18_nonpublic_routes_stay_nonpublic(self):
+        import os
+        nonpublic = set(self.catalog) - set(self.public_by_path)
+        self.assertEqual(len(nonpublic), 18)
+        for absent in (False, True):
+            if absent:
+                for alias in self.catalog:
+                    (self.repo / alias).unlink()
+            before = (self.repo / '.git/index').read_bytes()
+            for row in self.public_rows:
+                with self.subTest(path=row['repository_path'], absent=absent):
+                    self.assertEqual(check_object(self.repo, row), [])
+                    self.assertEqual(self.source.source_bytes(self.repo, row), self.bodies[row['repository_path']])
+            for alias in nonpublic:
+                with self.subTest(nonpublic=alias, absent=absent):
+                    self.assertEqual(self.source.checkpoint_code_copy_bytes(self.repo, alias), self.bodies[alias])
+                    self.assertEqual(check_object(self.repo, self._row(alias)), ['missing or unsafe public source'])
+                    with self.assertRaises(ValueError):
+                        self.source.source_bytes(self.repo, self._row(alias))
+            self.assertEqual((self.repo / '.git/index').read_bytes(), before)
+            self.assertEqual({p for p in self.catalog if not os.path.lexists(self.repo / p)}, set(self.catalog) if absent else set())
+
+    def test_each_public_code_row_requires_exact_identity_role_action_and_native_policy(self):
+        faults = (('disposition', 'ADD_EXACT'), ('source_sha256', '0' * 64), ('public_sha256', '0' * 64),
+                  ('source_bytes', 1), ('public_bytes', 1), ('repository_revision', self.baseline),
+                  ('git_blob', '0' * 40), ('role', 'recorded_output'), ('source_action', 'exclude'),
+                  ('repository_path', '../outside.py'))
+        for actual in self.public_rows:
+            for field, value in faults:
+                with self.subTest(path=actual['repository_path'], field=field):
+                    row = dict(actual); row[field] = value
+                    self.assertTrue(check_object(self.repo, row))
+                    with self.assertRaises(ValueError):
+                        self.source.source_bytes(self.repo, row)
+
+    def test_unknown_or_changed_code_and_public_populations_fail_before_git(self):
+        with patch.object(self.source, '_continuation_git', side_effect=AssertionError('unlisted code reached Git')):
+            for name in (self.extra, self.alias + '.other', '../' + self.alias, '/' + self.alias,
+                         self.alias.replace('/', '\\'), None):
+                with self.subTest(path=name):
+                    with self.assertRaises(ValueError):
+                        self.source.checkpoint_code_copy_bytes(self.repo, name)
+            for name in ('CHECKPOINT_CODE_COPY_MEMBERS', 'CHECKPOINT_CODE_PUBLIC_MEMBERS'):
+                with patch.object(self.source, name, getattr(self.source, name)[:-1]):
+                    self._reject()
+
+    def test_all_code_bodies_remain_inert(self):
+        with patch('builtins.compile', side_effect=AssertionError('historical source compiled')), \
+             patch('builtins.exec', side_effect=AssertionError('historical source executed')):
+            for alias in self.catalog:
+                self.assertEqual(self.source.checkpoint_code_copy_bytes(self.repo, alias), self.bodies[alias])
+
+    def test_19_original_module_and_input_contexts_preserve_exact_source_access(self):
+        import os
+        import validate_internal_references as references
+        self.assertEqual(len(self.CONTEXT_RELATIONS), 19)
+        with patch.object(references, 'ROOT', str(self.repo)):
+            for state in ('present', 'unstaged-absence', 'staged-absence'):
+                if state == 'unstaged-absence':
+                    for alias in self.catalog:
+                        (self.repo / alias).unlink()
+                elif state == 'staged-absence':
+                    self._git('update-index', '--force-remove', '--', *self.catalog)
+                before = (self.repo / '.git/index').read_bytes()
+                for original_source, retained_source, original, retained, blob, identity, size in self.CONTEXT_RELATIONS:
+                    for source, path in ((original_source, original), (retained_source, retained)):
+                        with self.subTest(source=source, target=path, state=state):
+                            if path in self.catalog:
+                                body = self.source.checkpoint_code_copy_bytes(self.repo, path)
+                            else:
+                                binding = dict(canonical=path, blob=blob, sha256=identity, bytes=size, mode='100644')
+                                body = self.source._checkpoint_bound_bytes(self.repo, path, binding)
+                            self.assertEqual((self.source.digest(body), len(body)), (identity, size))
+                            relative = os.path.relpath(path, os.path.dirname(source))
+                            self.assertTrue(references._resolves(source, path))
+                            self.assertTrue(references._resolves(source, relative))
+                self.assertEqual((self.repo / '.git/index').read_bytes(), before)
+                self.assertEqual({p for p in self.catalog if not os.path.lexists(self.repo / p)},
+                                 set() if state == 'present' else set(self.catalog))
 
     test_present_corruption_cannot_fall_back_to_a_correct_retained_copy = CheckpointCopyMigrationTests.test_present_corruption_cannot_fall_back_to_a_correct_retained_copy
     test_wrong_missing_or_executable_counterpart_rejects_absent_alias = CheckpointCopyMigrationTests.test_wrong_missing_or_executable_counterpart_rejects_absent_alias

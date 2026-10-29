@@ -521,6 +521,256 @@ CHECKPOINT_COPY_RETARGETS = (
 CHECKPOINT_COPY_RETARGETS_SHA256 = '275cdaf159464f7a2dfbff36766742c7944c277cc1fe721e8200e61ebb740eee'
 
 
+# Exactly52 redundant archived Python source coordinates. The bytes remain
+# inert evidence with their original date, role and context; this route does
+# not execute old programs, preserve a current historical CLI or permit removal.
+CHECKPOINT_CODE_COPY_MEMBERS = (
+    ('research/t20-live-20261009/checkpoints/CP01/recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/src/reactive_context.py',
+     'research/t20-live-20261009/checkpoints/CP01/recovery-t20/addendum/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/src/reactive_context.py',
+     '14f8836f0c8b8a7e64a7943db200311204d8a88d', 'f73cee9c0271dd2a80843a3994534e1119fca33386e59a483f3175d69880a6cc', 6736),
+    ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/productive-identifiability/general-roots/src/design_rank.py',
+     'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/identification-review/frozen-general-v1/design_rank.py',
+     '24ec8da899ff548dcbadab483dc32a58962bf456', '37cf8f723bf3813ea2fecbe04185297eae30b4d2de8618f83715329bc8c9284a', 5995),
+    ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/productive-identifiability/general-roots/src/test_design_rank.py',
+     'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/identification-review/frozen-general-v1/test_design_rank.py',
+     '5356c8213a11acb840f284d2b79b4cb4d388d114', '5ec96690318ecbbe3f56a7bf1f0bda07468113d7c50329f6c2ef7b9c66929df2', 3761),
+    ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/identification-review/frozen-v2/identifiability.py',
+     'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/productive-identifiability/src/identifiability.py',
+     'd3a3fb5d457e047adb67e29d495d9955f698d569', 'c35e212dbc24066ec3f1baf6e4fe753d5eb16e71b1318f5d307de6c805d33c3d', 7578),
+    ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/identification-review/frozen-v2/test_identifiability.py',
+     'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/productive-identifiability/src/test_identifiability.py',
+     '2a4342179eff5e23b74ad91dec169152e48dab5c', 'd55a1d852bda9a90e0980329b60f60206447c132bbb94b4f5a1891b71ed744ff', 11889),
+    ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/single-calibration-review/frozen/crt_calibration.py',
+     'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/single-calibration-design/src/crt_calibration.py',
+     '894119aece108e7fc93e6edd979e59edbcd44198', '8aa9f0b05291efdd876e9e9c2e4f04eeb09959b7b3d96adb1d6a4ee149faecec', 5074),
+    ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/single-calibration-review/frozen/test_crt_calibration.py',
+     'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/single-calibration-design/src/test_crt_calibration.py',
+     '1efb6d326805c1afe2a11607e6b6cc1cba5c0692', '76cf268e728af85faea8ab56ae36525dba04ace25e24de08f596f5a78a61924c', 5692),
+    ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/countable_support.py',
+     'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/countable_support.py',
+     '0d09017120146576d7d58d6760747efff05a7712', 'e6e928ce4894770b671e1b74b4c7cf2f88e5a3b767bdbd28c0dd03a6b923e2f6', 8119),
+    ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/gcd_decoder.py',
+     'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/gcd_decoder.py',
+     '8ec47140335456b7cb1bced055f80aa86f22ba92', '3450a5cf943da435984a48bbb8e04a5c4cdb13ad7fa89bed48f18738ba70d827', 4257),
+    ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/oracle_boundaries.py',
+     'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/oracle_boundaries.py',
+     '041fb80e6a60a25ddef3eaf67260661737fee6cf', 'f39ed4839663137b7c7863211de97fd6c33cf5b75486b5f96fd02cbc181cc060', 4206),
+    ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/test_countable_support.py',
+     'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/test_countable_support.py',
+     '4c983e003732e859f699e22e1f78175e04fc5dc9', '52aca0366e185b21c8f61437dd3c79ab3935f38bbe64246c9215870d9890ceed', 7560),
+    ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/test_gcd_decoder.py',
+     'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/test_gcd_decoder.py',
+     '77a0708d3164f71e25f1167aea856bf3ec300850', 'ce0ad237e36bfdb16f5b52a90e387d750bf91a7e5f5001c78178612d9910e676', 2502),
+    ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/test_oracle_boundaries.py',
+     'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-review/frozen/test_oracle_boundaries.py',
+     'f8fe51c5d92d77d7361830a5b6e54e7e3344e161', 'e03e1a5721aec610e0cc88c7a372cb37292cfdd8f8aa5bcb71a31f7bd91df8ba', 3857),
+    ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/grouped-mixture-identification/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/grouped-mixture-review/frozen/exact_controls.py',
+     '465b4c947f0f25b357a4f85f48daf79ce27ef71b', '7b9dbb1f7fa25a7165c421f61b3b2fd257a8c4f2a9d4446efde822900107cf82', 9072),
+    ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/noise-aware-calibration/src/robust_masks.py',
+     'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/noise-aware-review/frozen/robust_masks.py',
+     '8431f617edbe9d2429c9f3705bd26c1525c67bce', '1c818590a66e5e6b7af39d46c2db849bb2bb99e758a90771218c4b2cb148efd3', 9511),
+    ('research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/noise-aware-calibration/src/test_robust_masks.py',
+     'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/noise-aware-review/frozen/test_robust_masks.py',
+     '4422a35f856298cfc5537fd5d39dd597c51cd7ab', 'e9e1a14061d66a77fac35659d80b7f7298294afb940cdc797b5db62fee3d46c2', 6722),
+    ('research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/catalogue-mixture-review/frozen/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/catalogue-mixture-sampling/exact_controls.py',
+     '9433cc2df1ec94ab353b5a19405945ba1ed70ff7', '9e92b5affb6ce926bca92e39a9e222b051cdc47bd8f1efd6d78a98d2c0752d77', 8504),
+    ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity-review/replayed_appendix_controls/efficiency_controls.py',
+     'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity/efficiency_controls.py',
+     'd775415f97b3af7f65ba7fad639d1fe8fac453aa', '968268172209211e9c7dff218cc3a9acc97f6f765aac53d8569992dd1a239a6f', 4643),
+    ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity-review/replayed_author_controls/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity/exact_controls.py',
+     'fa7568bc43686b4408803c75b5b844b00944a5ee', '867de73098d4eb210ef4fbbf5758c728efeb4dbe46982bd80941630fed00a2d2', 4912),
+    ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/multi-root-adaptive-review/author_replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/multi-root-adaptive-bound/exact_controls.py',
+     '39c071038918ecff66460a2d318664f51cd4071c', 'c503cdaf9391b69dc503510ef05ff656c85aa6989f33ded6e75397cef1679907', 6327),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/grouped-calibration-invariants-review/replayed_author_controls/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/grouped-calibration-invariants/exact_controls.py',
+     'd283498dafd14ea38d2c926f453b7971130cc61d', 'aa8c7c45fc8f2f803aaf4535a6eec6f49b67048e59d0ab8ca402b4fb77ca1af1', 7255),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/author_replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction/exact_controls.py',
+     '4f78222a0ab2d0e4cb4972cb62e110436cc817ed', '92cd73364482270d5acb49190a4f5eb893c4f646aa052281fb2fdbe21c1c2b70', 5030),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/author/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction/exact_controls.py',
+     '4f78222a0ab2d0e4cb4972cb62e110436cc817ed', '92cd73364482270d5acb49190a4f5eb893c4f646aa052281fb2fdbe21c1c2b70', 5030),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/independent/independent_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/independent_controls.py',
+     'a261bcd23a0263de2df88b14016a58984c234f8a', 'ed2d1faf38772231440c05dc440068abe4849f5a5474a21d890bf6d0502aa1ba', 6836),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/exact_controls.py',
+     '4bcf6cd4a98548c23e03a82987bf6ccfad57f1a9', '9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c', 4780),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/exact_controls.py',
+     '4bcf6cd4a98548c23e03a82987bf6ccfad57f1a9', '9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c', 4780),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/exact_controls.py',
+     '4bcf6cd4a98548c23e03a82987bf6ccfad57f1a9', '9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c', 4780),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/panel_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/panel_controls.py',
+     'a5b7dfe4518398e7d2cf88ee71b70cc904290365', '0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b', 2826),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/panel_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/panel_controls.py',
+     'a5b7dfe4518398e7d2cf88ee71b70cc904290365', '0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b', 2826),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/panel_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/panel_controls.py',
+     'a5b7dfe4518398e7d2cf88ee71b70cc904290365', '0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b', 2826),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/verify_evidence.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/verify_evidence.py',
+     '9c92a346d92a803c528220689b02bdbdd212bd10', '8f41b467eb27f7dea863074e5886f477d0cc02f613a82dbea6e45a4a3d007093', 2252),
+    ('research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/stable-grouped-invariants-review/author_replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/stable-grouped-invariants/exact_controls.py',
+     'c3c1418cc6d3d639cb55c1b65b7c5c29f5a0999e', 'bb247d16c51a1427fa13226c396bedc3fbab02d1062e353382deabee587c57b9', 9541),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/bounded-interaction-detection-review/author_replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/bounded-interaction-detection/exact_controls.py',
+     '7fb03d67af2f6b8e0e189ea4ea732b1347549830', '6c4859846a169b94ba75e4a8087cfc432dc511d76a993a9f2e8f5e597e5e5a45', 7535),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/dependent-gate-transport-review/replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/dependent-gate-transport/exact_controls.py',
+     '39381d893a2be45a8dc32255c6fd3db9b3470c2e', 'c67207bacb7b38bb939ae6bd5d60bda44f63d489aa495c588f973c6b9cf9ffd1', 6916),
+    ('research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/dependent-gate-transport/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/dependent-gate-transport/exact_controls.py',
+     '39381d893a2be45a8dc32255c6fd3db9b3470c2e', 'c67207bacb7b38bb939ae6bd5d60bda44f63d489aa495c588f973c6b9cf9ffd1', 6916),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/finite-hypergraph-calibration-review/packaging_addendum/author_replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/finite-hypergraph-calibration/exact_controls.py',
+     '987adb4db1d177cc52e02a2d13dcd0f3708969a4', '30d362bfc64e01e53b3e9a8be9ffe4a3432b6d074beed27872894c550d3f6bee', 9581),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/finite-hypergraph-calibration-review/packaging_addendum/author_snapshot/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/finite-hypergraph-calibration/exact_controls.py',
+     '987adb4db1d177cc52e02a2d13dcd0f3708969a4', '30d362bfc64e01e53b3e9a8be9ffe4a3432b6d074beed27872894c550d3f6bee', 9581),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/same-threshold-replay-review/replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/same-threshold-replay/exact_controls.py',
+     'afbda6f9783e11ea3149a89273cce6bf6576a8d5', '0e43b8b3d5dc15929e79dae69e90ea8f06091477a181f5e1a64d503a24e947b6', 7158),
+    ('research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/same-threshold-replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/same-threshold-replay/exact_controls.py',
+     'afbda6f9783e11ea3149a89273cce6bf6576a8d5', '0e43b8b3d5dc15929e79dae69e90ea8f06091477a181f5e1a64d503a24e947b6', 7158),
+    ('research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/author_snapshot/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/finite-replay-sampling-lower-bound/exact_controls.py',
+     '2859a5a4e467afb6bf3815a3528a02d1e1e1b75d', '2acf221085fc8f0263041e7adbf129e828e4c93a877a5ee0668729bcf6b84901', 6905),
+    ('research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/qualitative-tensor-transport-review/reviewed_snapshot/controls.py',
+     'research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/qualitative-tensor-transport/controls.py',
+     'e455bbc9d1838dfb9f2467c785b010ba784a4a67', '9f1890d70aba5d3f4ca953809a588471226f3e56bb46feaf7cb82c3cf0aa3bd2', 13819),
+    ('research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate-review/AUTHOR_CONTROLS_REPLAY.py',
+     'research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate/controls.py',
+     'cb5f6d17a425b19cebb8aa7c0050d1f9bf56e160', '8b88ebefafedf4afdee817f73420870648b5b162ffb0ad8e6699b4a2aab9dced', 5579),
+    ('research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/baseline-skyline-moments-review/source-rerun/controls.py',
+     'research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/baseline-skyline-moments/controls.py',
+     '17da9c4757d030e1fced4d87a45e5496910c3ba4', '3f65d6f86cda2dccb9c64705a12b238d95ae04205e2508e6266ed47c8edc4fbb', 6042),
+    ('research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/full-skyline-log-squared-review/author_replay/controls.py',
+     'research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/full-skyline-log-squared/controls.py',
+     'd45cd3c56ac118aacb1aa24fdcda502bb74022ef', '43b2eb32343777d5094c2564f4641d99fcd6354bfab3a130b9dd8d92e3c6ca8c', 8352),
+    ('research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/full-skyline-reverse-kl-review/author_replay/controls.py',
+     'research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/full-skyline-reverse-kl/controls.py',
+     '7ec50a20fa03e42013dbb550077e01061186b7d7', 'a56ff98a0dfa7e8dbedda9b257ccfef48297eca553d2588092f86e659c4102d9', 8125),
+    ('research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/skyline-likelihood-score-review/author_replay/controls.py',
+     'research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/skyline-likelihood-score/controls.py',
+     '57b320b02bfd8227ec43fa9f4fec80815f86c9b5', 'b1399fda7487fa985f66e5cfa6650d7a63c10b91f3d9da665c6285dcd1bd8cc5', 2333),
+    ('research/t20-live-20261009/checkpoints/CP12/t20-next-frontier-20261008/sharp-skyline-information-review/author_replay/controls.py',
+     'research/t20-live-20261009/checkpoints/CP12/t20-next-frontier-20261008/sharp-skyline-information/controls.py',
+     '429ab66b4ac2f6907b98fa3a681de2aa358c0d60', '04e771ffc1d30e736776bc30b8d6922f36fe25867ddda05c7bc5e3289db86eb4', 9867),
+    ('research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-identity-transport-review/author_controls_snapshot.py',
+     'research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-identity-transport/controls.py',
+     'e1e1ed0f7bae9fec968192284a04a0e0984f11e8', '12ee27b036ed5b4d5fc51b6d10bb6f937da53ec4e5186e1e98f74889af8b3d9c', 14363),
+    ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/compilation-replay/compiler.py',
+     'research/t20-live-20261009/checkpoints/CP23/certificate-compilation-boundary-20261009/compiler.py',
+     '694261f36e31caf66ec6c2e79c1bf501e45d778c', '5da2762fe31720e898165751bf53636f66a5267719e0b3687587628c48ac4714', 6557),
+    ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/compilation-replay/verify.py',
+     'research/t20-live-20261009/checkpoints/CP23/certificate-compilation-boundary-20261009/verify.py',
+     'd8c2bd9d095b83b557982f27620bc4a830bedb13', 'ba6b947c758b0541ce4dc489c116c87cc6000ebc221ff23f8b5f3efd5de94f70', 10995),
+    ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/discrimination-replay/verify.py',
+     'research/t20-live-20261009/supplement/S01/warranted-discrimination-research-20261009/verify.py',
+     '6fbc0cecc3001da2aaf38e785998242786c2221a', 'bdd29fd57418db2327983bf2cb7e4c40632c9140637ae6df5d0d990ff28481b2', 7876),
+    ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/verify.py',
+     'research/t20-live-20261009/supplement/S01/warranted-discrimination-research-20261009/verify.py',
+     '6fbc0cecc3001da2aaf38e785998242786c2221a', 'bdd29fd57418db2327983bf2cb7e4c40632c9140637ae6df5d0d990ff28481b2', 7876),
+)
+CHECKPOINT_CODE_COPY_CATALOG_SHA256 = '6ff3c4f465ee492585502ae9db8ffe53aa806cc03333f9b4219d34ea2231949c'
+CHECKPOINT_CODE_COPY_PATHS = frozenset(row[0] for row in CHECKPOINT_CODE_COPY_MEMBERS)
+CHECKPOINT_CODE_PUBLIC_MEMBERS = (
+    'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/identification-review/frozen-v2/identifiability.py',
+    'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/identification-review/frozen-v2/test_identifiability.py',
+    'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/countable_support.py',
+    'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/gcd_decoder.py',
+    'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/oracle_boundaries.py',
+    'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/test_countable_support.py',
+    'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/test_gcd_decoder.py',
+    'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/countable-signature-identification/src/test_oracle_boundaries.py',
+    'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/grouped-mixture-identification/exact_controls.py',
+    'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/noise-aware-calibration/src/robust_masks.py',
+    'research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/noise-aware-calibration/src/test_robust_masks.py',
+    'research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/catalogue-mixture-review/frozen/exact_controls.py',
+    'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity-review/replayed_appendix_controls/efficiency_controls.py',
+    'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/global-calibration-ambiguity-review/replayed_author_controls/exact_controls.py',
+    'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/grouped-calibration-invariants-review/replayed_author_controls/exact_controls.py',
+    'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/author_replay/exact_controls.py',
+    'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/exact_controls.py',
+    'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/panel_controls.py',
+    'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/verify_evidence.py',
+    'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/stable-grouped-invariants-review/author_replay/exact_controls.py',
+    'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/bounded-interaction-detection-review/author_replay/exact_controls.py',
+    'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/dependent-gate-transport-review/replay/exact_controls.py',
+    'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/finite-hypergraph-calibration-review/packaging_addendum/author_replay/exact_controls.py',
+    'research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/same-threshold-replay-review/replay/exact_controls.py',
+    'research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/author_snapshot/exact_controls.py',
+    'research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/qualitative-tensor-transport-review/reviewed_snapshot/controls.py',
+    'research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate-review/AUTHOR_CONTROLS_REPLAY.py',
+    'research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/baseline-skyline-moments-review/source-rerun/controls.py',
+    'research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/full-skyline-log-squared-review/author_replay/controls.py',
+    'research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/full-skyline-reverse-kl-review/author_replay/controls.py',
+    'research/t20-live-20261009/checkpoints/CP11/t20-next-frontier-20261008/skyline-likelihood-score-review/author_replay/controls.py',
+    'research/t20-live-20261009/checkpoints/CP12/t20-next-frontier-20261008/sharp-skyline-information-review/author_replay/controls.py',
+    'research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-identity-transport-review/author_controls_snapshot.py',
+    'research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/discrimination-replay/verify.py',
+)
+CHECKPOINT_CODE_PUBLIC_SHA256 = '92f2ff50d1c018312945eeb56a19bc3fe033169f751c35c40c9a662f96931283'
+CHECKPOINT_CODE_PUBLIC_PATHS = frozenset(CHECKPOINT_CODE_PUBLIC_MEMBERS)
+
+# Original26 membership stays exact. Every retarget reads and authenticates
+# its former coordinate before the original alias, using the same native
+# history, current body, mode, index and symlink primitive as the earlier12.
+CHECKPOINT_PACKAGE_RETARGETS = (
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction-review/author_replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/author_replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction/exact_controls.py',
+     '4f78222a0ab2d0e4cb4972cb62e110436cc817ed', '92cd73364482270d5acb49190a4f5eb893c4f646aa052281fb2fdbe21c1c2b70', 5030),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/author/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/author/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction/exact_controls.py',
+     '4f78222a0ab2d0e4cb4972cb62e110436cc817ed', '92cd73364482270d5acb49190a4f5eb893c4f646aa052281fb2fdbe21c1c2b70', 5030),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/independent/independent_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/independent/independent_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-absence-obstruction-review/independent_controls.py',
+     'a261bcd23a0263de2df88b14016a58984c234f8a', 'ed2d1faf38772231440c05dc440068abe4849f5a5474a21d890bf6d0502aa1ba', 6836),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/exact_controls.py',
+     '4bcf6cd4a98548c23e03a82987bf6ccfad57f1a9', '9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c', 4780),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/panel_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/panel_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/panel_controls.py',
+     'a5b7dfe4518398e7d2cf88ee71b70cc904290365', '0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b', 2826),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/exact_controls.py',
+     '4bcf6cd4a98548c23e03a82987bf6ccfad57f1a9', '9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c', 4780),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/panel_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/panel_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/panel_controls.py',
+     'a5b7dfe4518398e7d2cf88ee71b70cc904290365', '0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b', 2826),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/verify_evidence.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/verify_evidence.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/verify_evidence.py',
+     '9c92a346d92a803c528220689b02bdbdd212bd10', '8f41b467eb27f7dea863074e5886f477d0cc02f613a82dbea6e45a4a3d007093', 2252),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/exact_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/exact_controls.py',
+     '4bcf6cd4a98548c23e03a82987bf6ccfad57f1a9', '9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c', 4780),
+    ('research/t20-live-20261009/checkpoints/CP06/t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/panel_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/panel_controls.py',
+     'research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/interaction-calibration-anchor/panel_controls.py',
+     'a5b7dfe4518398e7d2cf88ee71b70cc904290365', '0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b', 2826),
+)
+CHECKPOINT_PACKAGE_RETARGETS_SHA256 = 'f1bf97a6313f522d6564f5aea0cc8b9d853556a0b47fef8998481c04dd536534'
+
+
 # Exactly26 redundant historical package locations, including inert Python
 # source. Earlier public bodies preserve their original logical coordinates.
 # These paths receive no new public projection or historical execution route.
@@ -1335,6 +1585,19 @@ def _regular_current_bytes(root, path):
     return target.read_bytes()
 
 
+def _typed_guide_adaptation(path, original):
+    replacements = TYPED_GUIDES[path][3]
+    adapted = original
+    for key, count in replacements.items():
+        source = TYPED_SOURCE_KEYS[key]
+        old = ('../../source-store/' + source.split('/source-store/', 1)[1]).encode()
+        new = ('https://github.com/theislampill/orthemology/blob/' + TYPED_PROSE_REVISION + '/' + source).encode()
+        if original.count(old) != count:
+            raise ValueError('typed guide original link count differs')
+        adapted = adapted.replace(old, new)
+    return adapted
+
+
 def typed_guide_source_bytes(root, path, *, allow_original=False):
     """Return one original guide after authenticating its exact link adaptation."""
     if path not in TYPED_GUIDES:
@@ -1356,21 +1619,18 @@ def typed_guide_source_bytes(root, path, *, allow_original=False):
     actual_blob = hashlib.sha1(b'blob ' + str(len(original)).encode() + b'\0' + original).hexdigest()
     if (len(original), digest(original), actual_blob) != (size, identity, blob):
         raise ValueError('typed guide original identity differs')
-    adapted = original
-    for key, count in replacements.items():
-        source = TYPED_SOURCE_KEYS[key]
-        old = ('../../source-store/' + source.split('/source-store/', 1)[1]).encode()
-        new = ('https://github.com/theislampill/orthemology/blob/' + TYPED_PROSE_REVISION + '/' + source).encode()
-        if original.count(old) != count:
-            raise ValueError('typed guide original link count differs')
-        adapted = adapted.replace(old, new)
+    adapted = _typed_guide_adaptation(path, original)
+    administrative = (administrative_guide_adaptation(path, original)
+                      if path in ADMIN_GUIDES else adapted)
     current = _regular_current_bytes(root, path)
-    if current != adapted and not (allow_original and current == original):
+    if current not in (adapted, administrative) and not (allow_original and current == original):
         raise ValueError('typed guide is not its exact navigation adaptation')
     adapted_blob = hashlib.sha1(b'blob ' + str(len(adapted)).encode() + b'\0' + adapted).hexdigest()
     indexed = git('ls-files', '--stage', '-z', '--', path)
     choices = {('100644 ' + oid + ' 0\t' + path + '\0').encode(): body
                for oid, body in ((blob, original), (adapted_blob, adapted))}
+    administrative_blob = hashlib.sha1(b'blob ' + str(len(administrative)).encode() + b'\0' + administrative).hexdigest()
+    choices[('100644 ' + administrative_blob + ' 0\t' + path + '\0').encode()] = administrative
     if indexed not in choices:
         raise ValueError('typed guide index is absent, conflicted or unqualified')
     if git('cat-file', 'blob', indexed.split()[1].decode()) != choices[indexed]:
@@ -1659,6 +1919,426 @@ def readonly_git_diff(root, command):
 
 def digest(body):
     return hashlib.sha256(body).hexdigest()
+
+
+# Existing frozen replay contracts and recorded execution evidence. The native
+# original tree owns identities; this finite selector does not create another
+# scientific registry or turn historical receipts into current execution.
+ADMIN_RECORD_BASE = '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'
+ADMIN_RECORD_TREE_SHA256 = '7e65473d07162893f11ee6b2a1cc4cd33e4add3f20281d8ee4cbfecab68b5f0e'
+ADMIN_RECORD_NAMES = {
+    'docs/provenance/v5-research-continuations/checks/': (
+        '00b240cf2bfd-scc-region-integration.json',
+        '0a74eb642cc6-integer-budget-v3.json',
+        '0d018cbe2cff-generated-history-slice-tail.json',
+        '15e2b6abb662-prior-nonconvexity-v2.json',
+        '24afae53f1c4-raw-concentration.json',
+        '26d6d6369d07-sparse-process.json',
+        '3dae38ab50de-prior-width.json',
+        '4bd668ffbcfa-actual-cobuchi-cost.json',
+        '4cde2d91223b-finite-law-rotor-progress.json',
+        '549ba6a7f094-connected-author.json',
+        '549ba6a7f094-connected-review.json',
+        '549ba6a7f094-zero-error-disclosure.json',
+        '5b59e4a2a1c4-conditional-as-preservation.json',
+        '628d98dc2727-conditional-continuation.json',
+        '748545d4cf83-tail-moments.json',
+        '74b86eeeda46-runtime-v5.json',
+        '769dc45d15ba-global-parity-controller.json',
+        '7871eae3c71a-loss-obstruction.json',
+        '7cbe94fa76f6-actual-finite-model-common-exponential-range.json',
+        '83f1a917b40a-knowledge-author.json',
+        '866c6ff6e74a-atomic-membership.json',
+        '866c6ff6e74a-codec-pi3.json',
+        '866c6ff6e74a-finite-frontier.json',
+        '866c6ff6e74a-mealy-stage2.json',
+        '866c6ff6e74a-mealy-stage3.json',
+        '866c6ff6e74a-measure-frontier.json',
+        '866c6ff6e74a-membership-computability.json',
+        '866c6ff6e74a-operational-machine.json',
+        '866c6ff6e74a-p01-canonical-projection.json',
+        '866c6ff6e74a-p01-dependent.json',
+        '866c6ff6e74a-p01-repaired.json',
+        '866c6ff6e74a-p01-successor.json',
+        '866c6ff6e74a-p02-pr-compiler.json',
+        '866c6ff6e74a-p02-qualified.json',
+        '866c6ff6e74a-p03-graph.json',
+        '866c6ff6e74a-p03-native.json',
+        '866c6ff6e74a-tagged-prefix-primrec.json',
+        '866c6ff6e74a-tagged-row.json',
+        '866c6ff6e74a-uniform-computability.json',
+        '8d2cc96380ed-explicit-winning-record.json',
+        'a45cc7cb3021-scc-global-parity-iff.json',
+        'a5ea2c511948-borel-endpoint.json',
+        'abce3ba5d09e-sparse-concrete.json',
+        'b5be7775f6d0-runtime-v8.json',
+        'c95f5175af02-sparse-transport.json',
+        'd6f6fa5be514-common-observation.json',
+        'd6f6fa5be514-compact-observation.json',
+        'd6f6fa5be514-control-action.json',
+        'd6f6fa5be514-core.json',
+        'd6f6fa5be514-micro-static-equivalence.json',
+        'd6f6fa5be514-policy-embedding.json',
+        'd6f6fa5be514-recurrent-support.json',
+        'd6f6fa5be514-seeded-necessity.json',
+        'db6ccdc793a0-ae-licensing.json',
+        'db6ccdc793a0-canonical-sufficiency-v2.json',
+        'db6ccdc793a0-chain-budget.json',
+        'db6ccdc793a0-continuum-repair.json',
+        'db6ccdc793a0-coverage-boundary.json',
+        'db6ccdc793a0-efficient-statistical-repair.json',
+        'db6ccdc793a0-endpoint-law.json',
+        'db6ccdc793a0-endpoint-safety-audit.json',
+        'db6ccdc793a0-existence-aware-history.json',
+        'db6ccdc793a0-explicit-scale-kernel-audit.json',
+        'db6ccdc793a0-finite-audit-bridge.json',
+        'db6ccdc793a0-geometry-delta-audit.json',
+        'db6ccdc793a0-indexed-semantic.json',
+        'db6ccdc793a0-mixed-rank-kernel-audit.json',
+        'db6ccdc793a0-negative-clock.json',
+        'db6ccdc793a0-negative-receipts.json',
+        'db6ccdc793a0-orthability-core.json',
+        'db6ccdc793a0-physical-budget.json',
+        'db6ccdc793a0-polynomial-geometry-audit.json',
+        'db6ccdc793a0-recursive-equivalence.json',
+        'db6ccdc793a0-robust-repair.json',
+        'db6ccdc793a0-semantic-core.json',
+        'db6ccdc793a0-semantic-implementation.json',
+        'db6ccdc793a0-statistical-repair.json',
+        'ddbad6ca12d0-endpoint-atoms.json',
+        'eff5fada59f4-upstream-author.json',
+        'global-parity-control-summary.json',
+    ),
+    'experiments/orthemology-v5-continuations/native-suites/': (
+        'sixth-cost-controls.json',
+        'sixth-foundations-addenda.json',
+        'sixth-foundations.json',
+    ),
+    'experiments/orthemology-v5-continuations/suites/': (
+        '00b240cf2bfd-scc-region-integration.json',
+        '016c63c30f1a-actual-target-policy.json',
+        '0a74eb642cc6-integer-budget-v3.json',
+        '0d018cbe2cff-generated-history-slice-tail.json',
+        '0dbdc1f85fc9-global-parity-necessity.json',
+        '15e2b6abb662-prior-nonconvexity-v2.json',
+        '17797ddebb98-actual-cobuchi-cost.json',
+        '1f321e9a7d97-scc-parity-pruning.json',
+        '24afae53f1c4-raw-concentration.json',
+        '26d6d6369d07-sparse-process.json',
+        '332d0dbea81d-ae-licensing.json',
+        '332d0dbea81d-canonical-sufficiency-v2.json',
+        '332d0dbea81d-chain-budget.json',
+        '332d0dbea81d-continuum-repair.json',
+        '332d0dbea81d-coverage-boundary.json',
+        '332d0dbea81d-efficient-statistical-repair.json',
+        '332d0dbea81d-endpoint-law.json',
+        '332d0dbea81d-endpoint-safety-audit.json',
+        '332d0dbea81d-existence-aware-history.json',
+        '332d0dbea81d-explicit-scale-kernel-audit.json',
+        '332d0dbea81d-finite-audit-bridge.json',
+        '332d0dbea81d-geometry-delta-audit.json',
+        '332d0dbea81d-indexed-semantic.json',
+        '332d0dbea81d-mixed-rank-kernel-audit.json',
+        '332d0dbea81d-orthability-core.json',
+        '332d0dbea81d-physical-budget.json',
+        '332d0dbea81d-polynomial-geometry-audit.json',
+        '332d0dbea81d-recursive-equivalence.json',
+        '332d0dbea81d-robust-repair.json',
+        '332d0dbea81d-semantic-core.json',
+        '332d0dbea81d-semantic-implementation.json',
+        '332d0dbea81d-statistical-repair.json',
+        '3dae38ab50de-prior-width.json',
+        '4bd668ffbcfa-actual-cobuchi-cost.json',
+        '4cde2d91223b-finite-law-rotor-progress.json',
+        '549ba6a7f094-connected-author.json',
+        '549ba6a7f094-connected-review.json',
+        '549ba6a7f094-zero-error-disclosure.json',
+        '59af1e72d1f4-phase-stabilization.json',
+        '5b59e4a2a1c4-conditional-as-preservation.json',
+        '628d98dc2727-conditional-continuation.json',
+        '748545d4cf83-tail-moments.json',
+        '74b86eeeda46-runtime-v5.json',
+        '769dc45d15ba-global-parity-controller.json',
+        '781d33fdac12-global-parity-necessity.json',
+        '7871eae3c71a-loss-obstruction.json',
+        '7cbe94fa76f6-actual-finite-model-common-exponential-range.json',
+        '810768c2edec-empirical-rows.json',
+        '83f1a917b40a-knowledge-author.json',
+        '866c6ff6e74a-atomic-membership.json',
+        '866c6ff6e74a-codec-pi3.json',
+        '866c6ff6e74a-finite-frontier.json',
+        '866c6ff6e74a-mealy-stage2.json',
+        '866c6ff6e74a-mealy-stage3.json',
+        '866c6ff6e74a-measure-frontier.json',
+        '866c6ff6e74a-membership-computability.json',
+        '866c6ff6e74a-operational-machine.json',
+        '866c6ff6e74a-p01-canonical-projection.json',
+        '866c6ff6e74a-p01-dependent.json',
+        '866c6ff6e74a-p01-repaired.json',
+        '866c6ff6e74a-p01-successor.json',
+        '866c6ff6e74a-p02-pr-compiler.json',
+        '866c6ff6e74a-p02-qualified.json',
+        '866c6ff6e74a-p03-graph.json',
+        '866c6ff6e74a-p03-native.json',
+        '866c6ff6e74a-tagged-prefix-primrec.json',
+        '866c6ff6e74a-tagged-row.json',
+        '866c6ff6e74a-uniform-computability.json',
+        '8d2cc96380ed-explicit-winning-record.json',
+        '90950961b666-actual-target-policy.json',
+        '93fa38fffbbc-recovered-fourth-core.json',
+        '93fa38fffbbc-recursive-equivalence.json',
+        'a45cc7cb3021-scc-global-parity-iff.json',
+        'a5ea2c511948-borel-endpoint.json',
+        'abce3ba5d09e-sparse-concrete.json',
+        'af86eb0bbb59-adaptive-parity-necessity.json',
+        'b5be7775f6d0-runtime-v8.json',
+        'c0c3081227ca-hidden-parity-pruning.json',
+        'c3f900fa367b-residual-seed.json',
+        'c95f5175af02-sparse-transport.json',
+        'd6f6fa5be514-common-observation.json',
+        'd6f6fa5be514-compact-observation.json',
+        'd6f6fa5be514-control-action.json',
+        'd6f6fa5be514-core.json',
+        'd6f6fa5be514-micro-static-equivalence.json',
+        'd6f6fa5be514-policy-embedding.json',
+        'd6f6fa5be514-recurrent-support.json',
+        'd6f6fa5be514-seeded-necessity.json',
+        'd8de897ce9c1-empirical-rows.json',
+        'db6ccdc793a0-ae-licensing.json',
+        'db6ccdc793a0-canonical-sufficiency-v2.json',
+        'db6ccdc793a0-chain-budget.json',
+        'db6ccdc793a0-continuum-repair.json',
+        'db6ccdc793a0-coverage-boundary.json',
+        'db6ccdc793a0-efficient-statistical-repair.json',
+        'db6ccdc793a0-endpoint-law.json',
+        'db6ccdc793a0-endpoint-safety-audit.json',
+        'db6ccdc793a0-existence-aware-history.json',
+        'db6ccdc793a0-explicit-scale-kernel-audit.json',
+        'db6ccdc793a0-finite-audit-bridge.json',
+        'db6ccdc793a0-geometry-delta-audit.json',
+        'db6ccdc793a0-indexed-semantic.json',
+        'db6ccdc793a0-mixed-rank-kernel-audit.json',
+        'db6ccdc793a0-negative-clock.json',
+        'db6ccdc793a0-negative-receipts.json',
+        'db6ccdc793a0-orthability-core.json',
+        'db6ccdc793a0-physical-budget.json',
+        'db6ccdc793a0-polynomial-geometry-audit.json',
+        'db6ccdc793a0-recursive-equivalence.json',
+        'db6ccdc793a0-robust-repair.json',
+        'db6ccdc793a0-semantic-core.json',
+        'db6ccdc793a0-semantic-implementation.json',
+        'db6ccdc793a0-statistical-repair.json',
+        'ddbad6ca12d0-endpoint-atoms.json',
+        'eff5fada59f4-upstream-author.json',
+        'facff25d4a24-phase-stabilization.json',
+    ),
+    'experiments/orthemology-v5-successors/suites/': (
+        'D04-T07-ATTRIBUTION-ORIGINAL.json',
+        'D04-T07-COMPOSITION-ORIGINAL.json',
+        'D04-T07-COVERING-ORIGINAL.json',
+        'D04-T07-CRITERION-ORIGINAL.json',
+        'D04-T07-DYNAMIC-ORIGINAL.json',
+        'D04-T07-HISTORY-ORIGINAL.json',
+        'D05-T08-BATCH-ORIGINAL.json',
+        'D05-T08-COMMON-ORIGINAL.json',
+        'D05-T08-CONTROLLER-ORIGINAL.json',
+        'D05-T08-SHARED-ORIGINAL.json',
+        'D07-T09-CONTROLLER-ORIGINAL.json',
+        'D07-T09-TRANSPORT-ORIGINAL.json',
+        'T10-MODEL-CHECKER.json',
+        'T10-NONUNIFORM-COMPLETION.json',
+        'T10-UNIFORM-COMPLETION.json',
+        'T15-EMPIRICAL-REANALYSIS.json',
+        'd06-core-runtime.json',
+        'd06-portable-cost.json',
+        'd06-portable-runtime-literal.json',
+        'd06-selector.json',
+        'd08-g1-review.json',
+        'd08-g1.json',
+        'd08-p1-tail-audit-01.json',
+        'd08-p1-tail-finish-01.json',
+        'd08-p1-tail-finish-reference-01.json',
+        'd08-p1.json',
+        'd17-t14-occurrence-finite.json',
+        'd17-t14-sense-finite.json',
+        't11-dependent-all.json',
+        't11-normalization.json',
+        't11-nucleus.json',
+        't11-substitution.json',
+        't14-identity.json',
+        't15-identity.json',
+        't15-json-reference.json',
+        't15-runtime-agreement.json',
+        't15-univariate-reference.json',
+    ),
+}
+ADMIN_RECORD_PATHS = frozenset(prefix + name for prefix, names in ADMIN_RECORD_NAMES.items() for name in names)
+
+
+ADMIN_GUIDES = {
+    'experiments/orthemology-v5-successors/groups/occurrence-language/README.md':
+        ('e9a7bbd844b565ba3497650ed08f77bc8d960c40', 'dcf1e86bb630f7b4203d21587a638c94f2502c6e1a0b07fcf1f697c9e0953300', 11414, 2),
+    'experiments/orthemology-v5-successors/groups/t07-technical/README.md':
+        ('7cd6ff0393556359cecaee0c5b109a6cf8a05345', '3eb797cdf4925b80e21597fed04fbda0bee7a85f7bb5a141137fbba258cf25c2', 32584, 6),
+    'experiments/orthemology-v5-successors/groups/t08-history/README.md':
+        ('a49fbf2d3e0691495f5884e3a13ec475aafb1293', 'fb21186d2568c38564e0bf23f94df81d05fbad8fe39dcab23b6fd83b0291f7d1', 45079, 12),
+    'experiments/orthemology-v5-successors/groups/t09-controller/README.md':
+        ('f2b39f28134bfb2b8edf6406a90a51dcdaa1736a', 'de6b96e9afdffa7ace85c703990baaedf5b5ac7e70899d23b9ce3ad913d3fe6e', 17563, 4),
+    'experiments/orthemology-v5-successors/groups/t11-types/README.md':
+        ('06fd16b55848900bef9bb6ea1e1759c2b25b2cb4', '855990c6a98c740baa4bc050f5337e8a3b514dcea70fc3ea19a86558a9f067bc', 12902, 4),
+    'experiments/orthemology-v5-successors/groups/t14-identity/README.md':
+        ('09ea18f06905c0e5116375b2163737cf380755eb', 'bd58d620ac8a0dd0bbd8a3eb51e0c254b73cf14ae795a48dc19c347ee69b9961', 16523, 1),
+    'experiments/orthemology-v5-successors/groups/t15-identity/README.md':
+        ('eff9266c75ad72d7a60da622eb1e65ec5fe8a4e6', '03bdd90e71a1221722a27e39166f73b1ad0c14abd34c9a79773c6c01fc2d327a', 29130, 4),
+    'experiments/orthemology-v5-successors/groups/t15-restricted-reference/README.md':
+        ('fd3216e6d5c1a75c5f70260a3a66cc8194f69a92', 'a10ffec3e0baa17aa0307ba82f79cca7d85ea38edd212500bc8f1b21c171436d', 4451, 3),
+}
+ADMIN_PUBLIC_GUIDE_PATHS = frozenset(('experiments/orthemology-v5-successors/groups/t07-technical/README.md', 'experiments/orthemology-v5-successors/groups/t08-history/README.md'))
+
+def administrative_guide_adaptation(path, original):
+    """Replace only 36 original descriptor hyperlinks, keeping all wording exact."""
+    if path not in ADMIN_GUIDES:
+        raise ValueError('unqualified administrative guide')
+    if path in TYPED_GUIDES:
+        original = _typed_guide_adaptation(path, original)
+    import posixpath
+    changed = []
+    def link(match):
+        target = posixpath.normpath(posixpath.join(posixpath.dirname(path), match.group(1)))
+        if target not in ADMIN_RECORD_PATHS:
+            return match.group(0)
+        changed.append(target)
+        return '](' + 'https://github.com/theislampill/orthemology/blob/' + ADMIN_RECORD_BASE + '/' + target + (match.group(2) or '') + ')'
+    adapted = re.sub(r'\]\(([^)#\s]+)(#[^)]*)?\)', link, original.decode('utf-8')).encode()
+    if len(changed) != ADMIN_GUIDES[path][3]:
+        raise ValueError('administrative guide link population differs')
+    return adapted
+
+
+def administrative_guide_source_bytes(root, path, allow_original=True):
+    """Authenticate the original authored guide and its exact link-only edition."""
+    if path not in ADMIN_GUIDES:
+        raise ValueError('unqualified administrative guide')
+    root = pathlib.Path(root)
+    _administrative_catalog(root)
+    blob, identity, size, _ = ADMIN_GUIDES[path]
+    expected = ('100644 blob ' + blob + '\t' + path).encode() + b'\0'
+    if _administrative_git(root, 'ls-tree', '-z', ADMIN_RECORD_BASE, '--', path) != expected:
+        raise ValueError('administrative guide original coordinate differs')
+    original = _administrative_git(root, 'cat-file', 'blob', blob)
+    if (len(original) != size or digest(original) != identity
+            or hashlib.sha1(b'blob ' + str(size).encode() + b'\0' + original).hexdigest() != blob):
+        raise ValueError('administrative guide original identity differs')
+    adapted = administrative_guide_adaptation(path, original)
+    adapted_blob = hashlib.sha1(b'blob ' + str(len(adapted)).encode() + b'\0' + adapted).hexdigest()
+    choices = {blob: original, adapted_blob: adapted}
+    if path in TYPED_GUIDES:
+        earlier = _typed_guide_adaptation(path, original)
+        earlier_blob = hashlib.sha1(b'blob ' + str(len(earlier)).encode() + b'\0' + earlier).hexdigest()
+        choices[earlier_blob] = earlier
+    staged = _administrative_git(root, 'ls-files', '--stage', '-z', '--', path)
+    accepted = {('100644 ' + oid + ' 0\t' + path).encode() + b'\0' for oid in choices}
+    if staged not in accepted:
+        raise ValueError('administrative guide staged edition differs')
+    body = _regular_current_bytes(root, path)
+    if body != adapted and not (allow_original and body in choices.values()):
+        raise ValueError('administrative guide current wording or links differ')
+    return original
+
+
+def _administrative_git(root, *args):
+    """Native local reads, with real repository/index and replacement refs disabled."""
+    env = {name: value for name, value in os.environ.items() if not name.startswith('GIT_')}
+    env.update(GIT_NO_REPLACE_OBJECTS='1', GIT_NO_LAZY_FETCH='1', GIT_ALLOW_PROTOCOL='',
+               GIT_OPTIONAL_LOCKS='0', GIT_TERMINAL_PROMPT='0', GIT_CONFIG_NOSYSTEM='1',
+               GIT_CONFIG_GLOBAL=os.devnull, GIT_CONFIG_SYSTEM=os.devnull,
+               GIT_CONFIG_COUNT='2', GIT_CONFIG_KEY_0='core.fsmonitor', GIT_CONFIG_VALUE_0='false',
+               GIT_CONFIG_KEY_1='core.untrackedCache', GIT_CONFIG_VALUE_1='false')
+    result = subprocess.run(['git', '--no-replace-objects', '--literal-pathspecs', *args],
+                            cwd=root, env=env, capture_output=True, check=False)
+    if result.returncode:
+        raise ValueError('frozen administrative Git input is unavailable')
+    return result.stdout
+
+
+def _administrative_catalog(root):
+    root = pathlib.Path(root)
+    if root.is_symlink() or not root.is_dir():
+        raise ValueError('frozen administrative records require an ordinary repository root')
+    commit = _administrative_git(root, 'cat-file', 'commit', ADMIN_RECORD_BASE)
+    if hashlib.sha1(b'commit ' + str(len(commit)).encode() + b'\0' + commit).hexdigest() != ADMIN_RECORD_BASE:
+        raise ValueError('frozen administrative revision differs')
+    raw = _administrative_git(root, 'ls-tree', '-rz', '--full-tree', ADMIN_RECORD_BASE,
+                              '--', *sorted(ADMIN_RECORD_NAMES))
+    if len(ADMIN_RECORD_PATHS) != 236 or digest(raw) != ADMIN_RECORD_TREE_SHA256:
+        raise ValueError('frozen administrative native population differs')
+    bindings = {}
+    for entry in raw.split(b'\0'):
+        if not entry:
+            continue
+        metadata, name = entry.split(b'\t', 1)
+        mode, kind, blob = metadata.decode('ascii').split()
+        path = name.decode('utf-8')
+        if (mode != '100644' or kind != 'blob' or path not in ADMIN_RECORD_PATHS
+                or path in bindings or not re.fullmatch(r'[0-9a-f]{40}', blob)):
+            raise ValueError('frozen administrative coordinate differs')
+        bindings[path] = blob
+    if set(bindings) != ADMIN_RECORD_PATHS:
+        raise ValueError('frozen administrative class is incomplete')
+    return bindings
+
+
+def _administrative_bound_bytes(root, path, blob):
+    root = pathlib.Path(root)
+    indexed = _administrative_git(root, 'ls-files', '--stage', '-z', '--', path)
+    expected = ('100644 ' + blob + ' 0\t' + path).encode() + b'\0'
+    if indexed not in (b'', expected):
+        raise ValueError('frozen administrative staged identity differs')
+    original = _administrative_git(root, 'cat-file', 'blob', blob)
+    if hashlib.sha1(b'blob ' + str(len(original)).encode() + b'\0' + original).hexdigest() != blob:
+        raise ValueError('frozen administrative Git body differs')
+    target = root
+    for part in path.split('/'):
+        target = target / part
+        if target.is_symlink():
+            raise ValueError('frozen administrative path contains a symlink')
+    if os.path.lexists(target):
+        flags = os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK | getattr(os, 'O_NOATIME', 0)
+        with os.fdopen(os.open(target, flags), 'rb') as stream:
+            before = os.fstat(stream.fileno())
+            if not stat.S_ISREG(before.st_mode) or before.st_mode & 0o111:
+                raise ValueError('frozen administrative current file type or mode differs')
+            body = stream.read(len(original) + 1)
+            after = os.fstat(stream.fileno())
+            current = target.lstat()
+        state = lambda s: (s.st_dev, s.st_ino, s.st_mode, s.st_size, s.st_mtime_ns, s.st_ctime_ns)
+        if state(before) != state(after) or state(before) != state(current) or body != original:
+            raise ValueError('frozen administrative present bytes differ')
+    return original
+
+
+def administrative_record_bytes(root, path, identity=None, size=None):
+    """Read one exact original contract/receipt; no replay or status promotion."""
+    if not isinstance(path, str) or path not in ADMIN_RECORD_PATHS:
+        raise ValueError('unqualified frozen administrative path')
+    body = _administrative_bound_bytes(root, path, _administrative_catalog(root)[path])
+    if ((identity is not None and digest(body) != identity)
+            or (size is not None and len(body) != size)):
+        raise ValueError('frozen administrative requested identity differs')
+    return body
+
+
+def administrative_record_absences(root):
+    """Qualify actual absences through the complete fixed native population."""
+    result = set()
+    for path, blob in _administrative_catalog(root).items():
+        _administrative_bound_bytes(root, path, blob)
+        if not os.path.lexists(pathlib.Path(root) / path):
+            result.add(path)
+    if any(path.startswith('experiments/orthemology-v5-successors/suites/') for path in result):
+        for guide in ADMIN_GUIDES:
+            administrative_guide_source_bytes(root, guide, allow_original=False)
+    return result
 
 
 def _continuation_git(root, *args):
@@ -1988,6 +2668,102 @@ def checkpoint_record_duplicate_paths(root):
     return result
 
 
+def _checkpoint_code_members():
+    """Validate52 exact archived code bindings and their34 existing public rows."""
+    encoded = json.dumps(CHECKPOINT_CODE_COPY_MEMBERS, separators=(',', ':')).encode()
+    public = json.dumps(CHECKPOINT_CODE_PUBLIC_MEMBERS, separators=(',', ':')).encode()
+    if (len(CHECKPOINT_CODE_COPY_MEMBERS) != 52
+            or hashlib.sha256(encoded).hexdigest() != CHECKPOINT_CODE_COPY_CATALOG_SHA256
+            or len(CHECKPOINT_CODE_PUBLIC_MEMBERS) != 34
+            or hashlib.sha256(public).hexdigest() != CHECKPOINT_CODE_PUBLIC_SHA256
+            or CHECKPOINT_CODE_PUBLIC_PATHS != frozenset(CHECKPOINT_CODE_PUBLIC_MEMBERS)):
+        raise ValueError('checkpoint code finite class differs')
+    result = {}
+    for alias, canonical, blob, identity, size in CHECKPOINT_CODE_COPY_MEMBERS:
+        for path in (alias, canonical):
+            if (not isinstance(path, str) or not path.startswith('research/t20-live-20261009/')
+                    or '\\' in path or '\0' in path or ':' in path
+                    or any(p in ('', '.', '..', '.git') for p in path.split('/'))
+                    or not path.endswith('.py')):
+                raise ValueError('checkpoint code coordinate differs')
+        if (not alias.startswith(CHECKPOINT_COPY_ROOT) or alias in result or alias == canonical
+                or not re.fullmatch(r'[0-9a-f]{40}', blob)
+                or not re.fullmatch(r'[0-9a-f]{64}', identity)
+                or not isinstance(size, int) or isinstance(size, bool) or size <= 0):
+            raise ValueError('checkpoint code identity differs')
+        result[alias] = {'canonical': canonical, 'blob': blob, 'sha256': identity,
+                         'bytes': size, 'mode': '100644'}
+    kept = {row['canonical'] for row in result.values()}
+    if (len(result) != 52 or len(kept) != 43 or set(result) & kept
+            or not CHECKPOINT_CODE_PUBLIC_PATHS < set(result)):
+        raise ValueError('checkpoint code retained population differs')
+    return result
+
+
+def _checkpoint_package_retarget_catalog(original):
+    """Keep all ten former providers authenticated at their original coordinates."""
+    encoded = json.dumps(CHECKPOINT_PACKAGE_RETARGETS, separators=(',', ':')).encode()
+    if (len(CHECKPOINT_PACKAGE_RETARGETS) != 10
+            or hashlib.sha256(encoded).hexdigest() != CHECKPOINT_PACKAGE_RETARGETS_SHA256):
+        raise ValueError('checkpoint package retarget finite class differs')
+    code = _checkpoint_code_members()
+    result = {path: dict(binding) for path, binding in original.items()}
+    seen, former = set(), set()
+    for alias, prior, canonical, blob, identity, size in CHECKPOINT_PACKAGE_RETARGETS:
+        if (not all(isinstance(value, str) for value in (alias, prior, canonical, blob, identity))
+                or alias in seen or prior in former or prior == canonical):
+            raise ValueError('checkpoint package retarget coordinates differ')
+        binding = original.get(alias)
+        expected = {'canonical': canonical, 'blob': blob, 'sha256': identity,
+                    'bytes': size, 'mode': '100644'}
+        if (binding is None or binding['canonical'] != prior
+                or (binding['blob'], binding['sha256'], binding['bytes'], binding['mode'])
+                    != (blob, identity, size, '100644')
+                or code.get(prior) != expected):
+            raise ValueError('checkpoint package former provider binding differs')
+        seen.add(alias)
+        former.add(prior)
+        result[alias].update(canonical=canonical, prior_canonical=prior)
+    kept = {binding['canonical'] for binding in result.values()}
+    if (len(seen) != 10 or len(former) != 10 or len(kept) != 16
+            or kept & (set(result) | set(code))):
+        raise ValueError('checkpoint package retarget retained population differs')
+    return result
+
+
+def _checkpoint_code_copy_catalog():
+    """Preserve every prior class and all final providers without recursion."""
+    result = _checkpoint_code_members()
+    kept = {row['canonical'] for row in result.values()}
+    earlier = {**_checkpoint_copy_catalog(), **_checkpoint_record_copy_catalog(),
+               **_checkpoint_package_copy_catalog()}
+    earlier_kept = {row['canonical'] for row in earlier.values()}
+    if set(result) & (set(earlier) | earlier_kept) or kept & set(earlier):
+        raise ValueError('checkpoint code retained population differs')
+    return result
+
+
+def checkpoint_code_copy_bytes(root, path, identity=None, size=None):
+    """Return exact inert source bytes, preserving the requested logical context."""
+    if not isinstance(path, str) or path not in CHECKPOINT_CODE_COPY_PATHS:
+        raise ValueError('unqualified checkpoint code path')
+    binding = _checkpoint_code_copy_catalog().get(path)
+    if (binding is None or (identity is not None and identity != binding['sha256'])
+            or (size is not None and size != binding['bytes'])):
+        raise ValueError('checkpoint code requested identity differs')
+    return _checkpoint_bound_bytes(root, path, binding)
+
+
+def checkpoint_code_duplicate_paths(root):
+    """Admit actual52 absences only after authenticating every exact source."""
+    result = set()
+    for path, binding in _checkpoint_code_copy_catalog().items():
+        _checkpoint_bound_bytes(root, path, binding)
+        if not os.path.lexists(pathlib.Path(root) / path):
+            result.add(path)
+    return result
+
+
 def _checkpoint_package_copy_catalog():
     """Receive the exact26 additional members of five reviewed duplicate packages."""
     encoded = json.dumps(CHECKPOINT_PACKAGE_COPY_MEMBERS, separators=(',', ':')).encode()
@@ -2017,7 +2793,7 @@ def _checkpoint_package_copy_catalog():
             or suffixes != {'.py': 21, '.md': 3, '.json': 2}
             or set(result) & (set(earlier) | earlier_kept) or kept & set(earlier)):
         raise ValueError('checkpoint package retained population differs')
-    return result
+    return _checkpoint_package_retarget_catalog(result)
 
 
 def checkpoint_package_copy_bytes(root, path, identity=None, size=None):
@@ -2032,14 +2808,14 @@ def checkpoint_package_copy_bytes(root, path, identity=None, size=None):
     if (binding is None or (identity is not None and identity != binding['sha256'])
             or (size is not None and size != binding['bytes'])):
         raise ValueError('checkpoint package requested identity differs')
-    return _checkpoint_bound_bytes(root, path, binding)
+    return _checkpoint_copy_bound_bytes(root, path, binding)
 
 
 def checkpoint_package_duplicate_paths(root):
     """Admit exact26 absences only after authenticating the whole package class."""
     result = set()
     for path, binding in _checkpoint_package_copy_catalog().items():
-        _checkpoint_bound_bytes(root, path, binding)
+        _checkpoint_copy_bound_bytes(root, path, binding)
         if not os.path.lexists(pathlib.Path(root) / path):
             result.add(path)
     return result
@@ -2083,6 +2859,14 @@ def source_bytes(root, row):
         raise ValueError('unsafe source path')
     if str(path) == CONTINUATION_REGISTRY_PATH:
         body = continuation_registry_source_bytes(root, row)
+    elif str(path) in ADMIN_PUBLIC_GUIDE_PATHS and row.get('repository_revision'):
+        blob, identity, size, _ = ADMIN_GUIDES[str(path)]
+        if (row.get('repository_revision') != ADMIN_RECORD_BASE or row.get('git_blob') != blob
+                or row.get('disposition') != 'REUSE' or row.get('source_sha256') != identity
+                or row.get('public_sha256') != identity or row.get('source_bytes') != size
+                or row.get('public_bytes') != size):
+            raise ValueError('administrative guide public historical identity differs')
+        body = administrative_guide_source_bytes(root, str(path))
     elif str(path) in HISTORICAL_PROSE:
         blob, identity, size = HISTORICAL_PROSE[str(path)]
         if (row['repository_path'] != str(path) or str(path) not in HISTORICAL_PROSE_PUBLIC_PATHS
@@ -2090,6 +2874,18 @@ def source_bytes(root, row):
                 or row.get('source_sha256') != identity or row.get('source_bytes') != size):
             raise ValueError('historical public source owner differs')
         body = historical_source_bytes(root, str(path), row.get('repository_revision'), row.get('git_blob'))
+    elif str(path) in CHECKPOINT_CODE_COPY_PATHS:
+        binding = _checkpoint_code_copy_catalog()[str(path)]
+        if (str(path) not in CHECKPOINT_CODE_PUBLIC_PATHS or row['repository_path'] != str(path)
+                or row.get('disposition') != 'REUSE' or row.get('role') != 'authored_code'
+                or row.get('source_action') != 'include'
+                or row.get('repository_revision') is not None or row.get('git_blob') is not None
+                or row.get('source_sha256') != binding['sha256']
+                or row.get('public_sha256') != binding['sha256']
+                or row.get('source_bytes') != binding['bytes']
+                or row.get('public_bytes') != binding['bytes']):
+            raise ValueError('checkpoint code public identity or role differs')
+        body = checkpoint_code_copy_bytes(root, str(path), row['public_sha256'], row['public_bytes'])
     elif str(path) in CHECKPOINT_RECORD_COPY_PATHS:
         binding = _checkpoint_record_copy_catalog()[str(path)]
         if (row['repository_path'] != str(path) or row.get('disposition') != 'REUSE'

@@ -39,6 +39,8 @@ from resolve_t20_v6_source import (
     CHECKPOINT_COPY_PATHS, checkpoint_copy_bytes,
     CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_copy_bytes,
     CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_copy_bytes,
+    ADMIN_RECORD_PATHS, administrative_record_bytes,
+    CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_copy_bytes,
 )
 from validate_ar8r_reconciliation import (
     PMR007_DEEP_PREFIX, _pmr007_deep_original_members,
@@ -273,6 +275,12 @@ def _checkpoint_reference(src, cited):
             break
         directory = os.path.dirname(directory)
     for candidate in candidates:
+        if candidate in CHECKPOINT_CODE_COPY_PATHS:
+            try:
+                checkpoint_code_copy_bytes(ROOT, candidate)
+                return True
+            except (ValueError, OSError):
+                return False
         if candidate in CHECKPOINT_PACKAGE_COPY_PATHS:
             try:
                 checkpoint_package_copy_bytes(ROOT, candidate)
@@ -294,7 +302,29 @@ def _checkpoint_reference(src, cited):
     return None
 
 
+def _administrative_reference(src, cited):
+    """Resolve only enumerated frozen contracts/receipts before current exists()."""
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for path in candidates:
+        if path in ADMIN_RECORD_PATHS:
+            try:
+                administrative_record_bytes(ROOT, path)
+                return True
+            except (ValueError, OSError):
+                return False
+    return None
+
+
 def _resolves(src, cited):
+    administrative = _administrative_reference(src, cited)
+    if administrative is not None:
+        return administrative
     # These exact incorporated originals retain immutable provenance/evidence
     # references. Authenticate history and any present copy before ordinary
     # existence checks; no unrelated path obtains a missing-body exemption.

@@ -1471,7 +1471,15 @@ class BulkConsumerProjectionPinTests(unittest.TestCase):
      'tests/schema-negative/NEGATIVE-FIXTURES.json': ('b342240297511473b5c5568d4662de413d1f69fef20a7a55dc59c24657e7580b',
                                                       10709,
                                                       'a002ee8e159a7678e6c704323ca62670cc389880',
-                                                      '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
+                                                      '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+     'experiments/orthemology-v5-successors/groups/t07-technical/README.md': ('3eb797cdf4925b80e21597fed04fbda0bee7a85f7bb5a141137fbba258cf25c2',
+                                                                              32584,
+                                                                              '7cd6ff0393556359cecaee0c5b109a6cf8a05345',
+                                                                              '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+     'experiments/orthemology-v5-successors/groups/t08-history/README.md': ('fb21186d2568c38564e0bf23f94df81d05fbad8fe39dcab23b6fd83b0291f7d1',
+                                                                            45079,
+                                                                            'a49fbf2d3e0691495f5884e3a13ec475aafb1293',
+                                                                            '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
 
     @classmethod
     def setUpClass(cls):

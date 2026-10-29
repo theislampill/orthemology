@@ -2754,6 +2754,525 @@ Indexing matters when the record of a just-completed block is stored in its succ
 
 These are mathematical interfaces between a process law, its records and the action stream it actually generates. They do not supply a new execution receipt, an expected-time guarantee absent from the hypotheses, or a real sensor model. The common-observation and physical-time conclusions sharpen what a restoration argument must establish; they do not authenticate a normative target or identify the source of its authority.
 
+### 9.10 Sparse priors, cluster width and the cost of compulsory reports
+
+The endpoint-density result in §9.8 assumes a positive density envelope throughout an endpoint neighbourhood. A prior supported on separated clusters can have very different reporting costs. Its gaps can make the next relevant scale identifiable cheaply, while a small change in the shape inside each cluster can make every policy have infinite expected cost. The difference concerns one fixed literal acceptance test and one acquired experiment; it does not arise from changing the target after seeing the data.
+
+This section uses the positive reporting clock $`n=1,2,\ldots`$. Draw a parameter $`\alpha`$ once, draw a private seed independently of it and of the entire innovation stream, and acquire $`Y_j=\mathbf1\{U_j\leq\alpha\}`$ from independent uniform innovations. At time $`n`$ one report is compulsory and may use the seed, time and complete ordered word $`Y_1\ldots Y_n`$. The policy receives neither the parameter nor its cluster index, an unacquired innovation, a correctness label or an unpriced extra sample. The literal excesses are the same as in §9.8:
+
+```math
+D_0(\alpha,\varepsilon,q)=q^2-\frac14-\alpha\varepsilon(1+\varepsilon),
+\qquad
+D_1(\alpha,\varepsilon,q)=(1-q)^2-\frac14+\alpha\varepsilon(1-\varepsilon).
+```
+
+Acceptance means both excesses are nonpositive; equality is accepted. Let $`e_n`$ indicate failure and write
+
+```math
+C_N(\mu)=\inf_{\pi}\mathbb E_\mu^\pi\sum_{n=1}^N e_n,
+\qquad
+C_\infty(\mu)=\inf_{\pi}\mathbb E_\mu^\pi\sum_{n=1}^\infty e_n.
+```
+
+The negative results allow measurable real reports and all independent-seed policies. Positive witnesses below give coherent reports in $`[0,1]`$. All infinite sums and integrals of costs are nonnegative extended integrals, so their interchange uses Tonelli, not an assumed finite budget. A possible initial report at $`n=0`$ adds at most one; it is excluded from every displayed exact positive-time identity. Infinite expected count does not assert infinitely many failures almost surely.
+
+#### Sparse spacing gives a complete criterion for narrow clusters
+
+Fix $`0\lt\varepsilon\leq1/4`$ and a half-separated sequence
+
+```math
+0\lt a_{i+1}\leq\frac{a_i}{2},\qquad a_0\leq\frac12,
+\qquad
+r_i=\frac{a_{i+1}}{a_i},\quad L_i=\log(1/r_i),\quad
+Z=\sum_{i\geq0}a_i,\quad S=\sum_{i\geq0}r_iL_i.
+```
+
+Here $`0\lt Z\leq1`$. For each $`i`$, let $`\nu_i`$ be any Borel probability supported on $`I_i=[(1-\delta)a_i,(1+\delta)a_i]`$, and set $`\mu=Z^{-1}\sum_i a_i\nu_i`$. When $`0\leq\delta\leq\varepsilon/4`$, the complete criterion is
+
+```math
+\frac{e^{-1}}{9Z}S\ \leq\ C_\infty(\mu)\ \leq\ \frac{30000}{Z}S.
+```
+
+Thus a finite-cost policy exists exactly when $`S`$ is finite, uniformly over every choice of the component laws. The upper bound is attained as a bound by the explicit scale selector below; it does not require computation of a posterior maximizer. [sparse-cluster]
+
+First, the centre report $`q_i=1/2+\varepsilon a_i`$ accepts the whole cluster. Direct substitution gives
+
+```math
+D_0=-\varepsilon^2a_i(1-a_i)+(a_i-\alpha)\varepsilon(1+\varepsilon)
+       \leq-\frac3{16}\varepsilon^2a_i,
+\qquad
+D_1=-\varepsilon^2a_i(1-a_i)+(\alpha-a_i)\varepsilon(1-\varepsilon)
+       \leq-\frac14\varepsilon^2a_i.
+```
+
+Conversely, one report cannot accept parameters in two distinct clusters. Writing $`t=q-1/2`$, acceptance at positive $`\alpha\geq\beta`$ implies
+
+```math
+t-t^2\geq\alpha\varepsilon(1-\varepsilon)\gt0,
+\qquad
+t+t^2\leq\beta\varepsilon(1+\varepsilon),
+\qquad
+\frac\alpha\beta\leq\frac{1+\varepsilon}{1-\varepsilon}\leq\frac53.
+```
+
+Since $`\delta\leq1/16`$, parameters from successive clusters have ratio at least $`2(1-\delta)/(1+\delta)\geq30/17\gt5/3`$. At zero, the only accepted report is $`1/2`$, which accepts no positive parameter.
+
+For a word $`w`$ of length $`n`$, put $`m_i(w)=(a_i/Z)\int P_\alpha(w)\,d\nu_i(\alpha)`$. The sequence is summable, tends to zero, and has a positive attained maximum. The least maximizing index gives a deterministic measurable rule on the countable set of finite words. Its centre report accepts exactly the mass of that cluster, so it minimizes every stage risk and every finite horizon simultaneously. This is a classical selector, not a claim of effective maximization over an infinite prior. Independent randomization cannot lower that conditional minimum.
+
+For any nonnegative summable sequence with maximum at $`j`$,
+
+```math
+\sum_{i\geq0}\min(m_i,m_{i+1})\leq\sum_i m_i-m_j:
+```
+
+charge the term with $`i\lt j`$ to $`m_i`$ and the term with $`i\geq j`$ to $`m_{i+1}`$. No posterior-unimodality assumption is used. On the all-zero word, $`\alpha\leq17a_i/16`$ and $`1-\alpha\geq15/32`$ imply $`\log(1-\alpha)\geq-3a_i`$. For $`0\leq n\leq L_i/(3a_i)`$ this gives
+
+```math
+m_i(0^n)\geq\frac{a_{i+1}}Z,
+\qquad
+m_{i+1}(0^n)\geq\frac{a_{i+1}}Z e^{-r_iL_i}
+                  \geq\frac{e^{-1}a_{i+1}}Z.
+```
+
+Passing from $`n`$ to $`n+1`$ loses at most a factor $`1/3`$. There are at least $`L_i/(3a_i)`$ such nonnegative integer starting times. Summing their positive-time overlaps therefore contributes at least $`e^{-1}r_iL_i/(9Z)`$. The adjacent-overlap inequality and Tonelli give the universal lower bound. It remains valid pointwise in the seed, and hence after seed integration. This proof uses separation and $`\delta\leq1/16`$, but does not need a report that accepts an entire cluster.
+
+For the constructive upper bound define $`K=320/3`$ and
+
+```math
+b_i=a_i\min\left\{\frac34,
+       \max\left\{\frac32r_i,\frac1{KL_i}\right\}\right\},
+\qquad
+H_n=\frac1n\sum_{j=1}^nY_j,
+\qquad x_n=\max(H_n,1/n).
+```
+
+The boundaries satisfy $`(3/2)a_{i+1}\leq b_i\leq(3/4)a_i`$ and $`b_{i+1}\leq b_i/2`$. Thus $`J_n=\min\{i:x_n\gt b_i\}`$ exists; boundary equality selects the next index. Report $`q_{J_n}`$. The positive floor is essential: the nearest positive support point to an empirical mean of zero need not exist.
+
+Here is a bound that will also be used for wider clusters. For a Bernoulli variable of mean $`\alpha`$ and $`|t|\leq1`$,
+
+```math
+\mathbb E\exp(t(Y-\alpha))\leq\exp(t^2\alpha(1-\alpha)).
+```
+
+Indeed, the centred first moment vanishes, every absolute moment of order at least two is at most the variance, and $`e^{|t|}-1-|t|\leq t^2`$. Chernoff's argument with $`t=\pm1/10`$ yields
+
+```math
+\alpha\leq4b/5\ \Longrightarrow\ \Pr(H_n\geq b)\leq e^{-nb/100},
+\qquad
+b\leq4\alpha/5\ \Longrightarrow\ \Pr(H_n\leq b)\leq e^{-n\alpha/100}.
+```
+
+If the true cluster is $`i`$, selection of a different cluster requires $`x_n\gt b_{i-1}`$ or $`x_n\leq b_i`$, with no first event for $`i=0`$. For all $`\delta\leq1/16`$, the parameter lies between $`15a_i/16`$ and $`17a_i/16`$. The upper-boundary sum is at most $`101/b_{i-1}`$: at most $`1/b_{i-1}`$ early times can be caused by the floor, and the geometric tail is at most $`100/b_{i-1}`$. The lower event requires $`n\geq1/b_i`$ and has summed probability at most
+
+```math
+\frac{101}\alpha e^{-\alpha/(100b_i)}
+\leq\frac{1616}{15a_i}\exp\left(-\frac{3a_i}{320b_i}\right).
+```
+
+After weighting by $`a_i/Z`$, the total expected number of wrong cluster selections is at most
+
+```math
+\frac{101}Z\sum_i\frac{a_{i+1}}{b_i}
+ +\frac{1616}{15Z}\sum_i\exp\left(-\frac{3a_i}{320b_i}\right).
+```
+
+The boundary definition gives
+
+```math
+\frac{a_{i+1}}{b_i}\leq\left(K+\frac4{3\log2}\right)r_iL_i,
+\qquad
+\exp\left(-\frac{3a_i}{320b_i}\right)
+\leq e^{-1/(160r_i)}+r_i\leq(1+160/e)r_i.
+```
+
+Since $`\sum r_i\leq S/\log2`$, the coefficient is at most
+
+```math
+101\left(K+\frac4{3\log2}\right)
+ +\frac{1616}{15\log2}(1+160/e)
+ \leq\frac{427432}{15}\lt30000.
+```
+
+Here only $`\log2\geq1/2`$ and $`e\geq2`$ were used in the last estimate. Whole-cluster acceptance converts correct classification into a correct report in the narrow-width case. The classification estimate itself remains valid up to $`\delta=1/16`$; it must not be confused with that narrower acceptance premise.
+
+For example, $`a_i=e^{-(i+1)^2}`$ has $`r_i=e^{-(2i+3)}`$ and
+
+```math
+S=e^{-3}\left(\frac3{1-e^{-2}}+\frac{2e^{-2}}{(1-e^{-2})^2}\right)\lt\infty.
+```
+
+Uniform component laws with positive $`\delta`$ give an absolutely continuous prior of constant density $`1/(2\delta Z)`$ on the disjoint cluster intervals. Nevertheless $`\int\alpha^{-1}\,d\mu=\infty`$, since every component contributes at least $`1/[(1+\delta)Z]`$. This does not contradict §9.8: arbitrarily large relative gaps destroy a positive density envelope throughout an endpoint neighbourhood. Inside a sufficiently wide gap one can choose $`x`$ with no mass in $`(x,2x]`$, so its endpoint distribution function also has $`F(2x)=F(x)`$; a strict lower-growth premise would fail. If alternative weights satisfy $`c\,a_i/Z\leq w_i\leq C\,a_i/Z`$ for constants $`0\lt c\leq C\lt\infty`$ and the same component laws, then their measures and every policy cost satisfy the same two-sided comparison. Finiteness is preserved. The displayed $`S`$ criterion is not a classification for arbitrary unrelated weights. [sparse-cluster], [sparse-earlier-review]
+
+For this continuous prior, adding a zero atom gives a different result: every policy for $`\mu_\theta=\theta\delta_0+(1-\theta)\mu`$, with $`0\lt\theta\lt1`$, has infinite expected count, even when redesigned for that mixture. For any fixed common policy, write $`C_\alpha`$ for its conditional expected count. On this section's positive report clock, the zero-history argument of §9.8 gives $`C_\alpha+C_0\geq\sum_{n\geq1}(1-\alpha)^n=(1-\alpha)/\alpha`$. If $`C_0=\infty`$, the zero atom already forces divergence. If $`C_0\lt\infty`$, integrating against $`\mu`$ and using its infinite inverse first moment forces $`\int C_\alpha\,d\mu=\infty`$. Nonnegative mixture linearity proves the claim without subtracting infinite quantities. The pure-zero endpoint $`\theta=1`$ is excluded. [sparse-cluster]
+
+For later atomic examples it is useful to retain the sharper source bound $`C_\infty\leq256S/Z`$ for $`\nu_i=\delta_{a_i}`$. An ordinary derivation makes its scope explicit. On a word with $`k`$ ones, the unnormalized scores $`a_i^{k+1}(1-a_i)^{n-k}`$ are unimodal along the ordered support. Consequently the adjacent-minimum inequality above becomes equality. For adjacent parameters $`a`$ and $`b\leq a/2`$, summing over all words gives
+
+```math
+\sum_w\min(aP_a(w),bP_b(w))
+ \leq\min\{b,\sqrt{ab}\,\rho^n\},
+\qquad
+\rho=\sqrt{ab}+\sqrt{(1-a)(1-b)}.
+```
+
+The identity for $`1-\rho`$ as half the sum of two squared square-root differences gives $`1-\rho\geq a/32`$, because $`\sqrt{b/a}\leq1/\sqrt2\leq3/4`$. We may weaken this to $`\rho^n\leq e^{-na/64}`$. A decreasing-function integral bounds its positive-time sum by
+
+```math
+\int_0^\infty\min\{b,\sqrt{ab}e^{-at/64}\}\,dt
+ =64\frac ba\left(1+\frac12\log(a/b)\right)
+ \leq256\frac ba\log(a/b).
+```
+
+Sum over adjacent pairs and divide by $`Z`$. This proof uses the weights proportional to the support locations and the attained classical Bayes selector. It neither supplies an algorithm for exact infinite maximization nor licenses adjacent-minimum equality for arbitrary weights. [sparse-crossover], [sparse-nonconvex-review]
+
+#### Strict width, the critical width, and the shape of a component
+
+The narrow-width criterion extends to every $`0\leq\delta\lt\varepsilon`$ with $`\delta\leq1/16`$, but the report and finite-head treatment must change. Set
+
+```math
+q_i^*=\frac12+\varepsilon a_i(1-\delta\varepsilon),
+\qquad R=\frac{\varepsilon-\delta}{2\varepsilon}.
+```
+
+The two worst endpoint excesses coincide:
+
+```math
+D_0((1-\delta)a_i,\varepsilon,q_i^*)
+ =D_1((1+\delta)a_i,\varepsilon,q_i^*)
+ =\varepsilon a_i\{\delta-\varepsilon+
+                 \varepsilon a_i(1-\delta\varepsilon)^2\}.
+```
+
+For $`a_i\leq R`$ this is at most $`-\varepsilon a_i(\varepsilon-\delta)/2`$, so the entire tail cluster is accepted. Let $`H`$ be the first index with $`a_H\leq R`$. Use the same observable selector $`J_n`$; when $`J_n\lt H`$ report the empirical repair $`1/2+\varepsilon H_n`$, and otherwise report $`q_{J_n}^*`$. The true index appears only in the proof, not in the rule. [sparse-width]
+
+A useful empirical constant follows directly from the same moment bound. Put $`v=\alpha(1-\alpha)`$, $`m=\varepsilon^2v`$ and $`d=\varepsilon(H_n-\alpha)`$. The excesses of the empirical report are
+
+```math
+-m+(1+2\alpha\varepsilon)d+d^2,
+\qquad -m-(1-2\alpha\varepsilon)d+d^2.
+```
+
+If $`|H_n-\alpha|\leq\varepsilon v/2`$, then $`|d|\leq m/2`$; the absolute linear coefficients are at most $`3/2`$ and $`m\leq1/64`$, so both expressions are negative. Chernoff with $`t=\pm\varepsilon/4`$ bounds the failure probability by $`2e^{-n\varepsilon^2v/16}`$. Hence
+
+```math
+\mathbb E_\alpha\sum_{n\geq1}e_n(\mathrm{emp})
+ \leq\frac{32}{\varepsilon^2\alpha(1-\alpha)}.
+```
+
+This is an additional pointwise estimate with its proof, not a change to the separately derived constants in §9.8. Define
+
+```math
+M_{\mathrm{head}}=\sum_{i\lt H}\frac{a_i}Z
+       \int\frac{d\nu_i(\alpha)}{\alpha(1-\alpha)}.
+```
+
+Charge a wrong selected index to the already proved classification bound, and charge a correctly selected head index to the empirical bound. The result is
+
+```math
+C_\infty(\mu)\leq\frac{30000S}Z+
+                         \frac{32M_{\mathrm{head}}}{\varepsilon^2}.
+```
+
+For the minimal head, each head parameter is at least $`15R/16`$ and at most $`17/32`$. Thus $`M_{\mathrm{head}}\leq512/(225R)`$, and the additive term is at most $`32768/[225\varepsilon(\varepsilon-\delta)]`$. It diverges as $`\delta`$ approaches $`\varepsilon`$; no uniform limit at the boundary is asserted. The preceding zero-word lower bound still applies, so finiteness is equivalent to $`S\lt\infty`$ throughout this strict-width class. [sparse-width], [sparse-final-extension]
+
+The boundary $`\delta=\varepsilon`$ is sharp for a theorem uniform over all component shapes. More generally, whenever $`\varepsilon\leq\delta\leq1/16`$, an allowed component may give half its mass to each of
+
+```math
+\ell_i=(1-\varepsilon)a_i,\qquad u_i=(1+\varepsilon)a_i.
+```
+
+No real report accepts both. With $`t=q-1/2`$ and $`s_i=\varepsilon a_i(1-\varepsilon^2)\gt0`$, acceptance of the lower point gives $`t+t^2\leq s_i`$, whereas acceptance of the upper gives $`t-t^2\geq s_i`$. Their combination forces $`t=0`$ and then contradicts positivity of $`s_i`$. Strict positivity of the disturbance matters: at $`\varepsilon=0`$, the common report $`q=1/2`$ is accepted for every parameter. For every fixed seed and zero prefix at least one member of each pair fails. Its weighted risk is at least $`a_i(1-u_i)^n/(2Z)`$. The positive-time geometric sum is
+
+```math
+\frac{1-u_i}{2(1+\varepsilon)Z}\geq\frac3{20Z}.
+```
+
+Every one of infinitely many components therefore contributes a fixed positive amount, and every policy has infinite expected cost. This argument is within each pair; it needs no false claim that reports cannot be shared across different pairs. [sparse-width], [sparse-width-review]
+
+The same failure can be absolutely continuous, with no endpoint atom. Put $`h_i=\varepsilon a_i^2/16`$ and place half of each component uniformly on each strip $`[\ell_i,\ell_i+h_i]`$ and $`[u_i-h_i,u_i]`$. If one report accepted a point in both strips, acceptance of an upper-strip point would give $`t\geq3\varepsilon a_i/4`$. Adding the most favourable endpoint inequalities would instead give $`t^2\leq\varepsilon h_i=\varepsilon^2a_i^2/16`$, a contradiction. At least one entire strip is rejected. On a zero word its likelihood is at least $`(1-u_i)^n`$, so the same divergent lower bound applies.
+
+In contrast, a uniform law on each **whole** critical interval has a finite-cost witness whenever $`S`$ is finite. Assume $`\delta=\varepsilon\leq1/16`$, and first consider a tail centre $`a\leq1/8`$. Write
+
+```math
+\ell=(1-\varepsilon)a,\quad u=(1+\varepsilon)a,\quad
+s=\varepsilon a(1-\varepsilon^2),\quad h=2\varepsilon^2a^2,
+\quad W=4\varepsilon a^2,
+\qquad q_L=\frac12+s-h,\quad q_R=\frac12+s+h.
+```
+
+The left report accepts $`[\ell,u-W]`$, and the right report accepts $`[\ell+W,u]`$. The four extreme excesses are
+
+```math
+D_0(\ell,q_L)=s^2-h-2sh+h^2,
+\quad D_1(u,q_R)=s^2-h+2sh+h^2,
+```
+
+```math
+D_1(u-W,q_L)=s^2+h-2sh+h^2-W\varepsilon(1-\varepsilon),
+\quad D_0(\ell+W,q_R)=s^2+h+2sh+h^2-W\varepsilon(1+\varepsilon).
+```
+
+The suppressed middle argument in these four expressions is $`\varepsilon`$. For $`E=\varepsilon^2a^2`$, one has $`s^2\leq E`$ and $`2sh+h^2\leq E(4\varepsilon a+4\varepsilon^2a^2)\leq E`$. Also $`W\varepsilon(1-\varepsilon)\geq15E/4`$ and $`W\varepsilon(1+\varepsilon)\geq4E`$. All four excesses are nonpositive, and both reports are coherent. Since $`W\leq\varepsilon a/2`$, the accepted intervals overlap. [sparse-uniform]
+
+Choose $`q_L`$ when $`H_n\leq a`$ and $`q_R`$ otherwise; equality chooses the left report. Only the two edge strips, of combined uniform mass $`4a`$, can suffer a wrong-side report. At either edge, choosing the wrong side requires a sample-mean deviation of at least $`\varepsilon a/2`$. The variance is at most $`5a/4`$; Chernoff with $`t=\pm\varepsilon/8`$ bounds that probability by
+
+```math
+e^{-11n\varepsilon^2a/256}\leq e^{-n\varepsilon^2a/32}.
+```
+
+The positive-time sum is at most $`32/(\varepsilon^2a)`$. Multiplication by the edge mass $`4a`$ gives $`128/\varepsilon^2`$ for the component average. Use the original scale selector, the empirical report for selected centres above $`1/8`$, and this two-report rule for selected tail centres. The classification, head and local edge costs give
+
+```math
+C_\infty(\mu)\leq\frac{30000S}Z+
+       \frac{128}{\varepsilon^2}+
+       \frac{32M_{\mathrm{head}}}{\varepsilon^2}.
+```
+
+With the minimal head $`H\leq2`$, head parameters lie in $`[15/128,17/32]`$, so $`M_{\mathrm{head}}\leq4096/225`$. The additive bound is therefore $`[128+131072/225]/\varepsilon^2`$. The universal spacing lower bound proves necessity of $`S\lt\infty`$. Uniform whole intervals and thin endpoint strips thus have opposite answers at exactly the same critical width and with the same component weights. Width alone does not determine the answer. The minimal-head constants are the final extension; the earlier width and uniform editions are retained as predecessors, not silently treated as identical source text. [sparse-uniform], [sparse-final-extension], [sparse-width-previous], [sparse-uniform-previous]
+
+#### Endpoint contamination has an exact finite-horizon increment
+
+For this paragraph take an atomic prior $`\mu=\sum_iw_i\delta_{a_i}`$ on a half-separated positive support, with arbitrary positive weights summing to one. Write $`s=1-\theta`$ and $`\mu_\theta=\theta\delta_0+s\mu`$. Distinct positive atoms, and zero versus any positive atom, cannot share an accepted report. Word by word, the least maximizing posterior atom gives one policy that minimizes all horizons. The only word whose score acquires an endpoint contribution is $`0^n`$. If
+
+```math
+M_n=\max_i w_i(1-a_i)^n,
+```
+
+then the exact identity is
+
+```math
+C_N(\mu_\theta)=sC_N(\mu)+D_N(\theta),
+\qquad D_N(\theta)=\sum_{n=1}^N\min\{\theta,sM_n\}.
+```
+
+To see this, let $`A_n=\sum_iw_i(1-a_i)^n`$. The old zero-word error is $`A_n-M_n`$ and the new one is $`\theta+sA_n-\max(\theta,sM_n)`$. Subtract $`s(A_n-M_n)`$; every other word's error simply scales by $`s`$. Summability ensures that the maximum is attained. This identity is valid for $`\theta=0,1`$ as well; both endpoints have $`D_N=0`$. In particular $`0\leq D_N\leq\theta N`$ and $`|C_N(\mu_\theta)-C_N(\mu)|\leq\theta N`$. The increment is not the total cost: the known pure-zero model at $`\theta=1`$ has cost zero. [sparse-crossover]
+
+For $`0\lt\theta\lt1`$ define the finite threshold
+
+```math
+T_\theta=\max\left(\{0\}\cup
+ \left\{\frac{\log(sw_i/\theta)}{-\log(1-a_i)}:sw_i\gt\theta\right\}\right),
+\qquad m=\lfloor T_\theta\rfloor.
+```
+
+Only finitely many weights can exceed $`\theta/s`$. For $`n\leq m`$ the endpoint contribution is the smaller score, and beyond $`m`$ every positive-atom score is smaller. Therefore
+
+```math
+D_N(\theta)=\theta\min(N,m)+s\sum_{n=m+1}^N M_n,
+```
+
+with an empty tail understood as zero. If $`T_\theta`$ is an integer, equality of the scores makes either expression agree at that time. This is the exact crossover, not a universal multiple of $`1/\theta`$.
+
+For weights $`w_i=a_i/Z`$, the inequality $`-\log(1-a_i)\geq a_i`$ gives $`\theta T_\theta\leq s/(eZ)`$. Even a matching positive lower constant is false. For the exponential-square support put $`t_i=\sqrt{a_i a_{i+1}}`$ and $`\theta_i=t_i/(Z+t_i)`$. The eligible support locations are precisely $`a_j\geq a_i`$. For large $`i`$, $`x\mapsto\log(x/t_i)/x`$ decreases on that range, so
+
+```math
+\theta_iT_{\theta_i}\leq
+\frac{\sqrt{r_i}\log(1/r_i)}{2(Z+t_i)}\longrightarrow0.
+```
+
+The support gaps can therefore move the crossover far below the nominal inverse-contamination scale.
+
+There is also a uniform support-count description for $`w_i=a_i/Z`$. Set $`t=\theta Z/s`$ and
+
+```math
+L_N=\frac{s}Z\sum_{a_i\leq t}(1-a_i)\{1-(1-a_i)^N\},
+\qquad
+K(N,t)=\#\{i:1/N\leq a_i\leq t\}.
+```
+
+The full small-atom zero-word mass is unavoidable: if the endpoint wins, all small atoms fail; if a positive atom wins, its score is no greater than the endpoint score when it is small, so replacing it by that endpoint score still covers the small-atom sum. Consequently
+
+```math
+L_N\leq C_N(\mu_\theta)
+ \leq sC_N(\mu)+L_N+\frac{s}Z(2+4\log2).
+```
+
+For the upper bound use $`\min(t,\max_i x_i)\leq\sum_i\min(t,x_i)`$. At a head location $`a_i\gt t`$, the decreasing-function integral gives
+
+```math
+\sum_{n\geq1}\min\{t,a_i(1-a_i)^n\}
+ \leq\frac{t}{a_i}\{1+\log(a_i/t)\}.
+```
+
+There is at most one location in each half-open band $`[2^kt,2^{k+1}t)`$. Summing the bounds $`2^{-k}[1+(k+1)\log2]`$ gives $`2+4\log2`$. At the small locations the geometric sum is exactly the term defining $`L_N`$.
+
+Let $`Q_N=ZL_N/s`$. Locations below $`1/N`$ contribute less than $`N\sum_{a_i\lt1/N}a_i\leq2`$. Each of the $`K`$ remaining locations contributes at most one. Its deficit from one is at most $`a_i+e^{-Na_i}`$; the sum of the first terms is at most one, and the numbers $`Na_i\geq1`$ are separated by factors of at least two, so the exponential terms sum to less than one. Hence
+
+```math
+K(N,t)-2\leq Q_N\leq K(N,t)+2.
+```
+
+If $`B=C_\infty(\mu)\lt\infty`$, the resulting two-sided bound is
+
+```math
+\frac{s}Z\{K(N,t)-2\}\leq C_N(\mu_\theta)
+ \leq sB+\frac{s}Z\{K(N,t)+4+4\log2\}.
+```
+
+For $`a_i=e^{-(i+1)^2}`$ this count is exactly
+
+```math
+K(N,t)=\max\{0,A(N)-H(t)+1\},\qquad
+A(N)=\lfloor\sqrt{\log N}\rfloor,
+\quad H(t)=\max\{1,\lceil\sqrt{\max(0,\log(1/t))}\rceil\}.
+```
+
+The formula includes $`N=1`$ and equality at either support boundary. For fixed $`0\lt\theta\lt1`$,
+
+```math
+\frac{C_N(\mu_\theta)}{\sqrt{\log N}}\longrightarrow\frac{1-\theta}Z.
+```
+
+For jointly varying $`\theta,N`$, retaining the integer $`K`$ gives the more precise statement $`C_N=(s/Z)K+E`$ with $`-2s/Z\leq E\leq sB+s(4+4\log2)/Z`$. The uncontaminated lifetime cost is finite, while every fixed interior contamination weight has infinite lifetime cost. Thus taking $`N\to\infty`$ and then $`\theta\downarrow0`$ gives a different answer from taking those limits in the reverse order. This example concerns this sparse family; it does not overturn the endpoint-atom plus Beta example in §9.8.
+
+Two failed shortcuts clarify the proof. On support $`(1/2,1/4,1/8)`$ with weights $`(9/20,1/10,9/20)`$, the one-zero scores are $`(9/40,3/40,63/160)`$. Their sum minus their maximum is $`3/10`$, whereas the sum of adjacent minima is $`3/20`$. Arbitrary weights do not have the unimodality needed for equality. Nor can an empirical zero be assigned an unspecified nearest positive support point: that infimum need not be attained. The explicit positive floor and the correctly restricted atomic equality above avoid those failures. [sparse-crossover], [sparse-earlier-review]
+
+#### Interior contamination and a nonconvex finite-cost domain
+
+An endpoint atom is not essential to instability. Let $`\mu`$ be the centre prior on the exponential-square support and let $`\sigma`$ use the incompatible critical pairs, or the two thin continuous strips, at the same centres and weights. The former has a finite-cost policy and every policy for the latter has infinite expected count. For $`0\lt\theta\leq1`$,
+
+```math
+\widetilde\mu_\theta=(1-\theta)\mu+\theta\sigma
+\quad\Longrightarrow\quad
+C_\infty(\widetilde\mu_\theta)=\infty,
+\qquad
+\|\widetilde\mu_\theta-\mu\|_{\mathrm{TV}}\leq\theta,
+```
+
+where total variation is the supremum over measurable events. For each policy, linearity of the nonnegative prior integral gives a contribution $`\theta\cdot\infty`$ from $`\sigma`$. This also covers a policy redesigned for that particular mixture. Every new parameter is within relative distance $`\varepsilon`$ of a centre; no mass is placed at zero or one. For $`\varepsilon\leq1/16`$, a fully absolutely continuous version mixes the finite-cost uniform whole critical clusters with the divergent thin strips inside those same intervals. Both the positive and negative components can therefore be continuous, with unchanged cluster locations and weights. [sparse-interior], [sparse-final-extension]
+
+At each finite horizon, every fixed policy's cost function lies in $`[0,N]`$, so total variation gives
+
+```math
+|C_N(\widetilde\mu_\theta)-C_N(\mu)|\leq\theta N.
+```
+
+Apply the bound to policies approaching either infimum; an optimal-policy existence assertion is unnecessary. This finite-horizon continuity and the infinite-cost jump are compatible. The exact minimum-of-two-scores crossover formula in the endpoint case is not asserted for interior contamination.
+
+There is a stronger two-prior example. Choose half-separated centres with $`S\lt\infty`$ and $`(1+\varepsilon)a_0\leq1/2`$; for example $`a_i=(1/2)e^{-(i+1)^2}`$. Define
+
+```math
+b_i^-=(1-\varepsilon)a_i,\qquad b_i^+=(1+\varepsilon)a_i,
+\qquad Z_\pm=(1\pm\varepsilon)Z,
+\qquad
+\mu^\pm=\sum_i\frac{b_i^\pm}{Z_\pm}\delta_{b_i^\pm}
+       =\sum_i\frac{a_i}Z\delta_{b_i^\pm}.
+```
+
+Both one-sided priors are half-separated atomic families with the same ratios $`r_i`$. The atomic criterion supplies finite budgets $`256S/[(1-\varepsilon)Z]`$ and $`256S/[(1+\varepsilon)Z]`$, respectively. Yet every proper mixture
+
+```math
+\mu_\theta=\theta\mu^-+(1-\theta)\mu^+,
+\qquad 0\lt\theta\lt1,
+```
+
+has infinite cost for every allowed policy. The incompatible pair at scale $`i`$ contributes on $`0^n`$ at least
+
+```math
+\min(\theta,1-\theta)\frac{a_i}Z(1-b_i^+)^n.
+```
+
+Its lifetime sum is at least $`3\min(\theta,1-\theta)/(10Z)`$. Summing over infinitely many scales proves divergence. Equivalently, if one policy had finite cost for a proper mixture, nonnegative linearity would make its costs finite under both side priors, and therefore under their balanced mixture, contradicting the same pair bound. This alternative avoids subtracting infinite quantities. [sparse-nonconvex-review]
+
+The two side supports are disjoint: $`b_{i+1}^+\leq(1+\varepsilon)a_i/2\lt(1-\varepsilon)a_i=b_i^-`$. Thus $`\|\mu_\theta-\mu_\phi\|_{\mathrm{TV}}=|\theta-\phi|`$, with the minus-support event attaining the bound. The domain of priors admitting a finite expected count is neither convex nor open in total variation. Each fixed-policy lifetime cost is a nonnegative linear functional of the prior, and their infimum is concave in the extended sense; concavity does not make its finite-value domain convex.
+
+If a truthful side tag is supplied before the first report, the policy can select the appropriate finite-cost side rule and has a finite mixture budget. That tag is informative about the latent parameter and changes the observation contract. It cannot be replaced by an independent private seed. The negative theorem already includes adaptive switching, randomized strategies and policies using the full ordered prefix.
+
+Nor does the divergence contradict almost-sure eventual acceptance. At every fixed interior parameter the empirical report eventually enters a positive literal-acceptance neighbourhood by the strong law, as in §9.8. Integrating this probability-one statement against the bad mixture still gives finitely many failures almost surely. Their expected number is nevertheless infinite. Finite expectation, almost-sure finiteness and a uniform deterministic cutoff remain three different claims.
+
+#### Transport must preserve the acquired process and the literal count
+
+The prior comparisons above should all be interpreted on one actual experiment. A latent-index distribution and its real-parameter pushforward can have the same parameter integrals without yet identifying two policy interfaces. The source sequence first established the prior pushforward and literal score identities, and later supplied the full observation-and-policy transport. Those are distinct obligations. [sparse-paired-review], [sparse-transport-review]
+
+For a fixed $`\alpha\in[0,1]`$, the threshold map $`u\mapsto\mathbf1\{u\leq\alpha\}`$ pushes uniform measure to the Bernoulli law of parameter $`\alpha`$. Applied coordinatewise to an independent uniform stream, it gives the Bernoulli product law on every finite cylinder, hence on the sigma algebra of complete bit streams. Equality of one-time marginals alone would not prove that result. No invertible map of paths is needed: the unobserved innovation magnitudes are discarded.
+
+A word of fixed length $`n`$ can also be encoded by the set of its one positions. The pair consisting of that set and $`n`$ recovers the ordered word, so composing a policy with this encoding preserves every history-dependent decision. Replacing the set by its cardinality would be a different claim: words such as 01 and 10 have equal counts but a position-sensitive policy may distinguish them. This is why the full transport uses positions, even though the particular empirical selector later uses only counts.
+
+Transport the policy by the measurable history map while retaining the same time and independent seed. At each actual sample point, its old and new reports then coincide, and substitution in the two literal excesses gives equality of the stage indicators. Nonnegative infinite sums give equality of the total counts without an integrability premise. The stream pushforward identifies their conditional expectations. Finally, if $`\alpha=f(i)`$ is drawn from a normalized latent distribution, push that distribution forward, expand the resulting countable mixture, and use Tonelli together with seed independence. This identifies the unconditional expected count on the common real-parameter, seed and uniform-innovation space.
+
+That order matters: prove the stream law and actual readout first, then integrate the actual parameter map. Replacing $`f`$ by a constant would generally change the inverse moment and the cost even if one retained similar-looking symbolic formulas. Neither a correct parameter marginal alone nor an assumed conditional-loss equation supplies the full policy transport. Conversely, a forward measurable map is sufficient; recovery of the unused uniform magnitudes is not required. On the common interface, all-policy lower bounds still cover policies redesigned after the prior changes. [sparse-transport-review]
+
+#### A finite observation loss cannot represent this literal indicator
+
+There is a precise obstruction to importing an observed-symbol loss theorem directly into this example. If a finite family has strictly positive weights $`p(w)`$, a common nonnegative table $`\ell(w)`$ satisfies
+
+```math
+\sum_w p(w)\ell(w)=0\quad\Longrightarrow\quad
+\ell(w)=0\text{ for every }w.
+```
+
+Normalization of $`p`$ is unnecessary. The same table then has zero weighted sum under every other finite weight family. Interior Bernoulli laws give positive probability to every word of each fixed finite length.
+
+Take $`\varepsilon=1/4`$ and $`q=9/16`$. At $`\alpha=1/4`$ both excesses equal $`-3/256`$, so the literal failure indicator is zero. At $`\alpha=1/2`$, the excesses are $`-23/256`$ and $`9/256`$, so the indicator is one. A common nonnegative loss on the next bit, or on any fixed finite future word, cannot have expectations equal to those two literal values: the first zero expectation forces every entry to vanish. A signed next-bit table with values $`(-1,3)`$ does have expectations zero and one, respectively. Adding a constant to make it nonnegative adds a per-stage baseline and destroys the zero-loss and finite-total-cost contract. At an endpoint, some word probabilities vanish, so the full-support premise is substantive. [sparse-observation-review]
+
+Hutter's *General Loss Bounds for Universal Sequence Prediction* studies a common nonnegative bounded loss attached to the observed outcome and the chosen decision; its binary loss bound transfers finite known-law cumulative loss to the Bayes mixture under its hypotheses. The later *Optimality of Universal Bayesian Sequence Prediction for General Loss and Alphabet* develops the broader alphabet-and-loss framework. These are relevant antecedents, but the parameter-indexed literal zero-one indicator above has just failed that common finite-observation-loss representation. A Bayes mixture of the two sequence laws may dominate both without supplying the missing loss interface. [sparse-hutter-2001], [sparse-hutter-2003]
+
+The obstruction concerns that exact nonnegative finite-observation representation. It does not refute proper scoring, posterior convergence, parameter estimation, a signed or approximate loss, a different feedback model, an infinite-stream observation, or every possible indirect reduction. It is not a dispute about finite versus countable model classes. The sources retain that limited comparison rather than claiming a contradiction with universal prediction.
+
+#### An exact rational witness and its interface limits
+
+The preceding real-logarithm selector is an ordinary mathematical construction. An effective version can avoid logarithms, floating point, integration over the component laws, the normalizer $`Z`$ and an infinite posterior maximization. Assume first that each $`a_i`$ and the next centre can be computed exactly as positive rationals with the stated half-separation. Let $`m_i`$ be the least integer $`m\geq1`$ with $`2^m r_i\geq1`$. Then
+
+```math
+2^{-m_i}\leq r_i\lt2^{-(m_i-1)},\qquad
+L_i\leq m_i\leq4L_i.
+```
+
+Use rational boundaries
+
+```math
+b_i=a_i\min\left\{\frac34,
+       \max\left\{\frac32r_i,\frac1{128m_i}\right\}\right\}.
+```
+
+They retain $`(3/2)a_{i+1}\leq b_i\leq(3/4)a_i`$ and the same factor-two decrease. The earlier classification calculation applies, now with
+
+```math
+\frac{a_{i+1}}{b_i}\leq(512+8/3)r_iL_i,
+\qquad
+\exp\left(-\frac{3a_i}{320b_i}\right)
+ \leq e^{-1/(160r_i)}+e^{-6m_i/5}\leq81r_i.
+```
+
+The first exponential is at most $`80r_i`$ using $`e\geq2`$; the second is at most $`2^{-m_i}\leq r_i`$. Since $`\sum r_i\leq2S`$, the total coefficient is bounded by
+
+```math
+101(512+8/3)+\frac{1616}{15}\,162
+ =\frac{1041512}{15}\lt70000.
+```
+
+Thus replace $`30000S/Z`$ by $`70000S/Z`$ in the strict-width and uniform-critical positive bounds; their head and edge terms are unchanged. The input promises remain different: strict width allows arbitrary component laws, while the critical-width rule requires a uniform law on the entire cluster. A finite observed word does not verify either prior promise. [sparse-effective-theorem], [sparse-rational-contract]
+
+For the concrete rational family
+
+```math
+a_i=2^{-(i+1)^2},\qquad r_i=2^{-(2i+3)},\qquad m_i=2i+3,
+\qquad S=\frac{11}{18}\log2,\qquad \frac12\leq Z\leq\frac47,
+```
+
+the bounds are explicit. This is a dyadic-square family, distinct from the exponential-square example above. Its inverse first moment is again infinite. At a valid input $`n\geq1`$, $`0\leq k\leq n`$, use $`x=\max(k/n,1/n)`$ and select the least $`i`$ with $`x\gt b_i`$. With
+
+```math
+B=(n-1).\mathrm{bit\_length}()=\lceil\log_2 n\rceil,
+```
+
+half-separation gives $`a_B\leq2^{-B-1}`$, hence $`b_B\leq3/(8\cdot2^B)\lt1/n\leq x`$. The finite search through indices $`0,\ldots,B`$ always terminates. Equality at a boundary proceeds to the next index. In strict-width mode, a selected centre above $`R`$ uses the empirical report and equality at $`R`$ belongs to the tail. In uniform-critical mode, selected centres above $`1/8`$ use the empirical report; a tail empirical mean equal to its centre chooses the left report.
+
+For a general rational ratio, integer bit lengths give a bracket of two consecutive candidate ranks, and an exact shifted-integer comparison decides $`m_i`$. The word route counts the acquired bits and calls the same count core. For this symmetric rule, a truthful count pair and the corresponding ordered word give the same output. The count API does not establish that the caller acquired or truthfully summarized $`n`$ observations; the general history transport above still preserves positions. In the dyadic family, the search uses at most $`\lceil\log_2n\rceil+1`$ candidates, the largest centre denominator has bit length of order $`(\log n)^2`$, and reading a word takes order $`n`$ operations. Arithmetic also depends on the bit lengths of $`\varepsilon`$ and $`\delta`$. These are finite-input termination and representation statements, not unit-cost arithmetic on arbitrary integers or a physical real-time guarantee.
+
+The historical implementation sequence made three consequential distinctions. First, the initial guarded interfaces admitted word lengths from 1 to 1,000,000, count and parameter components up to 4096 bits, and decimal components up to 1234 digits. They required actual integers rather than booleans, exact rational parameters, valid ranges and the appropriate mode promise. These interfaces implement a bounded restriction of the rule. They do not supply a policy on every positive reporting time. Merely switching to the empirical report beyond a fixed cap would not prove a finite budget for a prior whose inverse moment diverges. The first independent review accordingly retained a partial verdict. [sparse-candidate1-review], [sparse-rational-contract]
+
+Second, the later typed cores `decide_counts_unbounded` and `decide_word_unbounded` removed preset length, integer and rational caps, and the word route called the uncapped count core directly. Their exact finite-input termination gives the infinite report family in the mathematical sense. The old guarded APIs and command-line interface remain bounded restrictions, and the uncapped typed core does not promise unlimited memory, unlimited decimal transport or verification of the host interpreter. The source's scope clarification explicitly superseded the first version's insufficient bounded-core claim. [sparse-unbounded-scope], [sparse-unbounded-readme], [sparse-effective-theorem]
+
+Third, removing mathematical caps did not repair a separate decimal-parser defect. With a host integer-string guard set to 640 decimal digits, the whole-string parser rejected the valid count $`n=10^{1000},k=0`$. That input has 1001 decimal digits and 3322 bits, within both advertised guarded caps, although it succeeded with the default guard of 4300. The report formulas were not falsified; the admitted transport domain was. A chunked output routine already worked under the 640-digit guard, including a 4711-digit denominator, so the original result had an input/output asymmetry. [sparse-parser-correction], [sparse-candidate1-review]
+
+The corrected parser validates syntax and length, then accumulates decimal chunks of at most nine digits by $`V\leftarrow10^kV+c`$. Induction on chunks proves equality with the signed decimal value, including leading zeros. Denominator positivity, rational normalization and the advertised bit bounds are checked explicitly. The output routine applies the inverse base-$`10^9`$ decomposition. The correction preserves the host guard, including settings 640, 4300 and zero, and leaves the report formulas and guarded caps intact. It repairs the finite JSON interface; it does not turn that interface into an unlimited serializer. [sparse-rational-final-review]
+
+A distinct test gap was also retained. The initial author's grid omitted the zero-width case, and a mutation replacing the strict-head comparison by its equality-inclusive counterpart survived that grid, even though the original comparison was correct. The independent default-mode check detected it, and the final revision added the missing coverage. A repaired test and parser do not retroactively turn the earlier partial review into a pass. The final candidate's exact version, historical test scope and the distinction between mathematical proof and Python execution are recorded with the source boundary below. [sparse-rational-final-review], [sparse-rational-review-readme]
+
+Together these results distinguish four obligations: the literal target, the joint law of acquired observations, the prior-shape assumptions and the effective reporting interface. Finiteness of an expected error count does not certify a prior from samples, authenticate a normative source, establish a physical sensing process, or grant authority to act. The examples and algorithms make no field-wide novelty claim, and the source reviews do not by themselves qualify this new exposition.
+
+
+
 ## 10. Assumptions, negative results, and open scope
 
 The positive-fibre and Fisher theorems quantify over the full strictly positive joint-law family. On a constrained reachable family, use its actual differences; the density proof may fail. For example, with three audit outcomes, a binary target, fixed weights $`w_j=1/3`$, and $`J=p_{1,1}`$, equation (12) has $`\dot w=0`$. The section is invariant and its signature is injective, so the flow descends there despite conditional dependence at fixed $`q`$. This does not contradict the full-domain rigidity theorem.
@@ -2807,6 +3326,31 @@ Section 5.3 and the retained-history argument in §9.4 incorporate the correspon
 Section 9.8 consolidates the fixed-disturbance continuum proof and its independent ordinary review [48–49], the Beta lifetime boundary and its separate review [50–51], the finite-horizon and deterministic-clock sources [52–53], and the endpoint-density proof [54]. It preserves the empirical learner's sharper pointwise constant, all-policy endpoint quantifiers, initial-report distinctions, seed independence and restrictions on priors and clocks. The elementary proofs are supplied in the subject treatment, so their scientific content does not require reconstruction of a historical research packet.
 
 These references are exact public navigation-only projections. The original private texts and their custody diffs are distinct editions. The recovery introduction and status index [55–56] distinguish recovered source identity, retained predecessor evidence, fresh ordinary review and unavailable earlier formal closures. Their pending-review wording and later source-bound reviews retain their original scopes. In particular, the rate and density sources' separate successor reviews are described by the recovery indexes and integrated-report review; those statements do not claim that every original review archive or raw output has been received or re-executed for this edition. The integrated report's recovered endpoint-program identities and bounded meter remain separate from the ordinary minimax policy variants [57]. No missing fourth formal closure, historical-priority verdict or normative-source authority is supplied by the new synthesis. The historical finite controls corroborate their stated source versions; independent qualification of this new exposition is its own obligation.
+
+### Sparse-prior continuation: source and verification boundary
+
+Section 9.10 consolidates twenty-five exact public continuation notes into the existing fixed-disturbance inquiry treatment. The cluster theorem supplies the spacing criterion and explicit selector [sparse-cluster]; the width and uniform-cluster sources supply the sharp shape distinction [sparse-width], [sparse-uniform]; and the crossover and nonconvexity sources supply the finite-horizon and prior-mixture counterexamples [sparse-crossover], [sparse-nonconvex-review]. The strict-width and uniform sources have both earlier and final editions. Their earlier bodies [sparse-width-previous], [sparse-uniform-previous] and the original ordinary review [sparse-width-review] are preserved as distinct historical evidence. The final extension separately checks the minimal-head constants and interior contamination [sparse-final-extension], [sparse-interior]. A review of an earlier exact text is not automatically a review of a changed paragraph.
+
+The proof here makes explicit the empirical constant 32, the atomic affinity bound, the zero-word overlap charges and the actual observation transport needed to connect those results. Those derivations are part of this exposition's own ordinary-mathematical review obligation. They do not claim a new discovery, an independent rediscovery of their source results, or a fresh formal proof. Classical mechanisms used here include Chernoff's inequality, affinity bounds, Tonelli's theorem, uniqueness of product laws from cylinders, elementary Bayesian decision rules and the strong law. The Hutter comparison credits the primary prediction results under their own observed-loss premises, rather than claiming that the present literal loss contradicts them [sparse-hutter-2001], [sparse-hutter-2003]. The finite observation-loss obstruction and its signed-loss, full-support and scope countercontrols are preserved from [sparse-observation-review].
+
+The earlier root ordinary review checked the crossover and cluster arguments at its named draft identity, with 24 finite cases and 481 rational assertions [sparse-earlier-review]. The later width/shape report distinguishes the ordinary proofs from the formal endpoints [sparse-final-review]. The complete positive smoothing classification, strict-width and uniform-critical upper bounds, continuous bad strips and absolutely continuous contamination are ordinary arguments. The reported formal terminal results concern the actual-process atomic paired prior and atomic non-endpoint mixture, together with selected local geometry and finite-stage kernels. Certifying such kernels does not certify the complete positive classification by association.
+
+The mechanical review reports ten fresh continuation modules and 61 selected author axiom footprints, with 22 reused compiled objects checked against their identities. Its independent probes comprise eight selected footprints, 26 definition expansions and nine theorem readbacks [sparse-mechanical-review]. The corresponding historical rational checks comprise 307,378 author assertions—53,317 base, 92,101 width and 161,960 critical—and 14,460 independent rational controls, including finite interval calculations. Finite controls corroborate those inputs; they do not replace the arguments over all real parameters or infinite time. The source does not claim a fresh build of the full 32-source closure or of upstream Mathlib. It retains a development critical-uniform snapshot that failed to compile while coherence was being added, and a review probe that initially failed because of lexical spacing. Those failures precede the corrected, source-bound successful checks; neither failed snapshot is represented as the accepted final body.
+
+The nonconvexity review separately reports a terminal actual-process Lean nonconvexity theorem [sparse-nonconvex-review]. Its two endpoint priors have coherent `FiniteBudget` witnesses with measurable reports in $`[0,1]`$; the negative conclusion covers all measurable real-report policies for every proper mixture, using the same positive report clock, complete ordered histories and fixed independent seed law. The terminal theorem establishes endpoint finiteness and universal mixture impossibility. The displayed numerical 256 budgets, total-variation and finite-horizon bounds, and the benefit of a truthful supplied side tag remain ordinary mathematical consequences, rather than additional conclusions of that terminal theorem. This incorporation performs no fresh formal replay.
+
+The actual-process comparison has a separate history. The paired review establishes the real-prior pushforward, support and moment identities, and the literal predicate relation; its initial before-and-after policy representations still differed [sparse-paired-review]. The later transport review discharges the full stream-law, history-encoding, policy, indicator and nonnegative-cost transport [sparse-transport-review]. The recorded selections contain eight paired and thirteen transport footprints, 37 expanded declarations and seven independent probes. The source identities cover 20 paired and 21 transport dependency files or objects; the independent rational grid records 12,985 assertions and the author's grid 34,973. The portable replay route described in the accompanying README has a full 22-source/137-path option, but the reported actual verification was incremental. Neither this exposition nor that incremental report claims a fresh execution of that full option or a fresh upstream bootstrap [sparse-transport-readme]. The reviewer had contributed to the earlier sparse-prior proof, but did not author the new bridge and transport implementations; that supports the stated implementation/contract review, not a claim of independent discovery or priority.
+
+The observation-loss report records four fresh modules and eight selected standard-only axiom footprints. Its comparison with Hutter is an interface analysis, not a new proof or re-execution of the cited prediction theorems. Across these historical formal reports, the listed standard dependencies are `propext`, `Classical.choice` and `Quot.sound`. Their reported kernel and dependency results remain attached to the exact original bodies and environments. Reading them here is not a new kernel run, receipt of every historical raw output, or certification of the whole new prose.
+
+The rational implementation records preserve a different kind of evidence. The initial contract and independent candidate-one review distinguish the correct rational decision formulas from the missing uncapped reporting family, the in-domain decimal-parser failure and a missed mutation [sparse-rational-contract], [sparse-candidate1-review]. The later scope clarification and README introduce the uncapped typed core while retaining the guarded interfaces [sparse-unbounded-scope], [sparse-unbounded-readme]. The effective theorem supplies the rational rank bound, finite search and cost proof [sparse-effective-theorem]. The parser correction identifies the restrictive host guard as a transport failure on an otherwise admitted input [sparse-parser-correction]. The final exact-version review then assesses the repaired interface and added zero-width coverage [sparse-rational-final-review], [sparse-rational-review-readme]. None of those later results erases the earlier partial verdict.
+
+The first candidate's historical author suite recorded 11,184 assertions and three mutation controls; the independent review recorded 16,784 assertions over 2,089 decisions. Its ten semantic mutations included the eventually detected overly broad critical-tolerance change, and the strict-head equality mutation exposed the author's original zero-width gap. The final candidate's author results recorded 14,892 guarded assertions, 673 uncapped assertions, 24 checks across host decimal-guard settings and five mutations. The independent final review retained the 16,784 earlier checks and added 436, totalling 17,220 assertions, including 91 uncapped decisions. Its large-input controls included 65,537-bit values, a word of length 1,200,001 and a 78,914-digit denominator with the decimal guard set to 640. Ten general and seven repair-specific mutation controls and five nested archive identities are reported. These are historical bounded tests, not a proof of the Python interpreter or of every possible resource environment.
+
+The final reference implementation is identified in that review by SHA-256 `28dcd6c5c6e2a5a43fe186c7d099f2165f319c864821024de9dd6e14d11744b9`. Its predecessor implementation and the review archives have their own retained identities in the cited notes. The finite JSON cap, external prior-shape promises, truthful-count premise and independent-seed contract remain part of the result even after the parser is corrected. No historical program, scorer or formal replay is newly executed by incorporating these notes, and no unchanged predecessor scientific result is counted as a new incorporation merely because it is invoked in a proof.
+
+All twenty-five references below identify the exact public note bodies at a fixed repository revision. Their incoming-packet dates, filenames, replay locators and verdicts are historical provenance, not instructions or present authority. This amendment supplies a subject-level home for their arguments, countermodels, interface failures, credits and limits. Its independent scientific review and owner adoption remain separate obligations. It neither replaces private or held source editions nor claims access to their bodies, and it supplies no normative-source authentication or field-wide priority adjudication.
+
 
 ### Generated binary experiment: source and audit boundary
 
@@ -3051,3 +3595,32 @@ Repository references identify exact public source editions, not mutable current
 [root-cold-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/51c98ce4cbc011f1e4d4d2af7fa9a34319f53713b876977bc9b16c74f0e258dc.md
 [seeded-necessity-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/890c6bc8949f630878e9d3de6bed22c7070d0b4f0d7c43d7fa96f4c7a6d91607.md
 [formalization-scope]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e.md
+
+
+[sparse-rational-review-readme]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/0ba213e9f1cd5c985925864d7edcc505c3adb16fa30036338b39ad04b77ea54f.md
+[sparse-paired-review]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/22c70614cb4a011790e348461f3e2fbea5e13b2eeb788dcd2124560fb0ef0f07.md
+[sparse-rational-contract]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/236f78b5ecc313f47085a765f26ef2f0482fdaff154c2aebb7393a8c01c59236.md
+[sparse-rational-final-review]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/251394f394fe75f9062aaa4dea33da2b3ffa3370572e14ba60e52ceb1c68a30b.md
+[sparse-final-review]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/3cdf7cb6582b44a2198ce9527847416ee834aa7636999871081e1677600a9f60.md
+[sparse-effective-theorem]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/6b796642b23d6280cfec717f7a762a55fe76a2fbc67b16f6c6b0fc1008599476.md
+[sparse-width]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/767be5173842b1520af940db691120091d868677754e7b452a0c7467ece4665d.md
+[sparse-earlier-review]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/87cad31677966946661ca6effed55165db3505d1bca45bfa6ba2428946cca88c.md
+[sparse-mechanical-review]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/893aabc2774f6a31df5777a9dab8cc4de2840a2f01d95691ce913f0406ab489c.md
+[sparse-final-extension]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/99847d69a9a9df978a7e596cc35b75b744e7661b72dd514d29bc3cf4d897cc6c.md
+[sparse-unbounded-scope]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/9c7508259cb9916b1ba6b0557584cff186487d256dac3918269052b4cd5626b6.md
+[sparse-transport-readme]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/b0edcf2ebfe71957a789033dec063424e658fe8971ef28e1f2fe9a4956e5d18e.md
+[sparse-interior]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/b1a029f0cd442ff623d9783c15e09260cd6063bf976290010b3fba07ec0548bf.md
+[sparse-cluster]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/b3403229c91a718f3e8c61068649590ec090d208206d9922da2270f71e956658.md
+[sparse-nonconvex-review]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/b545637a8dc1bdfda4a949dfe3a6084b469c5ef8639af8ae97b8e5fef683e0d3.md
+[sparse-observation-review]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/b6a6db5048293e4de7f286689ea635448ea61aec5f9a08acff0968892e10b5bb.md
+[sparse-crossover]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/c079f7733904976a602adae47284062ad23141dd9c79b04652e3561e74692a50.md
+[sparse-unbounded-readme]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/cab3e124b6ef2faad2c945c20d22d50e7fc2d1455367bcd4cb6dcf633908b3b9.md
+[sparse-width-review]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/d519d3b51e5f03f7b55db3c22c2a423bdb6cf5a702e726e4a57459e527ab8dbd.md
+[sparse-width-previous]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/daa7e92aaeee1cc9ae5601877a01ddfbb8ce2cf9cabf3f4f693ec8a7c8a0893b.md
+[sparse-uniform]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/e2afa027d652771010f909eb34642d5512c102a34c85a0ef90ff466b9fd7e0ae.md
+[sparse-uniform-previous]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/e2cf470975d1d6f344d3dd788410c911b5d6f9d93fa528709339322bcb4d8f6b.md
+[sparse-transport-review]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/e40d89c1d65f9053bafc6aea41ba93af0b510586ba188e14ba5a8f6d9a50c71f.md
+[sparse-parser-correction]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/f0fe93679a7c062a452bd3b3b2615c886dcdf8b96579af2d1ddd2c17c6df6459.md
+[sparse-candidate1-review]: https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/f7f610f5225df88d97fb6a60f984a7ec976632697e2e3f7854f4777994601d4a.md
+[sparse-hutter-2001]: https://hutter1.net/ai/ploss.pdf
+[sparse-hutter-2003]: https://arxiv.org/abs/cs/0311014

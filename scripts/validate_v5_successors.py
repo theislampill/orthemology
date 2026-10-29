@@ -168,8 +168,8 @@ def _public_values(value):
             _public_values(item)
 
 
-def read_json(path):
-    value = _legacy.read_json(path)
+def read_json(path, *, root=None):
+    value = _legacy.read_json(path, root=root)
     _finite(value)  # JSON's 1e999 also overflows; parse_constant alone is insufficient.
     return value
 
@@ -195,8 +195,8 @@ def refs(values, owners, label, *, empty=True):
 
 def file_ref(row, root):
     keys(row, {'path', 'sha256'})
-    path = path_in(root, row['path'])
-    require(sha(path) == digest(row['sha256']), 'Changed referenced file hash: ' + row['path'])
+    path = _legacy.record_path(root, row['path'])
+    require(sha(path, root=root) == digest(row['sha256']), 'Changed referenced file hash: ' + row['path'])
     return path
 
 
@@ -238,7 +238,7 @@ def _record_files(bundle, root):
         expected = (AREA + '/suites/' + name[6:] + '.json') if name.startswith('suite:') else PROV + '/' + name + '.json'
         require(isinstance(ref, dict) and ref.get('path') == expected, 'Wrong record owner path')
         path = file_ref(ref, root)
-        require(read_json(path) == value, 'Bundle/record mismatch: ' + name)
+        require(read_json(path, root=root) == value, 'Bundle/record mismatch: ' + name)
     for field, rows in [('suite_ids', bundle['suites']), ('result_ids', bundle['results'])]:
         string_list(registry[field])
         require(set(registry[field]) == set(indexed(rows, 'id')), 'Incomplete registry ' + field)
@@ -381,6 +381,8 @@ def _preservation(bundle, root, anchor):
                     'Historical preservation original inventory identity differs: ' + name)
             raw = _source.historical_source_bytes(
                 root, name, _source.HISTORICAL_PROSE_REVISIONS[name], blob)
+        elif name in _source.ADMIN_RECORD_PATHS:
+            raw = _source.administrative_record_bytes(root, name, row['sha256'], row['bytes'])
         elif name in present:
             raw = path_in(root, name).read_bytes()
         else:
@@ -517,6 +519,12 @@ def _allowlist(bundle, root, sources):
                 _source.HISTORICAL_PROSE_REVISIONS[name], _source.HISTORICAL_PROSE[name][0])
             if not path.exists():
                 authenticated_absent.add(name)
+        elif name in _source.ADMIN_GUIDES:
+            _, identity, size, _ = _source.ADMIN_GUIDES[name]
+            require(row['kind'] == 'AUTHORED' and row['source_ids'] == []
+                    and row['sha256'] == identity and row['bytes'] == size,
+                    'Original administrative guide allowlist identity changed')
+            raw = _source.administrative_guide_source_bytes(root, name)
         elif name == _source.MEDIATOR_GUIDE:
             require(row['kind'] == 'AUTHORED' and row['source_ids'] == []
                     and row['sha256'] == _source.MEDIATOR_GUIDE_SHA256 and row['bytes'] == _source.MEDIATOR_GUIDE_BYTES,
@@ -985,7 +993,7 @@ def load_bundle(root):
     require(isinstance(registry, dict) and isinstance(registry.get('records'), dict), 'Missing registry records')
     docs = {}
     for name, ref in registry['records'].items():
-        docs[name] = read_json(file_ref(ref, root))
+        docs[name] = read_json(file_ref(ref, root), root=root)
     mapping = {'sources': ('SOURCE_MAP', 'sources'), 'reviews': ('SOURCE_MAP', 'reviews'),
         'results': ('RESULT_STATUS', 'results'), 'statuses': ('RESULT_STATUS', 'statuses'),
         'bindings': ('EVIDENCE_BINDINGS', 'bindings'), 'receipts': ('EVIDENCE_BINDINGS', 'receipts'),

@@ -37,10 +37,13 @@ from resolve_t20_v6_source import (
     CONTINUATION_READER_PROSE, T4_READER_PROSE, T4_READER_SUPPORT_PROSE,
     NEXT24_PROSE, NEXT24_SUPPORT_PROSE, NEXT24_PUBLIC_PROSE,
     CONTINUATION_COPY_ROOT, continuation_duplicate_paths,
+    ADMIN_RECORD_PATHS, administrative_record_bytes, administrative_record_absences,
+    ADMIN_GUIDES, ADMIN_PUBLIC_GUIDE_PATHS, ADMIN_RECORD_BASE, administrative_guide_source_bytes,
     PUBLIC_READER_NOTE_PATHS, CONTINUATION_REGISTRY_PATH, CONTINUATION_REGISTRY_REVISION,
     CHECKPOINT_COPY_PATHS, checkpoint_duplicate_paths,
     CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths,
     CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_duplicate_paths,
+    CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_duplicate_paths,
 )
 
 
@@ -655,6 +658,27 @@ def _permitted_projection_consumer_pins(original, candidate):
     return False
 
 
+def _permitted_administrative_guide_pins(original, candidate):
+    """Admit the exact two already-public guide coordinates as a whole group."""
+    from copy import deepcopy
+    expected = deepcopy(original)
+    try:
+        for path in ADMIN_PUBLIC_GUIDE_PATHS:
+            blob, identity, size, _ = ADMIN_GUIDES[path]
+            rows = [row for row in expected['objects'] if row.get('repository_path') == path]
+            if len(rows) != 1:
+                return False
+            source = rows[0]
+            if (source.get('disposition') != 'REUSE' or source.get('source_sha256') != identity
+                    or source.get('public_sha256') != identity or source.get('source_bytes') != size
+                    or source.get('public_bytes') != size):
+                return False
+            source.update(repository_revision=ADMIN_RECORD_BASE, git_blob=blob)
+        return candidate == expected or _permitted_projection_consumer_pins(expected, candidate)
+    except (KeyError, TypeError, ValueError):
+        return False
+
+
 def permitted_historical_status_pin(repo, row, body):
     """Admit exact navigation and finite historical-source bindings, not identities.
 
@@ -874,7 +898,8 @@ def permitted_historical_status_pin(repo, row, body):
                 return False
             source.update(repository_revision=revision, git_blob=blob,
                           publication_basis="exact_existing_public_git_blob; current_consumer_has_distinct_identity")
-        return candidate == expected or _permitted_projection_consumer_pins(expected, candidate)
+        return (candidate == expected or _permitted_projection_consumer_pins(expected, candidate)
+                or _permitted_administrative_guide_pins(expected, candidate))
     except (KeyError, TypeError, ValueError):
         return False
 
@@ -912,7 +937,7 @@ REFACTOR_EDIT_PATHS = {
     "tests/test_v5_twentieth_data.py",
     # Existing source-ID and replay owners for the finite continuation copies.
     "scripts/validate_research_continuations.py", "scripts/replay_research_continuations.py",
-    "tests/test_research_continuations.py",
+    "tests/test_research_continuations.py", "scripts/replay_continuation_controls.py",
     # Current reference consumers for the same four exact typed prose identities.
     "scripts/validate_repo.py", "scripts/validate_internal_references.py",
     # Existing source-display integrity owner and its focused regression tests;
@@ -1274,7 +1299,8 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
         for key, population, qualify in (
                 ("checkpoint-copy", CHECKPOINT_COPY_PATHS, checkpoint_duplicate_paths),
                 ("checkpoint-record", CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths),
-                ("checkpoint-package", CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_duplicate_paths)):
+                ("checkpoint-package", CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_duplicate_paths),
+                ("checkpoint-code", CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_duplicate_paths)):
             if key not in duplicate_paths and any(
                     status == "D" and path in population
                     for status, path in zip(values[::2], values[1::2])):
@@ -1299,6 +1325,21 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
             except (ValueError, OSError, UnicodeError) as exc:
                 errors.append("corpus-currentness: continuation copy evidence: " + str(exc))
                 continuation_paths = set()
+        administrative_paths = set()
+        if any(status == "D" and path in ADMIN_RECORD_PATHS
+               for status, path in zip(values[::2], values[1::2])):
+            try:
+                administrative_paths = administrative_record_absences(repo)
+            except (ValueError, OSError) as exc:
+                errors.append("corpus-currentness: frozen administrative evidence: " + str(exc))
+        administrative_guides = set()
+        for path in ADMIN_GUIDES:
+            if any(status == "M" and name == path for status, name in zip(values[::2], values[1::2])):
+                try:
+                    administrative_guide_source_bytes(repo, path)
+                    administrative_guides.add(path)
+                except (ValueError, OSError) as exc:
+                    errors.append("corpus-currentness: administrative guide: " + str(exc))
         allowed_duplicates = set().union(*duplicate_paths.values())
         errors.extend("corpus-currentness: " + path +
                       " requires source-baseline and work/support disposition review"
@@ -1306,8 +1347,10 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                       if path not in editable and not
                       ((status == "D" and path in HISTORICAL_PROSE and path in historical_paths)
                         or (status == "D" and path in allowed_duplicates)
+                        or (status == "D" and path in administrative_paths)
                         or (status == "D" and path in (continuation_paths or ()))
                         or (status == "M" and path in rounds_navigation)
+                        or (status == "M" and path in administrative_guides)
                          or (status == "M" and path in CONTINUATION_OWNER_PATHS
                              and path in continuation_owners)
                          or (status == "M" and path in FIXTURE_CONSUMER_ORIGINAL
@@ -1358,6 +1401,12 @@ def check(repo, owners, cross):
             navigation[MEDIATOR_GUIDE] = mediator_guide_source_bytes(repo, allow_original=True)
         except (ValueError, OSError) as exc:
             fail("navigation-source", MEDIATOR_GUIDE + ": " + str(exc))
+    for path in ADMIN_GUIDES:
+        if path in indexed:
+            try:
+                navigation[path] = administrative_guide_source_bytes(repo, path)
+            except (ValueError, OSError) as exc:
+                fail("navigation-source", path + ": " + str(exc))
     for path in TYPED_GUIDES:
         if path in indexed:
             try:
@@ -1430,7 +1479,8 @@ def check(repo, owners, cross):
         try:
             path = source["path"]
             body = (historical[path] if path in historical else navigation[path]
-                    if path in navigation else safe_path(repo, path).read_bytes())
+                    if path in navigation else administrative_record_bytes(repo, path)
+                    if path in ADMIN_RECORD_PATHS else safe_path(repo, path).read_bytes())
         except (KeyError, ValueError, OSError) as exc:
             fail("unsafe-source", str(key) + ": " + str(exc))
             continue
@@ -1443,7 +1493,7 @@ def check(repo, owners, cross):
             if oid != continuation_owners.get(path, row)["git_oid"]:
                 fail("baseline-source" if path in indexed else "source-addition",
                      path + " differs from the independently bound source")
-            mode = ("100644" if path in historical else
+            mode = ("100644" if path in historical or path in ADMIN_RECORD_PATHS else
                     "100755" if safe_path(repo, path).stat().st_mode & 0o111 else "100644")
             if mode != row["mode"]:
                 fail("source-mode", path + " changed executable mode")

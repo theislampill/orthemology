@@ -573,4 +573,136 @@ class ContinuationCopyTests(unittest.TestCase):
             self.assertFalse(gate._resolves('preserved.md',self.original))
 
 
+class FrozenAdministrativeRecordTests(unittest.TestCase):
+    """Native history and real-index controls for the four finite record roles."""
+    BASE = '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'
+    TREE_ROWS_SHA256 = '7e65473d07162893f11ee6b2a1cc4cd33e4add3f20281d8ee4cbfecab68b5f0e'
+    PREFIXES = (
+        'docs/provenance/v5-research-continuations/checks/',
+        'experiments/orthemology-v5-continuations/native-suites/',
+        'experiments/orthemology-v5-continuations/suites/',
+        'experiments/orthemology-v5-successors/suites/',
+    )
+
+    @classmethod
+    def setUpClass(cls):
+        import os
+        import subprocess
+        cls.os, cls.subprocess = os, subprocess
+        cls.environment = dict(os.environ, GIT_NO_LAZY_FETCH='1', GIT_NO_REPLACE_OBJECTS='1',
+                               GIT_ALLOW_PROTOCOL='', GIT_OPTIONAL_LOCKS='0', GIT_TERMINAL_PROMPT='0')
+        cls.project = globals().get('PROJECT_ROOT', Path(__file__).resolve().parents[1])
+        spec = importlib.util.spec_from_file_location('administrative_continuations', SCRIPT)
+        cls.validator = importlib.util.module_from_spec(spec); spec.loader.exec_module(cls.validator)
+        cls.source = cls.validator._source
+        raw = cls.git(cls.project, 'ls-tree', '-rz', '--full-tree', cls.BASE, '--', *cls.PREFIXES)
+        if hashlib.sha256(raw).hexdigest() != cls.TREE_ROWS_SHA256:
+            raise AssertionError('Independent original administrative native population differs')
+        entries = {}
+        for record in raw.split(b'\0'):
+            if record:
+                left, path = record.split(b'\t', 1); mode, kind, blob = left.decode().split()
+                if mode != '100644' or kind != 'blob': raise AssertionError('Original mode/type differs')
+                entries[path.decode()] = blob
+        if len(entries) != 236 or set(entries) != cls.source.ADMIN_RECORD_PATHS:
+            raise AssertionError('Finite original role population differs')
+        cls.directory = tempfile.TemporaryDirectory()
+        cls.addClassCleanup(cls.directory.cleanup)
+        cls.root = Path(cls.directory.name)
+        cls.git(cls.root, 'init', '--quiet')
+        objects = cls.git(cls.project, 'rev-parse', '--path-format=absolute', '--git-path', 'objects').decode().strip()
+        cls.alternates = cls.root / '.git/objects/info/alternates'
+        cls.alternates.write_text(objects + '\n')
+        cls.paths = [min(path for path in entries if path.startswith(prefix)) for prefix in cls.PREFIXES]
+        cls.originals = {}
+        for path in cls.paths:
+            blob = entries[path]; body = cls.git(cls.root, 'cat-file', 'blob', blob)
+            cls.put(path, body); cls.git(cls.root, 'update-index', '--add', '--cacheinfo', '100644', blob, path)
+            cls.originals[path] = body
+        for path, (blob, _, _, _) in cls.source.ADMIN_GUIDES.items():
+            original = cls.git(cls.root, 'cat-file', 'blob', blob)
+            body = cls.source.administrative_guide_adaptation(path, original)
+            cls.put(path, body)
+            oid = cls.git(cls.root, 'hash-object', '-w', '--stdin', incoming=body).decode().strip()
+            cls.git(cls.root, 'update-index', '--add', '--cacheinfo', '100644', oid, path)
+            cls.originals[path] = body
+        cls.original_index = (cls.root / '.git/index').read_bytes()
+        cls.original_alternates = cls.alternates.read_bytes()
+
+    @classmethod
+    def git(cls, root, *args, incoming=None):
+        result = cls.subprocess.run(['git', '--no-replace-objects', '--literal-pathspecs', *args],
+            cwd=root, env=cls.environment, input=incoming, capture_output=True)
+        if result.returncode:
+            raise AssertionError('Required native public fixture operation unavailable: ' + args[0])
+        return result.stdout
+
+    @classmethod
+    def put(cls, path, body):
+        target = cls.root / path; target.parent.mkdir(parents=True, exist_ok=True)
+        if target.is_symlink(): target.unlink()
+        target.write_bytes(body); target.chmod(0o644)
+
+    def tearDown(self):
+        for path, body in self.originals.items(): self.put(path, body)
+        (self.root / '.git/index').write_bytes(self.original_index)
+        self.alternates.write_bytes(self.original_alternates)
+
+    def test_four_roles_keep_exact_bytes_with_present_worktree_and_staged_absence(self):
+        for state in ('present', 'worktree-absent', 'staged-absent'):
+            if state == 'worktree-absent':
+                for path in self.paths: (self.root / path).unlink()
+            elif state == 'staged-absent':
+                self.git(self.root, 'update-index', '--force-remove', '--', *self.paths)
+            for path in self.paths:
+                with self.subTest(state=state, path=path):
+                    self.assertEqual(self.os.path.lexists(self.root / path), state == 'present')
+                    body = self.source.administrative_record_bytes(self.root, path)
+                    self.assertEqual(body, self.originals[path])
+                    self.assertEqual(self.validator.read_record(self.root, path), json.loads(body))
+                    self.assertEqual(self.os.path.lexists(self.root / path), state == 'present')
+
+    def test_present_corruption_symlink_and_executable_mode_are_rejected(self):
+        path = self.paths[0]; target = self.root / path
+        target.write_bytes(self.originals[path] + b' ')
+        with self.assertRaises(ValueError): self.source.administrative_record_bytes(self.root, path)
+        self.put(path, self.originals[path]); target.chmod(0o755)
+        with self.assertRaises(ValueError): self.source.administrative_record_bytes(self.root, path)
+        target.chmod(0o644); target.unlink(); target.symlink_to(self.root / self.paths[1])
+        with self.assertRaises(ValueError): self.source.administrative_record_bytes(self.root, path)
+
+    def test_real_index_corruption_is_not_hidden_by_correct_present_bytes(self):
+        path = self.paths[0]
+        oid = self.git(self.root, 'hash-object', '-w', '--stdin', incoming=b'changed').decode().strip()
+        self.git(self.root, 'update-index', '--cacheinfo', '100644', oid, path)
+        with self.assertRaises(ValueError): self.source.administrative_record_bytes(self.root, path)
+        (self.root / '.git/index').write_bytes(self.original_index)
+        oid = self.git(self.root, 'hash-object', '--stdin', incoming=self.originals[path]).decode().strip()
+        self.git(self.root, 'update-index', '--cacheinfo', '100755', oid, path)
+        with self.assertRaises(ValueError): self.source.administrative_record_bytes(self.root, path)
+
+    def test_missing_original_history_refuses_even_a_correct_present_copy(self):
+        self.alternates.write_bytes(b'')
+        with self.assertRaises(ValueError): self.source.administrative_record_bytes(self.root, self.paths[0])
+
+    def test_unknown_path_and_wrong_requested_identity_are_rejected(self):
+        unknown = self.PREFIXES[0] + 'unreviewed.json'
+        self.put(unknown, b'{}')
+        with patch.object(self.source, '_administrative_git', side_effect=AssertionError('unknown path reached Git')):
+            with self.assertRaises(ValueError): self.source.administrative_record_bytes(self.root, unknown)
+        (self.root / unknown).unlink()
+        with self.assertRaises(ValueError): self.source.administrative_record_bytes(self.root, self.paths[0], '0' * 64)
+        with self.assertRaises(ValueError): self.source.administrative_record_bytes(self.root, self.paths[0], size=1)
+
+    def test_exact_navigation_keeps_the_prior_typed_route_and_refuses_wording_changes(self):
+        for path in self.source.ADMIN_GUIDES:
+            original = self.source.administrative_guide_source_bytes(self.root, path, allow_original=False)
+            self.assertEqual(hashlib.sha256(original).hexdigest(), self.source.ADMIN_GUIDES[path][1])
+            if path in self.source.TYPED_GUIDES:
+                self.assertEqual(self.source.typed_guide_source_bytes(self.root, path), original)
+        path = next(iter(self.source.ADMIN_GUIDES))
+        (self.root / path).write_bytes(self.originals[path] + b'Additional claim.\n')
+        with self.assertRaises(ValueError): self.source.administrative_guide_source_bytes(self.root, path)
+
+
 if __name__=='__main__':unittest.main(verbosity=2)

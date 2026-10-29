@@ -32,8 +32,26 @@ def require(condition, message):
         raise ValueError(message)
 
 
-def sha(path):
-    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+def record_bytes(path, root=None):
+    """Current operational JSON or one enumerated historical contract/receipt."""
+    path = Path(path)
+    if root is not None:
+        relative = path.relative_to(Path(root)).as_posix()
+        if relative in _source.ADMIN_RECORD_PATHS:
+            return _source.administrative_record_bytes(root, relative)
+    return path.read_bytes()
+
+
+def sha(path, *, root=None):
+    return hashlib.sha256(record_bytes(path, root)).hexdigest()
+
+
+def record_path(root, relative):
+    return path_in(root, relative, exists=relative not in _source.ADMIN_RECORD_PATHS)
+
+
+def read_record(root, relative):
+    return read_json(record_path(root, relative), root=root)
 
 
 def keys(value, required, optional=()):
@@ -90,7 +108,7 @@ def source_bytes(root, row):
     return body
 
 
-def read_json(path):
+def read_json(path, *, root=None):
     def pairs(rows):
         result={}
         for name,value in rows:
@@ -99,7 +117,7 @@ def read_json(path):
         return result
     def constant(value):
         raise ValueError('Nonfinite JSON value: '+value)
-    return json.loads(Path(path).read_text(encoding='utf-8'), object_pairs_hook=pairs, parse_constant=constant)
+    return json.loads(record_bytes(path, root).decode('utf-8'), object_pairs_hook=pairs, parse_constant=constant)
 
 
 def indexed(rows, key):
@@ -250,11 +268,12 @@ def suite_fingerprints(suite, sources):
     return result
 
 
-def validate_receipt(receipt, suite, suite_path, sources, context=None, active=()):
+def validate_receipt(receipt, suite, suite_path, sources, context=None, active=(), root=None):
+    root = context.get('root') if root is None and context is not None else root
     require(isinstance(receipt,dict),'Expected receipt object')
     require(receipt.get('status')=='FRESH_KERNEL_COMPONENTS' and receipt.get('kernel_verified') is True,'Not a fresh kernel component receipt')
     require(type(receipt.get('exit_code')) is int and receipt['exit_code']==0,'Receipt has no successful terminal exit')
-    require(receipt.get('suite_id')==suite['id'] and receipt.get('suite_sha256')==sha(suite_path),'Stale/foreign suite receipt')
+    require(receipt.get('suite_id')==suite['id'] and receipt.get('suite_sha256')==sha(suite_path,root=root),'Stale/foreign suite receipt')
     expected={m['module']:sources[m['source_id']]['sha256'] for m in suite['modules']}
     require(receipt.get('source_hashes')==expected and receipt.get('post_source_hashes')==expected,'Stale source receipt')
     require(receipt.get('compiler_sha256')==suite['pins']['lean_binary_sha256'],'Receipt compiler mismatch')
@@ -270,8 +289,8 @@ def validate_receipt(receipt, suite, suite_path, sources, context=None, active=(
             rel=row.get('predecessor_receipt');require(rel not in active,'Receipt dependency cycle')
             cache=context.setdefault('validated_receipts',{})
             if rel not in cache:
-                path=path_in(context['root'],rel);actual_sha=sha(path)
-                prior=read_json(path);require(isinstance(prior,dict),'Expected predecessor receipt object')
+                path=record_path(context['root'],rel);actual_sha=sha(path,root=context['root'])
+                prior=read_json(path,root=context['root']);require(isinstance(prior,dict),'Expected predecessor receipt object')
                 sid=prior.get('suite_id');require(sid in context['suites'],'Unknown predecessor suite')
                 validate_receipt(prior,context['suites'][sid],context['paths'][sid],sources,context,(*active,rel))
                 cache[rel]=(actual_sha,prior)
@@ -338,9 +357,9 @@ def validate_qualified_controls(rec, suite, sources, contracts, root):
     require(contract['driver_source_id']==driver,'Control contract driver mismatch')
     require(contract['review_driver_source_id'] in contract['control_source_ids'],'Control review driver not registered')
     require(all(sid in sources for sid in contract['control_source_ids']),'Unknown control source')
-    path=path_in(root,contract['receipt'])
-    require(sha(path)==digest(contract['sha256']),'Changed control receipt')
-    control=read_json(path)
+    path=record_path(root,contract['receipt'])
+    require(sha(path,root=root)==digest(contract['sha256']),'Changed control receipt')
+    control=read_json(path,root=root)
     keys(control,{'status','exit_code','suite_id','suite_sha256','source_hashes','driver_source_id','driver_sha256',
                   'original_receipt_sha256','review_driver_source_id','review_driver_sha256','review_receipt_sha256',
                   'control_sources','stages','counts','scope'})
@@ -401,7 +420,7 @@ def _validate(root):
     suites={};suite_paths={};parsed_sources={}
     require(isinstance(registry['suites'],list),'Invalid suites')
     for rel in registry['suites']:
-        path=path_in(root,rel);suite=read_json(path)
+        path=record_path(root,rel);suite=read_json(path,root=root)
         require(suite['id'] not in suites,'Duplicate suite ID');validate_suite(suite,sources,root,parsed_sources)
         suites[suite['id']]=suite;suite_paths[suite['id']]=path
     results=indexed(registry['results'],'id');require(results,'Empty result registry')
@@ -433,7 +452,7 @@ def _validate(root):
         require(isinstance(status['receipts'],list),'Invalid receipt list')
         verified=set()
         for rel in status['receipts']:
-            rec=read_json(path_in(root,rel));require(isinstance(rec,dict),'Expected receipt object');sid=rec.get('suite_id')
+            rec=read_record(root,rel);require(isinstance(rec,dict),'Expected receipt object');sid=rec.get('suite_id')
             require(sid in row['suite_ids'],'Receipt not owned by result')
             validate_receipt(rec,suites[sid],suite_paths[sid],sources,{'root':root,'suites':suites,'paths':suite_paths},(rel,));verified.add(sid)
             if status['fresh']=='QUALIFIED':validate_qualified_controls(rec,suites[sid],sources,contracts,root)
@@ -469,7 +488,7 @@ def _validate(root):
         from replay_continuation_controls import validate_suite as validate_native_suite
         native_ids=set()
         for rel in registry['native_suites']:
-            suite=read_json(path_in(root,rel));validate_native_suite(suite,sources,root)
+            suite=read_record(root,rel);validate_native_suite(suite,sources,root)
             require(suite['id'] not in native_ids,'Duplicate native suite');native_ids.add(suite['id'])
     return {'status':'SOURCE_AND_STATUS_INTEGRITY_PASS','results':len(results),'sources':len(sources),'suites':len(suites),
             'archives':len(archives),'fresh_qualified_results':sum(r['fresh']=='QUALIFIED' for r in statuses.values()),

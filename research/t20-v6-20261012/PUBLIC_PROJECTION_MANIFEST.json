@@ -79984,7 +79984,9 @@
       "repository_path": "experiments/orthemology-v5-successors/groups/t07-technical/README.md",
       "public_sha256": "3eb797cdf4925b80e21597fed04fbda0bee7a85f7bb5a141137fbba258cf25c2",
       "public_bytes": 32584,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "7cd6ff0393556359cecaee0c5b109a6cf8a05345"
     },
     {
       "source_sha256": "3eb8d64711f22cf5370b4f7f1bf23da42a52bbf6c481e4158b826799c1817d51",
@@ -325236,7 +325238,9 @@
       "repository_path": "experiments/orthemology-v5-successors/groups/t08-history/README.md",
       "public_sha256": "fb21186d2568c38564e0bf23f94df81d05fbad8fe39dcab23b6fd83b0291f7d1",
       "public_bytes": 45079,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "a49fbf2d3e0691495f5884e3a13ec475aafb1293"
     },
     {
       "source_sha256": "fb22d822c53259cac6045df41ede3addcfd6089e5196dae885394ece49e0d7d7",
