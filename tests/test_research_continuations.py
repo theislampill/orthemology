@@ -705,4 +705,293 @@ class FrozenAdministrativeRecordTests(unittest.TestCase):
         with self.assertRaises(ValueError): self.source.administrative_guide_source_bytes(self.root, path)
 
 
+    def projection_baseline(self):
+        """Real native guide history, isolated from unrelated preserved roots."""
+        try:
+            for path, (blob, _, _, _) in self.source.ADMIN_GUIDES.items():
+                published = self.git(self.project, 'show',
+                    '4bcb6fbbefb6cf960147dfc79e17f350f5370cdf:' + path)
+                self.assertEqual(self.originals[path], published)
+                self.git(self.root, 'update-index', '--cacheinfo', '100644', blob, path)
+            return self.git(self.root, 'write-tree').decode().strip()
+        finally:
+            (self.root / '.git/index').write_bytes(self.original_index)
+
+    def projection_errors(self, baseline):
+        import validate_t20_v6_projection as projection
+        index = (self.root / '.git/index').read_bytes()
+        with patch.object(projection, 'BASE', baseline), \
+             patch.object(projection, 'HISTORICAL_PROSE', {}):
+            errors = projection.check_preserved_roots(self.root, {})
+        self.assertEqual((self.root / '.git/index').read_bytes(), index)
+        return errors
+
+    def test_projection_accepts_exact_published_administrative_navigation(self):
+        baseline = self.projection_baseline()
+        self.assertEqual(self.projection_errors(baseline), [])
+
+    def test_projection_rejects_each_changed_guide_and_hidden_staged_tamper(self):
+        baseline = self.projection_baseline()
+        self.assertEqual(self.projection_errors(baseline), [])
+        bad = self.git(self.root, 'hash-object', '-w', '--stdin',
+                       incoming=b'Unqualified administrative wording.\n').decode().strip()
+        for path in self.source.ADMIN_GUIDES:
+            with self.subTest(path=path, state='changed-worktree'):
+                (self.root / path).write_bytes(self.originals[path] + b'Additional claim.\n')
+                self.assertTrue(self.projection_errors(baseline))
+                self.put(path, self.originals[path])
+                self.assertEqual(self.projection_errors(baseline), [])
+            with self.subTest(path=path, state='changed-index-correct-worktree'):
+                self.git(self.root, 'update-index', '--cacheinfo', '100644', bad, path)
+                self.assertTrue(self.projection_errors(baseline))
+                (self.root / '.git/index').write_bytes(self.original_index)
+                self.assertEqual(self.projection_errors(baseline), [])
+
+    def test_projection_rejects_guide_removal_type_mode_and_missing_history(self):
+        baseline = self.projection_baseline()
+        self.assertEqual(self.projection_errors(baseline), [])
+        path = next(iter(self.source.ADMIN_GUIDES)); target = self.root / path
+        for state in ('worktree-absent', 'staged-absent', 'symlink', 'executable'):
+            with self.subTest(state=state):
+                if state == 'executable':
+                    target.chmod(0o755)
+                else:
+                    target.unlink()
+                    if state == 'staged-absent':
+                        self.git(self.root, 'update-index', '--force-remove', '--', path)
+                    elif state == 'symlink':
+                        target.symlink_to(self.root / self.paths[0])
+                self.assertTrue(self.projection_errors(baseline))
+                self.put(path, self.originals[path])
+                (self.root / '.git/index').write_bytes(self.original_index)
+                self.assertEqual(self.projection_errors(baseline), [])
+        self.alternates.write_bytes(b'')
+        self.assertTrue(self.projection_errors(baseline))
+        self.alternates.write_bytes(self.original_alternates)
+        self.assertEqual(self.projection_errors(baseline), [])
+
+
+class SparsePriorHistoricalSourceTests(unittest.TestCase):
+    """Real native originals and source-role controls for the incorporated notes."""
+    REV = '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'
+    OWNER = 'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json'
+    CROSS = 'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json'
+    SOURCE_MAP = 'docs/provenance/v5-research-continuations/SOURCE_MAP.json'
+    NOTES = {'docs/provenance/v5-research-continuations/notes/0ba213e9f1cd5c985925864d7edcc505c3adb16fa30036338b39ad04b77ea54f.md': ('4de8b1921235006c37ae00945fad3e6e328d6336',
+                                                                                                                         '0ba213e9f1cd5c985925864d7edcc505c3adb16fa30036338b39ad04b77ea54f',
+                                                                                                                         1607),
+ 'docs/provenance/v5-research-continuations/notes/22c70614cb4a011790e348461f3e2fbea5e13b2eeb788dcd2124560fb0ef0f07.md': ('d82e2625487cf0771f96f3a883170f7edd7bd919',
+                                                                                                                         '22c70614cb4a011790e348461f3e2fbea5e13b2eeb788dcd2124560fb0ef0f07',
+                                                                                                                         2703),
+ 'docs/provenance/v5-research-continuations/notes/236f78b5ecc313f47085a765f26ef2f0482fdaff154c2aebb7393a8c01c59236.md': ('3f1ebe731980b67b94945f58689999b5b4edf55d',
+                                                                                                                         '236f78b5ecc313f47085a765f26ef2f0482fdaff154c2aebb7393a8c01c59236',
+                                                                                                                         4625),
+ 'docs/provenance/v5-research-continuations/notes/251394f394fe75f9062aaa4dea33da2b3ffa3370572e14ba60e52ceb1c68a30b.md': ('32e1bec0ba44d1f558286b0d5878d2f482b9907e',
+                                                                                                                         '251394f394fe75f9062aaa4dea33da2b3ffa3370572e14ba60e52ceb1c68a30b',
+                                                                                                                         8764),
+ 'docs/provenance/v5-research-continuations/notes/3cdf7cb6582b44a2198ce9527847416ee834aa7636999871081e1677600a9f60.md': ('ead60afbdc6f47c99c8aa17403daab4f9f602083',
+                                                                                                                         '3cdf7cb6582b44a2198ce9527847416ee834aa7636999871081e1677600a9f60',
+                                                                                                                         2311),
+ 'docs/provenance/v5-research-continuations/notes/6b796642b23d6280cfec717f7a762a55fe76a2fbc67b16f6c6b0fc1008599476.md': ('9bd1c1e0e30b46800c04c6dd189e40066b6ed4a6',
+                                                                                                                         '6b796642b23d6280cfec717f7a762a55fe76a2fbc67b16f6c6b0fc1008599476',
+                                                                                                                         8765),
+ 'docs/provenance/v5-research-continuations/notes/767be5173842b1520af940db691120091d868677754e7b452a0c7467ece4665d.md': ('b64eac11f5d5efd6618219731d6fa543d3c73487',
+                                                                                                                         '767be5173842b1520af940db691120091d868677754e7b452a0c7467ece4665d',
+                                                                                                                         7472),
+ 'docs/provenance/v5-research-continuations/notes/87cad31677966946661ca6effed55165db3505d1bca45bfa6ba2428946cca88c.md': ('40d69b1e5e377cab279f1d662cffcab0f1481378',
+                                                                                                                         '87cad31677966946661ca6effed55165db3505d1bca45bfa6ba2428946cca88c',
+                                                                                                                         5124),
+ 'docs/provenance/v5-research-continuations/notes/893aabc2774f6a31df5777a9dab8cc4de2840a2f01d95691ce913f0406ab489c.md': ('dd884420d315600cc7273536e8b70d48e5d3c3dd',
+                                                                                                                         '893aabc2774f6a31df5777a9dab8cc4de2840a2f01d95691ce913f0406ab489c',
+                                                                                                                         6175),
+ 'docs/provenance/v5-research-continuations/notes/99847d69a9a9df978a7e596cc35b75b744e7661b72dd514d29bc3cf4d897cc6c.md': ('e47ed15533018067e34c25ab30a659386a02d043',
+                                                                                                                         '99847d69a9a9df978a7e596cc35b75b744e7661b72dd514d29bc3cf4d897cc6c',
+                                                                                                                         4740),
+ 'docs/provenance/v5-research-continuations/notes/9c7508259cb9916b1ba6b0557584cff186487d256dac3918269052b4cd5626b6.md': ('db0f92e4868eb7a8df168ba69f53fce74a54f65e',
+                                                                                                                         '9c7508259cb9916b1ba6b0557584cff186487d256dac3918269052b4cd5626b6',
+                                                                                                                         1387),
+ 'docs/provenance/v5-research-continuations/notes/b0edcf2ebfe71957a789033dec063424e658fe8971ef28e1f2fe9a4956e5d18e.md': ('5f7789f7cbd38d8045e95154a00f5e2196b63134',
+                                                                                                                         'b0edcf2ebfe71957a789033dec063424e658fe8971ef28e1f2fe9a4956e5d18e',
+                                                                                                                         2448),
+ 'docs/provenance/v5-research-continuations/notes/b1a029f0cd442ff623d9783c15e09260cd6063bf976290010b3fba07ec0548bf.md': ('04a057f0604fcd9de9be11443113df5636510b19',
+                                                                                                                         'b1a029f0cd442ff623d9783c15e09260cd6063bf976290010b3fba07ec0548bf',
+                                                                                                                         4114),
+ 'docs/provenance/v5-research-continuations/notes/b3403229c91a718f3e8c61068649590ec090d208206d9922da2270f71e956658.md': ('c45b5a4f02d336ff00230e07d155b043874c4eca',
+                                                                                                                         'b3403229c91a718f3e8c61068649590ec090d208206d9922da2270f71e956658',
+                                                                                                                         10334),
+ 'docs/provenance/v5-research-continuations/notes/b545637a8dc1bdfda4a949dfe3a6084b469c5ef8639af8ae97b8e5fef683e0d3.md': ('ab2e9c125c1a65714e3a0670043f65859f299774',
+                                                                                                                         'b545637a8dc1bdfda4a949dfe3a6084b469c5ef8639af8ae97b8e5fef683e0d3',
+                                                                                                                         9202),
+ 'docs/provenance/v5-research-continuations/notes/b6a6db5048293e4de7f286689ea635448ea61aec5f9a08acff0968892e10b5bb.md': ('ab8e4a2149efeee43a943db37d0e51eb144200b3',
+                                                                                                                         'b6a6db5048293e4de7f286689ea635448ea61aec5f9a08acff0968892e10b5bb',
+                                                                                                                         5703),
+ 'docs/provenance/v5-research-continuations/notes/c079f7733904976a602adae47284062ad23141dd9c79b04652e3561e74692a50.md': ('9701a6c26c8419e2cd01db4a86a2db47af28659d',
+                                                                                                                         'c079f7733904976a602adae47284062ad23141dd9c79b04652e3561e74692a50',
+                                                                                                                         10353),
+ 'docs/provenance/v5-research-continuations/notes/cab3e124b6ef2faad2c945c20d22d50e7fc2d1455367bcd4cb6dcf633908b3b9.md': ('885d647840476099ca58a0a9b8f0ca6474033164',
+                                                                                                                         'cab3e124b6ef2faad2c945c20d22d50e7fc2d1455367bcd4cb6dcf633908b3b9',
+                                                                                                                         2872),
+ 'docs/provenance/v5-research-continuations/notes/d519d3b51e5f03f7b55db3c22c2a423bdb6cf5a702e726e4a57459e527ab8dbd.md': ('093d47e908d27ac854b722d059d2bf6ee14f2ce7',
+                                                                                                                         'd519d3b51e5f03f7b55db3c22c2a423bdb6cf5a702e726e4a57459e527ab8dbd',
+                                                                                                                         11197),
+ 'docs/provenance/v5-research-continuations/notes/daa7e92aaeee1cc9ae5601877a01ddfbb8ce2cf9cabf3f4f693ec8a7c8a0893b.md': ('05d1ee82e1cea6db4639dc96147571642a9b6f19',
+                                                                                                                         'daa7e92aaeee1cc9ae5601877a01ddfbb8ce2cf9cabf3f4f693ec8a7c8a0893b',
+                                                                                                                         7244),
+ 'docs/provenance/v5-research-continuations/notes/e2afa027d652771010f909eb34642d5512c102a34c85a0ef90ff466b9fd7e0ae.md': ('1442f0674ffe32f5a50d146993d4b3ac585e07c4',
+                                                                                                                         'e2afa027d652771010f909eb34642d5512c102a34c85a0ef90ff466b9fd7e0ae',
+                                                                                                                         5928),
+ 'docs/provenance/v5-research-continuations/notes/e2cf470975d1d6f344d3dd788410c911b5d6f9d93fa528709339322bcb4d8f6b.md': ('0639e32fb2b0d4128e64738030a546bdb1589374',
+                                                                                                                         'e2cf470975d1d6f344d3dd788410c911b5d6f9d93fa528709339322bcb4d8f6b',
+                                                                                                                         5715),
+ 'docs/provenance/v5-research-continuations/notes/e40d89c1d65f9053bafc6aea41ba93af0b510586ba188e14ba5a8f6d9a50c71f.md': ('7e33cd9283868e0bce24c38758c0d77c2a190666',
+                                                                                                                         'e40d89c1d65f9053bafc6aea41ba93af0b510586ba188e14ba5a8f6d9a50c71f',
+                                                                                                                         6541),
+ 'docs/provenance/v5-research-continuations/notes/f0fe93679a7c062a452bd3b3b2615c886dcdf8b96579af2d1ddd2c17c6df6459.md': ('a9f27e973a15d6cddc4d5ccbc20457a811e21ac9',
+                                                                                                                         'f0fe93679a7c062a452bd3b3b2615c886dcdf8b96579af2d1ddd2c17c6df6459',
+                                                                                                                         1437),
+ 'docs/provenance/v5-research-continuations/notes/f7f610f5225df88d97fb6a60f984a7ec976632697e2e3f7854f4777994601d4a.md': ('8ba4cb61febc35bffee4862c0cfa0b0ac67f3bd1',
+                                                                                                                         'f7f610f5225df88d97fb6a60f984a7ec976632697e2e3f7854f4777994601d4a',
+                                                                                                                         9310)}
+
+    @classmethod
+    def setUpClass(cls):
+        import os, subprocess
+        cls.native = subprocess
+        cls.repo = SCRIPT.parents[1]
+        cls.env = {k:v for k,v in os.environ.items() if not k.startswith('GIT_')}
+        cls.env.update(GIT_NO_LAZY_FETCH='1',GIT_ALLOW_PROTOCOL='',GIT_NO_REPLACE_OBJECTS='1',
+            GIT_TERMINAL_PROMPT='0',GIT_OPTIONAL_LOCKS='0',GIT_CONFIG_NOSYSTEM='1',
+            GIT_CONFIG_GLOBAL=os.devnull,GIT_CONFIG_SYSTEM=os.devnull)
+        spec=importlib.util.spec_from_file_location('sparse_continuations',SCRIPT)
+        cls.v=importlib.util.module_from_spec(spec);spec.loader.exec_module(cls.v)
+        cls.resolver=cls.v._source
+        common=cls.native.run(['git','rev-parse','--git-common-dir'],cwd=cls.repo,env=cls.env,
+            capture_output=True,check=True).stdout.decode().strip()
+        cls.object_store=(cls.repo/common/'objects').resolve()
+        cls.original_owners=json.loads((cls.repo/cls.OWNER).read_bytes())
+        cls.original_cross=json.loads((cls.repo/cls.CROSS).read_bytes())
+        cls.current={r['path']:(cls.repo/r['path']).read_bytes() for r in cls.original_owners['source_additions']}
+        rows=json.loads((cls.repo/cls.SOURCE_MAP).read_bytes())['sources']
+        cls.rows=[r for r in rows if r['path'] in cls.NOTES]
+        if len(cls.rows)!=35:raise AssertionError('exact historical source occurrence count differs')
+
+    def setUp(self):
+        self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup);self.root=Path(self.tmp.name)
+        self.git('-c','init.templateDir=','init','-q')
+        (self.root/'.git/objects/info/alternates').write_text(str(self.object_store)+'\n')
+        self.owners=deepcopy(self.original_owners);self.cross=deepcopy(self.original_cross)
+        existing={r['path'] for r in self.owners['historical_source_bindings']}
+        for path,values in self.NOTES.items():
+            if path not in existing:
+                self.owners['historical_source_bindings'].append(dict(path=path,repository_revision=self.REV,
+                    git_blob=values[0],role='historical-source',reading_source='consolidated-information-and-inquiry',basis='scientific-consolidation-review'))
+        for key,row in self.cross['sources'].items():
+            if row['path'] not in self.NOTES:continue
+            for work in self.cross['works']:
+                for form in work.get('reading_forms',[]):
+                    if form.get('source')==key:form['relationship']='historical-source'
+            relation=dict(from_=key)
+            relation={'from':key,'to':'consolidated-information-and-inquiry',
+                'kind':'logical-content-incorporated-historical-source-retained','basis':'scientific-consolidation-review'}
+            if relation not in self.cross['relations']:self.cross['relations'].append(relation)
+        for path,body in self.current.items():self.put(path,body)
+        self.save();self.git('add','--',*self.current,self.OWNER,self.CROSS)
+
+    def git(self,*args):
+        return self.native.run(['git','--no-replace-objects','--literal-pathspecs',*args],
+            cwd=self.root,env=self.env,capture_output=True,check=True).stdout
+
+    def put(self,path,body):
+        node=self.root/path;node.parent.mkdir(parents=True,exist_ok=True);node.write_bytes(body);node.chmod(0o644)
+
+    def save(self):
+        for path,value in ((self.OWNER,self.owners),(self.CROSS,self.cross)):
+            self.put(path,(json.dumps(value,indent=2,ensure_ascii=False)+'\n').encode())
+
+    def context(self):
+        gate=getattr(self.resolver,'require_sparse_prior_context',None)
+        self.assertTrue(callable(gate),'finite sparse-prior source context is missing')
+        return gate(self.root)
+
+    def test_exact_25_originals_and_35_occurrences_survive_absence(self):
+        self.context();before=(self.root/'.git/index').read_bytes()
+        for row in self.rows:
+            with self.subTest(source=row['id']):
+                expected=self.NOTES[row['path']]
+                body=self.v.source_bytes(self.root,row)
+                self.assertEqual((hashlib.sha1(b'blob '+str(len(body)).encode()+b'\0'+body).hexdigest(),
+                    hashlib.sha256(body).hexdigest(),len(body)),expected)
+                self.assertFalse((self.root/row['path']).exists())
+        self.assertEqual((self.root/'.git/index').read_bytes(),before)
+
+    def test_source_occurrence_identity_cannot_be_relabelled(self):
+        self.context();original=self.rows[0];self.v.source_bytes(self.root,original)
+        for field,bad in (('id','foreign-source'),('origin','0'*64),('member','different.md'),
+            ('original_sha256','0'*64),('original_bytes',0),('sha256','0'*64),('bytes',0),
+            ('projection','EXACT'),('derivation',None),('path',self.rows[-1]['path'])):
+            with self.subTest(field=field):
+                altered=deepcopy(original);altered[field]=bad
+                with self.assertRaises(ValueError):self.v.source_bytes(self.root,altered)
+
+    def test_corrupt_present_symlink_mode_and_staged_source_reject(self):
+        self.context();row=self.rows[0];path=row['path'];body=self.v.source_bytes(self.root,row)
+        node=self.root/path;self.put(path,body+b'changed')
+        with self.assertRaises(ValueError):self.v.source_bytes(self.root,row)
+        node.unlink();node.symlink_to('unavailable')
+        with self.assertRaises(ValueError):self.v.source_bytes(self.root,row)
+        node.unlink();self.put(path,body);node.chmod(0o755)
+        with self.assertRaises(ValueError):self.v.source_bytes(self.root,row)
+        node.unlink();wrong=self.NOTES[self.rows[-1]['path']][0]
+        self.git('update-index','--add','--cacheinfo','100644,'+wrong+','+path)
+        with self.assertRaises(ValueError):self.v.source_bytes(self.root,row)
+
+    def test_incomplete_duplicate_and_foreign_historical_sets_reject(self):
+        self.context();original=deepcopy(self.owners)
+        for fault in ('missing','duplicate','extra','wrong-history','wrong-reading'):
+            with self.subTest(fault=fault):
+                self.owners=deepcopy(original);rows=self.owners['historical_source_bindings']
+                item=next(r for r in rows if r['path'] in self.NOTES)
+                if fault=='missing':rows.remove(item)
+                elif fault=='duplicate':rows.append(deepcopy(item))
+                elif fault=='extra':rows.append(dict(item,path='unadmitted-original.md'))
+                elif fault=='wrong-history':item['repository_revision']='HEAD'
+                else:item['reading_source']='consolidated-common-repair'
+                self.save()
+                with self.assertRaises(ValueError):self.context()
+
+    def test_primary_and_support_roles_cannot_be_promoted_or_dropped(self):
+        self.context();original=deepcopy(self.cross)
+        for fault in ('primary-role','primary-support','support-reading','relation','source-hash','new-alias'):
+            with self.subTest(fault=fault):
+                self.cross=deepcopy(original)
+                primary=next(w for w in self.cross['works'] if w['key']=='continuation-strict-width')
+                if fault=='primary-role':primary['role']='review'
+                elif fault=='primary-support':primary['supporting_source_keys']=[]
+                elif fault=='support-reading':primary['reading_forms'].append({'source':'continuation-note-133','relationship':'historical-source'})
+                elif fault=='relation':
+                    next(r for r in self.cross['relations'] if r.get('from')=='continuation-note-145')['to']='consolidated-common-repair'
+                elif fault=='source-hash':self.cross['sources']['continuation-note-145']['sha256']='0'*64
+                else:self.cross['sources']['unadmitted-alias']=deepcopy(self.cross['sources']['continuation-note-145'])
+                self.save()
+                with self.assertRaises(ValueError):self.context()
+
+    def test_current_science_and_review_must_match_their_native_index(self):
+        self.context()
+        for path in ('mathematics/information-and-inquiry.md','docs/scientific-consolidation-review.md'):
+            with self.subTest(path=path):
+                body=self.current[path];self.put(path,body+b'changed')
+                with self.assertRaises(ValueError):self.context()
+                self.put(path,body)
+                wrong=self.NOTES[self.rows[0]['path']][0]
+                saved=(self.root/'.git/index').read_bytes()
+                self.git('update-index','--cacheinfo','100644,'+wrong+','+path)
+                with self.assertRaises(ValueError):self.context()
+                (self.root/'.git/index').write_bytes(saved);self.context()
+
+    def test_unadmitted_absent_note_has_no_history_fallback(self):
+        self.context();row=deepcopy(self.rows[0]);self.v.source_bytes(self.root,row)
+        row['path']='docs/provenance/v5-research-continuations/notes/'+'unadmitted-original.md'
+        with self.assertRaises(ValueError):self.v.source_bytes(self.root,row)
+
+
 if __name__=='__main__':unittest.main(verbosity=2)

@@ -40,15 +40,15 @@ use the final-sixth selectors below for current developments.
 | T5-SPARSE-EXAMPLE | [Finite cost with infinite inverse moments](notes/0edc26c068ec475fa9a6d268cef27ecdec7d85f73b0f7e7f641eeb08669100c3.md) | FORMAL |
 | T5-ENDPOINT | [Arbitrary Borel endpoint experiment](notes/5463cdd45018f6290a32e39e0daccf5be784e46bf3e91a9404140a928f3c7321.md) | FORMAL |
 | T5-ATOMS | [Endpoint atom necessity](notes/8dc7c18a19c65f1ce087c4e64e4537d6961284d363903451ecd2a40fcda26497.md) | FORMAL |
-| T5-TRANSPORT | [Same-interface prior contamination](notes/b0edcf2ebfe71957a789033dec063424e658fe8971ef28e1f2fe9a4956e5d18e.md) | FORMAL |
+| T5-TRANSPORT | [Same-interface prior contamination](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/b0edcf2ebfe71957a789033dec063424e658fe8971ef28e1f2fe9a4956e5d18e.md) | FORMAL |
 | T5-BENCHMARK | [Two-coin exact minimax](notes/15cab9119148899dd029a8bca7bdd2e39973ad823c760e8fe03eea72434ad2c4.md) | ORDINARY |
 | T6-COST | [Actual coBüchi controller cost and exponential tail](notes/a5398ba985c0702f5d47ad525f6b1a3bdb13e36c27a058926a8b8646a07e2322.md) | MIXED |
 | T6-CONCENTRATION | [Actual seeded raw-tape concentration](notes/dfc797da61addf9ebb7d9ddb6b794afcf94ad430064b778ae2f650a838fd6a96.md) | FORMAL |
 | T6-RUNTIME | [P02 finite/natural-state and history wrapper](notes/441cb8081b18a9312cddb3fb8568b43bc1f3c56a3f4703b571ff1edf31cb637d.md) | MIXED |
 | T6-WIDTH | [Prior width and shape boundaries](notes/1f972baeaf0cebf902b265839466390f9b47fae990b1bd294fd14b80c62ed948.md) | MIXED |
-| T6-RATIONAL | [Effective rational reference candidate3](notes/0ba213e9f1cd5c985925864d7edcc505c3adb16fa30036338b39ad04b77ea54f.md) | IMPLEMENTATION |
+| T6-RATIONAL | [Effective rational reference candidate3](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/0ba213e9f1cd5c985925864d7edcc505c3adb16fa30036338b39ad04b77ea54f.md) | IMPLEMENTATION |
 | T6-NONCONVEX | [Nonconvexity of finite-budget priors](notes/23eedf82a166d1f6ab49d6fb91b918b40c25130864204e8f48877337cb3f9e8b.md) | MIXED |
-| T6-LOSS | [Observed-symbol loss obstruction](notes/b6a6db5048293e4de7f286689ea635448ea61aec5f9a08acff0968892e10b5bb.md) | FORMAL |
+| T6-LOSS | [Observed-symbol loss obstruction](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/b6a6db5048293e4de7f286689ea635448ea61aec5f9a08acff0968892e10b5bb.md) | FORMAL |
 | T6-ROTOR | [Killed finite rotor law progress](notes/d5589f9ba57d7338d734943ff897fa9dce53bbab0f652c2a279f7feaa1aa9615.md) | FORMAL |
 | T6-HISTORY | [Actual generated-history slice tails](notes/b1ca25cb50f57b6a30aa45b12f405faed848f399f79de16d53b1d14e46051b68.md) | FORMAL |
 | T6-MOMENTS | [Tail implies moments and coBüchi](notes/456f19c008a5ec83ca21e0c4835b67ffed20ad0c7969ce6e0690872a78faf382.md) | CONDITIONAL |
@@ -58,7 +58,7 @@ use the final-sixth selectors below for current developments.
 
 ## Retained proofs and reviews
 
-Where a contribution has been incorporated, the link opens its current scholarly treatment. Other links open the public projection of the named original archive member. Original archive and member identities remain in the source map; the works and scientific consolidation record pin historical public editions.
+Where a contribution has been incorporated, the link opens its current scholarly treatment. Other links open the public projection of the named original archive member. Original archive and member identities remain in the source map; the works and scientific consolidation record pin historical public editions. Original sparse-prior, width, nonconvexity, observation-loss and rational-reference arguments are incorporated in [the current treatment](../../../mathematics/information-and-inquiry.md#910-sparse-priors-cluster-width-and-the-cost-of-compulsory-reports); the immutable original links retain their distinct evidence and review roles.
 
 - `866c6ff6e74a`: [STATUS_MAP.md](notes/f3a3bb02cfa49054a46d4ff108ac0f8f603b78b10a4799952b6a336de2a16226.md)
 - `d6f6fa5be514`: [README_CONTINUATION.md](notes/168bb8d5b3961ad044667f86ad8864d6d2207a80467aaba496d30ed37868e455.md)
@@ -183,9 +183,9 @@ Where a contribution has been incorporated, the link opens its current scholarly
 - `abce3ba5d09e`: [REPORT.md](notes/ce0c39b8d9a92e7dfebed02e558f19c6aea887fd6149b05909dcf9ea1d7a9f51.md)
 - `fd344d9f77ab`: [REPORT.md](notes/5463cdd45018f6290a32e39e0daccf5be784e46bf3e91a9404140a928f3c7321.md)
 - `0ae361960ccd`: [REPORT.md](notes/8dc7c18a19c65f1ce087c4e64e4537d6961284d363903451ecd2a40fcda26497.md)
-- `a3ef56796040`: [PAIRED_REVIEW.md](notes/22c70614cb4a011790e348461f3e2fbea5e13b2eeb788dcd2124560fb0ef0f07.md)
-- `a3ef56796040`: [README.md](notes/b0edcf2ebfe71957a789033dec063424e658fe8971ef28e1f2fe9a4956e5d18e.md)
-- `a3ef56796040`: [TRANSPORT_REVIEW.md](notes/e40d89c1d65f9053bafc6aea41ba93af0b510586ba188e14ba5a8f6d9a50c71f.md)
+- `a3ef56796040`: [PAIRED_REVIEW.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/22c70614cb4a011790e348461f3e2fbea5e13b2eeb788dcd2124560fb0ef0f07.md)
+- `a3ef56796040`: [README.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/b0edcf2ebfe71957a789033dec063424e658fe8971ef28e1f2fe9a4956e5d18e.md)
+- `a3ef56796040`: [TRANSPORT_REVIEW.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/e40d89c1d65f9053bafc6aea41ba93af0b510586ba188e14ba5a8f6d9a50c71f.md)
 - `10954d525a8c`: [README.md](notes/15cab9119148899dd029a8bca7bdd2e39973ad823c760e8fe03eea72434ad2c4.md)
 - `10954d525a8c`: [REPORT.md](notes/f53131ceb1c9e4a92237a9cdf6e0813f947e098a2135daefea81c9e205c8a36d.md)
 - `80437d2b1d39`: [BOUNDARY_CONTROLS.md](notes/5a56bacc1a008c830d8500611a94f1a8def76494c61747efc4b2b987b48f731f.md)
@@ -199,34 +199,34 @@ Where a contribution has been incorporated, the link opens its current scholarly
 - `dc0478c58360`: [INFORMATIONAL_CLOCK_BOUNDARY.md](notes/43fe42160972b3d8885da9689dd7c8441c827e93a53d3b441a6af719c75f99f7.md)
 - `dc0478c58360`: [README.md](notes/c9f56385a16e11034bd4de486c43ab81dd9f486e5a22549042dc857196a032d0.md)
 - `dc0478c58360`: [RUNTIME_REVIEW.md](notes/441cb8081b18a9312cddb3fb8568b43bc1f3c56a3f4703b571ff1edf31cb637d.md)
-- `e41706b14ab7`: [FINAL_ORDINARY_EXTENSION.md](notes/99847d69a9a9df978a7e596cc35b75b744e7661b72dd514d29bc3cf4d897cc6c.md)
-- `e41706b14ab7`: [FINAL_REVIEW.md](notes/3cdf7cb6582b44a2198ce9527847416ee834aa7636999871081e1677600a9f60.md)
-- `e41706b14ab7`: [MECHANICAL_REVIEW.md](notes/893aabc2774f6a31df5777a9dab8cc4de2840a2f01d95691ce913f0406ab489c.md)
-- `e41706b14ab7`: [ORDINARY_REVIEW.md](notes/d519d3b51e5f03f7b55db3c22c2a423bdb6cf5a702e726e4a57459e527ab8dbd.md)
+- `e41706b14ab7`: [FINAL_ORDINARY_EXTENSION.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/99847d69a9a9df978a7e596cc35b75b744e7661b72dd514d29bc3cf4d897cc6c.md)
+- `e41706b14ab7`: [FINAL_REVIEW.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/3cdf7cb6582b44a2198ce9527847416ee834aa7636999871081e1677600a9f60.md)
+- `e41706b14ab7`: [MECHANICAL_REVIEW.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/893aabc2774f6a31df5777a9dab8cc4de2840a2f01d95691ce913f0406ab489c.md)
+- `e41706b14ab7`: [ORDINARY_REVIEW.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/d519d3b51e5f03f7b55db3c22c2a423bdb6cf5a702e726e4a57459e527ab8dbd.md)
 - `e41706b14ab7`: [README.md](notes/1f972baeaf0cebf902b265839466390f9b47fae990b1bd294fd14b80c62ed948.md)
-- `e41706b14ab7`: [inputs/CLUSTER_SMOOTHING_THEOREM.md](notes/b3403229c91a718f3e8c61068649590ec090d208206d9922da2270f71e956658.md)
-- `e41706b14ab7`: [inputs/CONTAMINATION_CROSSOVER.md](notes/c079f7733904976a602adae47284062ad23141dd9c79b04652e3561e74692a50.md)
-- `e41706b14ab7`: [inputs/CRITICAL_UNIFORM_THEOREM.md](notes/e2cf470975d1d6f344d3dd788410c911b5d6f9d93fa528709339322bcb4d8f6b.md)
-- `e41706b14ab7`: [inputs/CRITICAL_UNIFORM_THEOREM_FINAL.md](notes/e2afa027d652771010f909eb34642d5512c102a34c85a0ef90ff466b9fd7e0ae.md)
-- `e41706b14ab7`: [inputs/EARLIER_ROOT_ORDINARY_REVIEW.md](notes/87cad31677966946661ca6effed55165db3505d1bca45bfa6ba2428946cca88c.md)
-- `e41706b14ab7`: [inputs/NON_ENDPOINT_CONTAMINATION_FINAL.md](notes/b1a029f0cd442ff623d9783c15e09260cd6063bf976290010b3fba07ec0548bf.md)
-- `e41706b14ab7`: [inputs/WIDTH_BOUNDARY.md](notes/daa7e92aaeee1cc9ae5601877a01ddfbb8ce2cf9cabf3f4f693ec8a7c8a0893b.md)
-- `e41706b14ab7`: [inputs/WIDTH_BOUNDARY_FINAL.md](notes/767be5173842b1520af940db691120091d868677754e7b452a0c7467ece4665d.md)
-- `a64783ac9ab4`: [FINAL_REVIEW.md](notes/251394f394fe75f9062aaa4dea33da2b3ffa3370572e14ba60e52ceb1c68a30b.md)
-- `a64783ac9ab4`: [README.md](notes/0ba213e9f1cd5c985925864d7edcc505c3adb16fa30036338b39ad04b77ea54f.md)
-- `a64783ac9ab4`: [candidate/DESIGN_AND_CONTRACT.md](notes/236f78b5ecc313f47085a765f26ef2f0482fdaff154c2aebb7393a8c01c59236.md)
-- `a64783ac9ab4`: [candidate/EFFECTIVE_WITNESS_THEOREM.md](notes/6b796642b23d6280cfec717f7a762a55fe76a2fbc67b16f6c6b0fc1008599476.md)
-- `a64783ac9ab4`: [candidate/README.md](notes/cab3e124b6ef2faad2c945c20d22d50e7fc2d1455367bcd4cb6dcf633908b3b9.md)
-- `a64783ac9ab4`: [candidate/V1_SCOPE_CLARIFICATION.md](notes/9c7508259cb9916b1ba6b0557584cff186487d256dac3918269052b4cd5626b6.md)
-- `a64783ac9ab4`: [candidate/V2_PARSER_CORRECTION.md](notes/f0fe93679a7c062a452bd3b3b2615c886dcdf8b96579af2d1ddd2c17c6df6459.md)
-- `a64783ac9ab4`: [history/REVIEW_CANDIDATE_1.md](notes/f7f610f5225df88d97fb6a60f984a7ec976632697e2e3f7854f4777994601d4a.md)
+- `e41706b14ab7`: [inputs/CLUSTER_SMOOTHING_THEOREM.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/b3403229c91a718f3e8c61068649590ec090d208206d9922da2270f71e956658.md)
+- `e41706b14ab7`: [inputs/CONTAMINATION_CROSSOVER.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/c079f7733904976a602adae47284062ad23141dd9c79b04652e3561e74692a50.md)
+- `e41706b14ab7`: [inputs/CRITICAL_UNIFORM_THEOREM.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/e2cf470975d1d6f344d3dd788410c911b5d6f9d93fa528709339322bcb4d8f6b.md)
+- `e41706b14ab7`: [inputs/CRITICAL_UNIFORM_THEOREM_FINAL.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/e2afa027d652771010f909eb34642d5512c102a34c85a0ef90ff466b9fd7e0ae.md)
+- `e41706b14ab7`: [inputs/EARLIER_ROOT_ORDINARY_REVIEW.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/87cad31677966946661ca6effed55165db3505d1bca45bfa6ba2428946cca88c.md)
+- `e41706b14ab7`: [inputs/NON_ENDPOINT_CONTAMINATION_FINAL.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/b1a029f0cd442ff623d9783c15e09260cd6063bf976290010b3fba07ec0548bf.md)
+- `e41706b14ab7`: [inputs/WIDTH_BOUNDARY.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/daa7e92aaeee1cc9ae5601877a01ddfbb8ce2cf9cabf3f4f693ec8a7c8a0893b.md)
+- `e41706b14ab7`: [inputs/WIDTH_BOUNDARY_FINAL.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/767be5173842b1520af940db691120091d868677754e7b452a0c7467ece4665d.md)
+- `a64783ac9ab4`: [FINAL_REVIEW.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/251394f394fe75f9062aaa4dea33da2b3ffa3370572e14ba60e52ceb1c68a30b.md)
+- `a64783ac9ab4`: [README.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/0ba213e9f1cd5c985925864d7edcc505c3adb16fa30036338b39ad04b77ea54f.md)
+- `a64783ac9ab4`: [candidate/DESIGN_AND_CONTRACT.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/236f78b5ecc313f47085a765f26ef2f0482fdaff154c2aebb7393a8c01c59236.md)
+- `a64783ac9ab4`: [candidate/EFFECTIVE_WITNESS_THEOREM.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/6b796642b23d6280cfec717f7a762a55fe76a2fbc67b16f6c6b0fc1008599476.md)
+- `a64783ac9ab4`: [candidate/README.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/cab3e124b6ef2faad2c945c20d22d50e7fc2d1455367bcd4cb6dcf633908b3b9.md)
+- `a64783ac9ab4`: [candidate/V1_SCOPE_CLARIFICATION.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/9c7508259cb9916b1ba6b0557584cff186487d256dac3918269052b4cd5626b6.md)
+- `a64783ac9ab4`: [candidate/V2_PARSER_CORRECTION.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/f0fe93679a7c062a452bd3b3b2615c886dcdf8b96579af2d1ddd2c17c6df6459.md)
+- `a64783ac9ab4`: [history/REVIEW_CANDIDATE_1.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/f7f610f5225df88d97fb6a60f984a7ec976632697e2e3f7854f4777994601d4a.md)
 - `c9f8099a9d47`: [ALMOST_SURE_ADDENDUM.md](notes/fe422970716f0b5c83033f0f790a4548d55d538b798e9a47f05095d81ea6f39c.md)
 - `c9f8099a9d47`: [FINAL_REVIEW.md](notes/23eedf82a166d1f6ab49d6fb91b918b40c25130864204e8f48877337cb3f9e8b.md)
 - `c9f8099a9d47`: [MECHANICAL_REVIEW.md](notes/8acb133d926e2f991effa524b357c5aae842317eb5c4b2bf8a7a42c502d26b8a.md)
-- `c9f8099a9d47`: [ORDINARY_REVIEW.md](notes/b545637a8dc1bdfda4a949dfe3a6084b469c5ef8639af8ae97b8e5fef683e0d3.md)
+- `c9f8099a9d47`: [ORDINARY_REVIEW.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/b545637a8dc1bdfda4a949dfe3a6084b469c5ef8639af8ae97b8e5fef683e0d3.md)
 - `c9f8099a9d47`: [README.md](notes/338772311eda3790a6bdf1835487d864aed383c9db8434672f0b7329c60cb442.md)
 - `6497ce9e8af6`: [README.md](notes/4adfc5bdf8cfa08ad1a17d35e02b2520e2473e4db7105fd03478311e23b8ce97.md)
-- `6497ce9e8af6`: [REVIEW.md](notes/b6a6db5048293e4de7f286689ea635448ea61aec5f9a08acff0968892e10b5bb.md)
+- `6497ce9e8af6`: [REVIEW.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/b6a6db5048293e4de7f286689ea635448ea61aec5f9a08acff0968892e10b5bb.md)
 - `fb85245673a9`: [README.md](notes/d5589f9ba57d7338d734943ff897fa9dce53bbab0f652c2a279f7feaa1aa9615.md)
 - `fb85245673a9`: [ROTOR_FRONTIER_REVIEW.md](notes/fbd271a03c0e84c690193d4f174405d2f25f4322fd6b9485ff60b96d0bd94749.md)
 - `e90780190185`: [HISTORY_FRONTIER_REVIEW.md](notes/b1ca25cb50f57b6a30aa45b12f405faed848f399f79de16d53b1d14e46051b68.md)
@@ -261,16 +261,16 @@ Where a contribution has been incorporated, the link opens its current scholarly
 - `ddbad6ca12d0`: [README.md](notes/263f4bcc9a50f73830f4d6826ccd70dca5527f09e1d1cf970cdee9a1c365f689.md)
 - `c95f5175af02`: [README.md](notes/2a585094e4cdb8c402854780aa9bb9fac3d8598349de448731acfb905c53150a.md)
 - `24afae53f1c4`: [README.md](notes/211febf4a1cf053563e4cefd1adc21a4778932bc6e39c9c414c09c9020e86853.md)
-- `3dae38ab50de`: [CLUSTER_SMOOTHING_THEOREM.md](notes/b3403229c91a718f3e8c61068649590ec090d208206d9922da2270f71e956658.md)
-- `3dae38ab50de`: [CONTAMINATION_CROSSOVER.md](notes/c079f7733904976a602adae47284062ad23141dd9c79b04652e3561e74692a50.md)
-- `3dae38ab50de`: [CRITICAL_UNIFORM_THEOREM.md](notes/e2afa027d652771010f909eb34642d5512c102a34c85a0ef90ff466b9fd7e0ae.md)
-- `3dae38ab50de`: [NON_ENDPOINT_CONTAMINATION.md](notes/b1a029f0cd442ff623d9783c15e09260cd6063bf976290010b3fba07ec0548bf.md)
+- `3dae38ab50de`: [CLUSTER_SMOOTHING_THEOREM.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/b3403229c91a718f3e8c61068649590ec090d208206d9922da2270f71e956658.md)
+- `3dae38ab50de`: [CONTAMINATION_CROSSOVER.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/c079f7733904976a602adae47284062ad23141dd9c79b04652e3561e74692a50.md)
+- `3dae38ab50de`: [CRITICAL_UNIFORM_THEOREM.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/e2afa027d652771010f909eb34642d5512c102a34c85a0ef90ff466b9fd7e0ae.md)
+- `3dae38ab50de`: [NON_ENDPOINT_CONTAMINATION.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/b1a029f0cd442ff623d9783c15e09260cd6063bf976290010b3fba07ec0548bf.md)
 - `3dae38ab50de`: [PRIOR_ART_AND_SCOPE.md](notes/8e8ec8d84c2563d40ec03ea480a47264ca927956f9b049f21294060432ea31df.md)
 - `3dae38ab50de`: [README.md](notes/e63f28c1f6023c75e676d7952a9c7e12ff97ba5c67b90adb8856336404001a98.md)
 - `3dae38ab50de`: [ROBUSTNESS_INTERFACE.md](notes/75c41e4504094c9c229216ea80413b9ce85595f8a91da950d5a777fa1cebae5f.md)
 - `3dae38ab50de`: [SUCCESSOR_SCOPE.md](notes/f5aadcfbf8f832fdcaab2df7ccc134fab96a3778fb3a5972f73d83e446a9a806.md)
 - `3dae38ab50de`: [THEOREM_CONTRACT.md](notes/c12fbd88ff7a409c9a2004ab835c099c750d7f6c3c63d06d9115d8de866a4881.md)
-- `3dae38ab50de`: [WIDTH_BOUNDARY.md](notes/767be5173842b1520af940db691120091d868677754e7b452a0c7467ece4665d.md)
+- `3dae38ab50de`: [WIDTH_BOUNDARY.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/767be5173842b1520af940db691120091d868677754e7b452a0c7467ece4665d.md)
 - `7871eae3c71a`: [PREDICTION_LOSS_COMPARISON.md](notes/fe1b8f9c639009f4232ef03f6f18d26927ad5a06249b02dde3d0defd1a1c30e9.md)
 - `748545d4cf83`: [README.md](notes/2d7ec3409db14cb075da9d60a8c0ebdcd564de32f3994a5e227fffacb31d4a42.md)
 - `4bd668ffbcfa`: [CONCENTRATION_ADDENDUM.md](notes/20b7b22149860c3faaa10850224f6e174b587cb39e8b634dc12267da94c04b78.md)
@@ -278,11 +278,11 @@ Where a contribution has been incorporated, the link opens its current scholarly
 - `4bd668ffbcfa`: [RESULT_REGISTER.md](notes/93288f384e107fdc0f7d65a2815ecd9f564528a31ed38e7bebc5f08539158735.md)
 - `4bd668ffbcfa`: [SOURCE_CROSSWALK.md](notes/94510c27daf0827f77f597f4394adbb7088b55869cc1116891832c8d0e802503.md)
 - `4bd668ffbcfa`: [THEOREM_AND_PROOF.md](notes/2600ec078aeacd393c1d9fa249ef513879c50445a428a301402372c1970fa80a.md)
-- `78f19b47a154`: [DESIGN_AND_CONTRACT.md](notes/236f78b5ecc313f47085a765f26ef2f0482fdaff154c2aebb7393a8c01c59236.md)
-- `78f19b47a154`: [EFFECTIVE_WITNESS_THEOREM.md](notes/6b796642b23d6280cfec717f7a762a55fe76a2fbc67b16f6c6b0fc1008599476.md)
-- `78f19b47a154`: [README.md](notes/cab3e124b6ef2faad2c945c20d22d50e7fc2d1455367bcd4cb6dcf633908b3b9.md)
-- `78f19b47a154`: [V1_SCOPE_CLARIFICATION.md](notes/9c7508259cb9916b1ba6b0557584cff186487d256dac3918269052b4cd5626b6.md)
-- `78f19b47a154`: [V2_PARSER_CORRECTION.md](notes/f0fe93679a7c062a452bd3b3b2615c886dcdf8b96579af2d1ddd2c17c6df6459.md)
+- `78f19b47a154`: [DESIGN_AND_CONTRACT.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/236f78b5ecc313f47085a765f26ef2f0482fdaff154c2aebb7393a8c01c59236.md)
+- `78f19b47a154`: [EFFECTIVE_WITNESS_THEOREM.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/6b796642b23d6280cfec717f7a762a55fe76a2fbc67b16f6c6b0fc1008599476.md)
+- `78f19b47a154`: [README.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/cab3e124b6ef2faad2c945c20d22d50e7fc2d1455367bcd4cb6dcf633908b3b9.md)
+- `78f19b47a154`: [V1_SCOPE_CLARIFICATION.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/9c7508259cb9916b1ba6b0557584cff186487d256dac3918269052b4cd5626b6.md)
+- `78f19b47a154`: [V2_PARSER_CORRECTION.md](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/f0fe93679a7c062a452bd3b3b2615c886dcdf8b96579af2d1ddd2c17c6df6459.md)
 - `0d018cbe2cff`: [README.md](notes/65a0f8fe2775ae850cc387000f2cf6bcce82e1cdf161ae2b5cc3b133f9c6c04d.md)
 - `0d018cbe2cff`: [THEOREM_CONTRACT.md](notes/57f9ba40f068d98c35bcd9df3b0624b40d179cf6708f9f8b224759ecf4103b39.md)
 - `9527a5e7bbf1`: [CLARIFICATION.md](notes/bc92ae5f37ea73f1196696314646006b5fdfb693c0293c1c92c6d16ec8845308.md)
@@ -323,6 +323,6 @@ that exact slice. See the scoped selectors and claim contracts in the overlay.
 | S6F-21 | [Fixed-finite-family common exponential range](notes/fd6a5f2e156d0ae95e9e1e0a5f44e3266cbe77a9f6d4dabbfc51f9d1979b2e6b.md) | [Retained assessment](notes/a96b3fc7e9c37ccb4ef28fea5d652e2b4229a704b97b8d7531c5595a08cf1ad9.md) | FORMAL |
 | S6F-22 | Runtime v8 bounded full-phase canonical law (private custody; identity in source map) | [Retained assessment](notes/464052cebf9b352e961f0b1f16045db069b60db3dfabaa5a8839bcc794459955.md) | IMPLEMENTATION |
 | S6F-23 | Exact rational sampling and projection boundaries (private custody; identity in source map) | [Retained assessment](notes/464052cebf9b352e961f0b1f16045db069b60db3dfabaa5a8839bcc794459955.md) | MIXED |
-| S6F-24 | [Prior width, nonconvexity, rational reference and literal loss](notes/b3403229c91a718f3e8c61068649590ec090d208206d9922da2270f71e956658.md) | [Retained assessment](notes/1f972baeaf0cebf902b265839466390f9b47fae990b1bd294fd14b80c62ed948.md) | MIXED |
+| S6F-24 | [Prior width, nonconvexity, rational reference and literal loss](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/b3403229c91a718f3e8c61068649590ec090d208206d9922da2270f71e956658.md) | [Retained assessment](notes/1f972baeaf0cebf902b265839466390f9b47fae990b1bd294fd14b80c62ed948.md) | MIXED |
 | S6F-25 | [Controller and disclosure prior-art corrections](notes/09b4a02871f01bb4a676c5a9ebb751344074d349107336b7f86ff1ee719183f1.md) | [Retained assessment](notes/dcbaf45a6a43878061f33259605be18510a6ba09f816514c8a9a36112570ebde.md) | ORDINARY |
 | S6F-26 | [Residual agenda and twelve-avenue reconciliation](notes/dd653de8a16de0196c33109d11a2c447589d57f8a8cad4877c8383856c845a3a.md) | [Retained assessment](notes/27bc8608b4db1442a5d330e9a03a0427df1a639bef15309a5c6f189e1553f398.md) | PROPOSAL |

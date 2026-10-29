@@ -14271,7 +14271,7 @@
       "reading_forms": [
         {
           "source": "continuation-note-138",
-          "relationship": "retained-source-reading-projection"
+          "relationship": "historical-source"
         }
       ],
       "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#sparse-learning-can-survive-smooth-local-uncertainty",
@@ -14298,7 +14298,7 @@
       "reading_forms": [
         {
           "source": "continuation-note-145",
-          "relationship": "retained-source-reading-projection"
+          "relationship": "historical-source"
         }
       ],
       "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#the-strict-width-guarantee-and-its-sharp-quantifiers",
@@ -14329,7 +14329,7 @@
       "reading_forms": [
         {
           "source": "continuation-note-141",
-          "relationship": "retained-source-reading-projection"
+          "relationship": "historical-source"
         }
       ],
       "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#at-critical-width-the-internal-shape-matters",
@@ -14359,7 +14359,7 @@
       "reading_forms": [
         {
           "source": "continuation-note-139",
-          "relationship": "retained-source-reading-projection"
+          "relationship": "historical-source"
         }
       ],
       "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#stable-finite-horizons-can-conceal-infinite-lifetime-cost",
@@ -14386,7 +14386,7 @@
       "reading_forms": [
         {
           "source": "continuation-note-143",
-          "relationship": "retained-source-reading-projection"
+          "relationship": "historical-source"
         }
       ],
       "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#harmful-perturbations-need-not-add-an-endpoint-atom",
@@ -14476,7 +14476,7 @@
       "reading_forms": [
         {
           "source": "continuation-note-149",
-          "relationship": "retained-source-reading-projection"
+          "relationship": "historical-source"
         }
       ],
       "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#an-executable-rational-witness-with-an-honest-resource-boundary",
@@ -23260,6 +23260,96 @@
     {
       "from": "continuation-note-48",
       "to": "consolidated-objective-normativity",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "continuation-note-118",
+      "to": "consolidated-information-and-inquiry",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "continuation-note-120",
+      "to": "consolidated-information-and-inquiry",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "continuation-note-138",
+      "to": "consolidated-information-and-inquiry",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "continuation-note-133",
+      "to": "consolidated-information-and-inquiry",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "continuation-note-134",
+      "to": "consolidated-information-and-inquiry",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "continuation-note-145",
+      "to": "consolidated-information-and-inquiry",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "continuation-note-136",
+      "to": "consolidated-information-and-inquiry",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "continuation-note-141",
+      "to": "consolidated-information-and-inquiry",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "continuation-note-139",
+      "to": "consolidated-information-and-inquiry",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "continuation-note-143",
+      "to": "consolidated-information-and-inquiry",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "continuation-note-148",
+      "to": "consolidated-information-and-inquiry",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "continuation-note-150",
+      "to": "consolidated-information-and-inquiry",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "continuation-note-146",
+      "to": "consolidated-information-and-inquiry",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "continuation-note-149",
+      "to": "consolidated-information-and-inquiry",
+      "kind": "logical-content-incorporated-historical-source-retained",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "from": "continuation-note-160",
+      "to": "consolidated-information-and-inquiry",
       "kind": "logical-content-incorporated-historical-source-retained",
       "basis": "scientific-consolidation-review"
     }

@@ -21,6 +21,7 @@ from resolve_t20_v6_source import (
     historical_source_bytes, source_bytes, MEDIATOR_GUIDE, mediator_guide_source_bytes,
     HISTORICAL_PROSE_REVISIONS, MEDIATOR_APPROXIMATION, FISHER_AUDIT, readonly_git_diff,
     TYPED_GUIDES, typed_guide_source_bytes,
+    ADMIN_GUIDES, administrative_guide_source_bytes,
     CONTINUATION_COPY_ROOT, continuation_duplicate_paths,
     CHECKPOINT_COPY_PATHS, checkpoint_duplicate_paths,
     CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths,
@@ -215,6 +216,13 @@ def check_preserved_roots(root, objects):
             typed_guides_authenticated.add(path)
         except (ValueError, OSError):
             pass  # No exception for a changed, missing or unsafe guide.
+    administrative_guides_authenticated = set()
+    for path in ADMIN_GUIDES:
+        try:
+            administrative_guide_source_bytes(root, path, allow_original=True)
+            administrative_guides_authenticated.add(path)
+        except (ValueError, OSError):
+            pass  # A changed, missing or unsafe guide receives no allowance.
     protected = ['experiments/orthemology-v5', 'experiments/orthemology-v5-continuations',
                  'experiments/orthemology-v5-successors', 'docs/provenance/v5-consolidation',
                  'docs/provenance/v5-research-continuations', 'docs/provenance/v5-successors',
@@ -280,6 +288,7 @@ def check_preserved_roots(root, objects):
                         (status == 'D' and path in (code_authenticated or ())) or
                         (status == 'M' and path == MEDIATOR_GUIDE and guide_authenticated) or
                         (status == 'M' and path in typed_guides_authenticated) or
+                        (status == 'M' and path in administrative_guides_authenticated) or
                         (status == 'M' and path in (owner_authenticated or ())))
                    for status, path in zip(changes[::2], changes[1::2])):
                 errors.append('preserved v5 or prior T20 baseline changed')

@@ -1181,6 +1181,171 @@ HISTORICAL_PROSE.update(NEXT24_PROSE)
 HISTORICAL_PROSE_REVISIONS.update({path: NEXT24_REVISION for path in NEXT24_PROSE})
 HISTORICAL_PROSE_DISPOSITIONS.update({path: 'REUSE' for path in NEXT24_PUBLIC_PROSE})
 
+# Exact incorporated sparse-prior public originals; no new public manifest forms.
+EARLIER_FIFTY_HISTORICAL_PATHS = tuple(HISTORICAL_PROSE)
+SPARSE_PRIOR_REVISION = '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'
+SPARSE_PRIOR_PROSE = {'docs/provenance/v5-research-continuations/notes/0ba213e9f1cd5c985925864d7edcc505c3adb16fa30036338b39ad04b77ea54f.md': ('4de8b1921235006c37ae00945fad3e6e328d6336',
+                                                                                                                         '0ba213e9f1cd5c985925864d7edcc505c3adb16fa30036338b39ad04b77ea54f',
+                                                                                                                         1607),
+ 'docs/provenance/v5-research-continuations/notes/22c70614cb4a011790e348461f3e2fbea5e13b2eeb788dcd2124560fb0ef0f07.md': ('d82e2625487cf0771f96f3a883170f7edd7bd919',
+                                                                                                                         '22c70614cb4a011790e348461f3e2fbea5e13b2eeb788dcd2124560fb0ef0f07',
+                                                                                                                         2703),
+ 'docs/provenance/v5-research-continuations/notes/236f78b5ecc313f47085a765f26ef2f0482fdaff154c2aebb7393a8c01c59236.md': ('3f1ebe731980b67b94945f58689999b5b4edf55d',
+                                                                                                                         '236f78b5ecc313f47085a765f26ef2f0482fdaff154c2aebb7393a8c01c59236',
+                                                                                                                         4625),
+ 'docs/provenance/v5-research-continuations/notes/251394f394fe75f9062aaa4dea33da2b3ffa3370572e14ba60e52ceb1c68a30b.md': ('32e1bec0ba44d1f558286b0d5878d2f482b9907e',
+                                                                                                                         '251394f394fe75f9062aaa4dea33da2b3ffa3370572e14ba60e52ceb1c68a30b',
+                                                                                                                         8764),
+ 'docs/provenance/v5-research-continuations/notes/3cdf7cb6582b44a2198ce9527847416ee834aa7636999871081e1677600a9f60.md': ('ead60afbdc6f47c99c8aa17403daab4f9f602083',
+                                                                                                                         '3cdf7cb6582b44a2198ce9527847416ee834aa7636999871081e1677600a9f60',
+                                                                                                                         2311),
+ 'docs/provenance/v5-research-continuations/notes/6b796642b23d6280cfec717f7a762a55fe76a2fbc67b16f6c6b0fc1008599476.md': ('9bd1c1e0e30b46800c04c6dd189e40066b6ed4a6',
+                                                                                                                         '6b796642b23d6280cfec717f7a762a55fe76a2fbc67b16f6c6b0fc1008599476',
+                                                                                                                         8765),
+ 'docs/provenance/v5-research-continuations/notes/767be5173842b1520af940db691120091d868677754e7b452a0c7467ece4665d.md': ('b64eac11f5d5efd6618219731d6fa543d3c73487',
+                                                                                                                         '767be5173842b1520af940db691120091d868677754e7b452a0c7467ece4665d',
+                                                                                                                         7472),
+ 'docs/provenance/v5-research-continuations/notes/87cad31677966946661ca6effed55165db3505d1bca45bfa6ba2428946cca88c.md': ('40d69b1e5e377cab279f1d662cffcab0f1481378',
+                                                                                                                         '87cad31677966946661ca6effed55165db3505d1bca45bfa6ba2428946cca88c',
+                                                                                                                         5124),
+ 'docs/provenance/v5-research-continuations/notes/893aabc2774f6a31df5777a9dab8cc4de2840a2f01d95691ce913f0406ab489c.md': ('dd884420d315600cc7273536e8b70d48e5d3c3dd',
+                                                                                                                         '893aabc2774f6a31df5777a9dab8cc4de2840a2f01d95691ce913f0406ab489c',
+                                                                                                                         6175),
+ 'docs/provenance/v5-research-continuations/notes/99847d69a9a9df978a7e596cc35b75b744e7661b72dd514d29bc3cf4d897cc6c.md': ('e47ed15533018067e34c25ab30a659386a02d043',
+                                                                                                                         '99847d69a9a9df978a7e596cc35b75b744e7661b72dd514d29bc3cf4d897cc6c',
+                                                                                                                         4740),
+ 'docs/provenance/v5-research-continuations/notes/9c7508259cb9916b1ba6b0557584cff186487d256dac3918269052b4cd5626b6.md': ('db0f92e4868eb7a8df168ba69f53fce74a54f65e',
+                                                                                                                         '9c7508259cb9916b1ba6b0557584cff186487d256dac3918269052b4cd5626b6',
+                                                                                                                         1387),
+ 'docs/provenance/v5-research-continuations/notes/b0edcf2ebfe71957a789033dec063424e658fe8971ef28e1f2fe9a4956e5d18e.md': ('5f7789f7cbd38d8045e95154a00f5e2196b63134',
+                                                                                                                         'b0edcf2ebfe71957a789033dec063424e658fe8971ef28e1f2fe9a4956e5d18e',
+                                                                                                                         2448),
+ 'docs/provenance/v5-research-continuations/notes/b1a029f0cd442ff623d9783c15e09260cd6063bf976290010b3fba07ec0548bf.md': ('04a057f0604fcd9de9be11443113df5636510b19',
+                                                                                                                         'b1a029f0cd442ff623d9783c15e09260cd6063bf976290010b3fba07ec0548bf',
+                                                                                                                         4114),
+ 'docs/provenance/v5-research-continuations/notes/b3403229c91a718f3e8c61068649590ec090d208206d9922da2270f71e956658.md': ('c45b5a4f02d336ff00230e07d155b043874c4eca',
+                                                                                                                         'b3403229c91a718f3e8c61068649590ec090d208206d9922da2270f71e956658',
+                                                                                                                         10334),
+ 'docs/provenance/v5-research-continuations/notes/b545637a8dc1bdfda4a949dfe3a6084b469c5ef8639af8ae97b8e5fef683e0d3.md': ('ab2e9c125c1a65714e3a0670043f65859f299774',
+                                                                                                                         'b545637a8dc1bdfda4a949dfe3a6084b469c5ef8639af8ae97b8e5fef683e0d3',
+                                                                                                                         9202),
+ 'docs/provenance/v5-research-continuations/notes/b6a6db5048293e4de7f286689ea635448ea61aec5f9a08acff0968892e10b5bb.md': ('ab8e4a2149efeee43a943db37d0e51eb144200b3',
+                                                                                                                         'b6a6db5048293e4de7f286689ea635448ea61aec5f9a08acff0968892e10b5bb',
+                                                                                                                         5703),
+ 'docs/provenance/v5-research-continuations/notes/c079f7733904976a602adae47284062ad23141dd9c79b04652e3561e74692a50.md': ('9701a6c26c8419e2cd01db4a86a2db47af28659d',
+                                                                                                                         'c079f7733904976a602adae47284062ad23141dd9c79b04652e3561e74692a50',
+                                                                                                                         10353),
+ 'docs/provenance/v5-research-continuations/notes/cab3e124b6ef2faad2c945c20d22d50e7fc2d1455367bcd4cb6dcf633908b3b9.md': ('885d647840476099ca58a0a9b8f0ca6474033164',
+                                                                                                                         'cab3e124b6ef2faad2c945c20d22d50e7fc2d1455367bcd4cb6dcf633908b3b9',
+                                                                                                                         2872),
+ 'docs/provenance/v5-research-continuations/notes/d519d3b51e5f03f7b55db3c22c2a423bdb6cf5a702e726e4a57459e527ab8dbd.md': ('093d47e908d27ac854b722d059d2bf6ee14f2ce7',
+                                                                                                                         'd519d3b51e5f03f7b55db3c22c2a423bdb6cf5a702e726e4a57459e527ab8dbd',
+                                                                                                                         11197),
+ 'docs/provenance/v5-research-continuations/notes/daa7e92aaeee1cc9ae5601877a01ddfbb8ce2cf9cabf3f4f693ec8a7c8a0893b.md': ('05d1ee82e1cea6db4639dc96147571642a9b6f19',
+                                                                                                                         'daa7e92aaeee1cc9ae5601877a01ddfbb8ce2cf9cabf3f4f693ec8a7c8a0893b',
+                                                                                                                         7244),
+ 'docs/provenance/v5-research-continuations/notes/e2afa027d652771010f909eb34642d5512c102a34c85a0ef90ff466b9fd7e0ae.md': ('1442f0674ffe32f5a50d146993d4b3ac585e07c4',
+                                                                                                                         'e2afa027d652771010f909eb34642d5512c102a34c85a0ef90ff466b9fd7e0ae',
+                                                                                                                         5928),
+ 'docs/provenance/v5-research-continuations/notes/e2cf470975d1d6f344d3dd788410c911b5d6f9d93fa528709339322bcb4d8f6b.md': ('0639e32fb2b0d4128e64738030a546bdb1589374',
+                                                                                                                         'e2cf470975d1d6f344d3dd788410c911b5d6f9d93fa528709339322bcb4d8f6b',
+                                                                                                                         5715),
+ 'docs/provenance/v5-research-continuations/notes/e40d89c1d65f9053bafc6aea41ba93af0b510586ba188e14ba5a8f6d9a50c71f.md': ('7e33cd9283868e0bce24c38758c0d77c2a190666',
+                                                                                                                         'e40d89c1d65f9053bafc6aea41ba93af0b510586ba188e14ba5a8f6d9a50c71f',
+                                                                                                                         6541),
+ 'docs/provenance/v5-research-continuations/notes/f0fe93679a7c062a452bd3b3b2615c886dcdf8b96579af2d1ddd2c17c6df6459.md': ('a9f27e973a15d6cddc4d5ccbc20457a811e21ac9',
+                                                                                                                         'f0fe93679a7c062a452bd3b3b2615c886dcdf8b96579af2d1ddd2c17c6df6459',
+                                                                                                                         1437),
+ 'docs/provenance/v5-research-continuations/notes/f7f610f5225df88d97fb6a60f984a7ec976632697e2e3f7854f4777994601d4a.md': ('8ba4cb61febc35bffee4862c0cfa0b0ac67f3bd1',
+                                                                                                                         'f7f610f5225df88d97fb6a60f984a7ec976632697e2e3f7854f4777994601d4a',
+                                                                                                                         9310)}
+SPARSE_PRIOR_READER_ALIASES = {'continuation-note-118': ('docs/provenance/v5-research-continuations/notes/22c70614cb4a011790e348461f3e2fbea5e13b2eeb788dcd2124560fb0ef0f07.md',
+                           None,
+                           None,
+                           None,
+                           ('continuation-prior-transport',)),
+ 'continuation-note-120': ('docs/provenance/v5-research-continuations/notes/e40d89c1d65f9053bafc6aea41ba93af0b510586ba188e14ba5a8f6d9a50c71f.md',
+                           None,
+                           None,
+                           None,
+                           ('continuation-prior-transport',)),
+ 'continuation-note-138': ('docs/provenance/v5-research-continuations/notes/b3403229c91a718f3e8c61068649590ec090d208206d9922da2270f71e956658.md',
+                           'continuation-cluster-smoothing',
+                           'research-note',
+                           (),
+                           ()),
+ 'continuation-note-133': ('docs/provenance/v5-research-continuations/notes/99847d69a9a9df978a7e596cc35b75b744e7661b72dd514d29bc3cf4d897cc6c.md',
+                           None,
+                           None,
+                           None,
+                           ('continuation-critical-uniform',
+                            'continuation-interior-contamination',
+                            'continuation-strict-width')),
+ 'continuation-note-134': ('docs/provenance/v5-research-continuations/notes/3cdf7cb6582b44a2198ce9527847416ee834aa7636999871081e1677600a9f60.md',
+                           None,
+                           None,
+                           None,
+                           ('continuation-critical-uniform',
+                            'continuation-interior-contamination',
+                            'continuation-strict-width')),
+ 'continuation-note-145': ('docs/provenance/v5-research-continuations/notes/767be5173842b1520af940db691120091d868677754e7b452a0c7467ece4665d.md',
+                           'continuation-strict-width',
+                           'research-note',
+                           ('continuation-note-133', 'continuation-note-134', 'continuation-note-136'),
+                           ()),
+ 'continuation-note-136': ('docs/provenance/v5-research-continuations/notes/d519d3b51e5f03f7b55db3c22c2a423bdb6cf5a702e726e4a57459e527ab8dbd.md',
+                           None,
+                           None,
+                           None,
+                           ('continuation-strict-width',)),
+ 'continuation-note-141': ('docs/provenance/v5-research-continuations/notes/e2afa027d652771010f909eb34642d5512c102a34c85a0ef90ff466b9fd7e0ae.md',
+                           'continuation-critical-uniform',
+                           'research-note',
+                           ('continuation-note-133', 'continuation-note-134'),
+                           ()),
+ 'continuation-note-139': ('docs/provenance/v5-research-continuations/notes/c079f7733904976a602adae47284062ad23141dd9c79b04652e3561e74692a50.md',
+                           'continuation-contamination-crossover',
+                           'research-note',
+                           (),
+                           ()),
+ 'continuation-note-143': ('docs/provenance/v5-research-continuations/notes/b1a029f0cd442ff623d9783c15e09260cd6063bf976290010b3fba07ec0548bf.md',
+                           'continuation-interior-contamination',
+                           'research-note',
+                           ('continuation-note-133', 'continuation-note-134'),
+                           ()),
+ 'continuation-note-148': ('docs/provenance/v5-research-continuations/notes/236f78b5ecc313f47085a765f26ef2f0482fdaff154c2aebb7393a8c01c59236.md',
+                           None,
+                           None,
+                           None,
+                           ('continuation-rational-prior',)),
+ 'continuation-note-150': ('docs/provenance/v5-research-continuations/notes/cab3e124b6ef2faad2c945c20d22d50e7fc2d1455367bcd4cb6dcf633908b3b9.md',
+                           None,
+                           None,
+                           None,
+                           ('continuation-rational-prior',)),
+ 'continuation-note-146': ('docs/provenance/v5-research-continuations/notes/251394f394fe75f9062aaa4dea33da2b3ffa3370572e14ba60e52ceb1c68a30b.md',
+                           None,
+                           None,
+                           None,
+                           ('continuation-rational-prior',)),
+ 'continuation-note-149': ('docs/provenance/v5-research-continuations/notes/6b796642b23d6280cfec717f7a762a55fe76a2fbc67b16f6c6b0fc1008599476.md',
+                           'continuation-rational-prior',
+                           'research-software',
+                           ('continuation-note-148',
+                            'continuation-note-150',
+                            'continuation-note-146',
+                            'prior-rational-reference'),
+                           ()),
+ 'continuation-note-160': ('docs/provenance/v5-research-continuations/notes/b6a6db5048293e4de7f286689ea635448ea61aec5f9a08acff0968892e10b5bb.md',
+                           None,
+                           None,
+                           None,
+                           ('continuation-observed-loss',))}
+SPARSE_PRIOR_SUPPORT_PROSE = {row[0] for row in SPARSE_PRIOR_READER_ALIASES.values() if row[1] is None}
+SPARSE_PRIOR_ORIGINAL_SOURCE_MAP = ('0f565ab802d53fae8a3a929e65f291e3dade7242', 'a6c2c87082f27c8560cfb4790059cc242effb5f45e3f7bdf30adf8b722b808c7', 5990901)
+HISTORICAL_PROSE.update(SPARSE_PRIOR_PROSE)
+HISTORICAL_PROSE_REVISIONS.update({path: SPARSE_PRIOR_REVISION for path in SPARSE_PRIOR_PROSE})
+
 # These six notes already have public REUSE rows. Their original coordinates
 # can be pinned without publishing any other reader-only or held source.
 PUBLIC_READER_NOTE_PATHS = (
@@ -1213,7 +1378,8 @@ MEDIATOR_GUIDE_BYTES = 18763
 # The inherited duplicate is a path obligation, not an extra manifest object.
 HISTORICAL_PROSE_PUBLIC_PATHS = tuple(
     path for path in HISTORICAL_PROSE
-    if path != 'research/t20-live-20261009/checkpoints/CP20/necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md'
+    if path not in SPARSE_PRIOR_PROSE
+    and path != 'research/t20-live-20261009/checkpoints/CP20/necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md'
     and ((path not in CONTINUATION_READER_PROSE and path not in T4_READER_PROSE)
          or path in PUBLIC_READER_NOTE_PATHS)
     and (path not in NEXT24_PROSE or path in NEXT24_PUBLIC_PROSE))
@@ -1242,6 +1408,8 @@ def historical_source_bytes(root, path, revision, git_blob):
         require_t4_note_context(root)
     elif path in NEXT24_PROSE:
         require_next24_note_context(root)
+    elif path in SPARSE_PRIOR_PROSE:
+        require_sparse_prior_context(root)
     blob, identity, size = binding
 
     def git(*args):
@@ -1290,6 +1458,106 @@ def historical_source_bytes(root, path, revision, git_blob):
     return body
 
 
+
+def require_sparse_prior_context(root):
+    """Bind the incorporated originals to their exact prior roles and current work.
+
+    This is finite source integrity, not scientific adoption, fresh execution,
+    independent custody or authority to remove a production original.
+    """
+    root = pathlib.Path(root)
+    try:
+        owners = json.loads(_regular_current_bytes(root,
+            'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json'))
+        cross = json.loads(_regular_current_bytes(root,
+            'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json'))
+        bindings = owners['historical_source_bindings']
+        fields = {'path', 'repository_revision', 'git_blob', 'role', 'reading_source', 'basis'}
+        if (not isinstance(bindings, list)
+                or any(not isinstance(row, dict) or set(row) != fields for row in bindings)
+                or len(bindings) != len(HISTORICAL_PROSE)
+                or {row['path'] for row in bindings} != set(HISTORICAL_PROSE)):
+            raise ValueError('the complete earlier fifty and sparse-prior twenty-five bindings are required')
+        for path, (blob, identity, size) in SPARSE_PRIOR_PROSE.items():
+            expected = dict(path=path, repository_revision=SPARSE_PRIOR_REVISION,
+                git_blob=blob, role='historical-source', reading_source='consolidated-information-and-inquiry',
+                basis='scientific-consolidation-review')
+            if [row for row in bindings if row['path'] == path] != [expected]:
+                raise ValueError('the exact sparse-prior original owner binding is required')
+            names = [key for key, row in cross['sources'].items() if row['path'] == path]
+            declared = [key for key, row in SPARSE_PRIOR_READER_ALIASES.items() if row[0] == path]
+            if names != declared:
+                raise ValueError('sparse-prior source aliases differ from their original population')
+        for key, path, role in (
+                ('consolidated-information-and-inquiry', 'mathematics/information-and-inquiry.md', 'work-source'),
+                ('scientific-consolidation-review', 'docs/scientific-consolidation-review.md', 'review')):
+            selected = [row for row in owners['source_additions'] if row['key'] == key]
+            if len(selected) != 1:
+                raise ValueError('missing or duplicate current sparse-prior reading owner')
+            admission, source = selected[0], cross['sources'][key]
+            body = _regular_current_bytes(root, path)
+            oid = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+            expected_index = ('100644 ' + oid + ' 0\t' + path + '\0').encode()
+            if (admission['path'] != path or source['path'] != path or admission['role'] != role
+                    or admission['mode'] != '100644' or admission['git_oid'] != oid
+                    or admission['bytes'] != len(body) or admission['sha256'] != digest(body)
+                    or source['sha256'] != digest(body)
+                    or _continuation_git(root, 'ls-files', '--stage', '-z', '--', path) != expected_index):
+                raise ValueError('current sparse-prior scholarship or review edition differs')
+            if role == 'work-source' and 'scientific-consolidation-review' not in admission['supporting_source_keys']:
+                raise ValueError('current sparse-prior work has lost its review owner')
+        for key, (path, work, role, support, users) in SPARSE_PRIOR_READER_ALIASES.items():
+            source = cross['sources'][key]
+            primary = [row for row in cross['works'] if key in row.get('source_keys', [])]
+            forms = [form for row in cross['works'] for form in row.get('reading_forms', [])
+                     if form.get('source') == key]
+            supported = sorted(row['key'] for row in cross['works']
+                               if key in row.get('supporting_source_keys', []))
+            expected_form = {'source': key, 'relationship': 'historical-source'}
+            if work is None:
+                if primary or forms or support is not None or role is not None:
+                    raise ValueError('sparse-prior support-only original acquired a work or reading form')
+            elif (len(primary) != 1 or primary[0]['key'] != work or primary[0]['role'] != role
+                    or primary[0]['source_keys'] != [key] or primary[0]['reading_forms'] != [expected_form]
+                    or forms != [expected_form] or primary[0].get('supporting_source_keys', []) != list(support)
+                    or any(name not in cross['sources'] for name in support)):
+                raise ValueError('sparse-prior original work role or retained support differs')
+            relation = {'from': key, 'to': 'consolidated-information-and-inquiry',
+                        'kind': 'logical-content-incorporated-historical-source-retained',
+                        'basis': 'scientific-consolidation-review'}
+            if (source['sha256'] != SPARSE_PRIOR_PROSE[path][1] or supported != list(users)
+                    or not isinstance(source.get('read_scope'), str) or not source['read_scope'].strip()
+                    or [row for row in cross['relations'] if row.get('from') == key] != [relation]
+                    or any(key in row.get('source_keys', []) for row in cross['reader_journeys'])):
+                raise ValueError('sparse-prior source identity, support incidence or incorporation differs')
+    except (KeyError, TypeError, UnicodeError) as exc:
+        raise ValueError('invalid current sparse-prior source context') from exc
+
+
+def sparse_prior_source_bytes(root, row):
+    """Read one original public occurrence without changing its historical role.
+
+    The original map supplies archive/member/derivation identity; the finite
+    prose route supplies native original bytes and current reading ownership.
+    Existing result, review, failure and status associations remain intact.
+    """
+    if not isinstance(row, dict) or row.get('path') not in SPARSE_PRIOR_PROSE:
+        raise ValueError('unqualified sparse-prior source occurrence')
+    path = 'docs/provenance/v5-research-continuations/SOURCE_MAP.json'
+    blob, identity, size = SPARSE_PRIOR_ORIGINAL_SOURCE_MAP
+    expected = ('100644 blob ' + blob + '\t' + path + '\0').encode()
+    if _continuation_git(root, 'ls-tree', '-z', SPARSE_PRIOR_REVISION, '--', path) != expected:
+        raise ValueError('sparse-prior original source map coordinate differs')
+    body = _continuation_object(root, 'blob', blob)
+    if (digest(body), len(body)) != (identity, size):
+        raise ValueError('sparse-prior original source map bytes differ')
+    original = json.loads(body)['sources']
+    if [source for source in original if source['id'] == row.get('id')] != [row]:
+        raise ValueError('sparse-prior original occurrence identity differs')
+    return historical_source_bytes(root, row['path'], SPARSE_PRIOR_REVISION,
+                                   SPARSE_PRIOR_PROSE[row['path']][0])
+
+
 def require_next24_note_context(root):
     """Require exactly 50 original identities and the accepted current owners.
 
@@ -1308,8 +1576,9 @@ def require_next24_note_context(root):
         fields = {'path', 'repository_revision', 'git_blob', 'role', 'reading_source', 'basis'}
         if (not isinstance(bindings, list)
                 or any(not isinstance(row, dict) or set(row) != fields for row in bindings)
-                or len(bindings) != len(HISTORICAL_PROSE)
-                or {row['path'] for row in bindings} != set(HISTORICAL_PROSE)):
+                or len({row['path'] for row in bindings}) != len(bindings)
+                or {row['path'] for row in bindings} not in
+                    (set(EARLIER_FIFTY_HISTORICAL_PATHS), set(HISTORICAL_PROSE))):
             raise ValueError('the exact earlier twenty-six and next24 bindings are required')
         for n, row in NEXT24_NOTES.items():
             expected = dict(path=NEXT24_PATHS[n], repository_revision=NEXT24_REVISION,
@@ -1388,7 +1657,7 @@ def require_t4_note_context(root):
                 or any(not isinstance(row, dict) or set(row) != fields for row in bindings)
                 or len({row['path'] for row in bindings}) != len(bindings)
                 or {row['path'] for row in bindings} not in
-                    (set(T4_READER_HISTORICAL_PATHS), set(HISTORICAL_PROSE))):
+                    (set(T4_READER_HISTORICAL_PATHS), set(EARLIER_FIFTY_HISTORICAL_PATHS), set(HISTORICAL_PROSE))):
             raise ValueError('the exact T4 twenty-six or next24 fifty bindings are required')
         for key, row in T4_READER_NOTES.items():
             expected = dict(path=T4_READER_PATHS[key], repository_revision=T4_READER_REVISION,
@@ -1465,7 +1734,7 @@ def require_continuation_note_context(root):
                 or len({row['path'] for row in bindings}) != len(bindings)
                 or {row['path'] for row in bindings} not in
                     (set(CONTINUATION_READER_HISTORICAL_PATHS), set(T4_READER_HISTORICAL_PATHS),
-                     set(HISTORICAL_PROSE))):
+                     set(EARLIER_FIFTY_HISTORICAL_PATHS), set(HISTORICAL_PROSE))):
             raise ValueError('exact continuation sixteen or T4 twenty-six bindings are required')
         for key, row in CONTINUATION_READER_NOTES.items():
             path = CONTINUATION_READER_PATHS[key]

@@ -35,6 +35,7 @@ from resolve_t20_v6_source import (
     ORIGINAL_HISTORICAL_PROSE_PATHS, FISHER_AUDIT, FISHER_PROSE_REVISION,
     TYPED_PROSE, TYPED_PROSE_REVISION, TYPED_GUIDES, typed_guide_source_bytes,
     CONTINUATION_READER_PROSE, T4_READER_PROSE, T4_READER_SUPPORT_PROSE,
+    SPARSE_PRIOR_PROSE, SPARSE_PRIOR_SUPPORT_PROSE,
     NEXT24_PROSE, NEXT24_SUPPORT_PROSE, NEXT24_PUBLIC_PROSE,
     CONTINUATION_COPY_ROOT, continuation_duplicate_paths,
     ADMIN_RECORD_PATHS, administrative_record_bytes, administrative_record_absences,
@@ -1114,8 +1115,9 @@ def check_historical_sources(repo, baseline_rows, owners, cross, additions):
     if (len(paths) != len(declared) or paths not in
             (original, mediator, fisher, typed, typed | set(CONTINUATION_READER_PROSE),
               typed | set(CONTINUATION_READER_PROSE) | set(T4_READER_PROSE),
-              typed | set(CONTINUATION_READER_PROSE) | set(T4_READER_PROSE) | set(NEXT24_PROSE))):
-        return {}, ["historical-source: expected exactly the original five, mediator seven, Fisher eight, typed twelve, continuation sixteen, T4 twenty-six or next24 fifty path dispositions"]
+              typed | set(CONTINUATION_READER_PROSE) | set(T4_READER_PROSE) | set(NEXT24_PROSE),
+               typed | set(CONTINUATION_READER_PROSE) | set(T4_READER_PROSE) | set(NEXT24_PROSE) | set(SPARSE_PRIOR_PROSE))):
+        return {}, ["historical-source: expected exactly the original five, mediator seven, Fisher eight, typed twelve, continuation sixteen, T4 twenty-six, next24 fifty or sparse-prior seventy-five path dispositions"]
     admitted, errors = {}, []
     sources = cross.get("sources", {})
     for binding in declared:
@@ -1157,7 +1159,7 @@ def check_historical_sources(repo, baseline_rows, owners, cross, additions):
                             "basis": binding["basis"]}
                 relations = [r for r in cross.get("relations", []) if r.get("from") == key
                              and r.get("kind") == expected["kind"]]
-                expected_forms = ([] if path in T4_READER_SUPPORT_PROSE | NEXT24_SUPPORT_PROSE else
+                expected_forms = ([] if path in T4_READER_SUPPORT_PROSE | NEXT24_SUPPORT_PROSE | SPARSE_PRIOR_SUPPORT_PROSE else
                                   [{"source": key, "relationship": "historical-source"}])
                 if forms != expected_forms or relations != [expected]:
                     raise ValueError("reader source lacks its exact historical/incorporation relationship")
@@ -1199,6 +1201,9 @@ CONTINUATION_OWNER_CURRENT = {'docs/provenance/v5-research-continuations/EVIDENC
                                                             '53eff919af5543ce3750f988c0b1c10422dd3ba883f9fbfc77b4840650a86258',
                                                             175135)}
 
+CONTINUATION_OWNER_SPARSE_PRIOR = dict(CONTINUATION_OWNER_CURRENT, **{
+    'docs/provenance/v5-research-continuations/README.md': ('b0195c6b5f1db05ff38ba01ced7390a7d46929dc', 'fc1eb9a3fb03e334670571838c045e46d16dd5a770993a796f323b0711d52b3e', 52968)})
+
 
 def check_continuation_owner_edition(repo, baseline_rows):
     """Bind four existing owners to one exact original or consolidated edition."""
@@ -1219,7 +1224,7 @@ def check_continuation_owner_edition(repo, baseline_rows):
         if staged.returncode:
             raise ValueError("could not inspect the four staged owners")
         edition = None
-        for candidate in (CONTINUATION_OWNER_ORIGINAL, CONTINUATION_OWNER_CURRENT):
+        for candidate in (CONTINUATION_OWNER_ORIGINAL, CONTINUATION_OWNER_CURRENT, CONTINUATION_OWNER_SPARSE_PRIOR):
             expected = b"".join(("100644 " + candidate[path][0] + " 0\t" + path + "\0").encode()
                                 for path in CONTINUATION_OWNER_PATHS)
             if staged.stdout == expected:

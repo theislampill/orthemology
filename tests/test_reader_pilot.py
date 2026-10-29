@@ -1384,7 +1384,8 @@ class BulkConsumerProjectionPinTests(unittest.TestCase):
     }
 
     # Independently admitted coordinate additions; all original row fields stay exact.
-    COORDINATE_PINS = {'docs/provenance/v5-research-continuations/notes/002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e.md': ('002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e',
+    # The fixture cohort keeps its original complete 22-coordinate contract.
+    BASE_COORDINATE_PINS = {'docs/provenance/v5-research-continuations/notes/002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e.md': ('002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e',
                                                                                                                              6680,
                                                                                                                              '2804e7b196437dd437f0099b15aa45a76249e63b',
                                                                                                                              'a7ff0e33d1a299db640041c46b1af81ca70851f6'),
@@ -1471,7 +1472,10 @@ class BulkConsumerProjectionPinTests(unittest.TestCase):
      'tests/schema-negative/NEGATIVE-FIXTURES.json': ('b342240297511473b5c5568d4662de413d1f69fef20a7a55dc59c24657e7580b',
                                                       10709,
                                                       'a002ee8e159a7678e6c704323ca62670cc389880',
-                                                      '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+                                                      '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
+
+    COORDINATE_PINS = {
+        **BASE_COORDINATE_PINS,
      'experiments/orthemology-v5-successors/groups/t07-technical/README.md': ('3eb797cdf4925b80e21597fed04fbda0bee7a85f7bb5a141137fbba258cf25c2',
                                                                               32584,
                                                                               '7cd6ff0393556359cecaee0c5b109a6cf8a05345',
@@ -8042,6 +8046,25 @@ class Next24HistoricalMigrationTests(unittest.TestCase):
                                 env=cls.env, capture_output=True, check=True).stdout.decode().strip()
         cls.object_store = (ROOT / common / 'objects').resolve()
         cls.original_owners = json.loads((ROOT / cls.OWNER).read_bytes())
+        # Keep this original fifty-source campaign independent of later cohorts.
+        # The literal published owner coordinate and digest are external evidence.
+        coordinate = subprocess.run(['git', 'ls-tree', '-z',
+            '254a48e595ae9b2966f4d4fa406b908a05150452', '--', cls.OWNER], cwd=ROOT,
+            env=cls.env, capture_output=True, check=True).stdout
+        expected = ('100644 blob 3e51e9d8c931493b4b1d8dd36248df5fbc7835b6\t' + cls.OWNER + '\0').encode()
+        if coordinate != expected:
+            raise AssertionError('original fifty owner coordinate differs')
+        historical_body = subprocess.run(['git', 'cat-file', 'blob',
+            '3e51e9d8c931493b4b1d8dd36248df5fbc7835b6'], cwd=ROOT,
+            env=cls.env, capture_output=True, check=True).stdout
+        if hashlib.sha256(historical_body).hexdigest() != 'bffb81e2ac979d3fb3fde4a8285910389cd497609d17bd5fdb276b38277dc2eb':
+            raise AssertionError('original fifty owner bytes differ')
+        history = json.loads(historical_body)['historical_source_bindings']
+        paths = {row['path'] for row in history}
+        current = [row for row in cls.original_owners['historical_source_bindings'] if row['path'] in paths]
+        if len(history) != 50 or current != history:
+            raise AssertionError('original fifty historical declarations changed')
+        cls.original_owners['historical_source_bindings'] = history
         cls.original_cross = json.loads((ROOT / cls.CROSS).read_bytes())
         cls.paths = {n: 'docs/provenance/v5-research-continuations/notes/' + r[0] + '.md'
                      for n, r in cls.ROWS.items()}
@@ -8402,7 +8425,7 @@ class FixtureConsumerProjectionPinTests(unittest.TestCase):
         spec = importlib.util.spec_from_file_location('fixture_pin_reader', MODULE)
         cls.reader = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(cls.reader)
-        cls.pins = BulkConsumerProjectionPinTests.COORDINATE_PINS
+        cls.pins = BulkConsumerProjectionPinTests.BASE_COORDINATE_PINS
         if len(cls.pins) != 22 or len(cls.FIXTURE_PATHS) != 13:
             raise AssertionError('complete independently admitted coordinate population required')
         document = json.loads((ROOT / 'research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json').read_text())

@@ -97,6 +97,8 @@ def path_in(root, name, exists=True):
 def source_bytes(root, row):
     """Preserve source-ID identity while using a qualified absent current copy."""
     path = path_in(root, row['path'], exists=False)
+    if row['path'] in _source.SPARSE_PRIOR_PROSE:
+        return _source.sparse_prior_source_bytes(root, row)
     if not path.exists() and row['path'].startswith(_source.CONTINUATION_COPY_ROOT) and path.suffix == '.lean':
         return _source.continuation_copy_bytes(root, row['path'], row['sha256'], row['bytes'], source=row)
     require(path.is_file(), 'Missing regular file: ' + row['path'])

@@ -85,6 +85,9 @@ PRESERVATION_OWNER_CURRENT = {'docs/provenance/v5-research-continuations/EVIDENC
  'experiments/orthemology-v5-continuations/registry.json': ('d8a37112646af3922ffe6a7ee86d1ded72996b54',
                                                             '53eff919af5543ce3750f988c0b1c10422dd3ba883f9fbfc77b4840650a86258',
                                                             175135)}
+
+PRESERVATION_OWNER_SPARSE_PRIOR = dict(PRESERVATION_OWNER_CURRENT, **{
+    'docs/provenance/v5-research-continuations/README.md': ('b0195c6b5f1db05ff38ba01ced7390a7d46929dc', 'fc1eb9a3fb03e334670571838c045e46d16dd5a770993a796f323b0711d52b3e', 52968)})
 FRESH = {'NOT_RUN', 'BLOCKED_EXTERNAL_INPUT', 'BLOCKED_TOOLCHAIN', 'RESOURCE_INCONCLUSIVE',
          'FAILED', 'FINITE_ONLY', 'FRESH_KERNEL_COMPONENTS', 'QUALIFIED_DECLARED_SUITE'}
 INHERITED = {'NONE', 'WRITTEN_MATHEMATICS', 'CONDITIONAL_PHILOSOPHY', 'SOURCE_ASSESSMENT',
@@ -324,7 +327,7 @@ def _preservation_owner_bytes(root, files):
             'Preservation owner root contains a symlink')
     staged = _preservation_owner_git(root, 'ls-files', '--stage', '-z', '--', *PRESERVATION_OWNER_PATHS)
     edition = None
-    for candidate in (PRESERVATION_OWNER_ORIGINAL, PRESERVATION_OWNER_CURRENT):
+    for candidate in (PRESERVATION_OWNER_ORIGINAL, PRESERVATION_OWNER_CURRENT, PRESERVATION_OWNER_SPARSE_PRIOR):
         expected = b''.join(('100644 ' + candidate[name][0] + ' 0\t' + name + '\0').encode('utf-8')
                             for name in PRESERVATION_OWNER_PATHS)
         if staged == expected:
