@@ -109,7 +109,7 @@ SUPPLEMENTARY = {'FOUNDATIONAL_FRONTIER', 'SOURCE_USE', 'INTEGRATION_VERIFICATIO
                  'CONTROL_DISPOSITIONS', 'INTERNAL_REVIEW_DISPOSITION', 'TOOLCHAINS'}
 BUNDLE_KEYS = {'registry', 'baseline_binding', 'preservation', 'sources', 'reviews', 'results',
                'statuses', 'bindings', 'suites', 'receipts', 'supersession', 'legacy_endpoints',
-               'selectors', 'obligations', 'avenues', 'calculus', 'empirical', 'supplementary',
+               'selectors', 'obligations', 'avenues', 'empirical', 'supplementary',
                'projection_reviews', 'public_allowlist'}
 
 
@@ -228,7 +228,6 @@ def _documents(bundle):
                         'legacy_endpoints': bundle['legacy_endpoints']},
         'OBLIGATION_CROSSWALK': {'obligations': bundle['obligations']},
         'TWELVE_AVENUES': {'avenues': bundle['avenues']},
-        'CALCULUS_MAP': {'results': bundle['calculus']},
         'EMPIRICAL_SCOPE': {'results': bundle['empirical']},
         'PUBLIC_PROJECTION': {'reviews': bundle['projection_reviews'], 'allowlist': bundle['public_allowlist']},
         **bundle['supplementary'],
@@ -367,6 +366,109 @@ def _preservation_owner_bytes(root, files):
     return originals
 
 
+def _preservation_history(bundle, root, anchor, files):
+    """Authenticate the immutable inventory; current consumers own availability.
+
+    A preserved ancestor is not a second current checkout specification. The
+    live continuation/source/suite validators still check the objects they use.
+    """
+    require(bool(files), 'Empty frozen preservation inventory')
+    reference = bundle['registry']['records']['PRESERVATION']
+    require(reference == {'path': PROV + '/PRESERVATION.json',
+                          'sha256': anchor['preservation_sha256']},
+            'Changed preservation inventory owner')
+    raw, witness = _source._successor_input_regular(Path(root).absolute(), reference['path'])
+    require(hashlib.sha256(raw).hexdigest() == anchor['preservation_sha256'],
+            'Changed pinned preservation inventory bytes')
+    require(_input_json_bytes(raw) == bundle['preservation'],
+            'In-memory preservation inventory differs from its pinned owner')
+    inventory_blob = hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest()
+    index_args = ('ls-files', '--stage', '-z', '--', reference['path'])
+    expected_index = ('100644 ' + inventory_blob + ' 0\t' + reference['path'] + '\0').encode()
+    require(_source._administrative_git(root, *index_args) == expected_index,
+            'Preservation inventory has a mixed or untracked native edition')
+    for row in files.values():
+        keys(row, {'path', 'bytes', 'sha256', 'git_blob_sha1'})
+        safe_relative(row['path']); integer(row['bytes']); digest(row['sha256'])
+        require(re.fullmatch('[0-9a-f]{40}', row['git_blob_sha1']), 'Invalid baseline Git blob identity')
+    for field in ['legacy_registry', 'legacy_overlay']:
+        ref = bundle['baseline_binding'][field]
+        require(ref['path'] in files and ref['sha256'] == files[ref['path']]['sha256'],
+                'Legacy baseline binding missing from preservation')
+    actual_tree = _source._administrative_git(root, 'rev-parse', anchor['base_commit'] + '^{tree}').decode().strip()
+    require(actual_tree == anchor['base_tree'], 'Pinned baseline tree mismatch')
+    output = _source._administrative_git(root, 'ls-tree', '-rz', '--full-tree',
+                                        anchor['base_commit'], '--', *FROZEN_ROOTS)
+    actual = {}
+    for record in output.split(b'\0'):
+        if record:
+            metadata, name = record.split(b'\t', 1)
+            mode, kind, blob = metadata.decode().split()
+            path = name.decode('utf-8')
+            require(kind == 'blob' and mode in {'100644', '100755'} and path not in actual,
+                    'Unsupported or duplicate frozen Git object')
+            actual[path] = blob
+    require(actual == {name: row['git_blob_sha1'] for name, row in files.items()},
+            'Preservation inventory does not match pinned Git objects')
+    require(_source._administrative_git(root, *index_args) == expected_index,
+            'Preservation inventory index changed during authentication')
+    current = path_in(root, reference['path']).lstat()
+    fields = ('st_dev', 'st_ino', 'st_mode', 'st_nlink', 'st_size', 'st_mtime_ns', 'st_ctime_ns')
+    require(tuple(getattr(current, field) for field in fields) == witness,
+            'Preservation inventory changed during authentication')
+    return files
+
+
+def _original_owner_bytes(root, path, identity, anchor, *, expected_size=None):
+    """Read one explicitly referenced original owner at its bound ancestor.
+
+    Callers supply the existing graph/obligation owner and original digest.
+    This is not a fallback for live source, suite or receipt availability.
+    """
+    digest(identity); safe_relative(path)
+    if not anchor['git_required']:
+        raw = path_in(root, path).read_bytes()  # Original isolated-fixture seam.
+        require(hashlib.sha256(raw).hexdigest() == identity, 'Changed original owner hash')
+        if expected_size is not None:
+            require(len(raw) == expected_size, 'Changed original owner size')
+        return raw
+    root = Path(root).absolute()
+    tree = _source._administrative_git(root, 'rev-parse', anchor['base_commit'] + '^{tree}').decode().strip()
+    require(tree == anchor['base_tree'], 'Original owner ancestor tree differs')
+    metadata = _source._administrative_git(root, 'ls-tree', '-z', anchor['base_commit'], '--', path)
+    records = metadata.split(b'\0')
+    require(len(records) == 2 and records[-1] == b'', 'Original owner is absent or ambiguous at its ancestor')
+    header, actual_path = records[0].split(b'\t', 1)
+    mode, kind, blob = header.decode('ascii').split()
+    require(actual_path.decode('utf-8') == path and mode == '100644' and kind == 'blob'
+            and re.fullmatch('[0-9a-f]{40}', blob), 'Original owner has an unsupported ancestor identity')
+    index_args = ('ls-files', '--stage', '-z', '--', path)
+    indexed = _source._administrative_git(root, *index_args)
+    require(indexed in (b'', ('100644 ' + blob + ' 0\t' + path + '\0').encode()),
+            'Original owner has changed staged bytes or mode')
+    raw = _source._administrative_git(root, 'cat-file', 'blob', blob)
+    require(hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest() == blob
+            and hashlib.sha256(raw).hexdigest() == identity, 'Original owner differs from its bound ancestor')
+    if expected_size is not None:
+        require(len(raw) == expected_size, 'Original owner differs from its preserved size')
+    node = _source._successor_input_path(root, path)
+    present = os.path.lexists(node)
+    witness = None
+    if present:
+        current, witness = _source._successor_input_regular(root, path)
+        require(current == raw, 'Changed present original owner bytes')
+    require(_source._administrative_git(root, *index_args) == indexed,
+            'Original owner index changed during authentication')
+    require(os.path.lexists(_source._successor_input_path(root, path)) == present,
+            'Original owner presence changed during authentication')
+    if witness is not None:
+        current = node.lstat()
+        fields = ('st_dev', 'st_ino', 'st_mode', 'st_nlink', 'st_size', 'st_mtime_ns', 'st_ctime_ns')
+        require(tuple(getattr(current, field) for field in fields) == witness,
+                'Original owner changed during authentication')
+    return raw
+
+
 def _preservation(bundle, root, anchor):
     bound, inventory = bundle['baseline_binding'], bundle['preservation']
     keys(bound, {'schema', 'base_commit', 'base_tree', 'preservation_sha256', 'legacy_registry', 'legacy_overlay'})
@@ -383,6 +485,8 @@ def _preservation(bundle, root, anchor):
             'Changed preservation baseline')
     require(inventory['roots'] == FROZEN_ROOTS, 'Changed preservation roots')
     files = indexed(inventory['files'], 'path')
+    if anchor['git_required']:
+        return _preservation_history(bundle, root, anchor, files)
     present = _inventory_paths(root, FROZEN_ROOTS)
     require(files and present <= set(files), 'Frozen preservation file-set changed')
     # Explicit fixture anchors keep their original test seam; the CLI and the
@@ -548,6 +652,12 @@ def _allowlist(bundle, root, sources):
                 _source.HISTORICAL_PROSE_REVISIONS[name], _source.HISTORICAL_PROSE[name][0])
             if not path.exists():
                 authenticated_absent.add(name)
+        elif name in _source.SUCCESSOR_CALCULUS_GUIDES:
+            _, identity, size = _source.SUCCESSOR_CALCULUS_GUIDES[name]['original']
+            require(row['kind'] == 'AUTHORED' and row['source_ids'] == []
+                    and row['sha256'] == identity and row['bytes'] == size,
+                    'Original calculus guide allowlist identity changed')
+            raw = _source.successor_calculus_guide_source_bytes(root, name)
         elif name in _source.ADMIN_GUIDES:
             _, identity, size, _ = _source.ADMIN_GUIDES[name]
             require(row['kind'] == 'AUTHORED' and row['source_ids'] == []
@@ -866,14 +976,16 @@ def _pointer(value, pointer):
     return value
 
 
-def _graph(bundle, root, results, statuses, sources, preserved):
+def _graph(bundle, root, results, statuses, sources, preserved, anchor):
     legacy = indexed(bundle['legacy_endpoints'], 'id')
     require(not (set(legacy) & set(results)), 'Legacy endpoint shadows new result')
     for row in legacy.values():
         keys(row, {'id', 'owner_path', 'owner_sha256', 'json_pointer', 'statement', 'target', 'domain', 'calculus'})
         require(row['owner_path'] in preserved and row['owner_sha256'] == preserved[row['owner_path']]['sha256'],
                 'Legacy endpoint owner is not preserved baseline')
-        value = _pointer(read_json(path_in(root, row['owner_path'])), row['json_pointer'])
+        original = _original_owner_bytes(root, row['owner_path'], row['owner_sha256'], anchor,
+                                         expected_size=preserved[row['owner_path']]['bytes'])
+        value = _pointer(_input_json_bytes(original), row['json_pointer'])
         literal = value if isinstance(value, str) else json.dumps(value, sort_keys=True, ensure_ascii=False, separators=(',', ':'))
         require(row['statement'] == literal, 'Legacy endpoint statement changed')
         nonempty(row['target']); enum(row['domain'], DOMAINS); enum(row['calculus'], CALCULI)
@@ -919,13 +1031,6 @@ def _graph(bundle, root, results, statuses, sources, preserved):
 
 
 def _ledgers(bundle, root, results, sources, anchor):
-    calculus = indexed(bundle['calculus'], 'id')
-    require(set(calculus) == set(results), 'Incomplete calculus map')
-    for rid, row in calculus.items():
-        keys(row, {'id', 'calculus', 'operational_model', 'canonical_adoption'})
-        require(row['calculus'] == results[rid]['calculus'] and row['operational_model'] == results[rid]['operational_model'],
-                'Changed calculus/operational model association')
-        require(row['canonical_adoption'] == 'NOT_ADOPTED', 'Candidate calculus cannot be adopted by source registration')
     for row in indexed(bundle['empirical'], 'id').values():
         keys(row, {'id', 'activity', 'data_scope', 'limitations'})
         require(row['id'] in results, 'Unknown empirical result')
@@ -934,12 +1039,8 @@ def _ledgers(bundle, root, results, sources, anchor):
     obligations = indexed(bundle['obligations'], 'id')
     for row in obligations.values():
         keys(row, {'id', 'owner_path', 'owner_sha256', 'statement', 'result_ids', 'disposition', 'residual'})
-        path = path_in(root, row['owner_path'])
-        require(sha(path) == digest(row['owner_sha256']), 'Changed obligation owner hash')
-        require(nonempty(row['statement']) in path.read_text(encoding='utf-8'), 'Obligation statement missing from owner')
-        if anchor['git_required']:
-            raw = _git(root, 'show', anchor['base_commit'] + ':' + row['owner_path'])
-            require(hashlib.sha256(raw).hexdigest() == row['owner_sha256'], 'Obligation owner differs from accepted base')
+        original = _original_owner_bytes(root, row['owner_path'], row['owner_sha256'], anchor)
+        require(nonempty(row['statement']) in original.decode('utf-8'), 'Obligation statement missing from owner')
         refs(row['result_ids'], results, 'obligation result')
         enum(row['disposition'], {'PRESERVED_OPEN', 'SCOPED_SUCCESSOR', 'PRESERVED_STATUS'})
         nonempty(row['residual'])
@@ -1006,7 +1107,7 @@ def validate_bundle(bundle, root, *, baseline_anchor=None, suite_validator=None,
             require(receipt.get('suite_id') in suites, 'Receipt references missing suite')
             _receipt(receipt, suites[receipt['suite_id']], sources, reviews, root, receipt_validator)
         results, statuses = _results(bundle, sources, reviews, projections, suites, receipts)
-        _graph(bundle, root, results, statuses, sources, preserved)
+        _graph(bundle, root, results, statuses, sources, preserved, anchor)
         _ledgers(bundle, root, results, sources, anchor)
         return {'results': len(results), 'sources': len(sources), 'suites': len(suites),
                 'preserved_files': len(preserved),
@@ -1028,7 +1129,7 @@ def load_bundle(root):
         'bindings': ('EVIDENCE_BINDINGS', 'bindings'), 'receipts': ('EVIDENCE_BINDINGS', 'receipts'),
         'supersession': ('SUPERSESSION', 'edges'), 'legacy_endpoints': ('SUPERSESSION', 'legacy_endpoints'),
         'selectors': ('SUPERSESSION', 'selectors'), 'obligations': ('OBLIGATION_CROSSWALK', 'obligations'),
-        'avenues': ('TWELVE_AVENUES', 'avenues'), 'calculus': ('CALCULUS_MAP', 'results'),
+        'avenues': ('TWELVE_AVENUES', 'avenues'),
         'empirical': ('EMPIRICAL_SCOPE', 'results'), 'projection_reviews': ('PUBLIC_PROJECTION', 'reviews'),
         'public_allowlist': ('PUBLIC_PROJECTION', 'allowlist')}
     try:

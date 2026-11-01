@@ -46,6 +46,26 @@ jobs:
           if-no-files-found: error
           include-hidden-files: false
           archive: true
+      - name: Public123 generated-source absence and exact restoration
+        id: public_fixture123
+        if: ${{ github.event_name == 'pull_request' && steps.source_alias_absence.outcome == 'success' }}
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: setsid --wait python -B scripts/check_source_alias_absence.py run-fixtures --state "$RUNNER_TEMP/r0002-public-fixtures123-absence"
+      - name: Receive bounded public123 evidence
+        if: ${{ always() && github.event_name == 'pull_request' && steps.public_fixture123.outcome != 'skipped' }}
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -B scripts/check_source_alias_absence.py export-fixtures --state "$RUNNER_TEMP/r0002-public-fixtures123-absence"
+      - name: Preserve bounded public123 evidence
+        if: ${{ always() && github.event_name == 'pull_request' && steps.public_fixture123.outcome != 'skipped' }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: r0002-public-fixtures123-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/r0002-public-fixtures123-receipts/
+          if-no-files-found: error
+          include-hidden-files: false
+          archive: true
       - name: Dependency lock consistency
         run: |
           python tests/test_dependency_lock.py

@@ -50920,6 +50920,8 @@
       "required_dependencies": [],
       "disposition": "REUSE",
       "repository_path": "tests/v5_successor_fixtures.py",
+      "repository_revision": "69f3f9284f2cb94433958c0669fc9b06a9760fe7",
+      "git_blob": "ccf0bd64f34b10f65ed8bd1bdd8a88adcaf03c7f",
       "public_sha256": "283ea7d698a5bf6a208e45260ee9078f819ecdb25a42c6dd2252d794d2dd3233",
       "public_bytes": 13030,
       "publication_basis": "exact_existing_public_repository_object"

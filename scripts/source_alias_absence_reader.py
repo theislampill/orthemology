@@ -17,13 +17,15 @@ import subprocess
 
 import sys
 
-RESOLVER_SHA256 = '52c9b3bbd81756c7e41c2f5f4f91cbe07cc57f2769ea9422bb662d22d8dff3e6'
+RESOLVER_SHA256 = '03125b6ee843f944a1f318479c63817aa9dd55e08f5182f139335db0dc70ec21'
 
 BASELINE = "0784acddd4770f1190f758f264ba52b2b110bd27"
 
-OWNER_MAP_SHA256 = 'fe0f041ce5114df9f6789ecf4b09aa43d884084ec3f4d6a11d2be448247424e2'
+OWNER_MAP_SHA256 = '34e59db8b4390c90f94ea7082be936ec146fb19b614e16fbed315e7bd1b13297'
 
-READER_SHA256 = '620057db119281308b132b41207e694d1cb7d34bcabbb638fdf633d91bcb97c3'
+READER_SHA256 = 'b51d25f3521dfba4667146389ac81af5048bfac4b4da1b0f0139003cb3b29b8b'
+
+CENSUS_SHA256 = '65980c4d2dd19936212a03ed650d0cb69cf4147e72098607fac9dbce39eb8461'
 
 PATHSPEC_ENV = ("GIT_LITERAL_PATHSPECS", "GIT_GLOB_PATHSPECS", "GIT_NOGLOB_PATHSPECS", "GIT_ICASE_PATHSPECS")
 
@@ -162,6 +164,61 @@ class HeldReaderDiffBoundary:
                             "held_stage_tree_metadata": "EXACT",
                             "held_worktree_body_integrity": "UNKNOWN"})
         return result
+
+    def currentness_baseline(self, reader, owners, census_body):
+        """Project pinned tree metadata for the finite authenticated contexts.
+
+        The received census is a summary, not a complete sized entry vector.
+        Its digest is bound to the owner map but is not recomputed here. Native
+        tree membership is authenticated by the pinned commit/tree. Only the
+        existing reader's finite original-identity maps supply logical sizes;
+        no Git object size query or held-body read is performed.
+        """
+        if hashlib.sha256(census_body).hexdigest() != CENSUS_SHA256:
+            raise RuntimeError("Reader census differs from received public metadata")
+        census = json.loads(census_body)
+        if (census.get("schema") != "orthemology-reader-census-v1"
+                or census.get("baseline") != owners.get("baseline")
+                or owners.get("baseline", {}).get("commit") != self.baseline
+                or self.baseline != BASELINE
+                or census.get("entries_sha256") != owners.get("entries_sha256")
+                or not census.get("entries_sha256")
+                or census.get("external_body_admissions") != []):
+            raise RuntimeError("Reader census/owner baseline binding differs")
+        if (self.git_metadata("rev-parse", "--verify", self.baseline + "^{commit}").decode().strip()
+                != self.baseline
+                or self.git_metadata("rev-parse", "--verify", self.baseline + "^{tree}").decode().strip()
+                != owners["baseline"].get("tree")):
+            raise RuntimeError("Reader baseline is not the pinned commit/tree")
+        if self.metadata() != self.initial_metadata:
+            raise RuntimeError("Held metadata changed before currentness context")
+        indexed = {}
+        for raw in self.git_metadata("ls-tree", "-r", "-z", "--full-tree", self.baseline).split(b"\0"):
+            if not raw:
+                continue
+            header, raw_path = raw.split(b"\t", 1)
+            mode, kind, oid = header.decode("ascii").split()
+            path = raw_path.decode("utf-8")
+            if path in indexed:
+                raise RuntimeError("Reader baseline has a duplicate path")
+            indexed[path] = {"path": path, "mode": mode, "kind": kind, "git_oid": oid, "bytes": None}
+        if len(indexed) != census.get("population", {}).get("tracked_entries"):
+            raise RuntimeError("Reader baseline population differs from pinned census")
+        held_oids = {row["published_metadata"]["git_blob"] for row in self.held.values()}
+        for originals in (reader.CONTINUATION_OWNER_ORIGINAL, reader.FIXTURE_CONSUMER_ORIGINAL,
+                          reader.HISTORICAL_PROSE):
+            for path, (oid, _, size) in originals.items():
+                if path in self.held or oid in held_oids:
+                    raise RuntimeError("Held identity cannot enter a sized public context")
+                row = indexed.get(path)
+                if row is None:
+                    continue
+                if ((row["mode"], row["kind"], row["git_oid"]) != ("100644", "blob", oid)
+                        or type(size) is not int or size < 0
+                        or row["bytes"] not in (None, size)):
+                    raise RuntimeError("Pinned public context identity differs: " + path)
+                row["bytes"] = size
+        return indexed
 
     def receipt(self):
         if self.metadata() != self.initial_metadata:

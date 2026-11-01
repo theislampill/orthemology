@@ -321,9 +321,28 @@ class ActualEvidenceAssociationTests(unittest.TestCase):
 
     def validate_override(self, overrides):
         original=self.v.read_json
-        def read(path):
-            return deepcopy(overrides[Path(path)]) if Path(path) in overrides else original(path)
+        def read(path, *, root=None):
+            return deepcopy(overrides[Path(path)]) if Path(path) in overrides else original(path, root=root)
         with patch.object(self.v,'read_json',side_effect=read):self.v.validate(self.root)
+
+    def test_override_reader_preserves_root_context_and_deepcopy(self):
+        value = {'items': [1]}
+        fallback = self.root / PROV / 'RESULT_STATUS.json'
+        seen = []
+        def original(path, *, root=None):
+            seen.append((Path(path), root))
+            return {'received': True}
+        def validate(root):
+            changed = self.v.read_json(self.receipt, root=root)
+            changed['items'].append(2)
+            self.assertEqual(changed, {'items': [1, 2]})
+            self.assertEqual(value, {'items': [1]})
+            self.assertEqual(self.v.read_json(fallback, root=root), {'received': True})
+            self.assertEqual(self.v.read_json(fallback), {'received': True})
+        with patch.object(self.v, 'read_json', side_effect=original), \
+                patch.object(self.v, 'validate', side_effect=validate):
+            self.validate_override({self.receipt: value})
+        self.assertEqual(seen, [(fallback, self.root), (fallback, None)])
 
     def test_integer_budget_receipt_cannot_qualify_global_parity(self):
         registry=deepcopy(self.registry);statuses=deepcopy(self.statuses)

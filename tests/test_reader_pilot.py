@@ -8653,6 +8653,8 @@ class ConsolidatedSuccessorInputTests(unittest.TestCase):
         cls.compact = (ROOT / cls.REGISTRY).read_bytes()
         document = json.loads(cls.compact)
         cls.originals = {path: value.encode() for path, value in document.pop('preserved_source_inputs').items()}
+        document['records']['CALCULUS_MAP'] = {'path': 'docs/provenance/v5-successors/CALCULUS_MAP.json',
+            'sha256': 'd0644ef40458d17ac19710e4d1ecdc2cc974a54d73b4053641979f9ce1f74759'}
         cls.original_registry = (json.dumps(document, sort_keys=True, ensure_ascii=False, indent=2) + '\n').encode()
         if set(cls.originals) != source.SUCCESSOR_INPUT_PATHS or len(cls.originals) != 19:
             raise ValueError('the current registry requires all nineteen original inputs')
@@ -8735,6 +8737,8 @@ class ConsolidatedSuccessorInputTests(unittest.TestCase):
         self.assertEqual(self.source.successor_input_registry_original_bytes(self.repo), self.original_registry)
         reconstructed = json.loads(self.compact)
         del reconstructed['preserved_source_inputs']
+        reconstructed['records']['CALCULUS_MAP'] = {'path': 'docs/provenance/v5-successors/CALCULUS_MAP.json',
+            'sha256': 'd0644ef40458d17ac19710e4d1ecdc2cc974a54d73b4053641979f9ce1f74759'}
         self.assertEqual(reconstructed, json.loads(self.original_registry))
         pending = next(path for path in self.originals if path.endswith('/CANDIDATE_v1.json'))
         reviewed = next(path for path in self.originals if path.endswith('/VERIFICATION.json'))

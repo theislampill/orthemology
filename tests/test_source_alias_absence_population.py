@@ -124,5 +124,54 @@ class PublicFileIdentityControls(unittest.TestCase):
                 population.public_identity(self.root, relative, self.original)
 
 
+
+
+
+class PublicFixturePopulationControls(unittest.TestCase):
+    def test_native_tree_metadata_never_requests_object_sizes(self):
+        import subprocess
+        with tempfile.TemporaryDirectory(prefix='public123-native-tree-') as temporary:
+            root = Path(temporary)
+            env = dict(os.environ, GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=os.devnull,
+                       GIT_CONFIG_SYSTEM=os.devnull, GIT_NO_LAZY_FETCH='1',
+                       GIT_NO_REPLACE_OBJECTS='1', GIT_ALLOW_PROTOCOL='',
+                       GIT_AUTHOR_NAME='Fixture', GIT_AUTHOR_EMAIL='fixture@example.invalid',
+                       GIT_COMMITTER_NAME='Fixture', GIT_COMMITTER_EMAIL='fixture@example.invalid')
+            def git(*args):
+                return subprocess.check_output(['/usr/bin/git', '--no-replace-objects', *args], cwd=root, env=env)
+            git('-c', 'init.templateDir=', 'init', '-q')
+            (root / 'public.json').write_bytes(b'{"public":true}\n')
+            git('add', '--', 'public.json')
+            git('commit', '-qm', 'Public metadata fixture')
+            revision = git('rev-parse', 'HEAD').decode().strip()
+            rows = population.original_metadata_tree(root, revision)
+            oid = hashlib.sha1(b'blob 16\0' + b'{"public":true}\n').hexdigest()
+            self.assertEqual(rows, {'public.json': ('100644', 'blob', oid)})
+            for bad in ('HEAD', revision + ':public.json', '--all', ''):
+                with self.subTest(revision=bad), self.assertRaises(ValueError):
+                    population.original_metadata_tree(root, bad)
+
+    def test_complete_public_row_contract_preserves_roles_and_status_fields(self):
+        body = b'public fixture\n'
+        path = 'experiments/episode-reification/fixtures/E1/baseline-log.md'
+        digest = hashlib.sha256(body).hexdigest()
+        row = {'source_sha256': digest, 'source_action': 'include', 'source_bytes': len(body),
+               'role': 'authored_argument', 'declared_eligibility_basis': 'reviewed_owner_authored',
+               'required_dependencies': [], 'disposition': 'REUSE', 'repository_path': path,
+               'public_sha256': digest, 'public_bytes': len(body),
+               'publication_basis': 'exact_existing_public_repository_object'}
+        self.assertEqual(population.public_fixture_row(path, body, row), row)
+        for field, value in [('role', 'new_proof'), ('disposition', 'ADD_EXACT'),
+                             ('source_action', 'exclude'), ('required_dependencies', ['new-source']),
+                             ('public_bytes', len(body) + 1), ('unadmitted_field', True)]:
+            with self.subTest(field=field), self.assertRaises(ValueError):
+                population.public_fixture_row(path, body, dict(row, **{field: value}))
+
+    def test_partial_duplicate_or_unbound_population_cannot_be_admitted(self):
+        for rows in ([], [{'path': 'x'}], [{'path': 'x'}] * 123):
+            with self.subTest(count=len(rows)), self.assertRaises((ValueError, KeyError, TypeError)):
+                population.validate_public_fixture_population(rows)
+
+
 if __name__ == '__main__':
     unittest.main()

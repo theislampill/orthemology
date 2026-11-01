@@ -48,6 +48,8 @@ from resolve_t20_v6_source import (
     SUCCESSOR_INPUT_PATHS, SUCCESSOR_INPUT_REGISTRY, SUCCESSOR_INPUT_REPLAY_ORIGINAL,
     successor_input_bytes, successor_input_absences, successor_input_registry_original_bytes,
     GENERATED_FIXTURE_PATHS, generated_fixture_absences,
+    SUCCESSOR_CALCULUS_MAP, SUCCESSOR_CALCULUS_GUIDES, successor_calculus_map_absences,
+    successor_calculus_guide_source_bytes,
 )
 
 
@@ -641,8 +643,13 @@ def _permitted_projection_consumer_pins(original, candidate):
                 for path, binding in FIXTURE_CONSUMER_ORIGINAL.items()}
     combined = dict(earlier, **next24)
     replay_input = {'scripts/replay_v5_successors.py': SUCCESSOR_INPUT_REPLAY_ORIGINAL}
+    calculus_fixture = {'tests/v5_successor_fixtures.py': (
+        'ccf0bd64f34b10f65ed8bd1bdd8a88adcaf03c7f',
+        '283ea7d698a5bf6a208e45260ee9078f819ecdb25a42c6dd2252d794d2dd3233',
+        13030, '69f3f9284f2cb94433958c0669fc9b06a9760fe7')}
     for bindings in (earlier, next24, combined, dict(combined, **fixtures),
-                     dict(combined, **fixtures, **replay_input)):
+                     dict(combined, **fixtures, **replay_input),
+                     dict(combined, **fixtures, **replay_input, **calculus_fixture)):
         expected = deepcopy(original)
         try:
             for path, (blob, identity, size, revision) in bindings.items():
@@ -941,6 +948,8 @@ REFACTOR_EDIT_PATHS = {
     "scripts/resolve_t20_v6_source.py", "scripts/validate_t20_v6_projection.py",
     "tests/test_t20_v6_projection.py", "scripts/validate_v5_successors.py",
     "tests/test_v5_twentieth_data.py",
+    # Existing synthetic controls now read the actual result/status owner.
+    "tests/test_v5_successors.py", "tests/v5_successor_fixtures.py",
     # Existing source-ID and replay owners for the finite continuation copies.
     "scripts/validate_research_continuations.py", "scripts/replay_research_continuations.py",
     "scripts/replay_v5_successors.py",
@@ -1346,6 +1355,13 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                 input_owners.add(SUCCESSOR_INPUT_REGISTRY)
             except (ValueError, OSError) as exc:
                 errors.append("corpus-currentness: consolidated input evidence: " + str(exc))
+        calculus_paths = set()
+        if any(status == "D" and path == SUCCESSOR_CALCULUS_MAP
+               for status, path in zip(values[::2], values[1::2])):
+            try:
+                calculus_paths = successor_calculus_map_absences(repo)
+            except (ValueError, OSError) as exc:
+                errors.append("corpus-currentness: calculus historical view: " + str(exc))
         generated_paths = set()
         if any(status == "D" and path in GENERATED_FIXTURE_PATHS
                for status, path in zip(values[::2], values[1::2])):
@@ -1377,6 +1393,7 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                         or (status == "D" and path in allowed_duplicates)
                         or (status == "D" and path in administrative_paths)
                         or (status == "D" and path in input_paths)
+                        or (status == "D" and path in calculus_paths)
                         or (status == "M" and path in input_owners)
                         or (status == "D" and path in generated_paths)
                         or (status == "D" and path in (continuation_paths or ()))
@@ -1386,31 +1403,16 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                              and path in continuation_owners)
                          or (status == "M" and path in FIXTURE_CONSUMER_ORIGINAL
                              and path in fixture_owners)
-                        or (status == "M" and path in {MEDIATOR_GUIDE, *TYPED_GUIDES}
+                        or (status == "M" and path in {MEDIATOR_GUIDE, *TYPED_GUIDES, *SUCCESSOR_CALCULUS_GUIDES}
                             and path in navigation_paths)))
     return list(dict.fromkeys(errors))
 
 
-def check(repo, owners, cross):
-    """Return precise mechanical errors; an empty list is not semantic acceptance."""
-    repo = Path(repo)
+def corpus_currentness_context(repo, indexed, owners, cross):
+    """Return the existing authenticated contexts and every qualification error."""
     errors = []
     def fail(code, message):
         errors.append(code + ": " + message)
-    if owners.get("schema") != "orthemology-reader-owner-map-v1":
-        fail("schema", "Unknown owner map")
-    if cross.get("schema") != "orthemology-reader-crosswalk-v1":
-        fail("schema", "Unknown crosswalk")
-    if cross.get("coverage_stage") not in ("representative-pilot", "reader-candidate"):
-        fail("stage", "This checker qualifies a representative pilot or reader candidate only")
-    if owners.get("external_body_admissions") != []:
-        fail("external", "This baseline contract admits no external bodies")
-    try:
-        rows = entries_at(repo, owners["baseline"]["commit"])
-    except (KeyError, ValueError, OSError, UnicodeError) as exc:
-        fail("baseline", str(exc))
-        return errors
-    indexed = {row["path"]: row for row in rows}
     continuation_owners, continuation_errors = check_continuation_owner_edition(repo, indexed)
     errors.extend(continuation_errors)
     fixture_owners, fixture_status, fixture_errors = check_fixture_consumer_edition(repo, indexed)
@@ -1437,6 +1439,12 @@ def check(repo, owners, cross):
             navigation[MEDIATOR_GUIDE] = mediator_guide_source_bytes(repo, allow_original=True)
         except (ValueError, OSError) as exc:
             fail("navigation-source", MEDIATOR_GUIDE + ": " + str(exc))
+    for path in SUCCESSOR_CALCULUS_GUIDES:
+        if path in indexed:
+            try:
+                navigation[path] = successor_calculus_guide_source_bytes(repo, path)
+            except (ValueError, OSError) as exc:
+                fail("navigation-source", path + ": " + str(exc))
     for path in ADMIN_GUIDES:
         if path in indexed:
             try:
@@ -1449,6 +1457,32 @@ def check(repo, owners, cross):
                 navigation[path] = typed_guide_source_bytes(repo, path, allow_original=True)
             except (ValueError, OSError) as exc:
                 fail("navigation-source", path + ": " + str(exc))
+    return (additions, historical, navigation, continuation_owners, fixture_owners), errors
+
+
+def check(repo, owners, cross):
+    """Return precise mechanical errors; an empty list is not semantic acceptance."""
+    repo = Path(repo)
+    errors = []
+    def fail(code, message):
+        errors.append(code + ": " + message)
+    if owners.get("schema") != "orthemology-reader-owner-map-v1":
+        fail("schema", "Unknown owner map")
+    if cross.get("schema") != "orthemology-reader-crosswalk-v1":
+        fail("schema", "Unknown crosswalk")
+    if cross.get("coverage_stage") not in ("representative-pilot", "reader-candidate"):
+        fail("stage", "This checker qualifies a representative pilot or reader candidate only")
+    if owners.get("external_body_admissions") != []:
+        fail("external", "This baseline contract admits no external bodies")
+    try:
+        rows = entries_at(repo, owners["baseline"]["commit"])
+    except (KeyError, ValueError, OSError, UnicodeError) as exc:
+        fail("baseline", str(exc))
+        return errors
+    indexed = {row["path"]: row for row in rows}
+    (additions, historical, navigation, continuation_owners, fixture_owners), context_errors = (
+        corpus_currentness_context(repo, indexed, owners, cross))
+    errors.extend(context_errors)
     errors.extend(check_corpus_currentness(repo, owners["baseline"]["commit"], additions,
                                           historical, navigation, continuation_owners, fixture_owners))
     errors.extend(check_collection_dispositions(rows, owners, cross))

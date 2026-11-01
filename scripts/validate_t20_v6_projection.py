@@ -29,6 +29,8 @@ from resolve_t20_v6_source import (
     CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_duplicate_paths,
     CONTINUATION_REGISTRY_PATH, SUCCESSOR_INPUT_PATHS, GENERATED_FIXTURE_PATHS,
     SUCCESSOR_INPUT_REGISTRY, successor_input_registry_document, successor_input_absences,
+    SUCCESSOR_CALCULUS_MAP, SUCCESSOR_CALCULUS_GUIDES, successor_calculus_map_absences,
+    successor_calculus_guide_source_bytes,
 )
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -240,6 +242,8 @@ def check_preserved_roots(root, objects):
     code_authenticated = None
     input_registry_authenticated = None
     input_absences_authenticated = None
+    calculus_absences_authenticated = None
+    calculus_guides_authenticated = set()
     for cached in (True, False):
         result = readonly_git_diff(root,
             ['git', '--no-replace-objects', 'diff', *(['--cached'] if cached else []),
@@ -286,6 +290,22 @@ def check_preserved_roots(root, objects):
                     input_absences_authenticated = successor_input_absences(root)
                 except (ValueError, OSError):
                     pass  # Only authenticated physically absent originals qualify.
+            if calculus_absences_authenticated is None and any(
+                    status == 'D' and path == SUCCESSOR_CALCULUS_MAP
+                    for status, path in zip(changes[::2], changes[1::2])):
+                calculus_absences_authenticated = set()
+                try:
+                    calculus_absences_authenticated = successor_calculus_map_absences(root)
+                except (ValueError, OSError):
+                    pass  # Only the exact historical view may be absent.
+            for path in SUCCESSOR_CALCULUS_GUIDES:
+                if any(status == 'M' and changed == path
+                       for status, changed in zip(changes[::2], changes[1::2])):
+                    try:
+                        successor_calculus_guide_source_bytes(root, path)
+                        calculus_guides_authenticated.add(path)
+                    except (ValueError, OSError):
+                        pass  # No broad allowance for edited provenance text.
             if owner_authenticated is None and any(
                     status == 'M' and path in continuation_owners.PRESERVATION_OWNER_PATHS
                     for status, path in zip(changes[::2], changes[1::2])):
@@ -309,6 +329,8 @@ def check_preserved_roots(root, objects):
                         (status == 'D' and path in (package_authenticated or ())) or
                         (status == 'D' and path in (code_authenticated or ())) or
                         (status == 'D' and path in (input_absences_authenticated or ())) or
+                        (status == 'D' and path in (calculus_absences_authenticated or ())) or
+                        (status == 'M' and path in calculus_guides_authenticated) or
                         (status == 'M' and path == SUCCESSOR_INPUT_REGISTRY
                          and input_registry_authenticated) or
                         (status == 'M' and path == MEDIATOR_GUIDE and guide_authenticated) or

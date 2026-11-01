@@ -77,3 +77,43 @@ def derive_held_metadata(repo, originals, stage, manifest):
     require({path for path, (_, kind, oid, _) in originals.items() if oid in held_oids} == set(PROTECTED_PATHS),
             'Unexcluded protected original alias')
     return rows
+
+
+def validate_public_fixture_coordinates(repo, state, env, actual_head, actual_root, *, fresh):
+    """Separate literal hosted profile; no override of the existing1180 admission."""
+    def require(value, message):
+        if not value:
+            raise RuntimeError(message)
+    def ordinary(path):
+        path = Path(path).absolute()
+        require(all(not part.is_symlink() for part in (path, *path.parents)) and path.is_dir(),
+                'Public fixture hosted coordinate is not an ordinary directory')
+        return path
+    require(env.get('GITHUB_ACTIONS') == 'true'
+            and env.get('GITHUB_REPOSITORY') == 'theislampill/orthemology'
+            and env.get('GITHUB_EVENT_NAME') in ('push', 'pull_request')
+            and env.get('RUNNER_OS') == 'Linux', 'Actual hosted public fixture admission is required')
+    require(all(re.fullmatch(r'[1-9][0-9]*', env.get(key, '')) is not None
+                for key in ('GITHUB_RUN_ID', 'GITHUB_RUN_ATTEMPT')), 'Missing actual hosted run identity')
+    repo = ordinary(repo)
+    temporary = ordinary(env.get('RUNNER_TEMP', ''))
+    workspace = ordinary(env.get('GITHUB_WORKSPACE', ''))
+    ordinary(repo/'.git')
+    require(repo == workspace == Path(actual_root).absolute(), 'Public fixture checkout root differs')
+    require(not temporary.is_relative_to(repo) and not repo.is_relative_to(temporary),
+            'Public fixture state must be outside checkout')
+    require(re.fullmatch(r'[0-9a-f]{40}', env.get('GITHUB_SHA', '')) is not None
+            and actual_head == env['GITHUB_SHA'], 'Actual hosted public fixture commit differs')
+    state = Path(state).absolute()
+    require(state == temporary/'r0002-public-fixtures123-absence' and not state.is_symlink(),
+            'Unexpected public fixture state coordinate')
+    require(repo.stat().st_dev == temporary.stat().st_dev, 'Original inode parking requires one filesystem')
+    if fresh:
+        require(not os.path.lexists(state), 'Public fixture hosted state is single-use')
+    else:
+        ordinary(state)
+    require(not os.path.lexists(repo/'.git/objects/info/alternates'), 'Alternate object stores are not admitted')
+    return {'profile': 'public-fixtures123', 'repository': env['GITHUB_REPOSITORY'], 'head': actual_head,
+            'repo': str(repo), 'state': str(state), 'run_id': env['GITHUB_RUN_ID'],
+            'run_attempt': env['GITHUB_RUN_ATTEMPT'], 'event': env['GITHUB_EVENT_NAME'],
+            'protected_body_integrity': 'UNKNOWN'}

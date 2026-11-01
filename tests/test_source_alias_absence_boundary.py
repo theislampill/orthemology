@@ -276,4 +276,782 @@ print(json.dumps(result, sort_keys=True))
                 runner.authenticate_state(self.repo, corrupt)
 
 
+
+
+
+class PublicFixtureNativeControls(unittest.TestCase):
+    """Small real native fixtures; no123 campaign or hosted-success simulation."""
+    def setUp(self):
+        area = Path(self.enterContext(tempfile.TemporaryDirectory(prefix='public123-native-control-')))
+        self.repo = area / 'repo'; self.repo.mkdir()
+        self.state = area / 'state'; self.state.mkdir()
+        self.env = {key: value for key, value in os.environ.items() if not key.startswith('GIT_')}
+        self.env.update(GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=os.devnull,
+                        GIT_CONFIG_SYSTEM=os.devnull, GIT_NO_LAZY_FETCH='1',
+                        GIT_NO_REPLACE_OBJECTS='1', GIT_ALLOW_PROTOCOL='',
+                        GIT_AUTHOR_NAME='Fixture', GIT_AUTHOR_EMAIL='fixture@example.invalid',
+                        GIT_COMMITTER_NAME='Fixture', GIT_COMMITTER_EMAIL='fixture@example.invalid')
+        self.git('-c', 'init.templateDir=', 'init', '-q')
+        self.bodies = {'one.json': b'{"one":1}\n', 'two.txt': b'two\n', 'provider.py': b'VALUE = 3\n'}
+        for name, body in self.bodies.items():
+            (self.repo / name).write_bytes(body)
+        self.git('add', '--', *self.bodies)
+        self.git('commit', '-qm', 'Small native restore contract fixture')
+        self.members = ['one.json', 'two.txt']
+
+    def git(self, *args, data=None):
+        return subprocess.check_output(['/usr/bin/git', '--no-replace-objects', '--literal-pathspecs', *args],
+                                       cwd=self.repo, env=self.env, input=data)
+
+    def prepare_small(self):
+        self.before = runner.capture_public_fixture_sources(self.repo, self.bodies)
+        raw = (self.repo / '.git/index').read_bytes()
+        (self.state / 'original-index').write_bytes(raw)
+        (self.state / 'expected-index').write_bytes(raw)
+        (self.state / 'index-mode.json').write_text(json.dumps({'mode': stat.S_IMODE((self.repo/'.git/index').stat().st_mode)}))
+        (self.state / 'before.json').write_text(json.dumps(self.before))
+        (self.state / 'before-namespace.json').write_text(json.dumps(runner.public_fixture_namespace(self.repo)))
+        self.raw = raw
+        return self.before
+
+    def park_and_stage(self):
+        self.prepare_small()
+        runner.park_public_fixture_members(self.repo, self.state, self.before, self.members)
+        runner.public_fixture_git(self.repo, self.state, 'update-index', '--force-remove', '--', *self.members)
+        (self.state / 'expected-index').write_bytes((self.repo / '.git/index').read_bytes())
+
+    def test_local_execution_cannot_obtain_actual_hosted_admission(self):
+        with self.assertRaises(RuntimeError):
+            boundary.validate_public_fixture_coordinates(self.repo, self.state, {}, 'a' * 40,
+                                                          self.repo, fresh=True)
+
+    def test_native_staged_absence_restores_original_inodes_and_raw_index(self):
+        self.park_and_stage()
+        self.assertTrue(all(not os.path.lexists(self.repo / path) for path in self.members))
+        remaining = self.git('ls-files', '-z').split(b'\0')
+        self.assertEqual([x for x in remaining if x], [b'provider.py'])
+        result = runner.restore_public_fixture_members(self.repo, self.state, self.before, self.members)
+        self.assertEqual(result['status'], 'PASS_FIXTURE_MEMBERS_AND_INDEX_RESTORATION_ONLY')
+        self.assertEqual(runner.capture_public_fixture_sources(self.repo, self.bodies), self.before)
+        self.assertEqual((self.repo / '.git/index').read_bytes(), self.raw)
+
+    def test_reappearance_stops_before_any_file_or_index_restore(self):
+        self.park_and_stage()
+        (self.repo / self.members[0]).write_bytes(self.bodies[self.members[0]])
+        reappeared = runner.public_fixture_file(self.repo, self.members[0])
+        index = (self.repo / '.git/index').read_bytes()
+        with self.assertRaisesRegex(RuntimeError, 'reappeared'):
+            runner.restore_public_fixture_members(self.repo, self.state, self.before, self.members)
+        self.assertEqual(runner.public_fixture_file(self.repo, self.members[0]), reappeared)
+        self.assertFalse(os.path.lexists(self.repo / self.members[1]))
+        self.assertTrue(all((self.state / 'park' / p).exists() for p in self.members))
+        self.assertEqual((self.repo / '.git/index').read_bytes(), index)
+
+    def test_provider_divergence_stops_before_original_or_index_restore(self):
+        self.park_and_stage()
+        (self.repo / 'provider.py').write_bytes(b'changed provider\n')
+        index = (self.repo / '.git/index').read_bytes()
+        with self.assertRaisesRegex(RuntimeError, 'source'):
+            runner.restore_public_fixture_members(self.repo, self.state, self.before, self.members)
+        self.assertTrue(all(not os.path.lexists(self.repo / path) for path in self.members))
+        self.assertEqual((self.repo / '.git/index').read_bytes(), index)
+
+    def test_unexplained_index_divergence_is_not_reset(self):
+        self.park_and_stage()
+        self.git('update-index', '--chmod=+x', '--', 'provider.py')
+        changed = (self.repo / '.git/index').read_bytes()
+        with self.assertRaisesRegex(RuntimeError, 'index'):
+            runner.restore_public_fixture_members(self.repo, self.state, self.before, self.members)
+        self.assertEqual((self.repo / '.git/index').read_bytes(), changed)
+        self.assertTrue(all(not os.path.lexists(self.repo / path) for path in self.members))
+
+    def test_park_corruption_or_alias_is_not_overwritten(self):
+        self.park_and_stage()
+        (self.state / 'park' / self.members[0]).write_bytes(b'corrupt parked body')
+        with self.assertRaisesRegex(RuntimeError, '[Pp]ark'):
+            runner.restore_public_fixture_members(self.repo, self.state, self.before, self.members)
+        self.assertTrue(all(not os.path.lexists(self.repo / path) for path in self.members))
+
+    def test_native_guard_rejects_size_queries_and_transports_before_execution(self):
+        for args in [('ls-tree', '-l', 'HEAD'), ('cat-file', '-s', '0' * 40), ('fetch', 'origin')]:
+            with self.subTest(args=args), self.assertRaises(RuntimeError):
+                runner.public_fixture_git(self.repo, self.state, *args)
+        self.assertEqual(runner.public_fixture_git(self.repo, self.state, 'ls-files', '-z'),
+                         self.git('ls-files', '-z'))
+        rows = list((self.state / 'native-commands').glob('*.json'))
+        self.assertEqual(len(rows), 1)
+        record = json.loads(rows[0].read_bytes())
+        self.assertEqual(record['exit_code'], 0)
+        self.assertTrue(record['stdout']['sha256'])
+
+    def test_atomic_move_refuses_a_destination_without_overwriting_either_inode(self):
+        first = runner.public_fixture_file(self.repo, 'one.json')
+        second = runner.public_fixture_file(self.repo, 'two.txt')
+        with self.assertRaises(OSError):
+            runner._public_fixture_rename_noreplace(self.repo/'one.json', self.repo/'two.txt')
+        self.assertEqual(runner.public_fixture_file(self.repo, 'one.json'), first)
+        self.assertEqual(runner.public_fixture_file(self.repo, 'two.txt'), second)
+
+    def test_native_conflict_stage_is_refused_before_consumer_execution(self):
+        _, original = runner.public_fixture_stage_map(self.repo, self.state)
+        oid = original['one.json'][1]
+        self.git('update-index', '--force-remove', '--', 'one.json')
+        self.git('update-index', '-z', '--index-info', data=('100644 '+oid+' 2\tone.json\0').encode())
+        with self.assertRaisesRegex(RuntimeError, 'ordinary unconflicted'):
+            runner.public_fixture_stage_map(self.repo, self.state)
+
+    def test_untracked_namespace_change_is_visible_without_body_reads(self):
+        before = runner.public_fixture_namespace(self.repo)
+        (self.state/'before-namespace.json').write_text(json.dumps(before))
+        self.assertEqual(runner.check_public_fixture_namespace(self.repo, self.state, set()), before)
+        (self.repo/'untracked.txt').write_bytes(b'new public test file\n')
+        with self.assertRaisesRegex(RuntimeError, 'namespace'):
+            runner.check_public_fixture_namespace(self.repo, self.state, set())
+
+    def test_unexplained_index_drift_is_refused_before_owned_native_mutation(self):
+        self.prepare_small()
+        runner.park_public_fixture_members(self.repo, self.state, self.before, self.members)
+        self.git('update-index', '--chmod=+x', '--', 'provider.py')
+        drift = (self.repo/'.git/index').read_bytes()
+        failure = None
+        try:
+            runner.public_fixture_git(self.repo, self.state, 'update-index', '--force-remove', '--', *self.members)
+        except RuntimeError as error:
+            failure = str(error)
+        after = (self.repo/'.git/index').read_bytes()
+        self.assertIsNotNone(failure, 'Unexplained raw-index drift admitted; further mutation='+str(after != drift))
+        self.assertIn('before controlled native mutation', failure)
+        self.assertEqual(after, drift)
+        self.assertEqual((self.state/'expected-index').read_bytes(), self.raw)
+        self.assertFalse((self.state/'native-index-mutations').exists())
+        self.assertTrue(all((self.state/'park'/path).exists() for path in self.members))
+
+    def test_unexplained_provider_drift_is_refused_before_owned_control_write(self):
+        from types import SimpleNamespace
+        self.prepare_small()
+        provider = self.before['provider.py']
+        (self.state/'provider-bodies').mkdir()
+        (self.state/'provider-bodies'/provider['sha256']).write_bytes(self.bodies['provider.py'])
+        (self.repo/'provider.py').write_bytes(b'foreign public provider change\n')
+        drift = runner.public_fixture_file(self.repo, 'provider.py')
+        failure = None
+        try:
+            runner.public_fixture_controls(self.repo, self.state,
+                {'records': [{'path': 'one.json'}], 'providers': [dict(provider, path='provider.py')]},
+                self.before, SimpleNamespace(members=set(self.members)))
+        except RuntimeError as error:
+            failure = str(error)
+        self.assertEqual(runner.public_fixture_file(self.repo, 'provider.py'), drift,
+                         'An unexplained provider change was overwritten by a control')
+        self.assertIsNotNone(failure)
+        self.assertIn('before controlled provider mutation', failure)
+        self.assertEqual((self.repo/'.git/index').read_bytes(), self.raw)
+
+
+import hashlib
+import stat
+
+class PublicFixtureMutationRevisionTests(unittest.TestCase):
+    """Declared tiny native fault fixtures; never a public123 campaign."""
+    def setUp(self):
+        self.area = Path(os.environ['PUBLIC123_REVISION_RESOURCES']) / self._testMethodName
+        if self.area.exists():
+            raise RuntimeError('Finite fault resource is single-use')
+        self.area.mkdir()
+        self.repo = self.area/'repo'; self.repo.mkdir()
+        self.state = self.area/'state'; self.state.mkdir()
+        self.env = {key: value for key, value in os.environ.items() if not key.startswith('GIT_')}
+        self.env.update(GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=os.devnull,
+                        GIT_CONFIG_SYSTEM=os.devnull, GIT_NO_LAZY_FETCH='1',
+                        GIT_NO_REPLACE_OBJECTS='1', GIT_ALLOW_PROTOCOL='', GIT_OPTIONAL_LOCKS='0',
+                        GIT_AUTHOR_NAME='Finite public fixture', GIT_AUTHOR_EMAIL='fixture@example.invalid',
+                        GIT_COMMITTER_NAME='Finite public fixture', GIT_COMMITTER_EMAIL='fixture@example.invalid')
+        self.git('-c', 'init.templateDir=', 'init', '-q')
+        self.bodies = {'one.json': b'{"one":1}\n', 'two.txt': b'two\n', 'provider.py': b'VALUE = 3\n'}
+        for name, body in self.bodies.items():
+            (self.repo/name).write_bytes(body)
+        self.git('add', '--', *self.bodies)
+        self.git('commit', '-qm', 'Declared tiny public mutation-boundary fixture')
+        self.members = {'one.json', 'two.txt'}
+        self.before = runner.capture_public_fixture_sources(self.repo, self.bodies)
+        self.raw = runner.public_fixture_index(self.repo)
+        self.mode = stat.S_IMODE((self.repo/'.git/index').stat().st_mode)
+        for name in ('original-index', 'expected-index'):
+            (self.state/name).write_bytes(self.raw)
+        (self.state/'index-mode.json').write_text(json.dumps({'mode': self.mode}))
+        (self.state/'before.json').write_text(json.dumps(self.before))
+        (self.state/'before-namespace.json').write_text(json.dumps(runner.public_fixture_namespace(self.repo)))
+        self.source = self.before['provider.py']
+        (self.state/'provider-bodies').mkdir()
+        (self.state/'provider-bodies'/self.source['sha256']).write_bytes(self.bodies['provider.py'])
+
+    def git(self, *args, data=None):
+        result = subprocess.run(['/usr/bin/git', '--no-replace-objects', '--literal-pathspecs', *args],
+                                cwd=self.repo, env=self.env, input=data, capture_output=True, check=True)
+        return result.stdout
+
+    def park(self):
+        runner.park_public_fixture_members(self.repo, self.state, self.before, self.members)
+
+    def controls(self):
+        value = {'records': [{'path': 'one.json'}],
+                 'providers': [dict(self.source, path='provider.py')]}
+        audit = runner.PublicFixtureAudit(self.repo, self.state, self.members)
+        return runner.public_fixture_controls(self.repo, self.state, value, self.before, audit)
+
+    def save_observation(self, name, value):
+        (self.area/(name+'.json')).write_text(json.dumps(value, indent=2)+'\n')
+
+    def test_saved_index_mode_is_required_before_any_parking(self):
+        os.chmod(self.repo/'.git/index', 0o600)
+        failure = None
+        try:
+            self.park()
+        except RuntimeError as error:
+            failure = str(error)
+        presence = {path: os.path.lexists(self.repo/path) for path in self.members}
+        self.save_observation('mode-before-parking', {'failure': failure, 'presence': presence,
+            'park_exists': os.path.lexists(self.state/'park'),
+            'parking_start_exists': (self.state/'PARKING-START.json').exists(),
+            'index_mode': stat.S_IMODE((self.repo/'.git/index').stat().st_mode),
+            'raw_index_unchanged': runner.public_fixture_index(self.repo) == self.raw})
+        self.assertTrue(all(presence.values()), 'Index mode drift was followed by original parking')
+        self.assertFalse(os.path.lexists(self.state/'park'))
+        self.assertFalse((self.state/'PARKING-START.json').exists())
+        self.assertIsNotNone(failure)
+        self.assertEqual(stat.S_IMODE((self.repo/'.git/index').stat().st_mode), 0o600)
+        self.assertEqual(runner.capture_public_fixture_sources(self.repo, self.bodies), self.before)
+
+    def test_valid_stat_only_index_drift_prevents_all_provider_writes(self):
+        self.park()
+        stage = self.git('ls-files', '--stage', '-z')
+        altered = bytearray(self.raw)
+        self.assertEqual(int.from_bytes(altered[4:8], 'big'), 2)
+        altered[12:16] = ((int.from_bytes(altered[12:16], 'big')+1) % (2**32)).to_bytes(4, 'big')
+        altered[-20:] = hashlib.sha1(altered[:-20]).digest()
+        (self.repo/'.git/index').write_bytes(altered)
+        self.assertEqual(self.git('ls-files', '--stage', '-z'), stage)
+        provider = runner.public_fixture_file(self.repo, 'provider.py')
+        writes, active = [], [True]
+        def record_write(event, args):
+            if (active[0] and event == 'open' and isinstance(args[0], (str, bytes, os.PathLike))
+                    and Path(os.fsdecode(args[0])).absolute() == self.repo/'provider.py'
+                    and isinstance(args[2], int) and args[2] & (os.O_WRONLY | os.O_RDWR)):
+                writes.append({'flags': args[2]})
+        sys.addaudithook(record_write)
+        failure = None
+        try:
+            self.controls()
+        except RuntimeError as error:
+            failure = str(error)
+        finally:
+            active[0] = False
+        after = runner.public_fixture_file(self.repo, 'provider.py')
+        self.save_observation('stat-index-before-controls', {'failure': failure, 'observed_provider_writes': writes,
+            'provider_before': provider, 'provider_after': after,
+            'drifted_raw_index_unchanged': runner.public_fixture_index(self.repo) == bytes(altered)})
+        self.assertEqual(writes, [], 'Unexpected raw-index drift was followed by provider-body writes')
+        self.assertIsNotNone(failure)
+        self.assertEqual(after, provider)
+        self.assertEqual(runner.public_fixture_index(self.repo), bytes(altered))
+
+    def cleanup_fault(self, kind):
+        from unittest.mock import patch
+        self.park()
+        real_run = subprocess.run
+        observed = {}
+        def actual_native_then_fault(command, *args, **kwargs):
+            result = real_run(command, *args, **kwargs)
+            if 'update-index' in command and '--cacheinfo' in command and not observed:
+                observed['controlled'] = runner.public_fixture_index(self.repo)
+                if kind == 'mode':
+                    os.chmod(self.repo/'.git/index', 0o600)
+                else:
+                    (self.repo/'.git/index.lock').write_bytes(b'foreign public test lock\n')
+            return result
+        failure = None
+        with patch.object(subprocess, 'run', side_effect=actual_native_then_fault):
+            try:
+                self.controls()
+            except (RuntimeError, KeyError) as error:
+                # This finite fixture intentionally stops at the controlled
+                # index boundary. The old implementation may proceed into the
+                # omitted later public-row stimulus after incorrectly resetting
+                # the index; preserve that diagnostic, then test the state.
+                failure = type(error).__name__+': '+str(error)
+        self.assertIn('controlled', observed)
+        after = runner.public_fixture_index(self.repo)
+        mode = stat.S_IMODE((self.repo/'.git/index').stat().st_mode)
+        lock = self.repo/'.git/index.lock'
+        self.save_observation('controlled-index-'+kind, {'failure': failure,
+            'controlled_raw': runner.identity(observed['controlled']), 'actual_raw': runner.identity(after),
+            'actual_mode': mode, 'foreign_lock_present': lock.exists()})
+        self.assertEqual(after, observed['controlled'], 'Controlled cleanup erased unexplained index drift')
+        self.assertIsNotNone(failure)
+        if kind == 'mode':
+            self.assertEqual(mode, 0o600)
+        else:
+            self.assertEqual(lock.read_bytes(), b'foreign public test lock\n')
+
+    def test_control_cleanup_refuses_foreign_index_mode(self):
+        self.cleanup_fault('mode')
+
+    def test_control_cleanup_refuses_foreign_index_lock(self):
+        self.cleanup_fault('lock')
+
+    def test_valid_control_cleanup_restores_exact_owned_index(self):
+        self.park()
+        self.git('update-index', '--cacheinfo', '100755,'+self.source['git_blob']+',provider.py')
+        changed = runner.public_fixture_index(self.repo)
+        runner.restore_public_fixture_control_index(self.repo, self.state, self.before, self.members,
+                                                    self.raw, changed, self.mode)
+        self.assertEqual(runner.public_fixture_index(self.repo), self.raw)
+        self.assertEqual(stat.S_IMODE((self.repo/'.git/index').stat().st_mode), self.mode)
+        self.assertTrue(all(not os.path.lexists(self.repo/path) for path in self.members))
+
+
+
+class PublicFixtureFailureExportRevisionTests(unittest.TestCase):
+    """Real tiny native source authentication; no hosted-context simulation."""
+    def setUp(self):
+        self.root = Path(os.environ['PUBLIC123_REVISION_RESOURCES'])/self._testMethodName
+        self.repo, self.state = self.root/'repo', self.root/'state'
+        self.repo.mkdir(parents=True); self.state.mkdir()
+        self.env = dict(runner.public_fixture_environment(), GIT_AUTHOR_NAME='Finite Fixture',
+                        GIT_AUTHOR_EMAIL='fixture@example.invalid', GIT_COMMITTER_NAME='Finite Fixture',
+                        GIT_COMMITTER_EMAIL='fixture@example.invalid')
+        self.git('-c', 'init.templateDir=', 'init', '-q')
+        helpers, inputs = {}, {}
+        paths = dict(runner.PUBLIC_HELPERS, **{'harness.py': 'scripts/check_source_alias_absence.py'})
+        for name, relative in paths.items():
+            body = (Path(runner.__file__).parent.parent/relative).read_bytes()
+            target = self.repo/relative; target.parent.mkdir(parents=True, exist_ok=True); target.write_bytes(body)
+            saved = self.state/'inputs'/name; saved.parent.mkdir(parents=True, exist_ok=True); saved.write_bytes(body)
+            inputs['inputs/'+name] = runner.identity(body)
+            if name != 'harness.py': helpers[name] = dict(runner.identity(body), source_path=relative)
+        runner.save(self.state/'inputs/SOURCE-IDENTITIES.json', helpers)
+        inputs['inputs/SOURCE-IDENTITIES.json'] = runner.identity((self.state/'inputs/SOURCE-IDENTITIES.json').read_bytes())
+        self.git('add', '--', *paths.values())
+        self.git('commit', '-qm', 'Declared finite public exporter source fixture')
+        self.prepared = {'profile': runner.PUBLIC_FIXTURE_PROFILE, 'repo': str(self.repo), 'state': str(self.state),
+            'repo_inode': [self.repo.stat().st_dev, self.repo.stat().st_ino],
+            'head': self.git('rev-parse', 'HEAD').decode().strip(), 'tree': self.git('rev-parse', 'HEAD^{tree}').decode().strip(),
+            'harness': inputs['inputs/harness.py'], 'input_files': inputs}
+        runner.save(self.state/'PREPARED.json', self.prepared)
+        self.raw = (self.repo/'.git/index').read_bytes()
+        runner.atomic_bytes(self.state/'expected-index', self.raw)
+        runner.save(self.state/'index-mode.json', {'mode': stat.S_IMODE((self.repo/'.git/index').stat().st_mode)})
+
+    def git(self, *args):
+        return subprocess.run(['/usr/bin/git', '--no-replace-objects', '--literal-pathspecs', *args],
+            cwd=self.repo, env=self.env, capture_output=True, check=True).stdout
+
+    def test_corrupt_live_index_does_not_block_public_source_receiving_or_get_repaired(self):
+        corrupt = b'INTENTIONALLY_CORRUPT_FINITE_INDEX\n'
+        (self.repo/'.git/index').write_bytes(corrupt)
+        before = {str(p.relative_to(self.state)): p.read_bytes() for p in self.state.rglob('*') if p.is_file()}
+        received = runner.authenticate_public_fixture_export_sources(self.repo, self.state)
+        self.assertEqual(len(received['public_sources']), 9)
+        self.assertFalse(received['live_index_required_for_authentication'])
+        observation = runner.public_fixture_export_index_observation(self.repo, self.state)
+        self.assertFalse(observation['exact'])
+        self.assertFalse(observation['restoration_performed'])
+        self.assertEqual((self.repo/'.git/index').read_bytes(), corrupt)
+        self.assertEqual(before, {str(p.relative_to(self.state)): p.read_bytes() for p in self.state.rglob('*') if p.is_file()})
+        runner.save(self.root/'corrupt-index-source-receiving.json', {'received': received, 'live_index': observation,
+            'actual_hosted_execution': False, 'qualification': 'SOURCE_AUTHENTICATION_ONLY'})
+
+    def test_wrong_public_code_head_and_root_are_refused(self):
+        for field, value in [('head', '0'*40), ('repo', str(self.root))]:
+            changed = dict(self.prepared, **{field: value})
+            runner.save(self.state/'PREPARED.json', changed, replace=True)
+            with self.subTest(field=field), self.assertRaises(RuntimeError):
+                runner.authenticate_public_fixture_export_sources(self.repo, self.state)
+        runner.save(self.state/'PREPARED.json', self.prepared, replace=True)
+        target = self.repo/'scripts/source_alias_absence_boundary.py'
+        target.write_bytes(target.read_bytes()+b'\n# wrong live code\n')
+        with self.assertRaises(RuntimeError):
+            runner.authenticate_public_fixture_export_sources(self.repo, self.state)
+        self.assertEqual((self.repo/'.git/index').read_bytes(), self.raw)
+
+
+
+class PublicFixtureChildLifetimeRevisionTests(unittest.TestCase):
+    """Actual tiny fault children: startup/lease custody, no consumer campaign."""
+    def setUp(self):
+        self.root = Path(os.environ['PUBLIC123_REVISION_RESOURCES'])/self._testMethodName
+        self.root.mkdir(parents=True)
+        self.repo, self.state = self.root/'repo', self.root/'state'
+        self.repo.mkdir(); self.state.mkdir()
+        self.out = self.state/'phases/fixtures123-present'
+        self.out.mkdir(parents=True)
+        self.token = 'a'*32
+
+    def child(self, mode, *, group_save_failure=False):
+        from unittest import mock
+        script = self.root/'fault_child.py'
+        code = ("import json,os,sys\n"
+                "sys.path.insert(0, "+repr(str(Path(runner.__file__).parent))+ ")\n"
+                "import check_source_alias_absence as harness\n"
+                "mode=sys.argv[1]\nfd=int(sys.argv[sys.argv.index('--identity-fd')+1])\n"
+                "if mode=='silent': sys.stdin.readline()\n"
+                "with os.fdopen(fd,'wb') as stream:\n"
+                "    if mode=='good': stream.write(json.dumps(harness.group_record()).encode()+b'\\n')\n"
+                "    elif mode=='malformed': stream.write(b'{\\n')\n"
+                "    elif mode=='invalid-shape': stream.write(b'{}\\n')\n"
+                "    stream.flush()\n"
+                "lease=sys.stdin.readline().rstrip('\\n')\n"
+                "if lease: print('actual narrow lease received',flush=True)\n")
+        prefix = [sys.executable, '-B', str(script), mode]
+        runner.save(self.root/'CHILD-DECLARATION.json', {'command_prefix': prefix,
+            'script_sha256': hashlib.sha256(code.encode()).hexdigest(), 'scope': 'Actual finite fault child only',
+            'declared_before_script_creation': True, 'actual_hosted_execution': False})
+        script.write_text(code)
+        lease_checks = []
+        real_save = runner.save
+        def save_with_one_transport_fault(path, *args, **kwargs):
+            if group_save_failure and Path(path) == self.state/'groups'/(self.token+'.json'):
+                raise OSError('Declared exact group-record persistence fault')
+            return real_save(path, *args, **kwargs)
+        with mock.patch.object(runner, 'save', save_with_one_transport_fault):
+            if mode == 'good' and not group_save_failure:
+                result = runner.public_fixture_child_custody(self.repo, self.state, self.out,
+                    'fixtures123-present', self.token, prefix, lambda: lease_checks.append(True), handshake_timeout=3)
+                self.assertEqual(result['exit_code'], 0)
+                self.assertTrue(result['lease_sent'])
+                self.assertTrue(result['quiescent'])
+            else:
+                with self.assertRaises((RuntimeError, ValueError, OSError)) as failure:
+                    runner.public_fixture_child_custody(self.repo, self.state, self.out,
+                        'fixtures123-present', self.token, prefix, lambda: lease_checks.append(True),
+                        handshake_timeout=0.2 if mode=='silent' else 3)
+                self.assertEqual(lease_checks, [])
+                if mode=='silent': self.assertIn('timed out', str(failure.exception))
+        record = json.loads((self.state/'children'/(self.token+'.json')).read_bytes())
+        self.assertEqual(record['status'], 'TERMINAL_RECEIVED')
+        self.assertIs(type(record['exit_code']), int)
+        with self.assertRaises(ChildProcessError): os.waitpid(record['pid'], os.WNOHANG)
+        quiet = runner.public_fixture_quiescence(self.state)
+        self.assertEqual(quiet['quiescent'], mode == 'good' and not group_save_failure)
+        if mode != 'good' or group_save_failure:
+            self.assertFalse(record['lease_sent'])
+            self.assertFalse(record['quiescent'])
+        runner.save(self.root/'ACTUAL-CHILD-OUTCOME.json', {'record': record, 'received_quiescence': quiet,
+            'reaped_by_owned_parent': True, 'actual_hosted_execution': False})
+
+    def test_malformed_handshake_child_is_reaped_and_restoration_stays_blocked(self):
+        self.child('malformed')
+
+    def test_missing_handshake_child_is_reaped_and_restoration_stays_blocked(self):
+        self.child('missing')
+
+    def test_invalid_group_shape_child_is_reaped_without_trusting_its_fields(self):
+        self.child('invalid-shape')
+
+    def test_group_save_failure_is_contained_before_any_lease(self):
+        self.child('good', group_save_failure=True)
+
+    def test_actual_finite_child_lease_wait_and_quiescence_are_bound(self):
+        self.child('good')
+
+    def test_silent_open_handshake_times_out_reaps_owned_child_and_blocks_restoration(self):
+        self.child('silent')
+
+
+import copy
+
+class PublicFixtureNativeOutcomeRevisionTests(unittest.TestCase):
+    """New actual native outcome/journal bindings on a three-file ordinary fixture."""
+    setUp = PublicFixtureMutationRevisionTests.setUp
+    git = PublicFixtureMutationRevisionTests.git
+    park = PublicFixtureMutationRevisionTests.park
+
+    def test_actual_native_outcomes_and_hash_bound_references_reject_missing_or_changed_evidence(self):
+        import source_alias_absence_evidence as evidence
+        with runner.PublicFixtureNativeRecorder(self.repo, self.state) as recorder:
+            runner.public_fixture_git(self.repo, self.state, 'rev-parse', 'HEAD')
+            result = subprocess.run(['/usr/bin/git', '--no-replace-objects', 'config', '--type=bool', '--get', 'core.splitIndex'],
+                cwd=self.repo, env=self.env, capture_output=True)
+            self.assertEqual(result.returncode, 1)
+            refs = recorder.snapshot()
+        rows, identities = evidence.public_fixture_category(self.state, 'native-executions')
+        self.assertEqual(len(rows), 2)
+        for row in rows.values():
+            self.assertEqual(evidence.public_fixture_native_record(row, str(self.repo), set())['scope'],
+                             'CONSISTENT_NATIVE_OUTCOME_ONLY')
+        process = next(iter(rows.values()))['process']
+        self.assertEqual(evidence.public_fixture_native_refs(refs, rows, identities, process), set(rows))
+        for change in ({'status': 'STARTED_NOT_TERMINAL'}, {'exit_code': None}, {'exit_code': True},
+                       {'observed_cwd': '/wrong/native/root'}, {'resolved_executable': '/fake/git'},
+                       {'stdout': {}}):
+            bad = dict(next(iter(rows.values())), **change)
+            with self.subTest(change=change), self.assertRaises((RuntimeError, TypeError, KeyError)):
+                evidence.public_fixture_native_record(bad, str(self.repo), set())
+        bad_refs = copy.deepcopy(refs); bad_refs[0]['identity']['sha256'] = '0'*64
+        with self.assertRaises(RuntimeError): evidence.public_fixture_native_refs(bad_refs, rows, identities, process)
+        with self.assertRaises(RuntimeError): evidence.public_fixture_native_refs(refs+refs[:1], rows, identities, process)
+        with self.assertRaises(RuntimeError): evidence.public_fixture_native_refs(refs, {}, {}, process)
+        runner.save(self.area/'NATIVE-OUTCOME-CONTRACT.json', {'native_records': len(rows), 'negative_variants': 9,
+            'actual_native_execution': True, 'actual123_or_hosted_execution': False, 'raw_index_unchanged': runner.public_fixture_index(self.repo)==self.raw})
+
+    def test_actual_native_control_journal_binds_before_after_process_and_owned_cleanup(self):
+        import source_alias_absence_evidence as evidence
+        self.park()
+        with runner.PublicFixtureNativeRecorder(self.repo, self.state) as recorder:
+            runner.public_fixture_git(self.repo, self.state, 'update-index', '--cacheinfo',
+                                      '100755,'+self.source['git_blob']+',provider.py')
+            changed = runner.public_fixture_index(self.repo)
+            cleanup = runner.restore_public_fixture_control_index(self.repo, self.state, self.before, self.members,
+                                                                  self.raw, changed, self.mode)
+            refs = recorder.snapshot()
+        commands, command_ids = evidence.public_fixture_category(self.state, 'native-commands')
+        native, native_ids = evidence.public_fixture_category(self.state, 'native-executions')
+        mutations, _ = evidence.public_fixture_category(self.state, 'native-index-mutations')
+        self.assertEqual(len(commands), 1); self.assertEqual(len(native), 1); self.assertEqual(len(mutations), 1)
+        mutation = next(iter(mutations.values())); command = commands[mutation['command_record']]
+        self.assertEqual(mutation['command_identity'], command_ids[mutation['command_record']])
+        self.assertEqual(mutation['native_record'], command['native_record'])
+        actual = native[mutation['native_record']]
+        self.assertEqual(mutation['process'], actual['process'])
+        self.assertEqual(mutation['command'], actual['observed_argv'])
+        self.assertEqual(mutation['before']['raw_index'], runner.identity(self.raw))
+        self.assertEqual(mutation['after'], runner.identity(changed))
+        self.assertEqual(mutation['status'], 'TERMINAL'); self.assertEqual(mutation['exit_code'], 0)
+        self.assertEqual(cleanup['before'], mutation['after']); self.assertEqual(cleanup['after'], runner.identity(self.raw))
+        self.assertEqual(json.loads((self.state/cleanup['write_record']).read_bytes())['body'], runner.identity(self.raw))
+        self.assertEqual(evidence.public_fixture_native_refs(refs, native, native_ids, actual['process']), set(native))
+        self.assertEqual(runner.public_fixture_index(self.repo), self.raw)
+        runner.save(self.area/'NATIVE-CONTROL-JOIN.json', {'mutation': mutation, 'cleanup': cleanup,
+            'actual_native_execution': True, 'actual123_or_hosted_execution': False})
+
+
+class PublicFixtureAuthenticatedCurrentnessControls(unittest.TestCase):
+    """The actual caller and validators, with finite artificial Git identities.
+
+    No generated fixture or research programme is executed. Empty public-object
+    records intentionally cannot earn a complete public123 consumer verdict.
+    """
+    def setUp(self):
+        import hashlib
+        import importlib
+        from types import SimpleNamespace
+        self.hashlib = hashlib
+        self.audit = SimpleNamespace(absent=False)
+        self.area = Path(self.enterContext(tempfile.TemporaryDirectory()))
+        self.repo = self.area/'checkout'; self.repo.mkdir()
+        self.state = self.area/'state'; (self.state/'inputs').mkdir(parents=True)
+        self.script_root = self.repo/'scripts'; self.script_root.mkdir()
+        names = {Path(path).name for path in runner.PUBLIC_FIXTURE_SOURCE_PATHS}
+        names |= {'source_alias_absence_boundary.py', 'source_alias_absence_reader.py'}
+        source_root = Path(runner.__file__).resolve().parent
+        for name in names:
+            (self.script_root/name).write_bytes((source_root/name).read_bytes())
+        module_names = {Path(name).stem for name in names}
+        old_modules = {name: sys.modules.get(name) for name in module_names}
+        old_path = list(sys.path)
+        def restore_imports():
+            sys.path[:] = old_path
+            for name, value in old_modules.items():
+                if value is None: sys.modules.pop(name, None)
+                else: sys.modules[name] = value
+        self.addCleanup(restore_imports)
+        for name in module_names: sys.modules.pop(name, None)
+        sys.path.insert(0, str(self.script_root))
+        self.reader = importlib.import_module('check_reader_pilot')
+        self.adapter = importlib.import_module('source_alias_absence_reader')
+        self.source = importlib.import_module('resolve_t20_v6_source')
+        self.enterContext(patch.object(runner, 'helper_module', return_value=self.adapter))
+        self.enterContext(patch.dict(os.environ, {'GITHUB_WORKSPACE': str(self.repo),
+            'GIT_NO_LAZY_FETCH': '1', 'GIT_NO_REPLACE_OBJECTS': '1', 'GIT_ALLOW_PROTOCOL': '',
+            'GIT_AUTHOR_NAME': 'Artificial fixture', 'GIT_AUTHOR_EMAIL': 'fixture@example.invalid',
+            'GIT_COMMITTER_NAME': 'Artificial fixture', 'GIT_COMMITTER_EMAIL': 'fixture@example.invalid'}))
+        self.git('init', '-q')
+        self.held = []
+        for n, path in enumerate(boundary.PROTECTED_PATHS):
+            body = ('artificial held stand-in '+str(n)+'\n').encode()
+            self.write(path, body)
+            self.held.append({'path': path, 'bytes': len(body), 'published_metadata': {
+                'mode': '100644', 'git_blob': runner.identity(body)['git_blob']}})
+        self.original, self.current = {}, {}
+        fixture_paths = set(self.reader.FIXTURE_CONSUMER_ORIGINAL)
+        continuation_paths = set(self.reader.CONTINUATION_OWNER_PATHS)
+        for n, path in enumerate(sorted(fixture_paths | continuation_paths)):
+            old, new = ('original owner '+str(n)+'\n').encode(), ('current owner '+str(n)+'\n').encode()
+            self.write(path, old)
+            self.original[path], self.current[path] = self.edition(old), self.edition(new)
+        self.base_path = str(Path('docs')/'context-base.md')
+        self.write(self.base_path, b'An artificial original public source.\n')
+        self.git('add', '--all')
+        tree = self.git('write-tree').decode().strip()
+        self.baseline = self.git('commit-tree', tree, input=b'Artificial currentness baseline\n').decode().strip()
+        rows = []
+        for raw in self.git('ls-tree', '-r', '-z', self.baseline).split(b'\0'):
+            if not raw: continue
+            head, path = raw.split(b'\t'); mode, kind, oid = head.decode().split()
+            path = path.decode()
+            rows.append({'path': path, 'mode': mode, 'kind': kind, 'git_oid': oid,
+                         'bytes': (self.repo/path).stat().st_size})
+        rows.sort(key=lambda row: row['path'])
+        digest = hashlib.sha256(json.dumps(rows, sort_keys=True, ensure_ascii=False,
+            separators=(',', ':')).encode()).hexdigest()
+        self.owner = {'schema': 'orthemology-reader-owner-map-v1', 'baseline': {
+            'commit': self.baseline, 'tree': tree}, 'entries_sha256': digest,
+            'external_body_admissions': [], 'historical_source_bindings': [],
+            'baseline_work_population': {'count': 0,
+                'keys_sha256': hashlib.sha256(b'[]').hexdigest()}}
+        self.census = {'schema': 'orthemology-reader-census-v1',
+            'baseline': dict(self.owner['baseline']), 'entries_sha256': digest,
+            'external_body_admissions': [], 'population': {'tracked_entries': len(rows)}}
+        self.cross = {'schema': 'orthemology-reader-crosswalk-v1', 'coverage_stage': 'reader-candidate',
+            'works': [], 'sources': {}}
+        for path in self.original:
+            n = sorted(self.original).index(path)
+            self.write(path, ('current owner '+str(n)+'\n').encode())
+        for name, values in [('FIXTURE_CONSUMER_ORIGINAL', self.original),
+                             ('FIXTURE_CONSUMER_CURRENT', self.current)]:
+            self.enterContext(patch.object(self.reader, name, {p: values[p] for p in fixture_paths}))
+        for name, values in [('CONTINUATION_OWNER_ORIGINAL', self.original),
+                             ('CONTINUATION_OWNER_CURRENT', self.current),
+                             ('CONTINUATION_OWNER_SPARSE_PRIOR', self.current)]:
+            self.enterContext(patch.object(self.reader, name, {p: values[p] for p in continuation_paths}))
+        self.enterContext(patch.object(self.reader, 'FIXTURE_CONSUMER_REVISION', self.baseline))
+        self.work_path = str(Path('docs')/'context-work.md')
+        review_path = str(Path('docs')/'context-review.md')
+        work = b'# Artificial admitted work\n\nFinite consumer test only.\n'
+        self.write(self.work_path, work)
+        review = ('| Work | SHA-256 | Bytes |\n|---|---|---|\n| [Work](context-work.md) | `'
+                  +hashlib.sha256(work).hexdigest()+'` | '+str(len(work))+' |\n').encode()
+        self.write(review_path, review)
+        self.owner['source_additions'] = []
+        for key, path, body, role, supports in [('work', self.work_path, work, 'work-source', ['review']),
+                                              ('review', review_path, review, 'review', [])]:
+            identity = runner.identity(body)
+            self.owner['source_additions'].append({'key': key, 'path': path, 'mode': '100644',
+                'git_oid': identity['git_blob'], 'bytes': identity['bytes'], 'sha256': identity['sha256'],
+                'role': role, 'work_keys': ['artificial-work'], 'supporting_source_keys': supports})
+            self.cross['sources'][key] = {'path': path, 'sha256': identity['sha256'],
+                'read_scope': 'Finite artificial caller control'}
+        self.cross['works'] = [{'key': 'artificial-work', 'role': 'synthesis', 'source_keys': ['work'],
+            'supporting_source_keys': ['review'],
+            'reading_forms': [{'source': 'work', 'relationship': 'authored-synthesis'}]}]
+        self.metadata_root = Path(runner.PUBLIC_FIXTURE_OWNER).parent
+        self.sync_metadata()
+        (self.state/'inputs/hold.json').write_text(json.dumps({'held': self.held}))
+        self.git('add', '--all')
+
+    def git(self, *args, input=None):
+        return subprocess.run(['git', '--no-replace-objects', *args], cwd=self.repo,
+            input=input, capture_output=True, check=True).stdout
+
+    def write(self, path, body):
+        node = self.repo/path; node.parent.mkdir(parents=True, exist_ok=True); node.write_bytes(body)
+
+    def edition(self, body):
+        value = runner.identity(body)
+        return value['git_blob'], value['sha256'], value['bytes']
+
+    def sync_metadata(self):
+        for name, value in [('OWNER-MAP.json', self.owner), ('CROSSWALK.json', self.cross),
+                            ('CENSUS.json', self.census)]:
+            self.write(str(self.metadata_root/name), runner.json_bytes(value))
+
+    def consume(self):
+        original = self.source.readonly_git_diff
+        native_run = subprocess.run
+        self.native_commands = []
+        def observe(command, *args, **kwargs):
+            self.native_commands.append(list(command))
+            return native_run(command, *args, **kwargs)
+        pins = {'BASELINE': self.baseline,
+            'OWNER_MAP_SHA256': runner.identity((self.repo/runner.PUBLIC_FIXTURE_OWNER).read_bytes())['sha256'],
+            'READER_SHA256': runner.identity((self.script_root/'check_reader_pilot.py').read_bytes())['sha256'],
+            'RESOLVER_SHA256': runner.identity((self.script_root/'resolve_t20_v6_source.py').read_bytes())['sha256'],
+            'CENSUS_SHA256': runner.identity((self.repo/self.metadata_root/'CENSUS.json').read_bytes())['sha256']}
+        with patch.multiple(self.adapter, create=True, **pins), patch.object(subprocess, 'run', side_effect=observe):
+            try:
+                return runner.public_fixture_consumers(self.repo, self.state, {'records': []}, self.audit)
+            finally:
+                self.source.readonly_git_diff = original
+                self.reader.readonly_git_diff = original
+
+    def test_actual_caller_accepts_authenticated_contexts_and_keeps_held_exclusions(self):
+        import io
+        held_paths = {self.repo/row['path'] for row in self.held}
+        actual_open, actual_os_open = io.open, os.open
+        def guarded_open(file, *args, **kwargs):
+            if not isinstance(file, int) and Path(file).absolute() in held_paths:
+                raise AssertionError('Held stand-in body open is forbidden')
+            return actual_open(file, *args, **kwargs)
+        def guarded_os_open(file, *args, **kwargs):
+            if not isinstance(file, int) and Path(file).absolute() in held_paths:
+                raise AssertionError('Held stand-in descriptor open is forbidden')
+            return actual_os_open(file, *args, **kwargs)
+        with patch.object(io, 'open', side_effect=guarded_open), patch.object(os, 'open', side_effect=guarded_os_open):
+            result = self.consume()
+        self.assertEqual(result['currentness_errors'], [])
+        metadata_queries = [argv for argv in self.native_commands if 'ls-tree' in argv]
+        self.assertTrue(metadata_queries)
+        self.assertTrue(all('-l' not in argv and '--long' not in argv for argv in metadata_queries))
+        self.assertFalse(result['passed'])  # Empty objects never claim a public123 pass.
+        events = result['reader_boundary']['events']
+        self.assertEqual([r['surface'] for r in events], ['index', 'public_worktree'])
+        self.assertEqual([r['held_worktree_exclusions'] for r in events], [0, 5])
+        self.assertEqual(sum(arg.startswith(':(top,literal,exclude)')
+            for arg in events[1]['executed_command']), 5)
+
+    def test_unknown_added_source_is_still_rejected(self):
+        path = str(Path('docs')/'context-unadmitted.md')
+        self.write(path, b'No source admission.\n'); self.git('add', '--', path)
+        result = self.consume()
+        self.assertTrue(any(path in error for error in result['currentness_errors']))
+
+    def test_unstaged_original_change_is_still_rejected(self):
+        self.write(self.base_path, b'Changed only in the worktree.\n')
+        result = self.consume()
+        self.assertTrue(any(self.base_path in error for error in result['currentness_errors']))
+
+    def test_corrupt_admission_error_reaches_actual_consumer(self):
+        self.owner['source_additions'][0]['sha256'] = '0'*64
+        self.sync_metadata(); self.git('add', '--all')
+        result = self.consume()
+        self.assertTrue(any(error.startswith('source-addition:') for error in result['currentness_errors']))
+
+    def test_incorrect_fixture_owner_edition_reaches_actual_consumer(self):
+        path = sorted(self.reader.FIXTURE_CONSUMER_ORIGINAL)[0]
+        self.write(path, b'Unadmitted owner edition.\n'); self.git('add', '--', path)
+        result = self.consume()
+        self.assertTrue(any(error.startswith('fixture-consumer:') for error in result['currentness_errors']))
+
+    def test_incorrect_continuation_owner_edition_reaches_actual_consumer(self):
+        path = self.reader.CONTINUATION_OWNER_PATHS[0]
+        self.write(path, b'Unadmitted continuation edition.\n'); self.git('add', '--', path)
+        result = self.consume()
+        self.assertTrue(any(error.startswith('continuation-owner:') for error in result['currentness_errors']))
+
+    def test_census_cannot_select_another_baseline_tree(self):
+        self.census['baseline']['tree'] = '0'*40
+        self.sync_metadata(); self.git('add', '--all')
+        with self.assertRaisesRegex(RuntimeError, 'census|baseline'):
+            self.consume()
+
+    def test_owner_body_changed_after_adapter_admission_is_rejected(self):
+        install = self.adapter.install
+        def changed_after_admission(*args):
+            result = install(*args)
+            self.owner['unexpected'] = True
+            self.write(runner.PUBLIC_FIXTURE_OWNER, runner.json_bytes(self.owner))
+            return result
+        with patch.object(self.adapter, 'install', side_effect=changed_after_admission):
+            with self.assertRaisesRegex(RuntimeError, 'owner map changed'):
+                self.consume()
+
+    def test_published_size_metadata_cannot_admit_a_held_identity(self):
+        held = self.held[0]
+        bad = dict(self.reader.HISTORICAL_PROSE)
+        bad[held['path']] = (held['published_metadata']['git_blob'], '0'*64, held['bytes'])
+        with patch.object(self.reader, 'HISTORICAL_PROSE', bad):
+            with self.assertRaisesRegex(RuntimeError, 'Held'):
+                self.consume()
+
+
 if __name__ == '__main__': unittest.main()

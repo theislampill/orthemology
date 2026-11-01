@@ -3101,6 +3101,41 @@ SUCCESSOR_INPUT_REGISTRY_ORIGINAL = ('2eb0d0b7bcd2227e72aacc069d491ac2c0d8704e',
 SUCCESSOR_INPUT_REGISTRY_COMPACT = ('779b9b2b1b606b639acbae817bcfe0b449db87cb',
  'abdf460e94482b8585507dbe02e4b2580c6a511cb30a1851c3fc2b21f96d95e6',
  247542)
+# The live result/status owner makes the separate calculus map redundant.
+# Only this exact registry edition may recover its original historical view.
+SUCCESSOR_INPUT_REGISTRY_CALCULUS = ('b623182df73c1d821d7d132ae092c7e7edf7abd3', 'a053989dc9c6dce6de4ec4208f48be8b1b0a66c284600b3dd17992c46aca7af7', 247365)
+SUCCESSOR_CALCULUS_MAP = 'docs/provenance/v5-successors/CALCULUS_MAP.json'
+SUCCESSOR_CALCULUS_MAP_IDENTITY = ('c00b45d757ee35877bc748351a6185faa6a1c360', 'd0644ef40458d17ac19710e4d1ecdc2cc974a54d73b4053641979f9ce1f74759', 69376)
+SUCCESSOR_CALCULUS_RESULTS = 'docs/provenance/v5-successors/RESULT_STATUS.json'
+SUCCESSOR_CALCULUS_RESULT_IDENTITY = ('de45612a3d7d68b78ed65dacf4dc8a9080b00f9b', '3e5917699c40b50fbd22ee4120b365b70bc32123b27d6ff9dac8eee9b1c5192e', 855613)
+SUCCESSOR_CALCULUS_GUIDES = {'docs/architecture/V5-RESEARCH-SUCCESSORS-07-15.md': {'current': ('a6026e3780b3a6025878891f94cab66354b97efe',
+                                                                   'a55842d9e674e018c2916c155050d312f74cef96c1788fde34a20d88af5f75cc',
+                                                                   12354),
+                                                       'original': ('92c1dd8d70889fa1c68e4a062866a6152225cc68',
+                                                                    'e39d4df2df63902276fe9279f9458e1ed12980c743a3c58be07827d7097453be',
+                                                                    12349),
+                                                       'original_text': 'The [calculus '
+                                                                        'map](../provenance/v5-successors/CALCULUS_MAP.json) '
+                                                                        'preserves the\n',
+                                                       'replacement': 'The [result '
+                                                                      'statements](../provenance/v5-successors/RESULT_STATUS.json) '
+                                                                      'preserve the\n'},
+ 'docs/provenance/v5-successors/README.md': {'current': ('4f160445222eb75c4afdb2710f44982737668f0a',
+                                                         '233561ef29c12585d4fcc76fa18591127f9f3bb001fcee7ad46a8a356f654537',
+                                                         8213),
+                                             'original': ('3a4a712c3c5b27a45d693444ccd0603c708e9d80',
+                                                          '1a5e06b45752fc2d01118b39550fdea297d5781954111a589c81e612f0823c93',
+                                                          8164),
+                                             'original_text': '| [CALCULUS_MAP](CALCULUS_MAP.json) '
+                                                              '| Separate public P01DF, current '
+                                                              'Has, HasPlus, HasE and '
+                                                              'operational-model owners |',
+                                             'replacement': '| Calculus and operational model in '
+                                                            '[RESULT_STATUS](RESULT_STATUS.json) | '
+                                                            'Separate public P01DF, current Has, '
+                                                            'HasPlus, HasE and operational-model '
+                                                            'owners; no adoption |'}}
+
 SUCCESSOR_INPUT_IDENTITIES = {'experiments/orthemology-v5-successors/source-store/0fa8d05ed79fae8494e902456594ba0ab5805d8cf653547c870d337f3db60227/ACCEPTED_INPUTS.json': ('9c6b8a36c8322a84bc60960354a798491f46a42e',
                                                                                                                                               '0fa8d05ed79fae8494e902456594ba0ab5805d8cf653547c870d337f3db60227',
                                                                                                                                               9661),
@@ -3265,18 +3300,22 @@ def _successor_input_catalog(root):
     registry_body, registry_witness = _successor_input_regular(root, SUCCESSOR_INPUT_REGISTRY)
     registry_oid = hashlib.sha1(b'blob ' + str(len(registry_body)).encode() + b'\0' + registry_body).hexdigest()
     registry_identity = (registry_oid, digest(registry_body), len(registry_body))
-    if (registry_identity not in (SUCCESSOR_INPUT_REGISTRY_ORIGINAL, SUCCESSOR_INPUT_REGISTRY_COMPACT)
+    if (registry_identity not in (SUCCESSOR_INPUT_REGISTRY_ORIGINAL, SUCCESSOR_INPUT_REGISTRY_COMPACT,
+                                     SUCCESSOR_INPUT_REGISTRY_CALCULUS)
             or entries.get(SUCCESSOR_INPUT_REGISTRY) != registry_oid):
         raise ValueError('consolidated input registry has a changed or mixed native edition')
     registry = json.loads(registry_body)
     witnesses = {SUCCESSOR_INPUT_REGISTRY: registry_witness}
     originals = {}
-    if registry_identity == SUCCESSOR_INPUT_REGISTRY_COMPACT:
+    if registry_identity in (SUCCESSOR_INPUT_REGISTRY_COMPACT, SUCCESSOR_INPUT_REGISTRY_CALCULUS):
         content = registry.get('preserved_source_inputs')
         if not isinstance(content, dict) or set(content) != SUCCESSOR_INPUT_PATHS or not all(isinstance(value, str) for value in content.values()):
             raise ValueError('consolidated input registry has an incomplete finite population')
         originals = {path: value.encode('utf-8') for path, value in content.items()}
         old_registry = {key: value for key, value in registry.items() if key != 'preserved_source_inputs'}
+        if registry_identity == SUCCESSOR_INPUT_REGISTRY_CALCULUS:
+            old_registry['records'] = dict(old_registry['records'], CALCULUS_MAP={
+                'path': SUCCESSOR_CALCULUS_MAP, 'sha256': SUCCESSOR_CALCULUS_MAP_IDENTITY[1]})
         original_registry_body = (json.dumps(old_registry, sort_keys=True, ensure_ascii=False, indent=2) + '\n').encode()
     else:
         if 'preserved_source_inputs' in registry:
@@ -3312,6 +3351,106 @@ def _successor_input_catalog(root):
     if any(os.path.lexists(_successor_input_path(root, path)) for path in absent):
         raise ValueError('consolidated input absence changed during qualification')
     return originals, absent, original_registry_body, registry
+
+
+def _successor_calculus_catalog(root):
+    """Authenticate the one retired view against its unchanged live owners.
+
+    This is historical byte recovery only. Current result, status and suite
+    validation reads RESULT_STATUS directly and grants no adoption by recovery.
+    """
+    root = pathlib.Path(root).absolute()
+    names = {SUCCESSOR_INPUT_REGISTRY, SUCCESSOR_CALCULUS_MAP,
+             SUCCESSOR_CALCULUS_RESULTS, *SUCCESSOR_CALCULUS_GUIDES}
+    arguments = ('ls-files', '--stage', '-z', '--', *sorted(names))
+    before_index = _administrative_git(root, *arguments)
+    entries = {}
+    for item in before_index.split(b'\0'):
+        if not item:
+            continue
+        try:
+            meta, raw_path = item.split(b'\t', 1)
+            mode, oid, stage = meta.decode('ascii').split()
+            path = raw_path.decode('utf-8')
+        except (ValueError, UnicodeError) as exc:
+            raise ValueError('malformed calculus owner index') from exc
+        if path not in names or path in entries or mode != '100644' or stage != '0':
+            raise ValueError('calculus owner index path, mode or stage differs')
+        entries[path] = oid
+    registry_body, registry_witness = _successor_input_regular(root, SUCCESSOR_INPUT_REGISTRY)
+    registry_oid = hashlib.sha1(b'blob ' + str(len(registry_body)).encode() + b'\0' + registry_body).hexdigest()
+    if ((registry_oid, digest(registry_body), len(registry_body)) != SUCCESSOR_INPUT_REGISTRY_CALCULUS
+            or entries.get(SUCCESSOR_INPUT_REGISTRY) != registry_oid):
+        raise ValueError('calculus recovery requires the exact current registry edition')
+    registry = _successor_input_catalog(root)[3]
+    if registry['records'].get('RESULT_STATUS') != {
+            'path': SUCCESSOR_CALCULUS_RESULTS, 'sha256': SUCCESSOR_CALCULUS_RESULT_IDENTITY[1]}:
+        raise ValueError('calculus result owner binding differs')
+    witnesses = {SUCCESSOR_INPUT_REGISTRY: registry_witness}
+    bodies = {}
+    originals = {}
+    owners = {SUCCESSOR_CALCULUS_RESULTS: SUCCESSOR_CALCULUS_RESULT_IDENTITY,
+              **{path: spec['current'] for path, spec in SUCCESSOR_CALCULUS_GUIDES.items()}}
+    for path, expected in owners.items():
+        body, witnesses[path] = _successor_input_regular(root, path)
+        oid = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+        if (oid, digest(body), len(body)) != expected or entries.get(path) != oid:
+            raise ValueError('calculus live owner has changed or mixed native bytes: ' + path)
+        bodies[path] = body
+        if path in SUCCESSOR_CALCULUS_GUIDES:
+            spec = SUCCESSOR_CALCULUS_GUIDES[path]
+            current, original = spec['replacement'].encode(), spec['original_text'].encode()
+            if body.count(current) != 1:
+                raise ValueError('calculus guide inverse is ambiguous: ' + path)
+            original_body = body.replace(current, original, 1)
+            original_oid = hashlib.sha1(b'blob ' + str(len(original_body)).encode() + b'\0' + original_body).hexdigest()
+            if (original_oid, digest(original_body), len(original_body)) != spec['original']:
+                raise ValueError('calculus guide changed outside its reviewed link: ' + path)
+            originals[path] = original_body
+    result_document = json.loads(bodies[SUCCESSOR_CALCULUS_RESULTS])
+    historical = {'results': [
+        {'id': row['id'], 'calculus': row['calculus'],
+         'operational_model': row['operational_model'], 'canonical_adoption': 'NOT_ADOPTED'}
+        for row in result_document['results']]}
+    body = (json.dumps(historical, sort_keys=True, ensure_ascii=False, indent=2) + '\n').encode()
+    oid = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+    if (oid, digest(body), len(body)) != SUCCESSOR_CALCULUS_MAP_IDENTITY:
+        raise ValueError('calculus historical reconstruction differs from its original identity')
+    if SUCCESSOR_CALCULUS_MAP in entries and entries[SUCCESSOR_CALCULUS_MAP] != oid:
+        raise ValueError('calculus historical view has a changed staged identity')
+    node = _successor_input_path(root, SUCCESSOR_CALCULUS_MAP)
+    absent = set()
+    if os.path.lexists(node):
+        present, witnesses[SUCCESSOR_CALCULUS_MAP] = _successor_input_regular(root, SUCCESSOR_CALCULUS_MAP)
+        if present != body:
+            raise ValueError('calculus historical view has changed present bytes')
+    else:
+        absent.add(SUCCESSOR_CALCULUS_MAP)
+    if _administrative_git(root, *arguments) != before_index:
+        raise ValueError('calculus native index changed during qualification')
+    fields = ('st_dev', 'st_ino', 'st_mode', 'st_nlink', 'st_size', 'st_mtime_ns', 'st_ctime_ns')
+    for path, witness in witnesses.items():
+        current = _successor_input_path(root, path).lstat()
+        if tuple(getattr(current, field) for field in fields) != witness:
+            raise ValueError('calculus owner changed during qualification: ' + path)
+    if absent and os.path.lexists(_successor_input_path(root, SUCCESSOR_CALCULUS_MAP)):
+        raise ValueError('calculus historical absence changed during qualification')
+    return body, absent, originals
+
+
+def successor_calculus_map_bytes(root):
+    """Return the exact original, non-adopting map for historical citations."""
+    return _successor_calculus_catalog(root)[0]
+
+
+def successor_calculus_map_absences(root):
+    return _successor_calculus_catalog(root)[1]
+
+
+def successor_calculus_guide_source_bytes(root, path):
+    if path not in SUCCESSOR_CALCULUS_GUIDES:
+        raise ValueError('path is outside the finite calculus navigation edits')
+    return _successor_calculus_catalog(root)[2][path]
 
 
 def successor_input_bytes(root, path):

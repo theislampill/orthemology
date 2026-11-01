@@ -78,9 +78,6 @@ class SuccessorTests(unittest.TestCase):
                       fresh_evidence='FRESH_KERNEL_COMPONENTS', implementation_reach='FORMAL_COMPONENT')
         self.bundle['results'].append(component)
         self.bundle['statuses'].append(status)
-        calculus = deepcopy(self.bundle['calculus'][0])
-        calculus['id'] = component['id']
-        self.bundle['calculus'].append(calculus)
         self.bundle['avenues'][0]['result_ids'].append(component['id'])
         self.bundle['selectors'].append({'family': component['family'], 'result_id': component['id'],
                                          'statement_sha256': digest(component)})
@@ -391,14 +388,20 @@ class SuccessorTests(unittest.TestCase):
         self.bundle['statuses'][0].update(fresh_evidence='FINITE_ONLY', implementation_reach='TOTAL_SERVICE')
         self.reject('enum|reach')
 
-    def test_calculus_map_cannot_conflate_has_e_and_plus(self):
+    def test_result_calculus_cannot_conflate_has_e_and_plus(self):
         self.bundle['results'][0]['calculus'] = 'P01AC.ExtensionalRepair.HasE'
-        self.bundle['calculus'][0]['calculus'] = 'P01AC.Intensional.Plus.HasPlus'
-        self.reject('calculus', reseal=True)
+        suite, _ = add_suite(self.root, self.bundle)
+        suite['targets'][0]['calculus'] = 'P01AC.Intensional.Plus.HasPlus'
+        self.bundle['receipts'][0]['suite_sha256'] = digest(suite)
+        self.reject('Result target source/domain/calculus mismatch', reseal=True)
 
     def test_canonical_calculus_adoption_rejected(self):
-        self.bundle['calculus'][0]['canonical_adoption'] = 'ADOPTED'
-        self.reject('adopt|enum')
+        self.bundle['statuses'][0]['research_disposition'] = 'ADOPTED'
+        self.reject('enum')
+
+    def test_external_terminology_adoption_rejected(self):
+        self.bundle['statuses'][0]['external_warrants']['terminology_adoption'] = 'ESTABLISHED'
+        self.reject('enum')
 
     def test_wrong_toolchain_rejected(self):
         suite, receipt = add_suite(self.root, self.bundle)
@@ -610,6 +613,355 @@ class SuccessorTests(unittest.TestCase):
         self.bundle['supersession'] = [{'from': 'legacy-control', 'to': row['id'], 'relation': 'CORRECTS',
             'target': row['target'], 'basis_source_ids': row['source_ids'], 'retained_scope': 'Corrects only the declared target.'}]
         self.assertEqual(self.validate()['results'], 1)
+
+
+class ConsolidatedCalculusMapTests(unittest.TestCase):
+    """One exact historical view; active results and input evidence stay live."""
+    REGISTRY = 'experiments/orthemology-v5-successors/registry.json'
+    RESULT = 'docs/provenance/v5-successors/RESULT_STATUS.json'
+    MAP = 'docs/provenance/v5-successors/CALCULUS_MAP.json'
+    MAP_SHA = 'd0644ef40458d17ac19710e4d1ecdc2cc974a54d73b4053641979f9ce1f74759'
+
+    @classmethod
+    def setUpClass(cls):
+        import os
+        import subprocess
+        cls.os, cls.subprocess = os, subprocess
+        path = SCRIPT.with_name('resolve_t20_v6_source.py')
+        spec = importlib.util.spec_from_file_location('calculus_source', path)
+        cls.source = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.source)
+        root = SCRIPT.parents[1]
+        cls.bodies = {path: (root / path).read_bytes() for path in
+                      (cls.REGISTRY, cls.RESULT, *cls.source.SUCCESSOR_CALCULUS_GUIDES)}
+
+    def git(self, *args):
+        env = {k: v for k, v in self.os.environ.items() if not k.startswith('GIT_')}
+        env.update(GIT_NO_LAZY_FETCH='1', GIT_NO_REPLACE_OBJECTS='1', GIT_ALLOW_PROTOCOL='',
+                   GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=self.os.devnull,
+                   GIT_CONFIG_SYSTEM=self.os.devnull, GIT_TERMINAL_PROMPT='0')
+        return self.subprocess.check_output(['/usr/bin/git', '--no-replace-objects',
+            '--literal-pathspecs', *args], cwd=self.root, env=env)
+
+    def put(self, path, body):
+        node = self.root / path
+        node.parent.mkdir(parents=True, exist_ok=True)
+        node.write_bytes(body)
+
+    def setUp(self):
+        temporary = tempfile.TemporaryDirectory(prefix='calculus-view-')
+        self.addCleanup(temporary.cleanup)
+        self.root = Path(temporary.name)
+        self.git('init', '-q', '--template=')
+        for path, body in self.bodies.items():
+            self.put(path, body)
+        self.git('add', '--', *self.bodies)
+
+    def assert_rejected(self):
+        with self.assertRaises((ValueError, OSError)):
+            self.source.successor_calculus_map_bytes(self.root)
+
+    def test_exact_registry_inverse_and_all_nineteen_inputs(self):
+        import hashlib
+        document = json.loads(self.bodies[self.REGISTRY])
+        inputs = {path: value.encode() for path, value in document.pop('preserved_source_inputs').items()}
+        self.assertEqual(len(inputs), 19)
+        self.assertNotIn('CALCULUS_MAP', document['records'])
+        document['records']['CALCULUS_MAP'] = {'path': self.MAP, 'sha256': self.MAP_SHA}
+        expected = (json.dumps(document, sort_keys=True, ensure_ascii=False, indent=2) + '\n').encode()
+        self.assertEqual(hashlib.sha256(expected).hexdigest(),
+                         'bd3a917d7225c18112915f5afaef373a864d176880bd6045c9ea291dd2308088')
+        originals, absent, original_registry, _ = self.source._successor_input_catalog(self.root)
+        self.assertEqual(original_registry, expected)
+        self.assertEqual(originals, inputs)
+        self.assertEqual(absent, set(inputs))
+
+    def test_exact_map_with_present_staged_and_unstaged_absence(self):
+        import hashlib
+        historical = self.source.successor_calculus_map_bytes(self.root)
+        self.assertEqual((len(historical), hashlib.sha256(historical).hexdigest()), (69376, self.MAP_SHA))
+        self.assertEqual(self.source.successor_calculus_map_absences(self.root), {self.MAP})
+        rows = json.loads(historical)['results']
+        self.assertEqual(len(rows), 262)
+        self.assertTrue(all(row['canonical_adoption'] == 'NOT_ADOPTED' for row in rows))
+        self.put(self.MAP, historical)
+        self.git('add', '--', self.MAP)
+        self.assertEqual(self.source.successor_calculus_map_absences(self.root), set())
+        (self.root / self.MAP).unlink()
+        self.assertEqual(self.source.successor_calculus_map_absences(self.root), {self.MAP})
+        self.git('update-index', '--remove', '--', self.MAP)
+        self.assertEqual(self.source.successor_calculus_map_bytes(self.root), historical)
+
+    def test_active_result_missing_tampered_or_mixed_index_is_rejected(self):
+        (self.root / self.RESULT).unlink()
+        self.assert_rejected()
+        self.put(self.RESULT, self.bodies[self.RESULT] + b' ')
+        self.assert_rejected()
+        self.git('add', '--', self.RESULT)
+        self.put(self.RESULT, self.bodies[self.RESULT])
+        self.assert_rejected()
+
+    def test_old_registry_cannot_admit_map_absence_or_hide_changed_input(self):
+        old = json.loads(self.bodies[self.REGISTRY])
+        old['records']['CALCULUS_MAP'] = {'path': self.MAP, 'sha256': self.MAP_SHA}
+        self.put(self.REGISTRY, (json.dumps(old, sort_keys=True, ensure_ascii=False, indent=2) + '\n').encode())
+        self.git('add', '--', self.REGISTRY)
+        self.assert_rejected()
+        # The previous input consolidation remains independently usable.
+        self.assertEqual(len(self.source.successor_input_absences(self.root)), 19)
+        changed = json.loads(self.bodies[self.REGISTRY])
+        path = next(iter(changed['preserved_source_inputs']))
+        changed['preserved_source_inputs'][path] += ' '
+        self.put(self.REGISTRY, (json.dumps(changed, sort_keys=True, ensure_ascii=False, indent=2) + '\n').encode())
+        self.git('add', '--', self.REGISTRY)
+        self.assert_rejected()
+
+    def test_present_or_staged_map_corruption_is_not_an_absence(self):
+        self.put(self.MAP, b'{"results": []}\n')
+        self.assert_rejected()
+        self.git('add', '--', self.MAP)
+        (self.root / self.MAP).unlink()
+        self.assert_rejected()
+
+    def test_guide_edits_have_exact_original_inverses_and_no_tamper_allowance(self):
+        import hashlib
+        for path, spec in self.source.SUCCESSOR_CALCULUS_GUIDES.items():
+            original = self.source.successor_calculus_guide_source_bytes(self.root, path)
+            self.assertEqual((hashlib.sha256(original).hexdigest(), len(original)), spec['original'][1:])
+        path = next(iter(self.source.SUCCESSOR_CALCULUS_GUIDES))
+        self.put(path, self.bodies[path] + b'\n')
+        self.assert_rejected()
+        self.git('add', '--', path)
+        self.put(path, self.bodies[path])
+        self.assert_rejected()
+
+    def guide_allowlist_context(self):
+        spec = importlib.util.spec_from_file_location('calculus_allowlist_successors', SCRIPT)
+        validator = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(validator)
+        document = json.loads((SCRIPT.parents[1] / PROV / 'PUBLIC_PROJECTION.json').read_bytes())
+        matches = [row for row in document['allowlist'] if row['path'] == PROV + '/README.md']
+        self.assertEqual(len(matches), 1)
+        return validator, matches[0]
+
+    def test_allowlist_accepts_current_guide_with_its_original_authored_identity(self):
+        import hashlib
+        validator, row = self.guide_allowlist_context()
+        self.assertEqual(row, {'path': PROV + '/README.md', 'kind': 'AUTHORED',
+            'source_ids': [], 'bytes': 8164,
+            'sha256': '1a5e06b45752fc2d01118b39550fdea297d5781954111a589c81e612f0823c93'})
+        body = self.bodies[row['path']]
+        self.assertEqual((len(body), hashlib.sha256(body).hexdigest()),
+            (8213, '233561ef29c12585d4fcc76fa18591127f9f3bb001fcee7ad46a8a356f654537'))
+        try:
+            validator._allowlist({'public_allowlist': [row]}, self.root, {})
+        except ValueError as error:
+            self.fail('Exact current guide must retain its original allowlist view: ' + str(error))
+
+    def test_allowlist_rejects_changes_to_the_original_guide_row(self):
+        validator, row = self.guide_allowlist_context()
+        mutations = [
+            {'kind': 'METADATA'},
+            {'source_ids': ['fixture-source']},
+            {'sha256': '0' * 64},
+            {'bytes': row['bytes'] + 1},
+            {'bytes': 8213, 'sha256': '233561ef29c12585d4fcc76fa18591127f9f3bb001fcee7ad46a8a356f654537'},
+        ]
+        sources = {'fixture-source': {'id': 'fixture-source', 'public_path': None}}
+        for mutation in mutations:
+            with self.subTest(mutation=mutation):
+                changed = dict(row, **mutation)
+                with self.assertRaisesRegex(ValueError, 'Original calculus guide allowlist identity changed'):
+                    validator._allowlist({'public_allowlist': [changed]}, self.root, sources)
+
+    def test_allowlist_enforces_live_and_staged_calculus_owner_identities(self):
+        validator, row = self.guide_allowlist_context()
+        bundle = {'public_allowlist': [row]}
+        validator._allowlist(bundle, self.root, {})
+        guide = row['path']
+        self.put(guide, self.bodies[guide] + b'\n')
+        with self.assertRaisesRegex(ValueError, 'calculus live owner'):
+            validator._allowlist(bundle, self.root, {})
+        self.git('add', '--', guide)
+        self.put(guide, self.bodies[guide])
+        with self.assertRaisesRegex(ValueError, 'calculus live owner'):
+            validator._allowlist(bundle, self.root, {})
+        self.git('add', '--', guide)
+        self.put(self.RESULT, self.bodies[self.RESULT] + b' ')
+        self.git('add', '--', self.RESULT)
+        self.put(self.RESULT, self.bodies[self.RESULT])
+        with self.assertRaisesRegex(ValueError, 'calculus live owner'):
+            validator._allowlist(bundle, self.root, {})
+        self.git('add', '--', self.RESULT)
+        (self.root / guide).unlink()
+        with self.assertRaises((ValueError, OSError)):
+            validator._allowlist(bundle, self.root, {})
+
+    def test_allowlist_keeps_unlisted_authored_payloads_exact(self):
+        import hashlib
+        validator, _ = self.guide_allowlist_context()
+        path = '/'.join(('docs', 'allowlist-fixture.md'))
+        body = b'# Ordinary authored fixture\n'
+        self.assertNotIn(path, validator._source.SUCCESSOR_CALCULUS_GUIDES)
+        self.put(path, body)
+        row = {'path': path, 'kind': 'AUTHORED', 'source_ids': [],
+               'bytes': len(body), 'sha256': hashlib.sha256(body).hexdigest()}
+        validator._allowlist({'public_allowlist': [row]}, self.root, {})
+        self.put(path, body + b'changed\n')
+        with self.assertRaisesRegex(ValueError, 'Changed public allowlist payload'):
+            validator._allowlist({'public_allowlist': [row]}, self.root, {})
+
+
+
+class HistoricalPreservationConsumerTests(unittest.TestCase):
+    """History authentication and current availability have separate owners."""
+    PRES = PROV + '/PRESERVATION.json'
+    BIND = PROV + '/BASELINE_BINDING.json'
+
+    @classmethod
+    def setUpClass(cls):
+        import os
+        import subprocess
+        cls.os, cls.subprocess = os, subprocess
+        spec = importlib.util.spec_from_file_location('preservation_successors', SCRIPT)
+        cls.v = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.v)
+        root = SCRIPT.parents[1]
+        cls.raw_inventory = (root / cls.PRES).read_bytes()
+        cls.inventory = json.loads(cls.raw_inventory)
+        cls.binding = json.loads((root / cls.BIND).read_bytes())
+        cls.graph = json.loads((root / PROV / 'SUPERSESSION.json').read_bytes())
+        cls.obligations = json.loads((root / PROV / 'OBLIGATION_CROSSWALK.json').read_bytes())['obligations']
+        cls.result_data = json.loads((root / PROV / 'RESULT_STATUS.json').read_bytes())
+        cls.source_data = json.loads((root / PROV / 'SOURCE_MAP.json').read_bytes())
+        env = {k: v for k, v in os.environ.items() if not k.startswith('GIT_')}
+        env.update(GIT_NO_LAZY_FETCH='1', GIT_NO_REPLACE_OBJECTS='1', GIT_ALLOW_PROTOCOL='')
+        cls.objects = subprocess.check_output(['/usr/bin/git', '--no-replace-objects',
+            'rev-parse', '--path-format=absolute', '--git-path', 'objects'], cwd=root, env=env).decode().strip()
+
+    def git(self, *args):
+        env = {k: v for k, v in self.os.environ.items() if not k.startswith('GIT_')}
+        env.update(GIT_NO_LAZY_FETCH='1', GIT_NO_REPLACE_OBJECTS='1', GIT_ALLOW_PROTOCOL='',
+                   GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=self.os.devnull,
+                   GIT_CONFIG_SYSTEM=self.os.devnull, GIT_TERMINAL_PROMPT='0')
+        return self.subprocess.check_output(['/usr/bin/git', '--no-replace-objects',
+            '--literal-pathspecs', *args], cwd=self.root, env=env)
+
+    def setUp(self):
+        temporary = tempfile.TemporaryDirectory(prefix='preservation-history-')
+        self.addCleanup(temporary.cleanup)
+        self.root = Path(temporary.name)
+        self.git('init', '-q', '--template=')
+        (self.root / '.git/objects/info/alternates').write_text(self.objects + '\n')
+        put_bytes(self.root, self.PRES, self.raw_inventory)
+        self.git('add', '--', self.PRES)
+        self.bundle = {'baseline_binding': deepcopy(self.binding), 'preservation': deepcopy(self.inventory),
+            'registry': {'baseline_commit': self.binding['base_commit'], 'baseline_tree': self.binding['base_tree'],
+                'records': {'PRESERVATION': {'path': self.PRES, 'sha256': self.binding['preservation_sha256']}}}}
+
+    def preserve(self):
+        return self.v._preservation(self.bundle, self.root, self.v.BASELINE_ANCHOR)
+
+    def test_all_original_identities_without_a_historical_checkout(self):
+        files = self.preserve()
+        self.assertEqual(len(files), 1200)
+        self.assertEqual(files, {row['path']: row for row in self.inventory['files']})
+        self.assertTrue(all(not (self.root / path).exists() for path in self.v.FROZEN_ROOTS))
+
+    def test_inventory_body_memory_and_staged_tampering_are_rejected(self):
+        self.bundle['preservation']['files'][0]['bytes'] += 1
+        with self.assertRaisesRegex(ValueError, 'In-memory preservation'):
+            self.preserve()
+        self.bundle['preservation'] = deepcopy(self.inventory)
+        put_bytes(self.root, self.PRES, self.raw_inventory + b' ')
+        with self.assertRaisesRegex(ValueError, 'pinned preservation inventory'):
+            self.preserve()
+        self.git('add', '--', self.PRES)
+        put_bytes(self.root, self.PRES, self.raw_inventory)
+        with self.assertRaisesRegex(ValueError, 'mixed or untracked native edition'):
+            self.preserve()
+
+    def test_wrong_ancestor_and_original_owner_identity_are_rejected(self):
+        self.bundle['baseline_binding']['base_commit'] = '0' * 40
+        with self.assertRaisesRegex(ValueError, 'baseline trust anchor'):
+            self.preserve()
+        row = self.graph['legacy_endpoints'][0]
+        with self.assertRaisesRegex(ValueError, 'bound ancestor'):
+            self.v._original_owner_bytes(self.root, row['owner_path'], '0' * 64, self.v.BASELINE_ANCHOR)
+        wrong = dict(self.v.BASELINE_ANCHOR, base_tree='0' * 40)
+        with self.assertRaisesRegex(ValueError, 'ancestor tree'):
+            self.v._original_owner_bytes(self.root, row['owner_path'], row['owner_sha256'], wrong)
+
+    def test_every_original_obligation_statement_remains_at_its_exact_owner(self):
+        cache = {}
+        for row in self.obligations:
+            key = (row['owner_path'], row['owner_sha256'])
+            if key not in cache:
+                cache[key] = self.v._original_owner_bytes(self.root, *key, self.v.BASELINE_ANCHOR)
+            self.assertIn(row['statement'], cache[key].decode('utf-8'))
+        self.assertEqual((len(self.obligations), len(cache)), (118, 10))
+
+    def test_both_inconclusive_legacy_observations_and_graph_binding_remain_exact(self):
+        files = self.preserve()
+        bundle = {'legacy_endpoints': deepcopy(self.graph['legacy_endpoints']),
+                  'supersession': self.graph['edges'], 'selectors': self.graph['selectors']}
+        results = {row['id']: row for row in self.result_data['results']}
+        statuses = {row['id']: row for row in self.result_data['statuses']}
+        sources = {row['id']: row for row in self.source_data['sources']}
+        for row in bundle['legacy_endpoints']:
+            raw = self.v._original_owner_bytes(self.root, row['owner_path'], row['owner_sha256'], self.v.BASELINE_ANCHOR)
+            observed = self.v._pointer(self.v._input_json_bytes(raw), row['json_pointer'])
+            self.assertEqual(observed['status'], 'INCONCLUSIVE')
+            self.assertEqual(observed['exit_code'], 1)
+        self.v._graph(bundle, self.root, results, statuses, sources, files, self.v.BASELINE_ANCHOR)
+        bundle['legacy_endpoints'][0]['statement'] = bundle['legacy_endpoints'][0]['statement'].replace('INCONCLUSIVE', 'REJECTED')
+        with self.assertRaisesRegex(ValueError, 'Legacy endpoint statement changed'):
+            self.v._graph(bundle, self.root, results, statuses, sources, files, self.v.BASELINE_ANCHOR)
+
+    def test_original_owner_present_and_staged_corruption_cannot_hide_as_absence(self):
+        row = self.graph['legacy_endpoints'][0]
+        raw = self.v._original_owner_bytes(self.root, row['owner_path'], row['owner_sha256'], self.v.BASELINE_ANCHOR)
+        put_bytes(self.root, row['owner_path'], raw)
+        self.git('add', '--', row['owner_path'])
+        self.assertEqual(self.v._original_owner_bytes(self.root, row['owner_path'], row['owner_sha256'], self.v.BASELINE_ANCHOR), raw)
+        put_bytes(self.root, row['owner_path'], raw + b' ')
+        with self.assertRaisesRegex(ValueError, 'Changed present original owner'):
+            self.v._original_owner_bytes(self.root, row['owner_path'], row['owner_sha256'], self.v.BASELINE_ANCHOR)
+        self.git('add', '--', row['owner_path'])
+        (self.root / row['owner_path']).unlink()
+        with self.assertRaisesRegex(ValueError, 'changed staged'):
+            self.v._original_owner_bytes(self.root, row['owner_path'], row['owner_sha256'], self.v.BASELINE_ANCHOR)
+
+    def test_current_source_and_suite_consumers_still_reject_absence_and_tamper(self):
+        bundle, _ = make_bundle(self.root)
+        self.v._sources(bundle, self.root)
+        source = bundle['sources'][0]
+        path = self.root / source['public_path']
+        raw = path.read_bytes()
+        legacy_row = {'id': source['id'], 'path': source['public_path'],
+                      'sha256': source['public_sha256'], 'bytes': source['public_bytes']}
+        self.assertEqual(self.v._legacy.source_bytes(self.root, legacy_row), raw)
+        path.unlink()
+        with self.assertRaises((ValueError, OSError)):
+            self.v._sources(bundle, self.root)
+        with self.assertRaises((ValueError, OSError)):
+            self.v._legacy.source_bytes(self.root, legacy_row)
+        path.write_bytes(raw + b' ')
+        with self.assertRaises((ValueError, OSError)):
+            self.v._sources(bundle, self.root)
+        with self.assertRaises((ValueError, OSError)):
+            self.v._legacy.source_bytes(self.root, legacy_row)
+        path.write_bytes(raw)
+        suite, _ = add_suite(self.root, bundle)
+        self.v._record_files(bundle, self.root)
+        suite_path = self.root / bundle['registry']['records']['suite:' + suite['id']]['path']
+        body = suite_path.read_bytes()
+        suite_path.unlink()
+        with self.assertRaises((ValueError, OSError)):
+            self.v._record_files(bundle, self.root)
+        suite_path.write_bytes(body + b' ')
+        with self.assertRaises((ValueError, OSError)):
+            self.v._record_files(bundle, self.root)
 
 
 if __name__ == '__main__':

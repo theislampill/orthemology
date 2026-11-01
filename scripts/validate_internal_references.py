@@ -42,6 +42,7 @@ from resolve_t20_v6_source import (
     ADMIN_RECORD_PATHS, administrative_record_bytes,
     CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_copy_bytes,
     SUCCESSOR_INPUT_PATHS, successor_input_bytes,
+    SUCCESSOR_CALCULUS_MAP, successor_calculus_map_bytes,
     GENERATED_FIXTURE_PATHS, generated_fixture_bytes,
 )
 from validate_ar8r_reconciliation import (
@@ -332,9 +333,12 @@ def _successor_input_reference(src, cited):
             break
         directory = os.path.dirname(directory)
     for path in candidates:
-        if path in SUCCESSOR_INPUT_PATHS:
+        if path in SUCCESSOR_INPUT_PATHS or path == SUCCESSOR_CALCULUS_MAP:
             try:
-                successor_input_bytes(ROOT, path)
+                if path == SUCCESSOR_CALCULUS_MAP:
+                    successor_calculus_map_bytes(ROOT)
+                else:
+                    successor_input_bytes(ROOT, path)
                 return True
             except (ValueError, OSError):
                 return False
