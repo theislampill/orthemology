@@ -897,6 +897,47 @@ The norm-orientation argument in the adjudication has a similarly exact hypothes
 
 The positive issue is what joins understanding, appropriate ends, ownership of direction and effective agency in the actual source. Section 12.4 and the normativity work's account of wise direction supply arguments for those relations. A rival carrying only the same output, the same truth values or one common bearer has not yet answered them. A source-relative account of the original disposition can also give a substantive function architecture, conditional on its source and application premises, without settling every property-ontology question. The present completion preserves both burdens: a sparse comparison cannot cancel the stronger affirmative source appraisal, and a source-relative or functional success cannot silently establish a personal or theological predicate whose needed premise is still absent.
 
+<a id="r132s-mental-hosts"></a>
+
+### 10.18 Mental hosting, attributed agency and candidate denotation
+
+The remaining source arguments distinguish an external order from a notion representing it, and both from the bearer in which the notion is realized. That distinction matters to the transition from intelligibility to an original intellect. The notional-hosting study reconstructs a conditional principle: if the relevant notional representation is present, some mental host is present. Its wider claim that universals subsist mentally is supplied principally through El-Tobgui's secondary reconstruction; the Asfahani translation supplies a narrower use within a unity argument. Neither source role may be silently promoted to an independently checked Arabic primary proposition or a neutral theory of every abstract object. [R359-AI]
+
+Even granting that hosting principle, four further transitions remain distinct. The studied order must itself have the required intrinsic notional character, rather than merely be representable. The hosting must be constitutive of that order, rather than a downstream representation of it. The order's underivability must transfer to the relevant host. Finally, the constitutive host must be unique. The study names these H7a through H7d. They are explicit hard premises, not consequences obtained by assigning the same label to order, notion and mind.
+
+The positive conditional has a transparent argument. Grant the underived input order, the notional-hosting principle and all four bridges. Intrinsic notionality and hosting supply a mental bearer; constitutive hosting gives the required relation to the order; the transfer premise gives its underivability; uniqueness gives exactly one such constitutive host. Removing a premise removes the corresponding step. The proof establishes what follows from the package. It is not additional evidence that representation constitutes the represented order or that the host is underived.
+
+The strongest comparison therefore preserves external impersonal order together with dependent minds whose notions represent it. An underived truth can be known by a derived thinker. Multiple downstream representers can also coexist with one stipulated constitutive host. The latter uniqueness claim is not that there is only one mind. Nor does the formal host-role conclusion by itself establish consciousness, de se ownership, agency, wisdom or speech. If a defended philosophical account makes genuine intellectual apprehension essentially a subject's apprehension, that account supplies a further premise and cannot be refuted by a thin formal predicate deliberately lacking it. The affirmative intellectual and practical arguments in §12 and in [Objective Normativity and Corrective Cognition](objective-normativity-and-corrective-cognition.md) retain that richer scope.
+
+Both primary editions report 8,192 valuations per declared class, 2,624 base models and 1,424 models in their broader full-bridge class; their separately restricted queries have their own denominators. In the revised query set, 224 of 512 notional-underived cases lack a constitutive host; 64 of 656 structural-underived cases lack a mental host; and 32 of 128 cases without the transfer premise lack the claimed underived host. Among 64 fully guarded query cases the exact host conclusion has no countermodel, but 16 lack the personal-subject predicate. The distinct three-host symbolic report retains satisfiable controls for downstream representation, nontransfer and multiple representers, and an unsatisfiable failure of the full guarded conclusion. These source-reported finite facts preserve the change from the earlier looser “intellect role” wording to the narrower constitutive-host conclusion. They establish no metaphysical possibility, explanatory parity or source truth. Its eight frozen-hash rows and nine source-anchor checks likewise remain historical custody statements, not new source verification here. [R359-AI]
+
+#### What source co-reference can supply
+
+The source-bundle study supplies a different positive premise: an accepted proposition can directly attribute its selected roles to one interpreted subject. For the finite six-role abstraction—creator, knowing, able, living, volitional and speaking—separate existential claims permit different witnesses. With $`B_q`$ the eligible bearers of role $`q`$, a common role bearer exists exactly when $`\bigcap_qB_q\ne\varnothing`$, by §10.11. Acceptance of a correctly reconstructed proposition applying all six roles to one $`g`$ supplies a witness in that intersection. This source-relative co-reference has substantive force; it is not derived merely from the roles' separate availability. [R359-AK]
+
+The source strata remain distinguishable. The receipt attributes the creed sentence to its author and the endorsement to the commentary, using different reported translation loci. The English rendering and its note of two Arabic editions constitute translated-primary access, not a fresh critical verification of the Arabic. Translation adequacy and proposition reconstruction are prerequisites to the intended co-reference. Source acceptance, referent identity and world adequacy are additional questions. The commentary's affirmation of volition and speech also does not authorize unrestricted Divine Name status for *al-murīd* and *al-mutakallim*. Preserving the attribute does not require erasing the naming qualification.
+
+At this scope, a distributed assignment with no common source-role bearer conflicts with the accepted co-reference. A source-extended powers bearer or an abstract-order actualizer carrying the selected roles need not. Adding those roles can increase the rival's primitive or interpretive burdens; that is different from deriving a contradiction. Conversely, treating richly interpreted knowledge or willing as an unexamined Boolean role cannot establish that the rival satisfies the full source semantics. The formal comparison retains this uncertainty instead of using a modern personality label to settle the historical meaning of every attribute.
+
+The historical three-bearer enumeration reports 117,649 nonempty role-set assignments: 12,097 have a common bearer and 105,552 do not. Its minimal control places speaking on one bearer while the other five roles occur on another. The 24,194 personal-false/personal-true expansions over common-bearer assignments show only the extra target's freedom in that neutral signature. The distinct three-bearer symbolic analysis keeps separate source and world predicates: a common source bundle can coexist with an empty world counterpart until the explicit identity/world bridge is supplied; the selected bundle then transfers. An additional mapping is still needed for the philosophical personality predicate. The reports' seven frozen rows and eleven source-anchor checks are source-reported historical checks. They do not close source-specialist review or settle which richer interpretation is correct. [R359-AK]
+
+#### Source objects, admissible interpretations and external reference
+
+The referent study makes the world bridge more precise. Let $`g`$ be a source-discourse object, $`W`$ a candidate-world domain and $`\mathcal H`$ a declared family of admissible source-to-world interpretations. The expression $`h(g)=w`$ is an interpretation or denotation relation between these roles, not an assertion of cross-sort numerical identity. Define the image fibre and the candidate-world role-bearer set by
+
+```math
+F_{\mathcal H}(g)=\{h(g):h\in\mathcal H\},\qquad
+U_W=\{w\in W:w\text{ satisfies every selected translated role}\}.
+```
+
+If the source proposition gives the selected roles to $`g`$ and every admitted map preserves those positive roles, then $`F_{\mathcal H}(g)\subseteq U_W`$. When $`\mathcal H\ne\varnothing`$, this yields a candidate-world role bearer. Nonemptiness is doing existence work: a coherent source proposition alone does not establish an admissible world interpretation. Source bytes, passage, translation, attribution, reconstructed proposition, acceptance, role preservation, referent eligibility, version and world adequacy cannot be hidden inside an unexplained word “admissible.” [R359-AP]
+
+Relative denotation is determinate exactly when $`|F_{\mathcal H}(g)|=1`$. If the family is also **role-complete**, meaning that every member of $`U_W`$ is the image of $`g`$ under an admitted map, then $`F_{\mathcal H}(g)=U_W`$. Under those hypotheses the relative uniqueness condition is equivalent to uniqueness of the candidate-world role bearer. Without role completeness, another structural constraint or external anchor may fix the image while several objects satisfy the role bundle. Such a restriction can be warranted, but its information comes from that further premise. Arbitrarily admitting only the map to a preferred object does not make the source roles select that object.
+
+Positive-role preservation is also weaker than complete-profile preservation or reflection. The image can have unregistered features not constrained by the selected positive predicates. A complete source interpretation may need negative, intensional, modal or subject-binding content that this reduced map does not carry. Even unique denotation within every candidate world leaves the actual candidate world undecided. A change of translation, version or reconstructed role set can change both $`\mathcal H`$ and $`U_W`$; earlier denotation does not transfer merely because a filename or source label persists.
+
+The primary referent receipt reports 512 world signatures, 169 nonempty interpretation families and 22 hidden-anchor witnesses. Its distinct injective-embedding analysis uses 256 signatures in four-object candidate worlds, 143 nonempty role-complete embedding cases, 1,144 independently restricted map families and 300 hidden-anchor witnesses, alongside 67 multiple-role-bearer signatures and a multiple-world control. Those denominators describe different constructions and remain distinct. Eight frozen-hash rows and nine translation-anchor checks are reported, with no new Arabic-primary or actual-world verification. The standard image-fibre argument therefore clarifies what a source interpretation can establish while leaving its authority and application premises assessable. It does not replace the stronger original-source argument with a merely formal denotation. [R359-AP]
+
 ## 11. What a complete explanatory fact does—and does not—establish
 
 Generic explanation provides independent logical comparisons. It must not silently replace productive provision or identify explanatory facts with individual bearers. The following results reconstruct the relevant explanatory principles of Koons and Pruss and the corpus's checked consequences and controls. They concern explicit relational assumptions; neither the proofs nor their counterinterpretations authenticate a metaphysical realization. [Koons and Pruss, §2][u-kp] [Plural-explanation analysis][u-psr]
@@ -1317,6 +1358,20 @@ Finally the account proposes *talāzum*: intrinsic essential attributes belong n
 These arguments complement the epistemology of sound cognition without becoming an automatic warrant for every belief formed within the tradition. Meaningful predication, a justified attribute, an actual speech act, faithful transmission, source authority and recipient uptake still have distinct conditions. The affirmative source account can provide a richer basis for truth-directed cognition when those conditions are established. The restoration and correction models cannot supply them merely by producing the expected response. [*Recognition, Warrant, Defeat and Restoration*, §§3 and 9](../epistemology/recognition-warrant-and-restoration.md) [*Objective Normativity and Corrective Cognition*, §7](objective-normativity-and-corrective-cognition.md#7-truth-calibrated-revision-on-a-finite-network)
 
 
+<a id="r132s-structural-centers"></a>
+
+### 12.15 Structural centers and first-person ownership
+
+The centered knowledge construction in §12.1 specifies an interpretation of first-person content. A different question is whether a neutral structure alone identifies such a center. For a finite declared episode reduct $`S`$ with automorphism group $`G`$, a candidate-center set $`D`$ is invariant exactly when it is a union of $`G`$-orbits. If it is invariant and contains $`x`$, it contains every $`gx`$; conversely a union of whole orbits is preserved by every group element. An invariant singleton must consequently be a fixed point. A transitive action on at least two candidate hosts permits no invariant singleton. [R359-AJ]
+
+This is a structural selection result. A unique fixed controller or a distinguished `self` token need not possess first-person understanding. Adding a center marker can create a singleton orbit by changing the reduct; its de se interpretation still requires warrant. Invariance of finite target sets, implicit determination in a model class and formula-definability in a specified logic are separate questions. The orbit fact cannot by itself supply the stronger logical result, still less a theory of consciousness.
+
+The declared reduct must include every neutral observation, intervention, episode, history and source coordinate used by the proposed inference, or explicitly delimit the omitted coordinates. A token-responsive reflexive controller and a genuine subject can be indistinguishable under a thinner observation without being indistinguishable under every richer semantic or causal description. Likewise, uptake, selection and execution can be co-located in one structural bearer without establishing that bearer as their intentional owner. An episode center also does not establish a numerically stable subject across episodes: lineage, memory, transitions and ownership stability require their own account. Episode-swap and distributed-realization controls preserve those separate burdens.
+
+The primary report covers 16,384 four-host structures and 262,144 target subsets, with a fixed point in 15,680 structures and transitivity in 32. Its distinct colored-graph procedure reports all 4,096 three-node structures, 5,000 sampled five-node structures and 192,768 target subsets, without a criterion mismatch. The source records this as a different implementation within the same model lineage, not external review. Seven frozen hashes and eight source anchors are likewise historical reported checks. No graph-matching or original programme was executed for this exposition. [R359-AJ]
+
+The source's co-predication of knowing, choosing, willing and speaking can restrict a source-expanded class under the interpretation conditions of §10.18. It is not a neutral deduction from a graph's fixed point. The missing H8 bridge conditions are accordingly a typed account of what the proposed personal classification needs, not proof that intellect alone supplies them. Formal personal and impersonal expansions establish nonentailment only in the admitted formal class; they do not establish equal metaphysical probability or realizability. Consciousness, moral personhood, stable wisdom and speech are stronger targets than a structural center. The positive practical argument can still warrant genuine ownership through its substantive premises, while this orbit calculation prevents structural uniqueness from doing that work by itself.
+
 ## 13. Conclusion
 
 The received-actuality argument establishes a relevant actual original under its defended productive interpretation, and the intrinsic-adequacy argument concerns the necessity of that same bearer. Original unity requires further work: differentiated actual efficacy, the fitting mode of complete original provision, faithful mediation and the genuine connected field. These contributions are compatible and cumulative, but their premises are not interchangeable. Local nonduplication gives at most one entire attribution; it does not create a complete provider. Connectivity propagates warranted coverage; it does not generate it.
@@ -1598,3 +1653,62 @@ Orthemology. *The Epistemological Architecture of Sound Reason*, especially §§
 [receipt-g-13]: https://api.github.com/repos/theislampill/orthemology/git/blobs/94b64b482a15dfd36142b622e5873f85ea49d308
 [receipt-g-14]: https://api.github.com/repos/theislampill/orthemology/git/blobs/794fa82ec0a29a136566d1bd8198ff533cdb1249
 [receipt-g-15]: https://api.github.com/repos/theislampill/orthemology/git/blobs/a61ddd317693ff8044b3fcc2b5b881757e495e9e
+
+
+### Public receipt studies for the preceding analyses
+
+The following public records preserve the critical audits, repairs, declared limits and historical numerical reports cited above. Their PASS and FAIL labels describe those records; they are not new executions or external review of this exposition. Mathematical ancestry and translated-primary versus secondary-source roles remain as stated in the analyses.
+
+The common source directory is `docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/VALIDATION_RECEIPTS/`. Each listed filename together with that directory gives its original source path; the immutable Git blob identifies the exact received body.
+
+<a id="r132s-ref-ai"></a>
+
+**[R359-AI] Notional hosting and underived constitutive hosts.**
+
+- **AI01 — admission and authority limits.** `PMR-007_DEEP_AI_ADMISSION_OVERLAY.yaml`. Git blob `700ce46d645fdd0ffc3521655a5c1218b6f81a80`.
+- **AI02 — critical audit and required corrections.** `PMR-007_DEEP_AI_V1_COLD_AUDIT.md`. Git blob `5c796cadd018dbcf65a7f54e0bc688ce28a1ce3d`.
+- **AI03 — distinct procedural review; not external review.** `PMR-007_DEEP_AI_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `3a57c17d7db3cd76aec3915f06b696763a7abfd2`.
+- **AI04 — repair account, retaining earlier defects.** `PMR-007_DEEP_AI_V2_REPAIR_LOG.md`. Git blob `bd8307b6440e5e297e36a04f38b8805fb98dae73`.
+- **AI05 — literal reported results and controls.** `pmr007_deep_ai_notionality_mind_primary_check_v1_results.json`. Git blob `dfe684cc45e083472fdddb1866d5e1118336acfa`.
+- **AI06 — literal reported results and controls.** `pmr007_deep_ai_notionality_mind_primary_check_v2_results.json`. Git blob `82841243e758f5573bf7a2603ad8e4d10d782f9f`.
+- **AI07 — literal reported results and controls.** `pmr007_deep_ai_sympy_three_host_rereview_v1_results.json`. Git blob `3a672340de10ee6136dfd64617db20ae6fc103f9`.
+
+[R359-AI]: #r132s-ref-ai
+
+<a id="r132s-ref-aj"></a>
+
+**[R359-AJ] Invariant centers and first-person ownership.**
+
+- **AJ01 — admission and authority limits.** `PMR-007_DEEP_AJ_ADMISSION_OVERLAY.yaml`. Git blob `7c91b2ab081f1ca0cfa6f01d41b3705854923f60`.
+- **AJ02 — critical audit and required corrections.** `PMR-007_DEEP_AJ_V1_COLD_AUDIT.md`. Git blob `91d9ec73baf8708e12fcc581b9cb49f4ba60d6ed`.
+- **AJ03 — distinct procedural review; not external review.** `PMR-007_DEEP_AJ_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `3a26733879005c9544db008b30febfcb4cb7f58b`.
+- **AJ04 — repair account, retaining earlier defects.** `PMR-007_DEEP_AJ_V2_REPAIR_LOG.md`. Git blob `e94e74cc4ea67cd9af359f86629af8216efd9844`.
+- **AJ05 — literal reported results and controls.** `pmr007_deep_aj_center_orbit_primary_check_v2_results.json`. Git blob `8da93ddefc7418ad02dc7b919530272199893d7c`.
+- **AJ06 — literal reported results and controls.** `pmr007_deep_aj_networkx_center_rereview_v1_results.json`. Git blob `5ec3fcce07b65ca70efce277e270fe842831d729`.
+
+[R359-AJ]: #r132s-ref-aj
+
+<a id="r132s-ref-ak"></a>
+
+**[R359-AK] Source co-reference and a common attribute bearer.**
+
+- **AK01 — admission and authority limits.** `PMR-007_DEEP_AK_ADMISSION_OVERLAY.yaml`. Git blob `0d580bc3ab42e2cb7e878ab9b099f60324db01bc`.
+- **AK02 — critical audit and required corrections.** `PMR-007_DEEP_AK_V1_COLD_AUDIT.md`. Git blob `49afadce1aa3cf96f49f759f42a8f12b6c2b9fae`.
+- **AK03 — distinct procedural review; not external review.** `PMR-007_DEEP_AK_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `a3f43f67d60e8bf6fb12f2588c78951641872dc9`.
+- **AK04 — repair account, retaining earlier defects.** `PMR-007_DEEP_AK_V2_REPAIR_LOG.md`. Git blob `359c5fb044711a369ad16cf379bbccece3bffa8b`.
+- **AK05 — literal reported results and controls.** `pmr007_deep_ak_source_bundle_primary_check_v2_results.json`. Git blob `7104010107b07005d827b338525bd003f0119619`.
+- **AK06 — literal reported results and controls.** `pmr007_deep_ak_sympy_source_bundle_rereview_v1_results.json`. Git blob `34b56070fe8d1c14d10d0b472560ea22e8ad0bc8`.
+
+[R359-AK]: #r132s-ref-ak
+
+<a id="r132s-ref-ap"></a>
+
+**[R359-AP] Source-to-world image fibres and denotation.**
+
+- **AP01 — critical audit and required corrections.** `PMR-007_DEEP_AP_V1_COLD_AUDIT.md`. Git blob `5fad2653449d1e6d573bb74439fde3c17555ceaa`.
+- **AP02 — distinct procedural review; not external review.** `PMR-007_DEEP_AP_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `4f24b633b21eb67719624b23942fdbf6613b1e6c`.
+- **AP03 — repair account, retaining earlier defects.** `PMR-007_DEEP_AP_V2_REPAIR_LOG.md`. Git blob `85aee0c55e523aaed27d745d3ca181875f7e96da`.
+- **AP04 — literal reported results and controls.** `pmr007_deep_ap_distinct_embedding_fibre_rereview_results.json`. Git blob `d46307f2cc2d684e86b0269fe9a768c98cf2d34d`.
+- **AP05 — literal reported results and controls.** `pmr007_deep_ap_source_world_referent_primary_check_v1_results.json`. Git blob `aed3450754a4c5ffcf659a73802f9a7868807038`.
+
+[R359-AP]: #r132s-ref-ap

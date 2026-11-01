@@ -1077,6 +1077,126 @@ Those failures remain substantive evidence about the review's limits. The [first
 The empirical and philosophical restrictions above remain controlling. Kernel alignment is relative to a selected metric and available modalities; a better trajectory fit in the reported hippocampal comparison is evidence about the tested models. Neither establishes unique literal reference, intrinsic notionality, an ultimate grammar or a mental ground. The secondary source's mental/external distinction permits a downstream-abstraction interpretation unless a further argument excludes it. The existing structural-mark monotonicity, joint-stability and evidence-fibre arguments retain their own exact hypotheses; these finite records do not certify every extension of them. The distinct implementation took place within the same programme and is not external human or model-lineage review. The abstract selector result receives no general mathematical novelty credit, and the records supply no scientific or metaphysical adoption decision. [Cold-audit limits][receipt-am-02]; [rereview scope][receipt-am-03].
 
 
+<a id="r132s-objective-receipts"></a>
+
+### 8.11 Causal guidance, fittingness and the reason for selecting
+
+The preceding account distinguishes possession of a correct standard from its causal use and from its authority. The score-guidance and reason-mediation studies sharpen these distinctions without discarding a successful mechanism. In the declared deterministic Boolean structural causal model, let the action equation be $`A=f_A(\mathrm{Score})`$, with the remaining equations held fixed under intervention. The interventions setting Score to zero and one produce different actions exactly when $`f_A`$ is nonconstant. This is a genuine causal statement **within that model**. It neither makes the encoded score a norm nor establishes that the model correctly describes an actual system. [R359-AA]
+
+A hidden-common-cause control explains the qualification. One model gives Score a causal influence on action; another lets a hidden variable determine both. Their natural observations of world, score and action can coincide. At the recorded control $`H=0`$, intervening to set $`\mathrm{Score}=1`$ produces action one in the causal model and zero in the common-cause model. Observational agreement consequently does not certify the proposed edge. Equally, fixing the entire declared observation-and-intervention reduct still leaves room, in a comparison class admitting them, for expansions with different norm-authority, semantic-anchor, intentional-uptake, ownership and personality predicates. Such a pair establishes nonentailment in that class. Its existence as a formal interpretation does not establish metaphysical possibility, equal prior probability or physical realizability.
+
+The positive policy result should also be retained. Let $`H(c,\theta)\subseteq A`$ be a supplied admissibility relation for a context $`c`$, profile $`\theta`$ and finite action set. A profile-aware policy selecting an element of every $`H(c,\theta)`$ exists exactly when every required fibre is nonempty. A profile-blind policy exists exactly when $`\bigcap_\theta H(c,\theta)`$ is nonempty for every context. The forward implications follow because the selected action belongs to the relevant sets; the reverse implications follow by choosing an element from each nonempty finite set or intersection. Distinct singleton fibres force every conforming policy to change its action between those profiles. Under the explicit equation $`\mathrm{Act}:=\pi(C,\Theta)`$, a surgical change of the exogenous profile input gives the corresponding limited intervention result. [R359-AB]
+
+Neither existence criterion verifies what the registered relation means. Truth, target authority, world adequacy, source and version applicability, scope and history sufficiency remain distinct conditions. An arbitrary or malicious table can satisfy the selection theorem. Overlapping admissible sets need not force an action change, and a static registry says nothing by itself about an unregistered profile, drifting standard, hidden history or later policy revision. Knowledge, selection, execution and source custody can also be distributed among bearers. A successful policy therefore supplies neither common-bearer co-instantiation nor first-person ownership merely by its success.
+
+There is a further operational gain when a genuinely irrelevant proxy can be separated from a registered reason variable. For a fixed policy $`\pi(c,r,p)`$, invariance under all permitted changes of the nuisance coordinate $`p`$ is equivalent to a factorization $`\pi(c,r,p)=g(c,r)`$. Choose any representative proxy value to define $`g`$; invariance makes the choice immaterial. Conversely a factorization has no remaining dependence on $`p`$. Conformity to the declared action relation, relevant reason contrasts and the appropriate intervention model can then establish **registered reason-variable mediation**. This is the familiar fibre criterion applied to a policy, rather than a new analysis of subjective motivation. [R359-AD]
+
+The nuisance premise is substantive. A token can carry an authenticated source version, indexical content or extra evidence; erasing that information would not be a virtue of semantic invariance. Likewise, varying a reason label need not be an independently feasible intervention on content while the world, evidence and policy remain fixed. Hidden history can make the same current triple require different actions. Correlation, endpoint performance and similar representation trajectories cannot replace the missing intervention evidence. Even a correctly interpreted system-level mediation relation is weaker than a subject apprehending an act's fittingness and selecting it for that reason.
+
+The crossed-design study gives a precise prospective experiment at this limited interface. Let $`F`$ be forms, $`C`$ declared contents and $`a(f,c)`$ the deterministic response under a feasible common intervention setting both. With at least two forms and contents and a nontrivial response alphabet, complete knowledge of the table decides whether responses are constant across forms at fixed content and vary across contents. Invariance is exactly factorization through the content coordinate; nonconstancy of the resulting content map supplies the additional sensitivity condition. Diagonal observations alone cannot decide it: a form-following and a content-following response can agree wherever the observed form and content happen to be paired. [R359-AZ]
+
+For the unrestricted finite table class, omitting any cell prevents a universally correct classifier. Start with a nonconstant content-only table and change the response at just the omitted cell. Every received entry remains the same, while the changed table fails form invariance because another form at that content retains its former response. This necessity result concerns worst-case classification over that unrestricted class. A warranted parametric, compositional, monotone or source-constrained class can reduce the measurements needed; some particular partial tables can already establish failure. In the stochastic extension, the objects compared are complete interventional response distributions, not single sampled outputs. The finite identification statement supplies neither finite-sample accuracy nor the feasibility of the proposed interventions.
+
+Semantic interpretation, positivity, consistency, absence of interference, fixed episode and history, source and version stability, and a candidate-independent coding and intervention design are all required for the intended application. Without the semantic premise the table concerns labels. With it, an impersonal semantic processor can still realize the full table. Intrinsic or constitutive content, intentional uptake, proper function, personality and wisdom remain further targets. This preserves the positive gain—an explicit test of form versus declared-content mediation—without presenting it as a test that already discriminates a personal ground from the strongest semantic impersonal rival.
+
+The receipt sequence records the cost of obtaining these bounded statements. The first score-guidance audit raised seven scope defects; a later audit found the named earlier checker source absent. The subsequent edition introduced fresh post-boundary owners and explicitly did **not** reconstruct the missing historical file. Its recorded primary analysis covers 1,024 Boolean models, 512 with causal guidance; its procedural re-review reports 22,528 observation/intervention rows. The policy re-review checks all 1,728 admissible selectors in 343 small systems, alongside 50,000 larger blind-policy cases and 20,000 reduct comparisons; the primary report covers 117,649 systems. The reason-mediation reports separately record 256 primary policy tables and 20,736 policy/admissibility systems, then 60,000 larger tables with 29,998 factorable cases and 34 direct intervention rows. The crossed-design reports retain the 16 binary $`2\times2`$ tables, all 512 binary $`3\times3`$ tables, six content-mediated tables in the latter class and 30,000 stochastic-table trials. These are historical source-reported checks, with their differing domains intact, not new executions or a substitute for the arguments above. Their reviews describe distinct procedures within the same model lineage, not external independent review. [R359-AA; R359-AB; R359-AD; R359-AZ]
+
+The mathematical ancestry is elementary finite selection, fibre factorization and factorial causal design. The philosophical source material has a different status: the policy study uses translated access to the Asfahani commentary, including its distinctions among praiseworthy and blameworthy volition and speech, without a fresh Arabic verification. Representation studies constrain the empirical models they actually compare; they do not authenticate a normative standard or establish the subject's ownership of a reason. A transparent bridge specifying uptake, fitting end, because-of selection and ownership can show what a proposed classification requires. It is not independent evidence for those very relations, and intentional purpose alone is weaker than the coordinated knowledge, fitting orientation and stable agency needed by the richer wisdom argument. The affirmative reasons in §§4–6 and 9–13 remain to be assessed at their own premises.
+
+### 8.12 Asymmetry resources and the limits of a specification argument
+
+The structural selection result in §8.10 also bears on the claim that a determinate outcome needs a specifier. Let a group $`G`$ act on a resource space $`E`$ and an alternative space $`A`$, and let $`f:E\to A`$ be an equivariant deterministic selector. Every element of the stabilizer of $`e`$ fixes $`f(e)`$, because $`g f(e)=f(ge)=f(e)`$. Consequently a resource state fixed by all of $`G`$ cannot select an alternative if the alternative action has no global fixed point. Transitivity on a non-singleton set is one sufficient condition for that absence; it is not the general hypothesis. [R359-AC]
+
+The conclusion requires accounting for asymmetry, not identifying its bearer as a voluntary subject. A represented seed can supply a pointwise asymmetric resource. A constant selector can instead violate equivariance. A purported world application can fail correspondence, resource completeness or interpretation. The theorem distinguishes these possibilities only after its spaces and action are fixed. A stochastic kernel can preserve symmetry at the level of its law while producing particular outcomes, and an invariant multivalued relation can contain every alternative without selecting one. Neither is automatically the deterministic map just considered. Representing a realized seed changes the pointwise question; it does not prove that the probability law itself has selected a unique fixed output.
+
+Nor does one output imply one explanatory source. Two resources may each suffice for it, or resources may be nested or jointly sufficient. Semantic apprehension of the alternatives, intention, selection because of a reason, ultimate grounding and common-bearer identity are not conclusions of stabilizer inclusion. Interpretations of the same parameter as brute, dispositional or intentional give a formal underdetermination control only in a class admitting those interpretations. Excluding every impersonal rival is a separate comparative task, not a premise whose inclusion would independently prove volition.
+
+The source distinction matters here. The recorded specification argument first belongs to the translated creed; the commentary affirms selected predications while scrutinizing causal, regress and premise questions in particular specification arguments. Treating that sentence as an unqualified neutral theorem would erase both strata. The received study assigns the deterministic result to the existing T254 family and the world-use restrictions to T255, with no new general theorem-origin credit. Its primary enumeration reports 3,412 natural maps and 16,738 extended fixed-resource maps; its procedural re-review uses cyclic and dihedral actions, 77 cyclic shifts and 30,000 orbit constructions with 195,343 stabilizer inclusions. It retains multivalued, overdetermination and non-equivariant controls. None of those recorded checks verifies world correspondence, truth, warrant, complete resources or personal will. [R359-AC]
+
+### 8.13 Exact determination and the interval of neutral bridges
+
+Repeated additions of structural invariants cannot resolve a target that varies within one unchanged complete reduct. For a finite attained class, exact recovery is equivalent to constancy on the reduct fibres. If representation independence is intended, isomorphic reducts must also receive the same classification. Exact same-domain equality and isomorphism are distinct relations; a finite lookup on attained classes is not by itself a first-order definition over every model of a theory. Classical Beth definability supplies the latter implication only under its own ordinary first-order, all-models hypotheses. It is not established by the finite check and does not silently transfer to finite-model-only, modal, intensional, second-order or source-governed classes. [R359-AF]
+
+The class and vocabulary remain load-bearing. Removing the impersonal expansion by definition, or adding a neutral coordinate defined to equal the personal target, produces formal determination by supplying the disputed answer. An independently warranted source restriction may instead legitimately change the admissible class. It then yields a source-relative result. The exact twin obstruction also leaves abductive support open: identical registered reducts need not have equal priors, equal explanatory merit or equal likelihood under additional evidence. The recorded finite study reports 759,375 five-fibre classes, with 1,024 exact-classifier cases; its distinct relational analysis reports 104 three-node isomorphism classes and 1,992 implicitly determined cases among 50,000 sampled intended classes. These finite counts are historical evidence for the stated constructions, not a proof of Beth's theorem or of any metaphysical realization.
+
+A complementary question asks whether a source premise entails a target through an independently eligible shared vocabulary. In finite classical propositional semantics, partition variables into source-private $`X`$, shared $`N`$ and target-private $`Y`$. Let the premise be $`A(X,N)`$ and conclusion $`C(N,Y)`$. Regard the following as sets of valuations of $`N`$:
+
+```math
+S_A=\{n:\exists x\ A(x,n)\},\qquad
+T_C=\{n:\forall y\ C(n,y)\}.
+```
+
+Then $`A\models C`$ if and only if $`S_A\subseteq T_C`$. Indeed, a shared valuation appearing in a model of $`A`$ must make $`C`$ true for every independently varying $`Y`$-assignment; the converse gives truth of $`C`$ in every model of $`A`$. A semantic interpolant $`I(N)`$ must satisfy exactly
+
+```math
+S_A\subseteq I\subseteq T_C.
+```
+
+Each valuation in $`T_C\setminus S_A`$ can be included or omitted independently. There are therefore $`2^{|T_C\setminus S_A|}`$ semantic interpolants, and exactly one precisely when the two endpoint sets coincide. This counts truth functions, not syntactic formulas. The source projection is the strongest shared consequence of the premise; it need not be the unique intermediate proposition. [R359-AV]
+
+The correction is substantive. The initial receipt records 13 failures of the unique-bridge claim among 49 entailed pairs in a 256-pair class; 36 pairs have no slack, 12 have one optional valuation and one has two. The repaired distinct analysis uses two shared variables and reports 2,401 entailed pairs among 65,536 pairs, together with 20,000 larger cases. The old counterexamples remain part of the result. An inconsistent premise has empty projection and entails anything; a tautological conclusion can admit many bridges without discriminating an architecture. Satisfiable premises and a nontrivial target are necessary safeguards for the intended evidential use, not extra conditions for the logical equivalence itself.
+
+No interpolant certifies that $`N`$ is neutral. Moving personality, wisdom, an actual-world marker or an equivalent proxy into the shared language changes the premise contract. If the source directly predicates the target, a bridge containing that predicate retains source dependence. With no shared variables, a satisfiable source-private premise cannot entail a target-private contingent conclusion. Even a valid bridge may be large, unnatural, nonunique or impractical; logical existence supplies neither explanatory merit nor a causal implementation. Source bytes, passage boundaries, translation, attribution, proposition reconstruction, source acceptance, referent identity, model-class adequacy and world truth remain separate questions. This is a constructive finite instance of Craig interpolation, complementary to the Beth frontier, with no claim to re-prove the first-order results or export them to other logics. [R359-AF; R359-AV]
+
+### 8.14 Coupled alternatives and completion-sensitive comparison
+
+A matched rival should retain the integration that its actual premises supply. The strengthened common-model study combines a selected dependency-closed neutral union through the additive-interaction analysis. It carries underived order, external actuality, semantic linkage, target authority and world adequacy as assumptions; it does not derive them by assigning true Boolean values. Its admissibility table is separately fixed before policy conformity is assessed. That repair prevents the fittingness relation from being defined by whichever action the policy already takes. Reason-variable responsiveness, nuisance invariance, asymmetry sensitivity and nonseparable interactions can then coexist with an impersonal expansion. [R359-AG]
+
+The selected union is not every neutral result in the corpus. Formal role availability is not divine Knowledge, Will or Power, and finite bearer labels are not a demonstrated ontology. The primary record checks eight states and 4,096 role allocations: 3,375 make the three roles globally available, 1,695 have a common role bearer and 1,680 do not. The procedural re-review independently reports one eligible table, mask 60, among all 256 Boolean action tables; two mixed-difference interaction edges; 20,000 coordinate relabellings; and 64 target-predicate expansions. These reports preserve a positive consistency and nonentailment control. They do not prove actuality, metaphysical possibility, explanatory parity, source acceptance, personal architecture falsity or implementation in a cognitive system. The neutral rival expressly leaves the source contract unaccepted; accepting an incompatible source predicate would change its premises.
+
+The architecture audit therefore compares admitted consequences, independently specified assumptions, unexplained stopping points, source commitments, imported targets and open bridges separately. One carrier is not automatically one primitive, and a desired predicate is not a derived benefit. A source-extended powers bearer or an abstract-order actualizer can remain compatible with a selected source-role package while incurring additional explanatory obligations. Omitting those strengthened alternatives would overstate the personal proposal's advantage. Conversely, calling a bridge open does not establish its falsity or show that its positive philosophical warrant has been exhausted. [R359-AL]
+
+In the recorded six-coordinate completion diagnostic, the 64 assignments yield one A-only outcome, 15 B1-only outcomes, 15 C1-only outcomes, 15 incomparable outcomes and 18 multiple outcomes. No winner holds across all completions. These are outcomes under the declared diagnostic, not probabilities or possible-world frequencies. The later symbolic receipt contains a satisfiable query labelled `one_architecture_robustly_wins`; a satisfying single assignment cannot by itself establish universal winning across completions. Its accompanying claims and review correctly retain completion sensitivity and the absence of a tautological winner. The label is thus preserved as an evidential limitation rather than used to reverse the stated judgment.
+
+The unresolved work is a matched discriminator or a warranted substantive ordering, not a scalar invented from names. Candidate G's distinction between carrier packaging and explanatory constraint remains the relevant ancestry. The coupled neutral core is a real achievement shared by the stipulated alternatives; it is not yet a personal discriminator. The richer affirmative arguments in these works are likewise not decided by completing this older diagnostic table.
+
+### 8.15 Predictive differences and information-preserving representations
+
+An explanatory preference becomes likelihood evidence only through a specified experiment. For candidates $`A,R`$ with positive prior odds and a received event $`e`$ having defined likelihood ratio,
+
+```math
+\frac{\Pr(A\mid e)}{\Pr(R\mid e)}
+=\frac{\Pr(A)}{\Pr(R)}\frac{P_A(e)}{P_R(e)}.
+```
+
+Equal positive likelihood leaves prior odds unchanged; it does not make unequal priors equal. On a finite outcome space, two probability laws differ exactly when some event has different probability, equivalently when their total variation distance is positive. The maximum event gap is obtained by collecting outcomes where one mass exceeds the other. These are standard finite probability facts, not a rule that fewer named primitives makes a hypothesis more likely. [R359-AN]
+
+Description length needs its own policy. The two prefix codes $`A\mapsto0,R\mapsto10`$ and $`A\mapsto10,R\mapsto0`$ are both valid and reverse the ranking; each has Kraft sum $`3/4`$. An independently motivated support restriction can change a likelihood, but deleting disfavored observations after seeing the answer supplies no predictive achievement. Product sequence likelihoods require the declared independent and identically distributed sampling model. Dependence, adaptive acquisition, intervention or selection bias changes that likelihood. An event impossible under both candidates leaves the posterior odds undefined; eliminating one exact zero-support model does not identify a unique rival or establish the adequacy of the candidate class.
+
+The source records distinguish their domains: the primary study reports 35 distributions, 1,225 pairs and 104,125 sequences; the independent-procedure report uses 21 denominator-five distributions, 441 pairs, 56 count vectors through length five and four prior-odds values. It retains 7,032 parity instances, 43,872 nonunit-likelihood instances and 11,970 undefined-denominator cases, rather than counting those last cases as successful updates. Its 75 independently fixed support cases and the prefix-code reversals support the bounded comparison. They supply neither a canonical prior nor a generally truth-conducive coding language. Matched information and computation, fixed representation and held-out evaluation remain requirements of an empirical architecture comparison, not experiments performed here. [R359-AN]
+
+A common representation can preserve or destroy that discrimination. For a deterministic map $`T:X\to Z`$, let $`U=\{x:P(x)+Q(x)>0\}`$ be the union support of a frozen binary experiment. Exact pointwise likelihood-ratio recovery holds precisely when the extended ratio $`P(x)/Q(x)`$ is constant on each attained fibre of $`T|_U`$. If it is constant, summing over a fibre gives the same ratio at its image; if the image ratio recovers every point ratio, points with the same image must agree. Finite ratios, the infinite ratio and impossible $`0/0`$ points have different roles. The likelihood-ratio partition is the coarsest exact representation for this pair on $`U`$, not a universal natural vocabulary. [R359-AO]
+
+The support restriction repairs an actual failed claim. The earlier checker retained impossible points as a compulsory extra class and recorded 1,580 minimality failures. The revised record removes 308 null-point cases and reports 2,652 support-partition cases with no minimality failure; its 1,484 strict-loss witnesses concern that revised domain, while the earlier report's 2,660 belonged to a different enumeration. The distinct conditional-distribution analysis reports 1,800 deterministic cases and 14,400 stochastic-channel cases. These corrected records do not erase the original failure or justify comparing the changed denominators as if the same sample had been rerun.
+
+For a common stochastic channel $`K`$, total variation obeys $`\|PK-QK\|_{\mathrm{TV}}\le\|P-Q\|_{\mathrm{TV}}`$ by the triangle inequality applied to the nonnegative channel weights. Deterministic equality in this contraction has the weaker requirement that the signed differences within each fibre do not cancel; it need not preserve every pointwise likelihood ratio. A stochastic sufficiency claim needs its own recovery condition. Nor does distributional contraction say that every realized output likelihood ratio is smaller than every input ratio.
+
+A new sensor or intervention can enlarge the experiment and genuinely add evidence. Recoding one fixed experiment cannot manufacture that gain. Candidate-dependent channels, score-selected representations and held-out leakage change the comparison instead of establishing superiority under a common channel. The cited representation-learning and hippocampal studies retain their reported kernel-alignment, state-decorrelation and trajectory-comparison content. They do not provide a likelihood over personal versus impersonal metaphysical grounds. Exact predictive sufficiency likewise establishes neither proper function, personality, wisdom nor source truth. [R359-AO]
+
+### 8.16 When adaptation cannot enlarge the registered experiment
+
+The static distinction extends to finite controlled weighted systems. Let $`M_{u,o}`$ be a nonnegative matrix giving the joint next-state and next-observation weights for action $`u`$ and observation $`o`$, and require $`\sum_oM_{u,o}`$ to be row-stochastic. With initial row distribution $`\alpha`$, an action-observation word $`w`$ has probability $`\alpha M_w\mathbf1`$. For two candidates, form their block-diagonal matrices, the signed initial row $`\beta=(\alpha_A,-\alpha_R)`$ and terminal column $`\mathbf1`$. Word probabilities agree exactly when $`\beta M_w\mathbf1=0`$ for every registered word. [R359-AT]
+
+Let $`V_k`$ span the rows $`\beta M_w`$ for words of length at most $`k`$, and let the full reachable row dimension be $`r`$. The initial row is nonzero, so $`\dim V_0=1`$. If $`V_k=V_{k+1}`$, multiplication by each letter preserves $`V_k`$, and no later level enlarges it. Otherwise the dimension grows by at least one. It follows that $`V_{r-1}`$ is the full reachable space. Thus a trace difference, if any, has a witness of length at most $`r-1\le n_A+n_R-1`$. The argument uses stabilization; it does not assume growth at every level or tightness in every smaller subclass.
+
+A common adaptive policy chooses each action from the public history and candidate-independent private randomness. The probability of a fixed transcript is its model word probability multiplied by the common policy factors along that transcript. Equal word laws therefore give equal transcript laws for every such policy. Conversely a differing word can be exposed by its fixed action sequence. Random or adaptive action choice does not distinguish candidates with the same complete registered trace language. This conclusion is relative to that action/observation algebra, target, representation and source version. An independently justified additional intervention can change it.
+
+The initial recorded checker failed because it demanded a length-three delayed witness inside its two-state deterministic subclass, even though its 16,384 actual horizon comparisons and 300 random rational comparisons found no bound failure. That was an unjustified tightness expectation. The repair preserves that failure and supplies a separate three-state pair agreeing through horizon two but differing at horizon three: along actions $`(0,1,0)`$ its outputs are $`(1,1,1)`$ and $`(1,1,0)`$. The distinct procedure reports 200 rational model pairs, an exact reachable-space calculation, one distinct trace-equivalent pair and all 128 deterministic adaptive policies through horizon three for that pair. Those are historical receipts, not a new automata campaign. Equal traces establish neither hidden-state isomorphism nor numerical, causal or ontological identity; different traces identify a test, not which architecture is true. The theorem's ancestry is finite weighted-automata equivalence and linear reachability. [R359-AT]
+
+### 8.17 Source testimony, joint reliability and three distinct evidential routes
+
+Source compatibility, evidential update and prior preference answer different questions. A source-based restriction can be warranted by authentication, translation, proposition reconstruction, version, applicability and a justified world-link. A predictive or interventional advantage instead needs differing likelihoods in an independently eligible experiment. An independently defended prior or coding policy can change a preference when current likelihoods agree. None of these three routes may be silently counted as another. Equal likelihood on a registered experiment also does not prove equality under every possible experiment. [R359-AQ]
+
+The same-byte version control is particularly direct: custody can remain unchanged while applicability fails after a version or target change. A candidate-independent common channel preserves candidate-swap symmetry and cannot create total-variation discrimination. A representation chosen separately for each candidate, or after observing which label it favors, supplies a changed experiment. The source-gate record tests 64 assignments to six separately typed conditions; that conjunction test does not authenticate any of the conditions. The earlier deterministic report's 2,925 pair/channel cases and the distinct stochastic report's 144 cases, nine binary channels and 104 equal-event parity cases remain separate finite domains. [R359-AQ]
+
+When testimony is treated probabilistically, the input must be the **joint** architecture-conditioned source-observation law. For an observed vector $`x=(x_1,\ldots,x_m)`$, the update uses $`P_A(x)/P_R(x)`$. This ratio factors into marginal root ratios only if the complete root vector is conditionally independent under each candidate. Distinct books, translations, editions, summaries, institutions or printed identifiers do not establish that premise. Source compatibility does not supply a source-generation or reliability law. A text and its translation are not two independent acquisitions, and a secondary reconstruction is not automatically an independent witness to the underlying proposition. [R359-AX]
+
+The preserved correlation witness is exact. On four binary-pair outcomes, take $`P_A=(1/4,1/4,1/4,1/4)`$ and $`P_R=(1/5,1/5,1/5,2/5)`$. At outcome $`(0,0)`$, the joint likelihood ratio is $`5/4`$, whereas multiplying marginal ratios gives $`(5/4)^2=25/16`$. The initial source report records 24,608 such marginal-product mismatches over its joint-table outcomes. Its distinct procedure records 24,969 mismatches among 25,000 joint cases, alongside 729 explicitly independent ternary-root cases, 27 duplicate controls, 15,000 common stochastic channels and 1,000 source-parity cases. The many mismatches are intended counterexamples to an unguarded product rule, not failures of the correctly conditional joint rule. The reports do not establish actual root independence.
+
+An exact duplicate preserves the original ratio rather than raising it to a power. A common translation channel uses pushforward likelihoods and contracts distributional total variation; an individual output can nevertheless have a larger pointwise ratio than some input. Zero support must remain explicit: an event impossible under both candidates gives no ordinary conditional update, and an event impossible under one excludes it only within that exact model. Posterior preference remains conditional on the candidate class, prior and reliability assumptions, rather than a certificate of actual-world selection.
+
+The source note preserves the Asfahani material as translated-primary access and El-Tobgui's account as secondary scholarly reconstruction. Its discussion of sense perception, reports, reason, natural cognitive disposition and widespread attestation includes qualitative competence, absence of collusion and recipient conditions beyond a finite independent-root model. Neither raw message multiplicity nor the present Bayesian specialization is an exact formalization of the broader account of tawātur or fiṭrah. The selected source predicates can have genuine force within a warranted source interpretation; placing them in a likelihood model does not turn them into independently measured neutral evidence. Source-world mapping, actual reliability, candidate-class completeness and the richer personal-ground conclusion remain open at this receipt scope. [R359-AX]
+
 ## 9. Intrinsic reasons, fitting response, and the indifferent agent
 
 The preceding results leave room for substantive normative reasoning. They show where a descriptive or computational account has not supplied a target; they do not establish that normative judgments are unwarranted unless deduced from wholly norm-free premises. A reason can have independent prima facie warrant through what it is about: another person's actual good, an actual relation, a fitting acknowledgment, or a valid undertaking. The remaining work is to articulate that warrant and test its scope. [S11; S13–S17]
@@ -1634,3 +1754,195 @@ The following subject descriptions identify the public Orthemology arguments use
 [receipt-t-11]: https://api.github.com/repos/theislampill/orthemology/git/blobs/7ae1a4e459206c1bccec5c3c711ebc2478b5dea2
 [receipt-t-12]: https://api.github.com/repos/theislampill/orthemology/git/blobs/400b2abbc9ba271af694c1aa89c9faf2d9b05150
 [receipt-t-13]: https://api.github.com/repos/theislampill/orthemology/git/blobs/73ce19dccc31f0b4eaa43b691c840acf4828e138
+
+
+### Public receipt studies for the preceding analyses
+
+The following public records preserve the critical audits, repairs, declared limits and historical numerical reports cited above. Their PASS and FAIL labels describe those records; they are not new executions or external review of this exposition. Mathematical ancestry and translated-primary versus secondary-source roles remain as stated in the analyses.
+
+The common source directory is `docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/VALIDATION_RECEIPTS/`. Each listed filename together with that directory gives its original source path; the immutable Git blob identifies the exact received body.
+
+<a id="r132s-ref-aa"></a>
+
+**[R359-AA] Causal score guidance and intervention controls.**
+
+- **AA01 — admission and authority limits.** `PMR-007_DEEP_AA_ADMISSION_OVERLAY.yaml`. Git blob `b041da53cd042ad9fc2ac69d37ae513277ad66f1`.
+- **AA02 — critical audit and required corrections.** `PMR-007_DEEP_AA_V1_COLD_AUDIT.md`. Git blob `8646c538019368258a245e9e8faa38dba2a3bf18`.
+- **AA03 — custody and scope audit.** `PMR-007_DEEP_AA_V2_CUSTODY_AND_SCOPE_AUDIT.md`. Git blob `b427f0015fdc3356d73922f86f4722ffe86f0665`.
+- **AA04 — repair account, retaining earlier defects.** `PMR-007_DEEP_AA_V3_CUSTODY_AND_SCOPE_REPAIR_LOG.md`. Git blob `1f6047f550826aa42b3bb5c54af8df73b21a8328`.
+- **AA05 — distinct procedural review; not external review.** `PMR-007_DEEP_AA_V3_DISTINCT_FRESH_REREVIEW.md`. Git blob `02c43e9d0736918d0f158116d5e36ed9876a6189`.
+- **AA06 — literal reported results and controls.** `pmr007_deep_aa_causal_guidance_primary_check_v3_results.json`. Git blob `bec9af32c2bf4b21b38f0c639fd712d15c393ce7`.
+- **AA07 — literal reported results and controls.** `pmr007_deep_aa_distinct_intervention_reduct_rereview_v3_results.json`. Git blob `0c3771f0266eb355cad66ec174b27227a2b8518a`.
+
+[R359-AA]: #r132s-ref-aa
+
+<a id="r132s-ref-ab"></a>
+
+**[R359-AB] Profile-aware and profile-blind admissible policies.**
+
+- **AB01 — admission and authority limits.** `PMR-007_DEEP_AB_ADMISSION_OVERLAY.yaml`. Git blob `3d1b12f99f88f6c5dd53c5b297dfc6ac72eb2816`.
+- **AB02 — critical audit and required corrections.** `PMR-007_DEEP_AB_V1_COLD_AUDIT.md`. Git blob `b98171fd63bb58e61ba388d4d46a345c3314669b`.
+- **AB03 — distinct procedural review; not external review.** `PMR-007_DEEP_AB_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `1c36f4ce534336c9bab3bb83782167baf9e3a2ef`.
+- **AB04 — repair account, retaining earlier defects.** `PMR-007_DEEP_AB_V2_REPAIR_LOG.md`. Git blob `ff8a4152510dc8437c5abfeac19870ab44143aa2`.
+- **AB05 — literal reported results and controls.** `pmr007_deep_ab_distinct_all_selector_constraint_rereview_v2_results.json`. Git blob `d774e987b55234aeea1599646a8a320a07391527`.
+- **AB06 — literal reported results and controls.** `pmr007_deep_ab_fittingness_policy_primary_check_v2_results.json`. Git blob `1d503cb0440d734c23a0feb01e5b0471406d4df5`.
+
+[R359-AB]: #r132s-ref-ab
+
+<a id="r132s-ref-ac"></a>
+
+**[R359-AC] Equivariant selection and the specification argument.**
+
+- **AC01 — admission and authority limits.** `PMR-007_DEEP_AC_ADMISSION_OVERLAY.yaml`. Git blob `60f20d65e4c8fd581e354784032f14db7deb49f4`.
+- **AC02 — critical audit and required corrections.** `PMR-007_DEEP_AC_V1_COLD_AUDIT.md`. Git blob `b3d73c1bd8ab0e47388ea8c028ff3c3c48f7082b`.
+- **AC03 — distinct procedural review; not external review.** `PMR-007_DEEP_AC_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `4d9af82bbc16e89c14ecf175c8578e20a35344d9`.
+- **AC04 — repair account, retaining earlier defects.** `PMR-007_DEEP_AC_V2_REPAIR_LOG.md`. Git blob `570bdfbf8974f94d1f0589e734e8f67b7f6ea67a`.
+- **AC05 — literal reported results and controls.** `pmr007_deep_ac_distinct_orbit_stabilizer_rereview_v2_results.json`. Git blob `39fe90bd41ecb924082f85145e373992274f8b84`.
+- **AC06 — literal reported results and controls.** `pmr007_deep_ac_specification_resource_primary_check_v2_results.json`. Git blob `834b6b5d7843fac1f2d2720797dcad07749f46d3`.
+
+[R359-AC]: #r132s-ref-ac
+
+<a id="r132s-ref-ad"></a>
+
+**[R359-AD] Registered reason mediation and nuisance invariance.**
+
+- **AD01 — admission and authority limits.** `PMR-007_DEEP_AD_ADMISSION_OVERLAY.yaml`. Git blob `7da92696408120bb22acc6559bf13a86bd189451`.
+- **AD02 — critical audit and required corrections.** `PMR-007_DEEP_AD_V1_COLD_AUDIT.md`. Git blob `514ce2eae00fc96476c0089aa86068480823df09`.
+- **AD03 — distinct procedural review; not external review.** `PMR-007_DEEP_AD_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `c71ae5b52c50be9931b85375545a7d73a5590b74`.
+- **AD04 — repair account, retaining earlier defects.** `PMR-007_DEEP_AD_V2_REPAIR_LOG.md`. Git blob `305087c5c81bb841172d640bcf0bc126f1826b85`.
+- **AD05 — literal reported results and controls.** `pmr007_deep_ad_distinct_partition_scm_rereview_v2_results.json`. Git blob `eb961d634edaf21076046f9e439a60eb118039df`.
+- **AD06 — literal reported results and controls.** `pmr007_deep_ad_reason_semantic_mediation_primary_check_v2_results.json`. Git blob `b74b749047b3e96ea296fff01346b5790d8a3767`.
+
+[R359-AD]: #r132s-ref-ad
+
+<a id="r132s-ref-af"></a>
+
+**[R359-AF] Finite reduct determination and the Beth frontier.**
+
+- **AF01 — admission and authority limits.** `PMR-007_DEEP_AF_ADMISSION_OVERLAY.yaml`. Git blob `2be22b47345b36e28a9068c0ac9ec428286e953b`.
+- **AF02 — critical audit and required corrections.** `PMR-007_DEEP_AF_V1_COLD_AUDIT.md`. Git blob `e592ab62f993ccadc59bc1a04c84b4ae799950ba`.
+- **AF03 — distinct procedural review; not external review.** `PMR-007_DEEP_AF_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `05a009775883c1f0358f679cdda072c7797415e9`.
+- **AF04 — repair account, retaining earlier defects.** `PMR-007_DEEP_AF_V2_REPAIR_LOG.md`. Git blob `1ba2d9439902ff24e45f1c314b9625614b18b4ec`.
+- **AF05 — literal reported results and controls.** `pmr007_deep_af_distinct_relational_isomorphism_rereview_v2_results.json`. Git blob `0d8280b91c6e17511efae748211ed8b44dff717b`.
+- **AF06 — literal reported results and controls.** `pmr007_deep_af_neutral_reduct_primary_check_v2_results.json`. Git blob `c085201d6f425c7a4eb1c3b66eeba8ec26d01574`.
+
+[R359-AF]: #r132s-ref-af
+
+<a id="r132s-ref-ag"></a>
+
+**[R359-AG] A coupled neutral comparison model.**
+
+- **AG01 — admission and authority limits.** `PMR-007_DEEP_AG_ADMISSION_OVERLAY.yaml`. Git blob `5a6dcc9ff18d30b7b67351f40e815d5b372deb2d`.
+- **AG02 — critical audit and required corrections.** `PMR-007_DEEP_AG_V1_COLD_AUDIT.md`. Git blob `579cd68d86e4d06c95a02e26a97ca5eb0638ee79`.
+- **AG03 — distinct procedural review; not external review.** `PMR-007_DEEP_AG_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `b843ea2f67deb05151c3e7cdb5bf94f8c3409ea0`.
+- **AG04 — repair account, retaining earlier defects.** `PMR-007_DEEP_AG_V2_REPAIR_LOG.md`. Git blob `4d2353e4caa573889996794c7209f4e7cc45dd06`.
+- **AG05 — literal reported results and controls.** `pmr007_deep_ag_distinct_constraint_search_rereview_v2_results.json`. Git blob `a6ea8eb06bf4ba3517b747f50f71394cd4f869a2`.
+- **AG06 — literal reported results and controls.** `pmr007_deep_ag_strengthened_r5_primary_check_v2_results.json`. Git blob `45bbf78784a4a370835b09279c69b7922c234ee5`.
+
+[R359-AG]: #r132s-ref-ag
+
+<a id="r132s-ref-al"></a>
+
+**[R359-AL] Completion-sensitive architecture comparison.**
+
+- **AL01 — critical audit and required corrections.** `PMR-007_DEEP_AL_V1_COLD_AUDIT.md`. Git blob `49d58e48d0357376f3ff0e82b5ed5642146ea586`.
+- **AL02 — distinct procedural review; not external review.** `PMR-007_DEEP_AL_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `083a66be284bcb2fc75d5f754b1bd41bda4ec667`.
+- **AL03 — repair account, retaining earlier defects.** `PMR-007_DEEP_AL_V2_REPAIR_LOG.md`. Git blob `b9568e1ed681d4b65ba4eeef8528943d9f6d16b8`.
+- **AL04 — literal reported results and controls.** `pmr007_deep_al_architecture_audit_primary_check_v2_results.json`. Git blob `99a8dadbc6a39ce9cf8c9a7c11a16f827c4e5038`.
+- **AL05 — literal reported results and controls.** `pmr007_deep_al_sympy_robust_champion_rereview_v1_results.json`. Git blob `b67ab0e72f0fd870cda38a1b4d48f56827c08d63`.
+
+[R359-AL]: #r132s-ref-al
+
+<a id="r132s-ref-an"></a>
+
+**[R359-AN] Likelihood discrimination, priors and coding policy.**
+
+- **AN01 — critical audit and required corrections.** `PMR-007_DEEP_AN_V1_COLD_AUDIT.md`. Git blob `fe9619b1f89c409de63c18d107d5b8c637ebf78f`.
+- **AN02 — distinct procedural review; not external review.** `PMR-007_DEEP_AN_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `2b3e56bbcf814cb0d9025c907242c102cb4ab44d`.
+- **AN03 — repair account, retaining earlier defects.** `PMR-007_DEEP_AN_V2_REPAIR_LOG.md`. Git blob `5e3a555dd5b71a5264c041c96eec001eae72f9d0`.
+- **AN04 — literal reported results and controls.** `pmr007_deep_an_abductive_discrimination_primary_check_v1_results.json`. Git blob `5b3a746306b9fc3401e423f0c19ac8e3eafaad90`.
+- **AN05 — literal reported results and controls.** `pmr007_deep_an_distinct_countvector_tv_rereview_results.json`. Git blob `d46f9913da4db1c79a4e97185aebfea4ba8344a5`.
+
+[R359-AN]: #r132s-ref-an
+
+<a id="r132s-ref-ao"></a>
+
+**[R359-AO] Likelihood-ratio sufficient representations.**
+
+- **AO01 — critical audit and required corrections.** `PMR-007_DEEP_AO_V1_COLD_AUDIT.md`. Git blob `9e582f55fd74dbd89c39d26a1423749289bc0a1d`.
+- **AO02 — distinct procedural review; not external review.** `PMR-007_DEEP_AO_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `c1ace191b81da3591c5e49bb3d99895192da03b2`.
+- **AO03 — repair account, retaining earlier defects.** `PMR-007_DEEP_AO_V2_REPAIR_LOG.md`. Git blob `27e18fc4a81d45d2a9bc9dc3d1fc9271b83c206c`.
+- **AO04 — literal reported results and controls.** `pmr007_deep_ao_distinct_channel_sufficiency_rereview_results.json`. Git blob `6c8247d7dfa3ac7c5bde0c2a40551da54192eed5`.
+- **AO05 — literal reported results and controls.** `pmr007_deep_ao_representation_sufficiency_primary_check_v1_results.json`. Git blob `f87f4fbb616c3c392d8150a6d8b7ed41b1a9cdce`.
+- **AO06 — literal reported results and controls.** `pmr007_deep_ao_representation_sufficiency_primary_check_v2_results.json`. Git blob `b92bf410d631df9889369cff5b44b247254594f4`.
+
+[R359-AO]: #r132s-ref-ao
+
+<a id="r132s-ref-aq"></a>
+
+**[R359-AQ] Source restriction, experiment and prior as distinct routes.**
+
+- **AQ01 — admission and authority limits.** `PMR-007_DEEP_AQ_ADMISSION_OVERLAY.yaml`. Git blob `bb272c2735e7b3ca33c8e3a5e94c6e2da101eb27`.
+- **AQ02 — critical audit and required corrections.** `PMR-007_DEEP_AQ_V1_COLD_AUDIT.md`. Git blob `d305fac036a075da775e8d077445fed234e1df8d`.
+- **AQ03 — distinct procedural review; not external review.** `PMR-007_DEEP_AQ_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `72db8779a4ad42a3f3a856d14d69dc014aaad166`.
+- **AQ04 — repair account, retaining earlier defects.** `PMR-007_DEEP_AQ_V2_REPAIR_LOG.md`. Git blob `d2cc6755cbf1ec41e4157691af9f493c28478256`.
+- **AQ05 — literal reported results and controls.** `pmr007_deep_aq_distinct_stochastic_source_rereview_v2_results.json`. Git blob `f9ee0ecf8c81420da462180100fccc15ece41ed2`.
+- **AQ06 — literal reported results and controls.** `pmr007_deep_aq_primary_check_v1_results.json`. Git blob `4d18214cc15db8a0b19910acd7f69113fd4d0b08`.
+
+[R359-AQ]: #r132s-ref-aq
+
+<a id="r132s-ref-at"></a>
+
+**[R359-AT] Weighted traces and adaptive indistinguishability.**
+
+- **AT01 — admission and authority limits.** `PMR-007_DEEP_AT_ADMISSION_OVERLAY.yaml`. Git blob `647e67283292a306bfd1cc960f55e7645d23cd18`.
+- **AT02 — critical audit and required corrections.** `PMR-007_DEEP_AT_V1_COLD_AUDIT.md`. Git blob `9e50d479906aecfde581fa145356f37600cd7c72`.
+- **AT03 — distinct procedural review; not external review.** `PMR-007_DEEP_AT_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `1f5fd49b5d44ae1541a05138da3bb2121f034b3e`.
+- **AT04 — repair account, retaining earlier defects.** `PMR-007_DEEP_AT_V2_REPAIR_LOG.md`. Git blob `d9e398a4bc735d855e715dc61ac8074ab5deaccf`.
+- **AT05 — literal reported results and controls.** `pmr007_deep_at_distinct_reachable_space_rereview_v2_results.json`. Git blob `32580f6a92dc3c1f375b640311129927d6f7ffb9`.
+- **AT06 — literal reported results and controls.** `pmr007_deep_at_trace_equivalence_primary_check_v1_results.json`. Git blob `d446882b7bea95e67ed95e9f3720ddd05c41dc86`.
+- **AT07 — literal reported results and controls.** `pmr007_deep_at_trace_equivalence_primary_check_v2_results.json`. Git blob `f9531c55afba5d45e2bd6f4c3836522cbdcc2c6a`.
+
+[R359-AT]: #r132s-ref-at
+
+<a id="r132s-ref-av"></a>
+
+**[R359-AV] The finite interval of shared-vocabulary interpolants.**
+
+- **AV01 — admission and authority limits.** `PMR-007_DEEP_AV_ADMISSION_OVERLAY.yaml`. Git blob `ecde8d1ac50a0959f8fc125c40249247e1c042f2`.
+- **AV02 — mathematical ancestry or source-scope note.** `PMR-007_DEEP_AV_CRAIG_BETH_SOURCE_NEUTRAL_BRIDGE_NOTE.md`. Git blob `4069e77e260899fe8afe21f0f45a188167877626`.
+- **AV03 — critical audit and required corrections.** `PMR-007_DEEP_AV_V1_COLD_AUDIT.md`. Git blob `6fb088b2de88314a039133a2186dd8e0bd501210`.
+- **AV04 — distinct procedural review; not external review.** `PMR-007_DEEP_AV_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `b4068bba2fbf345d770cc79db51e2957536a0ae9`.
+- **AV05 — repair account, retaining earlier defects.** `PMR-007_DEEP_AV_V2_REPAIR_LOG.md`. Git blob `0d80b19c0cfe58ed106b4cef81717b197a708236`.
+- **AV06 — literal reported results and controls.** `pmr007_deep_av_distinct_set_projection_rereview_v2_results.json`. Git blob `e2ebdd7933c2206d2eb601bd16d1635dea9cd9df`.
+- **AV07 — literal reported results and controls.** `pmr007_deep_av_neutral_bridge_primary_check_v1_results.json`. Git blob `9620ff406f6fb49e964fc463c1dc45ffd659bbc3`.
+- **AV08 — literal reported results and controls.** `pmr007_deep_av_neutral_bridge_primary_check_v2_results.json`. Git blob `49c2e270fa846ff17ad138f15121fcbf78a022ab`.
+
+[R359-AV]: #r132s-ref-av
+
+<a id="r132s-ref-ax"></a>
+
+**[R359-AX] Joint source reliability and the limits of multiplicity.**
+
+- **AX01 — admission and authority limits.** `PMR-007_DEEP_AX_ADMISSION_OVERLAY.yaml`. Git blob `ec1d6f36e8732838b75e5e13f1dc9ee4d13eba36`.
+- **AX02 — mathematical ancestry or source-scope note.** `PMR-007_DEEP_AX_BAYES_SOURCE_WORLD_AND_TAWATUR_SCOPE_NOTE.md`. Git blob `2bc886280f0535f78de4df14b8fab8689e9302ac`.
+- **AX03 — critical audit and required corrections.** `PMR-007_DEEP_AX_V1_COLD_AUDIT.md`. Git blob `88a1f1b446a786ea3326749adeb645400cc0506b`.
+- **AX04 — distinct procedural review; not external review.** `PMR-007_DEEP_AX_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `34378de2c63ae7a9d11ad4904df21bdd934b008b`.
+- **AX05 — repair account, retaining earlier defects.** `PMR-007_DEEP_AX_V2_REPAIR_LOG.md`. Git blob `9a45be875b073883dd6373aa2331f321786d8164`.
+- **AX06 — literal reported results and controls.** `pmr007_deep_ax_distinct_joint_source_channel_rereview_v2_results.json`. Git blob `4f300e80b322415f6be18a08b5eef506b7903c7c`.
+- **AX07 — literal reported results and controls.** `pmr007_deep_ax_source_likelihood_primary_check_v1_results.json`. Git blob `9a0ae20ef9f792a3ef0957d43af180e6032dea3d`.
+
+[R359-AX]: #r132s-ref-ax
+
+<a id="r132s-ref-az"></a>
+
+**[R359-AZ] Crossed form-content interventions.**
+
+- **AZ01 — admission and authority limits.** `PMR-007_DEEP_AZ_ADMISSION_OVERLAY.yaml`. Git blob `c49af723cd201395b573d2c0485572f0f6872d6f`.
+- **AZ02 — critical audit and required corrections.** `PMR-007_DEEP_AZ_V1_COLD_AUDIT.md`. Git blob `5db04bdd8b46955c81d4e1af03b05f64e6bccf87`.
+- **AZ03 — distinct procedural review; not external review.** `PMR-007_DEEP_AZ_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `cf7b3dd29a374f6a431dd092274ce590b10bfdc3`.
+- **AZ04 — repair account, retaining earlier defects.** `PMR-007_DEEP_AZ_V2_REPAIR_LOG.md`. Git blob `ce3e91a65ba323e1c2920b81a7dbb38df625126d`.
+- **AZ05 — literal reported results and controls.** `pmr007_deep_az_crossed_semantic_primary_check_v1_results.json`. Git blob `8d50aa3be36e5fc0767b7ce5a8f267ac039a5449`.
+- **AZ06 — literal reported results and controls.** `pmr007_deep_az_distinct_three_by_three_rereview_v2_results.json`. Git blob `823a1af053dc8091e49bd366a5f8f61c8c979699`.
+
+[R359-AZ]: #r132s-ref-az

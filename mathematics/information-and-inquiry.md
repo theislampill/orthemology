@@ -553,6 +553,50 @@ Choose two distinct positive $`q`$'s. Both positive-model families approach the 
 
 A fixed positive model has a unique posterior. The result does not prohibit rational revision of a zero-probability assessment; it separates such revision from conditioning inside the original model. Applied after a retained history, the argument uses its full positive support and says nothing about hypotheses excluded by that support. Changing the target, source claim, or audit authentication requires its own warranted modelling justification. [12]
 
+<a id="r132s-additive-interactions"></a>
+
+### 3.3 Additive interaction and the finest component partition
+
+The interaction in §3.1 concerns a joint probability law whose lower-order marginals lose a higher-order term. A related question asks whether a declared family of functions can be expressed as sums of functions on separate coordinate blocks. These are different questions: failure of a real additive decomposition is not, by itself, statistical dependence, causal influence or the existence of a common subject. The interaction-hypergraph study supplies an exact answer to the additive question at fixed coordinates. [R359-AE]
+
+Fix a nonempty finite coordinate set $`N`$ and a finite family of real-valued functions $`f_j:\{0,1\}^{N}\to\mathbb R`$. Each has the unique multilinear expansion
+
+```math
+f_j(x)=\sum_{S\subseteq N}a_{j,S}\prod_{i\in S}x_i,
+\qquad
+a_{j,S}=\sum_{T\subseteq S}(-1)^{|S|-|T|}f_j(\mathbf1_T),
+```
+
+where $`\mathbf1_T`$ is one on $`T`$ and zero elsewhere, and the empty product is one. This is ordinary real addition and multiplication on Boolean inputs. The formula follows by Möbius inversion on the subset lattice. Its uniqueness is what makes the following decomposition claim exact; it does not depend on estimating a coefficient from incomplete observations.
+
+Form a hypergraph on **all** registered coordinates, including unused ones, with a nonempty support $`S`$ present whenever some $`a_{j,S}\ne0`$. Singleton supports create no connection between distinct coordinates. For a partition $`\mathcal P`$ of $`N`$, require the unrestricted block-local additive contract
+
+```math
+f_j(x)=c_j+\sum_{B\in\mathcal P}g_{j,B}(x_B)
+\quad\text{for every }j,
+```
+
+with arbitrary real-valued block functions and constants. The family admits this contract exactly when every nonzero nonconstant support lies within one block of $`\mathcal P`$. To prove necessity, expand every block function in its own multilinear basis. It can contribute only supports inside that block; uniqueness rules out any cross-block coefficient. For sufficiency, assign each nonconstant monomial to the block containing its support and keep the constant separately. Every hypergraph component must consequently lie in one permitted block, and grouping monomials by components supplies a permitted decomposition.
+
+Thus the connected-component partition is the **finest** permitted additive partition, and every permitted partition is its coarsening. The number $`b_{\rm add}`$ of components is the greatest number of nonempty coordinate blocks obtainable under this contract. The one-block partition always permits a decomposition, so it would be incorrect to call the component partition the unique coarsest permitted partition in the usual refinement order. The cold audit's use of “coarsest blocks” is retained as source terminology, with this mathematical ordering made explicit. Constants can be distributed among the block functions, so uniqueness of the component partition is not uniqueness of their constant terms. [R359-AE]
+
+This specification also exposes a discrepancy in the distinct-review control. Its JSON record prints
+
+```math
+\bigl[x_0+x_1,\;x_2+x_3,\;x_4+x_5\bigr]
+```
+
+and reports one carrier with $`b_{\rm add}=3`$, alongside an overall `PASS`; the prose review repeats the three-component control. Under the real-valued Boolean contract above, every nonzero nonconstant coefficient has singleton support. There are **six** components. Grouping the variables into three pairs is a valid coarsening, but it is not the finest component partition. This conclusion follows directly from the printed functions and the theorem's hypotheses; no checker was run to obtain it. It leaves the intended carrier/decomposition distinction intact: one carrier label still does not imply additive unity. The primary receipt's separate four-variable sum reports four components and is consistent with this calculation. [R359-AE]
+
+Interpreting each printed plus as XOR would change the real-valued functions: $`x\mathbin{\mathsf{xor}}y=x+y-2xy`$. Their real expansions would then contain the three pair interactions. Performing the entire decomposition in a modular coefficient algebra is yet another contract that must specify its operations; over characteristic two, the modular sum itself again splits into single-coordinate summands. Neither convention may be silently substituted for the ordinary real sums to reconcile the recorded count. The reported `PASS`, the exact test input, and the three-versus-six discrepancy therefore remain separate evidence.
+
+The positive result is nevertheless useful. If the graph is connected, no nontrivial partition into independent additive blocks realizes the registered function family. It does not exclude nonadditive networks, coupled plural systems, latent-variable implementations or distributed realization of those same functions. A single carrier may host many additive components, while an impersonal connected law can have one. The union over a declared family matters because a single scalar output need not represent every constraint, transition or explanatory function. An omitted coordinate, a hidden resource or a different coordinate encoding can change the decomposition. Coordinate permutations preserve the component count, whereas an arbitrary recoding need not. [R359-AE]
+
+The ten cold-audit findings accordingly retain independent coordinate eligibility, function-family completeness, resource completeness and full-table identification as application premises. An arbitrary cross-term can connect a graph without supplying explanatory merit. Sparse observations, correlated activity or aligned representations do not identify all coefficients without additional design and identifiability assumptions. Connectivity carries no causal direction, common-bearer identity, ownership, personality, wisdom or actual-world authentication. Those claims require their own evidence and can neither be proved nor refuted by the component count alone.
+
+The primary historical record reports all 65,536 Boolean functions on four variables, 64,594 connected interaction graphs and 40,000 five-variable, three-function families, with no recorded reconstruction or component-minimality failures. The distinct method uses rectangular mixed differences rather than only the primary Möbius calculation: it reports 12,000 six-variable, two-function families, 58,987 partition cases and 5,970 connected families, with no reported method disagreement or coordinate-permutation failure. These are source-reported results, not executions of this incorporation; their separate domains and the explicit erroneous control remain visible. The proof's ancestry is standard Boolean Möbius decomposition and interaction-graph reasoning, and the application carries no general mathematical novelty or external-review claim. [R359-AE]
+
+
 ## 4. Posterior equivalence and its finite tensor test
 
 Two live states are posterior-equivalent if they admit the same words and give the same target posterior after every feasible word, including the empty word. They need not predict word probabilities.
@@ -1166,6 +1210,63 @@ Any nonconstant binary label needs at least three bits because its two classes r
 ```
 
 has all pairwise distances at least three and attains the bound. The distinction is thus two bits for a valid relational output, three for a nonconstant binary label, and five for complete four-state recovery. [13]
+
+<a id="r132s-root-provenance"></a>
+
+#### Evidence from an acquisition and evidence from its copies
+
+The certificate-selection and robust-decoding results assume a declared information channel. A provenance distinction is needed before interpreting repeated messages as additional evidence. Fix two candidate laws $`P,Q`$ on a finite space $`X`$ of authenticated acquisition-root outcomes. An exact copied bundle $`d_m(x)=(x,\ldots,x)`$ is an injective recoding of one outcome. On its diagonal image the two bundle probabilities are still $`P(x)`$ and $`Q(x)`$, so the likelihood ratio remains $`P(x)/Q(x)`$ wherever defined. It is not raised to the power $`m`$. The repeated-audit example in §3 is an instance of this distinction between rereading a retained result and making a new acquisition. [R359-AR]
+
+For a common candidate-independent channel $`K(y\mid x)`$, the output laws are $`PK`$ and $`QK`$. The triangle inequality gives
+
+```math
+\|PK-QK\|_{\rm TV}
+=\frac12\sum_y\left|\sum_x(P(x)-Q(x))K(y\mid x)\right|
+\leq\frac12\sum_x|P(x)-Q(x)|=\|P-Q\|_{\rm TV}.
+```
+
+On a common positive support, an output likelihood ratio is the corresponding $`Q(x)K(y\mid x)`$-weighted average of the input ratios. A sufficient exact copy preserves the relevant ratio; a paraphrase or lossy summary need not. The distributional contraction does not say that every realized output ratio is smaller than every input ratio. A candidate-dependent transmitter can itself carry information about the candidate and changes the experiment, so the common-channel conclusion does not apply to it. [R359-AR]
+
+For several genuinely separate acquisitions, let the complete root vector be $`x=(x_r)_{r\in R}`$. The update always uses its joint laws $`P(x)/Q(x)`$. If, additionally, the coordinates are conditionally independent under **each** candidate, those laws factor and the ratio is the product of the root ratios. For finite positive ratios their logarithms then add. Distinct printed identifiers, storage paths, carriers or institutions establish neither actual root identity nor the conditional-independence premise. Shared acquisition, copying and common causes must be represented in the joint model. Authentication of the root-equivalence partition is an input to this result, not an inference from the displayed labels.
+
+Support cases also remain separate. A zero numerator with positive denominator gives ratio zero; a positive numerator with zero denominator gives an extended infinite ratio; an outcome impossible under both candidates supplies no ordinary conditional update. Logarithmic evidence needs a finite positive ratio. In particular, the strict inequality $`L^m\ne L`$ for a naive duplicated ratio requires $`m\geq2`$ and finite informative $`L\notin\{0,1\}`$. Conservation of the copied experiment does not fail merely because the attempted overcount witness is nondiagnostic at zero or one.
+
+That distinction records an actual failed test. The first distinct-review result reports six failures because its harness demanded $`L^2\ne L`$ at $`L=0`$. The repair log identifies this as a false test expectation, preserves the failed result, and changes the harness's support classification without claiming a change to the already guarded theorem. Its successor reports 144 root/channel cases, 1,024 two-root factor cases, 160 copy-bundle cases, six common-cause boundary cases and three alias cases, with no failures. The primary record has its own domain: 225 root/channel cases, 200 faithful-copy comparisons, 2,500 joint-root cases and 72 informative naive-overcount witnesses, with separate alias and root-merge controls. The two procedural domains are not summed into one experiment, and neither was executed here. [R359-AR]
+
+The mathematical ancestry is finite data processing and likelihood factorization, applied to provenance transport and root-authentication interfaces. Root count and faithful transport do not establish source truth, competence, absence of collusion, recipient warrant, applicability, common knowledge or the broader theological conditions of tawātur. An exact copy can conserve evidence for a false or misspecified candidate model. An authenticated root can still be uninformative. These limits leave genuine new acquisition valuable while preventing copied multiplicity from being counted as independent support.
+
+<a id="r132s-root-diagnosis"></a>
+
+#### Exact diagnosis when an actual root is the corruption unit
+
+The Hamming argument above can be specialized to authenticated acquisition roots. Let $`H`$ be a finite set of at least two hypotheses and $`R`$ a finite set of actual roots. At a fixed version and membership epoch, each root supplies a deterministic complete symbol $`c_r(h)`$ in a finite alphabet $`\Gamma_r`$. All tests and copied messages from that root are bundled into that one symbol. The codeword is $`c(h)=(c_r(h))_{r\in R}`$, with root distance
+
+```math
+d_R(h,h')=|\{r:c_r(h)\ne c_r(h')\}|,
+\qquad d_R=\min_{h\ne h'}d_R(h,h').
+```
+
+Allow a worst-case adversary, knowing the code and true hypothesis, to replace the symbols of at most $`f`$ roots. The decoder sees root positions but is not told which substitutions are corrupt. Exact diagnosis for every permitted corruption is possible exactly when $`d_R\geq2f+1`$. Sufficiency follows from disjoint radius-$`f`$ Hamming balls. If two codewords differ in at most $`2f`$ positions, divide their disagreement positions between the two words to construct a received word within distance $`f`$ of both; no decoder can return the right hypothesis for both possible origins. This is the same classical separation mechanism as the earlier conflicting-label criterion, with the corruption coordinates now explicitly typed as roots. [R359-AW]
+
+For **marked erasures**, the decoder knows which at most $`f`$ positions were lost. Exact diagnosis is possible exactly when $`d_R\geq f+1`$. If all differences between two words fit inside an allowed erased set, their surviving projections coincide. Conversely, when every pair differs in more than $`f`$ places, every permitted erasure leaves a distinguishing coordinate. For a singleton hypothesis class no distinction is needed; for a noninjective code in a larger class, exact diagnosis already fails at $`f=0`$.
+
+The elementary counterexample explains why the thresholds cannot be merged. The words $`00`$ and $`11`$ remain distinguishable after either single marked erasure, but the unmarked word $`01`$ lies one substitution from each. The words $`000`$ and $`111`$ have distance three and correct one unmarked substitution. The source's first audit retained 1,248 failures of the proposed $`d_R>f`$ substitution criterion. Its V1 result is explicitly `PASS_WITH_V1_ERROR_THRESHOLD_COUNTEREXAMPLES`; it records the false earlier criterion alongside checks of the corrected distance statements. A general `PASS` label must not erase the counterexamples. [R359-AW]
+
+For a selected root portfolio $`S\subseteq R`$, define $`D(h,h')=\{r:c_r(h)\ne c_r(h')\}`$. The exact portfolio condition is
+
+```math
+|S\cap D(h,h')|\geq 2f+1
+\quad\text{for unmarked substitutions},
+```
+
+or the same condition with $`f+1`$ for marked erasures, for every distinct hypothesis pair. Selecting a smallest such portfolio is therefore a pair-separation multicover. At $`f=0`$ it is the usual Test Cover problem. This characterization supplies no new general coding or complexity theorem, nor a promise that the minimum portfolio is efficiently computable.
+
+Forty copies from one root contribute one corruption coordinate, even if a naive message code appears to have forty differing entries. Multiple informative tests at that root can enrich its bundled alphabet and improve identification, but they do not make the root forty independently corruptible positions. Conversely, learning that two displayed roots are aliases can reduce a claimed distance from two to one. The statistical independence needed for multiplying likelihoods in the preceding discussion is also distinct from the adversarial corruption model used here: the distance proof requires its actual replacement units and error budget, not a probability-factorization premise. Neither theorem authenticates those units.
+
+The revised primary receipt reports 4,096 binary codebooks, 8,192 erasure cases, 8,192 substitution cases and 184,320 selected-root cases with no recorded failures. The distinct ternary construction reports 19,683 exhaustive codebooks, 15,000 sampled codebooks and 45,000 portfolio cases, again without a reported characterization failure. Its independently generated ambiguity sets are a different procedure within the same programme, not external review. The source retains the earlier 1,248 threshold counterexamples and the distance-two, distance-three, copied-root and alias-contraction controls. These historical counts have not been newly reproduced. [R359-AW]
+
+Finally, diagnosis is only one possible output contract. The relation-selection result above can return a common valid certificate without identifying the true hypothesis, so exact root diagnosis may demand more information than the task actually needs. Even a correctly decoded label does not authenticate a source, establish truth or recipient authority, authorize execution, or guarantee a persistent correction. The static theorem fixes deterministic responses, the version, the membership and the corruption budget. Stochastic or adaptive queries, history dependence, mobile corruption, correlated attacks that exceed that budget, and changing membership require a different model. The temporal guarantee remains the separate transition-system question that follows. [R359-AR; R359-AW]
+
 
 #### Temporal guarantees require a transition model
 
@@ -3682,3 +3783,52 @@ Repository references identify exact public source editions, not mutable current
 [receipt-r16-04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/c84c603d97157f8bdb38cdec34ae3bcb43a9c2c5
 [receipt-r16-05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/0339cbbd4a83a3fdd064736ed322550df9adf3bf
 [receipt-r16-06]: https://api.github.com/repos/theislampill/orthemology/git/blobs/409b4aa41f34b8d801aa78ccfecef4e9b0be975c
+
+
+#### Public receipt studies for the preceding analyses
+
+The following public records preserve the critical audits, repairs, declared limits and historical numerical reports cited above. Their PASS and FAIL labels describe those records; they are not new executions or external review of this exposition. Mathematical ancestry and translated-primary versus secondary-source roles remain as stated in the analyses.
+
+The common source directory is `docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/VALIDATION_RECEIPTS/`. Each listed filename together with that directory gives its original source path; the immutable Git blob identifies the exact received body.
+
+<a id="r132s-ref-ae"></a>
+
+**[R359-AE] Interaction hypergraphs and real additive components.**
+
+- **AE01 — admission and authority limits.** `PMR-007_DEEP_AE_ADMISSION_OVERLAY.yaml`. Git blob `ff3703c81603a7a612a0c49f33194e8f9e69c16a`.
+- **AE02 — critical audit and required corrections.** `PMR-007_DEEP_AE_V1_COLD_AUDIT.md`. Git blob `1ad48f672281f79c31ebd4d937a25468ec3428e2`.
+- **AE03 — distinct procedural review; not external review.** `PMR-007_DEEP_AE_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `7db16ebfd31ef051ebdcbda6b71697f64b374f51`.
+- **AE04 — repair account, retaining earlier defects.** `PMR-007_DEEP_AE_V2_REPAIR_LOG.md`. Git blob `37968401e1ec76406570b3593fb452afd57feabe`.
+- **AE05 — literal reported results and controls.** `pmr007_deep_ae_distinct_rectangular_anova_rereview_v2_results.json`. Git blob `2e44a2e88a27c1728788d2e4054baaa553e6e18b`.
+- **AE06 — literal reported results and controls.** `pmr007_deep_ae_interaction_hypergraph_primary_check_v2_results.json`. Git blob `7c64fb6063cbb8c9261c049ae2be00e511c009cc`.
+
+[R359-AE]: #r132s-ref-ae
+
+<a id="r132s-ref-ar"></a>
+
+**[R359-AR] Root evidence conservation under retransmission.**
+
+- **AR01 — admission and authority limits.** `PMR-007_DEEP_AR_ADMISSION_OVERLAY.yaml`. Git blob `9df3a4643d4916a11d24c856763861e59755820d`.
+- **AR02 — repair account, retaining earlier defects.** `PMR-007_DEEP_AR_REREVIEW_HARNESS_REPAIR_LOG.md`. Git blob `9e99c9d0eb16035605a7bc92630df93b367cb4c8`.
+- **AR03 — critical audit and required corrections.** `PMR-007_DEEP_AR_V1_COLD_AUDIT.md`. Git blob `d7dd3b33d924463fb5faf62566c63d8e0d5f64b6`.
+- **AR04 — repair account, retaining earlier defects.** `PMR-007_DEEP_AR_V2_REPAIR_LOG.md`. Git blob `687553088d927c63bc77ed402c2156a5724d9e92`.
+- **AR05 — distinct procedural review; not external review.** `PMR-007_DEEP_AR_V3_DISTINCT_FRESH_REREVIEW.md`. Git blob `5e714656dc0b433384ae46999d68557bf8b036dd`.
+- **AR06 — literal reported results and controls.** `pmr007_deep_ar_distinct_joint_root_rereview_v2_results.json`. Git blob `932c147cb96307576aca430fe04b9f83311da811`.
+- **AR07 — literal reported results and controls.** `pmr007_deep_ar_distinct_joint_root_rereview_v3_results.json`. Git blob `7fd7f43cb89e7edeed0d99a99a6567db5b142413`.
+- **AR08 — literal reported results and controls.** `pmr007_deep_ar_primary_check_v1_results.json`. Git blob `1d10849b6639d80851966400b8e0c99dcc93f720`.
+
+[R359-AR]: #r132s-ref-ar
+
+<a id="r132s-ref-aw"></a>
+
+**[R359-AW] Root-level substitutions, erasures and portfolio multicover.**
+
+- **AW01 — admission and authority limits.** `PMR-007_DEEP_AW_ADMISSION_OVERLAY.yaml`. Git blob `162e12e8d746785ff7a210ef2332cc9d28394308`.
+- **AW02 — critical audit and required corrections.** `PMR-007_DEEP_AW_V1_COLD_AUDIT.md`. Git blob `849615c8c61dd3130a60f80c74207fff30bfa647`.
+- **AW03 — distinct procedural review; not external review.** `PMR-007_DEEP_AW_V2_DISTINCT_FRESH_REREVIEW.md`. Git blob `8bde9717f601b6646d3015823f52f6ebd8de152b`.
+- **AW04 — repair account, retaining earlier defects.** `PMR-007_DEEP_AW_V2_REPAIR_LOG.md`. Git blob `d1db7dbd69d080acb51479def3f1f3e48687fb41`.
+- **AW05 — literal reported results and controls.** `pmr007_deep_aw_distinct_ternary_hamming_rereview_v2_results.json`. Git blob `7e949de0c1743e2c5c2af8c3b8b44360f6307990`.
+- **AW06 — literal reported results and controls.** `pmr007_deep_aw_provenance_root_robust_diagnosis_primary_check_v1_results.json`. Git blob `cd3bf9bcfea1c63d6e152a00d07c974d3c21d8c0`.
+- **AW07 — literal reported results and controls.** `pmr007_deep_aw_provenance_root_robust_diagnosis_primary_check_v2_results.json`. Git blob `6f35a11d7ab0c252553f20b429a94e139c1e0b6b`.
+
+[R359-AW]: #r132s-ref-aw
