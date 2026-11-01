@@ -508,7 +508,16 @@ class ReaderPilotTests(unittest.TestCase):
         self.assertEqual(workflow.count(start), 1)
         self.assertEqual(workflow.count(anchor), 1)
         addition = workflow[workflow.index(start):workflow.index(anchor)]
-        self.assertEqual(addition.count("      - name: "), 4)
+        self.assertEqual(addition.count("      - name: "), 7)
+        self.assertEqual([line for line in addition.splitlines() if line.startswith("      - name: ")], [
+            "      - name: Source-alias admission and evidence controls",
+            "      - name: Combined public source-alias absence and exact restoration",
+            "      - name: Receive bounded source-alias evidence",
+            "      - name: Preserve bounded source-alias evidence",
+            "      - name: Public123 generated-source absence and exact restoration",
+            "      - name: Receive bounded public123 evidence",
+            "      - name: Preserve bounded public123 evidence",
+        ])
         candidate = candidate.replace(anchor, addition + anchor)
         path.write_text(candidate)
         return path, owners, before, candidate, addition
@@ -552,19 +561,115 @@ class ReaderPilotTests(unittest.TestCase):
             "      - name: Combined public source-alias absence and exact restoration\n",
             "      - name: Receive bounded source-alias evidence\n",
             "      - name: Preserve bounded source-alias evidence\n",
+            "      - name: Public123 generated-source absence and exact restoration\n",
+            "      - name: Receive bounded public123 evidence\n",
+            "      - name: Preserve bounded public123 evidence\n",
         )
         offsets = [addition.index(marker) for marker in markers] + [len(addition)]
         steps = [addition[a:b] for a, b in zip(offsets, offsets[1:])]
         alterations = (
             addition + addition,
             "".join(steps[1:]),
-            steps[1] + steps[0] + steps[2] + steps[3],
-            steps[0] + steps[1] + steps[3] + steps[2],
+            steps[1] + steps[0] + "".join(steps[2:]),
+            steps[0] + steps[1] + steps[3] + steps[2] + "".join(steps[4:]),
         )
+        alterations += tuple("".join(steps[:i] + steps[i + 1:]) for i in range(1, len(steps)))
+        alterations += tuple("".join(steps[:i] + [steps[i + 1], steps[i]] + steps[i + 2:])
+                             for i in range(3, len(steps) - 1))
         for changed in alterations:
             with self.subTest(block=changed):
                 path.write_text(candidate.replace(addition, changed, 1))
                 self.reject(self.check(owners=owners), "owner")
+
+    def test_hosted_ci_exact_legacy_reader_absence_and_public123_forms(self):
+        path, owners, before, candidate, addition = self.hosted_ci_owner_fixture()
+        plain = addition
+        for family in ("boundary", "evidence"):
+            qualifier = ('PUBLIC123_REVISION_RESOURCES="$(mktemp -d '
+                         '"$RUNNER_TEMP/r0002-public123-' + family + '.XXXXXX")" ')
+            self.assertEqual(plain.count(qualifier), 1)
+            plain = plain.replace(qualifier, "", 1)
+        public_start = "      - name: Public123 generated-source absence and exact restoration\n"
+        legacy_absence = plain[:plain.index(public_start)]
+        self.assertEqual(legacy_absence.count("      - name: "), 4)
+        forms = (
+            ("reader-only", ""),
+            ("legacy-absence", legacy_absence),
+            ("public123", plain),
+            ("public123-resource-roots", addition),
+        )
+        for label, block in forms:
+            with self.subTest(form=label):
+                path.write_text(candidate.replace(addition, block, 1))
+                self.assertEqual(self.check(owners=owners), [])
+
+    def test_public123_ci_gate_and_export_changes_are_rejected(self):
+        path, owners, before, candidate, addition = self.hosted_ci_owner_fixture()
+        start = "      - name: Public123 generated-source absence and exact restoration\n"
+        public = addition[addition.index(start):]
+        changes = (
+            ("id: public_fixture123", "id: another_consumer"),
+            ("steps.source_alias_absence.outcome == 'success'",
+             "steps.source_alias_absence.outcome != 'failure'"),
+            ("github.event_name == 'pull_request'", "github.event_name == 'push'"),
+            ("setsid --wait python", "setsid python"),
+            (" run-fixtures --state ", " run --state "),
+            (" export-fixtures --state ", " export --state "),
+            ("always() && github.event_name", "github.event_name"),
+            ("steps.public_fixture123.outcome != 'skipped'",
+             "steps.public_fixture123.outcome != 'failure'"),
+            ("$RUNNER_TEMP/r0002-public-fixtures123-absence", "$RUNNER_TEMP/another-state"),
+            ("${{ runner.temp }}/r0002-public-fixtures123-receipts/", "${{ github.workspace }}/"),
+            ("r0002-public-fixtures123-evidence-${{ github.run_id }}-${{ github.run_attempt }}",
+             "unbound-public123-evidence"),
+            ("actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+             "actions/upload-artifact@v7"),
+            ("if-no-files-found: error", "if-no-files-found: warn"),
+            ("include-hidden-files: false", "include-hidden-files: true"),
+            ("archive: true", "archive: false"),
+        )
+        for old, new in changes:
+            with self.subTest(public123_control=old):
+                self.assertIn(old, public)
+                path.write_text(candidate.replace(public, public.replace(old, new, 1), 1))
+                self.reject(self.check(owners=owners), "owner")
+
+    def test_public123_ci_resources_are_exact_and_paired(self):
+        path, owners, before, candidate, addition = self.hosted_ci_owner_fixture()
+        for family in ("boundary", "evidence"):
+            qualifier = ('PUBLIC123_REVISION_RESOURCES="$(mktemp -d '
+                         '"$RUNNER_TEMP/r0002-public123-' + family + '.XXXXXX")" ')
+            self.assertEqual(candidate.count(qualifier), 1)
+            alternatives = (
+                "",
+                qualifier.replace("PUBLIC123_REVISION_RESOURCES", "UNUSED_RESOURCE_ROOT"),
+                qualifier.replace("mktemp -d", "mktemp -u"),
+                qualifier.replace("$RUNNER_TEMP", "$GITHUB_WORKSPACE"),
+                qualifier.replace("r0002-public123-" + family + ".XXXXXX", "shared-fixture-root"),
+                'PUBLIC123_REVISION_RESOURCES="$RUNNER_TEMP/reused-resource-root" ',
+            )
+            for changed in alternatives:
+                with self.subTest(resource=family, replacement=changed):
+                    path.write_text(candidate.replace(qualifier, changed, 1))
+                    self.reject(self.check(owners=owners), "owner")
+
+    def test_public123_ci_requires_both_earlier_operational_blocks(self):
+        path, owners, before, candidate, addition = self.hosted_ci_owner_fixture()
+        public_start = "      - name: Public123 generated-source absence and exact restoration\n"
+        split = addition.index(public_start)
+        reader_start = "      - name: Reader pilot source, edition and navigation controls (not semantic acceptance)\n"
+        reader_end = "      - name: T20 v6 independent public projection and source boundaries\n"
+        reader = candidate[candidate.index(reader_start):candidate.index(reader_end)]
+        forms = (
+            candidate.replace(reader, "", 1),
+            candidate.replace(addition, addition[split:], 1),
+            candidate.replace(addition, addition[:split], 1),
+        )
+        for changed in forms:
+            with self.subTest(incomplete_increment=changed):
+                path.write_text(changed)
+                self.reject(self.check(owners=owners), "owner")
+
 
     def test_hosted_absence_support_paths_have_a_finite_operational_boundary(self):
         scripts = (
@@ -1502,6 +1607,11 @@ class BulkConsumerProjectionPinTests(unittest.TestCase):
 
     COORDINATE_PINS = {
         **BASE_COORDINATE_PINS,
+        # Published26's mock-fixture repair retains this exact historical source coordinate.
+        'tests/v5_successor_fixtures.py': (
+            '283ea7d698a5bf6a208e45260ee9078f819ecdb25a42c6dd2252d794d2dd3233',
+            13030, 'ccf0bd64f34b10f65ed8bd1bdd8a88adcaf03c7f',
+            '69f3f9284f2cb94433958c0669fc9b06a9760fe7'),
      'experiments/orthemology-v5-successors/groups/t07-technical/README.md': ('3eb797cdf4925b80e21597fed04fbda0bee7a85f7bb5a141137fbba258cf25c2',
                                                                               32584,
                                                                               '7cd6ff0393556359cecaee0c5b109a6cf8a05345',

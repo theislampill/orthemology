@@ -283,7 +283,7 @@ def check_collection_result_routes(repo, owners, cross):
 
 
 def permitted_reader_ci_addition(repo, row, body):
-    """Admit the two reviewed additive operational CI increments.
+    """Admit only the finite reviewed operational CI forms.
 
     Every original workflow byte, gate and permission must survive. This
     narrowly scoped operational change is not a free-form hash exemption.
@@ -344,9 +344,54 @@ def permitted_reader_ci_addition(repo, row, body):
         b"          include-hidden-files: false\n"
         b"          archive: true\n"
     )
-    return (reader_candidate.count(absence_anchor) == 1
-            and absence_addition not in reader_candidate
-            and body == reader_candidate.replace(absence_anchor, absence_addition + absence_anchor, 1))
+    if reader_candidate.count(absence_anchor) != 1 or absence_addition in reader_candidate:
+        return False
+    absence_candidate = reader_candidate.replace(absence_anchor, absence_addition + absence_anchor, 1)
+    if body == absence_candidate:
+        return True
+    # Public123 follows the complete earlier absence transaction. Its success
+    # dependency, process wait, state, export and upload guards stay exact.
+    public123_addition = (
+        b'      - name: Public123 generated-source absence and exact restoration\n'
+        b'        id: public_fixture123\n'
+        b"        if: ${{ github.event_name == 'pull_request' && steps.source_alias_absence.outcome == 'success' }}\n"
+        b'        env:\n'
+        b'          PYTHONDONTWRITEBYTECODE: "1"\n'
+        b'        run: setsid --wait python -B scripts/check_source_alias_absence.py run-fixtures --state "$RUNNER_TEMP/r0002-public-fixtures123-absence"\n'
+        b'      - name: Receive bounded public123 evidence\n'
+        b"        if: ${{ always() && github.event_name == 'pull_request' && steps.public_fixture123.outcome != 'skipped' }}\n"
+        b'        env:\n'
+        b'          PYTHONDONTWRITEBYTECODE: "1"\n'
+        b'        run: python -B scripts/check_source_alias_absence.py export-fixtures --state "$RUNNER_TEMP/r0002-public-fixtures123-absence"\n'
+        b'      - name: Preserve bounded public123 evidence\n'
+        b"        if: ${{ always() && github.event_name == 'pull_request' && steps.public_fixture123.outcome != 'skipped' }}\n"
+        b'        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2\n'
+        b'        with:\n'
+        b'          name: r0002-public-fixtures123-evidence-${{ github.run_id }}-${{ github.run_attempt }}\n'
+        b'          path: ${{ runner.temp }}/r0002-public-fixtures123-receipts/\n'
+        b'          if-no-files-found: error\n'
+        b'          include-hidden-files: false\n'
+        b'          archive: true\n'
+    )
+    if public123_addition in reader_candidate:
+        return False
+    public123_candidate = reader_candidate.replace(
+        absence_anchor, absence_addition + public123_addition + absence_anchor, 1)
+    if body == public123_candidate:
+        return True
+    # The reviewed resource correction is a paired replacement inside that
+    # exact admission step, not permission for arbitrary workflow edits.
+    resource_addition = absence_addition
+    for family in (b"boundary", b"evidence"):
+        plain = b"          python -B tests/test_source_alias_absence_" + family + b".py\n"
+        qualified = (b'          PUBLIC123_REVISION_RESOURCES="$(mktemp -d '
+                     b'"$RUNNER_TEMP/r0002-public123-' + family + b'.XXXXXX")" '
+                     b"python -B tests/test_source_alias_absence_" + family + b".py\n")
+        if resource_addition.count(plain) != 1:
+            return False
+        resource_addition = resource_addition.replace(plain, qualified, 1)
+    return body == reader_candidate.replace(
+        absence_anchor, resource_addition + public123_addition + absence_anchor, 1)
 
 
 
