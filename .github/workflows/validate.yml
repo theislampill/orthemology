@@ -24,8 +24,8 @@ jobs:
           PYTHONDONTWRITEBYTECODE: "1"
         run: |
           python -B tests/test_source_alias_absence_population.py
-          python -B tests/test_source_alias_absence_boundary.py
-          python -B tests/test_source_alias_absence_evidence.py
+          PUBLIC123_REVISION_RESOURCES="$(mktemp -d "$RUNNER_TEMP/r0002-public123-boundary.XXXXXX")" python -B tests/test_source_alias_absence_boundary.py
+          PUBLIC123_REVISION_RESOURCES="$(mktemp -d "$RUNNER_TEMP/r0002-public123-evidence.XXXXXX")" python -B tests/test_source_alias_absence_evidence.py
       - name: Combined public source-alias absence and exact restoration
         id: source_alias_absence
         if: github.event_name == 'pull_request'

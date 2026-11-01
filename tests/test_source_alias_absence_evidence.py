@@ -120,7 +120,7 @@ import os
 class PublicFixtureExportRevisionTests(unittest.TestCase):
     """Finite public-input transport only; never simulated hosted success."""
     def setUp(self):
-        self.root = Path(os.environ['PUBLIC123_REVISION_RESOURCES'])/self._testMethodName
+        self.root = Path(os.environ['PUBLIC123_REVISION_RESOURCES'])/self.id()
         self.state = self.root/'state'
         self.state.mkdir(parents=True)
         self.public = ('258.py', 'boundary.py', 'context.py', 'evidence.py', 'guard.py',
@@ -190,7 +190,7 @@ class PublicFixtureFailureTransportRevisionTests(PublicFixtureExportRevisionTest
 class PublicFixtureProcessGraphRevisionTests(unittest.TestCase):
     """In-memory grammar only, intentionally lacking any complete hosted/source packet."""
     def setUp(self):
-        self.root = Path(os.environ['PUBLIC123_REVISION_RESOURCES'])/self._testMethodName
+        self.root = Path(os.environ['PUBLIC123_REVISION_RESOURCES'])/self.id()
         self.root.mkdir(parents=True)
         self.cases = 0
 
@@ -275,7 +275,7 @@ class PublicFixtureProcessGraphRevisionTests(unittest.TestCase):
 class PublicFixtureControlReaderGraphRevisionTests(unittest.TestCase):
     """Exact path and reader-event grammar; no synthetic full hosted result."""
     def setUp(self):
-        self.root=Path(os.environ['PUBLIC123_REVISION_RESOURCES'])/self._testMethodName; self.root.mkdir(parents=True)
+        self.root=Path(os.environ['PUBLIC123_REVISION_RESOURCES'])/self.id(); self.root.mkdir(parents=True)
 
     def test_exact_ten_control_paths_reject_duplicate_provider_wrong_row_and_changed_key_target(self):
         providers=[{'path':'public/provider'+str(i)+'.py'} for i in range(3)]

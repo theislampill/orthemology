@@ -454,7 +454,7 @@ import stat
 class PublicFixtureMutationRevisionTests(unittest.TestCase):
     """Declared tiny native fault fixtures; never a public123 campaign."""
     def setUp(self):
-        self.area = Path(os.environ['PUBLIC123_REVISION_RESOURCES']) / self._testMethodName
+        self.area = Path(os.environ['PUBLIC123_REVISION_RESOURCES']) / self.id()
         if self.area.exists():
             raise RuntimeError('Finite fault resource is single-use')
         self.area.mkdir()
@@ -614,7 +614,7 @@ class PublicFixtureMutationRevisionTests(unittest.TestCase):
 class PublicFixtureFailureExportRevisionTests(unittest.TestCase):
     """Real tiny native source authentication; no hosted-context simulation."""
     def setUp(self):
-        self.root = Path(os.environ['PUBLIC123_REVISION_RESOURCES'])/self._testMethodName
+        self.root = Path(os.environ['PUBLIC123_REVISION_RESOURCES'])/self.id()
         self.repo, self.state = self.root/'repo', self.root/'state'
         self.repo.mkdir(parents=True); self.state.mkdir()
         self.env = dict(runner.public_fixture_environment(), GIT_AUTHOR_NAME='Finite Fixture',
@@ -679,7 +679,7 @@ class PublicFixtureFailureExportRevisionTests(unittest.TestCase):
 class PublicFixtureChildLifetimeRevisionTests(unittest.TestCase):
     """Actual tiny fault children: startup/lease custody, no consumer campaign."""
     def setUp(self):
-        self.root = Path(os.environ['PUBLIC123_REVISION_RESOURCES'])/self._testMethodName
+        self.root = Path(os.environ['PUBLIC123_REVISION_RESOURCES'])/self.id()
         self.root.mkdir(parents=True)
         self.repo, self.state = self.root/'repo', self.root/'state'
         self.repo.mkdir(); self.state.mkdir()
