@@ -3,6 +3,11 @@
 
 from __future__ import annotations
 
+from resolve_t20_v6_source import (
+    DIGEST_RECORD_PATHS, digest_record_view_bytes, digest_record_view_paths, digest_record_view_is_file,
+)
+
+
 import sys
 import csv
 import hashlib
@@ -246,9 +251,18 @@ def _pmr007_deep_regular_file(repo: Path, relative: str) -> Path:
     return path
 
 
+def _pmr007_deep_member_bytes(repo: Path, relative: str) -> bytes:
+    """Exact finite digest provider or the existing ordinary snapshot member."""
+    if relative in DIGEST_RECORD_PATHS:
+        return digest_record_view_bytes(Path(repo) / relative)
+    path = _pmr007_deep_regular_file(repo, relative)
+    if path.stat().st_mode & 0o111:
+        raise ValueError('pmr007-deep-member-mode-changed:' + relative)
+    return path.read_bytes()
+
+
 def _pmr007_deep_original_members(repo: Path) -> dict[str, str]:
-    path = _pmr007_deep_regular_file(repo, PMR007_DEEP_PREFIX + "/SHA256SUMS")
-    data = path.read_bytes()
+    data = _pmr007_deep_member_bytes(repo, PMR007_DEEP_PREFIX + "/SHA256SUMS")
     if hashlib.sha256(data).hexdigest() != PMR007_DEEP_MANIFEST_SHA256:
         raise ValueError("pmr007-deep-original-manifest-changed")
     members = {}
@@ -288,10 +302,7 @@ def pmr007_deep_duplicate_paths(repo: Path = ROOT) -> set[str]:
     sizes = {}
     for alias, canonical in duplicates.items():
         expected = members[alias.removeprefix(PMR007_DEEP_PREFIX + "/")]
-        current = _pmr007_deep_regular_file(repo, canonical)
-        data = current.read_bytes()
-        if current.stat().st_mode & 0o111:
-            raise ValueError("pmr007-deep-canonical-mode-changed:" + canonical)
+        data = _pmr007_deep_member_bytes(repo, canonical)
         if hashlib.sha256(data).hexdigest() != expected:
             raise ValueError("pmr007-deep-canonical-hash-mismatch:" + canonical)
         sizes[alias] = len(data)
@@ -359,15 +370,15 @@ def validate_pmr007_deep_snapshot(repo: Path = ROOT) -> list[str]:
             missing.add(relative)
             continue
         try:
-            target = _pmr007_deep_regular_file(repo, PMR007_DEEP_PREFIX + "/" + relative)
-            if hashlib.sha256(target.read_bytes()).hexdigest() != digest:
+            data = _pmr007_deep_member_bytes(repo, PMR007_DEEP_PREFIX + "/" + relative)
+            if hashlib.sha256(data).hexdigest() != digest:
                 issues.append("pmr007-deep-member-hash-mismatch:" + relative)
         except (ValueError, OSError) as exc:
             issues.append(str(exc))
     actual = {
         path.relative_to(snapshot).as_posix()
-        for path in snapshot.rglob("*")
-        if (path.is_file() or path.is_symlink()) and path != snapshot / "SHA256SUMS"
+        for path in digest_record_view_paths(repo, snapshot)
+        if (digest_record_view_is_file(path) or path.is_symlink()) and path != snapshot / "SHA256SUMS"
     }
     if actual != set(members) - missing:
         issues.append("pmr007-deep-internal-sha256sums-coverage-mismatch")
@@ -385,9 +396,8 @@ PMR007_ROUNDS_FORMALIZATION_SHA256 = '889197b69135b8525444004c95a6572ed6463b1954
 
 
 def _pmr007_rounds_original_members(repo: Path) -> dict[str, str]:
-    path = _pmr007_deep_regular_file(repo, PMR007_ROUNDS_PREFIX + '/SHA256SUMS')
-    data = path.read_bytes()
-    if path.stat().st_mode & 0o111 or hashlib.sha256(data).hexdigest() != PMR007_ROUNDS_MANIFEST_SHA256:
+    data = _pmr007_deep_member_bytes(repo, PMR007_ROUNDS_PREFIX + '/SHA256SUMS')
+    if hashlib.sha256(data).hexdigest() != PMR007_ROUNDS_MANIFEST_SHA256:
         raise ValueError('pmr007-rounds-original-manifest-changed')
     members = {}
     for line in data.decode('utf-8').splitlines():
@@ -431,9 +441,8 @@ def pmr007_rounds_duplicate_paths(repo: Path = ROOT) -> set[str]:
     objects = {}
     for alias, canonical in sorted(duplicates.items()):
         expected = members[alias.removeprefix(PMR007_ROUNDS_PREFIX + '/')]
-        target = _pmr007_deep_regular_file(repo, canonical)
-        data = target.read_bytes()
-        if target.stat().st_mode & 0o111 or hashlib.sha256(data).hexdigest() != expected:
+        data = _pmr007_deep_member_bytes(repo, canonical)
+        if hashlib.sha256(data).hexdigest() != expected:
             raise ValueError('pmr007-rounds-canonical-identity-mismatch:' + canonical)
         present = repo / alias
         if present.exists() or present.is_symlink():
@@ -501,11 +510,11 @@ def validate_pmr007_rounds_snapshot(repo: Path = ROOT) -> list[str]:
                     and PMR007_ROUNDS_PREFIX + '/' + relative in duplicates):
                 missing.add(relative)
                 continue
-            target = _pmr007_deep_regular_file(repo, PMR007_ROUNDS_PREFIX + '/' + relative)
-            if target.stat().st_mode & 0o111 or hashlib.sha256(target.read_bytes()).hexdigest() != digest:
+            data = _pmr007_deep_member_bytes(repo, PMR007_ROUNDS_PREFIX + '/' + relative)
+            if hashlib.sha256(data).hexdigest() != digest:
                 issues.append('pmr007-rounds-member-identity-mismatch:' + relative)
-        actual = {path.relative_to(snapshot).as_posix() for path in snapshot.rglob('*')
-                  if (path.is_file() or path.is_symlink()) and path != snapshot / 'SHA256SUMS'}
+        actual = {path.relative_to(snapshot).as_posix() for path in digest_record_view_paths(repo, snapshot)
+                  if (digest_record_view_is_file(path) or path.is_symlink()) and path != snapshot / 'SHA256SUMS'}
         if actual != set(members) - missing:
             issues.append('pmr007-rounds-internal-sha256sums-coverage-mismatch')
         if missing:

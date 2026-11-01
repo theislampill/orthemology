@@ -3,6 +3,12 @@
 
 from __future__ import annotations
 
+from resolve_t20_v6_source import (
+    digest_record_view_bytes, digest_record_view_text,
+    digest_record_view_is_file, digest_record_view_paths,
+)
+
+
 import argparse
 import hashlib
 import json
@@ -79,16 +85,16 @@ def contains_ready_to_run(value) -> bool:
 
 
 def sha256(path: pathlib.Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(digest_record_view_bytes(path)).hexdigest()
 
 
 def parse_manifest(path: pathlib.Path, expected_digest: str, issues: list[str]):
     expected: dict[str, str] = {}
-    if not path.is_file() or sha256(path) != expected_digest:
+    if not digest_record_view_is_file(path) or sha256(path) != expected_digest:
         issues.append(f"source manifest mismatch: {path}")
         return expected
     malformed = False
-    for raw in path.read_text(encoding="utf-8").splitlines():
+    for raw in digest_record_view_text(path, encoding="utf-8").splitlines():
         if not raw.strip():
             continue
         parts = raw.split(None, 1)
@@ -124,10 +130,18 @@ def parse_structured(root: pathlib.Path, issues: list[str]):
     return parsed
 
 
+def prepare_specialist_a_inputs(source: pathlib.Path, destination: pathlib.Path):
+    """Stage the original package, including its exact historical manifest."""
+    shutil.copytree(source, destination)
+    manifest = destination / "SHA256SUMS"
+    if not manifest.exists():
+        manifest.write_bytes(digest_record_view_bytes(source / "SHA256SUMS"))
+
+
 def rerun_specialist_a(source: pathlib.Path, issues: list[str]) -> bool:
     with tempfile.TemporaryDirectory() as temporary:
         work = pathlib.Path(temporary) / "specialist-a"
-        shutil.copytree(source, work)
+        prepare_specialist_a_inputs(source, work)
         for result in (work / "results").glob("*.json"):
             result.unlink()
         fresh = work / "audit/FRESH_REREVIEW.json"
@@ -203,8 +217,8 @@ def validate(root=ROOT, intake_override=None):
         expected = parse_manifest(manifest, contract["manifest_sha256"], issues)
         actual_paths = {
             path.relative_to(source).as_posix()
-            for path in source.rglob("*")
-            if path.is_file() or path.is_symlink()
+            for path in digest_record_view_paths(root, source)
+            if digest_record_view_is_file(path) or path.is_symlink()
         } if source.is_dir() else set()
         counts[lane] = len(actual_paths)
         expected_paths = set(expected) | {contract["manifest"]}
@@ -221,11 +235,11 @@ def validate(root=ROOT, intake_override=None):
     if source_hash_mismatches:
         issues.append("source hash mismatch")
 
-    for path in intake.rglob("*"):
-        if not path.is_file():
+    for path in digest_record_view_paths(root, intake):
+        if not digest_record_view_is_file(path):
             continue
         try:
-            text = path.read_text(encoding="utf-8")
+            text = digest_record_view_text(path, encoding="utf-8")
         except UnicodeDecodeError:
             issues.append(f"non-UTF-8 public intake member: {path.relative_to(intake)}")
             continue
@@ -236,7 +250,7 @@ def validate(root=ROOT, intake_override=None):
     structured_files_parsed = parse_structured(intake, issues)
 
     try:
-        ledger = yaml.safe_load((intake / "AR8R-SIX-LANE-V14-INTEGRATION-LEDGER.yaml").read_text(encoding="utf-8"))
+        ledger = yaml.safe_load(digest_record_view_text(intake / "AR8R-SIX-LANE-V14-INTEGRATION-LEDGER.yaml", encoding="utf-8"))
     except (OSError, UnicodeDecodeError, yaml.YAMLError):
         ledger = {}
     lanes = ledger.get("lanes", []) if isinstance(ledger, dict) else []
@@ -258,8 +272,8 @@ def validate(root=ROOT, intake_override=None):
     a_receipt_path = intake / "specialist-a/intake-review/LEAN_INTAKE_RECEIPT.json"
     b_receipt_path = intake / "specialist-b/intake-review/LEAN_INTAKE_RECEIPT.json"
     try:
-        a_receipt = json.loads(a_receipt_path.read_text(encoding="utf-8"))
-        b_receipt = json.loads(b_receipt_path.read_text(encoding="utf-8"))
+        a_receipt = json.loads(digest_record_view_text(a_receipt_path, encoding="utf-8"))
+        b_receipt = json.loads(digest_record_view_text(b_receipt_path, encoding="utf-8"))
     except (OSError, UnicodeDecodeError, json.JSONDecodeError):
         a_receipt, b_receipt = {}, {}
 
@@ -323,15 +337,15 @@ def validate(root=ROOT, intake_override=None):
 
     evidence_path = intake / "external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml"
     try:
-        evidence = yaml.safe_load(evidence_path.read_text(encoding="utf-8"))
+        evidence = yaml.safe_load(digest_record_view_text(evidence_path, encoding="utf-8"))
     except (OSError, UnicodeDecodeError, yaml.YAMLError):
         evidence = {}
 
     external_evidence_root = intake / "external-evidence"
     external_evidence_files = {
         path.relative_to(external_evidence_root).as_posix()
-        for path in external_evidence_root.rglob("*")
-        if path.is_file()
+        for path in digest_record_view_paths(root, external_evidence_root)
+        if digest_record_view_is_file(path)
     } if external_evidence_root.is_dir() else set()
     reports = evidence.get("reports", []) if isinstance(evidence, dict) else []
     report_copy_flags_exact = (
@@ -364,7 +378,7 @@ def validate(root=ROOT, intake_override=None):
 
     protocols = {row.get("id"): row for row in evidence.get("empirical_and_protocol_intake", [])}
     tensor = protocols.get("DR22-TENSOR-ARM-ONTOLOGY", {})
-    tensor_program = (root / "docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md").read_text(encoding="utf-8")
+    tensor_program = digest_record_view_text(root / "docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md", encoding="utf-8")
     tensor_arm_specification_blocked = (
         tensor.get("representation_candidates_in_current_charter") == 6
         and tensor.get("legacy_gate_description") == "120 observations and five arms"

@@ -579,11 +579,14 @@ def _sources(bundle, root):
                       **_source.TYPED_V5_SOURCE_IDS}
         binding_record = _source.is_binding_record(root, row['public_path'])
         path = path_in(root, row['public_path'], exists=row['public_path'] not in historical
-                       and row['public_path'] not in _source.SUCCESSOR_INPUT_PATHS and not binding_record)
+                       and row['public_path'] not in _source.SUCCESSOR_INPUT_PATHS and not binding_record
+                       and row['public_path'] not in _source.DIGEST_RECORD_PATHS)
         prefix = AREA + '/source-store/' + row['public_sha256'] + '/'
         require(row['public_path'].startswith(prefix), 'Wrong public source content-addressed path')
         if binding_record:
             raw = _source.binding_record_successor_bytes(root, row)
+        elif row['public_path'] in _source.DIGEST_RECORD_PATHS:
+            raw = _source.digest_record_successor_bytes(root, row)
         elif row['public_path'] in _source.SUCCESSOR_INPUT_PATHS:
             raw = _source.successor_input_source_bytes(root, row)
         elif row['public_path'] in historical:

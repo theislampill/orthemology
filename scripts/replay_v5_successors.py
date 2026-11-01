@@ -6,6 +6,9 @@ resource-inconclusive run; 2 means a missing prerequisite. No network or shell.
 """
 from __future__ import annotations
 
+from resolve_t20_v6_source import DIGEST_RECORD_PATHS, digest_record_successor_bytes
+
+
 import argparse
 import ast
 from datetime import datetime, timezone
@@ -318,7 +321,9 @@ def public_bytes(root, source):
     require(name.startswith('experiments/orthemology-v5-successors/source-store/' + expected + '/'), 'Source is not content-addressed')
     require(type(source['public_bytes']) is int and source['public_bytes'] >= 0, 'Invalid source length')
     from resolve_t20_v6_source import SUCCESSOR_INPUT_PATHS, successor_input_source_bytes
-    if name in SUCCESSOR_INPUT_PATHS:
+    if name in DIGEST_RECORD_PATHS:
+        data = digest_record_successor_bytes(root, source)
+    elif name in SUCCESSOR_INPUT_PATHS:
         data = successor_input_source_bytes(root, source)
     else:
         path = path_in(root, name)

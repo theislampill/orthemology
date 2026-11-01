@@ -3,6 +3,12 @@
 
 from __future__ import annotations
 
+from resolve_t20_v6_source import (
+    digest_record_view_bytes, digest_record_view_text,
+    digest_record_view_is_file, digest_record_view_paths,
+)
+
+
 import argparse
 import hashlib
 import json
@@ -275,7 +281,7 @@ def normalized_scan_variants(text: str) -> tuple[list[str], bool]:
 
 
 def sha256(path: pathlib.Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(digest_record_view_bytes(path)).hexdigest()
 
 
 def exact_json_equal(actual, expected) -> bool:
@@ -357,7 +363,7 @@ def validate(root=ROOT, synthesis_override=None):
             pure = pathlib.PurePosixPath(reference)
             if pure.is_absolute() or ".." in pure.parts or "\\" in reference:
                 issues.append(f"non-normalized instance source reference: {row.get('id')}: {reference}")
-            if not (root / reference).is_file():
+            if not digest_record_view_is_file(root / reference):
                 issues.append(f"unresolved instance source reference: {row.get('id')}: {reference}")
 
     if instance_map.get("authority") != {
@@ -387,7 +393,7 @@ def validate(root=ROOT, synthesis_override=None):
             pure = pathlib.PurePosixPath(reference)
             if pure.is_absolute() or ".." in pure.parts or "\\" in reference:
                 issues.append(f"non-normalized relation source reference: {row.get('id')}: {reference}")
-            if not (root / reference).is_file():
+            if not digest_record_view_is_file(root / reference):
                 issues.append(f"unresolved relation source reference: {row.get('id')}: {reference}")
     theorem_ancestry_bounded = any(
         row.get("source") == "AR-T1"
@@ -494,7 +500,7 @@ def validate(root=ROOT, synthesis_override=None):
     lean_source = synthesis / "lean/CodexFibreSynthesis.lean"
     lean_receipt = load_json(synthesis / "lean/LEAN_RECEIPT.json", issues)
     lean_receipt_exact = (
-        lean_source.is_file()
+        digest_record_view_is_file(lean_source)
         and sha256(lean_source) == EXPECTED_LEAN_SHA
         and lean_receipt.get("source_sha256") == EXPECTED_LEAN_SHA
         and lean_receipt.get("standalone_parse_elaboration_kernel") == "PASS"
@@ -511,8 +517,8 @@ def validate(root=ROOT, synthesis_override=None):
     results_path = synthesis / "checks/codex_fibre_synthesis_check_results.json"
     results = load_json(results_path, issues)
     checker_receipt_exact = (
-        checker.is_file()
-        and results_path.is_file()
+        digest_record_view_is_file(checker)
+        and digest_record_view_is_file(results_path)
         and sha256(checker) == EXPECTED_CHECKER_SHA
         and sha256(results_path) == EXPECTED_RESULTS_SHA
         and results.get("status") == "PASS"
@@ -585,19 +591,19 @@ def validate(root=ROOT, synthesis_override=None):
     append_only_audits_exact = True
     for relative, expected_digest in EXPECTED_APPEND_ONLY_AUDIT_SHA256.items():
         target = synthesis / pathlib.PurePosixPath(relative)
-        if not target.is_file() or sha256(target) != expected_digest:
+        if not digest_record_view_is_file(target) or sha256(target) != expected_digest:
             append_only_audits_exact = False
             issues.append(f"append-only audit receipt hash drift: {relative}")
 
     freeze_path = synthesis / "audit/CANDIDATE_FREEZE_SHA256SUMS"
     expected_reviewed_hashes = {
         "candidate_freeze_manifest_sha256": (
-            sha256(freeze_path) if freeze_path.is_file() else None
+            sha256(freeze_path) if digest_record_view_is_file(freeze_path) else None
         ),
         **{
             relative: (
                 sha256(synthesis / pathlib.PurePosixPath(relative))
-                if (synthesis / pathlib.PurePosixPath(relative)).is_file()
+                if digest_record_view_is_file(synthesis / pathlib.PurePosixPath(relative))
                 else None
             )
             for relative in sorted(EXPECTED_FREEZE_MEMBERS)
@@ -613,7 +619,7 @@ def validate(root=ROOT, synthesis_override=None):
     expected_audit_chain_hashes = {
         relative: (
             sha256(synthesis / pathlib.PurePosixPath(relative))
-            if (synthesis / pathlib.PurePosixPath(relative)).is_file()
+            if digest_record_view_is_file(synthesis / pathlib.PurePosixPath(relative))
             else None
         )
         for relative in (
@@ -641,7 +647,7 @@ def validate(root=ROOT, synthesis_override=None):
             "scripts/validate_ar8r_codex_corpus_synthesis_v14.py",
             "tests/test_ar8r_codex_corpus_synthesis_v14.py",
         )
-        if (root / pathlib.PurePosixPath(relative)).is_file()
+        if digest_record_view_is_file(root / pathlib.PurePosixPath(relative))
     }
     if fresh.get("verification_code_hashes") != expected_verification_code_hashes:
         issues.append("final rereview verification-code hash claims mismatch")
@@ -726,7 +732,7 @@ def validate(root=ROOT, synthesis_override=None):
         and [row.get("id") for row in cold.get("blocking_findings", [])]
         == ["AR8R-V14-B01", "AR8R-V14-B02", "AR8R-V14-B03", "AR8R-V14-B04"]
         and cold.get("authority_boundary") == EXPECTED_AUDIT_AUTHORITY
-        and repair.is_file()
+        and digest_record_view_is_file(repair)
         and first_fresh.get("verdict") == "REPAIR_REQUIRED"
         and first_fresh.get("reviewer_context") == "DISTINCT_FRESH_CONTEXT"
         and first_fresh.get("repaired_findings_not_verified") == ["AR8R-V14-B04"]
@@ -759,9 +765,9 @@ def validate(root=ROOT, synthesis_override=None):
 
     freeze = freeze_path
     freeze_entries: dict[str, str] = {}
-    freeze_manifest_exact = freeze.is_file() and sha256(freeze) == EXPECTED_FREEZE_MANIFEST_SHA
+    freeze_manifest_exact = digest_record_view_is_file(freeze) and sha256(freeze) == EXPECTED_FREEZE_MANIFEST_SHA
     try:
-        freeze_lines = freeze.read_text(encoding="utf-8").splitlines()
+        freeze_lines = digest_record_view_text(freeze, encoding="utf-8").splitlines()
     except OSError:
         freeze_lines = []
     for line in freeze_lines:
@@ -779,18 +785,18 @@ def validate(root=ROOT, synthesis_override=None):
         freeze_manifest_exact = False
     for relative, digest in freeze_entries.items():
         target = synthesis / pathlib.PurePosixPath(relative)
-        if not target.is_file() or sha256(target) != digest:
+        if not digest_record_view_is_file(target) or sha256(target) != digest:
             freeze_manifest_exact = False
     if not freeze_manifest_exact:
         issues.append("candidate freeze manifest or frozen member drift")
 
     private_path_findings = 0
     all_public_text = []
-    for path in synthesis.rglob("*") if synthesis.is_dir() else []:
-        if not path.is_file():
+    for path in digest_record_view_paths(root, synthesis) if synthesis.is_dir() else []:
+        if not digest_record_view_is_file(path):
             continue
         try:
-            text = path.read_text(encoding="utf-8")
+            text = digest_record_view_text(path, encoding="utf-8")
         except UnicodeDecodeError:
             issues.append(f"non-UTF-8 synthesis member: {path.relative_to(synthesis)}")
             continue
@@ -862,7 +868,7 @@ def validate(root=ROOT, synthesis_override=None):
     manifest = synthesis / "SOURCE_SHA256SUMS"
     expected: dict[str, str] = {}
     try:
-        lines = manifest.read_text(encoding="utf-8").splitlines()
+        lines = digest_record_view_text(manifest, encoding="utf-8").splitlines()
     except OSError:
         lines = []
         issues.append("SOURCE_SHA256SUMS missing")
@@ -880,8 +886,8 @@ def validate(root=ROOT, synthesis_override=None):
         expected[relative] = parts[0]
     actual = {
         path.relative_to(synthesis).as_posix()
-        for path in synthesis.rglob("*")
-        if path.is_file() and path != manifest
+        for path in digest_record_view_paths(root, synthesis)
+        if digest_record_view_is_file(path) and path != manifest
     } if synthesis.is_dir() else set()
     if actual != EXPECTED_SOURCE_MEMBERS:
         issues.append("required synthesis member set mismatch")
@@ -889,7 +895,7 @@ def validate(root=ROOT, synthesis_override=None):
         source_hash_mismatches += len(set(expected) ^ actual) or 1
     for relative, digest in expected.items():
         target = synthesis / pathlib.PurePosixPath(relative)
-        if not target.is_file() or sha256(target) != digest:
+        if not digest_record_view_is_file(target) or sha256(target) != digest:
             source_hash_mismatches += 1
     if source_hash_mismatches:
         issues.append("SOURCE_SHA256SUMS coverage or content mismatch")

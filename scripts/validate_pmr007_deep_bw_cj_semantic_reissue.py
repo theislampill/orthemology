@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 """Validate the bounded Deep BW-CJ semantic custody reissue."""
 
+from resolve_t20_v6_source import (
+    digest_record_view_bytes, digest_record_view_text,
+    digest_record_view_is_file, digest_record_view_paths,
+)
+
+
 import argparse
 import hashlib
 import importlib.util
@@ -44,7 +50,7 @@ PRIVATE_PATTERN = re.compile(
 
 
 def sha256(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(digest_record_view_bytes(path)).hexdigest()
 
 
 def load_mapping(path, label, issues):
@@ -63,14 +69,14 @@ def load_mapping(path, label, issues):
 
 
 def parse_source_manifest(path, issues):
-    if not path.is_file():
+    if not digest_record_view_is_file(path):
         issues.append("semantic-reissue SOURCE_SHA256SUMS is missing")
         return {}, False
     exact_digest = sha256(path) == EXPECTED_SOURCE_MANIFEST_SHA256
     observed = {}
     malformed = False
     try:
-        lines = path.read_text(encoding="utf-8").splitlines()
+        lines = digest_record_view_text(path, encoding="utf-8").splitlines()
     except (OSError, UnicodeDecodeError):
         lines = []
         malformed = True
@@ -217,8 +223,8 @@ def validate(root=ROOT, reissue_override=None, provenance_override=None):
     if source.is_dir():
         actual_paths = {
             path.relative_to(source).as_posix()
-            for path in source.rglob("*")
-            if path.is_file() or path.is_symlink()
+            for path in digest_record_view_paths(root, source)
+            if digest_record_view_is_file(path) or path.is_symlink()
         }
     else:
         issues.append("semantic-reissue source directory is missing")
@@ -232,7 +238,7 @@ def validate(root=ROOT, reissue_override=None, provenance_override=None):
             issues.append(f"semantic-reissue symlink is forbidden: {relative}")
             continue
         try:
-            text = target.read_text(encoding="utf-8")
+            text = digest_record_view_text(target, encoding="utf-8")
         except (OSError, UnicodeDecodeError):
             issues.append(f"semantic-reissue member is not readable UTF-8: {relative}")
             continue

@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 """Validate the exact PMR-007 Deep A-BK snapshot and public correction ceiling."""
 
+from resolve_t20_v6_source import (
+    digest_record_view_bytes, digest_record_view_text,
+    digest_record_view_is_file, digest_record_view_paths,
+)
+
+
 import argparse
 import hashlib
 import json
@@ -109,7 +115,7 @@ EXPECTED_FORBIDDEN_CLAIMS = {
 
 
 def sha256(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(digest_record_view_bytes(path)).hexdigest()
 
 
 def _safe_manifest_path(raw):
@@ -164,7 +170,7 @@ def _manifest_rows(path):
     duplicate_paths = 0
     listed_paths = set()
     parse_issues = []
-    for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+    for line_number, line in enumerate(digest_record_view_text(path, encoding="utf-8").splitlines(), 1):
         if not line.strip():
             continue
         row_count += 1
@@ -213,7 +219,7 @@ def validate(root=ROOT):
     snapshot_manifest_duplicate_paths = 0
     snapshot_manifest_read_errors = 0
     manifest_path = snapshot / "SHA256SUMS"
-    if not manifest_path.is_file():
+    if not digest_record_view_is_file(manifest_path):
         issues.append("snapshot SHA256SUMS is missing")
         manifest_rows = []
         manifest_row_count = 0
@@ -237,9 +243,9 @@ def validate(root=ROOT):
             issues.extend(manifest["issues"])
 
     actual_paths = set()
-    for path in snapshot.rglob("*"):
+    for path in digest_record_view_paths(root, snapshot):
         relative = path.relative_to(snapshot).as_posix()
-        if (path.is_file() or path.is_symlink()) and relative != "SHA256SUMS":
+        if (digest_record_view_is_file(path) or path.is_symlink()) and relative != "SHA256SUMS":
             actual_paths.add(relative)
     snapshot_manifest_coverage_exact = (
         manifest_row_count == EXPECTED_SNAPSHOT_FILES
@@ -257,7 +263,7 @@ def validate(root=ROOT):
     for line_number, expected, relative in manifest_rows:
         target = snapshot / pathlib.PurePosixPath(relative)
         target_is_safe_file = (
-            target.is_file()
+            digest_record_view_is_file(target)
             and not target.is_symlink()
             and target.resolve().is_relative_to(snapshot_root)
         )
@@ -273,11 +279,11 @@ def validate(root=ROOT):
             issues.append("snapshot symlink is forbidden: %s" % relative)
             continue
         try:
-            text = target.read_text(encoding="utf-8")
+            text = digest_record_view_text(target, encoding="utf-8")
         except UnicodeDecodeError:
             snapshot_non_utf8_files += 1
             issues.append("snapshot member is not UTF-8 text: %s" % relative)
-            text = target.read_bytes().decode("utf-8", errors="replace")
+            text = digest_record_view_bytes(target).decode("utf-8", errors="replace")
         private_paths_in_snapshot += len(PRIVATE_PATTERN.findall(text))
     if private_paths_in_snapshot:
         issues.append("private path or browser locator leaked into public snapshot")
@@ -315,7 +321,7 @@ def validate(root=ROOT):
         observed_repository_source_pairs.append((round_id, relative))
         target = root / pathlib.PurePosixPath(relative)
         target_is_safe_file = (
-            target.is_file()
+            digest_record_view_is_file(target)
             and not target.is_symlink()
             and target.resolve().is_relative_to(programs_root)
         )
@@ -399,12 +405,12 @@ def validate(root=ROOT):
         issues.append("proposal or execution authority ceiling mismatch")
 
     for required in required_text_paths:
-        if not required.is_file():
+        if not digest_record_view_is_file(required):
             issues.append("required correction surface is missing: %s" % required.relative_to(root))
     combined_text = "\n".join(
-        path.read_text(encoding="utf-8")
+        digest_record_view_text(path, encoding="utf-8")
         for path in [correction_path, crosswalk_path, *required_text_paths]
-        if path.is_file()
+        if digest_record_view_is_file(path)
     )
     private_paths = len(PRIVATE_PATTERN.findall(combined_text))
     if private_paths:
@@ -419,15 +425,15 @@ def validate(root=ROOT):
         "10.1038/s41586-024-08548-w",
     )
     sourcing_text = (
-        (root / SOURCING_REL).read_text(encoding="utf-8")
-        if (root / SOURCING_REL).is_file()
+        digest_record_view_text(root / SOURCING_REL, encoding="utf-8")
+        if digest_record_view_is_file(root / SOURCING_REL)
         else ""
     )
     if any(marker not in sourcing_text for marker in required_sourcing_markers):
         issues.append("sourcing correction is incomplete")
     adoption_text = (
-        (root / ADOPTION_REL).read_text(encoding="utf-8")
-        if (root / ADOPTION_REL).is_file()
+        digest_record_view_text(root / ADOPTION_REL, encoding="utf-8")
+        if digest_record_view_is_file(root / ADOPTION_REL)
         else ""
     )
     if "PMR-007-NCBD-1" not in adoption_text or "owner adoption: PENDING" not in adoption_text:

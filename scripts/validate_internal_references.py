@@ -23,6 +23,11 @@ ends once the path exists.
 
 Deterministic; offline.
 """
+
+from resolve_t20_v6_source import DIGEST_RECORD_PATHS, digest_record_bytes
+
+from validate_ar8r_reconciliation import _pmr007_deep_member_bytes
+
 import io
 import json
 import hashlib
@@ -89,7 +94,7 @@ def _original_driver_members(src, text):
     """
     pins = {
         'scripts/replay_v5_successors.py': (
-            'dd8c546780cb11d679d3bad2ab3c4fb2670a5dd4d6310e46ab07ea693f4d7298',
+            '14bc845ba7bc785a5b66d10749ef1bf7bdebaff360e0f4b8d62edc3e3ee96176',
             [('scripts', 'verify-inputs.py'), ('scripts', 'verify-sources.py')]),
         'scripts/v5_d04_assets/v5_d04_normalizers_translated.py': (
             '46133c72f1332efeeec42530cd26ce224decf617e55e7fb79bd5d486b9a28fcd',
@@ -244,10 +249,9 @@ def _historical_projection_reference(src, cited):
                 or row.get("publication_basis") !=
                    "exact_existing_public_git_blob; retained_counterpart_qualified_by_snapshot_validator"):
             return False
-        current = _pmr007_deep_regular_file(root, duplicates[cited])
-        body = current.read_bytes()
+        body = _pmr007_deep_member_bytes(root, duplicates[cited])
         blob = hashlib.sha1(b"blob " + str(len(body)).encode() + b"\0" + body).hexdigest()
-        if (current.stat().st_mode & 0o111 or hashlib.sha256(body).hexdigest() != identity
+        if (hashlib.sha256(body).hexdigest() != identity
                 or row.get("source_bytes") != len(body) or row.get("public_bytes") != len(body)
                 or row.get("git_blob") != blob):
             return False
@@ -384,7 +388,29 @@ def _binding_record_reference(src, cited):
     return None
 
 
+def _digest_record_reference(src, cited):
+    """Resolve only enumerated original checksum records before current exists()."""
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for path in candidates:
+        if path in DIGEST_RECORD_PATHS:
+            try:
+                digest_record_bytes(ROOT, path)
+                return True
+            except (ValueError, OSError):
+                return False
+    return None
+
+
 def _resolves(src, cited):
+    historical_digest = _digest_record_reference(src, cited)
+    if historical_digest is not None:
+        return historical_digest
     binding = _binding_record_reference(src, cited)
     if binding is not None:
         return binding

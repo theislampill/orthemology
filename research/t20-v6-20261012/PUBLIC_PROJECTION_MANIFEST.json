@@ -17040,7 +17040,9 @@
       "repository_path": "scripts/validate_pmr007_deep_bw_cj_semantic_reissue.py",
       "public_sha256": "0d75bcefc899d15b2d35377fa15b54c6d12d180a74a506bc9cd84212206c3311",
       "public_bytes": 19380,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "cb72e0de65eb40d0bd659e49e2a4b8a46ef197a9"
     },
     {
       "source_sha256": "0d76159b1672fbee34a0d89effc605a53e208e742c37ae3326731c255d8fad14",
@@ -65674,7 +65676,9 @@
       "repository_path": "scripts/validate_ar8r_six_lane_v14_intake.py",
       "public_sha256": "33de0e6b174499960cc2c521ab5ab5f2f13cb66467247636aa460419073745a3",
       "public_bytes": 19144,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "d9511107288776ddab58e06e3892bb61f3bd66e9"
     },
     {
       "source_sha256": "33df07a7c1dd6c114ee8da4b44c47db46f996fa65d75975b892096ee272f6d4c",
@@ -126280,7 +126284,9 @@
       "repository_path": "scripts/validate_ar8r_external_challenges.py",
       "public_sha256": "621c70320e6695ea77d85c7bec7147193d3c3f013bada94ea6bae328a8616c7e",
       "public_bytes": 9558,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "814d716588deff5a8f479deafc8e4d7e91e19c58"
     },
     {
       "source_sha256": "621f52899b55c01d80704b54979e92a340093aa4e2e2f4abdfc5b6decc5e9fb0",
@@ -167999,7 +168005,9 @@
       "repository_path": "scripts/validate_pmr007_deep_bv_semantic_reissue.py",
       "public_sha256": "818230667805e3db999dc52bd22376a4425e58a85f75e561da4ca39acd75e680",
       "public_bytes": 16337,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "06a0f45454a02b7c849682e563f0b1aa98cab963"
     },
     {
       "source_sha256": "8182d98eb3aeae1cc2074d99eea3b343127b270c8e4ea940b06b6d8b79686d3d",
@@ -242192,7 +242200,9 @@
       "repository_path": "scripts/validate_pmr007_deep_bk_public_snapshot.py",
       "public_sha256": "ba437ce44adf1ab03d1f797a3c5a72f8991b99186a733bdfc2f9574b02d3d4fd",
       "public_bytes": 20394,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "b7a701ad73a96d9de760f22778a17f2128eb7799"
     },
     {
       "source_sha256": "ba46d0a64972d88e0275d68d55474faaf51f27a08b07872b2e4d0e8a6f0539fc",
@@ -251691,7 +251701,9 @@
       "repository_path": "scripts/validate_ar8r_codex_corpus_synthesis_v14.py",
       "public_sha256": "c2153d22937864584ca0310a129cb41badbcbea96e3a2175b53bd1a9a666a626",
       "public_bytes": 43318,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "bf5693e9eaf14f932a7afef314772c5d6cfd19c3"
     },
     {
       "source_sha256": "c2191ff338a3f48025d892538adc13e5e754358f92c2f1c4cd401457de11845d",

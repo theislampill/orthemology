@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 """Validate the bounded Deep BL-BV semantic custody reissue."""
 
+from resolve_t20_v6_source import (
+    digest_record_view_bytes, digest_record_view_text,
+    digest_record_view_is_file, digest_record_view_paths,
+)
+
+
 import argparse
 import hashlib
 import importlib.util
@@ -51,7 +57,7 @@ EXPECTED_SOURCE_HASHES = {
 
 
 def sha256(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(digest_record_view_bytes(path)).hexdigest()
 
 
 def load_mapping(path, label, issues):
@@ -93,8 +99,8 @@ def validate(root=ROOT):
     if source.is_dir():
         actual_paths = {
             path.relative_to(source).as_posix()
-            for path in source.rglob("*")
-            if path.is_file() or path.is_symlink()
+            for path in digest_record_view_paths(root, source)
+            if digest_record_view_is_file(path) or path.is_symlink()
         }
     else:
         issues.append("semantic-reissue source directory is missing")
@@ -108,7 +114,7 @@ def validate(root=ROOT):
             issues.append(f"semantic-reissue symlink is forbidden: {relative}")
             continue
         try:
-            text = target.read_text(encoding="utf-8")
+            text = digest_record_view_text(target, encoding="utf-8")
         except (OSError, UnicodeDecodeError):
             issues.append(f"semantic-reissue member is not readable UTF-8: {relative}")
             continue
@@ -140,9 +146,9 @@ def validate(root=ROOT):
     }
     observed_manifest = {}
     manifest_malformed = False
-    if manifest_path.is_file():
+    if digest_record_view_is_file(manifest_path):
         try:
-            manifest_lines = manifest_path.read_text(encoding="utf-8").splitlines()
+            manifest_lines = digest_record_view_text(manifest_path, encoding="utf-8").splitlines()
         except (OSError, UnicodeDecodeError):
             manifest_lines = []
             manifest_malformed = True
@@ -241,7 +247,7 @@ def validate(root=ROOT):
 
     result_path = source / "pmr007_deep_bv_distinct_partition_experiment_rereview_results.json"
     try:
-        result_document = json.loads(result_path.read_text(encoding="utf-8"))
+        result_document = json.loads(digest_record_view_text(result_path, encoding="utf-8"))
     except (OSError, UnicodeDecodeError, json.JSONDecodeError):
         result_document = {}
     executable_reproduction_claimed = (

@@ -5,6 +5,9 @@ All registered bodies are checked regardless of suffix. This is source integrity
 publication boundary and current-record binding, not mathematical acceptance.
 """
 from __future__ import annotations
+
+from resolve_t20_v6_source import DIGEST_RECORD_PATHS, digest_record_absences
+
 import collections
 import hashlib
 import json
@@ -150,7 +153,8 @@ def check_object(root, row):
         path = root / relative
         if path.is_symlink() or not path.resolve().is_relative_to(root.resolve()):
             raise ValueError('source symlink or escaped root')
-        if (relative.as_posix() == SUCCESSOR_FIXTURE_PATH
+        if (relative.as_posix() in DIGEST_RECORD_PATHS
+                or relative.as_posix() == SUCCESSOR_FIXTURE_PATH
                 or binding_record_candidate(relative.as_posix())
                 or relative.as_posix() in SUCCESSOR_INPUT_PATHS
                 or relative.as_posix() in GENERATED_FIXTURE_PATHS
@@ -244,6 +248,7 @@ def check_preserved_roots(root, objects):
     record_authenticated = None
     package_authenticated = None
     code_authenticated = None
+    digest_authenticated = None
     input_registry_authenticated = None
     input_absences_authenticated = None
     calculus_absences_authenticated = None
@@ -282,6 +287,10 @@ def check_preserved_roots(root, objects):
                     status == 'D' and path in CHECKPOINT_CODE_COPY_PATHS
                     for status, path in zip(changes[::2], changes[1::2])):
                 code_authenticated = checkpoint_code_duplicate_paths(root)
+            if digest_authenticated is None and any(
+                    status == 'D' and path in DIGEST_RECORD_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                digest_authenticated = digest_record_absences(root)
             if input_registry_authenticated is None and any(
                     status == 'M' and path == SUCCESSOR_INPUT_REGISTRY
                     for status, path in zip(changes[::2], changes[1::2])):
@@ -338,6 +347,7 @@ def check_preserved_roots(root, objects):
                         (status == 'D' and path in (binding_absences_authenticated or ())) or
                         (status == 'D' and path in (package_authenticated or ())) or
                         (status == 'D' and path in (code_authenticated or ())) or
+                        (status == 'D' and path in (digest_authenticated or ())) or
                         (status == 'D' and path in (input_absences_authenticated or ())) or
                         (status == 'D' and path in (calculus_absences_authenticated or ())) or
                         (status == 'M' and path in calculus_guides_authenticated) or

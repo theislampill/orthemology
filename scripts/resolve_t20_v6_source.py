@@ -3204,6 +3204,403 @@ def binding_record_successor_bytes(root, row):
     return binding_record_bytes(root, row['public_path'], row['public_sha256'], row['public_bytes'])
 
 
+# Finite original checksum records; generated live manifests are excluded.
+DIGEST_RECORD_BASE = 'a7ff0e33d1a299db640041c46b1af81ca70851f6'
+DIGEST_RECORD_TREE_SHA256 = '8516d7f42ce675996fcc368efb2e1f66ec85c294d815e39855f3b2b4a5da68e0'
+DIGEST_RECORD_GROUPS = {'docs/project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14': ['SOURCE_SHA256SUMS'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/audit': ['CANDIDATE_FREEZE_SHA256SUMS'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-a-common-intervention': ['SOURCE_SHA256SUMS'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry': ['SOURCE_SHA256SUMS'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/source-files': ['MANIFEST.sha256',
+                                                                                                                      'reviewed_source_sha256.txt'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-ap': ['SHA256SUMS'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES': ['PMR-007_DEEP_BA_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                                 'PMR-007_DEEP_BB_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                                 'PMR-007_DEEP_BC_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                                 'PMR-007_DEEP_BD_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                                 'PMR-007_DEEP_BE_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                                 'PMR-007_DEEP_BF_ADMISSION_HASHES.sha256',
+                                                                                                 'PMR-007_DEEP_BG_ADMISSION_HASHES.sha256',
+                                                                                                 'PMR-007_DEEP_BH_ADMISSION_HASHES.sha256',
+                                                                                                 'PMR-007_DEEP_BI_ADMISSION_HASHES.sha256',
+                                                                                                 'PMR-007_DEEP_BJ_ADMISSION_HASHES.sha256',
+                                                                                                 'PMR-007_DEEP_BK_ADMISSION_HASHES.sha256',
+                                                                                                 'PMR-007_DEEP_M_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                                 'PMR-007_DEEP_N_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                                 'PMR-007_DEEP_O_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                                 'PMR-007_DEEP_P_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                                 'PMR-007_DEEP_Q_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                                 'PMR-007_DEEP_R_ADMISSION_HASHES_SANITIZED.sha256'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE': ['PMR-007_DEEP_AA_V2_FROZEN_HASHES.sha256',
+                                                                                                       'PMR-007_DEEP_BF_V1_FROZEN_HASHES.sha256',
+                                                                                                       'PMR-007_DEEP_BG_V1_FROZEN_HASHES.sha256',
+                                                                                                       'PMR-007_DEEP_BH_V1_FROZEN_HASHES.sha256',
+                                                                                                       'PMR-007_DEEP_BI_V1_FROZEN_HASHES.sha256',
+                                                                                                       'PMR-007_DEEP_BJ_V1_FROZEN_HASHES.sha256',
+                                                                                                       'PMR-007_DEEP_BK_V1_FROZEN_HASHES.sha256',
+                                                                                                       'PMR-007_DEEP_H_ADMISSION_HASHES_V1_REJECTED_COUNT_MISMATCH.sha256',
+                                                                                                       'PMR-007_DEEP_K_V1_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                                       'PMR-007_DEEP_L_V1_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                                       'PMR-007_DEEP_P_V1_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                                       'PMR-007_DEEP_Q_V1_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                                       'PMR-007_DEEP_R_V1_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                                       'PMR-007_DEEP_S_V1_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                                       'PMR-007_DEEP_T_V1_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                                       'PMR-007_DEEP_T_V2_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                                       'PMR-007_DEEP_T_V3_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                                       'PMR-007_DEEP_T_V4_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                                       'PMR-007_DEEP_U_V1_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                                       'PMR-007_DEEP_U_V2_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                                       'PMR-007_DEEP_V_V1_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                                       'PMR-007_DEEP_V_V2_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                                       'PMR-007_DEEP_W_V1_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                                       'PMR-007_DEEP_W_V2_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                                       'PMR-007_DEEP_W_V3_FROZEN_HASHES_SANITIZED.sha256'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk': ['SHA256SUMS'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/VALIDATION_RECEIPTS': ['PMR-007_DEEP_AA_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AA_V3_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AB_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AB_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AC_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AC_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AD_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AD_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AE_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AE_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AF_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AF_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AG_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AG_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AH_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AH_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AI_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AI_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AJ_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AJ_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AK_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AK_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AL_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AL_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AM_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AM_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AN_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AN_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AO_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AO_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AP_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AP_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AQ_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AQ_V1_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AQ_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AR_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AR_V1_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AR_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AS_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AS_V1_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AS_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AT_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AT_V1_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AT_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AU_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AU_V1_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AU_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AV_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AV_V1_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AV_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AW_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AW_V1_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AW_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AX_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AX_V1_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AX_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AY_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AY_V1_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AY_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AZ_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AZ_V1_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_AZ_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_A_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_BF_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_BG_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_BH_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_BI_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_BJ_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_BK_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_B_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_C_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_D_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_E_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_F_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_G_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_H_ADMISSION_HASHES_V2.sha256',
+                                                                                             'PMR-007_DEEP_I_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                             'PMR-007_DEEP_J_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                             'PMR-007_DEEP_K_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                             'PMR-007_DEEP_L_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_DEEP_S_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                             'PMR-007_DEEP_T_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                             'PMR-007_DEEP_U_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                             'PMR-007_DEEP_V_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                             'PMR-007_DEEP_W_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND11_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND12_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND13_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND14_V1_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND14_V2_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND14_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND15_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND15_V1_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND15_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND16_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND16_V1_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND16_V2_FROZEN_HASHES.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND18_V1_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND18_V3_FROZEN_HASHES_SANITIZED.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND18_V4_ADMISSION_HASHES_SANITIZED.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND19_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND20_ADMISSION_HASHES.sha256',
+                                                                                             'PMR-007_FRONTIER_ROUND20_V2_FROZEN_HASHES.sha256'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue': ['SOURCE_SHA256SUMS'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/source-files': ['AR8R_PMR007_CURRENT_CONTINUATION_AFTER_DEEP_BV.yaml.sha256',
+                                                                                                        'AR8R_PMR007_DEEP_BL_BV_BOUNDARY_REPORT.md.sha256'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue': ['SOURCE_SHA256SUMS'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/source-files': ['SHA256SUMS'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20/REJECTED_AND_BLOCKED_EVIDENCE': ['PMR-007_FRONTIER_ROUND20_V1_FROZEN_HASHES.sha256'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20': ['SHA256SUMS'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20/VALIDATION_RECEIPTS': ['PMR-007_FRONTIER_ROUND20_ADMISSION_HASHES.sha256',
+                                                                                               'PMR-007_FRONTIER_ROUND20_V2_FROZEN_HASHES.sha256'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files': ['SHA256SUMS'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files': ['SHA256SUMS'],
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-b/source-files': ['MANIFEST.sha256'],
+ 'experiments/orthemology-v5-successors/source-store/18f002a663dc517f2380cc9f776d7817d4e5bb0988ab4cf88c7b1191134a102c': ['SHA256SUMS'],
+ 'experiments/orthemology-v5-successors/source-store/4bd854bbfda323abb9aa99594130eb388bd5f70c34bb4a84c1a78db3a010691b': ['SHA256SUMS'],
+ 'experiments/orthemology-v5-successors/source-store/9ab3df6e096f8158f755ea31408786248d04547d0bd7c38785770d7e9964e41e': ['SHA256SUMS'],
+ 'experiments/orthemology-v5-successors/source-store/c39d66e66d470c11cea130594ddc90708424a7d6d4028f20d371889ab3743124': ['MANIFEST.sha256'],
+ 'experiments/orthemology-v5-successors/source-store/c52d567e74562f17214173bdbf61b078e369fa3241e20e897d1713d48c8cd56d': ['SHA256SUMS'],
+ 'experiments/orthemology-v5-successors/source-store/f281d34cfdf3731f8c91244625146828c72a60acd7eacab60b51915caba1e644': ['SOURCE_ONLY_v1.sha256'],
+ 'research/t20-v6-20261012/sources/5ddd6de378a77f800abf874535b0396a79c06514ce11b65f8b99268ee445cb5f': ['CURRENT_FREEZE_SOURCE_HASHES.txt'],
+ 'research/t20-v6-20261012/sources/696da008a6189fd88e004a56af683d65cf608a04cecdc6b3c3ef88b0a954301e': ['ORIGINAL_HASHES_AFTER.txt'],
+ 'research/t20-v6-20261012/sources/af1d4e4b0174f2e874ddba1fc867735636440239d135c79edb6d2b39ca368d36': ['INPUT_HASHES.txt'],
+ 'research/t20-v6-20261012/sources/ce94319878c97e22e69fe70b2cea9c13e2336407dc7d073e087b439ecc554e7c': ['recompiled-source-hashes.txt'],
+ 'research/t20-v6-20261012/sources/f9a086fc2356bce74109a1527f123e66efa438264f6a0433950cc0c84f6e4ccd': ['ORIGINAL_HASHES_BEFORE.txt']}
+DIGEST_RECORD_PATHS = {directory + "/" + name
+    for directory, members in DIGEST_RECORD_GROUPS.items() for name in members}
+DIGEST_PUBLIC_ROWS = {'research/t20-v6-20261012/sources/5ddd6de378a77f800abf874535b0396a79c06514ce11b65f8b99268ee445cb5f/CURRENT_FREEZE_SOURCE_HASHES.txt': 'b34a97aa437effe28f4568259c7bedd8a8b8ac9bd0516deecece3206da35a9b3',
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/source-files/reviewed_source_sha256.txt': '31d8ce211a3cfd633d60ebcaa64fdc5c8c533b15632c3aae7b44cdd38e8e5352',
+ 'research/t20-v6-20261012/sources/696da008a6189fd88e004a56af683d65cf608a04cecdc6b3c3ef88b0a954301e/ORIGINAL_HASHES_AFTER.txt': 'ddc5ea76873e2fb03c5302853843d53cd212ff2d4f69e4207e617666b71c98e0',
+ 'research/t20-v6-20261012/sources/af1d4e4b0174f2e874ddba1fc867735636440239d135c79edb6d2b39ca368d36/INPUT_HASHES.txt': 'b9b4b38f0a54400d86c650df80109ac639db776011864674fe40d0f322491a88',
+ 'research/t20-v6-20261012/sources/ce94319878c97e22e69fe70b2cea9c13e2336407dc7d073e087b439ecc554e7c/recompiled-source-hashes.txt': '4e65e419f61b0d05c4ee8f70c470814558aeec75879f3853b5b05f66ea2ea57b',
+ 'research/t20-v6-20261012/sources/f9a086fc2356bce74109a1527f123e66efa438264f6a0433950cc0c84f6e4ccd/ORIGINAL_HASHES_BEFORE.txt': '683a79f3d50ad7d9fb55025b6ab4c636111a47c1861969feabc99f6367bbe48b'}
+DIGEST_SUCCESSOR_ROWS = {'experiments/orthemology-v5-successors/source-store/c39d66e66d470c11cea130594ddc90708424a7d6d4028f20d371889ab3743124/MANIFEST.sha256': 'a340a77c84dc2cfa29144e883b40e756b346a0a720befce5567e48329d8c8b07',
+ 'experiments/orthemology-v5-successors/source-store/9ab3df6e096f8158f755ea31408786248d04547d0bd7c38785770d7e9964e41e/SHA256SUMS': 'e4e2b22ee6ffc2bad8298f5ff4e2faf50f63ae4bf1db428dcdc6ae55356de862',
+ 'experiments/orthemology-v5-successors/source-store/18f002a663dc517f2380cc9f776d7817d4e5bb0988ab4cf88c7b1191134a102c/SHA256SUMS': 'a1233e0d8e9a217934ed513841a922607916067e32f3ab9d0705ba64bac2cd93',
+ 'experiments/orthemology-v5-successors/source-store/f281d34cfdf3731f8c91244625146828c72a60acd7eacab60b51915caba1e644/SOURCE_ONLY_v1.sha256': '8fc718ca06b615fd9b7bfeb2ebe07b148197723e4eb3c0e14b331ed5560340e2',
+ 'experiments/orthemology-v5-successors/source-store/4bd854bbfda323abb9aa99594130eb388bd5f70c34bb4a84c1a78db3a010691b/SHA256SUMS': '4c87f6f6df1825f20fb97732cc9f3053ee834b156255603fc532bad126050fd1',
+ 'experiments/orthemology-v5-successors/source-store/c52d567e74562f17214173bdbf61b078e369fa3241e20e897d1713d48c8cd56d/SHA256SUMS': '7ff43a52d9d233833863ffd2d51d706341e98595954230bb490062dceb0875e7'}
+
+
+def _digest_record_root(root):
+    """Retain the supplied ordinary ancestry; never resolve an alias away."""
+    root = pathlib.Path(root)
+    if '..' in root.parts or '\\' in str(root):
+        raise ValueError('historical digest repository uses a lexical alias')
+    return _binding_record_root(root)
+
+
+def _digest_record_state(root, path):
+    root = _digest_record_root(root)
+    if not _binding_record_present(root, path):
+        return None
+    return _binding_record_current_state(root, path)
+
+
+def _digest_record_current_bytes(root, path, expected):
+    """Reject a replacement descriptor before reading its body."""
+    if expected is None or _digest_record_state(root, path) != expected:
+        raise ValueError('historical digest current node changed before reading')
+    target = pathlib.Path(root) / path
+    flags = os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK | getattr(os, 'O_NOATIME', 0)
+    state = lambda entry: (entry.st_dev, entry.st_ino, entry.st_mode, entry.st_size,
+                           entry.st_mtime_ns, entry.st_ctime_ns)
+    with os.fdopen(os.open(target, flags), 'rb') as stream:
+        before = os.fstat(stream.fileno())
+        if (not stat.S_ISREG(before.st_mode) or before.st_mode & 0o111
+                or state(before) != expected):
+            raise ValueError('historical digest current descriptor changed before reading')
+        body = stream.read(before.st_size + 1)
+        after = os.fstat(stream.fileno())
+    if (state(after) != expected or _digest_record_state(root, path) != expected
+            or len(body) != before.st_size):
+        raise ValueError('historical digest current node changed during reading')
+    return body
+
+
+def _digest_record_bound_bytes(root, path, blob, initial):
+    """Keep initial absence/presence, inode and staged identity through the read."""
+    if _digest_record_state(root, path) != initial:
+        raise ValueError('historical digest presence or node changed before reading')
+    staged = _administrative_git(root, 'ls-files', '--stage', '-z', '--', path)
+    expected = ('100644 ' + blob + ' 0\t' + path + '\0').encode()
+    if staged not in (b'', expected):
+        raise ValueError('historical digest staged identity differs')
+    if _digest_record_state(root, path) != initial:
+        raise ValueError('historical digest presence or node changed before native body read')
+    original = _administrative_git(root, 'cat-file', 'blob', blob)
+    if hashlib.sha1(b'blob ' + str(len(original)).encode() + b'\0' + original).hexdigest() != blob:
+        raise ValueError('historical digest Git body differs')
+    if _digest_record_state(root, path) != initial:
+        raise ValueError('historical digest presence or node changed during native body read')
+    if initial is not None and _digest_record_current_bytes(root, path, initial) != original:
+        raise ValueError('historical digest present bytes differ')
+    if _administrative_git(root, 'ls-files', '--stage', '-z', '--', path) != staged:
+        raise ValueError('historical digest index changed during reading')
+    if _digest_record_state(root, path) != initial:
+        raise ValueError('historical digest presence or node changed after reading')
+    return original
+
+
+def _digest_record_read(root, path, initial, identity=None, size=None):
+    body = _digest_record_bound_bytes(root, path, _digest_record_catalog(root)[path], initial)
+    if ((identity is not None and digest(body) != identity)
+            or (size is not None and len(body) != size)):
+        raise ValueError('historical digest requested identity differs')
+    return body
+
+
+def _digest_record_catalog(root):
+    """Authenticate the complete finite original checksum-record population."""
+    root = _digest_record_root(root)
+    commit = _administrative_git(root, 'cat-file', 'commit', DIGEST_RECORD_BASE)
+    if hashlib.sha1(b'commit ' + str(len(commit)).encode() + b'\0' + commit).hexdigest() != DIGEST_RECORD_BASE:
+        raise ValueError('historical digest revision differs')
+    raw = _administrative_git(root, 'ls-tree', '-rz', '--full-tree', DIGEST_RECORD_BASE,
+                              '--', *sorted(DIGEST_RECORD_PATHS))
+    if len(DIGEST_RECORD_PATHS) != 176 or digest(raw) != DIGEST_RECORD_TREE_SHA256:
+        raise ValueError('historical digest native population differs')
+    bindings = {}
+    for entry in raw.split(b'\0'):
+        if not entry:
+            continue
+        metadata, name = entry.split(b'\t', 1)
+        mode, kind, blob = metadata.decode('ascii').split()
+        path = name.decode('utf-8')
+        if (mode != '100644' or kind != 'blob' or path not in DIGEST_RECORD_PATHS
+                or path in bindings or not re.fullmatch(r'[0-9a-f]{40}', blob)):
+            raise ValueError('historical digest coordinate differs')
+        bindings[path] = blob
+    if set(bindings) != DIGEST_RECORD_PATHS:
+        raise ValueError('historical digest class is incomplete')
+    return bindings
+
+
+def digest_record_bytes(root, path, identity=None, size=None):
+    """Read an exact original record; preserve unknowns and never replay targets.
+
+    Capture the current node before any native work. An initially absent alias
+    cannot appear, nor a present node disappear or be replaced, during fallback.
+    """
+    if not isinstance(path, str) or path not in DIGEST_RECORD_PATHS:
+        raise ValueError('unqualified historical digest path')
+    root = _digest_record_root(root)
+    initial = _digest_record_state(root, path)
+    return _digest_record_read(root, path, initial, identity, size)
+
+
+def digest_record_absences(root):
+    """Authenticate the fixed original population and the same actual absence set."""
+    root = _digest_record_root(root)
+    initial = {path: _digest_record_state(root, path) for path in sorted(DIGEST_RECORD_PATHS)}
+    for path, blob in _digest_record_catalog(root).items():
+        _digest_record_bound_bytes(root, path, blob, initial[path])
+    if any(_digest_record_state(root, path) != state for path, state in initial.items()):
+        raise ValueError('historical digest actual absence set or current node changed')
+    return {path for path, state in initial.items() if state is None}
+
+
+def _digest_record_row_bytes(root, row, field, contracts):
+    if not isinstance(row, dict) or not isinstance(row.get(field), str):
+        raise ValueError('historical digest row is not a complete bound object')
+    path = row[field]
+    encoded = json.dumps(row, sort_keys=True, separators=(',', ':'),
+                         ensure_ascii=False, allow_nan=False).encode('utf-8')
+    if path not in contracts or digest(encoded) != contracts[path]:
+        raise ValueError('historical digest complete row identity or role differs')
+    return digest_record_bytes(root, path, row['public_sha256'], row['public_bytes'])
+
+
+def digest_record_public_bytes(root, row):
+    """Preserve all fields of the six existing public rows; admit no other row."""
+    return _digest_record_row_bytes(root, row, 'repository_path', DIGEST_PUBLIC_ROWS)
+
+
+def digest_record_successor_bytes(root, row):
+    """Preserve six source IDs, archive/member coordinates and complete roles."""
+    return _digest_record_row_bytes(root, row, 'public_path', DIGEST_SUCCESSOR_ROWS)
+
+
+def _digest_record_view_binding(path):
+    target = pathlib.Path(path).absolute()
+    for name in DIGEST_RECORD_PATHS:
+        parts = pathlib.PurePosixPath(name).parts
+        if len(target.parts) > len(parts) and target.parts[-len(parts):] == parts:
+            return target.parents[len(parts) - 1], name
+    return None
+
+
+def digest_record_view_bytes(path):
+    """Physical custody view with witnessed, finite historical fallback only."""
+    binding = _digest_record_view_binding(path)
+    if binding is None:
+        return pathlib.Path(path).read_bytes()
+    root, name = binding
+    initial = _digest_record_state(root, name)
+    if initial is not None:
+        return _digest_record_current_bytes(root, name, initial)
+    try:
+        return _digest_record_read(root, name, initial)
+    except (ValueError, OSError) as error:
+        raise OSError('historical digest is unavailable: ' + name) from error
+
+
+def digest_record_view_text(path, encoding='utf-8', errors='strict'):
+    return digest_record_view_bytes(path).decode(encoding, errors)
+
+
+def digest_record_view_is_file(path):
+    binding = _digest_record_view_binding(path)
+    if binding is None:
+        return pathlib.Path(path).is_file()
+    try:
+        digest_record_view_bytes(path)
+    except (ValueError, OSError):
+        return False
+    return True
+
+
+def digest_record_view_paths(root, directory):
+    """Retain every observed entry and authenticate missing finite members."""
+    root = _digest_record_root(pathlib.Path(root).absolute())
+    directory = pathlib.Path(directory).absolute()
+    if '..' in directory.parts:
+        raise ValueError('historical digest custody directory uses a lexical alias')
+    relative = directory.relative_to(root).as_posix().rstrip('/') + '/'
+    observed = list(directory.rglob('*'))
+    for name in sorted(DIGEST_RECORD_PATHS):
+        if not name.startswith(relative):
+            continue
+        initial = _digest_record_state(root, name)
+        if initial is not None:
+            continue
+        try:
+            _digest_record_read(root, name, initial)
+        except (ValueError, OSError):
+            if _digest_record_state(root, name) != initial:
+                raise ValueError('historical digest custody node changed during enumeration')
+            continue  # Existing namespace/manifest checks still see unavailable members missing.
+        observed.append(root / name)
+    return observed
+
+
 def _continuation_git(root, *args):
     result = subprocess.run(['git', '--no-replace-objects', '--literal-pathspecs', *args],
                             cwd=root, capture_output=True, check=False)
@@ -4418,7 +4815,9 @@ def source_bytes(root, row):
     path = pathlib.PurePosixPath(row['repository_path'])
     if path.is_absolute() or '..' in path.parts or '\\' in str(path):
         raise ValueError('unsafe source path')
-    if str(path) == SUCCESSOR_FIXTURE_PATH:
+    if str(path) in DIGEST_RECORD_PATHS:
+        body = digest_record_public_bytes(root, row)
+    elif str(path) == SUCCESSOR_FIXTURE_PATH:
         body = successor_fixture_source_bytes(root, row)
     elif is_binding_record(root, str(path)):
         body = binding_record_public_bytes(root, row)

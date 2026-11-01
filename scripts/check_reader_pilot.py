@@ -6,6 +6,9 @@ editorial sample. Existing publication ownership is read rather than copied into
 a competing scientific registry. This checker is read-only and does not fetch
 URLs, execute source payloads, extract theorems, or infer semantic acceptance.
 """
+
+from resolve_t20_v6_source import DIGEST_RECORD_PATHS, digest_record_absences
+
 import argparse
 from collections import Counter
 import hashlib
@@ -1366,7 +1369,8 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                 ("checkpoint-copy", CHECKPOINT_COPY_PATHS, checkpoint_duplicate_paths),
                 ("checkpoint-record", CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths),
                 ("checkpoint-package", CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_duplicate_paths),
-                ("checkpoint-code", CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_duplicate_paths)):
+                ("checkpoint-code", CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_duplicate_paths),
+                ("historical-digest", DIGEST_RECORD_PATHS, digest_record_absences)):
             if key not in duplicate_paths and any(
                     status == "D" and path in population
                     for status, path in zip(values[::2], values[1::2])):
