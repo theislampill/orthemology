@@ -455,6 +455,72 @@ The positive repair is correspondingly targeted. Form the pulled-back function f
 
 Under fixed finite instruments, adding a missing observable strictly increases the retained span, and taking its continuation closure terminates after finitely many strict increases by §2.2. This is termination of a finite algebraic construction, not a guarantee that the required observations can be acquired or that real-world inquiry and restoration terminate. Expanding a menu can increase the required rank within an analysis that already parameterizes that menu; changing the analysis itself is a separate revision. Restricting the menu can lower the information burden while losing useful opportunities, whose value is not their number or their rank. Full-law coverage, exactness, the future menu, reacquisition and memory capacity are consequently explicit premises in any preservation promise. Optimizing retained information, later queries, permitted continuations and tolerated error under a justified model remains a further problem. [1, Corollary 5 and “The next substantive frontier”][1]
 
+<a id="receipt44-interface-states"></a>
+
+### 2.7 Exact interface states in a finite deterministic system
+
+The continuation criterion in §2.6 concerns which functions of a law remain recoverable. A related question can be answered directly for a finite deterministic system: which individual states can be merged while preserving every permitted future interface observation? The answer has a dynamic requirement in addition to the static decoder criterion of §9.1. It is the familiar Moore-machine and Myhill–Nerode construction at a declared controlled interface, not a characterization of intrinsic meaning. [R44-BA01]
+
+Let $`X`$ be a nonempty finite state set, $`A`$ a finite action alphabet, $`\delta_a:X\to X`$ the complete transition for each action, and $`\ell:X\to O`$ the registered current label. For a finite word $`w`$, write $`\delta_w`$ for its successive transitions, including $`\delta_\varnothing=\mathrm{id}`$. Define
+
+```math
+x\sim_I x'
+\quad\Longleftrightarrow\quad
+\ell(\delta_w x)=\ell(\delta_w x')
+\quad\text{for every }w\in A^*.
+```
+
+Every prefix of an action word is itself a word, so this equality preserves the complete label trace, not merely a selected terminal observation. It is an equivalence relation. It also preserves current labels and is stable under each transition: if $`x\sim_I x'`$, testing every continuation after action $`a`$ gives $`\delta_a x\sim_I\delta_a x'`$. Consequently the quotient $`Q_I=X/{\sim_I}`$ has well-defined labels and transitions, obtained from representatives. Its quotient map realizes the entire registered deterministic interface.
+
+Now let $`r:X\to Y`$ be another deterministic representation with represented transitions and labels satisfying
+
+```math
+r\delta_a=\widehat\delta_a r,
+\qquad \ell=\widehat\ell r.
+```
+
+Induction on a word shows that equal $`r`$-values have equal future labels, so $`\ker r\subseteq\sim_I`$. There is therefore a well-defined surjection $`h:r(X)\to Q_I`$, given by $`h(r(x))=[x]`$, which preserves the labels and transitions. Hence $`|r(X)|\geq|Q_I|`$. If equality holds, $`h`$ is a bijection and an isomorphism of the attained represented systems. Unused or invented states in the ambient carrier $`Y`$ play no part in this minimality statement. [R44-BA02] [R44-BA03]
+
+The reverse implication needs care. A partition finer than $`\sim_I`$ need not itself admit deterministic represented transitions. For example, give three states $`a,b,c`$ the same constant label and one action with $`a\mapsto a`$, $`b\mapsto c`$, $`c\mapsto c`$. All states have the same label trace. The partition $`\{a,b\},\{c\}`$ refines that universal trace class, but its first block has successors in two different blocks. It cannot define one next block for that action. Transition congruence is a separate hypothesis, even when set-level output recovery holds.
+
+This distinction explains a preserved failure in the original record. The first checker tested the false biconditional between refinement and deterministic realization and reported **6,048 failures**. The written one-way implication was not thereby refuted, but the failed checker supplied no verification of it. The repair changed the tested direction and retained the rejected output. It also restricted the minimality statement to attained states and separated operational state from semantic truth, proper function and mentality. [R44-BA02] [R44-BA04]
+
+The equivalence can be found by finite refinement. Start with equal current labels, and repeatedly split a block when some action sends its states into different current blocks. At stage $`k`$, the blocks agree on all words of length at most $`k`$, by induction. A strict refinement increases the number of blocks; a fixed partition is a transition congruence and hence preserves every word. With $`n=|X|`$, at most $`n-1`$ strict increases are possible. Thus words of length at most $`n-1`$ suffice as a safe distinguishing bound for this complete finite system; no sharpness claim is needed. This termination argument does not infer a complete transition table from finitely many experimental samples.
+
+Interface strengthening is also conditional on a common underlying system. If actions are added while the old transitions remain fixed, or labels are refined by a map recovering the old labels, the new equivalence refines the old one. Every new-equivalent pair passes the old tests, giving a surjection from the new quotient to the old quotient. If state identity, action meanings, transition laws or versions change, this comparison is not supplied by action inclusion alone.
+
+The distinct historical review used propagation of distinguishable state pairs instead of the primary refinement procedure. It reports **46,656** three-state/two-action/four-label systems, **40,000** larger sampled systems, twenty candidate partitions per larger system, no recorded semantic failures and a maximum observed distinguishing-word length of six. These are separate historical checks. The exact theorem remains finite, deterministic and complete for its stated interface. Stochastic processes, partial observation, learned approximations, noise and uncertain or changing source contracts require additional machinery. [R44-BA03]
+
+The source note relates this construction to empirical state-representation and kernel-alignment studies, while preserving their different objects. A kernel geometry may agree without preserving all controlled traces; quotient-isomorphic systems may use different geometries. Neither the hippocampal comparison nor representation alignment establishes that a measured system realizes this exact minimal quotient. Their role here is motivation for a possible comparison, not reproduction, semantic authentication or a unique mechanism result. The stochastic causal-state literature supplies related ancestry at another contract, not an imported stochastic theorem for the present deterministic construction. [R44-BA01]
+
+<a id="receipt44-joint-dynamics"></a>
+
+### 2.8 Joint interfaces, dynamic closure and nonproduct support
+
+Suppose several interfaces use the same states and actions but have different label maps $`\ell_i`$. Let $`Q_i`$ be their individual exact quotients and let $`Q_J`$ use the tuple of all labels. Agreement on every joint trace is equivalent to agreement on every component trace, so
+
+```math
+\sim_J=\bigcap_i\sim_i.
+```
+
+The map $`[x]_J\mapsto([x]_i)_i`$ embeds $`Q_J`$ into $`\prod_iQ_i`$. It is well-defined and injective by this equality of kernels, and every coordinate projection is onto because each $`Q_i`$ consists of attained classes. Its image $`S`$ is therefore a subdirect product: a subset of the coordinate product that still projects onto every coordinate. It is closed under every componentwise action, since an image tuple represented by $`x`$ is sent to the tuple represented by $`\delta_a x`$. These are standard common-refinement and product-automaton facts. [R44-BB02]
+
+The image is the full product exactly when every tuple of coordinate classes has a common representative in $`X`$, equivalently when every such intersection of class preimages is nonempty. At a fixed finite registry one can record the raw deficit
+
+```math
+D_{\rm raw}=\prod_i|Q_i|-|S|.
+```
+
+A positive deficit excludes the unmodified full-product model at that registry. It is not by itself a measure of explanatory integration. Two identical nonconstant interfaces yield a diagonal image with positive deficit, although the second coordinate merely repeats the first. Splitting or duplicating an interface changes the denominator and the deficit without independently improving an explanation. The original primary check found **4,374** duplicate-interface cases with this behavior. [R44-BB03]
+
+Pairwise tests also miss some joint restrictions. The even-parity set $`\{000,011,101,110\}`$ projects onto the full binary product in every pair of coordinates but occupies only four of the eight triples. Identity transitions make it a closed dynamic example as well. This is a support illustration of the higher-order distinction already exhibited probabilistically in §3.1; it is not evidence of causal direction or one bearer. A proper attained image may instead reflect definitions, omitted states, restricted access, a hidden coordinate or the task's sampling rule.
+
+Consequently a substantive comparison needs independently typed interfaces, a fixed registry, complete admitted state support and action scope, and a warranted full-product null. Even then dynamic closure says that the registered transitions preserve the joint constraint. It does not say why that constraint holds, which coordinate grounds another, or whether a personal, impersonal or distributed mechanism realizes it. The coupled-profile arguments in Objective Normativity retain the separate cost, derivation and interpretation burdens. [R44-BB03] [R44-BB05]
+
+The historical review reports **46,656** exhaustive systems, partitioned into **20,412** full-product and **26,244** proper subdirect images, and **4,000** larger sampled systems with three interfaces. Its successful method used direct word traces and set images. Two preceding review harnesses timed out without producing a result: caching removed repeated work, and the later method reduced the larger sample and action budget while retaining the stated exhaustive small class. Those timeouts remain procedural failures, with no semantic PASS inferred from them and no alteration of the frozen theorem. [R44-BB01] [R44-BB04]
+
+The result adds an exact dynamic support question to the diagnostic products of §9.4. It does not derive one certificate condition from another or close the explanatory question merely because all their states occur in one structured carrier. This is a useful extension of the comparison contract, not an additional origin for the standard quotient and subdirect-product mechanisms. [R44-BB02]
+
 ## 3. The information hidden between target and audit marginals
 
 Let target $`\Theta`$, source type $`T`$, report $`Y`$, and verifier $`V`$ be binary. The target and type are independent and uniform. The report is $`9/10`$-accurate for a good source and $`1/2`$-accurate for a bad source. The verifier is $`4/5`$-accurate and conditionally independent of the report given $`(\Theta,T)`$. Define
@@ -596,6 +662,101 @@ The ten cold-audit findings accordingly retain independent coordinate eligibilit
 
 The primary historical record reports all 65,536 Boolean functions on four variables, 64,594 connected interaction graphs and 40,000 five-variable, three-function families, with no recorded reconstruction or component-minimality failures. The distinct method uses rectangular mixed differences rather than only the primary Möbius calculation: it reports 12,000 six-variable, two-function families, 58,987 partition cases and 5,970 connected families, with no reported method disagreement or coordinate-permutation failure. These are source-reported results, not executions of this incorporation; their separate domains and the explicit erroneous control remain visible. The proof's ancestry is standard Boolean Möbius decomposition and interaction-graph reasoning, and the application carries no general mathematical novelty or external-review claim. [R359-AE]
 
+
+<a id="receipt44-joint-interaction"></a>
+
+### 3.4 A joint prediction can distinguish equal marginals
+
+The parity example in §3.1 has a general finite form that clarifies what a joint measurement adds. There are two different premises to distinguish: equal single-coordinate marginals, and equality of every proper-subset marginal. They coincide for two coordinates but not at higher arity. Neither premise licenses joining records from different subjects, episodes, versions or intervention regimes as though they were one sampled unit. A joint law first needs that shared unit and provenance contract. [R44-BE04]
+
+For two binary coordinates coded as zero and one, suppose laws $`P,Q`$ have the same two marginals, and put $`\delta=P(1,1)-Q(1,1)`$. Vanishing row and column sums force the entire signed difference table:
+
+| $`P-Q`$ | $`Y=0`$ | $`Y=1`$ |
+|---|---:|---:|
+| $`X=0`$ | $`\delta`$ | $`-\delta`$ |
+| $`X=1`$ | $`-\delta`$ | $`\delta`$ |
+
+The four absolute entries sum to $`4|\delta|`$, and the common marginal means cancel in the covariance difference. Therefore
+
+```math
+\|P-Q\|_{\rm TV}
+=2|\delta|
+=2\left|\operatorname{Cov}_P(X,Y)-\operatorname{Cov}_Q(X,Y)\right|.
+```
+
+This is a binary, fixed-coding, equal-marginal identity. It is not a general covariance characterization of total variation. A later source addendum explicitly preserves this equation while withdrawing authority from a malformed rendering in an earlier response; the defective response was retained rather than silently rewritten. [R44-BE01]
+
+For $`k\ge2`$ binary coordinates, let $`d(x)=P(x)-Q(x)`$ and assume equality of **all proper-subset marginals**. The Walsh characters $`\chi_S(x)=(-1)^{\sum_{i\in S}x_i}`$ form a basis for real arrays on the cube. Expand
+
+```math
+d(x)=\sum_{S\subseteq\{1,\ldots,k\}}c_S\chi_S(x),
+\qquad
+c_S=2^{-k}\sum_xd(x)\chi_S(x).
+```
+
+If $`S`$ is proper, the latter sum depends only on the signed $`S`$-marginal, which is zero. Only the full-set coefficient can survive. Thus $`d=c\chi_{\{1,\ldots,k\}}`$, and conversely this array has every proper marginal zero because summing an omitted sign cancels it. It follows that
+
+```math
+\|P-Q\|_{\rm TV}=2^{k-1}|c|
+=\frac12\left|
+\mathbb E_P\chi_{\{1,\ldots,k\}}
+-\mathbb E_Q\chi_{\{1,\ldots,k\}}
+\right|.
+```
+
+This also proves a test-function boundary. Every function depending on a proper coordinate subset has the same expectation under the two laws, and so does every sum of such functions. A full interaction measurement can distinguish them. Equal single-coordinate marginals alone would permit additional higher-order coefficients and do not imply the one-dimensional form above. The argument is standard Boolean Fourier or finite tensor decomposition; it specializes the interaction mechanism already present in this work. [R44-BE02] [R44-BE04] [R44-BE06]
+
+To make this a prediction-based architecture comparison, the competing joint laws must be supplied independently of the tested outcome under one experiment and a common representation policy. A fitted interaction can describe the observed sample without predicting it. An impersonal or distributed rival that supplies the same joint law survives this particular discriminator. Observing a joint difference supplies evidence under the appropriate likelihood assumptions; it does not itself establish derivational explanation, personal unity or a metaphysical ground. The representation-channel and prior conditions in Objective Normativity §8.15 remain applicable. [R44-BE04] [R44-BE05]
+
+The retained review reports rank certificates for arities two through nine, **1,000** integer-count higher-arity trials, and **5,000** binary equal-marginal trials, including **3,413** strict coupling cases. Its modular rank argument is logically separate from new execution: for an integer marginal matrix, a nonzero minor modulo two gives a nonzero rational minor; an explicit rational parity null vector supplies the matching upper bound. The reported rank $`2^k-1`$ therefore certifies a one-dimensional rational nullspace if those computed premises hold. No rank checker was run for this incorporation. [R44-BE05]
+
+The failed attempts remain visible. The optimization log describes symbolic, dense modular and bitset review attempts that each timed out before the eventual successful method; no PASS was inferred from those attempts. The later review's introductory sentence says “two” earlier harnesses but lists all three filenames. That wording disagrees with the list and log. The successor preserves the discrepancy without inventing a missing run or changing a theorem count. [R44-BE03] [R44-BE05]
+
+The citation correction matters for interpretation as well. The hippocampal representation study is an empirical model-comparison source, while Cohen–Rothblum concerns nonnegative rank and Chistikov and collaborators the real/rational factorization boundary used in §3.5. The earlier link from the empirical sentence to the rank paper was withdrawn. These source roles remain separate, and the receipts' hash and locator declarations are historical custody evidence. Neither the hippocampal study nor representation alignment supplies a likelihood over personal and impersonal metaphysical architectures. [R44-BE01] [R44-BE02]
+
+<a id="receipt44-latent-width"></a>
+
+### 3.5 A bound on independent latent components
+
+Joint dependence can also test a stated bound on the number of independent latent components. Here the bound is part of the rival's statistical contract; it is not the number of persons, substances or explanatory grounds. Let $`P`$ be a nonnegative matrix with entries summing to one, representing one finite joint law on $`X\times Y`$. A conditional-independence mixture with $`r`$ positive-weight components has the form
+
+```math
+P(x,y)=\sum_{h=1}^{r}\lambda_h a_h(x)b_h(y),
+\qquad
+\lambda_h>0,\quad \sum_h\lambda_h=1,
+\quad \sum_xa_h(x)=\sum_yb_h(y)=1.
+```
+
+The minimum such $`r`$ is the real nonnegative rank $`\operatorname{rank}_+^{\mathbb R}(P)`$. This is a normalization of the standard nonnegative-factorization problem, not a new origin for that mechanism. Given a decomposition $`P=\sum_h u_hv_h^{\mathsf T}`$ with nonnegative real factors, put $`\alpha_h=\sum_xu_h(x)`$ and $`\beta_h=\sum_yv_h(y)`$. If either sum is zero, the whole term is zero and can be removed. Otherwise set $`\lambda_h=\alpha_h\beta_h`$, $`a_h=u_h/\alpha_h`$ and $`b_h=v_h/\beta_h`$. Summing all entries of $`P`$ shows $`\sum_h\lambda_h=1`$. Conversely a mixture yields a nonnegative factorization by taking $`u_h=\lambda_ha_h`$, $`v_h=b_h`$. Both constructions preserve the number of nonzero components, proving the equality of minima. [R44-BF01] [R44-BF03]
+
+Two elementary bounds clarify the scope:
+
+```math
+\operatorname{rank}_{\mathbb R}(P)
+\le \operatorname{rank}_+^{\mathbb R}(P)
+\le \min(|X|,|Y|).
+```
+
+The first follows because each term has ordinary rank at most one. For the second, one can take the formal latent variable to be $`H=X`$: use $`\lambda_x=P_X(x)`$, let $`a_x`$ be the point mass at $`x`$, and set $`b_x(y)=P(y\mid x)`$ for positive-probability rows. Zero rows contribute no component. Interchanging the coordinates gives the other bound. Therefore a rival with a warranted width bound $`r_0`$ is excluded by an established lower bound $`\operatorname{rank}_+^{\mathbb R}(P)>r_0`$. An unrestricted finite bivariate mixture can always represent the law. This mathematical saturation construction does not demonstrate that $`X`$ is a real common cause or that the mixture explains the law. [R44-BF03]
+
+Support supplies one useful lower bound. The positive support of each nonzero factor $`u_hv_h^{\mathsf T}`$ is a rectangle. Nonnegativity prevents cancellation, so each rectangle lies inside the positive support of $`P`$, and their union covers that support. Any lower bound on the number of such rectangles is consequently a lower bound on mixture width. For a positive diagonal $`n\times n`$ law, a contained rectangle can include at most one diagonal cell: two diagonal cells would force a forbidden off-diagonal cell. At least $`n`$ components are required, and the diagonal decomposition attains $`n`$. Rectangle coverage is a lower-bound method, not a general characterization of nonnegative rank from support alone.
+
+Representation channels require their own typing. If $`K_X`$ and $`K_Y`$ are column-stochastic matrices from the two old alphabets to their respective new alphabets, then
+
+```math
+P'=K_X P K_Y^{\mathsf T}
+=\sum_h\lambda_h(K_Xa_h)(K_Yb_h)^{\mathsf T}.
+```
+
+Each transformed factor remains a probability vector, proving $`\operatorname{rank}_+^{\mathbb R}(P')\le\operatorname{rank}_+^{\mathbb R}(P)`$. The loss can be strict: collapsing one coordinate of a uniform three-point diagonal law to a constant changes width three to width one. A common pair of these separately acting channels cannot generate a width lower bound that was absent before it. Allowing a different fitted pair for each rival changes the experiment and does not support the same comparison. This argument does not cover an arbitrary joint channel that can introduce dependence between the output coordinates. [R44-BF03] [R44-BF04]
+
+The field matters even when the data matrix is rational. The theorem just proved permits real factors. Requiring rational factors defines a different minimum, and exact rational arithmetic in a checker does not establish equality of these two minima in general. The source's ancestry note identifies Cohen–Rothblum for nonnegative rank and the later real/rational separation work of Chistikov and collaborators. Their roles remain distinct from empirical representation studies. No general nonnegative-rank optimizer, uniqueness theorem or identification of a causally real latent variable follows from the finite examples here. [R44-BF01]
+
+Other contracts must also remain separate. A factorization of one observational law need not factor an entire intervention-indexed family with the same latent mechanism. A matrix theorem is not automatically the corresponding higher-order tensor theorem. Latent labels may be permuted, and different factors can produce the same law; a width lower bound does not determine a unique ontology. These limitations were substantive repairs, together with removal of zero-weight components and the separation of statistical components from bearer roots. [R44-BF03] [R44-BF05]
+
+The distinct historical review reports **7,314** nonzero $`2\times2`$ count tables, of which **796** had rank one and **6,518** rank two; all **511** nonempty $`3\times3`$ support patterns; positive diagonal cases of sizes two through six; and respectively **30,000**, **20,000** and **30,000** checks of mixture normalization, the $`H=X`$ construction and channel monotonicity. Those reported checks are compatible with the elementary arguments above but do not settle general real-versus-rational optimization. [R44-BF04]
+
+There is a retained custody limit. An earlier rectangle-cover harness attempted a generic search through larger support masks and timed out. The replacement retained exhaustive support enumeration only at size three and used the direct diagonal argument at larger sizes. The repair note says the exact pre-repair script bytes were not separately frozen. Its failure and stated cause can be reported, but this packet cannot reconstruct or authenticate those missing script bytes. The repair log's statement that admission had not yet been earned describes its own historical stage; the later distinct review gives a qualified PASS at its narrower declared scope. Neither status licenses new execution or a broader theorem. [R44-BF02] [R44-BF04] [R44-BF05]
 
 ## 4. Posterior equivalence and its finite tensor test
 
@@ -1467,6 +1628,30 @@ The source retains seven repairs concerning the typed interface, attained joint 
 
 
 In the source's six-coordinate specialization, the conditions are profile uniformity, warrant integrity, contract compatibility, target authority, truth linkage and world adequacy. The last four are downstream additions to the initial profile/warrant pair, not properties retroactively proved of either original component. The recorded structural interface result leaves the reductive and explanatory question open. Accordingly, the construction can preserve access to valid component records and distinguish their failures while supplying neither a common causal mechanism nor an explanation of why their premises coordinate. [BZ-Z01] [BZ-Z02] [BZ-Z04] [BZ-Z05]
+
+<a id="receipt44-typed-reductions"></a>
+
+#### Exact recovery must preserve the structure being claimed
+
+At the deterministic set level, a target $`d:X\to D`$ factors through $`r:X\to R`$ on attained states exactly when $`\ker r\subseteq\ker d`$. Taking tuples intersects kernels; a joint image fills its coordinate product exactly when every tuple of coordinate fibres has a common element. These mechanisms also underlie §2.8. Their reuse across applications is useful, but does not make them independent mathematical origins or reduce every application's native structure to a partition. [R44-BJ01] [R44-BJ03]
+
+The distinction is visible in four small controls. First, the two strictly positive laws
+
+```math
+P=\begin{pmatrix}1/4&1/4\\1/4&1/4\end{pmatrix},
+\qquad
+Q=\begin{pmatrix}3/8&1/8\\1/8&3/8\end{pmatrix}
+```
+
+have identical full support. Yet $`P`$ has nonnegative rank one and $`Q`$ has rank two: the latter determinant is $`1/8`$, so ordinary rank already gives the lower bound. A support partition alone therefore does not preserve the latent-width question of §3.5. Second, on the same three-vertex triangle, assign zero increments to all edges in one field and assign a unit increment to one oriented edge in another. The vertex set and its chosen partition can remain identical, while the second field has a nonzero cycle sum and admits no global potential. Recovering vertices does not certify integrability of the edge data.
+
+Third, the equivalence $`\{0,1\},\{2\}`$ on $`\mathbb Z/3\mathbb Z`$ is a legitimate set quotient but not an addition congruence: $`0\sim1`$, whereas adding one gives $`1\not\sim2`$. This is the algebraic counterpart of the transition-congruence requirement in §2.7. Fourth, a fair binary pair supported equally on $`00,11`$ and one supported equally on $`01,10`$ have the same one-coordinate marginals and different joint laws. Preserving the separate marginals does not preserve their coupling. These controls instantiate the structure-loss tests in the distinct review; they are proofs by explicit examples, not additional executions of its harness. [R44-BJ02]
+
+A deterministic coarsening has a limited monotonicity consequence. If $`r'=q\circ r`$ and a decoder $`f`$ recovers $`d=f\circ r'`$, then $`f\circ q`$ recovers $`d`$ from $`r`$. Thus coarsening cannot create exact recovery of a fixed target. This statement is about deterministic factorization. Blackwell comparison instead concerns stochastic experiments, randomized decision rules and expected utility, under the hypotheses given in Objective Normativity §8.23. Neither result supplies the other's contract merely by sharing the language of information loss. [R44-BJ01]
+
+For a substantive application, the target and its interpretation must be fixed independently of the representation's success. Defining the representation to contain an oracle for the desired answer makes exact recovery tautological. Similarly, a joint attained carrier shows compatibility of coordinate values; it does not derive those coordinates, explain their dependence, authenticate a source or establish that one bearer grounds them. The native operation, transition, probability or provenance conditions must be checked separately wherever the conclusion uses them. This is why the existing information-closure conditions remain a comparison language rather than a universal reductive calculus. [R44-BJ01] [R44-BJ03]
+
+The historical distinct review reports **2,959** partition-pair checks, **2,959** joint-partition checks and **19,583** deterministic-coarsening triples, with no recorded failures at that scope. Its four structural controls address the different native objects just described. Two earlier negative-control records lacked explicit PASS fields; the repair added those fields rather than presenting their former absence as a mathematical counterexample or silently discarding it. The prior papers' decoder theorem is retained unchanged. This subsection adds the typed failure boundary and the audit history, with no new theorem-origin claim. [R44-BJ02] [R44-BJ03]
 
 ### 9.5 Which missing evidence must survive, and what does completion cost?
 
@@ -3951,3 +4136,55 @@ The common original directory is `docs/project-closure/ar8r-v11/post-merge-propo
 [BZ-Z04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/3e7642792f5a8454c15c949b0ccd42c82be79c13
 [BZ-Z05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/df3ee462f5656b4d2ed8dc5a1f0318b48cc6f4f1
 [R359BZ-V; R359BZ-W; R359BZ-Z]: #r359-bz-ref-v
+
+## Source records for finite dynamics and joint statistical structure
+
+These documentary records preserve the arguments’ source, repair and review history. A reported check or status is attributed to its record; no source-owner program was executed for this incorporation. Their mathematical scope and interpretation limits are stated in the relevant sections above.
+
+- [R44-BA01] — **Finite interface states: ancestry and empirical scope** (ancestry and scope note).
+- [R44-BA02] — **Finite interface states: first cold audit** (cold audit).
+- [R44-BA03] — **Finite interface states: distinct review** (distinct procedural review).
+- [R44-BA04] — **Finite interface states: repair history** (repair log).
+- [R44-BB01] — **Joint interfaces: timeout and optimization history** (timeout log).
+- [R44-BB02] — **Joint interfaces: subdirect-product ancestry** (ancestry and scope note).
+- [R44-BB03] — **Joint interfaces: first cold audit** (cold audit).
+- [R44-BB04] — **Joint interfaces: distinct review** (distinct procedural review).
+- [R44-BB05] — **Joint interfaces: repair history** (repair log).
+- [R44-BE01] — **Joint interaction: equation and citation correction** (equation and source-custody addendum).
+- [R44-BE02] — **Joint interaction: Walsh ancestry and empirical scope** (ancestry and scope note).
+- [R44-BE03] — **Joint interaction: timeout and optimization history** (timeout log).
+- [R44-BE04] — **Joint interaction: first cold audit** (cold audit).
+- [R44-BE05] — **Joint interaction: distinct review** (distinct procedural review).
+- [R44-BE06] — **Joint interaction: repair history** (repair log).
+- [R44-BF01] — **Latent mixture width: ancestry and factor field** (ancestry and field note).
+- [R44-BF02] — **Latent mixture width: harness repair history** (timeout and custody log).
+- [R44-BF03] — **Latent mixture width: first cold audit** (cold audit).
+- [R44-BF04] — **Latent mixture width: distinct review** (distinct procedural review).
+- [R44-BF05] — **Latent mixture width: repair history** (repair log).
+- [R44-BJ01] — **Exact recovery: first cold audit** (cold audit).
+- [R44-BJ02] — **Exact recovery: distinct review** (distinct procedural review).
+- [R44-BJ03] — **Exact recovery: repair history** (repair log).
+
+[R44-BA01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/d3fe73b8da69da58562bed55f69dcdb2fc783f53
+[R44-BA02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/c4e5f623c4e2c2a158063834877ec28e1ed1edf5
+[R44-BA03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/604f6ec1d45109c9074a36f299ee5cb6e8b5779e
+[R44-BA04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/4cb7702ad1ab47873d8059ca22c4b76d61db8100
+[R44-BB01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/c742dcb30bd7153981b34d5294d0d4c94de3b21d
+[R44-BB02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/5b26d5a04fc8ec9afe87346b7cc738217670482c
+[R44-BB03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/7102855d7a1af2be14ac3d9d25ca0d7edf925450
+[R44-BB04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/7989f01bb0e810562d4ae40db3ce012d0dc29032
+[R44-BB05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/8a767b4709b8d5ce89f459fd16dcf5304ac9154c
+[R44-BE01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/589dd50ff4a7226c19058a2ad2e47c23c518b23c
+[R44-BE02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/1b926e1f65fae1459de1fb168bfa417cd61e9979
+[R44-BE03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/668c54cc0389379e6a9570a83238d6a2e54f8ecf
+[R44-BE04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/214dbc6ee9c2674fd1668aab720bbc2d70a7d63b
+[R44-BE05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f89472a8ee6e12cd127cc0fedc1a91a4d2b7d5a4
+[R44-BE06]: https://api.github.com/repos/theislampill/orthemology/git/blobs/490c91b1463ceb0901f4be4b1646445630d5e727
+[R44-BF01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/9ec625179a0146ea0c2a980c19d1e149c6ead996
+[R44-BF02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/49089148fe70ed62c5de438e8d9e2c64de810ede
+[R44-BF03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/d17c962ec2648936208080d5d37feaf141bdd41c
+[R44-BF04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/9a84403edcabc89ec8204e0e9eca1e3036859c4e
+[R44-BF05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/24e27648ba876f7c9ff964dddd972e3fdd7a3893
+[R44-BJ01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/c1058e9cb4263986409838c65c2e8e9e9ab5203e
+[R44-BJ02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/66ca94570444eca6cf651396760f4d9da739dda0
+[R44-BJ03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/ff1e5c1696bf479da05048f4609ca148911d80e4

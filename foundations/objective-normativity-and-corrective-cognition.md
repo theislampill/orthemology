@@ -237,6 +237,43 @@ The finite content contract consequently separates three questions: whether the 
 The reported Q checks retain two different domains: 15,016 three-language systems, with 585,624 law comparisons and 4,232,880 predicate comparisons, and a distinct 9,000 four-language systems with 720,000 law and 1,728,000 predicate comparisons. They are historical checks, not new runs or empirical demonstrations of complete natural-language equivalence. The mathematical ancestry is elementary transport through bijections and groupoid composition. Neither this positive finite encoding result nor the symmetry obstruction supplies a general theorem about every possible content, complete disclosure, source truth or personal mentality. [R359BZ-Q]
 
 
+<a id="receipt44-finite-content"></a>
+
+### 4.7 Several expressions for one finite content
+
+The exact coordinate changes in §4.6 are bijective. A different construction permits several tokens to express one content. Fix a finite Boolean algebra $`B`$ of extensional contents and an algebra $`T`$ in the Boolean signature, together with a surjective operation-preserving semantic map $`\sigma:T\to B`$. Here an algebra *in the Boolean signature* has the named operations and constants; this does not yet say that its token carrier satisfies every Boolean-algebra identity. Both $`B`$ and $`\sigma`$ are prior inputs. Surjectivity asserts only that every content in this particular $`B`$ has a token. It neither explains those contents nor establishes completeness for natural language, all possible thoughts or every modal distinction. [R44-BI01]
+
+Define $`t\equiv t'`$ when $`\sigma(t)=\sigma(t')`$. This is an equivalence relation and a congruence. For example, if $`t\equiv t'`$ and $`u\equiv u'`$, operation preservation gives
+
+```math
+\sigma(t\wedge_Tu)
+=\sigma(t)\wedge_B\sigma(u)
+=\sigma(t')\wedge_B\sigma(u')
+=\sigma(t'\wedge_Tu').
+```
+
+The same reasoning handles the other operations. Therefore the quotient operations on $`T/{\equiv}`$ are well-defined. The map $`[t]\mapsto\sigma(t)`$ is well-defined, injective by the definition of $`\equiv`$, surjective by the hypothesis on $`\sigma`$, and operation-preserving. Its inverse preserves operations as well, by applying the bijection to the defining identities. Hence
+
+```math
+T/\ker\sigma\cong B.
+```
+
+This is the first isomorphism theorem for algebras. The quotient is Boolean because it is isomorphic to $`B`$, even if the token algebra itself is merely an algebra in that signature. Multiplying tokens cannot supply an explanation of the semantic map: any finite list with one token for each content can express those already specified contents, but the enumeration presupposes what it enumerates. [R44-BI01] [R44-BI03]
+
+Exact translation adds a commuting guard. For a second semantic map $`\sigma':T'\to B'`$, suppose a proposed translation $`\tau:T\to T'`$ satisfies
+
+```math
+\sigma'\tau=\phi\sigma
+```
+
+for a declared content homomorphism $`\phi:B\to B'`$. Equal source contents then have equal translated contents, so $`\tau`$ induces a map on semantic quotients, corresponding exactly to $`\phi`$. If $`\phi`$ is an isomorphism, the induced quotient translation is an isomorphism; if $`B'=B`$ and $`\phi`$ is the identity, it preserves the registered content exactly. These are conditional statements. They do not establish that an actual translation preserves ambiguity, morphology, occurrence meaning, pragmatics or authority. Nor do they require that two tokens with the same content have the same historical source or practical use. [R44-BI01] [R44-BI03]
+
+There is a terminology limit in the finite review that should remain explicit. It describes “Boolean token algebras” with one through six content atoms and one through four token copies per content. Its reported total of **1,260 tokens** is consistent with those multiplicities. A carrier having exactly three copies of each member of a finite nontrivial Boolean algebra cannot itself have the cardinality of a finite Boolean algebra: its size is $`3\cdot2^n`$, whereas a finite Boolean algebra has $`2^m`$ elements. The reviewed receipt does not reproduce the token-operation tables. Its wording therefore must not be promoted to a claim that every duplicate-token carrier satisfies the Boolean identities. The theorem used here requires an algebra in the signature and an operation-preserving semantic map; its quotient conclusion follows from those explicit hypotheses without that stronger claim. No missing implementation or prior wording has been reconstructed. [R44-BI02]
+
+Within its declared finite contract, that review reports **24** token systems, **184,824** operation samples, **252** guarded translations, detection of **252** deliberately bad translations, and **33** world-anchor variants, together with paired variations in source authority, version and personal predicates. These are historical reports of finite checks, not a fresh verification of token operations here. The cold audit's ten repairs retain the prior semantic map, exact-translation guard and relative model class as essential premises. [R44-BI01] [R44-BI02] [R44-BI03]
+
+Finally, the same grammar can be coupled to different world-interpretation maps. That nonidentification result does not select the correct map or refute realism. Authority, provenance, version, recipient warrant and applicability likewise require additional typed coordinates; they are not determined merely by the kernel of $`\sigma`$. An abstract semantic quotient establishes neither uncreated content nor mentality, divinity or actual Speech. If a richer model class supplies semantic or personal predicates as substantive constraints, its admissible expansions must respect them. The finite algebraic result leaves those further premises and their evidence visible. [R44-BI01] [R44-BI03]
+
 ## 5. Proper function, accuracy, and warranted exercise
 
 A capacity's regular operation, its proper function, its truth-directed orientation, and a person's warranted exercise of it are four distinguishable achievements. A stable process can reliably produce what it was selected to produce without being selected for truth. A properly functioning truth-directed process can err on an occasion. A true conclusion can be unwarranted because its operative basis is defective or defeated. These separations are central to a source-faithful use of proper-functionalism. [P4–P5; S5–S7]
@@ -640,6 +677,16 @@ The source also retains seven repairs and separate reported populations of 30,00
 
 
 The registry is finite and static at the declared scope, with stable labels and all relevant registered routes included. Omitted transitions, hidden state or target drift require a new application of the criterion. Distinct connected components retain independent additive constants, so their potentials are not comparable without a further calibration. Within one exact potential, a directed cycle of strictly positive increments is impossible: telescoping would make its positive sum zero. This consequence is narrower than saying that every acyclic improvement relation realizes a preassigned cardinal scale. The original audit also distinguished a primary check that reused its solver from the later spanning-tree method; agreement of two calls to the same solver was not counted as independent corroboration. [BZ-N02] [BZ-N04] [BZ-N06]
+
+<a id="receipt44-calibration-review"></a>
+
+#### Calibration certificates and their proper-function limits
+
+The forest-and-cycle theorem of §§7–7.2 and the exact-potential argument above already cover the mathematical content of the later calibration review. Its contribution here is to preserve the checking history and the limits of that theorem, not to repeat the proof as another origin. With the convention $`d(u,v)=L(u)-L(v)`$, a calibrated potential has the form $`N=-L+c_C`$ on each connected component $`C`$. An exact potential with the opposite orientation can exist while rewarding increased truth loss. Zero cycle sums alone do not warrant the truth or authority of $`L`$, and an ordinal ranking does not reproduce prescribed cardinal increments. These distinctions require the independently fixed truth-linked loss and the static complete registry already stated in this work. [R44-BH02] [R44-BH04]
+
+The historical primary harness first stopped with a key lookup error caused by inconsistent orientation of a stored edge. The repair used an antisymmetric edge accessor and restarted the check before freezing its successful version. The recorded failure concerns that implementation, not a refutation of the graph theorem; the receipt does not license treating the failed run as a PASS. The later distinct review used componentwise path integration and reports **1,728** exhaustive three-vertex graph/field/loss cases, **60,000** possibly disconnected cases and **1,024** proper-function account expansions, together with the countermodel in which a newly admitted edge invalidates a formerly valid certificate. No checker was executed for this incorporation. [R44-BH01] [R44-BH03]
+
+The account expansions support a signature-relative nonentailment only. If the reduct omits an account's function-fixing relation, varying a Boolean function label shows what that reduct leaves open. It does not show that the label remains free after selected history, design, organization, teleology or an authenticated source purpose has been supplied. Nor does success at reducing a true loss establish the corresponding fixing relation. Selection or design can concern a non-truth-directed aim; a truth-linked proper-function conclusion needs the appropriate truth aim as an additional warranted premise. A Plantingian account also invokes its design-plan and environment conditions, while a fiṭrah account remains dependent on the particular source, school, translation and applicability claims. The ten audit repairs preserve these account-specific requirements. The ordinary graph-potential mechanism has no independent general-novelty claim, and the finite checks confer no external-review or source-authentication status. [R44-BH02] [R44-BH03] [R44-BH04]
 
 ## 8. What interventions can distinguish
 
@@ -1380,6 +1427,53 @@ The source retains five source anchors and seven hash rows as historical custody
 
 
 The empirical qualification also concerns the kinds of objects being compared. Biological population activity, latent clones in a model, its transition graph and a projected profile are distinct. The reported order of decorrelation can depend on sensory-sequence encoding even when a selected endpoint structure is retained. Global orthogonalization is neither necessary nor sufficient for the source's strict soundness or pathway-adequacy target. The later audit treats the trajectory result as a bounded extraction requiring external comparison with raw figures or data for a stronger empirical synthesis; it does not report that comparison as completed. [BZ-U01] [BZ-U02] [BZ-U05]
+
+<a id="receipt44-experiment-comparison"></a>
+
+### 8.23 Decision comparison requires an aligned experiment
+
+The likelihood-ratio and common-channel arguments in §8.15 concern particular discrimination targets. A standard decision-theoretic extension compares finite experiments over a common state space. Let $`E(s\mid\theta)`$ be the probability of signal $`s`$ in state $`\theta`$, and let $`G(t\mid s)`$ be a stochastic channel independent of $`\theta`$ conditional on $`s`$. The garbled experiment is $`F(t\mid\theta)=\sum_sE(s\mid\theta)G(t\mid s)`$. Fix one prior $`\pi`$, a finite action set and one bounded payoff function $`u(\theta,a)`$. [R44-BC01]
+
+Any randomized rule $`d(a\mid t)`$ used after $`F`$ can be simulated after $`E`$ by the rule $`q(a\mid s)=\sum_tG(t\mid s)d(a\mid t)`$. Its expected payoff is exactly
+
+```math
+\sum_{\theta,s,t,a}
+\pi(\theta)E(s\mid\theta)G(t\mid s)d(a\mid t)u(\theta,a),
+```
+
+which is the payoff under $`F`$ and $`d`$. Maximizing over the available rules gives $`V(E)\ge V(F)`$. If each of two experiments is a garbling of the other, both inequalities apply and their optimal values agree for every such common decision problem. This proves the forward simulation result and mutual-garbling consequence; it does not assert or require a converse characterization here. The argument is standard Blackwell decision theory. [R44-BC01] [R44-BC02]
+
+Equal value is not identity of signal names. This matters when applying a subsequent channel. Consider two states and three signals. In $`E`$, state zero gives $`s_0`$ and state one gives $`s_1`$; in $`E'`$, state zero gives $`s_0`$ and state one gives $`s_2`$. The two experiments differ only by a signal permutation and each reveals the state perfectly. Now use the same named channel $`K`$ that sends $`s_0,s_1`$ to zero and $`s_2`$ to one. After $`E`$, the output is always zero; after $`E'`$, it reveals the state. Thus mutual Blackwell equivalence is not preserved by arbitrary asymmetric postprocessing of unaligned signal names. Identical aligned experiments do remain identical under a common channel, and a suitable commuting transport can preserve a more general comparison. Alignment is the additional premise, not a consequence of equal decision values. [R44-BC02] [R44-BC04]
+
+The original primary checker compared one postprocessed expression with itself. That tautological equality supplied no test of the alignment problem, even though its executable status was PASS. The cold audit required the noncommuting permutation control just illustrated. The distinct review reports **20,000** exact-rational three-signal experiments, **400,000** decision problems, **18,451** experiments with some strict value loss, and **5,000** permutation-equivalence cases; it found the unaligned-channel counterexample and reported no failures of garbling dominance at its finite scope. The earlier deficient test remains part of the history. [R44-BC02] [R44-BC03]
+
+For controlled systems, an isomorphism of the exact quotients in Information and Inquiry §2.7 induces equal transcript experiments only when initial laws, action meanings, available policy information and policy choices are transported under that isomorphism. Candidate-specific policies or differently interpreted actions change the experiment. A short horizon or impoverished sensor can also hide a distinction that an enlarged experiment would expose. The result relocates the evidential burden to a specified different experiment; it does not rule out every such enlargement. [R44-BC02] [R44-BC04]
+
+The scope is finite expected-reward choice with a common prior and payoff. Robust, lexicographic, deontic and other decision criteria need their own results. Equality under a registered experiment establishes neither equal metaphysical possibility nor equal prior probability, source truth or actual-world fit. In particular, identical evidence channels cannot by their representation alone create evidence favouring one architecture, but they do not authenticate the architectures' semantic and source premises. [R44-BC02] [R44-BC03]
+
+<a id="receipt44-testimony-orientation"></a>
+
+### 8.24 Agreement and the orientation of a latent truth label
+
+The joint-likelihood treatment of testimony in §8.17 separates independent evidence from duplicated reports. A further identification issue arises even when conditional independence is correctly specified. Let $`T\in\{0,1\}`$ be a latent state with $`0<\pi=P(T=1)<1`$, and let the reports $`Y_j`$ be conditionally independent given $`T`$, with conditional laws $`Q_j(y\mid t)`$. The observable report law is
+
+```math
+p_\theta(y)
+=\pi\prod_jQ_j(y_j\mid1)
+ +(1-\pi)\prod_jQ_j(y_j\mid0).
+```
+
+Replace $`\pi`$ by $`1-\pi`$ and interchange the two conditional rows of every $`Q_j`$. The two summands exchange, leaving the observable law unchanged. Wherever $`p_\theta(y)>0`$, Bayes' rule also shows that the posterior probability of the relabelled state one is $`1-P_\theta(T=1\mid y)`$. No procedure using only that observable law can distinguish these two label orientations. This is the standard latent-label symmetry familiar in observer-error and latent-class models; the ancestry note relates it to Dawid–Skene rather than claiming a new statistical mechanism. [R44-BD01] [R44-BD02]
+
+The conclusion has two separate premises. First, if an identification result is being used to recover parameters *up to exactly this swap*, that result must be supplied for the particular model class; a generic latent mixture may have additional nonidentifiabilities. Second, choosing between the two recovered orientations requires some input that is not invariant under the swap. It need not be one uniquely privileged kind of anchor. For example, independently knowing that a particular eligible report satisfies $`Q_j(1\mid1)>Q_j(1\mid0)`$ selects one member of a strict two-element swap orbit, because the swapped parameters reverse that inequality. Equality would select neither. This is a conditional orientation argument, not a theorem that observed consensus alone warrants the inequality. [R44-BD02] [R44-BD04]
+
+Even a statistically oriented label is not automatically worldly truth. The application needs a semantic link between the coded report and affirmation, a link between the coded latent value and the proposition's truth, and evidence that the calibration concerns the current source root, version and domain. An independently calibrated reporter can undergo domain shift or manipulation; several nominal reporters may share an unrecognized cause or copied text. These possibilities affect the model and the admissibility of its orientation input. They are not repaired merely by relabelling a fitted parameter as “truth.” [R44-BD02]
+
+The copied-report controls make the distinction concrete. In the cold audit's equal-prior example, a symmetric reporter with accuracy $`3/4`$ produces one report and three exact copies display it. Observing report one has likelihood ratio three, not $`3^3=27`$: the joint event is still the one underlying report. In the distinct review's separate example, accuracy $`4/5`$ and four exact copies give likelihood ratio four, not $`4^4=256`$. These are two historical parameter choices, not inconsistent estimates of one example. Genuinely conditionally independent reports would require a different joint law before multiplying their likelihood ratios. Neither control turns a source-root registry into an authentication result. [R44-BD02] [R44-BD03]
+
+The distinct review reports **50,000** exact-rational models with three through six sources, no recorded failures of swap invariance or posterior complement, and **45,859** cases in which a strict directional anchor selected an orientation. Its six frozen-row checks and finite calculations are historical evidence at that stated contract. The repair log's earlier status, complete pending a distinct rereview, is retained alongside the later qualified PASS; one is not substituted for the other. Seven audit repairs preserved the scope and interpretation conditions just described. [R44-BD03] [R44-BD04]
+
+Finally, the testimony note explicitly treats the theological material as a secondary reconstruction with its own source and translation limits. It supplies no direct Arabic verification here and does not identify tawātur with a latent-class majority rule. Root independence, source authentication and doctrinal or metaphysical warrant remain distinct questions. The statistical model can expose one form of copied-evidence inflation and one orientation ambiguity without settling those larger questions. [R44-BD01] [R44-BD04]
 
 ## 9. Intrinsic reasons, fitting response, and the indifferent agent
 
@@ -2360,3 +2454,39 @@ The common original directory is `docs/project-closure/ar8r-v11/post-merge-propo
 [BZ-Y05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/3868ceffd53a20a83520c6fef2850d248bebd221
 [R359BZ-B; R359BZ-O]: #r359-bz-ref-b
 [R359BZ-E; R359BZ-S]: #r359-bz-ref-e
+
+## Source records for semantic, calibration and evidence conditions
+
+These documentary records preserve the arguments’ source, repair and review history. A reported check or status is attributed to its record; no source-owner program was executed for this incorporation. Their mathematical scope and interpretation limits are stated in the relevant sections above.
+
+- [R44-BC01] — **Experiment comparison: Blackwell ancestry and evidence scope** (ancestry and scope note).
+- [R44-BC02] — **Experiment comparison: first cold audit** (cold audit).
+- [R44-BC03] — **Experiment comparison: distinct review** (distinct procedural review).
+- [R44-BC04] — **Experiment comparison: repair history** (repair log).
+- [R44-BD01] — **Testimony orientation: latent-class and source ancestry** (ancestry and source-scope note).
+- [R44-BD02] — **Testimony orientation: first cold audit** (cold audit).
+- [R44-BD03] — **Testimony orientation: distinct review** (distinct procedural review).
+- [R44-BD04] — **Testimony orientation: repair history** (repair log).
+- [R44-BH01] — **Truth-loss calibration: edge-orientation repair** (primary harness repair log).
+- [R44-BH02] — **Truth-loss calibration: first cold audit** (cold audit).
+- [R44-BH03] — **Truth-loss calibration: distinct review** (distinct procedural review).
+- [R44-BH04] — **Truth-loss calibration: repair history** (repair log).
+- [R44-BI01] — **Finite semantic quotients: first cold audit** (cold audit).
+- [R44-BI02] — **Finite semantic quotients: distinct review** (distinct procedural review).
+- [R44-BI03] — **Finite semantic quotients: repair history** (repair log).
+
+[R44-BC01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/dbc064e450d21d51f761d854808c7ccf991fd621
+[R44-BC02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/71439a1124ea2054a1c9a40bc0f7603f5e9a9c60
+[R44-BC03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/82270569ec30fad6038e7664b7dded89202fd939
+[R44-BC04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/2973fd71e7c0a810743dcf557492aceb2af8b507
+[R44-BD01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/7f6fc80ee4c7645d4f2e1834fe36afb03e173173
+[R44-BD02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/439cc78c38ce3ecbcfa63c321b293788f3ccba9d
+[R44-BD03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/3258fd7c81d093cc4ac448e98cc39e6903ce4a44
+[R44-BD04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/9fcfcab80487d4f5252b3b5b72463e7f8a51fe34
+[R44-BH01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/89a1ff22a6f2f7d1eee7457546619b5ef36d5538
+[R44-BH02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/3790a3a3ffee59f86a9fed4a069382213b569e8a
+[R44-BH03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/982fb1b9447f23bb98c33e6dde87aad70b48a9dd
+[R44-BH04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/ae8a329cdc295ba174ebf14e5dff8f450482d73f
+[R44-BI01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/c95d30a61e069013fe81a4daffc5a34ea9598763
+[R44-BI02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/6a2d27bc88173057f3e59f89c654bf2f712dc61b
+[R44-BI03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/bc698bd08b32687314104bac9bf8a2e58e3963b8

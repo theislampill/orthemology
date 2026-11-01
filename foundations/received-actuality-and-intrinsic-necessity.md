@@ -1008,6 +1008,47 @@ The exact C structured record names the nine empty target extensions as agency, 
 
 In the R record, the false flag is specifically the neutral model's source-acceptance flag. The source-conditioned expansion is a separate object; it is not a refutation of the accepted source's predicates. The underived-order entry is a placeholder compatible with an earlier conclusion, rather than a repetition of its derivation. The typed links connect content to selection and realization, order to the modal/transition profiles, the potential to revision evaluation, translation to selected content, and response to selected state. Their coexistence gives a stronger formal comparison than isolated component successes, while their primitive coordination and unequal explanatory commitments remain live burdens. [BZ-R02] [BZ-R03] [BZ-R04] [BZ-R05]
 
+<a id="receipt44-neutral-bearer"></a>
+
+### 10.22 Granting one bearer leaves further predicates to establish
+
+The common-model argument in §10.21 leaves several transitions open. A stronger structural grant can isolate what remains after numerical co-location is conceded: suppose the declared neutral model assigns its structural roles to one bearer. That grant removes one specific multiplicity objection within the model. It does not by itself show that the roles share a derivation, reduce to one primitive or explain their own coordination. A single carrier can hold several unexplained primitive relations. The later one-bearer audit uses this stronger grant to locate the remaining bridges, while retaining the rival's explanatory burden. [R44-BG01] [R44-BG03]
+
+The underlying logical argument is elementary but conditional on a precise model class. Let a reduct retain all the registered neutral structure and let $`P`$ be a proposed further predicate. If two admissible expansions agree on that entire reduct and disagree on $`P`$, no sentence about that reduct which is true of both can entail $`P`$ over a class admitting both expansions. The expansion in which $`P`$ is false is a countermodel. This is the usual reduct/expansion test for nondefinability or nonentailment, not a new general theorem. Its force depends on preserving every premise actually used by the proposed argument. If an argument already assumes actual understanding, for example, an expansion withholding understanding is not a countermodel to that richer argument merely because it matches a weaker register. [R44-BG01]
+
+The declared neutral coordinates also require careful interpretation. Existence at two indices establishes persistence in that finite frame. An external-actuality status becomes a claim of modelled causal efficacy only through participation in the stipulated effect relation; it does not supply a general criterion of concreteness. Truth-labelled contents and an interpretation table are primitive semantic coordinates, not actual knowledge or intentional apprehension. A supplied target key and fitting-action set do not explain their authority or yield proper function. One bearer's faithful token production does not establish an intention to speak, speech capacity, an occurrent act of Speech, authorization of a Name or revealed content. The audit's eleven repairs preserve these distinctions rather than claiming that the rival explains the omitted notions. [R44-BG01] [R44-BG03]
+
+The same discipline applies to an originator predicate. The source's scoped `CreatorClass` includes at least agentive, intentional origination under its declared bridge; it is not a synonym for an actualizer. An apparent countermodel obtained merely by changing an arbitrary name would not address that substantive target. Conversely, a finite effect relation alone does not supply the agency and intention required by the scoped predicate. Source-functional compatibility under one candidate interpretation likewise neither authenticates the source nor selects the actual world. The source-relative personal and Speech predicates retain their separate evidence requirements. [R44-BG01] [R44-BG03]
+
+The distinct historical review reports **512** bitmask assignments to nine target-predicate flags with no variation in the neutral-reduct digest, **256** true and **256** false assignments for each flag, nine single-deletion controls, ten one-bearer structural checks, and **32** assignments to five same-bearer structural coordinates, of which two were fully aligned. Its stated targets are intellect, personality, agency, intentional uptake, selection because of fittingness, Wisdom, speech capacity, actual Speech and the scoped originator predicate. These are reported finite-interface counts. Arbitrary Boolean assignments must not be promoted to **512 admissible rich interpretations**: a bundle such as agentive intentional origination can impose dependencies among its component predicates. The nonentailment used above requires an admissible disagreeing pair for the exact target and model class, rather than free flag counting alone. [R44-BG02]
+
+The review reports a one-bearer impersonal expansion and a personal twin at its declared contract. That is a model-class-relative result. Its five frozen-row checks and finite enumeration do not establish physical or metaphysical possibility, equal prior probability, equal evidential support, or explanatory adequacy of the rival. Neither the labels in the source nor a finite satisfiability claim closes those questions. This application strengthens the structural antecedent of the earlier common-model comparison while retaining the standard ancestry and every later semantic, normative, personal and source bridge. [R44-BG01] [R44-BG02] [R44-BG03]
+
+<a id="receipt44-modal-bearers"></a>
+
+### 10.23 Local occurrences and a persisting root bearer
+
+The transport and holonomy arguments of §§10.5–10.8 distinguish a coherent section from a globally identical bearer. The later modal-root reconciliation makes that distinction explicit in the types of its variables. Let $`W`$ be a declared finite frame, $`G`$ a global bearer sort, and $`O_w`$ a local occurrence sort for each $`w\in W`$. An occurrence-to-bearer map $`\beta_w:O_w\to G`$ specifies the chosen numerical-identity semantics. Local existence, root role, underivability and concreteness are separate predicates on $`O_w`$. An abstract order, if present, belongs to its own sort; it is not automatically a local concrete occurrence. [R44-BK01] [R44-BK03]
+
+A scoped sufficient package can now be stated without mixing domains. Suppose a selected occurrence $`o_w\in O_w`$ exists at every world, satisfies the root, underivability and concreteness conditions there, and obeys
+
+```math
+\beta_w(o_w)=g
+\quad\text{for one }g\in G\text{ and every }w\in W.
+```
+
+Then that one bearer has a concrete, underived root occurrence at every index of the declared frame. The proof is direct: for each index the supplied occurrence witnesses the stated predicates of the same $`g`$. If transport maps are part of the certification, one can additionally require that they carry the selected occurrences coherently. Their coherence certifies a selected lineage; the displayed identity condition is what identifies that lineage with one numerical bearer. It is a substantive bridge in this semantics, not an equality convention obtained for free from a constant-domain notation. [R44-BK01] [R44-BK03]
+
+The conditions cannot be collapsed into worldwise existence. With two worlds, choose a root occurrence in each and a coherent transport between them, but let their global labels be $`g_0\ne g_1`$. Worldwise root coverage and a coherent counterpart lineage hold, while no common numerical bearer is supplied by those facts. This exhibits the distinction between $`\forall w\,\exists g`$ and $`\exists g\,\forall w`$ without denying that an additional identity theory could link the occurrences. Likewise, a root at the designated actual index need not have a root occurrence at another index. An abstract ordering structure supplies no concrete occurrence merely by satisfying order axioms. These are separate failures of identity, coverage and concrete exemplification. [R44-BK01] [R44-BK02]
+
+Even the full package proves only frame-relative persistence. Extending the frame with a world lacking such an occurrence invalidates that conclusion over the larger frame. Absolute metaphysical necessity would require independently warranted modal semantics and the intended scope of worlds. Underivability also remains relative to the stipulated grounding graph: having no predecessor in that graph does not by itself establish aseity or nonborrowed actuality. The package is sufficient under its declared semantics; the source's deletion models do not prove that it is globally minimal across all possible semantics. Once identity is supplied directly, some transport conditions may instead function as certification guards. [R44-BK01] [R44-BK03]
+
+The historical implementation defects reinforce the typing issue. The first checker tested existence and underivability while omitting the separately declared root-role predicate. It also handled a constant-domain special case, which could not establish a claim about independent local occurrences and transport. The repair separated all four predicates and restricted that checker to regression evidence. The distinct review then used local occurrences with independently assigned global labels. These are recorded changes in the tested contract, not new computations performed here. [R44-BK01] [R44-BK03]
+
+That review reports **11,664** local models, **5,184** with coverage, **3,456** with coherent lineage but without the stated global-identity bridge, **1,296** with identity but lacking concreteness somewhere, **432** fully guarded models with no recorded failures, and **2,592** actual-only-root countermodels. The displayed predicates need not partition the model set; these numbers must not be summed into a new total. Separate abstract-order and frame-extension controls were reported. The six frozen-row checks and finite enumeration do not prove the truth of the identity, frame, grounding or concreteness premises. [R44-BK02]
+
+This reconciliation preserves the quantifier, coherent-section and identity machinery already established in the earlier modal sections. It adds explicit occurrence typing and the audit history, with no independent general-theorem origin. Even a warranted persistent concrete root would leave later claims of origination, actualization, Creatorhood, explanatory unity, intellect, personality and identification with a revealed referent to their own arguments. The finite package supplies none of those conclusions by itself. [R44-BK01] [R44-BK02] [R44-BK03]
+
 ## 11. What a complete explanatory fact does—and does not—establish
 
 Generic explanation provides independent logical comparisons. It must not silently replace productive provision or identify explanatory facts with individual bearers. The following results reconstruct the relevant explanatory principles of Koons and Pruss and the corpus's checked consequences and controls. They concern explicit relational assumptions; neither the proofs nor their counterinterpretations authenticate a metaphysical realization. [Koons and Pruss, §2][u-kp] [Plural-explanation analysis][u-psr]
@@ -1922,3 +1963,21 @@ The common original directory is `docs/project-closure/ar8r-v11/post-merge-propo
 [BZ-R04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/a76b52c183fe8760520dc6881887642121763c1b
 [BZ-R05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/a4af5db51c2d2d03d1f229829e9408fdd826706d
 [R359BZ-C; R359BZ-R]: #r359-bz-ref-c
+
+## Source records for bearer predicates and modal occurrence conditions
+
+These documentary records preserve the arguments’ source, repair and review history. A reported check or status is attributed to its record; no source-owner program was executed for this incorporation. Their mathematical scope and interpretation limits are stated in the relevant sections above.
+
+- [R44-BG01] — **One neutral bearer: first cold audit** (cold audit).
+- [R44-BG02] — **One neutral bearer: distinct review** (distinct procedural review).
+- [R44-BG03] — **One neutral bearer: repair history** (repair log).
+- [R44-BK01] — **Persistent roots: first cold audit** (cold audit).
+- [R44-BK02] — **Persistent roots: distinct local-occurrence review** (distinct procedural review).
+- [R44-BK03] — **Persistent roots: repair history** (repair log).
+
+[R44-BG01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/de6efbf7b752f70cf3f74631ad2915673ebbb866
+[R44-BG02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/d5f24ab112939bc4173c4a753c290bf231e41e81
+[R44-BG03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/b24891561bdff5501d84691ee72678794fd01bad
+[R44-BK01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/50b92b4c066d1ca6cc52defbcde28084be65e344
+[R44-BK02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/13b013e168e3e58065eb80eaf82ef97bc8a2c81a
+[R44-BK03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/7ad699be8b4c25d438b46d81b7f6d609b0834a15
