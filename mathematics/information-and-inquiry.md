@@ -758,6 +758,14 @@ The distinct historical review reports **7,314** nonzero $`2\times2`$ count tabl
 
 There is a retained custody limit. An earlier rectangle-cover harness attempted a generic search through larger support masks and timed out. The replacement retained exhaustive support enumeration only at size three and used the direct diagonal argument at larger sizes. The repair note says the exact pre-repair script bytes were not separately frozen. Its failure and stated cause can be reported, but this packet cannot reconstruct or authenticate those missing script bytes. The repair log's statement that admission had not yet been earned describes its own historical stage; the later distinct review gives a qualified PASS at its narrower declared scope. Neither status licenses new execution or a broader theorem. [R44-BF02] [R44-BF04] [R44-BF05]
 
+<a id="receipt68-latent-width-records"></a>
+
+#### The scope of the latent-width result files
+
+The underlying result files preserve distinct finite populations behind the preceding proof. The primary edition reports **3,059** matrices, partitioned into **471** and **2,588** cases, **49,832** normalization checks and **50,000** channel checks. The distinct review reports **7,314** cases, partitioned into **796** and **6,518**, together with its **511** three-by-three support patterns, **30,000** mixture checks, **20,000** hidden-variable checks and **30,000** channel checks. The dimensions and constructions differ, so those populations are not pooled into a larger theorem check. Both concern the stated nonnegative real factorization and stochastic operations; neither licenses a real-rank, integer-factorization or contextual-compatibility substitution. [R68-S042] [R68-S043]
+
+The primary record explicitly says that zero-term handling was not separately attacked in its first version. The algebraic argument above permits zero-weight terms to be omitted, but that proof fact must not be restated as a historical test that the file does not report. The same records retain rank collapse under a channel, including a three-to-one example: post-processing can discard latent distinctions. Preservation of a particular latent width requires additional conditions. These result files bind the evidence and its limit to the existing argument; they do not create a second origin for it. [R68-S042] [R68-S043]
+
 ## 4. Posterior equivalence and its finite tensor test
 
 Two live states are posterior-equivalent if they admit the same words and give the same target posterior after every feasible word, including the empty word. They need not predict word probabilities.
@@ -1497,6 +1505,16 @@ Given those exact inputs, a full-region certificate can be checked by recomputin
 
 Universal progress is essential. From a non-target state, an action with successors $`\{g,s\}`$ can reach a target $`g`$ but lets the adversary remain at $`s`$ forever. It is not a core-entry witness. The valid alternative $`\{g\}`$ strictly reduces rank on every successor. Wrong regions, stale eligibility epochs, absent completeness declarations, nonexistent selected actions, false ranks, changed model digests and nonforcing strategies are distinct rejection reasons; a recomputed digest cannot repair the others. [15]
 
+<a id="receipt68-temporal-evidence-history"></a>
+
+#### What the temporal validation record actually repairs
+
+The complete local-transition specimen accompanying the temporal argument records a current boundary, an eligible route, evidence references and a declared operation. Those fields do not determine the future transition relation. The same local record can be extended by a stable target loop or by a bypass into an absorbing nontarget state. Consequently its completeness as a current record cannot, by itself, prove eventual target entry, persistence or robust selection of a future policy. The specimen is a useful witness to the information missing from an event-local certificate, rather than an additional temporal theorem. [R68-S041] [R68-S023]
+
+The historical first result nevertheless records a passing temporal check. The subsequent cold audit identified two concrete gaps: a certificate was not bound to a digest of the exact temporal model, and the core-entry witness did not enforce progress against every successor of the selected action. An existential favorable branch is insufficient for the universal claim. The repair requires a canonical model identity covering epoch, states, safe and target predicates, actions and successors, eligibility references and epochs, and the completeness commitment. Certificate kind and the proposed answer are excluded from that identity, so that the identity binds the question's model rather than a chosen verdict. It also requires closure inside the kernel and strict descent outside it for every selected successor; the co-Büchi witness has the separately stated weak-good/strict-bad progress conditions and bad-cycle check. These are the conditions already proved above, now linked to the defect that made them necessary. [R68-S023] [R68-S024] [R68-S056]
+
+The repaired primary result records three positive certificates on models with respectively one, one and two admissible strategies. Its seven rejection controls concern the region, epoch, completeness commitment, selected action, rank, model digest and nonforcing progress. The earlier edition had two positive certificates and five rejection controls; the digest and nonforcing controls belong to the repaired edition and must not be read back into its earlier passing status. The distinct review records its own seven artifact hashes and the scoped certificate checks. These are historical reported checks, not a fresh run or an audit of current software. The original defect, repaired model-bound condition and remaining model-completeness and applicability assumptions are all retained. [R68-S025] [R68-S026] [R68-S056] [R68-S057]
+
 #### The rejected equivalence between core entry and persistence
 
 The distinction between the two temporal regions was forced by a failed review. The [first cold audit][receipt-r14-01] accepted the invariant-kernel attractor as a characterization of eventual target persistence and reported successful checks on 3,441 games, 24,624 memoryless strategies and 2,000 successor-enlargement cases. A [fresh direct-temporal rereview][receipt-r14-03] instead compared it with reachable-cycle semantics. Its [failed result][receipt-r14-02] preserves the first mismatch after 506 games and 3,984 strategies, with all three frozen hashes matching. The earlier `PASS` remains a historical verdict; it is not evidence that the rejected equivalence was true.
@@ -1652,6 +1670,14 @@ A deterministic coarsening has a limited monotonicity consequence. If $`r'=q\cir
 For a substantive application, the target and its interpretation must be fixed independently of the representation's success. Defining the representation to contain an oracle for the desired answer makes exact recovery tautological. Similarly, a joint attained carrier shows compatibility of coordinate values; it does not derive those coordinates, explain their dependence, authenticate a source or establish that one bearer grounds them. The native operation, transition, probability or provenance conditions must be checked separately wherever the conclusion uses them. This is why the existing information-closure conditions remain a comparison language rather than a universal reductive calculus. [R44-BJ01] [R44-BJ03]
 
 The historical distinct review reports **2,959** partition-pair checks, **2,959** joint-partition checks and **19,583** deterministic-coarsening triples, with no recorded failures at that scope. Its four structural controls address the different native objects just described. Two earlier negative-control records lacked explicit PASS fields; the repair added those fields rather than presenting their former absence as a mathematical counterexample or silently discarding it. The prior papers' decoder theorem is retained unchanged. This subsection adds the typed failure boundary and the audit history, with no new theorem-origin claim. [R44-BJ02] [R44-BJ03]
+
+<a id="receipt68-typed-descent-records"></a>
+
+#### Distinguishing a metadata repair from another experiment
+
+The primary typed-descent result records **11,132** maps, **404** joint cases and **17,018** coarsening cases. The distinct review records **2,959** pairs, **2,959** joint cases and **19,583** coarsenings. Its obstructed cycle has sum **three**, while the primary rank control has determinant **3/20**. The simple cycle and rank examples given above illustrate the same kinds of obstruction; their numerical values are not represented as a reconstruction of those historical harness instances. [R68-S050] [R68-S051]
+
+The second primary edition adds two explicit passing control fields without changing that edition's scientific case population. It is a metadata correction that makes those outcomes explicit, not an additional experiment or a new proof of descent. In every edition the deterministic fibre criterion, compatible joint representation, stochastic garbling and cycle obstruction retain their different types and hypotheses. Neither a corrected status field nor a pooled count can remove those distinctions. [R68-S051] [R68-S052]
 
 ### 9.5 Which missing evidence must survive, and what does completion cost?
 
@@ -3650,6 +3676,107 @@ Together these results distinguish four obligations: the literal target, the joi
 
 
 
+<a id="receipt68-root-query-cost"></a>
+
+### 9.11 The query cost of an authenticated root threshold
+
+The provenance distinction in §9.4 separates one acquisition from its copies. A different question asks how many exact queries are needed to discover whether a finite input contains at least $`t`$ distinct root labels. The source result assumes that those labels are already canonical and authenticated. It does not solve authentication, infer evidential independence, or charge an additional verification cost for returning a label. Those assumptions are part of the oracle. [R68-S031]
+
+Let the unknown input be an arbitrary partial matching $`M`$ in the complete bipartite graph $`K_{m,n}`$, together with a fixed label map $`\lambda:M\to\Lambda`$. A query to an edge returns either absence or the exact label of that positive edge. The target is $`|\lambda(M)|\ge t`$. The algorithm is deterministic and adaptive and must be correct on every input without error. In the nontrivial range
+
+```math
+1\le t\le\min(m,n),\qquad |\Lambda|\ge t,
+```
+
+the reported exact worst-case depth is
+
+```math
+B(m,n,t)=mn-\binom{t}{2}.
+```
+
+Its upper bound has a direct induction. Its lower bound is an oracle reduction to the previously asserted binary matching-cardinality theorem. That inherited theorem, and its still-open external mathematical and prior-art review, are part of the stated authority of the exact equality. The reduction below does not present a fresh independent proof of the binary lower bound. [R68-S031] [R68-S032] [R68-S033]
+
+For the upper bound, keep the set of labels already found and let $`k`$ be the number of additional distinct labels still required. If $`k\le0`$, return true. If $`k>\min(m,n)`$ for the remaining rows and columns, return false. Otherwise scan one remaining row until a positive edge is found or all its at most $`n`$ entries have been queried. A row without a positive is deleted. A positive edge permits deletion of both its row and column because the input is a matching. A new label reduces $`k`$ by one; an old label does not.
+
+Use the budget $`B(m,n,k)=mn-\binom{k}{2}`$ only in the feasible range, and budget zero for the terminal true or impossible-residual cases. If a residual demand remains feasible, the three branches satisfy
+
+```math
+\begin{aligned}
+n+B(m-1,n,k)&=B(m,n,k),\\
+n+B(m-1,n-1,k)&=B(m,n,k)-(m-1),\\
+n+B(m-1,n-1,k-1)&=B(m,n,k)-(m-k).
+\end{aligned}
+```
+
+The second line is the old-label branch and the third the new-label branch. Their slacks are nonnegative because the current demand is feasible. An immediately terminating residual branch costs at most $`n`$, and $`n\le B(m,n,k)`$ in the nontrivial range. Induction therefore proves the upper bound. Queries already answered negatively can be skipped; counting the whole row is only a conservative budget. This proof does not assert the displayed equalities outside their feasible residual domains. For example, with $`m=n=k=2`$, a wholly negative first row costs two and already proves false, whereas $`B(2,2,2)=3`$. The earlier unqualified equality was a recorded proof defect. [R68-S032] [R68-S035]
+
+For the lower reduction, suppose a root-threshold algorithm is available and only a binary membership oracle for a fixed matching $`M`$ is supplied. Simulate the richer oracle using $`t`$ fixed labels $`\alpha_1,\ldots,\alpha_t`$. Cache the answer for each positive edge. The first $`t`$ newly discovered positive edges receive distinct labels; any later newly discovered positive receives $`\alpha_t`$. Repeated queries receive the cached label and never advance the counter.
+
+At termination, extend this partial labeling to every unqueried positive edge. If $`|M|<t`$, give those edges the remaining distinct labels; the complete input has fewer than $`t`$ roots. If $`|M|\ge t`$ and fewer than $`t`$ labels have appeared, there are enough unqueried positives to supply all the missing labels; if $`t`$ have already appeared, the threshold is already met. Thus, for the actual transcript, there is one fixed complete label map consistent with every reply and satisfying
+
+```math
+|\lambda(M)|\ge t\quad\Longleftrightarrow\quad |M|\ge t.
+```
+
+The root algorithm must be correct for that fixed labeled input. The simulation consequently decides binary matching cardinality with the same edge queries. Hence the root problem is at least as hard as the binary problem. Combined with the inherited binary depth $`mn-\binom t2`$ and the proved upper bound, this gives the source's exact formula at its declared authority. Caching is essential: assigning a fresh label when an old edge is queried again would fail to describe any fixed input. [R68-S032] [R68-S033] [R68-S035]
+
+The trivial conventions remain separate. A nonpositive threshold is already true; a threshold exceeding either matching capacity or the label alphabet is already false. Binary support alone is insufficient for general root-label thresholds, although it suffices at $`t=1`$. Two positive edges with one repeated label and the same two edges with distinct labels have identical membership answers and opposite verdicts at threshold two. Conversely, different displayed symbols can alias one actual root, or one displayed symbol can merge two actual roots. Those are failures of the assumed canonical-label interpretation, not exceptions to the oracle theorem. Distinct authenticated labels also need not represent independent evidence or independent causes. [R68-S031] [R68-S058]
+
+The cold audit retained four defects: infeasible-branch algebra, uncached repeated queries, a tautological rather than independently constructed support-transcript comparison, and absent boundary regressions. The repaired primary record reports **9,455** recurrence cases, **211,094** online-lifting cases and **147** boundary cases. Its seven exact minimax examples have depths $`1,4,3,5,5,8,6`$ for $`(m,n,t)`$ equal respectively to $`(1,1,1),(2,2,1),(2,2,2),(2,3,2),(3,2,2),(3,3,2),(3,3,3)`$. The distinct review used a depth-feasibility procedure, reported **338,350** branch cases and **50,000** repeated-query trials, and retained the same seven small depths. These declarations are source-reported checks, not executions performed here. [R68-S032] [R68-S033] [R68-S034] [R68-S035] [R68-S058]
+
+The result supplies a precise query interface, not a randomized, parallel, distributed, communication or common-knowledge bound. Its lower mechanism inherits the earlier matching theorem, and a bounded failure to locate an exact external ancestor does not establish novelty. The accompanying custody record binds named theorem, audit, repair and result editions but does not itself verify a new run, authenticate roots or resolve recipient warrant. No private archive or executable named in that record is required as an additional premise of the readable reduction above, and no such artifact was reopened for this exposition. [R68-S031] [R68-S033] [R68-S065]
+
+<a id="receipt68-static-root-support"></a>
+
+### 9.12 How many root failures can a fixed blocking system tolerate?
+
+Counting distinct roots is not yet a robustness calculation. A root can support several actions, several roots can be jointly required by one action, and an action can block more than one adverse path. Robustness depends on these incidences. For a finite fixed path family, the relevant threshold is a transversal number. This is the root-action-path specialization of the support-family argument in Physical Realisation and Continuation §10.1; the historical records themselves retain its standard hitting-set ancestry. [R68-S036] [R68-S060]
+
+Let $`R`$ be the finite set of actual roots, $`P`$ the fixed complete set of adverse paths, and $`I`$ the available actions. For each action $`a`$, let $`Q(a)\subseteq R`$ be its required roots. The requirement is **conjunctive**: under a corruption set $`F\subseteq R`$, action $`a`$ remains supported exactly when $`Q(a)\cap F=\varnothing`$. For each path $`p`$, let $`B_p\subseteq I`$ be its blocking actions. The static pathwise requirement at budget $`f`$ is
+
+```math
+\forall F\subseteq R\ (|F|\le f)\quad
+\forall p\in P\quad
+\exists a\in B_p\quad Q(a)\cap F=\varnothing.
+```
+
+The order of these quantifiers permits the supported blocker to depend on the failed roots and on the path. It does not yet require one action to be committed before the failure or one compatible portfolio to block every path simultaneously.
+
+For each path form the hypergraph $`H_p=\{Q(a):a\in B_p\}`$. A transversal is a root set meeting every edge. Write $`\tau(H_p)`$ for its minimum size, with $`\tau(\varnothing)=0`$ and $`\tau(H_p)=\infty`$ when $`H_p`$ contains an empty edge. The first convention says that a path with no blocker already lacks support. The second says that an available blocker requiring no roots cannot be disabled by root corruption in this model. Define
+
+```math
+\kappa=\min_{p\in P}\tau(H_p),
+```
+
+using $`\kappa=\infty`$ if there are no adverse paths.
+
+**Static pathwise threshold.** The displayed robustness requirement holds exactly when $`\kappa>f`$.
+
+**Proof.** A path $`p`$ loses every supported blocker under $`F`$ exactly when $`F\cap Q(a)\ne\varnothing`$ for every $`a\in B_p`$. This says precisely that $`F`$ is a transversal of $`H_p`$. Such a failure can occur within budget $`f`$ exactly when $`\tau(H_p)\le f`$. Taking the minimum over the fixed path family gives failure exactly when $`\kappa\le f`$, and hence the asserted criterion. The two empty-family conventions make the same argument valid when a path has no blocker or has a root-free blocker. [R68-S036] [R68-S038] [R68-S060] [R68-S062]
+
+Several consequences follow without another probabilistic assumption. Adding an action to a path's blocker family adds a hyperedge, so every transversal of the enlarged family also hits the old family; the minimum failure size cannot decrease. Deleting a blocker has the reverse effect. Repeating the same action or copying its required-root set adds no constraint and changes no threshold. Overlapping required-root sets need not make the margin one: the margin is the size of a smallest set meeting all of them, not the number of names, actions or pairwise overlaps.
+
+Root identification must precede this calculation. Let $`q:R\to\bar R`$ identify displayed roots that are actually one root, and replace each required set by $`q(Q(a))`$. If $`F`$ hits every original edge, then $`q(F)`$ hits every image edge and has no more elements. Thus
+
+```math
+\tau(q(H_p))\le\tau(H_p),\qquad
+\bar\kappa\le\kappa.
+```
+
+An empty edge remains empty, so the infinite case is preserved as well. Quotienting aliases can reduce a claimed margin; duplicating labels for one acquisition cannot create a larger actual margin. This contraction statement concerns equality of roots. It does not establish causal or statistical independence between unequal roots. [R68-S039] [R68-S059] [R68-S062] [R68-S068]
+
+For example, eight blocking actions all requiring the same root have margin one. Two blockers requiring $`\{r_1\}`$ and $`\{r_2\}`$ have margin two when those roots are actually distinct. At budget one, at least one blocker remains, but neither blocker alone survives every possible one-root failure. This separates $`\forall F\,\exists a`$ from $`\exists a\,\forall F`$. An adaptive policy, a precommitted action and a simultaneous portfolio are different tasks. Moreover, a single action requiring $`\{r_1,r_2\}`$ conjunctively has margin one: either corruption disables it. If the application instead intends either root to suffice, its support semantics must represent that redundancy. Calling the same two-element set “support” does not make these two contracts equivalent. [R68-S037] [R68-S040] [R68-S061] [R68-S064]
+
+The pathwise theorem also has a precise limit at execution. After a failure, each path may have a supported blocker while no compatible collection of those blockers can be executed. A simultaneous blocking conclusion therefore requires jointly available and mutually compatible actions whose execution does not invalidate one another's blocking effects. Likewise, an action can create a new adverse path that was absent from $`P`$. The threshold then remains correct for the original family but does not prove safety in the expanded system. A partial path registry has the same limitation. A dynamic or strategic application must independently justify its path completeness and intervention semantics; these do not follow from the transversal calculation. [R68-S037] [R68-S038] [R68-S061] [R68-S062]
+
+Two historical review lineages concern this same mathematical result and must remain distinct. The first retained four blocking findings: an inadequately sanitized artifact reference and three stronger controls whose outcomes had been hardcoded instead of computed for incompatible cover, changing paths and commitment timing. Its repaired primary record reports **32,906** single-path hypergraphs with **164,380** budget checks, **40,000** multi-path systems with **200,207** budget checks, and **35,549** cases for each of its addition, deletion and duplication checks. Its distinct review reports **32,906** single-path families, **16,384** two-path families, **50,000** random systems and **1,662,078** root-contraction checks. These populations belong to that lineage. [R68-S037] [R68-S038] [R68-S039] [R68-S040] [R68-S059]
+
+The other lineage retained three scientific blockers: unspecified conjunctive versus redundant support, pathwise support being promoted to a compatible joint portfolio, and display labels being substituted for actual-root equivalence. Its repair list has five items because it also calls for boundary controls and narrowing the prose. The primary result reports **13,293** single-path systems and **100,000** randomized cases with **449,924** budget comparisons; its distinct review reports **13,985** action systems and **120,000** randomized cases. The case domains, review numbering and counts differ from those above. They are not pooled as one experiment or counted as two origins of the theorem. [R68-S061] [R68-S062] [R68-S063] [R68-S064] [R68-S068]
+
+The historical custody record also retains an initial failed sanitized verification and failed private-exclusion check. A later correction attributes the mismatch to pre-final receipts and an in-archive hash self-reference, and reports replacement checks using external archive sidecars. The later report does not erase the earlier failure. Its archive assertions have not been independently rerun in this exposition, and the mathematical argument above does not treat an archive status as evidence of path completeness, authentic roots or executable compatibility. [R68-S066] [R68-S067]
+
+The resulting claim is a finite, static support criterion with explicit failure semantics. It supplies no probability of corruption, no independence estimate, no general adaptive strategy theorem and no source- or world-level guarantee. Those boundaries are part of what makes the threshold usable: a failure of an application can be located in root identity, support semantics, available actions, complete paths or execution compatibility without changing the elementary transversal proof.
+
 ## 10. Assumptions, negative results, and open scope
 
 The positive-fibre and Fisher theorems quantify over the full strictly positive joint-law family. On a constrained reachable family, use its actual differences; the density proof may fail. For example, with three audit outcomes, a binary target, fixed weights $`w_j=1/3`$, and $`J=p_{1,1}`$, equation (12) has $`\dot w=0`$. The section is invariant and its signature is injective, so the flow descends there despite conditional dependence at fixed $`q`$. This does not contradict the full-domain rigidity theorem.
@@ -4188,3 +4315,75 @@ These documentary records preserve the arguments’ source, repair and review hi
 [R44-BJ01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/c1058e9cb4263986409838c65c2e8e9e9ab5203e
 [R44-BJ02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/66ca94570444eca6cf651396760f4d9da739dda0
 [R44-BJ03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/ff1e5c1696bf479da05048f4609ca148911d80e4
+
+## Source records for root queries, support and temporal conditions
+
+The following exact source editions supply the arguments, recorded failures, repairs and finite checking history cited above. A result or disposition is attributed to its historical record; the incorporation performs no new execution of the source programs. Mathematical ancestry and interpretation limits remain those stated in the corresponding sections.
+
+- [R68-S023] — **Temporal certificates: two-defect repair log** (repair log).
+- [R68-S024] — **Temporal certificates: initial cold audit** (cold audit).
+- [R68-S025] — **Temporal certificates: repaired distinct review** (distinct review).
+- [R68-S026] — **Temporal certificates: repaired review results** (result file).
+- [R68-S031] — **Authenticated root thresholds: bounded disposition** (historical disposition overlay).
+- [R68-S032] — **Authenticated root thresholds: initial cold audit** (cold audit).
+- [R68-S033] — **Authenticated root thresholds: repaired distinct review** (distinct review).
+- [R68-S034] — **Authenticated root thresholds: review results** (result file).
+- [R68-S035] — **Authenticated root thresholds: repair log** (repair log).
+- [R68-S036] — **Fixed-path root support: first-lineage disposition** (historical disposition overlay).
+- [R68-S037] — **Fixed-path root support: first-lineage cold audit** (sanitized cold audit).
+- [R68-S038] — **Fixed-path root support: first-lineage repaired review** (distinct review).
+- [R68-S039] — **Fixed-path root support: first-lineage review results** (result file).
+- [R68-S040] — **Fixed-path root support: first-lineage repair log** (repair log).
+- [R68-S041] — **A complete current-transition record without future dynamics** (current-record specimen).
+- [R68-S042] — **Latent width and stochastic channels: distinct results** (result file).
+- [R68-S043] — **Latent width and stochastic channels: primary results** (result file).
+- [R68-S050] — **Typed reductions: distinct partition results** (result file).
+- [R68-S051] — **Typed reductions: initial primary results** (result file).
+- [R68-S052] — **Typed reductions: primary metadata reconciliation** (result file / metadata-only correction).
+- [R68-S056] — **Temporal certificates: first primary results** (result file).
+- [R68-S057] — **Temporal certificates: repaired primary results** (result file).
+- [R68-S058] — **Authenticated root thresholds: repaired primary results** (result file).
+- [R68-S059] — **Fixed-path root support: first-lineage primary results** (result file).
+- [R68-S060] — **Fixed-path root support: second-lineage disposition** (historical disposition overlay).
+- [R68-S061] — **Fixed-path root support: second-lineage cold audit** (cold audit).
+- [R68-S062] — **Fixed-path root support: second-lineage repaired review** (distinct review).
+- [R68-S063] — **Fixed-path root support: second-lineage review results** (result file).
+- [R68-S064] — **Fixed-path root support: second-lineage repair log** (repair log).
+- [R68-S065] — **Authenticated root thresholds: historical custody record** (custody receipt).
+- [R68-S066] — **Fixed-path root support: failed custody receipt** (custody receipt).
+- [R68-S067] — **Fixed-path root support: custody correction** (custody correction).
+- [R68-S068] — **Fixed-path root support: second-lineage primary results** (result file).
+
+[R68-S023]: https://api.github.com/repos/theislampill/orthemology/git/blobs/29df89255d3656a069f1d8b6cf35a8b1507a3bd3
+[R68-S024]: https://api.github.com/repos/theislampill/orthemology/git/blobs/11c60c3ca6bc39eeaec2ce0249ef69a40a421060
+[R68-S025]: https://api.github.com/repos/theislampill/orthemology/git/blobs/de2665d5d74d6f969e0dba5c7d81c9aefbd6dc0c
+[R68-S026]: https://api.github.com/repos/theislampill/orthemology/git/blobs/b9caeb31d20e101f8a44fb79a782646da645d2a1
+[R68-S031]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f8e7ddb05517623087507ada54f41e5a3f4edec1
+[R68-S032]: https://api.github.com/repos/theislampill/orthemology/git/blobs/b1dd0af619aa6db7ca702d4924edb72a4cddc55b
+[R68-S033]: https://api.github.com/repos/theislampill/orthemology/git/blobs/0d4abb9e4906526205af0c5b8538a4f61e796e28
+[R68-S034]: https://api.github.com/repos/theislampill/orthemology/git/blobs/2f292ab8f884edebdd2e88d200b81b0fa8f5ede7
+[R68-S035]: https://api.github.com/repos/theislampill/orthemology/git/blobs/560456becf112d88aa26bc797da3a799e21a2a1d
+[R68-S036]: https://api.github.com/repos/theislampill/orthemology/git/blobs/336c822689d6574af26a7351423a3d48499ac52e
+[R68-S037]: https://api.github.com/repos/theislampill/orthemology/git/blobs/66e007b7a99bd2fbca13156e5248a60d0eeb893a
+[R68-S038]: https://api.github.com/repos/theislampill/orthemology/git/blobs/278e8161707620fb723e0daf05db190b1b2a8835
+[R68-S039]: https://api.github.com/repos/theislampill/orthemology/git/blobs/83005d7023aaf96f16ad7e4ce7b98262e185d36c
+[R68-S040]: https://api.github.com/repos/theislampill/orthemology/git/blobs/e4a053f01c84c6953b98018c3e508a4e59fcbcc1
+[R68-S041]: https://api.github.com/repos/theislampill/orthemology/git/blobs/cf03f02e2b6824b196d7a95c4eebc5534b44e288
+[R68-S042]: https://api.github.com/repos/theislampill/orthemology/git/blobs/1b2dfe68c1ccac9bdba4c5f67eefe460d1e44f9e
+[R68-S043]: https://api.github.com/repos/theislampill/orthemology/git/blobs/ca902c0dff45b80770ac58bbf7fe85a8e928e4ed
+[R68-S050]: https://api.github.com/repos/theislampill/orthemology/git/blobs/311cf4a4ce64eb031bf8a390c04f3d455c7d8bb3
+[R68-S051]: https://api.github.com/repos/theislampill/orthemology/git/blobs/2407ca5ba6223b4f804728258aa66383c3a8373f
+[R68-S052]: https://api.github.com/repos/theislampill/orthemology/git/blobs/9d387cf5e81e5e63d859971621f59bf194c40de4
+[R68-S056]: https://api.github.com/repos/theislampill/orthemology/git/blobs/a5e5b85f2057031dccac4346cc928df4fc67f4ab
+[R68-S057]: https://api.github.com/repos/theislampill/orthemology/git/blobs/7ffc6e3cbcc538ad484e5e75bfae93a8c24e166e
+[R68-S058]: https://api.github.com/repos/theislampill/orthemology/git/blobs/ccbfdb8940e9d4530a73d2cd6d3d9e3a97221225
+[R68-S059]: https://api.github.com/repos/theislampill/orthemology/git/blobs/88ced49ccabd55687a72462987ce110223cd0fa9
+[R68-S060]: https://api.github.com/repos/theislampill/orthemology/git/blobs/3a899e07d8b8e5dba0c930e44f8dc604f49a0e2b
+[R68-S061]: https://api.github.com/repos/theislampill/orthemology/git/blobs/7a13fafec16980d2e79f5f73b5afd8eff152c1e2
+[R68-S062]: https://api.github.com/repos/theislampill/orthemology/git/blobs/a8753bc4fcfd36f4729eff5ff2f4f35e35321566
+[R68-S063]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f0a5501ee57459f3523d9df4b0374aeee61a7e60
+[R68-S064]: https://api.github.com/repos/theislampill/orthemology/git/blobs/79da9277d68d88e5a4b6e2ed62f94fb25dbb2bea
+[R68-S065]: https://api.github.com/repos/theislampill/orthemology/git/blobs/2ff0a609e1d96c5b995472c1da5faa6cf80d21d2
+[R68-S066]: https://api.github.com/repos/theislampill/orthemology/git/blobs/655900e500dbc8980b88db82fe62044350c53037
+[R68-S067]: https://api.github.com/repos/theislampill/orthemology/git/blobs/db8ba1cdb4c7d92dcc5d4506048c6641c2e5701f
+[R68-S068]: https://api.github.com/repos/theislampill/orthemology/git/blobs/d09f92b384591a25e7d12747ee2122513331cc78

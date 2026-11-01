@@ -274,6 +274,14 @@ Within its declared finite contract, that review reports **24** token systems, *
 
 Finally, the same grammar can be coupled to different world-interpretation maps. That nonidentification result does not select the correct map or refute realism. Authority, provenance, version, recipient warrant and applicability likewise require additional typed coordinates; they are not determined merely by the kernel of $`\sigma`$. An abstract semantic quotient establishes neither uncreated content nor mentality, divinity or actual Speech. If a richer model class supplies semantic or personal predicates as substantive constraints, its admissible expansions must respect them. The finite algebraic result leaves those further premises and their evidence visible. [R44-BI01] [R44-BI03]
 
+<a id="receipt68-token-quotient-records"></a>
+
+#### Token multiplicity and what was actually checked
+
+The primary semantic-quotient file uses one to five atoms with two tokens per content, for **124** tokens across those cases. It separately records **16** personal expansions, four source controls, four version controls and ten world-twin controls. The distinct review reports **24** systems, **1,260** tokens and **184,824** operation checks, with **252** good and **252** bad translations and **33** world-anchor variants. The populations and copy multiplicities differ. The result files report outcomes but do not include the full operation tables; this receipt alone therefore cannot independently certify every algebraic axiom of a particular token presentation. The quotient argument above depends on its stated congruence and homomorphism assumptions, not on a count of tokens or a passing label. [R68-S048] [R68-S049]
+
+In particular, quotienting content-equivalent tokens does not identify personal subjects, source provenance, version, recipient authority or world applicability. The retained controls address these distinct interpretation fields. Their presence is evidence that the distinctions were tested within the stated finite structures; it is not a proof that an arbitrary content-preserving expansion carries the same source or normative warrant. No new identity theorem is inferred from these additional result records. [R68-S048] [R68-S049]
+
 ## 5. Proper function, accuracy, and warranted exercise
 
 A capacity's regular operation, its proper function, its truth-directed orientation, and a person's warranted exercise of it are four distinguishable achievements. A stable process can reliably produce what it was selected to produce without being selected for truth. A properly functioning truth-directed process can err on an occasion. A true conclusion can be unwarranted because its operative basis is defective or defeated. These separations are central to a source-faithful use of proper-functionalism. [P4–P5; S5–S7]
@@ -687,6 +695,12 @@ The forest-and-cycle theorem of §§7–7.2 and the exact-potential argument abo
 The historical primary harness first stopped with a key lookup error caused by inconsistent orientation of a stored edge. The repair used an antisymmetric edge accessor and restarted the check before freezing its successful version. The recorded failure concerns that implementation, not a refutation of the graph theorem; the receipt does not license treating the failed run as a PASS. The later distinct review used componentwise path integration and reports **1,728** exhaustive three-vertex graph/field/loss cases, **60,000** possibly disconnected cases and **1,024** proper-function account expansions, together with the countermodel in which a newly admitted edge invalidates a formerly valid certificate. No checker was executed for this incorporation. [R44-BH01] [R44-BH03]
 
 The account expansions support a signature-relative nonentailment only. If the reduct omits an account's function-fixing relation, varying a Boolean function label shows what that reduct leaves open. It does not show that the label remains free after selected history, design, organization, teleology or an authenticated source purpose has been supplied. Nor does success at reducing a true loss establish the corresponding fixing relation. Selection or design can concern a non-truth-directed aim; a truth-linked proper-function conclusion needs the appropriate truth aim as an additional warranted premise. A Plantingian account also invokes its design-plan and environment conditions, while a fiṭrah account remains dependent on the particular source, school, translation and applicability claims. The ten audit repairs preserve these account-specific requirements. The ordinary graph-potential mechanism has no independent general-novelty claim, and the finite checks confer no external-review or source-authentication status. [R44-BH02] [R44-BH03] [R44-BH04]
+
+<a id="receipt68-calibration-records"></a>
+
+#### The finite calibration populations
+
+The primary calibration file reports **50,000** random cases, **30,000** exact cases, **16,419** perturbed cases and **1,024** account-flag assignments. The distinct review reports **144,014** component-constant cases alongside **1,728** exhaustive cases, **60,000** random cases and **1,024** account assignments. These are the files' separately defined populations, not additive trials of one fixed design. Their account flags and coherence checks concern the stipulated relation among evaluator, account and calibration conditions. They do not establish the truth of an account, the authority of a source or the independent warrant of a recipient. The proof and qualification above remain the scientific claim; these records identify its finite checking history and the boundary of what those checks say. [R68-S046] [R68-S047]
 
 ## 8. What interventions can distinguish
 
@@ -1474,6 +1488,38 @@ The copied-report controls make the distinction concrete. In the cold audit's eq
 The distinct review reports **50,000** exact-rational models with three through six sources, no recorded failures of swap invariance or posterior complement, and **45,859** cases in which a strict directional anchor selected an orientation. Its six frozen-row checks and finite calculations are historical evidence at that stated contract. The repair log's earlier status, complete pending a distinct rereview, is retained alongside the later qualified PASS; one is not substituted for the other. Seven audit repairs preserved the scope and interpretation conditions just described. [R44-BD03] [R44-BD04]
 
 Finally, the testimony note explicitly treats the theological material as a secondary reconstruction with its own source and translation limits. It supplies no direct Arabic verification here and does not identify tawātur with a latent-class majority rule. Root independence, source authentication and doctrinal or metaphysical warrant remain distinct questions. The statistical model can expose one form of copied-evidence inflation and one orientation ambiguity without settling those larger questions. [R44-BD01] [R44-BD04]
+
+<a id="receipt68-comparative-explanation"></a>
+
+### 8.25 Comparing explanations without importing the conclusion
+
+The preceding comparisons leave a question about the architecture of an explanation. A candidate may organize more of the stated constraints while requiring a stronger source interpretation, a more demanding identity premise, or an unproved passage from a model to the world. Such a candidate has gained a conditional explanatory role; it has not thereby won a neutral comparison. The comparative records distinguish four levels that must remain separate: formal consequence in a specified structure, interpretation of an accepted source, implementation or checking of that structure, and applicability to the intended subject matter. A result at one level can support a premise at another only through an explicit bridge. [R68-S010] [R68-S011] [R68-S012] [R68-S013]
+
+This distinction is substantive in the linked arguments about order, attributes and agency. A connected nonflat graph of explanatory dependencies says that certain roles depend on or constrain others. Without a co-reference premise it does not say that all role instances have one bearer: an abstract support graph can be realized under many bearer assignments. Accepted source co-reference can restrict those assignments, but then translation, attribution, propositional content, acceptance, referent identity and application to the intended world are additional premises. The support-graph and source-partition arguments are given in Received Actuality and Intrinsic Necessity §10.16, including the failed source-anchor probes. Their later comparative use retains those failures and does not turn graph connectedness into numerical unity of a subject. [R68-S002] [R68-S006] [R68-S010]
+
+The same care is needed when an explanatory order is described as notional. A representation of order in a mind can be downstream from an impersonal order represented by a derived mind. To infer an underived intellectual host, the source analysis separates the claims that the relevant order is intrinsically notional, that mentality constitutes its being rather than merely representing it, that underivability transfers to the host, and that the host is unique. These are the separate host conditions of Received Actuality §10.18. Even their conjunction does not yet establish first-person ownership, agency or authority. The comparative record therefore preserves the rival in which an impersonal order is represented by derived local minds, and identifies the additional premises needed to exclude it. It does not cite a finite truth-table check as evidence that those premises hold in reality. [R68-S003] [R68-S007] [R68-S011]
+
+Structural individuation is another intermediate result. The automorphism argument in Received Actuality §12.15 says that a neutrally definable selected set must be a union of automorphism orbits, and a selected singleton must be fixed. A structure can nevertheless contain one distinguished impersonal controller with a reflexive self-model. Being a fixed point, processing information about oneself, and owning a first-person perspective are different predicates. The source's stronger conditions require de se reference, uptake, ownership, agency and stability, together with the relevant authority and world-application bridges. The controller example is retained as a countermodel to the inference from structural uniqueness alone. [R68-S004] [R68-S008] [R68-S012]
+
+Finally, source-accepted co-reference among creator, knowledge, ability, life, volition and speech roles requires a bearer in the total intersection of their assigned role sets. The finite role argument in Received Actuality §10.18 explains exactly this consequence. It narrows a source-compatible class; it does not show that a common role bearer has every further personal or normative property attributed to a favored interpretation. The latest comparison accordingly retains both a source-compatible common-role-bearer rival and the additional burden of interpreting an abstract-order actualizer under the source commitments. A source-compatibility leader is a candidate that best accommodates those accepted commitments under the stated comparison, not a source-neutral or world-level winner. [R68-S005] [R68-S009] [R68-S013]
+
+#### What accumulated constraints can and cannot establish
+
+There are two different composition questions. First, can the formal constraints be satisfied together? A witness for one local requirement and a different witness for another do not establish a common model of their conjunction. The records explicitly distinguish separate local controls from a common-model witness. Such a witness can refute a claimed implication from the jointly stipulated premises, provided it satisfies all of them in one structure. Its existence does not show that the structure is metaphysically possible, textually intended or realized in the world; those are the separate applicability questions. Conversely, a collection of locally successful checks cannot replace the missing common-model construction. [R68-S010] [R68-S011] [R68-S012] [R68-S013]
+
+Second, does the available evidence distinguish the proposed explanation? Let $`r(x)`$ be the complete eligible reduct of a candidate $`x`$ for a fixed comparison, and let $`d(x)`$ be the target distinction. If two candidates satisfy $`r(x)=r(y)`$ but $`d(x)\ne d(y)`$, no decoder of that reduct can recover the target on both. More generally, adjoining any family of derived invariants $`f_i(r(x))`$ leaves those two candidates indistinguishable, because equality of the input entails equality of every output. Even their joint tuple cannot break that particular twin. This is the attained-profile fibre argument used in §8.7, not an additional source of authority for the target.
+
+The qualification “that particular twin” matters. Failure of each coordinate separately to identify a target does not imply that their joint tuple fails: the coordinates can carry complementary information. Nor does a twin for an earlier restricted reduct prove that every richer warranted observation is powerless. A new source commitment, measured distinction or justified identity premise can change the eligible class or refine the reduct. The comparison must say which change occurred and what independently warrants it. Adding the target itself as a premise or a feature trivially separates the candidates but does not derive it. The comparative records retain this distinction between a stronger warranted constraint and target import. [R68-S010] [R68-S013]
+
+These points explain why a single score for accumulated predicates is inadequate. Coverage records which phenomena or source commitments are accommodated. Derivation records which properties follow from other commitments rather than being asserted. Primitive burden records what the candidate still takes as basic. Source commitments record the interpretive premises on which the comparison depends. World bridges record the step from a formal or textual object to the intended reality. Target import records where the conclusion has already entered the premises. These dimensions can disagree. The dominance conditions in §8.7 therefore define a partial comparison: a genuine improvement must preserve the warranted coverage, avoid increased unsupported burden and survive the relevant countermodels, with some strict gain. The records do not supply a canonical scalar weighting that converts every tradeoff into a winner. [R68-S006] [R68-S007] [R68-S008] [R68-S009]
+
+#### Versioned evidence and retained limits
+
+The four crosswalk editions preserve the development of this comparison, rather than four independent confirmations of one final architecture. Their edge inventories grow from **103** to **108**, **114** and **119** as the notional-host, structural-center and role-co-reference conditions are added. Their strongest surviving rivals also change. Some inherited summary fields stop at the earlier notional-host stage even when later edges and rival descriptions are present. Those fields are historical version state, not an instruction to erase the later qualifications or to infer an integrated final verdict from a summary label. Across the editions, the claim of an independently established integrated champion remains open. [R68-S010] [R68-S011] [R68-S012] [R68-S013]
+
+The older exact-artifact inventory likewise remains a limit. It records eight unavailable owner, model, check or rereview artifacts for two earlier argument groups. Reading that inventory and the later summaries does not reconstruct the missing historical bytes or upgrade the dependent checks. The limitation belongs to those earlier evidential obligations; it is not a claim that any of the sources cited in this section is missing. [R68-S001]
+
+The useful result is an organized set of conditional arguments and surviving alternatives. Formal checks can expose an illicit implication; accepted-source premises can restrict a source-relative class; an empirical measurement can constrain its registered target. None of these automatically establishes unique mechanism, a subject of experience, normative authority, source truth or world realization. An explanation that addresses several of these levels must make its bridges readable and defend them separately. That is the comparison supported by the retained record, including its failures and unclosed burdens.
 
 ## 9. Intrinsic reasons, fitting response, and the indifferent agent
 
@@ -2490,3 +2536,43 @@ These documentary records preserve the arguments’ source, repair and review hi
 [R44-BI01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/c95d30a61e069013fe81a4daffc5a34ea9598763
 [R44-BI02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/6a2d27bc88173057f3e59f89c654bf2f712dc61b
 [R44-BI03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/bc698bd08b32687314104bac9bf8a2e58e3963b8
+
+## Source records for comparative explanation and interpretation
+
+The following exact source editions supply the arguments, recorded failures, repairs and finite checking history cited above. A result or disposition is attributed to its historical record; the incorporation performs no new execution of the source programs. Mathematical ancestry and interpretation limits remain those stated in the corresponding sections.
+
+- [R68-S001] — **Unavailable exact artifacts for two earlier arguments** (historical missing-artifact inventory).
+- [R68-S002] — **Source dependencies and co-reference: comparative report** (comparative report).
+- [R68-S003] — **Notional hosting and underivability: comparative report** (comparative report).
+- [R68-S004] — **Structural centers and ownership: comparative report** (comparative report).
+- [R68-S005] — **Accepted role co-reference: comparative report** (comparative report).
+- [R68-S006] — **Source-dependency comparison: burden changes** (burden-delta record).
+- [R68-S007] — **Notional-host comparison: burden changes** (burden-delta record).
+- [R68-S008] — **Structural-center comparison: burden changes** (burden-delta record).
+- [R68-S009] — **Role co-reference comparison: burden changes** (burden-delta record).
+- [R68-S010] — **Comparative argument crosswalk through source dependencies** (crosswalk version 18).
+- [R68-S011] — **Comparative argument crosswalk through notional hosting** (crosswalk version 19).
+- [R68-S012] — **Comparative argument crosswalk through structural ownership** (crosswalk version 20).
+- [R68-S013] — **Comparative argument crosswalk through role co-reference** (crosswalk version 21).
+- [R68-S046] — **Cycle calibration and function accounts: distinct results** (result file).
+- [R68-S047] — **Cycle calibration and function accounts: primary results** (result file).
+- [R68-S048] — **Content quotients and translation: distinct results** (result file).
+- [R68-S049] — **Content quotients and translation: primary results** (result file).
+
+[R68-S001]: https://api.github.com/repos/theislampill/orthemology/git/blobs/000645f439be775f31426b884c1c3add3d379867
+[R68-S002]: https://api.github.com/repos/theislampill/orthemology/git/blobs/4932d820131832dcf28b09897f4775b77d57a484
+[R68-S003]: https://api.github.com/repos/theislampill/orthemology/git/blobs/9a19ce3533bd5cf06d1a9a2732fb8cb212a64fd0
+[R68-S004]: https://api.github.com/repos/theislampill/orthemology/git/blobs/df2f564b4248c0c8845444316e6d5e2fc3be32dd
+[R68-S005]: https://api.github.com/repos/theislampill/orthemology/git/blobs/2000bc3034048260708608eff5b0b122a8520948
+[R68-S006]: https://api.github.com/repos/theislampill/orthemology/git/blobs/1818899489b8de65a771cc3bbcafc6a147e6bdf9
+[R68-S007]: https://api.github.com/repos/theislampill/orthemology/git/blobs/00da5875a08cbfa514ab7b6496d63b9d05eef164
+[R68-S008]: https://api.github.com/repos/theislampill/orthemology/git/blobs/593560020e8ce0fddf2bbe80ead02dbfc99e3cdb
+[R68-S009]: https://api.github.com/repos/theislampill/orthemology/git/blobs/8469a39d952bead9e4332543e392237ee0c3c6c6
+[R68-S010]: https://api.github.com/repos/theislampill/orthemology/git/blobs/bae207d580e693f960695438333eb6dc2cf37680
+[R68-S011]: https://api.github.com/repos/theislampill/orthemology/git/blobs/6a4a43aef59eb91e593ae49e044b028dbbda2397
+[R68-S012]: https://api.github.com/repos/theislampill/orthemology/git/blobs/99f62b1ab190cdbf5b9f6a236937fefc1025a4d7
+[R68-S013]: https://api.github.com/repos/theislampill/orthemology/git/blobs/0d81a011b6206379fb9cce6640819611d4afb1cc
+[R68-S046]: https://api.github.com/repos/theislampill/orthemology/git/blobs/a6c6d2ca42cee5f36a8ed1b8e5c128b2228e155c
+[R68-S047]: https://api.github.com/repos/theislampill/orthemology/git/blobs/cd70099b415e269500aac711ad794cb33e4fe688
+[R68-S048]: https://api.github.com/repos/theislampill/orthemology/git/blobs/59ef46858621f12205bc58f03e4d13998eccc8ee
+[R68-S049]: https://api.github.com/repos/theislampill/orthemology/git/blobs/3882be8b380b1e6eebeebe6ee0c54ecea4f601fe

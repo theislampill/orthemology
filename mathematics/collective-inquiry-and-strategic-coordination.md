@@ -393,6 +393,35 @@ The source's philosophical comparisons retain those distinctions. Its Hume discu
 Finally, a reported research implementation is evidence at its own scope. The public source describes exact-fraction evaluation, a restricted syntax, recomputation and a sequence of finite checks, including a later repair of Boolean/integer certificate equality. Those historical observations are not rerun here and are not kernel or empirical validation of the philosophical application. Binding input content by a digest does not authenticate its author or justify its normative interpretation. The ordinary sign-cell proof establishes the continuous-domain claim under its hypotheses. A higher-dimensional polytope procedure, an unrestricted input parser, global metaphysical supervenience and machine-certified normative authority remain outside it. [6, §§6–9][r6]
 
 
+<a id="receipt68-correct-view-agreement"></a>
+
+### 2.5 One-step agreement when correct membership can vary
+
+The fibre criterion in §2.3 asks whether a prescribed response can be implemented from a local view. A related synthesis problem permits several valid outputs and allows the set of correct participants to differ between scenarios. The output must be chosen by the actual local rules, rather than by a central chooser who knows which scenario occurred. The finite equality-constraint form of this problem has an exact component criterion. [R68-S020]
+
+Let $`\Sigma`$ be a finite scenario family, $`K`$ a finite nonempty set of complete output objects, and $`A_s\subseteq K`$ the objects admitted in scenario $`s`$. Each scenario has a nonempty correct-participant set $`C_s`$ and supplies a complete local view $`v_i(s)`$ to each $`i\in C_s`$. A deterministic one-step protocol chooses an output through a function $`a_i`$ of participant $`i`$'s view. Success requires the correct participants in $`s`$ to agree on an element of $`A_s`$. Faulty participants' outputs are not required to agree; any fault-generated observations relevant to correct behavior must already be represented in the correct participants' views.
+
+Construct a graph whose vertices are the appearing **participant-view tokens** $`(i,v_i(s))`$ with $`i\in C_s`$. For every scenario, join all its correct tokens into a clique. A single-token scenario contributes an isolated vertex unless that token occurs elsewhere. Token identity includes participant identity: two different participants seeing the same symbol do not thereby share one local response function. Since $`C_s`$ is nonempty, all the tokens of $`s`$ belong to one well-defined component, denoted $`\gamma(s)`$.
+
+**Component criterion.** A successful deterministic protocol exists exactly when
+
+```math
+\bigcap_{s:\,\gamma(s)=D} A_s\ne\varnothing
+\qquad\text{for every graph component }D.
+```
+
+**Proof.** Agreement in one scenario makes the protocol output equal along every edge of its clique. Repeated occurrence of the same participant-view token reuses the same function value. Equality therefore propagates along paths, making the output constant on each connected component. That constant must be admitted by every scenario assigned to the component, proving necessity. Conversely, choose one object $`k_D`$ from each displayed intersection and assign it to every token in $`D`$. The assignment defines consistent local functions on all appearing correct views. Extend those functions to unused views using any fixed object of the nonempty set $`K`$. Each scenario's correct tokens then return $`k_{\gamma(s)}\in A_s`$, proving sufficiency. The empty scenario family imposes no conditions. [R68-S020] [R68-S021]
+
+This is stronger than checking whether each scenario separately admits a common choice. Consider two scenarios with correct sets $`\{1,2\}`$ and $`\{2,3\}`$. Let participant two have the same view in both, while the required outputs are respectively the distinct singletons $`\{a\}`$ and $`\{b\}`$. Each scenario alone is solvable. Together, the repeated token of participant two joins their cliques, and the component's required intersection is empty. A central observer could select the scenario's output; the local protocol cannot give two values to that unchanged token. This is an information obstruction, not a shortage of candidate actions.
+
+A truthful public bit distinguishing the two scenarios can repair the example if it is incorporated into every correct participant's protocol view, is commonly available at the relevant step, and has the required source, version and admissibility conditions. It splits the formerly repeated token. A private bit available only elsewhere, an untrusted message, or a bit omitted from the actual decision state does not supply the same repair. Refining views changes the information contract. By contrast, adding more scenarios while keeping the old views and requirements fixed cannot make an infeasible family feasible: any protocol for the larger family would restrict to one for the original family. [R68-S020]
+
+The output type matters equally. Suppose two incompatible action-certificate objects project to the same visible action. Agreement after that projection does not make their full admissible-object intersection nonempty. The certificates may differ in reason, root, source version, authority or applicability even though the actuator receives the same instruction. The component theorem is applied to the complete declared objects; it does not infer that their supplied admissibility sets are truthful or independently warranted. This is the relation-selection distinction developed in Information Retained by Inquiry §9.4, now with equality obligations generated by changing correct membership. [R68-S021] [R68-S022]
+
+The historical primary check reports **3,155** one-, two- and sampled three-scenario families and **4,632** supersets of infeasible pairs. The distinct review replaced the sampled three-scenario part with all **76,076** families in its stated small class: three participants, two views per participant, nonempty correct sets and nonempty subsets of two typed outputs. Its result file records no criterion mismatch and explicitly retains the action-only projection control. These are different historical finite populations, not new executions or a pooled experiment. [R68-S020] [R68-S021] [R68-S022]
+
+The mathematics is an equality-constraint specialization of local factorization. It is not a general Byzantine-agreement or asynchronous-liveness theorem. Repeated interaction, randomized protocols, changing information states, causal restoration and stable reach-and-stay need additional arguments. The scenario family must contain every fault, message, membership, source and snapshot pattern claimed by the application. Nor does operational agreement on a root or source label establish one metaphysical bearer, source truth or recipient authority. The criterion identifies exactly which one-step common choices the stipulated local information permits.
+
 ## 3. The finite strategic model and its limits
 
 ### 3.1 A game is additional structure
@@ -3658,3 +3687,15 @@ The numbered project sources below identify public research editions. They estab
 [receipt-au-04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/e4d29b87361df7ec26d69bf1f998d0202b6c2db8
 [receipt-au-05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/9e5ee0ff8395babb51c6c0865f9989072a35f986
 [receipt-au-06]: https://api.github.com/repos/theislampill/orthemology/git/blobs/b3c087138f108241406cb6e8c7092607fd8247eb
+
+## Source records for one-step agreement
+
+The following exact source editions supply the arguments, recorded failures, repairs and finite checking history cited above. A result or disposition is attributed to its historical record; the incorporation performs no new execution of the source programs. Mathematical ancestry and interpretation limits remain those stated in the corresponding sections.
+
+- [R68-S020] — **One-step agreement with varying correct participants: audit** (cold audit).
+- [R68-S021] — **One-step agreement with varying correct participants: review** (distinct review).
+- [R68-S022] — **One-step agreement with varying correct participants: results** (result file).
+
+[R68-S020]: https://api.github.com/repos/theislampill/orthemology/git/blobs/332fa5722e23ca135a90799ad6b97e3b9ea8be67
+[R68-S021]: https://api.github.com/repos/theislampill/orthemology/git/blobs/5010c98adf35b5876d31b66f2afb3813dd15743b
+[R68-S022]: https://api.github.com/repos/theislampill/orthemology/git/blobs/42fea34a366d8e4a8b1ce3afdfbb1bfa696282ed

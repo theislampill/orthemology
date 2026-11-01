@@ -589,6 +589,40 @@ It differs from $`\forall w\in W\ \exists b\in B:\ E_w(u_w(b))`$, which permits 
 
 The same target, resource and bearer remain under one existential scope. This formula neither supplies the original-adequacy premises nor identifies $`C_w(x)`$ with “has a supplier” without a separate representation assumption. Where necessity instead ranges only over worlds accessible from $`a`$, actual existence must be retained explicitly if $`a`$ is not guaranteed accessible. An empty accessibility set makes the box vacuous; adding actual existence then gives actual existence, not a nonvacuous alternative-world result. [Finite modal identity transport, §§5, 7][transport-proof]
 
+<a id="receipt68-definable-root-and-reduced-descent"></a>
+
+#### Definable actualizers and reduced descent
+
+The selected-section theorem of §10.5 already separates coherence of a chosen root from flatness of an entire bundle. Its original finite transport record reported **647** two-state bundles, of which **323** were flat and **324** were not. The distinct review considered **55,944** bundles and **167,832** selected anchors across its triangle, square, diagonal and complete four-vertex graph families. These are historical populations for the fixed-bundle statement. They do not establish that an application chose the right cross-context identity maps, covered every relevant context, or interpreted a transported point as an actual source of reception. In particular, a nonidentity loop can fix the selected anchor. Whole-bundle nonflatness is not a counterexample to the selected-root theorem. [R68-S014] [R68-S015] [R68-S016]
+
+A useful special case makes the actualization and dependence language explicit, including variation in the effect domain. At context $`w`$, let $`B_w`$ be the bearer set, $`E_w`$ the effect set, $`A_w\subseteq B_w\times E_w`$ the actualization relation, and $`D_w\subseteq B_w\times B_w`$ the relation “the first bearer depends on the second.” This $`D_w`$ is recipient-first; it transposes the supplier-first dependence notation used earlier in this work. Define
+
+```math
+U_w(b)\iff \forall e\in E_w\ A_w(b,e),
+\qquad
+N_w(b)\iff \neg\exists c\in B_w\ D_w(b,c).
+```
+
+For every edge $`w\to v`$, require bijections $`g_{wv}:B_w\to B_v`$ and $`h_{wv}:E_w\to E_v`$ that preserve and reflect both relations:
+
+```math
+A_w(b,e)\iff A_v(g_{wv}b,h_{wv}e),
+\qquad
+D_w(b,c)\iff D_v(g_{wv}b,g_{wv}c).
+```
+
+Take inverse maps on reversed edges and a connected context graph. If one context has a unique universal actualizer $`r`$ satisfying $`U(r)`$, then transport carries it to the unique universal actualizer in each other context. If $`N(r)`$ also holds, all these transported roots are underived in the stipulated dependence relation. Every loop fixes the unique root, so the roots form a coherent selected section even when the remaining bearers have nontrivial holonomy. [R68-S017] [R68-S018]
+
+**Proof.** Given $`U_w(b)`$ and any $`e'\in E_v`$, surjectivity of $`h_{wv}`$ gives $`e'=h_{wv}(e)`$ for some $`e`$. Preservation gives $`A_v(g_{wv}b,e')`$. Applying the inverse maps proves reflection of universality. Similarly, a dependence witness $`D_v(g_{wv}b,c')`$ has a preimage $`c`$ under $`g_{wv}`$, and reflection would give $`D_w(b,c)`$. Thus absence of a witness is preserved and reflected. Bijection then carries a singleton universal-actualizer set to a singleton. Composed transport around a loop is an automorphism, hence must fix that definable singleton. The path-independence conclusion follows from §10.5. No claim that the loop fixes every bearer was used.
+
+Both sorts must be included. Preserving bearers while omitting effects can turn “actualizes every represented effect” into a false claim about every effect. Omitting dependence reflection can turn an unrepresented supplier into apparent underivability. An arbitrary bijection, multiple candidate roots, a disconnected graph or an independently unjustified identity map breaks a different premise. Conversely, a full isomorphism requirement may be too restrictive for an intended modal application with genuinely varying structure. The historical primary record reports **1,728** structures and **2,064** automorphisms, including **336** nontrivial root-fixing automorphisms; its distinct review reports **20,736** renamed structure pairs. These are finite checks of the stated structure-preserving contract, not proof that that contract captures possible worlds. [R68-S017] [R68-S018] [R68-S019]
+
+There is a related quotient formulation for a selected invariant subbundle $`S_w\subseteq B_w`$. Assume each edge transport restricts to a bijection between these selected fibres. Identify points connected by transport and let $`Q`$ be the resulting set of transport orbits. The natural map $`j_w:S_w\to Q`$ is injective exactly when no orbit contains two different points of the same fibre. This is equivalent to every closed-walk transport fixing every point of every selected fibre: a closed walk moving a selected point creates a same-fibre collision, while any same-fibre collision is witnessed by a closed transport walk. Under these conditions the $`j_w`$ form an injective common-image descent. The selected subbundle can satisfy them while the full bundle fails them. [R68-S027] [R68-S028] [R68-S029]
+
+The common image is unique in the appropriate **reduced** sense. Suppose injective maps $`i_w:S_w\to U`$ commute with transport and $`U=\bigcup_w i_w(S_w)`$. The map $`[s]\mapsto i_w(s)`$ from $`Q`$ to $`U`$ is well-defined by commutation and is surjective by reducedness. To show injectivity, use connectedness to represent any two orbits in one fibre; equality of their images then contradicts injectivity of that fibre's $`i_w`$ unless the representatives, and hence the orbits, coincide. This gives the unique isomorphism commuting with the fibre maps. If arbitrary unused elements may be added to $`U`$, uniqueness of the entire codomain is false. The original audit recorded that omitted reducedness condition; §10.6's common-image construction already takes the image generated by the fibres. [R68-S028] [R68-S030]
+
+The same audit retained three further defects: necessary/external flags had not been checked, effect maps and preservation of actualization and dependence had not been tested, and an intra-world unity passage had been presented as stronger cross-world evidence. The repaired record reports **979** labelled cases and **50,000** random three-fibre cases, with root descent surviving a nonflat full bundle. Its common-model witness has two contexts, a unique universal underived necessary external root, and plural coordinated wisdom, power and knowledge roles; those roles are neither all local to the root nor identified by the witness with the creator role. This is a formal consistency witness for the given predicates. It does not establish metaphysical adequacy or a source interpretation. The retained translated primary-source comparison is explicitly partial overlap, not an Arabic-text verification or direct evidence for the cross-world identification premise. [R68-S027] [R68-S028] [R68-S029] [R68-S030]
+
 ### 10.9 Restricting bearers can erase the grounds of their reception
 
 A selected section has less preservation power than full charts. Let $`B_{\mathrm{sec}}`$ be the set of all compatible point sections. Evaluation $`s\mapsto s_w`$ is injective at every world: agreeing at one vertex forces agreement along every path. It need not be surjective. Thus replacing every local domain by these coherent sections can delete individuals needed as witnesses of other assertions.
@@ -1026,6 +1060,12 @@ The review reports a one-bearer impersonal expansion and a personal twin at its 
 
 <a id="receipt44-modal-bearers"></a>
 
+<a id="receipt68-one-bearer-records"></a>
+
+#### What the one-bearer records keep separate
+
+The underlying primary file enumerates **512** raw flag assignments, **32** compressed profiles and **two** aligned profiles. Its nine single-condition deletion witnesses retain the other target flags. Those raw Boolean assignments must not be promoted to fully admissible rich structures without the separately declared model conditions. The distinct review's ten one-bearer checks include nontrivial effects, a latent width of two, and truth, norm, fitting-response and expression alignment. Two latent mixture components in that construction are not two metaphysical subjects. The records therefore support the preceding distinction between representational or statistical plurality and plurality of bearers, while leaving the source interpretation and world-level adequacy of a one-bearer model open. Their reported passing statuses do not supply those extra premises. [R68-S044] [R68-S045]
+
 ### 10.23 Local occurrences and a persisting root bearer
 
 The transport and holonomy arguments of §§10.5–10.8 distinguish a coherent section from a globally identical bearer. The later modal-root reconciliation makes that distinction explicit in the types of its variables. Let $`W`$ be a declared finite frame, $`G`$ a global bearer sort, and $`O_w`$ a local occurrence sort for each $`w\in W`$. An occurrence-to-bearer map $`\beta_w:O_w\to G`$ specifies the chosen numerical-identity semantics. Local existence, root role, underivability and concreteness are separate predicates on $`O_w`$. An abstract order, if present, belongs to its own sort; it is not automatically a local concrete occurrence. [R44-BK01] [R44-BK03]
@@ -1048,6 +1088,14 @@ The historical implementation defects reinforce the typing issue. The first chec
 That review reports **11,664** local models, **5,184** with coverage, **3,456** with coherent lineage but without the stated global-identity bridge, **1,296** with identity but lacking concreteness somewhere, **432** fully guarded models with no recorded failures, and **2,592** actual-only-root countermodels. The displayed predicates need not partition the model set; these numbers must not be summed into a new total. Separate abstract-order and frame-extension controls were reported. The six frozen-row checks and finite enumeration do not prove the truth of the identity, frame, grounding or concreteness premises. [R44-BK02]
 
 This reconciliation preserves the quantifier, coherent-section and identity machinery already established in the earlier modal sections. It adds explicit occurrence typing and the audit history, with no independent general-theorem origin. Even a warranted persistent concrete root would leave later claims of origination, actualization, Creatorhood, explanatory unity, intellect, personality and identification with a revealed referent to their own arguments. The finite package supplies none of those conclusions by itself. [R44-BK01] [R44-BK02] [R44-BK03]
+
+<a id="receipt68-root-guard-records"></a>
+
+#### The omitted root guard remains a historical defect
+
+The first constant-domain result reports **4,096** assignments and **72** cases satisfying its then-declared full guard, with no counterexample in that guarded subset. Its guard omitted the independent root condition. The repaired constant-domain edition reports **65,536** assignments and **392** full-guard cases with no failure; the distinct local-model review reports **11,664** cases and **432** full-guard cases with no failure. These are different contracts and case spaces. Their zero-failure counts cannot be combined, and the later root condition must not be silently attributed to the earlier passing result. [R68-S053] [R68-S054] [R68-S055]
+
+The guarded implication proved above remains conditional on domain, occurrence, identity, frame and root assumptions as stated. A finite regression record neither establishes cross-context identity nor supplies the root premise that it assumes. The retained deletion controls show why those assumptions matter inside the model; source interpretation, modal applicability and the intended external bearer remain separate obligations. [R68-S053] [R68-S054] [R68-S055]
 
 ## 11. What a complete explanatory fact does—and does not—establish
 
@@ -1981,3 +2029,39 @@ These documentary records preserve the arguments’ source, repair and review hi
 [R44-BK01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/50b92b4c066d1ca6cc52defbcde28084be65e344
 [R44-BK02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/13b013e168e3e58065eb80eaf82ef97bc8a2c81a
 [R44-BK03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/7ad699be8b4c25d438b46d81b7f6d609b0834a15
+
+## Source records for transport, descent and bearer conditions
+
+The following exact source editions supply the arguments, recorded failures, repairs and finite checking history cited above. A result or disposition is attributed to its historical record; the incorporation performs no new execution of the source programs. Mathematical ancestry and interpretation limits remain those stated in the corresponding sections.
+
+- [R68-S014] — **Selected transport sections: cold audit** (cold audit).
+- [R68-S015] — **Selected transport sections: distinct review** (distinct review).
+- [R68-S016] — **Selected transport sections: review results** (result file).
+- [R68-S017] — **Definable actualizers under transport: cold audit** (cold audit).
+- [R68-S018] — **Definable actualizers under transport: distinct review** (distinct review).
+- [R68-S019] — **Definable actualizers under transport: review results** (result file).
+- [R68-S027] — **Reduced transport descent: bounded disposition** (historical disposition overlay).
+- [R68-S028] — **Reduced transport descent: repair log** (repair log).
+- [R68-S029] — **Reduced transport descent: initial cold audit** (cold audit).
+- [R68-S030] — **Reduced transport descent: repaired distinct review** (distinct review).
+- [R68-S044] — **One bearer and separate target predicates: distinct results** (result file).
+- [R68-S045] — **One bearer and separate target predicates: primary results** (result file).
+- [R68-S053] — **Local occurrences and necessary bearers: distinct results** (result file).
+- [R68-S054] — **Necessary bearers: initial constant-domain results** (result file).
+- [R68-S055] — **Necessary bearers: repaired constant-domain regression** (result file).
+
+[R68-S014]: https://api.github.com/repos/theislampill/orthemology/git/blobs/0713f257ad076df67421a1a8e2ec0413fb38aef5
+[R68-S015]: https://api.github.com/repos/theislampill/orthemology/git/blobs/6a85b202043cbd80e2cc333d9abfa35c41ad791f
+[R68-S016]: https://api.github.com/repos/theislampill/orthemology/git/blobs/07cf5e350038d0496b489aa79ad326ddba06de56
+[R68-S017]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f3f30777c46e09030206d6c6369ae40914f593fd
+[R68-S018]: https://api.github.com/repos/theislampill/orthemology/git/blobs/b025d00c54cf3b963accfc47a4c917bcd6a84413
+[R68-S019]: https://api.github.com/repos/theislampill/orthemology/git/blobs/df5f77cf382759812d491ba28095535467ef6707
+[R68-S027]: https://api.github.com/repos/theislampill/orthemology/git/blobs/97d2499b3415719ae68eb807b9a29660d1191bf1
+[R68-S028]: https://api.github.com/repos/theislampill/orthemology/git/blobs/e2ca766a33c96007af9ac5f6ed385763764e77d9
+[R68-S029]: https://api.github.com/repos/theislampill/orthemology/git/blobs/74da386d9c4b457cbbbffe0fe40b7f9e7595e876
+[R68-S030]: https://api.github.com/repos/theislampill/orthemology/git/blobs/a030aa806d84f162b4f4a78b93dacfd53df68c4c
+[R68-S044]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f09b3665dba54780a1c79d21770b9bd323abfa47
+[R68-S045]: https://api.github.com/repos/theislampill/orthemology/git/blobs/773a7f2e443a727af74d7950694e7df98b773eb8
+[R68-S053]: https://api.github.com/repos/theislampill/orthemology/git/blobs/6a85c34e6da0990fd2dd1e1145a047b6a6329c8d
+[R68-S054]: https://api.github.com/repos/theislampill/orthemology/git/blobs/8122d0f1ed868f770a98b4d1807f00e77c92e1c4
+[R68-S055]: https://api.github.com/repos/theislampill/orthemology/git/blobs/d6d6d2eeb6a10c6771723db0fba50f7ed8c60cb1
