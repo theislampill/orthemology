@@ -521,6 +521,670 @@ The historical review reports **46,656** exhaustive systems, partitioned into **
 
 The result adds an exact dynamic support question to the diagnostic products of §9.4. It does not derive one certificate condition from another or close the explanatory question merely because all their states occur in one structured carrier. This is a useful extension of the comparison contract, not an additional origin for the standard quotient and subdirect-product mechanisms. [R44-BB02]
 
+### 2.9 Calibrated endpoint laws and anonymous route multiplicities
+
+An endpoint record identifies a route inventory only relative to a specified stochastic experiment. Let a route occurrence have a nonempty positive root support $P$, a disjoint absence guard $N$, and a nonempty output bundle $T$ in a known finite effect catalogue $E$. An issued profile $S$ enables it when $P\subseteq S$ and $N\cap S=\varnothing$. This test precedes attenuation. At known root rates $x_i$, an enabled occurrence succeeds with probability $\prod_{i\in P}x_i$; distinct occurrences succeed independently, and a success emits the whole bundle $T$. The observed endpoint is the union of emitted bundles. The target is the anonymous histogram of these types, not names or ownership of occurrences. An independently gated whole route with that support-product probability has the same law as independent root incidences; endpoint identification does not select a physical gate architecture. [CAL-G089] [CAL-G090]
+
+For two roots $A,B$, the five possible positive-support/guard types are $A,B,AB,A\mid\neg B,B\mid\neg A$. For each nonempty effect query $U\subseteq E$, let $a,b,c,d,e$ count occurrences of those respective types whose bundle meets $U$. At rates $x_A=1/2,x_B=1/3$, the probabilities of no effect in $U$ at the three nonempty issued profiles are
+
+```math
+q_A(U)=2^{-(a+d)},\qquad q_B(U)=(2/3)^{b+e},\qquad
+q_{AB}(U)=2^{-a}(2/3)^b(5/6)^c.
+```
+
+The product follows directly by summing the normalized finite Bernoulli assignment law: no effect in $U$ means failure of every enabled occurrence meeting $U$; the other success bits sum out to one. Thus the forward probability statement and the inverse arithmetic statement have different premises. For a nonzero rational $q$, write $v_p(q)$ for its signed prime valuation. Then
+
+```math
+c=v_5(q_{AB}),\quad b=-v_3(q_{AB})-c,\quad
+a=b-c-v_2(q_{AB}),\quad
+d=-v_2(q_A)-a,\quad e=-v_3(q_B)-b.
+```
+
+These equations recover the hit counts for every effect query. To recover bundles themselves, fix one route type and write $h(U)=\sum_{T:T\cap U\ne\varnothing}n_T$, with $n_\varnothing=0$. The observed quantities determine
+
+```math
+F(V)=h(E)-h(E\setminus V)=\sum_{T\subseteq V}n_T,
+\qquad
+n_T=\sum_{V\subseteq T}(-1)^{|T|-|V|}F(V).
+```
+
+Indeed the coefficient of $n_W$ in the second expression is $\sum_{W\subseteq V\subseteq T}(-1)^{|T|-|V|}$, equal to one for $W=T$ and zero otherwise by the binomial theorem. This proves injectivity for arbitrary finite effect catalogues, including empty inventories. It uses ordinary Boolean-lattice inversion, not a new general inversion principle. The earlier algebraic formal report establishes the inverse under its displayed product premise; the later finite-probability report adds the normalized forward model. Their historical kernel claims concern those exact source bodies, not this exposition or an actual apparatus. [CAL-G075] [CAL-G083]
+
+Several losses can now be demonstrated exactly. Omitting the $A$ profile hides an added $A\mid\neg B$ occurrence; omitting $B$ hides its counterpart; omitting $AB$ hides a positive $AB$ occurrence. A common background inventory removes any dependence of these examples on an empty world. These are necessity statements for the unrestricted guarded class and this profile menu, not a theorem that every conceivable encoding requires three measurements. Separate effect marginals also lose information: one $AB$ occurrence emitting both $e_1,e_2$ and two occurrences emitting one each have absence probability $5/6$ for each individual effect, but joint absence $5/6$ and $25/36$ respectively. [CAL-G089] [CAL-G090]
+
+More generally, deleting just the hit coordinate $U_0$ has a separating signed bundle histogram. Put $C=E\setminus U_0$ and, for nonempty $T$, set $\delta(T)=(-1)^{|T|-|C|+1}$ when $C\subseteq T$, and zero otherwise. The same alternating-sum identity gives $\sum_{T:T\cap U\ne\varnothing}\delta(T)=1$ for $U=U_0$ and zero for other nonempty $U$. Splitting $\delta$ into positive and negative parts produces two nonnegative histograms, with an optional common background, differing only at the omitted coordinate. If the full endpoint law is still retained, however, that coordinate can be recomputed; the example concerns the reduced record. [CAL-G090]
+
+Uniform thinning of whole routes instead of root-specific attenuation retains only $a+d$, $b+e$, and $a+b+c$ at each hit query. After the output inversion, the same sums hold bundle by bundle. For each bundle its nonnegative fibre is parametrized by $a\leq a+d$, $b\leq b+e$, and $a+b\leq a+b+c$, with the other three counts determined by subtraction. Reusing one random gate per root across all occurrences erases duplicates and Boolean-absorbed supports. Re-evaluating an absence guard after attenuation changes the experiment again. Unknown calibration also restores an exact ambiguity: one unary route at rate $3/4$ and two independent unary routes at rate $1/2$ both have absence probability $1/4$. None of these alternatives is excluded by endpoint data without its corresponding model premise. [CAL-G089] [CAL-G090]
+
+### 2.10 Finite and countable root signatures
+
+For an unguarded finite root set $R$, a one-effect inventory has
+
+```math
+q(x)=\prod_{\varnothing\ne P\subseteq R}(1-x_P)^{n_P},
+\qquad x_P=\prod_{i\in P}x_i.
+```
+
+At finitely many rational probes with positive failure factors, form a matrix whose columns are supports and whose rows are the prime valuations of those factors at each probe. Unrestricted nonnegative integer histograms are identifiable exactly when this matrix has full column rank over $\mathbb Q$. Full rank recovers the exponent vector from valuations. Conversely, a nonzero rational kernel vector can be cleared to an integer vector and split into positive and negative parts, producing two distinct nonnegative histograms with identical products. A common background is harmless. A bounded subclass may be injective even when this unrestricted criterion fails. [CAL-G086]
+
+Choosing different rational root rates is not by itself enough. At $(1/2,1/3,1/5)$, the factors obey $2/3=(4/5)(5/6)$, and the seven-support valuation matrix has rank five. The reported probe $(1/2,1/3,1/7)$ raises the stacked rank to seven, while $(1/2,1/5,1/7)$ is a single full-rank example. There is also a universal mask design: at a fixed issued profile, set rate $1/2$ on a mask $V$ and zero elsewhere. Then
+
+```math
+v_2(q_V)=-\sum_{\varnothing\ne P\subseteq V}|P|n_P.
+```
+
+Boolean-lattice inversion recovers $|P|n_P$ and hence $n_P$. With guards, this first recovers the enabled aggregate $m_P(S)$. For $D=R\setminus P$ and $V\subseteq D$, one has $m_P(R\setminus V)=\sum_{N\subseteq V}n_{P,N}$, so a second inversion recovers guards; effect bundles use §2.9. A defective full-profile valuation vector can likewise be lifted to a guarded ambiguity by $\delta(P,N)=(-1)^{|N|}z_P$: every proper issued profile cancels the signed guard sum, and the full profile retains only the valuation-kernel ambiguity. These constructions retain the distinction between issuance and masking. [CAL-G086]
+
+A single rational calibration can be constructed for every known finite signature. For each nonempty support $P$ of size $k$, choose $p_*\in P$ and integers $a_i=1$ on $P\setminus\{p_*\}$, $a_{p_*}=-(k-1)$, and $a_i=k$ outside $P$. Among nonempty subsets, only $P$ has exponent sum zero. An outside index contributes at least $k-(k-1)>0$; within $P$, cancellation requires all its indices. All subset sums have absolute value at most $|R|^2$. Choose a distinct prime $\ell_P$ with $\ell_P-1>|R|^2$ and a primitive residue $g_P$ modulo it. Prescribe root residues $g_P^{a_i}$. Their product is one precisely on $P$. [CAL-G095]
+
+Let $M=\prod_P\ell_P$, $D=M+1$, and use the Chinese remainder theorem to choose $0<b_i<M$ with those nonzero residues. Set $x_i=b_i/D$. Because $D\equiv1\pmod{\ell_P}$, the prime $\ell_P$ divides $D^{|S|}-\prod_{i\in S}b_i$ precisely when $S=P$. Thus $v_{\ell_P}(1-x_S)=0$ for $S\ne P$, while its diagonal value $e_P$ is a positive integer. Consequently $n_P=v_{\ell_P}(q)/e_P$. The diagonal need not equal one. This is a constructive existence theorem, with exponentially many private primes and potentially large encodings; it is not an optimal design or a finite-precision sampling result. Guards and bundled effects still require the preceding profile and joint-output observations. If the entire symbolic polynomial $q(x)$ were supplied instead, unique factorization of the distinct primitive irreducible factors $1-x_P$ would give another inverse. That symbolic oracle is stronger than a few numerical evaluations. [CAL-G086] [CAL-G095]
+
+There is a different single calibration for an unknown finite subset of countably indexed roots. Index roots by $i\geq0$ and take $x_i=4^{-2^i}$. A finite nonempty support has binary code $e=\sum_{i\in P}2^i$, and its failure factor is $f_e=1-4^{-e}$. The primitive-divisor theorem for $4^e-1$ supplies a prime of order $e$ for every $e\geq1$; $e=1$ uses the prime three. The source explicitly attributes this classical input to the primitive-divisor literature. For a finite signed relation among the $f_e$, choose the largest index with nonzero exponent. Its primitive prime divides no smaller numerator and no power-of-four denominator, contradicting equality of products. Thus finite integer histograms, and by clearing denominators finite rational exponent vectors, are identifiable. The prime is triangular with respect to smaller indices, not private against all larger indices. Base two fails: its factors satisfy $f_6f_1=f_2^2f_3=63/128$. [CAL-G104] [CAL-G105]
+
+For a valid reduced readout $q=N/4^H$, the denominator gives $H=\sum e n_e$, hence a finite candidate bound. It does not itself reveal the counts. A factorization-free inverse makes the computational contract explicit. Write $A_e=4^e-1$ and remove from $A_e$, by repeated greatest-common-divisor division, every prime power whose prime occurs in $\prod_{d<e}A_d$. The remaining selector $K_e>1$ has only new primes, is coprime to the previous product, and is coprime to $A_e/K_e$. Descending from $H$, the largest power of $K_e$ dividing the residual numerator gives $n_e$; verify and remove the whole $A_e^{n_e}$, then continue. In valid data all larger factors have already been removed and no smaller one contains a selector prime. Finish by checking residual one, the denominator weight, and reconstruction. An early variant builds selectors until stripping their primes from the input numerator leaves one. [CAL-G101]
+
+The denominator alone has $2H+1$ binary digits, and products of the first $H$ candidate numerators have $O(H^2)$ digits. The number and bit sizes of the indicated integer divisions and gcd operations are polynomial in this **expanded rational input length**. This does not give a polynomial bound in a compressed exponent, the largest root label, the latent description, or the number of observations required to know $q$. A root with large index already requires exponentially many explicit denominator bits. Exhausting a resource allowance yields an inconclusive computation, not an invalid scientific readout. [CAL-G101] [CAL-G104]
+
+### 2.11 Finitude, precision and the limits of one exact number
+
+The finite-support promise cannot be read off a rational endpoint alone. Fix $q=f_E$ and start $Q_E=1$. For each $e>E$, choose the largest nonnegative integer $n_e$ with $Q_{e-1}f_e^{n_e}\geq q$, and put $Q_e=Q_{e-1}f_e^{n_e}$. Then
+
+```math
+q\leq Q_e<q/f_e,\qquad 0\leq Q_e-q<q/(4^e-1).
+```
+
+Moreover $n_e\leq4$. With $t=4^{-e}\leq1/16$, $(1-t)^5\leq1-5t+10t^2<1-4t=f_{e-1}$; the preceding upper bound on $Q_{e-1}$ makes five copies cross below $q$. Infinitely many digits are nonzero, since a finite product of indices larger than $E$ cannot equal $f_E$ by the primitive-prime argument. Yet $\sum n_e4^{-e}<\infty$, and the positive infinite product is exactly $f_E$. Passing from finite products to a real limit invalidates the finite largest-index proof. The source preserves an earlier reversed inequality in this construction as a corrected failed step; the strict inequality used here has the required direction. [CAL-G100]
+
+A second, stronger observation can establish finitude in the unguarded visible independent model. Decode a finite candidate root set $R_0$ from the first exact readout, and compare the absence probability when only $R_0$ is issued. If both probabilities equal the same positive $q$, no successful route can require an outside root: deleting such a route strictly increases a positive product. Inside $R_0$ there are only finitely many support types; infinitely many occurrences would repeat one positive-success type infinitely often and force absence probability zero. The inventory is therefore finite and the exact decoder applies. With guards, an added guarded route can be disabled at the all-root profile and enabled at the restricted one, compensating for deleted routes. Correlated occurrence outcomes also defeat the product argument. Neither completeness of visible routes nor independence follows from the two numbers. [CAL-G100]
+
+Approximate access changes the result. A deterministic procedure that halts after finitely many queries to a certified Cauchy oracle has used only finitely many positive error tolerances. Under the fixed countable calibration, a sufficiently high fresh root has success probability below all of them. Adding its route changes each queried endpoint by at most that amount; the same rational answers can be valid for the original and enlarged inventory. Hence such access does not generally give a finite halting exact decoder. This uses adversarial valid enclosures, not a stipulated canonical rounding oracle, and does not cover a newly enlarged arbitrary-rate instrument. Under a finite-inventory promise, fair enumeration of candidates and increasingly accurate queries can instead select the least candidate still consistent: every earlier false candidate is eventually excluded, so the answer stabilizes, without an observable certificate that stabilization has occurred. [CAL-G103]
+
+Unknown guards have a further finite-query obstruction even with exact values. Across finitely many issued subsets of a countable root set, infinitely many labels share the same membership pattern. Choose two fresh labels with that pattern and add a route requiring one and excluding the other. It is disabled at every queried profile, regardless of their attenuation rates. The construction also applies along one finite deterministic adaptive history; choosing the hidden route after a realized random seed does not prove a fixed-pair randomized lower bound. Conversely, with a known exact first readout and its finite candidate roots, the positive inside-success lower bound bounds the number of inside occurrences. There are then finitely many candidate restricted probabilities and a positive gap above $q$, permitting a finite-precision second comparison. The exact first value and candidate-dependent gap are essential. [CAL-G103] [CAL-G105]
+
+Even in the finite unguarded model, real-valued exponents and mixing are different extensions. For arbitrary real coefficients, $f_1=f_2^{\log f_1/\log f_2}$ defeats integer uniqueness. A fresh mixture of an empty inventory with weight $3/7$ and two copies of the first unary route with weight $4/7$ has the same single-trial absence $3/4$ as one copy. More strongly, at every two-root rate pair,
+
+```math
+(1-a)+(1-b)=(1-a)(1-b)+(1-ab).
+```
+
+Thus the equal mixture of unary $A,B$ inventories and the equal mixture of $A+B,AB$ inventories have identical fresh endpoint laws for every command. Two conditionally independent observations with a held latent inventory separate them: the difference of their second absence moments is $ab(1-a)(1-b)$, equal to $1/16$ at half rates. Resampling the inventory between observations removes that difference. A finite-product inverse is therefore not automatically a mixture or temporal-process theorem. [CAL-G103] [CAL-G113]
+
+### 2.12 A count bound turns exact inversion into a finite-precision experiment
+
+At a fixed calibration, adjacent unary counts $k,k+1$ have absence probabilities $2^{-k},2^{-(k+1)}$. The total variation of $N$ independent observations is at most $N2^{-(k+1)}$ by coupling. Error at most $1/3$ in both worlds requires variation at least $1/3$, hence $N\geq2^{k+1}/3$. This rules out a uniform budget with unbounded counts at that calibration; full-support Bernoulli laws also rule out a zero-error decision from a fixed finite sample. For a known total bound $K$, the two-root rational panel has grid spacing at least $6^{-K}$, giving a conservative finite-frequency inverse. A more useful design chooses its calibration using $K$. [CAL-G089] [CAL-G090]
+
+Let there be $r\geq1$ known roots and $m\geq1$ known effects, with at most $K\geq1$ route occurrences. Put $p=1/(2K)$. For every issued profile $S$ and nonempty mask $V\subseteq S$, give rate $p$ to roots in $V$ and zero to the other issued roots, keeping guard evaluation fixed. For an effect query $U$, write $h_P(S,U)$ for the enabled count with support $P$ whose bundle meets $U$. Then
+
+```math
+\log q(S,V,U)=\sum_{\varnothing\ne P\subseteq V}
+ h_P(S,U)\log(1-p^{|P|}),\qquad q(S,V,U)\geq1-Kp\geq\tfrac12.
+```
+
+The floor follows from the union bound, since each route succeeds with probability at most $p$. Apply the alternating inverse in $V$ to isolate $h_P\log(1-p^{|P|})$, then divide. If every empirical $q$ is within
+
+```math
+\epsilon=\frac{p^r}{16\,2^r}
+```
+
+of its population value, the empirical values remain above $1/4$. The logarithm error is at most $4\epsilon$ by its derivative. At most $2^r$ terms enter each inverse, and $|\log(1-p^{|P|})|\geq p^r$, so each count error is at most $1/4$. Rounding recovers integer enabled counts exactly; guard and bundle inversions then use exact integers. [CAL-G119]
+
+This can be implemented with certified rational intervals rather than assumed exact transcendental arithmetic. For $t=(z-1)/(z+1)$,
+
+```math
+\log z=2\sum_{j=0}^{J-1}\frac{t^{2j+1}}{2j+1}+R_J,
+\qquad |R_J|\leq\frac{2|t|^{2J+1}}{(2J+1)(1-t^2)}.
+```
+
+On the empirical range $z\in[1/4,1]$, $|t|\leq3/5$. The remainder has a known sign, so the partial sum and its one-sided remainder bound give an interval of width at most $B$. Choose $B\leq p^{2r}/(64\,2^r)$ by increasing $J$. Write $s=p^r$, and let $a,w$ be the exact empirical inverse numerator and denominator. Their intervals have widths at most $2^rB,B$; also $|a|<2^{r+1}$ since $|\log\widehat q|\leq\log4<2$, and $|w|\geq s$. Every denominator point stays negative with magnitude at least $s/2$. Each resulting quotient endpoint is therefore within
+
+```math
+\frac{2\,2^rB}{s}+\frac{2\,2^{r+1}B}{s^2}
+\leq\frac{5\,2^rB}{s^2}\leq\frac5{64}
+```
+
+of $a/w$, using $s\leq1/2$. Thus the complete certified interval lies within $21/64$ of the true integer, strictly inside its half-integer cell. A capped refinement that cannot certify a cell remains inconclusive. [CAL-G119]
+
+For completeness, the concentration step uses the Bernoulli log-moment-generating function: its second derivative is the variance of a tilted Bernoulli and is at most $1/4$. Integrating twice gives $\mathbb E e^{\lambda(Y-\mathbb EY)}\leq e^{\lambda^2/8}$; the exponential Markov inequality, optimized in $\lambda$, gives $2e^{-2N\tau^2}$ for two-sided empirical error $\tau$. There are $G=3^r-2^r$ settings and $L=G(2^m-1)$ retained event coordinates. A union bound therefore suffices with
+
+```math
+N_{\rm setting}=\left\lceil128(16K^2)^r\log(2L/\delta)\right\rceil.
+```
+
+One full endpoint supplies all effect-query indicators at its setting; total observations are $G N_{\rm setting}$, not $L N_{\rm setting}$. If each incidence rate is in error by at most $\eta$, an independent-gate coupling bounds endpoint bias by $Kr\eta$. Taking $\eta\leq\epsilon/(2Kr)$ and allocating the other half of the error to sampling multiplies the coefficient by four, to 512. Matching marginals without an independently warranted joint law does not justify that coupling. The allowance is sufficient, not proved optimal for multiple roots. The source's earlier fixed-mask lower bound has that restricted action menu; §2.17 gives a separate argument for arbitrary root-specific rates. [CAL-G119]
+### 2.13 Held latent inventories, moments and observable continuation
+
+Suppose a latent finite inventory $H$ is drawn once per group and held for $R$ endpoint observations. Conditional on $H$, the observations are independent Bernoulli no-effect indicators with propensity $z=q(H)\in(0,1]$. With distinct propensities $z_1,\ldots,z_s$ and positive weights $w_j$ summing to one, the grouped record supplies
+
+```math
+m_r=\Pr(Y_1=\cdots=Y_r=1)=\sum_{j=1}^s w_jz_j^r,
+\qquad m_0=1.
+```
+
+The full ordered binary law at length $R$ is equivalent to moments through $R$: a specified word with $t$ ones has probability $\sum_{j=0}^{R-t}(-1)^j\binom{R-t}{j}m_{t+j}$, by expanding $(1-z)^{R-t}$; marginalizing recovers each $m_r$. Under this exchangeable model, the count $S_R=\sum Y_i$ also suffices because $m_r=\mathbb E[(S_R)_r]/(R)_r$. Keeping only the all-one probability at length $R$ retains just $m_R$. These are three different records. [CAL-G113] [CAL-G115]
+
+**Finite-mixture determination.** Among competitors with at most $k$ atoms, moments $m_0,\ldots,m_{2k-1}$ identify the propensity distribution. Subtract two competitors and list their at most $2k$ distinct nodes $t_1,\ldots,t_N$. If all these moments agree, the signed measure integrates every polynomial of degree at most $N-1$ to zero. Integrating the Lagrange polynomial $\prod_{l\ne j}(z-t_l)/(t_j-t_l)$ gives its coefficient at $t_j$, hence zero. All signed coefficients vanish. If the calibrated map $H\mapsto q(H)$ is injective on the promised finite inventory class, its inverse then recovers inventory labels. [CAL-G115]
+
+The order is sharp even on genuine calibrated inventory nodes. Use $t_j=(3/4)^j$, $j=0,\ldots,2k-1$, and $c_j=1/\prod_{l\ne j}(t_j-t_l)$. Since the nodes decrease, $c_j$ has sign $(-1)^j$. Comparing leading coefficients in Lagrange interpolation gives $\sum c_jt_j^r=0$ for $r\leq2k-2$ and one for $r=2k-1$. The positive and negative parts have equal mass $C$; dividing by $C$ gives two $k$-atom probability measures agreeing through order $2k-2$ and differing at the next order. Shifting every index by one removes the empty inventory without changing the argument. For $k=2$, the weights $27/175,148/175$ at counts $0,2$ and $111/175,64/175$ at counts $1,3$ give common first two moments $63/100,27/64$ and third-moment difference $999/102400$. [CAL-G115]
+
+There is a constructive exact-rational inverse. The Hankel matrix $(m_{i+j})_{0\leq i,j<k}$ has rank $s$, since it factors as a Vandermonde matrix, a positive diagonal weight matrix, and its transpose. Its leading $s\times s$ block is positive definite: a nonzero polynomial of degree below $s$ cannot vanish at all $s$ nodes. Solve
+
+```math
+\sum_{l=0}^{s-1}p_lm_{j+l}=-m_{j+s},\qquad 0\leq j<s.
+```
+
+The monic polynomial $p(z)=z^s+\sum_{l<s}p_lz^l$ vanishes at every node, because the Vandermonde factor is invertible. Its roots give the nodes and a Vandermonde solve gives their weights. Verify positivity, unit total mass, the recovered node labels and all supplied moments. This is the classical finite moment/Prony mechanism specialized to the declared endpoint code. Exact rational arithmetic permits rank and equality decisions; arbitrary Cauchy access to unknown real moments does not supply them automatically. [CAL-G115] [CAL-G116]
+
+The competitor bound matters. Using $2k+1$ nodes in the signed interpolation construction gives $k$ versus $k+1$ atoms agreeing through $2k-1$. To certify an $s$-atom law against **every positive measure**, one more order suffices: if $p$ is its degree-$s$ annihilator, equality through degree $2s$ gives $\int p^2\,d\nu=0$, forcing the competitor onto the same roots, after which the Vandermonde equations fix weights. For an unknown finite atomic order, the first singular moment matrix $(m_{i+j})_{0\leq i,j\leq r}$ occurs at $r=s$; its kernel yields this certificate. An infinite-support positive measure makes every such matrix positive definite, so the search need not terminate. A finite scalar propensity distribution also does not prove a finite route inventory: §2.11's infinite product can have the same one scalar propensity and all its powers. [CAL-G115]
+
+The general observable-space theorem is already proved in §§2.1–2.5; it is not a new result of this application. On a known finite catalogue of distinct propensities, its operators specialize to multiplication by $z$ and $1-z$. Thus the horizon-$h$ observable space is $\operatorname{span}\{1,z,\ldots,z^h\}$, of dimension $\min(h+1,N)$ by Vandermonde independence, and the full-simplex continuous-coordinate requirement is $\min(h,N-1)$. The domain of at most $k$ unknown mixture atoms is different from that full simplex. The inherited continuation and moment-defect treatment supplies this comparison, not a second origin for the general theorem. [CAL-G118]
+
+Persistence and conditional independence are separate. Redrawing $H$ before every endpoint gives powers of the mean, rather than moments of a held propensity. Holding $H$ but setting every observation equal to one Bernoulli bit also gives only the mean. Even apparent pair persistence needs a model. If two latent propensities $Q,R$ have the same marginal law and conditionally independent emissions, then
+
+```math
+m_2-\mathbb E[QR]=\tfrac12\mathbb E[(Q-R)^2].
+```
+
+Therefore agreement with an independently known $m_2$ forces $Q=R$ almost surely; on a known catalogue with separation $\Delta$, it gives $\Pr(Q\ne R)\leq2(m_2-\mathbb E[QR])/\Delta^2$. No Markov or reversibility assumption is needed. Equal marginal laws and conditional product emissions are needed. For propensities $3/4,9/16$, a switching process can use conditional two-bit tables $(225,159,63,65)/512$ and their coordinate-swapped counterpart. Their average is $(225,111,111,65)/512$, the held-law table, although the latent propensity changes every time. This counterfeit changes conditional emission dependence. Unknown rare ports make $\Delta$ arbitrarily small, so a fixed tolerance cannot certify persistence. [CAL-G113]
+
+### 2.14 Known labels, finite sampling and crossed calibration designs
+
+For a known catalogue $z_1,\ldots,z_N$, $R=N-1$ repeated endpoints per held group suffice to reconstruct arbitrary mixture weights. Write the Lagrange polynomial for node $i$ as $\ell_i(z)=\sum_{r=0}^R a_{ir}z^r$, and define on the observed count
+
+```math
+b_i(S)=\sum_{r=0}^R a_{ir}\frac{(S)_r}{(R)_r},
+\qquad \mathbb E b_i(S)=w_i.
+```
+
+The signed contrasts need not lie in $[0,1]$, although they sum to one for each group. Let $B_i$ be their finite range. With $n$ independent groups, Hoeffding's argument from §2.12 gives simultaneous weight errors at most $B_i\sqrt{\log(2N/\delta)/(2n)}$. If actual propensities differ from catalogue values by at most $\beta$, let $D_i$ bound $|\ell_i'|$ on $[0,1]$; bias is at most $D_i\beta$. Such a bound follows directly from the Bernstein representation $\ell_i(z)=\sum_s b_i(s)\binom Rs z^s(1-z)^{R-s}$: its derivative is $R$ times the Bernstein average of adjacent differences. Add the two errors. If every nonzero weight is at least $w_*$ and the total bound is below $w_*/2$, thresholding at $w_*/2$ recovers support. Failure of that sufficient inequality is not by itself an impossibility theorem. [CAL-G125]
+
+Under independent route incidences, a propensity discrepancy can be bounded by first telescoping support products and then route failure products: $\beta_H\leq\min(1,\sum_{\text{occurrences}}\sum_{i\in P}\eta_i)$. Matching marginal gate rates without the joint premise is insufficient. Nor does independent repetition within a group establish independence across groups. One latent label drawn once for the entire experiment can make every group's marginal correct while empirical contrasts converge to a random component weight zero or one instead of the nominal mixture weight. A calibration bias can also move the limiting contrast strictly across the support threshold; an exact tie alone does not establish eventual wrong classification. [CAL-G123] [CAL-G125] [CAL-G126]
+
+Known labels are substantive information. If arbitrary new ports are allowed, append the same sufficiently rare route to every component of a mixture. Every label changes, while propensities become $(1-\eta)z_i$. Component weights are unchanged and any fixed internal separation can remain above its promised bound. A coupling of $M$ endpoints changes the data law by at most $M\eta$. Letting $\eta$ tend to zero proves that a fixed budget cannot uniformly recover these unknown exact labels, even with a component bound, weight floor and internal node separation. What is missing is isolation from external alternative labels, not merely separation among currently present components. [CAL-G123]
+
+Changing calibration within a held group can shorten its identifying word. Consider four known inventories: unary $A$, unary $B$, independent routes $A+B$, and one joint $AB$ route. Their effect probabilities at rates $(a,b)$ are $a,b,a+b-ab,ab$. With the issued set held fixed, rate vectors $(1,0)$ then $(0,1)$ give deterministic ordered codes $10,01,11,00$. Two endpoints therefore identify the component label. Freshly redrawing the label at each trial destroys this advantage: the mixture identity in §2.11 holds conditionally at every history and chosen action, so a common adaptive policy cannot distinguish its two mixtures. A single unconditional equality would not establish that stronger process statement. [CAL-G129] [CAL-G131]
+
+Repeated observations at one rate have only three count outcomes at length two, so their linear mixture channel cannot recover four arbitrary weights. Even for two different interior rates, forgetting order loses information: under conditionally independent observations at $(a,b),(b,a)$, the unary $A,B$ count laws coincide. Retaining order gives a four-column channel whose determinant, obtained equivalently in the moment coordinates $(1,p,q,pq)$, is
+
+```math
+(a-b)(a+b-2ab)\bigl[(a-b)^2+2ab(1-a)(1-b)\bigr].
+```
+
+It is nonzero whenever $a\ne b$ in $[0,1]$. The moment-coordinate change is invertible, and subtracting the two unary columns factors $a-b$; substituting the two symmetric response columns gives the displayed remaining factors. This is exact identifiability, not a lower conditioning bound. The interior product channel requires conditional independence; at the deterministic corners no within-pair coupling assumption is needed. [CAL-G131] [CAL-G132]
+
+Near those corners, suppose each bit's conditional error is at most $\eta$. A union bound makes wrong-code probability at most $\beta=\min(1,2\eta)$, without assuming independent errors within the pair. An absent code then has probability at most $\beta$, while a component of weight at least $w_*$ gives its correct code with probability at least $(1-\beta)w_*$. For independent groups, if $\beta\leq w_*/8$, threshold empirical code frequencies at $w_*/2$. Exponential Markov at parameter $\log2$ bounds an absent code's upper tail by $e^{-nw_*/8}$; the usual lower multiplicative bound for mean at least $7w_*/8$ is at most $e^{-nw_*/16}$. The four-code error is therefore at most $4e^{-nw_*/16}$, so
+
+```math
+n\geq\left\lceil\frac{16}{w_*}\log\frac4\delta\right\rceil,
+\qquad \eta\leq w_*/16
+```
+
+suffices. Weights themselves have the additive bias-plus-frequency bound $\beta+\sqrt{\log(8/\delta)/(2n)}$. At $w_*=1/3,\delta=.05$, the stated sufficient support design uses 211 groups, 422 endpoints and $\eta\leq1/48$. This concerns a different four-inventory catalogue from the three-node fixed-calibration example in the moment source; their numerical budgets are not interchangeable. [CAL-G129]
+
+For $0<w_*\leq1/2$, the dependence on the rare weight cannot disappear: even an oracle that reveals every true group label has overlap $(1-w_*)^n$ between a pure component and a mixture adding weight $w_*$. Two-sided error at most $\delta$ therefore requires $n\geq\log(1/(2\delta))/[-\log(1-w_*)]$. Additional endpoints within an already drawn group cannot outperform that label oracle. Calibration can create an exact collision: pure $A$ under rates $(1,0),(\epsilon,1)$ gives codes $10,11$ with weights $1-\epsilon,\epsilon$, just like the ideal mixture of $A$ and $A+B$. This gives an obstruction when the allowed error reaches the rare weight, leaving a constant-factor gap from the sufficient bound. Finally, all corner commands reveal only the minimal positive-support antichain: $A$, two copies of $A$, and $A+AB$ agree there, whereas half rates give effect probabilities $1/2,3/4,5/8$. Ordered corner codes do not recover arbitrary multiplicities. [CAL-G129]
+
+### 2.15 Unknown common calibration leaves a primitive count signature
+
+For pure unary counts, write $a=1-r(x)\in(0,1)$ at a fixed interior command. A held count $c_j$ has no-effect propensity $a^{c_j}$. Suppose two finite count mixtures have a common calibration within each world and their bounded-order grouped laws agree. The moment theorem identifies their nodes and attached weights. Sorting the distinct interior nodes matches the positive counts in increasing order; atom one records count zero separately. Equality $a^{c_j}=b^{d_j}$ gives a common positive rational ratio $d_j/c_j=\log a/\log b$. Write the first count vector as $c=dv$, with primitive integer $v$ of gcd one. Bézout coefficients $t_j$ with $\sum t_jv_j=1$ show that any proportional integer vector equals $ev$ for an integer $e>0$. Thus the identifiable positive signature is the primitive vector with its ordered weights; its actual dilation remains unknown. No gcd-one assumption about the actual inventory is learned from the data. The zero-only law is separate. [CAL-G155]
+
+Under an exact-rational node contract, choose a denominator prime and take the signed valuations of all positive-count nodes. Their gcd-normalized absolute vector gives $v$ under the common-power promise. Bézout coefficients then reconstruct the base $u=\prod_j z_j^{t_j}$; verify $0<u<1$, ordered positive integral exponents, and every equation $z_j=u^{v_j}$. These checks establish membership, not just a plausible ratio. Atom one must be excluded from this positive-count decoder. Arbitrary real calibration and rational mixture weights do not make node values rational. [CAL-G155]
+
+Let $w_0$ be the zero-count weight and $F(t)=w_0+\sum_jw_jt^{v_j}$. If any positive component is present, $F$ is continuous and strictly increasing on $[0,1]$, even if its derivative vanishes at zero. At actual scale $d$, the mean curve is $F((1-r(x))^d)$. Its inverse determines $u(x)=(1-r(x))^d$, hence every mixed-command held-group kernel once $v,w$ are fixed. A candidate dilation $e$ has the only possible calibration $r_e(x)=1-u(x)^{1/e}$. With count bound $M$, only $e\leq\lfloor M/\max v_j\rfloor$ remain. A uniform command-error band must be checked on the whole curve, not at a convenient point. At one command a feasible rate can be extended by endpoint-fixed monotone linear interpolation within the band; this does not establish feasibility of an arbitrary entire proposed curve. [CAL-G155]
+
+For two candidate scales $d<e$, put $x(u)=1-(u^d+u^e)/2$ and candidate rates $1-u^e,1-u^d$. Both induce the same common base $u^{de}$, with calibration errors $\pm(u^d-u^e)/2$. Their maximal absolute error is
+
+```math
+\theta(d,e)=\frac{e-d}{2e}\left(\frac de\right)^{d/(e-d)},
+```
+
+as follows by differentiating $u^d-u^e$. Below this radius, the command corresponding to its maximizer separates the pure-scale absence intervals, and strict monotonicity of $F$ preserves their separation. For scales $1,\ldots,D$, the last adjacent pair determines the threshold described in §2.16. This transfers a population identification threshold; the sampling gap is transformed by $F$ and cannot be copied unchanged from pure counts. If $D=1$, there is no remaining scale choice. At actual gate rate zero all counts have no effect; at rate one only count zero has no effect. Endpoint preservation without continuity and strict monotonicity can give a step map with no interior rate and destroy the argument. Component-specific calibrations can likewise collapse distinct counts to one node. [CAL-G155]
+
+The review source also distinguishes this exact identification from finite halting identification under arbitrary-valid approximation replies at one fixed command. A direct witness makes the issue explicit. Fix $0<t<1$ and equal weights at primitive counts $(1,2)$ with absence base $t$. Compare primitive counts $(N,2N+1)$ with base $t^{1/N}$. The latter nodes are $(t,t^{2+1/N})$, tending to $(t,t^2)$, and $\gcd(N,2N+1)=1$. Every finite collection of grouped probabilities converges; positive-error replies centered on the limiting rational probabilities, for rational $t$, can therefore also be valid for a sufficiently large alternative. Endpoint-preserving homeomorphisms can realize each required base at the single fixed command. A uniformly halting exact procedure would give the same answer on that finite transcript in two different primitive-signature worlds. This is an explicit expository realization of the review's stated fixed-command obstruction, not a claim to have received its unselected author implementation. Additional commands are a different contract. The review's historical precision corrections, feasibility-fixture correction, and bounded controls retain their own evidence scope in §11. [CAL-G155]
+### 2.16 Static calibration uncertainty: identification and sampling have different thresholds
+
+Consider a pure unary count $j$ and an unknown static, nondecreasing, endpoint-preserving calibration $r:[0,1]\to[0,1]$ satisfying $|r(x)-x|\leq\eta$. At command $x$, a fresh endpoint has no-effect probability $(1-r(x))^j$. The same map is used throughout one world, while competing worlds may have different maps. Only endpoint outcomes and chosen commands are observed. All adaptive extensions below assume that, conditionally on past observations and the next command, the endpoint has this fresh response law. [CAL-G137]
+
+For adjacent counts $k,k+1$, put
+
+```math
+b=\frac{k}{k+1},\qquad t_*=b^{k+1},\qquad s_*=b^k,
+\qquad \eta_k^*=\frac{s_*-t_*}{2}
+=\frac1{2(k+1)}\left(\frac{k}{k+1}\right)^k.
+```
+
+This is the sharp radius for uniform finite-budget identification. To prove the obstruction, parametrize commands by
+
+```math
+x(u)=1-\frac{u^{k+1}+u^k}{2},\quad
+r_k(x(u))=1-u^{k+1},\quad r_{k+1}(x(u))=1-u^k,
+\quad 0\leq u\leq1.
+```
+
+The resulting maps are continuous strictly increasing endpoint-preserving maps of $x$. Their errors are $\pm u^k(1-u)/2$, maximized at $u=b$, while both no-effect laws equal $u^{k(k+1)}$. At $\eta\geq\eta_k^*$, therefore, one fixed pair of worlds agrees at every command. A common policy seed and common fresh uniform variables couple every subsequent action and outcome, including stopping. No adaptive, randomized or infinitely continued endpoint protocol can give unconditional error below $1/2$ in both worlds. The construction is static; it does not choose a new calibration after each observation. [CAL-G137]
+
+If $\eta<\eta_k^*$, use $x_*=1-(t_*+s_*)/2$. With $a=(t_*+s_*)/2-\eta$ and $b'=(t_*+s_*)/2+\eta$, the possible count-$j$ absence means lie in $I_j=[a^j,(b')^j]$. Since $a>t_*$, $b'<s_*$ and $t_*^k=s_*^{k+1}$, the adjacent gap $g=a^k-(b')^{k+1}$ is positive. Classifying an empirical mean by the midpoint of that gap has error at most $e^{-Ng^2/2}$. For a catalogue $0,\ldots,M$, $M\geq2$, use the last pair $k=M-1$. All intervals are disjoint: $a^j/(b')^{j+1}$ decreases with $j$, and the positive gaps satisfy
+
+```math
+g_{j+1}=a g_j-(b'-a)(b')^{j+1}<g_j.
+```
+
+Here $I_0=\{1\}$. A single empirical mean and ordered midpoints recover the count with error at most $2e^{-Ng^2/2}$, with no union factor $M$. Conversely the last pair already gives the all-command ambiguity, proving the catalogue threshold. The catalogue $\{0,1\}$ is special: command one distinguishes the counts deterministically under endpoint preservation. [CAL-G137]
+
+Approaching the threshold can be costly. Interpolate each boundary calibration with the identity in proportion $\eta/\eta_k^*$. The two interpolated maps are within the smaller band, and each is at distance at most $\eta_k^*-\eta$ from its boundary map. The functions $(1-r)^k,(1-r)^{k+1}$ have Lipschitz constants $k,k+1$ in $r$. Their difference is consequently at most $(2k+1)(\eta_k^*-\eta)$ uniformly in commands. Coupling adaptive trials until their first disagreement gives total variation at most $N$ times that bound. Two-sided error $\delta<1/2$ therefore needs $N\geq(1-2\delta)/[(2k+1)(\eta_k^*-\eta)]$. This establishes divergence of fixed budgets, not a sharp rate or an expected-stopping theorem. Also $\eta_k^*\sim1/(2ek)$ while the common absence probability at the extremal command is $b^{k(k+1)}=\exp(-k+O(1))$. The command that maximizes tolerance can generate exponentially rare information. [CAL-G137]
+
+There is a stronger sampling obstruction below this identification threshold. Let $r_k^*,r_{k+1}^*$ be the boundary maps above, with signed deviation $d(x)\geq0$, and clip them to
+
+```math
+\widetilde r_k(x)=\min(r_k^*(x),x+\eta),\qquad
+\widetilde r_{k+1}(x)=\max(r_{k+1}^*(x),x-\eta).
+```
+
+These remain continuous increasing endpoint-preserving static maps. Where $d\leq\eta$, the endpoint laws agree. Elsewhere their nonnegative absence difference is at most $(1-x-\eta)^k$. The parameterization gives $d\leq x/(2k+1)$: it is equivalent to $u^k[(k+1)-ku]\leq1$, whose left side increases to one because its derivative is $k(k+1)u^{k-1}(1-u)$. Thus $d>\eta$ implies $x+\eta>2(k+1)\eta$, and the one-trial difference is at most $e^{-2k(k+1)\eta}$ for every command. The same adaptive coupling proves
+
+```math
+N\geq(1-2\delta)e^{2k(k+1)\eta}.
+```
+
+Above the sharp threshold, the exact indistinguishability result is stronger. This inequality below it isolates an exponential sampling cost without confusing a static nuisance map with a time-varying adversary. [CAL-G134]
+
+A complementary upper bound determines the polynomial scale. For a catalogue through $M\geq2$ and $\eta\leq1/(16M)$ choose $x=\max(1/M,8M\eta)\leq1/2$, $A=1-x-\eta$, $B=1-x+\eta$. Then $\eta\leq x/(8M)$ and
+
+```math
+g=A^{M-1}-B^M
+=B^{M-1}\left[(1-2\eta/B)^{M-1}-B\right]
+\geq\frac{x}{2}B^{M-1}
+\geq\frac{x}{2}e^{-2(M-1)x}.
+```
+
+The first bound uses $(1-z)^j\geq1-jz$, $B\geq1/2$, and $x-(4M-3)\eta\geq x/2$; the second uses $B\geq1-x$ and $\log(1-x)\geq-2x$. Earlier count gaps are larger. The empirical-mean classifier therefore needs at most
+
+```math
+\left\lceil8x^{-2}e^{4(M-1)x}\log(2/\delta)\right\rceil
+\leq\left\lceil8e^4M^2e^{32M(M-1)\eta}\log(2/\delta)\right\rceil.
+```
+
+At fixed $0<\delta<1/2$, a sequence of error bands admits uniform polynomial budgets in $M$ exactly when $\eta_M=O(\log M/M^2)$. Necessity follows by taking logarithms in the last-pair lower bound; sufficiency follows from this upper bound, since that error scale is eventually below $1/(16M)$. The usual $M^{-2}$ tolerance allows quadratic-order bounds, logarithmically larger tolerances still allow some polynomial order, and tolerances of order $M^{-1}$ may allow identification while requiring exponential budgets. Constants and optimal polynomial exponents are not settled here. These are pure-count, static-band, fresh-endpoint results, not arbitrary mixture or expected-stopping classifications. [CAL-G134]
+
+### 2.17 Arbitrary adaptive root rates and the total-count exponent
+
+Allow the fixed-histogram experiment of §2.12 to choose arbitrary exact root-specific rates and issued profiles at every trial. A numerical rate is shared across occurrences involving that root; individual occurrences cannot be separately addressed. Let $r\geq2$ be fixed, let the known total count bound be $L\geq r+1$, and set $k=\lfloor(L-1)/r\rfloor$. Construct $H_0$ with $k$ singleton routes at every root and $H_1$ by adding one route supported on all roots. Let every occurrence emit the whole nonempty effect catalogue. Counts are $rk,rk+1\leq L$, and the full observed endpoint remains binary, empty or the whole bundle. At proper issued profiles the laws agree. At the full profile put $u_i=1-a_i$, $z=\prod a_i$; their no-effect probabilities are
+
+```math
+q_0=\prod_i u_i^k,\qquad q_1=q_0(1-z).
+```
+
+If any $a_i=0$ or one, the laws agree. The latter fact uses the singleton baseline at **every** root. For interior rates, $\log t\leq t-1$ gives
+
+```math
+\operatorname{KL}(\operatorname{Ber}(q_0)\Vert\operatorname{Ber}(q_1))
+\leq\frac{q_0z^2}{(1-z)(1-q_1)}.
+```
+
+Use $1-z\geq u_2$ and $1-q_1\geq1-u_1^k=a_1\sum_{j=0}^{k-1}u_1^j\geq k a_1u_1^{(k-1)/2}$, the last inequality being arithmetic-geometric mean. The bound becomes
+
+```math
+\left[\frac{u_1^{(k+1)/2}a_1}{k}\right]
+[u_2^{k-1}a_2^2]\prod_{i=3}^r[u_i^ka_i^2]
+\leq C(r,k)
+=\frac{2}{k(k+3)}\frac4{(k+1)^2}
+ \left[\frac4{(k+2)^2}\right]^{r-2}.
+```
+
+Indeed the maximum of $u^\alpha(1-u)^b$ is at $u=\alpha/(\alpha+b)$ and is at most $[b/(\alpha+b)]^b$. This also covers $k=1$ and the empty product when $r=2$. No positive rate-uniform variance floor is assumed. [CAL-G142]
+
+For a common randomized adaptive policy using a fixed budget $N$, conditional action selection contributes zero relative entropy; each fresh endpoint contributes at most $C(r,k)$. Factoring transcript likelihoods and taking conditional expectations gives $\operatorname{KL}(P_0^{\rm tr}\Vert P_1^{\rm tr})\leq NC(r,k)$. If both histograms must be reported correctly with probability at least $1-\delta$, the event of reporting $H_0$ and the log-sum inequality give the lower bound $\operatorname{kl}(1-\delta,\delta)$ on transcript KL. Consequently
+
+```math
+N\geq\frac{k(k+3)(k+1)^2(k+2)^{2r-4}}{2\,4^{r-1}}
+(1-2\delta)\log\frac{1-\delta}{\delta},\qquad 0<\delta<\tfrac12.
+```
+
+For $\delta\leq1/4$, this is $\Omega(k^{2r}\log(1/\delta))$. Section 2.12's upper bound uses the **total** bound $K=L$, not the per-root $k$, and its menu is contained in this enlarged menu. With fixed $r$ and fixed effect-catalogue size, the worst-case fixed-budget order is therefore $\Theta(L^{2r}\log(1/\delta))$ in the small-error range. The narrower unguarded one-effect class uses $2^r-1$ masks and has the same lower exponent. This comparison is on the same fixed-histogram class, not an arbitrary trial-resampled mixture class. [CAL-G119] [CAL-G142]
+
+The failed shortcuts explain the hypotheses. An unbalanced pair with singleton baseline only at root one can be probed by turning every other root fully on: it reduces to adjacent unary counts and does not force the exponent $2r$. Bernoulli variance tends to zero at both rate boundaries, invalidating a constant-variance denominator. With one shared random gate per root, duplicates instead collapse: for $r=2,k=2,a_i=1/2$, both no-effect probabilities are $1/4$, whereas independent occurrences give $1/16,3/64$. Separately addressable routes or internal route-success readouts change the instrument. Setting rate zero is not deleting an issued root when guards are present. Finally, binary KL tends to zero as $\delta\uparrow1/2$, so the logarithmic comparison is not uniform there; a fixed-budget chain is not an unproved expected-stopping theorem. [CAL-G141]
+### 2.18 Interaction supports identify counts under a common separable calibration
+
+Now allow each root $i$ one unknown static continuous strictly increasing endpoint-preserving map $r_i:[0,1]\to[0,1]$, shared across every occurrence and support containing it. Consider a fixed finite **unguarded**, one-effect inventory, independent across occurrences, with success probability $\prod_{i\in S}r_i(x_i)$ for a support $S$. Its entire no-effect response is
+
+```math
+Q(x)=\prod_{\varnothing\ne S\subseteq R}
+ \left(1-\prod_{i\in S}r_i(x_i)\right)^{n_S}.
+```
+
+Zero-count factors are omitted, including at boundary commands. For interior values on $S$, let $x_T$ keep those values on $T\subseteq S$ and set other coordinates to zero. All these $Q(x_T)$ are positive. Boolean-lattice cancellation gives
+
+```math
+L_S(x_S)=\sum_{T\subseteq S}(-1)^{|S|-|T|}\log Q(x_T)
+=n_S\log\left(1-\prod_{i\in S}r_i(x_i)\right).
+```
+
+The proof is the alternating coefficient calculation of §2.9: a support $U$ contributes precisely on masks containing $U$, and cancels unless $U=S$. The multiplicative version $E_S=e^{L_S}=\prod Q(x_T)^{(-1)^{|S|-|T|}}$ is often preferable for finite rational controls. A positive support has $L_S<0$ at every interior point; an absent one has $L_S=0$. Detecting this distinction from exact population numbers is not a generic equality test on approximate data. [CAL-G198]
+
+Let two admissible worlds have the same entire $Q$. They have the same positive supports. For a positive $S$ put $c=n_S/n'_S$ and $\alpha_i=r'_i\circ r_i^{-1}$. Independent variation of actual coordinates gives
+
+```math
+\prod_{i\in S}\alpha_i(a_i)=H_c\left(\prod_{i\in S}a_i\right),
+\qquad H_c(z)=1-(1-z)^c.
+```
+
+Sending every coordinate except $i$ to one yields $\alpha_i(a)=H_c(a)$. If $|S|\geq2$, keep two coordinates free to obtain $H_c(ab)=H_c(a)H_c(b)$. Since $H_c(a)/a\to c$ as $a\downarrow0$, division by $a$ and passage to the limit give $cb=cH_c(b)$, so $H_c(b)=b$ and then $c=1$. This differentiates only the explicit function $H_c$, not an unknown calibration. Every positive interaction thus identifies its count and every participating root's whole calibration map. No connectivity between different interactions is required. [CAL-G198]
+
+Let $A$ be the union of positive supports of size at least two. The unary count at an anchored root $i\in A$ follows by division of $L_{\{i\}}$ by the known nonzero interior logarithm. Outside $A$, a positive unary count $n_i$ may be replaced by any positive integer $m_i$ with $r'_i=H_{n_i/m_i}\circ r_i$. An unused root's map is unrestricted. These are the complete remaining equivalences: necessity was proved above, and each displayed change preserves every factor, giving sufficiency. A convenient count-one representative for an isolated unary root is only a representative of its fibre, not an inferred actual count. [CAL-G198]
+
+There is a population inverse using limits. First isolate $L_S$ on the open cube. For distinct $i,j\in S$, let the other coordinates tend to one and write $D_{ij}(u,v)=n_S\log(1-r_i(u)r_j(v))$. Then
+
+```math
+r_j(v)=\lim_{u\downarrow0}\frac{D_{ij}(u,v)}{D_{ij}(u,1)},
+\qquad
+n_S=\frac{L_S(x_S)}{\log(1-\prod_{i\in S}r_i(x_i))}.
+```
+
+The ratio tends to $r_j(v)$ because $\log(1-ab)/\log(1-a)\to b$ as $a\downarrow0$. Crucially, one must isolate the contrast before approaching the boundary: lower-order routes can make individual raw $Q$ values zero, so direct alternating arithmetic with boundary logarithms would be undefined. This functional inverse is not yet a finite-query Cauchy algorithm. [CAL-G198]
+
+The model's exclusions are mathematically active. Two unary routes with identity calibration equal one with $H_2(x)=2x-x^2$. For a genuine $AB$ interaction, however, $H_2(ab)-H_2(a)H_2(b)=-2ab(1-a)(1-b)$; at half rates the two-route identity absence is $9/16$, while one route with the two transformed coordinate maps gives $7/16$. An $AB$ anchor cannot determine a unary $A$ count if those two supports are allowed different $A$ calibrations. Nor does own-input monotonicity imply coordinatewise calibration: for any $c>0$,
+
+```math
+r'_B(a,b)=H_c(b),\qquad
+r'_A(a,b)=H_c(ab)/H_c(b)\quad(b>0),\qquad r'_A(a,0)=a
+```
+
+is continuous, strictly increasing and endpoint-preserving in each gate's own command, yet its product is $H_c(ab)$ and it changes the count scale. Joint continuity at $b=0$ follows from $H_c(z)/z\to c$ uniformly for $0\leq z\leq b$. At $c=2$, the explicit cross-talk map is $a(2-ab)/(2-b)$. Step calibrations taking only zero and one erase every positive multiplicity. [CAL-G198] [CAL-G199]
+
+Finally, an $A$ route can Boolean-absorb $AB$ under shared bearer gates, while the independent-route absence $(1-a)(1-ab)$ differs from $1-a$. A fresh half-mixture of $A$ and $B$ has $Q=1-(a+b)/2$ and a strictly subunit isolated $AB$ contrast, despite having no $AB$ route in either inventory. The logarithm of a mixture is not the sum of fixed-support contributions. Guards evaluated on a full issued profile cannot be recovered by treating attenuation masks as new issued profiles. These countermodels explain why the theorem concerns a specified response factorization, not empirical certification of architecture or productive ownership. [CAL-G198] [CAL-G199]
+
+### 2.19 Finite interaction panels: integer cuts and incidence rank
+
+A positive support $S$ with $|S|\geq2$ has a finite count witness even when its coordinate maps are unknown. Choose two strictly ordered interior commands on each of distinct roots $i,j\in S$; hold other roots of $S$ at fixed interior commands. Four isolated contrasts have the form
+
+```math
+Z_{pq}=(1-Ka_pb_q)^n,
+\quad 0<a_1<a_2<1,\quad0<b_1<b_2<1,\quad0<K\leq1.
+```
+
+Each contrast itself uses masks; at most $4\,2^{|S|}$ raw probability evaluations suffice before merging repetitions. For real $m>0$ let $P_m(p,q)=1-Z_{pq}^{1/m}$ and $\Delta(m)=P_m(1,1)P_m(2,2)-P_m(1,2)P_m(2,1)$. Then
+
+```math
+\operatorname{sign}\Delta(m)=\operatorname{sign}(m-n).
+```
+
+Here is the strict proof. For $c=n/m$, set $e_c(z)=zH'_c(z)/H_c(z)$. With $t=-\log(1-z)$,
+
+```math
+e_c(z)=c\frac{e^t-1}{e^{ct}-1},\qquad
+\frac{d}{dt}\log e_c=\frac{f(t)-f(ct)}t,
+\qquad f(s)=\frac{s}{1-e^{-s}}.
+```
+
+Since $f'(s)=[1-(1+s)e^{-s}]/(1-e^{-s})^2>0$, $e_c$ decreases for $c>1$ and increases for $c<1$. The mixed derivative of $\log H_c(Ke^{u+v})$ has strict sign $1-c$. Integrating over the nondegenerate rectangle with corners $\log a_p,\log b_q$ proves that the log of the diagonal-product ratio has that sign. Exponentiation proves the determinant claim, and at $c=1$ the matrix is the rank-one product $Ka_pb_q$. [CAL-G196]
+
+Under certified population Cauchy access, this is an effective integer decoder **with a positive-support promise**. Positive raw probabilities permit products and quotients by refining until each denominator has a positive lower bound. Evaluate only half-integers $m=k+1/2$: then $Z^{1/m}$ is the nonnegative $(2k+1)$st root of $Z^2$, computable by rational interval bisection. The determinant is never zero at such a cut, so refinement eventually certifies its sign. A positive sign says $n\leq k$, a negative sign $n\geq k+1$. Doubling $k=1,2,4,\ldots$ finds an upper bound, followed by integer binary search. Finitely many distinct commands suffice, but the needed precision and number of refinements have no uniform bound. If $n=0$, all contrasts are one and every determinant is zero; this procedure does not decide absence. An exact-rational probability input could decide equality directly, but rational nominal commands do not guarantee rational probabilities under arbitrary calibration. [CAL-G196]
+
+Once the count is known, the panel gives ratios such as $a_2/a_1$ and $b_2/b_1$. Reciprocal rescaling of the two factors preserves its products and can be extended by endpoint-fixed increasing interpolation. Absolute factors and unsampled values therefore require more information. For several known positive supports, this remaining finite freedom has an exact linear description. Assume a **known complete** positive-support set $\mathcal E$, known counts, and finitely many ordered interior levels $x_{i,l}$ on every participating root. Zero masks are permitted; unit commands are excluded for now. Invert each contrast to get
+
+```math
+P_S(x_S)=1-E_S(x_S)^{1/n_S}=\prod_{i\in S}r_i(x_i).
+```
+
+The base values $u_i=r_i(x_{i,1})$ give base products $p_S$. Varying one coordinate on any incident support gives ratios $\rho_{i,l}=r_i(x_{i,l})/u_i$. The ratios must agree across overlapping supports under the shared-calibration premise. Form the matrix $A$ with unsigned incidence rows $1_S$, adding a unit row for each independently established actual-base anchor. With $y_i=\log u_i$, the retained equations are
+
+```math
+Ay=b,\qquad y_i<-\log\rho_{i,m_i},
+```
+
+where $b$ contains logarithms of base products and anchors. Raw $\log Q$ is not this linear record; the known-count root transformation is essential. [CAL-G227]
+
+Every equivalent sampled array is exactly $z'_{i,l}=e^{v_i}z_{i,l}$ for $v\in\ker A$ with $e^{v_i}z_{i,m_i}<1$. Necessity follows from equality of within-root ratios and base products. For sufficiency, interpolate linearly through $(0,0)$, every rescaled sample knot, and $(1,1)$. All slopes are positive. Each support product on the **whole finite interior/zero grid** is unchanged, and hence so is every endpoint probability. Completeness of the support list is needed for this converse. Every feasible array has strictly positive slack, so small positive and negative multiples of every kernel direction remain feasible. Thus
+
+```math
+\operatorname{span}(F-F)=\ker A,\qquad
+\dim F=|V|-\operatorname{rank}A.
+```
+
+All sampled values are determined exactly at full column rank. A particular root is determined exactly when its unit vector lies in the row space; the same criterion with $h$ identifies the monomial $e^{h^Ty}$. These are ordinary linear-fibre facts on an open real domain. [CAL-G227]
+
+For one $AB$ support, the kernel is reciprocal scaling. The triangle $AB,AC,BC$ has determinant $-2$ and gives $u_A=\sqrt{p_{AB}p_{AC}/p_{BC}}$ and cyclic formulas. Supports $AB,ABC$ identify $u_C=p_{ABC}/p_{AB}$ while leaving reciprocal freedom in $A,B$. A connected star $AB,AC$ retains $(1,-1,-1)$; connectedness alone is insufficient. For pair supports, equations are $v_i+v_j=0$. Each connected bipartite component contributes one alternating parameter, whereas an odd cycle forces it to zero; an actual anchor removes the bipartite parameter. For larger supports ordinary incidence rank, not pair-graph intuition, governs the answer; all four triples on four roots give the full-rank matrix $J-I$. [CAL-G227]
+
+This is a faithful use of the inherited fibre criterion in §§2.2 and 9.2, with a different parameter domain. Log calibration coordinates are not probability weights, and there is no automatic mass row. For $AB,AC$, $(1,-1,-1)$ has nonzero coordinate sum but is a genuine kernel direction. Scaling bases $(1/5,1/4,1/3)$ by $(6/5,5/6,5/6)$ preserves both products. Imposing an invented normalization would remove a real ambiguity. Adding $(1,1,1)$ as an observation row would instead measure a new total product. Likewise unsigned product incidence is different from signed difference incidence in an offset model. The historical probability-fibre proposition retains its mass premise; it is not literally instantiated with $y$. [CAL-G234] [CAL-G232]
+
+At full rank a square row basis has a rational inverse, giving $u_i=\prod_j p_{B_j}^{(A_B^{-1})_{ij}}$ and the sampled values $\rho_{i,l}u_i$. Known-matrix rank is decidable by rational elimination. Positive rational powers of positive Cauchy inputs can be computed to any requested accuracy by root bisection and division. This proves pointwise computability under the oracle, not arbitrary-real consistency testing or a sampling guarantee. More interior levels only add ratios, leaving the same base kernel; even full rank does not identify the functions between samples. [CAL-G227]
+
+### 2.20 Unary counts, safe boundary probes and uniform function representations
+
+An interaction ratio can anchor a positive unary count without first knowing the absolute calibration. Suppose the interaction count has been recovered and supplies $\rho=a_2/a_1>1$ at two ordered commands. For a promised positive unary count $n$, solo absence values are $Z_l=(1-a_l)^n$. Define
+
+```math
+D(m)=1-Z_2^{1/m}-\rho(1-Z_1^{1/m}).
+```
+
+Then $\operatorname{sign}D(m)=\operatorname{sign}(m-n)$. With $c=n/m$, this is $H_c(a_2)-(a_2/a_1)H_c(a_1)$. The function $H_c$ is strictly concave when $c>1$, strictly convex when $c<1$, and vanishes at zero, so $H_c(z)/z$ respectively decreases or increases. The same nonzero half-integer cuts and doubling search recover $n$. The common calibration across unary and interaction supports is essential. Once $n$ is known, $a_l=1-Z_l^{1/n}$ gives an actual anchor for §2.19. If the unary count is zero the cuts all vanish; this fact alone does not rule out richer presence tests. [CAL-G236]
+
+Unit commands provide such a stronger record. At $x_i=1$ and all other coordinates zero, $Q$ equals zero if the unary support is positive and one if it is absent. An enclosure of error below $1/4$ separates these cases; it is a gapped decision, not a generic approximate zero test. Suppose a positive interaction $S\ni i$ is promised. Recover its count and the required ratios by the finite-panel procedure. If unary $i$ is present, the preceding cut recovers its count and then $r_i(x)=1-Q_i(x)^{1/n_i}$ evaluates each desired interior point. [CAL-G226]
+
+If unary $i$ is absent, set $x_i=1$. The reduced field on the other roots has positive raw probabilities at zero/interior commands and support multiplicities
+
+```math
+\widetilde n_T=n_T+n_{T\cup\{i\}}.
+```
+
+Routes containing $i$ lose one factor equal to one; distinct occurrences remain independent. The only possible empty-support contribution was the absent unary route, so no surely successful factor remains. Put $T=S\setminus\{i\}$, whose reduced count is positive. If $|T|\geq2$, recover $\widetilde n_T$ with its positive interaction panel. If $T=\{j\}$, decide unary $j$ at its corner, recover its count from the original interaction ratio if present, and use $\widetilde n_T=n_j+n_S$. Invert the reduced contrast to obtain $P_T=\prod_{j\in T}r_j(x_j)$ at fixed reference levels. Comparing the original contrast gives
+
+```math
+r_i(x_i)=P_S(x_i,x_T)/P_T(x_T).
+```
+
+Every denominator is positive. Finitely many requested points require finitely many distinct commands and terminating positive-count searches, without discovering the whole inventory or assuming a count ceiling. The stronger boundary record removes a reciprocal finite-interior gauge because endpoint-fixed interpolation does not preserve the added unit probes. It still does not identify unsampled function values. [CAL-G226]
+
+An all-command population oracle supplies a further representation result. Suppose it accepts any rational command and requested precision, consistently for the same $Q$. The boundary construction evaluates $r_i$ at rational inputs after a reusable finite setup. For rational $0<\epsilon<1$, sample dyadic grids and obtain intervals $[l_j,u_j]$ of width at most $\epsilon/8$ for the calibration values, with exact endpoint intervals. Refine the mesh until
+
+```math
+\max_j(u_{j+1}-l_j)<\epsilon/2.
+```
+
+Monotonicity certifies that the whole cell lies within $[l_j,u_{j+1}]$. Continuity on the compact interval ensures termination: true adjacent increments eventually fall below $\epsilon/4$, and the two enclosure errors add at most $\epsilon/4$. No supplied modulus is used. Let $a_j=\max_{h\leq j}l_h$ and interpolate these rational nondecreasing knots. Both that polygon and $r_i$ lie in each certified cell enclosure, so uniform error is below $\epsilon/2$. The polygon
+
+```math
+g(x)=(1-\epsilon/4)a(x)+(\epsilon/4)x
+```
+
+is strictly increasing, endpoint-fixed, and within $\epsilon$ uniformly. Repeating for $\epsilon=2^{-k}$ gives a uniform Cauchy representation relative to the response oracle, also supporting inputs given by real Cauchy names. Later accuracies may require new commands; a fixed finite panel has not acquired an arbitrary whole function. There is no world-uniform mesh, precision, runtime or empirical sample bound. [CAL-G235]
+
+### 2.21 Dependent within-route gates restore an exact count ambiguity
+
+The preceding interaction theorem assumes a separable per-route success law. Its failure under dependent gates can be proved while retaining coordinate-only calibration and independence **between** routes. Start with $n\geq1$ independent product $AB$ routes, with absence $Q_n(a,b)=(1-ab)^n$. For every integer $m\geq n$, set $c=n/m\leq1$ and
+
+```math
+F_c(a,b)=H_c(ab)=1-(1-ab)^c.
+```
+
+This is a joint threshold CDF with margins $H_c$. It is grounded, continuous, has total mass one, and on the open square has mixed derivative
+
+```math
+\partial_a\partial_bF_c=c(1-ab)^{c-2}(1-cab)>0.
+```
+
+Integrating on compact rectangles proves nonnegative increments; boundary rectangles follow by continuity. Draw a threshold pair $(X,Y)$ from this fixed distribution and set gates to $1_{X\leq a},1_{Y\leq b}$. Each sample-path gate depends only on its own command. Take $m$ independent copies. Their endpoint absence is $(1-H_c(ab))^m=(1-ab)^n$ at every command. Composing $H_c$ with any baseline coordinate homeomorphism preserves all the stated marginal conditions. This is one common threshold probability space across commands, not separately chosen tables at each command. [CAL-G220]
+
+Uniformizing margins identifies the established Joe copula:
+
+```math
+C_\theta(u,v)=1-\left[(1-u)^\theta+(1-v)^\theta
+ -(1-u)^\theta(1-v)^\theta\right]^{1/\theta},
+\qquad \theta=1/c=m/n\geq1.
+```
+
+The parameter direction matters. $F_c$ itself has nonuniform margins and is not the copula. The source's named-family identification rests on targeted primary software formula and generator inspections; the ordinary CDF proof above is self-contained. The original Joe paper was checked bibliographically there, not read in full, and no new external inspection is claimed here. [CAL-G220] [CAL-G222]
+
+These alternatives have exactly the compatible count set $m\geq n$ under route independence and shared coordinate marginal maps, even if the joint law differs between routes. In the homogeneous case, equality of endpoint powers forces joint success $J=H_{n/m}(ab)$, and unit faces force both margins to be $H_{n/m}$. If $m<n$, put $c>1$ and $a=b=1-\epsilon$. The required neither-gate cell is $\epsilon^c[2-(2-\epsilon)^c]$, negative for sufficiently small positive $\epsilon$. For heterogeneous joint laws with the same margins, the face equation still forces those margins. Each route then has failure probability at most $2\epsilon^c$ by the union bound, so total absence is at most $2^m\epsilon^n$. The target is $\epsilon^n(2-\epsilon)^n$, larger when $m<n$ and $\epsilon<2-2^{m/n}$. This contradiction proves necessity; the homogeneous construction proves sufficiency. Occurrence-specific marginal maps or dependence between routes are outside this converse. [CAL-G220]
+
+The probability-surface/CDF distinction is visible numerically without simulation. For $c=1/2,a=b=1/2$, the four gate cells are $1-\sqrt3/2$, two copies of $(\sqrt3-\sqrt2)/2$, and $\sqrt2-\sqrt3/2$, all positive; two such independent routes have absence $3/4$, matching one product route. In contrast, $H_2(ab)=2ab-a^2b^2$ is a legitimate intervention-indexed probability in $[0,1]$, but at $a=b=3/4$ the forced CDF table is $(207,33,33,-17)/256$. Its rectangle $(3/4,7/8]^2$ has mass $-41/4096$. Coordinatewise monotonicity is not the two-increasingness required of a joint CDF, and monotone marginal reparameterization cannot repair a negative rectangle. [CAL-G220]
+
+The four-value determinant still selects $n$ on these endpoint data **under the separable model**. For the actual $m>n$ dependent alternative, the inferred per-route matrix is not rank one; the strict determinant rejects it from that narrower class. Neither a finite panel nor the full fresh endpoint law certifies factorization against the enlarged class. With fresh conditional sampling, equality of $Q$ extends to every adaptive endpoint transcript by coupling; with retained thresholds, a new joint observation becomes available, as the next section shows. This countermodel isolates within-route dependence, rather than duplicating the distinct shared-gate, cross-talk or support-specific-calibration failures. [CAL-G220] [CAL-G222]
+### 2.22 Retained thresholds: a different joint record and its sampling cost
+
+Holding an inventory does not mean holding its random gates. A retained-threshold experiment draws one vector of route thresholds, probes two commands on that same vector, and separately reads both endpoints without output carryover or state mutation. Freshly redrawing thresholds would give the product of endpoint marginals; repeating the same command on unchanged thresholds would merely repeat one bit. The additional record here is the cross-command joint law. Neither physical retention, reset, nor selectable true-rate coordinates is established by this mathematical specification. [CAL-G250]
+
+A useful all-command statement explains what the new record can identify. Compare $n$ product $AB$ routes with $m$ independent routes having arbitrary within-route threshold laws, but common coordinate marginal maps. Equality of all fresh endpoint laws forces these maps on unit faces to be $H_c$, $c=n/m$. Let $J_l(a,b)$ be route $l$'s joint-success probability. Suppose the two-face retained law also agrees for every $a,b$. Then
+
+```math
+\prod_{l=1}^m(1-J_l(a,b))=(1-ab)^n,
+\qquad
+\prod_{l=1}^m[1-H_c(a)-H_c(b)+J_l(a,b)]
+=(1-a)^n(1-b)^n.
+```
+
+Here is an explicit ordinary derivation of the small-command/AM–GM argument described in the source audit. At $a=b=t\downarrow0$, nonnegative $J_l$ and the first product imply $J_l=O(t^2)$ and $\sum_lJ_l=nt^2+O(t^4)$. Expand the known marginal function $H_c(t)=ct+c(1-c)t^2/2+O(t^3)$ in the second product. Its quadratic coefficient is $2n^2-nc$, whereas that of $(1-t)^{2n}$ is $2n^2-n$. Therefore $c=1$ and $m=n$. For arbitrary interior $a,b$, put $f_l=1-J_l$, $g_l=1-a-b+J_l$, $A=1-ab$, $B=(1-a)(1-b)$. The products are $A^n,B^n$, and $f_l+g_l=A+B$. Both arithmetic means are at least their geometric means $A,B$, and their sum is exactly $A+B$; equality in AM–GM forces every $f_l=A$ and $J_l=ab$. No differentiability of the unknown joint laws was used. This written derivation supplies the argument from the audit's stated hypotheses; it is not a claim to have received or re-executed its unselected predecessor author file. [CAL-G250]
+
+A fixed finite grid cannot certify factorization everywhere. Choose smooth nonzero bumps $\phi,\psi$ supported strictly between successive queried coordinate levels. The joint CDF $ab+\epsilon\phi(a)\psi(b)$ has uniform margins and positive density $1+\epsilon\phi'(a)\psi'(b)$ for sufficiently small $|\epsilon|$. It agrees with the product CDF at every grid corner, hence on all grid-cell probabilities and the entire finite threshold transcript, while differing between sampled levels. This is a finite-grid ambiguity at a fixed count, not an unrestricted adaptive lower bound. The audit also reports a high-command finite-panel count alias; its full numerical construction is not supplied by that selected audit, so it is retained as reported negative context rather than used as an unverified premise here. [CAL-G250]
+
+For a sampling lower bound, use the explicit worlds already constructed in §2.21: $n$ product-uniform routes versus $m=n+1$ independent Joe threshold pairs with $c=n/m$. Their fresh endpoint function agrees everywhere. At the fixed pair of face commands $(t,1),(1,t)$ with $t=1/(3m)$, let $p=1-t$, $A=p^n$, and
+
+```math
+S=2p^c-(1-t^2)^c,\qquad \Delta=S^m-A^2.
+```
+
+In order no/no, no/yes, yes/no, yes/yes, the pair laws are
+
+```math
+P_0=(A^2,A(1-A),A(1-A),(1-A)^2),\qquad
+P_1=P_0+(\Delta,-\Delta,-\Delta,\Delta).
+```
+
+The difference is positive. Indeed $D=2-(1+t)^c-(1-t)^c>0$ by strict concavity, and Taylor's integral remainder gives $D\leq c(1-c)t^2p^{c-2}$. Since $S-p^{2c}=p^cD$ and both bases lie in $[0,1]$, the difference-of-powers inequality yields
+
+```math
+0<\Delta\leq m p^cD\leq t^2p^{-2}\leq\frac4{25m^2}.
+```
+
+Bernoulli's inequality and its reciprocal version give $2/3\leq A\leq6/7$, hence each reference cell is at least $1/49$. The Joe cells are also positive, with off-diagonal positivity following from $S<p^c$. Using $\log z\leq z-1$,
+
+```math
+0<d=\operatorname{KL}(P_1\Vert P_0)
+\leq\chi^2(P_1\Vert P_0)
+\leq196\Delta^2\leq\frac{3136}{625m^4}.
+```
+
+These are finite inequalities, not asymptotic approximations. Their orientation places the denominator under the product reference and the later expected cost under the Joe alternative. [CAL-G264]
+
+Treat the whole pair as one atomic observation action; its second command is not selected after seeing the first outcome. A common policy may adaptively allocate such independent pairs and arbitrary fresh single-endpoint probes. At every common history, the policy kernel is the same; fresh endpoints have the same conditional law and contribute zero KL. A pair contributes $d$. Pad after stopping with a common symbol, and let $N_T$ count pairs through slot $T$. The finite-prefix likelihood calculation gives
+
+```math
+\operatorname{KL}(P_1^{\leq T}\Vert P_0^{\leq T})=d\,\mathbb E_1N_T.
+```
+
+Require unconditional terminal correctness: the reference stops and accepts with probability at least $1-\alpha$, and the alternative stops and rejects with probability at least $1-\alpha$, where $0<\alpha<1/2$. Apply binary data processing to the event of stopping and rejecting by $T$, then let $T\to\infty$. Monotone convergence for costs and lower semicontinuity of binary KL give
+
+```math
+\mathbb E_1N_\infty\geq\frac{625}{3136}(n+1)^4
+ \operatorname{kl}(1-\alpha,\alpha).
+```
+
+Infinite expectation satisfies the bound trivially. Nontermination consumes failure probability; accuracy only conditional on termination is insufficient. At $\alpha\geq1/2$, a no-data fair guess invalidates any positive lower bound. This proof uses finite prefixes rather than an unproved stopping-time interchange. The source records targeted ancestry in standard sequential change-of-measure arguments, and its independently reviewed upper comparison uses the same pair design plus fresh diagonal observations. That imported sufficient bound, $200000000(n+1)^4\log(8/\alpha)$ of each type, is reported source-relative here; its full upper theorem is not among these selected bodies. The lower proof stands independently. [CAL-G264] [CAL-G265] [CAL-G263]
+
+#### A uniform bound over rates chosen before each pair
+
+Allow arbitrary face rates $a,b\in[0,1]$, chosen using completed previous pairs but before either current bit. Write $x=1-a$, $y=1-b$, $X=x^c$, $Y=y^c$, $A=x^n$, $B=y^n$, $z=x+y-xy$, and $S=X+Y-z^c$. The pair laws still have common margins $A,B$ and a checkerboard difference $\Delta=S^m-(XY)^m$. For interior commands,
+
+```math
+\chi^2(P_1\Vert P_0)=\frac{\Delta^2}{A(1-A)B(1-B)}=\rho_n(a,b)^2.
+```
+
+Literal boundary commands give identical laws and divergence zero; the quotient is not evaluated at its zero denominator. In fact, as interior $a=b\to1$ at fixed $n$, chi-square tends to $(2-2^c)^{2m}>0$, so continuity of this divergence at the boundary must not be assumed. [CAL-G258]
+
+For $a,b\leq1/2$, the concavity gap $g=S-XY$ has the exact positive integral
+
+```math
+g=c(1-c)\int_0^{xb}\!\int_0^{ya}(xy+s+t)^{c-2}\,dt\,ds
+\leq c(1-c)ab(xy)^{c-1}.
+```
+
+Thus $h=g/(xy)^c\leq1/m$, and the difference of powers gives $\Delta\leq e c[ab/(xy)](xy)^n\leq4eabAB$. Put $u=-n\log x$, $v=-n\log y$. Since $a\leq u/n$, $b\leq v/n$,
+
+```math
+n^4\rho_n^2\leq16e^2 f(u)f(v),\qquad
+f(u)=\frac{u^2}{e^u-1}\leq2.
+```
+
+This retains the endpoint decay that a constant variance denominator would lose. [CAL-G258]
+
+For the other rate region, use the positive binomial expansion $H_c(z)=\sum_{k\geq1}p_kz^k$, with $p_k=(-1)^{k+1}\binom ck>0$ and $\sum p_k=1$ by monotone convergence at one. This is the classical Sibuya distribution. If $K$ has these masses, the **bounded** variables $F=1-a^K$, $G=1-b^K$ satisfy $\mathbb EF=X$, $\mathbb EG=Y$, $\mathbb EFG=S$. Concave chord bounds give
+
+```math
+\operatorname{Var}F=X[2-(1+a)^c-(1-a)^c]\leq2(1-c)Xa,
+\qquad g\leq2(1-c)\sqrt{XYab}.
+```
+
+This applies Cauchy–Schwarz to bounded variables, requiring no moment of $K$. Since $m(1-c)=1$ and $1-A\geq a$, $1-B\geq b$, it follows that $\rho_n\leq2[S/\sqrt{XY}]^n$. A concavity comparison with exponent $1/(2c)\in[1/2,1]$ gives
+
+```math
+S\leq X+Y-\sqrt{X^2+Y^2-X^2Y^2},\qquad
+\frac S{\sqrt{XY}}\leq\frac{2+XY}{2+\sqrt{2-XY}}.
+```
+
+For the first inequality, use $U^q+V^q\geq(UV)^q+(U+V-UV)^q$ for $0<q\leq1$, $U=X^2,V=Y^2$, then take the corresponding positive root. The second follows by rationalizing and using $X+Y\geq2\sqrt{XY}$ and $X^2+Y^2\geq2XY$. If either rate exceeds $1/2$, then $XY<3/4$, and the ratio is at most $11/12$. Hence $\chi^2\leq4(11/12)^{2n}\leq4e^{-n/6}$. Maximizing $n^4e^{-n/6}$ at 24 bounds its scaled value by $4(24/e)^4<32768$. Together with the central region and literal boundaries this proves
+
+```math
+\operatorname{KL}(P_1^{a,b}\Vert P_0^{a,b})
+\leq\chi^2(P_1^{a,b}\Vert P_0^{a,b})\leq32768/n^4.
+```
+
+The same finite-prefix and terminal-event argument now gives $\mathbb E_1N\geq(n^4/32768)\operatorname{kl}(1-\alpha,\alpha)$ even with adaptive selection of rates between completed pairs. Its all-rate bound does not by itself cover selecting the second command from the first bit, longer retained words, or shared latent vectors across replicas. [CAL-G258]
+
+The source also states sharp asymptotic information constants. They follow from the displayed exact laws and split envelope, as can be seen without importing an unseen appendix. On compact positive ranges of $u,v$, choose $a=1-e^{-u/n}$, $b=1-e^{-v/n}$. The integral expression gives $g=uv/n^3+o(n^{-3})$ uniformly, and the power difference gives $\Delta=uv e^{-(u+v)}/n^2+o(n^{-2})$. Therefore $n^4\chi^2\to f(u)f(v)$. All reference cells are bounded away from zero on such a compact set, so expanding $(1+t)\log(1+t)$ gives $n^4\operatorname{KL}\to f(u)f(v)/2$. Outside compacts, the central envelope tends to zero if either $u$ or $v$ tends to zero or infinity, while the other region has exponentially vanishing scaled bound. Thus both global suprema have these same limits. The unique positive maximizer of $f$ solves $u=2(1-e^{-u})$: the difference of the two sides is strictly concave, initially increasing and eventually negative, so it has exactly one positive zero. The resulting constants are approximately $0.4193990202$ for chi-square and half that for forward KL, as recorded in the source. This is asymptotic optimization for this two-world, two-face interface, not finite-$n$ optimality or a sharp minimax sample constant. [CAL-G258] [CAL-G259]
+
+### 2.23 Finer retained-face observations separate chi-square from forward KL
+
+An ideal stronger observation returns the two minimum thresholds of one retained vector. Let $X=1-T_A$, $Y=1-T_B$. Every coordinate-face comparison on that vector determines these minima in the limit, but a finite number of binary probes does not ordinarily reveal an exact real. In the same two worlds,
+
+```math
+F_0(x,y)=x^ny^n,\qquad F_1(x,y)=S(x,y)^m,
+\qquad S=x^c+y^c-(x+y-xy)^c.
+```
+
+Both margins are Beta$(n,1)$. The expression follows by taking the probability that every route's thresholds exceed $1-x,1-y$; route independence raises the one-route tail to the appropriate power. On the open square, putting $z=x+y-xy$ gives positive derivatives
+
+```math
+S_x=c[x^{c-1}-(1-y)z^{c-1}],\quad
+S_y=c[y^{c-1}-(1-x)z^{c-1}],\quad
+S_{xy}=cz^{c-2}[1-c(1-x)(1-y)].
+```
+
+The densities are $f_0=n^2x^{n-1}y^{n-1}$ and $f_1=m(m-1)S^{m-2}S_xS_y+mS^{m-1}S_{xy}>0$. Integrating over increasing compact interior rectangles gives total mass one by the continuous CDF and its boundary values. The continuous margins put no mass on boundary lines, so no singular part is missing. The two laws are mutually absolutely continuous. [CAL-G277]
+
+Nevertheless their chi-square divergence is infinite. For $E_r=\{X\leq r,Y\leq r\}$, set $L_n(r)=[2-(2-r)^c]^m$ and $\lambda_n=(2-2^c)^m>0$. Then
+
+```math
+P_0(E_r)=r^{2n},\qquad P_1(E_r)=r^nL_n(r),\qquad
+\frac{P_1(E_r)}{\sqrt{P_0(E_r)}}\longrightarrow\lambda_n>0.
+```
+
+If the likelihood ratio $\Lambda=f_1/f_0$ were square-integrable under $P_0$, localized Cauchy–Schwarz would bound that ratio by $[\int_{E_r}\Lambda^2\,dP_0]^{1/2}\to0$, since the sets shrink to a null point. This contradiction proves infinite chi-square. It is a specialization of positive Joe tail dependence against independence, not a new general copula theorem. [CAL-G277]
+
+There is a finite-resolution witness. Put $r_k=2^{-k}$, $h=2^{-n}$, and partition into shells $E_{r_k}\setminus E_{r_{k+1}}$ for $0\leq k<K$, followed by $E_{r_K}$. Their probabilities are
+
+```math
+p_k=r_k^{2n}(1-h^2),\qquad
+q_k=r_k^n[L_n(r_k)-hL_n(r_{k+1})],
+\qquad p_K=r_K^{2n},\quad q_K=r_K^nL_n(r_K).
+```
+
+Since $L_n$ is increasing and at least $\lambda_n$, every shell contributes $q_k^2/p_k\geq d_n=\lambda_n^2(1-h)/(1+h)>0$, and the final cell contributes at least $\lambda_n^2$. Therefore the partition chi-square is at least $Kd_n+\lambda_n^2-1$. Its shell contributions converge to $d_n$, so division by $K$ converges to $d_n$ by Cesàro averaging. Refinement makes chi-square nondecreasing by weighted Cauchy–Schwarz. At most $2K$ face probes at commands $1-2^{-k}$ on the **same** vector determine this partition. Each finite transcript has finite chi-square because it has finitely many cells and absolute continuity; unboundedness is the limit $K\to\infty$ at fixed $n$, not a uniform joint bound in $n,K$. [CAL-G277]
+
+Forward KL remains finite. The derivative formulas and $xy\leq z^2$, $S\leq1$ imply $S_x\leq c/x$, $S_y\leq c/y$, $S_{xy}\leq c/(xy)$. Thus
+
+```math
+f_1\leq\frac{C_n}{xy},\qquad C_n=n^2+\frac{n}{n+1},\qquad
+\log\Lambda\leq\log\left(1+\frac1{n(n+1)}\right)-n\log x-n\log y.
+```
+
+The shared Beta margins give $\mathbb E_1[-\log X]=\mathbb E_1[-\log Y]=1/n$, so the positive part is integrable with expectation at most $2+\log(1+1/[n(n+1)])$. On $\Lambda<1$, the negative part integrates to at most $\int f_0[-\Lambda\log\Lambda]\leq1/e$. Consequently
+
+```math
+0<\operatorname{KL}(P_1\Vert P_0)
+\leq2+\log\left(1+\frac1{n(n+1)}\right)
+\leq2+\log(3/2).
+```
+
+This includes $n=1$. At the separate equality case $m=n,c=1$, both divergences are zero. Data processing keeps every finite retained-face transcript's forward KL below the same envelope even while its chi-square can grow without bound. Failure of the old two-probe chi-square bound for longer words neither refutes its own sample lower bound nor proves a better count-testing exponent for this stronger instrument. No sharp KL asymptotic, reverse-KL claim, physical precision budget, or access to individual route thresholds follows. [CAL-G277]
+
 ## 3. The information hidden between target and audit marginals
 
 Let target $`\Theta`$, source type $`T`$, report $`Y`$, and verifier $`V`$ be binary. The target and type are independent and uniform. The report is $`9/10`$-accurate for a good source and $`1/2`$-accurate for a bad source. The verifier is $`4/5`$-accurate and conditionally independent of the report given $`(\Theta,T)`$. Define
@@ -3949,6 +4613,26 @@ Section 9.9 incorporates the [common-observation proof and controls][common-obse
 
 The [policy-equivalence review][micro-equivalence-review] and [static-menu review][static-license-review] are reconciled with the already developed controlled-restoration theorem in Collective Inquiry §7.11. The [generated-process review][generated-process-review], [recursive-action review][recursive-action-review], [pathwise flattening review][physical-flattening-review] and [measurable decoder review][measurable-physical-review] distinguish planned blocks, stopped outcomes, recorded acquisitions and physical actions. The proofs above preserve their nonempty-block, freshness, true-retention and index conditions. The [root review][root-cold-review] and [formalization register][formalization-scope] retain the finite-model and standard-Borel boundaries of their respective arguments; an ordinary statistical passage is not certified by a neighboring formal module. Source code, historical target counts and execution logs remain independently scoped evidence, not newly executed tests or new incorporation credit for results already present in the accepted works.
 
+### Calibrated identification: ancestry and evidence boundary
+
+Sections 2.9–2.23 consolidate exact public source editions concerning calibrated route histograms, held latent mixtures, calibration uncertainty, interaction reconstruction and retained-threshold information. Their subject is the information carried by a declared mathematical observation channel. A route occurrence, a latent component, a gate threshold, an exact population probability and an empirical observation are different objects. The results do not authenticate actual source ownership, admissible interventions, physical or psychological actuators, complete productive adequacy, or an original-source interpretation. The historical philosophical application is conditional on those additional commitments; the stochastic constructions do not establish them. [CAL-G089] [CAL-G090] [CAL-G199] [CAL-G222] [CAL-G250]
+
+The general fibre criterion, finite predictive closure and moment-defect arguments are already developed in §§2.1–2.5. The continuation source is used here for the diagonal held-propensity specialization and for its comparison of observation menus, without claiming another origin for the general theorem. Boolean-lattice inversion, unique factorization, the Chinese remainder theorem, primitive divisors, Vandermonde/Prony reconstruction, positive moment matrices, concentration inequalities, linear row-space criteria, the Joe and Sibuya families, and likelihood-ratio change of measure are established mathematical antecedents. The new source-specific content lies in the stated experiment maps, integer or function targets, admissible fibres, constructive designs and scoped counterexamples. The audits distinguish actual targeted source inspection from uninspected bibliographic ancestry; this exposition does not claim fresh reading of those external ancestors. In particular, the primitive-divisor and Joe attributions retain their source-reported inspection scope, and the archived probability-record proposition is not transported with a fictitious normalization on log calibration variables. [CAL-G086] [CAL-G095] [CAL-G104] [CAL-G116] [CAL-G118] [CAL-G126] [CAL-G232] [CAL-G234] [CAL-G265]
+
+The exact algebraic identification report and the later finite Bernoulli-model report have separate assurance boundaries. The former reports a kernel-checked inverse conditional on product equations; the latter reports a kernel-checked forward construction and histogram passage. Both report their original Lean environment and ordinary dependencies. Neither report identifies a real calibration, independence architecture or true occurrence individuation, and neither makes the ordinary arguments newly written here kernel theorems. Earlier prose reporting that no formal execution was then available is not silently upgraded by a later report for a different exact artifact. No original source program, scientific control, formal import, compilation or replay was executed in preparing this exposition. [CAL-G075] [CAL-G083] [CAL-G089] [CAL-G090]
+
+The grouped source audits and reading guides keep the contracts separate: exact rational inputs, arbitrary real population values, approximation oracles, independent groups, and fixed versus unknown labels. Their historical scripts and external-source retrievals are evidence about their own versions. The earlier crossed-rate derivation retains its pending reconciliation/review wording; the later theorem supplies the stronger stated argument without turning the earlier status into an unrecorded pass. The grouped calibration source in this selection is an independent review body. Its primitive-signature and scale arguments are written out here, and the explicit fixed-command Cauchy witness is an expository realization of its reported obstruction. Its unselected author files and independent derivations are not represented as received. [CAL-G113] [CAL-G114] [CAL-G115] [CAL-G116] [CAL-G123] [CAL-G124] [CAL-G125] [CAL-G126] [CAL-G131] [CAL-G132] [CAL-G155]
+
+That review records specific corrections: ordered Bernoulli-product words were distinguished from their exchangeable binomial count law, atom one was excluded from the positive-count rational decoder, and endpoint collapse was made explicit. Its own feasibility fixture at command $1/2$, base $(3/4)^{12}$ and error band $1/4$ had an incorrect expected set, corrected to $\{3,4\}$ without changing an author theorem. It reports 14 author-control families and 33,266 independent exact assertions; those counts are bounded historical diagnostics, not this edition's verification or a measure of general validity. The review-only record also mentions a fresh-resampling counterfeit with calibration deviation $1/8$; its unprovided full numerical fixture is not manufactured here. The general fresh-resampling failure and the distinct fixed-command approximation obstruction have explicit arguments in §§2.13 and 2.15. [CAL-G155]
+
+The interaction sources preserve separate main-law and finite-panel scopes. Their historical exact checks include masked inversion, gauges, correlated or cross-talk countermodels, half-integer searches, graph-rank examples, safe boundary reductions and polygonal enclosures. The reported 36,604 main assertions, 548 panel assertions and twelve later control families do not provide universal precision bounds or samples from an apparatus. A finite observed maximum refinement in those fixtures is not the theorem's runtime. The reading guides and audits distinguish positive-support promises from absence decisions, fixed finite grids from all-command oracles, and model-conditional count recovery from certification of separability. Equivalent author and parent derivations of the unary cut receive one mathematical attribution, not multiple discoveries. [CAL-G195] [CAL-G196] [CAL-G197] [CAL-G199] [CAL-G230] [CAL-G231] [CAL-G232] [CAL-G236]
+
+The dependent-gate audit credits the established Joe family and records targeted primary software checks, including a retrieved formula whose missing outer exponent was rejected in favor of corroborating formulas and direct algebra. It did not establish whether that defect originated in the source or its rendering. The retained-threshold audit distinguishes held inventories from held stochastic states and a fixed-grid countermodel from an adaptive impossibility theorem. The all-command small-command/AM–GM proof and finite-grid perturbation in §2.22 are written derivations of the audit's stated mechanisms. Its reported high-command count alias remains attributed context because the selected audit does not supply its full table. No full-body receipt is claimed for that unselected ancestor. [CAL-G222] [CAL-G250]
+
+For replay sampling, the source reports a failed first control invocation due to a missing output directory and an interrupted exact-log calculation due to denominator growth. Rigorous outward dyadic rounding resolved that implementation problem; no mathematical assertion failure was reported at those interruptions. The retained 2,043-assertion run and finite adaptive trees are historical corroboration, not a proof for arbitrary stopping rules. The finite-prefix proofs above carry that quantifier. The final all-rate review record reports a separately bound independent pass, and preserves an earlier Sibuya interval-overlap check strengthened to full containment. Its final reviewer, earlier contributor note and later packaging files have different scopes. None is a review of this new assembled exposition. [CAL-G261] [CAL-G263] [CAL-G264] [CAL-G265] [CAL-G259]
+
+The all-rate source's asymptotic appendix is not separately received here; the compact expansion and escape-bound proof in §2.22 make the stated conclusion directly assessable from the selected exact laws. Its imported broad wrong-count upper bound remains explicitly source-relative, with no newly claimed receipt of that theorem's complete proof. The full-threshold-readout source still states that independent review must be bound before its acceptance; its chi-square and KL arguments are supplied in §2.23, and its historical pending wording is preserved. Its contextual reference to a separate within-pair adaptive successor is not merged into the preselected-pair contract proved here. Review, mathematical incorporation, practical implementation, owner adoption and publication remain separate. [CAL-G258] [CAL-G259] [CAL-G265] [CAL-G277]
+
 ### References
 
 1. Orthemology. *Continuation-Complete Orthings: Sharp information loss, minimal predictive memory, and safe strategic composition*, finite predictive closure, sharp moment recovery, approximate memory and continuation-preserving reduction, treated in §§2.2–2.6. Its reduction identities and strategic arguments are treated in [Physical Realisation, §5.4](physical-realisation-and-continuation.md#54-what-an-eliminated-variable-can-leave-behind) and [Collective Inquiry, §5](collective-inquiry-and-strategic-coordination.md#5-strategically-sufficient-information-and-hard-coordination). [Exact source][1].
@@ -4387,3 +5071,113 @@ The following exact source editions supply the arguments, recorded failures, rep
 [R68-S066]: https://api.github.com/repos/theislampill/orthemology/git/blobs/655900e500dbc8980b88db82fe62044350c53037
 [R68-S067]: https://api.github.com/repos/theislampill/orthemology/git/blobs/db8ba1cdb4c7d92dcc5d4506048c6641c2e5701f
 [R68-S068]: https://api.github.com/repos/theislampill/orthemology/git/blobs/d09f92b384591a25e7d12747ee2122513331cc78
+
+## Source records for calibrated identification and observation processes
+
+Each entry names one exact public source body. Alias paths, provider coordinates, original inventory roles and byte identities are preserved in the accompanying source map. These references do not equate source bodies with new theorems or transfer historical execution/review status to this exposition.
+
+- [CAL-G075] — **Kernel-checked exact calibrated identification**. Exact public source edition.
+- [CAL-G083] — **Kernel-checked finite route probability and histogram identification**. Exact public source edition.
+- [CAL-G086] — **Instrument design beyond two root indices**. Exact public source edition.
+- [CAL-G089] — **Productive ground identification from endpoint observations**. Exact public source edition.
+- [CAL-G090] — **Conditional identification of direct productive routes**. Exact public source edition.
+- [CAL-G095] — **One rational calibration for every finite root signature**. Exact public source edition.
+- [CAL-G100] — **What an exact rational readout says about finitude**. Exact public source edition.
+- [CAL-G101] — **A decoder without integer factorisation**. Exact public source edition.
+- [CAL-G103] — **Observation precision and extensions of the histogram type**. Exact public source edition.
+- [CAL-G104] — **Countable input signatures and finite productive inventories**. Exact public source edition.
+- [CAL-G105] — **Exact identification with unknown finite input signature**. Exact public source edition.
+- [CAL-G113] — **What the grouped observation preserves, and what it does not**. Exact public source edition.
+- [CAL-G114] — **Grouped-mixture sibling: reading and replay**. Exact public source edition.
+- [CAL-G115] — **Grouped repeats identify finite mixtures of calibrated histograms**. Exact public source edition.
+- [CAL-G116] — **Source return, ancestry, and dependency record**. Exact public source edition.
+- [CAL-G118] — **Targeted inherited source return**. Exact public source edition.
+- [CAL-G119] — **Bounded-count recovery with certified arithmetic**. Exact public source edition.
+- [CAL-G123] — **Process assumptions and the unknown-label obstruction**. Exact public source edition.
+- [CAL-G124] — **Read first**. Exact public source edition.
+- [CAL-G125] — **Finite-catalogue grouped sampling with an explicit calibration floor**. Exact public source edition.
+- [CAL-G126] — **Primary ancestry and source-return record**. Exact public source edition.
+- [CAL-G129] — **Calibration design changes the identification problem**. Exact public source edition.
+- [CAL-G131] — **Root independent derivation: crossed-code support certificate**. Exact public source edition.
+- [CAL-G132] — **Label-preserving tensor versus count compression**. Exact public source edition.
+- [CAL-G134] — **Polynomial sampling and uniform calibration error**. Exact public source edition.
+- [CAL-G137] — **Sharp global calibration threshold for fixed pure counts**. Exact public source edition.
+- [CAL-G141] — **Failed shortcuts and retained boundaries**. Exact public source edition.
+- [CAL-G142] — **Arbitrary adaptive root rates cannot improve the bounded-count exponent**. Exact public source edition.
+- [CAL-G155] — **Independent digest-bound review: grouped count/calibration invariants**. Exact public source edition.
+- [CAL-G195] — **Exact controls and their limits**. Exact public source edition.
+- [CAL-G196] — **Four isolated interaction values identify a positive multiplicity**. Exact public source edition.
+- [CAL-G197] — **Read first**. Exact public source edition.
+- [CAL-G198] — **Interaction supports remove the coordinate-calibration gauge**. Exact public source edition.
+- [CAL-G199] — **Source ancestry, transport, and negative mappings**. Exact public source edition.
+- [CAL-G220] — **Coordinate-only dependent gates restore an interaction-count ambiguity**. Exact public source edition.
+- [CAL-G222] — **Source and transport audit**. Exact public source edition.
+- [CAL-G226] — **Boundary probes remove the interior finite-panel gauge**. Exact public source edition.
+- [CAL-G227] — **Finite interior calibration is governed by support-incidence rank**. Exact public source edition.
+- [CAL-G230] — **Exact author controls**. Exact public source edition.
+- [CAL-G231] — **Read first**. Exact public source edition.
+- [CAL-G232] — **Ancestry, observation contracts and nonduplication**. Exact public source edition.
+- [CAL-G234] — **Linear-record inheritance without a false probability constraint**. Exact public source edition.
+- [CAL-G235] — **Uniform approximation from an effective response oracle**. Exact public source edition.
+- [CAL-G236] — **A sampled interaction ratio identifies a positive unary count**. Exact public source edition.
+- [CAL-G250] — **Ancestry, source inspection and rejected transports**. Exact public source edition.
+- [CAL-G258] — **Arbitrary two-face rates retain the fourth-power replay barrier**. Exact public source edition.
+- [CAL-G259] — **Final review and freeze status**. Exact public source edition.
+- [CAL-G261] — **Exact and certified-algebraic controls**. Exact public source edition.
+- [CAL-G263] — **Read first**. Exact public source edition.
+- [CAL-G264] — **A matching-exponent lower bound for the fixed paired-face replay instrument**. Exact public source edition.
+- [CAL-G265] — **Source, experiment and proof audit**. Exact public source edition.
+- [CAL-G277] — **Full face-threshold readout has infinite chi-square but finite forward KL**. Exact public source edition.
+
+[CAL-G075]: https://api.github.com/repos/theislampill/orthemology/git/blobs/2382221a307c00755ebf677b391192533e115cc4
+[CAL-G083]: https://api.github.com/repos/theislampill/orthemology/git/blobs/b7b25c98126d1fe8ee34fa1d60199614a01a7582
+[CAL-G086]: https://api.github.com/repos/theislampill/orthemology/git/blobs/88685df4e519bdc5c6fc45f91ee57f35acd5bf0a
+[CAL-G089]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f66410ddbd48ea61d0ae50f2a13956887e3b64ee
+[CAL-G090]: https://api.github.com/repos/theislampill/orthemology/git/blobs/b8e6bb7ed5f6a1f26c4b62fea2b223767b001935
+[CAL-G095]: https://api.github.com/repos/theislampill/orthemology/git/blobs/5fa0a9c38677e23776e8ebf3e8be155874055a14
+[CAL-G100]: https://api.github.com/repos/theislampill/orthemology/git/blobs/5b362016c4fe1e78ef5fdc69d60feb6e54cfc26d
+[CAL-G101]: https://api.github.com/repos/theislampill/orthemology/git/blobs/5dffd429d871c8a3a4793f9a5d4261cc6f316870
+[CAL-G103]: https://api.github.com/repos/theislampill/orthemology/git/blobs/a09d4630e6091e9ff692de8a17672cafd5d2f8d7
+[CAL-G104]: https://api.github.com/repos/theislampill/orthemology/git/blobs/67e09f4b53aeb36e933afb7bf2ecae36df8385cc
+[CAL-G105]: https://api.github.com/repos/theislampill/orthemology/git/blobs/ea0fb12b4eafd2ac9c3b1edfb9e31b4762d79d26
+[CAL-G113]: https://api.github.com/repos/theislampill/orthemology/git/blobs/2003b34dc885babe9f655de9b34fdad2b3ad45eb
+[CAL-G114]: https://api.github.com/repos/theislampill/orthemology/git/blobs/791271d01d3047e2837d2850fe34d67e548cbfc6
+[CAL-G115]: https://api.github.com/repos/theislampill/orthemology/git/blobs/804afc7e0636df2ad2ec200b446402974d9aff56
+[CAL-G116]: https://api.github.com/repos/theislampill/orthemology/git/blobs/28d5f068f52d438d542dfce8476e128efd879bc2
+[CAL-G118]: https://api.github.com/repos/theislampill/orthemology/git/blobs/723e3d5292a2c51eb83c1317bc24ad6d827f8e1a
+[CAL-G119]: https://api.github.com/repos/theislampill/orthemology/git/blobs/6a0ee4e1275efeaaf32ba03520accd2b300ab4f8
+[CAL-G123]: https://api.github.com/repos/theislampill/orthemology/git/blobs/c0675e2cd36258fbb6de5b28ffae7a8ff0d1d52c
+[CAL-G124]: https://api.github.com/repos/theislampill/orthemology/git/blobs/b4f618e474a0ce57f558163bc1f46ed616e8a18d
+[CAL-G125]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f95a2741cdac014e65fcda028873e3a0d1673253
+[CAL-G126]: https://api.github.com/repos/theislampill/orthemology/git/blobs/28592a6faa5f0988043b603e8318a48ea7a85794
+[CAL-G129]: https://api.github.com/repos/theislampill/orthemology/git/blobs/b1800b3be65b38ef4116817afd7b9ff4a6ef759d
+[CAL-G131]: https://api.github.com/repos/theislampill/orthemology/git/blobs/8cbfc831a732c9738089f86acfd60e5baa31aaf2
+[CAL-G132]: https://api.github.com/repos/theislampill/orthemology/git/blobs/d175ce0204cdbd4556f2aa2914021193ac10448c
+[CAL-G134]: https://api.github.com/repos/theislampill/orthemology/git/blobs/323b35e3a4827ab25416d551c84372cf88b11ed7
+[CAL-G137]: https://api.github.com/repos/theislampill/orthemology/git/blobs/fd1c39b4bed42c37d997c95be9fb64b4b7d1a33b
+[CAL-G141]: https://api.github.com/repos/theislampill/orthemology/git/blobs/b6f90e933cdba73072c489049414b1697be29b39
+[CAL-G142]: https://api.github.com/repos/theislampill/orthemology/git/blobs/0e36c9ded80d8dd66672cf9fede89f2b9d551ad5
+[CAL-G155]: https://api.github.com/repos/theislampill/orthemology/git/blobs/e0e2c715a00d6f30ebcbaeb6481c169f4c1c5538
+[CAL-G195]: https://api.github.com/repos/theislampill/orthemology/git/blobs/57f2b99cbc5fda63b5da3dd59d6bb9317f1ef72a
+[CAL-G196]: https://api.github.com/repos/theislampill/orthemology/git/blobs/63a1c424dec9dd07651388b7bef35c55d050e436
+[CAL-G197]: https://api.github.com/repos/theislampill/orthemology/git/blobs/6ec3739d7f8041774b0a6833c57625b6319fbca5
+[CAL-G198]: https://api.github.com/repos/theislampill/orthemology/git/blobs/e631f2dab46506d48cfc2768f5309ae0ef95655e
+[CAL-G199]: https://api.github.com/repos/theislampill/orthemology/git/blobs/659eebbe5efe9d41589672e9f1cb028522d4db8c
+[CAL-G220]: https://api.github.com/repos/theislampill/orthemology/git/blobs/d9b737b26933106a0b9d1514885258615f1be0ff
+[CAL-G222]: https://api.github.com/repos/theislampill/orthemology/git/blobs/15ae2b54e8f03d1ad77ec847ac13b6c90d3d5542
+[CAL-G226]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f0db1129d302068796b259a1336a1705cbca2b5a
+[CAL-G227]: https://api.github.com/repos/theislampill/orthemology/git/blobs/25e35d5edaf99b6d5ac27ddf1127b2f6c37da9ec
+[CAL-G230]: https://api.github.com/repos/theislampill/orthemology/git/blobs/581c74d23d8a9aab8ed164fccefcf59b5dd8194b
+[CAL-G231]: https://api.github.com/repos/theislampill/orthemology/git/blobs/d4dfc0a9eb2bda638e0c39b413200df2896a1e08
+[CAL-G232]: https://api.github.com/repos/theislampill/orthemology/git/blobs/b8f59704178741de31e2892dc7b7c3a22acad857
+[CAL-G234]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f9472f2eedcda5ab8730c9b39b4cc8ba56a05409
+[CAL-G235]: https://api.github.com/repos/theislampill/orthemology/git/blobs/c2a93f4852ebc75537c5c1f0d9d8fe63f1aef1b3
+[CAL-G236]: https://api.github.com/repos/theislampill/orthemology/git/blobs/fbf8d798308fa7908e9087e669a3f4d062b5d723
+[CAL-G250]: https://api.github.com/repos/theislampill/orthemology/git/blobs/33a695f9e7757917e97c5a45955778833f29fc8a
+[CAL-G258]: https://api.github.com/repos/theislampill/orthemology/git/blobs/1ff7aecfe72f0b58be22568a1b930fd5726b6b67
+[CAL-G259]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f90c8890bf1aac14d97b9d1aa6d916d00f36927a
+[CAL-G261]: https://api.github.com/repos/theislampill/orthemology/git/blobs/b1a12a5e3e54d0f9b9bacafc5e7eff96c39bf665
+[CAL-G263]: https://api.github.com/repos/theislampill/orthemology/git/blobs/ffa0f99c8497c8db4fb320794d9dfb522702a434
+[CAL-G264]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f2e0acfba79f13f46d75f7dc3fe357f8b2786552
+[CAL-G265]: https://api.github.com/repos/theislampill/orthemology/git/blobs/675a0768967d78edec1c3e468a6fe825f7e38efb
+[CAL-G277]: https://api.github.com/repos/theislampill/orthemology/git/blobs/4b0fe3410c068ef3d1df425d0f55222627665a92
