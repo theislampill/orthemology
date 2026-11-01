@@ -326,29 +326,19 @@ def pmr007_deep_duplicate_paths(repo: Path = ROOT) -> set[str]:
                 or originals.get(canonical) != original):
             raise ValueError("pmr007-deep-original-git-identity-mismatch:" + alias)
         objects[original[2]] = (sizes[alias], members[alias.removeprefix(PMR007_DEEP_PREFIX + "/")])
-    result = subprocess.run(
-        command + ["cat-file", "--batch"], cwd=repo,
-        input=("\n".join(sorted(objects)) + "\n").encode("ascii"),
-        capture_output=True, check=False, env=environment,
-    )
-    if result.returncode:
-        raise ValueError("pmr007-deep-original-git-objects-unavailable")
-    position = 0
     for oid, (size, expected_sha256) in sorted(objects.items()):
-        header = (oid + " blob " + str(size) + "\n").encode("ascii")
-        if result.stdout[position:position + len(header)] != header:
+        result = subprocess.run(
+            command + ["cat-file", "blob", oid], cwd=repo,
+            capture_output=True, check=False, env=environment,
+        )
+        if result.returncode:
             raise ValueError("pmr007-deep-original-git-objects-unavailable")
-        position += len(header)
-        body = result.stdout[position:position + size]
-        position += size
+        body = result.stdout
         raw = b"blob " + str(size).encode("ascii") + b"\0" + body
-        if (len(body) != size or result.stdout[position:position + 1] != b"\n"
+        if (len(body) != size
                 or hashlib.sha256(body).hexdigest() != expected_sha256
                 or hashlib.sha1(raw).hexdigest() != oid):
             raise ValueError("pmr007-deep-original-git-content-mismatch:" + oid)
-        position += 1
-    if position != len(result.stdout):
-        raise ValueError("pmr007-deep-original-git-objects-unavailable")
     return set(duplicates)
 
 
@@ -451,26 +441,17 @@ def pmr007_rounds_duplicate_paths(repo: Path = ROOT) -> set[str]:
             if present.stat().st_mode & 0o111 or hashlib.sha256(present.read_bytes()).hexdigest() != expected:
                 raise ValueError('pmr007-rounds-present-alias-identity-mismatch:' + alias)
         objects[originals[alias][2]] = (len(data), expected)
-    result = subprocess.run(command + ['cat-file', '--batch'], cwd=repo,
-        input=('\n'.join(sorted(objects)) + '\n').encode('ascii'),
-        capture_output=True, check=False, env=environment)
-    if result.returncode:
-        raise ValueError('pmr007-rounds-original-git-objects-unavailable')
-    offset = 0
     for oid in sorted(objects):
         size, expected = objects[oid]
-        end = result.stdout.find(b'\n', offset)
-        if end < 0 or result.stdout[offset:end].split() != [oid.encode(), b'blob', str(size).encode()]:
-            raise ValueError('pmr007-rounds-original-git-object-metadata-mismatch')
-        body = result.stdout[end + 1:end + 1 + size]
-        offset = end + 1 + size
-        if (len(body) != size or result.stdout[offset:offset + 1] != b'\n'
+        result = subprocess.run(command + ['cat-file', 'blob', oid], cwd=repo,
+            capture_output=True, check=False, env=environment)
+        if result.returncode:
+            raise ValueError('pmr007-rounds-original-git-objects-unavailable')
+        body = result.stdout
+        if (len(body) != size
                 or hashlib.sha1(b'blob ' + str(size).encode() + b'\0' + body).hexdigest() != oid
                 or hashlib.sha256(body).hexdigest() != expected):
             raise ValueError('pmr007-rounds-original-git-object-content-mismatch')
-        offset += 1
-    if offset != len(result.stdout):
-        raise ValueError('pmr007-rounds-original-git-object-output-mismatch')
     return set(duplicates)
 
 
@@ -480,7 +461,7 @@ def pmr007_rounds_formalization_navigation(repo: Path = ROOT, *, indexed: bool =
     duplicates = pmr007_rounds_duplicate_paths(repo)
     environment = dict(os.environ, GIT_NO_LAZY_FETCH='1', GIT_TERMINAL_PROMPT='0')
     command = ['git', '--no-replace-objects', '-c', 'core.fsmonitor=false']
-    original = subprocess.run(command + ['show', PMR007_ROUNDS_HISTORY + ':' + PMR007_ROUNDS_FORMALIZATION],
+    original = subprocess.run(command + ['cat-file', 'blob', PMR007_ROUNDS_HISTORY + ':' + PMR007_ROUNDS_FORMALIZATION],
         cwd=repo, capture_output=True, check=False, env=environment)
     if original.returncode or hashlib.sha256(original.stdout).hexdigest() != PMR007_ROUNDS_FORMALIZATION_SHA256:
         raise ValueError('pmr007-rounds-original-formalization-unavailable')

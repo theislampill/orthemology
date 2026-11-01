@@ -8,6 +8,10 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import ast
+import re
+import shutil
+import types
 
 import source_alias_absence_boundary as boundary
 import check_source_alias_absence as runner
@@ -1069,6 +1073,419 @@ class ProductionReaderSourcePinControls(unittest.TestCase):
                                ('READER_SHA256', 'check_reader_pilot.py')]:
             with self.subTest(pin=name):
                 self.assertEqual(constants[name], hashlib.sha256((scripts / filename).read_bytes()).hexdigest())
+
+
+class PublicFixtureReconciliationCommandControls(unittest.TestCase):
+    """Exercise exact operational functions through the unchanged public audit.
+
+    No repository is initialized and no native command or scientific source is
+    executed. The dispatcher supplies finite synthetic native metadata/bodies
+    only after the actual PublicFixtureAudit accepts the requested command.
+    """
+    SOURCE_PATH = Path(__file__).resolve().parents[1] / 'scripts/validate_ar8r_reconciliation.py'
+    AUDIT_PATH = Path(__file__).resolve().parents[1] / 'scripts/check_source_alias_absence.py'
+    OBSERVATIONS = []
+
+    @staticmethod
+    def _operational_functions(source_path, audit_path):
+        constants = {
+            'PMR007_DEEP_PREFIX', 'PMR007_DEEP_HISTORY', 'PMR007_DEEP_MANIFEST_SHA256',
+            'PMR007_DEEP_DISTINCT_MEMBERS', 'PMR007_ROUNDS_PREFIX', 'PMR007_ROUNDS_HISTORY',
+            'PMR007_ROUNDS_MANIFEST_SHA256', 'PMR007_ROUNDS_CONTEXT_MEMBER',
+            'PMR007_ROUNDS_FORMALIZATION', 'PMR007_ROUNDS_FORMALIZATION_SHA256',
+        }
+        functions = {
+            '_pmr007_deep_regular_file', '_pmr007_deep_original_members',
+            '_pmr007_deep_duplicate_map', 'pmr007_deep_duplicate_paths',
+            '_pmr007_rounds_original_members', 'pmr007_rounds_duplicate_paths',
+            'pmr007_rounds_formalization_navigation',
+        }
+        selected, found = [], set()
+        for node in ast.parse(source_path.read_bytes(), filename=str(source_path)).body:
+            if isinstance(node, ast.FunctionDef) and node.name in functions:
+                selected.append(node); found.add(node.name)
+            elif (isinstance(node, ast.Assign) and len(node.targets) == 1
+                  and isinstance(node.targets[0], ast.Name) and node.targets[0].id in constants):
+                selected.append(node); found.add(node.targets[0].id)
+        if found != constants | functions:
+            raise AssertionError('Exact operational extraction population changed')
+        namespace = {'ROOT': Path('/unused-synthetic-default'), 'Path': Path,
+                     'hashlib': hashlib, 're': re, 'os': os,
+                     'subprocess': types.SimpleNamespace()}
+        exec(compile(ast.Module(body=selected, type_ignores=[]), str(source_path), 'exec'), namespace)
+        audit_nodes = [node for node in ast.parse(audit_path.read_bytes(), filename=str(audit_path)).body
+                       if isinstance(node, (ast.FunctionDef, ast.ClassDef))
+                       and node.name in {'require', 'PublicFixtureAudit'}]
+        if {node.name for node in audit_nodes} != {'require', 'PublicFixtureAudit'}:
+            raise AssertionError('Exact public audit extraction population changed')
+        audit_namespace = {'Path': Path, 'os': os, 'json': json, 'sys': sys, 'shutil': shutil,
+                           '__file__': str(audit_path), '_PUBLIC_FIXTURE_NATIVE': None}
+        exec(compile(ast.Module(body=audit_nodes, type_ignores=[]), str(audit_path), 'exec'), audit_namespace)
+        return namespace, audit_namespace['PublicFixtureAudit']
+
+    @staticmethod
+    def _oid(body):
+        return hashlib.sha1(b'blob ' + str(len(body)).encode('ascii') + b'\0' + body).hexdigest()
+
+    def setUp(self):
+        resources = Path(os.environ['PUBLIC123_REVISION_RESOURCES'])
+        self.area = Path(self.enterContext(tempfile.TemporaryDirectory(prefix='reconciliation-', dir=resources)))
+        self.cases = []
+        self.addCleanup(self._record_cases)
+
+    def _record_cases(self):
+        self.OBSERVATIONS.append({'test': self.id(), 'cases': self.cases})
+
+    def _write(self, relative, body, mode=0o644):
+        path = self.repo / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(body); path.chmod(mode)
+        return path
+
+    def _make(self, kind, *, aliases_present=True):
+        self.namespace, audit_class = self._operational_functions(self.SOURCE_PATH, self.AUDIT_PATH)
+        self.repo = self.area / ('case-' + str(len(self.cases)))
+        self.repo.mkdir()
+        state = self.repo / 'audit-state'; state.mkdir()
+        self.audit = audit_class(self.repo, state)
+        self.case = {'kind': kind, 'attempts': [], 'admitted': []}
+        self.cases.append(self.case)
+        self.kind = kind
+        self.prefix = self.namespace['PMR007_' + kind.upper() + '_PREFIX']
+        self.canonical_prefix = self.prefix.replace('pmr007-rounds11-20', 'pmr007-deep-a-bk').replace('a-ap', 'a-bk')
+        self.history = self.namespace['PMR007_' + kind.upper() + '_HISTORY']
+        if kind == 'deep':
+            duplicate_relatives = ['SYNTHETIC_MEMBERS/member_%04d.txt' % i for i in range(824)]
+            relatives = duplicate_relatives + sorted(self.namespace['PMR007_DEEP_DISTINCT_MEMBERS'])
+        else:
+            duplicate_relatives = (['PROPOSED_THEOREM_FILES/member_%02d.txt' % i for i in range(9)]
+                                   + ['SYNTHETIC_MEMBERS/member_%03d.txt' % i for i in range(89)])
+            duplicate_relatives.append(self.namespace['PMR007_ROUNDS_CONTEXT_MEMBER'])
+            relatives = duplicate_relatives + ['SYNTHETIC_DISTINCT/member_%02d.txt' % i for i in range(31)]
+        self.members, self.tree_rows, self.responses = {}, {}, {}
+        self.duplicates = {}
+        for number, relative in enumerate(relatives):
+            body = ('inert public fixture group %02d\n' % (number % 7)).encode('ascii')
+            oid = self._oid(body)
+            self.members[relative] = hashlib.sha256(body).hexdigest()
+            self.responses[oid] = (0, body)
+            alias, canonical = self.prefix + '/' + relative, self.canonical_prefix + '/' + relative
+            self.tree_rows[alias] = ('100644', 'blob', oid)
+            if relative in duplicate_relatives:
+                self.tree_rows[canonical] = self.tree_rows[alias]
+                self._write(canonical, body)
+                if aliases_present: self._write(alias, body)
+                self.duplicates[alias] = canonical
+        if kind == 'rounds':
+            del self.duplicates[self.prefix + '/' + self.namespace['PMR007_ROUNDS_CONTEXT_MEMBER']]
+        self._manifest(self.members)
+        self.ls_tree_result = None
+        self.index_result = None
+        self.namespace['subprocess'].run = self._run
+        self.original_navigation = None
+        if kind == 'rounds':
+            theorem_paths = [name for name in sorted(self.duplicates) if '/PROPOSED_THEOREM_FILES/' in name]
+            original = b'schema: synthetic-operational-only\nstatus: UNADOPTED\n'
+            original += b''.join(('source_path: ' + name.removeprefix('docs/project-closure/ar8r-v11/') + '\n').encode()
+                                 for name in theorem_paths)
+            original += b'controls: retain-every-field\n'
+            self._navigation(original)
+        self.case['manifest_rows'] = len(self.members)
+        self.case['qualified_aliases'] = len(self.duplicates)
+        return self
+
+    def _manifest(self, members):
+        body = ''.join(digest + '  ' + relative + '\n' for relative, digest in sorted(members.items())).encode()
+        self._write(self.prefix + '/SHA256SUMS', body)
+        # Only synthetic fixture identities are substituted. Production counts,
+        # modes, paths, pinned revision, equality predicates and audit stay exact.
+        self.namespace['PMR007_' + self.kind.upper() + '_MANIFEST_SHA256'] = hashlib.sha256(body).hexdigest()
+
+    def _navigation(self, original):
+        self.original_navigation = original
+        self.namespace['PMR007_ROUNDS_FORMALIZATION_SHA256'] = hashlib.sha256(original).hexdigest()
+        self.navigation_path = self.namespace['PMR007_ROUNDS_FORMALIZATION']
+        self.navigation_selector = self.history + ':' + self.navigation_path
+        self.responses[self.navigation_selector] = (0, original)
+        expected = original
+        for alias in sorted(self.duplicates):
+            if '/PROPOSED_THEOREM_FILES/' in alias:
+                old = ('source_path: ' + alias.removeprefix('docs/project-closure/ar8r-v11/')).encode()
+                expected = expected.replace(old, old.replace(b'pmr007-rounds11-20/', b'pmr007-deep-a-bk/'))
+        self.current_navigation = expected
+        self._write(self.navigation_path, expected)
+
+    def _tree_bytes(self):
+        return b''.join((' '.join(metadata) + '\t' + path + '\0').encode()
+                        for path, metadata in sorted(self.tree_rows.items()))
+
+    def _run(self, argv, *, cwd, capture_output, check, env, **kwargs):
+        self.case['attempts'].append(list(argv[4:7]))
+        self.audit.audit('subprocess.Popen', (argv[0], argv, str(cwd), env))
+        self.case['admitted'].append(list(argv[4:7]))
+        self.assertEqual(argv[:4], ['git', '--no-replace-objects', '-c', 'core.fsmonitor=false'])
+        self.assertEqual(Path(cwd), self.repo)
+        self.assertTrue(capture_output); self.assertFalse(check)
+        self.assertEqual(env['GIT_NO_LAZY_FETCH'], '1')
+        self.assertEqual(env['GIT_TERMINAL_PROMPT'], '0')
+        self.assertEqual(kwargs, {})
+        command = argv[4:]
+        if command[0] == 'ls-tree':
+            paths = (sorted(set(self.duplicates) | set(self.duplicates.values())) if self.kind == 'deep'
+                     else [self.prefix, self.canonical_prefix])
+            self.assertEqual(command, ['ls-tree', '-r', '-z', '--full-tree', self.history, '--', *paths])
+            code, body = self.ls_tree_result if self.ls_tree_result is not None else (0, self._tree_bytes())
+        elif command[0] == 'cat-file':
+            self.assertEqual(command[:2], ['cat-file', 'blob'])
+            self.assertEqual(len(command), 3)
+            self.assertIn(command[2], self.responses)
+            code, body = self.responses[command[2]]
+        elif command[0] == 'ls-files':
+            self.assertEqual(command, ['ls-files', '--stage', '-z', '--', self.navigation_path])
+            required = ('100644 ' + self._oid(self.current_navigation) + ' 0\t' + self.navigation_path + '\0').encode()
+            code, body = self.index_result if self.index_result is not None else (0, required)
+        else:
+            self.fail('Unexpected synthetic native command: ' + repr(command))
+        return subprocess.CompletedProcess(argv, code, body, b'')
+
+    def _qualify(self):
+        return self.namespace['pmr007_' + self.kind + '_duplicate_paths'](self.repo)
+
+    def _navigate(self, *, indexed=True):
+        return self.namespace['pmr007_rounds_formalization_navigation'](self.repo, indexed=indexed)
+
+    def _object_queries(self):
+        return [event['argv'][6] for event in self.audit.events if event['argv'][4:6] == ['cat-file', 'blob']]
+
+    def test_deep_exact_objects_pass_actual_audit(self):
+        self._make('deep')
+        self.assertEqual(self._qualify(), set(self.duplicates))
+        self.assertEqual(len(self.duplicates), 824)
+        expected = sorted({self.tree_rows[name][2] for name in self.duplicates})
+        self.assertEqual(self._object_queries(), expected)
+        self.assertEqual(len(self.audit.events), 1 + len(expected))
+
+    def test_rounds_exact_objects_pass_actual_audit(self):
+        self._make('rounds')
+        self.assertEqual(self._qualify(), set(self.duplicates))
+        self.assertEqual(len(self.duplicates), 98)
+        expected = sorted({self.tree_rows[name][2] for name in self.duplicates})
+        self.assertEqual(self._object_queries(), expected)
+        self.assertNotIn(self.prefix + '/' + self.namespace['PMR007_ROUNDS_CONTEXT_MEMBER'], self._qualify())
+
+    def test_absent_synthetic_aliases_keep_finite_qualification(self):
+        for kind in ('deep', 'rounds'):
+            with self.subTest(kind=kind):
+                self._make(kind, aliases_present=False)
+                self.assertEqual(self._qualify(), set(self.duplicates))
+                self.assertTrue(all(not (self.repo / name).exists() for name in self.duplicates))
+
+    def test_navigation_and_index_pass_actual_audit(self):
+        self._make('rounds')
+        for indexed in (True, False):
+            with self.subTest(indexed=indexed):
+                self.assertEqual(self._navigate(indexed=indexed), self.navigation_path)
+        self.assertEqual((self.repo / self.navigation_path).read_bytes(), self.current_navigation)
+        self.assertEqual(self.current_navigation.count(b'source_path: '), 9)
+        self.assertEqual(self._object_queries().count(self.navigation_selector), 2)
+
+    def test_navigation_original_read_passes_actual_audit(self):
+        self._make('rounds')
+        # Isolate the downstream read from duplicate qualification to expose the
+        # old `show` failure independently of the old `--batch` failure. The
+        # preceding test executes both actual functions without this test seam.
+        self.namespace['pmr007_rounds_duplicate_paths'] = lambda repo: set(self.duplicates)
+        self.assertEqual(self._navigate(), self.navigation_path)
+        self.assertEqual(self._object_queries(), [self.navigation_selector])
+
+    def test_object_failure_length_and_digest_guards(self):
+        for kind in ('deep', 'rounds'):
+            for corruption in ('failed', 'short', 'trailing', 'same-length'):
+                with self.subTest(kind=kind, corruption=corruption):
+                    self._make(kind)
+                    oid = sorted({self.tree_rows[name][2] for name in self.duplicates})[0]
+                    body = self.responses[oid][1]
+                    self.responses[oid] = {
+                        'failed': (1, body), 'short': (0, body[:-1]),
+                        'trailing': (0, body + b'\n'), 'same-length': (0, b'X' * len(body)),
+                    }[corruption]
+                    with self.assertRaisesRegex(ValueError, 'original-git-(objects-unavailable|.*content-mismatch)'):
+                        self._qualify()
+
+    def test_native_blob_oid_still_authenticates_body(self):
+        for kind in ('deep', 'rounds'):
+            with self.subTest(kind=kind):
+                self._make(kind)
+                old = self.tree_rows[sorted(self.duplicates)[0]][2]
+                different_oid = self._oid(b'other synthetic native object\n')
+                for name, metadata in list(self.tree_rows.items()):
+                    if metadata[2] == old: self.tree_rows[name] = (*metadata[:2], different_oid)
+                self.responses[different_oid] = self.responses[old]
+                # Length and expected SHA-256 still match; native SHA-1 must fail.
+                with self.assertRaisesRegex(ValueError, 'content-mismatch'): self._qualify()
+
+    def test_expected_sha256_still_authenticates_body(self):
+        for kind in ('deep', 'rounds'):
+            with self.subTest(kind=kind):
+                self._make(kind)
+                old = self.tree_rows[sorted(self.duplicates)[0]][2]
+                different_body = b'X' * len(self.responses[old][1])
+                different_oid = self._oid(different_body)
+                for name, metadata in list(self.tree_rows.items()):
+                    if metadata[2] == old: self.tree_rows[name] = (*metadata[:2], different_oid)
+                self.responses[different_oid] = (0, different_body)
+                # Length and native SHA-1 match; the original SHA-256 must fail.
+                with self.assertRaisesRegex(ValueError, 'content-mismatch'): self._qualify()
+
+    def test_pinned_history_and_equal_native_identity_are_required(self):
+        for kind in ('deep', 'rounds'):
+            for corruption in ('unavailable', 'malformed', 'missing', 'mode', 'type', 'unequal'):
+                with self.subTest(kind=kind, corruption=corruption):
+                    self._make(kind)
+                    alias = sorted(self.duplicates)[0]
+                    canonical = self.duplicates[alias]
+                    original = self.tree_rows[alias]
+                    if corruption == 'unavailable': self.ls_tree_result = (1, b'')
+                    elif corruption == 'malformed': self.ls_tree_result = (0, b'malformed-native-record\0')
+                    elif corruption == 'missing': del self.tree_rows[alias]
+                    elif corruption == 'mode': self.tree_rows[alias] = ('100755', *original[1:])
+                    elif corruption == 'type': self.tree_rows[alias] = (original[0], 'tree', original[2])
+                    else: self.tree_rows[canonical] = (*original[:2], self._oid(b'other synthetic identity'))
+                    with self.assertRaises(ValueError): self._qualify()
+
+    def test_current_canonical_and_present_alias_guards(self):
+        for kind in ('deep', 'rounds'):
+            for target_kind in ('canonical', 'alias'):
+                for corruption in ('bytes', 'executable', 'symlink', 'missing-parent'):
+                    with self.subTest(kind=kind, target=target_kind, corruption=corruption):
+                        self._make(kind)
+                        alias = sorted(self.duplicates)[0]
+                        target = self.repo / (self.duplicates[alias] if target_kind == 'canonical' else alias)
+                        if corruption == 'bytes': target.write_bytes(b'corrupt synthetic public body\n')
+                        elif corruption == 'executable': target.chmod(0o755)
+                        elif corruption == 'symlink':
+                            target.unlink(); target.symlink_to(self.repo / 'absent-synthetic-target')
+                        else:
+                            # A symlink component must fail even when it leads to
+                            # the same regular inert bytes inside this fixture.
+                            parent = target.parent
+                            relocated = parent.with_name(parent.name + '-moved')
+                            parent.rename(relocated); parent.symlink_to(relocated, target_is_directory=True)
+                        with self.assertRaises(ValueError): self._qualify()
+
+    def test_manifest_and_original_source_count_guards(self):
+        for kind in ('deep', 'rounds'):
+            for corruption in ('identity', 'count', 'duplicate-row', 'invalid-digest'):
+                with self.subTest(kind=kind, corruption=corruption):
+                    self._make(kind)
+                    path = self.repo / self.prefix / 'SHA256SUMS'
+                    if corruption == 'identity': path.write_bytes(path.read_bytes() + b'changed\n')
+                    elif corruption == 'count':
+                        members = dict(self.members); members.pop(sorted(self.duplicates)[0].removeprefix(self.prefix + '/'))
+                        self._manifest(members)
+                    else:
+                        lines = path.read_bytes().splitlines(keepends=True)
+                        body = b''.join(lines + [lines[0]]) if corruption == 'duplicate-row' else b'g' * 64 + lines[0][64:] + b''.join(lines[1:])
+                        path.write_bytes(body)
+                        self.namespace['PMR007_' + kind.upper() + '_MANIFEST_SHA256'] = hashlib.sha256(body).hexdigest()
+                    with self.assertRaisesRegex(ValueError, 'original-manifest-'): self._qualify()
+
+    def test_rounds_context_and_exact_equality_count(self):
+        for corruption in ('context', 'too-many', 'too-few'):
+            with self.subTest(corruption=corruption):
+                self._make('rounds')
+                if corruption == 'context':
+                    relative = self.namespace['PMR007_ROUNDS_CONTEXT_MEMBER']
+                    del self.tree_rows[self.canonical_prefix + '/' + relative]
+                elif corruption == 'too-many':
+                    relative = 'SYNTHETIC_DISTINCT/member_00.txt'
+                    self.tree_rows[self.canonical_prefix + '/' + relative] = self.tree_rows[self.prefix + '/' + relative]
+                else: del self.tree_rows[sorted(self.duplicates)[0]]
+                with self.assertRaisesRegex(ValueError, 'original-equality-class-mismatch'): self._qualify()
+
+    def test_deep_distinct_member_names_are_retained(self):
+        self._make('deep')
+        members = dict(self.members)
+        distinct = sorted(self.namespace['PMR007_DEEP_DISTINCT_MEMBERS'])[0]
+        members['UNEXPECTED_SYNTHETIC_MEMBER.txt'] = members.pop(distinct)
+        self._manifest(members)
+        with self.assertRaisesRegex(ValueError, 'distinct-member-set-mismatch'): self._qualify()
+
+    def test_navigation_original_pin_and_exact_nine_changes(self):
+        for corruption in ('unavailable', 'pin', 'eight', 'ten'):
+            with self.subTest(corruption=corruption):
+                self._make('rounds')
+                if corruption == 'unavailable': self.responses[self.navigation_selector] = (1, self.original_navigation)
+                elif corruption == 'pin': self.responses[self.navigation_selector] = (0, self.original_navigation + b'changed\n')
+                else:
+                    lines = self.original_navigation.splitlines(keepends=True)
+                    route = next(line for line in lines if line.startswith(b'source_path: '))
+                    original = self.original_navigation.replace(route, b'', 1) if corruption == 'eight' else self.original_navigation + route
+                    self._navigation(original)
+                with self.assertRaisesRegex(ValueError, 'original-formalization-unavailable|formalization-navigation-mismatch'):
+                    self._navigate()
+
+    def test_navigation_current_regular_bytes_and_mode(self):
+        for corruption in ('bytes', 'executable', 'symlink', 'parent-symlink'):
+            with self.subTest(corruption=corruption):
+                self._make('rounds')
+                path = self.repo / self.navigation_path
+                if corruption == 'bytes': path.write_bytes(self.current_navigation + b'changed\n')
+                elif corruption == 'executable': path.chmod(0o755)
+                elif corruption == 'symlink':
+                    path.unlink(); path.symlink_to(self.repo / 'absent-synthetic-target')
+                else:
+                    parent = path.parent; relocated = parent.with_name(parent.name + '-moved')
+                    parent.rename(relocated); parent.symlink_to(relocated, target_is_directory=True)
+                with self.assertRaises(ValueError): self._navigate()
+
+    def test_navigation_exact_index_entry_guards(self):
+        for corruption in ('unavailable', 'oid', 'mode', 'stage', 'extra'):
+            with self.subTest(corruption=corruption):
+                self._make('rounds')
+                entry = ('100644 ' + self._oid(self.current_navigation) + ' 0\t' + self.navigation_path + '\0').encode()
+                if corruption == 'unavailable': self.index_result = (1, entry)
+                elif corruption == 'oid': self.index_result = (0, entry.replace(self._oid(self.current_navigation).encode(), self._oid(b'other synthetic index').encode()))
+                elif corruption == 'mode': self.index_result = (0, entry.replace(b'100644 ', b'100755 ', 1))
+                elif corruption == 'stage': self.index_result = (0, entry.replace(b' 0\t', b' 1\t', 1))
+                else: self.index_result = (0, entry + entry)
+                with self.assertRaisesRegex(ValueError, 'indexed-formalization-navigation-mismatch'): self._navigate()
+
+    def test_actual_audit_refuses_forbidden_command_shapes(self):
+        self._make('rounds')
+        oid = self._oid(b'only synthetic native data')
+        for command in (['cat-file', '--batch'], ['cat-file', '--batch-check'], ['cat-file', '-s', oid],
+                        ['show', self.navigation_selector], ['fetch'], ['ls-tree', '-l', self.history],
+                        ['ls-tree', '--long', self.history]):
+            with self.subTest(command=command):
+                argv = ['git', '--no-replace-objects', '-c', 'core.fsmonitor=false', *command]
+                with self.assertRaises(RuntimeError):
+                    self.audit.audit('subprocess.Popen', ('git', argv, str(self.repo), {}))
+        self.assertEqual(self.audit.events, [])
+
+    def test_actual_audit_refuses_synthetic_hold_coordinates(self):
+        self._make('rounds')
+        held_oid = self._oid(b'synthetic held object, never requested from native Git')
+        held_path = 'SYNTHETIC_HELD/member.txt'
+        self.audit.held_coordinates = {held_oid, held_path}
+        for selector in (held_oid, self.history + ':' + held_path):
+            with self.subTest(selector=selector):
+                argv = ['git', '--no-replace-objects', '-c', 'core.fsmonitor=false', 'cat-file', 'blob', selector]
+                with self.assertRaises(PermissionError):
+                    self.audit.audit('subprocess.Popen', ('git', argv, str(self.repo), {}))
+        self.assertEqual(len(self.audit.private_denials), 2)
+        self.assertEqual(self.audit.events, [])
+
+    def test_actual_audit_refuses_other_roots_and_index_mutation(self):
+        self._make('rounds')
+        for command, cwd in ((['cat-file', 'blob', self.navigation_selector], self.area),
+                             (['update-index', '--remove', 'SYNTHETIC_MEMBER.txt'], self.repo)):
+            with self.subTest(command=command):
+                argv = ['git', '--no-replace-objects', '-c', 'core.fsmonitor=false', *command]
+                with self.assertRaises(RuntimeError):
+                    self.audit.audit('subprocess.Popen', ('git', argv, str(cwd), {}))
+        self.assertEqual(self.audit.events, [])
+
 
 
 if __name__ == '__main__': unittest.main()

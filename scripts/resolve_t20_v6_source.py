@@ -4350,11 +4350,77 @@ def continuation_registry_source_bytes(root, row):
     return body
 
 
+SUCCESSOR_FIXTURE_PATH = 'tests/v5_successor_fixtures.py'
+SUCCESSOR_FIXTURE_PUBLIC_ROW = {
+    'source_sha256': '283ea7d698a5bf6a208e45260ee9078f819ecdb25a42c6dd2252d794d2dd3233',
+    'source_action': 'include', 'source_bytes': 13030, 'role': 'authored_code',
+    'declared_eligibility_basis': 'reviewed_owner_authored', 'required_dependencies': [],
+    'disposition': 'REUSE', 'repository_path': SUCCESSOR_FIXTURE_PATH,
+    'repository_revision': '69f3f9284f2cb94433958c0669fc9b06a9760fe7',
+    'git_blob': 'ccf0bd64f34b10f65ed8bd1bdd8a88adcaf03c7f',
+    'public_sha256': '283ea7d698a5bf6a208e45260ee9078f819ecdb25a42c6dd2252d794d2dd3233',
+    'public_bytes': 13030, 'publication_basis': 'exact_existing_public_repository_object',
+}
+# The already-reviewed current fixture removes only its obsolete CALCULUS_MAP
+# entry and two-line calculus field; the historical public row stays unchanged.
+SUCCESSOR_FIXTURE_CURRENT = (
+    '350c192a7c912232889673110d326e4242bde8cf',
+    'd1b092a7deb91b71812f838d87d4af8de37fc72184b84eff8e8348d743ac0fb7', 12785)
+
+
+def successor_fixture_source_bytes(root, row):
+    """Return one immutable historical fixture view; never execute its body."""
+    expected = SUCCESSOR_FIXTURE_PUBLIC_ROW
+    if (type(row) is not dict or set(row) != set(expected)
+            or any(type(row[key]) is not type(value) or row[key] != value
+                   for key, value in expected.items())):
+        raise ValueError('successor fixture public row differs')
+    root = pathlib.Path(root)
+    path = SUCCESSOR_FIXTURE_PATH
+    current, witness = _successor_input_regular(root, path)
+    original_identity = (expected['git_blob'], expected['public_sha256'], expected['public_bytes'])
+    current_identity = (hashlib.sha1(b'blob ' + str(len(current)).encode() + b'\0' + current).hexdigest(),
+                        digest(current), len(current))
+    if current_identity not in (original_identity, SUCCESSOR_FIXTURE_CURRENT):
+        raise ValueError('successor fixture current edition differs')
+    environment = dict(os.environ, GIT_NO_LAZY_FETCH='1', GIT_NO_REPLACE_OBJECTS='1',
+                       GIT_ALLOW_PROTOCOL='', GIT_TERMINAL_PROMPT='0')
+
+    def git(*args):
+        result = subprocess.run(['git', '--no-replace-objects', '--literal-pathspecs', *args],
+                                cwd=root, capture_output=True, check=False, env=environment)
+        if result.returncode:
+            raise ValueError('successor fixture native identity unavailable')
+        return result.stdout
+
+    staged = git('ls-files', '--stage', '-z', '--', path)
+    if staged != ('100644 ' + current_identity[0] + ' 0\t' + path + '\0').encode():
+        raise ValueError('successor fixture current index differs')
+    revision, blob = expected['repository_revision'], expected['git_blob']
+    if git('cat-file', '-t', revision) != b'commit\n':
+        raise ValueError('successor fixture historical revision is not a commit')
+    if git('ls-tree', '-z', revision, '--', path) != ('100644 blob ' + blob + '\t' + path + '\0').encode():
+        raise ValueError('successor fixture historical path, mode or blob differs')
+    body = git('cat-file', 'blob', blob)
+    identity = (hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest(),
+                digest(body), len(body))
+    if identity != original_identity:
+        raise ValueError('successor fixture historical body differs')
+    if git('ls-files', '--stage', '-z', '--', path) != staged:
+        raise ValueError('successor fixture current index changed during historical read')
+    repeated, repeated_witness = _successor_input_regular(root, path)
+    if repeated_witness != witness or repeated != current:
+        raise ValueError('successor fixture current source changed during historical read')
+    return body
+
+
 def source_bytes(root, row):
     path = pathlib.PurePosixPath(row['repository_path'])
     if path.is_absolute() or '..' in path.parts or '\\' in str(path):
         raise ValueError('unsafe source path')
-    if is_binding_record(root, str(path)):
+    if str(path) == SUCCESSOR_FIXTURE_PATH:
+        body = successor_fixture_source_bytes(root, row)
+    elif is_binding_record(root, str(path)):
         body = binding_record_public_bytes(root, row)
     elif str(path) in SUCCESSOR_INPUT_PATHS:
         body = successor_input_public_bytes(root, row)

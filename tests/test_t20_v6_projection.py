@@ -5,6 +5,13 @@ import pathlib
 import sys
 import tempfile
 import unittest
+import ast
+import os
+import re
+import shutil
+import stat
+import subprocess
+import types
 from unittest.mock import patch
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / 'scripts'))
@@ -3032,6 +3039,309 @@ class CheckpointCodeCopyMigrationTests(unittest.TestCase):
     test_reader_currentness_authenticates_present_and_both_absence_states = CheckpointCopyMigrationTests.test_reader_currentness_authenticates_present_and_both_absence_states
     test_reader_currentness_rejects_retained_body_and_index_tampering = CheckpointCopyMigrationTests.test_reader_currentness_rejects_retained_body_and_index_tampering
     test_reader_currentness_rejects_present_alias_and_unrelated_changes = CheckpointCopyMigrationTests.test_reader_currentness_rejects_present_alias_and_unrelated_changes
+
+
+
+class HistoricalSuccessorFixtureRouteTests(unittest.TestCase):
+    SOURCE_ROOT = pathlib.Path(__file__).resolve().parents[1] / 'scripts'
+    FIXTURE_PATH = pathlib.Path(__file__).resolve().parents[1] / 'tests/v5_successor_fixtures.py'
+    RESOURCE_ROOT = None
+    ROW = {
+        'source_sha256': '283ea7d698a5bf6a208e45260ee9078f819ecdb25a42c6dd2252d794d2dd3233',
+        'source_action': 'include', 'source_bytes': 13030, 'role': 'authored_code',
+        'declared_eligibility_basis': 'reviewed_owner_authored', 'required_dependencies': [],
+        'disposition': 'REUSE', 'repository_path': 'tests/v5_successor_fixtures.py',
+        'repository_revision': '69f3f9284f2cb94433958c0669fc9b06a9760fe7',
+        'git_blob': 'ccf0bd64f34b10f65ed8bd1bdd8a88adcaf03c7f',
+        'public_sha256': '283ea7d698a5bf6a208e45260ee9078f819ecdb25a42c6dd2252d794d2dd3233',
+        'public_bytes': 13030, 'publication_basis': 'exact_existing_public_repository_object',
+    }
+    CURRENT = ('350c192a7c912232889673110d326e4242bde8cf',
+               'd1b092a7deb91b71812f838d87d4af8de37fc72184b84eff8e8348d743ac0fb7', 12785)
+
+    @staticmethod
+    def _identity(body):
+        return (hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest(),
+                hashlib.sha256(body).hexdigest(), len(body))
+
+    def _load_interfaces(self):
+        # Compile only these operational definitions, never the fixture body or
+        # either complete production module. Unrelated dispatch populations are
+        # empty synthetic inputs; the actual target route is left intact.
+        resolver = self.SOURCE_ROOT / 'resolve_t20_v6_source.py'
+        functions = {'digest', 'source_bytes', '_successor_input_path',
+                     '_successor_input_regular', 'successor_fixture_source_bytes'}
+        constants = {'HISTORICAL_PROSE_REVISION', 'SUCCESSOR_FIXTURE_PATH',
+                     'SUCCESSOR_FIXTURE_PUBLIC_ROW', 'SUCCESSOR_FIXTURE_CURRENT'}
+        nodes = []
+        for node in ast.parse(resolver.read_bytes(), filename=str(resolver)).body:
+            if isinstance(node, ast.FunctionDef) and node.name in functions: nodes.append(node)
+            elif (isinstance(node, ast.Assign) and len(node.targets) == 1
+                  and isinstance(node.targets[0], ast.Name) and node.targets[0].id in constants): nodes.append(node)
+        namespace = {'pathlib': pathlib, 'hashlib': hashlib, 'os': os, 'stat': stat,
+                     'subprocess': types.SimpleNamespace(run=self._native, check_output=self._legacy,
+                                                         CalledProcessError=subprocess.CalledProcessError),
+                     'is_binding_record': lambda root, path: False,
+                     'SUCCESSOR_INPUT_PATHS': (), 'GENERATED_FIXTURE_PATHS': (),
+                     'CONTINUATION_REGISTRY_PATH': 'synthetic/other-registry.json',
+                     'ADMIN_PUBLIC_GUIDE_PATHS': (), 'HISTORICAL_PROSE': {},
+                     'CHECKPOINT_CODE_COPY_PATHS': (), 'CHECKPOINT_RECORD_COPY_PATHS': (),
+                     'CHECKPOINT_COPY_PATHS': (), 'CONTINUATION_COPY_ROOT': 'synthetic/other-continuation/'}
+        exec(compile(ast.Module(body=nodes, type_ignores=[]), str(resolver), 'exec'), namespace)
+        self.resolver = namespace
+        projection = self.SOURCE_ROOT / 'validate_t20_v6_projection.py'
+        nodes = [node for node in ast.parse(projection.read_bytes(), filename=str(projection)).body
+                 if isinstance(node, ast.FunctionDef) and node.name in {'check_object', 'safe_path', 'sha256'}]
+        projection_namespace = dict(namespace, re=re, SHA=re.compile(r'[0-9a-f]{64}\Z'),
+                                    BASE=namespace['HISTORICAL_PROSE_REVISION'],
+                                    binding_record_candidate=lambda path: False,
+                                    source_bytes=namespace['source_bytes'])
+        exec(compile(ast.Module(body=nodes, type_ignores=[]), str(projection), 'exec'), projection_namespace)
+        self.projection = projection_namespace
+
+    def setUp(self):
+        if self.RESOURCE_ROOT is None:
+            self.area = pathlib.Path(self.enterContext(tempfile.TemporaryDirectory(prefix='t20-fixture-route-')))
+        else:
+            self.area = pathlib.Path(self.RESOURCE_ROOT) / self.id()
+            self.area.mkdir()
+            self.addCleanup(shutil.rmtree, self.area)
+        self.current = self.FIXTURE_PATH.read_bytes()
+        self.assertEqual(self._identity(self.current), self.CURRENT)
+        # Invert only the three reviewed calculus-fixture removals. This yields
+        # exact inert historical bytes without invoking Git or importing code.
+        anchor = b"            'EMPIRICAL_SCOPE': {'results': bundle['empirical']},\n"
+        original = b"            'CALCULUS_MAP': {'results': bundle['calculus']},\n" + anchor
+        self.assertEqual(self.current.count(anchor), 1)
+        self.historical = self.current.replace(anchor, original)
+        anchor = b"              'empirical': [], 'supplementary': {}, 'projection_reviews': [],\n"
+        original = (b"              'calculus': [{'id': result['id'], 'calculus': 'NONE', 'operational_model': result['operational_model'],\n"
+                    b"                           'canonical_adoption': 'NOT_ADOPTED'}],\n" + anchor)
+        self.assertEqual(self.historical.count(anchor), 1)
+        self.historical = self.historical.replace(anchor, original)
+        self.assertEqual(self._identity(self.historical),
+                         (self.ROW['git_blob'], self.ROW['public_sha256'], self.ROW['public_bytes']))
+        self.case_number = 0
+        self._load_interfaces()
+        self._case()
+
+    def _case(self):
+        self.repo = self.area / ('case-' + str(self.case_number)); self.case_number += 1
+        self.repo.mkdir()
+        self.target = self.repo / self.ROW['repository_path']
+        self.target.parent.mkdir(); self.target.write_bytes(self.current); self.target.chmod(0o644)
+        self.current_oid = self.CURRENT[0]
+        self.native_commands, self.legacy_commands = [], []
+        self.overrides = {}
+        self.after_blob = None
+        self.after_repeated_index = None
+
+    def _native(self, argv, *, cwd, capture_output, check, env):
+        self.assertEqual(argv[:3], ['git', '--no-replace-objects', '--literal-pathspecs'])
+        self.assertEqual(pathlib.Path(cwd), self.repo)
+        self.assertTrue(capture_output); self.assertFalse(check)
+        self.assertEqual({name: env[name] for name in ('GIT_NO_LAZY_FETCH', 'GIT_NO_REPLACE_OBJECTS',
+                                                     'GIT_ALLOW_PROTOCOL', 'GIT_TERMINAL_PROMPT')},
+                         {'GIT_NO_LAZY_FETCH': '1', 'GIT_NO_REPLACE_OBJECTS': '1',
+                          'GIT_ALLOW_PROTOCOL': '', 'GIT_TERMINAL_PROMPT': '0'})
+        command = tuple(argv[3:]); self.native_commands.append(command)
+        revision, path, blob = self.ROW['repository_revision'], self.ROW['repository_path'], self.ROW['git_blob']
+        replies = {
+            ('cat-file', '-t', revision): b'commit\n',
+            ('ls-tree', '-z', revision, '--', path): ('100644 blob ' + blob + '\t' + path + '\0').encode(),
+            ('cat-file', 'blob', blob): self.historical,
+            ('ls-files', '--stage', '-z', '--', path): ('100644 ' + self.current_oid + ' 0\t' + path + '\0').encode(),
+        }
+        self.assertIn(command, replies, 'No unbounded or unrelated native request is permitted')
+        result = self.overrides.get(command, (0, replies[command]))
+        if command == ('cat-file', 'blob', blob) and self.after_blob is not None:
+            callback, self.after_blob = self.after_blob, None
+            callback()
+        if (command == ('ls-files', '--stage', '-z', '--', path)
+                and self.native_commands.count(command) == 2 and self.after_repeated_index is not None):
+            callback, self.after_repeated_index = self.after_repeated_index, None
+            callback()
+        return subprocess.CompletedProcess(argv, result[0], result[1], b'')
+
+    def _legacy(self, argv, *, cwd):
+        self.legacy_commands.append(argv)
+        self.assertEqual(pathlib.Path(cwd), self.repo)
+        self.assertEqual(argv, ['git', 'show', self.resolver['HISTORICAL_PROSE_REVISION'] + ':docs/synthetic_legacy.txt'])
+        return b'inert legacy baseline body\n'
+
+    def _source(self, row=None):
+        return self.resolver['source_bytes'](self.repo, dict(self.ROW) if row is None else row)
+
+    def _projection(self, row=None):
+        return self.projection['check_object'](self.repo, dict(self.ROW) if row is None else row)
+
+    def _rejected(self, row=None):
+        with self.assertRaises((ValueError, KeyError, OSError)): self._source(row)
+        self.assertTrue(self._projection(row))
+
+    def test_exact_full_row_resolves_inert_historical_body(self):
+        self.assertEqual(self._source(), self.historical)
+        self.assertNotEqual(self.historical, self.current)
+        self.assertEqual(self.legacy_commands, [])
+
+    def test_exact_full_row_passes_projection_dispatch(self):
+        self.assertEqual(self._projection(), [])
+        self.assertEqual(self.legacy_commands, [])
+
+    def test_production_pins_equal_exact_reviewed_coordinates(self):
+        self.assertEqual(self.resolver['SUCCESSOR_FIXTURE_PUBLIC_ROW'], self.ROW)
+        self.assertEqual(len(self.resolver['SUCCESSOR_FIXTURE_PUBLIC_ROW']), 13)
+        self.assertEqual(self.resolver['SUCCESSOR_FIXTURE_PATH'], self.ROW['repository_path'])
+        self.assertEqual(self.resolver['SUCCESSOR_FIXTURE_CURRENT'], self.CURRENT)
+
+    def test_every_row_field_tamper_and_omission_refuses(self):
+        for name, original in self.ROW.items():
+            with self.subTest(field=name, change='value'):
+                row = dict(self.ROW)
+                row[name] = original + 1 if type(original) is int else ['unreviewed-dependency'] if isinstance(original, list) else original + '-changed'
+                self._rejected(row)
+            with self.subTest(field=name, change='omitted'):
+                row = dict(self.ROW); del row[name]
+                self._rejected(row)
+        self.assertEqual(self.native_commands, [])
+        self.assertEqual(self.legacy_commands, [])
+
+    def test_extra_field_float_size_and_lexical_alias_refuse(self):
+        for change in ({'extra': 'unreviewed'}, {'source_bytes': 13030.0}, {'public_bytes': 13030.0},
+                       {'repository_path': 'tests/./v5_successor_fixtures.py'},
+                       {'repository_path': 'tests//v5_successor_fixtures.py'},
+                       {'repository_path': './tests/v5_successor_fixtures.py'}):
+            with self.subTest(change=change): self._rejected(dict(self.ROW, **change))
+        self.assertEqual(self.native_commands, [])
+
+    def test_unrelated_path_or_revision_has_no_new_exception(self):
+        for change in ({'repository_path': 'tests/nearby_successor_fixtures.py'},
+                       {'repository_revision': self.resolver['HISTORICAL_PROSE_REVISION']},
+                       {'repository_revision': None}, {'git_blob': '0' * 40}):
+            with self.subTest(change=change): self._rejected(dict(self.ROW, **change))
+        self.assertEqual(self.native_commands, [])
+        self.assertEqual(self.legacy_commands, [])
+
+    def test_existing_generic_baseline_route_is_unchanged(self):
+        body = b'inert legacy baseline body\n'
+        row = dict(self.ROW, repository_path='docs/synthetic_legacy.txt',
+                   repository_revision=self.resolver['HISTORICAL_PROSE_REVISION'],
+                   source_sha256=hashlib.sha256(body).hexdigest(), public_sha256=hashlib.sha256(body).hexdigest(),
+                   source_bytes=len(body), public_bytes=len(body), git_blob=self._identity(body)[0])
+        self.assertEqual(self._source(row), body)
+        self.assertEqual(self._projection(row), [])
+        self.assertEqual(len(self.legacy_commands), 2)
+        self.assertEqual(self.native_commands, [])
+
+    def test_exact_original_current_alias_is_also_qualified(self):
+        self.target.write_bytes(self.historical); self.current_oid = self.ROW['git_blob']
+        self.assertEqual(self._source(), self.historical)
+        self.assertEqual(self._projection(), [])
+
+    def test_current_missing_corrupt_executable_or_directory_refuses(self):
+        for corruption in ('missing', 'bytes', 'short', 'executable', 'directory'):
+            with self.subTest(corruption=corruption):
+                self._case()
+                if corruption == 'missing': self.target.unlink()
+                elif corruption == 'bytes': self.target.write_bytes(b'X' * len(self.current))
+                elif corruption == 'short': self.target.write_bytes(self.current[:-1])
+                elif corruption == 'executable': self.target.chmod(0o755)
+                else: self.target.unlink(); self.target.mkdir()
+                self._rejected()
+                self.assertEqual(self.native_commands, [])
+
+    def test_current_symlink_parent_symlink_and_hardlink_refuse(self):
+        for alias in ('final-symlink', 'parent-symlink', 'hardlink'):
+            with self.subTest(alias=alias):
+                self._case()
+                if alias == 'final-symlink':
+                    other = self.repo / 'synthetic-target'; other.write_bytes(self.current)
+                    self.target.unlink(); self.target.symlink_to(other)
+                elif alias == 'parent-symlink':
+                    parent = self.target.parent; moved = parent.with_name('synthetic-tests-target')
+                    parent.rename(moved); parent.symlink_to(moved, target_is_directory=True)
+                else: os.link(self.target, self.repo / 'synthetic-hardlink')
+                self._rejected()
+                self.assertEqual(self.native_commands, [])
+
+    def test_root_and_root_ancestor_symlinks_refuse(self):
+        for alias in ('root', 'ancestor'):
+            with self.subTest(alias=alias):
+                self._case()
+                if alias == 'root':
+                    link = self.area / ('linked-root-' + str(self.case_number)); link.symlink_to(self.repo, target_is_directory=True)
+                    self.repo = link
+                else:
+                    link = self.area / ('linked-parent-' + str(self.case_number)); link.symlink_to(self.area, target_is_directory=True)
+                    self.repo = link / self.repo.name
+                self._rejected()
+                self.assertEqual(self.native_commands, [])
+
+    def test_native_commit_type_and_missing_commit_refuse(self):
+        command = ('cat-file', '-t', self.ROW['repository_revision'])
+        for result in ((0, b'blob\n'), (0, b'tag\n'), (1, b'')):
+            with self.subTest(result=result):
+                self._case(); self.overrides[command] = result; self._rejected()
+
+    def test_native_path_mode_type_blob_and_extra_entries_refuse(self):
+        row = self.ROW
+        good = ('100644 blob ' + row['git_blob'] + '\t' + row['repository_path'] + '\0').encode()
+        for bad in (b'', good.replace(b'100644', b'100755'), good.replace(b' blob ', b' tree '),
+                    good.replace(row['git_blob'].encode(), b'0' * 40), good.replace(b'v5_successor', b'nearby_successor'), good + good):
+            with self.subTest(reply=bad):
+                self._case(); self.overrides[('ls-tree', '-z', row['repository_revision'], '--', row['repository_path'])] = (0, bad)
+                self._rejected()
+
+    def test_native_object_missing_truncated_extra_or_corrupt_refuses(self):
+        command = ('cat-file', 'blob', self.ROW['git_blob'])
+        for result in ((1, b''), (0, self.historical[:-1]), (0, self.historical + b'\n'), (0, b'X' * len(self.historical))):
+            with self.subTest(returncode=result[0], length=len(result[1])):
+                self._case(); self.overrides[command] = result; self._rejected()
+
+    def test_current_index_identity_mode_stage_and_absence_refuse(self):
+        row = self.ROW
+        good = ('100644 ' + self.current_oid + ' 0\t' + row['repository_path'] + '\0').encode()
+        for bad in (b'', good.replace(self.current_oid.encode(), row['git_blob'].encode()),
+                    good.replace(b'100644', b'100755'), good.replace(b' 0\t', b' 1\t'), good + good):
+            with self.subTest(reply=bad):
+                self._case(); self.overrides[('ls-files', '--stage', '-z', '--', row['repository_path'])] = (0, bad)
+                self._rejected()
+
+    def test_current_disappearance_or_replacement_during_native_read_refuses(self):
+        for interface in ('source', 'projection'):
+            for mutation in ('disappearance', 'same-byte-replacement', 'corruption'):
+                with self.subTest(interface=interface, mutation=mutation):
+                    self._case()
+                    def change():
+                        if mutation == 'disappearance': self.target.unlink()
+                        elif mutation == 'same-byte-replacement':
+                            replacement = self.repo / 'synthetic-replacement'; replacement.write_bytes(self.current)
+                            replacement.replace(self.target)
+                        else: self.target.write_bytes(b'X' * len(self.current))
+                    self.after_blob = change
+                    if interface == 'source':
+                        with self.assertRaises((ValueError, OSError)): self._source()
+                    else: self.assertTrue(self._projection())
+
+    def test_current_index_changed_during_native_read_refuses(self):
+        for interface in ('source', 'projection'):
+            with self.subTest(interface=interface):
+                self._case()
+                def change():
+                    self.current_oid = self.ROW['git_blob']
+                self.after_blob = change
+                if interface == 'source':
+                    with self.assertRaises(ValueError): self._source()
+                else: self.assertTrue(self._projection())
+
+    def test_current_disappearance_during_final_native_read_refuses(self):
+        for interface in ('source', 'projection'):
+            with self.subTest(interface=interface):
+                self._case()
+                self.after_repeated_index = self.target.unlink
+                if interface == 'source':
+                    with self.assertRaises((ValueError, OSError)): self._source()
+                else: self.assertTrue(self._projection())
 
 
 

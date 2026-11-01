@@ -32,6 +32,7 @@ from resolve_t20_v6_source import (
     SUCCESSOR_CALCULUS_MAP, SUCCESSOR_CALCULUS_GUIDES, successor_calculus_map_absences,
     successor_calculus_guide_source_bytes,
     binding_record_candidate, binding_record_absences, binding_record_public_bytes,
+    SUCCESSOR_FIXTURE_PATH,
 )
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -149,7 +150,8 @@ def check_object(root, row):
         path = root / relative
         if path.is_symlink() or not path.resolve().is_relative_to(root.resolve()):
             raise ValueError('source symlink or escaped root')
-        if (binding_record_candidate(relative.as_posix())
+        if (relative.as_posix() == SUCCESSOR_FIXTURE_PATH
+                or binding_record_candidate(relative.as_posix())
                 or relative.as_posix() in SUCCESSOR_INPUT_PATHS
                 or relative.as_posix() in GENERATED_FIXTURE_PATHS
                 or relative.as_posix() in HISTORICAL_PROSE
