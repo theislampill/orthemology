@@ -1464,6 +1464,46 @@ class TypedProseOwnerMigrationTests(unittest.TestCase):
         cls.guide_blobs = {}
         for path in [*cls.GUIDES, cls.resolver.MEDIATOR_GUIDE]:
             cls.guide_original[path], cls.guide_blobs[path] = acquire_path(cls.REV, path)
+        # The shared t14 guide also authenticates the finite administrative
+        # catalogue. Supply its exact native traversal trees, not record bodies.
+        def acquire_tree_path(revision, relative):
+            acquire(revision, 'commit')
+            tree = subprocess.check_output(['git', '--no-replace-objects', 'rev-parse',
+                revision + '^{tree}'], cwd=cls.project).decode().strip()
+            for part in relative.rstrip('/').split('/'):
+                acquire(tree, 'tree')
+                raw = subprocess.check_output(['git', '--no-replace-objects', '--literal-pathspecs',
+                    'ls-tree', '-z', tree, '--', part], cwd=cls.project)
+                metadata, actual = raw.rstrip(b'\0').split(b'\t')
+                mode, kind, oid = metadata.decode().split()
+                if actual.decode() != part or mode != '040000' or kind != 'tree':
+                    raise ValueError('unsafe administrative fixture tree dependency')
+                tree = oid
+            acquire(tree, 'tree')
+            descendants = subprocess.check_output(['git', '--no-replace-objects',
+                'ls-tree', '-d', '-r', '-z', tree], cwd=cls.project)
+            for entry in descendants.split(b'\0'):
+                if not entry:
+                    continue
+                metadata, _ = entry.split(b'\t', 1)
+                mode, kind, oid = metadata.decode().split()
+                if mode != '040000' or kind != 'tree':
+                    raise ValueError('administrative fixture descendant is not a tree')
+                acquire(oid, kind)
+
+        catalogue_revision = cls.resolver.ADMIN_RECORD_BASE
+        for directory in sorted(cls.resolver.ADMIN_RECORD_NAMES):
+            acquire_tree_path(catalogue_revision, directory)
+        catalogue = subprocess.check_output(['git', '--no-replace-objects', 'ls-tree',
+            '-rz', '--full-tree', catalogue_revision, '--', *sorted(cls.resolver.ADMIN_RECORD_NAMES)],
+            cwd=cls.project)
+        if (len(catalogue.rstrip(b'\0').split(b'\0')) != 236
+                or hashlib.sha256(catalogue).hexdigest() != cls.resolver.ADMIN_RECORD_TREE_SHA256):
+            raise ValueError('administrative fixture catalogue differs')
+        for path in sorted(set(cls.GUIDES) & set(cls.resolver.ADMIN_GUIDES)):
+            body, oid = acquire_path(catalogue_revision, path)
+            if body != cls.guide_original[path] or oid != cls.guide_blobs[path]:
+                raise ValueError('shared typed/administrative guide identity differs')
         cls.old_manifest, cls.old_manifest_blob = acquire_path(cls.REV, projection.MANIFEST)
         # This isolated fixture owns the twelve prose bindings above. Pin its
         # manifest form before later snapshot migrations, whose independent
@@ -1811,7 +1851,7 @@ class ContinuationOwnerRootMigrationTests(unittest.TestCase):
         cls.paths = tuple(owners.PRESERVATION_OWNER_PATHS)
         cls.current = {
             name: owners._preservation_owner_body(
-                projection.ROOT, name, owners.PRESERVATION_OWNER_CURRENT[name])
+                projection.ROOT, name, owners.PRESERVATION_OWNER_SPARSE_PRIOR[name])
             for name in cls.paths
         }
         # All current ordinary bodies authenticate before any historical read.

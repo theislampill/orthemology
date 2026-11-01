@@ -177,6 +177,21 @@ def read_json(path, *, root=None):
     return value
 
 
+def _input_json_bytes(raw):
+    """Apply the original duplicate-key/nonfinite checks to derived bytes."""
+    def pairs(rows):
+        result = {}
+        for name, value in rows:
+            require(name not in result, 'Duplicate JSON key: ' + name)
+            result[name] = value
+        return result
+    def constant(value):
+        raise ValueError('Nonfinite JSON value: ' + value)
+    value = json.loads(raw.decode('utf-8'), object_pairs_hook=pairs, parse_constant=constant)
+    _finite(value)
+    return value
+
+
 def string_list(value, *, empty=True):
     require(isinstance(value, list), 'Expected string list')
     require(empty or bool(value), 'Empty required collection')
@@ -223,7 +238,10 @@ def _documents(bundle):
 def _record_files(bundle, root):
     registry = bundle['registry']
     keys(registry, {'schema', 'programme', 'cutoff', 'baseline_commit', 'baseline_tree',
-                    'records', 'suite_ids', 'result_ids'})
+                    'records', 'suite_ids', 'result_ids'}, {'preserved_source_inputs'})
+    if 'preserved_source_inputs' in registry:
+        require(registry == _source.successor_input_registry_document(root),
+                'Compact original inputs require the exact current native registry edition')
     require(registry['schema'] == 'orthemology-v5-successors-v1', 'Unknown registry schema')
     require(registry['programme'] == 'Orthemology v5' and registry['cutoff'] in CUTOFF_TRANCHES,
             'Wrong programme or cutoff')
@@ -455,10 +473,13 @@ def _sources(bundle, root):
         digest(row['public_sha256']); integer(row['public_bytes'])
         historical = {_source.MEDIATOR_COORDINATION: 'T12-SOURCE-COORDINATION',
                       **_source.TYPED_V5_SOURCE_IDS}
-        path = path_in(root, row['public_path'], exists=row['public_path'] not in historical)
+        path = path_in(root, row['public_path'], exists=row['public_path'] not in historical
+                       and row['public_path'] not in _source.SUCCESSOR_INPUT_PATHS)
         prefix = AREA + '/source-store/' + row['public_sha256'] + '/'
         require(row['public_path'].startswith(prefix), 'Wrong public source content-addressed path')
-        if row['public_path'] in historical:
+        if row['public_path'] in _source.SUCCESSOR_INPUT_PATHS:
+            raw = _source.successor_input_source_bytes(root, row)
+        elif row['public_path'] in historical:
             name = row['public_path']
             require(row['id'] == historical[name] and row['projection'] == 'EXACT',
                     'Wrong finite historical prose source role')
@@ -474,7 +495,8 @@ def _sources(bundle, root):
         except UnicodeDecodeError:
             raise ValueError('Public source must have a reviewed UTF-8 projection') from None
         if path.suffix.lower() == '.json':
-            _public_values(read_json(path))
+            _public_values(_input_json_bytes(raw) if row['public_path'] in _source.SUCCESSOR_INPUT_PATHS
+                           else read_json(path))
         if row['projection'] == 'EXACT':
             require(row['original_sha256'] == row['public_sha256'] and row['original_bytes'] == row['public_bytes']
                     and row['derivation'] is None, 'EXACT projection differs from original')
@@ -514,8 +536,12 @@ def _allowlist(bundle, root, sources):
         refs(row['source_ids'], sources, 'allowlist source')
         historical = {_source.MEDIATOR_COORDINATION: 'T12-SOURCE-COORDINATION',
                       **_source.TYPED_V5_SOURCE_IDS}
-        path = path_in(root, name, exists=name not in historical)
-        if name in historical:
+        path = path_in(root, name, exists=name not in historical and name not in _source.SUCCESSOR_INPUT_PATHS)
+        if name in _source.SUCCESSOR_INPUT_PATHS:
+            raw = _source.successor_input_allowlist_bytes(root, row)
+            if not path.exists():
+                authenticated_absent.add(name)
+        elif name in historical:
             require(row['kind'] == 'SOURCE' and row['source_ids'] == [historical[name]],
                     'Wrong finite historical prose allowlist role')
             raw = _source.historical_source_bytes(root, name,

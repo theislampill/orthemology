@@ -45,6 +45,9 @@ from resolve_t20_v6_source import (
     CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths,
     CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_duplicate_paths,
     CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_duplicate_paths,
+    SUCCESSOR_INPUT_PATHS, SUCCESSOR_INPUT_REGISTRY, SUCCESSOR_INPUT_REPLAY_ORIGINAL,
+    successor_input_bytes, successor_input_absences, successor_input_registry_original_bytes,
+    GENERATED_FIXTURE_PATHS, generated_fixture_absences,
 )
 
 
@@ -637,7 +640,9 @@ def _permitted_projection_consumer_pins(original, candidate):
     fixtures = {path: (*binding, FIXTURE_CONSUMER_REVISION)
                 for path, binding in FIXTURE_CONSUMER_ORIGINAL.items()}
     combined = dict(earlier, **next24)
-    for bindings in (earlier, next24, combined, dict(combined, **fixtures)):
+    replay_input = {'scripts/replay_v5_successors.py': SUCCESSOR_INPUT_REPLAY_ORIGINAL}
+    for bindings in (earlier, next24, combined, dict(combined, **fixtures),
+                     dict(combined, **fixtures, **replay_input)):
         expected = deepcopy(original)
         try:
             for path, (blob, identity, size, revision) in bindings.items():
@@ -938,6 +943,7 @@ REFACTOR_EDIT_PATHS = {
     "tests/test_v5_twentieth_data.py",
     # Existing source-ID and replay owners for the finite continuation copies.
     "scripts/validate_research_continuations.py", "scripts/replay_research_continuations.py",
+    "scripts/replay_v5_successors.py",
     "tests/test_research_continuations.py", "scripts/replay_continuation_controls.py",
     # Current reference consumers for the same four exact typed prose identities.
     "scripts/validate_repo.py", "scripts/validate_internal_references.py",
@@ -1330,6 +1336,23 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
             except (ValueError, OSError, UnicodeError) as exc:
                 errors.append("corpus-currentness: continuation copy evidence: " + str(exc))
                 continuation_paths = set()
+        input_paths = set()
+        input_owners = set()
+        if any((status == "D" and path in SUCCESSOR_INPUT_PATHS)
+               or (status == "M" and path == SUCCESSOR_INPUT_REGISTRY)
+               for status, path in zip(values[::2], values[1::2])):
+            try:
+                input_paths = successor_input_absences(repo)
+                input_owners.add(SUCCESSOR_INPUT_REGISTRY)
+            except (ValueError, OSError) as exc:
+                errors.append("corpus-currentness: consolidated input evidence: " + str(exc))
+        generated_paths = set()
+        if any(status == "D" and path in GENERATED_FIXTURE_PATHS
+               for status, path in zip(values[::2], values[1::2])):
+            try:
+                generated_paths = generated_fixture_absences(repo)
+            except (ValueError, OSError) as exc:
+                errors.append("corpus-currentness: live-derived fixture evidence: " + str(exc))
         administrative_paths = set()
         if any(status == "D" and path in ADMIN_RECORD_PATHS
                for status, path in zip(values[::2], values[1::2])):
@@ -1353,6 +1376,9 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                       ((status == "D" and path in HISTORICAL_PROSE and path in historical_paths)
                         or (status == "D" and path in allowed_duplicates)
                         or (status == "D" and path in administrative_paths)
+                        or (status == "D" and path in input_paths)
+                        or (status == "M" and path in input_owners)
+                        or (status == "D" and path in generated_paths)
                         or (status == "D" and path in (continuation_paths or ()))
                         or (status == "M" and path in rounds_navigation)
                         or (status == "M" and path in administrative_guides)
@@ -1396,6 +1422,11 @@ def check(repo, owners, cross):
     navigation = {}
     if fixture_status is not None:
         navigation[FIXTURE_STATUS_PATH] = fixture_status
+    if SUCCESSOR_INPUT_REGISTRY in indexed:
+        try:
+            navigation[SUCCESSOR_INPUT_REGISTRY] = successor_input_registry_original_bytes(repo)
+        except (ValueError, OSError) as exc:
+            fail("navigation-source", SUCCESSOR_INPUT_REGISTRY + ": " + str(exc))
     if PMR007_ROUNDS_PARENT in indexed:
         try:
             navigation[PMR007_ROUNDS_PARENT] = pmr007_rounds_parent_source_bytes(repo)
@@ -1464,7 +1495,7 @@ def check(repo, owners, cross):
             fail("owner", str(path) + " is not a regular pinned discovery owner")
             continue
         try:
-            body = (navigation[path] if path in (PMR007_ROUNDS_PARENT, FIXTURE_STATUS_PATH) and path in navigation
+            body = (navigation[path] if path in (PMR007_ROUNDS_PARENT, FIXTURE_STATUS_PATH, SUCCESSOR_INPUT_REGISTRY) and path in navigation
                     else safe_path(repo, path).read_bytes())
             raw = b"blob " + str(len(body)).encode("ascii") + b"\0" + body
             digest = (hashlib.sha1(raw) if len(row["git_oid"]) == 40 else hashlib.sha256(raw)).hexdigest()
@@ -1485,7 +1516,8 @@ def check(repo, owners, cross):
             path = source["path"]
             body = (historical[path] if path in historical else navigation[path]
                     if path in navigation else administrative_record_bytes(repo, path)
-                    if path in ADMIN_RECORD_PATHS else safe_path(repo, path).read_bytes())
+                    if path in ADMIN_RECORD_PATHS else successor_input_bytes(repo, path)
+                    if path in SUCCESSOR_INPUT_PATHS else safe_path(repo, path).read_bytes())
         except (KeyError, ValueError, OSError) as exc:
             fail("unsafe-source", str(key) + ": " + str(exc))
             continue
@@ -1498,7 +1530,7 @@ def check(repo, owners, cross):
             if oid != continuation_owners.get(path, row)["git_oid"]:
                 fail("baseline-source" if path in indexed else "source-addition",
                      path + " differs from the independently bound source")
-            mode = ("100644" if path in historical or path in ADMIN_RECORD_PATHS else
+            mode = ("100644" if path in historical or path in ADMIN_RECORD_PATHS or path in SUCCESSOR_INPUT_PATHS else
                     "100755" if safe_path(repo, path).stat().st_mode & 0o111 else "100644")
             if mode != row["mode"]:
                 fail("source-mode", path + " changed executable mode")

@@ -27,7 +27,8 @@ from resolve_t20_v6_source import (
     CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths,
     CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_duplicate_paths,
     CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_duplicate_paths,
-    CONTINUATION_REGISTRY_PATH,
+    CONTINUATION_REGISTRY_PATH, SUCCESSOR_INPUT_PATHS, GENERATED_FIXTURE_PATHS,
+    SUCCESSOR_INPUT_REGISTRY, successor_input_registry_document, successor_input_absences,
 )
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -145,7 +146,9 @@ def check_object(root, row):
         path = root / relative
         if path.is_symlink() or not path.resolve().is_relative_to(root.resolve()):
             raise ValueError('source symlink or escaped root')
-        if (relative.as_posix() in HISTORICAL_PROSE
+        if (relative.as_posix() in SUCCESSOR_INPUT_PATHS
+                or relative.as_posix() in GENERATED_FIXTURE_PATHS
+                or relative.as_posix() in HISTORICAL_PROSE
                 or relative.as_posix() == CONTINUATION_REGISTRY_PATH
                 or relative.as_posix() in CHECKPOINT_RECORD_COPY_PATHS
                 or relative.as_posix() in CHECKPOINT_CODE_COPY_PATHS
@@ -235,6 +238,8 @@ def check_preserved_roots(root, objects):
     record_authenticated = None
     package_authenticated = None
     code_authenticated = None
+    input_registry_authenticated = None
+    input_absences_authenticated = None
     for cached in (True, False):
         result = readonly_git_diff(root,
             ['git', '--no-replace-objects', 'diff', *(['--cached'] if cached else []),
@@ -264,6 +269,23 @@ def check_preserved_roots(root, objects):
                     status == 'D' and path in CHECKPOINT_CODE_COPY_PATHS
                     for status, path in zip(changes[::2], changes[1::2])):
                 code_authenticated = checkpoint_code_duplicate_paths(root)
+            if input_registry_authenticated is None and any(
+                    status == 'M' and path == SUCCESSOR_INPUT_REGISTRY
+                    for status, path in zip(changes[::2], changes[1::2])):
+                input_registry_authenticated = False
+                try:
+                    successor_input_registry_document(root)
+                    input_registry_authenticated = True
+                except (ValueError, OSError):
+                    pass  # No allowance for a changed or unsafe registry edition.
+            if input_absences_authenticated is None and any(
+                    status == 'D' and path in SUCCESSOR_INPUT_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                input_absences_authenticated = set()
+                try:
+                    input_absences_authenticated = successor_input_absences(root)
+                except (ValueError, OSError):
+                    pass  # Only authenticated physically absent originals qualify.
             if owner_authenticated is None and any(
                     status == 'M' and path in continuation_owners.PRESERVATION_OWNER_PATHS
                     for status, path in zip(changes[::2], changes[1::2])):
@@ -286,6 +308,9 @@ def check_preserved_roots(root, objects):
                         (status == 'D' and path in (record_authenticated or ())) or
                         (status == 'D' and path in (package_authenticated or ())) or
                         (status == 'D' and path in (code_authenticated or ())) or
+                        (status == 'D' and path in (input_absences_authenticated or ())) or
+                        (status == 'M' and path == SUCCESSOR_INPUT_REGISTRY
+                         and input_registry_authenticated) or
                         (status == 'M' and path == MEDIATOR_GUIDE and guide_authenticated) or
                         (status == 'M' and path in typed_guides_authenticated) or
                         (status == 'M' and path in administrative_guides_authenticated) or

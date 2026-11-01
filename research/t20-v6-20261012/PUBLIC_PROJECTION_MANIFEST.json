@@ -117180,7 +117180,9 @@
       "repository_path": "scripts/replay_v5_successors.py",
       "public_sha256": "5b4c1b7f0ced9af2599b980fd25fd1a15b819357853753319798b2965fc540ef",
       "public_bytes": 450007,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "8f6641df9d613c0814652a9b2fc338f72ebe2230"
     },
     {
       "source_sha256": "5b4d29e5972137e03f190bab1a5947a9d7fb462b8d40f950e24a8b991e4a241d",

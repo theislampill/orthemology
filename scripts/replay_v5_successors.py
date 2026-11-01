@@ -317,9 +317,13 @@ def public_bytes(root, source):
     name = relative(source['public_path'])
     require(name.startswith('experiments/orthemology-v5-successors/source-store/' + expected + '/'), 'Source is not content-addressed')
     require(type(source['public_bytes']) is int and source['public_bytes'] >= 0, 'Invalid source length')
-    path = path_in(root, name)
-    require(path.is_file(), 'Missing projected source')
-    data = path.read_bytes()
+    from resolve_t20_v6_source import SUCCESSOR_INPUT_PATHS, successor_input_source_bytes
+    if name in SUCCESSOR_INPUT_PATHS:
+        data = successor_input_source_bytes(root, source)
+    else:
+        path = path_in(root, name)
+        require(path.is_file(), 'Missing projected source')
+        data = path.read_bytes()
     require(len(data) == source['public_bytes'] and sha(data) == expected, 'Source bytes/hash changed')
     return data
 

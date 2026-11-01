@@ -1483,7 +1483,11 @@ class BulkConsumerProjectionPinTests(unittest.TestCase):
      'experiments/orthemology-v5-successors/groups/t08-history/README.md': ('fb21186d2568c38564e0bf23f94df81d05fbad8fe39dcab23b6fd83b0291f7d1',
                                                                             45079,
                                                                             'a49fbf2d3e0691495f5884e3a13ec475aafb1293',
-                                                                            '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
+                                                                            '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+     'scripts/replay_v5_successors.py': ('5b4c1b7f0ced9af2599b980fd25fd1a15b819357853753319798b2965fc540ef',
+                                         450007,
+                                         '8f6641df9d613c0814652a9b2fc338f72ebe2230',
+                                         '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
 
     @classmethod
     def setUpClass(cls):
@@ -8603,6 +8607,592 @@ class FixtureConsumerEditionTests(unittest.TestCase):
         self.assertEqual(len(before), 13)
         self.assertEqual(self.reader.check_corpus_currentness(
             repo, baseline, fixture_owners=owners), [])
+
+
+class ConsolidatedSuccessorInputTests(unittest.TestCase):
+    """Exact public original inputs remain live through one existing registry."""
+    REGISTRY = 'experiments/orthemology-v5-successors/registry.json'
+
+    @classmethod
+    def setUpClass(cls):
+        import os
+        import resolve_t20_v6_source as source
+        import validate_v5_successors as successors
+        import replay_v5_successors as replay
+        import validate_t20_v6_projection as projection
+        import validate_internal_references as references
+        import check_reader_pilot as reader
+        cls.os, cls.source, cls.successors, cls.replay = os, source, successors, replay
+        cls.projection, cls.references, cls.reader = projection, references, reader
+        cls.compact = (ROOT / cls.REGISTRY).read_bytes()
+        document = json.loads(cls.compact)
+        cls.originals = {path: value.encode() for path, value in document.pop('preserved_source_inputs').items()}
+        cls.original_registry = (json.dumps(document, sort_keys=True, ensure_ascii=False, indent=2) + '\n').encode()
+        if set(cls.originals) != source.SUCCESSOR_INPUT_PATHS or len(cls.originals) != 19:
+            raise ValueError('the current registry requires all nineteen original inputs')
+        source_map = json.loads((ROOT / 'docs/provenance/v5-successors/SOURCE_MAP.json').read_bytes())
+        cls.rows = [row for row in source_map['sources'] if row.get('public_path') in cls.originals]
+        allowlist = json.loads((ROOT / 'docs/provenance/v5-successors/PUBLIC_PROJECTION.json').read_bytes())['allowlist']
+        cls.allowlist = [row for row in allowlist if row['path'] in cls.originals]
+        cls.manifest = json.loads((ROOT / 'research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json').read_bytes())
+        cls.public = [row for row in cls.manifest['objects'] if row.get('repository_path') in cls.originals]
+        cross = json.loads((ROOT / 'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json').read_bytes())
+        cls.aliases = {key: row for key, row in cross['sources'].items() if row['path'] in cls.originals}
+        if (len(cls.rows), len(cls.allowlist), len(cls.public), len(cls.aliases)) != (29, 19, 3, 2):
+            raise ValueError('original source/allowlist/public/reader incidences differ')
+        cls.objects = subprocess.check_output(['/usr/bin/git', '--no-replace-objects', 'rev-parse',
+            '--path-format=absolute', '--git-path', 'objects'], cwd=ROOT).decode().strip()
+
+    def git(self, *args, data=None):
+        env = {k: v for k, v in self.os.environ.items() if not k.startswith('GIT_')}
+        env.update(GIT_NO_LAZY_FETCH='1', GIT_NO_REPLACE_OBJECTS='1', GIT_ALLOW_PROTOCOL='',
+                   GIT_OPTIONAL_LOCKS='0', GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=self.os.devnull,
+                   GIT_CONFIG_SYSTEM=self.os.devnull, GIT_TERMINAL_PROMPT='0',
+                   GIT_AUTHOR_NAME='Fixture test', GIT_AUTHOR_EMAIL='fixture@example.invalid',
+                   GIT_COMMITTER_NAME='Fixture test', GIT_COMMITTER_EMAIL='fixture@example.invalid')
+        return subprocess.check_output(['/usr/bin/git', '--no-replace-objects', '--literal-pathspecs', *args],
+                                       cwd=self.repo, env=env, input=data)
+
+    def setUp(self):
+        temporary = tempfile.TemporaryDirectory(prefix='consolidated-inputs-')
+        self.addCleanup(temporary.cleanup)
+        self.repo = Path(temporary.name)
+        self.git('-c', 'init.templateDir=', 'init', '-q')
+        (self.repo / '.git/objects/info/alternates').write_text(self.objects + '\n')
+        for name, body in {**self.originals, self.REGISTRY: self.original_registry}.items():
+            target = self.repo / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(body)
+            target.chmod(0o644)
+        self.git('add', '--', self.REGISTRY, *self.originals)
+        self.git('commit', '-qm', 'Original public input records and registry')
+        self.baseline = self.git('rev-parse', 'HEAD').decode().strip()
+        (self.repo / self.REGISTRY).write_bytes(self.compact)
+        self.git('add', '--', self.REGISTRY)
+        self.index = self.repo / '.git/index'
+        self.saved_index = self.index.read_bytes()
+        self.sample = sorted(self.originals)[0]
+
+    def original_bytes(self, path):
+        before = self.index.read_bytes()
+        try:
+            return self.source.successor_input_bytes(self.repo, path)
+        finally:
+            self.assertEqual(self.index.read_bytes(), before)
+
+    def remove_originals(self):
+        for path in self.originals:
+            (self.repo / path).unlink()
+
+    def test_original_and_compact_editions_preserve_original_bytes(self):
+        registry = self.repo / self.REGISTRY
+        registry.write_bytes(self.original_registry)
+        self.git('add', '--', self.REGISTRY)
+        self.assertEqual(self.original_bytes(self.sample), self.originals[self.sample])
+        (self.repo / self.sample).unlink()
+        with self.assertRaises((ValueError, OSError)):
+            self.original_bytes(self.sample)
+        (self.repo / self.sample).write_bytes(self.originals[self.sample])
+        registry.write_bytes(self.compact)
+        self.index.write_bytes(self.saved_index)
+        for state in ('present', 'unstaged', 'staged'):
+            if state == 'unstaged':
+                self.remove_originals()
+            elif state == 'staged':
+                self.git('update-index', '--force-remove', '--', *self.originals)
+            for path, body in self.originals.items():
+                self.assertEqual(self.original_bytes(path), body)
+            self.assertEqual(self.source.successor_input_absences(self.repo),
+                             set() if state == 'present' else set(self.originals))
+
+    def test_registry_inverse_and_distinct_original_statuses_remain_exact(self):
+        self.assertEqual(self.source.successor_input_registry_original_bytes(self.repo), self.original_registry)
+        reconstructed = json.loads(self.compact)
+        del reconstructed['preserved_source_inputs']
+        self.assertEqual(reconstructed, json.loads(self.original_registry))
+        pending = next(path for path in self.originals if path.endswith('/CANDIDATE_v1.json'))
+        reviewed = next(path for path in self.originals if path.endswith('/VERIFICATION.json'))
+        self.assertEqual(json.loads(self.original_bytes(pending))['status'], 'kernel-checked; independent review pending')
+        self.assertEqual(json.loads(self.original_bytes(reviewed))['verdict'], 'ACCEPT bounded syntactic admissibility extension')
+
+    def test_each_original_body_and_staged_concealment_are_rejected(self):
+        for name, body in self.originals.items():
+            with self.subTest(path=name):
+                path = self.repo / name
+                path.write_bytes(body + b'\nwrong\n')
+                with self.assertRaises((ValueError, OSError)):
+                    self.original_bytes(name)
+                self.git('add', '--', name)
+                path.write_bytes(body)
+                with self.assertRaises((ValueError, OSError)):
+                    self.original_bytes(name)
+                path.unlink()
+                with self.assertRaises((ValueError, OSError)):
+                    self.original_bytes(name)
+                self.index.write_bytes(self.saved_index)
+                path.write_bytes(body)
+
+    def test_registry_changed_mixed_missing_mode_and_link_states_fail(self):
+        registry = self.repo / self.REGISTRY
+        for fault in ('body', 'original-mixed', 'staged-wrong', 'missing', 'mode', 'symlink', 'hardlink'):
+            with self.subTest(fault=fault):
+                alias = self.repo / 'registry-copy'
+                try:
+                    if fault == 'body':
+                        document = json.loads(self.compact)
+                        document['preserved_source_inputs'][self.sample] += '\nwrong'
+                        registry.write_text(json.dumps(document))
+                    elif fault == 'original-mixed':
+                        registry.write_bytes(self.original_registry)
+                    elif fault == 'staged-wrong':
+                        registry.write_bytes(self.compact + b'\nwrong')
+                        self.git('add', '--', self.REGISTRY)
+                        registry.write_bytes(self.compact)
+                    elif fault == 'missing':
+                        registry.unlink()
+                    elif fault == 'mode':
+                        registry.chmod(0o755)
+                    elif fault == 'symlink':
+                        alias.write_bytes(self.compact)
+                        registry.unlink()
+                        registry.symlink_to(alias)
+                    else:
+                        self.os.link(registry, alias)
+                    with self.assertRaises((ValueError, OSError)):
+                        self.original_bytes(self.sample)
+                finally:
+                    if registry.is_symlink():
+                        registry.unlink()
+                    if alias.exists():
+                        alias.unlink()
+                    registry.write_bytes(self.compact)
+                    registry.chmod(0o644)
+                    self.index.write_bytes(self.saved_index)
+
+    def test_original_mode_conflict_stage_and_symlink_are_rejected(self):
+        path = self.repo / self.sample
+        oid = self.git('rev-parse', self.baseline + ':' + self.sample).decode().strip()
+        self.git('update-index', '--cacheinfo', '100755,' + oid + ',' + self.sample)
+        with self.assertRaises((ValueError, OSError)):
+            self.original_bytes(self.sample)
+        self.index.write_bytes(self.saved_index)
+        self.git('update-index', '--force-remove', '--', self.sample)
+        self.git('update-index', '-z', '--index-info', data=('100644 ' + oid + ' 2\t' + self.sample + '\0').encode())
+        with self.assertRaises((ValueError, OSError)):
+            self.original_bytes(self.sample)
+        self.index.write_bytes(self.saved_index)
+        path.unlink()
+        path.symlink_to(self.repo / self.REGISTRY)
+        with self.assertRaises((ValueError, OSError)):
+            self.original_bytes(self.sample)
+
+    def test_source_allowlist_and_public_rows_keep_all_original_roles(self):
+        for original in self.rows:
+            for field, value in (('id', 'unadmitted-id'), ('projection', 'DERIVED'), ('review_scope', 'new acceptance')):
+                row = deepcopy(original)
+                row[field] = value
+                with self.assertRaises(ValueError):
+                    self.source.successor_input_source_bytes(self.repo, row)
+        for original in self.allowlist:
+            for field, value in (('kind', 'AUTHORED'), ('source_ids', [])):
+                row = deepcopy(original)
+                row[field] = value
+                with self.assertRaises(ValueError):
+                    self.source.successor_input_allowlist_bytes(self.repo, row)
+        for original in self.public:
+            for field, value in (('role', 'new_proof'), ('disposition', 'ADD_EXACT'), ('public_sha256', '0' * 64)):
+                row = deepcopy(original)
+                row[field] = value
+                self.assertTrue(self.projection.check_object(self.repo, row))
+
+    def test_json_strictness_and_nonmember_boundaries_are_retained(self):
+        for raw in (b'{"x":1,"x":2}', b'{"x":NaN}', b'{"x":Infinity}', b'{"x":1e999}'):
+            with self.assertRaises(ValueError):
+                self.successors._input_json_bytes(raw)
+        for path in ('experiments/episode-reification-v2/fixtures/KEYS.json', 'not-an-admitted-input.json'):
+            with self.assertRaises(ValueError):
+                self.source.successor_input_bytes(self.repo, path)
+
+    def test_actual_sources_allowlist_and_replay_bytes_accept_absent_inputs(self):
+        self.remove_originals()
+        bundle = {'sources': self.rows, 'reviews': [], 'projection_reviews': []}
+        sources, _, _ = self.successors._sources(bundle, self.repo)
+        self.assertEqual(len(sources), 29)
+        self.successors._allowlist({'public_allowlist': self.allowlist}, self.repo, sources)
+        for row in self.rows:
+            self.assertEqual(self.replay.public_bytes(self.repo, row), self.originals[row['public_path']])
+        for row in self.public:
+            self.assertEqual(self.projection.check_object(self.repo, row), [])
+
+    def test_reader_currentness_discovery_and_two_aliases_keep_original_identity(self):
+        self.remove_originals()
+        self.assertEqual(self.reader.check_corpus_currentness(self.repo, self.baseline), [])
+        self.git('update-index', '--force-remove', '--', *self.originals)
+        self.assertEqual(self.reader.check_corpus_currentness(self.repo, self.baseline), [])
+        owners = {'schema': 'orthemology-reader-owner-map-v1', 'baseline': {'commit': self.baseline},
+                  'external_body_admissions': [], 'collections': [{'key': 'input19-fixture', 'include': ['**'],
+                  'exclude': [], 'owners': [self.REGISTRY]}], 'required_work_sources': []}
+        cross = {'schema': 'orthemology-reader-crosswalk-v1', 'coverage_stage': 'reader-candidate',
+                 'sources': self.aliases, 'works': []}
+        errors = self.reader.check(self.repo, owners, cross)
+        self.assertFalse([error for error in errors if error.startswith((
+            'unsafe-source:', 'baseline-source:', 'source-mode:', 'source-drift:', 'source-scope:', 'owner:', 'navigation-source:'))])
+        self.assertTrue(errors, 'the deliberately finite context must not be relabelled whole-reader PASS')
+        (self.repo / 'unadmitted.txt').write_text('new source\n')
+        self.git('add', '--', 'unadmitted.txt')
+        self.assertTrue(self.reader.check_corpus_currentness(self.repo, self.baseline))
+
+    def test_references_and_exact_public_replay_pin_reject_unrelated_changes(self):
+        previous = self.references.ROOT
+        self.references.ROOT = self.repo
+        try:
+            path = self.repo / self.sample
+            path.write_bytes(self.originals[self.sample] + b'wrong')
+            self.assertFalse(self.references._resolves('docs/input.md', self.sample))
+            path.write_bytes(self.originals[self.sample])
+            self.remove_originals()
+            self.assertTrue(self.references._resolves('docs/input.md', self.sample))
+            self.assertTrue(self.references._resolves('docs/input.md', '../' + self.sample))
+        finally:
+            self.references.ROOT = previous
+        replay_path = 'scripts/replay_v5_successors.py'
+        row = next(row for row in self.manifest['objects'] if row.get('repository_path') == replay_path)
+        self.assertEqual(self.projection.check_object(self.repo, row), [])
+        original = deepcopy(self.manifest)
+        old = next(item for item in original['objects'] if item.get('repository_path') == replay_path)
+        del old['repository_revision']
+        del old['git_blob']
+        self.assertTrue(self.reader._permitted_projection_consumer_pins(original, self.manifest))
+        for field, value in (('git_blob', '0' * 40), ('repository_revision', '0' * 40), ('role', 'new_proof')):
+            changed = deepcopy(self.manifest)
+            item = next(item for item in changed['objects'] if item.get('repository_path') == replay_path)
+            item[field] = value
+            self.assertFalse(self.reader._permitted_projection_consumer_pins(original, changed))
+
+
+    def projection_errors(self):
+        """Exercise the real preservation predicate over this native20-file baseline."""
+        from unittest.mock import patch
+        before = self.index.read_bytes()
+        with patch.object(self.projection, 'BASE', self.baseline), \
+             patch.object(self.projection, 'HISTORICAL_PROSE', {}):
+            errors = self.projection.check_preserved_roots(self.repo, {})
+        self.assertEqual(self.index.read_bytes(), before)
+        return errors
+
+    def test_projection_accepts_authenticated_registry_and_exact_absence_states(self):
+        self.assertEqual(self.projection_errors(), [])
+        self.remove_originals()
+        self.assertEqual(self.projection_errors(), [])
+        self.git('update-index', '--force-remove', '--', *self.originals)
+        self.assertEqual(self.projection_errors(), [])
+
+    def test_projection_rejects_bad_registry_and_unrelated_protected_changes(self):
+        registry = self.repo / self.REGISTRY
+        extra = self.repo / 'experiments/orthemology-v5-successors/unadmitted-input.json'
+        alias = self.repo / 'registry-link'
+        for fault in ('body', 'mixed-edition', 'staged-body', 'staged-mode',
+                      'missing', 'mode', 'symlink', 'hardlink', 'unrelated-addition'):
+            with self.subTest(fault=fault):
+                try:
+                    if fault == 'body':
+                        registry.write_bytes(self.compact + b'changed')
+                    elif fault == 'mixed-edition':
+                        registry.write_bytes(self.original_registry)
+                    elif fault == 'staged-body':
+                        registry.write_bytes(self.compact + b'changed')
+                        self.git('add', '--', self.REGISTRY)
+                        registry.write_bytes(self.compact)
+                    elif fault == 'staged-mode':
+                        self.git('update-index', '--chmod=+x', '--', self.REGISTRY)
+                    elif fault == 'missing':
+                        registry.unlink()
+                    elif fault == 'mode':
+                        registry.chmod(0o755)
+                    elif fault == 'symlink':
+                        alias.write_bytes(self.compact)
+                        registry.unlink()
+                        registry.symlink_to(alias)
+                    elif fault == 'hardlink':
+                        self.os.link(registry, alias)
+                    else:
+                        extra.write_text('{"new": "unqualified"}\n')
+                        self.git('add', '--', str(extra.relative_to(self.repo)))
+                    self.assertTrue(self.projection_errors())
+                finally:
+                    if registry.is_symlink():
+                        registry.unlink()
+                    if alias.exists():
+                        alias.unlink()
+                    if extra.exists():
+                        extra.unlink()
+                    registry.write_bytes(self.compact)
+                    registry.chmod(0o644)
+                    self.index.write_bytes(self.saved_index)
+                self.assertEqual(self.projection_errors(), [])
+
+    def test_projection_rejects_source_changes_and_concealed_index_states(self):
+        target = self.repo / self.sample
+        original = self.originals[self.sample]
+        alias = self.repo / 'input-link'
+        for fault in ('body', 'staged-body-hidden-by-absence', 'staged-mode',
+                      'mode', 'symlink', 'hardlink', 'staged-deletion-with-present-copy'):
+            with self.subTest(fault=fault):
+                try:
+                    if fault == 'body':
+                        target.write_bytes(original + b'changed')
+                    elif fault == 'staged-body-hidden-by-absence':
+                        target.write_bytes(original + b'changed')
+                        self.git('add', '--', self.sample)
+                        target.unlink()
+                    elif fault == 'staged-mode':
+                        self.git('update-index', '--chmod=+x', '--', self.sample)
+                    elif fault == 'mode':
+                        target.chmod(0o755)
+                    elif fault == 'symlink':
+                        target.unlink()
+                        target.symlink_to(self.repo / self.REGISTRY)
+                    elif fault == 'hardlink':
+                        self.os.link(target, alias)
+                    else:
+                        self.git('update-index', '--force-remove', '--', self.sample)
+                    self.assertTrue(self.projection_errors())
+                finally:
+                    if target.is_symlink():
+                        target.unlink()
+                    if alias.exists():
+                        alias.unlink()
+                    target.write_bytes(original)
+                    target.chmod(0o644)
+                    self.index.write_bytes(self.saved_index)
+                self.assertEqual(self.projection_errors(), [])
+
+
+class LiveDerivedFixtureConsumerTests(unittest.TestCase):
+    """Original public identities survive only through their exact live owners."""
+    OWNERS = {
+        'experiments/episode-reification/scripts/generate_fixtures.py': '9c39be153165e8d1c5a074243fc5f4ba467862ccc0d433bb42e7471230e4b929',
+        'experiments/episode-reification-v2/scripts/generate_cases.py': '3b449a7580426fdf89f85612018473f92c3c2c274d4eea47e7046d1bcfe1bc89',
+        'tests/schema-negative/NEGATIVE-FIXTURES.json': 'b229103cc93bb15d046cb15a1794d99d0cb40200fbc8fe9ac7ceff358c88d3e9',
+    }
+
+    @classmethod
+    def setUpClass(cls):
+        import os
+        import resolve_t20_v6_source as source
+        import validate_t20_v6_projection as projection
+        import validate_internal_references as references
+        import check_reader_pilot as reader
+        cls.os, cls.source, cls.projection, cls.references, cls.reader = os, source, projection, references, reader
+        cls.owner_bodies = {name: (ROOT / name).read_bytes() for name in cls.OWNERS}
+        cls.originals = {}
+        for name, identity in cls.OWNERS.items():
+            body = cls.owner_bodies[name]
+            if hashlib.sha256(body).hexdigest() != identity:
+                raise ValueError('the test requires the exact public generator/consolidation owner')
+            if name.endswith('.py'):
+                scope = {'__name__': 'episode_public_renderer', '__file__': str(ROOT / name)}
+                exec(compile(body, name, 'exec'), scope)
+                prefix = name.split('/scripts/')[0] + '/fixtures/'
+                cls.originals.update({prefix + path: text.encode() for path, text in scope['public_files']().items()})
+            else:
+                for row in json.loads(body)['invalid_fixtures']:
+                    cls.originals['tests/invalid/' + row['id'] + '.json'] = (
+                        json.dumps(row, ensure_ascii=False, indent=2) + '\n').encode()
+        if len(cls.originals) != 123:
+            raise ValueError('the finite original fixture population differs')
+        manifest = json.loads((ROOT / 'research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json').read_bytes())
+        cls.rows = {row['repository_path']: row for row in manifest['objects']
+                    if row.get('repository_path') in cls.originals}
+        if set(cls.rows) != set(cls.originals):
+            raise ValueError('every original requires its real public row')
+        cls.samples = [next(path for path in cls.originals if path.startswith(prefix)) for prefix in (
+            'experiments/episode-reification/fixtures/',
+            'experiments/episode-reification-v2/fixtures/', 'tests/invalid/')]
+
+    def git(self, *args, data=None):
+        env = {k: v for k, v in self.os.environ.items() if not k.startswith('GIT_')}
+        env.update(GIT_NO_LAZY_FETCH='1', GIT_NO_REPLACE_OBJECTS='1', GIT_ALLOW_PROTOCOL='',
+                   GIT_OPTIONAL_LOCKS='0', GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=self.os.devnull,
+                   GIT_CONFIG_SYSTEM=self.os.devnull, GIT_TERMINAL_PROMPT='0',
+                   GIT_AUTHOR_NAME='Fixture test', GIT_AUTHOR_EMAIL='fixture@example.invalid',
+                   GIT_COMMITTER_NAME='Fixture test', GIT_COMMITTER_EMAIL='fixture@example.invalid')
+        return subprocess.check_output(['/usr/bin/git', '--no-replace-objects', '--literal-pathspecs', *args],
+                                       cwd=self.repo, env=env, input=data)
+
+    def setUp(self):
+        temporary = tempfile.TemporaryDirectory(prefix='live-derived-fixtures-')
+        self.addCleanup(temporary.cleanup)
+        self.repo = Path(temporary.name)
+        self.git('-c', 'init.templateDir=', 'init', '-q')
+        for name, body in {**self.owner_bodies, **self.originals}.items():
+            path = self.repo / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(body)
+            path.chmod(0o644)
+        self.git('add', '--', *self.owner_bodies, *self.originals)
+        self.git('commit', '-qm', 'Finite original public fixture identities')
+        self.baseline = self.git('rev-parse', 'HEAD').decode().strip()
+        self.index = self.repo / '.git/index'
+        self.raw_index = self.index.read_bytes()
+
+    def read_original(self, path):
+        gate = getattr(self.source, 'generated_fixture_bytes', None)
+        self.assertTrue(callable(gate), 'live-derived original fixture resolver is absent')
+        before = self.index.read_bytes()
+        try:
+            return gate(self.repo, path)
+        finally:
+            self.assertEqual(self.index.read_bytes(), before)
+
+    def remove_originals(self):
+        for name in self.originals:
+            (self.repo / name).unlink()
+
+    def test_present_unstaged_and_staged_originals_have_identical_public_bytes(self):
+        for state in ('present', 'unstaged', 'staged'):
+            with self.subTest(state=state):
+                if state == 'unstaged':
+                    self.remove_originals()
+                elif state == 'staged':
+                    self.git('update-index', '--force-remove', '--', *self.originals)
+                for path in self.samples:
+                    self.assertEqual(self.read_original(path), self.originals[path])
+                    self.assertEqual(self.source.source_bytes(self.repo, self.rows[path]), self.originals[path])
+                    self.assertEqual(self.projection.check_object(self.repo, self.rows[path]), [])
+                self.assertEqual(self.source.generated_fixture_absences(self.repo),
+                                 set() if state == 'present' else set(self.originals))
+
+    def test_each_owner_body_and_staged_identity_are_required(self):
+        for name, body in self.owner_bodies.items():
+            with self.subTest(owner=name):
+                path = self.repo / name
+                path.write_bytes(body + b'\nwrong source\n')
+                with self.assertRaises((ValueError, OSError)):
+                    self.read_original(self.samples[0])
+                self.git('add', '--', name)
+                path.write_bytes(body)
+                with self.assertRaises((ValueError, OSError)):
+                    self.read_original(self.samples[0])
+                self.index.write_bytes(self.raw_index)
+                self.assertEqual(self.read_original(self.samples[0]), self.originals[self.samples[0]])
+
+    def test_missing_executable_symlink_and_hardlinked_owners_are_rejected(self):
+        for name, body in self.owner_bodies.items():
+            for fault in ('missing', 'executable', 'symlink', 'hardlink'):
+                with self.subTest(owner=name, fault=fault):
+                    path = self.repo / name
+                    extra = self.repo / 'owner-alias'
+                    if fault == 'missing':
+                        path.unlink()
+                    elif fault == 'executable':
+                        path.chmod(0o755)
+                    elif fault == 'symlink':
+                        extra.write_bytes(body)
+                        path.unlink()
+                        path.symlink_to(extra)
+                    else:
+                        self.os.link(path, extra)
+                    with self.assertRaises((ValueError, OSError)):
+                        self.read_original(self.samples[0])
+                    if path.is_symlink():
+                        path.unlink()
+                    if extra.exists():
+                        extra.unlink()
+                    path.write_bytes(body)
+                    path.chmod(0o644)
+
+    def test_present_original_corruption_and_staged_concealment_are_rejected(self):
+        for name in self.samples:
+            with self.subTest(original=name):
+                path = self.repo / name
+                path.write_bytes(self.originals[name] + b'\nwrong original\n')
+                with self.assertRaises((ValueError, OSError)):
+                    self.read_original(name)
+                self.assertTrue(self.projection.check_object(self.repo, self.rows[name]))
+                self.git('add', '--', name)
+                path.write_bytes(self.originals[name])
+                with self.assertRaises((ValueError, OSError)):
+                    self.read_original(name)
+                path.unlink()
+                with self.assertRaises((ValueError, OSError)):
+                    self.read_original(name)
+                self.index.write_bytes(self.raw_index)
+                path.write_bytes(self.originals[name])
+
+    def test_original_index_mode_and_unmerged_stage_and_symlink_are_rejected(self):
+        name = self.samples[0]
+        oid = self.git('rev-parse', self.baseline + ':' + name).decode().strip()
+        self.git('update-index', '--cacheinfo', '100755,' + oid + ',' + name)
+        with self.assertRaises((ValueError, OSError)):
+            self.read_original(name)
+        self.index.write_bytes(self.raw_index)
+        self.git('update-index', '--force-remove', '--', name)
+        self.git('update-index', '-z', '--index-info', data=('100644 ' + oid + ' 2\t' + name + '\0').encode())
+        with self.assertRaises((ValueError, OSError)):
+            self.read_original(name)
+        self.index.write_bytes(self.raw_index)
+        path = self.repo / name
+        path.unlink()
+        path.symlink_to(self.repo / self.samples[1])
+        with self.assertRaises((ValueError, OSError)):
+            self.read_original(name)
+
+    def test_original_public_role_identity_and_complete_row_cannot_be_relabelled(self):
+        for name in self.samples:
+            self.assertEqual(self.read_original(name), self.originals[name])
+            mutations = {'source_sha256': '0' * 64, 'public_sha256': '0' * 64,
+                         'source_bytes': 1, 'public_bytes': 1, 'disposition': 'ADD_EXACT',
+                         'role': 'accepted_proof', 'source_action': 'omit',
+                         'declared_eligibility_basis': 'new_claim', 'required_dependencies': ['invented'],
+                         'publication_basis': 'new_authority', 'repository_revision': self.baseline,
+                         'git_blob': '0' * 40, 'unreviewed_extra': True}
+            for field, value in mutations.items():
+                with self.subTest(path=name, field=field):
+                    row = deepcopy(self.rows[name])
+                    row[field] = value
+                    with self.assertRaises((ValueError, OSError)):
+                        self.source.source_bytes(self.repo, row)
+                    self.assertTrue(self.projection.check_object(self.repo, row))
+        for outside in ('tests/invalid/not-admitted.json',
+                        'experiments/episode-reification-v2/fixtures/KEYS.json'):
+            with self.assertRaises(ValueError):
+                self.source.generated_fixture_bytes(self.repo, outside)
+
+    def test_currentness_admits_only_the_exact_physically_absent_class(self):
+        self.read_original(self.samples[0])
+        self.remove_originals()
+        self.assertEqual(self.reader.check_corpus_currentness(self.repo, self.baseline), [])
+        self.git('update-index', '--force-remove', '--', *self.originals)
+        self.assertEqual(self.reader.check_corpus_currentness(self.repo, self.baseline), [])
+        name = self.samples[0]
+        (self.repo / name).write_bytes(self.originals[name] + b'wrong')
+        self.git('add', '--', name)
+        self.assertTrue(self.reader.check_corpus_currentness(self.repo, self.baseline))
+        (self.repo / name).unlink()
+        self.git('update-index', '--force-remove', '--', name)
+        (self.repo / 'unadmitted-source.txt').write_text('new material\n')
+        self.git('add', '--', 'unadmitted-source.txt')
+        self.assertTrue(self.reader.check_corpus_currentness(self.repo, self.baseline))
+
+    def test_references_authenticate_present_and_absent_originals_before_exists(self):
+        self.read_original(self.samples[0])
+        previous = self.references.ROOT
+        self.references.ROOT = self.repo
+        try:
+            for name in self.samples:
+                path = self.repo / name
+                path.write_bytes(self.originals[name] + b'wrong')
+                self.assertFalse(self.references._resolves('docs/historical.md', name))
+                path.write_bytes(self.originals[name])
+            self.remove_originals()
+            for name in self.samples:
+                self.assertTrue(self.references._resolves('docs/historical.md', name))
+                self.assertTrue(self.references._resolves('docs/historical.md', '../' + name))
+            self.assertFalse(self.references._resolves('docs/historical.md', 'tests/invalid/not-admitted.json'))
+        finally:
+            self.references.ROOT = previous
+
 
 if __name__ == "__main__":
     unittest.main()

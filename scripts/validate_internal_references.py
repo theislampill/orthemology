@@ -41,6 +41,8 @@ from resolve_t20_v6_source import (
     CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_copy_bytes,
     ADMIN_RECORD_PATHS, administrative_record_bytes,
     CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_copy_bytes,
+    SUCCESSOR_INPUT_PATHS, successor_input_bytes,
+    GENERATED_FIXTURE_PATHS, generated_fixture_bytes,
 )
 from validate_ar8r_reconciliation import (
     PMR007_DEEP_PREFIX, _pmr007_deep_original_members,
@@ -321,7 +323,50 @@ def _administrative_reference(src, cited):
     return None
 
 
+def _successor_input_reference(src, cited):
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for path in candidates:
+        if path in SUCCESSOR_INPUT_PATHS:
+            try:
+                successor_input_bytes(ROOT, path)
+                return True
+            except (ValueError, OSError):
+                return False
+    return None
+
+
+def _generated_fixture_reference(src, cited):
+    """Original public fixture citations use exact live owners before exists()."""
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for path in candidates:
+        if path in GENERATED_FIXTURE_PATHS:
+            try:
+                generated_fixture_bytes(ROOT, path)
+                return True
+            except (ValueError, OSError):
+                return False
+    return None
+
+
 def _resolves(src, cited):
+    inputs = _successor_input_reference(src, cited)
+    if inputs is not None:
+        return inputs
+    generated = _generated_fixture_reference(src, cited)
+    if generated is not None:
+        return generated
     administrative = _administrative_reference(src, cited)
     if administrative is not None:
         return administrative

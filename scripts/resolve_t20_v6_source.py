@@ -3090,6 +3090,501 @@ def checkpoint_package_duplicate_paths(root):
     return result
 
 
+
+# Original public source-lock/input documents consolidated in the existing
+# successor registry. Historical status and source-ID rows remain unchanged;
+# this current-owner route neither reads historical input bodies nor runs them.
+SUCCESSOR_INPUT_REGISTRY = 'experiments/orthemology-v5-successors/registry.json'
+SUCCESSOR_INPUT_REGISTRY_ORIGINAL = ('2eb0d0b7bcd2227e72aacc069d491ac2c0d8704e',
+ 'bd3a917d7225c18112915f5afaef373a864d176880bd6045c9ea291dd2308088',
+ 20278)
+SUCCESSOR_INPUT_REGISTRY_COMPACT = ('779b9b2b1b606b639acbae817bcfe0b449db87cb',
+ 'abdf460e94482b8585507dbe02e4b2580c6a511cb30a1851c3fc2b21f96d95e6',
+ 247542)
+SUCCESSOR_INPUT_IDENTITIES = {'experiments/orthemology-v5-successors/source-store/0fa8d05ed79fae8494e902456594ba0ab5805d8cf653547c870d337f3db60227/ACCEPTED_INPUTS.json': ('9c6b8a36c8322a84bc60960354a798491f46a42e',
+                                                                                                                                              '0fa8d05ed79fae8494e902456594ba0ab5805d8cf653547c870d337f3db60227',
+                                                                                                                                              9661),
+ 'experiments/orthemology-v5-successors/source-store/28daa5deacd7358a75f1ccf7b2beededd4b323218dfd3c0dcde37c64415117e7/source-lock.json': ('f5f31b17a11692e540fecac986571d0810eae80b',
+                                                                                                                                          '28daa5deacd7358a75f1ccf7b2beededd4b323218dfd3c0dcde37c64415117e7',
+                                                                                                                                          11769),
+ 'experiments/orthemology-v5-successors/source-store/44677823653e8e914ca7e8e4f582c08d6834bbe57c2835e8b0e4ddbca157eac8/SOURCE_IDENTITIES.json': ('4ae7354b188ce45097d72b4ac8795ef38ab7444e',
+                                                                                                                                                '44677823653e8e914ca7e8e4f582c08d6834bbe57c2835e8b0e4ddbca157eac8',
+                                                                                                                                                10061),
+ 'experiments/orthemology-v5-successors/source-store/4c6d10a5d818dda9b5f68b8c8bdd6d9ec8a053e584e6aaa70e8c014cb49fbb14/DEPENDENCIES.json': ('e4ba2d129645b64d614f2f9d130f23ab577cb7de',
+                                                                                                                                           '4c6d10a5d818dda9b5f68b8c8bdd6d9ec8a053e584e6aaa70e8c014cb49fbb14',
+                                                                                                                                           911),
+ 'experiments/orthemology-v5-successors/source-store/54638026fd05b40e780d1ed5d51bbd286398926e074b487f746237b5dd816be0/source-lock.json': ('fc50ba0dc4d991fe073b877998579cb7c69fefcd',
+                                                                                                                                          '54638026fd05b40e780d1ed5d51bbd286398926e074b487f746237b5dd816be0',
+                                                                                                                                          27255),
+ 'experiments/orthemology-v5-successors/source-store/59f9f607436e2b70ba2b8060aafcbf5edbd80f5c5c69553fe43447d039589924/lake-manifest.json': ('0e5527b93cab98dc17ea2bae63c47a2e97d93d09',
+                                                                                                                                            '59f9f607436e2b70ba2b8060aafcbf5edbd80f5c5c69553fe43447d039589924',
+                                                                                                                                            3530),
+ 'experiments/orthemology-v5-successors/source-store/5c6421b650bc87a2427a892a39e5522dc44543ca4ac1bd6e9f08d536c044a752/mathlib-lake-manifest.json': ('92a8049abc1f1b43ae2b4a6605616034f0dd2682',
+                                                                                                                                                    '5c6421b650bc87a2427a892a39e5522dc44543ca4ac1bd6e9f08d536c044a752',
+                                                                                                                                                    2786),
+ 'experiments/orthemology-v5-successors/source-store/5ca88d5793fb2283badb16c8d722b777e0e9eb49198043b9335a198d572060c7/MODULES.json': ('fb6800f3c9a97318f042984fa44bc8b653ee86bf',
+                                                                                                                                      '5ca88d5793fb2283badb16c8d722b777e0e9eb49198043b9335a198d572060c7',
+                                                                                                                                      2143),
+ 'experiments/orthemology-v5-successors/source-store/72293db56804c56c017582d7d22f8dc21a985ab37ff258ac789160c2dfeb7c63/sense-source-lock.json': ('08686a52836bd38618c89714033f5773e0aa8b7b',
+                                                                                                                                                '72293db56804c56c017582d7d22f8dc21a985ab37ff258ac789160c2dfeb7c63',
+                                                                                                                                                3700),
+ 'experiments/orthemology-v5-successors/source-store/7dc06e97812b481caac84ca86cc685c2fb255fdc119f650b83cc6851dc085e61/preserved-module-lock.json': ('749a698d39a4b7331db8da32adadbfdce8ce0500',
+                                                                                                                                                    '7dc06e97812b481caac84ca86cc685c2fb255fdc119f650b83cc6851dc085e61',
+                                                                                                                                                    13881),
+ 'experiments/orthemology-v5-successors/source-store/8981fe18fb0d182dfbab01142f250354846dfb691c873d8d1ced71d3f1df3f4c/SOURCE_MANIFEST.json': ('a453c3cab30144a42a0fee620e79be164bd9004d',
+                                                                                                                                              '8981fe18fb0d182dfbab01142f250354846dfb691c873d8d1ced71d3f1df3f4c',
+                                                                                                                                              54364),
+ 'experiments/orthemology-v5-successors/source-store/95927e700cd403a2651b33280d052a8c972b12bca48c5cac26a1643c14a80cc6/VERIFICATION.json': ('dc4b5bf39147633e519ce26714fa6ac8d45c2b52',
+                                                                                                                                           '95927e700cd403a2651b33280d052a8c972b12bca48c5cac26a1643c14a80cc6',
+                                                                                                                                           10917),
+ 'experiments/orthemology-v5-successors/source-store/9eaffaa788991447cf64938183de0e982b467d333dd9a369f11c0c99a0be595c/DEPENDENCY_PINS.json': ('1b4b907f9a07e510966cc556394328332503e6ad',
+                                                                                                                                              '9eaffaa788991447cf64938183de0e982b467d333dd9a369f11c0c99a0be595c',
+                                                                                                                                              1411),
+ 'experiments/orthemology-v5-successors/source-store/a774b663b6f6c6dfe81f7b6272cc57b8059a5bbfc7428ca4d0c41e0ba0fd88f2/TOOLCHAIN_REQUIREMENTS.json': ('b4f789777f78dfeea7396030f43de19effaab911',
+                                                                                                                                                     'a774b663b6f6c6dfe81f7b6272cc57b8059a5bbfc7428ca4d0c41e0ba0fd88f2',
+                                                                                                                                                     1930),
+ 'experiments/orthemology-v5-successors/source-store/a919102c102ff3d07b447f52490266aca76afa4f84a972e2f3d78b3470f97a7a/INPUTS.json': ('8f24186f63a4bf8d8170f4966d81499e25cd325a',
+                                                                                                                                     'a919102c102ff3d07b447f52490266aca76afa4f84a972e2f3d78b3470f97a7a',
+                                                                                                                                     3067),
+ 'experiments/orthemology-v5-successors/source-store/b7500882ab904ebc84f3f28a036d687a54f5f023eac839b6177a1d65b679874f/INPUT_SOURCE_MANIFEST.json': ('6c1cd045289ee6c80141e467f1571ff56c8ad626',
+                                                                                                                                                    'b7500882ab904ebc84f3f28a036d687a54f5f023eac839b6177a1d65b679874f',
+                                                                                                                                                    13212),
+ 'experiments/orthemology-v5-successors/source-store/bd800ff0214d7a382feb5da185d706766185fa309794ab52b2ad9e26444f613c/source-lock.json': ('84aa71aab1aa6f093a903667e9ba43b2e3379c55',
+                                                                                                                                          'bd800ff0214d7a382feb5da185d706766185fa309794ab52b2ad9e26444f613c',
+                                                                                                                                          33103),
+ 'experiments/orthemology-v5-successors/source-store/f7bda53cf932963883223c7f14f305b1354b35207d2a50da3c0dfcc2e3813eec/SOURCE_LOCK.json': ('c9e307e8f56b5f422c7c37ce81b2ff9b1d6911ac',
+                                                                                                                                          'f7bda53cf932963883223c7f14f305b1354b35207d2a50da3c0dfcc2e3813eec',
+                                                                                                                                          1293),
+ 'experiments/orthemology-v5-successors/source-store/fc51e32962e76ac4c5ebef5c3154b5c4a1ab6061aeb018db712d128ee6dac210/CANDIDATE_v1.json': ('efb2c86d08dc320547b45f6235491d49d0ad3cbd',
+                                                                                                                                           'fc51e32962e76ac4c5ebef5c3154b5c4a1ab6061aeb018db712d128ee6dac210',
+                                                                                                                                           1436)}
+SUCCESSOR_INPUT_PATHS = frozenset(SUCCESSOR_INPUT_IDENTITIES)
+SUCCESSOR_INPUT_SOURCE_ROWS = {'D04-SRC-a85d94dc414a670c7a8f': 'ebbbbcba2ed7fcfc88d63f8ab81be953fe45005fd723b5f6a465565abe162642',
+ 'D04-SRC-be2c9366c9dcd528896a': '36a8ed1f1735a68428bc83e4414b83c91ec20e5bd7d768e1f4ddd6550bf3cec4',
+ 'D17-T14-OCCURRENCE-LOCK': '6a7289058f39dcacb5bf439a1247469499e7b5805f67f7b62f3f61b17ba215f0',
+ 'D17-T14-SENSE-LOCK': '181874ad231690d68a8e0da0f7cfe72730ec36de6a1e66e2e915c4b3914124de',
+ 'T10-SOURCE-MATHLIB-LOCK': 'b390b2fa34594df1c0a17f469c1b12ebfa12ea72a1afc540ec2c03f9dcf590d5',
+ 'T10-SOURCE-TOOLCHAIN': '95930f09e34928b638caad4673ec3a28d6ba619e405ee345625e18bfdfbb76f7',
+ 'T15-EMPIRICAL-INPUTS': '2622157726e160b4bc62699ae8a2ce093c08c76fc25f514f7486389dd6ca9b19',
+ 'T16-SRC-558248588a84c4008c9f': '9e79cef98c755b5e6b6f80d6fd5614be44e56cf18c3634881ab061145d065d8f',
+ 'T16-SRC-5e89ebdc28d2c56f623b': '074fc08e953e04f2ae15bfb8e35e71026a8ec5e97f58e0fafbb4d24c3546c03f',
+ 'T16-SRC-92f6c5b5ed52c8f0f5b9': '64340de02564e21c1b885c3fd757d56e4d24582af06858c855395081dc3dcac6',
+ 'T18-SRC-ad5b98addd9ac45e786f': 'f06ac028a52bc105ae02bc41143d6dc174c22f0becc3c21551824e9f2caf2b76',
+ 'T20-SRC-08ebd6db94fc7f4d3631': '915c7d67fe0eaaacaafc3de9a80561baf19c08ea7e7cf7d8b116bb5afac47595',
+ 'T20-SRC-0ac8c842fa418387529e': '7880577635d065e15049ea8f05956f292d42ee080d3e91a6b884d0b45259b9d9',
+ 'identity-src-1c4b694e76a97ff0a4f3': 'b0555ac411a150b116107c8d5ac7d4f91f2bd94cf7c27cc53e31d16807cf3bb3',
+ 'identity-src-3a568ae64ac6477c0a72': '4ed8c27b9f93eb8cbd8a791477ab30fa8f3185e3126b32b7f26f0075ef3c4a02',
+ 'identity-src-3ef69ec0388c759d402a': 'e2bb40c54691cef5f04ac4f437042fe33e10ba7478541c30026289ee8ffa9645',
+ 'identity-src-4d2242ca386abb9fb05c': '3b471428146cf211b10a8f27e4f42d9d9131b11695acdc741e4e48421c4a19c0',
+ 'identity-src-5c6cec97594b89d6e3f9': '367b552dff0d0ea3aa23e362115a27b00656d37ccdd5772a4d00e8ece74fc8d9',
+ 'identity-src-75a60db349c64e493278': 'fafd1a9f669c6d077986d5fce70941d0df732854955c6d7d69c59b2fa048ddae',
+ 'identity-src-812be4cd57020df2dda2': 'de7838a5ad15d3fa723d6133db466fa2412f700e26b9a6af5149d2199bf3265d',
+ 'identity-src-9e0f90d4821dac7a884e': '783b47c72569db73f5ce1739d1d565886b65df0ff8d8b0acececa1c87986a67a',
+ 'identity-src-cd9196f31acf59c1f322': 'fbed0e4f6d3fadf7871236fe1e73f6c666c9f243472f0e1f4bad1b020611d745',
+ 'identity-src-e57c31ee021169826e13': '5058bfc1fe8f686b95b11a557bc2b5699aa553e64c767a9603df56a72d5b5392',
+ 'identity-src-f76bd800c9ca61417210': '230cc95e46272e4dad737e5f08cbef79329ac25b02e58f1fc9ff566edabe814b',
+ 'identity-src-fc97dc05921345d7812e': '437ae474ecbbab0c32dfce5bfe3f7815648ee691f791a706a70efae19b02e8c9',
+ 's0715-62eea502abc73f088bab': '0a506bbf9ceadcba7d4ffef63435532bd7e0eac6db82de12d000d163e9c0590e',
+ 's0715-65f87c96b2f69867bfbd': 'f0ebd5df2c8baf5cf544b713809a723b29130d95066ff22ea3fad86f87279bec',
+ 's0715-8bc1d7ed6f374d6baed3': '043280dddea1c4ba88b541e3daf4cb1b860416d9fb7d4189736bc0c82ff4c156',
+ 's0715-bd1e3387b8323ac0da4c': '28d967d45608efd982d05ae0f3da6871729eeda1e4bc7b4bc486ead9ecc6c64c'}
+SUCCESSOR_INPUT_ALLOWLIST_ROWS = {'experiments/orthemology-v5-successors/source-store/0fa8d05ed79fae8494e902456594ba0ab5805d8cf653547c870d337f3db60227/ACCEPTED_INPUTS.json': '2bcc7a99b1f59efd3b61795dc1e1ab7d696487ff96e8fa9d39de76c44515372f',
+ 'experiments/orthemology-v5-successors/source-store/28daa5deacd7358a75f1ccf7b2beededd4b323218dfd3c0dcde37c64415117e7/source-lock.json': '0af14f0df23408642214602e83cc3211efcda9a33a995a16865baa8cf23db025',
+ 'experiments/orthemology-v5-successors/source-store/44677823653e8e914ca7e8e4f582c08d6834bbe57c2835e8b0e4ddbca157eac8/SOURCE_IDENTITIES.json': 'd1f4442c116b50bcbe9ec172157bf192a8fd2d37eaed46c3d5a5d16803f1a58b',
+ 'experiments/orthemology-v5-successors/source-store/4c6d10a5d818dda9b5f68b8c8bdd6d9ec8a053e584e6aaa70e8c014cb49fbb14/DEPENDENCIES.json': '9d6524b06037093483f964a9d47633b2a003bd9ecce07f3bf9df581a90adf0e1',
+ 'experiments/orthemology-v5-successors/source-store/54638026fd05b40e780d1ed5d51bbd286398926e074b487f746237b5dd816be0/source-lock.json': 'bcf66ccc33db40b901b74b84d2611f990a7ebdd2d6c3b06d57e916463ace9410',
+ 'experiments/orthemology-v5-successors/source-store/59f9f607436e2b70ba2b8060aafcbf5edbd80f5c5c69553fe43447d039589924/lake-manifest.json': 'e766c35d157152fdd139d6bcd3443d430c8246be2549919a16b370cb3df14406',
+ 'experiments/orthemology-v5-successors/source-store/5c6421b650bc87a2427a892a39e5522dc44543ca4ac1bd6e9f08d536c044a752/mathlib-lake-manifest.json': '7670c11c159257f2b7e79511e74024442764ccaea3ddd64e47df85ad195403da',
+ 'experiments/orthemology-v5-successors/source-store/5ca88d5793fb2283badb16c8d722b777e0e9eb49198043b9335a198d572060c7/MODULES.json': 'efe0a33ef9a4292a51d447dd55aa329f44bc4f315dcc7b60e3d4afbf51cbc580',
+ 'experiments/orthemology-v5-successors/source-store/72293db56804c56c017582d7d22f8dc21a985ab37ff258ac789160c2dfeb7c63/sense-source-lock.json': '36d38b458468f95cfc61671558ebe6a46a985d65c480783c6fbf384267448b84',
+ 'experiments/orthemology-v5-successors/source-store/7dc06e97812b481caac84ca86cc685c2fb255fdc119f650b83cc6851dc085e61/preserved-module-lock.json': '09bc31f615684c63eb5c00fa7ca7387b77619744690e7b641b3261e731278de4',
+ 'experiments/orthemology-v5-successors/source-store/8981fe18fb0d182dfbab01142f250354846dfb691c873d8d1ced71d3f1df3f4c/SOURCE_MANIFEST.json': 'e62e9d640e8a6204a02c49638c785ad9109e3995b962de4ba4f71512d098b694',
+ 'experiments/orthemology-v5-successors/source-store/95927e700cd403a2651b33280d052a8c972b12bca48c5cac26a1643c14a80cc6/VERIFICATION.json': 'e590599a732c26631a8cc10626bac0a0b091d869adc757bba1ff2bf7ca980642',
+ 'experiments/orthemology-v5-successors/source-store/9eaffaa788991447cf64938183de0e982b467d333dd9a369f11c0c99a0be595c/DEPENDENCY_PINS.json': 'aaa1405813e8ddbb86a2f630a5b7a4d44bfeeb89649ec37288ab4a54562fdfce',
+ 'experiments/orthemology-v5-successors/source-store/a774b663b6f6c6dfe81f7b6272cc57b8059a5bbfc7428ca4d0c41e0ba0fd88f2/TOOLCHAIN_REQUIREMENTS.json': '8aafe0be5934f2f02c118608afbc25dfc19e5bbaa8a0b48bd62f538efe5d632c',
+ 'experiments/orthemology-v5-successors/source-store/a919102c102ff3d07b447f52490266aca76afa4f84a972e2f3d78b3470f97a7a/INPUTS.json': 'ce885e003129dc6b65c8819498d6aee4314998a05ba1f6e563354057942a89af',
+ 'experiments/orthemology-v5-successors/source-store/b7500882ab904ebc84f3f28a036d687a54f5f023eac839b6177a1d65b679874f/INPUT_SOURCE_MANIFEST.json': '24672e5a3f2cc8d58a3f59635122a30926f510a02ede7949976ce5f36369e3e7',
+ 'experiments/orthemology-v5-successors/source-store/bd800ff0214d7a382feb5da185d706766185fa309794ab52b2ad9e26444f613c/source-lock.json': '47fee37425fe3aaab4d28c2206d573ae9eeeb8c18bd5fdd78efd839e743bc6b7',
+ 'experiments/orthemology-v5-successors/source-store/f7bda53cf932963883223c7f14f305b1354b35207d2a50da3c0dfcc2e3813eec/SOURCE_LOCK.json': '22673682c67f7715ab9049485187f9917e926aac6c28e93f3613bd9bbc164e8a',
+ 'experiments/orthemology-v5-successors/source-store/fc51e32962e76ac4c5ebef5c3154b5c4a1ab6061aeb018db712d128ee6dac210/CANDIDATE_v1.json': '5c4b8f56e2e550c5a80e7285d04d08dad69f4bbed3c8c342e8aa595933ed2e8e'}
+SUCCESSOR_INPUT_PUBLIC_ROWS = {'experiments/orthemology-v5-successors/source-store/54638026fd05b40e780d1ed5d51bbd286398926e074b487f746237b5dd816be0/source-lock.json': '5e12a40c3ff8ca85d985c985d854241f99c608d8fa1b2fae3c1eb1d8d46eddb3',
+ 'experiments/orthemology-v5-successors/source-store/72293db56804c56c017582d7d22f8dc21a985ab37ff258ac789160c2dfeb7c63/sense-source-lock.json': 'd5e0f7b74663fb8a776d89b3e8c260548eb67b5ae4b6d4d5d9bb8e445d24545d',
+ 'experiments/orthemology-v5-successors/source-store/a919102c102ff3d07b447f52490266aca76afa4f84a972e2f3d78b3470f97a7a/INPUTS.json': '509a4a86b62e81850c4e7e1ea4ecbb3360b8a3753adf49c2c4ca8f0071ff95b9'}
+SUCCESSOR_INPUT_REPLAY_ORIGINAL = ('8f6641df9d613c0814652a9b2fc338f72ebe2230',
+ '5b4c1b7f0ced9af2599b980fd25fd1a15b819357853753319798b2965fc540ef',
+ 450007,
+ '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')
+
+
+def _successor_input_path(root, path):
+    node = root / path
+    for part in (root, *root.parents, *node.parents, node):
+        try:
+            if stat.S_ISLNK(part.lstat().st_mode):
+                raise ValueError('consolidated input path contains a symlink: ' + path)
+        except FileNotFoundError:
+            continue
+    return node
+
+
+def _successor_input_regular(root, path):
+    node = _successor_input_path(root, path)
+    fields = ('st_dev', 'st_ino', 'st_mode', 'st_nlink', 'st_size', 'st_mtime_ns', 'st_ctime_ns')
+    with os.fdopen(os.open(node, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK), 'rb') as stream:
+        before = os.fstat(stream.fileno())
+        if not stat.S_ISREG(before.st_mode) or before.st_nlink != 1 or before.st_mode & 0o111:
+            raise ValueError('consolidated input source is not an ordinary nonexecutable file: ' + path)
+        body = stream.read()
+        after = os.fstat(stream.fileno())
+    witness = tuple(getattr(before, field) for field in fields)
+    current = node.lstat()
+    if witness != tuple(getattr(after, field) for field in fields) or witness != tuple(getattr(current, field) for field in fields):
+        raise ValueError('consolidated input source changed during read: ' + path)
+    return body, witness
+
+
+def _successor_input_catalog(root):
+    root = pathlib.Path(root).absolute()
+    _successor_input_path(root, SUCCESSOR_INPUT_REGISTRY)
+    names = SUCCESSOR_INPUT_PATHS | {SUCCESSOR_INPUT_REGISTRY}
+    arguments = ('ls-files', '--stage', '-z', '--', *sorted(names))
+    before_index = _administrative_git(root, *arguments)
+    entries = {}
+    for item in before_index.split(b'\0'):
+        if not item:
+            continue
+        try:
+            meta, raw_path = item.split(b'\t', 1)
+            mode, oid, stage = meta.decode('ascii').split()
+            path = raw_path.decode('utf-8')
+        except (ValueError, UnicodeError) as exc:
+            raise ValueError('malformed consolidated input index') from exc
+        if path not in names or path in entries or mode != '100644' or stage != '0':
+            raise ValueError('consolidated input index path, mode or stage differs')
+        entries[path] = oid
+    registry_body, registry_witness = _successor_input_regular(root, SUCCESSOR_INPUT_REGISTRY)
+    registry_oid = hashlib.sha1(b'blob ' + str(len(registry_body)).encode() + b'\0' + registry_body).hexdigest()
+    registry_identity = (registry_oid, digest(registry_body), len(registry_body))
+    if (registry_identity not in (SUCCESSOR_INPUT_REGISTRY_ORIGINAL, SUCCESSOR_INPUT_REGISTRY_COMPACT)
+            or entries.get(SUCCESSOR_INPUT_REGISTRY) != registry_oid):
+        raise ValueError('consolidated input registry has a changed or mixed native edition')
+    registry = json.loads(registry_body)
+    witnesses = {SUCCESSOR_INPUT_REGISTRY: registry_witness}
+    originals = {}
+    if registry_identity == SUCCESSOR_INPUT_REGISTRY_COMPACT:
+        content = registry.get('preserved_source_inputs')
+        if not isinstance(content, dict) or set(content) != SUCCESSOR_INPUT_PATHS or not all(isinstance(value, str) for value in content.values()):
+            raise ValueError('consolidated input registry has an incomplete finite population')
+        originals = {path: value.encode('utf-8') for path, value in content.items()}
+        old_registry = {key: value for key, value in registry.items() if key != 'preserved_source_inputs'}
+        original_registry_body = (json.dumps(old_registry, sort_keys=True, ensure_ascii=False, indent=2) + '\n').encode()
+    else:
+        if 'preserved_source_inputs' in registry:
+            raise ValueError('original registry unexpectedly contains the successor field')
+        original_registry_body = registry_body
+        for path in SUCCESSOR_INPUT_PATHS:
+            originals[path], witnesses[path] = _successor_input_regular(root, path)
+    original_oid = hashlib.sha1(b'blob ' + str(len(original_registry_body)).encode() + b'\0' + original_registry_body).hexdigest()
+    if (original_oid, digest(original_registry_body), len(original_registry_body)) != SUCCESSOR_INPUT_REGISTRY_ORIGINAL:
+        raise ValueError('consolidated registry changed an original programme/status/record field')
+    absent = set()
+    for path, expected in SUCCESSOR_INPUT_IDENTITIES.items():
+        body = originals[path]
+        oid = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+        if (oid, digest(body), len(body)) != expected:
+            raise ValueError('consolidated original input identity differs: ' + path)
+        if path in entries and entries[path] != oid:
+            raise ValueError('consolidated original input staged identity differs: ' + path)
+        node = _successor_input_path(root, path)
+        if os.path.lexists(node):
+            present, witnesses[path] = _successor_input_regular(root, path)
+            if present != body:
+                raise ValueError('consolidated original input present bytes differ: ' + path)
+        else:
+            absent.add(path)
+    if _administrative_git(root, *arguments) != before_index:
+        raise ValueError('consolidated input native index changed during qualification')
+    fields = ('st_dev', 'st_ino', 'st_mode', 'st_nlink', 'st_size', 'st_mtime_ns', 'st_ctime_ns')
+    for path, witness in witnesses.items():
+        current = _successor_input_path(root, path).lstat()
+        if tuple(getattr(current, field) for field in fields) != witness:
+            raise ValueError('consolidated input changed during qualification: ' + path)
+    if any(os.path.lexists(_successor_input_path(root, path)) for path in absent):
+        raise ValueError('consolidated input absence changed during qualification')
+    return originals, absent, original_registry_body, registry
+
+
+def successor_input_bytes(root, path):
+    """Return one exact original public document from its current compact owner."""
+    if path not in SUCCESSOR_INPUT_PATHS:
+        raise ValueError('path is outside the finite consolidated input class')
+    return _successor_input_catalog(root)[0][path]
+
+
+def successor_input_absences(root):
+    return _successor_input_catalog(root)[1]
+
+
+def successor_input_registry_original_bytes(root):
+    """Retain the discovery owner's exact original view after native admission."""
+    return _successor_input_catalog(root)[2]
+
+
+def successor_input_registry_document(root):
+    return _successor_input_catalog(root)[3]
+
+
+def _successor_input_row_identity(row):
+    return digest(json.dumps(row, sort_keys=True, ensure_ascii=False, separators=(',', ':')).encode())
+
+
+def successor_input_source_bytes(root, row):
+    if (row.get('public_path') not in SUCCESSOR_INPUT_PATHS
+            or SUCCESSOR_INPUT_SOURCE_ROWS.get(row.get('id')) != _successor_input_row_identity(row)):
+        raise ValueError('consolidated input original source-ID/projection/review row differs')
+    return successor_input_bytes(root, row['public_path'])
+
+
+def successor_input_allowlist_bytes(root, row):
+    if SUCCESSOR_INPUT_ALLOWLIST_ROWS.get(row.get('path')) != _successor_input_row_identity(row):
+        raise ValueError('consolidated input original allowlist role/source association differs')
+    return successor_input_bytes(root, row['path'])
+
+
+def successor_input_public_bytes(root, row):
+    if SUCCESSOR_INPUT_PUBLIC_ROWS.get(row.get('repository_path')) != _successor_input_row_identity(row):
+        raise ValueError('consolidated input original public identity or role differs')
+    return successor_input_bytes(root, row['repository_path'])
+
+
+# The 75 public renderings and 48 negative-case copies have current compact
+# owners. Their original bytes, roles and counterexamples remain exact. This
+# route does not recover fixture bodies from Git, run a scorer or read keys.
+# The finite path set and identity digest are the original public123 edition;
+# the three ordinary current owners must also match their native index entries.
+GENERATED_FIXTURE_OWNERS = {'experiments/episode-reification-v2/scripts/generate_cases.py': ('e43f016e6a12594c29deef253cf1ba65d86462be',
+                                                                  '3b449a7580426fdf89f85612018473f92c3c2c274d4eea47e7046d1bcfe1bc89',
+                                                                  9631),
+ 'experiments/episode-reification/scripts/generate_fixtures.py': ('be7dd10d2f60ad16c4cf9df2ea3316d778b0c8fc',
+                                                                  '9c39be153165e8d1c5a074243fc5f4ba467862ccc0d433bb42e7471230e4b929',
+                                                                  8675),
+ 'tests/schema-negative/NEGATIVE-FIXTURES.json': ('20b6e5801823e87db6b5fb1638d0e3992eee36e6',
+                                                  'b229103cc93bb15d046cb15a1794d99d0cb40200fbc8fe9ac7ceff358c88d3e9',
+                                                  108213)}
+GENERATED_NEGATIVE_PATHS = frozenset(('tests/invalid/I01-empty-task-analysis.json',
+ 'tests/invalid/I02-empty-id-metaortheme.json',
+ 'tests/invalid/I03-duplicate-state-metaortheme.json',
+ 'tests/invalid/I04-bare-string-selector-metaortheme.json',
+ 'tests/invalid/I05-empty-anchor-metaorthemma.json',
+ 'tests/invalid/I06-plural-metaorthemma-type.json',
+ 'tests/invalid/I07-empty-metaorthemma-binding.json',
+ 'tests/invalid/I08-unresolved-residual-without-queue.json',
+ 'tests/invalid/I09-deferred-residual-without-trigger.json',
+ 'tests/invalid/I10-transferred-residual-without-receiver.json',
+ 'tests/invalid/I11-owner-assigned-residual-without-owner.json',
+ 'tests/invalid/I12-risk-accepted-residual-without-risk-record.json',
+ 'tests/invalid/I13-validated-resolved-without-evidence.json',
+ 'tests/invalid/I14-payload-free-handoff.json',
+ 'tests/invalid/I15-handoff-state-claim-without-valid-for-version.json',
+ 'tests/invalid/I16-skeletal-audit-ready-episode.json',
+ 'tests/invalid/I17-verdict-without-objectivity-index.json',
+ 'tests/invalid/I18-free-form-relspec.json',
+ 'tests/invalid/I19-free-form-perturbspec.json',
+ 'tests/invalid/I20-perturbspec-without-enumeration-or-measure.json',
+ 'tests/invalid/I21-verdict-missing-required-statuses.json',
+ 'tests/invalid/I22-na-without-reason-outside-required-path.json',
+ 'tests/invalid/I23-contradicted-pathway-summary.json',
+ 'tests/invalid/I24-claim-path-collapsed-into-episode-path.json',
+ 'tests/invalid/I25-relspec-declared-after-the-result.json',
+ 'tests/invalid/I26-perturbspec-invariant-also-varied.json',
+ 'tests/invalid/I27-claim-dependency-cycle.json',
+ 'tests/invalid/I28-token-anchored-to-another-occurrence.json',
+ 'tests/invalid/I29-analysis-self-inheritance.json',
+ 'tests/invalid/I30-analysis-inheritance-cycle.json',
+ 'tests/invalid/I31-analysis-unresolved-chain.json',
+ 'tests/invalid/I32-token-collision-across-episodes.json',
+ 'tests/invalid/I33-standalone-token-unowned.json',
+ 'tests/invalid/I34-token-scope-foreign-claim.json',
+ 'tests/invalid/I35-gc-ghost-mu-edition.json',
+ 'tests/invalid/I36-precedence-self-edge.json',
+ 'tests/invalid/I37-precedence-cycle.json',
+ 'tests/invalid/I38-token-outside-governing-config.json',
+ 'tests/invalid/I39-audit-ready-silent-external-analysis.json',
+ 'tests/invalid/I40-audit-ready-unresolved-external-ref.json',
+ 'tests/invalid/I41-mixed-offset-postdated-relspec.json',
+ 'tests/invalid/I42-naive-timestamp-relspec.json',
+ 'tests/invalid/I43-inverted-token-validity.json',
+ 'tests/invalid/I44-req-reason-omission.json',
+ 'tests/invalid/I45-naive-decision-time.json',
+ 'tests/invalid/I46-audit-ready-implicit-claim-type.json',
+ 'tests/invalid/I47-currency-exempt-undeclared-scope.json',
+ 'tests/invalid/I48-robustness-silently-disabled.json'))
+GENERATED_FIXTURE_PATHS = GENERATED_NEGATIVE_PATHS | {
+    'experiments/episode-reification/fixtures/E' + str(case) + '/' + name
+    for case in range(1, 6)
+    for name in ('baseline-log.md', 'facts.yaml', 'treatment-episode.json')
+} | {
+    'experiments/episode-reification-v2/fixtures/C' + format(case, '02d') + '/' + name
+    for case in range(1, 21)
+    for name in ('baseline-record.md', 'facts.json', 'treatment-record.json')
+}
+GENERATED_FIXTURE_IDENTITY_SHA256 = '2b078fcd3245db2e5b967145e00b1de4cb2bb5cfe2456f7f6c73d18de3e27540'
+
+
+def _generated_fixture_path(root, name):
+    target = root / name
+    for path in (root, *root.parents, *target.parents, target):
+        try:
+            if stat.S_ISLNK(path.lstat().st_mode):
+                raise ValueError('generated fixture source has a symlink component: ' + name)
+        except FileNotFoundError:
+            continue
+    return target
+
+
+def _generated_fixture_regular(root, name):
+    target = _generated_fixture_path(root, name)
+    fields = ('st_dev', 'st_ino', 'st_mode', 'st_nlink', 'st_size', 'st_mtime_ns', 'st_ctime_ns')
+    with os.fdopen(os.open(target, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK), 'rb') as stream:
+        before = os.fstat(stream.fileno())
+        if not stat.S_ISREG(before.st_mode) or before.st_nlink != 1 or before.st_mode & 0o111:
+            raise ValueError('generated fixture source is not an ordinary nonexecutable file: ' + name)
+        body = stream.read()
+        after = os.fstat(stream.fileno())
+    witness = tuple(getattr(before, field) for field in fields)
+    current_path = target.lstat()
+    if (witness != tuple(getattr(after, field) for field in fields)
+            or witness != tuple(getattr(current_path, field) for field in fields)):
+        raise ValueError('generated fixture source changed during the ordinary read: ' + name)
+    return body, witness
+
+
+def _generated_fixture_index(root):
+    environment = {key: value for key, value in os.environ.items() if not key.startswith('GIT_')}
+    environment.update(GIT_NO_LAZY_FETCH='1', GIT_NO_REPLACE_OBJECTS='1', GIT_ALLOW_PROTOCOL='',
+                       GIT_OPTIONAL_LOCKS='0', GIT_TERMINAL_PROMPT='0', GIT_CONFIG_NOSYSTEM='1',
+                       GIT_CONFIG_GLOBAL=os.devnull, GIT_CONFIG_SYSTEM=os.devnull)
+    process = subprocess.run(
+        ['/usr/bin/git', '--no-replace-objects', '--literal-pathspecs', 'ls-files', '--stage', '-z', '--',
+         *sorted(GENERATED_FIXTURE_PATHS | GENERATED_FIXTURE_OWNERS.keys())],
+        cwd=root, env=environment, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    if process.returncode:
+        raise ValueError('generated fixture native index is unavailable')
+    return process.stdout
+
+
+def _generated_fixture_catalog(root):
+    root = pathlib.Path(root).absolute()
+    _generated_fixture_path(root, next(iter(GENERATED_FIXTURE_OWNERS)))
+    originals = {}
+    witnesses = {}
+    before_index = _generated_fixture_index(root)
+    entries = {}
+    for entry in before_index.split(b'\0'):
+        if not entry:
+            continue
+        try:
+            metadata, raw_path = entry.split(b'\t', 1)
+            mode, oid, stage = metadata.decode('ascii').split()
+            name = raw_path.decode('utf-8')
+        except (ValueError, UnicodeError) as exc:
+            raise ValueError('malformed generated fixture index entry') from exc
+        if name not in GENERATED_FIXTURE_PATHS | GENERATED_FIXTURE_OWNERS.keys() or name in entries:
+            raise ValueError('unexpected or repeated generated fixture index entry')
+        if mode != '100644' or stage != '0':
+            raise ValueError('generated fixture index mode or stage differs: ' + name)
+        entries[name] = oid
+    for name, (oid, identity, size) in GENERATED_FIXTURE_OWNERS.items():
+        if entries.get(name) != oid:
+            raise ValueError('generated fixture owner is missing or differs in the native index: ' + name)
+        body, witnesses[name] = _generated_fixture_regular(root, name)
+        actual_oid = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+        if (actual_oid, digest(body), len(body)) != (oid, identity, size):
+            raise ValueError('generated fixture current owner bytes differ: ' + name)
+        if name.endswith('.py'):
+            # This is the already admitted pure public renderer, hash checked
+            # before compilation. Neither main() nor scoring_keys() is called.
+            namespace = {'__name__': 'episode_public_renderer', '__file__': str(root / name)}
+            exec(compile(body, name, 'exec'), namespace)
+            rendered = namespace['public_files']()
+            if not isinstance(rendered, dict) or not all(
+                    isinstance(path, str) and isinstance(text, str) for path, text in rendered.items()):
+                raise ValueError('public fixture renderer returned an invalid mapping')
+            prefix = name.split('/scripts/')[0] + '/fixtures/'
+            materialized = {prefix + path: text.encode('utf-8') for path, text in rendered.items()}
+        else:
+            materialized = {}
+            for row in json.loads(body)['invalid_fixtures']:
+                path = 'tests/invalid/' + row['id'] + '.json'
+                if path in materialized:
+                    raise ValueError('repeated canonical negative case')
+                materialized[path] = (json.dumps(row, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
+        if set(originals) & set(materialized):
+            raise ValueError('overlapping generated fixture owners')
+        originals.update(materialized)
+    if set(originals) != GENERATED_FIXTURE_PATHS:
+        raise ValueError('generated fixture original population differs')
+    identities = []
+    for name, body in sorted(originals.items()):
+        oid = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+        identities.append([name, oid, digest(body), len(body)])
+        if name in entries and entries[name] != oid:
+            raise ValueError('generated fixture original staged identity differs: ' + name)
+        target = _generated_fixture_path(root, name)
+        if os.path.lexists(target):
+            present, witnesses[name] = _generated_fixture_regular(root, name)
+            if present != body:
+                raise ValueError('generated fixture present original differs: ' + name)
+        else:
+            witnesses[name] = None
+    if digest(json.dumps(identities, separators=(',', ':'), ensure_ascii=False).encode()) != GENERATED_FIXTURE_IDENTITY_SHA256:
+        raise ValueError('generated fixture complete original identity binding differs')
+    if _generated_fixture_index(root) != before_index:
+        raise ValueError('generated fixture native index changed during qualification')
+    fields = ('st_dev', 'st_ino', 'st_mode', 'st_nlink', 'st_size', 'st_mtime_ns', 'st_ctime_ns')
+    for name, witness in witnesses.items():
+        target = _generated_fixture_path(root, name)
+        if witness is None:
+            if os.path.lexists(target):
+                raise ValueError('absent generated fixture reappeared during qualification: ' + name)
+        else:
+            current_path = target.lstat()
+            if tuple(getattr(current_path, field) for field in fields) != witness:
+                raise ValueError('generated fixture source changed during qualification: ' + name)
+    return originals, {name for name, witness in witnesses.items() if witness is None}
+
+
+def generated_fixture_bytes(root, path):
+    """Exact original bytes from current public generators/canonical cases only."""
+    if path not in GENERATED_FIXTURE_PATHS:
+        raise ValueError('path is outside the finite live-derived fixture class')
+    return _generated_fixture_catalog(root)[0][path]
+
+
+def generated_fixture_absences(root):
+    """Only genuine missing originals with exact live owners qualify."""
+    return _generated_fixture_catalog(root)[1]
+
+
+def generated_fixture_source_bytes(root, row):
+    path = row.get('repository_path')
+    if path not in GENERATED_FIXTURE_PATHS:
+        raise ValueError('public path is outside the finite live-derived fixture class')
+    body = generated_fixture_bytes(root, path)
+    argument = path.endswith('.md')
+    expected = {
+        'source_sha256': digest(body), 'source_action': 'include', 'source_bytes': len(body),
+        'role': 'authored_argument' if argument else 'qualified_metadata',
+        'declared_eligibility_basis': 'reviewed_owner_authored' if argument else 'reviewed_distribution_metadata',
+        'required_dependencies': [], 'disposition': 'REUSE', 'repository_path': path,
+        'public_sha256': digest(body), 'public_bytes': len(body),
+        'publication_basis': 'exact_existing_public_repository_object',
+    }
+    if row != expected:
+        raise ValueError('generated fixture public original identity, role or complete row differs')
+    return body
+
+
 def continuation_registry_source_bytes(root, row):
     """Keep one original public registry and its complete current owner edition.
 
@@ -3126,7 +3621,11 @@ def source_bytes(root, row):
     path = pathlib.PurePosixPath(row['repository_path'])
     if path.is_absolute() or '..' in path.parts or '\\' in str(path):
         raise ValueError('unsafe source path')
-    if str(path) == CONTINUATION_REGISTRY_PATH:
+    if str(path) in SUCCESSOR_INPUT_PATHS:
+        body = successor_input_public_bytes(root, row)
+    elif str(path) in GENERATED_FIXTURE_PATHS:
+        body = generated_fixture_source_bytes(root, row)
+    elif str(path) == CONTINUATION_REGISTRY_PATH:
         body = continuation_registry_source_bytes(root, row)
     elif str(path) in ADMIN_PUBLIC_GUIDE_PATHS and row.get('repository_revision'):
         blob, identity, size, _ = ADMIN_GUIDES[str(path)]
