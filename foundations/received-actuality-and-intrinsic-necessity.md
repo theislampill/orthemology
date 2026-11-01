@@ -938,6 +938,76 @@ Positive-role preservation is also weaker than complete-profile preservation or 
 
 The primary referent receipt reports 512 world signatures, 169 nonempty interpretation families and 22 hidden-anchor witnesses. Its distinct injective-embedding analysis uses 256 signatures in four-object candidate worlds, 143 nonempty role-complete embedding cases, 1,144 independently restricted map families and 300 hidden-anchor witnesses, alongside 67 multiple-role-bearer signatures and a multiple-world control. Those denominators describe different constructions and remain distinct. Eight frozen-hash rows and nine translation-anchor checks are reported, with no new Arabic-primary or actual-world verification. The standard image-fibre argument therefore clarifies what a source interpretation can establish while leaving its authority and application premises assessable. It does not replace the stronger original-source argument with a merely formal denotation. [R359-AP]
 
+<a id="r359-bz-realizer-selection"></a>
+
+### 10.19 Eligible realizers and selection across isomorphic descriptions
+
+An existence claim about realizers needs a nonempty domain and a precise account of what counts as eligible. For a required instance $`x`$, distinguish its applicability set $`\operatorname{App}(x)`$ from the efficacy witnesses available for an applicable candidate. A combined realization fibre can be written
+
+```math
+R(x)=\{(a,w):a\in\operatorname{App}(x),\ w\in\operatorname{Eff}(x,a)\}.
+```
+
+An empty applicability set and a nonempty applicability set with no efficacy witness both leave $`R(x)`$ empty, but for different reasons. A total choice of a realizer over a finite required instance set exists exactly when every required fibre is nonempty. An empty instance domain would make the universal assertion vacuous and establish no actual realized case. These distinctions prevent the formal success of a selection statement from being confused with a supplied productive resource. [R359BZ-I]
+
+Natural selection under changes of description asks a stronger question. Fix one isomorphism class of finite structures. Suppose eligible realizers are transported along its isomorphisms, with identity and composition respected, and eligibility itself is preserved by that transport. At a representative structure $`M`$, its automorphism group acts on the eligible fibre. A natural choice over this class exists exactly when that fibre contains a point fixed by every automorphism.
+
+For necessity, a natural choice at $`M`$ must be unchanged by every automorphism of $`M`$. For sufficiency, choose an eligible fixed point $`r`$ at $`M`$ and transport it to each isomorphic structure along any isomorphism. Two such isomorphisms differ by an automorphism of $`M`$; its fixing $`r`$ makes the transported choice independent of which isomorphism was used. Compatibility with further transport follows from composition. The proof concerns the specified transport and eligible fibre, not an unspecified notion of sameness. [R359BZ-I]
+
+Nonemptiness alone is insufficient. Two eligible realizers interchanged by an automorphism form a nonempty fibre with no fixed point. Conversely, several eligible fixed points can yield several natural choices; existence does not imply uniqueness. A distinguished marker or additional eligible relation may remove a symmetry and supply a choice, but its warrant comes from that enrichment. A natural choice over one isomorphism class also does not provide a uniform formula over every model of an arbitrary theory, nor does it demonstrate a unique metaphysical source. Those stronger claims require the appropriate logical, semantic and world-application premises.
+
+The retained source history records four repairs, including the nonempty-sort and uniformity distinctions. Its partition analysis reports 1,155 partitions, 16,067 fibres, 12,161 positive cases and 2,302 transitive cases. The distinct group method uses thirty-nine groups, 131 fibres, twelve transitive cases and 750 sampled cases. These populations describe different finite constructions; they are historical results, not new executions or a proof that actual productive eligibility has been authenticated. The source-to-world and underivability questions remain the ones stated in §10.18 and in the earlier positive adequacy argument. [R359BZ-I]
+
+<a id="r359-bz-lineage-root"></a>
+
+### 10.20 A common upstream lineage and what it does not supply
+
+There is a separate finite graph criterion for a common upstream source. Let $`G=(V,E)`$ be a finite nonempty directed acyclic graph, with an edge directed from an upstream contributor towards a downstream vertex. Reachability includes the length-zero path. Call the graph upstream-directed when every pair of vertices has a common ancestor. The following are equivalent: upstream directedness; exactly one vertex of indegree zero; and a vertex from which every vertex is reachable. [R359BZ-J]
+
+Every vertex in a finite DAG has an indegree-zero ancestor: repeatedly follow an incoming edge backwards; finiteness and acyclicity force the process to terminate. If the root is unique, each of these ancestor paths begins there, so it reaches every vertex. A vertex reaching every vertex is a common ancestor for every pair. Finally, if two distinct roots existed in an upstream-directed graph, their common ancestor would have to equal each root, because a root admits no nontrivial incoming path. Thus they could not be distinct. This establishes the equivalence under the stated hypotheses.
+
+The direction and boundary conditions are essential. Two upstream branches can merge at one downstream vertex without sharing an upstream root. A directed cycle can supply common ancestors through cyclic reachability while having no indegree-zero vertex. An infinite chain can also have a common ancestor for every finite pair without having a first root. The finite nonempty DAG contract excludes these cases; suppressing those hypotheses would change the result.
+
+This is a lineage theorem. Reaching every vertex does not by itself show that one root is the completely adequate productive source of every effect. The edge registry must represent the relevant relation in the same respect, include the contributors required by the claim, use an appropriate bearer granularity and justify closure against omitted external sources. A path of influence is not automatically a path of complete adequacy. The local adequacy and propagation premises in §§10.1–10.4 supply a different kind of argument when their conditions hold.
+
+A common lineage also need not identify the bearer of every attribute attributed along it. Distribution, mediation and co-instantiation remain separate questions. The finite graph can organize a proposed common-source explanation and make an omitted contributor or merger visible. It cannot establish the interpretation of an edge, the source's intrinsic necessity, its personal ownership, or actual-world uniqueness solely from the root count.
+
+The source reports 33,867 primary DAG cases, including 10,106 cases satisfying its root criterion. The distinct record uses 4,165 graphs: 572 acyclic and 3,593 cyclic, with 2,426 rootless upstream controls, together with 50,000 sampled cases. The cyclic controls test the stated boundary rather than refuting the finite DAG theorem. These are historical source-reported checks. No graph enumeration was run here, and no new general graph-theorem origin is claimed. [R359BZ-J]
+
+
+
+A unique root is fixed by every automorphism of the registered graph, since an automorphism preserves indegree zero and hence must preserve its sole witness. This invariant identification remains identification of the graph vertex. For the separately guarded productive corollary, compositional sufficiency, effect coverage, root concreteness and closure against external contributors must hold in the intended interpretation. Completeness of the vertex list alone does not establish completeness of the edge relation. A root with a downstream contributor requiring an unregistered second input, or a root vertex denoting a distributed collective, illustrates why those extra premises cannot be inferred from the finite graph equivalence. [BZ-J01] [BZ-J03] [BZ-J04] [BZ-J05]
+
+<a id="r359-bz-common-models"></a>
+
+### 10.21 Common formal models and the burden of a richer interpretation
+
+The impersonal comparison must preserve the neutral constraints it is offered to explain, while also respecting what a formal interpretation can establish. The C record illustrates both requirements. Its earlier PASS concerned a declaration about conclusions; it was not by itself evidence that a false-valued predicate had the intended rich interpretation. The audit identified an under-typed Creator predicate and a functional claim that had been asserted without an instantiated model. Those findings remain part of the source history rather than disappearing behind the successful label. [R359BZ-C]
+
+The revised construction uses a two-world constant-domain interpretation in which the named objects $`o`$ and $`x`$ are present throughout the two worlds. Their necessary existence is a fact stipulated in that finite interpretation. It does not make every relation involving them necessary, determine an actual world, or establish a complete theory of original productive adequacy. Likewise, an empty extension for a registered Creator predicate says what is false under that predicate's specified interpretation. Applying the result to a richer account of creatorhood requires its typing, definition and complete premises; the mere possibility of writing an empty predicate does not provide that account.
+
+The retained neutral-profile and common-bearer controls therefore have a conditional force. If two admitted interpretations preserve the complete neutral constraints but differ on an additional personal or source target, those constraints do not entail that target within the declared class. This is the exact profile principle of §10.14. A rich source or philosophical premise can legitimately restrict that class, but it must be stated and warranted. Conversely, a formal impersonal expansion must not be rejected merely because it lacks a target that was never entailed by the weaker premises. The comparison neither establishes equal explanatory merit nor demonstrates that every thin-signature interpretation is metaphysically realizable.
+
+The R construction makes the shared core more substantial. It links the multi-output coupling described in Objective Normativity §8.18, an exact potential, the finite content transports of §4.6 in that work, and the complete boundary law of its §8.19. Those relations constrain the combined interpretation together. Their input identifications and compatibility are part of the construction; separate success of several components would not, without those links, establish that they form one model. The result remains a selected formal union rather than a proof that every neutral result in the corpus has been jointly realized. [R359BZ-R]
+
+The common-bearer arithmetic is exact and illustrates a further distinction. With four eligible bearers and three independently selected nonempty role sets, there are $`(2^4-1)^3=3,375`$ assignments. For a given bearer to have all three roles, each role set must include it, leaving $`2^3=8`$ possibilities per role. Inclusion–exclusion over the four possible common bearers gives
+
+```math
+4\cdot8^3-\binom42 4^3+\binom43 2^3-1=1,695.
+```
+
+The remaining 1,680 assignments have each role available but no bearer common to all three. If empty role sets are allowed, the unrestricted three-set count is instead $`16^3=4,096`$. These domains must not be conflated. The calculation identifies a common witness for the formal role sets; it does not interpret those roles as full Divine Knowledge, Will or Power, or prove that their conjunction amounts to personal agency. [R359BZ-R]
+
+Necessity, externality, source acceptance and the additional $`N`$ expansion in the record also retain their separate status. They are stipulated conditions or interpreted coordinates of the finite model. A neutral comparison that does not accept a source contract has not refuted that source's accepted predication; accepting the contract changes its premises. A Boolean role proxy is also insufficient to certify a stronger account's actual semantics. The source's false flag, separately varied extension and eight repair findings remain visible under these distinctions.
+
+The positive result is a more demanding formal rival than a disconnected list of functions: a single admissible structure can carry the selected coupling, potential, transport and boundary relations while leaving the further target underdetermined. The remaining philosophical comparison concerns the warrant for that structure's interpretation, its explanatory stopping points, and the substantive bridges that would select or exclude it. It is not resolved by assigning a favorable name to one carrier, by asserting that the formal model is actual, or by treating a source-relative premise as if it had been derived from the neutral core. The affirmative productive, cognitive and practical arguments elsewhere in this work continue at their own premises. [R359BZ-C; R359BZ-R]
+
+
+
+The exact C structured record names the nine empty target extensions as agency, creatorhood, intellect, personality, revelational identification, actual speech, speech capacity, unified common bearer and wisdom. That explicit list is stronger evidence about the stipulated interpretation than the V1 field merely saying that conclusions were withheld. It still does not prove that the predicates capture every richer philosophical definition. The selected records report their original model and checks; reproducing those reports here is not a new execution or an independent verification of all the original model-owner bytes. [BZ-C03] [BZ-C04] [BZ-C06] [BZ-C07]
+
+In the R record, the false flag is specifically the neutral model's source-acceptance flag. The source-conditioned expansion is a separate object; it is not a refutation of the accepted source's predicates. The underived-order entry is a placeholder compatible with an earlier conclusion, rather than a repetition of its derivation. The typed links connect content to selection and realization, order to the modal/transition profiles, the potential to revision evaluation, translation to selected content, and response to selected state. Their coexistence gives a stronger formal comparison than isolated component successes, while their primitive coordination and unequal explanatory commitments remain live burdens. [BZ-R02] [BZ-R03] [BZ-R04] [BZ-R05]
+
 ## 11. What a complete explanatory fact does—and does not—establish
 
 Generic explanation provides independent logical comparisons. It must not silently replace productive provision or identify explanatory facts with individual bearers. The following results reconstruct the relevant explanatory principles of Koons and Pruss and the corpus's checked consequences and controls. They concern explicit relational assumptions; neither the proofs nor their counterinterpretations authenticate a metaphysical realization. [Koons and Pruss, §2][u-kp] [Plural-explanation analysis][u-psr]
@@ -1372,6 +1442,40 @@ The primary report covers 16,384 four-host structures and 262,144 target subsets
 
 The source's co-predication of knowing, choosing, willing and speaking can restrict a source-expanded class under the interpretation conditions of §10.18. It is not a neutral deduction from a graph's fixed point. The missing H8 bridge conditions are accordingly a typed account of what the proposed personal classification needs, not proof that intellect alone supplies them. Formal personal and impersonal expansions establish nonentailment only in the admitted formal class; they do not establish equal metaphysical probability or realizability. Consciousness, moral personhood, stable wisdom and speech are stronger targets than a structural center. The positive practical argument can still warrant genuine ownership through its substantive premises, while this orbit calculation prevents structural uniqueness from doing that work by itself.
 
+<a id="r359-bz-disclosure"></a>
+
+### 12.16 A disclosure contract preserves speaker, content and medium
+
+The distinctions among source speech, attributed content and created recitation in §§12.11 and 12.14 can be stated as a guarded disclosure contract. The L study keeps `UTTER`, `AUTHOR`, `ATTR_N` and `RELAY` separately represented. Producing a token, uttering it, relaying it and being the author to whom its content is attributed are different relations. Their coincidence in a warranted case requires an argument from the source and transmission conditions; it is not supplied by the same words appearing in several places. [R359BZ-L]
+
+The study's fourteen-condition disclosure gate is the conjunction of the following registered guards:
+
+```math
+\begin{aligned}
+G_D={}&\mathrm{MENT}\wedge\mathrm{CAP}\wedge\mathrm{UTTER}
+\wedge\mathrm{ATTR}_{N}\wedge\mathrm{EXPR}\wedge\mathrm{RELAY}\\
+&\wedge\mathrm{CREATED\_TOK}\wedge\mathrm{FID}_{T}
+\wedge\mathrm{SID}\wedge\mathrm{PROV}\wedge\mathrm{VER}\\
+&\wedge\mathrm{AUTHZ}\wedge\mathrm{APP}\wedge\mathrm{UNCR}_{N}.
+\end{aligned}
+```
+
+The subscripts and source/medium types remain part of the contract. `AUTHOR` is a separately represented relation, not a fifteenth conjunct in this enumeration. Any inference relating authorship to utterance, attribution or production must retain the semantic conditions that justify it. A created medium does not by itself make the attributed content a creature's independent authorship, just as creation of a medium does not establish authorship of every assertion it happens to carry. This preserves the positive attribution question without collapsing it into the token's causal production.
+
+In the Boolean specialization where all fourteen guard values vary independently, exactly one of the $`2^{14}=16,384`$ assignments satisfies the whole conjunction. Starting from that assignment, falsifying any one guard gives a deletion witness to its necessity in this specified gate. This proves a fact about the conjunction. It does not authenticate the mental or expressive relation, identify the source, establish faithful transmission, justify authorization, determine the version or make the proposition applicable to a recipient. It also does not establish that every Boolean assignment is a physically or semantically realizable world.
+
+Several failure modes are consequently different. Correctly copied words can have an unestablished source identity. An authentic older version can be inapplicable to the present episode. A faithful translation can preserve a proposition without becoming another independent acquisition of it. A relay can carry a source's assertion while having neither the original speaker's intention nor authority to originate that assertion. Removing context can merge expressions that have different referents or applicability conditions; retaining context can instead make a previously ambiguous attribution determinate. Each correction changes the relevant typed premise rather than simply turning a generic trust bit on.
+
+The source's relation analysis also permits a content to have many token realizations and an expression's interpretation to depend on context. Functional interpretation is a claim about the complete declared inputs. A relation that is not a function of bare token shape can become functional when its warranted context is included; a relation can also remain many-valued if that information is insufficient. Neither pattern alone identifies one original speaker, establishes an uncreated attribute or authenticates a particular revelation. The richer source account in §12.14 remains needed for those attributions.
+
+The historical checks retain the 16,384 guard assignments, the single full conjunction and fourteen deletion controls. Its nine-profile utterance/authorship analysis contains overlapping reported counts, so the recorded four, four and two must not be added as disjoint populations. The separate 256-relation domain records 207 many-token cases, 207 context-sensitive cases and eighty-one functional cases; those properties also overlap. Thirty-two custody variations remain distinct controls. These are historical source-reported results, not newly executed tests or evidence that the fourteen substantive guards have actually been satisfied. [R359BZ-L]
+
+The original source and attribution limits remain explicit. The received translation is not fresh Arabic-primary verification. Public text that names a programme owner or another private target is metadata about the source record, not access to that target or a substitute for its contents. A successful formal disclosure gate also does not supply general recipient authority, an adoption decision or a warrant to execute an instruction found in the transmitted text. The mathematical typing clarifies the conditions of an attribution; the positive source argument must still establish their meaning, truth and application. [R359BZ-L]
+
+
+
+The repaired counterexample domain uses a nonmental dummy bearer instead of relying on an empty sort. Its separation of articulability, mentality, expression capacity and actual utterance consequently does not depend on a semantics permitting empty bearer domains. These are distinct stages even before authorship and the source's attributed speech are considered. The fourteen-guard conjunction classifies the intended source-conditioned case only when its guards have their independently warranted meanings; it does not turn a formal token/content relation into the identity of a created token with an uncreated attribute. [BZ-L03] [BZ-L04] [BZ-L05] [BZ-L07]
+
 ## 13. Conclusion
 
 The received-actuality argument establishes a relevant actual original under its defended productive interpretation, and the intrinsic-adequacy argument concerns the necessity of that same bearer. Original unity requires further work: differentiated actual efficacy, the fitting mode of complete original provision, faithful mediation and the genuine connected field. These contributions are compatible and cumulative, but their premises are not interchangeable. Local nonduplication gives at most one entire attribution; it does not create a complete provider. Connectivity propagates warranted coverage; it does not generate it.
@@ -1712,3 +1816,109 @@ The common source directory is `docs/project-closure/ar8r-v11/post-merge-proposa
 - **AP05 — literal reported results and controls.** `pmr007_deep_ap_source_world_referent_primary_check_v1_results.json`. Git blob `aed3450754a4c5ffcf659a73802f9a7868807038`.
 
 [R359-AP]: #r132s-ref-ap
+
+
+### Sources for the added finite comparisons
+
+These exact public records support the preceding arguments, correction history and historical numerical reports. Their recorded PASS, repair and admission labels retain their original scope. They do not report new execution or external review of this exposition. Source acceptance, translated-primary access, custody, formal entailment and world application remain separate evidence levels.
+
+The common original directory is `docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/VALIDATION_RECEIPTS/`. Each filename below completes that path; the immutable Git-blob link identifies its exact body.
+
+<a id="r359-bz-ref-i"></a>
+
+**Eligible realization fibres and natural choices.** [R359BZ-I]
+
+- **I01 — scoped admission statement.** [PMR-007_DEEP_I_ADMISSION_OVERLAY.yaml][BZ-I01]. Git blob `25ce91befa603ca33a4cbd2087a0bfedfabe0df6`.
+- **I02 — structured subgroup review.** [PMR-007_DEEP_I_ARBITRARY_SUBGROUP_REREVIEW_RESULTS.json][BZ-I02]. Git blob `abf0b2a109fdd3bd89d122371c7ea9070e356ac1`.
+- **I03 — cold audit.** [PMR-007_DEEP_I_V1_COLD_AUDIT.md][BZ-I03]. Git blob `aea085d2a66dea7a673b89d6c0f6cc5cce4082f5`.
+- **I04 — distinct procedural review.** [PMR-007_DEEP_I_V2_DISTINCT_FRESH_REREVIEW.md][BZ-I04]. Git blob `5e760f0b449fc863ecf70937388a6c12bc2f4ee0`.
+- **I05 — repair account.** [PMR-007_DEEP_I_V2_REPAIR_LOG.md][BZ-I05]. Git blob `b08b94faa9f5aa151c7ace4467ffab479c8fb5d1`.
+- **I06 — primary result record.** [pmr007_deep_i_symmetry_selection_primary_check_results.json][BZ-I06]. Git blob `f52da93f04f044a7d3ecfc34d125df1717ab9f46`.
+
+[R359BZ-I]: #r359-bz-ref-i
+
+<a id="r359-bz-ref-j"></a>
+
+**Finite DAG lineage and a unique root.** [R359BZ-J]
+
+- **J01 — scoped admission statement.** [PMR-007_DEEP_J_ADMISSION_OVERLAY.yaml][BZ-J01]. Git blob `21d530500afdd9305a008b9999f46eaf38f0a5fc`.
+- **J02 — structured graph review.** [PMR-007_DEEP_J_ALL_DIGRAPH_SCC_REREVIEW_RESULTS.json][BZ-J02]. Git blob `8dbb3cc0063e0125317f33e9df463aefcf7f0fda`.
+- **J03 — cold audit.** [PMR-007_DEEP_J_V1_COLD_AUDIT.md][BZ-J03]. Git blob `542e1147f0fa3887159c0332d47e78711b090597`.
+- **J04 — distinct procedural review.** [PMR-007_DEEP_J_V2_DISTINCT_FRESH_REREVIEW.md][BZ-J04]. Git blob `ae494d8bf7def92f5f5d8e07bb5b9c79dec34864`.
+- **J05 — repair account.** [PMR-007_DEEP_J_V2_REPAIR_LOG.md][BZ-J05]. Git blob `a76a1e7881d3f85632a7ecfc1b2114283e36bf7e`.
+- **J06 — primary result record.** [pmr007_deep_j_common_ancestry_primary_check_results.json][BZ-J06]. Git blob `bd517e9a6d6ff2bf98f29c6a3fc729743996bddb`.
+
+[R359BZ-J]: #r359-bz-ref-j
+
+<a id="r359-bz-ref-c"></a>
+
+**A finite impersonal common-model comparison.** [R359BZ-C]
+
+- **C01 — scoped admission statement.** [PMR-007_DEEP_C_ADMISSION_OVERLAY.yaml][BZ-C01]. Git blob `539f9e595d67445bc19d39b004c9b3ab3ed4a29f`.
+- **C02 — distinct procedural review.** [PMR-007_DEEP_C_DISTINCT_FRESH_REREVIEW.md][BZ-C02]. Git blob `c739566a41098c3abbc4cf56a7b9fb5d9db60887`.
+- **C03 — structured review result.** [PMR-007_DEEP_C_DISTINCT_REREVIEW_RESULTS.json][BZ-C03]. Git blob `fd50e71d7a2666eec1c0441da27ab399fca50231`.
+- **C04 — cold audit.** [PMR-007_DEEP_C_V1_COLD_AUDIT.md][BZ-C04]. Git blob `d7900776153a8f055ed43b087403d28142128637`.
+- **C05 — repair account.** [PMR-007_DEEP_C_V2_REPAIR_LOG.md][BZ-C05]. Git blob `7d5ca1de7afc2a4e26d211ce8895394667f584bb`.
+- **C06 — primary result record.** [pmr007_deep_c_integrated_rival_check_results.json][BZ-C06]. Git blob `687df1ba16f9892228fd6636299fd9a60c48a167`.
+- **C07 — primary result record.** [pmr007_deep_c_integrated_rival_check_v2_results.json][BZ-C07]. Git blob `4911884939d281e01dd84b1b330dc1924e38cd38`.
+
+[R359BZ-C]: #r359-bz-ref-c
+
+<a id="r359-bz-ref-r"></a>
+
+**A linked neutral union and common-bearer controls.** [R359BZ-R]
+
+- **R01 — structured constraint/link review.** [PMR-007_DEEP_R_DISTINCT_CONSTRAINT_AND_BRIDGE_REREVIEW_RESULTS.json][BZ-R01]. Git blob `100018a93f0d82cd295011f7fb1e8c3620bc72b4`.
+- **R02 — cold audit.** [PMR-007_DEEP_R_V1_COLD_AUDIT.md][BZ-R02]. Git blob `f72fb6c9a1e0eb51d904a3f26ed58d0739749974`.
+- **R03 — distinct procedural review.** [PMR-007_DEEP_R_V2_DISTINCT_FRESH_REREVIEW.md][BZ-R03]. Git blob `037cea7c6ef67e2603d26b2d07472bbc373d0a4c`.
+- **R04 — repair account.** [PMR-007_DEEP_R_V2_REPAIR_LOG.md][BZ-R04]. Git blob `a76b52c183fe8760520dc6881887642121763c1b`.
+- **R05 — primary result record.** [pmr007_deep_r_r5_common_union_primary_check_v2_results.json][BZ-R05]. Git blob `a4af5db51c2d2d03d1f229829e9408fdd826706d`.
+
+[R359BZ-R]: #r359-bz-ref-r
+
+<a id="r359-bz-ref-l"></a>
+
+**Guarded disclosure, authorship and created media.** [R359BZ-L]
+
+- **L01 — scoped admission statement.** [PMR-007_DEEP_L_ADMISSION_OVERLAY.yaml][BZ-L01]. Git blob `6c7863f472e9a7c2ce87e6739b819ccb64c59cd1`.
+- **L02 — structured relation/custody review.** [PMR-007_DEEP_L_DISTINCT_RELATION_CUSTODY_REREVIEW_RESULTS.json][BZ-L02]. Git blob `28d67df7607a61cfbde3b333ebba1c806bc192d0`.
+- **L03 — cold audit.** [PMR-007_DEEP_L_V1_COLD_AUDIT.md][BZ-L03]. Git blob `4d73d17c01c681e219a191a6d8e20ef62e03fd4c`.
+- **L04 — distinct procedural review.** [PMR-007_DEEP_L_V2_DISTINCT_FRESH_REREVIEW.md][BZ-L04]. Git blob `24b0f92e5f2bb73f7ff5fb584e09ed47ef057b03`.
+- **L05 — repair account.** [PMR-007_DEEP_L_V2_REPAIR_LOG.md][BZ-L05]. Git blob `80128c6e3e254e9fcb981595ce7f8cde888d6feb`.
+- **L06 — source/program custody result.** [pmr007_deep_l_source_program_custody_check_v2_results.json][BZ-L06]. Git blob `f2236b7b84e5fa1172f2d0ca66223dfcfae1b6dc`.
+- **L07 — primary result record.** [pmr007_deep_l_speech_disclosure_primary_check_v2_results.json][BZ-L07]. Git blob `fb362bdb150a998fee8f20bf5570cb4f7b14f10f`.
+
+[R359BZ-L]: #r359-bz-ref-l
+
+[BZ-C01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/539f9e595d67445bc19d39b004c9b3ab3ed4a29f
+[BZ-C02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/c739566a41098c3abbc4cf56a7b9fb5d9db60887
+[BZ-C03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/fd50e71d7a2666eec1c0441da27ab399fca50231
+[BZ-C04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/d7900776153a8f055ed43b087403d28142128637
+[BZ-C05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/7d5ca1de7afc2a4e26d211ce8895394667f584bb
+[BZ-C06]: https://api.github.com/repos/theislampill/orthemology/git/blobs/687df1ba16f9892228fd6636299fd9a60c48a167
+[BZ-C07]: https://api.github.com/repos/theislampill/orthemology/git/blobs/4911884939d281e01dd84b1b330dc1924e38cd38
+[BZ-I01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/25ce91befa603ca33a4cbd2087a0bfedfabe0df6
+[BZ-I02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/abf0b2a109fdd3bd89d122371c7ea9070e356ac1
+[BZ-I03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/aea085d2a66dea7a673b89d6c0f6cc5cce4082f5
+[BZ-I04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/5e760f0b449fc863ecf70937388a6c12bc2f4ee0
+[BZ-I05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/b08b94faa9f5aa151c7ace4467ffab479c8fb5d1
+[BZ-I06]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f52da93f04f044a7d3ecfc34d125df1717ab9f46
+[BZ-J01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/21d530500afdd9305a008b9999f46eaf38f0a5fc
+[BZ-J02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/8dbb3cc0063e0125317f33e9df463aefcf7f0fda
+[BZ-J03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/542e1147f0fa3887159c0332d47e78711b090597
+[BZ-J04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/ae494d8bf7def92f5f5d8e07bb5b9c79dec34864
+[BZ-J05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/a76a1e7881d3f85632a7ecfc1b2114283e36bf7e
+[BZ-J06]: https://api.github.com/repos/theislampill/orthemology/git/blobs/bd517e9a6d6ff2bf98f29c6a3fc729743996bddb
+[BZ-L01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/6c7863f472e9a7c2ce87e6739b819ccb64c59cd1
+[BZ-L02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/28d67df7607a61cfbde3b333ebba1c806bc192d0
+[BZ-L03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/4d73d17c01c681e219a191a6d8e20ef62e03fd4c
+[BZ-L04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/24b0f92e5f2bb73f7ff5fb584e09ed47ef057b03
+[BZ-L05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/80128c6e3e254e9fcb981595ce7f8cde888d6feb
+[BZ-L06]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f2236b7b84e5fa1172f2d0ca66223dfcfae1b6dc
+[BZ-L07]: https://api.github.com/repos/theislampill/orthemology/git/blobs/fb362bdb150a998fee8f20bf5570cb4f7b14f10f
+[BZ-R01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/100018a93f0d82cd295011f7fb1e8c3620bc72b4
+[BZ-R02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f72fb6c9a1e0eb51d904a3f26ed58d0739749974
+[BZ-R03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/037cea7c6ef67e2603d26b2d07472bbc373d0a4c
+[BZ-R04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/a76b52c183fe8760520dc6881887642121763c1b
+[BZ-R05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/a4af5db51c2d2d03d1f229829e9408fdd826706d
+[R359BZ-C; R359BZ-R]: #r359-bz-ref-c

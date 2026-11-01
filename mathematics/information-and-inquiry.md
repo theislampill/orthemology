@@ -1411,6 +1411,63 @@ This preservation rule allows genuine active simplification. A guarded contracti
 
 Addressability does not itself provide an authenticated, permitted and affordable retrieval operation. [Source Context and Reacquisition, §§6.5–7.3](../epistemology/source-context-and-reacquisition.md#65-information-preserved-and-access-preserved) treats that further access question. Nor does a fully traceable history ensure that the active summary preserves the future observables of §2.6. A retained false claim remains a false claim available for later appraisal; representing it again at a higher level does not change its truth. The record-validity conditions are an explicit model of a proposed history-preserving process, not universal reflective conditions on every warranted belief.
 
+<a id="r359-bz-typed-products"></a>
+
+#### Separate certificate conditions and their common episode
+
+The admissibility relation above can represent several independently meaningful conditions. Their comparison must hold fixed the candidate class, target and warrant interpretation of the same EvaluationEpisode. Changing one of those parameters changes the question the certificate answers. The V study accordingly distinguishes a profile certificate from a truth certificate and a minimal frozen interface from the whole calculus that may consume it. A small complete product of registered conditions does not establish every semantic or epistemic premise of that larger system. [R359BZ-V]
+
+For the elementary case, let two independently varying conditions be $`p,q\in\{0,1\}`$. Their complete joint profile has four values and requires four labels, or two fixed-length bits, if the decoder must recover both conditions exactly. Fewer labels identify two different profiles. If an additional independently varying world-correctness coordinate is part of the target, the full attained product has eight values and requires three bits. These bounds concern the specified complete profile and its attained domain; they do not make a formal condition true of the world or require full recovery for every coarser decision task.
+
+A release flag $`p\wedge q`$ is a different target. It distinguishes the all-satisfied state from the three distinct failure states but merges those failures with one another. One bit suffices for that conjunction. It does not say which premise failed, what evidence is missing, or whether a particular repair is warranted. This is compatible with the relation-selection theorem: if every state in a merged bucket admits one common output, the task may not need the whole profile. If their admitted outputs are disjoint, the lost distinction matters.
+
+Order claims need the same precision. On the four-state product, the componentwise order is partial: $`(1,0)`$ and $`(0,1)`$ are incomparable. If the interpretation admits the coordinate swap, there is no invariant strict linear order on that exchanged pair. Either strict ordering would be reversed by the swap, contradicting invariance and asymmetry. Yet a monotone invariant scalar such as $`p+q`$ exists; it simply ties the exchanged states. Thus failure of an invariant strict ranking does not imply failure of every useful monotone summary. If the two conditions have different semantic roles and cannot legitimately be exchanged, the swap premise must not be assumed merely because both have Boolean values. [R359BZ-V]
+
+The historical finite report retains fifteen partitions of the four-state domain and 4,140 partitions of the eight-state domain, together with two linear extensions of the four-state componentwise order and no swap-invariant strict extension. Its ten repairs preserve the typed episode, the independent coordinates and the limits of the minimal FrozenRootComplete interface. These are reported checks of the declared finite specialization, not a new execution, a proof of the full CoreB calculus, or authentication of its source, target and warrant premises.
+
+Profile integrity and target independence are additional requirements. Coarsening the profile or inserting the desired label can manufacture apparent constancy without supplying a sound target. The product does not remove that inherited vulnerability, and the independently supplied world-target parameter is not authenticated by being added as another axis. The information bound is exact fixed-length or worst-case coding; no expected-length, interactive or noisy-channel bound is inferred. The source notes a shared product mechanism with bilattice work, while explicitly distinguishing the axes and orders used here. [BZ-V01] [BZ-V02] [BZ-V04]
+
+<a id="r359-bz-valid-pullback"></a>
+
+#### A pullback composes valid records only after validity is established
+
+A shared key can make two records composable, but equality of an underspecified key cannot supply every premise omitted from it. Let $`A^*\subseteq A`$ and $`B^*\subseteq B`$ be the already valid component records at the fixed episode. Let their independently bound maps into the full comparison key be $`k_A:A^*\to K`$ and $`k_B:B^*\to K`$. The valid composition is the set-theoretic pullback
+
+```math
+A^*\times_K B^*
+=\{(a,b)\in A^*\times B^*:k_A(a)=k_B(b)\}.
+```
+
+Its projections preserve the two valid components and their common key. If a set $`X`$ has maps $`u:X\to A^*`$ and $`v:X\to B^*`$ with $`k_Au=k_Bv`$, then $`x\mapsto(u(x),v(x))`$ is the unique map into the pullback with those projections. Existence follows from the key equality, and uniqueness from the two coordinates of each pair. This universal property assumes that the maps land in $`A^*`$ and $`B^*`$; it does not prove their validity from raw records in $`A`$ and $`B`$. [R359BZ-W]
+
+The source's full key separately binds target identity, version, scope, analysis, referent and semantic-contract digest. Both components must carry the relevant binding. Supplying a missing value from the other component or from an unexamined default can make a comparison agree by construction. Omitting one field can also merge records that concern different targets or versions. The formal pullback of a reduced key still exists as a mathematical object, but it answers the reduced equality question rather than the full intended compatibility claim.
+
+Validity and joint existence are separate as well. Two nonempty valid component sets can have disjoint key images and hence an empty pullback. Having a valid record on each side does not guarantee a jointly admissible pair. For three valid components over the same fully bound key, compatible tuples give the corresponding iterated pullback, with the two parenthesizations canonically identified by the same triple. That associativity does not create a missing component, authenticate a field or establish that the records' subjects are numerically the same bearer. A common interface and a common ontology are different claims.
+
+The W history retains a concrete witness-completeness failure. The V2 structured report records 341 cones and three independently missing bindings: target identity, version and semantic-contract digest. The V2 blocking prose instead records 168,505 cones and names two missing bindings, target and digest. Those declarations are preserved as a discrepancy; their counts are not added, and the prose's shorter list does not cancel the version defect. The repair record restores all three bindings. The V3 prose and structured report agree on 341 pair cones, thirteen triple cones, six independently bound fields and three invalid raw-pair controls. [R359BZ-W]
+
+These historical results distinguish an actual correction to the proposed witness from a general statement of the universal property. A successful construction of tuple maps does not prove that the chosen data satisfy the intended witness contract. Conversely, repairing that contract does not establish source truth, warrant, current applicability or a personal common bearer. Those conditions retain the separate criteria of the component records and their interpretation. No pullback checker was executed here.
+
+The six fields are complete only for this declared finite contract; another application may require further independent bindings. Equal stored bytes or a shared carrier do not establish version or analysis compatibility. A transport must preserve the warranted contract before full-key equality is used. Nor does agreement of a referent label authenticate that referent: source authentication, referent identification and the adequacy of the semantic digest remain independent premises. The ordinary finite-set construction here makes no verification claim about dynamic, probabilistic, partial or enriched variants. [BZ-W01] [BZ-W03] [BZ-W05]
+
+<a id="r359-bz-interface-information"></a>
+
+#### Recovering an interface profile and reporting one release bit
+
+The Z analysis makes the information cost of a complete interface explicit. Let $`\mathcal C`$ be the eligible state class and let $`q=(q_1,\ldots,q_6)`$ be six declared Boolean conditions. The actual profile domain is $`S=q(\mathcal C)`$, not automatically the whole Boolean cube. Exact recovery of the six-condition profile requires at least $`|S|`$ distinct message labels, and $`|S|`$ suffice by naming each attained profile. The fixed-length binary minimum is consequently $`\lceil\log_2|S|\rceil`$ for a nonempty attained domain. This is the finite profile principle, not a claim that every typed owner object is exhausted by six bits. [R359BZ-Z]
+
+If every Boolean combination is admitted and attained, $`|S|=64`$ and six bits are necessary and sufficient. Deleting any one coordinate then creates thirty-two collision pairs: for each assignment of the five retained coordinates, two profiles differ only in the omitted one. This calculation is conditional on the full-cube hypothesis. Six separately variable marginals do not by themselves establish all sixty-four jointly possible profiles. Constraints, empty joint fibres or incompatible source contracts can reduce or invalidate the proposed product.
+
+The conjunction $`r=\bigwedge_{i=1}^6q_i`$ again has a smaller target. On the full cube it is true at one profile and false at sixty-three. A single release bit can recover that conjunction exactly while losing the distinctions among the sixty-three failures. It cannot then serve as a complete diagnostic record of the six conditions. If the task asks only for a common valid action, the relation-selection criterion may permit that coarser output; if different failure profiles require different corrective certificates, more information is necessary. The output contract decides which lower bound is relevant.
+
+Typed owners, their evidence and their validity conditions must therefore remain distinguishable from this Boolean projection. An all-true flag vector is meaningful only relative to the actual definitions and witnesses of its conditions. A common projection or valid pullback can organize those records and preserve their declared relations. It does not show that their explanations reduce to one principle, that one bearer instantiates all relevant attributes, or that a personal subject owns their interpretation.
+
+The source retains seven repairs concerning the typed interface, attained joint fibres, full-cube hypothesis, projection and nontransfer claims. The sixty-four-profile, six-bit and thirty-two-pair calculations specify the declared finite case; they are not new measurements or a proof that every application has that state space. Together with V and W, they give a positive compositional result when the components, keys, admissible class and output contract are actually supplied, while preserving the truth, authority and interpretation questions that the information calculation alone cannot settle. [R359BZ-V; R359BZ-W; R359BZ-Z]
+
+
+
+In the source's six-coordinate specialization, the conditions are profile uniformity, warrant integrity, contract compatibility, target authority, truth linkage and world adequacy. The last four are downstream additions to the initial profile/warrant pair, not properties retroactively proved of either original component. The recorded structural interface result leaves the reductive and explanatory question open. Accordingly, the construction can preserve access to valid component records and distinguish their failures while supplying neither a common causal mechanism nor an explanation of why their premises coordinate. [BZ-Z01] [BZ-Z02] [BZ-Z04] [BZ-Z05]
+
 ### 9.5 Which missing evidence must survive, and what does completion cost?
 
 The certificate-selection problem in §9.4 begins with the outputs already admissible at each state. Inquiry has a further question: which acquisitions would make an actual proof available, and how expensive would it be to complete and check that proof? A present licence bit or a list of true propositions can lose precisely this information. A finite persistent-evidence model admits an exact answer. [24–25]
@@ -3832,3 +3889,65 @@ The common source directory is `docs/project-closure/ar8r-v11/post-merge-proposa
 - **AW07 — literal reported results and controls.** `pmr007_deep_aw_provenance_root_robust_diagnosis_primary_check_v2_results.json`. Git blob `6f35a11d7ab0c252553f20b429a94e139c1e0b6b`.
 
 [R359-AW]: #r132s-ref-aw
+
+
+#### Sources for the added finite comparisons
+
+These exact public records support the preceding arguments, correction history and historical numerical reports. Their recorded PASS, repair and admission labels retain their original scope. They do not report new execution or external review of this exposition. Source acceptance, translated-primary access, custody, formal entailment and world application remain separate evidence levels.
+
+The common original directory is `docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/VALIDATION_RECEIPTS/`. Each filename below completes that path; the immutable Git-blob link identifies its exact body.
+
+<a id="r359-bz-ref-v"></a>
+
+**Typed evidence products and invariant partial comparison.** [R359BZ-V]
+
+- **V01 — cold audit.** [PMR-007_DEEP_V_V1_COLD_AUDIT.md][BZ-V01]. Git blob `694f62256d3603f2d6cc1b7d76e00b8493591998`.
+- **V02 — distinct partition/order review.** [PMR-007_DEEP_V_V2_DISTINCT_FRESH_REREVIEW.md][BZ-V02]. Git blob `7bc597a7972ab36dd005ae2398eb7bc6af9d810a`.
+- **V03 — structured partition/order review.** [PMR-007_DEEP_V_V2_DISTINCT_PARTITION_ORDER_REREVIEW_RESULTS.json][BZ-V03]. Git blob `e16d27137afd3dfa3b53a696b1a13028aa4da5cc`.
+- **V04 — repair account.** [PMR-007_DEEP_V_V2_REPAIR_LOG.md][BZ-V04]. Git blob `3f951e070d4c7d65c5871814d4a3b28727d241f4`.
+
+[R359BZ-V]: #r359-bz-ref-v
+
+<a id="r359-bz-ref-w"></a>
+
+**Valid pullbacks with independently bound full keys.** [R359BZ-W]
+
+- **W01 — cold audit.** [PMR-007_DEEP_W_V1_COLD_AUDIT.md][BZ-W01]. Git blob `09b2305105d87ca93784f594ac9f49e5af387f0e`.
+- **W02 — structured natural-join review.** [PMR-007_DEEP_W_V2_DISTINCT_NATURAL_JOIN_REREVIEW_RESULTS.json][BZ-W02]. Git blob `1e4f633b39838d05f278a7db8c16cc2ce8ca27a0`.
+- **W03 — repair account.** [PMR-007_DEEP_W_V2_REPAIR_LOG.md][BZ-W03]. Git blob `8e355e45ea830063cae8af28972dfb4a55627e8e`.
+- **W04 — blocking review finding.** [PMR-007_DEEP_W_V2_REREVIEW_BLOCKING_FINDING.md][BZ-W04]. Git blob `29c12932f664a4e675eb5da9a84a9b2443136f97`.
+- **W05 — distinct pullback review.** [PMR-007_DEEP_W_V3_DISTINCT_FRESH_REREVIEW.md][BZ-W05]. Git blob `5c7ddbc2313501613bef77f19be7e00083f89d61`.
+- **W06 — structured pullback review.** [PMR-007_DEEP_W_V3_DISTINCT_PULLBACK_REREVIEW_RESULTS.json][BZ-W06]. Git blob `a352f33d4c19d4d45230ed45b5e04926ea5f9802`.
+- **W07 — witness-completeness repair.** [PMR-007_DEEP_W_V3_WITNESS_COMPLETENESS_REPAIR_LOG.md][BZ-W07]. Git blob `603d7c7f8a214f4cdc86e3b37892e406aa2ce2a7`.
+
+[R359BZ-W]: #r359-bz-ref-w
+
+<a id="r359-bz-ref-z"></a>
+
+**Attained interface profiles and one-bit release.** [R359BZ-Z]
+
+- **Z01 — scoped admission statement.** [PMR-007_DEEP_Z_ADMISSION_OVERLAY.yaml][BZ-Z01]. Git blob `ee87e9e682b2a5240f642cd25fad306227799115`.
+- **Z02 — cold audit.** [PMR-007_DEEP_Z_V1_COLD_AUDIT.md][BZ-Z02]. Git blob `20a23dae5434b7e32ab6f8c5708bd8f3f5889c88`.
+- **Z03 — distinct bitmask review.** [PMR-007_DEEP_Z_V2_DISTINCT_FRESH_REREVIEW.md][BZ-Z03]. Git blob `1fcdf1517d300e9b0f4c5c0d59a012ec2c15c4a9`.
+- **Z04 — repair account.** [PMR-007_DEEP_Z_V2_REPAIR_LOG.md][BZ-Z04]. Git blob `3e7642792f5a8454c15c949b0ccd42c82be79c13`.
+- **Z05 — primary result record.** [pmr007_deep_z_common_core_primary_check_v1_results.json][BZ-Z05]. Git blob `df3ee462f5656b4d2ed8dc5a1f0318b48cc6f4f1`.
+
+[R359BZ-Z]: #r359-bz-ref-z
+
+[BZ-V01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/694f62256d3603f2d6cc1b7d76e00b8493591998
+[BZ-V02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/7bc597a7972ab36dd005ae2398eb7bc6af9d810a
+[BZ-V03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/e16d27137afd3dfa3b53a696b1a13028aa4da5cc
+[BZ-V04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/3f951e070d4c7d65c5871814d4a3b28727d241f4
+[BZ-W01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/09b2305105d87ca93784f594ac9f49e5af387f0e
+[BZ-W02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/1e4f633b39838d05f278a7db8c16cc2ce8ca27a0
+[BZ-W03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/8e355e45ea830063cae8af28972dfb4a55627e8e
+[BZ-W04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/29c12932f664a4e675eb5da9a84a9b2443136f97
+[BZ-W05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/5c7ddbc2313501613bef77f19be7e00083f89d61
+[BZ-W06]: https://api.github.com/repos/theislampill/orthemology/git/blobs/a352f33d4c19d4d45230ed45b5e04926ea5f9802
+[BZ-W07]: https://api.github.com/repos/theislampill/orthemology/git/blobs/603d7c7f8a214f4cdc86e3b37892e406aa2ce2a7
+[BZ-Z01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/ee87e9e682b2a5240f642cd25fad306227799115
+[BZ-Z02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/20a23dae5434b7e32ab6f8c5708bd8f3f5889c88
+[BZ-Z03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/1fcdf1517d300e9b0f4c5c0d59a012ec2c15c4a9
+[BZ-Z04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/3e7642792f5a8454c15c949b0ccd42c82be79c13
+[BZ-Z05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/df3ee462f5656b4d2ed8dc5a1f0318b48cc6f4f1
+[R359BZ-V; R359BZ-W; R359BZ-Z]: #r359-bz-ref-v

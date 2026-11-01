@@ -124,6 +124,24 @@ If, instead, each stage receives all its authority only from a later ungrounded 
 
 The proper conclusion is therefore bounded. Objective radical correction excludes complete containment of its adequate authority within the very token basis defeated in that correction. Which wider account is correct remains open to argument. The original public presentation of this radical-correction proposal was not independently adopted as a complete metaphysical proof; the present proof states its valid local content without retrospectively changing that historical status.
 
+<a id="r359-bz-authority"></a>
+
+### 3.3 Local anti-self-authorization and the interpretation of a function
+
+The obstruction just stated has a conditional logical form. It must not be enlarged into an objection to every ordinary correction or every account of natural function. Write $`\mathrm{Rad}`$ for the radical corrective undertaking at issue and $`\mathrm{ObjCorr}`$ for the objective correction it purports to achieve. If the local argument establishes $`\mathrm{Rad}\Rightarrow\mathrm{ObjCorr}`$, and a separately specified exclusion condition $`E`$ entails $`\neg\mathrm{ObjCorr}`$, then $`\mathrm{Rad}\Rightarrow\neg E`$. The conclusion follows by contradiction. Its substantive force depends on the warranted content of $`E`$ and on why that content prevents objective correction; the two implications do not prove their own premises. [R359BZ-X]
+
+This distinction matters when an objection moves from a limited construction to a whole philosophical family. A self-evaluating process can revise a local belief while retaining a warranted standard, reliable instrument or background commitment. Such retained meta-correction is not automatically the radical case in which every ground of the standard's authority has been put into question. Conversely, recording a stable internal preference does not establish its authority over the assessment that uses it. One must identify what is retained, why it is eligible, and which part of the assessment it warrants. The same correction can therefore be ordinary relative to one declared background and radical relative to another.
+
+The record separates the local AA/CL anti-self-authorization claims from the PART comparison's role predicates, denoted $`T,H,P`$ there. A Boolean assignment to those declared roles is not, merely by its formal admissibility, an interpretation of all the richer claims about truth, proper function, ownership or source authority. Nor does an observed successful outcome establish every role or rule out an account whose relevant norm has a different proposed ground. The assigned predicates and the claim that the world actually instantiates them remain distinguishable.
+
+Two controls prevent a misleading comparison. An order-only mechanism can preserve relations and produce stable corrections while leaving normative authority unspecified. A primitive impersonal normative account can instead posit that authority, while incurring the burden of explaining and warranting the posit. These are different rivals. Showing that the first lacks a registered norm does not show that the second lacks one, and registering the second's norm does not show that its explanation is satisfactory. A source-relative personal account likewise needs the source acceptance and application premises that give its attributed agency or norm its intended force. Authentication and referent identity—the conditions designated H12 and H16 in the source comparisons—cannot be supplied by a successful truth-table row.
+
+The preserved study reports 138 assignments and seven radical cases, together with five interpretive repairs. Those historical finite results locate the implications in the declared comparison; they are not a new execution and do not certify that each formal interpretation is metaphysically possible. In particular, the distinction between a functional success and its normative or personal ground leaves the affirmative proper-function argument in §5.4 available at its stronger premises. It also leaves a developed impersonal norm theory answerable at its actual account, rather than replacing it by an order-only mechanism it does not endorse. [R359BZ-X]
+
+
+
+Under the additional declared partition assumption `PART`, an accepted radical objective correction has at least one of the trans-state, holistic or primitive authority roles denoted by $`T,H,P`$. The error-theory alternative $`E`$ cannot discharge that correction's objective authority because it denies $`\mathrm{ObjCorr}`$. Thus the positive disjunction is conditional on `PART` as well as the two implications; its members need not be exclusive, and the proof does not establish that the partition exhausts actual philosophical accounts. The repaired source also types target-key authority through an undefeated source outside the wholly defeated token closure. Compatibility of two keys does not supply such a source or establish its truth, fittingness or teleology. [BZ-X01] [BZ-X02] [BZ-X04]
+
 ## 4. Intelligibility and its ground
 
 The argument from intelligibility asks why evaluable thought and action are possible at all. Its strongest starting point is not that a particular program runs, nor that a community uses normative language. It is that some judgments about identity, truth, implication, possibility, and fitting response are true, and that their truth is not produced merely by whichever practice currently endorses them. That realist premise can be warranted without being neutral between every philosophical position. [S1–S3]
@@ -193,6 +211,31 @@ Suppose an intelligent, willing, efficacious ground has been established under t
 The qualification matters. The premise is not that every cause possesses every property of its effects. Nor does the conclusion establish an actual speech act, particular words, a language, a transmitted text, or the authenticity of a claimant. Those require additional evidence. Within an Atharī theological account, distinctions among divine knowing, willing, speaking, created vocal media, and recipient uptake remain substantive commitments. A learning model does not establish or refute them by representing only created messages and cognitive states.
 
 The strongest warranted structure is consequently a set of connected arguments: objective evaluability; a bounded obstruction to self-originating authority; a further intellectual-ground proposal; separately supported accounts of will, efficacy, wisdom, and disclosure; and distinct evidence for any actual communication. Their connections are philosophical work, not interchangeable labels.
+
+<a id="r359-bz-articulability"></a>
+
+### 4.6 Symmetry, expression and a finite content contract
+
+A symmetry obstruction can identify a missing distinction without proving that nothing could express the required content. Let a group $`G`$ act on a source space and an output space, and let $`f`$ be equivariant. If the source state $`e`$ is fixed by every admitted symmetry, then $`g f(e)=f(ge)=f(e)`$ for every $`g\in G`$. Thus $`f(e)`$ must be a fixed output. If the output action has no fixed point, that particular source state cannot determine one by an equivariant deterministic map. The stabilizer formulation in §8.12 gives the stronger general statement; the special case here shows how its premise enters an articulability argument. [R359BZ-D]
+
+None of its terms may be omitted when drawing the conclusion. An identity map on a nonfixed input is equivariant and can return that nonfixed input. A constant map selecting a nonfixed output violates equivariance. An additional parameter can carry an asymmetry absent from the original source description. An invariant probability law can also yield particular outcomes without being a deterministic fixed-point selector. These controls answer different proposed extensions of the theorem; they do not refute the theorem or demonstrate a voluntary specifier by themselves.
+
+The source's audit history is informative here. Earlier controls were hardcoded, and an asserted distinct comparison contained a self-comparison defect. The repaired record preserves those problems and reports a domain of sixteen groups, 104 singleton cases and 120 extensions. The check concerns its finite actions and declared maps. It does not prove that every possible vocabulary, source of distinctions, interpretive community or intervention has the same symmetry. Absolute unorthability would require a warranted restriction over all those alternatives, not merely the absence of a selector in one registered structure. [R359BZ-D]
+
+A positive finite result complements the obstruction. Fix a finite content set $`C`$ and, for each language $`i`$, a bijective encoding $`e_i:C\to L_i`$. Define translation between the corresponding expression sets by
+
+```math
+T_{ij}=e_j\circ e_i^{-1}:L_i\to L_j.
+```
+
+Then $`T_{ii}=\mathrm{id}`$, $`T_{ji}=T_{ij}^{-1}`$, and $`T_{jk}\circ T_{ij}=T_{ik}`$. These equations follow by cancelling the adjacent inverse encodings. If a content predicate is $`P\subseteq C`$, its expression in language $`i`$ is $`e_i(P)`$, and translation carries that set exactly to $`e_j(P)`$. The same calculation applies to a declared finite relation by transporting each coordinate. The expressions therefore form a groupoid of mutually invertible presentations of the supplied content. [R359BZ-Q]
+
+This construction proves something useful and limited. A difference in expression does not itself force a difference in the content thus encoded. But the theorem begins with $`C`$, its predicates or relations and the correctness of the encodings. It does not infer their actual-world denotation from the symbols. A lossy map can merge contents and have no inverse; a partial map may fail on some required expression. To retain an exact translation theorem in those cases one must state the intended quotient or restricted domain and prove the corresponding compatibility. Calling two expressions translations does not supply the missing conditions.
+
+The finite content contract consequently separates three questions: whether the chosen content can be encoded, whether two encodings transport it faithfully, and whether the content itself correctly concerns its proposed object. The first two admit the finite construction above. The third needs the semantic and source-to-world premises addressed in [Received Actuality and Intrinsic Necessity, §10.18](received-actuality-and-intrinsic-necessity.md#r132s-mental-hosts). Nor does the ability to communicate a proposition establish a subject's ownership of it or that its speaker is the author to whom it is attributed; the [disclosure analysis](received-actuality-and-intrinsic-necessity.md#r359-bz-disclosure) keeps those relations distinct.
+
+The reported Q checks retain two different domains: 15,016 three-language systems, with 585,624 law comparisons and 4,232,880 predicate comparisons, and a distinct 9,000 four-language systems with 720,000 law and 1,728,000 predicate comparisons. They are historical checks, not new runs or empirical demonstrations of complete natural-language equivalence. The mathematical ancestry is elementary transport through bijections and groupoid composition. Neither this positive finite encoding result nor the symmetry obstruction supplies a general theorem about every possible content, complete disclosure, source truth or personal mentality. [R359BZ-Q]
+
 
 ## 5. Proper function, accuracy, and warranted exercise
 
@@ -313,6 +356,23 @@ The positive source account is not exhausted by the foregoing negative controls.
 Its strongest case joins several considerations: the directedness of representation toward truth; the distinction between a function and whatever a system happens to do; the possibility of correcting even an entrenched disposition; and a source adequate to the relation between true target, suitable means, and actual operation. The argument's intellectual and teleological premises were made explicit in §4.2. If those premises are warranted, the resulting explanation can exceed an agnostic structural description.
 
 A demonstration that structure alone fails to identify that explanation does not withdraw its independent evidence. Conversely, possessing the explanation does not certify each contemporary judgment as properly produced. Particular functioning and warrant still require the relevant application of equation (2). That is how the metaphysical account and the epistemology of actual inquiry can support one another without becoming circular substitutes.
+
+<a id="r359-bz-truth-coordinate"></a>
+
+### 5.5 Truth-linked function and the symmetries of eligible evidence
+
+The proper-function comparison can be sharpened without replacing the substantive account in §5.4. Fix a declared evidence structure $`E`$, an admissible interpretation domain $`X`$, and the actual automorphism action of $`\operatorname{Aut}(E)`$ on that domain. The action must preserve every registered relation used by the inference, including any history, source, design or selection relation that the comparison has independently admitted. Let $`\mathrm{TL}:X\to\{0,1\}`$ record the particular truth-linked-function target. An invariant target is exactly one that is constant on each actual automorphism orbit. If it is invariant, $`\mathrm{TL}(gx)=\mathrm{TL}(x)`$ makes it constant on the orbit; conversely, orbit constancy gives that equality for every group element. [R359BZ-Y]
+
+This criterion identifies a precise obstruction. If an eligible symmetry carries $`x`$ to $`x'`$ while preserving the complete registered evidence and changing TL, no inference that uses only that invariant information can decide which target value obtains. An alleged symmetry that changes an independently admitted source relation or selected-because-of history is not a symmetry of the actual comparison. One must therefore use the full registered structure, rather than a convenient reduct that drops a premise the proposed function theory genuinely uses.
+
+The converse also has a limit. Removing a truth-changing automorphism does not show that every proposed observation identifies TL. A coarser evidence map can still merge distinct orbits with different target values; its fibres, not merely the group orbits, then determine exact recoverability. Conversely, an independently warranted enrichment can split the relevant ambiguity and identify the target. There may be several such enrichments. Their success does not imply that one anchor is unique, that its interpretation is correct, or that the value it reports is actually true. The difference between orbit restrictions and evidence-fibre refinement is the one already developed in §§8.4–8.5 and 8.10.
+
+A selected-effect or design account can therefore change this comparison when its independently justified historical or purposive relation rules out an otherwise admitted transformation. That is a substantive addition to the premises, not a defeat of the invariance theorem. A target-selected label introduced only because it gives the desired answer has a different evidential status. The same distinction applies to a source-relative proper-function account: a warranted source and its applicable proposition can restrict the class, while an unverified source marker cannot authenticate itself.
+
+Proper function is also richer than this single TL coordinate. An account can require an appropriate environment, the right kind of operation, reliable exercise, an actual function-fixing relation, or a fitting orientation. Even identification of TL does not automatically identify that whole account, its ontology, the bearer of the function or a personal source. Conversely, a developed positive argument whose warranted premises include personal direction can have a stronger conclusion than a structural comparison deliberately omitting it. Keeping those contracts separate prevents both an unearned personal inference and an unearned dismissal of the affirmative argument.
+
+The source history retains seven repairs. Its named primary finite record reports 278 partitions and 14,946 truth assignments, with 3,008 constant and 11,938 nonconstant cases. The distinct group-based procedure is preserved as a different method, without inventing a single aggregate count absent from the retained comparison. These are historical source reports, not new computations. They test the finite registered relation, not the truth of every function theory or the metaphysical realizability of every formal interpretation. [R359BZ-Y]
+
 
 ## 6. Wise direction, effective performance, and stable character
 
@@ -560,6 +620,26 @@ Minimal subjecthood should be preserved when it has actually been established. I
 The repaired mathematical interface makes the remaining philosophical alternatives sharper. A constitutive argument could show that the selected objective content is intrinsically representational in the proposed ground and requires an intellectual host. A bearer-identity argument could connect an independently established host to that ground. A common intervention could distinguish uptake or ownership at the relevant bearer and episode, provided both candidates have warranted implementation maps for the same manipulation. An abductive comparison could show why intellectual hosting, normative integration and efficacious selection explain the actual facts better than impersonal essential structure together with dependent minds. Such a comparison must compare explanatory laws and unresolved premises, not merely count predicates. Finally, a source-conditional argument can proceed from authenticated content, identified reference and warranted recipient uptake while preserving that conditional scope. [S33]
 
 An experiment that changes information about $`\alpha`$ is not automatically an intervention on original understanding or on acting because an outcome is fitting. It may establish the causal access requirement while leaving those interpretations alike. Conversely, the strengthened corrective geometry is genuine explanatory material for an affirmative source argument: it narrows the structures that could realize integrated correction and prevents an incompatible standard plurality from being assumed harmless. The further intellectual, teleological and source arguments in §§4–6 and 9–12 must be assessed with those gains and these remaining obligations both intact.
+
+<a id="r359-bz-potential-evidence"></a>
+
+### 7.5 Exact cycle evidence, ordinal improvement and a counting discrepancy
+
+The exact potential in this section has stronger requirements than an ordering of preferred revisions. On the underlying finite graph, choose an orientation for each edge and let the weight of traversing an edge backwards be the negative of its forward weight. Exactness means that a scalar $`V`$ satisfies $`w(u,v)=V(v)-V(u)`$ on every registered edge. The sum along any closed walk is then zero by telescoping. Conversely, if every closed walk has zero sum, choose one reference vertex in each connected component and define $`V(v)`$ by a path sum from that reference. Two paths give the same value because one followed by the reverse of the other is a closed walk. The potential is determined up to one additive constant per component. [R359BZ-N]
+
+A spanning forest gives an exact finite certificate of this condition. The tree-edge weights determine a candidate potential from the chosen component origins. Each non-tree edge then closes a fundamental cycle; agreement on those edges is equivalent to zero sum on all cycles. This is path-independence evidence, not merely the absence of forward directed cycles. A directed acyclic orientation can still have two paths between the same vertices whose assigned increments disagree. A topological or ordinal rank can order those vertices while failing to realize their specified increments exactly.
+
+The source's perturbation controls make the distinction concrete. Changing the weight of a bridge can be absorbed by shifting the potential on one side of the cut; no cycle constraint crosses that bridge and returns by another route. Changing only one edge on a cycle can instead destroy exactness because the remaining route fixes its required difference. Coordinated changes to several cycle weights can preserve exactness, so the conclusion is about the stated perturbation, not every alteration of a cyclic network. These controls concern a supplied edge registry and its complete comparisons.
+
+Neither an exact potential nor an ordinal rank calibrates itself to truth or normative correctness. An arbitrary numerical target can yield a perfectly exact edge field. The calibration and authority conditions in §§7.2–7.4 remain separate from the algebraic certificate. Likewise, a common potential does not identify one intellectual bearer or establish that an agent selects a revision because it is fitting. Those stronger conclusions need the evidence appropriate to their respective targets.
+
+The recorded counting history contains an unresolved discrepancy that must accompany the positive theorem. The admission-metadata repair rejects a total of 59,049 and corrects the declared six-coordinate, four-choice domain to $`4^6=4,096`$. The distinct-review prose nevertheless reports 4,096 total cases and 7,425 exact cases. The latter cannot be a subset of that same printed domain. Its structured spanning-tree/holonomy result separately records 1,040 exact cases. The successor preserves the incompatible prose declaration and that structured value; it does not invent a different enumeration, attribute the discrepancy to a specific programming error, or claim to have rerun the test. [R359BZ-N]
+
+The source also retains seven repairs and separate reported populations of 30,000 exact and 30,000 perturbed cases. They are historical evidence at their stated scope. The theorem is supported here by the path-sum argument under its explicit hypotheses, while the inconsistent count remains a limitation of the recorded report. The mathematical ancestry is the familiar graph-potential and cycle-exactness criterion, not a new general theorem of truth-directed cognition. [R359BZ-N]
+
+
+
+The registry is finite and static at the declared scope, with stable labels and all relevant registered routes included. Omitted transitions, hidden state or target drift require a new application of the criterion. Distinct connected components retain independent additive constants, so their potentials are not comparable without a further calibration. Within one exact potential, a directed cycle of strictly positive increments is impossible: telescoping would make its positive sum zero. This consequence is narrower than saying that every acyclic improvement relation realizes a preassigned cardinal scale. The original audit also distinguished a primary check that reused its solver from the later spanning-tree method; agreement of two calls to the same solver was not counted as independent corroboration. [BZ-N02] [BZ-N04] [BZ-N06]
 
 ## 8. What interventions can distinguish
 
@@ -1196,6 +1276,110 @@ The preserved correlation witness is exact. On four binary-pair outcomes, take $
 An exact duplicate preserves the original ratio rather than raising it to a power. A common translation channel uses pushforward likelihoods and contracts distributional total variation; an individual output can nevertheless have a larger pointwise ratio than some input. Zero support must remain explicit: an event impossible under both candidates gives no ordinary conditional update, and an event impossible under one excludes it only within that exact model. Posterior preference remains conditional on the candidate class, prior and reliability assumptions, rather than a certificate of actual-world selection.
 
 The source note preserves the Asfahani material as translated-primary access and El-Tobgui's account as secondary scholarly reconstruction. Its discussion of sense perception, reports, reason, natural cognitive disposition and widespread attestation includes qualitative competence, absence of collusion and recipient conditions beyond a finite independent-root model. Neither raw message multiplicity nor the present Bayesian specialization is an exact formalization of the broader account of tawātur or fiṭrah. The selected source predicates can have genuine force within a warranted source interpretation; placing them in a likelihood model does not turn them into independently measured neutral evidence. Source-world mapping, actual reliability, candidate-class completeness and the richer personal-ground conclusion remain open at this receipt scope. [R359-AX]
+
+<a id="r359-bz-formal-coupling"></a>
+
+### 8.18 A coupled profile is more than its marginal inventory
+
+A fair architecture comparison should retain the relations that a rival actually supplies. The earlier coupled-profile studies give small exact examples. For Boolean inputs $`t,e`$, take
+
+```math
+F_B(t,e)=(t,e,t,t,e\wedge t).
+```
+
+Every output coordinate can take both values, so the product of the five marginal ranges contains $`2^5=32`$ profiles. Only four are jointly attained. The first two outputs recover the inputs, and the remaining three are fixed by them. Thus twenty-eight marginal combinations are excluded by the actual common law. The shared $`t`$-dependence and the final conjunction are constraints that would be erased by treating the five coordinates as independent accomplishments. [R359BZ-B]
+
+A second family makes the distinction between Boolean and integer output explicit:
+
+```math
+F_O(x,y)=(x,y,x\mathbin{\mathsf{xor}}y,x+y,x\vee y).
+```
+
+Here $`x,y`$ are Boolean but $`x+y`$ is ordinary integer addition, with range $`\{0,1,2\}`$. The marginal product has forty-eight profiles, of which four occur jointly:
+
+| Input | Coupled five-coordinate output |
+|---|---|
+| $`(0,0)`$ | $`(0,0,0,0,0)`$ |
+| $`(0,1)`$ | $`(0,1,1,1,1)`$ |
+| $`(1,0)`$ | $`(1,0,1,1,1)`$ |
+| $`(1,1)`$ | $`(1,1,0,2,1)`$ |
+
+The forty-four excluded combinations are a positive integration constraint. Replacing the fourth output by XOR would change the function and its range; the Boolean-function diagnostic must not silently be applied to this multi-valued example as though the two contracts were identical. The real-additive interaction analysis in [Information and Inquiry, §3.3](../mathematics/information-and-inquiry.md#r132s-additive-interactions) supplies a further, separately specified decomposition test. [R359BZ-O]
+
+These examples also explain why a common carrier and a derivational connection must not be conflated. Putting unrelated outputs on one carrier does not introduce the equations above. Conversely, a distributed realization can preserve a common constrained profile. Whether such a realization costs more depends on the declared realization and cost model; it does not follow from counting carrier names. The B comparison retains the relevant structure and cost-invariance question, while leaving truth-conduciveness, normative authority, intentional uptake and personality as further targets.
+
+The O record additionally preserves an exact-potential control with cycle increments $`1,1,-1,-1`$ and sixteen expansions of the personal target over the retained neutral profile. The zero cycle sum is a mathematical constraint, not a calibration of the potential to truth. Changing a target predicate in a formal expansion witnesses nonentailment only if both expansions belong to the independently justified comparison class. It does not establish that their rich interpretations are physically or metaphysically realizable or equally explanatory.
+
+Its reported Boolean-function enumeration lists 1,048,576 total cases, 537,824 all-nonconstant cases, and numerical fields of 491,520 for its injectivity diagnostic and 490,240 for its coupling diagnostic. Those historical diagnostic scopes remain separate from the multi-valued witness above; they are not new computations or counts of forty-eight output profiles. The seven recorded scope repairs preserve the difference between coupled behavior, a valid semantic interpretation, a common bearer and a personal source. The strengthened neutral union in §8.14 therefore retains a genuine positive achievement, while the more demanding personal-ground comparison still needs its substantive discriminator. [R359BZ-B; R359BZ-O]
+
+<a id="r359-bz-boundary-tables"></a>
+
+### 8.19 A complete boundary law and its hidden interpretations
+
+Boundary equivalence is stronger than agreement on a few outputs, but it still has a declared interface. Suppose a finite boundary state $`b`$ is sufficient for every registered input transition, with successor table $`\delta(b,a)`$ and output table $`\lambda(b,a)`$. Two realizations start at the same boundary state and implement those same tables. Their outputs agree for every finite input word: the empty word has the same starting state; if the states agree after a prefix, the common transition and output entries give the same next output and state. Induction extends the equality to arbitrary finite length. [R359BZ-M]
+
+The completeness premise does work that a finite sample cannot do. Observing agreement up to a tested horizon does not show that an unregistered hidden variable cannot affect a later transition. If the boundary state omits a relevant history or internal condition, the displayed table may not define a closed system. A declared extension of the input alphabet, an internal intervention or a different output contract can also expose differences that the old boundary law did not register. The result applies to the supplied complete interface, rather than to every possible experiment on the realization.
+
+Semantic and practical interpretation introduces another distinction. An output token named `ZRESP` is not, by that name, semantic understanding, orientation to a fitting end, intentional uptake or selection because that end is fitting. The record keeps `SEM`, `FIT_O`, `UPTAKE` and `BECAUSE_F` separately represented. If the admitted class contains two realizations with the same complete boundary law but different values of one of those targets, the law alone cannot determine it. If an independently warranted interpretation excludes one realization, the class has changed and the earlier countermodel cannot simply be carried into it.
+
+This is why a formal mechanism twin is useful without being a complete philosophical verdict. It can reveal exactly which target is absent from the registered constraints. It cannot establish that an allegedly nonsemantic realization meets a rich semantic premise merely by assigning a Boolean value, or that an alleged subject's mental state is physically possible. One carrier can contain all the specified operations while the relation of ownership remains open. Conversely, a substantive account of understanding or agency may supply conditions not present in the boundary signature and must be assessed at those conditions.
+
+The source reports 5,000 three-state systems and 100,000 traces of length at most twenty. Its retained comparison includes 1,023 words with no boundary differences but 682 hidden differences, together with 256 profiles and 4,096 target expansions. The finite-word induction above supplies the all-length conclusion when the complete-table hypotheses hold; the sampled traces alone do not. These historical reports establish neither equality under arbitrary internal intervention nor equal physical realization, metaphysical possibility, priors or explanatory merit. Their positive result is exact behavior at a specified boundary, with the further semantic and personal claims left to their own arguments. [R359BZ-M]
+
+<a id="r359-bz-abductive-parity"></a>
+
+### 8.20 Likelihood parity does not settle explanatory preference
+
+The earlier abduction receipts fit the distinctions proved in §8.15. If two hypotheses give the same positive likelihood to the received evidence, Bayes's odds identity preserves their prior odds. It does not require equal priors, and it does not show that every additional experiment will have equal likelihoods. If the observed event is impossible under both hypotheses, the ordinary conditional update is undefined. An argument that begins with likelihood parity must therefore state both its evidence scope and its support assumptions. [R359BZ-H]
+
+Coding comparisons need a similarly explicit contract. Two valid prefix codes can exchange which candidate receives the shorter name. That control refutes the claim that the displayed code length by itself supplies a representation-independent architecture preference. It does not show that every independently warranted language, complexity measure or prior is arbitrary. A defended choice may incorporate substantive knowledge or explanatory constraints; that additional justification is part of the comparison rather than an outcome of the code swap.
+
+A common neutral profile also leaves room for different explanations of that profile. Equal registered outputs need not imply equal primitive assumptions, source commitments or accounts of why the laws hold. Conversely, attaching a desirable predicate to a favored explanation does not derive it, and placing several constraints on one carrier does not show that they have one explanatory ground. A matched comparison must preserve the strongest admissible rival and make its explanatory cost explicit. These are the burdens already separated in §§8.14–8.15, not a warrant to declare every architecture equally supported.
+
+The H history reports 810 parity cases, 7,290 asymmetric cases and 210 score cases. The distinct total retained by the correction is 12,288, not the rejected 36,864. The earlier record's absence of a required theorem repair is distinct from a later metadata repair: correcting a reported enumeration or declaration does not retroactively turn a sound conditional proof into a failed theorem, and a sound proof does not make an erroneous metadata count true. None of these cases has been newly executed here. The resulting claim is bounded likelihood and coding sensitivity, with substantive priors, explanatory arguments and new evidence still available for independent assessment. [R359BZ-H]
+
+<a id="r359-bz-source-comparison"></a>
+
+### 8.21 Source compatibility and minimal distinguishing portfolios
+
+A source-relative comparison can add a genuine premise when its source is warranted and its proposition faithfully reconstructed. It must retain the conditions of that premise instead of presenting a compatibility score as a neutral measurement of architecture truth. The E comparison registers eight source predicates and reports eight satisfied entries for A, two for B and none for C or D under its declared column interpretations. Those values concern the selected models and predicate mapping. They do not classify every possible personal, powers-based, abstract-order or distributed account, and they do not show that a stronger source-extended rival is inconsistent merely because an earlier sparse column omitted the relevant roles. [R359BZ-E]
+
+The comparison's correction history preserves three different problems: an incorrect map hash, locators that had not been checked, and a hardcoded best-fit conclusion. Repairing a custody or matching defect is not the same as establishing source truth. Nor does replacing a hardcoded conclusion with an actual comparison settle the meaning of the source predicates. English translated-primary access, secondary reconstruction and the analytical synthesis must remain separately attributed. There was no fresh Arabic-primary verification or external-review claim at this receipt scope.
+
+One numerical discrepancy remains explicit. The distinct-review prose says fifteen exact locators, while its own table and structured review result give thirteen. The source-custody record lists thirteen as eight plus two plus two plus one. The successor therefore attributes thirteen to those explicit records and preserves the incompatible prose declaration. It neither invents two missing locators nor treats the source owners as newly inspected to resolve the discrepancy. The substantive argument keeps authentication, passage, translation, attribution and applicability as conditions to be evaluated, rather than converting their successful-looking labels into independent warrant. [R359BZ-E]
+
+For precision, the eight E entries are the registered creator, knowledge, life, power, revelation, speech, unity and will predicates. Their coverage calculation is separate from the declared neutral dominance relation, which records no dominance edges and no full dominator. These are results about those columns and that rule. The correction therefore preserves both the source-conditioned discrimination and the absence of a winner under the narrower neutral comparison, without assigning a canonical scalar score to architectures. [BZ-E03] [BZ-E08]
+
+The S portfolio analysis asks a smaller exact question. Fix a finite comparison class and a finite menu of eligible source conditions. For each pair that the task must distinguish, let $`D(h,h')`$ be the set of conditions on which their declared profiles differ. A selected portfolio $`P`$ distinguishes every required pair exactly when
+
+```math
+P\cap D(h,h')\ne\varnothing
+\quad\text{for every required pair }h,h'.
+```
+
+If an intersection is empty, that pair has the same selected profile. If every intersection is nonempty, each required pair differs in at least one retained condition. Selecting a smallest such portfolio is the standard finite hitting-set or pair-separation problem. It identifies which conditions suffice within that table; it does not make the conditions true, justify the class, or exhaust the relevant theological sources. [R359BZ-S]
+
+In the source's two specified portfolio instances, the retained minimum sizes are respectively two with sixteen minimum portfolios, and three with two minimum portfolios, together with thirty-eight deletion controls. These are different declared instances, not probabilities or a universal law that every stronger account adds exactly one condition. The authentication and referent conditions designated H12 and H16 remain load-bearing. Source co-predication can give a common source-role witness once the interpretation is warranted; it is not neutral numerical identity. A title, an attribute and permission to use a Divine Name are also different source claims.
+
+This gives the source argument a positive and assessable role. A warranted condition can exclude a model that genuinely conflicts with it, and a justified minimal portfolio can explain which part of the source contract does the distinguishing. But a model absent from the finite table has not thereby been refuted. The source-extended alternatives in §8.14 and the fuller common-bearer discussion in Received Actuality retain their own obligations. A claim of source compatibility, a claim of explanatory superiority and a claim of actual truth must each be supported at its proper level. [R359BZ-E; R359BZ-S]
+
+<a id="r359-bz-trajectory"></a>
+
+### 8.22 Trajectory evidence can improve a model comparison
+
+The empirical comparison retained in §8.10 has a positive methodological consequence: the way a representation develops can distinguish models that look similar at an endpoint. The U receipts examine a seven-instance categorical extraction rather than a newly executed neural-data analysis. In that extraction, endpoint-only comparison gives two groups, no exact match and a best fit of six of seven. The endpoint-family comparison gives five groups, still no exact match and six of seven. Adding the retained trajectory signature gives five groups and one exact seven-of-seven match. These outcomes concern the stated coding and comparison class. [R359BZ-U]
+
+The zero/one entries here count exact binary classifiers of the registered trajectory-match target across the seven categorical instances; six-of-seven and seven-of-seven are their best classification accuracies. The intermediate five-group profile adds model-family identity to the endpoint. These statistics concern target recovery from the stated partitions and do not count empirical models whose neural trajectories match the animal data. [BZ-U03] [BZ-U04]
+
+The added coordinate can supply information because it changes the evidence profile. That gain requires a trajectory description fixed independently of the favored candidate. If a feature is defined merely to equal a model label, its apparent discrimination is supplied by the coding decision. Similarly, grouping endpoint descriptions into a family changes the comparison and must not be presented as an additional independent observation. The recorded corrections separate these coding choices from the observed learning pattern and retain the specific clone-structured causal graph encoding used by the comparison.
+
+An exact match on those categories is neither an exact simulation of all neural measurements nor proof that every untested model fails. Two mechanisms can share the registered endpoint and trajectory signature while differing in hidden architecture or in a semantic or personal predicate. Such formal twins delimit what the selected evidence can decide; they do not invalidate the empirical fact that adding the reported trajectory improved discrimination among the tested alternatives. A genuinely richer experiment can further refine that class.
+
+The source retains five source anchors and seven hash rows as historical custody evidence. No experimental programme, raw neural data or neural matrix was received or executed for this incorporation. The study's model-comparison result therefore remains evidence about the tested representations and learning trajectories, not a likelihood over personal versus impersonal metaphysical grounds. Its proper wider use is to motivate a matched additional measurement when the proposed rivals actually predict different eligible trajectories. The current result supplies neither such a universal prediction nor the truth of an ultimate-source interpretation. [R359BZ-U]
+
+
+
+The empirical qualification also concerns the kinds of objects being compared. Biological population activity, latent clones in a model, its transition graph and a projected profile are distinct. The reported order of decorrelation can depend on sensory-sequence encoding even when a selected endpoint structure is retained. Global orthogonalization is neither necessary nor sufficient for the source's strict soundness or pathway-adequacy target. The later audit treats the trajectory result as a bounded extraction requiring external comparison with raw figures or data for a stronger empirical synthesis; it does not report that comparison as completed. [BZ-U01] [BZ-U02] [BZ-U05]
 
 ## 9. Intrinsic reasons, fitting response, and the indifferent agent
 
@@ -1946,3 +2130,233 @@ The common source directory is `docs/project-closure/ar8r-v11/post-merge-proposa
 - **AZ06 — literal reported results and controls.** `pmr007_deep_az_distinct_three_by_three_rereview_v2_results.json`. Git blob `823a1af053dc8091e49bd366a5f8f61c8c979699`.
 
 [R359-AZ]: #r132s-ref-az
+
+
+### Sources for the added finite comparisons
+
+These exact public records support the preceding arguments, correction history and historical numerical reports. Their recorded PASS, repair and admission labels retain their original scope. They do not report new execution or external review of this exposition. Source acceptance, translated-primary access, custody, formal entailment and world application remain separate evidence levels.
+
+The common original directory is `docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/VALIDATION_RECEIPTS/`. Each filename below completes that path; the immutable Git-blob link identifies its exact body.
+
+<a id="r359-bz-ref-x"></a>
+
+**Local anti-self-authorization and function interpretation.** [R359BZ-X]
+
+- **X01 — scoped admission statement.** [PMR-007_DEEP_X_ADMISSION_OVERLAY.yaml][BZ-X01]. Git blob `3419f01230e20643f7b24b4a36af599cb784766a`.
+- **X02 — cold audit.** [PMR-007_DEEP_X_V1_COLD_AUDIT.md][BZ-X02]. Git blob `7feee3f1cbbfb36a66eb677338cd231dfacc844d`.
+- **X03 — distinct authority review.** [PMR-007_DEEP_X_V2_DISTINCT_FRESH_REREVIEW.md][BZ-X03]. Git blob `3fd093153999e5041fb9c47dd98a5c5c8414776f`.
+- **X04 — repair account.** [PMR-007_DEEP_X_V2_REPAIR_LOG.md][BZ-X04]. Git blob `2f53c34c70907e538be63df078d8ce75dd6dba12`.
+
+[R359BZ-X]: #r359-bz-ref-x
+
+<a id="r359-bz-ref-d"></a>
+
+**Fixed sources, equivariance and articulability.** [R359BZ-D]
+
+- **D01 — scoped admission statement.** [PMR-007_DEEP_D_ADMISSION_OVERLAY.yaml][BZ-D01]. Git blob `9a3f93546415833d95db9cbfa14391b2059c14f1`.
+- **D02 — distinct procedural review.** [PMR-007_DEEP_D_DISTINCT_FRESH_REREVIEW.md][BZ-D02]. Git blob `55f39a37cfa9edc1ba5d0aa8e8778889dd724b10`.
+- **D03 — structured review result.** [PMR-007_DEEP_D_DISTINCT_REREVIEW_RESULTS.json][BZ-D03]. Git blob `831e025b3bfeb033947af1cf911802e15010471e`.
+- **D04 — cold audit.** [PMR-007_DEEP_D_V1_COLD_AUDIT.md][BZ-D04]. Git blob `c370f2b4f877f668dfd4bba58b32cf9af444a7d4`.
+- **D05 — repair account.** [PMR-007_DEEP_D_V2_REPAIR_LOG.md][BZ-D05]. Git blob `1ec687261009c43804e20a0cfaefcf0f645df36a`.
+- **D06 — primary result record.** [pmr007_deep_d_equivariance_check_results.json][BZ-D06]. Git blob `0013d75fe9b896f3525f983ebc0117a857192e2f`.
+- **D07 — primary result record.** [pmr007_deep_d_equivariance_check_v2_results.json][BZ-D07]. Git blob `e7e295f2a2b05a3aeb539c5ff85fe3add3e1baf0`.
+
+[R359BZ-D]: #r359-bz-ref-d
+
+<a id="r359-bz-ref-q"></a>
+
+**Finite content transport through bijective encodings.** [R359BZ-Q]
+
+- **Q01 — structured matrix/loss review.** [PMR-007_DEEP_Q_DISTINCT_MATRIX_AND_LOSS_REREVIEW_RESULTS.json][BZ-Q01]. Git blob `65b0db09c541d36197f68287605d17818db4577a`.
+- **Q02 — cold audit.** [PMR-007_DEEP_Q_V1_COLD_AUDIT.md][BZ-Q02]. Git blob `6221a359c56c620ff3f111bea1558326c846de23`.
+- **Q03 — distinct procedural review.** [PMR-007_DEEP_Q_V2_DISTINCT_FRESH_REREVIEW.md][BZ-Q03]. Git blob `ab1dfff7ff5be6d92ecfdb428c1af0fedd067d7b`.
+- **Q04 — repair account.** [PMR-007_DEEP_Q_V2_REPAIR_LOG.md][BZ-Q04]. Git blob `ae3b463a8cdf06ff780da2b71aae966d6dda8f0c`.
+- **Q05 — primary result record.** [pmr007_deep_q_articulability_groupoid_primary_check_v2_results.json][BZ-Q05]. Git blob `81951cafc301236ce989cb03d4b7ba6ad02dc8a1`.
+
+[R359BZ-Q]: #r359-bz-ref-q
+
+<a id="r359-bz-ref-y"></a>
+
+**Truth-linked function and actual evidence automorphisms.** [R359BZ-Y]
+
+- **Y01 — scoped admission statement.** [PMR-007_DEEP_Y_ADMISSION_OVERLAY.yaml][BZ-Y01]. Git blob `35a81f8e107f8295b94693b40fcac900d6302df1`.
+- **Y02 — cold audit.** [PMR-007_DEEP_Y_V1_COLD_AUDIT.md][BZ-Y02]. Git blob `f628dfaf18dc71274d6fb9c2c2ceadbdd3fafb53`.
+- **Y03 — distinct group review.** [PMR-007_DEEP_Y_V2_DISTINCT_FRESH_REREVIEW.md][BZ-Y03]. Git blob `9ed4ca8382d88969d6111c8892a211b15e394523`.
+- **Y04 — repair account.** [PMR-007_DEEP_Y_V2_REPAIR_LOG.md][BZ-Y04]. Git blob `f71d96703229ab6f9e499f49454f910ea6afba51`.
+- **Y05 — primary result record.** [pmr007_deep_y_semantic_anchor_primary_check_v1_results.json][BZ-Y05]. Git blob `3868ceffd53a20a83520c6fef2850d248bebd221`.
+
+[R359BZ-Y]: #r359-bz-ref-y
+
+<a id="r359-bz-ref-n"></a>
+
+**Cycle exactness, ordinal rank and inconsistent case counts.** [R359BZ-N]
+
+- **N01 — metadata repair account.** [PMR-007_DEEP_N_ADMISSION_METADATA_REPAIR_LOG.md][BZ-N01]. Git blob `d776eca7d62ddeb6ee035e96ca445c478e1d5c7f`.
+- **N02 — scoped admission statement.** [PMR-007_DEEP_N_ADMISSION_OVERLAY.yaml][BZ-N02]. Git blob `4ceff9a6f092876749d2226710882a6ff95048b6`.
+- **N03 — structured holonomy review.** [PMR-007_DEEP_N_SPANNING_TREE_HOLONOMY_REREVIEW_RESULTS.json][BZ-N03]. Git blob `03ac0049a3093d8325061ba081ddeb6ffc6b2ca6`.
+- **N04 — cold audit.** [PMR-007_DEEP_N_V1_COLD_AUDIT.md][BZ-N04]. Git blob `cea30d2044a8860b65367df944764ce3c4676f49`.
+- **N05 — distinct procedural review.** [PMR-007_DEEP_N_V2_DISTINCT_FRESH_REREVIEW.md][BZ-N05]. Git blob `6e32579d8333393e86a34efb8f8fc95afe9587dc`.
+- **N06 — repair account.** [PMR-007_DEEP_N_V2_REPAIR_LOG.md][BZ-N06]. Git blob `64a10687764322be6f0f42c4ae45cd18ffdc591d`.
+
+[R359BZ-N]: #r359-bz-ref-n
+
+<a id="r359-bz-ref-b"></a>
+
+**Coupled profiles and marginal inventories.** [R359BZ-B]
+
+- **B01 — scoped admission statement.** [PMR-007_DEEP_B_ADMISSION_OVERLAY.yaml][BZ-B01]. Git blob `f916250f96c81a229d48308df6073495bef4c9f1`.
+- **B02 — distinct procedural review.** [PMR-007_DEEP_B_DISTINCT_FRESH_REREVIEW.md][BZ-B02]. Git blob `25cf183cfb031b2e890482df02ee09ef79422691`.
+- **B03 — structured review result.** [PMR-007_DEEP_B_DISTINCT_REREVIEW_RESULTS.json][BZ-B03]. Git blob `70861220f73095a7ebe62d8b8bba27622fec1f32`.
+- **B04 — no-repair disposition.** [PMR-007_DEEP_B_NO_REPAIR_REQUIRED.md][BZ-B04]. Git blob `28843b6bb42820e866e285350fb591e03fe3cff9`.
+- **B05 — cold audit.** [PMR-007_DEEP_B_V1_COLD_AUDIT.md][BZ-B05]. Git blob `50f97327b12649b3c2fccf8c66859130ac846333`.
+- **B06 — primary result record.** [pmr007_deep_b_unification_check_results.json][BZ-B06]. Git blob `a95d96f65da21e9f2fc202c691bc5652f6645ba3`.
+
+[R359BZ-B]: #r359-bz-ref-b
+
+<a id="r359-bz-ref-o"></a>
+
+**Multi-output coupling and formal target expansions.** [R359BZ-O]
+
+- **O01 — cold audit.** [PMR-007_DEEP_O_V1_COLD_AUDIT.md][BZ-O01]. Git blob `9709afb3901a60e6e51e91bc6601a7b2fb551e9e`.
+- **O02 — distinct relational review.** [PMR-007_DEEP_O_V2_DISTINCT_FRESH_REREVIEW.md][BZ-O02]. Git blob `4a1abd14cc60eab16dcf3c4ee54f133b72145a48`.
+- **O03 — structured relational review.** [PMR-007_DEEP_O_V2_DISTINCT_RELATIONAL_REREVIEW_RESULTS.json][BZ-O03]. Git blob `7fd64adf78e05a002124fd1ea50965b58d6ffe1d`.
+- **O04 — repair account.** [PMR-007_DEEP_O_V2_REPAIR_LOG.md][BZ-O04]. Git blob `60a350ff33618dda0979599e337636f0d7f1408c`.
+- **O05 — primary result record.** [pmr007_deep_o_formal_coupling_primary_check_v2_results.json][BZ-O05]. Git blob `504532454be729f29a5f105c7e22c696aeeb3a63`.
+
+[R359BZ-O]: #r359-bz-ref-o
+
+<a id="r359-bz-ref-m"></a>
+
+**Complete boundary tables and hidden interpretations.** [R359BZ-M]
+
+- **M01 — scoped admission statement.** [PMR-007_DEEP_M_ADMISSION_OVERLAY.yaml][BZ-M01]. Git blob `ebd1fa582999c8459c0621500b1d31d739a6371c`.
+- **M02 — structured transducer review.** [PMR-007_DEEP_M_DISTINCT_TRANSDUCER_REDUCT_REREVIEW_RESULTS.json][BZ-M02]. Git blob `7d86434d17b476075321e21f3e89778e919217c6`.
+- **M03 — cold audit.** [PMR-007_DEEP_M_V1_COLD_AUDIT.md][BZ-M03]. Git blob `7017f4f7c1bd489c4ff942a64b171404ac470c83`.
+- **M04 — distinct procedural review.** [PMR-007_DEEP_M_V2_DISTINCT_FRESH_REREVIEW.md][BZ-M04]. Git blob `62245fb71482feaf070955f50c1dba579b8adf7c`.
+- **M05 — repair account.** [PMR-007_DEEP_M_V2_REPAIR_LOG.md][BZ-M05]. Git blob `ba85d496f0ceba971cde81e487424fc923b9e979`.
+
+[R359BZ-M]: #r359-bz-ref-m
+
+<a id="r359-bz-ref-h"></a>
+
+**Likelihood parity and coding-sensitive preference.** [R359BZ-H]
+
+- **H01 — admission-count audit.** [PMR-007_DEEP_H_ADMISSION_COUNT_AUDIT.md][BZ-H01]. Git blob `66cf9f46daa19c4017333b7c96c1fb5b63b92a94`.
+- **H02 — metadata repair account.** [PMR-007_DEEP_H_ADMISSION_METADATA_REPAIR_LOG.md][BZ-H02]. Git blob `19731032cf5b76310eb03a2d1c32d0cee6a5dc0c`.
+- **H03 — scoped admission statement.** [PMR-007_DEEP_H_ADMISSION_OVERLAY_V2.yaml][BZ-H03]. Git blob `0404e84fb9b49ee983ac49a86c1ed30ee3ba67b3`.
+- **H04 — distinct procedural review.** [PMR-007_DEEP_H_DISTINCT_FRESH_REREVIEW.md][BZ-H04]. Git blob `c1248a540b798e5bd4dc9b8c13547492b759c89c`.
+- **H05 — structured review result.** [PMR-007_DEEP_H_DISTINCT_REREVIEW_RESULTS.json][BZ-H05]. Git blob `2972535271f12fa42e8dfe02b39869e838e9e361`.
+- **H06 — no-repair disposition.** [PMR-007_DEEP_H_NO_REPAIR_REQUIRED.md][BZ-H06]. Git blob `b27d7ca97c18295b1594c5e1017e8b97eee90902`.
+- **H07 — cold audit.** [PMR-007_DEEP_H_V1_COLD_AUDIT.md][BZ-H07]. Git blob `34fddde9bd21b522771ca1443dd4d1cada69cbef`.
+- **H08 — primary result record.** [pmr007_deep_h_abductive_parity_check_results.json][BZ-H08]. Git blob `cbedbc37c6aeb78f474870148833d4eb76aedf0a`.
+
+[R359BZ-H]: #r359-bz-ref-h
+
+<a id="r359-bz-ref-e"></a>
+
+**Source-role compatibility and custody corrections.** [R359BZ-E]
+
+- **E01 — scoped admission statement.** [PMR-007_DEEP_E_ADMISSION_OVERLAY.yaml][BZ-E01]. Git blob `90833b87172b3f25ee9819ec256356d1965f82c1`.
+- **E02 — distinct procedural review.** [PMR-007_DEEP_E_DISTINCT_FRESH_REREVIEW.md][BZ-E02]. Git blob `2ad5ae8fb73606376428acf331bdcfe109f63c92`.
+- **E03 — structured review result.** [PMR-007_DEEP_E_DISTINCT_REREVIEW_RESULTS.json][BZ-E03]. Git blob `dc158f93f8d5a713ff36dcc6b1d53d4948e7b587`.
+- **E04 — cold audit.** [PMR-007_DEEP_E_V1_COLD_AUDIT.md][BZ-E04]. Git blob `be7e954c74b2348850fdeace70c460dc07ed081d`.
+- **E05 — repair account.** [PMR-007_DEEP_E_V2_REPAIR_LOG.md][BZ-E05]. Git blob `e35e9705dca6e6f30f331ef6f9a41e14f99590a6`.
+- **E06 — source-custody result.** [pmr007_deep_e_source_custody_check_v2_results.json][BZ-E06]. Git blob `09eaed269aa364709cea90be8b8860f995677bdb`.
+- **E07 — primary result record.** [pmr007_deep_e_track_architecture_check_results.json][BZ-E07]. Git blob `854e776f3133e5fec351c3298f9b052d6b80ac44`.
+- **E08 — primary result record.** [pmr007_deep_e_track_architecture_check_v2_results.json][BZ-E08]. Git blob `c28c4efef192f15e2da12afdbde6f278b79f6593`.
+
+[R359BZ-E]: #r359-bz-ref-e
+
+<a id="r359-bz-ref-s"></a>
+
+**Minimal source-condition portfolios.** [R359BZ-S]
+
+- **S01 — structured source-portfolio review.** [PMR-007_DEEP_S_DISTINCT_SOURCE_NONMIGRATION_REREVIEW_RESULTS.json][BZ-S01]. Git blob `37c919f24393868afcb828ddc2c41644bc2ccdf3`.
+- **S02 — cold audit.** [PMR-007_DEEP_S_V1_COLD_AUDIT.md][BZ-S02]. Git blob `63d224cd65d8ed43b32b6f26e5ac01bdd2545030`.
+- **S03 — distinct procedural review.** [PMR-007_DEEP_S_V2_DISTINCT_FRESH_REREVIEW.md][BZ-S03]. Git blob `25410aac3ed81d1a982ecddc2bed007284f39e33`.
+- **S04 — repair account.** [PMR-007_DEEP_S_V2_REPAIR_LOG.md][BZ-S04]. Git blob `d3a93a2c61b7504d9c440ef3f3aa3efb749def43`.
+
+[R359BZ-S]: #r359-bz-ref-s
+
+<a id="r359-bz-ref-u"></a>
+
+**Endpoint and learning-trajectory model comparisons.** [R359BZ-U]
+
+- **U01 — cold audit.** [PMR-007_DEEP_U_V1_COLD_AUDIT.md][BZ-U01]. Git blob `9444e3c85ae903c6522beb7cd0f4d493088e5e02`.
+- **U02 — repaired cold audit.** [PMR-007_DEEP_U_V2_COLD_AUDIT.md][BZ-U02]. Git blob `656ac517c65ad1b77878011207747eb2d726826a`.
+- **U03 — distinct procedural review.** [PMR-007_DEEP_U_V2_DISTINCT_FRESH_REREVIEW.md][BZ-U03]. Git blob `e823ae79f6ec3beb95ebdf08fef978f46eded62e`.
+- **U04 — structured trace/mechanism review.** [PMR-007_DEEP_U_V2_DISTINCT_TRACE_MECHANISM_REREVIEW_RESULTS.json][BZ-U04]. Git blob `d6df4c4ad3faec6c5c3e5b4d25b026a8995e1e97`.
+- **U05 — repair account.** [PMR-007_DEEP_U_V2_REPAIR_LOG.md][BZ-U05]. Git blob `a044f0728d89030f9b2de5ad8305ad559bf99794`.
+
+[R359BZ-U]: #r359-bz-ref-u
+
+[BZ-B01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f916250f96c81a229d48308df6073495bef4c9f1
+[BZ-B02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/25cf183cfb031b2e890482df02ee09ef79422691
+[BZ-B03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/70861220f73095a7ebe62d8b8bba27622fec1f32
+[BZ-B04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/28843b6bb42820e866e285350fb591e03fe3cff9
+[BZ-B05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/50f97327b12649b3c2fccf8c66859130ac846333
+[BZ-B06]: https://api.github.com/repos/theislampill/orthemology/git/blobs/a95d96f65da21e9f2fc202c691bc5652f6645ba3
+[BZ-D01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/9a3f93546415833d95db9cbfa14391b2059c14f1
+[BZ-D02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/55f39a37cfa9edc1ba5d0aa8e8778889dd724b10
+[BZ-D03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/831e025b3bfeb033947af1cf911802e15010471e
+[BZ-D04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/c370f2b4f877f668dfd4bba58b32cf9af444a7d4
+[BZ-D05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/1ec687261009c43804e20a0cfaefcf0f645df36a
+[BZ-D06]: https://api.github.com/repos/theislampill/orthemology/git/blobs/0013d75fe9b896f3525f983ebc0117a857192e2f
+[BZ-D07]: https://api.github.com/repos/theislampill/orthemology/git/blobs/e7e295f2a2b05a3aeb539c5ff85fe3add3e1baf0
+[BZ-E01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/90833b87172b3f25ee9819ec256356d1965f82c1
+[BZ-E02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/2ad5ae8fb73606376428acf331bdcfe109f63c92
+[BZ-E03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/dc158f93f8d5a713ff36dcc6b1d53d4948e7b587
+[BZ-E04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/be7e954c74b2348850fdeace70c460dc07ed081d
+[BZ-E05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/e35e9705dca6e6f30f331ef6f9a41e14f99590a6
+[BZ-E06]: https://api.github.com/repos/theislampill/orthemology/git/blobs/09eaed269aa364709cea90be8b8860f995677bdb
+[BZ-E07]: https://api.github.com/repos/theislampill/orthemology/git/blobs/854e776f3133e5fec351c3298f9b052d6b80ac44
+[BZ-E08]: https://api.github.com/repos/theislampill/orthemology/git/blobs/c28c4efef192f15e2da12afdbde6f278b79f6593
+[BZ-H01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/66cf9f46daa19c4017333b7c96c1fb5b63b92a94
+[BZ-H02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/19731032cf5b76310eb03a2d1c32d0cee6a5dc0c
+[BZ-H03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/0404e84fb9b49ee983ac49a86c1ed30ee3ba67b3
+[BZ-H04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/c1248a540b798e5bd4dc9b8c13547492b759c89c
+[BZ-H05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/2972535271f12fa42e8dfe02b39869e838e9e361
+[BZ-H06]: https://api.github.com/repos/theislampill/orthemology/git/blobs/b27d7ca97c18295b1594c5e1017e8b97eee90902
+[BZ-H07]: https://api.github.com/repos/theislampill/orthemology/git/blobs/34fddde9bd21b522771ca1443dd4d1cada69cbef
+[BZ-H08]: https://api.github.com/repos/theislampill/orthemology/git/blobs/cbedbc37c6aeb78f474870148833d4eb76aedf0a
+[BZ-M01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/ebd1fa582999c8459c0621500b1d31d739a6371c
+[BZ-M02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/7d86434d17b476075321e21f3e89778e919217c6
+[BZ-M03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/7017f4f7c1bd489c4ff942a64b171404ac470c83
+[BZ-M04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/62245fb71482feaf070955f50c1dba579b8adf7c
+[BZ-M05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/ba85d496f0ceba971cde81e487424fc923b9e979
+[BZ-N01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/d776eca7d62ddeb6ee035e96ca445c478e1d5c7f
+[BZ-N02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/4ceff9a6f092876749d2226710882a6ff95048b6
+[BZ-N03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/03ac0049a3093d8325061ba081ddeb6ffc6b2ca6
+[BZ-N04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/cea30d2044a8860b65367df944764ce3c4676f49
+[BZ-N05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/6e32579d8333393e86a34efb8f8fc95afe9587dc
+[BZ-N06]: https://api.github.com/repos/theislampill/orthemology/git/blobs/64a10687764322be6f0f42c4ae45cd18ffdc591d
+[BZ-O01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/9709afb3901a60e6e51e91bc6601a7b2fb551e9e
+[BZ-O02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/4a1abd14cc60eab16dcf3c4ee54f133b72145a48
+[BZ-O03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/7fd64adf78e05a002124fd1ea50965b58d6ffe1d
+[BZ-O04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/60a350ff33618dda0979599e337636f0d7f1408c
+[BZ-O05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/504532454be729f29a5f105c7e22c696aeeb3a63
+[BZ-Q01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/65b0db09c541d36197f68287605d17818db4577a
+[BZ-Q02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/6221a359c56c620ff3f111bea1558326c846de23
+[BZ-Q03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/ab1dfff7ff5be6d92ecfdb428c1af0fedd067d7b
+[BZ-Q04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/ae3b463a8cdf06ff780da2b71aae966d6dda8f0c
+[BZ-Q05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/81951cafc301236ce989cb03d4b7ba6ad02dc8a1
+[BZ-S01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/37c919f24393868afcb828ddc2c41644bc2ccdf3
+[BZ-S02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/63d224cd65d8ed43b32b6f26e5ac01bdd2545030
+[BZ-S03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/25410aac3ed81d1a982ecddc2bed007284f39e33
+[BZ-S04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/d3a93a2c61b7504d9c440ef3f3aa3efb749def43
+[BZ-U01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/9444e3c85ae903c6522beb7cd0f4d493088e5e02
+[BZ-U02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/656ac517c65ad1b77878011207747eb2d726826a
+[BZ-U03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/e823ae79f6ec3beb95ebdf08fef978f46eded62e
+[BZ-U04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/d6df4c4ad3faec6c5c3e5b4d25b026a8995e1e97
+[BZ-U05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/a044f0728d89030f9b2de5ad8305ad559bf99794
+[BZ-X01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/3419f01230e20643f7b24b4a36af599cb784766a
+[BZ-X02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/7feee3f1cbbfb36a66eb677338cd231dfacc844d
+[BZ-X03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/3fd093153999e5041fb9c47dd98a5c5c8414776f
+[BZ-X04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/2f53c34c70907e538be63df078d8ce75dd6dba12
+[BZ-Y01]: https://api.github.com/repos/theislampill/orthemology/git/blobs/35a81f8e107f8295b94693b40fcac900d6302df1
+[BZ-Y02]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f628dfaf18dc71274d6fb9c2c2ceadbdd3fafb53
+[BZ-Y03]: https://api.github.com/repos/theislampill/orthemology/git/blobs/9ed4ca8382d88969d6111c8892a211b15e394523
+[BZ-Y04]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f71d96703229ab6f9e499f49454f910ea6afba51
+[BZ-Y05]: https://api.github.com/repos/theislampill/orthemology/git/blobs/3868ceffd53a20a83520c6fef2850d248bebd221
+[R359BZ-B; R359BZ-O]: #r359-bz-ref-b
+[R359BZ-E; R359BZ-S]: #r359-bz-ref-e
