@@ -1054,4 +1054,21 @@ class PublicFixtureAuthenticatedCurrentnessControls(unittest.TestCase):
                 self.consume()
 
 
+class ProductionReaderSourcePinControls(unittest.TestCase):
+    def test_unpatched_adapter_pins_equal_exact_composed_source_bytes(self):
+        import ast
+        import hashlib
+        scripts = Path(__file__).resolve().parents[1] / 'scripts'
+        source = (scripts / 'source_alias_absence_reader.py').read_bytes()
+        constants = {node.targets[0].id: ast.literal_eval(node.value)
+                     for node in ast.parse(source).body
+                     if isinstance(node, ast.Assign) and len(node.targets) == 1
+                     and isinstance(node.targets[0], ast.Name)
+                     and node.targets[0].id in {'RESOLVER_SHA256', 'READER_SHA256'}}
+        for name, filename in [('RESOLVER_SHA256', 'resolve_t20_v6_source.py'),
+                               ('READER_SHA256', 'check_reader_pilot.py')]:
+            with self.subTest(pin=name):
+                self.assertEqual(constants[name], hashlib.sha256((scripts / filename).read_bytes()).hexdigest())
+
+
 if __name__ == '__main__': unittest.main()

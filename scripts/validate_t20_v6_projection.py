@@ -31,6 +31,7 @@ from resolve_t20_v6_source import (
     SUCCESSOR_INPUT_REGISTRY, successor_input_registry_document, successor_input_absences,
     SUCCESSOR_CALCULUS_MAP, SUCCESSOR_CALCULUS_GUIDES, successor_calculus_map_absences,
     successor_calculus_guide_source_bytes,
+    binding_record_candidate, binding_record_absences, binding_record_public_bytes,
 )
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -148,7 +149,8 @@ def check_object(root, row):
         path = root / relative
         if path.is_symlink() or not path.resolve().is_relative_to(root.resolve()):
             raise ValueError('source symlink or escaped root')
-        if (relative.as_posix() in SUCCESSOR_INPUT_PATHS
+        if (binding_record_candidate(relative.as_posix())
+                or relative.as_posix() in SUCCESSOR_INPUT_PATHS
                 or relative.as_posix() in GENERATED_FIXTURE_PATHS
                 or relative.as_posix() in HISTORICAL_PROSE
                 or relative.as_posix() == CONTINUATION_REGISTRY_PATH
@@ -243,6 +245,7 @@ def check_preserved_roots(root, objects):
     input_registry_authenticated = None
     input_absences_authenticated = None
     calculus_absences_authenticated = None
+    binding_absences_authenticated = None
     calculus_guides_authenticated = set()
     for cached in (True, False):
         result = readonly_git_diff(root,
@@ -253,6 +256,10 @@ def check_preserved_roots(root, objects):
             changes = result.stdout.decode('utf-8').rstrip('\0').split('\0') if result.stdout else []
             if result.returncode or len(changes) % 2:
                 raise ValueError('protected baseline comparison unavailable')
+            if binding_absences_authenticated is None and any(
+                    status == 'D' and binding_record_candidate(path)
+                    for status, path in zip(changes[::2], changes[1::2])):
+                binding_absences_authenticated = binding_record_absences(root)
             if copy_authenticated is None and any(
                     status == 'D' and path.startswith(CONTINUATION_COPY_ROOT)
                     for status, path in zip(changes[::2], changes[1::2])):
@@ -326,6 +333,7 @@ def check_preserved_roots(root, objects):
                         (status == 'D' and path in (copy_authenticated or ())) or
                         (status == 'D' and path in (checkpoint_authenticated or ())) or
                         (status == 'D' and path in (record_authenticated or ())) or
+                        (status == 'D' and path in (binding_absences_authenticated or ())) or
                         (status == 'D' and path in (package_authenticated or ())) or
                         (status == 'D' and path in (code_authenticated or ())) or
                         (status == 'D' and path in (input_absences_authenticated or ())) or
@@ -346,7 +354,7 @@ def check_preserved_roots(root, objects):
 
 
 def check_public_inventory(root, rows, controls):
-    """Keep every manifest row; authenticate the one finite ADD_EXACT absence."""
+    """Keep every manifest row and authenticate each finite historical absence."""
     declared = {r['repository_path'] for r in rows if r['disposition'] in ('ADD_EXACT', 'PROJECT')}
     expected = declared | set(controls['files']) | {MANIFEST, PREFIX + '/PUBLIC_CONTROLS.json'}
     actual = {p.relative_to(root).as_posix() for p in (root / PREFIX).rglob('*') if p.is_file()}
@@ -361,6 +369,17 @@ def check_public_inventory(root, rows, controls):
         except (KeyError, OSError, ValueError, subprocess.CalledProcessError):
             return ['public inventory has an unqualified historical absence']
         expected.remove(historical)
+    missing_bindings = [r for r in rows if r.get('repository_path') in expected - actual
+                        and binding_record_candidate(r['repository_path'])]
+    if missing_bindings:
+        try:
+            qualified = binding_record_absences(root)
+            for row in missing_bindings:
+                if row['repository_path'] in qualified:
+                    binding_record_public_bytes(root, row)
+                    expected.remove(row['repository_path'])
+        except (KeyError, OSError, ValueError):
+            return ['public inventory has an unqualified binding-record absence']
     if actual != expected:
         return ['public inventory differs: ' + str(sorted(actual ^ expected)[:10])]
     return []

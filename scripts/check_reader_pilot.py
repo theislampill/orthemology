@@ -50,6 +50,7 @@ from resolve_t20_v6_source import (
     GENERATED_FIXTURE_PATHS, generated_fixture_absences,
     SUCCESSOR_CALCULUS_MAP, SUCCESSOR_CALCULUS_GUIDES, successor_calculus_map_absences,
     successor_calculus_guide_source_bytes,
+    binding_record_candidate, is_binding_record, binding_record_bytes, binding_record_absences,
 )
 
 
@@ -1414,6 +1415,13 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                 generated_paths = generated_fixture_absences(repo)
             except (ValueError, OSError) as exc:
                 errors.append("corpus-currentness: live-derived fixture evidence: " + str(exc))
+        binding_paths = set()
+        if any(status == "D" and binding_record_candidate(path)
+               for status, path in zip(values[::2], values[1::2])):
+            try:
+                binding_paths = binding_record_absences(repo)
+            except (ValueError, OSError) as exc:
+                errors.append("corpus-currentness: source binding record: " + str(exc))
         administrative_paths = set()
         if any(status == "D" and path in ADMIN_RECORD_PATHS
                for status, path in zip(values[::2], values[1::2])):
@@ -1437,6 +1445,7 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                       ((status == "D" and path in HISTORICAL_PROSE and path in historical_paths)
                         or (status == "D" and path in allowed_duplicates)
                         or (status == "D" and path in administrative_paths)
+                        or (status == "D" and path in binding_paths)
                         or (status == "D" and path in input_paths)
                         or (status == "D" and path in calculus_paths)
                         or (status == "M" and path in input_owners)
@@ -1593,7 +1602,9 @@ def check(repo, owners, cross):
     for key, source in sources.items():
         try:
             path = source["path"]
-            body = (historical[path] if path in historical else navigation[path]
+            binding_record = is_binding_record(repo, path)
+            body = (binding_record_bytes(repo, path) if binding_record else
+                    historical[path] if path in historical else navigation[path]
                     if path in navigation else administrative_record_bytes(repo, path)
                     if path in ADMIN_RECORD_PATHS else successor_input_bytes(repo, path)
                     if path in SUCCESSOR_INPUT_PATHS else safe_path(repo, path).read_bytes())
@@ -1609,7 +1620,7 @@ def check(repo, owners, cross):
             if oid != continuation_owners.get(path, row)["git_oid"]:
                 fail("baseline-source" if path in indexed else "source-addition",
                      path + " differs from the independently bound source")
-            mode = ("100644" if path in historical or path in ADMIN_RECORD_PATHS or path in SUCCESSOR_INPUT_PATHS else
+            mode = ("100644" if binding_record or path in historical or path in ADMIN_RECORD_PATHS or path in SUCCESSOR_INPUT_PATHS else
                     "100755" if safe_path(repo, path).stat().st_mode & 0o111 else "100644")
             if mode != row["mode"]:
                 fail("source-mode", path + " changed executable mode")

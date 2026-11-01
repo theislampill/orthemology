@@ -2610,6 +2610,600 @@ def administrative_record_absences(root):
     return result
 
 
+# Exact original source/evidence records. Historical viewing never changes a
+# status, source credit, control, adoption value, namespace or current result.
+BINDING_RECORD_BASE = 'a7ff0e33d1a299db640041c46b1af81ca70851f6'
+BINDING_RECORD_TREE = '9cd3f787299b774513f68837112d5f138b093dbd'
+BINDING_RECORD_COUNT = 277
+BINDING_RECORD_ORIGINAL_COUNT = 16103
+BINDING_RECORD_CLASS_SHA256 = 'b457efc5f027c0179a573ef7f50e6f3f686e479d91ba4c6b676721623de2286e'
+BINDING_RECORD_NAMES = frozenset(('MANIFEST.json', 'INPUT_BINDINGS.json', 'SOURCE_BINDINGS.json'))
+BINDING_RECORD_ROOTS = ('research/', 'experiments/orthemology-v5-successors/')
+BINDING_RECORD_CURRENT_REQUIRED = frozenset(('experiments/orthemology-v5-successors/source-store/138833be8349d7d7a1f5cc2790f9af1f920d52ed2e18d1103726f1e944ac9847/MANIFEST.json',
+ 'experiments/orthemology-v5-successors/source-store/16ee01f25a93117b0dd893bfb06b2f73a974594ef794650aada7e1231266b6d3/SOURCE_BINDINGS.json',
+ 'experiments/orthemology-v5-successors/source-store/4afd877fe463ed00698dd1e38f3a99c4de30d01f552577695dbd9ddff54b885f/MANIFEST.json',
+ 'experiments/orthemology-v5-successors/source-store/5705935996f3ed949f77d1f7d727d3b7970bf28778248f2ef5b643e0328682a7/MANIFEST.json',
+ 'experiments/orthemology-v5-successors/source-store/ccf9167bbb612d800a14b528407c6952101f5d217767922f4f074068277ee5fc/MANIFEST.json',
+ 'experiments/orthemology-v5-successors/source-store/fd3f503d6f1dd9ce5b164300154c9b4cc4cd477ed026804ff754338452815bd6/SOURCE_BINDINGS.json',
+ 'research/t20-v6-20261012/sources/06f23df1709d43f9ce21249202a012ab276861ac86f5471a7e868c466822a06a/INPUT_BINDINGS.json',
+ 'research/t20-v6-20261012/sources/fffd1bf1398f437d310aed8d3a54d3f0b7069d7d2852d5754babc22cffc49f18/INPUT_BINDINGS.json'))
+# Dispatch filter only: the native original catalog still owns every mode/blob.
+BINDING_RECORD_PATH_HASHES = frozenset(('002c5b9228aa3e7499c57b79a8796d941a9884cf688c422215ec8595d3a0ec12',
+ '005a65f96af35a4c4a83c509b21d70df2979b22e3dce395d3a3b336da694bb3d',
+ '006adae9ad6024ed93f5e8a5d593434abece417fa409fab3634c90249c02fc8c',
+ '00ca11cbbe19ea85ed239d3bb432f229630ba04f7797c3b39e4311b6030aa904',
+ '0146361e79bdd1d2ece4b546efd95d08b8c3029794e1292ac025be4fd9bcf082',
+ '016c7ac27851df04484b672a2823893ca0c9961947e260bad89c845fee011f5d',
+ '01ac4994152dc44b81cff446a26cacf6f6bb710ca9173156cc34184261f77dd4',
+ '023a77782950298381dfe46b2e30e5b3018ef1608c5901440fef254b8b6f1042',
+ '02a110de713ead7bc0f1d97f1d4b5ae0ce01c41cfb07e0eadc2d25a1184074e9',
+ '02f1ff573e308423283f447776e94f77b749bccb5196aa6e0aa4a1d5415dce4e',
+ '049228bbfb5dfffc3b1f02bd143aa6fa624d2bbeb51bd73b47081defb6928697',
+ '060a661edb69d78b5d5772a715734f349857ce9f1998ad6cc40f677ef26c9c79',
+ '066b0e0c80afff9a7df97cacf02018a5f8b2f0a247cc65fadd3082968a311f42',
+ '071b2b82a8265919cb4419116f5dbb6b81490516128554526a62bfbc29d8605f',
+ '0812ccd480deb99d2deef9424fae8047fb4cd861f189391cf0b2d250e5e82b1d',
+ '09c26a96c9f4cdced2daec8042ce5c24408f11be4fb5e5910860cc190645ced4',
+ '0aa8b5a82c3aacf4c7d63a63872de7ebd647629f116e045f039b3d1300bb8628',
+ '0c944c50818e4286f4ae6a727c6492a2605f94229c4470392bcfc7df85170640',
+ '0cb100e3a24ae26942bb1cd27cbc35ce86ae0c9e0f9a95ae1a9bb7a4c815e4c0',
+ '0dd66f9d1d8a2c835e599536f47a7b449096f0ce9faf5ff3ff2decf495926baf',
+ '0e8028539c7dc823fb20caca51edb1344d506e0d2c400951a2f3125b650bc09d',
+ '0e94760663041fcb825a4deb6ca9ca5f840431673a86a5d30b50b1836822d872',
+ '0f069659c9732bc353c8ab071a99c3021cce9236ddcc11d3cc4a6b8df05e9137',
+ '0f1d2cbc12fd8491dba0ea8505fc6a977c694c1d0ac092e9b49a8b9a51f06542',
+ '0f3da223a009b4d900bcff4c46828fa4535f6faca448d30b88f8f4cbf5d1447f',
+ '0f5d3b4d5ae85cf09d1b92448f6446fa9a95ebd9e3f953d401af309202cf823b',
+ '10a87971195baf82461a158a6d56790bb7c2ad3bedeb32590487096097946a4f',
+ '12acb5d47815e3fb47ffc2262ce8f2eac914ac4d9f947bd58e899add622c9660',
+ '13b800180f10bafedc52a853eaeec63999f204f88d42b72fd5396abfa630a0fb',
+ '15414b10e07ac8a18704245bdc6ee07bccda27450a3402009e4e1203ffcb5af4',
+ '1545e238eb9e555037b775b65f927dddfb11c1077cd7669ea92698c972453a02',
+ '15faeb349919e7af8f834b763c1d9d5a2ba8dd99f48e954ea715e7da8cdb4366',
+ '191d9b2df5180d1979d08dff2b1a9c83174781536a9b73d9337b34e172eb3f0e',
+ '1af2fe03cb73f60450353518cda021b0bfcbbf76150fa619037324b7284c497c',
+ '1c6da2b28f4f01e58a4698a14fad80cb38fd99368818c75475ef6c92300b6392',
+ '1e8ecfa37b4c57559395221588ad2b8d61b8cd122ecd2b7455911d3b44f9052f',
+ '202dba0e163e47f6f016fddbec7560f8f4f1d55cc23b94cc6f553fbab575223f',
+ '23dad990a50f014667ab7728d2b45447c4e26f0c372fd1d32a0122fa41667140',
+ '24926c8a745de476a82f4480a7bc9669f039ebb3b55abd432cc351211c1d13e7',
+ '2521536af8164a80fc185d9f5cfb313f931626d109bc17e228cbe65daf79742b',
+ '263070b259548a4540e1fb2357232b0df7b2913c529ad9289fa125fbd7a107ba',
+ '2866701ce92bfbeace588eebf478e477e7e6d1baea68c8a864ae472c417d3f7a',
+ '286c5f553ff9b74d4441b2daeb981811aa342ca04c9e8fa07f8a37647d0b80a8',
+ '2942867e5318f23b54241d0df8623069a57b556749fd60a1f1dd7223f4b374c0',
+ '2a1314a7da5bdaf4372c5cdea1c3f77c0ab9dd036d822c634ec4577087474b1a',
+ '2adea39aca1543d04967ddfb38d6faacaf62036ac4e3cf6dd1718fd7630868fd',
+ '2c94171b78fb00fd4119763430e98eb01b268c35c5d1b7cb14c89218e660ddc4',
+ '2c9dd0389a9800db6752b7b143cc92f54a2c2fa9c6047a572232065d8c80a4e2',
+ '2dcdafa6e2a64a9edd2b71f19fd72f61df36f7e18677b5a41d438f9a72faaa5a',
+ '2e22e6bc0959ed37948f59aecaed31a88f66caa833175852ec3779b25cb7206a',
+ '2e2c68d98bbe06fd013a1c72574f6f031e181d8442ae38b57007239388256dba',
+ '2f8ed0a03b1f66f9d8fbd3e82ba6bc4e03250603050f144419e0c663b8ddb890',
+ '2f9a826efe5c3365065f13fa59172926f8369ccc6341b2b6c9ee17d0bf7b8b9f',
+ '2feb2f0702c4ed81cf7367e51a0a81b89df569f3f55926f88e6fd08f5615dfdc',
+ '30e866a4011fed91a4735eb4260d78636447212f2d5b4a334eb47518cb3d2fbd',
+ '31d1ef85620d63b19416882f387914bfc50169747b0d41ca16011594afabc6b8',
+ '31d92aa361282f8c34557e4e00ccec493ab798d45606ac1355295db0f53a13be',
+ '326187eb271bce0a3d12086dac772292ca5aeed63ce8ca5b47cd6fe2ee5fd3d7',
+ '32fd2cb061b718356c5b46ddc893c7bfc4a5eb74479db78bdce1fb975b3d3178',
+ '331fa89db01df335a7102894dbcc65492a4784a203c06d9590c5252d783325d8',
+ '3350f38ed484b9b2219c6ac116d13cabfeb7ca748ad68741f4c8b73d2055454c',
+ '351ac7f43e7a33f819a663dcbb00f8c48a48094e4fecd6a7219375d04fcde311',
+ '37121b5471ffc986ad298cd6b89eee38e98d4fbee612e4d2745c159f59a097ba',
+ '37155790bb7e0a32a787d4a4a5a69b1e322bfe4fb8a12298b5c711bd33391333',
+ '37d54ce856b5241beb2c8fb6a53af439d9b627c3359af4ba33d07f51a6d28af4',
+ '39794083b05e102c4185bbb5de8fa09b698d9b0e34219b51401ca0016f9b75da',
+ '39df0455d48d128c5c6de6f6fded0198470277fd483bcdc3fbd857b5edab39a6',
+ '3a04fcd75bdd2872702f402689434bb417bdf32ff36463e3c9097ceaf268c316',
+ '3a3d9b03acf7a2a607d27dd2513fd305efcc0e720aa3651036dc2b1e582477dd',
+ '3a66a7136fac7d91e583fcd2a3f009e72afe97b4dc8a8cabe8c810e6a43edbd5',
+ '3adf1551b35c090a81e0e185f49250ef825c949c038ee0296722eb0c66998603',
+ '3b8952dedd17058ef0d58ca3ebe1fa7ac3284d52597b1f880b3179fd78ab0b19',
+ '3c2eacb618ec4999abcec85a9f51f3bf74d24638e37f2a1650c1be99bc0cc7f7',
+ '3ce0fca365b638a037b7200da19390494cd08444cdaaa53d1e858736345022ad',
+ '3d6591f0808014f1773a8ca37ea0f404d6f8f96780e4f55756ff9342874145ec',
+ '3f12a98b58307e57a2e60c4a929d6c91083b49dc68a3adac63beb4615c0960d5',
+ '3f5dcaab128023ccb0a17710f6f3cbfd0f98979426081be244ede68c7890c55a',
+ '3fcb2ea190a2f63be6da27185dc4f505de5ae495d61cadf9faa9407edcdef4d8',
+ '40950ac6b3d4c7669c87abe13904d59a03c52c360fdbc2187d1c7637a748ead9',
+ '42c128e7ee52cb1dbdcb7bcd79301337a7bc1814b54d6da3a425122cf83762b2',
+ '4364e1abb741a3e578ff8dc39cadfe1a1bbe131216e00af7d5c08f48db6465cb',
+ '43ed422f0cd48e1e03b74698f471268eb98ddc6fe1349c7076026305a9361e5c',
+ '468651dfe0e86a6a3e7e196065a848c8142c4e81bb64f1cf036dd6c4016fb629',
+ '46bc6362a18647fb4fb6b9da8a4eec75bcf2f0780d878419f32bc6651dfd9987',
+ '49c9f68856de4a22f2b7cf7147f2c50c4c71cf512670ca0db33879449beacf0d',
+ '4b5dd3222d64d01d43468fedb73cf2d9014b57a5d06a18c49f3e791275d336b7',
+ '4c6bef285698e7ef54ff11eba30d36804a1c78ff252f43a4f1b3f13147ca82be',
+ '4cb54ff3c19c32d6c39eef349b2b1139829982207d268abf2bed35c7e7d90520',
+ '4d6622610fad2f3018ec062f73c57441204427ccebad25b63817206d69aa879d',
+ '4dc4359c623c3db7069da76b785fab509490293418a6ab139de00ef28f86a892',
+ '4ddf8b9d78e2eb24f88c4302d83d6c70104515263a5232de7cbbfc50e490cd94',
+ '4e617a9abdd83d544368adf772410abd06eb64b54b595fe709b457b515472f31',
+ '50b96b616e36699e93a0d84d52b5ae8a70328afd926144e3dcc236896227cd6a',
+ '52c242aef46b5b1cab06dd368c7a73c1000cc763ad647da369c7c186e3755d17',
+ '540939e869185038d8ad54611a1c748960b7b3bf81e61e635ce3b569bfea459a',
+ '5585c6d60dfa2ed861277b1571c747a4b87239ec8a2baec2e436e77834d9e1c0',
+ '560785d90097fcbb829aeaab1f8352f35052076d3a957930b878e6f92a981c15',
+ '57baea2579f1fa98340ca8c05c1d1f484be2b07fa7401ea5b8a8dcd856b03a56',
+ '5990988da3647d59251a86a630fd03ee5e6fdf986db929c67d08429ef7222aaf',
+ '59fcda6cf03dd489aa047b07402e8c8802abd6ff97f31971c4298f3441326529',
+ '5cd66a12de638696feb7e09a4df7b5db819af86c197367f6d2192dde7765308a',
+ '5d2b681f45c7a88b3df36baaa943bfb742ca6d5ec03b34f57e3445b2f91cc81a',
+ '5d9ddbc686aab5a6e18105d5e17eda067f7ecb1d277379807a77e5f252f7d230',
+ '5dbda47d09aab7f35d5802918540217bcae9cdbf5c77745e05c0a58a2800a1a9',
+ '5e133d7fce2c4f2d0be5b55d66d9f06ec0d92c21acb84d7554ca47591a4841fc',
+ '5eccf15d277cab100dc02d92ffe4baa8df47db3e07a59852f7f8ae71a35676a5',
+ '5f225c544671bc28b7f89f8f8c0a6d02d1aad2e7676b62dc05af2304fc0b24e9',
+ '5f22a8b8765bb3a0c7410b9e9b46ac609c95bac6a8e7dab1c6d3c0adf858ee27',
+ '6063e7cfe3127804511b276e383572ec87155663d46283416d633188a4c79346',
+ '606530071fbd6a5c67f96eb4dec5fbcbdca073e13ba72206d1bbcb0b882b8baa',
+ '6138f58c80ea7708aaf5e0d62bd46a9994e78323bd69eb045e8f8f86555d8d7b',
+ '6150a7b3f3298f18ac59e47f0bdab6d26ae77d0442dbecd1806f136684f10364',
+ '615817d2b734134a2c0039af194d07daf1499d2234994d36a7cea0dae3925a51',
+ '6182e4aa3be5d9dfbb0ee9298ed254c4646340967b00d98dd7bf465ca2847c54',
+ '62f5490f1231a7e932fdc6e596f842584c7c49af8944cfbf505b6b166cf9fa70',
+ '63e319814666805cb7ee476818a7baeb4f135bb67349275c3cf89f4268c08a97',
+ '6477a4b00dec94a458eed10d3e43a7805c0624b00374e67219ab8920a4eecdb9',
+ '64d71048e1bb675dca1f76fe48b10a52d62e4f315b7801d7fac90a64da1fe862',
+ '65b4e1ed00760f92e87e0fcfbf55197d15d14dfcdd8c92a0ae414bfaf2e7e737',
+ '66e289fdeae38a6aeba0fb9ab1d63a3da84f7582b8507c90e6d227c6e06e8266',
+ '67be643c09e389f99b4d06cbc815ab8b156fa059975c0b1fb108201036520421',
+ '67c12b9442f463c5aa525f2400655aff358ff76949446bb33ec1a3a68e30b114',
+ '67d7f4b5f3b31e6e442399afb8a5cfcdafb37e6a396b73b87b9a32e426c482e8',
+ '68e118b1ebf3bb9abfe24195dceccd908e34a870681f0fbbfaa8b6dbef74df66',
+ '69b612667988050059f604cc580bb9ae05280371733af9e242dcc79575287d1f',
+ '6af619463af57117151e58e92618ce56b9c1140995de76b81fd5e68499f05061',
+ '6b6172214f00b206e9ce5818f74adaac1e42aaf6e6a3a4288d895eb86a9019d2',
+ '6c5fffb4f409006b0388fcc08e09903b0cb939fe1f8ae6074c54806f257a2789',
+ '6f750cddf03be71c26f192f679d98c4ae3e9ccece9e427c11f73d0700f0647a2',
+ '703a5a78a7e453dda9a85a7d12184f3bc132fe86d72d948047dfb464dccc5b30',
+ '71104e7e7c4477c8e22f69c09cecc2691c56e5f425f839ab0b91107e600c4b04',
+ '72c112e837fa9b741ab5a183ddb6fb9ac3d79cc2852e2e61367e56b7fb057216',
+ '73a386e332559f4abfdb426f5f5d2a45a97178fe9a170fd127241eb7f5d69d96',
+ '73b69710c6d0f0ddc844556622436e7ad80ab3f302c15191d4f403b664ee6f87',
+ '74324642f5b027f9ec0cfe42231e7ba7a96c18e815c333b007dce72a364f85d8',
+ '7483370d36aa6e4c10967602c1688d3c6592c05406be873dcd867e349ac1d16c',
+ '750fd16df02dbd7ad2075a8989ed37dcfc0a771d7881614f3309066d00d151a9',
+ '776b1c97fc09be037cfc11278e95b361ec6665fc7087966ce1326ca9e93e4a43',
+ '7be03002da6e94237cad8b9df5784e44d4c20557266aa9c8a6bfdcdd9dbdc33b',
+ '7c2cabe2e9dc3fb222b81dd99b972d4a2f1965ad98025bcfd64172337a7ef18d',
+ '7cd97319eaf4a90977d6928f1ac0bd2cb141bf12403841fb4355b14ee47ad295',
+ '7e45c0d42550964abda2979706899b405d38026103477b740bc22dbaaf24ab40',
+ '7f9d1a98d0d2dce8ba013ad6e5cdb211e099883f246a8084e2b8fec337c6269a',
+ '7fd9944c874e496a248bf72f0cc73956c185b6b15e6d7ec14df756ae69a63891',
+ '7fe0d9ccbf2b04168a7fb6fe8e3a6ebb65e10b41a0ab214a259a4bcc72aeea35',
+ '7ffe3a02dfb8b51b9ec9384004bb32d8f198af1bbaa485888dab2cca5879e41e',
+ '800b96132ad584859eda6b4f4f5882f26f594d26f39fa3fcf33df7960f959443',
+ '827ff2b3c4805a2cd318b7fb86f5bd9547c5205b4bf697a0077760df94c92bd1',
+ '840c138144a6d248f053f49107c9077c22a98e53e0bcff5f8a8b71fa4b8c4a0e',
+ '863dfd0e5381183688c99057c3bfaadc4d7911a43064ad53e8e80ed8040834c8',
+ '868142a87f63fb85ad89251e8583898d5a1cd082a48bcb88df9715a728599b01',
+ '86e2f9bf82a5c48d76a564999d92ae054bf2d1e79c45c99bdde5a0ff9d55acc7',
+ '872e211f22feabd3818b3bd4009f0ecdcd5133964b1baf230ab63230b15ec604',
+ '87cedc90c90f0afc3ff4d8981befbd85a94c3403ba603579d981559d9e77fefc',
+ '87e12e4f8f66fbae3056ed9e7122febfc331a6f7c52683468dd96f9f90b81725',
+ '894a52721cc64e8f848f81dc351bd4ddaad33da4d8890f085c0d583e10ded466',
+ '89739648720e881affb2251290c0cd80191f6dd6fa7849ede0575a20cc41adf3',
+ '89c102ddc3639ba73b8241fdcbaca18b4b2e878f0fa2c8e000a00edfbcba88c1',
+ '8a9c2e60272c1f11603081fcdafdfac57d0335d483a93aed5dfa36eafeb683c4',
+ '8b37e8cbf16673462393f275a00a9523ec2d6a4adc60ca5361d10abaee671da5',
+ '8b842708c58b00827b4067bedb296756fdd00ad6420ce5b13979be3fcf8708e9',
+ '8bda8373b897ab62b8b951b02c87bdaaee655fa3392a6590b7204fa681358043',
+ '8d498db8f731aecd606a898f8e7e972b74d0ce8ca907ff5dc8fd4c1959c02d35',
+ '8f4fcf4148b88f5e7a06dc3a6f5ac8bac342e5ea75fa1b7a9e2bf58bc596b03d',
+ '908e3fc6513ed50771ec38fbf4738b16565a95eac2e40565069a14655741fc15',
+ '91f953b83de4f919779bb7eddad10deb679c3e1e16ecdf70d2ed6e30f3a92862',
+ '9267b437aba98b03778df1f2012f682d35b602b63ed7fca3d829831cdbd27dd2',
+ '932b096f36d7073e124a6b316a3e7615a68052d3d8ca0866d534f39a504f37b5',
+ '93b41df4a87094b4b5e49c500c01ffb438f0260d145f7e271a9c279c1ef6bd61',
+ '9477103a559afef359fd8c5584a892fabfe04a070bb613a681054aaab15c0365',
+ '95b28749c13a093d46ab24a2aae0825fcc68dde4f55781f3bdc4f3948cea6e36',
+ '96efca7e88f5c62801294aef258c1c49411363d694afe2278ac9260d50495e4f',
+ '9960e6f9ea6f1ceed55372378223892f296c505e2d147cdde52f1898815d3af3',
+ '9a75b6dc6acbf2cffc066bec7499df36669ecc4eafae98fc033437d85379a792',
+ '9bf89b5d289e2a640908f5af745adb85a1f06809a8e2c7782d2e6ca16ce6d227',
+ '9c07018446238dd62c6814b86da314e30ce56d390ea0bdff03fe659b5f2d2f99',
+ '9c46308e47221f9921d72459b019e3d26af298ff573964b6a3364d3acfb464e2',
+ '9de2e57fab5b14ce4cbc105af8af72f4721d53472d54278d1c3795cf6923cfeb',
+ '9e5561a78dea43d193d169fcfdf0d1b824c67bd2e7cebd7c3eef46e5cfca1ee1',
+ 'a13b5972c4c7cb6f78aa9ed0637fd387733d5c5f63d50643d47288a7a8fa242b',
+ 'a33020bc0b51b0bf4725f87f9106dce58f9eca4e6185f62b4c4f19446f1f8ab5',
+ 'a463a847c340b68235d59862244824e89af7469bf0e37028b599ef9039181bce',
+ 'a58f0d3b955ffc5b23a6ec09d52928647356f199c8d73c8611aaaa6a08f1f984',
+ 'a6f5f72a86bfdc2c601550e9307ea20ff474dd9909e90c6bc553a4ef9c856ee2',
+ 'a76eec588682934ddde687033a3f9b7c64dc4a499fc6b39d61e1a7fd92bb6ae1',
+ 'a783656e50714eb3f7026329958e13b74e08f8980fff29192ad8e41c0aa74cff',
+ 'a8dc0710125f9582bae63126c8410cb4fd47b34d1037ae6e62aff90d65182bc7',
+ 'aa457cb1c9a8eb5aed9887f668780b8c0b925ffafa92ad19ec0770a86bc19ddf',
+ 'aa73bc461b0286829f41b8c67d6fa7217425b949dbfc4e3be547731a48defb4b',
+ 'aab8e0350856c0a7b1c9f3fea2a88d8e02304acfb0ab362297592d38fdced046',
+ 'ab28192810196657fc5e2a7b5892b211593f900da8d2ebbe425f0ed0af4873d9',
+ 'abe02c4889ab34dc920743347009eda516398d8947a00af9059c41c0ad761bba',
+ 'ac65e75191fe711f3f23152bebffb6721b88e3908bd0eb2e66c332b9b11f4557',
+ 'ac9d169625950fe0cb6f7a9c0c9383be30ec240b3a7924b45ade505062fac717',
+ 'acd3da1a0effcacc8e267939d0edffde45209f60275cbe134e64810d223024ca',
+ 'ae1732a1dbbd8f8b86ac7c0065efe2732c8e36d66003f5c0ffa49cb97f8185d5',
+ 'aeb9db5aef7db70be37a6e8978f395eaf97cc24a1dbbd66b1cc4b4c231548a5b',
+ 'b08ca204115ebe9f81b0c28a32db41e647d9eb49cbdef268a13b68ef25d819fa',
+ 'b095292bffe537dc11aaa30f26ad0d14501316a23986f9d757e5e83f69410dcd',
+ 'b0c265b2ddc58eccb88e96d7a3cdb21aac9230c60992e397fe5d43ab742ace31',
+ 'b0c44ea2a049b051f2fa4d0264b94666cc85895f65d2a69c033ca8a641cf6ab5',
+ 'b2d293ce3190c69f12c17985361ccdda48dd6ff2914a7e08ded29e19a1798fc9',
+ 'b4238bee1d6355196a6ea8e32d2ce0ba0517e25b09d1133de2f701c76bb142ef',
+ 'b526a840847a2e53c4687d035d8535216a4aa04ca470aaa1df1a4321f3b8b7c6',
+ 'b575f335eb779b8fa4ecfb80f7e4ebddad1710df83ab103dcb8148f30b33cea3',
+ 'b86036261725cd589a9eddfa1beb53a4d8c415fa1d63619bebd687f7ddfd217a',
+ 'b8e653b18bfd59ea2ed18cd3d40d0b4ff851a5b8639c0311161b245dd9d8c3b3',
+ 'baae3c9506273584a7f11274514de02677c8f21e1e5e628ffa1bc854aa353a60',
+ 'bacf67ece0e357f59b0913fd3397bbb68bf3c7db9ddea44147f0456ee8b996c0',
+ 'bd320044029505045b5483d6b44b580086a8491e1769445aca213181d5bb5957',
+ 'bd670598453d830460b46e9ceef4c889378fc45787ed60572ecf014e93f63ce9',
+ 'bdfd9c2df8178808d9914ee5aca99e5dfdfa86c8abb2e1773e14e173801823d0',
+ 'be81d796394f9794da306cd180accb03306414946d56463c0501572062aba29a',
+ 'bedbd5692157e02e9db1442c0ef63255112363f65b7cdb42a6cb3061d14b747e',
+ 'bf4e470869c830e338d83c371b779c3e079afdcb85ad7eec9e25cbaf27745299',
+ 'c04039e4c23a48cc45a8838bad66dbda2e4d49792d59b8546bbab21e5e1767dc',
+ 'c0707535fe2e6e0e30a5c1432a3506747a441d4bb67b049cf52c965c7a96fcdf',
+ 'c1e8c0ac222a97f9af47b56627422772d3b9e20d80f881378a7625c6efd45afa',
+ 'c24321153f01113a10b85bc1f958eea9da4e127303e62cc21f9f75dc582e2cbb',
+ 'c2d8591d1555ba3978e8205678a8dec40d5e0196ddd8749648902914f5a6e534',
+ 'c2f1dc88f543e553240dfd4584e96fbf96cace2f44661ccf5c5600dac0ba60b8',
+ 'c34bc5497a36a9d664134a4408a84a14f4213185c93b04204c830a10881d254c',
+ 'c48e9b7f84a4c7bd88d16e307a3bbe6ca140c390aee36309778ec433f71384aa',
+ 'c626de88def816a6376277ec3a8a1b29247e5293545f20a2e149a59217169314',
+ 'c664b53cc3ba97b666cba4ef39a9b776944959acbe089edf9d4fd2eafd55db06',
+ 'c6ab44565cd6b4aaad3217439c3e4909ee2e8a05cc34a0e884fa72a71d5cf32f',
+ 'c6d59a8babce65dfe6116b733774c43be22291fe35ae5a3de1980cd6bfbf0d21',
+ 'c71885d3bc0103b0902494235d908dfc4a1ae80b19a563a93c7a09b2da8f6c5e',
+ 'c7dc9d97ccd097fda7bed3df99ad0e8849491319b7e0112f5b7189a5a9ba4520',
+ 'c8042d607b7fd00b21c33ee59d6e53948ce1a4cbd8653a6e9568775555878ccc',
+ 'c8b813e48cfef6de3fee86ab762e1c4559d82518362a3a936a7077b2d843c7e8',
+ 'cab23bb15af56e8a74ec43e603286b78b96db101020df4a135b66a84f00f1309',
+ 'cafb73d867463626e1d01491546ba4cb310a4d41fae9d9d48ad46602e78c61c6',
+ 'cd818f27296d8f0ef3ec3fae28339a745b30db20cebfc9a5db90da9f27d18889',
+ 'cdf585c7b72d047ae429223edf9fe2a27151b79e7e5f47fb0ccba7cb684b4be5',
+ 'cec75f2ac58db0840333dbb02493a6a29d8e11e1308792494ab49b97f056fb97',
+ 'd0c27f33eae6c2c80f4795ab30fa57308e334f0b5e06126356759ed3019f8718',
+ 'd1489dbbc8bc35b5b80838931a44648d958fabae7964cf13a62da98e89d355f0',
+ 'd1bdb226584ee7b86536b1a7e3443b97324583929783762ceea1bc82d6b97e66',
+ 'd5eba985829bb7c62c9327cde930a64701fd59ece5f671a286c2eaad528bbd8f',
+ 'd693024698b15f7220cba904d2811a4e9a6d8c7dc98d4446563064408ea04227',
+ 'd75807c5030ed9572094fde6b5767879b8791f90479217814075632eb6d3a131',
+ 'd9133867e0504eaa98c698fed619286ce73c97f026b5109d212d2bfc8aafe970',
+ 'da0aa2e6d06fa7a85b2620b7db83da37b8e71618dbfc6743da0ceb5ea5813984',
+ 'da71d8bd418efdbc285092f2b3b3e4775c5a3c3344f9ad6ecf621d8e81242b4d',
+ 'dd16f40d9191335ea56c5a2414d04276981d56db7951eef090be91a1cd09f7c0',
+ 'de6b655c8cee885ea6d83171039b8ea898ab54e23c9f8a8973b12a49fdf137fa',
+ 'df0ce0c3a112b3719c3a34d0ef773eeb67174a856e338d963f3bf0de7a92656e',
+ 'e306dc273b9e9d3a921cfb2c64095778959f4bc618b113517c0b04c7644f001e',
+ 'e33f5c2b07d083d483f2ab44775412c09cdc2ef10e06ffc6f74a72ade63b4126',
+ 'e3dce5076a8d41d9a8df7b87f894059a35a9a5251057b1caded37b6fbf17c22b',
+ 'e3fdd5d58c9d4ff2c92ec11587a323704ea671d384d217a641a0ea40055e678c',
+ 'e5c44f5c0bb6b1b5feeee521bed3d4c7d0bf87bd0019bb67c506560546ec6851',
+ 'e83f05ae4980b834687e2f472bfc20beb686a7a657588d5437d2f362d65bdd94',
+ 'ea33d11b46247e5f436c59ac0e63dc830d8ca32eacaf9bc79390ba555e5e92fb',
+ 'ea4aafaa939b926cf4b8a5d9e2dafd8154f6fe22c8bc8f18a6cfc928f612e5f3',
+ 'ea70d2c912c8725990d9eb2afcd3a22291bc09c39390e2c325d909f9b9fa93ae',
+ 'ee5e65b904f6a2db7c446ecc1669912dd5dd4a379e4377b9804ef78d5d86187b',
+ 'ef323726b7210c860b4701ff6d0b74551c3ca80159328688ce80eeadb26f9f38',
+ 'ef9c215116031614c173afb45142e31e75f2e0783d6e86dc0d6240c325e5d945',
+ 'efbcd9e3b8d77c27cd9df659bbd8d53b3e9b4bdfd5785a6043e0a7b890132c73',
+ 'f053f29725151012b10b1e0098a2f6f0c391baf8fe4c164daaf4ff828d9ae18b',
+ 'f0e72732a6cb663288a00ae44acd02f8e79f365fa1770625d0c738d3dd9afd77',
+ 'f10b06065d0b93794652a36bbb3d470551aec41f681416033a1d7cc1c25ab945',
+ 'f351f17be5372e6d2ac952e36cc5666aa64028a2ac0d93a87832a96bd9c667b7',
+ 'f4ccfcaea9c94018dd7064c08302732ad0bca8c1356cfe3d28df9a4541b0c039',
+ 'f4d2e703956f6ebea7a1e0572c36cbe63ed24b4d37cefa7607cad7730661d911',
+ 'f7588280a8de74256f3a6662f438c35b97c6e5529096928c7836bdf798904c5e',
+ 'f7b4df4549a63251824424d4144c5b14100742459ba1137743ba569be117a076',
+ 'f7ee01855db9b9809847f12edf83365ac5b67bb85ef930a3c0ce52b21bb33314',
+ 'fa16f91c53286e3fe04c3c247d82440dd9c5502eb547b312165f3d3bca7e12e0',
+ 'fc6cacaf3ebc9144250c86860ae07cdfa789d0e8f4a54f57df75741838fb23a9',
+ 'fca662ef34706f24235e557a48cc09c0896c995e37c8a0adefbff4289b3a1680',
+ 'fda528fe3b81e780c9dea6773125be2e9afc7345b9ebe92254a0f40501320e3b',
+ 'fe3c8c93a810776d2d0426c093c88bd41dffe6f82cfdbaceb77a4a983b36d369',
+ 'ff5bfa168f0270e71a7eddf2e958a58754f04de2cbb6e1862dd8ba4b2dd31c9c',
+ 'ffa6d8b10ac3c06813f9fd3b4e4e16e0a9fd9f067e6f44e0217acde9873a5f2c'))
+BINDING_RECORD_ROLE_OWNERS = {'docs/provenance/v5-successors/EVIDENCE_BINDINGS.json': ('1c724cd0a8e70dd2634ff5e95174f87a76da1263',
+                                                          '5da3fc5207ad200f6677f7b12306655c3a6d1388c533a343cb1e3d0718a89673',
+                                                          20211043),
+ 'docs/provenance/v5-successors/RESULT_STATUS.json': ('de45612a3d7d68b78ed65dacf4dc8a9080b00f9b',
+                                                      '3e5917699c40b50fbd22ee4120b365b70bc32123b27d6ff9dac8eee9b1c5192e',
+                                                      855613),
+ 'docs/provenance/v5-successors/SOURCE_MAP.json': ('4d61a64f4e9022dc24e517f26923980aaf6fdcda',
+                                                   'db90ad110ccc9c6a63454cf91ecec4605eed7fe243d18883d3cf501c58cb4883',
+                                                   4978847),
+ 'experiments/orthemology-v5-successors/registry.json': ('b623182df73c1d821d7d132ae092c7e7edf7abd3',
+                                                         'a053989dc9c6dce6de4ec4208f48be8b1b0a66c284600b3dd17992c46aca7af7',
+                                                         247365),
+ 'research/t20-v6-20261012/CURRENT_SOURCE_GRAPH.json': ('f6f7691f7f73abe581d72d438e74c5cb724bb4d6',
+                                                        'ce15fabe3966d210aadbbf51b0d1213c45d6f9397a3dfebbaa66257afc32b5ff',
+                                                        239538)}
+BINDING_RECORD_PUBLIC_ROWS = frozenset(('0051eb5bf5bef81bb853007c953d98ad5498798cd16bbcb071fe182dafb2dec7',
+ '02fa85d28c332df837783772c7f44a962a76d6f6a25bba725c7f39b7f59ac5b2',
+ '0402ac0e9f901a716c76a252bb11eada8f0dd2eb09d9e3f7efe34efee2aba56a',
+ '04d468950d8590f769e91804d91ad03d3ea4291d71e416dc095febd255f08e51',
+ '082565d0eda6bc44eb539f441dab8a4a538f2a4722d5117527e46d0af7c0033c',
+ '0c7f94d0621270fd901aa4fc5da6f1a6d3b130da585c72db649466761d474d67',
+ '0ed796fd315a75ad3d6f12d25060039c4858214e6ed12484ca5b560d97ccf001',
+ '10fb2f1fab1322c53808f70aa2e60b478d4f0700eda0ef7e6f3bd2335a960e89',
+ '1284863b1dd50c072cd49a4fe0a1b6f994002638d8a80f87acc99088b5a55dbf',
+ '131b00b78392302d79c0c5267bdd5988c00b293872afd96308e661b23165b452',
+ '1451789885602b0bd37355e4d3696d7a92abe56c59ffa4a729b3074465a3685a',
+ '185d49c808db354d62305c823b91ffe943c129dbf268bf6806c4abd4db1ee7ce',
+ '195691bc2ed85537f1f575d1b72d37f98ddbe4a012f8286ab5963197de29463b',
+ '1af1962c29ea94c4bf90c4df102da36f9fcf8d71ee713249e4d4a266fe43cec7',
+ '1da2bf0592616c36be1012593f280c1afe3c918d17d7be4719aa263f8cf709bf',
+ '1ffc981af3200614c72765fb5f19d0b4a145841b8898e37fe821b3c22a2bf403',
+ '224400d933fe7aae5f1d30eb4fb34ea75b1b26450077a48278456072ede88d1e',
+ '22cc4994e6f68061480fa1a7717b0dd770c9c183d68e4c8f141ce9ed710ad623',
+ '23364be369b45fab02eeb1b4e3c4177507e3565eae87ba881cd36936d455418b',
+ '27152cf774b9c5de3c63714352560be035ce9b9fa5d64e51b0ed704480e80704',
+ '2866aeb96010a3d650a99878b93820b32cefe9ca71688f5f02375d2302619b5b',
+ '2bb3e198cd68141ef80bf6dc00f4639d21d48891d6e01b4eec406fc612c48118',
+ '2c33f1295a6da066733e8aa1565defbb82f1d5484ff6a3f77409c05e07b2d0d6',
+ '2d69075c171a6451da230251473fe141d637f59e632b3e0ef776cf2a94c79a96',
+ '2daafd81828b1720fa5d6daf01e0b667d3cb202c29bd34304914621402279b6e',
+ '2f1def60962c1cf174b9652dc66143341ba03b382a18c03c5d09fa8422692cdd',
+ '2f23754a6c7f0ac0770541a8e6069004f30d0812bacd8c465c3be78f3f409608',
+ '327e71a7ee9e050dcddd186ce906ec8808d11f77beaac1c6cf8ac19f6799b0d4',
+ '3c58409bad44f8356bdb29a88cef7f2f5dd9fe93a087e778c49972fa7b8c8585',
+ '3ce7cd90e13c695486284fbbf14f3955922882b4bcd3f0d7bfc6b40e309cb6b5',
+ '43efb3d24076174d4c6e3206d76c112af83d1efd1aa5355ad0418aed7b5d02bc',
+ '4432a342cf2f169500b2ae39c85aa9853be0162978b82093971e0f8635c6448f',
+ '45cf5767883b230bbb7478b3402b04c38c3e0c6f7dbb8cdc2762733a9e1a048e',
+ '4b0bf504be5f90b467ecfa617f12be0077d27a935301aead0fdb5dca4689fd71',
+ '4b6d8c463a8e53d26a90ded0d236116301fe60a8889e547503ae28cdd259f6d3',
+ '511239c3f4b40e9b76d70be0d7653b35f97fd431876ffde674a21ce234393e8f',
+ '51826602b68b24ab9bd02d9396b92ae592ca0810ec511166f9aba5a69438a306',
+ '563e18b61d75e59518e17121a6fdfd54b8aa3f9c7812fc12394d5f949a888daf',
+ '5652898cdc527fb614c4942220a55439f77d7dfd947909acc7224d6aa89e13fb',
+ '57704fd83563369f4baed59ecea5c6c754c936eb1d11dc62921b41ea8dc8277f',
+ '5c13d84ec81f0b3662b65c9596c2455cae20cf5ba045ecdb9cd797b9140797b1',
+ '5cfe5e4d2898bfabdaea5804953e0dccc146362d5783b1dfe09ce1a4ec07b265',
+ '5f95be5f6beffb0706ee3a56f002af11e3151e162ba8d5f2713511d9e9f3b622',
+ '671001276b0303751b912ed4313533a406788b05c0d564c773417a3225ddf4eb',
+ '671b9afc30bc35e76e6c8d00422f659ee0daa5a01b2919b01587c4d3477b593a',
+ '6f170d9b5d2a2ce134ef82b3f06293a0f6b9b29c3310a86814f28e4544a2d708',
+ '6ff11247980d4817494f37b1aa8efaafa194e7d0fdb78c1fd128ec752ce110c0',
+ '7131631d50e3c6560dad0602731cca7cdf1413685b89cb211e57b06288d50a57',
+ '7311e1d0c597062b44d66269c515ff51fa558dc7b3c836eff36441cfb29071fe',
+ '745fe8087b724a05d99b98012e065180ce7e7e6e465d6138a746c66f1ef4eb13',
+ '78f953cb5dfe1ef14bbebca77e4773a40d39513a8de4e485e8ee6742e2e2a729',
+ '7cb040de08641df8142a8e096309754aaf8f91be1e9488266f434da8cc281c8f',
+ '7fcd5d93e47eb533f77bbd5bc47762507b9344e5de29f0508449c5944bdfe79c',
+ '84a84b3308676bd7003f7942bb564d83f73e6ec3d248374920dd6f988ed16cf9',
+ '879fa84bc5157d1fb3049becd430b247ceb7824d635e6de09066041e07046d65',
+ '921199477ea6aaeaefb206c9f03da50f1de253c1357259fac963f987fedd7a6b',
+ '9914bd9d90fc5866b21a86105d85a72d51e74ee8503f4576ee189f923e3275b7',
+ '9d2d1191fe02b87d011e065801da2ef8ace98b6814e29450c25ef803e5abddff',
+ '9d5a2fc799fd8e458da609fd8430831213ad0ea7bcd79c36e83c774493b38a5d',
+ '9f376aa3be38363d3b47a8d0d4143fc26dd9bdd6e1b3c374569e7e8840b63d14',
+ 'a2ce248880c56a503504b2a8775d38f86e0ba29c9dce8f81be077504f9de18fd',
+ 'a85c02a895d8ddd0133ce0aca6e82b7c7ebf4b7c41c7ca0de74274efaf74af71',
+ 'acac9c29b02f56ab14ad22caf4eef87c63f6878c1a867aceeb6e0a59039bb9c9',
+ 'af52b38ce6209be85bc2aa5238e8d5787f0d9f0e48c85915481f069ecf47b3a9',
+ 'b2b897b7deab80c58e7418ed0a8a996346e8c3505135984ae3f3fdfcc69828b5',
+ 'babd0a986eef6911168874100e46cfb9ca6f55ae729711d91ac0cedb8b4d0760',
+ 'bf5ccd6a4cd62608f9862429f13f14b0f9d7005fa635a6d062c2cb4251b2eb1e',
+ 'c30eac4fe781117e0ba5af8b533005e95a974974d7b02bc81c1f4d177f6c479a',
+ 'c41bdac94195ab2e3e2f967de81bc93fbfa62b9de1b5b267812093f7d6b1d743',
+ 'ca3a22906b86655e31de368b0a71ae3b8902f50210645de8c30d43418e0e68d1',
+ 'ca5d2699f67b82dab3d2892e08560d957e636c352cb4ec0670641a92a2ac79f4',
+ 'd464289a01dfa778adf3c6cff719d0b70270c2381c57697b19f06f07aa41ee70',
+ 'd55e7dee27b3d58d82d336c7e68ee2d58f01c14e3c7c0baded2e08a8535a1336',
+ 'd6fb8155ff49bcff48de13015b75c212d33ce347cbd587a15b225f66e18e2199',
+ 'da6310035158d77918181b055df12874329447bee1e2fe9dd9d15391344a83d1',
+ 'da83c66ce42bd4b30c4c5ca498514d0007259b93b5d49e0b6b66d526f6e1ad42',
+ 'db4fdedbe69540da77db1c5fa63b66b220c883b89f5bc8b2cea36e9b2b51ff27',
+ 'dc6ca42457144ca13f289b86b817661c9cd125a62c473159840aaae6cc161549',
+ 'dc87005db591c70734c1519d7cde31c9d72028a8016346066e51ce594d1f42f8',
+ 'e194c94cbac13e33136db2f3fdfde7c2cda5b7667a0d34f7a5dd0414c8edae54',
+ 'e88edc5f31d704750dda26c505c50651fd89a1a140b41e221fc68a5e8b9f399a',
+ 'e91d052c52a3d5f13f836adab69a48a902656cb2861e325e804444712f7d1939',
+ 'ea58a0c70794b6f34f56e0ec4be2150d6f266ec21d06ba04a0ed689ce2aa202a',
+ 'eab61669049321a45314616f837966ace07251fe8dd420c04813418dd2c66305',
+ 'f18e0ee417e0897c541a947b4b65636de64025620ae3cb549a9a4831240b2e30',
+ 'f61cfc61b11759d33e48113b738da03d54798110661a39090b7d259d11549e62',
+ 'fad1d3f36b16223fdc5a37d8580744e16cf2cbf42a2f658a1b15737a4588537e',
+ 'fe427688c6bfde96be340211ea4f60fa2599c2916059611a1573cc9e0d343f67'))
+BINDING_RECORD_SUCCESSOR_ROWS = frozenset(('09a823e526cd5bef346941bdb5fc49791d9cf9a7b00b40c14064f6b78d85c331',
+ '1c98e6e4120d798921f2912d38bdac131a2a09d59ffd2e61bbc726246934a43c',
+ '38c4f0b79c5b09bfa9410e69aabe9978b2bb29a367e039f1a19cdd5c1da53c23',
+ '4b566ece6feb60f48041a2524dc67c6ac2246660cab9cca3dba0e36776d5bf0d',
+ '547c4852fad59ae292cf88a3e2ecc288142eaf440bff73380007184a9ce50a9b',
+ '58e5e29e4c5a3b9dcdd2aaa9adc58dc8e94e5959dd0afc6ac9d43c3c47f098aa',
+ '6c0d6cb7036fa2733755ec50160e68888357fa2e62abe3d79e0e9e0378a4b8a0',
+ '77a77cae44eac41e80d77f68e02b08f0bebe4bf73d0958e9f5a67bfdf3e1599f',
+ '7fa3e9ccec2a6d4c8874e3c75d49917459cbab28166ff6e82fa41265f2cc18d4',
+ '80a814403aa8a088f8369c1d77a542da4b6a1510c6e3ac8ec7d0cc13ac196e39',
+ '9f1e196692cdc1e42d8549d3c3d12f9835a7c2b16f0e99da2bfba0938318687f',
+ 'ce2187c4583477a55604a67a836f546961f2f29d1ecebb73ea735fb271ceb15e',
+ 'd0254ffea347cd76b37230f4202194034b5600ad8b29975a7d616258529f2a25',
+ 'd88697b9eaf33886d7d25daeb104a06ea57c097c2de1d04605de8c5ffc606358',
+ 'da702d40c77b54e50edeeadcb31423a41deac31c81c0818a1bb093fc99b2b201',
+ 'df1d759974c6840895f1c878a3475435be2a61af431aeff70c4396181f488770',
+ 'e4702e24d465d8e1642cb65725e8bb5d53443a14b55419a2268cf7ddcc39eebf',
+ 'ea355cf69c25763140a63679f9d0ac4fbce22acef0260a5217a6e35808ca3709',
+ 'f6d49938a2133fde56ff2ecd7045d00e600f7216b0fe595a6a23b6920d79365d'))
+
+def binding_record_candidate(path):
+    """Cheap shape test only; original native membership is still mandatory."""
+    if not isinstance(path, str) or '\\' in path or '\0' in path:
+        return False
+    relative = pathlib.PurePosixPath(path)
+    return (not relative.is_absolute() and '..' not in relative.parts
+            and relative.as_posix() == path
+            and path.startswith(BINDING_RECORD_ROOTS)
+            and relative.name in BINDING_RECORD_NAMES)
+
+
+def _binding_record_root(root):
+    """Check the supplied ancestry without resolving away filesystem aliases."""
+    root = pathlib.Path(root)
+    absolute = root if root.is_absolute() else pathlib.Path.cwd() / root
+    for component in reversed((absolute, *absolute.parents)):
+        try:
+            entry = component.lstat()
+        except OSError as exc:
+            raise ValueError('binding record repository ancestry is unavailable') from exc
+        if not stat.S_ISDIR(entry.st_mode):
+            raise ValueError('binding records require ordinary repository ancestors')
+    return root
+
+
+def _binding_record_catalog(root):
+    """The original tree, not names or a new registry, owns the 277 identities."""
+    root = _binding_record_root(root)
+    commit = _administrative_git(root, 'cat-file', 'commit', BINDING_RECORD_BASE)
+    if (hashlib.sha1(b'commit ' + str(len(commit)).encode() + b'\0' + commit).hexdigest()
+            != BINDING_RECORD_BASE or not commit.startswith(('tree ' + BINDING_RECORD_TREE + '\n').encode())):
+        raise ValueError('binding record original commit or tree differs')
+    raw = _administrative_git(root, 'ls-tree', '-rz', '--full-tree', BINDING_RECORD_BASE)
+    entries, counts = {}, collections.Counter()
+    for item in raw.split(b'\0'):
+        if not item:
+            continue
+        try:
+            coordinate, name = item.split(b'\t', 1)
+            mode, kind, blob = coordinate.decode('ascii').split()
+            path = name.decode('utf-8')
+        except (ValueError, UnicodeError) as exc:
+            raise ValueError('binding record original metadata is malformed') from exc
+        if path in entries or not re.fullmatch('[0-9a-f]{40}', blob):
+            raise ValueError('binding record original coordinate is duplicated or invalid')
+        entries[path] = (mode, kind, blob)
+        counts[mode, blob] += 1
+    selected = {path: entry for path, entry in entries.items()
+                if binding_record_candidate(path) and counts[entry[0], entry[2]] == 1}
+    vector = b''.join((' '.join(entry) + '\t' + path + '\0').encode()
+                      for path, entry in sorted(selected.items()))
+    if (len(entries) != BINDING_RECORD_ORIGINAL_COUNT or len(selected) != BINDING_RECORD_COUNT
+            or digest(vector) != BINDING_RECORD_CLASS_SHA256
+            or {digest(path.encode()) for path in selected} != BINDING_RECORD_PATH_HASHES
+            or any(mode != '100644' or kind != 'blob' for mode, kind, _ in selected.values())):
+        raise ValueError('binding record original finite class differs')
+    return {path: entry[2] for path, entry in selected.items()}
+
+
+def is_binding_record(root, path):
+    return (binding_record_candidate(path) and digest(path.encode()) in BINDING_RECORD_PATH_HASHES
+            and path in _binding_record_catalog(root))
+
+
+def _binding_record_present(root, path):
+    target = _binding_record_root(root)
+    parts = path.split('/')
+    for position, part in enumerate(parts):
+        target = target / part
+        try:
+            entry = target.lstat()
+        except FileNotFoundError:
+            return False
+        if stat.S_ISLNK(entry.st_mode):
+            raise ValueError('binding record path contains a symlink')
+        if position < len(parts) - 1 and not stat.S_ISDIR(entry.st_mode):
+            raise ValueError('binding record ancestor is not a directory')
+    return True
+
+
+def _binding_record_current_state(root, path):
+    """A current role owner cannot be supplied by the historical fallback."""
+    if not _binding_record_present(root, path):
+        raise ValueError('binding record current role owner is absent')
+    try:
+        entry = (pathlib.Path(root) / path).lstat()
+    except OSError as exc:
+        raise ValueError('binding record current role owner disappeared') from exc
+    if not stat.S_ISREG(entry.st_mode) or entry.st_mode & 0o111:
+        raise ValueError('binding record current role owner type or mode differs')
+    return (entry.st_dev, entry.st_ino, entry.st_mode, entry.st_size,
+            entry.st_mtime_ns, entry.st_ctime_ns)
+
+
+def _binding_record_role_context(root):
+    """An absence cannot hide new active inputs, results, receipts or sources."""
+    for path, (blob, identity, size) in BINDING_RECORD_ROLE_OWNERS.items():
+        expected = ('100644 ' + blob + ' 0\t' + path + '\0').encode()
+        before = _administrative_git(root, 'ls-files', '--stage', '-z', '--', path)
+        if before != expected:
+            raise ValueError('binding record current role owner is absent or staged differently')
+        present_before = _binding_record_current_state(root, path)
+        body = _administrative_bound_bytes(root, path, blob)
+        if ((len(body), digest(body)) != (size, identity)
+                or _administrative_git(root, 'ls-files', '--stage', '-z', '--', path) != before
+                or _binding_record_current_state(root, path) != present_before):
+            raise ValueError('binding record current role owner changed')
+
+
+def _binding_record_bound_bytes(root, path, blob, present):
+    if _binding_record_present(root, path) != present:
+        raise ValueError('binding record presence changed before its read')
+    if path in BINDING_RECORD_CURRENT_REQUIRED and not present:
+        raise ValueError('active proof, result or replay binding record must remain present')
+    expected = ('100644 ' + blob + ' 0\t' + path + '\0').encode()
+    before = _administrative_git(root, 'ls-files', '--stage', '-z', '--', path)
+    if before not in (b'', expected):
+        raise ValueError('binding record staged identity differs')
+    if path in BINDING_RECORD_CURRENT_REQUIRED and before != expected:
+        raise ValueError('active proof, result or replay binding record must remain indexed')
+    body = _administrative_bound_bytes(root, path, blob)
+    if _administrative_git(root, 'ls-files', '--stage', '-z', '--', path) != before:
+        raise ValueError('binding record index changed during its read')
+    if _binding_record_present(root, path) != present:
+        raise ValueError('binding record presence changed during its read')
+    return body
+
+
+def binding_record_bytes(root, path, identity=None, size=None):
+    """Return the complete original record without replay or status promotion."""
+    if not binding_record_candidate(path) or digest(path.encode()) not in BINDING_RECORD_PATH_HASHES:
+        raise ValueError('unqualified original binding record path')
+    catalog = _binding_record_catalog(root)
+    if path not in catalog:
+        raise ValueError('unqualified original binding record coordinate')
+    present = _binding_record_present(root, path)
+    if not present:
+        _binding_record_role_context(root)
+    body = _binding_record_bound_bytes(root, path, catalog[path], present)
+    if ((identity is not None and digest(body) != identity)
+            or (size is not None and len(body) != size)):
+        raise ValueError('binding record requested identity differs')
+    return body
+
+
+def binding_record_absences(root):
+    """Actual historical absences only; direct active obligations cannot vanish."""
+    catalog = _binding_record_catalog(root)
+    absent = {path for path in catalog if not _binding_record_present(root, path)}
+    if absent:
+        _binding_record_role_context(root)
+    for path, blob in catalog.items():
+        _binding_record_bound_bytes(root, path, blob, path not in absent)
+    if {path for path in catalog if not _binding_record_present(root, path)} != absent:
+        raise ValueError('binding record actual absence set changed during qualification')
+    return absent
+
+
+def _binding_record_row_digest(row):
+    return digest(json.dumps(row, sort_keys=True, separators=(',', ':'), ensure_ascii=False).encode())
+
+
+def binding_record_public_bytes(root, row):
+    """Bind every original public-row value, including source and projection roles."""
+    if _binding_record_row_digest(row) not in BINDING_RECORD_PUBLIC_ROWS:
+        raise ValueError('binding record complete public source row differs')
+    return binding_record_bytes(root, row['repository_path'], row['public_sha256'], row['public_bytes'])
+
+
+def binding_record_successor_bytes(root, row):
+    """Keep original/private and public identities, source IDs and credits distinct."""
+    if _binding_record_row_digest(row) not in BINDING_RECORD_SUCCESSOR_ROWS:
+        raise ValueError('binding record complete successor source row differs')
+    return binding_record_bytes(root, row['public_path'], row['public_sha256'], row['public_bytes'])
+
+
 def _continuation_git(root, *args):
     result = subprocess.run(['git', '--no-replace-objects', '--literal-pathspecs', *args],
                             cwd=root, capture_output=True, check=False)
@@ -3760,7 +4354,9 @@ def source_bytes(root, row):
     path = pathlib.PurePosixPath(row['repository_path'])
     if path.is_absolute() or '..' in path.parts or '\\' in str(path):
         raise ValueError('unsafe source path')
-    if str(path) in SUCCESSOR_INPUT_PATHS:
+    if is_binding_record(root, str(path)):
+        body = binding_record_public_bytes(root, row)
+    elif str(path) in SUCCESSOR_INPUT_PATHS:
         body = successor_input_public_bytes(root, row)
     elif str(path) in GENERATED_FIXTURE_PATHS:
         body = generated_fixture_source_bytes(root, row)

@@ -44,6 +44,7 @@ from resolve_t20_v6_source import (
     SUCCESSOR_INPUT_PATHS, successor_input_bytes,
     SUCCESSOR_CALCULUS_MAP, successor_calculus_map_bytes,
     GENERATED_FIXTURE_PATHS, generated_fixture_bytes,
+    is_binding_record, binding_record_bytes,
 )
 from validate_ar8r_reconciliation import (
     PMR007_DEEP_PREFIX, _pmr007_deep_original_members,
@@ -364,7 +365,29 @@ def _generated_fixture_reference(src, cited):
     return None
 
 
+def _binding_record_reference(src, cited):
+    """Keep original record namespaces; authenticate before ordinary exists()."""
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for path in candidates:
+        try:
+            if is_binding_record(ROOT, path):
+                binding_record_bytes(ROOT, path)
+                return True
+        except (ValueError, OSError):
+            return False
+    return None
+
+
 def _resolves(src, cited):
+    binding = _binding_record_reference(src, cited)
+    if binding is not None:
+        return binding
     inputs = _successor_input_reference(src, cited)
     if inputs is not None:
         return inputs

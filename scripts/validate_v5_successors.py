@@ -577,11 +577,14 @@ def _sources(bundle, root):
         digest(row['public_sha256']); integer(row['public_bytes'])
         historical = {_source.MEDIATOR_COORDINATION: 'T12-SOURCE-COORDINATION',
                       **_source.TYPED_V5_SOURCE_IDS}
+        binding_record = _source.is_binding_record(root, row['public_path'])
         path = path_in(root, row['public_path'], exists=row['public_path'] not in historical
-                       and row['public_path'] not in _source.SUCCESSOR_INPUT_PATHS)
+                       and row['public_path'] not in _source.SUCCESSOR_INPUT_PATHS and not binding_record)
         prefix = AREA + '/source-store/' + row['public_sha256'] + '/'
         require(row['public_path'].startswith(prefix), 'Wrong public source content-addressed path')
-        if row['public_path'] in _source.SUCCESSOR_INPUT_PATHS:
+        if binding_record:
+            raw = _source.binding_record_successor_bytes(root, row)
+        elif row['public_path'] in _source.SUCCESSOR_INPUT_PATHS:
             raw = _source.successor_input_source_bytes(root, row)
         elif row['public_path'] in historical:
             name = row['public_path']
@@ -599,7 +602,7 @@ def _sources(bundle, root):
         except UnicodeDecodeError:
             raise ValueError('Public source must have a reviewed UTF-8 projection') from None
         if path.suffix.lower() == '.json':
-            _public_values(_input_json_bytes(raw) if row['public_path'] in _source.SUCCESSOR_INPUT_PATHS
+            _public_values(_input_json_bytes(raw) if binding_record or row['public_path'] in _source.SUCCESSOR_INPUT_PATHS
                            else read_json(path))
         if row['projection'] == 'EXACT':
             require(row['original_sha256'] == row['public_sha256'] and row['original_bytes'] == row['public_bytes']
@@ -640,8 +643,16 @@ def _allowlist(bundle, root, sources):
         refs(row['source_ids'], sources, 'allowlist source')
         historical = {_source.MEDIATOR_COORDINATION: 'T12-SOURCE-COORDINATION',
                       **_source.TYPED_V5_SOURCE_IDS}
-        path = path_in(root, name, exists=name not in historical and name not in _source.SUCCESSOR_INPUT_PATHS)
-        if name in _source.SUCCESSOR_INPUT_PATHS:
+        binding_record = _source.is_binding_record(root, name)
+        path = path_in(root, name, exists=name not in historical and name not in _source.SUCCESSOR_INPUT_PATHS
+                       and not binding_record)
+        if binding_record:
+            require(row['kind'] == 'SOURCE' and bool(row['source_ids']),
+                    'Binding record allowlist source role differs')
+            raw = _source.binding_record_bytes(root, name, row['sha256'], row['bytes'])
+            if not path.exists():
+                authenticated_absent.add(name)
+        elif name in _source.SUCCESSOR_INPUT_PATHS:
             raw = _source.successor_input_allowlist_bytes(root, row)
             if not path.exists():
                 authenticated_absent.add(name)
