@@ -2013,6 +2013,66 @@ class ContinuationOwnerRootMigrationTests(unittest.TestCase):
 
 
 
+def _checkpoint_binding_fixture_inputs(case):
+    """Give record-shaped checkpoint fixtures a nonempty administrative history.
+
+    Checkpoint aliases can share MANIFEST/INPUT_BINDINGS/SOURCE_BINDINGS names
+    without belonging to the unique-body binding class. The real consumer still
+    qualifies that class before admitting a deletion, so its history must exist
+    in this isolated repository too. These two bodies are inert fixture data.
+    """
+    if not any(case.source.binding_record_candidate(path) for path in case.catalog):
+        return {}
+    case.binding_record = (case.source.CHECKPOINT_COPY_ROOT
+                           + 'CP99/binding-record-fixture/INPUT_BINDINGS.json')
+    case.binding_owner = 'docs/' 'checkpoint-binding-fixture-owner.json'
+    result = {
+        case.binding_record: b'{"fixture":"historical binding record","active":false}\n',
+        case.binding_owner: b'{"fixture":"current binding role owner","active_inputs":[]}\n',
+    }
+    case.assertTrue(set(result).isdisjoint(case.bodies))
+    return result
+
+
+def _checkpoint_binding_fixture_history(case):
+    """Rebind only synthetic coordinates; execute the unchanged native catalogue.
+
+    Existing copied bodies are duplicated in this tree and must not become
+    unique binding records. The expected class is the one literal fixture row,
+    not a census obtained by accepting the production qualifier's output.
+    Complete public/successor row pins and the eight active-record pins stay
+    unchanged; no real public row is manufactured for the synthetic record.
+    """
+    if not case.binding_fixture:
+        return
+    blob = lambda body: hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+    known = {**case.bodies, case.extra: b'unrelated protected fixture\n', **case.binding_fixture}
+    entries = case._git('ls-tree', '-rz', '--full-tree', case.baseline).split(b'\0')[:-1]
+    expected = {('100644 blob ' + blob(body) + '\t' + path).encode()
+                for path, body in known.items()}
+    case.assertEqual(len(entries), len(known))
+    case.assertEqual(set(entries), expected)
+    record_blob = blob(case.binding_fixture[case.binding_record])
+    owner_body = case.binding_fixture[case.binding_owner]
+    vector = ('100644 blob ' + record_blob + '\t' + case.binding_record + '\0').encode()
+    pins = {
+        'BINDING_RECORD_BASE': case.baseline,
+        'BINDING_RECORD_TREE': case._git('rev-parse', case.baseline + '^{tree}').decode().strip(),
+        'BINDING_RECORD_ORIGINAL_COUNT': len(known),
+        'BINDING_RECORD_COUNT': 1,
+        'BINDING_RECORD_CLASS_SHA256': hashlib.sha256(vector).hexdigest(),
+        'BINDING_RECORD_PATH_HASHES': frozenset((hashlib.sha256(case.binding_record.encode()).hexdigest(),)),
+        'BINDING_RECORD_ROLE_OWNERS': {case.binding_owner: (
+            blob(owner_body), hashlib.sha256(owner_body).hexdigest(), len(owner_body))},
+    }
+    for name, value in pins.items():
+        binding_patch = patch.object(case.source, name, value)
+        binding_patch.start()
+        case.addCleanup(binding_patch.stop)
+    case.assertNotIn(case.binding_record, case.source.BINDING_RECORD_CURRENT_REQUIRED)
+    case.assertEqual(case.source._binding_record_catalog(case.repo), {case.binding_record: record_blob})
+
+
 class CheckpointCopyMigrationTests(unittest.TestCase):
     """Real finite public bodies in isolated Git/index and reference fixtures.
 
@@ -2059,12 +2119,16 @@ class CheckpointCopyMigrationTests(unittest.TestCase):
             self._put(name, body)
         self.extra = self.source.CHECKPOINT_COPY_ROOT + 'CP99/unqualified-fixture.md'
         self._put(self.extra, b'unrelated protected fixture\n')
-        self._git('add', '--', *self.bodies, self.extra)
+        self.binding_fixture = _checkpoint_binding_fixture_inputs(self)
+        for name, body in self.binding_fixture.items():
+            self._put(name, body)
+        self._git('add', '--', *self.bodies, self.extra, *self.binding_fixture)
         self._git('-c', 'user.name=Fixture', '-c', 'user.email=fixture@example.invalid',
                   'commit', '-qm', 'authentic public checkpoint objects in isolated fixture')
         self.baseline = self._git('rev-parse', 'HEAD').decode().strip()
         self.base_patch = patch.object(self.source, 'CHECKPOINT_COPY_BASE', self.baseline)
         self.base_patch.start(); self.addCleanup(self.base_patch.stop)
+        _checkpoint_binding_fixture_history(self)
         self.alias = next(iter(self.catalog))
         self.canonical = self.catalog[self.alias]['canonical']
 
@@ -2320,6 +2384,109 @@ class CheckpointCopyMigrationTests(unittest.TestCase):
         self._git('add', '--', self.alias)
         (self.repo / self.extra).unlink()
         self.assertTrue(self._reader_currentness())
+
+    def test_binding_fixture_keeps_native_history_and_complete_public_row_guards(self):
+        body = self.binding_fixture[self.binding_record]
+        identity = hashlib.sha256(body).hexdigest()
+        self.assertEqual(self.source.binding_record_bytes(
+            self.repo, self.binding_record, identity, len(body)), body)
+        self.assertEqual(self.source.binding_record_absences(self.repo), set())
+        row = {'repository_path': self.binding_record, 'public_sha256': identity,
+               'public_bytes': len(body)}
+        with self.assertRaisesRegex(ValueError, 'complete public source row differs'):
+            self.source.binding_record_public_bytes(self.repo, row)
+
+    def test_binding_fixture_rejects_missing_or_wrong_native_catalogue(self):
+        body = self.binding_fixture[self.binding_record]
+        body_oid = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+        changes = (
+            ('BINDING_RECORD_BASE', '0' * 40),
+            ('BINDING_RECORD_BASE', body_oid),
+            ('BINDING_RECORD_TREE', '0' * 40),
+            ('BINDING_RECORD_ORIGINAL_COUNT', self.source.BINDING_RECORD_ORIGINAL_COUNT + 1),
+            ('BINDING_RECORD_COUNT', 2),
+            ('BINDING_RECORD_CLASS_SHA256', '0' * 64),
+            ('BINDING_RECORD_PATH_HASHES', frozenset(('0' * 64,))),
+        )
+        for name, value in changes:
+            with self.subTest(coordinate=name, value=value), patch.object(self.source, name, value):
+                with self.assertRaises(ValueError):
+                    self.source._binding_record_catalog(self.repo)
+        alias = next(path for path in self.catalog if self.source.binding_record_candidate(path))
+        (self.repo / alias).unlink()
+        with patch.object(self.source, 'BINDING_RECORD_BASE', '0' * 40):
+            self.assertIn('preserved v5 or prior T20 baseline comparison unavailable', self._gate())
+            self.assertIn('corpus-currentness: source binding record: frozen administrative Git input is unavailable',
+                          self._reader_currentness())
+
+    def test_binding_fixture_qualifies_absence_only_with_unchanged_current_owner(self):
+        (self.repo / self.binding_record).unlink()
+        self.assertEqual(self.source.binding_record_absences(self.repo), {self.binding_record})
+        self.assertEqual(self._gate(), [])
+        self.assertEqual(self._reader_currentness(), [])
+        self._git('add', '-u', '--', self.binding_record)
+        self.assertEqual(self._gate(), [])
+        self.assertEqual(self._reader_currentness(), [])
+        owner = self.binding_fixture[self.binding_owner]
+        for condition in ('changed', 'absent', 'executable', 'staged'):
+            with self.subTest(owner=condition):
+                self._put(self.binding_owner, owner)
+                if condition == 'changed':
+                    self._put(self.binding_owner, b'changed current fixture owner\n')
+                elif condition == 'absent':
+                    (self.repo / self.binding_owner).unlink()
+                elif condition == 'executable':
+                    (self.repo / self.binding_owner).chmod(0o755)
+                else:
+                    self._put(self.binding_owner, b'changed staged fixture owner\n')
+                    self._git('add', '--', self.binding_owner)
+                    self._put(self.binding_owner, owner)
+                with self.assertRaises(ValueError):
+                    self.source.binding_record_absences(self.repo)
+                self.assertTrue(self._gate())
+                self.assertTrue(self._reader_currentness())
+                self._put(self.binding_owner, owner)
+                self._git('add', '--', self.binding_owner)
+        self.assertEqual(self.source.binding_record_absences(self.repo), {self.binding_record})
+
+    def test_binding_fixture_rejects_changed_or_missing_original_input(self):
+        body = self.binding_fixture[self.binding_record]
+        self._put(self.binding_record, b'changed current fixture binding\n')
+        with self.assertRaises(ValueError):
+            self.source.binding_record_bytes(self.repo, self.binding_record)
+        self._put(self.binding_record, body)
+        oid = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+        native = self.repo / '.git' / 'objects' / oid[:2] / oid[2:]
+        self.assertTrue(native.is_file())
+        native.unlink()  # Only this test-owned synthetic loose object.
+        try:
+            with self.assertRaisesRegex(ValueError, 'frozen administrative Git input is unavailable'):
+                self.source.binding_record_bytes(self.repo, self.binding_record)
+        finally:
+            self.assertEqual(self._git('hash-object', '-w', '--stdin', input=body).decode().strip(), oid)
+        self.assertEqual(self.source.binding_record_bytes(self.repo, self.binding_record), body)
+
+    def test_binding_fixture_rejects_staged_or_active_record_disappearance(self):
+        body = self.binding_fixture[self.binding_record]
+        self._put(self.binding_record, b'changed staged fixture binding\n')
+        self._git('add', '--', self.binding_record)
+        self._put(self.binding_record, body)
+        with self.assertRaisesRegex(ValueError, 'staged identity differs'):
+            self.source.binding_record_absences(self.repo)
+        self.assertTrue(self._gate())
+        self.assertTrue(self._reader_currentness())
+        self._git('add', '--', self.binding_record)
+        active = self.source.BINDING_RECORD_CURRENT_REQUIRED | {self.binding_record}
+        with patch.object(self.source, 'BINDING_RECORD_CURRENT_REQUIRED', active):
+            (self.repo / self.binding_record).unlink()
+            with self.assertRaisesRegex(ValueError, 'must remain present'):
+                self.source.binding_record_absences(self.repo)
+            self.assertTrue(self._gate())
+            self.assertTrue(self._reader_currentness())
+            self._put(self.binding_record, body)
+            self._git('rm', '--cached', '--', self.binding_record)
+            with self.assertRaisesRegex(ValueError, 'must remain indexed'):
+                self.source.binding_record_bytes(self.repo, self.binding_record)
 
 
 
@@ -3166,7 +3333,7 @@ class HistoricalSuccessorFixtureRouteTests(unittest.TestCase):
     def _legacy(self, argv, *, cwd):
         self.legacy_commands.append(argv)
         self.assertEqual(pathlib.Path(cwd), self.repo)
-        self.assertEqual(argv, ['git', 'show', self.resolver['HISTORICAL_PROSE_REVISION'] + ':docs/synthetic_legacy.txt'])
+        self.assertEqual(argv, ['git', 'show', self.resolver['HISTORICAL_PROSE_REVISION'] + ':docs/' 'synthetic_legacy.txt'])
         return b'inert legacy baseline body\n'
 
     def _source(self, row=None):
@@ -3215,7 +3382,7 @@ class HistoricalSuccessorFixtureRouteTests(unittest.TestCase):
         self.assertEqual(self.native_commands, [])
 
     def test_unrelated_path_or_revision_has_no_new_exception(self):
-        for change in ({'repository_path': 'tests/nearby_successor_fixtures.py'},
+        for change in ({'repository_path': 'tests/' 'nearby_successor_fixtures.py'},
                        {'repository_revision': self.resolver['HISTORICAL_PROSE_REVISION']},
                        {'repository_revision': None}, {'git_blob': '0' * 40}):
             with self.subTest(change=change): self._rejected(dict(self.ROW, **change))
@@ -3224,7 +3391,7 @@ class HistoricalSuccessorFixtureRouteTests(unittest.TestCase):
 
     def test_existing_generic_baseline_route_is_unchanged(self):
         body = b'inert legacy baseline body\n'
-        row = dict(self.ROW, repository_path='docs/synthetic_legacy.txt',
+        row = dict(self.ROW, repository_path='docs/' 'synthetic_legacy.txt',
                    repository_revision=self.resolver['HISTORICAL_PROSE_REVISION'],
                    source_sha256=hashlib.sha256(body).hexdigest(), public_sha256=hashlib.sha256(body).hexdigest(),
                    source_bytes=len(body), public_bytes=len(body), git_blob=self._identity(body)[0])
