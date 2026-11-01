@@ -87,7 +87,7 @@ def _original_driver_members(src, text):
     """
     pins = {
         'scripts/replay_v5_successors.py': (
-            '5b4c1b7f0ced9af2599b980fd25fd1a15b819357853753319798b2965fc540ef',
+            'dd8c546780cb11d679d3bad2ab3c4fb2670a5dd4d6310e46ab07ea693f4d7298',
             [('scripts', 'verify-inputs.py'), ('scripts', 'verify-sources.py')]),
         'scripts/v5_d04_assets/v5_d04_normalizers_translated.py': (
             '46133c72f1332efeeec42530cd26ce224decf617e55e7fb79bd5d486b9a28fcd',

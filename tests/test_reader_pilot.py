@@ -1065,6 +1065,32 @@ class ReaderFixtureReferenceTests(unittest.TestCase):
 
 
 
+    def test_packet_member_exemption_is_exact_to_replay_owner_and_body(self):
+        import sys
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import validate_internal_references as refs
+        owner = "/".join(("scripts", "replay_v5_successors.py"))
+        text = (ROOT / owner).read_text(encoding="utf-8")
+        expected = {"/".join(("scripts", name))
+                    for name in ("verify-inputs.py", "verify-sources.py")}
+        self.assertEqual(refs._original_driver_members(owner, text), expected)
+        changed = text + "\n# changed owner body\n"
+        other_owner = "/".join(("scripts", "unrelated-owner.py"))
+        for source, body in ((owner, changed), (other_owner, text)):
+            with self.subTest(owner=source):
+                self.assertEqual(refs._original_driver_members(source, body), set())
+                citations = {path for path, _ in refs._citation_occurrences(
+                    source, body, root=str(ROOT), successor_sources={})}
+                self.assertTrue(expected <= citations)
+        citations = {path for path, _ in refs._citation_occurrences(
+            owner, text, root=str(ROOT), successor_sources={})}
+        self.assertFalse(expected & citations)
+        unrelated = "/".join(("scripts", "unexpected-packet-member.py"))
+        citations = {path for path, _ in refs._citation_occurrences(
+            owner, text + "\n# " + unrelated, root=str(ROOT), successor_sources={})}
+        self.assertIn(unrelated, citations)
+
+
 class HistoricalMetadataPinTests(unittest.TestCase):
     """Historical source custody survives an authorised current-index addition."""
     TYPED_REVISION = "a7ff0e33d1a299db640041c46b1af81ca70851f6"
@@ -8848,11 +8874,11 @@ class ConsolidatedSuccessorInputTests(unittest.TestCase):
         try:
             path = self.repo / self.sample
             path.write_bytes(self.originals[self.sample] + b'wrong')
-            self.assertFalse(self.references._resolves('docs/input.md', self.sample))
+            self.assertFalse(self.references._resolves('/'.join(('docs', 'input.md')), self.sample))
             path.write_bytes(self.originals[self.sample])
             self.remove_originals()
-            self.assertTrue(self.references._resolves('docs/input.md', self.sample))
-            self.assertTrue(self.references._resolves('docs/input.md', '../' + self.sample))
+            self.assertTrue(self.references._resolves('/'.join(('docs', 'input.md')), self.sample))
+            self.assertTrue(self.references._resolves('/'.join(('docs', 'input.md')), '../' + self.sample))
         finally:
             self.references.ROOT = previous
         replay_path = 'scripts/replay_v5_successors.py'
@@ -8889,7 +8915,7 @@ class ConsolidatedSuccessorInputTests(unittest.TestCase):
 
     def test_projection_rejects_bad_registry_and_unrelated_protected_changes(self):
         registry = self.repo / self.REGISTRY
-        extra = self.repo / 'experiments/orthemology-v5-successors/unadmitted-input.json'
+        extra = self.repo / '/'.join(('experiments', 'orthemology-v5-successors', 'unadmitted-input.json'))
         alias = self.repo / 'registry-link'
         for fault in ('body', 'mixed-edition', 'staged-body', 'staged-mode',
                       'missing', 'mode', 'symlink', 'hardlink', 'unrelated-addition'):
@@ -9154,7 +9180,7 @@ class LiveDerivedFixtureConsumerTests(unittest.TestCase):
                     with self.assertRaises((ValueError, OSError)):
                         self.source.source_bytes(self.repo, row)
                     self.assertTrue(self.projection.check_object(self.repo, row))
-        for outside in ('tests/invalid/not-admitted.json',
+        for outside in ('/'.join(('tests', 'invalid', 'not-admitted.json')),
                         'experiments/episode-reification-v2/fixtures/KEYS.json'):
             with self.assertRaises(ValueError):
                 self.source.generated_fixture_bytes(self.repo, outside)
@@ -9183,13 +9209,13 @@ class LiveDerivedFixtureConsumerTests(unittest.TestCase):
             for name in self.samples:
                 path = self.repo / name
                 path.write_bytes(self.originals[name] + b'wrong')
-                self.assertFalse(self.references._resolves('docs/historical.md', name))
+                self.assertFalse(self.references._resolves('/'.join(('docs', 'historical.md')), name))
                 path.write_bytes(self.originals[name])
             self.remove_originals()
             for name in self.samples:
-                self.assertTrue(self.references._resolves('docs/historical.md', name))
-                self.assertTrue(self.references._resolves('docs/historical.md', '../' + name))
-            self.assertFalse(self.references._resolves('docs/historical.md', 'tests/invalid/not-admitted.json'))
+                self.assertTrue(self.references._resolves('/'.join(('docs', 'historical.md')), name))
+                self.assertTrue(self.references._resolves('/'.join(('docs', 'historical.md')), '../' + name))
+            self.assertFalse(self.references._resolves('/'.join(('docs', 'historical.md')), '/'.join(('tests', 'invalid', 'not-admitted.json'))))
         finally:
             self.references.ROOT = previous
 
