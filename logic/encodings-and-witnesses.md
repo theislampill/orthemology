@@ -1110,6 +1110,22 @@ The witness on the left is $`v=I`$. This defeats transport from a finite represe
 
 The exposed polynomial $`K\,I\,\mathrm{atom}(\Omega)`$ remains originally typed at $`A_{\mathrm{id}}`$: its original polynomial $`K`$ contraction gives conversion to the already typed atom $`I`$, and the conversion rule can be used in reverse with the scope-zero check. It evaluates to $`d`$. This second example therefore also preserves existence of a different representation. The cycle and finite-normalization premise are inherited source facts; the conclusion about the supplied opaque atom is the whole-label consequence. [Discarded-loop argument and limits][opaque-source] [Literal cycle][discarded-loop-source]
 
+#### Operational identity and the reviewed normalization boundary
+
+Applying the first witness to an argument helps locate its exact negative claim. For every raw $`a`$,
+
+```math
+(SK(K\Omega))a\longrightarrow
+Ka\bigl((K\Omega)a\bigr)\longrightarrow a.
+```
+
+This finite reduction establishes the displayed behavior after application. It neither supplies a normal reduct of the unapplied $`t`$ nor identifies $`t`$ with $`I`$ by raw conversion. In the unapplied wrapper $`SK(Kq)`$, the outer $`S`$ has only two arguments and the inner $`K`$ only one, so neither is a head redex. With the full compatible reduction relation, every step is inside $`q`$ and preserves the wrapper. Conversely every step of $`q`$ lifts through it. The wrapper is normal exactly when $`q`$ is normal. Combined with the inherited all-reduct obstruction for $`\Omega`$, this gives the no-normal-reduct premise used above; it is not an argument from failure of one evaluation strategy. [R18-G060, §§“Exact negative result”, “Independent discriminators”][R18-G060]
+
+The independent review checks the stronger quantification over **every** finite-typed raw $`u`$ at **any** finite code, not just rejection of the identity code for $`t`$. A finite-typed $`u`$ has a normal reduct; conversion and Church–Rosser would join it with $`t`$, forcing a normal reduct of $`t`$ and giving the contradiction. The discarded-loop $`KI\Omega`$ is the necessary contrasting control: it reduces to $`I`$ despite lacking strong normalization, and therefore cannot supply this stronger no-convertible-finite-representative conclusion. The distinction from equivalence under a separately declared PER also remains essential. These are qualifications of the already proved boundary in this subsection, not another normalization theorem or a new calculus. [R18-G060, §§“Exact negative result”–“Ownership and interpretation”][R18-G060]
+
+The review's positive certificate concerns the literal exposed application polynomial and its closed old polymorphic identity typing, with Raw used for the $`\Omega`$ premise. It does not replace that polynomial by the opaque atom with the same evaluation. Its recorded formal assessment used a selected 48-source closure, including the audit support, and retained the inherited normalization and confluence premises. Those are historical, bounded automated-review claims. This exposition has not rerun that closure, rebuilt its dependencies or promoted its verdict to external human peer review. The mathematical arguments and the source's reported execution remain separate evidence. [R18-G060, §§“Contract and source binding”, “Literal positive result”, “Reproduction and evidence”][R18-G060]
+
+
 ### 10.4 What the bridge repairs
 
 The prior dependent-All design had already identified the mismatch between an application of two atom polynomials and the single atom of their raw application, and explicitly excluded the bridge from the retained calculus. The bridge source records that design choice and assesses a hypothetical reconsideration of it. The following result inherits that assessment; it does not discover a previously unrecognized option or authorize an implementation migration. [Prior design and hypothetical scope][bridge-source]
@@ -1992,3 +2008,12 @@ The following references bind this exposition to the public source edition at Gi
 
 [unary-companion]: https://github.com/theislampill/orthemology/blob/7b385e4116b052a0132dd740d07b918d3103f648/experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md
 [unary-diophantine]: https://doi.org/10.1070/IM1971v005n01ABEH001004
+
+
+## Exact public sources for the additional discussion
+
+These links identify the received public bodies at their immutable original revision. Their historical review and prospective statuses remain source-relative; this exposition performs no new source-program or formal execution.
+
+- [Review of the closed polymorphic source-normalization boundary][R18-G060]. historical review of prior covered argument. Git blob `2489da4be949d888d8fafaa9cbae35576f77fa3d`.
+
+[R18-G060]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/2c67e22d0b19126c63fc9f1e476dd38d06174bd9208d816680165a64b437ea23/REVIEW.md

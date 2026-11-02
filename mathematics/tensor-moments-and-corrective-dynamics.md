@@ -237,6 +237,169 @@ Every $`s_m`$ lies in the algebraic direct sum. Its prospective coordinatewise l
 
 The source's conditional synthesis now has a concrete reading across the chapters. Under one compatible set of declarations, the encoder gives finite typed support, the retained-history theorem keeps the obligation lineage, and the inquiry-menu definition supplies the prospective feasible set. Wherever the additional finite-game premises hold, [Collective Inquiry, §3.2](collective-inquiry-and-strategic-coordination.md#32-existence-is-conditional-stability) supplies a mixed equilibrium; an adequate quotient gives the finite continuation identities above. These conclusions follow from their respective hypotheses, without identifying their different objects. They do not imply that an equilibrium is played, a recorded conclusion is true, the menu improves or infinite-time execution exists. Probability marginalisation here and mixed-payoff contraction in [Collective Inquiry, §3.1](collective-inquiry-and-strategic-coordination.md#31-a-game-is-additional-structure) are actual uses of multilinear structure. A comparative advantage still needs a target-preserving calculation or measured benefit at a declared cost; mere encodability, including the degree-one record construction, establishes none. [FORM, Theorem 11.3 and “What would make tensor structure substantively useful?”][FORM]
 
+### 1.5 Finite relations as Boolean tensors
+
+The declared record representation of §§1.1–1.4 and an extensional interpretation of predicates answer different questions. A record can preserve which occurrence was supplied, while a predicate interpretation assigns tuples of model elements to a relation. Moving between them requires an interpreted extraction: argument roles must be aligned with the same domain, relation symbols must remain distinguished, and occurrence information must be retained separately whenever the task still observes it. A repeated record of one tuple is not another model element; two elements with the same descriptive label remain two elements. The finite transport below begins after these choices have been supplied. [R18-G273, §§1–2][R18-G273]
+
+Fix a finite **nonempty** domain $`D`$ and the Boolean semiring $`\mathbb B=(\{0,1\},\lor,\land,0,1)`$. At arity $`n\geq0`$ put
+
+```math
+T_n(D;\mathbb B)=\{P:D^n\longrightarrow\mathbb B\},
+\qquad D^0=\{()\}.
+```
+
+These finite arrays are the tensor powers of the free Boolean semimodule with distinguished basis indexed by $`D`$. A relation $`A\subseteq D^n`$ corresponds to its characteristic array $`\chi_A`$; taking the support is the inverse. This is a bijection of **extensions at a fixed grade**. Distinct formulas or property intensions can have the same extension. An arity-tagged family, or a graded direct sum, keeps the grades separate; an individual finite expression uses finitely many of them. Complement is taken inside its particular finite cube $`D^n`$, not simultaneously across an infinite graded space or a countably infinite predicate vocabulary. [R18-G273, §2][R18-G273]
+
+For an $`n`$-ary $`P`$ and an $`m`$-ary $`Q`$, let $`k=\max(n,m)`$. The predicate-functor operations have the following exact array interpretation:
+
+| Operation | Array value and arity |
+|---|---|
+| Negation | $`(\neg P)(a_1,\ldots,a_n)=1-P(a_1,\ldots,a_n)`$, arity $`n`$. |
+| Conjunction | $`(P\mathbin{\&}Q)(a_1,\ldots,a_k)=P(a_1,\ldots,a_n)\land Q(a_1,\ldots,a_m)`$, arity $`k`$. |
+| Cyclic permutation | $`(\sigma P)(a_1,\ldots,a_n)=P(a_n,a_1,\ldots,a_{n-1})`$ for $`n\geq2`$. |
+| First-pair permutation | $`(\iota P)(a_1,\ldots,a_n)=P(a_2,a_1,a_3,\ldots,a_n)`$ for $`n\geq2`$. |
+| Existential contraction | $`(cP)(a_2,\ldots,a_n)=\bigvee_{a_1\in D}P(a_1,\ldots,a_n)`$ for $`n\geq1`$; $`c`$ is the identity at arity zero. |
+| Leading padding | $`(pP)(a_1,\ldots,a_{n+1})=P(a_2,\ldots,a_{n+1})`$. |
+| Equality | $`I(a,b)=1`$ exactly when $`a=b`$. |
+
+Declare $`\sigma`$ and $`\iota`$ to be identities below arity two. This low-arity completion is an explicit hypothesis, not a conclusion about every literal clause in the historical presentation. Conjunction aligns the **initial** coordinates and implicitly pads shorter inputs at the end; $`p`$ adds an ignored coordinate at the **beginning**. Neither conjunction's arity nor its operation is ordinary outer product. [R18-G273, §§2, 4][R18-G273]
+
+**Finite extensional transport.** For every term in this completed typed language, tensor evaluation at each assignment equals satisfaction of the term under the same finite nonempty interpretation. In particular, arity-zero evaluation gives the truth of the corresponding obtaining sentence.
+
+**Proof.** Induct on the term. Atomic predicates agree by the characteristic-array definition, and $`I`$ agrees with equality. Complement reverses membership. Conjunction evaluates both subterms under the same prefix-aligned assignment, including the ignored trailing coordinates of the shorter term. The two permutation clauses pull back the assignment along exactly the displayed coordinate permutations; at low arity both sides use the declared identity. The contraction is one precisely when some first-coordinate witness makes its subterm true, which is the existential clause. Padding ignores precisely its newly added first coordinate. At arity zero there is one empty assignment, and the stated $`c`$ convention preserves its scalar. These cases exhaust the constructors. Reading coefficient support recovers the extension at each grade, proving that the translation and support are inverse homomorphisms of these finite relation algebras. ∎
+
+This theorem preserves truth at each assignment. It therefore preserves both existential closure and the source's universal, all-assignment notion of truth of an **open predicate on a model**, provided the two are not confused. If $`D=\{0,1\}`$ and $`F=\{0\}`$, then $`cF=1`$ although $`F`$ is not true at every assignment. Repeated contraction gives existential closure, not universal model-truth. The resulting consequence comparison is restricted to finite nonempty models. No unrestricted first-order consequence, finite-model property, or completeness of finite testing follows. [R18-G273, §2][R18-G273]
+
+The low-arity hypothesis has a concrete reason. Applied literally to an infinite assignment sequence, the historical unary $`\iota`$ clause can read its second coordinate. A unary predicate true just of $`0`$ then gives different values on sequences beginning $`(0,0,\ldots)`$ and $`(0,1,\ldots)`$, although both have the same declared unary argument. Under those uncompleted clauses, the syntactically scalar $`c(\iota F)`$ can still depend on the incoming first coordinate: contraction prepends its witness and the swap moves the old coordinate into the predicate's argument. The zero-arity cyclic clause also lacks its indexed final coordinate. The stated completion, or a restriction to well-typed permutation terms, removes this ambiguity before the induction is applied. This is the source report's bounded finding about that presentation, not a claim about an unread original system or a refutation of the binary examples. [R18-G273, §4][R18-G273]
+
+### 1.6 Shared witnesses and equality wiring
+
+With $`\varepsilon(e_a)=1`$ on the distinguished domain basis, positive-arity $`c`$ is first-slot contraction by $`\varepsilon`$ **over the Boolean semiring**. Its sum is existential OR. Padding is $`pP=u\otimes P`$ for the all-one vector $`u=\sum_{a\in D}e_a`$. The composite $`pc`$ is an arity-preserving operation that forgets dependence on the first slot; the source's $`c`$ itself lowers arity. Conjunction is pointwise product after the declared lifts. A tensor product can implement it only when the common variables are subsequently joined by equality wires. [R18-G273, §3][R18-G273]
+
+Here is a general and directly checkable binding rule. For a slot map $`\alpha:\{1,\ldots,n\}\to\{1,\ldots,k\}`$, define
+
+```math
+(\alpha^*P)(a_1,\ldots,a_k)
+   =P(a_{\alpha(1)},\ldots,a_{\alpha(n)}).
+```
+
+Using the Kronecker equality coefficients $`\delta`$, the same operation is
+
+```math
+(\alpha^*P)(a)
+ =\sum_{b\in D^n}P(b)\prod_{j=1}^{n}\delta(b_j,a_{\alpha(j)}).
+```
+
+For fixed $`a`$, exactly one tuple $`b`$ satisfies all the equalities; its multiplier is one and every other multiplier is zero. The sum is therefore the displayed coefficient of $`P`$. This proves the formula over any unital semiring, including $`\mathbb B`$ and $`\mathbb N`$. Repeated values of $`\alpha`$ bind occurrences to the **same index**. They do not identify different domain elements with matching names or labels. The formula includes permutation, padding and repeated variables, without asserting that those operations have the same semantic role. [R18-G273, §3][R18-G273]
+
+In particular, the diagonal pullback $`P(x,x)`$ retains the free $`x`$ wire. A trace $`\sum_xP(x,x)`$ removes it. Within the predicate-functor signature, $`c(P\mathbin{\&}I)(y)=P(y,y)`$: equality forces the existential first argument to be the remaining second one. Multiplying two independently contracted predicates usually does something else because their successful witnesses need not agree.
+
+The distinction is visible even in a two-element domain. Let $`D=\{a,b\}`$, $`F=\{a\}`$ and $`G=\{b\}`$. Compare $`R_+=\{(a,b)\}`$ with $`R_-=\{(b,a)\}`$. Both interpretations have the same three separated truth values
+
+```math
+\exists x\,F(x),\qquad
+\exists y\,G(y),\qquad
+\exists x\exists y\,R(x,y),
+```
+
+all true. Their corresponding simple counts are also all one. Adding the exact domain cardinality two, or a scalar asserting two distinct elements, leaves the interpretations indistinguishable. Yet
+
+```math
+\exists x\exists y\,
+  [F(x)\land G(y)\land R(x,y)\land x\ne y]
+```
+
+is true only for $`R_+`$. Its exact tensor expression is
+
+```math
+c\,c\,(F\mathbin{\&}pG\mathbin{\&}R\mathbin{\&}\neg I).
+```
+
+Trailing padding places $`F`$ on the first coordinate, leading padding places $`G`$ on the second, and the oriented relation and inequality are evaluated on those same coordinates until the final contraction. This calculation supplies both a failure and a repair: separate existence/count summaries, or symmetrizing $`R`$, lose the target; retaining the predicates on aligned oriented axes recovers it. The impossibility of decoding the separated summaries is the already established fibre criterion applied to this pair, not a second origin for that theorem. The example rejects this compression, rather than every structured decomposition, and settles no direction of metaphysical grounding. [R18-G273, §6][R18-G273]
+
+### 1.7 Counting coefficients, support and negation
+
+Boolean truth and natural-number counting use the same finite wiring but different addition. On $`\mathbb N`$ or $`\mathbb R_{\geq0}`$ define $`s(0)=0`$ and $`s(x)=1`$ for $`x>0`$. Then
+
+```math
+s(x+y)=s(x)\lor s(y),\qquad
+s(xy)=s(x)\land s(y),\qquad s(0)=0,
+\quad s(1)=1.
+```
+
+The first equality holds because a sum of nonnegative terms is positive exactly when a term is positive; the second holds because a product is positive exactly when both factors are positive. Induction over a finite network now shows that coefficientwise support commutes with products, contractions, permutations, equality wiring and padding. This is the standard positive-semiring mechanism behind the transport, with the provenance-semantics ancestry retained by the source. It intentionally forgets multiplicities and weights. [R18-G273, §§1, 5][R18-G273]
+
+For flat products of characteristic atomic factors, natural-number contraction counts satisfying assignments to the contracted variables. Nested bag-style expressions can instead count combinations of witnesses or derivations. Repetition can add multiplicity, and a self-join can square a weight. Thus arithmetic operations need not preserve logical idempotence before support is taken. In a two-element domain, $`c_{\mathbb N}(1,1)=2`$ while $`c_{\mathbb B}(1,1)=1`$. More generally,
+
+```math
+c_{\mathbb N}p_{\mathbb N}P=|D|P,
+\qquad
+c_{\mathbb B}p_{\mathbb B}P=P
+```
+
+under the nonemptiness assumption. The direct inclusion of Boolean coefficients as $`0,1`$ is consequently not a homomorphism for these contractions. The exact positive comparison applies the support quotient **after** numerical arithmetic.
+
+Negation requires another declared operation. Applying $`1-x`$ to a count of two gives $`-1`$, neither a natural number nor the intended false value. The correct numerical operation for this support interpretation is
+
+```math
+z(x)=\begin{cases}1,&x=0,\\0,&x>0.\end{cases}
+\qquad s(z(x))=\neg s(x).
+```
+
+Adding this zero-test at every negation extends the structural induction to nested negative terms; alternatively one can Booleanize the relevant array before complementing it. The zero-test is nonlinear and is not supplied by positive semiring arithmetic. A network built from fixed nonnegative Boolean coefficients, finite sums and products is monotone in each input coefficient, by induction on its construction. Coefficient complement reverses $`0<1`$, so such a network cannot implement it on that one-coefficient representation. [R18-G273, §5][R18-G273]
+
+A different representation can carry the missing information. Encode truth $`b`$ by the one-hot vector $`v_b(a)=1`$ iff $`a=b`$, with $`a\in\{0,1\}`$. For any finite truth function $`f`$, use the gate tensor
+
+```math
+G_f(a_1,\ldots,a_r,c)=1
+   \quad\Longleftrightarrow\quad c=f(a_1,\ldots,a_r).
+```
+
+Contracting its input legs with $`v_{b_1},\ldots,v_{b_r}`$ leaves $`v_{f(b_1,\ldots,b_r)}`$, since precisely one input tuple survives. NOT is a two-leg swap, AND and OR use their truth tables, and a finite existential can be built from OR gates. Copy wires preserve shared intermediate truth values. This is a standard full Boolean-circuit construction. Its initial lift $`b\mapsto(1-b,b)`$ already includes both truth rails and is not monotone or semiring-linear in the original coefficient. It therefore does not refute the preceding obstruction, or make negation an undeclared real linear contraction. [R18-G273, §5][R18-G273]
+
+### 1.8 Signed arrays and transported structure
+
+The positive-support result does not extend to arbitrary signed coefficients. Nonzero support fails to preserve addition because $`1+(-1)=0`$ although each summand is nonzero. The positive-part predicate fails to preserve multiplication because two negative numbers have positive product. More generally, no unital semiring homomorphism from a nonzero ring to $`\mathbb B`$ exists: it would give
+
+```math
+0=s(0)=s(1+(-1))=1\lor s(-1),
+```
+
+a contradiction. Cancellation of the **difference** of two probability tensors can still prove equality of their marginals, as in §1.3. That signed difference is not thereby a positive relation or a truth predicate. [R18-G273, §5][R18-G273]
+
+The distinguished domain basis also matters. With
+
+```math
+g=\begin{pmatrix}1&0\\-1&1\end{pmatrix},
+\qquad P=\binom10,
+\qquad\varepsilon=(1,1),
+```
+
+the changed coordinate vector is $`gP=(1,-1)^{\mathsf T}`$. Applying the unchanged covector gives zero. Transporting the covector as well gives $`\varepsilon g^{-1}=(2,1)`$ and restores the value one. This is ordinary passive numerical transport. The signed entries in the changed basis do not acquire the original entrywise membership interpretation. Domain permutations, by contrast, preserve the distinguished basis, equality tensor and augmentation and commute with the declared truth operations. No arbitrary-general-linear invariant truth interpretation is supplied.
+
+There is an even simpler obstruction to a real linear existential evaluator on characteristic vectors when $`|D|\geq2`$. It would require $`L(e_a)=L(e_b)=1`$ for distinct $`a,b`$, and also $`L(e_a+e_b)=1`$ because the union is nonempty. Linearity gives two instead. Boolean contraction, a nonnegative calculation followed by support, and truth-wire encoding are different legitimate responses; ordinary real linear contraction alone is insufficient. [R18-G273, §5][R18-G273]
+
+### 1.9 Plurality, inhabitation and the limits of the interpretation
+
+The qualitative language need not erase numerical plurality. If $`F=D`$, the term
+
+```math
+c\,c\,(F\mathbin{\&}pF\mathbin{\&}\neg I)
+```
+
+is true exactly when $`|D|\geq2`$; with natural-number coefficients its value is $`|D|(|D|-1)`$. All objects can share the same unary $`F`$ label while inequality still distinguishes two from one. Quotienting the domain to one element per unary label would change the sentence's truth and is therefore invalid for this target. The model's indices retain its numerical elements, but indexing is not an independent metaphysical explanation of their individuation. Renaming the indices by a bijection changes no closed truth value. [R18-G273, §7][R18-G273]
+
+Nonemptiness is another real premise. At $`D=\varnothing`$, the set $`D^0`$ still contains its empty tuple, so the scalar $`1_0`$ exists. Padding it gives an empty unary array; existentially summing that array gives zero. Thus
+
+```math
+c(p(1_0))=0\ne1_0
+```
+
+outside the nonempty-domain class. The separate convention that $`c`$ itself fixes scalars remains valid. An inhabited genus or capacity carrier does not imply an inhabited extension of its actual tokens; a many-sorted application must state inhabitation separately for every sort on which it uses dummy-variable elimination. Neither the empty tuple nor the tensor unit establishes an actual event, concrete resource or bearer. The productive and modal questions require the additional interpretations discussed in [Received Actuality, §§3–4](../foundations/received-actuality-and-intrinsic-necessity.md#3-from-an-original-resource-to-its-actual-bearer). [R18-G273, §7][R18-G273]
+
+The transport is finite and extensional. The source report attributes the predicate-functor presentation to Dasgupta's 2009 text and distinguishes its inspected clauses from bibliographic references whose full texts were unavailable. Its reported 553,359 finite controls compare direct-set and array evaluations; they are historical checks, not executions performed for this exposition or a proof over unrestricted models. It also retains a development failure in a helper that captured a changing loop-domain instead of the fixed tensor domain; the reported repair concerns the helper, not a failed mathematical assertion. The proofs above, the explicit low-arity qualification and the counterexamples carry the scientific result without treating that finite count as a replacement for them. The earlier representation, fibre and parity results keep their own ancestry. No ontological priority, physical advantage or completed empirical test follows merely from this tensor encoding. [R18-G273, §§1, 8][R18-G273]
+
+
 ## 2. Finite channels: exact tensor closure and its limits
 
 ### 2.1 Fisher gradient descent produces a moment hierarchy
@@ -1536,3 +1699,12 @@ The public Orthemology proofs cited in the text authenticate the particular stat
 [valid-initial-escape-source]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/research/t20-v6-20261012/sources/c6dc162591a6827b8ae09a3b0be902ee53573435ae5b4f4ecfb1fc66ed835ada/RESULT.md
 
 [FORM]: https://github.com/theislampill/orthemology/blob/28679eaed33ee48cf0c5d15ba6dc3b27aac9067b/theory/lineages/h-formalisation/orthing_formalisation_v1.md
+
+
+## Exact public sources for the additional discussion
+
+These links identify the received public bodies at their immutable original revision. Their historical review and prospective statuses remain source-relative; this exposition performs no new source-program or formal execution.
+
+- [Finite predicate-functor transport into Boolean tensors][R18-G273]. finite extensional transport with explicit hypotheses. Git blob `6bb2b13b32994328b207c064c91220f723bdd2ce`.
+
+[R18-G273]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/qualitative-tensor-transport/RESULT.md

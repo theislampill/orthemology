@@ -1521,6 +1521,19 @@ The older exact-artifact inventory likewise remains a limit. It records eight un
 
 The useful result is an organized set of conditional arguments and surviving alternatives. Formal checks can expose an illicit implication; accepted-source premises can restrict a source-relative class; an empirical measurement can constrain its registered target. None of these automatically establishes unique mechanism, a subject of experience, normative authority, source truth or world realization. An explanation that addresses several of these levels must make its bridges readable and defend them separately. That is the comparison supported by the retained record, including its failures and unclosed burdens.
 
+### 8.26 Experimental instructions and the status of their evidence
+
+A proposed intervention can change the information an agent is asked to retain without yet showing that it improves the agent's judgments. The frozen baseline and treatment for a false-completion comparison illustrate this distinction. Both use ordinary language, request a decision, numerical confidence, a concrete next action and a completion judgment, and permit abstention or escalation. Both forbid inventing facts. The baseline also asks what would settle an unclear case and allows useful handoff notes. It is therefore not a control that forbids uncertainty or reflection. [R18-G040] [R18-G041]
+
+The treatment makes a particular working record explicit. It asks for still-live alternatives, the actual coverage and currentness of each relied-on item, and the case's identity and version before an earlier finding is reused. Its action choice must respect unresolved possibilities and stated hard constraints. Its completion judgment is tied to a disposition for every remaining obligation, including open, resolved, deferred, transferred, owner-assigned or risk-accepted, and it disallows calling the case done while something remains open or wrongly discharged. These requests distinguish unresolved evidence, authorized handoff and actual discharge. Merely naming a disposition does not prove that its conditions are met. [R18-G041]
+
+The design therefore probes a meaningful contrast between freely organized explanation and an explicitly structured record of alternatives, evidence scope and outstanding obligations. It does not supply a theorem that the latter record is truthful, competently used or causally effective. The two bodies describe the instructions as frozen, verbatim and length-band-matched within fifteen percent; that is a declaration in the protocol, not an independently measured performance result. The documents are evidence about an intended intervention, and their imperative sentences are the experimental material being described. [R18-G040] [R18-G041]
+
+The two associated deviation ledgers have an even narrower evidential role. The ledger for episode reification and the ledger for false closure/selective prediction both record no entries and state that no run has occurred. Each prospectively calls for dated classification of deviations before analysis, including whether they affect the outcome. The absence of entries is consequently not evidence that a completed experiment adhered to its protocol, and it supplies no treatment effect, accuracy estimate, calibration result or independent replication. No completed run is inferred from the existence of a frozen arm or a ledger. [R18-G038] [R18-G039]
+
+This boundary complements the conditional inquiry arguments in §§8.1–8.5. A formal target and an adequate observation rule can establish what a transcript would distinguish under its premises. An intervention on a real reasoner's practice requires its own evidence that the observations, decisions and completion judgments occurred under the compared conditions. The present four records preserve the intended comparison and its prospective status. They neither extend the finite identification theorems nor settle actual epistemic warrant, practical basing or a universal duty to maintain this particular record format. [R18-G038] [R18-G039] [R18-G040] [R18-G041]
+
+
 ## 9. Intrinsic reasons, fitting response, and the indifferent agent
 
 The preceding results leave room for substantive normative reasoning. They show where a descriptive or computational account has not supplied a target; they do not establish that normative judgments are unwarranted unless deduced from wholly norm-free premises. A reason can have independent prima facie warrant through what it is about: another person's actual good, an actual relation, a fitting acknowledgment, or a valid undertaking. The remaining work is to articulate that warrant and test its scope. [S11; S13–S17]
@@ -2576,3 +2589,18 @@ The following exact source editions supply the arguments, recorded failures, rep
 [R68-S047]: https://api.github.com/repos/theislampill/orthemology/git/blobs/cd70099b415e269500aac711ad794cb33e4fe688
 [R68-S048]: https://api.github.com/repos/theislampill/orthemology/git/blobs/59ef46858621f12205bc58f03e4d13998eccc8ee
 [R68-S049]: https://api.github.com/repos/theislampill/orthemology/git/blobs/3882be8b380b1e6eebeebe6ee0c54ecea4f601fe
+
+
+## Exact public sources for the additional discussion
+
+These links identify the received public bodies at their immutable original revision. Their historical review and prospective statuses remain source-relative; this exposition performs no new source-program or formal execution.
+
+- [Episode-recording deviation ledger][R18-G038]. prospective administrative evidence. Git blob `4ddaa58967928728cb098f7f02d3b35be4b51531`.
+- [False-completion deviation ledger][R18-G039]. prospective administrative evidence. Git blob `e70a3e321644ece3d07b67c98050912c0d258920`.
+- [Baseline instructions for the false-completion comparison][R18-G040]. frozen experimental material without results. Git blob `a351bf97fc04fb300e9327b1a0029974708f835c`.
+- [Treatment instructions for the false-completion comparison][R18-G041]. frozen experimental material without results. Git blob `45197b27cf5f74aa490a5bb99a88ec4521560d11`.
+
+[R18-G038]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/episode-reification/DEVIATION-LEDGER.md
+[R18-G039]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/false-closure-selective-prediction/DEVIATION-LEDGER.md
+[R18-G040]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/false-closure-selective-prediction/baselines/BASELINE-ARM.md
+[R18-G041]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/false-closure-selective-prediction/treatments/TREATMENT-ARM.md

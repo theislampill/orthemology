@@ -79,6 +79,15 @@ Ibn Taymiyya's discussion of time in *Minhāj al-sunna al-nabawiyya* makes a rel
 
 A shared definition of time, or a citation of a reported consensus, cannot by itself identify two authors' complete arguments about the past. The scope of the definition and the alleged agreement both require independent support. No universal theological consensus is assumed here. A proposed beginning of the observed cosmos must likewise be distinguished from a beginning of all productive reality; establishing either requires evidence appropriate to that target. The present argument does not import unverified physical or comparative-scriptural premises to cross that boundary. [Causal foundations, §4; contextual reconciliation][causal-background] [Causal context and explanatory scope][causal-context]
 
+### 2.2 Standing resources and a selected occurrence
+
+The distinction between required actuality and outcome necessitation also fixes the status of a proposed comparison between a standing necessary bearer and one realized occurrence. A probability law can specify an experiment's possible realizations without identifying which realization obtains. Supplying a realized assignment can determine the endpoint under a given outcome map, but that supplied coordinate is not automatically an antecedent hidden variable or an explanation of its own selection. The actual background, the law, the realized productive exercise and the selected event remain different objects of explanation. [R18-G145]
+
+The prospective source proposed to connect one unguarded productive route and a singleton endpoint to the already defined probability-model and resource/bearer interfaces. Its planned discrimination compared a standing bearer and law, a supplied realized success coordinate, and the full premise package for an actual original resource and bearer. It explicitly retained nonvacuous contingency and the receipt interpretation rather than replacing the latter by the endpoint equation alone. The outcome map can determine its result **conditional on** the realization while the particular realization still calls for its own account. The proposed comparison also allowed a particular intrinsic act to vary without treating that variation as whole-existence receipt of its bearer. [R18-G145]
+
+This document is a design record, not a report that the proposed composed model was built or checked. Its stop condition required a verified interface witness and a matrix of omitted premises, or a concrete obstruction. The body supplies neither completed outcome. In particular, it does not establish an all-pure-perfection interpretation, the wisdom of a selected event, a complete actual cause, or physical eligibility. Its omission of these premises is part of the scientific scope, not permission to treat them as satisfied. The original-bearer proof in §3 remains the already established conditional argument; neither this prospective experiment nor a law-to-endpoint calculation is counted as another proof of its application. [R18-G145]
+
+
 ## 3. From an original resource to its actual bearer
 
 The retained formal interface separates a **target**, a **resource**, and a **bearer**. A resource is intended to be a concrete intrinsic instantiation in the same existential respect as the receipt question. It is not an arbitrary true proposition or an unrestricted explanatory fact. The following notation makes the existing conditional reasoning explicit. [Original resource/bearer interface][s10]
@@ -138,6 +147,88 @@ An alternative adequate description also does not automatically establish that o
 Third, a qualitative-first proposal could allow an actual independent concrete field with an intrinsic unreceived productive resource. Under an established intrinsic relation and the same receipt interpretation, that field could qualify as a bearer in the broad interface. It would then satisfy the relevant original-resource commitment rather than refute it. The interface does not require a primitive material individual or a personal agent. A true assertion about a field, the content of that assertion, an obtaining state, and a concrete field bearing resources remain different candidates; their substitution requires argument. [Productive totality, §6][s4]
 
 The comparison leaves a precise result. Collective or qualitative explanation has positive philosophical significance, but it does not by itself entail the denial of original productive provision. The source argument supplies a substantive reason for global productive adequacy while leaving its exhaustive application across rival ontologies open to appropriate criticism. The current foundational record retains the affirmative, defeasible judgment; the existence of that applicability question does not itself count as a new defeater. Nor may the positive side insulate itself by defining every adequate ground to be the kind of productive resource it seeks. [Productive totality, §§7–8; current claim FND-004][s4] [Foundational claims][s8]
+
+### 4.1 Qualitative description and collective grounding
+
+The qualitative alternative becomes sharper when its language, modal claims and explanatory claim are kept distinct. The source appraisal of Dasgupta's *The Bare Necessities* treats grounding as noncausal metaphysical explanation, with talk of facts serving a sentential explanatory apparatus rather than automatically introducing another class of abstract objects. A claim about whether space exists differs from a claim about whether it depends on matter. Likewise, the manifold, metric and other mathematical ingredients of a physical model do not by themselves decide the ontology of the represented world. Necessary co-obtaining also leaves explanatory direction open: a necessitarian theology can still distinguish a ground from what it grounds. This compatibility observation is not an endorsement of such a theology by the author under discussion. [R18-G302, §2][R18-G302]
+
+The Hole Argument supplies a reason to inspect the interpretation of apparently different models, but it does not alone prove qualitative priority. One can revise a determinism claim, deny that a proposed pair represents distinct possibilities, or adopt a suitable counterpart interpretation. Even agreement that two particular models represent one world does not prove that no other distinct possibilities exist. A view retaining substantive individuals can share some antihaecceitist modal claims. Thus modal covariance, qualitative discernibility and metaphysical grounding cannot be substituted for one another. The positive qualitative proposal still needs an obtaining basis and an explanation of the derivative individualistic truths. [R18-G302, §2][R18-G302]
+
+Its economy argument is correspondingly conditional and defeasible. If the physical theory supplies the relevant complete laws, allegedly surplus distinctions may add no discriminable explanatory work. This is a comparative reason to prefer the leaner account, not the verificationist principle that every undetectable distinction is unreal. Absolute velocity, for example, can affect later absolute velocities within the theory that posits it; the alleged redundancy is not absence of any consequence whatsoever. The truth of a law and its status as a law are further distinct questions. Reliable indexical answers likewise need not discriminate the proposed surplus. These qualifications preserve the positive motivation while preventing it from becoming an automatic proof of the whole ontology. [R18-G302, §2][R18-G302]
+
+The algebraic qualitative language retains relations, equality and numerical plurality. Its two-sphere illustration has the form
+
+```math
+c\,c\,(F\mathbin{\&}pF\mathbin{\&}R
+                 \mathbin{\&}\sigma R\mathbin{\&}\neg I).
+```
+
+With the declared operations, this says that two distinct $`F`$-witnesses stand in $`R`$ in both directions. It does **not** say that these are the only two objects or that the displayed predicates describe the complete world; totality clauses would be additional. Nor does it require every individual to have a unique qualitative role. The finite extensional proof and its exact padding and permutation conventions appear in [Tensor Moments, §§1.5–1.9](../mathematics/tensor-moments-and-corrective-dynamics.md#15-finite-relations-as-boolean-tensors). That proof preserves the described truth conditions; it does not establish a direction of grounding. If weak discernibility is meant to supply a substantive qualitative distinction, simply using inequality as its own discriminator would not answer that further question. [R18-G273, §§2, 6–7][R18-G273] [R18-G302, §3][R18-G302]
+
+The source's distinctive explanatory proposal is plural on the **grounded** side. Let $`Q`$ express the obtaining of the complete qualitative state, let $`Y`$ be the complete plurality of the relevant individualistic facts, and let $`e_b\in Y`$ express the existence of a particular region. Write $`G(X,Y)`$ schematically for the proposed grounding explanation. Its relevant form is
+
+```math
+G(\{Q\},Y),
+```
+
+while it rejects a separate qualitative explanation $`G(\{Q\},\{e_b\})`$ of that individualistic fact taken alone. This is more specific than allowing several grounds for one conclusion. It proposes that individualistic facts can all be nonfundamental without each having an individual qualitative ground. The concern that the whole cosmos is an unsuitable separate explanation of just one person's existence motivates that proposal; it does not by itself settle every question about plural explanatory adequacy. The 2011 discussion defers fuller defense of the plural form. [R18-G300, §§1–3][R18-G300] [R18-G302, §3][R18-G302]
+
+### 4.2 Modal projection does not distribute a ground
+
+Suppose the joint explanatory assertion is used factively: $`Q`$ and all the members of $`Y`$ obtain. Suppose also the source's plural necessitation condition: whenever the grounds obtain, all the grounded facts obtain. For a possibly infinite plurality this is a metalanguage condition, not a tacit infinite conjunction in a finitary formula. For each particular $`e_b\in Y`$, it yields
+
+```math
+\Box(Q\longrightarrow e_b).
+```
+
+**Reason.** At any world satisfying $`Q`$, plural necessitation supplies every member of $`Y`$, hence this member. The same pointwise implication holds throughout the modal range. This uses projection of truth from a plurality. It does not project the grounding relation itself. [R18-G300, §§2–3][R18-G300]
+
+The rejected extra step would be
+
+```math
+G(\{Q\},Y)\quad\Longrightarrow\quad G(\{Q\},\{e_b\}).
+```
+
+That is right-distribution of grounding, the very principle the proposed interpretation denies. It cannot be obtained by reversing necessitation: necessary implication is not sufficient for grounding. Treating $`Y`$ as a conjunction and applying conjunction elimination **inside the grounding operator** likewise adds an explanatory rule, rather than merely using ordinary truth-functional logic. Factivity supplies the actual $`e_b`$ but not its separate ground. [R18-G300, §3][R18-G300]
+
+Transitivity does not silently supply the missing rule. The source's single-output schema has the shape
+
+```math
+G(X,\{z\})\ \land\ G(U\cup\{z\},\{v\})
+   \quad\Longrightarrow\quad G(X\cup U,\{v\}).
+```
+
+The plural output $`Y`$ is not the singleton output required by that first premise. One can propose a whole-plurality extension,
+
+```math
+G(X,Y)\ \land\ G(Y\cup Z,V)
+   \quad\Longrightarrow\quad G(X\cup Z,V),
+```
+
+but applying it to derive a singleton output still requires an additional grounding premise from the intermediate plurality to that singleton. The membership $`e_b\in Y`$ is not such a premise. Similarly, irreflexivity is an explanatory constraint; it is not a license to regard a collection as explaining a member merely because the collection entails it. The source changes the logical form of grounding without providing a complete revised plural calculus, so this mapping analysis does not certify consistency of every intended plural axiom. It identifies the precise unprovided step in the attempted distribution. A substantive criticism of plural adequacy remains possible; replacing the advertised proposal by a distributive one would address a different proposal. [R18-G300, §§2–3][R18-G300]
+
+Fine-grained explanatory roles must also survive translation between languages. An ordinary first-order existential assertion $`P`$ can be an extensional counterpart of an algebraic obtaining assertion $`Q`$ while having a different grounding role. The 2011 paper's note 74 allows ordinary existential truths to be grounded in their individual instances; their algebraic qualitative counterpart is intended as fundamental in the proposed explanation. Extensional equivalence therefore does not authorize identifying the assertions inside $`G`$. The intended direction can be qualitative obtaining, then the collectively grounded individualistic facts, then ordinary existential truth, without treating the three descriptions as three newly introduced concrete objects. This attribution sharpens the comparison already made in §4; it does not discover a new logical flaw in the existing productive argument. [R18-G300, §§1, 3][R18-G300] [R18-G302, §3][R18-G302]
+
+### 4.3 A whole received field remains an available target
+
+The failure of right-distribution does not negate Completion. Completion in §3 concerns an actual received target and an actual unreceived resource productively relevant to it. It does not mention $`G`$. Even a valid extraction of a separate ground would leave the need to establish the target's receipt, a concrete intrinsic resource, productive relevance and nonreceipt, an actual bearer, and transport of receipt in the same respect. An obtaining assertion or a universal is not automatically that resource. Conversely, successful collective grounding does not show that no original productive resource coexists with it. Failure of one argument for Completion is not proof of its negation. [R18-G300, §4][R18-G300]
+
+The affirmative route has a stronger response than demanding distributivity: take the relevant whole field as the target. Suppose that field is an actual received target $`t`$, Completion supplies $`r`$ actual, relevant and unreceived, Realisation supplies an actual $`g`$ with $`I(g,r)`$, and Support transport applies. If $`g`$ were wholly received, transport would make $`r`$ received, contradicting the selected resource. Thus the same conditional original-bearer argument in §3 applies to this whole target. Its proof uses neither a distinct resource for every individual nor a singleton grounding explanation for every member of the field. [R18-G300, §5][R18-G300]
+
+This is an application of the existing conditional theorem, not a second proof of actual global adequacy. The whole field's eligibility as a received target, and the relevant productive resource, remain to be warranted. A whole target need not itself be one individual or one intrinsic resource. Calling a state qualitative does not exclude every broad interpretation of a bearer, but identifying it with an actual concrete resource-bearing field requires argument. The strongest rival and the affirmative therefore continue to disagree over the exhaustive applicability and warrant of productive Completion, rather than over a distributive rule that the original-bearer inference never needed. [R18-G300, §§4–5][R18-G300] [R18-G302, §4][R18-G302]
+
+This also fixes what an adequate counterexample would have to do. It would retain the actual received productive target while justifying the relevant absence of every qualifying original productive resource, or supply an independently supported undercutter to the adequacy inference. Merely producing a qualitative description or a noncausal explanatory alternative does neither automatically. The rival can challenge the positive judgment without constructing an entire cosmos, but the challenge must reach that judgment's actual target. The existing affirmative and defeasible appraisal is preserved.
+
+### 4.4 Necessitation, identity and autonomy
+
+The conditional modal content should be stated at full strength. The proposal says that the **same fact-specific plurality** $`Y`$ obtains wherever $`Q`$ obtains; replacing this by agreement only up to qualitative isomorphism would weaken it. But the condition neither proves that $`Q`$ is necessary nor provides a unique qualitative role for each symmetric individual. If $`U`$ is the class of $`Q`$-worlds, universal truth over $`U`$ remains conditional on membership in that class. When $`Q`$ actually obtains, the actual world belongs to it. If $`U`$ is empty, vacuous universal truths supply no actual individual. A zero-world frame likewise supplies no actual-world interpretation. [R18-G300, §6][R18-G300] [R18-G302, §5][R18-G302]
+
+Even necessary $`Q`$, together with an adequately interpreted de re conditional for a bearer, would establish necessary existence only under that interpretation. It would not establish existence through that bearer's own essence, intrinsic productive adequacy or nonreceipt. A counterpart account need not employ the fixed outer bearer domain used by the chart construction in §§10.5–10.9. The source allows a sentential necessitation formulation where facts obtaining across worlds would otherwise be ill-defined. Neither that option nor the extensional tensor translation supplies a modal correspondence atlas, its transport maps, or the reflection of supplier witnesses required when bearer domains are restricted. Those remain independent interpretation conditions; the accepted transport theorems are conditional on them. [R18-G300, §6][R18-G300] [R18-G302, §5][R18-G302]
+
+Autonomy makes a further claim: the grounding question is inapplicable to the proposed autonomous fact, not merely unanswered and not merely lacking a singleton answer. The 2016 paper's singular presentation explicitly sets plural grounding options aside. It therefore does not, by its singular notation alone, contradict the earlier collective proposal. Nor does its qualitative-essentialist possibility establish that the actual complete qualitative obtaining has an essence making the question inapplicable. Relative fundamentality to individual descriptions is insufficient for that conclusion. No actual counterexample to Completion, full plural-autonomy theory, or proof of the proposal's incoherence is supplied by these comparisons. [R18-G300, §7][R18-G300] [R18-G302, §§5–6][R18-G302]
+
+The resulting limits are substantive. The theory retains derivative individuals, so it is not a denial that regions exist. Its finite qualitative illustrations are not a completed formal account of general relativity; more expressive resources are contemplated for that task. A qualitative property is not automatically a concrete intrinsic instance, and an arity-zero obtaining value is not an actual resource. The 2011 positive proposal, the later autonomy discussion and the separately cited plural-grounding arguments retain their distinct evidential roles. The source reports' full versus targeted historical readings, earlier overlap, and uninspected bibliographic leads are not new external readings by this exposition. Repeated attention to the same proposal is not independent confirmation or a reason by itself to change the comparative judgment. [R18-G302, §§1, 6][R18-G302]
+
 
 ## 5. From complete independence to intrinsic adequacy
 
@@ -358,6 +449,170 @@ Aquinas's *Sententia libri Metaphysicae* VIII, lectio 5 provides a useful differ
 For the current question, the distinction is between an account of the unity of an actual composite and an adequate source of its actuality. A productive cause of the composite need not, by that description alone, lie outside every constituent; that stronger claim needs the relevant dependence facts. What remains excluded is an alleged act whose availability already presupposes the whole actuality it is meant to supply. This respects both the positive intrinsic-unity account and the independent productive question. It neither turns the historical comparison into an endorsement of every surrounding metaphysical commitment nor treats intrinsic unity as an unexplained substitute for productive adequacy.
 
 These comparisons are incorporated from the complete public derived *Sixteenth Report*, whose original private document has not been received here. The temporal criterion and these unity discussions retain their separate argument roles. Current primary inspection covers the specified passages; it is not a rereading of either author's whole work or a reconstruction of the report's historical research session.
+
+### 9.5 Local response and finite productive augmentation
+
+The nonduplication judgment in §9.2 requires a comparison of actual productive content. Several weaker properties must not be mistaken for that comparison: an agent can have an intrinsic exercise; its input can occur nontrivially in an operation; changing it locally can change the output; adding its entire exercise can change the endpoint; and its addition can strictly enlarge the complete work in the relevant order. These are different assertions. In particular, positive local response does not establish a strict finite change from a specified solo history to a specified joint history. [R18-G094, §§2–3][R18-G094]
+
+An elementary polynomial separates the claims without presuming a causal interpretation. On $`[0,1]^2`$ let
+
+```math
+F(x,y)=x+y-3xy+x^2y+xy^2.
+```
+
+Then
+
+```math
+F(0,0)=0,\qquad
+F(1,0)=F(0,1)=F(1,1)=1,
+```
+
+while
+
+```math
+F_x=1-3y+2xy+y^2,
+\qquad
+F_y=1-3x+x^2+2xy,
+\qquad F_x(1,1)=F_y(1,1)=1.
+```
+
+Both partial derivatives are strictly positive throughout $`[0.9,1]^2`$. For example, $`F_x`$ increases with $`x`$ there because its derivative is $`2y\geq1.8`$, and increases with $`y`$ because $`-3+2x+2y\geq0.6`$. Its minimum is consequently $`F_x(0.9,0.9)=0.73`$. Symmetry gives the same bound for $`F_y`$. Thus both inputs have genuine local response around the joint point, yet the displayed solo and joint endpoint values are equal. [R18-G094, §3.1][R18-G094]
+
+The missing premise is visible along the full comparison path. Put
+
+```math
+g(y)=F(1,y)=1-y+y^2,
+\qquad g'(y)=-1+2y.
+```
+
+The derivative integrates to $`-1/4`$ from zero to $`1/2`$ and to $`1/4`$ from $`1/2`$ to one. Its positive final response therefore leaves $`g(1)=g(0)`$. The path parameter describes this mathematical comparison; it does not establish an actual temporal episode of destruction followed by reconstruction. [R18-G094, §3.2][R18-G094]
+
+There is a positive theorem with the missing global premise. If $`g`$ is nondecreasing throughout $`[0,1]`$ and $`g(1)>g(1-\varepsilon)`$ for some $`\varepsilon>0`$, then
+
+```math
+g(1)>g(1-\varepsilon)\geq g(0).
+```
+
+A positive left derivative at one supplies such a strict final comparison. Alternatively, for continuously differentiable $`g`$, nonnegative derivative everywhere and positive derivative on a nonempty interval give strict endpoint growth by integration. This is ordinary monotonicity reasoning. Its application requires a justified complete-work ordering and a warranted monotonicity claim along the **entire** relevant augmentation, not only near its endpoint. Global injectivity of every conceivable productive operator would be more than this argument needs. [R18-G094, §3.3][R18-G094]
+
+Coefficient signs do not provide the missing productive interpretation. The same polynomial is
+
+```math
+F(x,y)=x(1-y)^2+y(1-x)^2+xy,
+```
+
+a sum of nonnegative terms on the declared domain, while the endpoint comparison still fails. A negative coefficient in the expanded basis is not itself a destructive causal event, and nonnegative summands do not establish global monotonicity. Likewise, multiplying the scalar by a fixed nonzero vector or time profile $`H`$ preserves the equality $`F(1,0)H=F(1,1)H`$. Increasing the dimension of an output profile does not prove that it represents the complete productive history. [R18-G094, §§3.4–4][R18-G094]
+
+Three targets must remain distinct. A created-effect profile records stipulated observables. A complete created history would also have to account for production, preservation, interaction or destruction wherever the ontology makes these relevant. A total actual inventory may additionally include the original subjects and their uncreated proper exercises. Adding the latter to an inventory does not make them extra created products. A provenance relation is also not automatically another created entity. Equality of profiles therefore proves neither numerical identity of whole histories nor equality of their complete productive work. Conversely, merely giving the histories different source labels does not prove more created work. [R18-G094, §4][R18-G094]
+
+The strongest affirmative argument concerns that complete actual efficacy. It maintains that an independently original producer's adequate exercise should be effective through its own original resources; an added genuinely productive peer cannot be treated as doing nothing, and cannot silently diminish, redirect or complete what was being held fixed as the first producer's complete efficacy. If the peer makes a real additional contribution and the full account faithfully retains productive content, the comparison must either register further work or show that the first contribution was not already the alleged complete original provision. Fixed intrinsic willing or bodily movement alone is weaker than this fixed **contextually complete efficacy** premise. The latter needs substantive warrant; it cannot be manufactured by defining the output comparison to be strict. [R18-G094, §5][R18-G094]
+
+This preserves the source rationale in §9.2. The relevant discussions distinguish an agent's proper act from an externally supplied part and distinguish standing ability from actual execution. Their original-specific no-foreign-completion and pure-perfection arguments have more content than the bare assertion that an added helper increases a scalar. The source report's historical returns to *Majmūʿ al-fatāwā*, *Jāmiʿ al-masāʾil* and the perfection discussion retain their contextual roles and earlier overlap; unsuccessful PDF or screenshot access in that inquiry is not represented as successful visual collation here. [R18-G094, §§1, 5][R18-G094]
+
+The strongest surviving reply grants distinct intrinsic powers and acts while proposing a primitive joint manifestation with the same stipulated work as an available solo history. It denies that every change of productive relation is receipt of a constitutive perfection. It does **not** thereby make both subjects exclusive providers of the entire actual origin. The rival still needs a defensible interpretation of real production, appropriate complete efficacy, the wisdom of its particular undertaking and the adequacy of its full history. The polynomial establishes none of these. It refutes the shortcut from local sensitivity to finite augmentation, while leaving the independently motivated original-efficacy argument and its live classification dispute intact. [R18-G094, §§6–7][R18-G094]
+
+
+### 9.6 A reason for particular means without a unique best outcome
+
+A source of actual determination is not automatically a reason for preferring one outcome, and a reason for a particular means need not presuppose a unique value-maximizing outcome. The finite coordinated-means example makes these distinctions exact. It supplies a conditional instrumental rationale while leaving the eligibility of the proposed original subjects and ends to the substantive arguments above. [R18-G098, §§2–4][R18-G098]
+
+Let the active settings be $`\mathbb Z_3`$, with addition and multiplication modulo three. When both agents act, stipulate
+
+```math
+F(a,b)=2(a+b).
+```
+
+When one is idle, stipulate $`F(a,\mathrm{idle})=a`$ and $`F(\mathrm{idle},b)=b`$. Each agent retains every solo target in its standing repertoire. For a fixed joint target $`q`$, successful coactive plans are exactly
+
+```math
+(a,b)=(q+t,q-t),\qquad t\in\mathbb Z_3.
+```
+
+Indeed these pairs give $`F=2(2q)=q`$, and $`F(a,b)=q`$ conversely gives $`a+b=2q`$, hence the same parametrization with $`t=a-q`$. There are three successful plans; mere success does not select one. [R18-G098, §2][R18-G098]
+
+Now suppose the **complete practical context** is fixed by exchanging the agents: they have equivalent roles for this undertaking, the supplied reasons distinguish neither side, and the planning norm requires a plan invariant under that exchange. Invariance gives $`a=b`$. Then $`F(a,a)=4a=a`$, so the successful invariant plan is uniquely
+
+```math
+(a,b)=(q,q).
+```
+
+This proves the conditional symmetric-means result. Both agents can implement their own $`q`$-setting from the supplied target and norm, without receiving the peer's actual exercise as an input to the local policy. No claim that $`q`$ is the uniquely best ultimate end was used. The rationale is avoidance of an unsupported differentiated assignment under the stipulated symmetric reasons. Equal powers alone would not establish those reasons: de re relations, actor-relative duties or other relevant circumstances can break the practical symmetry even when the standing repertoires match. [R18-G098, §§2–3][R18-G098]
+
+The symmetry must preserve the entire declared operation. The map
+
+```math
+(a,b)\longmapsto(a+c,b-c),\qquad c\ne0,
+```
+
+preserves the coactive sum but changes solo outputs: the first agent's solo $`a`$ becomes $`a+c`$ and the second's solo $`b`$ becomes $`b-c`$. Across their three settings each, all six comparisons change. Treating this free cycle as a symmetry of the full law would therefore manufacture a selection obstruction by dropping the idle cases. The source's historical finite enumeration reports 216 setting/output permutation triples, 18 preserving the coactive table and six preserving the full table; with outputs fixed de re, the corresponding counts are three and one. These bounded historical counts corroborate the distinction, while the displayed solo calculation already shows why the proposed nontrivial shift is not a faithful symmetry. [R18-G098, §§2, 5][R18-G098]
+
+The general selector principle is already developed in [Objective Normativity, §8.10](objective-normativity-and-corrective-cognition.md#810-structural-covariance-content-recoding-and-semantic-identification): an equivariant choice must be fixed by the stabilizer of its complete context. Its finite converse chooses a stabilizer-fixed candidate at an orbit representative and transports it; two transports to the same context differ by an element of that stabilizer, so the result is well-defined. Here the diagonal candidate supplies precisely the required fixed point. A multiplicity of successful plans is thus not itself an impossibility result. The relevant action, admissible candidates, full reasons and equivariance requirement have to be identified first. [R18-G098, §2][R18-G098]
+
+Particularizing data can instead select every successful plan. Add $`d=a-b`$. Solving the sum and difference equations in $`\mathbb Z_3`$ gives
+
+```math
+a=q+2d,\qquad b=q-2d.
+```
+
+For fixed $`q`$, the value $`d`$ is in bijection with the three successful plans. Exchanging agents sends it to $`-d`$, with only $`d=0`$ fixed. The extra coordinate therefore carries selection information; it does not, merely by being recorded, supply a fitting reason for its value. Copying a chosen plan into a determination record explains how that record fixes execution, not why the plan is justified under the unchanged reasons. [R18-G098, §3][R18-G098]
+
+This can be stated without confusing two success contracts. A plan family descends to a coarser context record exactly when it is constant on that record's fibres, by the established factorization criterion. If the task requires the declared role-specific $`d`$, a $`q`$-only record generally cannot recover the plan: different $`d`$ values share $`q`$ but require different actions. If the task requires only achieving $`q`$, the $`q`$-only diagonal policy works for every context. At $`q=0`$, for example, both $`(0,0)`$ and $`(1,2)`$ achieve the endpoint, but only the former matches the $`d=0`$ plan requirement. Endpoint success is weaker than satisfying the complete reason or assignment certificate. [R18-G098, §§2–3][R18-G098]
+
+The historical source comparison preserves parallel distinctions in the account of willing. Its *Majmūʿ* reading separates antecedent capacity from a contemporaneous determining condition, and cosmic willing from command, love or approval. Real means remain causes within the complete decree; deleting those means while holding the entire determination fixed is not automatically an admissible alternative. Wise succession and an act's fitting occasion also differ from deficiency in standing power. An explanation through a particular actual willing need not be an external efficient donor or a unique numerical optimizer; nevertheless, the generic assertion that there is willing does not yet explain why this particular willing obtains. [R18-G098, §1][R18-G098]
+
+The equal-bread or equal-path discussion requires an attribution qualification. In the examined *Bayān* context, the reasonless-selection reply is reported as al-Rāzī's position within a criticized analogy; it cannot simply be quoted as the responding author's final account. The response affirms an unreceived particular willing while retaining the question of particular determination. Two suspect electronic strings were quarantined in the source inquiry rather than silently emended or treated as verified print readings. No new primary collation is claimed here. The source's wisdom argument also distinguishes our ignorance of a detailed reason from proof that no reason exists; conversely, a successful mathematical adapter does not establish the actual wise reason it represents. [R18-G098, §1][R18-G098]
+
+The example accordingly earns a real but bounded credit for the concordant rival. It gives an instrumental rationale under symmetric complete reasons, without a unique ultimate optimizer or reciprocal efficient donation of the local choices. It does not establish that the proposed peer-valued undertaking is perfectly wise, explain every particular target and occasion, or change the actual coactive origin from joint support to individual entire provision. Varying a few declared occasions is not a model of a beginningless history. Holding standing resources fixed can leave particular determinations open; holding the complete actual determination fixed cannot be used to demand a different effect without changing the premise. These limits preserve both the conditional means argument and the stronger productive-efficacy question. [R18-G098, §§4–5][R18-G098]
+
+
+### 9.7 Necessary agreement and complete original efficacy
+
+Necessary agreement leaves two different questions: which exercises are possible together, and whose original resources actually provide an undertaking's complete productive basis. A correction to the first inference does not settle the second. The source comparison of Baillie and Hagen's power argument, Gordon's direct criticism and Amini's parallel critique isolates this distinction while retaining the affirmative original-efficacy appraisal. Their related historical ancestry also prevents treating these philosophical discussions as independent empirical convergence. [R18-G307, §§1, 4][R18-G307]
+
+Baillie and Hagen deliberately analyze non-normative power, allow nature-relative restrictions, and use maximality to exclude radically limited agents. Their criterion combines power for every individually possible achievement, unsurpassability and some effective power; it does not rule out equal power by definition. Their objections to necessary harmony concern another's determination restricting ability, possible divergence as a condition of personal distinctness, and complete productive sufficiency. These are distinct claims, followed by the nested-necessity argument and a further criticism of universal frustration. The source reports their express development of al-Ghazālī's position and discussion of Scotus and Ockham; Amini engages related antecedents. The stronger productive-perfection application below must therefore be argued at its own scope rather than silently inserted into the initial non-normative definition. [R18-G307, §1][R18-G307]
+
+Let $`F`$ mean that one agent brings about $`s`$, and $`H`$ that the other brings about an incompatible $`r`$, in the same respect and occasion. Use one metaphysical accessibility relation. Necessary nonconflict and separate attainability say
+
+```math
+\mathrm{NC}:\quad\Box\neg(F\land H),
+\qquad
+\mathrm{EA}:\quad\Diamond F\land\Diamond H.
+```
+
+These assertions are compatible: the successful alternatives need not have a common completion. As a purely propositional check, an S5 frame with two mutually accessible worlds, one satisfying only $`F`$ and the other only $`H`$, satisfies NC and EA at both worlds. This is a check of modal scope, not a model of omnipotent subjects or a metaphysical possibility certificate. The stronger premise used in the disputed modal step is
+
+```math
+\mathrm{STR}:\quad\Box(H\longrightarrow\Box\neg F).
+```
+
+**Conditional deduction.** STR and $`\Diamond H`$ yield $`\Diamond\Box\neg F`$: choose an accessible $`H`$-world and apply STR there. In S5 this implies $`\Box\neg F`$, contradicting $`\Diamond F`$. In equivalence-frame semantics, the chosen world has the same accessible component as the initial world, so its universal absence of $`F`$ covers every alternative accessible initially. The deduction is valid on its stated premise. NC does not supply the extra inner necessity in STR; the two-world scope check also exhibits that failure. [R18-G307, §2][R18-G307]
+
+Four possible substitutions would change the argument. Necessitating the conditional $`H\to\neg F`$ gives NC, not STR. From actual $`H`$ and NC one gets actual $`\neg F`$, but necessitation cannot be applied while the contingent $`H`$ assumption remains undischarged. Necessary existence of the agent, or necessary agreement of agents, is not necessity of this particular determination $`H`$. Finally, one may hold $`H`$ fixed and restrict the inner alternatives to those preserving it; absence of $`F`$ on that restricted class can be true, but the inner operator is then different from the unrestricted outer metaphysical operator. The same-operator S5 inference cannot be transferred without another premise. [R18-G307, §2][R18-G307]
+
+A substantive power standard can motivate a stronger premise. An absolutely adequate original might be required to retain effective ability under independently fixed peer determinations, rather than possess only an antecedent capacity or a counterfactual ability whose exercise covaries with the peer. This is a robustness and eligibility claim, not another manipulation of NC. Likewise, ruling out one eligible achievement is not yet total impotence: that generalization needs contrary-target assumptions for every relevant act. Nonoccurrence of an act and productive achievement of its contrary are not automatically the same target. [R18-G307, §§2–3][R18-G307]
+
+Agent distinctness itself supplies neither unrestricted independent choice combinations nor possible disagreement. Two necessarily equivalent will-contents need not be one numerical act or one subject; ownership of proper acts and first-person reference remain distinct. A theory of personal independence may impose counterfactual divergence, but it must defend that requirement. The conservative centered construction of §12.1 is enough to reject an automatic identity inference from semantic agreement, while leaving the actual realization and perfection of the proposed subjects open. The incompatible-guarantees argument of §12.2 similarly retains its own common-completion premise. [R18-G307, §§3, 7][R18-G307]
+
+The productive question is stronger than mere concomitance. Distinguish: one willing necessarily accompanies the other; an intended effect is achieved through an agent's intentional activity whenever that willing occurs; and that agent originally provides the **entire actual productive basis** of the undertaking, including indispensable contributions. The first does not prove that the peer efficiently produces one's willing. The second is stronger than an accidental matching endpoint but does not entail the third. Conversely, an indispensable peer contribution is not removed from the undertaking's origin merely by showing that no intrinsic item was donated to the first agent. [R18-G307, §4][R18-G307]
+
+The strongest affirmative application can be written with three explicit premises:
+
+1. A perfected original's relevant actual undertaking must be adequately effective through its own original resources, without an independently original supplier of indispensable productive efficacy.
+2. This undertaking's actual productive basis includes the peer's proper unborrowed exercise, which the first agent does not originally supply.
+3. The peer's role is genuinely productive, rather than only an object known or a proposition entailed by the undertaking.
+
+The second and third premises exhibit precisely the foreign original contribution excluded by the first. Hence the first agent's undertaking fails the stated requirement, without any contrary willing or disagreement; the symmetric argument applies to the peer. This conditional reasoning reaches the retained primitive-joint-support proposal at its strongest actual interpretation: that proposal grants both original roots, rather than making each individually the whole source. Its standing solo constructors can produce the same endpoint in another history, but that other history does not supply the missing origin of this actual one. [R18-G307, §4][R18-G307]
+
+The first premise has independent motivation in the inherited account of complete effective agency. An actual receiving mode includes its indispensable productive efficacy in its explanatory target. Leaving an independently original contribution unexplained by this source makes the source's provision incomplete at that scope. The perfection comparison also distinguishes wholly adequate agency from essentially assisted agency and does not require an identity-preserving upgrade of the proposed subject. These are substantive reasons for the requirement, not merely a definition selected to imply uniqueness. They carry the affirmative weight already stated in §§9.2–9.3. [R18-G307, §4][R18-G307]
+
+The surviving reply disputes the scope of **appropriate complete efficacy**. It accepts that the joint product has two actual original roots but proposes that each already adequate activity manifests nonexclusively in that effect, without the participant's own proper perfection being supplied by the other. The affirmative answers that this achieved agency remains productively incomplete at the original respect in question. Neither bare covariance of the wills nor the finite coordinated-means result resolves that classification. The rival owes an account of its appropriate efficacy and the eligibility of its peer-valued end; the affirmative owes the application of its productive-perfection norm to that undertaking. The modal-scope criticism does not refute a separately warranted three-premise productive argument. [R18-G307, §4][R18-G307]
+
+Moral agreement also falls short of complete particular concordance. Agents can agree on every moral truth while permissible means, timing, equal goods or actor-relative duties leave several action profiles. Failure of moral agreement to entail complete concordance does not, conversely, prove that conflict is possible. A richer reason structure can require compatible plans. Section 9.6 gives one such conditional means rationale without a unique value-maximizing end; it does not establish the requisite symmetry or ultimate wisdom in every context. Necessary wise nonselection need not remove antecedent capacity, and common rational content need not be a third efficient controller. Yet a complete account of the particular ends, occasions and actual willings remains a further explanatory task. Not possessing that account is neither a proof of arbitrary willing nor a warrant to declare the account complete. [R18-G307, §5][R18-G307]
+
+The literature comparison has a precise attribution boundary. The source reports Gordon's 2024 note 17 as a direct response to Baillie and Hagen: had the first agent willed the alternative, the peer could have harmoniously done so too. This challenges the inference from actual harmonious nonexercise to inability under a counterfactual conception of power. It does not establish that two subjects satisfy every adequate conception of omnipotence. Amini's 2009 paper is a parallel critique of related older arguments and does not discuss Baillie and Hagen. His at-most-one/existence distinction is sound, but universal or self-involving quantification alone is not an incoherence proof. A paradox needs the particular closure or incompatible-success requirements that generate it. If a warranted uniqueness argument makes joint omnipotence impossible, inability to realize that impossibility does not refute a possibility-qualified account of power without adopting the stronger unrestricted conception at issue. Ordinary mutual frustration also does not certify maximal efficacy, and it is not the retained rival's account of successful concordant activity. [R18-G307, §§1, 6][R18-G307]
+
+The direct criticism thus succeeds at a local ability inference while leaving robust power and individually adequate actual provision as substantive responses. Its source acquisition used one published-format mirror for Baillie and Hagen, without a verified byte identity to the publisher's full file; the other reported readings have their own stated scopes. This exposition incorporates that public source comparison, not a new acquisition of the three papers. The routes of §12 remain distinct: universal mastery needs its universal authority premise; complete actual origin needs the proper-exercise and adequacy premises; incompatible guarantees need common admissibility. If a genuine productive defect is correctly recognized and practical conformance is supplied, self-knowledge can mediate exclusion, but it still does not establish the defect norm. [R18-G307, §§1, 7–8][R18-G307]
+
 
 ## 10. From actual provision to a common connected source
 
@@ -1210,6 +1465,11 @@ The construction preserves factivity, complete semantic knowledge and introspect
 Consequently, a reduced two-source interpretation can retain truthful awareness of each proper act and of joint productive support. Neither agent must misidentify itself or claim sole provision. This demonstrates a limited semantic non-entailment. It does not establish that the enriched agents meet the complete original-perfection profile, or that their joint ontology is metaphysically possible. The existing positive common-source appraisal is not cancelled by this control. [Centered self-knowledge analysis, §§4, 7][u-center]
 
 Common reasons require a further distinction. Two policies can respond to the same fitting reason without one peer efficiently producing the other's will or a third efficient controller being introduced. Conversely, the shared reason does not automatically provide a complete explanation of why these particular agents instantiate those determinations. Shared reasons alone establish neither one numerical subject, a third original giver, nor reciprocal efficient donation. This preserves a genuine explanatory credit of the concordant proposal without certifying its entire original ontology or practical basing. [Centered self-knowledge analysis, §4][u-center]
+
+The earlier centered-knowledge edition called part of its interpretation action-guiding, but its conservative-enrichment proof supplies truthful centered semantic knowledge without an independent practical-basing relation. Its designation as an initial edition before the basing clarification therefore matters. The stronger statements in §§12.1 and 12.4 are retained: a policy can choose an owned act while a truthful self-description merely accompanies it, and making the description richer does not prove that the recognized reason guides the choice. The initial edition is evidence for the argument's development, not a reason to restore the stronger unsupported inference. [R18-G298, §§3–4][R18-G298]
+
+Its remaining positive arguments retain their exact homes above. The centered construction preserves the non-epistemic reduct and the outer domain of bearers; it cannot overwrite incompatible prior epistemic commitments or delete the peer by changing the quantifier domain. The three exclusion routes and recognition-conformance argument in §§12.2–12.3 each use the substantive additional premise already stated there. Truthfully knowing a proposition of whole adequacy would include that adequacy in the known content by factivity; ordinary truthful self-knowledge does not provide it. The initial report neither establishes a real intrinsic realization of complete cognition nor certifies the two-source ontology as fully perfect. These inherited arguments are not counted again as new results from receipt of their earlier edition. [R18-G298, §§1–7][R18-G298]
+
 
 ### 12.2 Three substantive routes to exclusion
 
@@ -2065,3 +2325,26 @@ The following exact source editions supply the arguments, recorded failures, rep
 [R68-S053]: https://api.github.com/repos/theislampill/orthemology/git/blobs/6a85c34e6da0990fd2dd1e1145a047b6a6329c8d
 [R68-S054]: https://api.github.com/repos/theislampill/orthemology/git/blobs/8122d0f1ed868f770a98b4d1807f00e77c92e1c4
 [R68-S055]: https://api.github.com/repos/theislampill/orthemology/git/blobs/d6d6d2eeb6a10c6771723db0fba50f7ed8c60cb1
+
+
+## Exact public sources for the additional discussion
+
+These links identify the received public bodies at their immutable original revision. Their historical review and prospective statuses remain source-relative; this exposition performs no new source-program or formal execution.
+
+- [Local response and finite productive augmentation][R18-G094]. source argument and counterexample. Git blob `e60fdcfe9dfde8578c9cf02ec271ab07ecfdc143`.
+- [Particular wise determination: reasons, means and willing][R18-G098]. conditional means argument with source limits. Git blob `e2f72e34e6838075830ca86dea59709cfba8f132`.
+- [Prospective comparison of existential completeness and selected occurrence][R18-G145]. prospective interface design without completion. Git blob `a51f0d6d96ed4c3cc85c5d1426989465196cb1bd`.
+- [Finite predicate-functor transport into Boolean tensors][R18-G273]. finite extensional transport with explicit hypotheses. Git blob `6bb2b13b32994328b207c064c91220f723bdd2ce`.
+- [Centered self-knowledge and sovereignty: initial edition before the basing clarification][R18-G298]. historical initial edition with prior covered proofs. Git blob `be1ca620f7ff567a83317fb03f79c6cfcedb10e0`.
+- [Collective grounding and the productive target: mapping test][R18-G300]. source relative grounding mapping. Git blob `2572305665efdc7994dd829b3eaf5b074025bd6d`.
+- [Qualitative grounding after The Bare Necessities][R18-G302]. philosophical source appraisal with bounded ancestry. Git blob `6ce35cc179df1e07e6215d6c7923e93ce9071fbf`.
+- [Necessary concordance, power and complete original efficacy][R18-G307]. modal and productive argument discrimination. Git blob `33b3b39bde16f267eb2c78701f1d455d82a9d12b`.
+
+[R18-G094]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/nonabsorption/REPORT.md
+[R18-G098]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/wise-determination/REPORT.md
+[R18-G145]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/PROSPECTIVE_TEST.md
+[R18-G273]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/qualitative-tensor-transport/RESULT.md
+[R18-G298]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/de-se-sovereignty-review/reviewed_RESULT.initial.md
+[R18-G300]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-grounding-source/MAPPING_TEST.md
+[R18-G302]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-grounding-source/REPORT.md
+[R18-G307]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP14/t20-next-frontier-20261008/necessary-concordance-power/RESULT.md
