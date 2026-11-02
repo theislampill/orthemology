@@ -564,16 +564,23 @@ class ContinuationCopyTests(unittest.TestCase):
         (self.root/self.original).write_bytes(b'X'*len(self.body));self.git('add',self.original);self.absent()
         self.assertTrue(gate.check_corpus_currentness(self.root,self.base))
 
-    def test_frozen_preservation_keeps_rows_and_rejects_extra_members(self):
+    def preservation_fixture(self, *, git_required=True):
         gate=self.owner('validate_v5_successors');inventory=json.loads((self.root/self.preservation).read_bytes())
         metadata={'path':self.legacy_map,'sha256':hashlib.sha256((self.root/self.legacy_map).read_bytes()).hexdigest()}
         bound={'schema':'orthemology-v5-baseline-binding-v1','base_commit':inventory['base_commit'],
             'base_tree':inventory['base_tree'],'preservation_sha256':hashlib.sha256((self.root/self.preservation).read_bytes()).hexdigest(),
             'legacy_registry':metadata,'legacy_overlay':metadata}
-        anchor=dict(bound,git_required=True);anchor.pop('schema')
+        anchor=dict(bound,git_required=git_required);anchor.pop('schema')
         bundle={'baseline_binding':bound,'preservation':inventory,'registry':{
-            'records':{'PRESERVATION':{'sha256':bound['preservation_sha256']}},
+            'records':{'PRESERVATION':{'path':self.preservation,'sha256':bound['preservation_sha256']}},
             'baseline_commit':bound['base_commit'],'baseline_tree':bound['base_tree']}}
+        return gate,bundle,anchor
+
+    def test_frozen_preservation_keeps_rows_and_rejects_extra_members(self):
+        # This explicit programmatic branch checks live current-copy availability
+        # and namespace membership. The pinned-history branch is tested below.
+        gate,bundle,anchor=self.preservation_fixture(git_required=False)
+        inventory=bundle['preservation']
         before=deepcopy(bundle);self.absent()
         try:
             preserved=gate._preservation(bundle,self.root,anchor)
@@ -583,6 +590,51 @@ class ContinuationCopyTests(unittest.TestCase):
         self.assertEqual(bundle,before)
         (self.root/AREA/'source-store/extra.lean').write_bytes(b'extra')
         with self.assertRaises(ValueError):gate._preservation(bundle,self.root,anchor)
+
+    def test_pinned_preservation_history_requires_exact_owner(self):
+        gate,bundle,anchor=self.preservation_fixture()
+        before=deepcopy(bundle);self.absent()
+        expected={row['path'] for row in bundle['preservation']['files']}
+        self.assertEqual(set(gate._preservation(bundle,self.root,anchor)),expected)
+        self.assertEqual(bundle,before)
+        # New live files do not rewrite or enlarge the pinned ancestor inventory.
+        (self.root/AREA/'source-store'/'later.lean').write_bytes(b'later inert current member')
+        self.assertEqual(set(gate._preservation(bundle,self.root,anchor)),expected)
+        original=bundle['registry']['records']['PRESERVATION']
+        for reference in ({'sha256':original['sha256']},
+                          dict(original,path=self.preservation+'.unadmitted'),
+                          dict(original,unadmitted=True)):
+            with self.subTest(reference=sorted(reference)):
+                changed=deepcopy(bundle);changed['registry']['records']['PRESERVATION']=reference
+                with self.assertRaisesRegex(ValueError,'Changed preservation inventory owner'):
+                    gate._preservation(changed,self.root,anchor)
+        changed=deepcopy(bundle);changed['preservation']['files'].pop()
+        with self.assertRaisesRegex(ValueError,'In-memory preservation inventory differs'):
+            gate._preservation(changed,self.root,anchor)
+        path=self.root/self.preservation;path.write_bytes(path.read_bytes()+b' ')
+        with self.assertRaisesRegex(ValueError,'Changed pinned preservation inventory bytes'):
+            gate._preservation(bundle,self.root,anchor)
+
+    def test_pinned_preservation_history_rejects_changed_inventory_index(self):
+        gate,bundle,anchor=self.preservation_fixture();self.absent()
+        self.git('rm','--cached','-q','--',self.preservation)
+        with self.assertRaisesRegex(ValueError,'mixed or untracked native edition'):
+            gate._preservation(bundle,self.root,anchor)
+
+    def test_pinned_preservation_history_rejects_incomplete_native_inventory(self):
+        gate,bundle,anchor=self.preservation_fixture();self.absent()
+        # Rebind only the artificial owner so native tree completeness, rather
+        # than an earlier owner digest check, rejects the missing original row.
+        inventory=bundle['preservation']
+        inventory['files']=[row for row in inventory['files'] if row['path']!=self.excluded_original]
+        put(self.root,self.preservation,inventory)
+        identity=hashlib.sha256((self.root/self.preservation).read_bytes()).hexdigest()
+        bundle['baseline_binding']['preservation_sha256']=identity
+        bundle['registry']['records']['PRESERVATION']['sha256']=identity
+        anchor['preservation_sha256']=identity
+        self.git('add','--',self.preservation)
+        with self.assertRaisesRegex(ValueError,'does not match pinned Git objects'):
+            gate._preservation(bundle,self.root,anchor)
 
     def test_immutable_reference_resolves_only_exact_current_copy(self):
         gate=self.owner('validate_internal_references');self.absent()
