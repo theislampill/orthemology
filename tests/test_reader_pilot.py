@@ -9453,6 +9453,24 @@ class Digest176ReaderContractTests(unittest.TestCase):
         cls.namespace = {'Path': Path}
         exec(compile(ast.Module(body=nodes, type_ignores=[]),
                      'reader-digest176-operational-interface', 'exec'), cls.namespace)
+        # Preserve the actual finite status selector in this metadata-only
+        # fixture. An unrelated status absence qualifier still must not run.
+        resolver = (ROOT / 'scripts/resolve_t20_v6_source.py').read_text()
+        status_functions = {'digest', 'status_record_candidate'}
+        status_constants = {'STATUS_RECORD_PATH_HASHES', 'STATUS_RECORD_OWNERS'}
+        status_nodes, found = [], set()
+        for node in ast.parse(resolver).body:
+            if isinstance(node, ast.FunctionDef) and node.name in status_functions:
+                status_nodes.append(node); found.add(node.name)
+            elif isinstance(node, ast.Assign) and len(node.targets) == 1:
+                target = node.targets[0]
+                if isinstance(target, ast.Name) and target.id in status_constants:
+                    status_nodes.append(node); found.add(target.id)
+        if found != status_functions | status_constants:
+            raise AssertionError('exact finite status selector population differs')
+        cls.namespace['hashlib'] = hashlib
+        exec(compile(ast.Module(body=status_nodes, type_ignores=[]),
+                     'reader-status-selector-interface', 'exec'), cls.namespace)
 
     def setUp(self):
         import types
@@ -9607,7 +9625,8 @@ class Digest176ReaderContractTests(unittest.TestCase):
                      'pmr007_rounds_formalization_navigation', 'continuation_duplicate_paths',
                      'successor_input_absences', 'successor_calculus_map_absences',
                      'generated_fixture_absences', 'binding_record_absences',
-                     'administrative_record_absences', 'administrative_guide_source_bytes'):
+                     'administrative_record_absences', 'administrative_guide_source_bytes',
+                     'status_record_absences'):
             ns[name] = unexpected
         ns['binding_record_candidate'] = lambda path: path.startswith('synthetic-binding/')
         body = ''.join(status + '\0' + path + '\0' for status, path in entries).encode()

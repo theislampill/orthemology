@@ -6,6 +6,9 @@ import sys
 import tempfile
 import unittest
 import ast
+import collections
+import io
+from pathlib import Path, PurePosixPath
 import os
 import re
 import shutil
@@ -3700,7 +3703,8 @@ class FormalCurrentCompositionControls(unittest.TestCase):
             elif source_constants and isinstance(node, ast.Assign) and any(
                     isinstance(target, ast.Name) and (target.id.startswith(
                         ('FORMAL_', 'CONTINUATION_FORMAL_', 'CHECKPOINT_', 'BINDING_RECORD_'))
-                        or target.id == 'CONTINUATION_COPY_ROOT') for target in node.targets):
+                        or target.id in {'CONTINUATION_COPY_ROOT', 'STATUS_RECORD_PATH_HASHES', 'STATUS_RECORD_OWNERS'})
+                    for target in node.targets):
                 nodes.append(node)
         found = {node.name for node in nodes if isinstance(node, ast.FunctionDef)}
         if found != set(functions):
@@ -3718,7 +3722,8 @@ class FormalCurrentCompositionControls(unittest.TestCase):
         self.source = self._module('resolve_t20_v6_source.py', {
             'digest', '_formal_tuple_binding', '_formal_copy_catalog', '_formal_row_digest',
             '_formal_public_source_bytes', '_continuation_formal_bound_bytes', 'source_bytes',
-            'binding_record_candidate', 'is_binding_record'}, source_constants=True)
+            'binding_record_candidate', 'is_binding_record',
+            'status_record_candidate'}, source_constants=True)
         self.source.DIGEST_RECORD_PATHS = frozenset()
         self.source.SUCCESSOR_FIXTURE_PATH = 'synthetic-unused-fixture-coordinate'
         self.source.SUCCESSOR_INPUT_PATHS = frozenset()
@@ -3838,7 +3843,8 @@ class FormalCurrentCompositionControls(unittest.TestCase):
         for name in ('pmr007_deep_duplicate_paths', 'pmr007_rounds_duplicate_paths',
                      'checkpoint_duplicate_paths', 'checkpoint_record_duplicate_paths',
                      'checkpoint_package_duplicate_paths', 'checkpoint_code_duplicate_paths',
-                     'digest_record_absences', 'mediator_guide_source_bytes'):
+                     'digest_record_absences', 'mediator_guide_source_bytes',
+                     'status_record_absences'):
             namespace[name] = unrelated
         return getattr(module, function), namespace
 
@@ -3908,5 +3914,1023 @@ class FormalCurrentCompositionControls(unittest.TestCase):
                     getter.return_value = b'wrong-returned-body'
                     with self.assertRaisesRegex(ValueError, 'Source bytes/hash changed'):
                         module.public_bytes('unused-root', row)
+class _StatusMemory:
+    """Wholly in-memory files/index/native responses; no external resources."""
+    ROOT = '/status-interface-fixture'
+
+    def __init__(self):
+        self.entries = {}
+        self.objects = {}
+        self.object_types = {}
+        self.index = {}
+        self.tree = {}
+        self.events = []
+        self.fd_paths = {}
+        self.on_event = None
+        self.next_inode = 1
+        self.put('/', None)
+        self.put(self.ROOT, None)
+        owner = self
+
+        class MemoryPath:
+            def __init__(self, value):
+                self.value = str(value)
+            def __str__(self):
+                return self.value
+            def __fspath__(self):
+                return self.value
+            def __truediv__(self, part):
+                return type(self)(str(PurePosixPath(self.value) / str(part)))
+            def is_absolute(self):
+                return self.value.startswith('/')
+            @property
+            def parents(self):
+                return tuple(type(self)(str(p)) for p in PurePosixPath(self.value).parents)
+            @classmethod
+            def cwd(cls):
+                return cls(owner.ROOT)
+            def lstat(self):
+                owner.event(('lstat', self.value))
+                if self.value not in owner.entries:
+                    raise FileNotFoundError(self.value)
+                entry = owner.entries[self.value]
+                return types.SimpleNamespace(st_dev=1, st_ino=entry['inode'], st_mode=entry['mode'],
+                    st_nlink=1, st_size=len(entry['body']), st_mtime_ns=entry['stamp'],
+                    st_ctime_ns=entry['stamp'])
+            def stat(self):
+                return self.lstat()
+            def is_symlink(self):
+                try:
+                    return stat.S_ISLNK(self.lstat().st_mode)
+                except FileNotFoundError:
+                    return False
+            def is_dir(self):
+                try:
+                    return stat.S_ISDIR(self.lstat().st_mode)
+                except FileNotFoundError:
+                    return False
+            def read_bytes(self):
+                owner.event(('read', self.value))
+                if self.value not in owner.entries:
+                    raise FileNotFoundError(self.value)
+                return owner.entries[self.value]['body']
+
+        self.Path = MemoryPath
+        self.root = MemoryPath(self.ROOT)
+        self.pathlib = types.SimpleNamespace(Path=MemoryPath)
+        self.os = types.SimpleNamespace(
+            O_RDONLY=os.O_RDONLY, O_NOFOLLOW=os.O_NOFOLLOW, O_NONBLOCK=os.O_NONBLOCK,
+            O_NOATIME=getattr(os, 'O_NOATIME', 0), open=self.open, fdopen=self.fdopen,
+            fstat=self.fstat, path=types.SimpleNamespace(lexists=lambda p: str(p) in self.entries))
+
+    def event(self, event):
+        self.events.append(event)
+        if self.on_event is not None:
+            self.on_event(event)
+
+    @staticmethod
+    def blob(body, kind='blob'):
+        return hashlib.sha1(kind.encode() + b' ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+
+    def put(self, path, body, mode=None):
+        name = str(path)
+        for parent in reversed(PurePosixPath(name).parents):
+            if str(parent) not in self.entries:
+                self.put(str(parent), None)
+        self.entries[name] = {'body': b'' if body is None else body,
+                             'mode': (stat.S_IFDIR | 0o755 if body is None else stat.S_IFREG | 0o644)
+                                     if mode is None else mode,
+                             'inode': self.next_inode, 'stamp': self.next_inode}
+        self.next_inode += 1
+
+    def remove(self, relative):
+        self.entries.pop(self.ROOT + '/' + relative, None)
+
+    def set_file(self, relative, body, mode=None):
+        self.put(self.ROOT + '/' + relative, body, mode)
+
+    def add_object(self, body, kind='blob'):
+        oid = self.blob(body, kind)
+        self.objects[oid] = body
+        self.object_types[oid] = kind
+        return oid
+
+    def open(self, path, flags):
+        name = str(path)
+        self.event(('open', name, flags))
+        if name not in self.entries:
+            raise FileNotFoundError(name)
+        if stat.S_ISLNK(self.entries[name]['mode']):
+            raise OSError('in-memory O_NOFOLLOW refusal')
+        fd = len(self.fd_paths) + 100
+        self.fd_paths[fd] = name
+        return fd
+
+    def fstat(self, fd):
+        return self.Path(self.fd_paths[fd]).lstat()
+
+    def fdopen(self, fd, mode):
+        owner = self
+        path = self.fd_paths[fd]
+        class Stream(io.BytesIO):
+            def fileno(self):
+                return fd
+            def read(self, size=-1):
+                owner.event(('stream-read', path))
+                return super().read(size)
+        return Stream(self.entries[path]['body'])
+
+    def git(self, root, *args):
+        self.event(('git', *args))
+        if args[:1] == ('cat-file',) and len(args) == 3:
+            kind, oid = args[1:]
+            if oid not in self.objects or self.object_types.get(oid) != kind:
+                raise ValueError('declared synthetic native object missing or wrong type')
+            return self.objects[oid]
+        if args[:4] == ('ls-files', '--stage', '-z', '--'):
+            return b''.join((row + '\t' + path + '\0').encode()
+                            for path in args[4:] for row in self.index.get(path, []))
+        if args[:2] == ('ls-tree', '-z') and len(args) == 5 and args[3] == '--':
+            return self.tree.get(args[4], b'')
+        raise AssertionError('undeclared synthetic native request: ' + repr(args))
+
+class StatusSourceViewMigrationTests(unittest.TestCase):
+    STATUS = 'research/t20-live-20261009/checkpoints/CP01/COMPONENT_STATUS.json'
+    PROVIDER = ('research/t20-live-20261009/checkpoints/CP01/'
+                't20-next-frontier-20261008/identification-review/results/INDEPENDENT_METRICS.json')
+    ALIAS = ('research/t20-live-20261009/checkpoints/CP01/'
+             't20-next-frontier-20261008/identification-review/results/INDEPENDENT_METRICS_V2.json')
+    BODY = b'{"inert": "software interface fixture", "status": "ACTIVE"}\n'
+
+    def selected(self, filename, names, namespace):
+        root = globals().get('_STATUS_TEST_SOURCE_ROOT', Path(__file__).resolve().parents[1])
+        source = (root / 'scripts' / filename).read_text()
+        nodes = [node for node in ast.parse(source).body
+                 if (isinstance(node, (ast.FunctionDef, ast.ClassDef)) and node.name in names)
+                 or (isinstance(node, ast.Assign) and len(node.targets) == 1
+                     and isinstance(node.targets[0], ast.Name) and node.targets[0].id in names)]
+        exec(compile(ast.Module(body=nodes, type_ignores=[]), filename + ':operational-interface', 'exec'), namespace)
+        return namespace
+
+
+    def currentness(self, *, changes=None, refuse=False, qualified=None):
+        def unexpected(*args, **kwargs):
+            raise AssertionError('unrelated history or original-body qualifier invoked')
+        requests = []
+        namespace = {'Path': Path, 'REFACTOR_EDIT_PATHS': set(), 'HISTORICAL_PROSE': {},
+                     'FIXTURE_CONSUMER_ORIGINAL': {}, 'binding_record_candidate': lambda path: False,
+                     'status_record_candidate': lambda path: path == self.STATUS}
+        for name in ('CHECKPOINT_COPY_PATHS', 'CHECKPOINT_RECORD_COPY_PATHS',
+                     'CHECKPOINT_PACKAGE_COPY_PATHS', 'FORMAL_COPY_PATHS',
+                     'CHECKPOINT_CODE_COPY_PATHS', 'DIGEST_RECORD_PATHS', 'SUCCESSOR_INPUT_PATHS',
+                     'GENERATED_FIXTURE_PATHS', 'ADMIN_RECORD_PATHS', 'ADMIN_GUIDES',
+                     'CONTINUATION_OWNER_PATHS', 'TYPED_GUIDES', 'SUCCESSOR_CALCULUS_GUIDES'):
+            namespace[name] = set()
+        for name in ('PMR007_DEEP_PREFIX', 'PMR007_ROUNDS_PREFIX', 'PMR007_ROUNDS_FORMALIZATION',
+                     'CONTINUATION_COPY_ROOT', 'SUCCESSOR_INPUT_REGISTRY',
+                     'SUCCESSOR_CALCULUS_MAP', 'MEDIATOR_GUIDE'):
+            namespace[name] = 'unrelated/' + name
+        for name in ('pmr007_deep_duplicate_paths', 'pmr007_rounds_duplicate_paths',
+                     'checkpoint_duplicate_paths', 'checkpoint_record_duplicate_paths',
+                     'checkpoint_package_duplicate_paths', 'formal_duplicate_paths',
+                     'checkpoint_code_duplicate_paths', 'digest_record_absences',
+                     'pmr007_rounds_formalization_navigation', 'continuation_duplicate_paths',
+                     'successor_input_absences', 'successor_calculus_map_absences',
+                     'generated_fixture_absences', 'binding_record_absences',
+                     'administrative_record_absences', 'administrative_guide_source_bytes'):
+            namespace[name] = unexpected
+        def qualify(root, paths):
+            requests.append(set(paths))
+            if refuse:
+                raise ValueError('synthetic current role owner or original coordinate refusal')
+            return set(paths) if qualified is None else set(qualified)
+        namespace['status_record_absences'] = qualify
+        changes = [('D', self.STATUS)] if changes is None else changes
+        raw = b''.join((status + '\0' + path + '\0').encode() for status, path in changes)
+        namespace['readonly_git_diff'] = lambda root, args: subprocess.CompletedProcess(args, 0, raw)
+        self.selected('resolve_t20_v6_source.py', {'STATUS_RECORD_OWNERS'}, namespace)
+        self.selected('check_reader_pilot.py', {'check_corpus_currentness'}, namespace)
+        return namespace['check_corpus_currentness'](Path('in-memory-root'), 'synthetic-baseline'), requests
+
+    def provider(self, *, absent=True, selected=True, corrupt=False, refused=False):
+        body = self.BODY
+        blob = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+        binding = {'canonical': self.PROVIDER, 'blob': blob,
+                   'sha256': hashlib.sha256(body).hexdigest(), 'bytes': len(body)}
+        class MemoryPath:
+            def __init__(self, name='in-memory-root'):
+                self.name = str(name)
+            def __truediv__(self, value):
+                return type(self)(self.name + '/' + str(value))
+            def is_symlink(self):
+                return False
+            def is_dir(self):
+                return True
+            def __str__(self):
+                return self.name
+        def git(root, *args):
+            if args == ('ls-tree', '-z', 'synthetic-baseline', '--', self.ALIAS, self.PROVIDER):
+                return b''.join(('100644 blob ' + blob + '\t' + p + '\0').encode()
+                                for p in (self.ALIAS, self.PROVIDER))
+            if args == ('ls-files', '--stage', '-z', '--', self.ALIAS, self.PROVIDER):
+                return ('100644 ' + blob + ' 0\t' + self.PROVIDER + '\0').encode()
+            raise AssertionError('unexpected native command: ' + repr(args))
+        def current(root, path):
+            if absent:
+                raise FileNotFoundError('declared absent inert provider')
+            return body + (b'corruption' if corrupt else b'')
+        requests = []
+        def historical(root, path, identity=None, size=None):
+            requests.append((path, identity, size))
+            if refused:
+                raise ValueError('synthetic source-owner refusal')
+            return body
+        namespace = {'pathlib': types.SimpleNamespace(Path=lambda value: value),
+                     'CHECKPOINT_COPY_BASE': 'synthetic-baseline',
+                     '_continuation_object': lambda root, kind, oid: body if kind == 'blob' else b'inert commit',
+                     '_continuation_git': git, '_regular_current_bytes': current,
+                     'collections': collections, 'digest': lambda value: hashlib.sha256(value).hexdigest(),
+                     'os': types.SimpleNamespace(path=types.SimpleNamespace(lexists=lambda path: False)),
+                     'status_record_candidate': lambda path: selected and path == self.PROVIDER,
+                     'status_record_provider': lambda path: selected and path == self.PROVIDER,
+                     '_binding_record_present': lambda root, path: not absent,
+                     'status_record_bytes': historical}
+        self.selected('resolve_t20_v6_source.py', {'_checkpoint_bound_bytes'}, namespace)
+        return lambda: namespace['_checkpoint_bound_bytes'](MemoryPath(), self.ALIAS, binding), requests
+
+
+    def test_currentness_uses_only_qualified_actual_status_absence(self):
+        errors, requests = self.currentness()
+        self.assertEqual(errors, [])
+        self.assertEqual(requests, [{self.STATUS}, {self.STATUS}])
+
+    def test_selected_absent_provider_uses_exact_source_view(self):
+        read, requests = self.provider()
+        self.assertEqual(read(), self.BODY)
+        self.assertEqual(requests, [(self.PROVIDER, hashlib.sha256(self.BODY).hexdigest(), len(self.BODY))])
+
+    def runtime(self):
+        namespace = {'__name__': 'inert_status_runtime', 'json': json, 'hashlib': hashlib, 're': re,
+                     'stat': stat, 'digest': lambda body: hashlib.sha256(body).hexdigest()}
+        names = {
+            '_StatusJsonNumber', '_status_json_loads', '_status_integer', '_status_identity',
+            '_status_render', '_status_decode_body', 'status_record_candidate', 'status_record_provider',
+            '_status_record_owner_bytes', '_status_record_catalog', '_status_record_original_base',
+            '_status_record_bound_bytes', 'status_record_bytes', 'status_record_absences',
+            '_binding_record_root', '_binding_record_present', '_binding_record_current_state',
+            '_binding_record_role_context', '_administrative_bound_bytes',
+        }
+        self.selected('resolve_t20_v6_source.py', names, namespace)
+        self.assertEqual(names - set(namespace), set(), 'actual operational definition absent')
+        return namespace
+
+    def raw_source(self, namespace, raw, *, tree=None, values=None, style=None, edits=None, base=None):
+        value = namespace['_status_json_loads'](raw)
+        source = {'identity': {'git_blob': _StatusMemory.blob(raw),
+                              'sha256': hashlib.sha256(raw).hexdigest(), 'bytes': len(raw)},
+                  'aliases': [self.STATUS], 'root': tree or {'value_id': 'V000001'},
+                  'raw_byte_reconstruction': {
+                      'schema': 'typed-json-original-byte-recipe-v1',
+                      'style': style or {'indent': None, 'compact': False,
+                                        'ensure_ascii': False, 'trailing': '\n'},
+                      'base_render_sha256': hashlib.sha256(raw if base is None else base).hexdigest(),
+                      'format_edits': [] if edits is None else edits}}
+        return source, {'V000001': value} if values is None else values
+
+    def memory_runtime(self, *, present=False):
+        ns, memory = self.runtime(), _StatusMemory()
+        source, values = self.raw_source(ns, self.BODY)
+        # Fixture metadata are plain JSON and are reparsed by the actual strict
+        # loader. No original source data, owner row or catalogue is substituted.
+        document = {'schema': 'scientific-status-owner-v3',
+                    'sources': {'S0001': source}, 'values': values}
+        raw = json.dumps(document, ensure_ascii=False, separators=(',', ':')).encode()
+        index_path = 'research/t20-live-20261009/INDEX.json'
+        readme_path = 'research/t20-live-20261009/README.md'
+        role_path = 'docs/provenance/v5-successors/SOURCE_MAP.json'
+        owners = {}
+        for path, body in ((index_path, raw), (readme_path, b'# Inert current owner\n'),
+                           (role_path, b'{"sources": []}\n')):
+            oid = memory.add_object(body)
+            memory.set_file(path, body)
+            memory.index[path] = ['100644 ' + oid + ' 0']
+            pin = (oid, hashlib.sha256(body).hexdigest(), len(body))
+            if path != role_path:
+                owners[path] = pin
+            else:
+                role_pin = pin
+        blob = memory.add_object(self.BODY)
+        if present:
+            memory.set_file(self.STATUS, self.BODY)
+        memory.index[self.STATUS] = ['100644 ' + blob + ' 0']
+        memory.tree[self.STATUS] = ('100644 blob ' + blob + '\t' + self.STATUS + '\0').encode()
+        tree = '0123456789abcdef0123456789abcdef01234567'
+        commit = memory.add_object(('tree ' + tree + '\n\ninert synthetic commit\n').encode(), 'commit')
+        vector = (self.STATUS + '\0S0001\0' + blob + '\0' + hashlib.sha256(self.BODY).hexdigest()
+                  + '\0' + str(len(self.BODY)) + '\n').encode()
+        ns.update(pathlib=memory.pathlib, os=memory.os, _administrative_git=memory.git,
+                  STATUS_RECORD_INDEX=index_path, STATUS_RECORD_OWNERS=owners,
+                  STATUS_RECORD_PATH_HASHES={hashlib.sha256(self.STATUS.encode()).hexdigest()},
+                  STATUS_RECORD_PROVIDER_HASHES=set(), STATUS_RECORD_ALIAS_COUNT=1,
+                  STATUS_RECORD_SOURCE_COUNT=1, STATUS_RECORD_CLASS_SHA256=hashlib.sha256(vector).hexdigest(),
+                  STATUS_RECORD_BASE=commit, STATUS_RECORD_TREE=tree,
+                  BINDING_RECORD_ROLE_OWNERS={role_path: role_pin})
+        memory.status_blob, memory.owner_index, memory.role_path = blob, index_path, role_path
+        return ns, memory
+
+    def test_actual_getter_authenticates_native_owner_and_preserved_active_value(self):
+        ns, memory = self.memory_runtime()
+        self.assertEqual(ns['status_record_bytes'](memory.root, self.STATUS), self.BODY)
+        self.assertIn(('git', 'cat-file', 'commit', ns['STATUS_RECORD_BASE']), memory.events)
+        self.assertIn(('git', 'cat-file', 'blob', memory.status_blob), memory.events)
+        self.assertIn(('git', 'ls-tree', '-z', ns['STATUS_RECORD_BASE'], '--', self.STATUS), memory.events)
+        self.assertTrue(any(event[:2] == ('open', memory.ROOT + '/' + memory.role_path)
+                            for event in memory.events))
+        self.assertEqual(ns['_status_json_loads'](self.BODY)['status'], 'ACTIVE')
+
+    def test_getter_rejects_present_corruption_modes_and_lexical_aliases(self):
+        for mutation in ('bytes', 'executable', 'directory', 'symlink', 'ancestor-symlink', 'root-symlink'):
+            with self.subTest(mutation=mutation):
+                ns, memory = self.memory_runtime(present=True)
+                if mutation == 'bytes':
+                    memory.set_file(self.STATUS, self.BODY + b'corrupt')
+                elif mutation == 'executable':
+                    memory.set_file(self.STATUS, self.BODY, stat.S_IFREG | 0o755)
+                elif mutation == 'directory':
+                    memory.set_file(self.STATUS, None)
+                elif mutation == 'symlink':
+                    memory.set_file(self.STATUS, b'declared-target', stat.S_IFLNK | 0o777)
+                elif mutation == 'ancestor-symlink':
+                    memory.set_file('research/t20-live-20261009/checkpoints', b'target', stat.S_IFLNK | 0o777)
+                else:
+                    memory.put(memory.ROOT, b'target', stat.S_IFLNK | 0o777)
+                with self.assertRaises((ValueError, OSError)):
+                    ns['status_record_bytes'](memory.root, self.STATUS)
+
+    def test_getter_refuses_native_original_corruption_and_coordinate_changes(self):
+        for mutation in ('commit-bytes', 'commit-type', 'commit-missing', 'tree-coordinate',
+                         'blob-bytes', 'blob-type', 'blob-missing', 'mode', 'path-missing', 'path-blob'):
+            with self.subTest(mutation=mutation):
+                ns, memory = self.memory_runtime()
+                if mutation == 'commit-bytes':
+                    memory.objects[ns['STATUS_RECORD_BASE']] += b'changed'
+                elif mutation == 'commit-type':
+                    memory.object_types[ns['STATUS_RECORD_BASE']] = 'blob'
+                elif mutation == 'commit-missing':
+                    del memory.objects[ns['STATUS_RECORD_BASE']]
+                elif mutation == 'tree-coordinate':
+                    ns['STATUS_RECORD_TREE'] = 'f' * 40
+                elif mutation == 'blob-bytes':
+                    memory.objects[memory.status_blob] += b'changed'
+                elif mutation == 'blob-type':
+                    memory.object_types[memory.status_blob] = 'tree'
+                elif mutation == 'blob-missing':
+                    del memory.objects[memory.status_blob]
+                elif mutation == 'mode':
+                    memory.tree[self.STATUS] = memory.tree[self.STATUS].replace(b'100644', b'100755')
+                elif mutation == 'path-missing':
+                    del memory.tree[self.STATUS]
+                else:
+                    memory.tree[self.STATUS] = memory.tree[self.STATUS].replace(memory.status_blob.encode(), b'f' * 40)
+                with self.assertRaises(ValueError):
+                    ns['status_record_bytes'](memory.root, self.STATUS)
+
+    def test_getter_refuses_missing_changed_or_unindexed_current_owners(self):
+        for mutation in ('owner-absent', 'owner-corrupt', 'owner-unindexed', 'owner-symlink',
+                         'role-absent', 'role-corrupt', 'role-unindexed', 'source-index-conflict'):
+            with self.subTest(mutation=mutation):
+                ns, memory = self.memory_runtime()
+                if mutation == 'owner-absent':
+                    memory.remove(memory.owner_index)
+                elif mutation == 'owner-corrupt':
+                    memory.set_file(memory.owner_index, b'{}')
+                elif mutation == 'owner-unindexed':
+                    memory.index[memory.owner_index] = []
+                elif mutation == 'owner-symlink':
+                    memory.set_file(memory.owner_index, b'target', stat.S_IFLNK | 0o777)
+                elif mutation == 'role-absent':
+                    memory.remove(memory.role_path)
+                elif mutation == 'role-corrupt':
+                    memory.set_file(memory.role_path, b'{}')
+                elif mutation == 'role-unindexed':
+                    memory.index[memory.role_path] = []
+                else:
+                    memory.index[self.STATUS] = ['100644 ' + memory.status_blob + ' 1']
+                with self.assertRaises((ValueError, OSError)):
+                    ns['status_record_bytes'](memory.root, self.STATUS)
+
+    def test_getter_refuses_source_owner_and_role_changes_during_original_lookup(self):
+        for mutation in ('present-to-absent', 'absent-to-present', 'owner-disappears', 'role-disappears'):
+            with self.subTest(mutation=mutation):
+                ns, memory = self.memory_runtime(present=mutation == 'present-to-absent')
+                def race(event):
+                    if event == ('git', 'cat-file', 'blob', memory.status_blob):
+                        memory.on_event = None
+                        if mutation == 'present-to-absent':
+                            memory.remove(self.STATUS)
+                        elif mutation == 'absent-to-present':
+                            memory.set_file(self.STATUS, self.BODY + b'corrupt')
+                        elif mutation == 'owner-disappears':
+                            memory.remove(memory.owner_index)
+                        else:
+                            memory.remove(memory.role_path)
+                memory.on_event = race
+                with self.assertRaises((ValueError, OSError)):
+                    ns['status_record_bytes'](memory.root, self.STATUS)
+                self.assertIsNone(memory.on_event, 'the intended race discriminator must execute')
+
+    def test_actual_absence_qualifier_rejects_unrelated_and_present_inputs(self):
+        ns, memory = self.memory_runtime()
+        memory.index[self.STATUS] = []
+        self.assertEqual(ns['status_record_absences'](memory.root, {self.STATUS}), {self.STATUS})
+        for paths in (set(), {self.STATUS, 'research/t20-live-20261009/unselected.json'},
+                      {'experiments/current-required-source.json'}):
+            with self.subTest(paths=sorted(paths)):
+                with self.assertRaises(ValueError):
+                    ns['status_record_absences'](memory.root, paths)
+        memory.set_file(self.STATUS, self.BODY)
+        with self.assertRaisesRegex(ValueError, 'present'):
+            ns['status_record_absences'](memory.root, {self.STATUS})
+
+    def test_exact_request_identity_and_finite_catalogue_are_enforced(self):
+        ns, memory = self.memory_runtime(present=True)
+        self.assertEqual(ns['status_record_bytes'](memory.root, self.STATUS,
+                         hashlib.sha256(self.BODY).hexdigest(), len(self.BODY)), self.BODY)
+        for identity, size in (('0' * 64, len(self.BODY)), (None, len(self.BODY) + 1),
+                               (None, True), (123, None)):
+            with self.subTest(identity=identity, size=size):
+                with self.assertRaises(ValueError):
+                    ns['status_record_bytes'](memory.root, self.STATUS, identity, size)
+        ns['STATUS_RECORD_CLASS_SHA256'] = '0' * 64
+        with self.assertRaisesRegex(ValueError, 'finite'):
+            ns['status_record_bytes'](memory.root, self.STATUS)
+
+    def test_provider_migration_preserves_present_and_unselected_refusals(self):
+        read, requests = self.provider(absent=False)
+        self.assertEqual(read(), self.BODY)
+        self.assertEqual(requests, [])
+        for options in ({'selected': False}, {'absent': False, 'corrupt': True}, {'refused': True}):
+            with self.subTest(options=options):
+                read, requests = self.provider(**options)
+                with self.assertRaises(ValueError):
+                    read()
+
+
+    def test_currentness_preserves_modification_unrelated_and_refusal_failures(self):
+        for changes in ([('M', self.STATUS)], [('D', 'research/t20-live-20261009/unselected.json')]):
+            with self.subTest(changes=changes):
+                errors, requests = self.currentness(changes=changes)
+                self.assertTrue(errors)
+                self.assertEqual(requests, [])
+        errors, requests = self.currentness(refuse=True)
+        self.assertTrue(any('synthetic current role owner' in error for error in errors))
+        self.assertTrue(any('requires source-baseline' in error for error in errors))
+        errors, requests = self.currentness(qualified=set())
+        self.assertTrue(any('requires source-baseline' in error for error in errors))
+
+    def test_decoder_preserves_number_lexemes_order_and_literal_value_id_data(self):
+        ns = self.runtime()
+        raw = b'{"z": [1.2300e+04, -0, 9007199254740993], "value_id": "literal-data"}\n'
+        source, values = self.raw_source(ns, raw)
+        self.assertEqual(ns['_status_decode_body'](source, values), raw)
+        self.assertEqual(ns['_status_json_loads'](raw)['z'][0], '1.2300e+04')
+        self.assertIsInstance(ns['_status_json_loads'](raw)['z'][0], ns['_StatusJsonNumber'])
+        source['root'] = {'object': [['a', {'value_id': 'V000002'}],
+                                     ['b', {'array': [{'value_id': 'V000003'}]}]]}
+        expected = b'{"a": "1", "b": [1]}\n'
+        source['identity'] = {'bytes': len(expected), 'sha256': hashlib.sha256(expected).hexdigest(),
+                              'git_blob': _StatusMemory.blob(expected)}
+        source['raw_byte_reconstruction']['base_render_sha256'] = hashlib.sha256(expected).hexdigest()
+        self.assertEqual(ns['_status_decode_body'](source,
+                         {'V000002': '1', 'V000003': ns['_StatusJsonNumber']('1')}), expected)
+
+    def test_decoder_uses_one_base_offset_vector_and_equivalent_string_escapes(self):
+        ns = self.runtime()
+        base = '{"x": "é", "n": 1.00}\n'.encode()
+        original = b'{ "x": "\\u00e9", "n": 1.00}\r\n'
+        token_start, token_end = base.index('"é"'.encode()), base.index('"é"'.encode()) + len('"é"'.encode())
+        edits = [[1, 1, ' '], [token_start, token_end, '"\\u00e9"'], [len(base)-1, len(base), '\r\n']]
+        source, values = self.raw_source(ns, original, base=base, edits=edits)
+        self.assertEqual(ns['_status_decode_body'](source, values), original)
+
+    def test_decoder_preserves_indented_unicode_and_empty_container_styles(self):
+        ns = self.runtime()
+        value = {'name': 'é', 'empty': [], 'nested': {'empty': {}, 'truth': True}}
+        for indent, ascii_only, compact in ((1, False, False), (2, True, False),
+                                             (4, False, False), (None, False, True)):
+            with self.subTest(indent=indent, ascii_only=ascii_only, compact=compact):
+                options = {'ensure_ascii': ascii_only, 'indent': indent}
+                if compact:
+                    options['separators'] = (',', ':')
+                raw = (json.dumps(value, **options) + '\n').encode()
+                style = {'indent': indent, 'ensure_ascii': ascii_only,
+                         'compact': compact, 'trailing': '\n'}
+                source, values = self.raw_source(ns, raw, style=style)
+                self.assertEqual(ns['_status_decode_body'](source, values), raw)
+
+    def test_unpatched_production_selector_excludes_existing_routes_and_active_source_store(self):
+        root = globals().get('_STATUS_TEST_SOURCE_ROOT', Path(__file__).resolve().parents[1])
+        source = (root / 'scripts/resolve_t20_v6_source.py').read_text()
+        names = {'STATUS_RECORD_PATH_HASHES', 'STATUS_RECORD_PROVIDER_HASHES',
+                 'STATUS_RECORD_SOURCE_COUNT', 'STATUS_RECORD_ALIAS_COUNT',
+                 'STATUS_RECORD_BASE', 'STATUS_RECORD_TREE'}
+        selected = []
+        for node in ast.parse(source).body:
+            if isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and t.id in names for t in node.targets):
+                selected.append(node)
+            elif isinstance(node, ast.FunctionDef) and node.name in ('status_record_candidate', 'status_record_provider'):
+                selected.append(node)
+        ns = {'digest': lambda body: hashlib.sha256(body).hexdigest()}
+        exec(compile(ast.Module(body=selected, type_ignores=[]), 'actual-status-selectors', 'exec'), ns)
+        self.assertEqual(len(ns['STATUS_RECORD_PATH_HASHES']), 574)
+        self.assertEqual(len(ns['STATUS_RECORD_PROVIDER_HASHES']), 87)
+        self.assertEqual((ns['STATUS_RECORD_ALIAS_COUNT'], ns['STATUS_RECORD_SOURCE_COUNT']), (811, 749))
+        self.assertEqual(ns['STATUS_RECORD_BASE'], 'f97b01417de9d95a44cae4d3a3ac71d1e29f984b')
+        self.assertEqual(ns['STATUS_RECORD_TREE'], 'c8ec5b28d65fccc5a2f38c6564384fcd682089e3')
+        self.assertTrue(ns['status_record_candidate'](self.STATUS))
+        self.assertTrue(ns['status_record_provider'](self.PROVIDER))
+        for path in ('research/t20-live-20261009/checkpoints/CP01/MANIFEST.json', self.ALIAS,
+                     'research/t20-live-20261009/unselected.json',
+                     'experiments/orthemology-v5-successors/source-store/'
+                     '5c6421b650bc87a2427a892a39e5522dc44543ca4ac1bd6e9f08d536c044a752/mathlib-lake-manifest.json'):
+            with self.subTest(path=path):
+                self.assertFalse(ns['status_record_candidate'](path))
+
+    def test_decoder_rejects_malformed_graph_keys_cycles_and_unknown_values(self):
+        ns = self.runtime()
+        bad_nodes = ({'value_id': 'V999999'}, {'other': []}, {'value_id': 'V000001', 'array': []},
+                     {'object': [['same', {'value_id': 'V000001'}], ['same', {'value_id': 'V000001'}]]},
+                     {'array': 'not-an-array'}, {'object': [['key']]})
+        for node in bad_nodes:
+            with self.subTest(node=node):
+                source, values = self.raw_source(ns, self.BODY)
+                source['root'] = node
+                with self.assertRaises(ValueError):
+                    ns['_status_decode_body'](source, values)
+        source, values = self.raw_source(ns, self.BODY)
+        node = {'array': []}
+        node['array'].append(node)
+        source['root'] = node
+        with self.assertRaisesRegex(ValueError, 'cyclic'):
+            ns['_status_decode_body'](source, values)
+        for raw in (b'{"x": 1, "x": 2}', b'{"x": NaN}'):
+            with self.subTest(raw=raw):
+                with self.assertRaises(ValueError):
+                    ns['_status_json_loads'](raw)
+
+    def test_decoder_rejects_recipe_style_edit_and_native_identity_tampering(self):
+        ns = self.runtime()
+        mutations = (
+            lambda s: s['raw_byte_reconstruction'].__setitem__('schema', 'unqualified'),
+            lambda s: s['raw_byte_reconstruction'].__setitem__('base_render_sha256', '0' * 64),
+            lambda s: s['raw_byte_reconstruction']['style'].__setitem__('indent', True),
+            lambda s: s['raw_byte_reconstruction']['style'].__setitem__('indent', -1),
+            lambda s: s['raw_byte_reconstruction']['style'].__setitem__('ensure_ascii', 'false'),
+            lambda s: s['raw_byte_reconstruction']['style'].__setitem__('trailing', 'execute'),
+            lambda s: s['raw_byte_reconstruction'].__setitem__('format_edits', [[1, 3, ''], [2, 4, '']]),
+            lambda s: s['raw_byte_reconstruction'].__setitem__('format_edits', [[0, len(self.BODY)+1, '']]),
+            lambda s: s['raw_byte_reconstruction'].__setitem__('format_edits', [[False, 0, '']]),
+            lambda s: s['identity'].__setitem__('bytes', len(self.BODY)+1),
+            lambda s: s['identity'].__setitem__('sha256', '0' * 64),
+            lambda s: s['identity'].__setitem__('git_blob', '0' * 40),
+        )
+        for i, mutate in enumerate(mutations):
+            with self.subTest(mutation=i):
+                source, values = self.raw_source(ns, self.BODY)
+                mutate(source)
+                with self.assertRaises(ValueError):
+                    ns['_status_decode_body'](source, values)
+
+    def test_recipe_cannot_change_typed_content_even_with_new_matching_hashes(self):
+        ns = self.runtime()
+        source, values = self.raw_source(ns, self.BODY)
+        changed = self.BODY.replace(b'ACTIVE', b'CLOSED')
+        start = self.BODY.index(b'ACTIVE')
+        source['raw_byte_reconstruction']['format_edits'] = [[start, start + 6, 'CLOSED']]
+        source['identity'] = {'bytes': len(changed), 'sha256': hashlib.sha256(changed).hexdigest(),
+                              'git_blob': _StatusMemory.blob(changed)}
+        with self.assertRaisesRegex(ValueError, 'typed source content'):
+            ns['_status_decode_body'](source, values)
+
+
+class StatusOwnerEditionResponseTests(unittest.TestCase):
+    """Actual operational interfaces with new, wholly in-memory metadata."""
+
+    INDEX = 'research/t20-live-20261009/INDEX.json'
+    README = 'research/t20-live-20261009/README.md'
+    ALIAS = 'research/t20-live-20261009/checkpoints/CP01/INERT_ALIAS.json'
+
+    def base(self):
+        return StatusSourceViewMigrationTests(
+            'test_actual_getter_authenticates_native_owner_and_preserved_active_value')
+
+    def observe(self, row):
+        sink = globals().get('_STATUS_RESPONSE_OBSERVATIONS')
+        if sink is not None:
+            sink.append(dict(test=self.id(), **row))
+
+    def owner_runtime(self, *, edition='current', changes=None):
+        helper = self.base()
+        ns, memory = helper.memory_runtime()
+        original = {}
+        for path, body in ((self.INDEX, b'{"inert_original_index": true}\n'),
+                           (self.README, b'# Inert original discovery owner\n')):
+            blob = memory.add_object(body)
+            original[path] = (blob, hashlib.sha256(body).hexdigest(), len(body))
+            memory.tree[path] = ('100644 blob ' + blob + '\t' + path + '\0').encode()
+            if edition == 'original':
+                memory.set_file(path, body)
+                memory.index[path] = ['100644 ' + blob + ' 0']
+        tree = '76543210fedcba9876543210fedcba9876543210'
+        commit = memory.add_object(('tree ' + tree + '\n\ninert owner baseline\n').encode(), 'commit')
+        ns.update(STATUS_RECORD_OWNER_ORIGINAL=original, STATUS_RECORD_OWNER_BASE=commit,
+                  STATUS_RECORD_OWNER_TREE=tree)
+        helper.selected('resolve_t20_v6_source.py', {'status_owner_edition'}, ns)
+        rows = {path: {'path': path, 'mode': '100644', 'kind': 'blob',
+                       'git_oid': pin[0], 'bytes': pin[2]}
+                for path, pin in original.items()}
+        owners = {'schema': 'orthemology-reader-owner-map-v1',
+                  'baseline': {'commit': commit, 'tree': tree}, 'external_body_admissions': [],
+                  'collections': [{'key': 't20-live', 'include': ['research/t20-live-20261009/'],
+                                   'exclude': [], 'owners': [self.README, self.INDEX],
+                                   'candidate_paths': 2}]}
+        cross = {'schema': 'orthemology-reader-crosswalk-v1', 'coverage_stage': 'reader-candidate'}
+        # Only unrelated collection populations are empty. The two owner rows,
+        # native objects, files and stage rows pass the actual admission helper.
+        for name in ('CHECKPOINT_COPY_PATHS', 'CHECKPOINT_RECORD_COPY_PATHS',
+                     'CHECKPOINT_PACKAGE_COPY_PATHS', 'FORMAL_COPY_PATHS',
+                     'CHECKPOINT_CODE_COPY_PATHS', 'DIGEST_RECORD_PATHS', 'SUCCESSOR_INPUT_PATHS',
+                     'GENERATED_FIXTURE_PATHS', 'ADMIN_RECORD_PATHS', 'ADMIN_GUIDES',
+                     'CONTINUATION_OWNER_PATHS', 'TYPED_GUIDES', 'SUCCESSOR_CALCULUS_GUIDES'):
+            ns[name] = set()
+        for name in ('PMR007_DEEP_PREFIX', 'PMR007_ROUNDS_PREFIX', 'PMR007_ROUNDS_FORMALIZATION',
+                     'CONTINUATION_COPY_ROOT', 'SUCCESSOR_INPUT_REGISTRY',
+                     'SUCCESSOR_CALCULUS_MAP', 'MEDIATOR_GUIDE', 'PMR007_ROUNDS_PARENT',
+                     'FIXTURE_STATUS_PATH'):
+            ns[name] = 'unrelated/' + name
+        ns.update(REFACTOR_EDIT_PATHS=set(), HISTORICAL_PROSE={}, FIXTURE_CONSUMER_ORIGINAL={},
+                  binding_record_candidate=lambda path: False, Path=memory.Path,
+                  Counter=collections.Counter)
+        def unexpected(*args, **kwargs):
+            raise AssertionError('unrelated source qualification must not run')
+        for name in ('pmr007_deep_duplicate_paths', 'pmr007_rounds_duplicate_paths',
+                     'checkpoint_duplicate_paths', 'checkpoint_record_duplicate_paths',
+                     'checkpoint_package_duplicate_paths', 'formal_duplicate_paths',
+                     'checkpoint_code_duplicate_paths', 'digest_record_absences',
+                     'pmr007_rounds_formalization_navigation', 'continuation_duplicate_paths',
+                     'successor_input_absences', 'successor_calculus_map_absences',
+                     'generated_fixture_absences', 'binding_record_absences',
+                     'administrative_record_absences', 'administrative_guide_source_bytes'):
+            ns[name] = unexpected
+        ns.update(check_continuation_owner_edition=lambda *a: ({}, []),
+                  check_fixture_consumer_edition=lambda *a: ({}, None, []),
+                  check_source_additions=lambda *a: ({}, []),
+                  check_historical_sources=lambda *a: ({}, []),
+                  check_collection_dispositions=lambda *a: [],
+                  check_collection_result_routes=lambda *a: [],
+                  entries_at=lambda *a: list(rows.values()),
+                  permitted_reader_ci_addition=lambda *a: False,
+                  permitted_historical_status_pin=lambda *a: False,
+                  permitted_contributor_navigation=lambda *a: False)
+        selected_changes = ([('M', self.INDEX), ('M', self.README)] if changes is None else changes)
+        def differences(root, args):
+            raw = b''.join((status + '\0' + path + '\0').encode() for status, path in selected_changes)
+            return subprocess.CompletedProcess(args, 0, raw)
+        ns['readonly_git_diff'] = differences
+        def native_tree(args, **kwargs):
+            if args != ['git', 'rev-parse', commit + '^{tree}']:
+                raise AssertionError('undeclared native request: ' + repr(args))
+            return subprocess.CompletedProcess(args, 0, tree + '\n')
+        ns['subprocess'] = types.SimpleNamespace(run=native_tree)
+        memory.Path.is_file = lambda path: stat.S_ISREG(path.lstat().st_mode)
+        helper.selected('check_reader_pilot.py',
+                        {'check_corpus_currentness', 'corpus_currentness_context', 'safe_path', 'matches'}, ns)
+        root = globals().get('_STATUS_TEST_SOURCE_ROOT', Path(__file__).resolve().parents[1])
+        reader = (root / 'scripts/check_reader_pilot.py').read_text()
+        node = next(n for n in ast.parse(reader).body if isinstance(n, ast.FunctionDef) and n.name == 'check')
+        # Execute the exact check() prefix through discovery. Later publication,
+        # scientific crosswalk and original-body loops are outside this fixture.
+        prefix = []
+        for statement in node.body:
+            if isinstance(statement, ast.Assign) and any(
+                    isinstance(target, ast.Name) and target.id == 'sources' for target in statement.targets):
+                break
+            prefix.append(statement)
+        node.body = prefix + [ast.Return(value=ast.Name(id='errors', ctx=ast.Load()))]
+        exec(compile(ast.fix_missing_locations(ast.Module(body=[node], type_ignores=[])),
+                     'reader-check-through-discovery:actual-prefix', 'exec'), ns)
+        return ns, memory, rows, owners, cross
+
+    def test_current_pair_modifications_use_authenticated_edition(self):
+        ns, memory, rows, owners, cross = self.owner_runtime()
+        context, context_errors = ns['corpus_currentness_context'](memory.root, rows, owners, cross)
+        errors = ns['check_corpus_currentness'](memory.root, owners['baseline']['commit'], *context)
+        self.observe({'case': 'two-owner-M', 'context_errors': context_errors, 'errors': errors,
+                      'edition_paths': sorted(context[3])})
+        self.assertEqual(context_errors, [])
+        self.assertEqual(errors, [])
+        self.assertEqual(set(context[3]), {self.INDEX, self.README})
+
+    def test_discovery_uses_current_rows_without_rebasing_original_population(self):
+        ns, memory, rows, owners, cross = self.owner_runtime(changes=[])
+        original_rows = json.loads(json.dumps(rows))
+        errors = ns['check'](memory.root, owners, cross)
+        self.observe({'case': 'two-owner-discovery', 'errors': errors, 'baseline_rows_unchanged': rows == original_rows})
+        self.assertEqual(errors, [])
+        self.assertEqual(rows, original_rows)
+        self.assertEqual(owners['collections'][0]['candidate_paths'], 2)
+
+    def test_original_pair_retains_original_discovery_and_existing_context_mapping(self):
+        ns, memory, rows, owners, cross = self.owner_runtime(edition='original', changes=[])
+        self.assertEqual(ns['status_owner_edition'](memory.root, rows, owners['baseline']), {})
+        self.assertEqual(ns['check'](memory.root, owners, cross), [])
+        sentinel = {'unrelated/prior-owner.md': {'git_oid': 'a' * 40}}
+        ns['check_continuation_owner_edition'] = lambda *a: (dict(sentinel), [])
+        context, errors = ns['corpus_currentness_context'](memory.root, rows, owners, cross)
+        self.assertEqual(errors, [])
+        self.assertEqual(context[3], sentinel)
+        self.assertEqual(len(context), 5)
+
+    def test_owner_edition_refuses_wrong_baseline_or_incomplete_original_pair(self):
+        for mutation in ('baseline-commit', 'baseline-tree', 'missing-pair', 'path', 'kind', 'mode', 'git_oid', 'bytes'):
+            with self.subTest(mutation=mutation):
+                ns, memory, rows, owners, cross = self.owner_runtime()
+                if mutation.startswith('baseline-'):
+                    owners['baseline'][mutation.split('-')[1]] = 'f' * 40
+                elif mutation == 'missing-pair':
+                    del rows[self.README]
+                else:
+                    rows[self.INDEX][mutation] = 0 if mutation == 'bytes' else 'wrong'
+                context, errors = ns['corpus_currentness_context'](memory.root, rows, owners, cross)
+                self.assertTrue(any(error.startswith('status-owner: ') for error in errors), errors)
+                self.assertFalse({self.INDEX, self.README} & set(context[3]))
+        ns, memory, _, _, _ = self.owner_runtime()
+        self.assertEqual(ns['status_owner_edition'](memory.root, {}, {}), {})
+
+    def test_owner_edition_refuses_native_original_identity_and_coordinate_changes(self):
+        mutations = ('commit-bytes', 'commit-type', 'commit-missing', 'tree-pin',
+                     'native-mode', 'native-path-missing', 'native-blob',
+                     'original-bytes', 'original-type', 'original-missing', 'original-size', 'original-sha256')
+        for mutation in mutations:
+            with self.subTest(mutation=mutation):
+                ns, memory, rows, owners, _ = self.owner_runtime()
+                commit = ns['STATUS_RECORD_OWNER_BASE']
+                blob, identity, size = ns['STATUS_RECORD_OWNER_ORIGINAL'][self.INDEX]
+                if mutation == 'commit-bytes': memory.objects[commit] += b'corrupt'
+                elif mutation == 'commit-type': memory.object_types[commit] = 'blob'
+                elif mutation == 'commit-missing': del memory.objects[commit]
+                elif mutation == 'tree-pin':
+                    ns['STATUS_RECORD_OWNER_TREE'] = 'f' * 40
+                    owners['baseline']['tree'] = 'f' * 40
+                elif mutation == 'native-mode': memory.tree[self.INDEX] = memory.tree[self.INDEX].replace(b'100644', b'100755')
+                elif mutation == 'native-path-missing': del memory.tree[self.INDEX]
+                elif mutation == 'native-blob': memory.tree[self.INDEX] = memory.tree[self.INDEX].replace(blob.encode(), b'f' * 40)
+                elif mutation == 'original-bytes': memory.objects[blob] += b'corrupt'
+                elif mutation == 'original-type': memory.object_types[blob] = 'tree'
+                elif mutation == 'original-missing': del memory.objects[blob]
+                elif mutation == 'original-size':
+                    ns['STATUS_RECORD_OWNER_ORIGINAL'][self.INDEX] = (blob, identity, size + 1)
+                    rows[self.INDEX]['bytes'] = size + 1
+                else: ns['STATUS_RECORD_OWNER_ORIGINAL'][self.INDEX] = (blob, 'f' * 64, size)
+                with self.assertRaises((ValueError, OSError)):
+                    ns['status_owner_edition'](memory.root, rows, owners['baseline'])
+
+    def test_both_current_owners_require_one_exact_present_indexed_edition(self):
+        mutations = ('unindexed', 'conflict', 'wrong-index', 'mixed-edition', 'absent',
+                     'corrupt', 'executable', 'directory', 'symlink',
+                     'native-bytes', 'native-type', 'native-missing')
+        for path in (self.INDEX, self.README):
+            for mutation in mutations:
+                with self.subTest(path=path, mutation=mutation):
+                    ns, memory, rows, owners, _ = self.owner_runtime()
+                    blob = ns['STATUS_RECORD_OWNERS'][path][0]
+                    if mutation == 'unindexed': memory.index[path] = []
+                    elif mutation == 'conflict': memory.index[path] = ['100644 ' + blob + ' 1']
+                    elif mutation == 'wrong-index': memory.index[path] = ['100644 ' + 'f' * 40 + ' 0']
+                    elif mutation == 'mixed-edition':
+                        old_blob = ns['STATUS_RECORD_OWNER_ORIGINAL'][path][0]
+                        memory.index[path] = ['100644 ' + old_blob + ' 0']
+                        memory.set_file(path, memory.objects[old_blob])
+                    elif mutation == 'absent': memory.remove(path)
+                    elif mutation == 'corrupt': memory.set_file(path, b'corrupt')
+                    elif mutation == 'executable': memory.set_file(path, memory.objects[blob], stat.S_IFREG | 0o755)
+                    elif mutation == 'directory': memory.set_file(path, None)
+                    elif mutation == 'symlink': memory.set_file(path, b'target', stat.S_IFLNK | 0o777)
+                    elif mutation == 'native-bytes': memory.objects[blob] += b'corrupt'
+                    elif mutation == 'native-type': memory.object_types[blob] = 'tree'
+                    else: del memory.objects[blob]
+                    with self.assertRaises((ValueError, OSError)):
+                        ns['status_owner_edition'](memory.root, rows, owners['baseline'])
+
+    def test_owner_ancestry_and_late_pair_changes_refuse(self):
+        for mutation in ('root-symlink', 'ancestor-symlink', 'late-index', 'late-body', 'late-absence'):
+            with self.subTest(mutation=mutation):
+                ns, memory, rows, owners, _ = self.owner_runtime()
+                fired = []
+                if mutation == 'root-symlink': memory.put(memory.ROOT, b'target', stat.S_IFLNK | 0o777)
+                elif mutation == 'ancestor-symlink': memory.set_file('research', b'target', stat.S_IFLNK | 0o777)
+                else:
+                    def drift(event):
+                        if event == ('git', 'cat-file', 'blob', ns['STATUS_RECORD_OWNERS'][self.README][0]):
+                            memory.on_event = None
+                            fired.append(len(memory.events) - 1)
+                            if mutation == 'late-index': memory.index[self.INDEX] = ['100644 ' + ns['STATUS_RECORD_OWNERS'][self.INDEX][0] + ' 1']
+                            elif mutation == 'late-body': memory.set_file(self.INDEX, b'corrupt')
+                            else: memory.remove(self.INDEX)
+                    memory.on_event = drift
+                with self.assertRaises((ValueError, OSError)):
+                    ns['status_owner_edition'](memory.root, rows, owners['baseline'])
+                if mutation.startswith('late-'):
+                    self.assertTrue(fired)
+
+    def test_status_edition_never_admits_owner_deletion_addition_or_nearby_edit(self):
+        for changes, authenticated in (([('M', self.INDEX)], False),
+                                       ([('D', self.INDEX)], True),
+                                       ([('A', self.README)], True),
+                                       ([('T', self.INDEX)], True),
+                                       ([('M', 'research/t20-live-20261009/nearby.json')], True)):
+            with self.subTest(changes=changes, authenticated=authenticated):
+                ns, memory, rows, owners, cross = self.owner_runtime(changes=changes)
+                context, context_errors = ns['corpus_currentness_context'](memory.root, rows, owners, cross)
+                self.assertEqual(context_errors, [])
+                if not authenticated:
+                    context = (*context[:3], {}, context[4])
+                self.assertTrue(ns['check_corpus_currentness'](memory.root, owners['baseline']['commit'], *context))
+
+    def test_production_owner_pins_and_editable_paths_remain_exact(self):
+        root = globals().get('_STATUS_TEST_SOURCE_ROOT', Path(__file__).resolve().parents[1])
+        source = (root / 'scripts/resolve_t20_v6_source.py').read_text()
+        names = {'STATUS_RECORD_OWNER_BASE', 'STATUS_RECORD_OWNER_TREE',
+                 'STATUS_RECORD_OWNER_ORIGINAL', 'STATUS_RECORD_OWNERS'}
+        pins = {node.targets[0].id: ast.literal_eval(node.value) for node in ast.parse(source).body
+                if isinstance(node, ast.Assign) and len(node.targets) == 1
+                and isinstance(node.targets[0], ast.Name) and node.targets[0].id in names}
+        self.assertEqual(pins['STATUS_RECORD_OWNER_BASE'], '0784acddd4770f1190f758f264ba52b2b110bd27')
+        self.assertEqual(pins['STATUS_RECORD_OWNER_TREE'], '38b18f38db2e38dabe1ec391c07c0b0f2b20d574')
+        self.assertEqual(pins['STATUS_RECORD_OWNER_ORIGINAL'], {
+            self.INDEX: ('533205328be61d4ef00734ec5ab1726af056ce24', '578b2f63c3038627a68c1d4cd816ca9f9a3cd973ee35864a5c22e3860f2f7483', 15728),
+            self.README: ('0d225b8cf2973d28c9ff2bcfd215e364bb18ca42', '543cc8ea246fdc3f1fb03e0b41bb539dde2f23a7eeaa2ddf9178826840b5f139', 10196)})
+        self.assertEqual(pins['STATUS_RECORD_OWNERS'], {
+            self.INDEX: ('08341bfd44725c42af1048aec08fcad5b51aadfd', '9cf4bca6f4162f3a0426dba75949cb13482544ba35876d6e3a4dc1d2e699241f', 5956771),
+            self.README: ('3a93bf5c75cbbd0796e3edef91a7571da4eb2771', '1bea43d34528443aedec67f7a58a92d04b173e87c4d068f018499f9c4651d49d', 107789)})
+        reader = (root / 'scripts/check_reader_pilot.py').read_text()
+        editable = next(node for node in ast.parse(reader).body
+                        if isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and t.id == 'REFACTOR_EDIT_PATHS' for t in node.targets))
+        namespace = {}
+        exec(compile(ast.Module(body=[editable], type_ignores=[]),
+                     'reader-exact-editable-constant', 'exec'), namespace)
+        self.assertFalse({self.INDEX, self.README} & namespace['REFACTOR_EDIT_PATHS'])
+
+    def late_source_index(self, interface, present):
+        helper = self.base()
+        ns, memory = helper.memory_runtime(present=present)
+        reads, fired = [], []
+        owner_blob = ns['STATUS_RECORD_OWNERS'][memory.owner_index][0]
+        def drift(event):
+            if event == ('git', 'cat-file', 'blob', owner_blob):
+                reads.append(len(memory.events) - 1)
+                if len(reads) == 2:
+                    memory.on_event = None
+                    fired.append(len(memory.events) - 1)
+                    memory.index[helper.STATUS] = ['100644 ' + memory.status_blob + ' 1']
+        memory.on_event = drift
+        argument = helper.STATUS if interface == 'status_record_bytes' else {helper.STATUS}
+        error = None
+        try: ns[interface](memory.root, argument)
+        except (ValueError, OSError) as exc: error = str(exc)
+        index_reads = [i for i, event in enumerate(memory.events)
+                       if event == ('git', 'ls-files', '--stage', '-z', '--', helper.STATUS)]
+        self.observe({'case': 'SCR-002', 'interface': interface, 'present': present,
+                      'fired': fired, 'index_reads': index_reads, 'error': error,
+                      'events': [list(event) for event in memory.events]})
+        self.assertTrue(fired)
+        self.assertIsNotNone(error, 'late selected-source index conflict was accepted')
+        self.assertTrue(any(i > fired[0] for i in index_reads))
+
+    def test_absent_getter_refuses_index_drift_during_final_owner_read(self):
+        self.late_source_index('status_record_bytes', False)
+
+    def test_present_getter_refuses_index_drift_during_final_owner_read(self):
+        self.late_source_index('status_record_bytes', True)
+
+    def test_absence_set_refuses_index_drift_during_final_owner_read(self):
+        self.late_source_index('status_record_absences', False)
+
+    def test_source_entry_conflicts_refuse_and_stable_empty_indexes_remain_allowed(self):
+        helper = self.base()
+        for interface, present in (('status_record_bytes', False), ('status_record_bytes', True), ('status_record_absences', False)):
+            for index in ('exact', 'empty', 'conflict'):
+                with self.subTest(interface=interface, present=present, index=index):
+                    ns, memory = helper.memory_runtime(present=present)
+                    if index == 'empty': memory.index[helper.STATUS] = []
+                    elif index == 'conflict': memory.index[helper.STATUS] = ['100644 ' + memory.status_blob + ' 1']
+                    argument = helper.STATUS if interface == 'status_record_bytes' else {helper.STATUS}
+                    if index == 'conflict':
+                        with self.assertRaises(ValueError): ns[interface](memory.root, argument)
+                    else:
+                        expected = helper.BODY if interface == 'status_record_bytes' else {helper.STATUS}
+                        self.assertEqual(ns[interface](memory.root, argument), expected)
+
+    def test_absence_bracket_checks_every_requested_source(self):
+        helper = self.base()
+        other = 'research/t20-live-20261009/checkpoints/CP01/SECOND_INERT_STATUS.json'
+        for changed in (helper.STATUS, other):
+            with self.subTest(changed=changed):
+                ns, memory = helper.memory_runtime()
+                source, values = helper.raw_source(ns, helper.BODY)
+                source['aliases'].append(other)
+                document = {'schema': 'scientific-status-owner-v3', 'sources': {'S0001': source}, 'values': values}
+                raw = json.dumps(document, ensure_ascii=False, separators=(',', ':')).encode()
+                blob = memory.add_object(raw)
+                memory.set_file(self.INDEX, raw)
+                memory.index[self.INDEX] = ['100644 ' + blob + ' 0']
+                ns['STATUS_RECORD_OWNERS'][self.INDEX] = (blob, hashlib.sha256(raw).hexdigest(), len(raw))
+                paths = {helper.STATUS, other}
+                for path in paths:
+                    memory.index[path] = ['100644 ' + memory.status_blob + ' 0']
+                    memory.tree[path] = ('100644 blob ' + memory.status_blob + '\t' + path + '\0').encode()
+                vector = b''.join((path + '\0S0001\0' + memory.status_blob + '\0' + hashlib.sha256(helper.BODY).hexdigest() + '\0' + str(len(helper.BODY)) + '\n').encode() for path in sorted(paths))
+                ns.update(STATUS_RECORD_PATH_HASHES={hashlib.sha256(path.encode()).hexdigest() for path in paths},
+                          STATUS_RECORD_ALIAS_COUNT=2, STATUS_RECORD_CLASS_SHA256=hashlib.sha256(vector).hexdigest())
+                count, fired = [], []
+                def drift(event):
+                    if event == ('git', 'cat-file', 'blob', blob):
+                        count.append(1)
+                        if len(count) == 2:
+                            memory.on_event = None
+                            fired.append(1)
+                            memory.index[changed] = ['100644 ' + memory.status_blob + ' 1']
+                memory.on_event = drift
+                with self.assertRaises(ValueError): ns['status_record_absences'](memory.root, paths)
+                self.assertTrue(fired)
+
+    def provider_runtime(self):
+        helper = self.base()
+        ns, memory = helper.memory_runtime()
+        memory.tree[self.ALIAS] = ('100644 blob ' + memory.status_blob + '\t' + self.ALIAS + '\0').encode()
+        memory.index[self.ALIAS] = ['100644 ' + memory.status_blob + ' 0']
+        ns.update(STATUS_RECORD_PROVIDER_HASHES={hashlib.sha256(helper.STATUS.encode()).hexdigest()},
+                  CHECKPOINT_COPY_BASE=ns['STATUS_RECORD_BASE'], collections=collections)
+        def native(root, *args):
+            if args[:2] == ('ls-tree', '-z') and len(args) == 6 and args[3] == '--':
+                memory.event(('checkpoint-native', *args))
+                return b''.join(memory.tree.get(path, b'') for path in args[4:])
+            return memory.git(root, *args)
+        ns['_continuation_git'] = native
+        helper.selected('resolve_t20_v6_source.py',
+                        {'_checkpoint_bound_bytes', '_continuation_object', '_regular_current_bytes'}, ns)
+        binding = {'canonical': helper.STATUS, 'blob': memory.status_blob,
+                   'sha256': hashlib.sha256(helper.BODY).hexdigest(), 'bytes': len(helper.BODY)}
+        return ns, memory, binding
+
+    def late_alias(self, mutation):
+        helper = self.base()
+        ns, memory, binding = self.provider_runtime()
+        initial_index = list(memory.index[self.ALIAS])
+        fired = []
+        def drift(event):
+            if event == ('git', 'cat-file', 'blob', ns['STATUS_RECORD_OWNERS'][self.INDEX][0]):
+                memory.on_event = None
+                fired.append(len(memory.events) - 1)
+                if mutation == 'index': memory.index[self.ALIAS] = ['100644 ' + memory.status_blob + ' 1']
+                else: memory.set_file(self.ALIAS, helper.BODY + b'corrupt')
+        memory.on_event = drift
+        error = None
+        try: ns['_checkpoint_bound_bytes'](memory.root, self.ALIAS, binding)
+        except (ValueError, OSError) as exc: error = str(exc)
+        self.observe({'case': 'SCR-003', 'mutation': mutation, 'fired': fired, 'error': error,
+                      'alias_index_before': initial_index, 'alias_index_after': memory.index[self.ALIAS],
+                      'events': [list(event) for event in memory.events]})
+        self.assertTrue(fired)
+        self.assertIsNotNone(error, 'late requested-alias change was accepted')
+
+    def test_provider_read_cannot_hide_late_alias_index_conflict(self):
+        self.late_alias('index')
+
+    def test_provider_read_cannot_hide_late_corrupt_alias_appearance(self):
+        self.late_alias('bytes')
+
+    def test_provider_entry_guards_and_final_provider_absence_remain_required(self):
+        helper = self.base()
+        for mutation in ('unchanged', 'entry-index', 'entry-bytes', 'late-provider-present'):
+            with self.subTest(mutation=mutation):
+                ns, memory, binding = self.provider_runtime()
+                fired = []
+                if mutation == 'entry-index': memory.index[self.ALIAS] = ['100644 ' + memory.status_blob + ' 1']
+                elif mutation == 'entry-bytes': memory.set_file(self.ALIAS, helper.BODY + b'corrupt')
+                elif mutation == 'late-provider-present':
+                    def appear(event):
+                        if event == ('git', 'ls-files', '--stage', '-z', '--', self.ALIAS, helper.STATUS):
+                            memory.on_event = None
+                            fired.append(1)
+                            memory.set_file(helper.STATUS, helper.BODY)
+                    memory.on_event = appear
+                if mutation == 'unchanged':
+                    self.assertEqual(ns['_checkpoint_bound_bytes'](memory.root, self.ALIAS, binding), helper.BODY)
+                else:
+                    with self.assertRaises(ValueError): ns['_checkpoint_bound_bytes'](memory.root, self.ALIAS, binding)
+                if mutation == 'late-provider-present': self.assertTrue(fired)
+
+
 if __name__ == '__main__':
     unittest.main()

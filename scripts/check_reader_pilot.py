@@ -55,6 +55,7 @@ from resolve_t20_v6_source import (
     SUCCESSOR_CALCULUS_MAP, SUCCESSOR_CALCULUS_GUIDES, successor_calculus_map_absences,
     successor_calculus_guide_source_bytes,
     binding_record_candidate, is_binding_record, binding_record_bytes, binding_record_absences,
+    status_record_candidate, status_record_absences, STATUS_RECORD_OWNERS, status_owner_edition,
 )
 
 
@@ -1483,6 +1484,14 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                 binding_paths = binding_record_absences(repo)
             except (ValueError, OSError) as exc:
                 errors.append("corpus-currentness: source binding record: " + str(exc))
+        status_paths = set()
+        status_requests = {path for status, path in zip(values[::2], values[1::2])
+                           if status == 'D' and status_record_candidate(path)}
+        if status_requests:
+            try:
+                status_paths = status_record_absences(repo, status_requests)
+            except (ValueError, OSError) as exc:
+                errors.append('corpus-currentness: historical status source: ' + str(exc))
         administrative_paths = set()
         if any(status == "D" and path in ADMIN_RECORD_PATHS
                for status, path in zip(values[::2], values[1::2])):
@@ -1507,6 +1516,7 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                         or (status == "D" and path in allowed_duplicates)
                         or (status == "D" and path in administrative_paths)
                         or (status == "D" and path in binding_paths)
+                        or (status == "D" and path in status_paths)
                         or (status == "D" and path in input_paths)
                         or (status == "D" and path in calculus_paths)
                         or (status == "M" and path in input_owners)
@@ -1515,6 +1525,8 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                         or (status == "M" and path in rounds_navigation)
                         or (status == "M" and path in administrative_guides)
                          or (status == "M" and path in CONTINUATION_OWNER_PATHS
+                             and path in continuation_owners)
+                         or (status == "M" and path in STATUS_RECORD_OWNERS
                              and path in continuation_owners)
                          or (status == "M" and path in FIXTURE_CONSUMER_ORIGINAL
                              and path in fixture_owners)
@@ -1530,6 +1542,12 @@ def corpus_currentness_context(repo, indexed, owners, cross):
         errors.append(code + ": " + message)
     continuation_owners, continuation_errors = check_continuation_owner_edition(repo, indexed)
     errors.extend(continuation_errors)
+    try:
+        # Reuse the discovery edition namespace; original census rows and
+        # collection routing remain unchanged. Only this exact pair joins it.
+        continuation_owners.update(status_owner_edition(repo, indexed, owners.get("baseline", {})))
+    except (ValueError, OSError) as exc:
+        fail("status-owner", str(exc))
     fixture_owners, fixture_status, fixture_errors = check_fixture_consumer_edition(repo, indexed)
     errors.extend(fixture_errors)
     additions, addition_errors = check_source_additions(repo, indexed, owners, cross)
