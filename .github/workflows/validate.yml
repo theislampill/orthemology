@@ -138,7 +138,7 @@ jobs:
         run: python scripts/validate_review_state.py
       - name: R7E Sol independent-review control plane (Decision 0034)
         run: python tests/test_r7e_sol_review_state.py
-      - name: Complete R7 candidate-topology contract (Decision 0034)
+      - name: Current decision authority and retained historical authority controls
         run: python tests/test_candidate_state.py
       - name: R7E provenance and immutable candidate-ledger contract (Decision 0034)
         run: |
@@ -220,7 +220,7 @@ jobs:
         run: python scripts/validate_meta_noetic_memetics.py
       - name: Project layer map + firewall (R7B, Phase H)
         run: python scripts/validate_layer_map.py
-      - name: Candidate-state / pre-merge decision status (R7C 0026; R7D 0029 live-head gate)
+      - name: Current candidate decision authority and source ownership
         run: python scripts/validate_candidate_state.py
       - name: Public experiment-readiness conformance (R7D, Decision 0029)
         run: python scripts/validate_public_readiness.py

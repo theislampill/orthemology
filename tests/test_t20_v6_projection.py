@@ -4932,5 +4932,140 @@ class StatusOwnerEditionResponseTests(unittest.TestCase):
                 if mutation == 'late-provider-present': self.assertTrue(fired)
 
 
+class StatusProjectionCompositionControls(unittest.TestCase):
+    """Actual protected-root logic with inert interfaces; no source-body replay."""
+
+    SOURCE = pathlib.Path(__file__).resolve().parents[1] / 'scripts/validate_t20_v6_projection.py'
+    OWNERS = ('research/t20-live-20261009/INDEX.json',
+              'research/t20-live-20261009/README.md')
+    RECORDS = ('research/t20-live-20261009/synthetic-selected-a.json',
+               'research/t20-live-20261009/synthetic-selected-b.json')
+
+    def _gate(self, cached=(), worktree=None, *, owners='qualified', absences='qualified',
+              diff_status=0):
+        # Only the actual operational function is compiled. Every dependency is
+        # finite in-memory input, never an import or a native/filesystem probe.
+        nodes = [n for n in ast.parse(self.SOURCE.read_bytes()).body
+                 if isinstance(n, ast.FunctionDef) and n.name == 'check_preserved_roots']
+        self.assertEqual(len(nodes), 1)
+        calls = []
+        worktree = cached if worktree is None else worktree
+        original = {p: (str(i + 1) * 40, str(i + 1) * 64, i + 100)
+                    for i, p in enumerate(self.OWNERS)}
+        expected_rows = {p: dict(path=p, kind='blob', mode='100644', git_oid=b, bytes=z)
+                         for p, (b, h, z) in original.items()}
+        baseline = dict(commit='a' * 40, tree='b' * 40)
+        def owner_edition(root, rows, base):
+            self.assertEqual(rows, expected_rows)
+            self.assertEqual(base, baseline)
+            calls.append(('owner', None))
+            if owners == 'ioerror': raise OSError('unavailable owner evidence')
+            if owners == 'valueerror': raise ValueError('wrong owner edition')
+            return expected_rows if owners == 'qualified' else {}
+        def record_absences(root, requested):
+            requested = set(requested)
+            calls.append(('absence', requested))
+            self.assertTrue(requested)
+            self.assertTrue(requested <= set(self.RECORDS))
+            if absences == 'ioerror': raise OSError('unavailable record evidence')
+            if absences == 'valueerror': raise ValueError('present or corrupt record')
+            return requested if absences == 'qualified' else set()
+        def diff(root, command):
+            selected = cached if '--cached' in command else worktree
+            raw = ''.join(status + '\0' + path + '\0' for status, path in selected).encode()
+            return subprocess.CompletedProcess(command, diff_status, raw, b'')
+        def unavailable(*args, **kwargs):
+            raise ValueError('unrelated population absent from inert fixture')
+        namespace = dict(subprocess=subprocess, readonly_git_diff=diff,
+            HISTORICAL_PROSE={}, HISTORICAL_PROSE_PUBLIC_PATHS=set(),
+            HISTORICAL_PROSE_REVISIONS={}, TYPED_GUIDES={}, ADMIN_GUIDES={},
+            BASE='inert-baseline', CONTINUATION_COPY_ROOT='unrelated-continuation/',
+            CHECKPOINT_COPY_PATHS=set(), CHECKPOINT_RECORD_COPY_PATHS=set(),
+            CHECKPOINT_PACKAGE_COPY_PATHS=set(), FORMAL_COPY_PATHS=set(),
+            CHECKPOINT_CODE_COPY_PATHS=set(), DIGEST_RECORD_PATHS=set(),
+            SUCCESSOR_INPUT_REGISTRY='unrelated-input-registry', SUCCESSOR_INPUT_PATHS=set(),
+            SUCCESSOR_CALCULUS_MAP='unrelated-calculus-map', SUCCESSOR_CALCULUS_GUIDES={},
+            MEDIATOR_GUIDE='unrelated-guide', binding_record_candidate=lambda p: False,
+            continuation_owners=types.SimpleNamespace(PRESERVATION_OWNER_PATHS=set()),
+            mediator_guide_source_bytes=unavailable,
+            STATUS_RECORD_OWNERS={p: () for p in self.OWNERS},
+            STATUS_RECORD_OWNER_ORIGINAL=original,
+            STATUS_RECORD_OWNER_BASE=baseline['commit'], STATUS_RECORD_OWNER_TREE=baseline['tree'],
+            status_owner_edition=owner_edition,
+            status_record_candidate=lambda p: p in self.RECORDS,
+            status_record_absences=record_absences)
+        exec(compile(ast.Module(body=nodes, type_ignores=[]), str(self.SOURCE), 'exec'), namespace)
+        return namespace['check_preserved_roots'](pathlib.Path('unused-inert-root'), {}), calls
+
+    def test_unchanged_scope_is_live_without_status_qualification(self):
+        result, calls = self._gate()
+        self.assertEqual(result, [])
+        self.assertEqual(calls, [])
+
+    def test_complete_qualified_status_owner_modifications_are_admitted(self):
+        result, calls = self._gate(tuple(('M', p) for p in self.OWNERS))
+        self.assertEqual(result, [])
+        self.assertEqual(calls, [('owner', None), ('owner', None)])
+
+    def test_original_or_unavailable_owner_does_not_waive_modification(self):
+        for state in ('original', 'valueerror', 'ioerror'):
+            with self.subTest(state=state):
+                result, calls = self._gate((('M', self.OWNERS[0]),), owners=state)
+                self.assertTrue(result)
+                self.assertEqual(len(calls), 2)
+
+    def test_owner_deletion_type_addition_and_unselected_modification_refuse(self):
+        for status, path in (('D', self.OWNERS[0]), ('T', self.OWNERS[0]),
+                             ('A', self.OWNERS[0]), ('M', 'research/t20-live-20261009/unselected.md')):
+            with self.subTest(status=status, path=path):
+                result, calls = self._gate(((status, path),))
+                self.assertTrue(result)
+                self.assertEqual(calls, [])
+
+    def test_selected_qualified_D_only_status_absence_is_admitted(self):
+        result, calls = self._gate((('D', self.RECORDS[0]),))
+        self.assertEqual(result, [])
+        self.assertEqual(calls, [('absence', {self.RECORDS[0]})] * 2)
+
+    def test_each_boundary_qualifies_its_complete_requested_absence_set(self):
+        result, calls = self._gate((('D', self.RECORDS[0]),),
+                                  tuple(('D', p) for p in self.RECORDS))
+        self.assertEqual(result, [])
+        self.assertEqual(calls, [('absence', {self.RECORDS[0]}),
+                                 ('absence', set(self.RECORDS))])
+
+    def test_empty_unavailable_present_or_corrupt_absence_refuses(self):
+        for state in ('empty', 'valueerror', 'ioerror'):
+            with self.subTest(state=state):
+                result, calls = self._gate((('D', self.RECORDS[0]),), absences=state)
+                self.assertTrue(result)
+                self.assertEqual(len(calls), 2)
+
+    def test_selected_M_T_A_and_unselected_D_are_not_absence_allowances(self):
+        for status, path in (('M', self.RECORDS[0]), ('T', self.RECORDS[0]),
+                             ('A', self.RECORDS[0]), ('D', 'research/t20-live-20261009/unselected.json')):
+            with self.subTest(status=status, path=path):
+                result, calls = self._gate(((status, path),))
+                self.assertTrue(result)
+                self.assertEqual(calls, [])
+
+    def test_staged_M_cannot_hide_behind_worktree_D(self):
+        result, calls = self._gate((('M', self.RECORDS[0]),), (('D', self.RECORDS[0]),))
+        self.assertTrue(result)
+        self.assertEqual(calls, [('absence', {self.RECORDS[0]})])
+
+    def test_owner_and_absence_admission_compose_without_widening_scope(self):
+        changes = tuple(('M', p) for p in self.OWNERS) + (('D', self.RECORDS[0]),)
+        result, calls = self._gate(changes)
+        self.assertEqual(result, [])
+        self.assertEqual(len(calls), 4)
+        result, _ = self._gate(changes + (('D', 'research/t20-live-20261009/unselected.json'),))
+        self.assertTrue(result)
+
+    def test_failed_diff_is_not_empty_success(self):
+        result, calls = self._gate(diff_status=1)
+        self.assertTrue(result)
+        self.assertEqual(calls, [])
+
 if __name__ == '__main__':
     unittest.main()

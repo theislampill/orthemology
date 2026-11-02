@@ -3016,6 +3016,158 @@ The rational actual-source bridge guide isolates another boundary: its source th
 The same guide preserves historical kernel logs and the non-object dependency collection without claiming a new compilation. Environment-bound verification harnesses remain historical evidence rather than portable promises. Assertion-based reviewer controls receive their stated normal-mode credit; optimized execution is supplemental where it removes those assertions. Participating diagnostics do not become independent review by appearing beside the review files. These distinctions preserve the positive finite target and deterministic-source results while keeping their probability, implementation and execution limits explicit. [GUIDE105-G064]
 
 
+<a id="common-exponential-cost-range"></a>
+
+#### A common exponential cost range for the original generated policy
+
+Finite expected bad count is not the strongest conclusion available for every particular construction. The original generated hidden-parity policy has a separate, stronger co-Büchi cost theorem: on a fixed finite input, one policy admits a positive exponential-moment range common to all initially live models. The reason is a bound on products of chronologically stopped interval factors, not an inference from the finite expectation in §7.14. This result concerns the source's `generatedPhasePolicy` with its original empirical row test and constant Unit seed. Neither the stage-local fresh-count scheduler of §7.14 nor the literal certificate body's separately compiled policy in §7.16 is identified with it merely because each addresses the same existence question. [EXP-common][EXP-actual]
+
+**Statement and quantifiers.** Let S and A be finite nonempty state and action sets, let B₀ be a finite nonempty set of models, and supply normalized rational transition rows, support-indexed hard menus, an initial state s₀ and the source construction's fallback values. For each model σ, let badσ be a predicate on state/action pairs. Assign priority 1 to bad pairs and 2 to good pairs, as in §7.17, and assume s₀ lies in the generated construction's hidden-parity winning region. Its lawful navigation, target selection and retained-action scheduling retain that construction's hypotheses; the cost statement is not a replacement specification for those components.
+
+Choose a positive row-test tolerance ε such that
+
+```math
+\forall\sigma,\tau\in B_0\;\forall e\in S\times A,
+\quad P_\tau(e,\cdot)\ne P_\sigma(e,\cdot)
+\ \Longrightarrow\
+\exists y\in S:\ |P_\sigma(e,y)-P_\tau(e,y)|>\varepsilon.
+```
+
+This is inequality of the full original rows and separation in **some** coordinate, not every coordinate and not the rows conditioned on no support change. Here ε is a probability-coordinate tolerance, not §7.14's bound on a stage's false-rejection probability. The empirical test at candidate index k rejects if some pair has acquired count greater than k and some empirical coordinate differs from the candidate row by at least ε. It uses the acquired global pair counts. The policy is fixed with this same ε throughout the theorem; the analysis must not quietly replace its test by one at ε/2. [EXP-test]
+
+Let π<sub>ε</sub> denote that original generated policy, chosen before the actual model. Under its canonical Markov history law for model σ and the constant seed, put
+
+```math
+C_\sigma=\sum_{t\ge0}\mathbf1\{\mathrm{bad}_\sigma(S_t,A_t)\}
+\quad\text{in }[0,\infty].
+```
+
+The first executed action is t=0. There is no synthetic initial charge or omitted first action. There exists r>0 such that, for every σ∈B₀, Cσ is finite almost surely, and
+
+```math
+\forall\theta\in[0,r)\quad\exists K_\theta<\infty\quad
+\forall\sigma\in B_0,\qquad
+\mathbb E_{\sigma,\pi_\varepsilon}
+       \exp(\theta C_\sigma)\le K_\theta.
+```
+
+The ordinary exponential is evaluated on the almost-sure finite value. The source states almost-sure finiteness separately from its integral using the extended-nonnegative count's real conversion: that conversion sends infinity to zero and cannot itself exclude infinitely bad runs. The order is one ε, one policy and one positive r for the whole fixed input, then θ, then a common finite Kθ, then all actual models. Kθ may depend on θ. Neither the rate nor the bound is claimed independent of the input, effectively extracted, or practically small. [EXP-common]
+
+**Finite separation supplies the analysis constants without changing the policy.** There are finitely many coordinate differences between the rows of models in B₀. If any are positive, half their positive minimum is a permitted common ε; if all are zero, the separation implication is vacuous and one may take ε=1. This choice precedes the actual-model quantifier. For an already chosen permissible ε and a fixed actual σ, the positive gaps above ε form a finite set. Half the minimum of ε and those positive gaps gives an analysis margin η with 0<η<ε and a witnessing coordinate difference greater than ε+η for every unequal rival row. If there are no unequal rival rows, take η=ε/2. This is slack for the proof, not a retuning of π<sub>ε</sub>. Likewise the finite actual transition table supplies p∈(0,1] below every positive entry. [EXP-test][EXP-margin][EXP-moments]
+
+**Why the stopped factors can be multiplied.** Work first with independent next-state tapes for each pair, consumed according to the generated policy. This is a representation of the acquisition law, not a claim that the selected physical trajectory or its selected counts are independent. Write q=|S×A|, m=|B₀|, and let D=|S|·|A|<sup>|S|</sup>>0 be the finite augmented rotor-state bound used by the source's navigation argument. [EXP-rotor] For a deterministic count cutoff N≥1, the event that any row coordinate deviates by at least η at any tape prefix of length n≥N has probability at most
+
+```math
+A\exp(-cN),\qquad
+c=\frac{(\min\{\eta,1\})^2}{2},\qquad
+A=\frac{2q|S|}{1-\exp(-c)}.
+```
+
+This unions over all deterministic tape counts before consulting the selected acquired count. Off that event every acquired history is accurate whenever its relevant pair count is at least N. On a supported accurate finite prefix, the generated index remains below N+m. Each nonterminal mismatching execution consumes a distinct global pair-count position below that barrier, contributing at most q(N+m−1) endpoints. Segment-terminal transitions contribute at most 2m(N+m); the final detecting transition is included once, not dropped because its newly completed history might be inaccurate. Thus the chronological progress-slot budget is
+
+```math
+J_N=q(N+m-1)+2m(N+m)=\alpha N+\beta,
+\quad\alpha=q+2m,\quad\beta=q(m-1)+2m^2.
+```
+
+This census is specific to the generated policy's retained global counts and phase/support bookkeeping. Resetting the pair counts at each phase would destroy the cross-phase count budget. The index and segment invariants are inherited controller obligations, not consequences of a generic concentration inequality. [EXP-charge][EXP-cutoff]
+
+A dangerous slot is an actual chronological interval whose actions may incur bad cost; a matching good operating interval can have infinite elapsed duration but no bad cost. The source retains the zero-cost gaps on the original physical path. For a deterministic horizon T, let L<sub>j,T</sub> be the number of dangerous actions in its j-th progress slot, with zero for absent slots. The accurate-prefix census bounds the bad prefix by the sum of the first JN such lengths. At a dangerous slot's complete finite starting history, the augmented navigation argument gives a chance at least pᴰ of progress within D steps. Iterating this conditional bound gives
+
+```math
+\Pr(L_{j,T}>kD\mid\text{the complete starting history})
+ \le\rho^k,\qquad \rho=1-p^D<1.
+```
+
+No conditional law is required on a null starting-history cylinder; its integral contribution is zero. With a=2/(1+ρ)>1, the geometric-tail summation for the rounded count R=⌈L<sub>j,T</sub>/D⌉ yields
+
+```math
+\mathbb E(a^R\mid\text{start})
+ \le 1+(a-1)\sum_{k\ge0}a^k\rho^k
+ =1+\frac{a-1}{1-a\rho}=2.
+```
+
+Here aρ<1, including the case ρ=0. The bound does **not** make different slots independent. For a fixed slot index, its possible finite starting histories form disjoint cylinders. On each cylinder all earlier slot lengths, and hence the product of their factors, are already determined by that complete history. Multiply the conditional integral bound by this known earlier product and sum over the cylinders. On the complement, the slot never starts and its factor is 1. Induction therefore gives the unconditional estimate
+
+```math
+\mathbb E\prod_{j<J}a^{\lceil L_{j,T}/D\rceil}\le2^J.
+```
+
+The no-start complement, chronological indexing and knowledge of the entire past are necessary: multiplying marginal moment bounds or conditioning on an analysis-selected last error would not prove this inequality. [EXP-slot][EXP-product][EXP-tower]
+
+**From the product to an affine confidence tail.** Put λ=log a>0. On the accurate event, the bad prefix count is at most the slot-length sum, and rounding gives
+
+```math
+\exp\!\left(\frac{\lambda}{D}\,C_{\sigma,T}\right)
+ \le\prod_{j<J_N}a^{\lceil L_{j,T}/D\rceil}.
+```
+
+Markov's inequality and the product bound control the accurate-event contribution; the preceding deterministic-count union controls its complement. The full count is the increasing supremum of its literal prefix counts. Continuity from below therefore gives, for t≥0,
+
+```math
+\Pr(C_\sigma>t)
+ \le A e^{-cN}
+       +\exp\!\left((\alpha N+\beta)\log2-\frac{\lambda t}{D}\right).
+```
+
+This passage permits Cσ=∞ and does not presuppose the almost-sure finiteness to be proved. It improves the alternative union-over-long-slots estimate, whose threshold is a product of the number of slots and their length cutoff; finite moments obtained from that weaker estimate do not by themselves establish an exponential moment. [EXP-cutoff][EXP-exp-tail]
+
+For u≥0 choose N=⌈(log(2A)+u)/c⌉. Since A≥1, this is at least 1 and is bounded above by (log(2A)+u)/c+1. Define
+
+```math
+b=\frac D\lambda
+  \left[\left(\alpha\left(1+\frac{\log(2A)}c\right)+\beta\right)
+          \log2+\log2\right],
+\qquad
+v=\frac D\lambda\left(\frac{\alpha\log2}c+1\right)>0.
+```
+
+At t=b+vu the first tail term is at most e<sup>−u</sup>/2 by the lower bound on N; the second is at most e<sup>−u</sup>/2 by its upper bound. Hence
+
+```math
+\Pr(C_\sigma>b+vu)\le e^{-u}.
+```
+
+This explicit algebraic optimization explains the positive range; it is not an assertion that the source exports certified executable rate constants. [EXP-affine]
+
+**Moments and the actual history law.** The affine tail implies, for every integer n≥0,
+
+```math
+\Pr(C_\sigma>n)\le\widetilde A\,r_0^n,
+\qquad \widetilde A=e^{b/v},\quad r_0=e^{-1/v}<1.
+```
+
+For n≥b substitute u=(n−b)/v; for n<b the right side is at least 1. Summing the integer tails bounds the extended expectation and therefore proves almost-sure finiteness. A weighted tail sum then gives the finite bound
+
+```math
+\mathbb E e^{\theta C_\sigma}
+ \le 1+\frac{e^\theta\widetilde A}{1-e^\theta r_0}
+ <\infty\qquad(0\le\theta<1/v).
+```
+
+Thus finiteness is established before the real conversion is relied upon. All natural moments also follow, since for θ>0 and x≥0,
+
+```math
+x^k\le\frac{k!}{\theta^k}e^{\theta x}.
+```
+
+The tape calculation must then be transported to the **whole action-path law**. The generated source's stack-action trajectory law equals its canonical Markov action law, and the map from histories to executed actions preserves action 0. Applying this equality to the measurable exponential-of-count function transports its nonnegative integral, including possible infinite values. Applying the corresponding first-moment identity supplies almost-sure finiteness on the actual history law as well. Equality of a parity event alone would not transport these integrals. This is the same kind of full-law obligation distinguished from deterministic seed correctness earlier in §7.19. [EXP-tail-moments][EXP-cost-law][EXP-actual]
+
+**One range for every live model.** For each σ∈B₀, the preceding proof supplies a positive rate rσ and actual-law finiteness for the *same* π<sub>ε</sub>. Take
+
+```math
+r=\min_{\sigma\in B_0}r_\sigma>0.
+```
+
+If 0≤θ<r, every model's exponential integral is finite. Their finite maximum is a valid Kθ. The minimum belongs to the rate argument; the maximum belongs to the bound argument. Replacing the minimum by a maximum can enter a model's unsupported rate range; replacing the maximum integral by a minimum need not bound all models. Nor can the all-model separation premise be checked only at the fallback model. The source's finite-set induction also treats B₀=∅ vacuously, choosing a positive rate and zero supremum, but that empty branch does not describe an actual model or a winning physical experiment. [EXP-common]
+
+The common range is open. For example, a geometric count with 0<ρ<1 and probability (1−ρ)ρⁿ at n has finite exponential moment exactly when e<sup>θ</sup>ρ<1; it diverges at θ=−logρ. No endpoint assertion follows from the positive-range proof. Finiteness of B₀ is equally substantive: a sequence of geometric models with positive rates tending to zero need not have a common positive rate. More basically, a count with probabilities proportional to (n+1)<sup>−3</sup> has finite mean but no positive exponential moment. These boundary examples explain why the result strengthens the earlier cost conclusion without licensing a closed endpoint, an infinite-family extension or a rate uniform across inputs.
+
+There is one useful connection to §7.14's posterior-deterministic visible-state construction. That construction preserves the entire bad-indicator stream, not just the event of eventual goodness. If the present generated policy is applied to a qualifying lifted finite model and pulled back through those exact causal history maps, the equality of count laws preserves its exponential moments too. This is a consequence of the already established full-law transport, conditional on the lifted input satisfying the present theorem's premises; it is not a new cost theorem for an arbitrary posterior-deterministic controller. Neither this connection nor the moment bound turns bad-action count into physical elapsed time, bounds the memory of the full learner, or extends a co-Büchi cost result to general parity with recurring odd visits.
+
+The source editions below preserve the exact theorem and proof dependencies used here. Their text supports this ordinary reconstruction; no new Lean execution, recovered historical acceptance seal, mutation rejection run or source-closure qualification is asserted. In particular, the six supplied mutations of the common-range module isolate minimum/maximum, open-endpoint, all-model and fixed-policy obligations, but their existence is not evidence that the exact mutated builds have freshly failed.
+
+
 ## 8. What final judgments identify about evidence use
 
 The previous sections ask what information a strategy or coordination mechanism needs. The converse question is different: what does a successful collective answer reveal about how the answer was produced? A group can produce informative, accurate answers without the available observations identifying each member's causal contribution. The following construction proves this limitation while preserving both a real two-input mechanism and a real one-input alternative. [11][r11]
@@ -3723,3 +3875,40 @@ These exact public guides identify the reported results, historical review scope
 
 [GUIDE105-G064]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/a288f1990b9320e0f4d0447d366ebaae7cd43344af8c16a1a6b421fb507396c5/README.md
 [GUIDE105-G092]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/e1db9b4ba20122bfd5052fa802a5408493c8cde398d5155c657a8d4e4e9a0d25/README.md
+
+
+## Source editions for the common exponential cost range
+
+The following exact public editions are the theorem and proof texts used in §7.19. They are bound by the common-range suite descriptor, not selected from similarly named later modules. The comparison reconstructs their ordinary argument without asserting a new kernel replay or an unavailable historical independent acceptance. The bound uses the original generated policy; the separately compiled signed-body policy retains its distinct cost boundary.
+
+- [EXP-common] **FiniteModelExponentialUniformity**, exact Git object `863a0388927949d9c75a604e8025dce7e2237cf3`; complete body read.
+- [EXP-actual] **ActualExponentialMoments**, exact Git object `14235fc2e06c5adf2465818a6b0b7e64590b9f6b`; complete body read.
+- [EXP-exp-tail] **GeneratedExponentialTail**, exact Git object `b520b9f22c7a775b473238c11f60e421539d239d`; complete body read.
+- [EXP-affine] **AffineTailOptimization**, exact Git object `c7797aeb50ecb60ed4af47fcc64602f3eb0f78a0`; complete body read.
+- [EXP-tail-moments] **TailMoments**, exact Git object `b32f686d61f9f3e91fd52410a2100884bc688263`; complete body read.
+- [EXP-moments] **ActualCostMoments**, exact Git object `1bada0a94ab7fa45ef0346719ea8cd377e747107`; complete body read.
+- [EXP-product] **GeneratedPrefixProduct**, exact Git object `c060aa26ebe3a0dca5ce6222d9d359d5229de010`; complete body read.
+- [EXP-cost-law] **GeneratedCostLaw**, exact Git object `08e270e893aa959b5fe952d5d04a1e475e82289b`; complete body read.
+- [EXP-cutoff] **ActualTotalCostTail**, exact Git object `d6740f8d1efc93196343e9f43cc7d4c622123121`; complete body read.
+- [EXP-slot] **GeneratedSlotMoment**, exact Git object `e41d3edf34f8c0ca2c59b2666e9710a39609c082`; complete body read.
+- [EXP-charge] **GeneratedChargeBudget**, exact Git object `2a2056483fe25dfc6186877f31235384e948be19`; complete body read.
+- [EXP-tower] **PrefixWeightedProduct**, exact Git object `3c35db59850de00ce3cc89525b5548258e50cd20`; complete body read.
+- [EXP-margin] **QuantitativeEmpiricalGate**, exact Git object `f4a7b6ec010df44f02458c57712f013e58bf55e7`; finite positive-margin theorem read.
+- [EXP-test] **ObservedRowTest**, exact Git object `d4b346d7f1179bc27f8c8408a710eca96f2851ef`; finite common separation and literal empirical-test definitions read.
+- [EXP-rotor] **FrozenRotorProgress**, exact Git object `50f6e54557c1fecf6e81dc53f108240c972ce50e`; rotor dimension definition read.
+
+[EXP-common]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/d0b174d6c0dd1e96df91497883e297ef41fe1ddb3e08d14c050dab15a3d180cc.lean
+[EXP-actual]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/20cd0fcfa5f1218776fd9377a32bb40c2324efc8cc85f08c490b8d16f3b2d595.lean
+[EXP-exp-tail]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/4904e5827d4b972c32fb182f40707c96b46b7d309f0cd75d63c54c42615df22c.lean
+[EXP-affine]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/ebc2d3831afafd6d1bda98da2213bdbb1dfe1fc164655f05945d9d7bf669c0d6.lean
+[EXP-tail-moments]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/7f58b3c0270925b452c97ebeaaaa9383f7958f2c0c0b4fc6b578a7cde01ef4f7.lean
+[EXP-moments]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/8b4014de8d7ae893631060dbe780cce434bccbce16524e6303e2c692f3fce46b.lean
+[EXP-product]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/6ab22024412f84e0295bb162ea1cd84432c2610dc87c917fd71281a5507caa94.lean
+[EXP-cost-law]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/9e5c38fdd7f3c7c3fe19dc9849cdba3ae3cb6abb1639d3ce7d4c8edfca0d7736.lean
+[EXP-cutoff]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/a55e4106c813ee266475198cadd3b93a90b2256b9d486468b5405d993b27bb4b.lean
+[EXP-slot]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/3c4ed79c762cc1e81f5b0ff4797c10fb0e45ab17b5c79a24495f8c8af775116b.lean
+[EXP-charge]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/4e315dcb799ddd5cd1c8b9a3392b0e159c38f271ca1826cb3e9625f1e44693ff.lean
+[EXP-tower]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/b8010ed64321d19eebe4a8b08b5b9066717bf701e40d64b254eef6a7caa55d32.lean
+[EXP-margin]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/00743077f4ad01f106967f1200f4d8a0d2b04cd48c568ad0a82ab4ae38b9b5c3.lean
+[EXP-test]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/e38e3a972bbdf859b854b42c44a7cbf4d83c0f5b2fb7566d2f726f155572bfee.lean
+[EXP-rotor]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/3804ba91149f9672a3c6e8c878c53a6661c74cb11f15069fbb7c9b5afb555703.lean

@@ -41907,6 +41907,8 @@
       "required_dependencies": [],
       "disposition": "REUSE",
       "repository_path": "docs/sourcing/R3-SOURCING-LEDGER.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "2ed9e182cb9db7d38d7c56c0f043983c99f8c940",
       "public_sha256": "2177de55bb84adc24b69dd8551c12893e7f4dd7eae2a5d5d643b372b9236b770",
       "public_bytes": 5421,
       "publication_basis": "exact_existing_public_repository_object"
@@ -45403,6 +45405,8 @@
       "required_dependencies": [],
       "disposition": "REUSE",
       "repository_path": "scripts/validate_review_state.py",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "95087964f175e00c5dc1a628bc83d40377c6b911",
       "public_sha256": "240dd79778d8fded8744873ddfc298e3206fa120dbe0417b50198983975efff0",
       "public_bytes": 34750,
       "publication_basis": "exact_existing_public_repository_object"

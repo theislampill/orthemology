@@ -9450,7 +9450,7 @@ class Digest176ReaderContractTests(unittest.TestCase):
                      for target in node.targets))]
         if len(nodes) != 3:
             raise AssertionError('the exact operational function/constant population changed')
-        cls.namespace = {'Path': Path}
+        cls.namespace = {'Path': Path, 'REVIEWED_AUTHORITY_EDITS': {}}
         exec(compile(ast.Module(body=nodes, type_ignores=[]),
                      'reader-digest176-operational-interface', 'exec'), cls.namespace)
         # Preserve the actual finite status selector in this metadata-only
@@ -9673,6 +9673,285 @@ class Digest176ReaderContractTests(unittest.TestCase):
                 self.assertEqual(len(errors), 1)
                 self.assertTrue(errors[0].startswith('corpus-currentness:'))
 
+
+class ReviewedSourcingLedgerControls(unittest.TestCase):
+    """Finite actual-interface controls, without native Git or source replay."""
+    SOURCE = Path(__file__).resolve().parents[1] / 'scripts/check_reader_pilot.py'
+
+    def _module(self):
+        import ast, os, stat, types
+        names={'safe_path','reviewed_indexed_modification','reviewed_sourcing_ledger_modifications','check_corpus_currentness'}
+        nodes=[n for n in ast.parse(self.SOURCE.read_bytes()).body
+               if isinstance(n,ast.FunctionDef) and n.name in names]
+        self.assertEqual({n.name for n in nodes}, names)
+        module=types.ModuleType('inert_sourcing_ledger')
+        module.__dict__.update(Path=Path,hashlib=hashlib,os=os,stat=stat,subprocess=subprocess,REVIEWED_AUTHORITY_EDITS={})
+        exec(compile(ast.Module(body=nodes,type_ignores=[]),str(self.SOURCE),'exec'),module.__dict__)
+        return module
+
+    def _fixture(self, *, state='valid'):
+        import types
+        module=self._module();tmp=tempfile.TemporaryDirectory();self.addCleanup(tmp.cleanup)
+        repo=Path(tmp.name);path='docs/sourcing/R3-SOURCING-LEDGER.md'
+        node=repo/path;node.parent.mkdir(parents=True);original=b'original scoped attribution\n'
+        current=original+b'additive VIA-COMPILATION attribution\n';node.write_bytes(current)
+        identity=lambda b:(hashlib.sha1(b'blob '+str(len(b)).encode()+b'\0'+b).hexdigest(),hashlib.sha256(b).hexdigest(),len(b))
+        module.REVIEWED_SOURCING_LEDGER=(path,'a'*40,identity(original),identity(current))
+        before='100644 blob '+identity(original)[0]+'\t'+path+'\0'
+        stage=('100644 '+identity(current)[0]+' 0\t'+path+'\0').encode();calls=[]
+        def git(argv,**kwargs):
+            self.assertEqual(kwargs,dict(cwd=repo,capture_output=True,check=False));calls.append(argv)
+            if 'ls-tree' in argv:body=before.encode()
+            elif 'cat-file' in argv:body=original if state!='history-bytes' else original+b'wrong'
+            elif 'ls-files' in argv:
+                body=stage
+                if state=='index':body=stage.replace(b'100644',b'100755')
+                if state=='conflict':body=stage.replace(b' 0\t',b' 1\t')
+                if state=='late-index' and sum('ls-files' in a for a in calls)>1:body=b''
+                if state=='late-body' and sum('ls-files' in a for a in calls)>1:node.write_bytes(current+b'late')
+            else:raise AssertionError('unexpected native command '+repr(argv))
+            return subprocess.CompletedProcess(argv,1 if state=='native-failure' else 0,body,b'')
+        module.subprocess=types.SimpleNamespace(run=git)
+        if state=='wrong-bytes':node.write_bytes(current+b'wrong')
+        if state=='missing':node.unlink()
+        if state=='executable':node.chmod(0o755)
+        if state=='symlink':
+            target=repo/'ordinary';target.write_bytes(current);node.unlink();node.symlink_to(target)
+        if state=='hardlink':
+            import os
+            os.link(node,repo/'ordinary')
+        return module,repo,calls
+
+    def test_exact_postimage_and_original_history_are_admitted(self):
+        module,repo,calls=self._fixture()
+        self.assertEqual(module.reviewed_sourcing_ledger_modifications(repo),{'docs/sourcing/R3-SOURCING-LEDGER.md'})
+        self.assertEqual(sum('ls-files' in a for a in calls),2)
+
+    def test_wrong_missing_executable_symlink_hardlink_worktree_refuse(self):
+        for state in ('wrong-bytes','missing','executable','symlink','hardlink'):
+            with self.subTest(state=state):
+                module,repo,_=self._fixture(state=state)
+                with self.assertRaises((ValueError,OSError)):module.reviewed_sourcing_ledger_modifications(repo)
+
+    def test_wrong_conflicted_or_late_changed_index_refuse(self):
+        for state in ('index','conflict','late-index'):
+            with self.subTest(state=state):
+                module,repo,_=self._fixture(state=state)
+                with self.assertRaises((ValueError,OSError)):module.reviewed_sourcing_ledger_modifications(repo)
+
+    def test_wrong_history_failed_native_and_late_body_refuse(self):
+        for state in ('history-bytes','native-failure','late-body'):
+            with self.subTest(state=state):
+                module,repo,_=self._fixture(state=state)
+                with self.assertRaises((ValueError,OSError)):module.reviewed_sourcing_ledger_modifications(repo)
+
+    def _currentness(self, changes, qualification='valid'):
+        module=self._module();calls=[]
+        namespace=module.__dict__
+        namespace.update(REFACTOR_EDIT_PATHS=set(),PMR007_DEEP_PREFIX='unused-deep',
+            PMR007_ROUNDS_PREFIX='unused-rounds',PMR007_ROUNDS_FORMALIZATION='unused-round-guide',
+            CONTINUATION_COPY_ROOT='unused-continuation/',SUCCESSOR_INPUT_REGISTRY='unused-input',
+            SUCCESSOR_CALCULUS_MAP='unused-calculus',MEDIATOR_GUIDE='unused-guide')
+        for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS',
+            'FORMAL_COPY_PATHS','CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','SUCCESSOR_INPUT_PATHS',
+            'GENERATED_FIXTURE_PATHS','ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS',
+            'FIXTURE_CONSUMER_ORIGINAL','HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'):
+            namespace[name]=set()
+        for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_duplicate_paths',
+            'checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths','formal_duplicate_paths',
+            'checkpoint_code_duplicate_paths','digest_record_absences'):
+            namespace[name]=lambda *a:set()
+        namespace.update(binding_record_candidate=lambda p:False,status_record_candidate=lambda p:False)
+        def qualify(repo):
+            calls.append('qualify')
+            if qualification=='error':raise ValueError('wrong reviewed edition')
+            return {'docs/sourcing/R3-SOURCING-LEDGER.md'} if qualification=='valid' else set()
+        namespace['reviewed_sourcing_ledger_modifications']=qualify
+        namespace['readonly_git_diff']=lambda *a,**k:subprocess.CompletedProcess([],0,
+            ''.join(s+'\0'+p+'\0' for s,p in changes).encode(),b'')
+        return module.check_corpus_currentness(Path('unused-inert-root'),'unused-baseline'),calls
+
+    def test_gate_admits_only_qualified_named_modification(self):
+        errors,calls=self._currentness([('M','docs/sourcing/R3-SOURCING-LEDGER.md')])
+        self.assertEqual(errors,[]);self.assertEqual(calls,['qualify','qualify'])
+
+    def test_gate_rejects_unqualified_modification(self):
+        for state in ('empty','error'):
+            with self.subTest(state=state):
+                errors,_=self._currentness([('M','docs/sourcing/R3-SOURCING-LEDGER.md')],state)
+                self.assertTrue(errors)
+
+    def test_gate_rejects_deletion_type_addition_and_unrelated_modification(self):
+        for status,path in [('D','docs/sourcing/R3-SOURCING-LEDGER.md'),('T','docs/sourcing/R3-SOURCING-LEDGER.md'),
+                            ('A','docs/sourcing/R3-SOURCING-LEDGER.md'),('M','docs/sourcing/unrelated.md')]:
+            with self.subTest(status=status,path=path):
+                errors,calls=self._currentness([(status,path)])
+                self.assertTrue(errors);self.assertEqual(calls,[])
+
+    def test_gate_unchanged_liveness_and_extra_path_refusal(self):
+        errors,calls=self._currentness([]);self.assertEqual((errors,calls),([],[]))
+        errors,_=self._currentness([('M','docs/sourcing/R3-SOURCING-LEDGER.md'),('M','unrelated.md')])
+        self.assertTrue(errors)
+
+
+class ReviewedAuthorityControls(unittest.TestCase):
+    """Exact current owner editions, not an arbitrary operational-edit waiver."""
+    PATHS = ('scripts/validate_candidate_state.py', 'scripts/validate_review_state.py',
+             'tests/test_candidate_state.py')
+
+    def fixture(self, state='valid'):
+        import ast,os,stat,types
+        source=(ROOT/'scripts/check_reader_pilot.py').read_bytes()
+        names={'safe_path','reviewed_indexed_modification','reviewed_authority_modifications','check_corpus_currentness'}
+        nodes=[n for n in ast.parse(source).body if isinstance(n,ast.FunctionDef) and n.name in names]
+        self.assertEqual({n.name for n in nodes},names,'exact reviewed authority owner is missing')
+        module=types.ModuleType('isolated_reviewed_authority')
+        module.__dict__.update(Path=Path,hashlib=hashlib,os=os,stat=stat,subprocess=subprocess)
+        exec(compile(ast.Module(body=nodes,type_ignores=[]),'actual-reviewed-authority-functions','exec'),module.__dict__)
+        temp=tempfile.TemporaryDirectory();self.addCleanup(temp.cleanup);repo=Path(temp.name)
+        identity=lambda b:(hashlib.sha1(b'blob '+str(len(b)).encode()+b'\0'+b).hexdigest(),hashlib.sha256(b).hexdigest(),len(b))
+        originals={p:('original authority '+p+'\n').encode() for p in self.PATHS}
+        currents={p:b+b'reviewed exact successor\n' for p,b in originals.items()}
+        module.REVIEWED_AUTHORITY_EDITS={p:(p,'a'*40,identity(originals[p]),identity(currents[p])) for p in self.PATHS}
+        for path,body in currents.items():
+            node=repo/path;node.parent.mkdir(parents=True,exist_ok=True);node.write_bytes(body)
+        calls=[];counts={}
+        def git(argv,**kwargs):
+            self.assertEqual(kwargs,dict(cwd=repo,capture_output=True,check=False));calls.append(argv)
+            path=argv[-1].split(':',1)[-1] if 'cat-file' in argv else argv[-1]
+            self.assertIn(path,self.PATHS)
+            if 'ls-tree' in argv:
+                body=('100644 blob '+identity(originals[path])[0]+'\t'+path+'\0').encode()
+                if state=='wrong-tree':body=body.replace(b'100644',b'100755')
+            elif 'cat-file' in argv:body=originals[path]+(b'wrong' if state=='wrong-history' else b'')
+            elif 'ls-files' in argv:
+                counts[path]=counts.get(path,0)+1
+                body=('100644 '+identity(currents[path])[0]+' 0\t'+path+'\0').encode()
+                if state=='index':body=body.replace(b' 0\t',b' 1\t')
+                if state=='late-index' and counts[path]>1:body=b''
+            else:raise AssertionError('Unexpected native operation')
+            return subprocess.CompletedProcess(argv,1 if state=='native-failure' else 0,body,b'')
+        module.subprocess=types.SimpleNamespace(run=git)
+        node=repo/self.PATHS[0]
+        if state=='wrong-body':node.write_bytes(b'X'+currents[self.PATHS[0]][1:])
+        if state=='missing':node.unlink()
+        if state=='executable':node.chmod(0o755)
+        if state=='symlink':
+            target=repo/'ordinary';target.write_bytes(node.read_bytes());node.unlink();node.symlink_to(target)
+        if state=='hardlink':os.link(node,repo/'ordinary')
+        return module,repo,calls
+
+    def test_exact_three_owner_editions_and_requested_subset(self):
+        module,repo,calls=self.fixture()
+        self.assertEqual(module.reviewed_authority_modifications(repo,set(self.PATHS)),set(self.PATHS))
+        self.assertEqual(module.reviewed_authority_modifications(repo,{self.PATHS[1]}),{self.PATHS[1]})
+
+    def test_wrong_missing_or_nonordinary_current_owner_refuses(self):
+        for state in ('wrong-body','missing','executable','symlink','hardlink'):
+            with self.subTest(state=state):
+                module,repo,_=self.fixture(state)
+                with self.assertRaises((ValueError,OSError)):
+                    module.reviewed_authority_modifications(repo,set(self.PATHS))
+
+    def test_history_index_and_native_failures_refuse(self):
+        for state in ('wrong-tree','wrong-history','index','late-index','native-failure'):
+            with self.subTest(state=state):
+                module,repo,_=self.fixture(state)
+                with self.assertRaises((ValueError,OSError)):
+                    module.reviewed_authority_modifications(repo,set(self.PATHS))
+        module,repo,_=self.fixture()
+        with self.assertRaises(ValueError):module.reviewed_authority_modifications(repo,{'scripts/unrelated.py'})
+
+    def currentness(self,changes,qualification='valid'):
+        base=ReviewedSourcingLedgerControls()
+        module=base._module();ns=module.__dict__;calls=[]
+        ns.update(REFACTOR_EDIT_PATHS=set(),PMR007_DEEP_PREFIX='unused-deep',PMR007_ROUNDS_PREFIX='unused-rounds',
+            PMR007_ROUNDS_FORMALIZATION='unused-formal',CONTINUATION_COPY_ROOT='unused-copy/',SUCCESSOR_INPUT_REGISTRY='unused-input',
+            SUCCESSOR_CALCULUS_MAP='unused-map',MEDIATOR_GUIDE='unused-guide',REVIEWED_AUTHORITY_EDITS={p:None for p in self.PATHS})
+        for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS','FORMAL_COPY_PATHS',
+                     'CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','SUCCESSOR_INPUT_PATHS','GENERATED_FIXTURE_PATHS',
+                     'ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS','FIXTURE_CONSUMER_ORIGINAL',
+                     'HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'):ns[name]=set()
+        for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_duplicate_paths',
+                     'checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths','formal_duplicate_paths',
+                     'checkpoint_code_duplicate_paths','digest_record_absences'):ns[name]=lambda *a:set()
+        ns.update(binding_record_candidate=lambda p:False,status_record_candidate=lambda p:False)
+        def qualify(repo,requested):
+            calls.append(set(requested))
+            if qualification=='error':raise ValueError('wrong exact owner edition')
+            return set(requested) if qualification=='valid' else set()
+        ns['reviewed_authority_modifications']=qualify
+        ns['readonly_git_diff']=lambda *a,**k:subprocess.CompletedProcess([],0,''.join(s+'\0'+p+'\0' for s,p in changes).encode(),b'')
+        return module.check_corpus_currentness(Path('inert-authority-root'),'unused-baseline'),calls
+
+    def test_currentness_admits_only_requested_qualified_modifications(self):
+        errors,calls=self.currentness([('M',p) for p in self.PATHS])
+        self.assertEqual(errors,[]);self.assertEqual(calls,[set(self.PATHS)]*2)
+        for state in ('error','empty'):
+            with self.subTest(state=state):self.assertTrue(self.currentness([('M',self.PATHS[0])],state)[0])
+
+    def test_deletion_type_change_addition_and_unrelated_edit_refuse(self):
+        for path in self.PATHS:
+            for status in ('D','T','A'):
+                with self.subTest(path=path,status=status):
+                    errors,calls=self.currentness([(status,path)])
+                    self.assertTrue(errors);self.assertEqual(calls,[])
+        self.assertTrue(self.currentness([('M','scripts/unrelated.py')])[0])
+
+    def test_unchanged_positive_and_extra_path_refusal(self):
+        self.assertEqual(self.currentness([]),([],[]))
+        self.assertTrue(self.currentness([('M',self.PATHS[0]),('M','unrelated.md')])[0])
+
+
+class ReviewedAttributionPinControls(unittest.TestCase):
+    PINS={
+        'scripts/validate_review_state.py':('95087964f175e00c5dc1a628bc83d40377c6b911',
+            '240dd79778d8fded8744873ddfc298e3206fa120dbe0417b50198983975efff0',34750,'7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/sourcing/R3-SOURCING-LEDGER.md':('2ed9e182cb9db7d38d7c56c0f043983c99f8c940',
+            '2177de55bb84adc24b69dd8551c12893e7f4dd7eae2a5d5d643b372b9236b770',5421,'7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
+
+    def setUp(self):
+        Digest176ReaderContractTests.setUpClass()
+        self.base=Digest176ReaderContractTests();self.base.setUp()
+        for path,(_,identity,size,_) in self.PINS.items():
+            row=dict(repository_path=path,source_sha256=identity,public_sha256=identity,
+                     source_bytes=size,public_bytes=size,disposition='REUSE',role='unchanged-role')
+            for document in (self.base.original,self.base.prior,self.base.current):
+                document['objects'].append(deepcopy(row))
+        self.current=self.base.pinned(self.base.current,self.PINS)
+
+    def test_previous_six_pin_form_remains_accepted(self):
+        self.assertTrue(self.base.permitted(self.base.current))
+
+    def test_complete_two_original_coordinates_are_admitted(self):
+        self.assertTrue(self.base.permitted(self.current))
+
+    def test_partial_original_coordinate_pair_refuses(self):
+        for path in self.PINS:
+            with self.subTest(path=path):
+                changed=deepcopy(self.current);row=next(r for r in changed['objects'] if r['repository_path']==path)
+                row.pop('repository_revision');row.pop('git_blob')
+                self.assertFalse(self.base.permitted(changed))
+
+    def test_identity_coordinate_type_or_role_change_refuses(self):
+        mutations=(('source_sha256','0'*64),('public_sha256','0'*64),('source_bytes',1),('public_bytes',1),
+                   ('repository_revision','HEAD'),('git_blob','0'*40),('disposition','PROJECT'),('role','reclassified'))
+        for path in self.PINS:
+            for field,value in mutations:
+                with self.subTest(path=path,field=field):
+                    changed=deepcopy(self.current);next(r for r in changed['objects'] if r['repository_path']==path)[field]=value
+                    self.assertFalse(self.base.permitted(changed))
+
+    def test_missing_duplicate_reordered_and_unrelated_rows_refuse(self):
+        for kind in ('missing','duplicate','reordered','unrelated','metadata'):
+            with self.subTest(kind=kind):
+                changed=deepcopy(self.current)
+                if kind=='missing':changed['objects'].pop()
+                elif kind=='duplicate':changed['objects'].append(deepcopy(changed['objects'][-1]))
+                elif kind=='reordered':changed['objects'].reverse()
+                elif kind=='unrelated':changed['objects'][0]['role']='unreviewed'
+                else:changed['schema']='unreviewed'
+                self.assertFalse(self.base.permitted(changed))
 
 if __name__ == "__main__":
     unittest.main()

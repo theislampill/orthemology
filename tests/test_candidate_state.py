@@ -1,384 +1,265 @@
 #!/usr/bin/env python3
-"""Focused contract tests for the generated R7 candidate topology."""
-import copy
+"""Current decision authority, independent of retired topology reconstruction."""
+import ast
+import json
 import contextlib
+import copy
 import importlib.util
 import io
-import json
+from pathlib import Path
 import sys
 import tempfile
 import unittest
-from pathlib import Path
 
 import yaml
 from jsonschema import Draft202012Validator
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
-
-from scripts.generate_candidate_state import build_overlay, collect_issues  # noqa: E402
-import scripts.generate_candidate_state as candidate_generator  # noqa: E402
 
 
-INPUT = ROOT / "docs" / "project-closure" / "r7e-sol" / "CANDIDATE-TOPOLOGY-INPUT.yaml"
-OUTPUT = ROOT / "docs" / "current-candidate-state.yaml"
-TOPOLOGY_SCHEMA = ROOT / "schemas" / "candidate-topology.schema.json"
-OVERLAY_SCHEMA = ROOT / "schemas" / "candidate-overlay.schema.json"
-DECISIONS = ROOT / "docs" / "decision-status.yaml"
-SCRIPTS = ROOT / "scripts"
-
-
-def generator_exit(data):
-    """Run the real generator main against a disposable frozen input."""
-    with tempfile.TemporaryDirectory() as temp_dir:
-        input_path = Path(temp_dir) / "input.yaml"
-        output_path = Path(temp_dir) / "output.yaml"
-        input_path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
-        old_input = candidate_generator.INPUT_PATH
-        old_output = candidate_generator.OUTPUT_PATH
-        old_argv = sys.argv
-        candidate_generator.INPUT_PATH = str(input_path)
-        candidate_generator.OUTPUT_PATH = str(output_path)
-        sys.argv = ["generate_candidate_state.py"]
-        stream = io.StringIO()
-        try:
-            with contextlib.redirect_stdout(stream), contextlib.redirect_stderr(stream):
-                try:
-                    exit_code = candidate_generator.main()
-                except Exception as exc:  # test boundary: a traceback is a contract failure
-                    exit_code = 99
-                    stream.write("TRACEBACK: %s: %s" % (type(exc).__name__, exc))
-        finally:
-            candidate_generator.INPUT_PATH = old_input
-            candidate_generator.OUTPUT_PATH = old_output
-            sys.argv = old_argv
-        return exit_code, stream.getvalue(), output_path.exists()
-
-
-def production_validator_exit(data, overlay=None, decisions=None):
-    """Run the real production validator with only input/output reads replaced."""
-    scripts_path = str(SCRIPTS)
-    if scripts_path not in sys.path:
-        sys.path.insert(0, scripts_path)
+def load_validator():
     spec = importlib.util.spec_from_file_location(
-        "candidate_state_production_probe",
-        SCRIPTS / "validate_candidate_state.py",
-    )
-    if spec is None or spec.loader is None:
-        return 2, "could not import production validator"
+        'candidate_authority_probe', ROOT / 'scripts/validate_candidate_state.py')
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-    if overlay is None:
-        try:
-            overlay = build_overlay(data)
-        except Exception:
-            overlay = yaml.safe_load(OUTPUT.read_text(encoding="utf-8"))
-    overrides = {
-        "docs/project-closure/r7e-sol/CANDIDATE-TOPOLOGY-INPUT.yaml": yaml.safe_dump(
-            data, sort_keys=False
-        ),
-        "docs/current-candidate-state.yaml": yaml.safe_dump(overlay, sort_keys=False),
-    }
-    if decisions is not None:
-        registry=yaml.safe_load(DECISIONS.read_text(encoding="utf-8"))
-        registry["decisions"]=decisions
-        overrides["docs/decision-status.yaml"]=yaml.safe_dump(registry,sort_keys=False)
-    real_read = module.read
-    module.read = lambda rel: overrides.get(rel, real_read(rel))
-    module.FAILS.clear()
-    stream = io.StringIO()
-    try:
-        with contextlib.redirect_stdout(stream), contextlib.redirect_stderr(stream):
-            try:
-                exit_code = module.main()
-            except Exception as exc:  # test boundary: a traceback is a contract failure
-                exit_code = 99
-                stream.write("TRACEBACK: %s: %s" % (type(exc).__name__, exc))
-    finally:
-        module.read = real_read
-    return exit_code, stream.getvalue()
+    return module
 
 
-class CandidateStateTests(unittest.TestCase):
-    def test_local_candidate_requires_no_invented_pull_request(self):
-        data=yaml.safe_load(INPUT.read_text(encoding="utf-8"))
-        decisions=yaml.safe_load(DECISIONS.read_text(encoding="utf-8"))["decisions"]
-        decisions["0037"]={"status":"proposed-candidate","stage":"local-preparation","title":"Local continuation"}
-        code,output=production_validator_exit(data,decisions=decisions)
-        self.assertEqual(code,0,output)
-        decisions["0037"]["status"]="adopted-merged"
-        code,_=production_validator_exit(data,decisions=decisions)
-        self.assertEqual(code,1)
-
-    def test_historical_candidate_cannot_lose_its_pull_request(self):
-        data=yaml.safe_load(INPUT.read_text(encoding="utf-8"))
-        decisions=yaml.safe_load(DECISIONS.read_text(encoding="utf-8"))["decisions"]
-        decisions["0034"].pop("pr")
-        code,_=production_validator_exit(data,decisions=decisions)
-        self.assertEqual(code,1)
-
-    def setUp(self):
-        self.data = yaml.safe_load(INPUT.read_text(encoding="utf-8"))
-        self.decisions = yaml.safe_load(DECISIONS.read_text(encoding="utf-8"))["decisions"]
-
-    def issues(self, data=None, decisions=None):
-        return collect_issues(data or self.data, decisions or self.decisions)
-
-    def assertIssue(self, issues, fragment):
-        self.assertTrue(
-            any(fragment in issue for issue in issues),
-            f"expected issue containing {fragment!r}, got {issues!r}",
-        )
-
-    def authority_mutations(self):
-        cases = []
-
-        omitted_document = copy.deepcopy(self.data)
-        omitted_document["candidate_documents"]["closure"].pop()
-        cases.append(("omitted document", omitted_document, "candidate document inventory"))
-
-        extra_document = copy.deepcopy(self.data)
-        extra_document["candidate_documents"]["closure"].append("README.md")
-        cases.append(("extra document", extra_document, "candidate document inventory"))
-
-        nonexistent_document = copy.deepcopy(self.data)
-        nonexistent_document["candidate_documents"]["closure"][-1] = (
-            "docs/" + "does-not-exist.md"
-        )
-        cases.append(("nonexistent document", nonexistent_document, "does not resolve"))
-
-        omitted_pdf = copy.deepcopy(self.data)
-        omitted_pdf["candidate_pdfs"].pop()
-        cases.append(("omitted PDF", omitted_pdf, "candidate PDF inventory"))
-
-        extra_pdf = copy.deepcopy(self.data)
-        extra_pdf["candidate_pdfs"].append("artifacts/orthemic-core-reference-draft.pdf")
-        cases.append(("extra PDF", extra_pdf, "candidate PDF inventory"))
-
-        nonexistent_pdf = copy.deepcopy(self.data)
-        nonexistent_pdf["candidate_pdfs"][-1] = "artifacts/does-not-exist.pdf"
-        cases.append(("nonexistent PDF", nonexistent_pdf, "does not resolve"))
-
-        revision = copy.deepcopy(self.data)
-        revision["pull_requests"][-1]["revision"] = "R7F"
-        cases.append(("revision drift", revision, "revision drift"))
-
-        provenance_layer = copy.deepcopy(self.data)
-        provenance_layer["pull_requests"][-1]["provenance"]["layer"] = "fabricated-layer"
-        cases.append(("provenance layer drift", provenance_layer, "provenance layer drift"))
-
-        provenance_model = copy.deepcopy(self.data)
-        provenance_model["pull_requests"][-1]["provenance"]["model"] = "Unknown"
-        cases.append(("provenance model drift", provenance_model, "provenance model drift"))
-
-        observation_source = copy.deepcopy(self.data)
-        observation_source["observation_source"] = "fabricated"
-        cases.append(("observation-source drift", observation_source, "observation_source drift"))
-
-        return cases
-
-    def test_frozen_input_and_generated_overlay_validate_against_schemas(self):
-        topology_schema = json.loads(TOPOLOGY_SCHEMA.read_text(encoding="utf-8"))
-        overlay_schema = json.loads(OVERLAY_SCHEMA.read_text(encoding="utf-8"))
-        Draft202012Validator.check_schema(topology_schema)
-        Draft202012Validator.check_schema(overlay_schema)
-        self.assertEqual([], list(Draft202012Validator(topology_schema).iter_errors(self.data)))
-        overlay = build_overlay(self.data)
-        self.assertEqual([], list(Draft202012Validator(overlay_schema).iter_errors(overlay)))
-
-    def test_build_overlay_is_deterministic_complete_and_non_self_referential(self):
-        first = build_overlay(copy.deepcopy(self.data))
-        second = build_overlay(copy.deepcopy(self.data))
-        self.assertEqual(first, second)
-        self.assertEqual([8, 9, 10, 11, 12], [row["pr"] for row in first["pr_chain"]])
-        self.assertEqual([12, 11, 10, 9, 8], first["merge_order"])
-        self.assertEqual(
-            "cbab14747835855d232448f648eefa1d4e36074e",
-            first["pr_chain"][-1]["head_at_observation"],
-        )
-        self.assertNotIn("head", first["pr_chain"][-1])
-        self.assertFalse(first["timeless_state"])
-
-    def test_tracked_overlay_exactly_matches_generated_model(self):
-        self.assertEqual(
-            build_overlay(self.data),
-            yaml.safe_load(OUTPUT.read_text(encoding="utf-8")),
-        )
-
-    def test_valid_topology_has_no_issues(self):
-        self.assertEqual([], self.issues())
-
-    def test_review_provenance_is_distinct_from_implementation_provenance(self):
-        self.assertEqual(
-            {
-                "layer": "independent-review",
-                "model": "gpt-5.6-sol",
-                "statement": (
-                    "Controller-confirmed Sol review provenance; separate from the "
-                    "historical candidate implementation provenance."
-                ),
-            },
-            self.data.get("review_provenance"),
-        )
-        overlay = build_overlay(self.data)
-        self.assertEqual(self.data["review_provenance"], overlay.get("review_provenance"))
-        self.assertNotEqual(
-            overlay["pr_chain"][-1]["provenance"],
-            overlay["review_provenance"],
-        )
-
-    def test_semantics_reject_complete_authority_mutations(self):
-        for name, mutated, fragment in self.authority_mutations():
-            with self.subTest(name=name):
-                self.assertIssue(self.issues(mutated), fragment)
-
-    def test_generator_rejects_complete_authority_mutations(self):
-        for name, mutated, _ in self.authority_mutations():
-            with self.subTest(name=name):
-                exit_code, output, output_exists = generator_exit(mutated)
-                self.assertEqual(1, exit_code, output)
-                self.assertNotIn("TRACEBACK", output)
-                self.assertFalse(output_exists, output)
-
-    def test_production_validator_rejects_complete_authority_mutations(self):
-        for name, mutated, _ in self.authority_mutations():
-            with self.subTest(name=name):
-                exit_code, output = production_validator_exit(mutated)
-                self.assertEqual(1, exit_code, output)
-                self.assertNotIn("TRACEBACK", output)
-
-        key_drift_overlay = build_overlay(self.data)
-        key_drift_overlay["provenance_layers"]["r7f"] = key_drift_overlay[
-            "provenance_layers"
-        ].pop("r7e")
-        exit_code, output = production_validator_exit(self.data, key_drift_overlay)
-        self.assertEqual(1, exit_code, output)
-        self.assertNotIn("TRACEBACK", output)
-
-    def test_generator_and_validator_report_malformed_shapes_without_traceback(self):
-        cases = []
-
-        nested_decision = copy.deepcopy(self.data)
-        nested_decision["pull_requests"][-1]["candidate_decisions"] = [["0034"]]
-        cases.append(("nested-list decision ID", nested_decision))
-
-        nonmapping_claims = copy.deepcopy(self.data)
-        nonmapping_claims["status_claims"] = []
-        cases.append(("non-mapping status_claims", nonmapping_claims))
-
-        nonmapping_evidence = copy.deepcopy(self.data)
-        nonmapping_evidence["status_claims"]["evidence"] = "fabricated"
-        cases.append(("non-mapping evidence", nonmapping_evidence))
-
-        for name, mutated in cases:
-            with self.subTest(component="generator", name=name):
-                exit_code, output, output_exists = generator_exit(mutated)
-                self.assertEqual(1, exit_code, output)
-                self.assertIn("schema:", output)
-                self.assertIn("TOTAL:", output)
-                self.assertNotIn("TRACEBACK", output)
-                self.assertFalse(output_exists, output)
-            with self.subTest(component="production validator", name=name):
-                exit_code, output = production_validator_exit(mutated)
-                self.assertEqual(1, exit_code, output)
-                self.assertIn("schema", output)
-                self.assertIn("TOTAL:", output)
-                self.assertNotIn("TRACEBACK", output)
-
-    def test_production_validator_rejects_malformed_generated_overlays_without_traceback(self):
-        malformed_row = build_overlay(self.data)
-        malformed_row["pr_chain"][0] = ["bad"]
-
-        nonmapping_merged_base = build_overlay(self.data)
-        nonmapping_merged_base["merged_base"] = []
-
-        nonmapping_no_merge_status = build_overlay(self.data)
-        nonmapping_no_merge_status["no_merge_status"] = "bad"
-
-        cases = [
-            ("list overlay", []),
-            ("string overlay", "bad"),
-            ("malformed pr_chain row", malformed_row),
-            ("non-mapping merged_base", nonmapping_merged_base),
-            ("non-mapping no_merge_status", nonmapping_no_merge_status),
-        ]
-        for name, overlay in cases:
-            with self.subTest(name=name):
-                exit_code, output = production_validator_exit(self.data, overlay)
-                self.assertEqual(1, exit_code, output)
-                self.assertIn("schema", output)
-                self.assertIn("TOTAL:", output)
-                self.assertNotIn("TRACEBACK", output)
-
-    def test_omitted_pr_11_or_12_is_rejected(self):
-        for omitted in (11, 12):
-            with self.subTest(omitted=omitted):
-                mutated = copy.deepcopy(self.data)
-                mutated["pull_requests"] = [
-                    row for row in mutated["pull_requests"] if row["pr"] != omitted
-                ]
-                self.assertIssue(self.issues(mutated), f"missing PR #{omitted}")
-
-    def test_duplicate_or_noninteger_pr_is_rejected(self):
-        duplicate = copy.deepcopy(self.data)
-        duplicate["pull_requests"][-1]["pr"] = 11
-        self.assertIssue(self.issues(duplicate), "duplicate PR #11")
-
-        noninteger = copy.deepcopy(self.data)
-        noninteger["pull_requests"][-1]["pr"] = "12"
-        self.assertIssue(self.issues(noninteger), "PR number must be an integer")
-
-    def test_placeholder_or_non_40_hex_head_is_rejected(self):
-        for bad in ("set at delivery (child PR head)", "abc123"):
-            with self.subTest(head=bad):
-                mutated = copy.deepcopy(self.data)
-                mutated["pull_requests"][-1]["head_at_observation"] = bad
-                self.assertIssue(self.issues(mutated), "40-lowercase-hex")
-
-    def test_broken_parent_link_is_rejected(self):
-        mutated = copy.deepcopy(self.data)
-        mutated["pull_requests"][3]["base_branch"] = "candidate/wrong-parent"
-        self.assertIssue(self.issues(mutated), "PR #11 base_branch does not match PR #10")
-
-        mutated = copy.deepcopy(self.data)
-        mutated["pull_requests"][3]["base_head_at_observation"] = "0" * 40
-        self.assertIssue(self.issues(mutated), "PR #11 base head does not match PR #10")
-
-    def test_wrong_merge_order_is_rejected(self):
-        mutated = copy.deepcopy(self.data)
-        mutated["merge_order"] = [8, 9, 10, 11, 12]
-        self.assertIssue(self.issues(mutated), "merge_order must be [12, 11, 10, 9, 8]")
-
-    def test_stale_frozen_observation_is_rejected(self):
-        mutated = copy.deepcopy(self.data)
-        mutated["observed_at_utc"] = "2026-07-21T18:10:21Z"
-        self.assertIssue(self.issues(mutated), "frozen observation is stale")
-
-    def test_missing_provenance_layer_is_rejected(self):
-        mutated = copy.deepcopy(self.data)
-        del mutated["pull_requests"][-1]["provenance"]["layer"]
-        self.assertIssue(self.issues(mutated), "PR #12 provenance layer is missing")
-
-    def test_decision_allocation_drift_is_rejected(self):
-        mutated = copy.deepcopy(self.data)
-        mutated["pull_requests"][-1]["candidate_decisions"] = []
-        self.assertIssue(self.issues(mutated), "decision allocation drift")
-
-    def test_candidate_decision_self_promotion_is_rejected(self):
-        decisions = copy.deepcopy(self.decisions)
-        decisions["0034"]["status"] = "adopted-merged"
-        self.assertIssue(self.issues(decisions=decisions), "candidate self-promotion")
-
-    def test_evidence_free_terminal_claims_are_rejected(self):
-        for claim in ("merged", "independent_signoff", "ready_for_merge"):
-            with self.subTest(claim=claim):
-                mutated = copy.deepcopy(self.data)
-                mutated["status_claims"][claim] = True
-                mutated["status_claims"]["evidence"][claim] = []
-                issues = self.issues(mutated)
-                self.assertIssue(issues, f"{claim} claim lacks evidence")
-                self.assertIssue(issues, "candidate topology cannot self-promote")
+def fixture():
+    return {'decisions': {
+        '0001': {'status': 'adopted-merged', 'title': 'Existing adopted decision'},
+        '0020': {'status': 'proposed-candidate', 'pr': 8, 'title': 'Observed candidate'},
+        '0041': {'status': 'proposed-candidate', 'stage': 'local-preparation',
+                 'title': 'Local preparation, not an invented pull request'},
+    }}
 
 
-if __name__ == "__main__":
-    unittest.main(verbosity=2)
+class CandidateAuthorityTests(unittest.TestCase):
+    def run_case(self, registry=None, source_changes=None):
+        module = load_validator()
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            decisions = root / 'docs/decisions'
+            decisions.mkdir(parents=True)
+            (root / 'docs/decision-status.yaml').write_text(
+                yaml.safe_dump(fixture() if registry is None else registry))
+            files = {'0001-adopted.md': '# Existing adopted decision\n',
+                     '0020-observed.md': '# CANDIDATE decision\n',
+                     '0041-local.md': '# CANDIDATE local preparation\n'}
+            files.update(source_changes or {})
+            for name, body in files.items():
+                if body is not None:
+                    (decisions / name).write_text(body)
+            module.ROOT = str(root)
+            module.FAILS.clear()
+            output = io.StringIO()
+            with contextlib.redirect_stdout(output), contextlib.redirect_stderr(output):
+                try:
+                    code = module.main()
+                except Exception as exc:
+                    code = 99
+                    output.write('UNHANDLED: '+repr(exc))
+            self.assertNotIn('UNHANDLED:', output.getvalue(), output.getvalue())
+            return code, output.getvalue()
+
+    def assert_rejected(self, registry=None, changes=None, fragment=None):
+        code, out = self.run_case(registry, changes)
+        self.assertEqual(1, code, out)
+        if fragment:
+            self.assertIn(fragment, out)
+
+    def test_current_positive_requires_no_history_or_topology(self):
+        code, out = self.run_case()
+        self.assertEqual(0, code, out)
+
+    def test_candidate_promotion_is_rejected(self):
+        for decision in ('0020', '0041'):
+            with self.subTest(decision=decision):
+                data = fixture();data['decisions'][decision]['status'] = 'adopted-merged'
+                self.assert_rejected(data)
+
+    def test_removing_pr_and_promoting_cannot_evade_boundary(self):
+        data=fixture();data['decisions']['0020'].pop('pr')
+        data['decisions']['0020']['status']='adopted-merged'
+        self.assert_rejected(data)
+
+    def test_historical_candidate_pr_is_not_invented_or_dropped(self):
+        data=fixture();data['decisions']['0020'].pop('pr')
+        self.assert_rejected(data)
+
+    def test_local_candidate_requires_explicit_preparation(self):
+        data=fixture();data['decisions']['0041'].pop('stage')
+        self.assert_rejected(data)
+
+    def test_previous_decision_without_candidate_origin_is_rejected(self):
+        data=fixture();data['decisions']['0001']['status']='proposed-candidate'
+        self.assert_rejected(data)
+
+    def test_candidate_source_label_is_required(self):
+        self.assert_rejected(changes={'0020-observed.md':'# A decision\n'})
+
+    def test_missing_candidate_source_is_rejected(self):
+        self.assert_rejected(changes={'0041-local.md':None})
+
+    def test_ambiguous_candidate_source_is_rejected(self):
+        self.assert_rejected(changes={'0041-other.md':'# CANDIDATE ambiguous source\n'})
+
+    def test_malformed_registry_is_rejected_without_traceback(self):
+        for data in ({}, {'decisions': []}, {'decisions': {}}, {'decisions': {'bad':{}}},
+                     {'decisions': {'0041':None}}, {'decisions': {'0041': {'status': []}}}):
+            with self.subTest(data=data):
+                self.assert_rejected(data)
+
+    def test_unknown_status_is_rejected(self):
+        data=fixture();data['decisions']['0001']['status']='verified-by-implementation'
+        self.assert_rejected(data)
+
+    def test_guard_is_live_after_repair(self):
+        data=fixture();data['decisions']['0041']['status']='adopted-merged'
+        self.assert_rejected(data)
+        data['decisions']['0041']['status']='proposed-candidate'
+        self.assertEqual(0,self.run_case(data)[0])
+
+
+def source_tree(relative):
+    return ast.parse((ROOT / relative).read_text(encoding='utf-8'))
+
+
+def production_history_guard():
+    tree = source_tree('scripts/validate_review_state.py')
+    nodes = [node for node in tree.body if isinstance(node, ast.FunctionDef)
+             and node.name == 'candidate_history_issues']
+    if len(nodes) != 1:
+        raise AssertionError('existing review owner must expose the transferred history guard')
+    namespace = {}
+    exec(compile(ast.fix_missing_locations(ast.Module(body=nodes, type_ignores=[])),
+                 '<actual review-owner history predicate>', 'exec'), namespace)
+    return namespace['candidate_history_issues']
+
+
+def historical_predicate(kind, data, row=None, pr=8):
+    """Execute selected actual owner statements, never import the old generator."""
+    tree = source_tree('scripts/generate_candidate_state.py')
+    function = next(n for n in tree.body if isinstance(n, ast.FunctionDef)
+                    and n.name == 'collect_issues')
+    namespace = {'data': data, 'row': row, 'pr': pr, 'issues': []}
+    for name in ('REQUIRED_REVIEW_PROVENANCE', 'EXPECTED_PROVENANCE'):
+        node = next(n for n in tree.body if isinstance(n, ast.Assign)
+                    and any(isinstance(t, ast.Name) and t.id == name for t in n.targets))
+        namespace[name] = ast.literal_eval(node.value)
+    if kind == 'review':
+        nodes = [n for n in function.body if isinstance(n, ast.If)
+                 and 'data.get(\'review_provenance\')' in ast.unparse(n.test)]
+    elif kind == 'implementation':
+        loop = next(n for n in function.body if isinstance(n, ast.For)
+                    and ast.unparse(n.target) == '(pr, row)')
+        start = next(i for i,n in enumerate(loop.body) if isinstance(n, ast.Assign)
+                     and any(isinstance(t,ast.Name) and t.id=='provenance' for t in n.targets))
+        nodes = loop.body[start:start+2]
+    elif kind == 'terminal':
+        start = next(i for i,n in enumerate(function.body) if isinstance(n, ast.Assign)
+                     and any(isinstance(t,ast.Name) and t.id=='claims' for t in n.targets))
+        nodes = function.body[start:-1]
+    else:
+        raise AssertionError('unknown predicate')
+    if not nodes:
+        raise AssertionError('actual owner predicate was not selected')
+    exec(compile(ast.fix_missing_locations(ast.Module(body=nodes, type_ignores=[])),
+                 '<actual historical authority statements>', 'exec'), namespace)
+    return namespace['issues'], namespace
+
+
+class CandidateHistoryGuardTests(unittest.TestCase):
+    def test_history_guard_accepts_existing_historical_shapes(self):
+        rows = [{'prefix': 'docs/project-closure/r7c/', 'status': 'historical'}]
+        for history in (rows, {'rules': rows}, {'entries': rows}):
+            with self.subTest(history=history):
+                self.assertEqual([], production_history_guard()(history))
+
+    def test_history_guard_rejects_all_candidate_prefix_terminal_statuses(self):
+        for prefix in ('r7', 'r7c/', 'r7-new-suffix/', 'r70/'):
+            for status in ('merged', 'adopted', 'adopted-merged'):
+                with self.subTest(prefix=prefix, status=status):
+                    rows = [{'prefix':'docs/project-closure/'+prefix, 'status':status}]
+                    self.assertTrue(production_history_guard()({'rules':rows}))
+
+    def test_history_guard_does_not_promote_non_candidate_history(self):
+        for status in ('merged', 'adopted', 'adopted-merged'):
+            with self.subTest(status=status):
+                self.assertEqual([], production_history_guard()(
+                    {'rules':[{'prefix':'docs/project-closure/r6/', 'status':status}]}))
+
+    def test_history_helper_refuses_malformed_shapes(self):
+        for history in (None, 'history', {'rules':None}, {'entries':'bad'}, [None]):
+            with self.subTest(history=history):
+                self.assertTrue(production_history_guard()(history))
+
+    def test_existing_review_main_calls_guard_at_its_existing_index_read(self):
+        tree = source_tree('scripts/validate_review_state.py')
+        main = next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='main')
+        index = next(i for i,n in enumerate(main.body) if isinstance(n,ast.Assign)
+                     and any(isinstance(t,ast.Name) and t.id=='idx' for t in n.targets))
+        following = main.body[index+1:index+3]
+        self.assertEqual(2,len(following))
+        self.assertIn('candidate_history_issues(idx)', ast.unparse(following[0]))
+        self.assertEqual("check('no R7 candidate closure artifact is marked merged/adopted', not history_issues, '; '.join(history_issues))",
+                         ast.unparse(following[1]))
+
+
+# Attach only the additional witness to the existing current-input class.
+def test_existing_early_id_local_preparation_loophole_is_not_newly_fixed(self):
+    data=fixture()
+    data['decisions']['0001'].update(status='proposed-candidate', stage='local-preparation')
+    code,out=self.run_case(data, {'0001-adopted.md':'# CANDIDATE existing policy limitation\n'})
+    self.assertEqual(0,code,out)
+CandidateAuthorityTests.test_existing_early_id_local_preparation_loophole_is_not_newly_fixed = test_existing_early_id_local_preparation_loophole_is_not_newly_fixed
+
+
+class ExistingHistoricalAuthorityPredicateTests(unittest.TestCase):
+    def test_review_is_not_implementation_attestation(self):
+        _,scope=historical_predicate('review', {})
+        valid=copy.deepcopy(scope['REQUIRED_REVIEW_PROVENANCE'])
+        self.assertEqual([],historical_predicate('review', {'review_provenance':valid})[0])
+        for bad in (None, {'layer':'implementation','model':valid['model'], 'statement':valid['statement']},
+                    scope['EXPECTED_PROVENANCE'][8]):
+            with self.subTest(bad=bad):
+                self.assertTrue(historical_predicate('review', {'review_provenance':bad})[0])
+
+    def test_missing_or_fabricated_implementation_provenance_refuses(self):
+        _,scope=historical_predicate('implementation', {}, row={})
+        for pr,provenance in scope['EXPECTED_PROVENANCE'].items():
+            with self.subTest(pr=pr):
+                self.assertEqual([],historical_predicate('implementation', {}, {'provenance':provenance}, pr)[0])
+                for bad in (None, {}, {'layer':'independent-review', 'model':provenance['model']},
+                            {'layer':provenance['layer'], 'model':'invented-model'}):
+                    self.assertTrue(historical_predicate('implementation', {}, {'provenance':bad}, pr)[0])
+
+    def test_historical_candidate_terminal_claims_need_more_than_self_attestation(self):
+        claims={'candidate_status':'proposed-candidate','merged':False,
+                'independent_signoff':False,'ready_for_merge':False,
+                'evidence':{'merged':[],'independent_signoff':[],'ready_for_merge':[]}}
+        self.assertEqual([],historical_predicate('terminal', {'status_claims':claims})[0])
+        for name in ('merged','independent_signoff','ready_for_merge'):
+            for evidence in ([],['self-supplied-evidence']):
+                with self.subTest(name=name,evidence=evidence):
+                    changed=copy.deepcopy(claims);changed[name]=True;changed['evidence'][name]=evidence
+                    issues=historical_predicate('terminal', {'status_claims':changed})[0]
+                    self.assertIn('candidate topology cannot self-promote',issues)
+
+    def test_actual_terminal_schema_refuses_malformed_claims_and_evidence(self):
+        schema=json.loads((ROOT/'schemas/candidate-topology.schema.json').read_text())['$defs']['status_claims']
+        validator=Draft202012Validator(schema)
+        claims={'candidate_status':'proposed-candidate','merged':False,
+                'independent_signoff':False,'ready_for_merge':False,
+                'evidence':{'merged':[],'independent_signoff':[],'ready_for_merge':[]},
+                'next_action':'Independent owner decision remains required'}
+        self.assertEqual([],list(validator.iter_errors(claims)))
+        wrong_evidence=copy.deepcopy(claims);wrong_evidence['evidence']='fabricated'
+        wrong_boolean=copy.deepcopy(claims);wrong_boolean['merged']='false'
+        for bad in ([], {}, wrong_evidence, wrong_boolean):
+            with self.subTest(bad=bad):
+                self.assertTrue(list(validator.iter_errors(bad)))
+
+
+if __name__ == '__main__':
+    unittest.main()

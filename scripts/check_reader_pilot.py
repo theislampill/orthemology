@@ -743,11 +743,22 @@ def _permitted_projection_consumer_pins(original, candidate):
             '0d75bcefc899d15b2d35377fa15b54c6d12d180a74a506bc9cd84212206c3311',
             19380, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
     }
+    # Original public evidence remains pinned while current reviewed owners advance.
+    attribution_consumers = {'docs/sourcing/R3-SOURCING-LEDGER.md': ('2ed9e182cb9db7d38d7c56c0f043983c99f8c940',
+                                         '2177de55bb84adc24b69dd8551c12893e7f4dd7eae2a5d5d643b372b9236b770',
+                                         5421,
+                                         '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+ 'scripts/validate_review_state.py': ('95087964f175e00c5dc1a628bc83d40377c6b911',
+                                      '240dd79778d8fded8744873ddfc298e3206fa120dbe0417b50198983975efff0',
+                                      34750,
+                                      '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
     for bindings in (earlier, next24, combined, dict(combined, **fixtures),
                      dict(combined, **fixtures, **replay_input),
                      dict(combined, **fixtures, **replay_input, **calculus_fixture),
                      dict(combined, **fixtures, **replay_input, **calculus_fixture,
-                          **digest_consumers)):
+                          **digest_consumers),
+                     dict(combined, **fixtures, **replay_input, **calculus_fixture,
+                          **digest_consumers, **attribution_consumers)):
         expected = deepcopy(original)
         try:
             for path, (blob, identity, size, revision) in bindings.items():
@@ -1014,6 +1025,109 @@ def permitted_historical_status_pin(repo, row, body):
     except (KeyError, TypeError, ValueError, OSError):
         return False
 
+
+
+# Temporary, exact reviewed attribution-ledger successor. The root-approved
+# v4 modal packet is c52ca63023cb01215f323a37495fc70a1ef2806009936bc567d16ccb6abfffb0;
+# separate correction review is fe7e8aa047475a3df7ea72919c6db81b594343499fa013ae59329fc5b1d184c2.
+# This is neither an arbitrary operational-edit waiver nor final reader design.
+REVIEWED_SOURCING_LEDGER = (
+    'docs/sourcing/R3-SOURCING-LEDGER.md',
+    'c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce',
+    ('2ed9e182cb9db7d38d7c56c0f043983c99f8c940',
+     '2177de55bb84adc24b69dd8551c12893e7f4dd7eae2a5d5d643b372b9236b770', 5421),
+    ('947ad35bde130263dc4a057a1adebb72837f2d2f',
+     '1cf0a9885997a0dbaa37fbf03d63e4b500cc12ad75340d3b83170fd8bf755d6b', 10030),
+)
+
+
+def reviewed_indexed_modification(repo, contract):
+    """Authenticate one exact ordinary indexed/present reviewed source successor."""
+    repo = Path(repo)
+    path, revision, original, current = contract
+    def git(*args):
+        result = subprocess.run(['git', '--no-replace-objects', '--literal-pathspecs', *args],
+                                cwd=repo, capture_output=True, check=False)
+        if result.returncode:
+            raise ValueError('reviewed source edition native evidence unavailable')
+        return result.stdout
+    def identity(body):
+        return (hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest(),
+                hashlib.sha256(body).hexdigest(), len(body))
+    tree = git('ls-tree', '-z', revision, '--', path)
+    if tree != ('100644 blob ' + original[0] + '\t' + path + '\0').encode():
+        raise ValueError('reviewed source edition predecessor tree differs')
+    if identity(git('cat-file', 'blob', revision + ':' + path)) != original:
+        raise ValueError('reviewed source edition predecessor bytes differ')
+    expected = ('100644 ' + current[0] + ' 0\t' + path + '\0').encode()
+    if git('ls-files', '--stage', '-z', '--', path) != expected:
+        raise ValueError('reviewed source edition index differs')
+    for ancestor in (repo, *repo.parents):
+        if ancestor.is_symlink():
+            raise ValueError('reviewed source edition root is symlinked')
+    node = safe_path(repo, path)
+    fd = os.open(node, os.O_RDONLY | os.O_NOFOLLOW)
+    with os.fdopen(fd, 'rb') as stream:
+        start = os.fstat(stream.fileno())
+        if (not stat.S_ISREG(start.st_mode) or start.st_nlink != 1
+                or start.st_mode & 0o111 or start.st_size != current[2]):
+            raise ValueError('reviewed source edition is not an ordinary exact-sized file')
+        body = stream.read()
+        finish = os.fstat(stream.fileno())
+    fields = ('st_dev', 'st_ino', 'st_mode', 'st_nlink', 'st_size', 'st_mtime_ns', 'st_ctime_ns')
+    if (any(getattr(start, f) != getattr(finish, f) for f in fields)
+            or identity(body) != current):
+        raise ValueError('reviewed source edition present bytes differ or changed')
+    if git('ls-files', '--stage', '-z', '--', path) != expected:
+        raise ValueError('reviewed source edition index changed during qualification')
+    final = node.lstat()
+    if any(getattr(start, f) != getattr(final, f) for f in fields):
+        raise ValueError('reviewed source edition path changed during qualification')
+    return {path}
+
+
+
+def reviewed_sourcing_ledger_modifications(repo):
+    """Preserve the existing exact attribution-ledger contract unchanged."""
+    return reviewed_indexed_modification(repo, REVIEWED_SOURCING_LEDGER)
+
+
+# Exact three-owner successor from independently reviewed reconstruction8fd004ba.
+# This temporary migration contract neither adopts science nor admits arbitrary edits.
+REVIEWED_AUTHORITY_EDITS = {'scripts/validate_candidate_state.py': ('scripts/validate_candidate_state.py',
+                                         'c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce',
+                                         ('f978626577743edc5f18a90edcc9661b3935f91c',
+                                          '8808f2d7278885021b2fb812b5149dd157e9e53fcae49e24b3bea9353dc68215',
+                                          6410),
+                                         ('a8e5c1caff041069010374af1093f279d320a168',
+                                          'dd0c826ca8a32eb2beeee02a8e443d4d2a5886d22c8854afb2f0fc6348f3b9ca',
+                                          4789)),
+ 'scripts/validate_review_state.py': ('scripts/validate_review_state.py',
+                                      'c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce',
+                                      ('95087964f175e00c5dc1a628bc83d40377c6b911',
+                                       '240dd79778d8fded8744873ddfc298e3206fa120dbe0417b50198983975efff0',
+                                       34750),
+                                      ('89938d0e0190627b04ca849de028c3e6908e38e5',
+                                       'e69772afa041b7044874c15c1b83169ab06d89b167a7b00796051df49167faf0',
+                                       36059)),
+ 'tests/test_candidate_state.py': ('tests/test_candidate_state.py',
+                                   'c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce',
+                                   ('a2c0369810339d315bca87ecf02f29dc2d1b0a0d',
+                                    'fefd90abb169e79644813129e1b11acc9a973a9a39128645682c46d51108a8e9',
+                                    17484),
+                                   ('35dfb35cb5e190ee81caea56ccc59a5083882fb1',
+                                    'cd3cd8df68677335cb7a08457e2791058c8f01b14d41d68e85019313c958cf22',
+                                    13417))}
+
+
+def reviewed_authority_modifications(repo, paths):
+    """Admit only requested exact indexed/present authority-owner editions."""
+    admitted = set()
+    for path in sorted(paths):
+        if path not in REVIEWED_AUTHORITY_EDITS:
+            raise ValueError('unreviewed authority owner: ' + path)
+        admitted.update(reviewed_indexed_modification(repo, REVIEWED_AUTHORITY_EDITS[path]))
+    return admitted
 
 
 # These are the existing Issue-35 implementation surfaces, not a science
@@ -1492,6 +1606,21 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                 status_paths = status_record_absences(repo, status_requests)
             except (ValueError, OSError) as exc:
                 errors.append('corpus-currentness: historical status source: ' + str(exc))
+        sourcing_paths = set()
+        if any(status == 'M' and path == 'docs/sourcing/R3-SOURCING-LEDGER.md'
+               for status, path in zip(values[::2], values[1::2])):
+            try:
+                sourcing_paths = reviewed_sourcing_ledger_modifications(repo)
+            except (ValueError, OSError) as exc:
+                errors.append('corpus-currentness: reviewed sourcing ledger: ' + str(exc))
+        authority_paths = set()
+        authority_requests = {path for status, path in zip(values[::2], values[1::2])
+                              if status == 'M' and path in REVIEWED_AUTHORITY_EDITS}
+        if authority_requests:
+            try:
+                authority_paths = reviewed_authority_modifications(repo, authority_requests)
+            except (ValueError, OSError) as exc:
+                errors.append('corpus-currentness: reviewed authority source: ' + str(exc))
         administrative_paths = set()
         if any(status == "D" and path in ADMIN_RECORD_PATHS
                for status, path in zip(values[::2], values[1::2])):
@@ -1512,7 +1641,9 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                       " requires source-baseline and work/support disposition review"
                       for status, path in zip(values[::2], values[1::2])
                       if path not in editable and not
-                      ((status == "D" and path in HISTORICAL_PROSE and path in historical_paths)
+                      ((status == "M" and path in sourcing_paths)
+                        or (status == "M" and path in authority_paths)
+                        or (status == "D" and path in HISTORICAL_PROSE and path in historical_paths)
                         or (status == "D" and path in allowed_duplicates)
                         or (status == "D" and path in administrative_paths)
                         or (status == "D" and path in binding_paths)

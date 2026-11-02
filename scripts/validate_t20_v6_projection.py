@@ -36,6 +36,9 @@ from resolve_t20_v6_source import (
     SUCCESSOR_CALCULUS_MAP, SUCCESSOR_CALCULUS_GUIDES, successor_calculus_map_absences,
     successor_calculus_guide_source_bytes,
     binding_record_candidate, binding_record_absences, binding_record_public_bytes,
+    STATUS_RECORD_OWNERS, STATUS_RECORD_OWNER_ORIGINAL,
+    STATUS_RECORD_OWNER_BASE, STATUS_RECORD_OWNER_TREE, status_owner_edition,
+    status_record_candidate, status_record_absences,
     SUCCESSOR_FIXTURE_PATH,
 )
 
@@ -266,6 +269,27 @@ def check_preserved_roots(root, objects):
             changes = result.stdout.decode('utf-8').rstrip('\0').split('\0') if result.stdout else []
             if result.returncode or len(changes) % 2:
                 raise ValueError('protected baseline comparison unavailable')
+            status_owners_authenticated = set()
+            if any(status == 'M' and path in STATUS_RECORD_OWNERS
+                   for status, path in zip(changes[::2], changes[1::2])):
+                try:
+                    original_status_owners = {
+                        path: {'path': path, 'kind': 'blob', 'mode': '100644',
+                               'git_oid': blob, 'bytes': size}
+                        for path, (blob, identity, size) in STATUS_RECORD_OWNER_ORIGINAL.items()}
+                    status_owners_authenticated = set(status_owner_edition(
+                        root, original_status_owners,
+                        {'commit': STATUS_RECORD_OWNER_BASE, 'tree': STATUS_RECORD_OWNER_TREE}))
+                except (ValueError, OSError):
+                    pass  # Only the complete authenticated owner edition admits M.
+            status_absences_authenticated = set()
+            status_requests = {path for status, path in zip(changes[::2], changes[1::2])
+                               if status == 'D' and status_record_candidate(path)}
+            if status_requests:
+                try:
+                    status_absences_authenticated = status_record_absences(root, status_requests)
+                except (ValueError, OSError):
+                    pass  # A missing or invalid proof cannot admit any selected D.
             if binding_absences_authenticated is None and any(
                     status == 'D' and binding_record_candidate(path)
                     for status, path in zip(changes[::2], changes[1::2])):
@@ -348,6 +372,8 @@ def check_preserved_roots(root, objects):
                 except (ValueError, OSError):
                     pass  # No modification allowance for an unqualified edition.
             if any(not ((status == 'D' and path in authenticated) or
+                        (status == 'D' and path in status_absences_authenticated) or
+                        (status == 'M' and path in status_owners_authenticated) or
                         (status == 'D' and path in (copy_authenticated or ())) or
                         (status == 'D' and path in (checkpoint_authenticated or ())) or
                         (status == 'D' and path in (record_authenticated or ())) or
