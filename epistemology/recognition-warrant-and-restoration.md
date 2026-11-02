@@ -917,6 +917,28 @@ For $`p_0=p_1=1/2`$, half unchanged failures and half unchanged successes give b
 This algebra is an elementary consequence of the proposed state/outcome distinction, not a new causal theorem or experimental result. It assumes the marginals are identified exactly; finite samples add estimation uncertainty. The no-treatment follow-up outcome is not automatically the observed pre-intervention condition. Moreover, beneficial change in a validated proxy need not satisfy the disposition, causal-mechanism and source-compatibility clauses in §9.5. A study can therefore establish a worthwhile average benefit or a lower bound on benefit while leaving individual causal restoration, recipient warrant and theological identification unestablished. That precise conclusion is stronger and more useful than either an unsupported restoration claim or a blanket assertion that empirical inquiry can establish nothing.
 
 
+<a id="negative-synthetic-restoration-pilot"></a>
+
+#### A negative synthetic pilot and its corrected evidential scope
+
+The distinctions above have a concrete historical application. A completed internal synthetic pilot tested a proposed shortcut-burden intervention under eight frozen seeds. Its public custody summary reports the following results; the operation and control whole-field measurements must not be silently expanded into a three-arm whole-field comparison. [PILOT-SUMMARY] [PILOT-RECEIPT]
+
+| Recorded measure | Reported result |
+|---|---|
+| Anti-shortcut accuracy: baseline, operation and control | 1.00 in all three arms |
+| Whole-field accuracy: operation and control | 1.00 in both arms |
+| Median hidden-layer CKA | 0.9971370697021484 |
+| T299 causal-landing success | 0 of 8 seeds |
+| Tested T300 profile-blindness support condition | False in all eight seeds |
+
+Perfect recorded accuracy and high representational alignment were therefore not evidence that the proposed causal burden had been discharged. The admitted interpretation is that this pilot failed to instantiate a live shortcut burden at its declared evidential class. That is a scoped appraisal of the tested mechanism, not a deduction from high accuracy alone and not a demonstration that the general theoretical distinction between a profile and its target is false. The reported landing and support outcomes are the pilot's recorded criteria; the public summaries do not independently establish the adequacy of their original implementation. [PILOT-RECEIPT]
+
+The subsequent design audit matters to the interpretation. The baseline corpus contained all **44** source configurations; each seed's anti-cue pool contained **42–44**. Evaluation rows were sample-distinct but their supports overlapped. Shared starting weights and matched compute likewise did not make the runs case-paired: the operation and control runs were independently sampled. The result is therefore neither a support-disjoint generalization test nor a paired causal-effect estimate. Section 9.6 explains the related distinction between comparative outcomes and an identified unit-level causal change; it does not turn this pilot into the idealized identified design assumed by that proposition. [PILOT-SUMMARY] [PILOT-RECEIPT]
+
+The source-reported audit **143** repaired the evidential-class and design interpretation without changing the numerical results. Its subsequent rereview **144** is reported as passing with nonblocking scope notes. These are inherited review declarations, not a new inspection of the underlying run records, checker or full rereview. The receipt's preregistration label likewise describes its internal history: the public summary expressly disclaims an externally preregistered study or external validation of the framework. [PILOT-SUMMARY] [PILOT-RECEIPT]
+
+The exact tested configuration was retired, rather than scheduled for an unchanged rerun. A successor would require materially different support separation, an identified causal design, or a changed intervention/control identification strategy. The negative result supplies no general claim about restorative efficacy, humans, language models, theological fiṭrah, source truth or the Platonic Representation Hypothesis. It preserves a useful failed empirical instantiation while leaving the theoretical family active. No experiment is rerun here; successful prediction, warranted cognition and causal restoration remain different achievements. [PILOT-SUMMARY] [PILOT-RECEIPT]
+
 <a id="textual-observation-and-warrant"></a>
 
 ### 9.7 What an observation-fibre obstruction establishes
@@ -1019,3 +1041,11 @@ These exact public guides identify the reported results, historical review scope
 [GUIDE105-G047]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/826c89636c09c597d3f7e6f0d2fa3350bd5feb22f07379c2a206ea8b9a0660a5/README.md
 [GUIDE105-G088]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/defc84b7b2d2169234b6d64f08222c262dba3dd4631da45d83831e8f56fb57e3/README.md
 [GUIDE105-G095]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/e3eac749f6848eb9ba987f8f67f7911608bcb6e42361393c1ea070550f750516/README.md
+
+### Sources for the bounded negative synthetic pilot
+
+- [PILOT-SUMMARY] Orthemology public research. *T299/T300 historical synthetic pilot — negative at the tested evidential class*. Public custody summary, exact Git blob `43bdd734d262ce320d6bfa8586f3ac5dc4ab8992`. This summary is not the underlying execution packet or an externally preregistered study.
+- [PILOT-RECEIPT] Orthemology public research. *AR8R T299/T300 admitted negative-pilot receipt*. Exact Git blob `26b728be49a47e513cd9c9abc31761e05972e384`. The reported audit, rereview and retirement are inherited history; no new empirical execution or independent authentication of the original review is claimed.
+
+[PILOT-SUMMARY]: https://api.github.com/repos/theislampill/orthemology/git/blobs/43bdd734d262ce320d6bfa8586f3ac5dc4ab8992
+[PILOT-RECEIPT]: https://api.github.com/repos/theislampill/orthemology/git/blobs/26b728be49a47e513cd9c9abc31761e05972e384

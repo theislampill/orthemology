@@ -916,6 +916,75 @@ The common-bearer coordinate in this example has a deliberately limited type: co
 
 If an independently warranted background fixes that value at one, the exact residual class in this table is $`\{u,i\}`$. The remaining task is to warrant a target-independent, type-preserving anchor or enlarged experiment that distinguishes those two, or to show that a specified admissible family leaves their conflict uncovered. Writing “intentional uptake” as a coordinate identifies where a distinction would help; it does not operationalize its measurement. The full source package can supply the required distinction conditionally on its own source and world premises. Neither this conditional reduction nor perfect classification within the table proves that the three candidates exhaust the actual possibilities. Without the common-bearer premise, the plural candidate also remains in the declared neutral fibre. [S27–S28]
 
+<a id="marginal-evidence-gain-and-private-witnesses"></a>
+
+#### Useful evidence, indispensable evidence and an optimal cover
+
+The cover theorem also distinguishes three questions: whether a factor adds information, whether a selected cover needs it, and whether that cover is smallest. Fix the finite candidate class, target, independently eligible registry and complete value maps of §8.4. Keep a base evidence profile E fixed. Let C be its unordered cross-target collision pairs, and let $`C_f\subseteq C`$ be the pairs separated by an eligible factor f. For a selected family S define
+
+```math
+U(S)=\bigcup_{f\in S}C_f,
+\qquad G(S)=|U(S)|,
+\qquad \Delta_f(S)=G(S\cup\{f\})-G(S).
+```
+
+The residual collision set is exactly $`C\setminus U(S)`$: a base-colliding pair remains indistinguishable precisely when every added factor agrees on it. Its cardinality is $`|C|-G(S)`$. Thus zero residual gives identification on the attained joint-profile image by Proposition 5A, without extending the decoder to unattained profiles. These quantities count conflicting pairs, not probabilities, acquisition costs or epistemic warrant. [GAIN-R8] [GAIN-R10] [GAIN-INTAKE]
+
+**Marginal gain and diminishing returns.** The gain is monotone, and for $`S\subseteq T`$,
+
+```math
+\Delta_f(S)=|C_f\setminus U(S)|
+\ \ge\ |C_f\setminus U(T)|=\Delta_f(T).
+```
+
+**Proof.** Adjoining f adds exactly its pairs not already in the union. Enlarging the selected family enlarges that union and can only shrink this difference. This proves monotonicity and the diminishing-returns form of submodularity. Overlapping coverage is counted once, not once per factor. ∎
+
+A factor determined entirely by E separates no base collision, regardless of its range size or descriptive complexity. Conversely, a field that simply reads the disputed target can remove every collision without being independently eligible. Optimization therefore follows eligibility and a warranted common implementation; it cannot supply them. Complementary weak factors can jointly identify the target even though neither suffices alone. [GAIN-R8]
+
+**Private-witness criterion.** Suppose S covers C and $`f\in S`$. Deleting f destroys identification exactly when
+
+```math
+C_f\setminus\bigcup_{g\in S\setminus\{f\}}C_g\ne\varnothing,
+```
+
+or equivalently $`\Delta_f(S\setminus\{f\})>0`$.
+
+**Proof.** A pair left uncovered after deletion was covered before deletion, so f must have been its only cover within S. Conversely any such private pair remains a target collision when f is removed. ∎
+
+Positive gain when f was first considered does not make it indispensable after other factors have been added. If every member of S has a private witness, S is inclusion-minimal; that does not establish minimum cardinality over the registry. For example, two factors covering one distinct collision each are both necessary within that two-factor cover, while a separately eligible third factor covering both would give a smaller cover. This is a conditional coverage example, not an assertion that such a measurement is available in an actual inquiry. [GAIN-R10]
+
+Nor does maximum marginal gain guarantee even an inclusion-minimal final cover. An explicit six-collision example has coverage sets $`C_a=\{1,2,3,4\}`$, $`C_b=\{1,2,5\}`$ and $`C_c=\{3,4,6\}`$. Greedy gain selects a first, then needs both b and c to cover the remaining collisions 5 and 6. But b and c already cover all six, and no single factor does; the optimum is two. These sets can be realized by a constant base profile on one target-one and six target-zero candidates: each binary factor distinguishes exactly its listed opposite-target pairs. This displayed set system is an elementary illustration of the source's stated greedy limitation, not a recovery of its unprinted historical checker table. Deletion testing can remove redundancy from a greedy result, but does not by itself prove global minimum size.
+
+Finally, if the union of the entire eligible registry leaves a collision, no subfamily in that registry identifies the target. This is the existing bounded no-cover conclusion, not impossibility for an enlarged justified experiment or a different candidate class. Marginal gain provides a useful selection heuristic under the fixed contract; exact minimum-cover calculation answers a different question. The source reports 32,768 three-factor signatures and 262,144 gain/residual checks, and separately 74,954 finite set systems for the cover comparison. These are historical declarations, not executions here. Its intake warns that the aggregate “79/79 mutants” included seven hard-coded scope assertions and could reuse stale outputs; those labels supply no additional proof of the displayed arguments or empirical implementation. Causal identification and source-world truth still need their own premises. [GAIN-R8] [GAIN-R10] [GAIN-INTAKE]
+
+#### Eligible refinements need not have a unique weakest member
+
+The eligible-anchor problem must also distinguish minimum registry size from informational weakness. For a fixed current profile $`E`$ and target $`Q`$, a candidate refinement $`r`$ suffices exactly when $`\ker(E,r)\subseteq\ker Q`$. Order candidates by their **joint** partitions with $`E`$, with a coarser partition counting as weaker. A finite nonempty family of sufficient candidates has a minimal element in this order; it need not have a least element, even after equivalent joint partitions are identified. [CPCT-CS]
+
+For an explicit witness, let $`E`$ be constant on $`\{0,1,2,3\}`$ and let the target partition be $`\{0,1\}\mid\{2,3\}`$. Suppose the independently eligible family contains just the two refinements
+
+```math
+\{0,1\}\mid\{2\}\mid\{3\},\qquad
+\{0\}\mid\{1\}\mid\{2,3\}.
+```
+
+Both determine the target and neither is coarser than the other. Each is minimal within that family, with no least eligible refinement. Among unrestricted joint partitions refining $`E`$ and determining $`Q`$, the partition of $`(E,Q)`$ is a coarsest bound. But naming $`Q`$ inside that bound is not an independent procedure for measuring it. A constant refinement is weak but can be uninformative; a target oracle is discriminating but can be ineligible. These controls replace the source's earlier claims of a universally unique weakest remedy. Its cited weakness and allocation literature remains a proof-search heuristic here, not a derivation of that selection policy. [CPCT-CS]
+
+#### A partial experiment and an observed failure to implement it are different evidence
+
+If an outcome $`Y`$ is supplied only on a proper domain $`D\subsetneq M`$, its on-domain record alone cannot distinguish two target assignments that agree on $`D`$ and differ outside it. This does **not** imply that every total observation involving that experiment is globally uninformative. If availability $`A=1_D`$ is itself observed under a common, independently warranted contract, the signal is
+
+```math
+X(m)=(A(m),\,Y(m)\text{ if }A(m)=1\text{, otherwise }\bot).
+```
+
+It is a new evidential coordinate, subject to the ordinary fibre criterion. For example, take a constant old profile on four candidates, target values $`(0,0,0,1)`$, availability with those same values, and constant on-domain outcome zero. The outcome is defined on only one candidate, yet the availability bit identifies the target. This refutes the earlier blanket claim that a proper domain prevents identification even after bottom totalization. It does not validate a target-laden availability assignment: if “available exactly when personal” merely reads the conclusion under dispute, the apparent discriminator is an oracle, not evidence. [CPCT-CT]
+
+The precise unchanged-information barrier is different: if the **whole** totalized signal $`X`$ factors through the old profile $`E`$, then $`(E,X)`$ has exactly the old fibres and cannot resolve an old target conflict. Conversely, genuinely measured capability or nonimplementation can supply information not measurable from $`E`$, but only after the common semantics, implementation, version, authorization, resource and missingness conditions are warranted. A common-bearer probe can separate a plural candidate while leaving personal and one-bearer impersonal candidates together. Directly assigning an uptake-only domain does not by itself supply the missing common experiment. [CPCT-CT]
+
+The source preserves eight explicit failures of its first blanket rule. Its repaired record separates 32,064 identifying totalizations on **nonempty proper** domains from 18,572 successful refinements of previously conflicted profiles, and reports 15,652 old-profile-measurable cases with no barrier failure. These are differently defined populations, not additive replications or evidence that the formal architecture descriptions are actual. The constructive possibility of a newly warranted observation remains open; so does the distinct force of a source argument whose independently justified premises exceed the neutral registry.
+
+
 ### 8.6 Source-conditioned exclusion and its exact burden
 
 A source-based argument needs to distinguish the truth of a claim, its attribution to a source, and its application to the target being assessed. Consider a contract $`(b,\Pi,\mathrm{Auth},\mathrm{Ident})`$. Here $`b`$ is the source's intended referent, $`\Pi`$ is the relevant predicate bundle, $`\mathrm{Auth}`$ supplies the requisite warrant for accepting that attributed content, and $`\mathrm{Ident}`$ identifies its referent with the target bearer. Authentication in this sense is more than possessing a document or matching its checksum. Its sufficient epistemic conditions must be warranted for the kind of claim being made. Referent identification is equally substantive: a correct statement about one object need not be a correct statement about another. [S23–S24]
@@ -1281,15 +1350,26 @@ No interpolant certifies that $`N`$ is neutral. Moving personality, wisdom, an a
 
 ### 8.14 Coupled alternatives and completion-sensitive comparison
 
-A matched rival should retain the integration that its actual premises supply. The strengthened common-model study combines a selected dependency-closed neutral union through the additive-interaction analysis. It carries underived order, external actuality, semantic linkage, target authority and world adequacy as assumptions; it does not derive them by assigning true Boolean values. Its admissibility table is separately fixed before policy conformity is assessed. That repair prevents the fittingness relation from being defined by whichever action the policy already takes. Reason-variable responsiveness, nuisance invariance, asymmetry sensitivity and nonseparable interactions can then coexist with an impersonal expansion. [R359-AG]
+A matched rival must retain the integration its premises supply. The strengthened common-model study joins a selected dependency-closed neutral core, not every result in the corpus. Underived order, external actuality, semantic linkage, target authority and world adequacy remain assumptions, not conclusions established by Boolean labels. Its eight-state witness shows how reason responsiveness, nuisance invariance, asymmetry sensitivity and nonseparable interaction can coexist with an impersonal expansion. [R359-AG]
 
-The selected union is not every neutral result in the corpus. Formal role availability is not divine Knowledge, Will or Power, and finite bearer labels are not a demonstrated ontology. The primary record checks eight states and 4,096 role allocations: 3,375 make the three roles globally available, 1,695 have a common role bearer and 1,680 do not. The procedural re-review independently reports one eligible table, mask 60, among all 256 Boolean action tables; two mixed-difference interaction edges; 20,000 coordinate relabellings; and 64 target-predicate expansions. These reports preserve a positive consistency and nonentailment control. They do not prove actuality, metaphysical possibility, explanatory parity, source acceptance, personal architecture falsity or implementation in a cognitive system. The neutral rival expressly leaves the source contract unaccepted; accepting an incompatible source predicate would change its premises.
+Let $`m,r,n\in\{0,1\}`$, put $`\theta=m`$, and independently fix
 
-The architecture audit therefore compares admitted consequences, independently specified assumptions, unexplained stopping points, source commitments, imported targets and open bridges separately. One carrier is not automatically one primitive, and a desired predicate is not a derived benefit. A source-extended powers bearer or an abstract-order actualizer can remain compatible with a selected source-role package while incurring additional explanatory obligations. Omitting those strengthened alternatives would overstate the personal proposal's advantage. Conversely, calling a bridge open does not establish its falsity or show that its positive philosophical warrant has been exhausted. [R359-AL]
+```math
+H(\theta,r)=\{r\mathbin{\mathsf{xor}}\theta\},
+\qquad A(m,r,n)=r\mathbin{\mathsf{xor}}m.
+```
 
-In the recorded six-coordinate completion diagnostic, the 64 assignments yield one A-only outcome, 15 B1-only outcomes, 15 C1-only outcomes, 15 incomparable outcomes and 18 multiple outcomes. No winner holds across all completions. These are outcomes under the declared diagnostic, not probabilities or possible-world frequencies. The later symbolic receipt contains a satisfiable query labelled `one_architecture_robustly_wins`; a satisfying single assignment cannot by itself establish universal winning across completions. Its accompanying claims and review correctly retain completion sensitivity and the absence of a tautological winner. The label is thus preserved as an evidential limitation rather than used to reverse the stated judgment.
+The singleton admissibility set makes A the unique conforming policy. Changing r or m while holding the other inputs fixed changes its action; changing n does not. Under the fixed structural equation $`\mathrm{Act}:=A(m,r,n)`$, these are also surgical input-intervention effects. They establish neither empirical adequacy nor the authority of H. Defining H from the chosen policy would manufacture conformity—the defect the source repair removes.
 
-The unresolved work is a matched discriminator or a warranted substantive ordering, not a scalar invented from names. Candidate G's distinction between carrier packaging and explanatory constraint remains the relevant ancestry. The coupled neutral core is a real achievement shared by the stipulated alternatives; it is not yet a personal discriminator. The richer affirmative arguments in these works are likewise not decided by completing this older diagnostic table.
+On the same states, take $`N=m+r+n`$ and $`F=mr+rn`$. Assigning each edge its N-difference makes path sums telescope. The mixed differences of F in $`(m,r)`$ and $`(r,n)`$ are one, while that in $`(m,n)`$ is zero. Every nontrivial coordinate partition therefore cuts an interaction in the connected chain $`m-r-n`$, excluding an additive decomposition of F across its blocks. This concerns the fixed registered coordinates, not arbitrary latent extensions. Additivity of N does not imply additivity of F; n is a nuisance for the policy, not for F.
+
+Allocate the knowledge and power role proxies to a and the will proxy to $`b\ne a`$. All roles are available but no bearer has all three, despite the connected interactions. Role availability is not divine Knowledge, Will or Power, and the labels establish no ontology. The separate role-allocation calculation is developed in [Received Actuality, §10.21](received-actuality-and-intrinsic-necessity.md#1021-common-formal-models-and-the-burden-of-a-richer-interpretation). The construction supplies a positive formal consistency and nonentailment control, not actuality, metaphysical possibility, explanatory parity, a cognitive implementation or personal-architecture falsity. It leaves the source contract unaccepted; accepting an incompatible source predicate changes the premises. Its reported finite checks are historical evidence, not new executions here. [R359-AG]
+
+A comparison must consequently distinguish derived consequences from independently supplied assumptions, imported targets and unexplained stopping points. One carrier need not be one primitive, nor an imported target a derived benefit. Source-extended powers and abstract-order actualizers can satisfy a selected source-role package while owing further explanation; omitting them exaggerates the personal proposal's advantage. Conversely, an open bridge is not a false bridge or evidence that its positive philosophical warrant has been exhausted. [R359-AL]
+
+The six-coordinate completion diagnostic makes this dependence visible: its 64 assignments yield one A-only, 15 B1-only, 15 C1-only, 15 incomparable and 18 multiple outcomes, with no winner throughout. These are diagnostic outcomes, not probabilities or possible-world frequencies. The later satisfiable query named `one_architecture_robustly_wins` supplies only a satisfying assignment; its label cannot establish universal winning across completions. The accompanying review retains that distinction and the absence of a tautological winner.
+
+The remaining task is a matched discriminator or a warranted substantive ordering, not a score invented from names. Candidate G's distinction between carrier packaging and explanatory constraint remains the relevant ancestry. The coupled neutral core is a shared achievement, not yet a personal discriminator; completing this older diagnostic does not decide the richer affirmative arguments in these works.
 
 ### 8.15 Predictive differences and information-preserving representations
 
@@ -1323,6 +1403,77 @@ Let $`V_k`$ span the rows $`\beta M_w`$ for words of length at most $`k`$, and l
 A common adaptive policy chooses each action from the public history and candidate-independent private randomness. The probability of a fixed transcript is its model word probability multiplied by the common policy factors along that transcript. Equal word laws therefore give equal transcript laws for every such policy. Conversely a differing word can be exposed by its fixed action sequence. Random or adaptive action choice does not distinguish candidates with the same complete registered trace language. This conclusion is relative to that action/observation algebra, target, representation and source version. An independently justified additional intervention can change it.
 
 The initial recorded checker failed because it demanded a length-three delayed witness inside its two-state deterministic subclass, even though its 16,384 actual horizon comparisons and 300 random rational comparisons found no bound failure. That was an unjustified tightness expectation. The repair preserves that failure and supplies a separate three-state pair agreeing through horizon two but differing at horizon three: along actions $`(0,1,0)`$ its outputs are $`(1,1,1)`$ and $`(1,1,0)`$. The distinct procedure reports 200 rational model pairs, an exact reachable-space calculation, one distinct trace-equivalent pair and all 128 deterministic adaptive policies through horizon three for that pair. Those are historical receipts, not a new automata campaign. Equal traces establish neither hidden-state isomorphism nor numerical, causal or ontological identity; different traces identify a test, not which architecture is true. The theorem's ancestry is finite weighted-automata equivalence and linear reachability. [R359-AT]
+
+<a id="common-intervention-contract-and-realisation"></a>
+
+#### Common implementation is a contract, not equality of response
+
+The adaptive trace theorem fixes the experiment before comparing its response laws. Whether two physical or formal procedures implement **the same intervention** is an earlier question. The stochastic common-intervention reissue and the later adversarial challenger distinguish this question from the stronger assumption that the implementations project to the **same controlled kernel**. Shared intervention meaning permits different responses—that is what a discriminating experiment seeks. Equality of a complete neutral kernel is instead a sufficient reason for the responses to agree. Conflating these premises would make either the experiment unfair or the nonidentification conclusion tautological. [COMMON-BW][COMMON-CHALLENGE][COMMON-REVIEW]
+
+An eligible common contract fixes the intervention's input, opportunity and output types, its intended operation, the interpretation of received outputs and the applicable source/version, authorization, capability and resource conditions. Each compared implementation must realize that denotation under those conditions. Its internal implementation need not be identical to another's. Different mechanisms for clearing the same registered input are not thereby hidden target information; clearing different inputs while printing the same label is not a common operation. The maps, decoder and scoring rule must be fixed independently of which architecture they are intended to favor. A policy, compiler, budget or decoder that secretly consults the disputed target changes the experiment. These requirements constrain the comparison without requiring equal response distributions.
+
+**The stronger commuting-kernel condition.** Let implementation i have finite state space Xᵢ and a neutral abstraction fᵢ:Xᵢ→N. For an abstract intervention u, let Kᵢᵘ(x;x′,o) be its joint next-state/output kernel. Suppose there is one common kernel Kᵘ on N and the common output alphabet such that
+
+```math
+\sum_{x':f_i(x')=n'}K_i^u(x;x',o)
+   =K^u(f_i(x);n',o)
+```
+
+for every permitted x,u,n′,o. Also require the same initial pushforward law on N and the same output interpretation. This stochastic condition strengthens the concrete deterministic commuting construction in §8.3; it is not a definition of all eligible experiments. For example, applying the same input-setting operation to two devices can legitimately produce different output laws, in which case the displayed common-kernel hypothesis simply fails. [COMMON-BW]
+
+Under that hypothesis, every finite adaptive action/output law agrees. The common policy must choose only interventions permitted by the shared contract. Induct jointly on the neutral state and the complete common history. Initially the projected state laws agree. Given a common history, a target-blind behavioral policy supplies the same next-intervention probabilities. Sum those policy factors against the current joint law and the displayed kernel identity to obtain the same next neutral-state/output/history law. This proves the induction step. Common independent randomization is allowed; undisclosed target-correlated information is not. Matching the initial law and any already populated controller memory is substantive, as §8.3's different-initial-state control shows. If a target coordinate varies among these implementations, the equal profile cannot recover it. This is the stochastic implementation bridge to §8.16's trace argument, not another general adaptive-identification theorem.
+
+**Capability and ownership operations.** A proposed operation such as changing an ownership state must first specify what change it denotes. If an admitted architecture has no capable, meaning-preserving implementation, the proposed common intervention is partial. Relabelling a no-op as that operation does not repair it. Conversely, architecture-specific implementation differences do not invalidate a contract when each actually performs the same declared operation. Capability to perform a registered operation is not identical to truth of the philosophical target. A formal ownership variable is not, by notation alone, actual first-person ownership. [COMMON-CH]
+
+Replacing the missing operation with a universal center, self-model or origin-index register creates a different experiment. Such a proxy can be meaningful and informative, but its output must satisfy the ordinary profile criterion for the intended target; its name supplies no ownership semantics. This is a boundary of the proposed actuator, not a proof that ownership evidence, conscious subjects or personal agency are impossible. A warranted source-relative interpretation likewise retains its own source/world route rather than being counted as an independently neutral measurement.
+
+**What a richer declared interface can and cannot measure.** The challenger organizes useful intervention designs around the following distinctions. These are specification sketches and interpretation limits, not implemented experiments or an exhaustive catalogue of every possible discriminator. [COMMON-CHALLENGE][COMMON-REVIEW]
+
+| Declared operation | What its complete response can distinguish | Additional obligation not supplied by the response alone |
+|---|---|---|
+| Cut, delay, duplicate, permute or rewire registered channels | Causal dependence, redundancy, recovery and bottlenecks in the registered interface | A neutral crosswalk identifying the same channels; causal integration is not by itself one subject or bearer. |
+| Cross an installed target with independently certified truth or fittingness | Correction and target-persistence policies | Independent truth/fittingness certification; a responsive score is not its own normative authority. |
+| Cross presentation form with declared content | Form invariance, content sensitivity and their interactions | Common semantics and feasible cells; an impersonal semantic controller can realize the response table. |
+| Rotate authenticated authority, source versions, scopes and revocations | Operational authentication, adoption, refusal and execution behavior | Credential validity is not source truth; receipt, warranted adoption and execution remain distinct. |
+| Split, copy, corrupt, replay or delete authenticated acquisition roots | Dependence on the declared provenance graph and recovery opportunities | Copies, carriers and paths are not independent roots merely because they multiply. |
+| Permute centered, ownership or origin indices | At most sensitivity to the independently interpreted index | The common ownership anchor is not supplied by labeling a register “self”; missing semantics makes the proposed comparison ineligible. |
+| Supply fresh authenticated tasks under external budgets | Bounded competence, communication and resource-use differences | A common machine/measurement contract and a justified rival class; success or efficiency does not alone identify a personal ground. |
+
+The full profile must include the declared joint trajectories, failures, refusals and timeouts, not only selected successes or endpoint actions. A field asserted to measure actual energy or memory must be externally interpreted and measured as such; a self-report with that label is a different field. Potentially continuous or unbounded meters do not fit a finite-alphabet theorem merely by appearing in a table. Finite bins, ranges and horizons must be specified, or the theorem must be reformulated and proved at the corresponding measurable-space scope. Binning changes the observed profile; equality of binned costs does not establish equality of the unbinned costs. The packet supplied neither that extension nor a total validated implementation crosswalk.
+
+**A conditional finite-history realization.** Fix a finite horizon H, finite intervention and output alphabets U,O, and an admissible causal interface kernel κₜ(o|h,u) giving the next output law for every attainable public history h and intervention u. This is one coherent controlled interface, not an arbitrary collection of incompatible laws indexed separately by policy. An abstract stochastic controller can realize it with the complete history as its state: start at the empty history, draw o from κₜ(·|h,u), and append (u,o). Values at unreachable histories can be completed arbitrarily without changing the acquired law. There are at most
+
+```math
+\sum_{t=0}^{H}(|U||O|)^t
+```
+
+such history states. This is a finite mathematical realization; it asserts neither a small representation nor an effective implementation of arbitrary exact probabilities. [COMMON-CHALLENGE]
+
+For any common causal policy π, the probability of a particular transcript is the product of the same policy factors πₜ(u|h) and response factors κₜ(o|h,u) in the original interface and the history-state realization. Induction therefore gives equality of every declared finite transcript law under every such policy. This argument extends the use of complete histories in §8.16 but supplies a realization, rather than a new way to distinguish trace-equivalent systems.
+
+The architecture conclusion requires a separate **class-closure premise**: the admitted impersonal comparison class must contain this history-state realization, with a different target value, while satisfying every actual operational guard of the comparison. A finite-state realization of output symbols does not automatically reproduce externally measured physical energy, locality, memory, causal roots or noncopyable resources. Copying the original meter readings into its emitted transcript would simulate reports, not satisfy those guards. If a warranted guard excludes the realization, the collision argument has not constructed an eligible rival. The independent review makes this conditional premise load-bearing. [COMMON-REVIEW]
+
+When the premise does hold, one personal implementation and one eligible impersonal realization with the same complete profile already defeat class-wide identification of the three-valued personal/impersonal/plural target. It is unnecessary to construct a further plural twin for that negative conclusion. The result does not establish metaphysical possibility, actuality, equal probability or equality of all possible experiments. It does not prevent a registered finite suite from separating particular implementations or every member of a smaller justified registry. Such successes retain their implementation-relative scope.
+
+**Two ways a comparison can legitimately change.** A restriction computed wholly from unchanged evidence E has the form r=g∘E. If E(m)=E(m′), then r(m)=r(m′); appending r cannot split that collision. On a retained fibre, such a filter either retains both models or rejects both. An independent source, constitutive, metaphysical or resource premise can restrict the class differently, but its warrant is not inherited from the old profile. A prior preference is also not the same as excluding an implementation. This restates the relevant factorization consequence for class selection, without treating every external restriction as false or circular. [COMMON-CB]
+
+Resource evidence is one possible genuinely additional premise. Fix shared cost coordinates, units, measurement rules, a realization class Rₐ for each architecture a, and a vector budget b. For budget-pass evidence, the remaining architecture set is
+
+```math
+\mathcal F_b=\{a:\exists r\in R_a,\ \operatorname{cost}(r)\le b
+                          \text{ coordinatewise}\}.
+```
+
+Within this model, exact architecture identification requires F_b to be a singleton: two feasible architectures both explain the same pass, while one supplies the unique compatible label. An empty set indicates failure of the supplied class or premises to explain a genuine pass; it does not identify an architecture. Expected and worst-case costs must not be exchanged, nor may rival realizations be silently omitted. Pareto-incomparable vectors provide no canonical scalar winner without a separately warranted aggregation rule. No common measured architecture discriminator or complete rival realization class was established by the reissue. [COMMON-CA]
+
+A positive intervention effect can also exclude a **strictly restricted** rival class without identifying a person. In the reissue's finite potential-response model, if every unit response is constant across the declared intervention and fixed mixture weights aggregate those responses, the aggregate is constant. A nonzero exact effect therefore excludes that constant-response class. The converse fails: two equally weighted units with binary responses 0→1 and 1→0 have invariant aggregate 1/2 despite both varying. Plurality is not strict separability; coordinated plural and coupled impersonal systems remain possible members of the declared comparison. A null aggregate effect does not prove independent units, and sampled equality is not equality of the complete law. [COMMON-CE]
+
+**Completeness and the correction history.** A complete joint profile refines each of its coordinate projections. It need not be more informative than an independently added experiment, and duplicated or deterministically recoverable coordinates give no further refinement. The challenger did not supply a manifest-backed proof that all proposal families fit its asserted four buckets, a complete executable factorial, typed total architecture maps, a common decoder or guard validators. Its words “strongest” and “exhaustive” therefore cannot be inherited as established results. The one-omitted-cell countermodel applies to unrestricted response tables; warranted structural constraints can determine an omitted cell, as §8.11 already explains. Failure to find a resource lower bound or a discriminator is not a proof that none exists. [COMMON-REVIEW]
+
+The BW–CH arguments cited here are later **semantic reissues**, not recovered exact originals. Their outer intake rejected inflated checking evidence: an initial CI/CJ checker prefilled twin counts without checking twins, and a second attempt merely repeated definitional twins. The repaired finite-signature witnesses do not establish actual architecture implementation; adequate per-result independent review for BW–CH was not supplied by that custody package. The challenger packet's internal reread likewise was not an independent repository review. These failures concern the evidence claimed for the proposal family and must not be erased by a top-line PASS token. [COMMON-INTAKE][COMMON-REVIEW]
+
+The ordinary arguments above preserve the useful bounded content and its corrected premises without claiming a new execution, historical acceptance, universal architecture impossibility or exhaustive research closure. They sharpen which experiments could bear on the comparison. They do not replace the affirmative arguments for fittingness, intellect, agency and wise disclosure elsewhere in these works, whose substantive premises exceed this frozen neutral interface.
+
 
 ### 8.17 Source testimony, joint reliability and three distinct evidential routes
 
@@ -2200,6 +2351,8 @@ The common source directory is `docs/project-closure/ar8r-v11/post-merge-proposa
 - **AG05 — literal reported results and controls.** `pmr007_deep_ag_distinct_constraint_search_rereview_v2_results.json`. Git blob `a6ea8eb06bf4ba3517b747f50f71394cd4f869a2`.
 - **AG06 — literal reported results and controls.** `pmr007_deep_ag_strengthened_r5_primary_check_v2_results.json`. Git blob `45bbf78784a4a370835b09279c69b7922c234ee5`.
 
+- **AG07 — explicit finite witness and independently registered admissibility table.** Source edition: Git blob `145f24ca3f98704c2c444cd38d2aae6d5fa71da8`.
+
 [R359-AG]: #r132s-ref-ag
 
 <a id="r132s-ref-al"></a>
@@ -2649,3 +2802,63 @@ These exact public guides identify the reported results, historical review scope
 [GUIDE105-G065]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/a3da39901dc4e0eb682e0dc7ce49176f377dcff406086932fb5530df73c20da4/README.md
 [GUIDE105-G072]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/b2b3266cedf8f7d82f60c3ffb11e800a4be63bad4e9609faa1a56df2d0dcb2c0/README.md
 [GUIDE105-G104]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/f4a4ba0650ca4f5bab0e08793e35588d7459179d11d02021ef3a85939431bd9f/README.md
+
+
+## Source records for common-intervention contracts
+
+The following public editions supply the bounded argument and its correction history. BW–CE/CH are semantic reissues, not exact recovery of vanished original packets. The Challenger A review supersedes its unsupported implementation, exhaustion and independent-rereview claims; the BW–CJ intake retains the failed checks rather than promoting historical PASS labels. These citations supply source attribution, not a new execution or historical acceptance seal.
+
+- [COMMON-BW] **Target-blind common-intervention saturation**. Exact Git object `5f76ae15c46f60c0a7cb64324a4fb465044baad3`.
+- [COMMON-CH] **Constitution-sensitive ownership intervention**. Exact Git object `91dea4100bec60a0db748be9fe7ea54e84ee8101`.
+- [COMMON-CA] **Resource-cost identifiability**. Exact Git object `79bda42ee7815c3bbc46d4eec112b3eec38471f8`.
+- [COMMON-CB] **Evidence-determined class restriction**. Exact Git object `88f82be5de323de56eca6bfc598a5a7706bd6944`.
+- [COMMON-CE] **Cross-domain effect and strict separability**. Exact Git object `0a38dd83fce229828489f45d73813ec2d89a11f0`.
+- [COMMON-CHALLENGE] **Bounded Challenger A: common interventions and rival discrimination**. Exact Git object `92addb3ec6b8595682cdd97af22eddaf02baa66a`.
+- [COMMON-REVIEW] **Independent review findings: Challenger A**. Exact Git object `d6a1a7cb54125eb43031d87754016b8cc88d6b63`.
+- [COMMON-STATUS] **Challenger A public status and custody**. Exact Git object `2a2dd0535cce3265c7c7ac749fc274ef247f0027`.
+- [COMMON-INTAKE] **Independent BW–CJ intake: failed checks and repaired bounded scope**. Exact Git object `cf6ea86bfb942cd052c6c630120576e214420483`.
+
+[COMMON-BW]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/source-files/PROPOSAL/theorems/PMR-007_DEEP_BW_PMR-007-TCIS-1_REISSUE_V1.md
+[COMMON-CH]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/source-files/PROPOSAL/theorems/PMR-007_DEEP_CH_PMR-007-OIOT-1_REISSUE_V1.md
+[COMMON-CA]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/source-files/PROPOSAL/theorems/PMR-007_DEEP_CA_PMR-007-RCIG-1_REISSUE_V1.md
+[COMMON-CB]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/source-files/PROPOSAL/theorems/PMR-007_DEEP_CB_PMR-007-CRFW-1_REISSUE_V1.md
+[COMMON-CE]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/source-files/PROPOSAL/theorems/PMR-007_DEEP_CE_PMR-007-CDPS-1_REISSUE_V1.md
+[COMMON-CHALLENGE]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-a-common-intervention/source-files/BOUNDED_CHALLENGER_A_COMMON_INTERVENTION_PACKET.md
+[COMMON-REVIEW]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-a-common-intervention/INDEPENDENT_REVIEW_FINDINGS.md
+[COMMON-STATUS]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-a-common-intervention/README.md
+[COMMON-INTAKE]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/intake-review/PMR-007-DEEP-BW-CJ-INDEPENDENT-INTAKE-REVIEW.md
+
+### Sources for marginal evidence gain and private collision witnesses
+
+- [GAIN-R8] Orthemology public research. *SPA-R8 — residual-collision gain for candidate-intervention selection*. Exact public Git blob `dc8c7c551407ccd930299feaad1508c6febec02d`. Finite fixed-manifest coverage argument and reported checks; no new empirical or source-world verification.
+- [GAIN-R10] Orthemology public research. *SPA-R10 — minimum eligible residual-collision cover*. Exact public Git blob `515d797a6192262c363f93e63586d7e279016010`. Standard finite-cover application, private-witness criterion and bounded no-cover/greedy limits; no new general theorem origin is claimed.
+- [GAIN-INTAKE] Orthemology public research. *Specialist A intake correction*. Exact public Git blob `6a4b0832402177d79608bae6ca79959f5a970ef7`. The decoder extension guard and historical checker, audit and standalone-versus-project Lean limits remain in force. This exposition does not adopt the whole proposal or rerun its programs.
+
+[GAIN-R8]: https://api.github.com/repos/theislampill/orthemology/git/blobs/dc8c7c551407ccd930299feaad1508c6febec02d
+[GAIN-R10]: https://api.github.com/repos/theislampill/orthemology/git/blobs/515d797a6192262c363f93e63586d7e279016010
+[GAIN-INTAKE]: https://api.github.com/repos/theislampill/orthemology/git/blobs/6a4b0832402177d79608bae6ca79959f5a970ef7
+
+
+#### Sources for the standard-family and partial-experiment refinements
+
+These exact source editions retain their own proposal, repair and execution scopes. Their historical status fields do not report a new run or establish the source/world premises of this exposition. The original base directory is `docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/`.
+
+<a id="cpct-cs"></a>
+
+**[CPCT-CS]**
+
+- `deep_cs/PMR007_DEEP_CS_REFINEMENT_LATTICE_MODEL_V1.yaml`. Git blob `188a4d22366041568a9d3b34816159763176247c`.
+- `deep_cs/PMR007_DEEP_CS_REFINEMENT_LATTICE_MODEL_V2.yaml`. Git blob `13d956d17c456cc4e05c5f4206cd14fe1c99a9dc`.
+
+[CPCT-CS]: #cpct-cs
+
+<a id="cpct-ct"></a>
+
+**[CPCT-CT]**
+
+- `deep_ct/PMR007_DEEP_CT_PARTIAL_INTERVENTION_MODEL_V1.yaml`. Git blob `f364375dc4acb7bc750c01f112af1fd4253a1aa7`.
+- `deep_ct/PMR007_DEEP_CT_PARTIAL_INTERVENTION_MODEL_V2.yaml`. Git blob `9cda0d95b4da50eda06e527eb4b75d6771fa67b9`.
+- `checks/pmr007_deep_ct_partial_domain_primary_check_v1_results.json`. Git blob `9a52c8eb568a33e83f9c1a8f6d0e6b71294eb111`.
+- `checks/pmr007_deep_ct_partial_domain_primary_check_v2_results.json`. Git blob `488f34eeb82faa575976fcfbee7ab2e7ba4a627f`.
+
+[CPCT-CT]: #cpct-ct

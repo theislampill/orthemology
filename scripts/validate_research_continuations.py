@@ -226,6 +226,21 @@ def validate_suite(suite, sources, root, parsed_sources=None):
     enum(suite['driver']['lean_argument'],{'EXECUTABLE','BIN_DIRECTORY','ENVIRONMENT_DIRECTORY','NOT_SPECIFIED'})
     enum(suite['controls'],{'ORIGINAL_DRIVER_REQUIRED','DECLARED_SOURCE_CONTROLS'})
     mods=indexed(suite['modules'],'module');require(mods,'Empty suite')
+    # These current P01 profiles require the inherited382 checked-environment
+    # and transitive-axiom guards independently of their ordinary readbacks.
+    # In particular, successor151 is not a replacement for that guarded scope.
+    # A future generated step must transfer this obligation explicitly; merely
+    # deleting the stored audit or changing its formatting edition is not enough.
+    if suite['id'] in {'866c6ff6e74a-p01-repaired','866c6ff6e74a-p01-successor'}:
+        required_guard_sources = {
+            'AuditSupport': ('f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96',1024),
+            'P01Audit': ('5566f2328b32cff190afc27608ae963744ee61c8e3122edb3c9ab53638eb2494',77506),
+        }
+        require(required_guard_sources.keys() <= mods.keys(),'Missing mandatory P01 guarded audit')
+        for name, expected in required_guard_sources.items():
+            source = sources.get(mods[name]['source_id'],{})
+            require((source.get('sha256'),source.get('bytes')) == expected,
+                    'Changed mandatory P01 guard source: '+name)
     order=suite['module_order']
     require(isinstance(order,list) and len(order)==len(set(order)) and set(order)==set(mods),'Module order/census mismatch')
     official=indexed(suite['official_imports'],'module')

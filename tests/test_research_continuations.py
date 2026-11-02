@@ -91,6 +91,69 @@ class ContinuationTests(unittest.TestCase):
         self.assertEqual(summary['results'],1)
         self.assertEqual(summary['fresh_qualified_results'],0)
 
+    def test_current_p01_repaired_requires_inherited_guarded_audit(self):
+        suite=deepcopy(self.data[AREA+'/suites/fixture-a.json'])
+        suite['id']='866c6ff6e74a-p01-repaired'
+        sources=self.v.indexed(self.data[PROV+'/SOURCE_MAP.json']['sources'],'id')
+        with self.assertRaisesRegex(ValueError,'Missing mandatory P01 guarded audit'):
+            self.v.validate_suite(suite,sources,self.root)
+
+    def test_current_p01_successor_requires_inherited_guarded_audit(self):
+        suite=deepcopy(self.data[AREA+'/suites/fixture-a.json'])
+        suite['id']='866c6ff6e74a-p01-successor'
+        sources=self.v.indexed(self.data[PROV+'/SOURCE_MAP.json']['sources'],'id')
+        with self.assertRaisesRegex(ValueError,'Missing mandatory P01 guarded audit'):
+            self.v.validate_suite(suite,sources,self.root)
+
+    def test_current_p01_rejects_unreviewed_guard_source_bodies(self):
+        suite=deepcopy(self.data[AREA+'/suites/fixture-a.json'])
+        suite['id']='866c6ff6e74a-p01-successor'
+        sources=self.v.indexed(deepcopy(self.data[PROV+'/SOURCE_MAP.json']['sources']),'id')
+        raw=b'import Proof\n';digest=hashlib.sha256(raw).hexdigest()
+        path=AREA+'/source-store/'+digest+'.lean';(self.root/path).write_bytes(raw)
+        for name in ['AuditSupport','P01Audit']:
+            ident='unreviewed-'+name;row=deepcopy(sources['source-a'])
+            row.update(id=ident,member='src/'+name+'.lean',path=path,
+                       original_sha256=digest,sha256=digest,original_bytes=len(raw),bytes=len(raw))
+            sources[ident]=row;suite['modules'].append({'module':name,'source_id':ident,'imports':['Proof']})
+            suite['module_order'].append(name)
+        with self.assertRaisesRegex(ValueError,'Changed mandatory P01 guard source'):
+            self.v.validate_suite(suite,sources,self.root)
+
+    def _cached_current_p01_guards(self):
+        # This isolates validate_suite's parsed-cache boundary, not body authentication.
+        suite=deepcopy(self.data[AREA+'/suites/fixture-a.json'])
+        suite['id']='866c6ff6e74a-p01-successor'
+        sources=self.v.indexed(deepcopy(self.data[PROV+'/SOURCE_MAP.json']['sources']),'id')
+        parsed={sources['source-a']['path']:([],{'Demo.ok'})}
+        identities={
+            'AuditSupport':('f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96',1024),
+            'P01Audit':('5566f2328b32cff190afc27608ae963744ee61c8e3122edb3c9ab53638eb2494',77506),
+        }
+        for name,(digest,size) in identities.items():
+            ident='cached-'+name;row=deepcopy(sources['source-a'])
+            path=AREA+'/source-store/'+digest+'.lean'
+            row.update(id=ident,member='src/'+name+'.lean',path=path,
+                       original_sha256=digest,sha256=digest,original_bytes=size,bytes=size)
+            sources[ident]=row;parsed[path]=(['Proof'],set())
+            suite['modules'].append({'module':name,'source_id':ident,'imports':['Proof']})
+            suite['module_order'].append(name)
+        return suite,sources,parsed
+
+    def test_current_p01_audit_support_edition_with_parsed_cache(self):
+        suite,sources,parsed=self._cached_current_p01_guards()
+        self.v.validate_suite(suite,sources,self.root,parsed)
+        sources['cached-AuditSupport']['sha256']='0'*64
+        with self.assertRaisesRegex(ValueError,'Changed mandatory P01 guard source: AuditSupport'):
+            self.v.validate_suite(suite,sources,self.root,parsed)
+
+    def test_current_p01_guarded_audit_edition_with_parsed_cache(self):
+        suite,sources,parsed=self._cached_current_p01_guards()
+        self.v.validate_suite(suite,sources,self.root,parsed)
+        sources['cached-P01Audit']['sha256']='0'*64
+        with self.assertRaisesRegex(ValueError,'Changed mandatory P01 guard source: P01Audit'):
+            self.v.validate_suite(suite,sources,self.root,parsed)
+
     def test_obligation_statement_must_belong_to_exact_owner(self):
         owner='original.md';(self.root/owner).write_text('Original obligation remains open.\n',encoding='utf-8')
         row={'id':'U08','owner_path':owner,'owner_sha256':self.v.sha(self.root/owner),'statement':'Original obligation remains open.',

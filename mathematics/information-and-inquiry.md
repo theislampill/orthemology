@@ -1204,7 +1204,110 @@ The shared Beta margins give $\mathbb E_1[-\log X]=\mathbb E_1[-\log Y]=1/n$, so
 \leq2+\log(3/2).
 ```
 
-This includes $n=1$. At the separate equality case $m=n,c=1$, both divergences are zero. Data processing keeps every finite retained-face transcript's forward KL below the same envelope even while its chi-square can grow without bound. Failure of the old two-probe chi-square bound for longer words neither refutes its own sample lower bound nor proves a better count-testing exponent for this stronger instrument. No sharp KL asymptotic, reverse-KL claim, physical precision budget, or access to individual route thresholds follows. [CAL-G277]
+This includes $n=1$. At the separate equality case $m=n,c=1$, both divergences are zero. Data processing keeps every finite retained-face transcript's forward KL below the same envelope even while its chi-square can grow without bound. Failure of the old two-probe chi-square bound for longer words neither refutes its own sample lower bound nor proves a better count-testing exponent for this stronger instrument. This envelope alone supplies no sharp KL asymptotic, reverse-KL claim, physical precision budget, or access to individual route thresholds; the additional rate proof is separate below. [CAL-G277]
+
+### 2.24 Exact face minima retain a fourth-power KL rate
+
+The finite envelope in §2.23 does not determine how information changes with the route count. For the same stipulated hard pair, its sharper successor proves, with natural logarithms,
+
+```math
+D_n=\operatorname{KL}(P_1\Vert P_0),\qquad n^4D_n\longrightarrow\frac12.
+```
+
+Here $P_0$ has $n$ independent product-uniform route pairs, while $P_1$ has $m=n+1$ independent route pairs with $c=n/(n+1)$ and the stipulated threshold law $H_c(ab)$, where $H_c(t)=1-(1-t)^c$. The observation is only the two coordinate minima of one unchanged vector, not its individual routes or labels. Infinite chi-square at each fixed $n$ is compatible with this vanishing forward KL. The following argument controls derivatives and entropy tails, rather than inferring a rate from pointwise CDF expansions or numerical quadrature. [CP09-KL-RATE]
+
+**A common coordinate change and a growing-box expansion.** Set $U=-n\log X$, $V=-n\log Y$ in **both** worlds. Both margins become Exp$(1)$, and the reference density is $f_0(u,v)=e^{-u-v}$. With $x=e^{-u/n}$ and $y=e^{-v/n}$, the alternative survival function and density ratio are
+
+```math
+G_1(u,v)=e^{-u-v+H(u,v)},\qquad
+H=m\log\frac{S(x,y)}{(xy)^c},
+\qquad R=\frac{f_1}{f_0}=e^H(1-H_u-H_v+H_uH_v+H_{uv}).
+```
+
+The density is the positive mixed derivative of the survival function; §2.23 already accounts for all its mass. The common bijection preserves KL. Transforming the alternative with $m$ instead would not establish this ratio.
+
+Write $t=1/n$, $A=e^{tu}-1$, $B=e^{tv}-1$. The positive integral identity underlying the two-face law gives
+
+```math
+h=\frac{S}{(xy)^c}-1=c(1-c)AB I,
+\qquad I=\int_0^1\!\int_0^1(1+Bs+Ar)^{c-2}\,dr\,ds.
+```
+
+On $[0,L]^2$ with $tL\leq1$, put $p=1+L$ and let $\|\cdot\|_2$ be the largest supremum of derivatives of total order at most two. Constants $K$ below are independent of $n,L$ and may increase. For $E=(e^{tu}-1)/t$ and $F=(e^{tv}-1)/t$, Taylor's theorem gives $\|E\|_2,\|F\|_2\leq ep$ and $\|E-u\|_2,\|F-v\|_2\leq etp^2$. Direct differentiation under the unit-square integral gives
+
+```math
+\|I\|_2\leq K,\qquad \|I-1\|_2\leq Ktp.
+```
+
+Indeed $q=c-2\in[-3/2,-1)$ and $W=1+Bs+Ar\geq1$: the first derivative has the form $qA'\int rW^{q-1}$, and second derivatives add $q(q-1)(A')^2\int r^2W^{q-2}$ and $qA''\int rW^{q-1}$, or the mixed counterpart. Bounds $A',B'\leq et$, $A'',B''\leq et^2$ and $|I-1|\leq2(A+B)$ give the estimates, including the axes.
+
+Since $m(1-c)=1$, $J=mh=ct^2EFI$. Expand $cEFI-uv$ as $(c-1)EFI+(E-u)FI+u(F-v)I+uv(I-1)$ and use $\|fg\|_2\leq4\|f\|_2\|g\|_2$. Then
+
+```math
+\|J-t^2uv\|_2\leq Kt^3p^3,\qquad
+\|J\|_2\leq Kt^2p^2,\qquad \|h\|_2\leq Kt^3p^2.
+```
+
+For $z\geq0$, $\phi(z)=\log(1+z)-z$ satisfies $|\phi(z)|\leq z^2/2$, $|\phi'(z)|\leq z$ and $|\phi''(z)|\leq1$. Both terms in the second-derivative chain rule are therefore bounded, yielding $\|H-J\|_2\leq Kt^5p^4$ and hence
+
+```math
+\|H-t^2uv\|_2\leq Kt^3p^4.
+```
+
+Choose $L=C\log n$ for any fixed $C>4$. Eventually $tL\leq1$ and $\|H\|_2=O(t^2p^2)\to0$. Expanding the **density ratio**, its linear term is $H-H_u-H_v+H_{uv}$ and all products are $O(t^4p^4)$. Uniformly on this growing box,
+
+```math
+R=1+t^2k+r_n,\qquad k=(1-u)(1-v),\qquad
+\sup|r_n|\leq Kt^3p^4,\qquad \sup|R-1|=O(t^2p^2).
+```
+
+This is a local growing-box estimate, not a global $L^2(P_0)$ bound. [CP09-KL-RATE]
+
+**The tail and the coefficient.** The inherited envelope $f_{1,XY}\leq C_n/(xy)$ and Jacobian $xy/n^2$ give $f_1(u,v)\leq1+1/[n(n+1)]\leq3/2$, so $\log R\leq a+u+v$, where $a=\log(3/2)$. For $T_L=[0,\infty)^2\setminus[0,L]^2$, both laws satisfy $P_i(T_L)\leq2e^{-L}$. Dependence under $P_1$ is harmless for the cross-tail moment because
+
+```math
+\mathbb E_1[U\mathbf1_{V>L}]
+\leq\int_0^\infty\min(e^{-s},e^{-L})\,ds=(L+1)e^{-L}.
+```
+
+Together with the exchanged term and the two same-coordinate tail moments, this gives $\mathbb E_1[(U+V)\mathbf1_{T_L}]\leq4(L+1)e^{-L}$. Since forward entropy is finite, use the centered nonnegative function $\psi(r)=r\log r-r+1$ and mass equality to write $D_n=\int f_0\psi(R)$. Pointwise $f_0\psi(R)\leq f_1(\log R)_++f_0$, hence
+
+```math
+0\leq\int_{T_L}f_0\psi(R)\leq[2a+4(L+1)+2]e^{-L}.
+```
+
+Multiplying by $n^4$ makes this bound vanish for $L=C\log n$, $C>4$. Centering is essential: expanding $R\log R$ on the box without cancelling the first-order mass term would not suffice.
+
+On the box put $\delta=R-1$. Taylor's theorem gives $\psi(1+\delta)=\delta^2/2+O(|\delta|^3)$ uniformly. The preceding remainder implies
+
+```math
+\sup|t^{-4}\delta^2-k^2|\leq K(tp^6+t^2p^8)\longrightarrow0,
+\qquad t^{-4}\int_{[0,L]^2}f_0|\delta|^3\leq Kt^2p^6\longrightarrow0.
+```
+
+The reference mass is at most one; the growing boxes exhaust the quadrant and $\int_0^\infty e^{-u}(1-u)^2\,du=1$. The scaled bulk entropy therefore tends to $\frac12\int e^{-u-v}k^2\,du\,dv=1/2$. Adding the tail proves the limit. The far tail that destroys chi-square integrability has negligible scaled entropy; no contradiction or numerical limit interchange is being hidden. [CP09-KL-RATE]
+
+**What an adaptive protocol can conclude.** Every face probe $(a,1)$ or $(1,b)$ is a comparison with one of the minima. With common policy randomization, any finite adaptive face-only transcript is thus a common kernel of the pair and has KL at most $D_n$, with no fixed word-length or precision cap.
+
+For repeated sampling, require fresh independent vectors, unchanged during each retained face-only word, and a common policy. Augment its history by revealing the minima at the **first probe** of a new retained vector and charge that vector immediately; continue making decisions using only the policy's original observations. A fresh reveal contributes $D_n$ conditional KL. Later face probes of that vector contribute zero additional oracle KL. Through the first $T$ **actual actions**, with common padding after termination,
+
+```math
+\operatorname{KL}(\mathcal L_1(\mathcal H_T)\Vert\mathcal L_0(\mathcal H_T))
+\leq D_n\,\mathbb E_1[N_T],
+```
+
+where $N_T$ counts independent retained vectors started, not completed words. This history remains defined if one word never finishes. Separate fresh endpoint-only observations may contribute zero KL for this hard pair only when they use independent vectors discarded without replay. An initial interior $AB$ observation followed by reuse is excluded: charging it does not make that bit a function of the two minima. Every reused vector must be entirely face-only and charged from its first observation.
+
+Assume unconditional terminal correctness, $P_0(\text{finite stop and accept }0)\geq1-\alpha$ and $P_1(\text{finite stop and reject }0)\geq1-\alpha$, with $0<\alpha<1/2$. Apply binary data processing to rejection by action $T$, then monotone convergence of $\mathbb E_1N_T$ and lower semicontinuity of binary KL. The limiting rejection probabilities are at least $1-\alpha$ under $P_1$ and at most $\alpha$ under $P_0$, giving
+
+```math
+\mathbb E_1N\geq\frac{\operatorname{kl}(1-\alpha,\alpha)}{D_n}
+=(2+o(1))n^4\operatorname{kl}(1-\alpha,\alpha).
+```
+
+Infinite expected cost satisfies the inequality trivially. Correctness merely conditional on termination would not give these event bounds. This is a lower bound on independent retained vectors for the specified hard pair, not an achievable or minimax sample/probe-cost constant, general wrong-count identification, reverse-KL theorem or physical readout claim. Interior retained probes, route labels and changing latent states are different channels. [CP09-KL-RATE] [CP09-KL-REVIEW]
+
+The exact historical review binds the final source SHA256 `1c2fd5cf4e8006205cbd61562d88eb5da72d4952f335b17952540ec9f1a1d544`, after corrections to actual-action indexing and the interior-reuse exclusion. Its symbolic and quadrature diagnostics corroborate only bounded calculations: resolution agreement is not certified quadrature error, and the analytic argument carries the asymptotic claim. This exposition adds no source-program, empirical or kernel execution and does not transfer the historical verdict to a new edition automatically. [CP09-KL-REVIEW]
 
 ## 3. The information hidden between target and audit marginals
 
@@ -2344,6 +2447,32 @@ The [distinct V2 rereview][receipt-r14-06] used set-valued fixed-point approxima
 The admitted result is relative to a finite common-state, perfect-information game with eligible local fragments and the declared successor relation. It does not construct common state from private views, establish partial-observation or asynchronous sufficiency, cover arbitrary probabilistic or changing-membership objectives, authenticate source or target predicates, or prove that the modeled transitions match a real corrective system. The failed review's noncommon-state control explicitly retains a case where state-indexed choices exist but no strategy factors through the actual local view. The outer rank certifies correctness, not minimum time or cost. The repaired review leaves source truth, causal adequacy, actual restoration, external review and owner adoption open, and assigns no general mathematical novelty or overarching closure credit. [Failed control record][receipt-r14-02]; [V2 scope and disposition][receipt-r14-06].
 
 
+#### Uncertain standards change the game being certified
+
+The same finite machinery can compare several supplied standards without deciding which standard is correct. Let a finite nonempty family $`H`$ specify targets $`T_h`$, eligible menus $`A_h(s)`$ and deterministic successors $`F_h(s,a)`$ on one common finite state space. The controller observes the current state, chooses one action eligible under every standard, and then an adversary may choose a standard afresh. Put
+
+```math
+A_H(s)=\bigcap_{h\in H}A_h(s),\qquad T_H=\bigcap_{h\in H}T_h,
+\qquad
+\mathrm{Pre}_H(X)=\{s:\exists a\in A_H(s),\ \forall h\in H,\ F_h(s,a)\in X\}.
+```
+
+A state with no common action is losing, not a vacuous successful continuation. The invariant target region and its forced-entry region are
+
+```math
+K_H=\nu X\,(T_H\cap\mathrm{Pre}_H(X)),\qquad
+W_H=\mu Z\,(K_H\cup\mathrm{Pre}_H(Z)).
+```
+
+These are the earlier invariant-kernel and attractor constructions, with the declared uncertainty included in the adversary's successor choice. Greatest-fixed-point closure supplies a memoryless policy inside $`K_H`$; the least entry layers supply strictly decreasing ranks until that region is reached. Outside the attractor, every common action has a standard-indexed successor outside it, or no common action exists. Thus $`W_H`$ concerns **forced finite entry into the common kernel**, not an identification of the standard and not a replacement for the distinct co-Büchi region above. The source uses that stronger core-entry meaning of “reach-and-stay.” [CPCT-CQ]
+
+Switching is also stronger than one unknown but fixed standard. With states $`s,m,t`$ and one action, let the first standard send $`s\to m\to t\to t`$, and the second send $`s\to t\to t`$ and $`m\to s`$. From $`s`$, each fixed standard reaches $`t`$. A switching adversary instead uses the first standard at $`s`$ and the second at $`m`$, producing $`s,m,s,m,\ldots`$. The common invariant kernel and its attractor are both $`\{t\}`$. This exact witness replaces an earlier defective automatically reported witness; a passing field in that earlier record does not repair its specification. Disjoint common-action menus provide another obstruction even when each standard individually sustains the same target. [CPCT-CQ]
+
+An independently warranted restriction to a **nonempty** subfamily $`H'\subseteq H`$ can enlarge both regions: the target intersection and common menus expand, while the universal successor test weakens. This comparison requires inherited targets, action meanings and dynamics without reinterpretation. It does not authorize deleting an inconvenient standard. The source-restriction repair distinguishes acceptance within a declared source-relative argument from the further truth and actual-world adequacy premises needed for world-directed use. Custody, version, translation, attribution, predicate meaning and applicability remain substantive obligations. Even when those obligations are met, a restriction may leave several standards; uniqueness needs a singleton result or another premise. An empty surviving family represents an inconsistent restriction, not a restored controller. [CPCT-CR]
+
+The historical source reports 186,624 two-state structures and separately larger policy-graph checks; those populations are not rerun or added together here. The finite constructions assume full state observation, the supplied target family and the switching contract. They establish neither objective correctness of every supplied standard nor actual human restoration, source truth, a fixed-hidden-standard characterization or enforcement by the current application runtime. A source-grounded proper-function argument may warrant a particular standard, but that warrant is not manufactured by the game calculation.
+
+
 #### Versioned evidence and compositional eligibility
 
 The admissibility relation itself can depend on a reason-certificate path. At each boundary retain the version, frozen claim, provenance root, finite reason-node and directed dependency-edge sets, and the obligations actually discharged. A proposed edge must match that complete input boundary. Its node map must have exactly the input node set as domain and send every input dependency edge to an output dependency edge. The output node set is exactly the map's image, and every output dependency-edge endpoint must belong to that set.
@@ -2468,6 +2597,8 @@ In the source's six-coordinate specialization, the conditions are profile unifor
 #### Exact recovery must preserve the structure being claimed
 
 At the deterministic set level, a target $`d:X\to D`$ factors through $`r:X\to R`$ on attained states exactly when $`\ker r\subseteq\ker d`$. Taking tuples intersects kernels; a joint image fills its coordinate product exactly when every tuple of coordinate fibres has a common element. These mechanisms also underlie §2.8. Their reuse across applications is useful, but does not make them independent mathematical origins or reduce every application's native structure to a partition. [R44-BJ01] [R44-BJ03]
+
+For the attained-image proof and the empty-target boundary on extending a decoder to the whole observation space, see [Physical Realisation and Continuation, §9.3](physical-realisation-and-continuation.md#93-lossless-abstraction-is-target-relative) and [Collective Inquiry and Strategic Coordination, §2.1](collective-inquiry-and-strategic-coordination.md#21-what-scalarization-does-and-does-not-lose).
 
 The distinction is visible in four small controls. First, the two strictly positive laws
 
@@ -5587,3 +5718,32 @@ These exact public guides identify the reported results, historical review scope
 [GUIDE105-G081]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/d50f072786fe17e57f1b181631ebc7bf861bd087e4a282b3ae6e020be65892e8/README.md
 [GUIDE105-G089]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/df0218dbf05454c99eccf3fcd94757e7388f8eac6161c95ed6beb6eddaac4e30/README.md
 [GUIDE105-G096]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/e403bf42e103d1065a1f4723f382566a18e8e76c8b44424ba517d6ccfc71b5e5/README.md
+
+
+#### Sources for the standard-family and partial-experiment refinements
+
+These exact source editions retain their own proposal, repair and execution scopes. Their historical status fields do not report a new run or establish the source/world premises of this exposition. The original base directory is `docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/`.
+
+<a id="cpct-cq"></a>
+
+**[CPCT-CQ]**
+
+- `deep_cq/PMR-007_DEEP_ROUND_CQ_NORM_UNCERTAIN_ROBUST_RESTORATION_V2.md`. Git blob `37de4b9fc498f2bb03bb4557a0bedf6149a9aa93`.
+- `deep_cq/PMR007_DEEP_CQ_NORM_UNCERTAIN_RESTORATION_MODEL_V2.yaml`. Git blob `dd3ecc53b8c02865acce709205babe160a241c5d`.
+- `checks/pmr007_deep_cq_norm_uncertain_restoration_primary_check_v1_results.json`. Git blob `919310e0ccb237681e8d4bd8013644d558134ab5`.
+- `checks/pmr007_deep_cq_norm_uncertain_restoration_primary_check_v2_results.json`. Git blob `c60f4b539c6dc5eba5f870b8a9e19b26deb7a06e`.
+- `checks/pmr007_deep_cq_distinct_strategy_graph_rereview_results.json`. Git blob `2af48c7a3c373ca7fcbb28e9d8cf378933955116`.
+
+[CPCT-CQ]: #cpct-cq
+
+<a id="cpct-cr"></a>
+
+**[CPCT-CR]**
+
+- `deep_cr/PMR007_DEEP_CR_SOURCE_RESTRICTION_MODEL_V1.yaml`. Git blob `dd2ec65d7b6bb9732b022cf3ffe9afc06b7af68a`.
+- `deep_cr/PMR007_DEEP_CR_SOURCE_RESTRICTION_MODEL_V2.yaml`. Git blob `e2a37b6a0c1e1584ac209eb8bf0432a13f7d60d9`.
+
+[CPCT-CR]: #cpct-cr
+
+[CP09-KL-RATE]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f78244c657922e59291a613448a2205787e7be2d
+[CP09-KL-REVIEW]: https://api.github.com/repos/theislampill/orthemology/git/blobs/8753df7f4b6bef586619c189ff6a74ac784e757b
