@@ -1430,6 +1430,33 @@ The underlying result files preserve distinct finite populations behind the prec
 
 The primary record explicitly says that zero-term handling was not separately attacked in its first version. The algebraic argument above permits zero-weight terms to be omitted, but that proof fact must not be restated as a historical test that the file does not report. The same records retain rank collapse under a channel, including a three-to-one example: post-processing can discard latent distinctions. Preservation of a particular latent width requires additional conditions. These result files bind the evidence and its limit to the existing argument; they do not create a second origin for it. [R68-S042] [R68-S043]
 
+<a id="audit-history-and-model-revision"></a>
+
+### 3.6 Sufficient retained history depends on the future audit
+
+The source-revision guide reports conditions for dropping an old report while preserving the full-history posterior, together with positive audit and replacement updates and counterexamples to two stronger deletion implementations. Its proof body is not present in this guide cohort. The supported question can nevertheless be stated exactly using the finite-law framework already developed here. [GUIDE105-G013]
+
+Let $H$ be a full finite history, let $S=s(H)$ be a retained summary, and let $Z$ be a specified future audit outcome in one fixed joint model. Dropping $H$ while retaining $S$ preserves the target posterior after that audit precisely when, on every positive-probability branch,
+
+```math
+\Pr(\Theta=\theta\mid H=h,Z=z)
+=\Pr(\Theta=\theta\mid S=s(h),Z=z)
+\quad\text{for every }\theta.
+```
+
+This is conditional independence of $\Theta$ and $H$ given $(S,Z)$ in the stated finite model. Necessity is the required equality itself. For sufficiency, conditioning the full posterior on $(S,Z)$ averages identical vectors on each positive summary-and-audit class, leaving that common vector unchanged. If the contract includes a family of future audit words, the equality and feasibility guard must hold for every admitted word. Equality before the audit is a weaker requirement.
+
+Section 3.1 already supplies the relevant counterexample mechanism: a report can be neutral in a marginal and still participate in a higher-order interaction exposed by a later audit. That proof is not repeated or given a second origin here. It establishes why posterior neutrality at one stage cannot authorize unrestricted deletion. It does not identify the two particular failed implementations named by the new guide, whose full definitions remain unreceived. [GUIDE105-G013]
+
+A replacement operation also needs a model of what has changed. An audit of an old source, an independent new observation, a change in the permitted view, and replacement of an invalid likelihood factor need not induce the same posterior. The explicit retraction calculations in [Recognition, Warrant and Restoration, §7.4](../epistemology/recognition-warrant-and-restoration.md#74-deleting-a-factor-and-observing-a-retraction) already demonstrate that distinction. The audit-continuation guide assigns its positive construction to an actual audit-model quotient and a posterior-only tensor-and-feasibility criterion. Section 4 supplies the readable general comparison proof; the guide's particular construction and its handled concurrent source correction retain separate dependencies. [GUIDE105-G081]
+
+### 3.7 A correction operator requires its own audit application
+
+The correction-audit guide applies the inherited audit mathematics to an actual Ornstein–Uhlenbeck-to-normalized-power operator. It expressly claims an application of the existing kernel-audit and Bayesian principles, rather than a new general theorem of either kind. An audit result about a specified operator cannot be transported to an alternative numerical update merely because both are called correction. The operator, normalization and observation contract must agree. [GUIDE105-G028]
+
+The guide distinguishes exact symbolic and rational controls from three floating-point controls that call the inherited Gaussian-step implementation. Those numerical results are corroboration at their declared inputs. They establish neither a stable inverse, a finite-dimensional representation valid for all laws, nor a numerical error certificate. The complete operator formula and application proof are not supplied in the guide; no such formula is inferred here from the name. This is also why a positive audit-transport construction does not erase the separate whole-law versus restricted-Gaussian distinctions in [Tensor Moments, §§3.4–3.8](tensor-moments-and-corrective-dynamics.md#full-density-and-gaussian-geometry). [GUIDE105-G028]
+
+
 ## 4. Posterior equivalence and its finite tensor test
 
 Two live states are posterior-equivalent if they admit the same words and give the same target posterior after every feasible word, including the empty word. They need not predict word probabilities.
@@ -1471,6 +1498,92 @@ F_a(S)=\{i:\ M_a[i,j]>0\text{ for some }j\in S\}.
 Explore support pairs under synchronized $`(F_a,F_a)`$. Exactly one empty component witnesses a language difference; otherwise complete exploration establishes equality. There are at most $`4^n`$ pairs. With the finite supplied alphabet and rational, explicitly supplied $`M_a,C,x,y`$, this test and invariant-space closure are exact terminating algorithms. Arbitrary uncomputable real coefficients or an unspecified infinite alphabet do not provide that guarantee.
 
 A common feasible first observation preserves all continuation comparisons, giving a set-theoretic partial quotient. This does not supply a convenient linear or finite-dimensional posterior-state parameterization. The product and invariant-span methods have established predictive-state and weighted-automata antecedents. [2], [8], [9]
+
+<a id="hierarchical-marginal-algebra"></a>
+
+### 4.1 The common core of a hierarchical marginal record
+
+The hierarchical-marginal guides identify a useful algebraic boundary: for a downward-closed family of finite-product marginals, the componentwise stabilizing algebra consists of functions of the intersection of its maximal faces. The following proof makes that finite linear-algebra statement readable independently of the linked result. It is the standard product decomposition specialized to this contract, not a new general origin for the method. [GUIDE105-G025] [GUIDE105-G051]
+
+Let $N$ be a finite coordinate set and $\Omega=\prod_{i\in N}\Omega_i$, with each $\Omega_i$ finite and of size at least two. Trivial one-point factors may first be removed. Let $\mathcal F\subseteq2^N$ be a nonempty downward-closed family, and let $V$ be the span of all real functions depending only on coordinates in a face $A\in\mathcal F$. Equivalently, $V$ is the linear space of tests whose expectations are supplied by these marginals. Put
+
+```math
+C=\bigcap_{M\in\operatorname{Max}(\mathcal F)}M,
+\qquad
+\operatorname{Stab}(V)=\{g:\;gf\in V\text{ for every }f\in V\}.
+```
+
+Then $\operatorname{Stab}(V)$ is exactly the space of functions of $x_C$.
+
+**Proof.** Give each finite factor its uniform probability measure and decompose its function space as constants plus the mean-zero subspace. Tensoring these orthogonal decompositions gives
+
+```math
+\mathbb R^\Omega=\bigoplus_{S\subseteq N}H_S,
+\qquad
+V=\bigoplus_{S\in\mathcal F}H_S,
+```
+
+where $H_S$ has mean-zero factors at coordinates in $S$ and constant factors elsewhere. Downward closure is exactly what makes the second identity true.
+
+Suppose $g\in\operatorname{Stab}(V)$ and fix a maximal face $M$ and a value $a\in\prod_{i\in M}\Omega_i$. The cylinder indicator $e_a=\mathbf1[x_M=a]$ belongs to $V$, hence so does $ge_a$. Write $h_a(x_{N\setminus M})=g(a,x_{N\setminus M})$. We have $ge_a=e_a h_a$. If $h_a$ has a nonzero component on a nonempty outside-coordinate set $T$, the product has a nonzero component in $H_{M\cup T}$: the projection of $e_a$ onto the full mean-zero $M$ tensor is the nonzero tensor product of $\mathbf1[x_i=a_i]-1/|\Omega_i|$. But $M\cup T\notin\mathcal F$ by maximality. This contradicts $ge_a\in V$. Thus each $h_a$ is constant, and $g$ depends only on $M$.
+
+This holds for every maximal face. For any coordinate outside $C$, at least one maximal face omits it, so changing that coordinate alone leaves $g$ unchanged. Changing all coordinates outside $C$ one at a time proves that $g$ depends only on $C$.
+
+Conversely, if $g$ depends on $C$ and $f$ depends on a face $A$, choose a maximal face $M\supseteq A$. Since $C\subseteq M$, the product $gf$ depends only on $M$ and belongs to $V$. Linearity handles every $f\in V$. ∎
+
+For example, keeping all proper marginals on at least two nontrivial coordinates gives empty common core and therefore only constant universal multipliers. Keeping just one maximal marginal face permits all multipliers on that face. These statements concern preservation of the test space under multiplication. They do not assert that every posterior-only quotient, every support-feasibility question or every fixed-prior subfamily has the same minimal record. The author guide explicitly separates full probability-plus-posterior, posterior-only, feasibility, Fisher-objective and restricted-prior contracts. Its independent review describes a reconstruction of the ordinary universal proof; the finite control counts remain corroboration rather than a proof by enumeration. [GUIDE105-G025] [GUIDE105-G051]
+
+### 4.2 Positive likelihoods and possible zero branches
+
+For a finite nonnegative law $p$ and likelihood $\ell\ge0$, conditioning is the partial operation
+
+```math
+B_\ell(p)_i=\frac{\ell_i p_i}{\sum_j\ell_jp_j},
+\qquad \sum_j\ell_jp_j>0.
+```
+
+A positive likelihood never creates a zero denominator on a nonzero law. A likelihood with zeros may make an entire branch impossible. Consequently an update can preserve a normalized answer wherever both sides are defined while failing to preserve the domain of possible observations. The support-language guard in Theorem 2 is precisely what excludes this false identification.
+
+The event-feasibility guides report a general descent proof and finite support classifications, including explicit ambiguous fibres. The proper-moment guide also identifies zero-likelihood classification and a transition to the admissible moment cone. Their detailed criteria are not stated in the guides, so those classifications are not reconstructed from the reported counts. The present point is the already proved distinction between a cross-multiplied posterior equation and equality of its feasibility-sensitive partial maps. [GUIDE105-G033] [GUIDE105-G039] [GUIDE105-G066]
+
+The tensor-likelihood review adds two wording or scope clarifications and an explicitly handled dependency drift. It retains the older cone dependency needed by its frozen checker, reconstructed there by reversing two recorded edits and matching the original digest. This is a specifically documented recovery, not permission to replace any missing dependency with a similar current file. Its ordinary review does not add a formal kernel theorem. [GUIDE105-G089]
+
+<a id="completion-conditioning-and-fixed-priors"></a>
+
+### 4.3 A completion section must respect the update domain
+
+Let $R$ be a retained-record map and let $C$ choose a representative law for each admitted record, with $R\circ C$ the identity on that record image. A claim that completion commutes with conditioning asks for
+
+```math
+C\bigl(R(B_\ell(p))\bigr)=B_\ell\bigl(C(R(p))\bigr),
+```
+
+with agreement of the domains on which the two sides are defined. This is stronger than saying that the completion matches the original record before updating. It is also stronger than checking the equation only on strictly positive inputs when boundary laws belong to the intended contract.
+
+The completion-and-Bayes guides classify positive inputs, genuinely possible boundary branches, and equality of the entire feasibility-sensitive partial maps separately. The associated face-stratified guide reports finite relative-face geometry and a same-reference zero-likelihood criterion, including preservation of local evidence in the closed model. These are attributed classical finite exponential-family specializations. They do not license changing the reference law between the two sides of a comparison. [GUIDE105-G080] [GUIDE105-G074] [GUIDE105-G048]
+
+The need for a model-preservation premise can be seen directly. If a completed law lies in a selected family but its conditioned successor lies outside that family, applying completion again can change the successor. Record agreement alone cannot make the operation commute. Conversely, even preservation of the family does not settle impossible branches unless feasibility is preserved. The guides' complete classification proofs and exact boundary conventions remain unreceived dependencies; this explanation states the operations that those proofs must compare, not a replacement classification of every exponential family.
+
+### 4.4 Fixed-prior learning is a convex feasibility question
+
+The constrained-learning guide applies classical finite splitting and convex geometry at a fixed prior. Its elementary positive construction can be stated completely. Let $p$ be a strictly positive prior on $n$ targets, let $q^1,\ldots,q^m$ be proposed posterior laws, and let $\lambda_a>0$ sum to one. There is an experiment with outcome probabilities $\lambda_a$ and those posteriors exactly when
+
+```math
+p=\sum_{a=1}^m\lambda_a q^a.
+```
+
+Necessity is the law of total probability. For sufficiency, define the observation channel by
+
+```math
+K(a\mid i)=\frac{\lambda_a q_i^a}{p_i}.
+```
+
+Every entry is nonnegative, and $\sum_aK(a\mid i)=1$ by the barycenter identity. The joint law $p_iK(a\mid i)=\lambda_aq_i^a$ then has the required outcome probabilities and posteriors. Zero-weight outcomes can be omitted. If the prior has zeros, the construction applies on its support face and no positive-probability posterior can put mass outside that face. ∎ [GUIDE105-G049]
+
+Thus, for a specified set of allowed posteriors, a finite experiment exists precisely when the prior belongs to their finite convex hull. Additional constraints on the experiment itself require additional conditions; the construction does not automatically preserve an independently fixed observation channel. Nor does existence select a unique learning policy or establish that its information is normatively authorized.
+
+A separate uniqueness argument based on strict convexity requires a convex feasible domain: two distinct minimizers would then have an admissible midpoint with strictly smaller objective. Without admissibility of the midpoint the contradiction fails. The guide preserves a detected predecessor correction adding convexity to such a projection-uniqueness condition and records that the result used by the splitting application was unchanged. Its independent review credits the bounded proof while noting that the original Aumann–Maschler lemma text was not inspected there. No renewed reading of that primary work or a new general splitting theorem is claimed by this exposition. [GUIDE105-G049] [GUIDE105-G063]
+
 
 ## 5. Fixed audits and the value of inquiry
 
@@ -1855,6 +1968,15 @@ The signatures tend to $`p_1=p_2=q=(1/2,1/2)`$, whose source fibres are stationa
 
 This explicit specialization follows from the preceding source equations and is included to make their regularity limitation concrete. It is not an assertion that the source vector field is discontinuous, or a field-wide novelty claim.
 
+<a id="exact-audit-identities-and-covariance"></a>
+
+### 7.5 A finite list of audits can impose an infinite identity
+
+The finite audit-generator guide reports that two fixed multiplicative audits per nonreference coordinate suffice for universal covariance under its stated exact commutation hypotheses, whereas one audit need not suffice. The quantifier is essential: each of those finitely many commutation equations must hold on the **entire admitted domain**. This is not a theorem that finitely many sampled input-output matches establish universal covariance. A small residual on a grid is still a different proposition. [GUIDE105-G008]
+
+The exact audit scales, domain and regularity assumptions of that generator theorem are not supplied in the short guide. They remain dependencies of its reported sufficiency statement; arbitrary choices of two audits are not being certified here. The already proved positive-tilt formulas in §7.2 establish their own composition and normalization identities directly. Neither those formulas nor the guide's archive integrity replaces the missing generator hypotheses. The source describes written mathematics without a new executable or formal-kernel verification. [GUIDE105-G008]
+
+
 ## 8. Preserving one objective versus preserving an entire metric
 
 The pointwise Fisher criterion differs from the expected-value row-space criterion. For the interior three-outcome example, use columns
@@ -1894,6 +2016,15 @@ v^\mathsf TA(x)v=(L^\mathsf Tv)^\mathsf TG(x)^{-1}(L^\mathsf Tv)>0.
 For necessity, apply (20) to every coordinate objective $`j(z)=z_i`$; its projected field reads the $`i`$-th column of $`A`$. Every column must be fibre-constant. [6]
 
 The necessity quantifies over all objectives. One objective can be insensitive to a varying cometric direction. This infinitesimal theorem also does not identify source and quotient maximal lifetimes: boundary behaviour requires additional proof, supplied for the special Fisher model by Theorem 5. For example, retaining only a visible coordinate while discarding a two-valued metric label can turn the same objective's velocity from $`1`$ to $`2`$, changing arrival time at a visible threshold from $`1`$ to $`1/2`$. Rescaling time changes the clock contract.
+
+<a id="fixed-coordinate-geometric-comparisons"></a>
+
+### 8.1 Fixed coordinates are part of a geometric comparison
+
+The Fisher endpoint-transport guide makes a narrower geometric comparison than an abstract classification of Riemannian spaces. It holds the operational control and mean affine coordinates fixed. Under that contract a change in metric or endpoint response can matter even if some unrelated coordinate transformation would identify abstract spaces. Conversely, a discrepancy in the fixed coordinates does not prove intrinsic nonisometry, and it does not show that a metric completion collapses. The guide explicitly withholds both stronger claims. [GUIDE105-G096]
+
+This fits the distinction proved above: preserving a specified objective's projected velocity, preserving every such velocity and preserving an entire metric have different quantifiers. A comparison of endpoint geometry further needs its admitted paths and boundary conventions. The guide's full real-analysis proof is not supplied here; its exact finite controls and participating derivation are historical corroboration with that limit. It supplies no empirical identification of a cognitive correction metric. [GUIDE105-G096]
+
 
 ## 9. How much supplementary information is necessary?
 
@@ -3821,6 +3952,13 @@ Indexing matters when the record of a just-completed block is stored in its succ
 
 These are mathematical interfaces between a process law, its records and the action stream it actually generates. They do not supply a new execution receipt, an expected-time guarantee absent from the hypotheses, or a real sensor model. The common-observation and physical-time conclusions sharpen what a restoration argument must establish; they do not authenticate a normative target or identify the source of its authority.
 
+<a id="compact-common-observation-evidence"></a>
+
+#### Scope of the compact common-observation guide
+
+The compact common-observation audit guide corroborates the scope of the preceding common-action argument: targets and baselines are fixed, the score wrapper must apply, and every candidate path law must dominate the same **nonzero lower reference on complete paths**. Its reported compactness, closedness and confinement deletion controls do not weaken those premises. The conclusion is a common weakly nonworsening action under the contract, not a policy-law refinement or a general necessity claim. The guide names a historical replay and type/axiom inspection; it is not another execution or a second origin for the proof in this section. [GUIDE105-G078]
+
+
 ### 9.10 Sparse priors, cluster width and the cost of compulsory reports
 
 The endpoint-density result in §9.8 assumes a positive density envelope throughout an endpoint neighbourhood. A prior supported on separated clusters can have very different reporting costs. Its gaps can make the next relevant scale identifiable cheaply, while a small change in the shape inside each cluster can make every policy have infinite expected cost. The difference concerns one fixed literal acceptance test and one acquired experiment; it does not arise from changing the target after seeing the data.
@@ -5227,3 +5365,44 @@ These links identify the received public bodies at their immutable original revi
 [R18-G331]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/independent-review/REVIEW.md
 [R18-G334]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/supplement/S01/warranted-discrimination-research-20261009/READ_FIRST.md
 [R18-G337]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/supplement/S01/warranted-discrimination-research-20261009/review/REVIEW.md
+
+
+## Source guides for the additional arguments and qualifications
+
+These exact public guides identify the reported results, historical review scopes and dependencies used in the additional discussion. A guide citation does not claim receipt or renewed verification of every linked proof, primary source or execution record.
+
+- [GUIDE105-G008] Finite audit-generator consequence.
+- [GUIDE105-G013] Source audit revision research packet.
+- [GUIDE105-G025] Hierarchical marginal common-core theorem.
+- [GUIDE105-G028] Correction audit transport.
+- [GUIDE105-G033] Event-feasibility descent: bounded mathematical packet.
+- [GUIDE105-G039] Event-feasibility independent review.
+- [GUIDE105-G048] Face-stratified finite exponential geometry.
+- [GUIDE105-G049] Fixed prior constrained learning research packet.
+- [GUIDE105-G051] Hierarchical marginal independent review.
+- [GUIDE105-G063] Constrained-learning independent review.
+- [GUIDE105-G066] Proper-moment passive-update obstruction.
+- [GUIDE105-G074] Independent completion/Bayes review.
+- [GUIDE105-G078] Compact common-observation audit.
+- [GUIDE105-G080] Completion and Bayesian commutation.
+- [GUIDE105-G081] Audit continuation transport.
+- [GUIDE105-G089] Tensor likelihood closure independent review.
+- [GUIDE105-G096] Fisher endpoint geometry transport.
+
+[GUIDE105-G008]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/12e999702e0e03b6f4a4c160446893f9e4e838e63ca522fc483c41dba637e915/README.md
+[GUIDE105-G013]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/1d04b46ede24e81358679b85d6f049b8661c8b115470b0cc27e9084ecbd4bbfa/README.md
+[GUIDE105-G025]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/4ee07a744043871d623d105a0df3678ce970b72e6ab07dd174bba6a8fcfd9329/README.md
+[GUIDE105-G028]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/51dcbf4b8be3cfbbb957a053dad43b0412b3cbbccc3a849c18749f9fa4f5233a/README.md
+[GUIDE105-G033]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/5d950aac5454a65a4873a1f46c256e10a95e9e6dff306e182978a6dd38c8bdda/README.md
+[GUIDE105-G039]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/71ce05d0f85936dc2f0670be791910f238652d51588d28c0eef031f83df1f378/README.md
+[GUIDE105-G048]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/8312228e70157eceb8460cb28b9800eae6ac91e1b00c90f894034537ae19f457/README.md
+[GUIDE105-G049]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/8b339a7e6ce6621f98d5d22d0d9d15941fa7c727db89b0066be97089a93e747b/README.md
+[GUIDE105-G051]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/8f9506df17ae61e44df9d6598797d6d5d4659c26828750c3ba5de493a0ff8a88/README.md
+[GUIDE105-G063]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/a07f854440329c4a67f42d2d07577a2f49fcd18b52a7ad4420620d6f103bf708/README.md
+[GUIDE105-G066]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/a450f89aa1785e1d2eb35268c329d1902f348c5979a411cbe6a3f9b8b238cfeb/README.md
+[GUIDE105-G074]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/b4121b57ee1671e75f2fe7124bbccc803b141b12327f5c499ba546b7d21fea4a/README.md
+[GUIDE105-G078]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/c0b846ab7d32c31778bf05363e04d81bd83a6694b9583a663b1d52694f1fd7d2/README.md
+[GUIDE105-G080]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/d216c3107db9adb4f2fe44642d314e3f8c95858637d179771c135b2b54f18db0/README.md
+[GUIDE105-G081]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/d50f072786fe17e57f1b181631ebc7bf861bd087e4a282b3ae6e020be65892e8/README.md
+[GUIDE105-G089]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/df0218dbf05454c99eccf3fcd94757e7388f8eac6161c95ed6beb6eddaac4e30/README.md
+[GUIDE105-G096]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/e403bf42e103d1065a1f4723f382566a18e8e76c8b44424ba517d6ccfc71b5e5/README.md

@@ -600,6 +600,11 @@ The remaining historical question is concrete: which characteristics or effects 
 An investigator's incomplete acquisition history is not itself a defeater for the subject. The affirmative first-order account in §2 permits competent recognition without a separately completed theory of how that recognition arose. The stronger historical claim needs evidence because it describes a particular acquisition episode, not because ordinary knowledge must wait for an investigator's reconstruction. A warranted mediated identification can therefore stand while the historical question about first reference remains unresolved. This preserves both the positive source argument and its actual limit. [13]
 
 
+<a id="mediated-identification-preservation-scope"></a>
+
+The later mediated-identification preservation guide confirms that the preceding result is partial inherited source reconciliation, not primary rediscovery. It retains the positive allowance for mediated identification while leaving first-reference chronology, stronger individual and cross-presentation grounds, actual uptake, token authentication and epistemic de re modal warrant unresolved at their respective scopes. Those unresolved historical or stronger claims do not erase an identifying route whose grounds are actually warranted. Conversely, preserving a guide and its report hashes does not resolve them by renewed primary-source inspection. [GUIDE105-G088]
+
+
 ## 6. Knowing, assenting and acting
 
 ### 6.1 A practical obstacle can leave cognition intact
@@ -773,6 +778,15 @@ At time $`t_0`$, suppose a source clearly and truthfully communicates q to an au
 
 A stronger conclusion can follow from a genuinely stronger premise: successful discharge of an enduring undertaking to make this content accessible to these recipients under these circumstances. Another route invokes a specifically defended bridge from an unexcused obligation of warranted uptake to adequate epistemic opportunity. The opportunity must fit the task; the possibility of accidentally guessing the correct answer is not enough. Culpable earlier neglect, a present duty to inquire, communal preservation duties and a current individual duty of knowledgeable assent are different matters. The word “obligation” does not erase those distinctions.
 
+<a id="publicity-and-omission-evidence"></a>
+
+### 8.4 A stronger publicity claim needs its own evidence
+
+The publicity and omission notes report no additional specifically responsive argument within their supplied records. Their finite omission comparison is substantially duplicate and does not authenticate an abridgement event. The narrower positive source link and the stronger expected-publicity challenge both remain. Failure to find a further argument in a bounded record is not proof that none exists anywhere, while the lack of an authenticated omission event prevents that comparison from becoming a historical defeater by itself. These are no-new-result notes, not new discoveries or a withdrawal of the positive source account. [GUIDE105-G095]
+
+This preserves the distinction in §8.3 between truthful original delivery and a defended continuing-access undertaking. A broader publicity expectation can be assessed if its content, intended audience, transmission conditions and grounds are supplied. Neither the mere existence of a preserved report nor an unverified hypothesis about omitted material supplies those premises. The raw sources referenced by the notes remain external to their portable evidence, and no new source-byte inspection or historical authentication is claimed here. [GUIDE105-G095]
+
+
 ## 9. What would constitute restoration?
 
 ### 9.1 Restoration needs a specified change
@@ -903,6 +917,19 @@ For $`p_0=p_1=1/2`$, half unchanged failures and half unchanged successes give b
 This algebra is an elementary consequence of the proposed state/outcome distinction, not a new causal theorem or experimental result. It assumes the marginals are identified exactly; finite samples add estimation uncertainty. The no-treatment follow-up outcome is not automatically the observed pre-intervention condition. Moreover, beneficial change in a validated proxy need not satisfy the disposition, causal-mechanism and source-compatibility clauses in §9.5. A study can therefore establish a worthwhile average benefit or a lower bound on benefit while leaving individual causal restoration, recipient warrant and theological identification unestablished. That precise conclusion is stronger and more useful than either an unsupported restoration claim or a blanket assertion that empirical inquiry can establish nothing.
 
 
+<a id="textual-observation-and-warrant"></a>
+
+### 9.7 What an observation-fibre obstruction establishes
+
+The textual-recovery assessment applies the established observation-fibre principle to a specified interpretive problem. If two admitted possibilities produce the same available observation and disagree about the target, no decoder of that observation can return the exact target in both. For a metric-valued target, if the two target values are distance $d$ apart, any one estimate at that shared observation is at distance at least $d/2$ from one of them: the contrary would violate the triangle inequality. This is a worst-case statement about the stipulated pair and observation. A posterior error requires a separately supplied probability model. [GUIDE105-G032]
+
+The premise is where an actual application can fail. Raw observations are not the same object as moments of a probability law. Failure to reconstruct a composite target is not automatically failure to reconstruct each nominated component. And a mathematically admitted pair is not thereby a pair of historically or theologically warranted alternatives. The source assessment expressly withholds that latter promotion. It supplies a bounded mathematical check and a written scope analysis, not a historical countermodel or a new external scholarly review. Its normalized local text projections also do not assert original-byte identity of the supplied texts. [GUIDE105-G032]
+
+A separate occurrence/warrant crosswalk is narrower still: its actual application uses seven manual source records and one absorbing excluded-view state. Excluding a work from that declared view is an operation on availability; it is not, by definition, a source defeater or revocation of authority. No reinclusion operation is claimed. The model does not cover a whole document store, human cognition, new historical interpretation or actual philosophical warrant. Its separate direct-signature implementation is an internal control, not independent review; its source reports independent review pending at freeze. [GUIDE105-G047]
+
+These distinctions allow a finite model to be exact without overextending its meaning. The target, admitted alternatives, observation service and interpretation of exclusion must be fixed before an obstruction is transferred to actual warrant. The positive survival and restoration cases already developed in §§7–9 remain available when their substantive acquisition, continuity and defeater premises hold. An inability to reconstruct an assessor's record does not alone establish that a subject has lost a warranted ground. [GUIDE105-G032] [GUIDE105-G047]
+
+
 ## 10. A coherent discipline of corrective inquiry
 
 Corrective inquiry can begin with substantive commitments and still be responsive to reasons. A teacher may direct attention toward a truth already known to the teacher; that pedagogical aim is not automatically the learner's ground. A learner may retain a warranted conclusion while rejecting a defective explanation, or legitimately suspend a conclusion when its only adequate support fails. Neither always retaining the preferred answer nor always discarding it after one route fails is an adequate rule. The response should follow the content and reach of the established defect. [16–18]
@@ -977,3 +1004,18 @@ The following references identify substantive predecessors by title and exact Gi
 40. Carl Sharif El-Tobgui. *From Legal Theory to Erkenntnistheorie*, [author's institutional record and abstract](https://scholarworks.brandeis.edu/esploro/outputs/journalArticle/From-Legal-Theory-to-Erkenntnistheorie-Ibn/9924027312401921). This fresh check confirms the article's stated generalized tawātur interpretation and the metadata in reference 6. It is not a new complete reading of the article or a classical primary-source verification.
 41. Jamie B. Turner. “Ibn Taymiyya on theistic signs and knowledge of God.” *Religious Studies* 58(3), 2022, 583–597; first published online 20 May 2021. [Publisher's abstract and metadata](https://www.cambridge.org/core/journals/religious-studies/article/abs/ibn-taymiyya-on-theistic-signs-and-knowledge-of-god/8969C76512D2DD2588CAA0484747B6BE), DOI [10.1017/S0034412521000159](https://doi.org/10.1017/S0034412521000159). The check is bounded to the bibliographic distinction and stated natural-signs subject.
 42. Jamie B. Turner. “Ibn Taymiyya's ‘Common-Sense’ Philosophy.” In *Pluralizing Philosophy's Past*, 197–212, 2023. [Publisher's chapter record](https://link.springer.com/chapter/10.1007/978-3-031-13405-0_14), first online 22 March 2023, DOI [10.1007/978-3-031-13405-0_14](https://doi.org/10.1007/978-3-031-13405-0_14). This is a distinct chapter, not the 2022 natural-signs article. The fresh reading covers metadata and abstract, not its complete argument. Reference 5's joint authorship, title and page range were separately checked at the [Cambridge chapter record](https://www.cambridge.org/core/books/abs/cambridge-handbook-of-religious-epistemology/islamic-religious-epistemology/2F9CECA50D6203FB0350C244F1F3EA9E); the reported Evans page remains unverified.
+
+
+## Source guides for the additional arguments and qualifications
+
+These exact public guides identify the reported results, historical review scopes and dependencies used in the additional discussion. A guide citation does not claim receipt or renewed verification of every linked proof, primary source or execution record.
+
+- [GUIDE105-G032] T20 supplemental reading: textual recovery and warrant.
+- [GUIDE105-G047] Bounded occurrence/warrant crosswalk.
+- [GUIDE105-G088] Additive intermediate source evidence.
+- [GUIDE105-G095] Additive intermediate source evidence.
+
+[GUIDE105-G032]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/59643f825a88914fea7b92bff8154281556fb76eeb8713c5ea1e5e64a6c14550/README.md
+[GUIDE105-G047]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/826c89636c09c597d3f7e6f0d2fa3350bd5feb22f07379c2a206ea8b9a0660a5/README.md
+[GUIDE105-G088]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/defc84b7b2d2169234b6d64f08222c262dba3dd4631da45d83831e8f56fb57e3/README.md
+[GUIDE105-G095]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/e3eac749f6848eb9ba987f8f67f7911608bcb6e42361393c1ea070550f750516/README.md

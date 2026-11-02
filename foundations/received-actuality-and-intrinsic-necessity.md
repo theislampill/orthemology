@@ -355,6 +355,33 @@ The conclusion does not make the correction necessary, make this bearer contribu
 
 This keeps the criterion compatible with the stronger argument developed in sections 1–6. If an alleged original is explicitly granted complete nonreceived adequacy in the selected respect, a rival that gives it received adequacy changes that premise. But the temporal criterion by itself makes no such grant. Actual originality, essential nonreceipt and intrinsic existential sufficiency must each be stated at the respect and modal strength needed by the further conclusion. Neither a temporal proof nor a label of necessity supplies them automatically.
 
+<a id="existential-supply-and-modal-route-boundaries"></a>
+
+### 7.4 Existential supply and the scope of earlier routes
+
+The earlier source guides address several routes that must be compared with, rather than substituted for, the affirmative argument in §§1–7. Their own open-premise statements concern those particular investigations. They neither erase the current defeasible appraisal of intrinsic adequacy nor acquire its conclusion without supplying its premises. The initial necessary-source checkpoint distinguishes an explanatory base from an empty-base link; the later current foundational guide distinguishes factivity from modal necessity and efficient self-production from constitutive explanation. A true explanation of an actual fact is not, solely because it is factive, a proof that the same fact obtains in every genuine alternative. Conversely, the failure of that weaker inference does not refute the stronger intrinsic-adequacy judgment stated explicitly above. [GUIDE105-G105] [GUIDE105-G070]
+
+The existential-determination investigation reports a fair test of a stronger primary rationale while leaving its necessary-source and particular-source warrants open. It preserves the whole actual productive-origin target and the inherited conditional uniqueness and intentional-agency results. Its source-relative counterinterpretations do not certify an actual rival cosmos or essential truthfulness. The earlier provisional checkpoint and independent source baseline similarly distinguish strong conditional exclusion of two individually complete productive sources from weaker plural-source rivals. An independent baseline formed before the new drafts is not independent acceptance of those drafts. [GUIDE105-G030] [GUIDE105-G099] [GUIDE105-G014]
+
+A connected issue is **what must remain available when an antecedent is held fixed**. The joint-coverage candidate reports fixed-antecedent preservation at a properly retained supply route, while diagnosing indiscriminate lifting of contributions and redistribution across resources. An inference about a whole supplied target cannot move freely between a bearer, that bearer's act, an upstream enabling resource and a downstream completed product. Changing that unit can change the question of what has been supplied. This is consistent with the member-versus-field distinction already developed in §4: the target is not repaired by silently selecting a different aggregation. [GUIDE105-G031]
+
+The candidate's repaired positive route is conditional. Broader resource coverage is said to yield an actual necessary concrete realization resource; a supplying-power premise on the selected actual anchor gives the stronger capacity-bearer result. The guide records that the first candidate's bounded preservation claims were accepted while its extraction needed resource-domain and anchor repairs, and that the second candidate still awaited revision verification at its freeze. Those exact historical statuses do not establish the repaired premises, actual exercise, unique sourcehood or later attributes. Its full extraction proof is an unreceived dependency of the guide, not a new theorem of this chapter. The qualified-achievement contradiction and generic source-owned controls keep their inherited ownership; the candidate does not claim those techniques as new. [GUIDE105-G031]
+
+### 7.5 Availability, kind coverage and the same explanatory target
+
+The actual-powers study supplies a source-relative finite generative availability trace compatible with changed later history. That is a positive description of how a later state may be available under its interpretation. It does not by itself establish an actual necessary resource, an actual capacity bearer or existence through essence. Historical classification, possibility of the complete target, joint removal and the type of the essential ground remain distinct obligations. The candidate guide explicitly leaves its philosophical and source-accounting review pending at that stage. [GUIDE105-G069]
+
+The intrinsic-power candidate distinguishes actualisability of an object from actualisability of the exact origin fact, together with a premise-relocation equivalence and a one-possibility indispensable-ground route. The distinction is substantive even before its formal details are supplied. A possibility statement about an object can allow changes in the history by which it comes to be; a claim about the same exact origin fact fixes more. Transferring a premise between these targets therefore needs an explicit equivalence or implication. The guide reports those conditional logical results but does not supply their formulas or proofs. Its finite interpretations do not establish metaphysical possibility, and a focused review of a working derivation is not a review of the whole final article or every attribution. The later wording/accounting correction has its own review obligation. [GUIDE105-G071]
+
+The modal-source continuation guide separately records a source-bound refinement concerning particular powers, modal warrant and created essence/existence identity. It explicitly depends on a necessary-source companion rather than repeating that companion's exposition, and leaves its stronger sourcehood conclusions open. Neither the companion nor the detailed refinement is supplied by the short guide. Its role is therefore a bounded source comparison with a named dependency, not an additional derivation of necessity from a bare power predicate. [GUIDE105-G026]
+
+The accepted existential-supply investigation gives targeted prima-facie support for answerability of the actual supply question, with explicit limits on causal and actual-powers derivations. The kind-priority component develops relevance at that existential-supply question and a reduced modal-production burden. Neither is a shortcut from a generic explanation to a necessary participant. Identifying the same explanatory target, applying the claim jointly, establishing actual kind coverage, and justifying a separate source origin-dependence condition remain substantive. The common-basis inference and modal-outsider limits likewise cannot be removed by redescribing a condition as a kind. [GUIDE105-G090] [GUIDE105-G102]
+
+The law-only-completion and explanatory-distribution study reports a null-preservation proof in its full paper. The short guide does not supply the proof's definitions, so no unrestricted theorem about all laws or all kinds of explanation is inferred from the word null. Its contribution is tied to the specified completion and distribution problem. Its accepted argumentative scope does not establish a necessary participant, productive completion, particular-bearer identification, unity or integrity. A successful philosophical review also does not silently verify every administrative file accompanying the paper. [GUIDE105-G103] [GUIDE105-G090]
+
+These investigations preserve genuine positive credit at each step while leaving the next step visible. The present chapter's resource-to-bearer inference, explicit modal judgment and actual-field propagation argument retain their own warrants. An earlier route's open premise is not a general verdict that no route can succeed; a later affirmative appraisal is not retrospective evidence that an earlier candidate's full premise package was proved. The independent model-assisted reviews remain argumentative assessments, not external specialist validation or metaphysical model certification. [GUIDE105-G030] [GUIDE105-G031] [GUIDE105-G069] [GUIDE105-G071] [GUIDE105-G102] [GUIDE105-G103]
+
+
 ## 8. The brute-original challenge
 
 The strongest recorded rival permits an actual, concrete, intrinsically qualified B with unreceived productive powers. B has no external existential requisite, never produced itself, and may have no temporal beginning. It adequately supplies the received effects under discussion. Nevertheless, B could have been absent, and its own obtaining has no sufficient intrinsic or external account. This proposal distinguishes sufficiency for effects from sufficiency for the source's existence. It should not be weakened into production by nothing or efficient self-production. [Direct anti-brute return, “The strongest rival and fair adjudication”][s3]
@@ -1825,6 +1852,23 @@ The original source and attribution limits remain explicit. The received transla
 
 The repaired counterexample domain uses a nonmental dummy bearer instead of relying on an empty sort. Its separation of articulability, mentality, expression capacity and actual utterance consequently does not depend on a semantics permitting empty bearer domains. These are distinct stages even before authorship and the source's attributed speech are considered. The fourteen-guard conjunction classifies the intended source-conditioned case only when its guards have their independently warranted meanings; it does not turn a formal token/content relation into the identity of a created token with an uncreated attribute. [BZ-L03] [BZ-L04] [BZ-L05] [BZ-L07]
 
+<a id="purpose-linked-attestation-and-practical-profiles"></a>
+
+### 12.17 A token purpose and a complete practical profile
+
+The truthful-agency guide isolates a means-linked token-purpose implication. The relevant attestation must actually be selected as a means to its governing epistemic purpose; merely attaching a desirable purpose to an act from outside does not supply that premise. In a local argument, suppose that truthful certification is required by that purpose and that the stipulated practical integrity excludes knowingly selecting a purpose-defeating means in that exercise. A knowingly false certification would defeat the very purpose under which it was selected, contrary to the integrity premise. The conclusion is conditional on the actual purpose relation and the relevant practical premise. It does not derive exceptionless truthfulness from theoretical knowledge alone. [GUIDE105-G015] [GUIDE105-G070]
+
+The local implication and the complete-profile argument have different scopes. The original-integrity guide reports complete-profile definitions, a short general conditional proof and counterexamples in its logical appendix, while withholding essential integrity and actual recipient warrant at that investigation's stage. The appendix is not supplied by the guide. Its unrestricted conditional claim therefore cannot be expanded by guessing what the complete profile contains. In particular, a finite model that omits a relevant practical-integrity premise is not a counterexample to an argument that includes it. Conversely, calling a profile complete cannot serve as a proof that its substantive premises hold. [GUIDE105-G087]
+
+The earlier truthful-agency investigation also expressly preserves the original-perfection account as a combined positive rationale. Describing an intrinsic contrary end does not, merely by its description, refute that rationale or establish the metaphysical possibility of a contrary necessary source. This is compatible with the current affirmative account in §§12.10–12.11, whose all-context integrity premise is stated and defended separately. The earlier investigation's withheld conclusion is retained as a limit on that route, rather than used to withdraw the later account's earned affirmative appraisal. Actual authenticated disclosure and recipient uptake remain separate questions on either route. [GUIDE105-G015]
+
+The intrinsic-willing guide supplies an additional representation control: output, actual support and intentions can be preserved while eliminating rule-name switching. A defect attributed merely to branch names therefore does not survive that change of presentation. It also distinguishes an explicit primitive intrinsic-knowledge enrichment from its reduced-signature consistency credit. Consistency in a reduced interpretation does not certify every property of a richer intended model. The full construction and imported provision interface are not supplied in the short guide; no additional complete intrinsic determination or metaphysical model is inferred here. [GUIDE105-G036]
+
+The earlier foundational source baseline also retained a disputed volition passage whose grammatical alternatives were unresolved: it had not shown the passage corrupt or mistranslated. That source-specific textual limit cannot be settled by a finite model or by substituting a preferred philosophical interpretation. It concerns the stated earlier reading and does not by itself reverse the separately supported agency account above. [GUIDE105-G070]
+
+The foundational-nexus candidate and acceptance guides retain the same discipline. Their paired exact-byte assessment has a bounded scope, with no acceptance of an outer report or metaphysical closure. Those guides contain neither the connected argument nor primary scans. They record historical review roles; they do not supply an additional independent primary witness or settle every actuality, unity, disclosure or restoration claim in the surrounding discussion. [GUIDE105-G084] [GUIDE105-G037]
+
+
 ## 13. Conclusion
 
 The received-actuality argument establishes a relevant actual original under its defended productive interpretation, and the intrinsic-adequacy argument concerns the necessity of that same bearer. Original unity requires further work: differentiated actual efficacy, the fitting mode of complete original provision, faithful mediation and the genuine connected field. These contributions are compatible and cumulative, but their premises are not interchangeable. Local nonduplication gives at most one entire attribution; it does not create a complete provider. Connectivity propagates warranted coverage; it does not generate it.
@@ -1859,6 +1903,11 @@ Subsections 12.5–12.13 consolidate the three complete public attribute and Kno
 The historical records report a five-module Lean compilation, nineteen statement and axiom readbacks, three deliberately false controls, and finite checks of sixteen modal and eight temporal assignments. Those are source-reported results, not executions newly performed by this editorial continuation. The same records preserve an initially incomplete pagination capture, its separately supplied passage and the later noninferential clarification. The ordinary proofs presented above stand directly on their stated assumptions. No formal execution, empirical restoration, metaphysical model certification, new scientific adoption or private original receipt follows from the incorporation.
 
 The new direct historical checks are bounded electronic readings: the specified *Darʾ* self-Knowledge, noninferential, particular-effect and cognitive-perfection passages; the displayed *Majmūʿ* VI perfection, successive-act and wise-commitment passages; the *al-Ṣafadiyya* complete-determination comparison; the *al-Nubuwwāt* Knowledge/Wisdom and attestation discussion; and the particular Aristotle, Spinoza, Hume, Bird and Plotinus selections cited below. These do not constitute complete readings of those works, a new scan or manuscript collation, fresh verification of inherited page mappings, or endorsement of their historical physical examples. The comprehensive-Knowledge study owns its printed X, 150–152 control; the veracity crosscheck owns its reported earlier document readings. This continuation reads their admitted public bodies, not the private or otherwise unavailable originals they reference.
+
+
+<a id="productive-origination-correction-boundary"></a>
+
+The productive-origination preservation guide confirms the narrow correction history already stated in this appendix: the field/member relevance correction was resolved without withdrawing the foundational judgment, but the initial report's exact bytes were overwritten before a snapshot and were not recovered. A retained initial manifest and receipt do not supply a reproducible original draft or an exact historical diff. The root reading note is participating context, distinct from the separate independent review. The guide's portable identity checks do not rerun the earlier scholarly judgment, the original fifty-seven-check review or excluded primary-source inspections. These are additional source-scope bindings for the existing argument, not a new proof or a reconstruction of missing text. [GUIDE105-G054]
 
 
 ## References
@@ -2348,3 +2397,46 @@ These links identify the received public bodies at their immutable original revi
 [R18-G300]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-grounding-source/MAPPING_TEST.md
 [R18-G302]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-grounding-source/REPORT.md
 [R18-G307]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP14/t20-next-frontier-20261008/necessary-concordance-power/RESULT.md
+
+
+## Source guides for the additional arguments and qualifications
+
+These exact public guides identify the reported results, historical review scopes and dependencies used in the additional discussion. A guide citation does not claim receipt or renewed verification of every linked proof, primary source or execution record.
+
+- [GUIDE105-G014] Seventh independent source-scope audit.
+- [GUIDE105-G015] Truthful agency research return.
+- [GUIDE105-G026] Seventh research checkpoint 5 General proof coverage and source continuation.
+- [GUIDE105-G030] Existential determination and necessary particular sourcehood.
+- [GUIDE105-G031] Joint existential-coverage research candidate.
+- [GUIDE105-G036] Intrinsic willing continuation.
+- [GUIDE105-G037] Foundational nexus independent acceptance.
+- [GUIDE105-G054] Productive origination: accepted additive source component.
+- [GUIDE105-G069] Actual-powers source-level study.
+- [GUIDE105-G070] Seventh research checkpoint 2 Current foundational collection.
+- [GUIDE105-G071] Intrinsic power and original existence.
+- [GUIDE105-G084] Foundational nexus review candidate.
+- [GUIDE105-G087] Original practical integrity: Ninth continuation.
+- [GUIDE105-G090] Accepted existential supply transfer investigation.
+- [GUIDE105-G099] Seventh research checkpoint 2.
+- [GUIDE105-G102] Kind priority research component.
+- [GUIDE105-G103] Existential explanation research component.
+- [GUIDE105-G105] Necessary source research checkpoint.
+
+[GUIDE105-G014]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/23a703393c65b69903f9bde455b536ffec1f6336452502c7cda9f01b671fff32/README.md
+[GUIDE105-G015]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/256dba64f3008692ad2b606d2901314aa12ee83874f565e09611322a3b1f92e9/README.md
+[GUIDE105-G026]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/50a0407740b183f6ec3c7505584088d148fce3acde4108f3384f0dddd920daa6/README.md
+[GUIDE105-G030]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/547593798c1db2f21bbabed1c6b70f4cdd49a19a89080f405c570639c0484487/README.md
+[GUIDE105-G031]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/55e884ee3ce94c9c6b523404e56cd58d286061d6bb591b104615c384754e5863/README.md
+[GUIDE105-G036]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/6c64d184bc95fc2bf155c19afcf3e4c5b715c66e2d850d69d24b8a70298dac21/README.md
+[GUIDE105-G037]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/6cbe4c7c27f54b03db935f0b7cae0257626499cf30bd9597b6c59ea0338026ca/README.md
+[GUIDE105-G054]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/917250a37e438c376d906423c26ef81337c759e3d2ab110f50fbeeae8acb726c/README.md
+[GUIDE105-G069]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/ab1aa0d23f59a41f131e60ebbc90d1c50d56e7f2bb75929dc2663fdf1364f277/README.md
+[GUIDE105-G070]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/ad1a1189ead7a6645133d9176b1fca4aab488e5816ec4c655e633cae01830e4c/README.md
+[GUIDE105-G071]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/afcb92b16ab003831d63fb1f100eea5d3ae32c5042315f4ab0ee8b2e1bd7e3b7/README.md
+[GUIDE105-G084]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/d68f5697b1fde224810a8eb3f7bf0fe09a267f9080f697bae7fdeec27d882fdc/README.md
+[GUIDE105-G087]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/db7d9c677061b54b1681487f3790ffe480cbd6fc0f7456c3e57934ae47df9775/README.md
+[GUIDE105-G090]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/e0850daa85f9c59a7e80667bfc24973020b7f352adf123ea5f496b6fca611611/README.md
+[GUIDE105-G099]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/e73c9702ff6096a1983f1037ebc930fecbaa1ccbf6ae11477f93824891644a8f/README.md
+[GUIDE105-G102]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/ea117c6fd44f15e3cc113460b697adb923f4ac1982190baf1babd8c8cd0826d5/README.md
+[GUIDE105-G103]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/f3ba67a8ad2ec81f3793a54d0b7872920b9f6087dd021c35c048a25418fbaed6/README.md
+[GUIDE105-G105]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/f6e5f848c40c391823f86a6643aa1b0f22a714d0868883f5a41c7c018d32164f/README.md

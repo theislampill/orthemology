@@ -3003,6 +3003,19 @@ The source's historical mutation controls test distinct parts of the negative ce
 
 That development is separate from the companion's 111-module core. Adding the numbers does not produce one newly built 132-module library, and project-object rebuilding is not a cold rebuild of dependencies. The direct controller's original default-heartbeat compilation and finite controls support their reported interface, not a verified wire parser, machine-code correctness, a physical controller or a resource-bound guarantee. The positive calculus's semantic equivalence and general probability lemmas remain inherited results; the new source contribution is exhaustive signed certification and the theorem about the literal body's actual compiled policy.
 
+<a id="finite-targets-and-probability-interfaces"></a>
+
+### 7.19 Exact targets and the probability interface
+
+The hidden-parity target-pruning review guide concerns an exact finite target construction, including an executable exhaustive reference and a normalized rational-kernel adapter. It explicitly separates this construction from hard-menu/support recursion, the stochastic policy-existence equivalence and a polynomial strongly-connected-component or maximal-end-component implementation. Those further obligations cannot be discharged merely by retaining the target table. The broader ordinary arguments in §§7.11–7.17 keep their own source support and are not recounted as new consequences of this guide. [GUIDE105-G092]
+
+The distinction between execution and proof is equally concrete. A finite comparison run tests the cases it evaluates. A kernel-checked refinement or an ordinary decision proposition has its own formal statement and dependency assumptions. The guide reports both types of historical evidence, using a trusted installed object cache, but supplies neither its module closure nor a fresh replay here. Its finite comparison counts are not an exhaustive quantification over arbitrary controller implementations. [GUIDE105-G092]
+
+The rational actual-source bridge guide isolates another boundary: its source theorem is deterministic for explicit seeds. Probability and finite-history transport require separately stated external finite-law conditions; that bridge does not itself provide a new formal probability theorem. A deterministic function can be placed under many seed distributions. Identifying its output law requires the distribution and its relation to the acquired history, not only correctness of the function on each seed. The actual-law constructions already given in this chapter supply their own declared probabilistic premises. [GUIDE105-G064]
+
+The same guide preserves historical kernel logs and the non-object dependency collection without claiming a new compilation. Environment-bound verification harnesses remain historical evidence rather than portable promises. Assertion-based reviewer controls receive their stated normal-mode credit; optimized execution is supplemental where it removes those assertions. Participating diagnostics do not become independent review by appearing beside the review files. These distinctions preserve the positive finite target and deterministic-source results while keeping their probability, implementation and execution limits explicit. [GUIDE105-G064]
+
+
 ## 8. What final judgments identify about evidence use
 
 The previous sections ask what information a strategy or coordination mechanism needs. The converse question is different: what does a successful collective answer reveal about how the answer was produced? A group can produce informative, accurate answers without the available observations identifying each member's causal contribution. The following construction proves this limitation while preserving both a real two-input mechanism and a real one-input alternative. [11][r11]
@@ -3699,3 +3712,14 @@ The following exact source editions supply the arguments, recorded failures, rep
 [R68-S020]: https://api.github.com/repos/theislampill/orthemology/git/blobs/332fa5722e23ca135a90799ad6b97e3b9ea8be67
 [R68-S021]: https://api.github.com/repos/theislampill/orthemology/git/blobs/5010c98adf35b5876d31b66f2afb3813dd15743b
 [R68-S022]: https://api.github.com/repos/theislampill/orthemology/git/blobs/42fea34a366d8e4a8b1ce3afdfbb1bfa696282ed
+
+
+## Source guides for the additional arguments and qualifications
+
+These exact public guides identify the reported results, historical review scopes and dependencies used in the additional discussion. A guide citation does not claim receipt or renewed verification of every linked proof, primary source or execution record.
+
+- [GUIDE105-G064] Rational actual-source bridge: additive preservation.
+- [GUIDE105-G092] Independent hidden-parity target-pruning review.
+
+[GUIDE105-G064]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/a288f1990b9320e0f4d0447d366ebaae7cd43344af8c16a1a6b421fb507396c5/README.md
+[GUIDE105-G092]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/e1db9b4ba20122bfd5052fa802a5408493c8cde398d5155c657a8d4e4e9a0d25/README.md

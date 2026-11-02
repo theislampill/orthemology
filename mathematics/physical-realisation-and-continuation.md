@@ -853,6 +853,40 @@ The interval restriction matters: for opposite deterministic length-two traces, 
 The stochastic transfer results in [Collective Inquiry and Strategic Coordination](collective-inquiry-and-strategic-coordination.md), sections 7.5–7.6, additionally track full joint laws, private/public interface modes, admissible controller memory and initial distributions. The finite-horizon trace bound here does not imply the eventual-occupancy or persistence claims developed there. It supplies a different, explicitly finite error account.
 
 
+<a id="nonuniform-compact-continuation"></a>
+
+### 7.4 Nonuniform compact continuation at a fixed observation time
+
+A continuation can use different state spaces and maps at successive stages. The compact-completion guides explicitly retain that nonuniform interface: they do not add a common state space, stationary transition, common fixed point, time-uniform bound, rate, or inference from an observer's record to an entire hidden state. The elementary compactness argument below states the positive mechanism with its quantifiers. [GUIDE105-G075] [GUIDE105-G091]
+
+Let $X_n$ be nonempty compact Hausdorff spaces and let $f_n:X_{n+1}\to X_n$ be continuous. For $m\ge n$, let $f_{n,m}$ be the finite composite, with $f_{n,n}$ the identity, and define
+
+```math
+K_{n,m}=f_{n,m}(X_m),\qquad K_n=\bigcap_{m\ge n}K_{n,m}.
+```
+
+The sets $K_{n,m}$ are nonempty compact and nested in $m$, so each $K_n$ is nonempty. Let $L$ be the set of compatible sequences satisfying $f_n(x_{n+1})=x_n$ for every $n$. Then
+
+```math
+\pi_n(L)=K_n.
+```
+
+**Proof.** Every compatible sequence projects into every finite-horizon image, giving one inclusion. Conversely, fix $x\in K_n$. For any finite horizon $m\ge n$, choose $y\in X_m$ with $f_{n,m}(y)=x$ and propagate it backwards to obtain a compatible prefix. Such prefixes show the finite intersection property for the closed compatibility conditions together with $x_n=x$ in the compact product $\prod_jX_j$. Compactness gives a full compatible sequence. The equality follows. This argument also proves nonemptiness of $L$. ∎
+
+If the $X_n$ are compact metric spaces, then for each fixed $n$,
+
+```math
+\lim_{m\to\infty}\operatorname{diam}(K_{n,m})
+=\operatorname{diam}(K_n).
+```
+
+The left-hand side exists because the diameters decrease. To prove the nontrivial inequality, choose pairs attaining the diameters in a sequence of $K_{n,m}$ and take a convergent subsequence in $X_n\times X_n$. Nestedness puts both limit points in every $K_{n,m}$, hence in $K_n$, and continuity of distance gives the limiting diameter. It follows that a unique compatible full sequence, singleton $K_n$ for every $n$, and diameter decay at every fixed observation time are equivalent. Equivalently, for each fixed $n$ and $\varepsilon>0$, some sufficiently late horizon makes all its projected states within $\varepsilon$ of one another.
+
+The order of those quantifiers matters. Take $X_n=[0,1]$ and $f_n(x)=a_nx$, where $a_n=1/2$ at powers of two and $a_n=1$ otherwise. For each fixed $n$, infinitely many later halvings force $K_n=\{0\}$ and the diameters tend to zero. But there are arbitrarily long identity blocks. For any fixed lookahead length, some starting stage has diameter one throughout that lookahead. Thus pointwise fixed-stage forgetting supplies no uniform lookahead over all starting stages. This elementary illustration does not assert that the guides' formal modules contain this exact example.
+
+The guides assign general algebraic and metric implications, compact-continuous equivalence, and two bounded countercontrols to separate formal components. Another control and the philosophical or source-domain conclusions remain ordinary-only. The full checked source closures are not supplied by these short guides, so their historical validation records are not fresh kernel proofs here. The argument above is the ordinary compact inverse-system argument under explicitly stated hypotheses. It does not establish an actual physical realization, a computational rate, or persistence of a person through replacement. [GUIDE105-G075] [GUIDE105-G091]
+
+
 ## 8. A robust stateful witness
 
 A theory of substitution should exhibit a nonvacuous case in which memory, continuous dynamics and handover actually compose in the model. The parity kernel provides such a case:
@@ -1132,6 +1166,21 @@ Thermodynamic arguments need equally precise scope. Bennett's account distinguis
 
 The practical objective of orchestration is therefore a contract-level quantity—correct output, latency, cost, robustness or some specified combination—under admissible resources. Increasing the number of components or the number of exchanged signals does not by itself improve it.
 
+<a id="versioned-operational-safety"></a>
+
+### 10.6 Versioned safety, attribution and progress
+
+The operational guides distinguish three interfaces that a real replacement must not conflate: revising a governing criterion, admitting a state transition through an interlock, and identifying the root behind an opaque observed attempt. A certificate valid under a retained criterion is not yet permission to install a different criterion. The earlier criterion version explicitly lacked that installation step; the later version reports installation under a separate permission while retaining source, draft and unrelated state. That is a change in the modeled operation, not merely a stronger description of the earlier certificate. [GUIDE105-G073] [GUIDE105-G082]
+
+The compiled-composition checkpoint then reports a known-root model with $n=4$ and fault budget $B=1$ that consumes the actual imported transition both at proposal and at live-root admission. Its returned successor determines the modeled plant change. Actor-observed time, root landing time, rule and draft versions, and operation-specific permissions remain separate. A fixed expected-version command changes the full record at most once; a later duplicate rejects without undoing the achieved goal. This is a statement about that exact modeled interface, not a proof that an arbitrary physical controller realizes it. [GUIDE105-G068]
+
+The dynamic-history guide reports finite multi-epoch safety, durable cancellation exclusion and stable whole-table goal preservation for its corrected dynamic interface. It does not prove complete liveness, a covering or randomized search theorem, physical realization or automatic transfer to another root/table interface. This agrees with §10.3: a safety invariant can hold while useful progress fails. The unknown-root attribution extension additionally fixes prepared path/quorum families, a specified alias class and opaque macro-attempt observations. Its obstruction does not exclude arbitrary adaptive provenance discovery or redesign of the family. The general root-image criterion, actual-root availability, arbitrary fixed-family feasibility, root-name/fault transport, original-definition correspondence and root-cost corollaries retain their interface premises even where more of their algebra was later mechanized. [GUIDE105-G020] [GUIDE105-G082] [GUIDE105-G026]
+
+The historical review stages must remain distinct. A preserved first-version receipt does not qualify a corrected second-version root. The earlier dynamic review required repairs to releasing stalled attempts, the adequate remaining horizon and the fixed scope of its restoration claim; the later candidate recorded those repairs while its own review was still pending. Conversely, an old pending-review sentence can remain an accurate historical feature of an unchanged author artifact when a later exact-byte sidecar supplies its disposition. The operational-model acceptance guide explicitly describes a later distribution whose scientific bytes were unchanged but whose state/event wording and manifest were corrected; its full replay concerns that identified distribution. Trusted compiler and dependency caches were not independently bootstrapped by that replay. No new scientific theorem, whole-batch refinement or physical-clock warrant follows from the distribution correction. [GUIDE105-G073] [GUIDE105-G020] [GUIDE105-G043]
+
+Two older semantic controls remain expressly inconclusive: the old-program/new-decoder mutation reached only its declared resource failure, and the cost check diagnosed an insufficient scalar premise without rejecting the full mutant module. A later baseline reconstruction did not convert either outcome into a successful rejection. The restart guide likewise awards no rejection credit to those resource-limited controls. These are retained limits on historical evidence, not refutations of an unrelated accepted theorem and not new executions in this chapter. [GUIDE105-G068] [GUIDE105-G003]
+
+
 ## 11. Coordination, discoverability and agency
 
 ### 11.1 Recognition, coordinated updates and adaptation
@@ -1392,3 +1441,28 @@ The proposed case/type terminology is attributed by the Third Edition to the Ort
 [CONT]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/theory/lineages/h-continuation/continuation_complete_orthing.md
 
 [FORM]: https://github.com/theislampill/orthemology/blob/28679eaed33ee48cf0c5d15ba6dc3b27aac9067b/theory/lineages/h-formalisation/orthing_formalisation_v1.md
+
+
+## Source guides for the additional arguments and qualifications
+
+These exact public guides identify the reported results, historical review scopes and dependencies used in the additional discussion. A guide citation does not claim receipt or renewed verification of every linked proof, primary source or execution record.
+
+- [GUIDE105-G003] Orthemology Seventh research restart checkpoint 1.
+- [GUIDE105-G020] Reviewed dynamic V2 finite-history safety kernel.
+- [GUIDE105-G026] Seventh research checkpoint 5 General proof coverage and source continuation.
+- [GUIDE105-G043] External acceptance of the operational-model checkpoint.
+- [GUIDE105-G068] Seventh research checkpoint 4 Compiled composition and baseline checks.
+- [GUIDE105-G073] Seventh research checkpoint 3.
+- [GUIDE105-G075] Nonuniform compact completion: isolated Lean extension.
+- [GUIDE105-G082] Seventh research checkpoint 3 Current operational collection.
+- [GUIDE105-G091] Law-completion correction: isolated Lean packet.
+
+[GUIDE105-G003]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/051d8f8ebc0b27421fef9812de14b59ec9ccb55c46d00685faf75b2fee671698/README.md
+[GUIDE105-G020]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/2bf4aa20d6c009bee1e1a5161163fa1686f48809cc9a37a01d6dc800e5e8e20a/README.md
+[GUIDE105-G026]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/50a0407740b183f6ec3c7505584088d148fce3acde4108f3384f0dddd920daa6/README.md
+[GUIDE105-G043]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/76507e2b3b55b455d380530dd9a152004a79f4a43001e1839b687131b268ffcf/README.md
+[GUIDE105-G068]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/aa25f70324cba0ee0b90ed368549a2344b66c4470b5a7d5da3ec56a2c45c3e6c/README.md
+[GUIDE105-G073]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/b3cdfd7d4208143c2f37da8f9ae2d220622a6af37f9acd6c633a61d657f13d9e/README.md
+[GUIDE105-G075]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/bc1f50cf87277c4f726da9089d1ffded10bec3c149db94bc6d86a6c15a3e8be5/README.md
+[GUIDE105-G082]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/d5287737a29ebdc21d94ada81bd78e77bcc6d7b904d101e541d536852a7b3329/README.md
+[GUIDE105-G091]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/e0b751137b92a04177bcf5b2ca4452306cf082bc503cc794062310f6cfc9e8a6/README.md

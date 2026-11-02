@@ -878,6 +878,15 @@ The worked example separates several obligations that are easily conflated in fo
 
 These are mathematical results about an explicit representation of proofs and programs. They show both the usefulness of extensional proof rules and the limits of deriving general witness principles from erased computation. They supply no direct theorem about metaphysical grounding, collective cognition, or an unfinished noetic-field research objective. Such applications would require a separate, explicit interpretation and its own evidence.
 
+<a id="witness-metadata-and-repair-boundaries"></a>
+
+### 9.5 Corrected metadata is not a changed proof witness
+
+The scalar provenance-correction guide explicitly says that preserved predecessor metadata falsely alleged a historical scalar receipt/object mismatch. It assigns those old claims a correction-evidence role and states that the original proof and review evidence remained valid and unchanged. That metadata must not be revived as a current defect in the scalar witness of §4. The guide itself does not supply the correction record or a fresh inspection of the original objects; its contribution here is the exact reported status of the allegation. [GUIDE105-G027]
+
+A separate candidate guide distinguishes actual repair from replacement of a test surface. Its type-space proposal required a complete exact original body and a criticized-passage guard; a receipt, not the existence of a proposal, determines whether that guard succeeded. Its modal-support iterator repair belongs to a preserved interrupted attempt and still requires the original helper, tests, candidate and direct-world oracle to be reconciled. A newly written finite-model suite elsewhere cannot certify that the original helper was repaired. These are source-specific pending repair obligations, not additional theorems about the calculus or reasons to rewrite the accepted witness arguments. [GUIDE105-G006]
+
+
 ## 10. Representation fidelity and the intensional identity boundary
 
 The distinction between a supplied program representation and the existence of any proof is already visible before extensionality is added. This section reconstructs that boundary in the original calculus, shows exactly what the atom/application bridge changes, and proves the older intensional identity theorem against which the positive extensional results must be compared. The proofs come from the complete opaque-atom, bridge, residual-identity and intensional-separation sources. Here F/G names the original unary and heterogeneous predicates, whose full universal-type conditions are used in section 10.5. Their order here is explanatory: the residual source's stopped argument is followed by the later argument that resolves it. It is not a newly open problem. [Opaque representation][opaque-source] [Bridge][bridge-source] [Historical residual question][residual-source] [Full-rule resolution][intensional-source]
@@ -2017,3 +2026,14 @@ These links identify the received public bodies at their immutable original revi
 - [Review of the closed polymorphic source-normalization boundary][R18-G060]. historical review of prior covered argument. Git blob `2489da4be949d888d8fafaa9cbae35576f77fa3d`.
 
 [R18-G060]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/2c67e22d0b19126c63fc9f1e476dd38d06174bd9208d816680165a64b437ea23/REVIEW.md
+
+
+## Source guides for the additional arguments and qualifications
+
+These exact public guides identify the reported results, historical review scopes and dependencies used in the additional discussion. A guide citation does not claim receipt or renewed verification of every linked proof, primary source or execution record.
+
+- [GUIDE105-G006] Isolated candidates, not repository changes.
+- [GUIDE105-G027] Untitled source guide.
+
+[GUIDE105-G006]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/0ae580e4d03d07903afe36fa936696ec62193be206be37dcf97264cf1acfb5ef/README.md
+[GUIDE105-G027]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/50e05cfde2ff11cb8fe262b8bc85bc9f9432d3d302274fc84b8d1f5500917d7c/README.md

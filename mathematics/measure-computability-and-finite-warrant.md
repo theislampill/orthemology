@@ -711,6 +711,70 @@ The transfer product of section 9.2 preserves both directions of the effective-p
 
 This equivalence does not automatically classify every population, probabilistic or resource-bounded service built around that product. Conversely, a system whose invariant already includes a warranted effective next-choice rule is not refuted by an example that lacks such a rule. The practical conclusion is to state the actual service—finite horizon, one lineage, closed population, or revisable plan—and to identify the witness that makes its positive continuation claim effective.
 
+<a id="effective-countable-law-recovery"></a>
+
+### 9.11 A full moment name and an indexed law are different outputs
+
+The effective-law theorem in [Tensor Moments, §10.1](tensor-moments-and-corrective-dynamics.md#101-computing-an-actual-determinate-law-from-all-its-moments) computes an unlabelled law under validity and determinacy promises. A countable indexed representation asks for more: approximation in $\ell^1$ of the individual weights attached to a supplied sequence of distinct support points. The capped-countable-recovery guide reports a positive theorem with known injective computable support and effective cap tails, and a failure without equivalent effective tail or total information. Full moment determination and effective recovery in this stronger representation must therefore remain separate. [GUIDE105-G050]
+
+Here is the compactness mechanism under explicit sufficient hypotheses. Suppose $x_i$ is an injective computable sequence in a fixed compact box, and the admissible probability weights satisfy
+
+```math
+0\le p_i\le c_i,\qquad \sum_i p_i=1,
+```
+
+where the nonnegative caps are computable and their tails have a computable bound tending to zero. The capped box is effectively totally bounded in $\ell^1$: choose $N$ making $\sum_{i>N}c_i$ small, then cover the first $N$ bounded coordinates by a rational grid. It is closed and complete, hence compact. The normalization equation and coordinate inequalities define an effectively closed admissible subset. A nonempty subset is assumed; the argument is not a decision procedure for consistency of arbitrary inputs.
+
+Every polynomial moment is uniformly computable from such a weight vector. On the compact box the polynomial has a computable bound, so truncating the weight sum gives a certified tail error and the finite part can be approximated effectively. Conversely, equality of all polynomial moments identifies the Borel law by compact polynomial approximation. Injectivity of the support sequence then identifies every weight as the law's mass at that particular point. Thus a valid full moment name cuts out a singleton in the compact admissible weight space.
+
+The effective compact-singleton argument used earlier in this work now applies in the indexed space. Enumerate strict violations of the moment equations and of the defining constraints. Search for a finite cover of the ambient capped box by those excluded open sets together with a ball of the desired radius around a rational approximation. A cover certifies that the promised singleton lies in the ball; some such cover exists by compactness. Finite rational probability vectors can be used as approximation centers, for example by truncating and reallocating the small omitted mass. The centers need not satisfy the caps exactly. This proves approximation of the actual indexed law under the stated promises, without deciding validity, giving a running-time estimate or claiming that every arbitrary moment sequence has a representative. The mechanism is standard effective compactness, as in Tensor Moments §10.1, not a new abstract selection principle. [GUIDE105-G050]
+
+The same compactness explains why a finite precision certificate can exist for each requested error without one fixed exact cutoff sufficing. For any $\varepsilon>0$, if no finite set of moment tests with positive tolerances controlled the $\ell^1$ error, there would be pairs of admissible weights at least $\varepsilon$ apart agreeing increasingly closely on increasingly many moments. Compactness supplies convergent subsequences. Their limits would have all moments equal, hence the same weights, contradicting their separation. This proves a finite-test conclusion on the **fixed capped domain**; its effective search uses the supplied effective compactness and computable tests.
+
+A fixed cutoff has a different obstruction. Whenever a domain contains a probability vector with strict upper and lower slack at more coordinates than the number of rows in the finite test matrix including normalization, choose a nonzero vector in that matrix's kernel. Give it finite support on those coordinates. Small perturbations in both signs preserve the caps, positivity and total mass, while producing distinct indexed laws with exactly equal retained tests. This is the finite linear-algebra mechanism behind failure of a universal fixed cutoff. The guide's sharper formulation uses its parameter $C>1$ and infinitely many positive caps; its full cap convention and construction are not supplied here, so that exact formulation remains source-reported. [GUIDE105-G050]
+
+The guide also reports that bounded tensor-tilt continuation is computable from full moments without the cap assumption. That is a weaker output: an unlabelled bounded continuation need not expose the mass at each enumerated support point with a uniform $\ell^1$ tail guarantee. Its noncomputable-indexed-law example and the full closed-band output construction remain unreceived proof dependencies. The reported finite rational controls establish neither a universal reconstruction implementation nor a noncomputability theorem by execution. [GUIDE105-G050]
+
+<a id="interior-effectivity-and-endpoint-information"></a>
+
+### 9.12 Interior tail control does not settle an endpoint
+
+The exponential-tail guide separates local effective series, all strict-interior normalized-tilt moments, an endpoint with a noncomputable normalizer or law, and failure of one uniform endpoint-mean operation even on an individually computable finite-support class with an exact normalizer. These claims have different input and output quantifiers. In particular, individual computability of each finite example does not provide one algorithm acting uniformly on the declared representation of every example. [GUIDE105-G086]
+
+A simple interior estimate shows the role of the missing margin. For $X\ge0$, suppose a computable bound $\mathbb E e^{aX}\le M$ is supplied with $a>0$. Then
+
+```math
+\frac{\mathbb E X^n}{n!}\le M a^{-n}.
+```
+
+For an amplification parameter $0\le t<a$, the tail of the normalizer series is bounded by
+
+```math
+\sum_{n>N}\frac{t^n\mathbb E X^n}{n!}
+\le M\frac{(t/a)^{N+1}}{1-t/a}.
+```
+
+For a polynomial numerator of degree $k$, the analogous bound is
+$M a^{-k}\sum_{n>N}((n+k)!/n!)(t/a)^n$, whose polynomial factor times a geometric term has an effective tail. Full uniformly named moments and the supplied strict gap therefore give computable integrals. The normalizer is at least one in this nonnegative-amplification convention, so division is safe. At $t=a$ the estimate loses its geometric margin. That failure of this estimate is not alone a noncomputability proof; the guide's endpoint negative results require their separate constructions. [GUIDE105-G086]
+
+The guide records a two-step approximate-oracle computation for an exponential initial law at its continuation coordinate $u=4/3$, beyond the radius of the original series. The lesson is about changing expansion centers along an admissible continuation, not crossing a divergence boundary by formal manipulation. A local series radius, an actual integral's domain and the effective information available at an endpoint are three distinct things. Its finite enclosures corroborate the reported instance; the universal effectivity and noncomputability claims remain written arguments in the unreceived result. [GUIDE105-G086]
+
+### 9.13 Residual approximation, uniqueness and selection
+
+The stationary-selection guide distinguishes approximation of a residual, exact computation under uniqueness, and failure of uniform exact selection. It also reports an exact cap-only contraction coefficient and an equivalent universal uniqueness criterion, with strict-gap certificates and error bounds. The guide expressly requires **row domination**, a stronger premise than general envelope invariance, for that cap criterion. Its coefficient formula and general proof are not supplied in the short body, so they are not inferred from the word cap or from the finite control count. [GUIDE105-G062]
+
+The elementary quantitative implication is useful in its own right. If a supplied operator $T$ is a contraction with known $0\le\kappa<1$ and fixed point $x_*$, then
+
+```math
+\|x-x_*\|\le\|x-Tx\|+\|Tx-Tx_*\|
+\le\|x-Tx\|+\kappa\|x-x_*\|,
+```
+
+so $\|x-x_*\|\le\|x-Tx\|/(1-\kappa)$. A small residual gives a certified error only after the operator, norm and strict contraction gap have been supplied. Envelope invariance merely keeps iterates inside a set and does not furnish that estimate. Without a uniqueness or selection premise, several fixed points can have exactly zero residual.
+
+The effective assertions in the guide apply to a supplied **computable selected operator**. A classical theorem that some row can be selected from each admissible set does not automatically supply an algorithm for those choices. This is the same existence-versus-effective-access distinction used in §§9.1–9.10, now at the operator level. The guide credits its classical ancestry and later inherited sources separately; its exact finite checks are not proofs of general computability or uniform nonselection. [GUIDE105-G062]
+
+
 ## 10. Exact sources, contribution and limits
 
 ### 10.1 Three complete public prose bodies
@@ -765,6 +829,19 @@ The standard toolchain and declared logical assumptions remain the source's trus
 
 The present synthesis preserves the positive pruned-witness criterion, finite planning, high-probability random success below one, effective finite restricted-language procedures and exact finite policy certificates alongside their negative boundaries. It adds the perfect-path-set and eventual-width consequences of the population proof. No external priority claim is made for these elementary composed consequences. Mathematical iteration does not establish the identity of a person through replacement, an operative permission condition does not create normative authority, and state-transfer correctness does not establish physical realisability. Those further applications need their own empirical, interpretive and normative premises.
 
+<a id="atomic-membership-and-literal-probability-evidence"></a>
+
+### 10.5 Atomic membership and literal probability evidence
+
+The atomic-membership author and review guides concern the existing classification and its formal bridges. Their historical scopes differ: the author guide reports thirty-two root targets in a fifty-one-module closure and a separately sealed finite-table stage; the independent bridge guide describes a fifty-three-source reconstruction without using author object files. These are overlapping evidence populations, not quantities to add into a new theorem count. Uniform certification through the library's full computability and hierarchy interfaces remains distinct from the ordinary classification argument. The original soft/excess formula and later stack-machine developments are outside the bridge review's seal. [GUIDE105-G045] [GUIDE105-G017]
+
+A recovered Python routine in that review generated comparison vectors; it was not a logical axiom or part of the measure proof. Deliberately false mutations were intended to fail, while a host resource failure is neither a successful proof nor a semantic zero-output case. The pinned compiler and dependency cache retain their declared trust role. None of these short guides supplies the source closure for a fresh rebuild in the present exposition. [GUIDE105-G017]
+
+The literal-shift probability guides likewise preserve the original ordinary correspondence and probability proofs rather than claim a second origin for them. They identify five added modules, seven unchanged literal inputs and a prerequisite source closure, while retaining the Python, host and bytecode boundaries. Their artifact policies differ: one projection omits all compiled objects, while the other retains one independently observed object copy. That difference concerns the distribution of evidence, not a different probability theorem. A supplementary root check of one main module is not another independent replay of the whole dependency closure. [GUIDE105-G076] [GUIDE105-G093]
+
+In all of these cases, checking frozen file identities establishes agreement with a manifest. It does not check the mathematical proofs. Historical build receipts, ordinary proofs, finite runtime comparisons and integrity checks remain distinct forms of evidence, each limited to its exact interface. The ordinary arguments in this chapter stand at their stated scope without a new compiler, kernel or source-program execution. [GUIDE105-G017] [GUIDE105-G045] [GUIDE105-G076] [GUIDE105-G093]
+
+
 [s1]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5/mathematics/DEFECT_COMPUTABILITY.md
 [s2]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/94a47f2ed5926fcef2e178544640eb7f713af3d33b49dd55d0a45445c8769320/MINIMAL_ADDENDUM.md
 [s3]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/2f9f3b008b1afeac4ef9e3786835e811c95a9ad84d96c30c90dcda93f7b50b53/MATHEMATICAL_CONTROLS.md
@@ -781,3 +858,24 @@ The present synthesis preserves the positive pruned-witness criterion, finite pl
 [renewal-cenzer-remmel]: https://people.clas.ufl.edu/cenzer/files/Closed-Sets-Book-2017.pdf
 
 [continuation-reassessment]: https://github.com/theislampill/orthemology/blob/9601ce1e2390dc178cff608dc71e85982faae504/research/t20-v6-20261012/sources/93ce02f68f9c20543e8790a4180bd6f5c72520b101456b5b8f50c69f24a92f16/RESULT.md
+
+
+## Source guides for the additional arguments and qualifications
+
+These exact public guides identify the reported results, historical review scopes and dependencies used in the additional discussion. A guide citation does not claim receipt or renewed verification of every linked proof, primary source or execution record.
+
+- [GUIDE105-G017] Independent atomic-membership bridge audit.
+- [GUIDE105-G045] Atomic membership research return.
+- [GUIDE105-G050] Capped countable tensor recovery.
+- [GUIDE105-G062] Effective stationary selection: separate T20 research.
+- [GUIDE105-G076] Literal shift probability checkpoint.
+- [GUIDE105-G086] Exponential-tail effectivity evidence.
+- [GUIDE105-G093] Literal shift probability checkpoint.
+
+[GUIDE105-G017]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/299ac00416e01c20478069e76ef754ebb897ff0930fa15ca3aa233d9da57f60a/README.md
+[GUIDE105-G045]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/8164ff7afd94778550cfa63b4c368f7da4ec60732cc835d1a7506690014905c6/README.md
+[GUIDE105-G050]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/8f1d8e313607ae5918ef6716cd09b93ee08cc7a671bc040d596a56f10f94616a/README.md
+[GUIDE105-G062]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/9d9068400dc6039c1e66310015724ac2697bbf40819e6b86fe13dd93b98aa338/README.md
+[GUIDE105-G076]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/be59d6660f80e7d26a58631280921cbba5294b7014f09edec30338f872644312/README.md
+[GUIDE105-G086]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/d9d2addde3f0e5036e3671cf46577c0b07a5e49e8037e5d096f000d0e50b592d/README.md
+[GUIDE105-G093]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/e1f58b5b19ead43b3394242f3144df6fe31b08cdd490adee6e7111ece4355595/README.md

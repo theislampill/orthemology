@@ -755,6 +755,45 @@ The accepted parent arguments and their exact acceptance scopes remain unchanged
 
 All arguments necessary for the bounded effect, cost, access-geometry, and handoff results appear above. Any wider application must justify its own source interpretation, observation channel, permissions, task, and practical premises. Preservation of historical evidence and permission to retire source files require their own dispositions; scientific exposition alone does not decide them.
 
+<a id="source-projection-and-evidence-scope"></a>
+
+### 10.5 A source projection has its own domain
+
+A bounded handoff must distinguish the identity of a source from the presence of its contents. A manifest can accurately name a body that a later projection deliberately omits. Keeping that manifest unchanged preserves what the earlier operation bound; it does not put the omitted body into the successor. The historical-inventory guide makes this distinction explicit: old manifests remain relative to their original components, while a new delivery manifest describes the current distributed set. An omitted external witness is not a missing-file failure relative to that new set, and the older inventory is not thereby fully replayable from the projection. [GUIDE105-G100]
+
+This is a simple domain issue. If an original manifest describes a finite set $F$ and a projection contains $P\subseteq F$, verifying the identities of all members of $P$ establishes a fact about $P$. It does not verify the bytes of $F\setminus P$. Conversely, the deliberate omission of those other members does not show that the included bytes are wrong. The exact question is which claim depends on which member. A source body, a report about that body and the report's hash occupy different places in that dependency relation.
+
+The two reader-copy guides retain their accepted arguments' conclusions and limitations through an identified projection binding, while treating the original publication as a distinct historical object. Neither reader guide includes the full source bodies, scans or raw captures. Cumulative source-wording accounting across the reader papers and an integrated report records reuse; it does not create an additional primary-source witness each time the same material appears. Their full condensed arguments are also not present in the short guides themselves. No unnamed theorem or attribution can therefore be reconstructed from their navigation instructions alone. [GUIDE105-G021] [GUIDE105-G098]
+
+The compact accepted-evidence guide gives the corresponding execution boundary. Selected files are bound to historical manifests, but hashes of omitted outputs do not claim those outputs are present. A separate full-archive reopen is a distinct event from constructing a compact projection. The guide awards no new proof, test or research credit to the handoff and explicitly preserves an immutable earlier wrapper failure. A later projection does not silently erase that failure, and the failure does not automatically invalidate every separately supported mathematical claim. [GUIDE105-G097]
+
+### 10.6 Navigation, recovery and semantic reading
+
+Inventories and headings enable reading; they are not reading. The navigation guide counts recursively retained archive members, including repeated and nested occurrences, and expressly refuses to interpret that count as a count of distinct results. Its file and heading indices identify physical entry points without asserting that every proof at those locations was reviewed. Fresh primary-source ranges, inherited paths and actual semantic reading coverage remain different fields. [GUIDE105-G052]
+
+The staged-synthesis guide accordingly labels its own state partial. It records a substantive conditional development while saying that the requested exhaustive line-by-line and recursive two-pass approval was not achieved. Machine-indexed lines do not receive semantic-reading credit, and extracted PDF text does not acquire mathematical validity merely from successful extraction. The exact criterion under investigation, complete archive and repository review, corpus-relative novelty and physical or empirical bridges remain outstanding in that record. Those are its historical limits; they are not new conclusions about all later research. [GUIDE105-G034]
+
+Recovery has an equally precise object. One guide preserves six surviving documents while expressly withholding recovery of the missing checkpoint, code, tests, receipt and seal. Another preserves sources matching recorded hashes after a workspace reset, while leaving post-reset compilation, integrated controls and final verification unfinished. Matching a recovered source to a prior hash supports byte identity; it does not supply missing modules or complete a build. An inherited source baseline outside the recovered set remains a separate dependency. [GUIDE105-G041] [GUIDE105-G042]
+
+The restart checkpoint similarly contains no new scientific result and grants no evidence credit to unavailable earlier unpublished files. Its recorded work window and active status describe a historical process; they do not establish continuous research or qualify the inherited endpoints again. Validation of a repository baseline is expressly distinguished there from a fresh full formal replay. [GUIDE105-G003]
+
+A generic mathematical-packet guide supplies no named theorem in its own body. Its useful content is the declared division between ordinary proofs, exact finite controls, input bindings and bounded primary-source notes, including the absence of a pinned PDF-possession claim. It is therefore evidence navigation and scope, not an additional mathematical result. The proper response to such a guide is to retain that role rather than infer a theorem from the existence of a result filename. [GUIDE105-G022]
+
+### 10.7 A verification receipt binds a candidate and a property
+
+Integrity is a comparison against a specified inventory and anchor. A manifest whose entries have all been replaced together with the files can remain internally consistent; internal agreement alone does not authenticate the source of that manifest. The read-only verification guide therefore separates a transfer anchor from its finite payload checks, and distinguishes retained nested-archive bytes from execution of their contents. Its normal and optimized interpreter controls test that particular verifier, not the mathematical programs stored inside the package. [GUIDE105-G085]
+
+Timing also affects the binding. Preseal validation records can identify an earlier immutable payload before those records were embedded. The final archive then has a different manifest and needs its own preservation or replay binding. The two preseal guides explicitly retain that sequence. One additionally records a corrected guard fixture that mutates an independently bound retained-source hash, while the mathematical inputs remain unchanged. A correction to a guard fixture is not a correction to a theorem, and an earlier payload's receipt must not be relabeled as a receipt for the final archive. [GUIDE105-G060] [GUIDE105-G077]
+
+The native-integration guide supplies a related source-location lesson. A relative link in a nested document is resolved from that document's location. Finding an identically named alias at an archive root does not establish that the nested link reaches the intended bytes. Its receipt therefore binds the named owner document and exact local target identities. That bounded check does not cover fragments, raw HTML or availability of external URLs. The guide also separates inherited whole-review scope from a later final-tree delta scope, and archived native execution receipts from a portable consistency checker that performs no Git application or scientific execution. [GUIDE105-G055]
+
+The same historical guide reports exact-candidate PDF validation blocked locally and warns that old-head validation is not final-candidate validation. That statement belongs to its own frozen stage; it is not a new assertion about the present manuscripts' publication state. More generally, success for a property of one candidate transfers only through an argument that preserves the relevant candidate, inputs, interface and property. A source projection can preserve such an argument or its receipt without performing the operation again. [GUIDE105-G055]
+
+### 10.8 What a short guide can support
+
+These distinctions give a finite evidential conclusion. A completely read short guide can establish what that guide says, how it qualifies its claims and which dependencies it identifies. It can point to an already incorporated proof or preserve a historical failure, review scope or recovery limit. It cannot supply the missing contents of a linked result, primary witness, formal module or execution log. Where an ordinary argument is reconstructed under explicit hypotheses, that argument must be readable in its own right; where a result remains only reported, that limitation must remain visible. Reading, transformation, source identity, proof, execution and independent review consequently retain separate roles throughout this work.
+
+
 ## References and exact public sources
 
 The first seven references are the complete public prose bodies consolidated here. Their links fix the original baseline edition; their existing historical boundaries are retained. References [8]–[9] are public historical reviews used as evidence, not newly executed reviews.
@@ -808,3 +847,38 @@ The first seven references are the complete public prose bodies consolidated her
 [attributed-atiyya]: https://quranpedia.net/surah/1/48/book/350
 [attributed-ashur]: https://tafsir.app/ibn-aashoor/48/9
 [attributed-zamakhshari]: https://tafsir.app/kashaf/48/9
+
+
+## Source guides for the additional arguments and qualifications
+
+These exact public guides identify the reported results, historical review scopes and dependencies used in the additional discussion. A guide citation does not claim receipt or renewed verification of every linked proof, primary source or execution record.
+
+- [GUIDE105-G003] Orthemology Seventh research restart checkpoint 1.
+- [GUIDE105-G021] Reader copy and source locators.
+- [GUIDE105-G022] Scratch mathematical packet.
+- [GUIDE105-G034] Orthemology staged research archive.
+- [GUIDE105-G041] Untitled source guide.
+- [GUIDE105-G042] Orthemology Sixteenth source recovery checkpoint.
+- [GUIDE105-G052] Inventory and navigation.
+- [GUIDE105-G055] One-command archive verification.
+- [GUIDE105-G060] Untitled source guide.
+- [GUIDE105-G077] Untitled source guide.
+- [GUIDE105-G085] Read-only packet verification.
+- [GUIDE105-G097] Accepted evidence projection.
+- [GUIDE105-G098] Reader copy and source locators.
+- [GUIDE105-G100] Historical inventories, not this delivery.
+
+[GUIDE105-G003]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/051d8f8ebc0b27421fef9812de14b59ec9ccb55c46d00685faf75b2fee671698/README.md
+[GUIDE105-G021]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/2e583692b11baed0b09bf68ca52ab3b100c0b6e477e3bb2c8320c11e0eb1845b/README.md
+[GUIDE105-G022]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/3135bb5683cfd7325e364bccdba0a2e4672378d88b45a073386279b033d29dad/README.md
+[GUIDE105-G034]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/66caf469d48898f22de0fdc668a4295cbbcdabe6714929d304c8b11fe7d300e5/README.md
+[GUIDE105-G041]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/75fbd73d92a4fd93b20802990f6bdc74d7ebd677d2920c08372106009f8e1611/README.md
+[GUIDE105-G042]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/7649a9f81e78ee686a5e862b11c7f8b42845ef5dd6bf48d8cf42639bf3da5cb3/README.md
+[GUIDE105-G052]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/8fc98f290a853f70407774d5f58bc437f3fb4ef95c3dcae76401f885d801abd3/README.md
+[GUIDE105-G055]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/91887b8f6bfb6d7938c03bad9b4dfa21adde2ba4e68d7b819e65e8ab5436698a/README.md
+[GUIDE105-G060]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/9aa9041836d620a511c10f9db38b1f6edba6f086b033f143d4922ca8640247d9/README.md
+[GUIDE105-G077]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/bfa15c6fea5183cc84bc8be1a4b4b4d97bfe6519eb751610c81f722d4f6f8240/README.md
+[GUIDE105-G085]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/d9b670570b4081ea6b6b25fe9a8aeb653f9637e8226be697f54f08761c47c5eb/README.md
+[GUIDE105-G097]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/e48fc79fc047737ccef14af09e745979d9e6c1de9c25d857511f9a71d7d6213d/README.md
+[GUIDE105-G098]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/e6cb529b1849fa666a84cc7c1f78291e7d3df34827767feb9ce06530eba915e9/README.md
+[GUIDE105-G100]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/e7acab14e75af351eb786545f607aa99193e5abfb4866a3b3c24496f25ba9f44/README.md

@@ -513,6 +513,19 @@ For $`g=(1,0)`$, their velocities are $`(-1/8,1/8)`$ and $`(-3/16,3/16)`$. On th
 
 The admissible weights at $`1,1/2,0`$ are respectively $`2S-Q`$, $`4(Q-S)`$, and $`1-3Q+2S`$, all positive. On four points $`0,1/3,2/3,1`$, the weights $`(5,9,3,7)/24`$ and $`(7,3,9,5)/24`$ instead share both first and second moments. Their third moments differ by $`1/54`$, and under unit linear damping their second mean derivatives differ by that amount, since $`Q''=E[X^3]-3QS+2Q^3`$. Equality of an immediate velocity is weaker than equality of a future trajectory. These finite results incorporate [the finite-channel proof][finite-source].
 
+<a id="finite-descriptors-and-law-closure"></a>
+
+### 2.5 A fixed descriptor and a restricted family answer different questions
+
+The known-support theorem has a finite domain built into its hypotheses: the locations of the atoms are fixed before the weights vary. The polynomial-state-closure guides concern a different universal claim. They report that, for a nonconstant polynomial objective on $\mathbb R^d$, no fixed finite vector of polynomial expectations containing a nonconstant coordinate has the stated universal, arbitrarily nonlinear vector-field closure over **all finitely supported laws**. Allowing a nonlinear function of the retained vector does not, by itself, recover information that varies inside one of its fibres. The author and accepted-preservation guides describe the same result, with the latter also retaining the independent rank-boundary control; they do not describe two additional closure theorems. [GUIDE105-G038] [GUIDE105-G083]
+
+The elementary obstruction underlying such claims is already visible in §§2.2–2.4. If a record map $R$ and an observable velocity $V$ have $R(\mu)=R(\nu)$ but $V(\mu)\ne V(\nu)$, then there is no function $v$ on the record image with $V=v\circ R$: applying $v$ to the one common input would have to give two values. Conversely, constancy of $V$ on every record fibre defines a set-theoretic descended function. That converse supplies neither continuity nor a conveniently computable formula. The existing explicit three- and four-point examples prove particular failures of first- and second-moment closure without requiring a general polynomial impossibility theorem.
+
+This distinction preserves the positive exceptions. A known finite support can be reconstructed by the interpolation argument above. A chart with a genuine bound on atomic rank has an additional promise. A family invariant under one specified quadratic flow can have exact finite-dimensional equations. None is the universal all-law contract. The preservation guide specifically warns that agreement of the first three moments does not identify a promised-rank representation: its rank-two versus rank-three comparison concerns different admissible support classes. A claimed rank bound must therefore be an input assumption justified independently of the moment match. [GUIDE105-G083]
+
+The general polynomial theorem's full operator specification, positive-law witnesses and proof are in the guides' linked result and review, which are not supplied with these short guides. The universal statement is retained here as their source-reported result, not as a deduction from the finite examples in this chapter. The reported float-coercion defect and subsequent exact-arithmetic correction likewise concern the historical control implementation. Correcting that implementation does not replace the ordinary universal proof, and reading its guide is not a new execution. [GUIDE105-G038] [GUIDE105-G083]
+
+
 ## 3. Complete records on compact and unbounded spaces
 
 ### 3.1 Compactness and the absence of a universal finite cutoff
@@ -593,6 +606,71 @@ E_{\mathcal T_u\mu}X=-\frac{Z_\mu'(u)}{Z_\mu(u)}.
 
 Even the countable values $`Z_\mu(n)`$ determine the law set-theoretically, since they are the moments of $`e^{-X}\in[0,1]`$. That does not provide an error modulus for the unbounded observable $`-\log y`$ near zero. A complete exact record, a computable inverse, and a stable finite-data procedure remain distinct. The proofs and limits in this section incorporate [the unbounded continuation analysis][moment-boundary-source].
 
+
+
+<a id="full-density-and-gaussian-geometry"></a>
+
+### 3.4 Full-density tangents and an invariant Gaussian family
+
+A finite family of laws can inherit geometry from an ambient law space without being a sufficient state for every ambient evolution. The Gaussian-geometry guides distinguish precisely these claims. Their metric is induced by a minimum over **all admissible square-integrable density tangents**, rather than by minimization over a chosen polynomial ansatz. They report a one-dimensional metric and curvature, a multivariate positive-definite-matrix cometric, and the quadratic gradient flows that genuinely leave the Gaussian family invariant. Noncommuting precision evolution belongs to the multivariate claim and cannot be inferred by treating the matrices as scalars. [GUIDE105-G011] [GUIDE105-G094]
+
+There are two different operations here. Restricting an ambient tangent norm to a tangent of a parametrized family asks what the least ambient cost of that same tangent is. Evolving the ambient law asks whether its actual vector field stays tangent to the family at every point of the trajectory. The first question does not answer the second. Even a correct induced Riemannian metric consequently gives no finite polynomial closure for arbitrary laws. Nor does a distance intrinsic to the Gaussian submanifold equal the unrestricted endpoint distance merely because both are obtained from an action: the latter permits additional paths, and equality needs a separate minimizing-path argument. The inherited Hessian and Bregman results concern their own metrics and remain intact. [GUIDE105-G011] [GUIDE105-G094]
+
+The full functional minimization and the multivariate formulas are not contained in the short guides received here. Their existence is a source report, with the analytic argument assigned to the original result and review. Exact algebraic controls can check formulas after those analytic premises are supplied; they do not show that an unexamined ansatz exhausts an infinite-dimensional admissible class. The distinction between the historical original-aware and portable control counts concerns omitted original-location integrity checks, not permission to omit mathematical hypotheses. [GUIDE105-G011]
+
+### 3.5 Equal initial variance rates need not give equal continuations
+
+The quartic diagnostic gives a particularly sharp warning about a locally plausible restriction. For the objective $F(x)=x^4/4$ and a centered initial Gaussian of variance $v>0$, the guide reports equality of the initial variance rates in the actual-law and restricted-Gaussian models, but a positive gap between their right-hand second derivatives:
+
+```math
+3v^3(7v^2+32v+16)>0.
+```
+
+At $v=1$ the stated gap is $165$. Equality of one initial derivative therefore does not identify the actual continuation. The reported second-order discrepancy does not contradict the exact quadratic invariant-family result: the objective and the invariant-family premise have changed. [GUIDE105-G061]
+
+The right-hand differentiability is substantive. The independent argument described in the guide uses domination along weighted characteristics to justify the actual-law right-$C^2$ assertion. Formal differentiation of finitely many moments, or agreement of symbolic expressions, would not establish that analytic premise. The full domination argument is an unreceived dependency of this particular diagnostic. The guide also preserves an initially failed structural-equality assertion whose printed mathematical values agreed; that failure is an implementation comparison issue, not a counterexample to equality of those values. Neither the failure nor its corrected finite controls is substituted for the analytic proof. [GUIDE105-G061]
+
+<a id="full-law-marginal-contracts"></a>
+
+### 3.6 Coarse action and a whole marginal constraint
+
+The full-law coarse-graining guides describe a transport-and-reaction action contract supported by Hilbert-space projection, distributional arguments and cutoff or well-posedness hypotheses. Their universal claims are ordinary written mathematics. The finite controls concern exact algebra and identity checks. A contraction of action, an attained endpoint minimum, an evolution equation and uniqueness of that evolution are distinct assertions; none should be inferred merely from another's name. The historical initial failed checker remains evidence of its own failure, while the corrected result has its own scope. The reviewer-supplied strict-norm residual example is participating work, not independent corroboration of that same example by its originator. [GUIDE105-G005] [GUIDE105-G007]
+
+The distinction between a whole marginal and finitely many statistics can be stated without importing an unreceived formula. On a product space $X\times Y$, fixing the $Y$ marginal to $\nu$ means
+
+```math
+\int f(y)\,d\mu_t(x,y)=\int f\,d\nu
+```
+
+for a measure-determining class of tests $f$. Under a differentiable weak equation, the derivative of every such integral must vanish. Preserving a finite list of marginal moments asserts only the corresponding finite list of equalities. Unless that list determines the admitted marginal class, it does not impose the whole-marginal constraint. This is the same distinction between a record and a law that §§2–3 make explicit; it becomes a restriction on the admissible tangent space when deriving a constrained gradient.
+
+The fixed-marginal correction guides report that the constrained construction accounts for the complete density tangent. The correlated-target extension keeps the inherited constrained metric and includes a target-dependent conditional spatial score in its multiplier. Its exact Gaussian coordinate flow converges globally, by compact Kullback–Leibler sublevels, toward an arbitrary centered correlated Gaussian target with the prescribed marginal $N(0,1)$. It claims no additional convergence rate. The reported example moves from identity covariance toward
+
+```math
+\begin{pmatrix}1&1\\1&2\end{pmatrix}
+```
+
+while retaining the designated marginal. The off-diagonal covariance is allowed to change: it is not an extra conserved coordinate. The guide does not specify which displayed coordinate is named $y$, so the matrix alone should not be used to reverse the declared marginal convention. [GUIDE105-G046] [GUIDE105-G016]
+
+Feasibility must also be separated from optimality. A conditional recentering may obey the marginal constraint while having strictly greater tangent cost than the constrained minimizer. The fixed-marginal review explicitly retains an initially mislabeled passing recentering control and its correction to a feasibility-and-gap check. That is a change in what the example establishes, not a reason to infer that the feasible recentering is the optimal projection. The reviewer's supplied rate-six inequality has participating authorship; its originator's later review is not independent corroboration of that same contribution. [GUIDE105-G053] [GUIDE105-G101]
+
+For general laws, the reported projection and evolution statements keep their solution-domain, chain-rule and regularity assumptions. The directly global Gaussian construction is a narrower positive result, not a general-law partial-differential-equation existence or uniqueness theorem. The full constrained operator and its proofs are unreceived here; the guides support the distinctions and reported scope above, not a new derivation of that operator from marginal preservation alone. [GUIDE105-G053] [GUIDE105-G101]
+
+### 3.7 Conditional entropy transfer retains the reaction and flux terms
+
+An entropy calculation must use the actual constrained tangent. The conditional-entropy guide reports a coercivity transfer through the same fixed-whole-marginal projection, under explicit domain and energy-chain-rule premises. Its non-Gaussian quartic example includes the full observed-flux correction and retains reaction. Dropping either term because a simpler unconstrained or Gaussian calculation omits it would change the evolution being assessed. [GUIDE105-G002]
+
+Three comparisons need separate quantifiers. Decay of total entropy is not automatically decay of conditional entropy. An inequality after integration over the observed variable is not a uniform inequality on every conditional fibre. A constant proved for centered Gaussian laws is not thereby valid on all laws. A non-Gaussian example can diagnose the difference, but one example does not prove a universal coercivity constant. The guide's full inequalities and domains remain in its unreceived result; no new constant is supplied here. [GUIDE105-G002]
+
+The Gaussian entropy-transfer author and review guides retain an all-dimensional analytic result within a fixed Gaussian contract, with classical transport geometry credited separately from the local derivation. Their evidence combines distinct types of controls: the portable author branch includes numerical ordinary-differential-equation corroboration, whereas the independent suite is symbolic and rational. Neither turns the fixed-family comparison into a global unrestricted endpoint identification. Source-inspection records, PDF hashes and reported page checks remain historical evidence; a portable run that lacks the raw source cannot renew that inspection. [GUIDE105-G019] [GUIDE105-G029]
+
+### 3.8 Endpoint minima, singular entrance and feasible paths
+
+The endpoint-action guide reports finite-action feasibility, attained constrained transport-and-reaction minima, a finite geodesic metric and convergence of nested finite marginal-test minima on compact product tori. Singular laws and zero-density endpoint conventions are included in its stated result. These are specific additional assertions, whose compactness and limiting proofs are not supplied by the guide. A theorem for finitely many constraints cannot simply be applied to the infinitely many tests defining an entire marginal; a passage to that limit must be proved. [GUIDE105-G012]
+
+The same guide names a conditional sphere path and a convex-mixture path as feasible competitors. Their role is to establish an admissible connection or an upper bound on the infimum. They are not claimed to minimize the action. In general, if $\mathcal A$ is the admissible path class and $\gamma\in\mathcal A$, then $\inf_{\eta\in\mathcal A}I(\eta)\le I(\gamma)$; reversing that inequality requires an optimality argument. No explicit endpoint metric formula or finite-to-infinite-constraint proof is reconstructed from the short description. [GUIDE105-G012]
+
+The singular-Gaussian-entrance guides identify a further ordinary analytic result and a separate scoped review. Their symbolic and input-binding controls are supplemental. They do not prove analytic existence, the asserted endpoint trace or uniqueness merely by evaluating formulas. Nor does a result for nondegenerate Gaussian geometry automatically cover a singular initial law: the boundary and its admitted entrance need their own argument. This preserves the positive source-reported entrance result together with the unreceived analytic dependency and the precise limit of its historical checks. [GUIDE105-G010] [GUIDE105-G035]
 
 
 ## 4. Scalar hierarchies: realizability is an additional condition
@@ -967,6 +1045,15 @@ The flat construction with $`b=1-\varepsilon e^{-1/t}`$ also works algebraically
 
 
 
+<a id="signed-energy-proof-and-evidence-scope"></a>
+
+### 6.4 The theorem and its historical corroboration
+
+The author and preservation guides for signed autonomous energy describe the weighted-energy argument, finite-horizon control and null-ideal consequence already proved in §§6.1–6.3. They supply an additional source-role clarification, not a second origin for those results. In particular, bounded energy gives a global weighting path, while compact joint support supplies the stronger law-uniqueness conclusion; the two assumptions should not be merged. The persistent Gram kernel is an exact algebraic invariant, not a uniform lower bound on positive eigenvalues. [GUIDE105-G004] [GUIDE105-G067]
+
+The guides expressly classify the proof-route check as participating work, rather than independent review of the final artifact. Their exact symbolic controls use neither random sampling nor a finite degree cutoff as a proof of the universal theorem. Their references to a full result, retained inputs and execution reports identify historical dependencies. They do not add a new formal-kernel execution to the ordinary proof displayed here. [GUIDE105-G004] [GUIDE105-G067]
+
+
 ## 7. Time-dependent damping and cumulative control
 
 Instantaneous coercivity is stronger than the dynamics needs. A succession of rank-one dampings may control every direction cumulatively, even though no single instantaneous energy does.
@@ -1135,6 +1222,33 @@ $`k_t(u,z)=(u+tz)^2`$, so (33) supplies the required cumulative control. General
 
 The full argument, its examples, and this transport result incorporate [the cumulative damping proof][cumulative-source]. The [independent review][cumulative-review-source] matters particularly for the smooth time-varying test step: spatial smoothness of the time derivative is included explicitly above.
 
+
+
+<a id="moving-objective-continuation-and-order"></a>
+
+### 7.4 Frozen coercivity does not bound moving characteristics
+
+The cumulative-damping theorem concerns a specified multiplication hierarchy; the polynomial-transport extension additionally requires a supplied global polynomial change of coordinates. General moving-gradient characteristics have a separate lifetime question. The escape guides report a smoothly changing, predetermined objective schedule whose frozen losses are coercive, yet whose characteristic escapes in finite time while the actual loss decreases. The stronger nonnegative example uses sum-of-squares frozen losses, has loss tending to zero, and retains positive surviving mass. It preserves the older signed example and the accepted common-energy continuation result. [GUIDE105-G001] [GUIDE105-G018]
+
+There is no contradiction between these statements. Coercivity at each fixed time says that the sublevel sets of that time's loss are bounded. It does not give one compact set containing the relevant sublevels at every time approaching the escape horizon. The center or shape of the controlled region can move. Along a moving objective, a decreasing scalar value therefore does not by itself bound the trajectory in the spatial coordinates.
+
+A fixed coercive Gronwall control would provide a different premise. Suppose a nonnegative coercive $C^1$ function $G$ obeyed, along the characteristics on a finite interval,
+
+```math
+\frac{d}{dt}G(x(t))\le a(t)G(x(t))+b(t),
+```
+
+with integrable $a,b$ and a finite initial value. Multiplying by $e^{-\int_0^t a}$ and integrating bounds $G(x(t))$ up to that horizon. Coercivity then confines the trajectory to a bounded sublevel. Subject to the usual local continuation hypotheses for the vector field, finite-time escape is impossible. Thus an actual escaping example rules out such a fixed coercive control; testing a finite collection of polynomial candidates would not establish that universal exclusion. This is the ordinary Gronwall reasoning identified in both guides, not a claim that a symbolic search exhausted all $C^1$ functions. [GUIDE105-G001] [GUIDE105-G018]
+
+The guides do not supply their exact schedules or the full characteristic construction. Those remain unreceived proof dependencies. The reported escape consequently must not be redescribed as a newly proved endpoint moment counterexample or a failure of law representation before escape. It also does not refute the common-energy theorem, whose uniform control is precisely what the counterexample lacks. [GUIDE105-G001]
+
+### 7.5 Ordered transport differs from pure reweighting
+
+The order neutrality in (5) and (27) comes from multiplication of scalar weights. A moving transport operator changes where those weights act. The moving-objective guide reports, for its specified transport-and-selection operators, compact initial support and sufficiently short common times, that the first order-sensitive term is a transport commutator. The direct killing contribution cancels at that order. This does not make all reaction effects vanish at higher orders. [GUIDE105-G057]
+
+The ordered-control continuation makes the distinction between formal and actual expansions explicit. Formal finite operator jets have identity constant term; its projective separation ranges over all finitely supported laws and polynomial outputs. Actual finite-order asymptotics require a fixed finite control, compact initial support and a common compact set containing the relevant characteristics. The reported quadratic protocols have positive durations and are forward complete, but this does not establish convergence of an unrestricted infinite operator series. Nor does projective separation mean that every different raw control word has a different action. [GUIDE105-G059]
+
+The exact operators and universal separation proof are not contained in these guides. Their scoped claims refine the operation contract without supplying empirical meanings for the objectives or a global classification of all schedules. Their classical operator-series ancestry remains source-owned. The preservation record distinguishes mathematical controls from hash and count checks, and distinguishes excluded full-paper byte checks from unchanged mathematical identities. None of those accounting facts supplies renewed paper reading or an additional independent proof. [GUIDE105-G057] [GUIDE105-G059]
 
 
 ## 8. A fixed controlled subspace and hidden coordinates
@@ -1448,6 +1562,15 @@ The theorem also covers odd $`D`$ and $`D=0`$; it does not require the cone of n
 
 
 
+<a id="polynomial-obstruction-and-measure-bridge"></a>
+
+### 9.6 A polynomial obstruction and an unbuilt measure bridge
+
+The distinction between polynomial positivity and measure representation also fixes the scope of formal corroboration. The development-intermediates guide explicitly excludes its exploratory files from every successful compiled-module list. Its direct measure-theory bridge stopped at an unavailable import before that file was checked; the reported missing dependency closure was not rebuilt. The unsuccessful lemma probes likewise carry no theorem qualification. [GUIDE105-G079]
+
+The mathematical implication remains straightforward: if a positive Borel measure represented a functional, every everywhere nonnegative integrable polynomial would have nonnegative integral. A negative value on such a polynomial therefore excludes representation. The guide assigns that conclusion to an ordinary corollary of a checked polynomial obstruction, not to a separately checked measure-theory theorem. The full ordinary arguments in §§9.1–9.5 stand on their stated assumptions; this historical failed import neither refutes them nor extends their formal verification scope. [GUIDE105-G079]
+
+
 ## 10. Effective recovery and finite certificates
 
 The preceding existence and uniqueness theorems concern exact mathematical records. They neither supply a practical finite-data reconstruction method nor make validity or determinacy decidable. Some effective statements are nevertheless available under explicit input promises.
@@ -1708,3 +1831,58 @@ These links identify the received public bodies at their immutable original revi
 - [Finite predicate-functor transport into Boolean tensors][R18-G273]. finite extensional transport with explicit hypotheses. Git blob `6bb2b13b32994328b207c064c91220f723bdd2ce`.
 
 [R18-G273]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/qualitative-tensor-transport/RESULT.md
+
+
+## Source guides for the additional arguments and qualifications
+
+These exact public guides identify the reported results, historical review scopes and dependencies used in the additional discussion. A guide citation does not claim receipt or renewed verification of every linked proof, primary source or execution record.
+
+- [GUIDE105-G001] Pointwise-coercive changing-gradient escape: intermediate countercontrol.
+- [GUIDE105-G002] Conditional entropy control.
+- [GUIDE105-G004] Signed autonomous energy continuation.
+- [GUIDE105-G005] Full-law coarse-graining packet.
+- [GUIDE105-G007] Full-law coarse-graining: accepted intermediate component.
+- [GUIDE105-G010] Untitled source guide.
+- [GUIDE105-G011] Gaussian correction geometry: accepted intermediate component.
+- [GUIDE105-G012] Entire-fixed-marginal endpoint action.
+- [GUIDE105-G016] Correlated-target independent review.
+- [GUIDE105-G018] Nonnegative moving-gradient escape.
+- [GUIDE105-G019] Gaussian entropy transfer: portable accepted intermediate component.
+- [GUIDE105-G029] Gaussian entropy transfer review packet.
+- [GUIDE105-G035] Singular Gaussian entrance evidence.
+- [GUIDE105-G038] Finite polynomial descriptor closure boundary.
+- [GUIDE105-G046] Correlated-target fixed-marginal correction.
+- [GUIDE105-G053] Fixed-marginal constrained correction.
+- [GUIDE105-G057] Moving-objective order interface: intermediate evidence.
+- [GUIDE105-G059] Ordered-control projective transport: intermediate preservation.
+- [GUIDE105-G061] Quartic variance continuation: separate accepted supplement.
+- [GUIDE105-G067] Signed autonomous energy continuation.
+- [GUIDE105-G079] Unbuilt development intermediates.
+- [GUIDE105-G083] Finite polynomial state closure: intermediate preservation.
+- [GUIDE105-G094] Gaussian correction geometry: author packet.
+- [GUIDE105-G101] Fixed marginal correction review packet.
+
+[GUIDE105-G001]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/0174f088bc34d917efe251fb40e1bce4ad33f6896c14f08486edf360cce56fff/README.md
+[GUIDE105-G002]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/03a89ae96e6612620b0312aaef1ecb907eff535f66d31d7a4d5dc6f226074e2d/README.md
+[GUIDE105-G004]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/05602a7c8e1353961c33efecd62b7d955064901ca43315aca2c94e704fdbe0cc/README.md
+[GUIDE105-G005]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/0a5cd3af281313de7821dddc9d12bfd5a05af6bd48d818ea29eff48f74893dd0/README.md
+[GUIDE105-G007]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/0fc42ccc06a810a8fb6406ecaf00d4a110d2a1f46d4924fa4eab92859142bd61/README.md
+[GUIDE105-G010]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/1587c146d95459a94d221faf0b67cb18215bc3d97eccf1256b82e9b05cc74d19/README.md
+[GUIDE105-G011]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/1b6017227ffcf86072dc569a06cef3bc88ee6d5eab0c8dbf738d1c4c57fd6b82/README.md
+[GUIDE105-G012]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/1cfb7b8d434f92d76f5c0e207659b8fe8b81e9f07cf0c67a9a03127fc526ccde/README.md
+[GUIDE105-G016]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/280362da432793d6e725fcdab291bf2813f810e4a20832a688f1d966254a3390/README.md
+[GUIDE105-G018]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/2a154bdf328fece5f778af435e1df1b277d9c688b1380c8fba34587e1f38f21c/README.md
+[GUIDE105-G019]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/2b0b8b6a74b7fdc5ba1dbe6b46008caefa538e1d3b259ea04ed0e2b9585b307a/README.md
+[GUIDE105-G029]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/5335293a33ddba5e10ceb44ec35dd91dbe86f23d107e784cfcb8fa68aafa4ca5/README.md
+[GUIDE105-G035]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/6a76213d0f1df8a2f4e563d2f0fd1ce681823e8d4bdd8f3b2f0801df690fbb0b/README.md
+[GUIDE105-G038]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/719293c172700fb5415668d1237d2be96be74c525451c3d448c7cbfdc2c2449a/README.md
+[GUIDE105-G046]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/823138c702525d3e680a0ba9fab3e733e09179a32389c281902a33f0272e6d1c/README.md
+[GUIDE105-G053]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/914c6786931bacf832a80d8e32941cfbebbdff66f2bc574aad48e5170989c782/README.md
+[GUIDE105-G057]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/91ed8c74c0d53f66af3f9e0fbdbab51910bc4be92d20e46e866a4434aabb0307/README.md
+[GUIDE105-G059]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/98c88347b4bd9e4f2d09ad892b7d9f209ff2e93a43965d710596f39f127f5dd9/README.md
+[GUIDE105-G061]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/9c6ec5263abf1a42e0dea266078d87c572bfc92439236acbaa6bfc4c0ea13242/README.md
+[GUIDE105-G067]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/a8c79cf80ba9fd5643dea744bfc6c9d679421404c9d0ada722e4f3626a76e2b7/README.md
+[GUIDE105-G079]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/d0b24497a9ddf2b34f91483b7ee7cfb61acf1ec2430c0aecb5b61c32239b392a/README.md
+[GUIDE105-G083]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/d5581d7beec9da984e667a2f66afd97cd98bc2ab2b94f1e76e743ba7ae41c856/README.md
+[GUIDE105-G094]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/e2139a907c0af4aba7dd0e02d838bcef0d0cf521e478adf2bd338a9fa04673ba/README.md
+[GUIDE105-G101]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/e9214d31a3dd05329d0cfde1745d3fe870a0f3c7690ed10f4aefa05f23d124c9/README.md

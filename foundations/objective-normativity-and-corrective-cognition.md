@@ -1684,6 +1684,17 @@ This supplies the missing respect-specific premise that a generic perfection sho
 
 The philosophical conclusion is positive and bounded: actual relations and valid source-owned commitments can add normative structure; their effect depends on their content. They neither require a creature to become the source's legislator nor turn every declaration into a successful imposition of duty.
 
+<a id="cooperation-and-authority-scope"></a>
+
+### 10.8 Cooperation and the limits of a local title
+
+The governance–authority review credits a bounded application-level reason for cooperation while retaining a two-sided-alternatives or no-leverage limit. This is compatible with the distinction in §10.2 between a general governing relation and a warranted title over a particular choice. If the relevant reasons leave alternatives on both sides and no further authority-bearing relation has been established, a cooperation argument does not by itself select one party's will as binding. Conversely, a valid undertaking or a content-sensitive duty can add a reason not present in that stripped-down comparison. The guide's limited positive result and its limit must therefore travel together. [GUIDE105-G009]
+
+The review does not establish general command power, actual identification or disclosure of an original source, essential integrity or adoption of an entire philosophical account. Its mechanical identity and count checks do not establish philosophical truth. The separate cooperation-review guide similarly describes bounded research completion with a narrowed residual, while explicitly withholding full-model certification and universal impossibility. Its new formal and finite controls have their own historical roles; their existence is not an argument for an unstated normative premise. [GUIDE105-G009] [GUIDE105-G058]
+
+The practical-perfection review accepts its bounded argumentative and primary-attribution scope without establishing the stronger actuality or essentiality conclusion named in that record. Its conceptual controls are not an empirical population or external specialist validation. The underlying article, controls and exact premise ledger are not contained in these short guides. The current positive account of fittingness, informed agency and valid agreements consequently rests on the arguments above, while the guides preserve the precise limits of those particular earlier assessments. [GUIDE105-G072]
+
+
 ## 11. Wise ends and actual achieved response
 
 A source can know that a response will occur while the good of that response still requires its occurrence. Foreknowledge and achievement have different explanatory roles. Confusing them can make response-mediated goods appear idle or can mistakenly portray an original source as acquiring its essential perfection from its creatures. [S12]
@@ -1719,6 +1730,19 @@ This also distinguishes a succession of actual completed ends from a process tha
 Omnipotence does not make all means purposeless. If the end includes a person's actual voluntary response, replacing the person with a simulation or merely representing the outcome changes the end. The argument does not establish that every possible end requires the same means, or that a particular entire history is uniquely necessary. It identifies why one response-mediated good has real conditions.
 
 Finally, successive directives conveyed by a messenger do not by themselves settle how intrinsic divine volitions are individuated. The bounded source unit supports the practical discrimination described above; it does not prove one comprehensive volition or a particular collection of separate volition tokens. The fuller ontology of succession and original agency belongs to its own argument. The earned source-specific appraisals of knowledge, will, wisdom, and efficacy remain in place without being redescribed as conclusions of this one example.
+
+<a id="responsive-purpose-and-cumulative-support"></a>
+
+### 11.4 Responsive purpose and cumulative support
+
+A response can demonstrate, acknowledge or apply something already affirmed. It need not always supply previously unknown propositional content. The responsive-demonstration guide reports a worked case retaining prior affirmation and a means-substitution test; it assigns general means/end and request-response reasoning to inherited arguments. Its positive contribution does not establish a unique optimum, complete intrinsic determination of a volition token or independent historical authentication. The appropriate question is what the particular response does under its stated purpose, not whether its mere occurrence entails every stronger claim about agency. The old shared review directory and overwritten earlier nested review remain process and correction evidence; the subsequently separated root and nested reviews retain their own authorship, and the nested review is not an additional primary-source corroboration. [GUIDE105-G056]
+
+The question-purpose guide makes a similarly local distinction: a rhetorical acknowledgment gloss and a discrimination of procedural rationales are narrower than a general doctrine of acknowledgment, a certainty hierarchy or an inference about intrinsic volition. It expressly says that the exchange alone does not support the intrinsic-volition conclusion; this is an inferential limit, not an attribution that the historical author denies voluntary speech. The access record is also asymmetric: the opening was received as an attributed transcript, an official later lesson supplied overlap, and the attempted official opening retrieval failed. Neither audio nor printed-edition collation follows from those facts. [GUIDE105-G065]
+
+The wisdom-and-attestation correction retains legitimate cumulative-profile support for a particular act while denying defeater credit to an unsupported nonattesting alternative. A merely imagined alternative can identify a premise worth examining; without relevant support it is not already a competing explanation of equal force. At the same time, cumulative support needs the actual connections among its grounds. A same-author corroborating passage is not an independent historical witness, and an overlapping source check by a participant is not external specialist validation. The guide preserves an earlier overbroad formulation and its correction, without supplying the missing earlier wording for reconstruction here. [GUIDE105-G104]
+
+The continuous source supplement corroborates already-owned source/content and cognitive-mode distinctions. It is explicitly not a new theorem, whole-corpus consolidation or historical authentication. Together these guides sharpen the relation between an act's purpose, the epistemic role of a response and the strength of its source evidence. Their full reports and primary witnesses are not supplied with the guides, and no fresh historical exposition, manuscript collation or whole-author survey is added. The affirmative results already defended in the relevant accounts remain at their existing scopes. [GUIDE105-G024] [GUIDE105-G056] [GUIDE105-G065] [GUIDE105-G104]
+
 
 ## 12. Objective assessment and its strongest inspected rivals
 
@@ -2604,3 +2628,24 @@ These links identify the received public bodies at their immutable original revi
 [R18-G039]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/false-closure-selective-prediction/DEVIATION-LEDGER.md
 [R18-G040]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/false-closure-selective-prediction/baselines/BASELINE-ARM.md
 [R18-G041]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/false-closure-selective-prediction/treatments/TREATMENT-ARM.md
+
+
+## Source guides for the additional arguments and qualifications
+
+These exact public guides identify the reported results, historical review scopes and dependencies used in the additional discussion. A guide citation does not claim receipt or renewed verification of every linked proof, primary source or execution record.
+
+- [GUIDE105-G009] Independent governance–authority review.
+- [GUIDE105-G024] Additive source supplement.
+- [GUIDE105-G056] Additive intermediate source evidence.
+- [GUIDE105-G058] Independent cooperation review.
+- [GUIDE105-G065] Ibn Uthaymin question-purpose: bounded intermediate preservation.
+- [GUIDE105-G072] Practical perfection independent review.
+- [GUIDE105-G104] Wisdom and attestation source note.
+
+[GUIDE105-G009]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/13139c2a71cae1993c9192976183f21311b1bbd8e31b815690b0158272f751f5/README.md
+[GUIDE105-G024]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/45f3eab0d8e94c34b2f8ae5923968fa67e191f3ade97ae6e6b9b3ca6a6520976/README.md
+[GUIDE105-G056]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/91928e4cabcaaf35b1c05db90a0f15caadb47c06322151cb4512159164556a83/README.md
+[GUIDE105-G058]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/92172803f024bfb2d319c42044041e5d13408054d808223c09d1f62ae97ce910/README.md
+[GUIDE105-G065]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/a3da39901dc4e0eb682e0dc7ce49176f377dcff406086932fb5530df73c20da4/README.md
+[GUIDE105-G072]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/b2b3266cedf8f7d82f60c3ffb11e800a4be63bad4e9609faa1a56df2d0dcb2c0/README.md
+[GUIDE105-G104]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/f4a4ba0650ca4f5bab0e08793e35588d7459179d11d02021ef3a85939431bd9f/README.md

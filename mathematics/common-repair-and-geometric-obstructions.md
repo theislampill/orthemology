@@ -1361,6 +1361,19 @@ $`\varepsilon^2/26+o(\varepsilon^2)`$, respectively. The explicit interval proof
 
 The inputs just listed are identical in the two instances, but their correct feasibility answers differ. A representation adequate for both must retain the relevant joint truth constraints or information that distinguishes them. This does not identify a unique minimal representation, prove that every joint moment is necessary, or establish a cognitive realization of either truth family.
 
+<a id="geometric-radius-and-verification-scope"></a>
+
+### 9.8 An existential radius and a literal arithmetic certificate
+
+The common-repair conclusion and its usable scale have different quantifiers. A result of the form “for every admitted context and direction there exists a positive radius” does not supply one radius uniform over all contexts and directions. Formula (65) displays that dependence through the actual leading gain, remainder, barycentric and coordinate bounds. A literal arithmetic certificate for the four-coordinate example is a separate strengthening at its specified inputs; it does not automatically strengthen the general mixed-rank theorem. The mixed-rank and explicit-scale audit guides expressly preserve this distinction. [GUIDE105-G023] [GUIDE105-G040]
+
+A valid radius must control actual losses and actual membership inequalities together. A leading positive quadratic coefficient alone is insufficient if its remainder or an admissible-hull boundary is not controlled. The explicit-scale guide reports exact rational evaluation of all twenty actual constraints and a copied polynomial oracle as a test helper. It makes no general runtime-refinement claim for that helper. The specific fixture and its arithmetic proof are not supplied by the guide, so no additional numerical radius is inferred here. The directly readable coefficient argument in §§9.3–9.4 retains its own complete proof.
+
+The geometry-boundary guide also separates proof layers. Its kernel scope covers the critical-zero and finite linear-programming certificates, boundary readback and exact primal/dual binding. The mixed-rank extension and exponential positive comparator are ordinary results at that earlier seal; their later formalization and the full-jet flat-perturbation work have separate identities. An earlier seal cannot be retroactively described as certifying those later additions. [GUIDE105-G044]
+
+The unsuccessful auditor normalization attempts and the deliberately rejected mutations are retained historical failures. They do not count as accepted source qualification. General optimized-regret asymptotics remain ordinary mathematics where the guide says so. These records add evidence boundaries to the existing positive constructions and obstructions; they do not alter the source proofs or create another common-repair result from the number of successful build modules. [GUIDE105-G023] [GUIDE105-G040] [GUIDE105-G044]
+
+
 ## 10. An obstruction invisible to the full Taylor data
 
 The joint-hull example changes the truth constraints while preserving the whole score functions. A different obstruction keeps the truth hull fixed and changes the generators by a smooth perturbation that is flat at the coherent context.
@@ -1599,3 +1612,16 @@ The [geometry proof review][geometry-proof-review], [finite-hull review][finite-
 [formalization-scope]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e.md
 [literature-scope]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/45ffbb9679d23bd16a43b4930ec615bb55f4c0c56705e5a0c90f0fec425a2a3e.md
 [source-bridge-synthesis]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/21f9e48328bfbf843b5f0371168f84c51768dec6260b3798fca4a461900aa006.md
+
+
+## Source guides for the additional arguments and qualifications
+
+These exact public guides identify the reported results, historical review scopes and dependencies used in the additional discussion. A guide citation does not claim receipt or renewed verification of every linked proof, primary source or execution record.
+
+- [GUIDE105-G023] Mixed rank kernel successor audit.
+- [GUIDE105-G040] Explicit polynomial scale audit.
+- [GUIDE105-G044] Geometry boundary delta audit.
+
+[GUIDE105-G023]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/39510850bf6cce0af6b35f98367240015afad94db5eebe5c4fa5db60f79dbb8b/README.md
+[GUIDE105-G040]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/726ce66e66d1b1ab39571baf9009b4ee7803e8b1fa9b1a39a3ed58c94cdfdf1f/README.md
+[GUIDE105-G044]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/805e6b3b36cb6b4c25efbcd76e4e93dac970ce31deaa0ae2b9e86558e82e589d/README.md
