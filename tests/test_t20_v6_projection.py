@@ -2722,12 +2722,21 @@ class CheckpointRecordCopyMigrationTests(unittest.TestCase):
             cls.bodies[alias] = body
             if cls.bodies.setdefault(binding['canonical'], body) != body:
                 raise AssertionError('retained record body conflicts')
+        formal = source._formal_copy_catalog()
         for relative, blob, identity, size in cls.CONTEXT_MEMBERS:
             path = str(pathlib.PurePosixPath(cls.CONTEXT_SOURCE).parent / relative)
             binding = dict(canonical=path, blob=blob, sha256=identity, bytes=size, mode='100644')
             body = source._checkpoint_bound_bytes(projection.ROOT, path, binding)
             if cls.bodies.setdefault(path, body) != body:
                 raise AssertionError('original-context fixture body conflicts')
+            # These five original-context dependencies now authenticate their
+            # exact retained formal counterparts before reference resolution.
+            retained = formal[path]
+            if (retained['blob'], retained['sha256'], retained['bytes'], retained['mode']) != (
+                    blob, identity, size, '100644'):
+                raise AssertionError('original-context retained identity differs')
+            if cls.bodies.setdefault(retained['canonical'], body) != body:
+                raise AssertionError('original-context retained body conflicts')
         manifest = json.loads((projection.ROOT / projection.MANIFEST).read_bytes())
         cls.public_rows = [r for r in manifest['objects'] if r.get('repository_path') in cls.catalog]
         if len(cls.public_rows) != 14:
@@ -3250,6 +3259,8 @@ class HistoricalSuccessorFixtureRouteTests(unittest.TestCase):
                                                          CalledProcessError=subprocess.CalledProcessError),
                      'is_binding_record': lambda root, path: False,
                      'SUCCESSOR_INPUT_PATHS': (), 'GENERATED_FIXTURE_PATHS': (),
+                     'DIGEST_RECORD_PATHS': (), 'FORMAL_COPY_PATHS': (),
+                     'CONTINUATION_FORMAL_RETARGET_PATHS': (),
                      'CONTINUATION_REGISTRY_PATH': 'synthetic/other-registry.json',
                      'ADMIN_PUBLIC_GUIDE_PATHS': (), 'HISTORICAL_PROSE': {},
                      'CHECKPOINT_CODE_COPY_PATHS': (), 'CHECKPOINT_RECORD_COPY_PATHS': (),

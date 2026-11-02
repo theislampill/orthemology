@@ -1010,7 +1010,7 @@ def permitted_historical_status_pin(repo, row, body):
                           publication_basis="exact_existing_public_git_blob; current_consumer_has_distinct_identity")
         return (candidate == expected or _permitted_projection_consumer_pins(expected, candidate)
                 or _permitted_administrative_guide_pins(expected, candidate))
-    except (KeyError, TypeError, ValueError):
+    except (KeyError, TypeError, ValueError, OSError):
         return False
 
 
