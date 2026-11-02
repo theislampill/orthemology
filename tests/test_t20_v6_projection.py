@@ -3512,5 +3512,390 @@ class HistoricalSuccessorFixtureRouteTests(unittest.TestCase):
 
 
 
+
+
+class FormalCopyMigrationTests(unittest.TestCase):
+    """Native finite-copy guards; no Lean or historical replay is executed."""
+
+    @classmethod
+    def setUpClass(cls):
+        import resolve_t20_v6_source as source
+        cls.source = source
+        cls.catalog = source._formal_copy_catalog()
+        if len(cls.catalog) != 71:
+            raise AssertionError('formal fixture population differs')
+        cls.bodies = {}
+        for alias, binding in cls.catalog.items():
+            body = source.formal_copy_bytes(projection.ROOT, alias)
+            cls.bodies[alias] = body
+            if cls.bodies.setdefault(binding['canonical'], body) != body:
+                raise AssertionError('retained formal body conflicts')
+        cls.public = [r for r in json.loads((projection.ROOT / projection.MANIFEST).read_bytes())['objects']
+                      if r.get('repository_path') in source.FORMAL_COPY_PATHS]
+        cls.continuations = [r for r in json.loads((projection.ROOT /
+            'docs/provenance/v5-research-continuations/SOURCE_MAP.json').read_bytes())['sources']
+            if r.get('path') in source.FORMAL_CONTINUATION_PATHS]
+        cls.successors = [r for r in json.loads((projection.ROOT /
+            'docs/provenance/v5-successors/SOURCE_MAP.json').read_bytes())['sources']
+            if r.get('public_path') in source.FORMAL_SUCCESSOR_PATHS]
+        cls.allowlist = [r for r in json.loads((projection.ROOT /
+            'docs/provenance/v5-successors/PUBLIC_PROJECTION.json').read_bytes())['allowlist']
+            if r.get('path') in source.FORMAL_SUCCESSOR_PATHS]
+        if tuple(map(len, (cls.public, cls.continuations, cls.successors, cls.allowlist))) != (26, 12, 9, 3):
+            raise AssertionError('actual formal source-role rows differ')
+
+    setUp = CheckpointCopyMigrationTests.setUp
+    _git = CheckpointCopyMigrationTests._git
+    _put = CheckpointCopyMigrationTests._put
+    _gate = CheckpointCopyMigrationTests._gate
+
+    def _reject(self, path=None):
+        with self.assertRaises((ValueError, OSError)):
+            self.source.formal_copy_bytes(self.repo, path or self.alias)
+
+    def test_native_formal_copies_survive_absence_and_staged_absence(self):
+        for path in self.catalog:
+            (self.repo / path).unlink()
+        self.assertEqual(self.source.formal_duplicate_paths(self.repo), set(self.catalog))
+        for path in self.catalog:
+            self.assertEqual(self.source.formal_copy_bytes(self.repo, path), self.bodies[path])
+        self._git('add', '-u')
+        self.assertEqual(self.source.formal_duplicate_paths(self.repo), set(self.catalog))
+        for row in self.public:
+            self.assertEqual(self.source.source_bytes(self.repo, row), self.bodies[row['repository_path']])
+
+    def test_changed_alias_and_retained_body_are_rejected(self):
+        for path in (self.alias, self.canonical):
+            with self.subTest(path=path):
+                self._put(path, self.bodies[path] + b'\n-- changed inert source\n')
+                self._reject()
+                self._put(path, self.bodies[path])
+
+    def test_executable_formal_alias_and_retained_source_are_rejected(self):
+        for path in (self.alias, self.canonical):
+            with self.subTest(path=path):
+                (self.repo / path).chmod(0o755)
+                self._reject()
+                (self.repo / path).chmod(0o644)
+
+    def test_symlink_formal_alias_and_retained_source_are_rejected(self):
+        for path in (self.alias, self.canonical):
+            with self.subTest(path=path):
+                target = self.repo / path
+                target.unlink()
+                target.symlink_to(self.repo / (self.canonical if path == self.alias else self.alias))
+                self._reject()
+                target.unlink()
+                self._put(path, self.bodies[path])
+
+    def test_staged_mode_and_blob_substitutions_are_rejected(self):
+        blob = self.catalog[self.alias]['blob']
+        wrong = self._git('hash-object', '-w', '--stdin', input=b'unrelated public fixture\n').decode().strip()
+        for path in (self.alias, self.canonical):
+            for mode, identity in (('100755', blob), ('100644', wrong)):
+                with self.subTest(path=path, mode=mode, blob=identity):
+                    self._git('update-index', '--cacheinfo', mode + ',' + identity + ',' + path)
+                    self._reject()
+                    self._git('update-index', '--cacheinfo', '100644,' + blob + ',' + path)
+
+    def test_unavailable_history_and_wrong_requested_identity_are_rejected(self):
+        with patch.object(self.source, 'CHECKPOINT_COPY_BASE', '0' * 40):
+            self._reject()
+        for values in ({'identity': '0' * 64}, {'size': -1}):
+            with self.assertRaises(ValueError):
+                self.source.formal_copy_bytes(self.repo, self.alias, **values)
+        for value in (None, '../unknown.lean', self.extra):
+            with self.assertRaises(ValueError):
+                self.source.formal_copy_bytes(self.repo, value)
+
+    def test_all_existing_public_fields_remain_bound(self):
+        import copy
+        for row in self.public:
+            self.assertEqual(self.source.source_bytes(self.repo, row), self.bodies[row['repository_path']])
+            for key, value in row.items():
+                changed = copy.deepcopy(row)
+                changed[key] = (value + '-changed' if isinstance(value, str) else
+                                value + 1 if type(value) is int else ['unadmitted-field-value'])
+                with self.subTest(path=row['repository_path'], field=key), self.assertRaises(ValueError):
+                    self.source._formal_public_source_bytes(self.repo, changed)
+
+    def test_nonpublic_formal_aliases_gain_no_public_admission(self):
+        published = {r['repository_path'] for r in self.public}
+        for path in set(self.catalog) - published:
+            binding = self.catalog[path]
+            row = dict(repository_path=path, disposition='REUSE', source_sha256=binding['sha256'],
+                       public_sha256=binding['sha256'], source_bytes=binding['bytes'], public_bytes=binding['bytes'])
+            with self.subTest(path=path), self.assertRaises(ValueError):
+                self.source.source_bytes(self.repo, row)
+
+    def test_full_continuation_origin_member_and_module_source_rows_remain_bound(self):
+        import copy
+        for row in self.continuations:
+            self.assertEqual(self.source.continuation_formal_source_bytes(self.repo, row), self.bodies[row['path']])
+            for key in row:
+                changed = copy.deepcopy(row)
+                changed[key] = 'changed-field-value'
+                with self.subTest(source=row['id'], field=key), self.assertRaises(ValueError):
+                    self.source.continuation_formal_source_bytes(self.repo, changed)
+
+    def test_full_successor_origins_and_allowlist_associations_remain_bound(self):
+        import copy
+        for row in self.successors:
+            self.assertEqual(self.source.successor_formal_source_bytes(self.repo, row), self.bodies[row['public_path']])
+            for key in row:
+                changed = copy.deepcopy(row)
+                changed[key] = 'changed-field-value'
+                with self.subTest(source=row['id'], field=key), self.assertRaises(ValueError):
+                    self.source.successor_formal_source_bytes(self.repo, changed)
+        for row in self.allowlist:
+            self.assertEqual(self.source.successor_formal_allowlist_bytes(self.repo, row), self.bodies[row['path']])
+            for key in row:
+                changed = copy.deepcopy(row)
+                changed[key] = 'changed-field-value'
+                with self.subTest(path=row['path'], field=key), self.assertRaises(ValueError):
+                    self.source.successor_formal_allowlist_bytes(self.repo, changed)
+
+    def test_preservation_accepts_only_checkpoint_D_not_staged_M_or_T(self):
+        path = next(p for p in self.catalog if p.startswith(self.source.CHECKPOINT_COPY_ROOT))
+        (self.repo / path).unlink()
+        self.assertEqual(self._gate(), [])
+        self._git('add', '-u')
+        self.assertEqual(self._gate(), [])
+        self._put(path, self.bodies[path] + b'\n-- changed\n')
+        self._git('add', '--', path)
+        (self.repo / path).unlink()
+        self.assertTrue(self._gate())
+        self._put(path, self.bodies[path])
+        self._git('add', '--', path)
+        (self.repo / path).unlink()
+        (self.repo / path).symlink_to(self.repo / self.catalog[path]['canonical'])
+        self._git('add', '--', path)
+        (self.repo / path).unlink()
+        self.assertTrue(self._gate())
+
+
+class FormalCurrentCompositionControls(unittest.TestCase):
+    """Finite operational interfaces; no original formal/replay program runs."""
+
+    @classmethod
+    def _module(cls, name, functions, *, source_constants=False):
+        import collections
+        filename = pathlib.Path(__file__).resolve().parents[1] / 'scripts' / name
+        tree = ast.parse(filename.read_text(encoding='utf-8'))
+        nodes = []
+        for node in tree.body:
+            if isinstance(node, ast.FunctionDef) and node.name in functions:
+                nodes.append(node)
+            elif source_constants and isinstance(node, ast.Assign) and any(
+                    isinstance(target, ast.Name) and (target.id.startswith(
+                        ('FORMAL_', 'CONTINUATION_FORMAL_', 'CHECKPOINT_', 'BINDING_RECORD_'))
+                        or target.id == 'CONTINUATION_COPY_ROOT') for target in node.targets):
+                nodes.append(node)
+        found = {node.name for node in nodes if isinstance(node, ast.FunctionDef)}
+        if found != set(functions):
+            raise AssertionError('operational fixture function population differs')
+        module = types.ModuleType('formal_current_' + name.replace('.', '_'))
+        module.__dict__.update(hashlib=hashlib, json=json, pathlib=pathlib, os=os, re=re,
+                               stat=stat, collections=collections, subprocess=subprocess,
+                               Path=pathlib.Path)
+        future = ast.ImportFrom(module='__future__', names=[ast.alias(name='annotations')], level=0)
+        code = ast.fix_missing_locations(ast.Module(body=[future, *nodes], type_ignores=[]))
+        exec(compile(code, str(filename), 'exec'), module.__dict__)
+        return module
+
+    def setUp(self):
+        self.source = self._module('resolve_t20_v6_source.py', {
+            'digest', '_formal_tuple_binding', '_formal_copy_catalog', '_formal_row_digest',
+            '_formal_public_source_bytes', '_continuation_formal_bound_bytes', 'source_bytes',
+            'binding_record_candidate', 'is_binding_record'}, source_constants=True)
+        self.source.DIGEST_RECORD_PATHS = frozenset()
+        self.source.SUCCESSOR_FIXTURE_PATH = 'synthetic-unused-fixture-coordinate'
+        self.source.SUCCESSOR_INPUT_PATHS = frozenset()
+        self.source.GENERATED_FIXTURE_PATHS = frozenset()
+        self.source.CONTINUATION_REGISTRY_PATH = 'synthetic-unused-registry-coordinate'
+        manifest = pathlib.Path(__file__).resolve().parents[1] / 'research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json'
+        public = dict(self.source.FORMAL_PUBLIC_MEMBERS)
+        self.rows = {row['repository_path']: row for row in json.loads(manifest.read_text())['objects']
+                     if row.get('repository_path') in public}
+        self.assertEqual(len(self.rows), 27)
+        self.assertEqual({path: self.source._formal_row_digest(row) for path, row in self.rows.items()}, public)
+        self.prior_path, = self.source.CONTINUATION_FORMAL_RETARGET_PATHS
+
+    def _prior_field(self, field):
+        import copy
+        original = self.rows[self.prior_path]
+        self.assertIn(field, original)
+        for mode in ('changed', 'missing'):
+            changed = copy.deepcopy(original)
+            if mode == 'missing':
+                del changed[field]
+            else:
+                value = changed[field]
+                changed[field] = (value + '-changed' if isinstance(value, str) else
+                                  value + 1 if type(value) is int else ['unadmitted-fixture-value'])
+            with self.subTest(field=field, mode=mode), patch.object(
+                    self.source, 'continuation_copy_bytes', create=True,
+                    side_effect=AssertionError('changed complete row reached a body getter')) as getter:
+                with self.assertRaisesRegex(ValueError, 'formal existing public role or complete identity differs'):
+                    self.source._formal_public_source_bytes(pathlib.Path('unused-synthetic-root'), changed)
+                getter.assert_not_called()
+
+    def test_prior_declared_eligibility_basis_is_bound(self):
+        self._prior_field('declared_eligibility_basis')
+
+    def test_prior_required_dependencies_are_bound(self):
+        self._prior_field('required_dependencies')
+
+    def test_prior_disposition_is_bound(self):
+        self._prior_field('disposition')
+
+    def test_prior_repository_path_is_bound(self):
+        self._prior_field('repository_path')
+
+    def test_prior_public_sha256_is_bound(self):
+        self._prior_field('public_sha256')
+
+    def test_prior_public_bytes_are_bound(self):
+        self._prior_field('public_bytes')
+
+    def test_prior_publication_basis_is_bound(self):
+        self._prior_field('publication_basis')
+
+    def test_current_public_entry_dispatch_and_returned_identity(self):
+        body = b'inert synthetic public interface body\n'
+        identity = hashlib.sha256(body).hexdigest()
+        direct = next(path for path in self.rows if path in self.source.FORMAL_COPY_PATHS)
+        for path in (direct, self.prior_path):
+            row = dict(self.rows[path], public_sha256=identity, source_sha256=identity,
+                       public_bytes=len(body), source_bytes=len(body))
+            members = tuple((name, self.source._formal_row_digest(row) if name == path else digest)
+                            for name, digest in self.source.FORMAL_PUBLIC_MEMBERS)
+            checksum = hashlib.sha256(json.dumps(members, separators=(',', ':')).encode()).hexdigest()
+            with self.subTest(path=path), \
+                 patch.object(self.source, 'FORMAL_PUBLIC_MEMBERS', members), \
+                 patch.object(self.source, 'FORMAL_PUBLIC_MEMBERS_SHA256', checksum), \
+                 patch.object(self.source, 'formal_copy_bytes', create=True, return_value=body) as direct_getter, \
+                 patch.object(self.source, 'continuation_copy_bytes', create=True, return_value=body) as prior_getter:
+                self.assertEqual(self.source.source_bytes(pathlib.Path('unused-synthetic-root'), row), body)
+                used, unused = (prior_getter, direct_getter) if path == self.prior_path else (direct_getter, prior_getter)
+                used.assert_called_once_with(pathlib.Path('unused-synthetic-root'), path, identity, len(body))
+                unused.assert_not_called()
+                used.return_value = b'wrong returned identity\n'
+                with self.assertRaisesRegex(ValueError, 'source identity differs'):
+                    self.source.source_bytes(pathlib.Path('unused-synthetic-root'), row)
+
+    def test_prior_chain_checks_former_provider_before_final_endpoint(self):
+        alias, former, canonical, blob, identity, size = self.source.CONTINUATION_FORMAL_RETARGETS[0]
+        binding = dict(canonical=former, blob=blob, sha256=identity, bytes=size, sources=[])
+        calls = []
+        def checkpoint(root, path, value):
+            calls.append(('former', path, value['canonical']))
+            return b'inert-provider-interface'
+        def continuation(root, path, value):
+            calls.append(('prior', path, value['canonical']))
+            return b'inert-endpoint-interface'
+        with patch.object(self.source, '_checkpoint_bound_bytes', create=True, side_effect=checkpoint) as original, \
+             patch.object(self.source, '_continuation_bound_bytes', create=True, side_effect=continuation) as endpoint:
+            self.assertEqual(self.source._continuation_formal_bound_bytes('unused', alias, binding),
+                             b'inert-endpoint-interface')
+            self.assertEqual(calls, [('former', former, canonical), ('prior', alias, canonical)])
+            endpoint.reset_mock()
+            original.side_effect = ValueError('corrupt former provider')
+            with self.assertRaisesRegex(ValueError, 'corrupt former provider'):
+                self.source._continuation_formal_bound_bytes('unused', alias, binding)
+            endpoint.assert_not_called()
+
+    def _consumer(self, filename, function):
+        module = self._module(filename, {function})
+        def unrelated(*args, **kwargs):
+            raise ValueError('unrelated population is absent from this finite interface fixture')
+        module.__dict__.update(self.source.__dict__)
+        # Bind the exact function back after supplying only its finite inputs.
+        compiled = self._module(filename, {function})
+        module.__dict__.update({function: getattr(compiled, function)})
+        namespace = getattr(module, function).__globals__
+        namespace.update(self.source.__dict__)
+        namespace.update(BASE='unused-synthetic-baseline', REFACTOR_EDIT_PATHS=set(),
+            HISTORICAL_PROSE={}, HISTORICAL_PROSE_PUBLIC_PATHS=set(), HISTORICAL_PROSE_REVISIONS={},
+            TYPED_GUIDES={}, ADMIN_GUIDES={}, ADMIN_RECORD_PATHS=set(),
+            SUCCESSOR_CALCULUS_GUIDES={}, SUCCESSOR_CALCULUS_MAP='unused-calculus',
+            SUCCESSOR_INPUT_REGISTRY='unused-registry', MEDIATOR_GUIDE='unused-guide',
+            CONTINUATION_OWNER_PATHS=set(), FIXTURE_CONSUMER_ORIGINAL={},
+            PMR007_DEEP_PREFIX='unused-deep', PMR007_ROUNDS_PREFIX='unused-rounds',
+            PMR007_ROUNDS_FORMALIZATION='unused-formalization',
+            continuation_owners=types.SimpleNamespace(PRESERVATION_OWNER_PATHS=set()))
+        for name in ('pmr007_deep_duplicate_paths', 'pmr007_rounds_duplicate_paths',
+                     'checkpoint_duplicate_paths', 'checkpoint_record_duplicate_paths',
+                     'checkpoint_package_duplicate_paths', 'checkpoint_code_duplicate_paths',
+                     'digest_record_absences', 'mediator_guide_source_bytes'):
+            namespace[name] = unrelated
+        return getattr(module, function), namespace
+
+    def _deletion_gate(self, filename, function, reader):
+        call, namespace = self._consumer(filename, function)
+        path = next(path for path in self.source.FORMAL_COPY_PATHS
+                    if path.startswith(self.source.CHECKPOINT_COPY_ROOT))
+        for status, qualified, permitted in (('D', {path}, True), ('M', {path}, False),
+                                             ('T', {path}, False), ('D', set(), False)):
+            with self.subTest(status=status, qualified=bool(qualified)), patch.dict(namespace):
+                namespace['readonly_git_diff'] = lambda *a, **k: subprocess.CompletedProcess(
+                    ['synthetic-name-status'], 0, (status + '\0' + path + '\0').encode(), b'')
+                with patch.dict(namespace, formal_duplicate_paths=unittest.mock.Mock(return_value=qualified)):
+                    result = call(pathlib.Path('unused-root'), 'unused-baseline') if reader else call(pathlib.Path('unused-root'), {})
+                    self.assertEqual(result == [], permitted)
+                    self.assertEqual(namespace['formal_duplicate_paths'].call_count, 1 if status == 'D' else 0)
+        with patch.dict(namespace):
+            namespace['readonly_git_diff'] = lambda *a, **k: subprocess.CompletedProcess(
+                ['synthetic-name-status'], 0, ('D\0' + path + '\0').encode(), b'')
+            namespace['formal_duplicate_paths'] = unittest.mock.Mock(side_effect=ValueError('unavailable formal evidence'))
+            result = call(pathlib.Path('unused-root'), 'unused-baseline') if reader else call(pathlib.Path('unused-root'), {})
+            self.assertTrue(result)
+
+    def test_current_reader_requires_qualified_D_only_formal_absence(self):
+        self._deletion_gate('check_reader_pilot.py', 'check_corpus_currentness', True)
+
+    def test_current_projection_requires_qualified_D_only_formal_absence(self):
+        self._deletion_gate('validate_t20_v6_projection.py', 'check_preserved_roots', False)
+
+    def test_continuation_adapter_preserves_formal_prior_and_sparse_routes(self):
+        module = self._module('validate_research_continuations.py', {'source_bytes'})
+        module._source = self.source
+        module.path_in = lambda root, name, exists: pathlib.Path(name)
+        self.source.SPARSE_PRIOR_PROSE = {'synthetic-sparse.md'}
+        for path, getter in ((next(iter(self.source.FORMAL_CONTINUATION_PATHS)), 'continuation_formal_source_bytes'),
+                             (self.prior_path, 'continuation_copy_bytes'),
+                             ('synthetic-sparse.md', 'sparse_prior_source_bytes')):
+            row = dict(path=path, sha256='1' * 64, bytes=7)
+            with self.subTest(route=getter), patch.object(self.source, getter, create=True, return_value=b'inert') as selected:
+                self.assertEqual(module.source_bytes('unused-root', row), b'inert')
+                if getter == 'continuation_copy_bytes':
+                    selected.assert_called_once_with('unused-root', path, row['sha256'], row['bytes'], source=row)
+                else:
+                    selected.assert_called_once_with('unused-root', row)
+
+    def test_replay_byte_getter_preserves_digest_input_and_formal_routes(self):
+        module = self._module('replay_v5_successors.py', {'public_bytes', 'require', 'digest', 'relative', 'sha'})
+        body = b'inert synthetic replay-getter interface\n'
+        identity = hashlib.sha256(body).hexdigest()
+        prefix = 'experiments/orthemology-v5-successors/source-store/' + identity + '/'
+        fake = types.ModuleType('resolve_t20_v6_source')
+        fake.FORMAL_SUCCESSOR_PATHS = {prefix + 'Synthetic.lean'}
+        fake.SUCCESSOR_INPUT_PATHS = {prefix + 'INPUT.json'}
+        fake.successor_input_source_bytes = unittest.mock.Mock(return_value=body)
+        fake.successor_formal_source_bytes = unittest.mock.Mock(return_value=body)
+        module._formal_sources = fake
+        module.DIGEST_RECORD_PATHS = {prefix + 'DIGEST.md'}
+        module.digest_record_successor_bytes = unittest.mock.Mock(return_value=body)
+        with patch.dict(sys.modules, resolve_t20_v6_source=fake):
+            for path, getter in ((prefix + 'Synthetic.lean', fake.successor_formal_source_bytes),
+                                 (prefix + 'INPUT.json', fake.successor_input_source_bytes),
+                                 (prefix + 'DIGEST.md', module.digest_record_successor_bytes)):
+                row = dict(public_path=path, public_sha256=identity, public_bytes=len(body))
+                with self.subTest(path=path):
+                    self.assertEqual(module.public_bytes('unused-root', row), body)
+                    getter.assert_called_once_with('unused-root', row)
+                    getter.return_value = b'wrong-returned-body'
+                    with self.assertRaisesRegex(ValueError, 'Source bytes/hash changed'):
+                        module.public_bytes('unused-root', row)
 if __name__ == '__main__':
     unittest.main()

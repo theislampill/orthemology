@@ -315,6 +315,9 @@ def extract_source_zip(source, destination):
     return {name: sha(data) for name, data in rows}
 
 
+import resolve_t20_v6_source as _formal_sources
+
+
 def public_bytes(root, source):
     expected = digest(source['public_sha256'])
     name = relative(source['public_path'])
@@ -323,6 +326,8 @@ def public_bytes(root, source):
     from resolve_t20_v6_source import SUCCESSOR_INPUT_PATHS, successor_input_source_bytes
     if name in DIGEST_RECORD_PATHS:
         data = digest_record_successor_bytes(root, source)
+    elif name in _formal_sources.FORMAL_SUCCESSOR_PATHS:
+        data = _formal_sources.successor_formal_source_bytes(root, source)
     elif name in SUCCESSOR_INPUT_PATHS:
         data = successor_input_source_bytes(root, source)
     else:

@@ -44,6 +44,7 @@ from resolve_t20_v6_source import (
     CHECKPOINT_COPY_PATHS, checkpoint_copy_bytes,
     CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_copy_bytes,
     CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_copy_bytes,
+    FORMAL_COPY_PATHS, formal_copy_bytes, CONTINUATION_FORMAL_RETARGET_PATHS,
     ADMIN_RECORD_PATHS, administrative_record_bytes,
     CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_copy_bytes,
     SUCCESSOR_INPUT_PATHS, successor_input_bytes,
@@ -94,7 +95,7 @@ def _original_driver_members(src, text):
     """
     pins = {
         'scripts/replay_v5_successors.py': (
-            '14bc845ba7bc785a5b66d10749ef1bf7bdebaff360e0f4b8d62edc3e3ee96176',
+            'e114a43548dc2d5d747b9eb1147d471a82b6a5cda833ae322353dfc91dc58c27',
             [('scripts', 'verify-inputs.py'), ('scripts', 'verify-sources.py')]),
         'scripts/v5_d04_assets/v5_d04_normalizers_translated.py': (
             '46133c72f1332efeeec42530cd26ce224decf617e55e7fb79bd5d486b9a28fcd',
@@ -283,6 +284,15 @@ def _checkpoint_reference(src, cited):
             break
         directory = os.path.dirname(directory)
     for candidate in candidates:
+        if candidate in FORMAL_COPY_PATHS or candidate in CONTINUATION_FORMAL_RETARGET_PATHS:
+            try:
+                if candidate in FORMAL_COPY_PATHS:
+                    formal_copy_bytes(ROOT, candidate)
+                else:
+                    continuation_copy_bytes(ROOT, candidate)
+                return True
+            except (ValueError, OSError):
+                return False
         if candidate in CHECKPOINT_CODE_COPY_PATHS:
             try:
                 checkpoint_code_copy_bytes(ROOT, candidate)

@@ -47,6 +47,7 @@ from resolve_t20_v6_source import (
     CHECKPOINT_COPY_PATHS, checkpoint_duplicate_paths,
     CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths,
     CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_duplicate_paths,
+    FORMAL_COPY_PATHS, formal_duplicate_paths,
     CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_duplicate_paths,
     SUCCESSOR_INPUT_PATHS, SUCCESSOR_INPUT_REGISTRY, SUCCESSOR_INPUT_REPLAY_ORIGINAL,
     successor_input_bytes, successor_input_absences, successor_input_registry_original_bytes,
@@ -1386,6 +1387,7 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                 ("checkpoint-copy", CHECKPOINT_COPY_PATHS, checkpoint_duplicate_paths),
                 ("checkpoint-record", CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths),
                 ("checkpoint-package", CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_duplicate_paths),
+                ("formal-copy", FORMAL_COPY_PATHS, formal_duplicate_paths),
                 ("checkpoint-code", CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_duplicate_paths),
                 ("historical-digest", DIGEST_RECORD_PATHS, digest_record_absences)):
             if key not in duplicate_paths and any(

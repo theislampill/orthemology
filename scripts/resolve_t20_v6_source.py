@@ -2190,6 +2190,506 @@ def digest(body):
     return hashlib.sha256(body).hexdigest()
 
 
+# Exact formal aliases retain full arguments, witnesses, false controls,
+# licenses and original logical module coordinates. Source acquisition and
+# staging confer no fresh Lean result, historical replay or research adoption.
+FORMAL_COPY_MEMBERS = (('experiments/orthemology-v5-continuations/source-store/0f8e551de28b6bdf549e0d2ecba0932bb2758b8ff57aaf5f1cf5956d7d88d8cd.lean',
+  'experiments/orthemology-v5/source/lean/GeneratedExamples.lean',
+  'e28a54b251fb81375367099fdcff50f182c2692e',
+  '0f8e551de28b6bdf549e0d2ecba0932bb2758b8ff57aaf5f1cf5956d7d88d8cd',
+  13685),
+ ('experiments/orthemology-v5-continuations/source-store/12dfbed26b887067f2bbd2a75930d038558b3a5c715100d7c25d3cfee79a7fdb.lean',
+  'experiments/orthemology-v5/source/lean/RelationalFragment.lean',
+  '74220a92cbf0c072e42402bd0a41d2597e4bdb90',
+  '12dfbed26b887067f2bbd2a75930d038558b3a5c715100d7c25d3cfee79a7fdb',
+  6417),
+ ('experiments/orthemology-v5-continuations/source-store/4c1d8a9d8a9a6ebec9f5e1a1ee41008b75fbfffeabbbd9ee489ea21982425a08.lean',
+  'experiments/orthemology-v5/source/lean/HurkensBoundary.lean',
+  '074187709780bc0e313ac5ddec5cf4625a9a233d',
+  '4c1d8a9d8a9a6ebec9f5e1a1ee41008b75fbfffeabbbd9ee489ea21982425a08',
+  2245),
+ ('experiments/orthemology-v5-continuations/source-store/766ae9391263f193c6e84e16042281fb5e70fe680f083f0359b4b3c10f215779.lean',
+  'experiments/orthemology-v5/source/lean/OperationalKernel.lean',
+  'ad434829b298fb58e95aa64a8b8edb3b219e6b21',
+  '766ae9391263f193c6e84e16042281fb5e70fe680f083f0359b4b3c10f215779',
+  8778),
+ ('experiments/orthemology-v5-continuations/source-store/8485a2156b943ce569af6f219d69d7d24b00b41b04b8225a68d7480d2d70522d.lean',
+  'experiments/orthemology-v5/source/lean/AlmostSureBoundary.lean',
+  'be13b34a2d1ba2d8a846cc7a279ae55fb1283fbf',
+  '8485a2156b943ce569af6f219d69d7d24b00b41b04b8225a68d7480d2d70522d',
+  3234),
+ ('experiments/orthemology-v5-successors/source-store/b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183/PhaseStabilization.lean',
+  'experiments/orthemology-v5-continuations/source-store/b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183.lean',
+  'bf40cccf2a6c791714ce4abf9f39ab2532c0e99e',
+  'b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183',
+  4741),
+ ('experiments/orthemology-v5-continuations/source-store/d3494436356f8aec5510b004e2a977c9946533f6190219f30eee2de511b53f4e.lean',
+  'experiments/orthemology-v5/source/lean/OperationalBoundary.lean',
+  'ffa0b6d903b3285a3282b056f7df3c9de6770ebe',
+  'd3494436356f8aec5510b004e2a977c9946533f6190219f30eee2de511b53f4e',
+  2599),
+ ('experiments/orthemology-v5-successors/source-store/f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96/AuditSupport.lean',
+  'experiments/orthemology-v5/source/lean/AuditSupport.lean',
+  '4ba3d9db5e9157c7c183a1045d82e3c40be887f9',
+  'f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96',
+  1024),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/inherited/OriginalBearerBridge.lean',
+  'experiments/orthemology-v5-successors/source-store/086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99/OriginalBearerBridge.lean',
+  '7b8effb1f2281515208dcb23171d2bc7a004c97f',
+  '086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99',
+  6940),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/inherited/OriginalBearerBridge.lean',
+  'experiments/orthemology-v5-successors/source-store/086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99/OriginalBearerBridge.lean',
+  '7b8effb1f2281515208dcb23171d2bc7a004c97f',
+  '086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99',
+  6940),
+ ('research/t20-live-20261009/checkpoints/CP08/recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean',
+  'experiments/orthemology-v5-successors/source-store/086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99/OriginalBearerBridge.lean',
+  '7b8effb1f2281515208dcb23171d2bc7a004c97f',
+  '086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99',
+  6940),
+ ('experiments/orthemology-v5-successors/source-store/0e0636bf2cbd583b0a7193d9cc5985bdca6c5e52a0c895f01e9cd71b5677e34c/ReviewerReadback.lean',
+  'experiments/orthemology-v5-successors/source-store/0e0636bf2cbd583b0a7193d9cc5985bdca6c5e52a0c895f01e9cd71b5677e34c/ReadbackAudit.lean',
+  '25cafa10bad0bc925fd900e8ccd18ad85c4cdd51',
+  '0e0636bf2cbd583b0a7193d9cc5985bdca6c5e52a0c895f01e9cd71b5677e34c',
+  4035),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/inherited/SourceIdentityDerived.lean',
+  'experiments/orthemology-v5-successors/source-store/51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54/SourceIdentityDerived.lean',
+  '1ae461afa51ba4f339fa02b154b6ec781407d968',
+  '51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54',
+  7438),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/inherited/SourceIdentityDerived.lean',
+  'experiments/orthemology-v5-successors/source-store/51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54/SourceIdentityDerived.lean',
+  '1ae461afa51ba4f339fa02b154b6ec781407d968',
+  '51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54',
+  7438),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/inherited/BridgeControls.lean',
+  'experiments/orthemology-v5-successors/source-store/be1ba7d32e603bc2c4d725d9fc0425150b992aa24e0cab8c9a7807fcd36371a8/BridgeControls.lean',
+  '272f4f1ffb8c78a0e74033edf86bbfb928f3f9ff',
+  'be1ba7d32e603bc2c4d725d9fc0425150b992aa24e0cab8c9a7807fcd36371a8',
+  9487),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/inherited/BridgeControls.lean',
+  'experiments/orthemology-v5-successors/source-store/be1ba7d32e603bc2c4d725d9fc0425150b992aa24e0cab8c9a7807fcd36371a8/BridgeControls.lean',
+  '272f4f1ffb8c78a0e74033edf86bbfb928f3f9ff',
+  'be1ba7d32e603bc2c4d725d9fc0425150b992aa24e0cab8c9a7807fcd36371a8',
+  9487),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification-review/frozen/CalibratedPanels.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification/CalibratedPanels.lean',
+  '89edc9114951ee0752e6baf3309692d6c15eb029',
+  '1f96630cac12107b21c96615a14cc817d16af4d29264c47a742bd2da59c2382a',
+  3454),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/formal-identification/CalibratedPanels.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification/CalibratedPanels.lean',
+  '89edc9114951ee0752e6baf3309692d6c15eb029',
+  '1f96630cac12107b21c96615a14cc817d16af4d29264c47a742bd2da59c2382a',
+  3454),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification-review/frozen/Calibration.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification/Calibration.lean',
+  '8b0d2c9b22c36140a4b7249fbd59509c0d3e1bf2',
+  'e5b126e3b9e9cdb8805f3417d90d3431611ec86a83614a925d5671b2dc10aeba',
+  5422),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification-review/mutation-controls/CalibrationControl.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification/Calibration.lean',
+  '8b0d2c9b22c36140a4b7249fbd59509c0d3e1bf2',
+  'e5b126e3b9e9cdb8805f3417d90d3431611ec86a83614a925d5671b2dc10aeba',
+  5422),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/formal-identification/Calibration.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification/Calibration.lean',
+  '8b0d2c9b22c36140a4b7249fbd59509c0d3e1bf2',
+  'e5b126e3b9e9cdb8805f3417d90d3431611ec86a83614a925d5671b2dc10aeba',
+  5422),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification-review/frozen/HitTransform.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification/HitTransform.lean',
+  'a50b0fd5b8bc0d0bf44e2ebb2a1548b573b97f28',
+  '046c5be8de2e0878ce3820860b26cd43b9199de52c82dd22f647ee471f56b3d7',
+  6036),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification-review/mutation-controls/HitTransformControl.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification/HitTransform.lean',
+  'a50b0fd5b8bc0d0bf44e2ebb2a1548b573b97f28',
+  '046c5be8de2e0878ce3820860b26cd43b9199de52c82dd22f647ee471f56b3d7',
+  6036),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/formal-identification/HitTransform.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification/HitTransform.lean',
+  'a50b0fd5b8bc0d0bf44e2ebb2a1548b573b97f28',
+  '046c5be8de2e0878ce3820860b26cd43b9199de52c82dd22f647ee471f56b3d7',
+  6036),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification-review/frozen/Verification.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification/Verification.lean',
+  'ef1086b283a133bce96792cfe898fcf14ede26ff',
+  '1b5d16d632df462189d2a510d96b3ea662e8b166879a8c44825905d0509b7e68',
+  993),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/frozen/BernoulliAssignments.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/BernoulliAssignments.lean',
+  'b124aa9bf8f261d042bc7fe591103a0b5ce13aea',
+  'e6dd1e4814bb0bb6c977cd3b6e4ee600e8d4cdfeb5c4564148d3bb5a38eb8eba',
+  2636),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/mutation-workspace/BernoulliAssignments.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/BernoulliAssignments.lean',
+  'b124aa9bf8f261d042bc7fe591103a0b5ce13aea',
+  'e6dd1e4814bb0bb6c977cd3b6e4ee600e8d4cdfeb5c4564148d3bb5a38eb8eba',
+  2636),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/BernoulliAssignments.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/BernoulliAssignments.lean',
+  'b124aa9bf8f261d042bc7fe591103a0b5ce13aea',
+  'e6dd1e4814bb0bb6c977cd3b6e4ee600e8d4cdfeb5c4564148d3bb5a38eb8eba',
+  2636),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/frozen/EndpointLaw.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/EndpointLaw.lean',
+  '2a3a51280a0b15f12f0e54c8a03052d3863da912',
+  '0a1e6aa470334ecb7766d53bbdd984b2cdeab0945ec3639984c66d4f3980f616',
+  2704),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/mutation-workspace/EndpointLaw.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/EndpointLaw.lean',
+  '2a3a51280a0b15f12f0e54c8a03052d3863da912',
+  '0a1e6aa470334ecb7766d53bbdd984b2cdeab0945ec3639984c66d4f3980f616',
+  2704),
+ ('research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/formal-route-probability/EndpointLaw.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/EndpointLaw.lean',
+  '2a3a51280a0b15f12f0e54c8a03052d3863da912',
+  '0a1e6aa470334ecb7766d53bbdd984b2cdeab0945ec3639984c66d4f3980f616',
+  2704),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/EndpointLaw.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/EndpointLaw.lean',
+  '2a3a51280a0b15f12f0e54c8a03052d3863da912',
+  '0a1e6aa470334ecb7766d53bbdd984b2cdeab0945ec3639984c66d4f3980f616',
+  2704),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/frozen/GenerativePanels.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/GenerativePanels.lean',
+  '130bc2ea400b43bbbf09c79c31651904b1053e16',
+  '086ec54ea878df015b5a533c77d8b93fc440cad9b68c68e349388bbd376581e9',
+  4484),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/mutation-workspace/GenerativePanels.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/GenerativePanels.lean',
+  '130bc2ea400b43bbbf09c79c31651904b1053e16',
+  '086ec54ea878df015b5a533c77d8b93fc440cad9b68c68e349388bbd376581e9',
+  4484),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/GenerativePanels.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/GenerativePanels.lean',
+  '130bc2ea400b43bbbf09c79c31651904b1053e16',
+  '086ec54ea878df015b5a533c77d8b93fc440cad9b68c68e349388bbd376581e9',
+  4484),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/frozen/HistogramGrouping.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/HistogramGrouping.lean',
+  'd3c9ebb18b555926ccea4ed12b637a04e4340454',
+  '07de3ab146e22f88555edf16cafd96cb1fd7547935f640f64c790861ceed42dc',
+  2601),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/mutation-workspace/HistogramGrouping.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/HistogramGrouping.lean',
+  'd3c9ebb18b555926ccea4ed12b637a04e4340454',
+  '07de3ab146e22f88555edf16cafd96cb1fd7547935f640f64c790861ceed42dc',
+  2601),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/HistogramGrouping.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/HistogramGrouping.lean',
+  'd3c9ebb18b555926ccea4ed12b637a04e4340454',
+  '07de3ab146e22f88555edf16cafd96cb1fd7547935f640f64c790861ceed42dc',
+  2601),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/frozen/Model.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/Model.lean',
+  '76aceddb4d47731c1db7319720c2e503cd117f1b',
+  '878e4e82b13cb572f8d5ce838c10efd930acb35cfdd2b44915c22bb19980769e',
+  3042),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/mutation-workspace/Model.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/Model.lean',
+  '76aceddb4d47731c1db7319720c2e503cd117f1b',
+  '878e4e82b13cb572f8d5ce838c10efd930acb35cfdd2b44915c22bb19980769e',
+  3042),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/Model.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/Model.lean',
+  '76aceddb4d47731c1db7319720c2e503cd117f1b',
+  '878e4e82b13cb572f8d5ce838c10efd930acb35cfdd2b44915c22bb19980769e',
+  3042),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/frozen/Verification.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/Verification.lean',
+  'b4679342ad203cdee85eeec726ab44459dfc4fed',
+  'c66cda0da6393d46178c07912016e02a73d23bdae123fb38a5513ae4fbf57e7d',
+  1548),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/mutation-workspace/Verification.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/Verification.lean',
+  'b4679342ad203cdee85eeec726ab44459dfc4fed',
+  'c66cda0da6393d46178c07912016e02a73d23bdae123fb38a5513ae4fbf57e7d',
+  1548),
+ ('research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/formal-route-probability/Verification.lean',
+  'research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability/Verification.lean',
+  'b4679342ad203cdee85eeec726ab44459dfc4fed',
+  'c66cda0da6393d46178c07912016e02a73d23bdae123fb38a5513ae4fbf57e7d',
+  1548),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/ScopeTest.lean',
+  'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/ScopeTest.lean',
+  '2e633f3980f6db1638934f099089efd335bed4a1',
+  'a53b58e88b6b3f7a9dd4b6693a223743e766b96bfc675e59086cb26d277b9d30',
+  5595),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/results/fixed_act_token.lean',
+  'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/results/fixed_act_token.lean',
+  '88934485195bb34029f82283ead3269c52a23e55',
+  '1802cfb96c76e1202e0812e088313676441d946dfce4a6670e93e0aa88dfd64b',
+  243),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/results/necessary_target.lean',
+  'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/results/necessary_target.lean',
+  '0e157feea11945f8dc94b48e79dad166a0ce33dc',
+  'a4ffbd3832735b5fafd1b50ebba14c280abd5ba7039adcf1d6cc4edc12488852',
+  261),
+ ('research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/results/normalization_forces_nonempty_endpoint.lean',
+  'research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/productive-sufficiency-scope/results/normalization_forces_nonempty_endpoint.lean',
+  '141798d17996aaaf4cc7fb8067e7a861ea28b145',
+  'b56be9cad3c7c7caba544a31647ee224af15a190c4bc7bc87c3a6e80253575de',
+  266),
+ ('research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate-review/ImportInventory.lean',
+  'research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate/ImportInventory.lean',
+  'da869ba63fddd5c5c783405d923b4b2815848dfe',
+  '240941371ef58576258cd8b879ab2d6119157d95e3b0f11156d027585fea0620',
+  194),
+ ('research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate-review/kernel-isolated/FalseConnectorPremise.lean',
+  'research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate/kernel-replay/FalseConnectorPremise.lean',
+  '464f2de70988a7030f70d09db2cd232d05558322',
+  '58f1e282f69df4c355264695de926ecb0942a9126b00f34dca66b5253e7f32d6',
+  3263),
+ ('research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate-review/kernel-isolated/FalseCountBound.lean',
+  'research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate/kernel-replay/FalseCountBound.lean',
+  '1d690c1addabec5fa8fd7f88f2af0aaabb412b9a',
+  '3fdd60e121af0abade18bdb59331ac4f8be8e9eeee8b3490bbebb1895396518f',
+  3277),
+ ('research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate-review/kernel-isolated/RetainedInterior.lean',
+  'research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate/RetainedInterior.lean',
+  '5a3c1979a61ec161a21d02a6ebbf6106981c366e',
+  '85a487cd9041cc46d319a7f239ba77f911293eb922ca8dc9f97e60e98cbc170a',
+  3269),
+ ('research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate/kernel-replay/RetainedInterior.lean',
+  'research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate/RetainedInterior.lean',
+  '5a3c1979a61ec161a21d02a6ebbf6106981c366e',
+  '85a487cd9041cc46d319a7f239ba77f911293eb922ca8dc9f97e60e98cbc170a',
+  3269),
+ ('research/t20-live-20261009/checkpoints/CP19/graph-constrained-continuation-20261009/verified/GraphContinuation.lean',
+  'research/t20-live-20261009/checkpoints/CP19/graph-constrained-continuation-20261009/GraphContinuation.lean',
+  '8ad376afef34fed1a36a06756c333e845c957f65',
+  '2f8b4df91a832fb3d656ee9d854b7a5d625236ecc127588bc574d051c4b2cf73',
+  10145),
+ ('research/t20-live-20261009/checkpoints/CP19/graph-continuation-review-20261009/lean-replay/GraphContinuation.lean',
+  'research/t20-live-20261009/checkpoints/CP19/graph-constrained-continuation-20261009/GraphContinuation.lean',
+  '8ad376afef34fed1a36a06756c333e845c957f65',
+  '2f8b4df91a832fb3d656ee9d854b7a5d625236ecc127588bc574d051c4b2cf73',
+  10145),
+ ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/frontier-kernel-replay/CertificateFrontier.lean',
+  'research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/CertificateFrontier.lean',
+  '208cf6e6250c6ff50d0b03575a6ae7926b70d1ed',
+  '5e799995b95e37105dff8dfe10e5ba78dfe44034334353bcf66107069e8a67e0',
+  12278),
+ ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/independent-review/CertificateFrontier.lean',
+  'research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/CertificateFrontier.lean',
+  '208cf6e6250c6ff50d0b03575a6ae7926b70d1ed',
+  '5e799995b95e37105dff8dfe10e5ba78dfe44034334353bcf66107069e8a67e0',
+  12278),
+ ('research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/CertificateFrontier.lean',
+  'research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/CertificateFrontier.lean',
+  '208cf6e6250c6ff50d0b03575a6ae7926b70d1ed',
+  '5e799995b95e37105dff8dfe10e5ba78dfe44034334353bcf66107069e8a67e0',
+  12278),
+ ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/frontier-kernel-replay/Controls.lean',
+  'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/Controls.lean',
+  '1c6b8900e600c63e30f0aa83f49f7db8211a7cdf',
+  '7d49f0df7d1b5eb633e6edebf17bc0a967eeff1718b9e1cc3fcab1513afb5132',
+  2410),
+ ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/Controls.lean',
+  'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/Controls.lean',
+  '1c6b8900e600c63e30f0aa83f49f7db8211a7cdf',
+  '7d49f0df7d1b5eb633e6edebf17bc0a967eeff1718b9e1cc3fcab1513afb5132',
+  2410),
+ ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/independent-review/Controls.lean',
+  'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/Controls.lean',
+  '1c6b8900e600c63e30f0aa83f49f7db8211a7cdf',
+  '7d49f0df7d1b5eb633e6edebf17bc0a967eeff1718b9e1cc3fcab1513afb5132',
+  2410),
+ ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/frontier-kernel-replay/mutations/CostBlind.lean',
+  'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/CostBlind.lean',
+  '01cef9257fc16b90c16ae14ca9e65aef41cdd787',
+  'c05bf6d3207aeeaa7dddc222092c73d44f73ecc5eab5c8d465485a9a540d5776',
+  227),
+ ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/independent-review/mutations/CostBlind.lean',
+  'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/CostBlind.lean',
+  '01cef9257fc16b90c16ae14ca9e65aef41cdd787',
+  'c05bf6d3207aeeaa7dddc222092c73d44f73ecc5eab5c8d465485a9a540d5776',
+  227),
+ ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/mutations/CostBlind.lean',
+  'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/CostBlind.lean',
+  '01cef9257fc16b90c16ae14ca9e65aef41cdd787',
+  'c05bf6d3207aeeaa7dddc222092c73d44f73ecc5eab5c8d465485a9a540d5776',
+  227),
+ ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/frontier-kernel-replay/mutations/CurrentCost.lean',
+  'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/CurrentCost.lean',
+  '9ad7316c3906603cd262cb781736078b18cd14a5',
+  '876039d480a1415531f1f099679c5094327caf35c7933a36550e09692de1e83d',
+  249),
+ ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/independent-review/mutations/CurrentCost.lean',
+  'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/CurrentCost.lean',
+  '9ad7316c3906603cd262cb781736078b18cd14a5',
+  '876039d480a1415531f1f099679c5094327caf35c7933a36550e09692de1e83d',
+  249),
+ ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/mutations/CurrentCost.lean',
+  'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/CurrentCost.lean',
+  '9ad7316c3906603cd262cb781736078b18cd14a5',
+  '876039d480a1415531f1f099679c5094327caf35c7933a36550e09692de1e83d',
+  249),
+ ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/frontier-kernel-replay/mutations/InfinitePrice.lean',
+  'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/InfinitePrice.lean',
+  'ffa13821c157cd943b1bcb5f6aa514c917f198b1',
+  '0b2d8b2584f48d343d753a373161e28f93c397982ce9ab4c098b8daf16db31fe',
+  293),
+ ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/independent-review/mutations/InfinitePrice.lean',
+  'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/InfinitePrice.lean',
+  'ffa13821c157cd943b1bcb5f6aa514c917f198b1',
+  '0b2d8b2584f48d343d753a373161e28f93c397982ce9ab4c098b8daf16db31fe',
+  293),
+ ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/mutations/InfinitePrice.lean',
+  'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/InfinitePrice.lean',
+  'ffa13821c157cd943b1bcb5f6aa514c917f198b1',
+  '0b2d8b2584f48d343d753a373161e28f93c397982ce9ab4c098b8daf16db31fe',
+  293),
+ ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/independent-review/ScopeChecks.lean',
+  'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/independent-review/ScopeChecks.lean',
+  '2efba39e95c7b0cf38b246654d64f16e099f8e31',
+  '6218ff6fa7b6e5b304859c2f4ad3d512118f1a3c9b68ec7e446d6cc1cd2d78a6',
+  1345))
+FORMAL_COPY_MEMBERS_SHA256 = 'de1c51c3a3f27aa190d8237c91fe68ccbb21154b17c3721a489fe71d6ff59d37'
+FORMAL_PUBLIC_MEMBERS = (('experiments/orthemology-v5-continuations/source-store/0f8e551de28b6bdf549e0d2ecba0932bb2758b8ff57aaf5f1cf5956d7d88d8cd.lean',
+  'e226857f99c81c90bacf27580cf44f80efee8cd8b51105642a98709be04e6230'),
+ ('experiments/orthemology-v5-continuations/source-store/12dfbed26b887067f2bbd2a75930d038558b3a5c715100d7c25d3cfee79a7fdb.lean',
+  'b39c06d649dea07629d6870530139a1b73137a0334f7544203fdb27c203f1169'),
+ ('experiments/orthemology-v5-continuations/source-store/4c1d8a9d8a9a6ebec9f5e1a1ee41008b75fbfffeabbbd9ee489ea21982425a08.lean',
+  '2bc085f620d469552b5ff7e483b59eede21db78506973d046ef83db1882c3206'),
+ ('experiments/orthemology-v5-continuations/source-store/766ae9391263f193c6e84e16042281fb5e70fe680f083f0359b4b3c10f215779.lean',
+  '203b8cf11d60fbf245c0355b5f132757ac68c49d56ec81a0b36650e10425c73b'),
+ ('experiments/orthemology-v5-continuations/source-store/8485a2156b943ce569af6f219d69d7d24b00b41b04b8225a68d7480d2d70522d.lean',
+  'babb169a57c56df564fd57ab434718f4909e8f5bd24d63dc639ac47a1f37bac2'),
+ ('experiments/orthemology-v5-continuations/source-store/d3494436356f8aec5510b004e2a977c9946533f6190219f30eee2de511b53f4e.lean',
+  '297f8bede968c500077567a69a9f7ba3c92629aced150d6a32bfdd80c6bbae76'),
+ ('experiments/orthemology-v5-continuations/source-store/f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96.lean',
+  '82ee275d73c1175828246e22558d55b0f536f9796cedf209760114e98f2801d1'),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification-review/frozen/CalibratedPanels.lean',
+  'a94e075aedbfd323066e2e3d9c448c4324cba0a66024134621bf21b3f853a2dd'),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification-review/frozen/Calibration.lean',
+  '4d6ce88b6f9861a6e16474b9fdae3cd0065c35bf2ee6999a4174490dbb5658a7'),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification-review/frozen/HitTransform.lean',
+  '6ef417e8c3a354484fd5516ed88f89007916b0b5b7afb7f39fc2a697b5b9faf2'),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-identification-review/frozen/Verification.lean',
+  '6828c55050390d08827d08324d85638909ea9ba6ee0b6057eb50cdcab68da426'),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/frozen/BernoulliAssignments.lean',
+  '5479c27ef9ba926baf67cc729ee1de8745d72763fbfe81013afe3aeb0291e468'),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/frozen/EndpointLaw.lean',
+  '1955766441ae48efc8fed4244c15e3d1f0f6db1ac538d5301b355f23f69e11ca'),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/frozen/GenerativePanels.lean',
+  '4bfe487a3035317b2952c0fbe0edd5f0671b50c26f642c4ed20d2ca92f52ae27'),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/frozen/HistogramGrouping.lean',
+  '96d836539a45e6b5052de22c0cee2d4ebc5126d65a7c8849acc4863ae6ff7e6f'),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/frozen/Model.lean',
+  '2f34079118372c9d11362046cd7453bcc58d3a2eb235fb13382aa1c5675bd7b7'),
+ ('research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/formal-route-probability-review/frozen/Verification.lean',
+  '9e584791d95a6f1d9b49f369ecfc62ee83d8bc5f7769d5b0fe9b32af53f91387'),
+ ('research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate-review/ImportInventory.lean',
+  '7df4c8333864b66adbd1fff67095518bcd55d88da505f6357222eaf390c3f90a'),
+ ('research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate-review/kernel-isolated/FalseConnectorPremise.lean',
+  'de05da6fd8fa5b76c7a4ed4d769d955c9031b18670a74df320db49f668e60305'),
+ ('research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate-review/kernel-isolated/FalseCountBound.lean',
+  '5273a642875beb31e8bd135af55eec550c3ba6c05f8daa3b4956fe8fb27b69c3'),
+ ('research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate-review/kernel-isolated/RetainedInterior.lean',
+  '626edb56f345be531bade962af7f452d5d33f89b940cd63f708512742ac20e19'),
+ ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/frontier-kernel-replay/CertificateFrontier.lean',
+  '7120d15aa2056ecbc0609f88b3a15c057f1eedbf84125e8cfbf36880fafd163e'),
+ ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/frontier-kernel-replay/Controls.lean',
+  'e10019dad63f1c8b96dbf5a40e09383b1f5b5db1f165ab49f47aacb25a8c135d'),
+ ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/frontier-kernel-replay/mutations/CostBlind.lean',
+  '999e1df5851bef57266ccda86db59bb8c3437a3cf103bd01e02d9be01da2ceac'),
+ ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/frontier-kernel-replay/mutations/CurrentCost.lean',
+  '8a6264b005544897ae3add937d8fc25d9e6e3b7435d980921a374abf49050543'),
+ ('research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/frontier-kernel-replay/mutations/InfinitePrice.lean',
+  'fc028cd81562a8968c196a01a0b21f819e28b14a66fbcf5503efe54d041719ec'),
+ ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/independent-review/ScopeChecks.lean',
+  'f843892ea1afea1ce881679a3d068cd3421742c3755d27feedd54dfa92114ff4'))
+FORMAL_PUBLIC_MEMBERS_SHA256 = 'e9e5ace0005db8af0d82ae41e2314d266300b05f50672bb4f1d2b507a97dc9f5'
+CONTINUATION_FORMAL_RETARGETS = (('experiments/orthemology-v5-continuations/source-store/f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96.lean',
+  'experiments/orthemology-v5-successors/source-store/f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96/AuditSupport.lean',
+  'experiments/orthemology-v5/source/lean/AuditSupport.lean',
+  '4ba3d9db5e9157c7c183a1045d82e3c40be887f9',
+  'f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96',
+  1024),)
+CONTINUATION_FORMAL_RETARGETS_SHA256 = '6a433a1284ca0d1410afa33e9d90736448209077aa03bde028b3ee0c81896205'
+FORMAL_CONTINUATION_SOURCE_MEMBERS = (('src-866c6ff6e74a67f2-32f3457897f7365f',
+  'experiments/orthemology-v5-continuations/source-store/0f8e551de28b6bdf549e0d2ecba0932bb2758b8ff57aaf5f1cf5956d7d88d8cd.lean',
+  '2e7c4caca6ce91ab6fae306e95e90ab32b372a708b0749a1634976cbdcfa9634'),
+ ('src-866c6ff6e74a67f2-35cd3b8045bab054',
+  'experiments/orthemology-v5-continuations/source-store/0f8e551de28b6bdf549e0d2ecba0932bb2758b8ff57aaf5f1cf5956d7d88d8cd.lean',
+  '7f7f493c1c28d7250cc485ef49b0e04934fded40c79c54c4a141a02ac01eccd6'),
+ ('src-866c6ff6e74a67f2-3e93323a3f29bb5a',
+  'experiments/orthemology-v5-continuations/source-store/12dfbed26b887067f2bbd2a75930d038558b3a5c715100d7c25d3cfee79a7fdb.lean',
+  '574d3f804893c9159e2c0c7bdce959403d787e8629b728cbcc553ad0150f01fa'),
+ ('src-866c6ff6e74a67f2-65795fa696b7195b',
+  'experiments/orthemology-v5-continuations/source-store/d3494436356f8aec5510b004e2a977c9946533f6190219f30eee2de511b53f4e.lean',
+  '96434881b71ddede1a128613a0a2ae78dc7ec251c86e7cb272f6acd8b4d1f1cc'),
+ ('src-866c6ff6e74a67f2-745256f635eb1b4a',
+  'experiments/orthemology-v5-continuations/source-store/766ae9391263f193c6e84e16042281fb5e70fe680f083f0359b4b3c10f215779.lean',
+  'a558442e5cb0735c38e1413b7ee2fe7969b288adb8a1767f3a6ad5c0c28a8131'),
+ ('src-866c6ff6e74a67f2-8093c78798d6cca2',
+  'experiments/orthemology-v5-continuations/source-store/8485a2156b943ce569af6f219d69d7d24b00b41b04b8225a68d7480d2d70522d.lean',
+  'a227837d99e1e264eb108145a00bbc2de62a9e250a32e4409dd9d9d288c585e1'),
+ ('src-866c6ff6e74a67f2-a6ebca3a4d81869b',
+  'experiments/orthemology-v5-continuations/source-store/8485a2156b943ce569af6f219d69d7d24b00b41b04b8225a68d7480d2d70522d.lean',
+  '2be6798c15d6c520422d5dc2f6514a201f9eb3ee664c7490a8d5da8068c8c291'),
+ ('src-866c6ff6e74a67f2-afaf5bb6a3463145',
+  'experiments/orthemology-v5-continuations/source-store/4c1d8a9d8a9a6ebec9f5e1a1ee41008b75fbfffeabbbd9ee489ea21982425a08.lean',
+  '3652b78174689c1604fccaa37566a3836da8f1b5b3852eca0dd5ee0f8e3f8fac'),
+ ('src-866c6ff6e74a67f2-cff78a4285d78182',
+  'experiments/orthemology-v5-continuations/source-store/12dfbed26b887067f2bbd2a75930d038558b3a5c715100d7c25d3cfee79a7fdb.lean',
+  'b3a05ed1d44137c6abec0a3fcf22b06f7f5f1a99e5a596792bd7628ebadb2550'),
+ ('src-866c6ff6e74a67f2-d0674b738864eae6',
+  'experiments/orthemology-v5-continuations/source-store/766ae9391263f193c6e84e16042281fb5e70fe680f083f0359b4b3c10f215779.lean',
+  '242e74e9fa4b89562ec623a1b7a4ae23b40e7ec6cf64877fef0f37205cd44274'),
+ ('src-866c6ff6e74a67f2-def38b90ccbec6a6',
+  'experiments/orthemology-v5-continuations/source-store/4c1d8a9d8a9a6ebec9f5e1a1ee41008b75fbfffeabbbd9ee489ea21982425a08.lean',
+  '2b5aacaddc28bf3e4faa4d42fd1ce77d126a5ce5c5de7a52fcd65f493806871b'),
+ ('src-866c6ff6e74a67f2-f8db73bee7f4cf95',
+  'experiments/orthemology-v5-continuations/source-store/d3494436356f8aec5510b004e2a977c9946533f6190219f30eee2de511b53f4e.lean',
+  'f02d623b8dc81e65698f18cfdfdc6542636b10e9b2a56f72ad7a603434b43f76'))
+FORMAL_CONTINUATION_SOURCE_MEMBERS_SHA256 = '2de02c958585f0089ab5974db3d8f2a6b3f443e95d9186b060f30b252778a447'
+FORMAL_SUCCESSOR_SOURCE_MEMBERS = (('T16-SRC-9defcecf448b7eff64a3',
+  'experiments/orthemology-v5-successors/source-store/b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183/PhaseStabilization.lean',
+  '0fa4e6ae04a207cdd5bbb2f705ea1b657737f91853053b712c20e378e72b3f1d'),
+ ('T18-SRC-e17dde5c235ce8f7cdf3',
+  'experiments/orthemology-v5-successors/source-store/b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183/PhaseStabilization.lean',
+  'b24f87865b69eab991c333dbf0444408fc7c9e10c5ab279880e18068e78e3c71'),
+ ('T20-SRC-2b486650b115df568986',
+  'experiments/orthemology-v5-successors/source-store/0e0636bf2cbd583b0a7193d9cc5985bdca6c5e52a0c895f01e9cd71b5677e34c/ReviewerReadback.lean',
+  'd78131b36fa4ab0670ba27b5662238f9b698377353eafb4c69b59c2eb8d52b2c'),
+ ('identity-src-238c1dfb4fcf213c07ba',
+  'experiments/orthemology-v5-successors/source-store/f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96/AuditSupport.lean',
+  '8c1c4338910e8e1ac529495a4807e2e72d3e1e6fddc9f81f2c8afd5d7c1897f9'),
+ ('identity-src-46bc8a425b4dceebe493',
+  'experiments/orthemology-v5-successors/source-store/f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96/AuditSupport.lean',
+  '245581c6a57c60c6ad46a9c887f4b4329aa0f3b805539297eeecc4d9a1a6c575'),
+ ('identity-src-a7b7307578252e460f78',
+  'experiments/orthemology-v5-successors/source-store/f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96/AuditSupport.lean',
+  'dc7b6b0f21aa5a16208da13244a9c125479d7d50cc19cc3c4e1efc35487b51ee'),
+ ('s0715-179a29b309f46405321b',
+  'experiments/orthemology-v5-successors/source-store/b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183/PhaseStabilization.lean',
+  '3b9784a6f233553d033649b1fb0c9a7a566d974ca494eb3a0382560ff30b2847'),
+ ('s0715-89259ffa9f43a905f9ad',
+  'experiments/orthemology-v5-successors/source-store/b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183/PhaseStabilization.lean',
+  'c52024e59ed9792eebaf2b859860595d1dfcbc4ebaa02e355f28dcc199f039a4'),
+ ('s0715-c045f612cd9cf2974e56',
+  'experiments/orthemology-v5-successors/source-store/b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183/PhaseStabilization.lean',
+  '003f50b907bfbfd4bb689d26734e54b96ac7a14fbbca9e9c0c5e73c7d3f353fe'))
+FORMAL_SUCCESSOR_SOURCE_MEMBERS_SHA256 = '5a1d6512928ca3a41b7c13608b3aa180de857f61b8bc7f1962494c936164fd9b'
+FORMAL_SUCCESSOR_ALLOWLIST_MEMBERS = (('experiments/orthemology-v5-successors/source-store/0e0636bf2cbd583b0a7193d9cc5985bdca6c5e52a0c895f01e9cd71b5677e34c/ReviewerReadback.lean',
+  'ca0db331d3eb2caf9747ebc15b2c387b7c858121b63923623e1968dc30ef4867'),
+ ('experiments/orthemology-v5-successors/source-store/b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183/PhaseStabilization.lean',
+  '5f8116b123ac3795d0f0054e6e13655a7846043979998a670d75efcef8b203b9'),
+ ('experiments/orthemology-v5-successors/source-store/f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96/AuditSupport.lean',
+  '03ff3847817dca83bcd36419819c2f4dc0ccb874de79e555a9c062d61da6c395'))
+FORMAL_SUCCESSOR_ALLOWLIST_MEMBERS_SHA256 = 'a1b31d3d3d7e44f5f0c618851a4fd5cfa07bfdf2b86967c9b40774c41226cef6'
+
+FORMAL_COPY_PATHS = frozenset(row[0] for row in FORMAL_COPY_MEMBERS)
+FORMAL_CONTINUATION_PATHS = frozenset(row[1] for row in FORMAL_CONTINUATION_SOURCE_MEMBERS)
+FORMAL_SUCCESSOR_PATHS = frozenset(row[1] for row in FORMAL_SUCCESSOR_SOURCE_MEMBERS)
+CONTINUATION_FORMAL_RETARGET_PATHS = frozenset(row[0] for row in CONTINUATION_FORMAL_RETARGETS)
+
+
 # Existing frozen replay contracts and recorded execution evidence. The native
 # original tree owns identities; this finite selector does not create another
 # scientific registry or turn historical receipts into current execution.
@@ -3716,7 +4216,7 @@ def continuation_copy_bytes(root, path, identity=None, size=None, source=None):
             or (size is not None and size != binding['bytes'])
             or (source is not None and source not in binding['sources'])):
         raise ValueError('unqualified continuation copy or source-ID binding')
-    return _continuation_bound_bytes(root, path, binding)
+    return _continuation_formal_bound_bytes(root, path, binding)
 
 
 def continuation_duplicate_paths(root):
@@ -3724,7 +4224,7 @@ def continuation_duplicate_paths(root):
     result = set()
     for path, binding in _continuation_copy_catalog(root).items():
         if not os.path.lexists(pathlib.Path(root) / path):
-            _continuation_bound_bytes(root, path, binding)
+            _continuation_formal_bound_bytes(root, path, binding)
             result.add(path)
     return result
 
@@ -4715,6 +5215,135 @@ def generated_fixture_source_bytes(root, row):
     return body
 
 
+def _formal_tuple_binding(values, count, expected):
+    if len(values) != count or digest(json.dumps(values, separators=(',', ':')).encode()) != expected:
+        raise ValueError('formal finite catalog differs')
+
+
+def _formal_copy_catalog():
+    """Bind71 original formal coordinates without changing their proof roles."""
+    _formal_tuple_binding(FORMAL_COPY_MEMBERS, 71, FORMAL_COPY_MEMBERS_SHA256)
+    result = {}
+    for alias, canonical, blob, identity, size in FORMAL_COPY_MEMBERS:
+        for path in (alias, canonical):
+            if (not isinstance(path, str) or not path.endswith('.lean')
+                    or not path.startswith(('experiments/orthemology-v5/',
+                        'experiments/orthemology-v5-continuations/', 'experiments/orthemology-v5-successors/',
+                        'research/t20-live-20261009/'))
+                    or '\\' in path or '\0' in path or ':' in path
+                    or any(part in ('', '.', '..', '.git') for part in path.split('/'))):
+                raise ValueError('formal source coordinate differs')
+        if (alias == canonical or alias in result or not re.fullmatch(r'[0-9a-f]{40}', blob)
+                or not re.fullmatch(r'[0-9a-f]{64}', identity) or type(size) is not int or size <= 0):
+            raise ValueError('formal source identity differs')
+        result[alias] = {'canonical': canonical, 'blob': blob, 'sha256': identity, 'bytes': size, 'mode': '100644'}
+    kept = {r['canonical'] for r in result.values()}
+    if (len(result) != 71 or len(kept) != 37 or set(result) & kept
+            or FORMAL_COPY_PATHS != frozenset(result)
+            or len(FORMAL_CONTINUATION_PATHS) != 6 or len(FORMAL_SUCCESSOR_PATHS) != 3
+            or not FORMAL_CONTINUATION_PATHS < set(result) or not FORMAL_SUCCESSOR_PATHS < set(result)
+            or FORMAL_CONTINUATION_PATHS & FORMAL_SUCCESSOR_PATHS
+            or set(result) & (CHECKPOINT_COPY_PATHS | CHECKPOINT_RECORD_COPY_PATHS | CHECKPOINT_PACKAGE_COPY_PATHS)):
+        raise ValueError('formal retained population differs')
+    return result
+
+
+def formal_copy_bytes(root, path, identity=None, size=None):
+    """Read a finite exact body at its original logical source coordinate."""
+    if not isinstance(path, str) or path not in FORMAL_COPY_PATHS:
+        raise ValueError('unqualified formal source path')
+    binding = _formal_copy_catalog()[path]
+    if ((identity is not None and identity != binding['sha256'])
+            or (size is not None and size != binding['bytes'])):
+        raise ValueError('formal requested identity differs')
+    return _checkpoint_bound_bytes(root, path, binding)
+
+
+def formal_duplicate_paths(root):
+    """Authenticate the complete class before admitting actual source absences."""
+    result = set()
+    for path, binding in _formal_copy_catalog().items():
+        _checkpoint_bound_bytes(root, path, binding)
+        if not os.path.lexists(pathlib.Path(root) / path):
+            result.add(path)
+    return result
+
+
+def _continuation_formal_bound_bytes(root, path, binding):
+    """Preserve the legacy source rows and two anchors across one provider chain."""
+    _formal_tuple_binding(CONTINUATION_FORMAL_RETARGETS, 1, CONTINUATION_FORMAL_RETARGETS_SHA256)
+    if CONTINUATION_FORMAL_RETARGET_PATHS != frozenset(r[0] for r in CONTINUATION_FORMAL_RETARGETS):
+        raise ValueError('formal prior-provider population differs')
+    if path not in CONTINUATION_FORMAL_RETARGET_PATHS:
+        return _continuation_bound_bytes(root, path, binding)
+    alias, former, canonical, blob, identity, size = CONTINUATION_FORMAL_RETARGETS[0]
+    expected = {'canonical': canonical, 'blob': blob, 'sha256': identity, 'bytes': size, 'mode': '100644'}
+    if (path != alias or _formal_copy_catalog().get(former) != expected
+            or binding.get('canonical') != former
+            or (binding.get('blob'), binding.get('sha256'), binding.get('bytes')) != (blob, identity, size)):
+        raise ValueError('formal prior-provider identity differs')
+    # A correct endpoint cannot conceal a corrupt present/staged former provider.
+    _checkpoint_bound_bytes(root, former, expected)
+    return _continuation_bound_bytes(root, path, dict(binding, canonical=canonical))
+
+
+def _formal_row_digest(row):
+    return digest(json.dumps(row, sort_keys=True, ensure_ascii=False,
+                             separators=(',', ':'), allow_nan=False).encode('utf-8'))
+
+
+def _formal_source_row_bytes(root, row, continuation):
+    if not isinstance(row, dict):
+        raise ValueError('formal source row is not an object')
+    if continuation:
+        values, count, expected = FORMAL_CONTINUATION_SOURCE_MEMBERS, 12, FORMAL_CONTINUATION_SOURCE_MEMBERS_SHA256
+        path_key, identity_key, size_key, paths = 'path', 'sha256', 'bytes', FORMAL_CONTINUATION_PATHS
+    else:
+        values, count, expected = FORMAL_SUCCESSOR_SOURCE_MEMBERS, 9, FORMAL_SUCCESSOR_SOURCE_MEMBERS_SHA256
+        path_key, identity_key, size_key, paths = 'public_path', 'public_sha256', 'public_bytes', FORMAL_SUCCESSOR_PATHS
+    _formal_tuple_binding(values, count, expected)
+    members = {key: (path, identity) for key, path, identity in values}
+    if (len(members) != count or frozenset(path for path, _ in members.values()) != paths
+            or row.get(path_key) not in paths
+            or members.get(row.get('id')) != (row.get(path_key), _formal_row_digest(row))):
+        raise ValueError('formal full source-ID/provenance row differs')
+    return formal_copy_bytes(root, row[path_key], row[identity_key], row[size_key])
+
+
+def continuation_formal_source_bytes(root, row):
+    """Keep all twelve original origin/member/source-ID bindings unchanged."""
+    return _formal_source_row_bytes(root, row, True)
+
+
+def successor_formal_source_bytes(root, row):
+    """Keep all nine original source IDs and complete provenance contracts."""
+    return _formal_source_row_bytes(root, row, False)
+
+
+def successor_formal_allowlist_bytes(root, row):
+    _formal_tuple_binding(FORMAL_SUCCESSOR_ALLOWLIST_MEMBERS, 3, FORMAL_SUCCESSOR_ALLOWLIST_MEMBERS_SHA256)
+    members = dict(FORMAL_SUCCESSOR_ALLOWLIST_MEMBERS)
+    if (len(members) != 3 or frozenset(members) != FORMAL_SUCCESSOR_PATHS
+            or not isinstance(row, dict) or row.get('path') not in members
+            or members[row['path']] != _formal_row_digest(row)):
+        raise ValueError('formal allowlist kind/source associations differ')
+    return formal_copy_bytes(root, row['path'], row['sha256'], row['bytes'])
+
+
+def _formal_public_source_bytes(root, row):
+    _formal_tuple_binding(FORMAL_PUBLIC_MEMBERS, 27, FORMAL_PUBLIC_MEMBERS_SHA256)
+    members = dict(FORMAL_PUBLIC_MEMBERS)
+    if (len(members) != 27 or len(set(members) & FORMAL_COPY_PATHS) != 26
+            or set(members) - FORMAL_COPY_PATHS != CONTINUATION_FORMAL_RETARGET_PATHS
+            or not isinstance(row, dict) or row.get('repository_path') not in members
+            or members[row['repository_path']] != _formal_row_digest(row)):
+        raise ValueError('formal existing public role or complete identity differs')
+    path = row['repository_path']
+    if path in CONTINUATION_FORMAL_RETARGET_PATHS:
+        return continuation_copy_bytes(root, path, row['public_sha256'], row['public_bytes'])
+    return formal_copy_bytes(root, path, row['public_sha256'], row['public_bytes'])
+
+
 def continuation_registry_source_bytes(root, row):
     """Keep one original public registry and its complete current owner edition.
 
@@ -4827,6 +5456,8 @@ def source_bytes(root, row):
         body = generated_fixture_source_bytes(root, row)
     elif str(path) == CONTINUATION_REGISTRY_PATH:
         body = continuation_registry_source_bytes(root, row)
+    elif str(path) in FORMAL_COPY_PATHS or str(path) in CONTINUATION_FORMAL_RETARGET_PATHS:
+        body = _formal_public_source_bytes(root, row)
     elif str(path) in ADMIN_PUBLIC_GUIDE_PATHS and row.get('repository_revision'):
         blob, identity, size, _ = ADMIN_GUIDES[str(path)]
         if (row.get('repository_revision') != ADMIN_RECORD_BASE or row.get('git_blob') != blob
