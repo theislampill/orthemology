@@ -2,6 +2,7 @@
 from pathlib import Path
 from unittest.mock import patch
 import os
+import pathlib
 import importlib.util
 import json
 import subprocess
@@ -1095,7 +1096,8 @@ class PublicFixtureReconciliationCommandControls(unittest.TestCase):
             'PMR007_ROUNDS_FORMALIZATION', 'PMR007_ROUNDS_FORMALIZATION_SHA256',
         }
         functions = {
-            '_pmr007_deep_regular_file', '_pmr007_deep_original_members',
+            '_pmr007_deep_regular_file', '_pmr007_deep_member_bytes',
+            '_pmr007_deep_original_members',
             '_pmr007_deep_duplicate_map', 'pmr007_deep_duplicate_paths',
             '_pmr007_rounds_original_members', 'pmr007_rounds_duplicate_paths',
             'pmr007_rounds_formalization_navigation',
@@ -1112,6 +1114,36 @@ class PublicFixtureReconciliationCommandControls(unittest.TestCase):
         namespace = {'ROOT': Path('/unused-synthetic-default'), 'Path': Path,
                      'hashlib': hashlib, 're': re, 'os': os,
                      'subprocess': types.SimpleNamespace()}
+        # The current member getter uses the actual finite custody provider.
+        # Load its entire operational dependency closure, never a permissive
+        # path read or an empty catalogue. No resolver module is imported.
+        resolver_path = source_path.with_name('resolve_t20_v6_source.py')
+        resolver_constants = {'DIGEST_RECORD_BASE', 'DIGEST_RECORD_TREE_SHA256',
+                              'DIGEST_RECORD_GROUPS', 'DIGEST_RECORD_PATHS'}
+        resolver_functions = {
+            'digest', '_administrative_git', '_binding_record_root',
+            '_binding_record_present', '_binding_record_current_state',
+            '_digest_record_root', '_digest_record_state',
+            '_digest_record_current_bytes', '_digest_record_bound_bytes',
+            '_digest_record_read', '_digest_record_catalog',
+            '_digest_record_view_binding', 'digest_record_view_bytes',
+        }
+        resolver_selected, resolver_found = [], set()
+        for node in ast.parse(resolver_path.read_bytes(), filename=str(resolver_path)).body:
+            if isinstance(node, ast.FunctionDef) and node.name in resolver_functions:
+                resolver_selected.append(node); resolver_found.add(node.name)
+            elif (isinstance(node, ast.Assign) and len(node.targets) == 1
+                  and isinstance(node.targets[0], ast.Name)
+                  and node.targets[0].id in resolver_constants):
+                resolver_selected.append(node); resolver_found.add(node.targets[0].id)
+        if resolver_found != resolver_constants | resolver_functions:
+            raise AssertionError('Exact digest custody dependency population changed')
+        resolver_namespace = {'pathlib': pathlib, 'hashlib': hashlib, 're': re,
+                              'os': os, 'stat': stat, 'subprocess': types.SimpleNamespace()}
+        exec(compile(ast.Module(body=resolver_selected, type_ignores=[]),
+                     str(resolver_path), 'exec'), resolver_namespace)
+        namespace['DIGEST_RECORD_PATHS'] = resolver_namespace['DIGEST_RECORD_PATHS']
+        namespace['digest_record_view_bytes'] = resolver_namespace['digest_record_view_bytes']
         exec(compile(ast.Module(body=selected, type_ignores=[]), str(source_path), 'exec'), namespace)
         audit_nodes = [node for node in ast.parse(audit_path.read_bytes(), filename=str(audit_path)).body
                        if isinstance(node, (ast.FunctionDef, ast.ClassDef))
@@ -1182,6 +1214,8 @@ class PublicFixtureReconciliationCommandControls(unittest.TestCase):
         self.ls_tree_result = None
         self.index_result = None
         self.namespace['subprocess'].run = self._run
+        self.digest_namespace = self.namespace['digest_record_view_bytes'].__globals__
+        self.digest_namespace['subprocess'].run = self._digest_run
         self.original_navigation = None
         if kind == 'rounds':
             theorem_paths = [name for name in sorted(self.duplicates) if '/PROPOSED_THEOREM_FILES/' in name]
@@ -1247,6 +1281,21 @@ class PublicFixtureReconciliationCommandControls(unittest.TestCase):
         else:
             self.fail('Unexpected synthetic native command: ' + repr(command))
         return subprocess.CompletedProcess(argv, code, body, b'')
+
+    def _digest_run(self, argv, *, cwd, capture_output, check, env):
+        """An unavailable synthetic history still passes through the real audit."""
+        command = ['git', '--no-replace-objects', '--literal-pathspecs',
+                   'cat-file', 'commit', self.digest_namespace['DIGEST_RECORD_BASE']]
+        self.case.setdefault('digest_attempts', []).append(list(argv))
+        self.audit.audit('subprocess.Popen', (argv[0], argv, str(cwd), env))
+        self.assertEqual(argv, command)
+        self.assertEqual(Path(cwd), self.repo)
+        self.assertTrue(capture_output); self.assertFalse(check)
+        for key, value in {'GIT_NO_LAZY_FETCH': '1', 'GIT_NO_REPLACE_OBJECTS': '1',
+                           'GIT_ALLOW_PROTOCOL': '', 'GIT_OPTIONAL_LOCKS': '0',
+                           'GIT_TERMINAL_PROMPT': '0'}.items():
+            self.assertEqual(env[key], value)
+        return subprocess.CompletedProcess(argv, 1, b'', b'synthetic history unavailable')
 
     def _qualify(self):
         return self.namespace['pmr007_' + self.kind + '_duplicate_paths'](self.repo)
@@ -1372,6 +1421,40 @@ class PublicFixtureReconciliationCommandControls(unittest.TestCase):
                             relocated = parent.with_name(parent.name + '-moved')
                             parent.rename(relocated); parent.symlink_to(relocated, target_is_directory=True)
                         with self.assertRaises(ValueError): self._qualify()
+
+    def test_digest_manifest_retains_current_inode_witness(self):
+        # Clearing the finite set or substituting an ordinary read loses this
+        # descriptor witness and must fail this consumer-facing control.
+        for kind in ('deep', 'rounds'):
+            with self.subTest(kind=kind):
+                self._make(kind)
+                relative = self.prefix + '/SHA256SUMS'
+                target = self.repo / relative
+                original = target.read_bytes()
+                native_open, replacements = os.open, []
+                def replace_before_open(name, flags, *args, **kwargs):
+                    if not isinstance(name, int) and Path(name) == target:
+                        self.assertFalse(replacements)
+                        target.rename(target.with_name('parked-inert-manifest'))
+                        target.write_bytes(original)
+                        replacements.append(relative)
+                    return native_open(name, flags, *args, **kwargs)
+                with patch.object(os, 'open', side_effect=replace_before_open):
+                    with self.assertRaisesRegex(ValueError, 'current descriptor changed'):
+                        self.namespace['_pmr007_deep_member_bytes'](self.repo, relative)
+                self.assertEqual(replacements, [relative])
+
+    def test_missing_digest_manifest_keeps_history_failure_closed(self):
+        for kind in ('deep', 'rounds'):
+            with self.subTest(kind=kind):
+                self._make(kind)
+                relative = self.prefix + '/SHA256SUMS'
+                (self.repo / relative).unlink()
+                with self.assertRaisesRegex(OSError, 'historical digest is unavailable'):
+                    self.namespace['_pmr007_deep_member_bytes'](self.repo, relative)
+                self.assertFalse((self.repo / relative).exists())
+                self.assertEqual(len(self.case['digest_attempts']), 1)
+                self.assertEqual(self.audit.private_denials, [])
 
     def test_manifest_and_original_source_count_guards(self):
         for kind in ('deep', 'rounds'):

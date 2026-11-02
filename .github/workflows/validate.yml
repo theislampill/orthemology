@@ -26,6 +26,12 @@ jobs:
           python -B tests/test_source_alias_absence_population.py
           PUBLIC123_REVISION_RESOURCES="$(mktemp -d "$RUNNER_TEMP/r0002-public123-boundary.XXXXXX")" python -B tests/test_source_alias_absence_boundary.py
           PUBLIC123_REVISION_RESOURCES="$(mktemp -d "$RUNNER_TEMP/r0002-public123-evidence.XXXXXX")" python -B tests/test_source_alias_absence_evidence.py
+      - name: Previously failed continuation receipt controls
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          python -B tests/test_research_continuations.py ActualEvidenceAssociationTests.test_array_receipt_has_descriptive_validation_failure ActualEvidenceAssociationTests.test_qualified_original_controls_require_provenance
+          python -B -O tests/test_research_continuations.py ActualEvidenceAssociationTests.test_array_receipt_has_descriptive_validation_failure ActualEvidenceAssociationTests.test_qualified_original_controls_require_provenance
       - name: Combined public source-alias absence and exact restoration
         id: source_alias_absence
         if: github.event_name == 'pull_request'

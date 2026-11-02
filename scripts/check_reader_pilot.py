@@ -394,8 +394,25 @@ def permitted_reader_ci_addition(repo, row, body):
         if resource_addition.count(plain) != 1:
             return False
         resource_addition = resource_addition.replace(plain, qualified, 1)
-    return body == reader_candidate.replace(
+    resource_candidate = reader_candidate.replace(
         absence_anchor, resource_addition + public123_addition + absence_anchor, 1)
+    if body == resource_candidate:
+        return True
+    # These two original receipt controls run early in both interpreter modes.
+    # The complete previous workflow remains the exact prefix/insertion owner.
+    continuation_anchor = b"      - name: Combined public source-alias absence and exact restoration\n"
+    continuation_addition = (
+        b'      - name: Previously failed continuation receipt controls\n'
+        b'        env:\n'
+        b'          PYTHONDONTWRITEBYTECODE: "1"\n'
+        b'        run: |\n'
+        b'          python -B tests/test_research_continuations.py ActualEvidenceAssociationTests.test_array_receipt_has_descriptive_validation_failure ActualEvidenceAssociationTests.test_qualified_original_controls_require_provenance\n'
+        b'          python -B -O tests/test_research_continuations.py ActualEvidenceAssociationTests.test_array_receipt_has_descriptive_validation_failure ActualEvidenceAssociationTests.test_qualified_original_controls_require_provenance\n'
+    )
+    if resource_candidate.count(continuation_anchor) != 1 or continuation_addition in resource_candidate:
+        return False
+    return body == resource_candidate.replace(
+        continuation_anchor, continuation_addition + continuation_anchor, 1)
 
 
 
