@@ -508,9 +508,10 @@ class ReaderPilotTests(unittest.TestCase):
         self.assertEqual(workflow.count(start), 1)
         self.assertEqual(workflow.count(anchor), 1)
         addition = workflow[workflow.index(start):workflow.index(anchor)]
-        self.assertEqual(addition.count("      - name: "), 7)
+        self.assertEqual(addition.count("      - name: "), 8)
         self.assertEqual([line for line in addition.splitlines() if line.startswith("      - name: ")], [
             "      - name: Source-alias admission and evidence controls",
+            "      - name: Previously failed continuation receipt controls",
             "      - name: Combined public source-alias absence and exact restoration",
             "      - name: Receive bounded source-alias evidence",
             "      - name: Preserve bounded source-alias evidence",
@@ -558,6 +559,7 @@ class ReaderPilotTests(unittest.TestCase):
         path, owners, before, candidate, addition = self.hosted_ci_owner_fixture()
         markers = (
             "      - name: Source-alias admission and evidence controls\n",
+            "      - name: Previously failed continuation receipt controls\n",
             "      - name: Combined public source-alias absence and exact restoration\n",
             "      - name: Receive bounded source-alias evidence\n",
             "      - name: Preserve bounded source-alias evidence\n",
@@ -570,10 +572,14 @@ class ReaderPilotTests(unittest.TestCase):
         alterations = (
             addition + addition,
             "".join(steps[1:]),
+            steps[2] + steps[1] + steps[0] + "".join(steps[3:]),
+            steps[0] + steps[1] + steps[2] + steps[4] + steps[3] + "".join(steps[5:]),
             steps[1] + steps[0] + "".join(steps[2:]),
-            steps[0] + steps[1] + steps[3] + steps[2] + "".join(steps[4:]),
+            steps[0] + steps[2] + steps[1] + "".join(steps[3:]),
         )
-        alterations += tuple("".join(steps[:i] + steps[i + 1:]) for i in range(1, len(steps)))
+        # Removing the whole optional receipt step is the preceding accepted form,
+        # exercised below. Every previously required step remains mandatory.
+        alterations += tuple("".join(steps[:i] + steps[i + 1:]) for i in range(2, len(steps)))
         alterations += tuple("".join(steps[:i] + [steps[i + 1], steps[i]] + steps[i + 2:])
                              for i in range(3, len(steps) - 1))
         for changed in alterations:
@@ -583,7 +589,17 @@ class ReaderPilotTests(unittest.TestCase):
 
     def test_hosted_ci_exact_legacy_reader_absence_and_public123_forms(self):
         path, owners, before, candidate, addition = self.hosted_ci_owner_fixture()
-        plain = addition
+        receipt_step = (
+            '      - name: Previously failed continuation receipt controls\n'
+            '        env:\n'
+            '          PYTHONDONTWRITEBYTECODE: "1"\n'
+            '        run: |\n'
+            '          python -B tests/test_research_continuations.py ActualEvidenceAssociationTests.test_array_receipt_has_descriptive_validation_failure ActualEvidenceAssociationTests.test_qualified_original_controls_require_provenance\n'
+            '          python -B -O tests/test_research_continuations.py ActualEvidenceAssociationTests.test_array_receipt_has_descriptive_validation_failure ActualEvidenceAssociationTests.test_qualified_original_controls_require_provenance\n'
+        )
+        self.assertEqual(addition.count(receipt_step), 1)
+        with_resources = addition.replace(receipt_step, "", 1)
+        plain = with_resources
         for family in ("boundary", "evidence"):
             qualifier = ('PUBLIC123_REVISION_RESOURCES="$(mktemp -d '
                          '"$RUNNER_TEMP/r0002-public123-' + family + '.XXXXXX")" ')
@@ -596,7 +612,8 @@ class ReaderPilotTests(unittest.TestCase):
             ("reader-only", ""),
             ("legacy-absence", legacy_absence),
             ("public123", plain),
-            ("public123-resource-roots", addition),
+            ("public123-resource-roots", with_resources),
+            ("continuation-receipt-controls", addition),
         )
         for label, block in forms:
             with self.subTest(form=label):
@@ -745,6 +762,36 @@ class ReaderPilotTests(unittest.TestCase):
         altered = deepcopy(self.owners)
         altered["collections"][0]["candidate_paths"] = 999
         self.reject(self.check(owners=altered), "owner-count")
+
+    def test_continuation_receipt_ci_controls_are_exact(self):
+        path, owners, before, candidate, addition = self.hosted_ci_owner_fixture()
+        start = "      - name: Previously failed continuation receipt controls\n"
+        end = "      - name: Combined public source-alias absence and exact restoration\n"
+        receipt = addition[addition.index(start):addition.index(end)]
+        commands = [line for line in receipt.splitlines(keepends=True)
+                    if line.startswith("          python ")]
+        self.assertEqual(len(commands), 2)
+        self.assertTrue(commands[0].startswith("          python -B tests/"))
+        self.assertTrue(commands[1].startswith("          python -B -O tests/"))
+        changes = (
+            (commands[0], ""),
+            (commands[1], ""),
+            (commands[0] + commands[1], commands[1] + commands[0]),
+            (commands[0], commands[0] + commands[0]),
+            ('PYTHONDONTWRITEBYTECODE: "1"', 'PYTHONDONTWRITEBYTECODE: "0"'),
+            ("test_array_receipt_has_descriptive_validation_failure", "test_unreviewed_receipt"),
+            ("test_qualified_original_controls_require_provenance", "test_unreviewed_original_controls"),
+            ("        run: |\n", "        continue-on-error: true\n        run: |\n"),
+        )
+        for old, new in changes:
+            with self.subTest(receipt_control=old):
+                self.assertIn(old, receipt)
+                changed = receipt.replace(old, new, 1)
+                path.write_text(candidate.replace(receipt, changed, 1))
+                self.reject(self.check(owners=owners), "owner")
+        path.write_text(candidate.replace(receipt, receipt + receipt, 1))
+        self.reject(self.check(owners=owners), "owner")
+
 
 
 
@@ -1606,6 +1653,31 @@ class BulkConsumerProjectionPinTests(unittest.TestCase):
                                                       '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
 
     COORDINATE_PINS = {
+        # Six reviewed digest176 consumers retain these exact original coordinates.
+        'scripts/validate_ar8r_codex_corpus_synthesis_v14.py': (
+            'c2153d22937864584ca0310a129cb41badbcbea96e3a2175b53bd1a9a666a626',
+            43318, 'bf5693e9eaf14f932a7afef314772c5d6cfd19c3',
+            '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'scripts/validate_ar8r_external_challenges.py': (
+            '621c70320e6695ea77d85c7bec7147193d3c3f013bada94ea6bae328a8616c7e',
+            9558, '814d716588deff5a8f479deafc8e4d7e91e19c58',
+            '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'scripts/validate_ar8r_six_lane_v14_intake.py': (
+            '33de0e6b174499960cc2c521ab5ab5f2f13cb66467247636aa460419073745a3',
+            19144, 'd9511107288776ddab58e06e3892bb61f3bd66e9',
+            '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'scripts/validate_pmr007_deep_bk_public_snapshot.py': (
+            'ba437ce44adf1ab03d1f797a3c5a72f8991b99186a733bdfc2f9574b02d3d4fd',
+            20394, 'b7a701ad73a96d9de760f22778a17f2128eb7799',
+            '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'scripts/validate_pmr007_deep_bv_semantic_reissue.py': (
+            '818230667805e3db999dc52bd22376a4425e58a85f75e561da4ca39acd75e680',
+            16337, '06a0f45454a02b7c849682e563f0b1aa98cab963',
+            '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'scripts/validate_pmr007_deep_bw_cj_semantic_reissue.py': (
+            '0d75bcefc899d15b2d35377fa15b54c6d12d180a74a506bc9cd84212206c3311',
+            19380, 'cb72e0de65eb40d0bd659e49e2a4b8a46ef197a9',
+            '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
         **BASE_COORDINATE_PINS,
         # Published26's mock-fixture repair retains this exact historical source coordinate.
         'tests/v5_successor_fixtures.py': (
@@ -9332,6 +9404,255 @@ class LiveDerivedFixtureConsumerTests(unittest.TestCase):
             self.assertFalse(self.references._resolves('/'.join(('docs', 'historical.md')), '/'.join(('tests', 'invalid', 'not-admitted.json'))))
         finally:
             self.references.ROOT = previous
+
+
+class Digest176ReaderContractTests(unittest.TestCase):
+    """Finite operational controls; original research bodies remain inert."""
+
+    # Original coordinates joined to the immutable digest176 source admission.
+    # The current consumer editions intentionally have distinct identities.
+    PINS = {
+        'scripts/validate_ar8r_codex_corpus_synthesis_v14.py': (
+            'bf5693e9eaf14f932a7afef314772c5d6cfd19c3',
+            'c2153d22937864584ca0310a129cb41badbcbea96e3a2175b53bd1a9a666a626',
+            43318, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'scripts/validate_ar8r_external_challenges.py': (
+            '814d716588deff5a8f479deafc8e4d7e91e19c58',
+            '621c70320e6695ea77d85c7bec7147193d3c3f013bada94ea6bae328a8616c7e',
+            9558, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'scripts/validate_ar8r_six_lane_v14_intake.py': (
+            'd9511107288776ddab58e06e3892bb61f3bd66e9',
+            '33de0e6b174499960cc2c521ab5ab5f2f13cb66467247636aa460419073745a3',
+            19144, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'scripts/validate_pmr007_deep_bk_public_snapshot.py': (
+            'b7a701ad73a96d9de760f22778a17f2128eb7799',
+            'ba437ce44adf1ab03d1f797a3c5a72f8991b99186a733bdfc2f9574b02d3d4fd',
+            20394, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'scripts/validate_pmr007_deep_bv_semantic_reissue.py': (
+            '06a0f45454a02b7c849682e563f0b1aa98cab963',
+            '818230667805e3db999dc52bd22376a4425e58a85f75e561da4ca39acd75e680',
+            16337, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'scripts/validate_pmr007_deep_bw_cj_semantic_reissue.py': (
+            'cb72e0de65eb40d0bd659e49e2a4b8a46ef197a9',
+            '0d75bcefc899d15b2d35377fa15b54c6d12d180a74a506bc9cd84212206c3311',
+            19380, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+    }
+
+    @classmethod
+    def setUpClass(cls):
+        import ast
+        source = (ROOT / 'scripts/check_reader_pilot.py').read_text()
+        names = {'_permitted_projection_consumer_pins', 'check_corpus_currentness'}
+        nodes = [node for node in ast.parse(source).body
+                 if (isinstance(node, ast.FunctionDef) and node.name in names)
+                 or (isinstance(node, ast.Assign) and any(
+                     isinstance(target, ast.Name) and target.id == 'REFACTOR_EDIT_PATHS'
+                     for target in node.targets))]
+        if len(nodes) != 3:
+            raise AssertionError('the exact operational function/constant population changed')
+        cls.namespace = {'Path': Path}
+        exec(compile(ast.Module(body=nodes, type_ignores=[]),
+                     'reader-digest176-operational-interface', 'exec'), cls.namespace)
+
+    def setUp(self):
+        import types
+        self.namespace = dict(type(self).namespace)
+        self.registry = 'synthetic/continuation-registry.json'
+        self.prerequisites = {
+            self.registry: ('1' * 40, '1' * 64, 11, '2' * 40),
+            'scripts/replay_v5_successors.py': ('3' * 40, '3' * 64, 13, '2' * 40),
+            'tests/v5_successor_fixtures.py': (
+                'ccf0bd64f34b10f65ed8bd1bdd8a88adcaf03c7f',
+                '283ea7d698a5bf6a208e45260ee9078f819ecdb25a42c6dd2252d794d2dd3233',
+                13030, '69f3f9284f2cb94433958c0669fc9b06a9760fe7'),
+        }
+        self.owners = types.ModuleType('validate_v5_successors')
+        self.owners.PRESERVATION_OWNER_ORIGINAL = {
+            self.registry: self.prerequisites[self.registry][:3]}
+        self.namespace.update(
+            HISTORICAL_PROSE={}, HISTORICAL_PROSE_REVISIONS={},
+            PUBLIC_READER_NOTE_PATHS=set(), NEXT24_PUBLIC_PROSE=set(),
+            CONTINUATION_REGISTRY_PATH=self.registry,
+            CONTINUATION_REGISTRY_REVISION=self.prerequisites[self.registry][3],
+            FIXTURE_CONSUMER_ORIGINAL={}, FIXTURE_CONSUMER_REVISION='2' * 40,
+            SUCCESSOR_INPUT_REPLAY_ORIGINAL=self.prerequisites['scripts/replay_v5_successors.py'])
+        # Rebind the selected functions to this case's isolated metadata namespace.
+        for name in ('_permitted_projection_consumer_pins', 'check_corpus_currentness'):
+            original = type(self).namespace[name]
+            self.namespace[name] = types.FunctionType(
+                original.__code__, self.namespace, name, original.__defaults__)
+        bindings = dict(self.prerequisites, **self.PINS)
+        self.original = {
+            'schema': 'inert-digest176-interface-fixture',
+            'objects': [dict(repository_path=path, source_sha256=identity,
+                             public_sha256=identity, source_bytes=size, public_bytes=size,
+                             disposition='REUSE', role='unchanged-public-role',
+                             declared_eligibility_basis='unchanged-basis',
+                             required_dependencies=[], publication_basis='unchanged-publication')
+                        for path, (_, identity, size, _) in bindings.items()],
+        }
+        self.prior = self.pinned(self.original, self.prerequisites)
+        self.current = self.pinned(self.prior, self.PINS)
+
+    @staticmethod
+    def pinned(document, bindings):
+        result = deepcopy(document)
+        for path, (blob, _, _, revision) in bindings.items():
+            row = next(row for row in result['objects'] if row['repository_path'] == path)
+            row.update(git_blob=blob, repository_revision=revision)
+        return result
+
+    def permitted(self, candidate, original=None):
+        from unittest.mock import patch
+        with patch.dict(sys.modules, {'validate_v5_successors': self.owners}):
+            return self.namespace['_permitted_projection_consumer_pins'](
+                self.original if original is None else original, candidate)
+
+    def test_preceding_coordinate_form_remains_admissible(self):
+        self.assertTrue(self.permitted(self.prior))
+
+    def test_complete_six_consumer_extension_is_admitted(self):
+        self.assertEqual(len(self.PINS), 6)
+        self.assertTrue(self.permitted(self.current))
+        for path, (blob, identity, size, revision) in self.PINS.items():
+            old = next(row for row in self.original['objects'] if row['repository_path'] == path)
+            new = next(row for row in self.current['objects'] if row['repository_path'] == path)
+            self.assertEqual((old['source_sha256'], old['public_sha256'],
+                              old['source_bytes'], old['public_bytes']),
+                             (identity, identity, size, size))
+            self.assertEqual(new, dict(old, repository_revision=revision, git_blob=blob))
+
+    def test_partial_six_consumer_extensions_are_refused(self):
+        for path in self.PINS:
+            with self.subTest(missing=path):
+                candidate = deepcopy(self.current)
+                row = next(row for row in candidate['objects'] if row['repository_path'] == path)
+                row.pop('repository_revision')
+                row.pop('git_blob')
+                self.assertFalse(self.permitted(candidate))
+
+    def test_six_consumer_identity_role_and_coordinate_tampering_is_refused(self):
+        changes = (('source_sha256', '0' * 64), ('public_sha256', '0' * 64),
+                   ('source_bytes', 1), ('public_bytes', 1),
+                   ('repository_revision', 'HEAD'), ('git_blob', '0' * 40),
+                   ('repository_path', 'scripts/' 'unreviewed_consumer.py'),
+                   ('disposition', 'PROJECT'), ('role', 'reclassified'),
+                   ('declared_eligibility_basis', 'changed'),
+                   ('required_dependencies', ['unreviewed']),
+                   ('publication_basis', 'unreviewed'))
+        for path in self.PINS:
+            for field, value in changes:
+                with self.subTest(path=path, field=field):
+                    candidate = deepcopy(self.current)
+                    next(row for row in candidate['objects']
+                         if row['repository_path'] == path)[field] = value
+                    self.assertFalse(self.permitted(candidate))
+            for field in ('git_blob', 'repository_revision'):
+                with self.subTest(path=path, missing=field):
+                    candidate = deepcopy(self.current)
+                    next(row for row in candidate['objects']
+                         if row['repository_path'] == path).pop(field)
+                    self.assertFalse(self.permitted(candidate))
+
+    def test_corrupt_original_identity_is_not_rebound(self):
+        for path in self.PINS:
+            for field, value in (('source_sha256', '0' * 64), ('public_sha256', '0' * 64),
+                                 ('source_bytes', 1), ('public_bytes', 1), ('disposition', 'PROJECT')):
+                with self.subTest(path=path, field=field):
+                    original = deepcopy(self.original)
+                    next(row for row in original['objects']
+                         if row['repository_path'] == path)[field] = value
+                    candidate = self.pinned(original, dict(self.prerequisites, **self.PINS))
+                    self.assertFalse(self.permitted(candidate, original))
+
+    def test_duplicate_missing_reordered_and_unlisted_records_are_refused(self):
+        path = next(iter(self.PINS))
+        for change in ('duplicate', 'missing', 'reorder', 'unlisted', 'metadata'):
+            with self.subTest(change=change):
+                candidate = deepcopy(self.current)
+                row = next(row for row in candidate['objects'] if row['repository_path'] == path)
+                if change == 'duplicate':
+                    candidate['objects'].append(deepcopy(row))
+                elif change == 'missing':
+                    candidate['objects'].remove(row)
+                elif change == 'reorder':
+                    candidate['objects'].reverse()
+                elif change == 'unlisted':
+                    candidate['objects'].append(dict(row, repository_path='scripts/' 'nearby_unreviewed.py'))
+                else:
+                    candidate['schema'] = 'unreviewed'
+                self.assertFalse(self.permitted(candidate))
+
+    def currentness(self, entries, *, cached=None, worktree=None):
+        # Only the name/status routing interface is exercised here. Every
+        # unrelated qualification callable fails if this fixture invokes it.
+        def unexpected(*args, **kwargs):
+            raise AssertionError('unrelated original-body qualifier was invoked')
+        ns = self.namespace
+        for name in ('CHECKPOINT_COPY_PATHS', 'CHECKPOINT_RECORD_COPY_PATHS',
+                     'CHECKPOINT_PACKAGE_COPY_PATHS', 'FORMAL_COPY_PATHS',
+                     'CHECKPOINT_CODE_COPY_PATHS', 'DIGEST_RECORD_PATHS',
+                     'SUCCESSOR_INPUT_PATHS', 'GENERATED_FIXTURE_PATHS',
+                     'ADMIN_RECORD_PATHS', 'ADMIN_GUIDES', 'CONTINUATION_OWNER_PATHS',
+                     'TYPED_GUIDES', 'SUCCESSOR_CALCULUS_GUIDES'):
+            ns[name] = set()
+        for name in ('PMR007_DEEP_PREFIX', 'PMR007_ROUNDS_PREFIX',
+                     'PMR007_ROUNDS_FORMALIZATION', 'CONTINUATION_COPY_ROOT',
+                     'SUCCESSOR_INPUT_REGISTRY', 'SUCCESSOR_CALCULUS_MAP', 'MEDIATOR_GUIDE'):
+            ns[name] = 'synthetic-unrelated/' + name
+        for name in ('pmr007_deep_duplicate_paths', 'pmr007_rounds_duplicate_paths',
+                     'checkpoint_duplicate_paths', 'checkpoint_record_duplicate_paths',
+                     'checkpoint_package_duplicate_paths', 'formal_duplicate_paths',
+                     'checkpoint_code_duplicate_paths', 'digest_record_absences',
+                     'pmr007_rounds_formalization_navigation', 'continuation_duplicate_paths',
+                     'successor_input_absences', 'successor_calculus_map_absences',
+                     'generated_fixture_absences', 'binding_record_absences',
+                     'administrative_record_absences', 'administrative_guide_source_bytes'):
+            ns[name] = unexpected
+        ns['binding_record_candidate'] = lambda path: path.startswith('synthetic-binding/')
+        body = ''.join(status + '\0' + path + '\0' for status, path in entries).encode()
+        calls = []
+        def diff(repo, argv):
+            calls.append(tuple(argv))
+            value = cached if '--cached' in argv else worktree
+            return subprocess.CompletedProcess(argv, 0, body) if value is None else value
+        ns['readonly_git_diff'] = diff
+        errors = ns['check_corpus_currentness'](Path('inert-routing-fixture'), 'synthetic-baseline')
+        return errors, calls
+
+    def test_exact_six_engineering_paths_are_admitted(self):
+        errors, calls = self.currentness([('M', path) for path in self.PINS])
+        self.assertEqual(errors, [])
+        self.assertEqual(len(calls), 2)
+        self.assertIn('--cached', calls[0])
+        self.assertNotIn('--cached', calls[1])
+
+    def test_unlisted_engineering_paths_and_deletions_still_require_review(self):
+        paths = [path + '.unreviewed' for path in self.PINS]
+        paths.append('scripts/' 'validate_ar8r_unreviewed.py')
+        for status in ('A', 'M', 'D'):
+            with self.subTest(status=status):
+                errors, calls = self.currentness([(status, path) for path in paths])
+                self.assertEqual(len(calls), 2)
+                self.assertEqual(errors, [
+                    'corpus-currentness: ' + path +
+                    ' requires source-baseline and work/support disposition review' for path in paths])
+
+    def test_index_worktree_and_malformed_diff_fail_closed(self):
+        bad = [('M', 'scripts/' 'unlisted_engineering_owner.py')]
+        empty = subprocess.CompletedProcess([], 0, b'')
+        for which in ('cached', 'worktree'):
+            with self.subTest(empty_side=which):
+                errors, calls = self.currentness(bad, **{which: empty})
+                self.assertEqual(len(errors), 1)
+                self.assertEqual(len(calls), 2)
+        for result in (subprocess.CompletedProcess([], 1, b''),
+                       subprocess.CompletedProcess([], 0, b'M\0'),
+                       subprocess.CompletedProcess([], 0, b'M\0\xff\0')):
+            with self.subTest(result=(result.returncode, result.stdout)):
+                errors, _ = self.currentness([], cached=result)
+                self.assertEqual(len(errors), 1)
+                self.assertTrue(errors[0].startswith('corpus-currentness:'))
 
 
 if __name__ == "__main__":

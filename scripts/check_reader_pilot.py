@@ -714,9 +714,39 @@ def _permitted_projection_consumer_pins(original, candidate):
         'ccf0bd64f34b10f65ed8bd1bdd8a88adcaf03c7f',
         '283ea7d698a5bf6a208e45260ee9078f819ecdb25a42c6dd2252d794d2dd3233',
         13030, '69f3f9284f2cb94433958c0669fc9b06a9760fe7')}
+    # Reviewed digest176 consumers retain their original T20 evidence.
+    # This complete extension changes only revision/blob coordinates.
+    digest_consumers = {
+        'scripts/validate_ar8r_codex_corpus_synthesis_v14.py': (
+            'bf5693e9eaf14f932a7afef314772c5d6cfd19c3',
+            'c2153d22937864584ca0310a129cb41badbcbea96e3a2175b53bd1a9a666a626',
+            43318, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'scripts/validate_ar8r_external_challenges.py': (
+            '814d716588deff5a8f479deafc8e4d7e91e19c58',
+            '621c70320e6695ea77d85c7bec7147193d3c3f013bada94ea6bae328a8616c7e',
+            9558, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'scripts/validate_ar8r_six_lane_v14_intake.py': (
+            'd9511107288776ddab58e06e3892bb61f3bd66e9',
+            '33de0e6b174499960cc2c521ab5ab5f2f13cb66467247636aa460419073745a3',
+            19144, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'scripts/validate_pmr007_deep_bk_public_snapshot.py': (
+            'b7a701ad73a96d9de760f22778a17f2128eb7799',
+            'ba437ce44adf1ab03d1f797a3c5a72f8991b99186a733bdfc2f9574b02d3d4fd',
+            20394, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'scripts/validate_pmr007_deep_bv_semantic_reissue.py': (
+            '06a0f45454a02b7c849682e563f0b1aa98cab963',
+            '818230667805e3db999dc52bd22376a4425e58a85f75e561da4ca39acd75e680',
+            16337, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'scripts/validate_pmr007_deep_bw_cj_semantic_reissue.py': (
+            'cb72e0de65eb40d0bd659e49e2a4b8a46ef197a9',
+            '0d75bcefc899d15b2d35377fa15b54c6d12d180a74a506bc9cd84212206c3311',
+            19380, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+    }
     for bindings in (earlier, next24, combined, dict(combined, **fixtures),
                      dict(combined, **fixtures, **replay_input),
-                     dict(combined, **fixtures, **replay_input, **calculus_fixture)):
+                     dict(combined, **fixtures, **replay_input, **calculus_fixture),
+                     dict(combined, **fixtures, **replay_input, **calculus_fixture,
+                          **digest_consumers)):
         expected = deepcopy(original)
         try:
             for path, (blob, identity, size, revision) in bindings.items():
@@ -1002,6 +1032,14 @@ REFACTOR_EDIT_PATHS = {
     "scripts/source_alias_absence_reader.py",
     "tests/test_source_alias_absence_boundary.py", "tests/test_source_alias_absence_evidence.py",
     "tests/test_source_alias_absence_population.py",
+    # Exact existing engineering consumers changed by the reviewed digest176 migration.
+    # Their original evidence remains pinned by the finite projection contract.
+    "scripts/validate_ar8r_codex_corpus_synthesis_v14.py",
+    "scripts/validate_ar8r_external_challenges.py",
+    "scripts/validate_ar8r_six_lane_v14_intake.py",
+    "scripts/validate_pmr007_deep_bk_public_snapshot.py",
+    "scripts/validate_pmr007_deep_bv_semantic_reissue.py",
+    "scripts/validate_pmr007_deep_bw_cj_semantic_reissue.py",
     # Existing integrity owners for the finite A-AP duplicate retirement.
     "scripts/validate_ar8r_reconciliation.py", "tests/test_ar8r_v11_reconciliation.py",
     "docs/project-closure/ar8r-v11/SHA256SUMS",
