@@ -1128,4 +1128,317 @@ class SparsePriorHistoricalSourceTests(unittest.TestCase):
         with self.assertRaises(ValueError):self.v.source_bytes(self.root,row)
 
 
+class ContinuationCatalogProvenanceTests(unittest.TestCase):
+    """Public provider spelling must not erase authenticated original custody."""
+
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location(
+            'continuation_catalog_provenance', SCRIPT.with_name('resolve_t20_v6_source.py'))
+        cls.resolver = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.resolver)
+        spec = importlib.util.spec_from_file_location('ordinary_guard_reader', SCRIPT)
+        cls.reader = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.reader)
+
+    def setUp(self):
+        self.root = SCRIPT.parents[1]
+        self.identity = '1' * 64
+        self.excluded = '2' * 64
+        self.original = AREA + '/source-store/' + self.identity + '.lean'
+        self.ordinary = 'formal/type-theory/Proof.lean'
+        self.source = {'id': 'public-a', 'origin': ORIGIN, 'member': 'src/Proof.lean',
+                       'original_sha256': self.identity, 'original_bytes': 17,
+                       'path': self.original, 'sha256': self.identity, 'bytes': 17,
+                       'projection': 'EXACT', 'derivation': None}
+        excluded = dict(self.source, id='excluded', member='src/Excluded.lean',
+                        original_sha256=self.excluded, sha256=self.excluded,
+                        path=AREA + '/source-store/' + self.excluded + '.lean')
+        custody = dict(self.source, id='custody-only', path=None, sha256=None,
+                       bytes=None, projection='CUSTODY_ONLY')
+        self.legacy = PROV + '/SOURCE_MAP.json'
+        self.successor = 'docs/provenance/v5-successors/SOURCE_MAP.json'
+        self.preservation = 'docs/provenance/v5-successors/PRESERVATION.json'
+        self.documents = {
+            self.legacy: {'sources': [self.source, excluded, custody]},
+            self.successor: {'sources': [
+                {'id': 'retained-' + row['id'], 'projection': 'EXACT', 'derivation': None,
+                 'original_sha256': row['sha256'], 'public_sha256': row['sha256'],
+                 'original_bytes': 17, 'public_bytes': 17,
+                 'public_path': 'experiments/orthemology-v5-successors/source-store/'
+                                + row['sha256'] + '/Proof.lean'}
+                for row in (self.source, excluded)]},
+            self.preservation: {'base_commit': 'b' * 40, 'base_tree': 'c' * 40,
+                                'files': [
+                {'path': row['path'], 'sha256': row['sha256'], 'bytes': 17,
+                 'git_blob_sha1': 'a' * 40} for row in (self.source, excluded)]}}
+
+    def catalogue(self, documents=None, corrupt_frozen_bytes=False):
+        documents = deepcopy(self.documents if documents is None else documents)
+        bodies = {path: json.dumps(value, sort_keys=True).encode()
+                  for path, value in documents.items()}
+        pins = {path: (len(body), hashlib.sha256(body).hexdigest())
+                for path, body in bodies.items()}
+        if corrupt_frozen_bytes:
+            bodies[self.legacy] += b' '
+        with patch.object(self.resolver, 'CONTINUATION_COPY_METADATA', pins), \
+                patch.object(self.resolver, 'CONTINUATION_LEGACY_BASE', 'b' * 40), \
+                patch.object(self.resolver, 'CONTINUATION_COPY_COUNT', 1), \
+                patch.object(self.resolver, 'CONTINUATION_COPY_EXCLUDED', self.excluded), \
+                patch.object(self.resolver, '_regular_current_bytes',
+                             side_effect=lambda root, path: bodies[path]), \
+                patch.object(self.resolver, '_continuation_git',
+                             side_effect=AssertionError('catalogue must not execute Git')):
+            return self.resolver._continuation_copy_catalog(self.root)
+
+    def ordinary_documents(self):
+        documents = deepcopy(self.documents)
+        documents[self.legacy]['sources'][0]['path'] = self.ordinary
+        return documents
+
+    def test_original_public_and_custody_boundary_is_preserved(self):
+        actual = self.catalogue()
+        self.assertEqual(set(actual), {self.original})
+        self.assertEqual([r['id'] for r in actual[self.original]['sources']], ['public-a'])
+        self.assertEqual(actual[self.original]['blob'], 'a' * 40)
+
+    def test_ordinary_public_provider_keeps_original_catalogue_identity(self):
+        before = self.catalogue()
+        try:
+            actual = self.catalogue(self.ordinary_documents())
+        except ValueError as exc:
+            self.fail('An exact ordinary provider lost its original custody: ' + str(exc))
+        expected = deepcopy(before)
+        expected[self.original]['sources'][0]['path'] = self.ordinary
+        self.assertEqual(actual, expected)
+
+    def test_mixed_provider_spellings_keep_every_source_id(self):
+        documents = deepcopy(self.documents)
+        documents[self.legacy]['sources'].append(dict(
+            self.source, id='public-alias', member='other/Proof.lean', path=self.ordinary))
+        actual = self.catalogue(documents)
+        self.assertEqual({r['id'] for r in actual[self.original]['sources']},
+                         {'public-a', 'public-alias'})
+
+    def test_ordinary_provider_still_requires_exact_identity_and_projection(self):
+        for field, value in [('sha256', '3' * 64), ('bytes', 18),
+                             ('original_bytes', 18), ('projection', 'DERIVED'),
+                             ('derivation', {'unreviewed': True})]:
+            with self.subTest(field=field):
+                documents = self.ordinary_documents()
+                documents[self.legacy]['sources'][0][field] = value
+                with self.assertRaises(ValueError):
+                    self.catalogue(documents)
+
+    def test_missing_public_provider_or_preserved_original_is_rejected(self):
+        for change in ('public', 'inventory'):
+            with self.subTest(change=change):
+                documents = self.ordinary_documents()
+                if change == 'public':
+                    documents[self.legacy]['sources'][0]['path'] = None
+                else:
+                    documents[self.preservation]['files'].pop(0)
+                with self.assertRaises(ValueError):
+                    self.catalogue(documents)
+
+    def test_ordinary_provider_still_requires_valid_original_blob_and_unique_copy(self):
+        for change in ('blob', 'copy'):
+            with self.subTest(change=change):
+                documents = self.ordinary_documents()
+                if change == 'blob':
+                    documents[self.preservation]['files'][0]['git_blob_sha1'] = 'invalid'
+                else:
+                    duplicate = deepcopy(documents[self.successor]['sources'][0])
+                    duplicate['public_path'] = duplicate['public_path'].replace(
+                        '/Proof.lean', '/Other.lean')
+                    documents[self.successor]['sources'].append(duplicate)
+                with self.assertRaises(ValueError):
+                    self.catalogue(documents)
+
+    def test_metadata_bytes_remain_exactly_pinned(self):
+        with self.assertRaisesRegex(ValueError, 'frozen metadata'):
+            self.catalogue(self.ordinary_documents(), corrupt_frozen_bytes=True)
+
+    def test_original_version_and_excluded_member_remain_required(self):
+        for change in ('version', 'excluded'):
+            with self.subTest(change=change):
+                documents = self.ordinary_documents()
+                if change == 'version':
+                    documents[self.preservation]['base_commit'] = 'd' * 40
+                else:
+                    documents[self.legacy]['sources'].pop(1)
+                with self.assertRaises(ValueError):
+                    self.catalogue(documents)
+
+    def ordinary_guard_read(self, updates=None, missing=False, wrong_native_body=False, dispatch_change=None):
+        body = b'-- guard fixture\n'
+        identity = hashlib.sha256(body).hexdigest()
+        documents = json.loads(json.dumps(self.documents).replace(self.identity, identity))
+        ordinary = 'formal/type-theory/AuditSupport.lean'
+        original = documents[self.legacy]['sources'][0]['path']
+        retargets = ((original, 'former/AuditSupport.lean',
+                      'experiments/orthemology-v5/source/lean/AuditSupport.lean',
+                      'a' * 40, identity, len(body)),)
+        dispatch = {} if dispatch_change == 'missing' else {
+            ordinary: 'wrong-original' if dispatch_change == 'wrong_alias' else original}
+        documents[self.legacy]['sources'][0]['path'] = ordinary
+        row = deepcopy(documents[self.legacy]['sources'][0])
+        row.update(updates or {})
+        bodies = {path: json.dumps(value, sort_keys=True).encode()
+                  for path, value in documents.items()}
+        pins = {path: (len(value), hashlib.sha256(value).hexdigest())
+                for path, value in bodies.items()}
+        # Only a fresh synthetic17-byte provider is written/cleaned. Native Git
+        # authentication is an inert boundary; actual catalogue/row checks run.
+        with tempfile.TemporaryDirectory(prefix='ordinary-guard-control-') as folder:
+            root = Path(folder)
+            target = root / ordinary
+            target.parent.mkdir(parents=True)
+            if not missing:
+                target.write_bytes(body)
+            with patch.object(self.reader, '_source', self.resolver), \
+                    patch.object(self.resolver, 'CONTINUATION_COPY_METADATA', pins), \
+                    patch.object(self.resolver, 'CONTINUATION_LEGACY_BASE', 'b' * 40), \
+                    patch.object(self.resolver, 'CONTINUATION_COPY_COUNT', 1), \
+                    patch.object(self.resolver, 'CONTINUATION_COPY_EXCLUDED', self.excluded), \
+                    patch.object(self.resolver, 'CONTINUATION_FORMAL_RETARGETS', retargets), \
+                    patch.object(self.resolver, 'CONTINUATION_FORMAL_RETARGETS_SHA256',
+                                 'f' * 64 if dispatch_change == 'tuple_digest' else
+                                 hashlib.sha256(json.dumps(retargets, separators=(',', ':')).encode()).hexdigest()), \
+                    patch.object(self.resolver, 'CONTINUATION_FORMAL_RETARGET_PATHS',
+                                 frozenset() if dispatch_change == 'retarget_set' else frozenset([original])), \
+                    patch.object(self.resolver, 'CONTINUATION_FORMAL_CURRENT_PATHS', dispatch), \
+                    patch.object(self.resolver, '_regular_current_bytes',
+                                 side_effect=lambda root, path: bodies[path]), \
+                    patch.object(self.resolver, '_continuation_formal_bound_bytes',
+                                 return_value=b'X' * len(body) if wrong_native_body else body), \
+                    patch.object(self.resolver, '_continuation_git',
+                                 side_effect=AssertionError('native history is outside this test')):
+                return self.reader.source_bytes(root, row)
+
+    def test_ordinary_guard_retains_full_source_id_and_original_provenance(self):
+        self.assertEqual(self.ordinary_guard_read(), b'-- guard fixture\n')
+        for field, value in [('id', 'unrelated-source'), ('origin', 'e' * 64),
+                             ('member', 'unrelated/Proof.lean'),
+                             ('original_sha256', 'f' * 64), ('original_bytes', 18)]:
+            with self.subTest(field=field):
+                with self.assertRaises(ValueError):
+                    self.ordinary_guard_read({field: value})
+
+    def test_ordinary_guard_cannot_mask_missing_current_provider(self):
+        with self.assertRaises(ValueError):
+            self.ordinary_guard_read(missing=True)
+
+    def test_ordinary_guard_requires_equality_with_authenticated_original_bytes(self):
+        with self.assertRaises(ValueError):
+            self.ordinary_guard_read(wrong_native_body=True)
+
+    def test_ordinary_dispatch_cannot_drop_mandatory_guard(self):
+        with self.assertRaisesRegex(ValueError, 'formal prior-provider population differs'):
+            self.ordinary_guard_read(dispatch_change='missing')
+
+    def test_ordinary_dispatch_requires_exact_derived_tuple(self):
+        for change in ('wrong_alias', 'tuple_digest', 'retarget_set'):
+            with self.subTest(change=change):
+                with self.assertRaises(ValueError):
+                    self.ordinary_guard_read(dispatch_change=change)
+
+    def guarded_current_provider(self, change=None, default_helpers=False):
+        body = b'-- guard fixture\n'
+        identity = hashlib.sha256(body).hexdigest()
+        blob = hashlib.sha1(b'blob 17\0' + body).hexdigest()
+        alias = AREA + '/source-store/' + identity + '.lean'
+        former = 'experiments/orthemology-v5-successors/source-store/' + identity + '/AuditSupport.lean'
+        canonical = 'experiments/orthemology-v5/source/lean/AuditSupport.lean'
+        current = 'formal/type-theory/AuditSupport.lean'
+        values = ((alias, former, canonical, blob, identity, len(body)),)
+        expected = {'canonical': canonical, 'blob': blob, 'sha256': identity,
+                    'bytes': len(body), 'mode': '100644'}
+        binding = dict(expected, canonical=former, legacy_tree='c' * 40)
+        def object_bytes(root, kind, value):
+            if kind == 'commit':
+                return ('tree ' + ('d' * 40 if change == 'legacy_tree' else 'c' * 40) + '\n').encode()
+            if kind == 'blob' and value == blob:
+                return b'X' * len(body) if change == 'original_bytes' else body
+            raise AssertionError('unexpected native object')
+        def git(root, *args):
+            names = args[args.index('--') + 1:]
+            if args[0] == 'ls-tree':
+                if args[2] == 'b' * 40:
+                    self.assertEqual(tuple(names), (alias,))
+                else:
+                    self.assertTrue(set(names) <= {alias, former, canonical})
+                mode = '100755' if change == 'history_mode' else '100644'
+                oid = 'e' * 40 if change == 'history_blob' else blob
+                return b''.join((mode + ' blob ' + oid + '\t' + name).encode() + b'\0' for name in names)
+            self.assertEqual(args[:3], ('ls-files', '--stage', '-z'))
+            rows = []
+            for name in names:
+                if name == current or (default_helpers and name == canonical):
+                    if change == 'missing_index':
+                        continue
+                    oid = 'e' * 40 if change == 'current_index' else blob
+                    stage = '1' if change == 'current_stage' else '0'
+                    rows.append(('100644 ' + oid + ' ' + stage + '\t' + name).encode() + b'\0')
+                elif change == 'old_index' and name == former:
+                    rows.append(('100644 ' + 'e' * 40 + ' 0\t' + name).encode() + b'\0')
+            return b''.join(rows)
+        with tempfile.TemporaryDirectory(prefix='ordinary-custody-control-') as folder:
+            root = Path(folder)
+            target = root / current
+            target.parent.mkdir(parents=True)
+            target.write_bytes(b'X' * len(body) if change == 'current_bytes' else body)
+            if change == 'missing_current':
+                target.unlink()
+            if change == 'current_mode':
+                target.chmod(0o755)
+            if change == 'current_symlink':
+                other = root / 'other.lean'
+                other.write_bytes(body)
+                target.unlink()
+                target.symlink_to(other)
+            if change in ('alias_bytes', 'former_bytes', 'canonical_bytes'):
+                name = {'alias_bytes': alias, 'former_bytes': former,
+                        'canonical_bytes': canonical}[change]
+                old = root / name
+                old.parent.mkdir(parents=True)
+                old.write_bytes(b'X' * len(body))
+            if default_helpers:
+                old = root / canonical
+                old.parent.mkdir(parents=True, exist_ok=True)
+                old.write_bytes(body)
+            with patch.object(self.resolver, 'CONTINUATION_FORMAL_RETARGETS', values), \
+                    patch.object(self.resolver, 'CONTINUATION_FORMAL_RETARGETS_SHA256',
+                                 hashlib.sha256(json.dumps(values, separators=(',', ':')).encode()).hexdigest()), \
+                    patch.object(self.resolver, 'CONTINUATION_FORMAL_RETARGET_PATHS', frozenset([alias])), \
+                    patch.object(self.resolver, 'CONTINUATION_FORMAL_CURRENT_PATHS', {current: alias}), \
+                    patch.object(self.resolver, 'CONTINUATION_LEGACY_BASE', 'b' * 40), \
+                    patch.object(self.resolver, '_formal_copy_catalog', return_value={former: expected}), \
+                    patch.object(self.resolver, '_continuation_object', side_effect=object_bytes), \
+                    patch.object(self.resolver, '_continuation_git', side_effect=git):
+                if default_helpers:
+                    self.assertEqual(self.resolver._checkpoint_bound_bytes(root, former, expected), body)
+                    return self.resolver._continuation_bound_bytes(root, alias, dict(binding, canonical=canonical))
+                return self.resolver._continuation_formal_bound_bytes(root, alias, binding)
+
+    def test_current_guard_requires_no_old_physical_provider(self):
+        try:
+            body = self.guarded_current_provider()
+        except (ValueError, OSError) as exc:
+            self.fail('Ordinary current provider still depends on an obsolete physical provider: ' + str(exc))
+        self.assertEqual(body, b'-- guard fixture\n')
+
+    def test_current_provider_preserves_historical_and_present_corruption_controls(self):
+        for change in ('legacy_tree', 'history_mode', 'history_blob', 'original_bytes',
+                       'missing_current', 'current_bytes', 'current_mode', 'current_symlink',
+                       'missing_index', 'current_index', 'current_stage', 'old_index',
+                       'alias_bytes', 'former_bytes', 'canonical_bytes'):
+            with self.subTest(change=change):
+                with self.assertRaises((ValueError, OSError)):
+                    self.guarded_current_provider(change)
+
+    def test_unchanged_default_provider_helpers_still_accept_their_exact_owner(self):
+        self.assertEqual(self.guarded_current_provider(default_helpers=True), b'-- guard fixture\n')
+
+
 if __name__=='__main__':unittest.main(verbosity=2)

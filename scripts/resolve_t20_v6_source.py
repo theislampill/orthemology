@@ -30,8 +30,8 @@ CONTINUATION_COPY_BASE = 'a7ff0e33d1a299db640041c46b1af81ca70851f6'
 CONTINUATION_LEGACY_BASE = '19de267cd41d2a5eeeb3eaf0b91562f706e2a916'
 CONTINUATION_COPY_COUNT = 258
 CONTINUATION_COPY_EXCLUDED = 'b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183'
-CONTINUATION_COPY_METADATA = {'docs/provenance/v5-research-continuations/SOURCE_MAP.json': (5960211,
-                                                               'b434046568c41e56d060282975e7e7829bbed77b85bfb4e47108e9810da93384'),
+CONTINUATION_COPY_METADATA = {'docs/provenance/v5-research-continuations/SOURCE_MAP.json': (5942902,
+                                                               'e7cce0f3ad6c7742ea2b3702963dfad8920e06e3f1208f15656d926922e64725'),
  'docs/provenance/v5-successors/SOURCE_MAP.json': (4978847,
                                                    'db90ad110ccc9c6a63454cf91ecec4605eed7fe243d18883d3cf501c58cb4883'),
  'docs/provenance/v5-successors/PRESERVATION.json': (379708,
@@ -2688,6 +2688,9 @@ FORMAL_COPY_PATHS = frozenset(row[0] for row in FORMAL_COPY_MEMBERS)
 FORMAL_CONTINUATION_PATHS = frozenset(row[1] for row in FORMAL_CONTINUATION_SOURCE_MEMBERS)
 FORMAL_SUCCESSOR_PATHS = frozenset(row[1] for row in FORMAL_SUCCESSOR_SOURCE_MEMBERS)
 CONTINUATION_FORMAL_RETARGET_PATHS = frozenset(row[0] for row in CONTINUATION_FORMAL_RETARGETS)
+CONTINUATION_FORMAL_CURRENT_PATHS = {
+    'formal/type-theory/' + pathlib.PurePosixPath(row[2]).name: row[0]
+    for row in CONTINUATION_FORMAL_RETARGETS}
 
 
 # Existing frozen replay contracts and recorded execution evidence. The native
@@ -5196,8 +5199,10 @@ def _continuation_copy_catalog(root):
     preserved = {row['path']: row for row in preservation['files']}
     originals, retained = collections.defaultdict(list), collections.defaultdict(dict)
     for row in legacy:
-        path = row.get('path') or ''
-        if re.fullmatch(re.escape(CONTINUATION_COPY_ROOT) + r'[0-9a-f]{64}\.lean', path):
+        public_path = row.get('path')
+        # Public provider names may change; original custody is inventory-owned.
+        path = CONTINUATION_COPY_ROOT + str(row.get('original_sha256', '')) + '.lean'
+        if isinstance(public_path, str) and public_path and path in preserved:
             originals[path].append(row)
     for row in successor:
         path = row.get('public_path') or ''
@@ -5233,9 +5238,10 @@ def _continuation_copy_catalog(root):
     return result
 
 
-def _continuation_bound_bytes(root, path, binding):
+def _continuation_bound_bytes(root, path, binding, *, current=None):
     root = pathlib.Path(root)
     canonical, blob = binding['canonical'], binding['blob']
+    current = canonical if current is None else current
     for revision, names in ((CONTINUATION_LEGACY_BASE, (path,)),
                             (CONTINUATION_COPY_BASE, (path, canonical))):
         commit = _continuation_object(root, 'commit', revision)
@@ -5247,24 +5253,27 @@ def _continuation_bound_bytes(root, path, binding):
         if actual != expected:
             raise ValueError('continuation copy original or retained mode/blob differs')
     original = _continuation_object(root, 'blob', blob)
-    body = _regular_current_bytes(root, canonical)
+    body = _regular_current_bytes(root, current)
     if (len(body), digest(body)) != (binding['bytes'], binding['sha256']) or original != body:
         raise ValueError('continuation retained copy or original Git bytes differ')
     indexed = collections.defaultdict(list)
-    for raw in _continuation_git(root, 'ls-files', '--stage', '-z', '--', path, canonical).split(b'\0'):
+    names = tuple(dict.fromkeys((path, canonical, current)))
+    for raw in _continuation_git(root, 'ls-files', '--stage', '-z', '--', *names).split(b'\0'):
         if raw:
             metadata, name = raw.split(b'\t', 1)
             indexed[name.decode()].append(metadata.decode())
     expected = ['100644 ' + blob + ' 0']
-    if indexed[path] not in ([], expected) or indexed[canonical] != expected:
+    if (indexed[path] not in ([], expected)
+            or indexed[canonical] not in ([], expected) or indexed[current] != expected):
         raise ValueError('continuation copy staged identity differs')
-    target = root
-    for part in path.split('/'):
-        target = target / part
-        if target.is_symlink():
-            raise ValueError('continuation original path contains a symlink')
-    if os.path.lexists(target) and _regular_current_bytes(root, path) != body:
-        raise ValueError('present continuation original differs')
+    for original_path in dict.fromkeys((path, canonical) if current != canonical else (path,)):
+        target = root
+        for part in original_path.split('/'):
+            target = target / part
+            if target.is_symlink():
+                raise ValueError('continuation original path contains a symlink')
+        if os.path.lexists(target) and _regular_current_bytes(root, original_path) != body:
+            raise ValueError('present continuation original differs')
     return body
 
 
@@ -5351,12 +5360,13 @@ def _checkpoint_copy_catalog():
     return _checkpoint_retarget_catalog(result)
 
 
-def _checkpoint_bound_bytes(root, path, binding):
+def _checkpoint_bound_bytes(root, path, binding, *, current=None):
     """Authenticate one original coordinate and its exact retained public body."""
     root = pathlib.Path(root)
     if root.is_symlink() or not root.is_dir():
         raise ValueError('checkpoint copy requires an ordinary repository root')
     canonical, blob = binding['canonical'], binding['blob']
+    current = canonical if current is None else current
     try:
         # These unchanged Git primitives already authenticate exact object bytes.
         # Only two explicitly catalogued public paths and their known blob are read.
@@ -5368,29 +5378,33 @@ def _checkpoint_bound_bytes(root, path, binding):
         if actual != expected:
             raise ValueError('checkpoint original or retained mode/blob differs')
         original = _continuation_object(root, 'blob', blob)
-        owner_provider = (status_record_provider(canonical)
+        owner_provider = (current == canonical and status_record_provider(canonical)
                           and not _binding_record_present(root, canonical))
         body = (status_record_bytes(root, canonical, binding['sha256'], binding['bytes'])
-                if owner_provider else _regular_current_bytes(root, canonical))
+                if owner_provider else _regular_current_bytes(root, current))
         if (len(body), digest(body)) != (binding['bytes'], binding['sha256']) or body != original:
             raise ValueError('checkpoint retained body or original Git bytes differ')
         indexed = collections.defaultdict(list)
+        names = tuple(dict.fromkeys((path, canonical, current)))
         for raw in _continuation_git(root, 'ls-files', '--stage', '-z',
-                                     '--', path, canonical).split(b'\0'):
+                                     '--', *names).split(b'\0'):
             if raw:
                 metadata, name = raw.split(b'\t', 1)
                 indexed[name.decode()].append(metadata.decode())
         expected_index = ['100644 ' + blob + ' 0']
-        canonical_indexes = ([], expected_index) if owner_provider else (expected_index,)
-        if indexed[path] not in ([], expected_index) or indexed[canonical] not in canonical_indexes:
+        current_indexes = ([], expected_index) if owner_provider else (expected_index,)
+        if (indexed[path] not in ([], expected_index)
+                or indexed[canonical] not in ([], expected_index)
+                or indexed[current] not in current_indexes):
             raise ValueError('checkpoint copy staged identity differs')
-        target = root
-        for part in path.split('/'):
-            target = target / part
-            if target.is_symlink():
-                raise ValueError('checkpoint original path contains a symlink')
-        if os.path.lexists(target) and _regular_current_bytes(root, path) != body:
-            raise ValueError('present checkpoint original differs')
+        for original_path in dict.fromkeys((path, canonical) if current != canonical else (path,)):
+            target = root
+            for part in original_path.split('/'):
+                target = target / part
+                if target.is_symlink():
+                    raise ValueError('checkpoint original path contains a symlink')
+            if os.path.lexists(target) and _regular_current_bytes(root, original_path) != body:
+                raise ValueError('present checkpoint original differs')
         if owner_provider and _binding_record_present(root, canonical):
             raise ValueError('checkpoint historical provider owner or actual absence differs')
         return body
@@ -6336,11 +6350,20 @@ def formal_duplicate_paths(root):
     return result
 
 
+def continuation_formal_current_paths():
+    """Validate the exact guard dispatch before any ordinary-source decision."""
+    _formal_tuple_binding(CONTINUATION_FORMAL_RETARGETS, 1, CONTINUATION_FORMAL_RETARGETS_SHA256)
+    if (CONTINUATION_FORMAL_RETARGET_PATHS != frozenset(r[0] for r in CONTINUATION_FORMAL_RETARGETS)
+            or CONTINUATION_FORMAL_CURRENT_PATHS != {
+                'formal/type-theory/' + pathlib.PurePosixPath(r[2]).name: r[0]
+                for r in CONTINUATION_FORMAL_RETARGETS}):
+        raise ValueError('formal prior-provider population differs')
+    return CONTINUATION_FORMAL_CURRENT_PATHS
+
+
 def _continuation_formal_bound_bytes(root, path, binding):
     """Preserve the legacy source rows and two anchors across one provider chain."""
-    _formal_tuple_binding(CONTINUATION_FORMAL_RETARGETS, 1, CONTINUATION_FORMAL_RETARGETS_SHA256)
-    if CONTINUATION_FORMAL_RETARGET_PATHS != frozenset(r[0] for r in CONTINUATION_FORMAL_RETARGETS):
-        raise ValueError('formal prior-provider population differs')
+    continuation_formal_current_paths()
     if path not in CONTINUATION_FORMAL_RETARGET_PATHS:
         return _continuation_bound_bytes(root, path, binding)
     alias, former, canonical, blob, identity, size = CONTINUATION_FORMAL_RETARGETS[0]
@@ -6350,8 +6373,9 @@ def _continuation_formal_bound_bytes(root, path, binding):
             or (binding.get('blob'), binding.get('sha256'), binding.get('bytes')) != (blob, identity, size)):
         raise ValueError('formal prior-provider identity differs')
     # A correct endpoint cannot conceal a corrupt present/staged former provider.
-    _checkpoint_bound_bytes(root, former, expected)
-    return _continuation_bound_bytes(root, path, dict(binding, canonical=canonical))
+    current = 'formal/type-theory/' + pathlib.PurePosixPath(canonical).name
+    _checkpoint_bound_bytes(root, former, expected, current=current)
+    return _continuation_bound_bytes(root, path, dict(binding, canonical=canonical), current=current)
 
 
 def _formal_row_digest(row):

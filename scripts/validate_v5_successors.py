@@ -79,9 +79,9 @@ PRESERVATION_OWNER_CURRENT = {'docs/provenance/v5-research-continuations/EVIDENC
  'docs/provenance/v5-research-continuations/README.md': ('25b47c9b01a2e1bff5d98b66e95968a94cbfd8ca',
                                                          '1afc3bdde01b03fdfa58b325d2089f95d972554a1af63ce1e7ca231501c5b6f0',
                                                          47487),
- 'docs/provenance/v5-research-continuations/SOURCE_MAP.json': ('a98763ceb0e638bd055b77c83f7e7b9899c52930',
-                                                               'b434046568c41e56d060282975e7e7829bbed77b85bfb4e47108e9810da93384',
-                                                               5960211),
+ 'docs/provenance/v5-research-continuations/SOURCE_MAP.json': ('c5da80acfdf209cb3c96a73576f362be1f5be292',
+                                                               'e7cce0f3ad6c7742ea2b3702963dfad8920e06e3f1208f15656d926922e64725',
+                                                               5942902),
  'experiments/orthemology-v5-continuations/registry.json': ('d8a37112646af3922ffe6a7ee86d1ded72996b54',
                                                             '53eff919af5543ce3750f988c0b1c10422dd3ba883f9fbfc77b4840650a86258',
                                                             175135)}

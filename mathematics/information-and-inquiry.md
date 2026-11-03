@@ -1371,6 +1371,125 @@ At $2n+1$ fixed probes, the staircase with $m=n+1$ requires $n+1$ routes and is 
 
 These are ordinary mathematical arguments under the stated observation laws. The source's finite-grid controls and its predecessor's kernel-checked staircase witness do not supply a new kernel proof of minimum-panel complexity or arbitrary measurable adaptive policies. No original controls, new experiment or physical realization is asserted here. [CP09-PANEL]
 
+### 2.26 Exact minima and an interior panel are stochastically incomparable
+
+The exact face-minimum instrument and a finite interior panel need not be ordered by randomized reconstruction. Fix the same known pair as in §2.23: $n\geq1$ independent product-uniform routes in world 0, and $m=n+1$ independent routes with the stipulated threshold CDF $H_c(ab)$ in world 1, where $c=n/m$. Each experiment observes one unchanged threshold vector. Write $M_i$ for the exact two-minima law, equivalently its common complement coordinates $(X,Y)$, and $Q_i$ for the ordered bits of the strict interior staircase in §2.25 with $m$ positives and $m-1$ missed connectors. A common Markov kernel may depend on this known pair and chosen panel, but not on the unknown world; its auxiliary randomness conveys no further information about that world. [CP09-READOUT]
+
+**Claim.** No such kernel reconstructs $Q_i$ from $M_i$ in both worlds, and none reconstructs $M_i$ from $Q_i$ in both worlds. This is exact-law incomparability of these two specified binary experiments, not a ranking of every face/interior instrument.
+
+**Minima to panel.** Section 2.23 proves $M_1\ll M_0$. The staircase event $E$—all positives hit and all connectors missed—requires at least $m$ routes, so $Q_0(E)=0$. Its open realizations and the independent full-support world 1 law give $p=Q_1(E)>0$.
+
+Absolute continuity survives any common Markov kernel $K$. Indeed, $(M_0K)(D)=0$ makes the nonnegative function $K(s,D)$ zero $M_0$-almost everywhere; it is then zero $M_1$-almost everywhere too. Consequently exact baseline reproduction $M_0K=Q_0$ forces $(M_1K)(E)=0$, contrary to $Q_1(E)=p$. With $\operatorname{TV}(A,B)=\sup_D|A(D)-B(D)|$, this also gives
+
+```math
+M_0K=Q_0\quad\Longrightarrow\quad
+\operatorname{TV}(M_1K,Q_1)\geq p.
+```
+
+The baseline-exact premise matters: no identical $p$ bound is asserted when both output laws may be approximate. The argument does not require a deterministic decoder or a density for its output. [CP09-READOUT]
+
+**Panel to minima.** The opposite direction needs a different invariant. A baseline-positive finite-panel transcript has a realizing route vector in the open square and off all finitely many queried coordinate lines. All its route/query comparisons persist in small open neighborhoods. Duplicate one route: endpoint OR values are unchanged. Independent small perturbations of the resulting $m$ routes still give the transcript, and that open product set has positive world 1 probability. This does not assign positive probability to the exact duplicated vector. Hence $Q_0\ll Q_1$. Since the panel alphabet is finite, some finite $C$ satisfies $Q_0\leq C Q_1$ as measures. Every common kernel $J$ preserves this inequality by nonnegative integration. Thus reconstruction of both minima laws would require $M_0\leq C M_1$.
+
+But no finite $C$ works. Use §2.23's notation $z=x+y-xy$, $S=x^c+y^c-z^c$ and its complete positive densities. On the strip $1/3\leq y\leq2/3$, $0<x<1/2$,
+
+```math
+S\leq x^c,\qquad 0<S_x\leq c x^{c-1},\qquad
+0<S_{xy}=c z^{c-2}[1-c(1-x)(1-y)]\leq A,
+\qquad A=c\,3^{2-c}.
+```
+
+The explicit $S_y$ is smooth in $x$ up to zero on this strip and $S_y(0,y)=0$, so integrating $S_{xy}$ gives $0\leq S_y\leq Ax$. Substitution into the density formula yields
+
+```math
+f_1\leq A[m(m-1)c+m]x^{c(m-1)}
+      =A[m(m-1)c+m]x^{n-c},
+\qquad
+f_0\geq n^2 3^{-(n-1)}x^{n-1}.
+```
+
+Therefore $f_1/f_0\leq B(n)x^{1-c}$ uniformly on that strip, for a finite positive $B(n)$. Since $1-c>0$, for any proposed $C>0$ choose $\epsilon<1/2$ so $CB(n)\epsilon^{1-c}<1$. On the positive-area rectangle $(0,\epsilon)\times(1/3,2/3)$, $f_0>Cf_1$; integration contradicts $M_0\leq C M_1$. The case $C=0$ is immediate. This proves essential unboundedness of the reverse likelihood, not a limit along a null line. It includes $n=1$ and needs no constant uniform in $n$. The finite panel therefore cannot reconstruct the minima laws either. [CP09-READOUT] [CP09-READOUT-REVIEW]
+
+The reverse-support argument works for any fixed finite endpoint panel under these laws; the other direction specifically needs a panel with the positive/zero certificate. A finite alphabet alone would not bar randomized continuous output—a kernel can generate a continuous variable from one input symbol. Nor does a pair of deterministic configurations with equal minima and different interior bits prove stochastic incomparability: individual configurations can be null under both laws. Here the obstructions are respectively absolute continuity and bounded reverse domination.
+
+These ordinary proofs compare exact experiments for one retained vector. They establish no order for arbitrary larger-count laws, adaptive or repeated experiments, simultaneous approximation, efficient count estimators, statistical optimality or physically available exact-real readout. The source's finite support and high-precision diagnostics are not replayed here, and the inherited deterministic Lean certificate is not a kernel proof of these measure-theoretic statements. [CP09-READOUT-REVIEW]
+
+### 2.27 Exact skyline information and invisible routes
+
+A full retained endpoint map determines the answers to each fixed finite panel, but need not reveal every underlying route. Let $N\ge1$ iid threshold pairs have an absolutely continuous law $\mu$ with density $f$ on $(0,1)^2$. A noiseless query $(a,b)$ reports whether at least one pair lies coordinatewise below it; all queries concern the same unchanged retained vector. Let $S$ be the sample's coordinatewise-minimal skyline. Every nonminimal point dominates a minimal one, by descending a finite chain. Consequently the hit set is exactly
+
+```math
+D(S)=\bigcup_{(x,y)\in S}[x,1]\times[y,1].
+```
+
+Conversely the minimal points of this set recover $S$. Countably many rational queries determine the closed union and its minimal points, since rational hit points are dense in each upper rectangle. This is an equivalence of ideal mathematical readouts, not a finite procedure for recovering arbitrary real coordinates. Dominated additions leave the entire map unchanged; identifying a sample size from its distribution therefore needs the stated iid family model. [SKYLINE-LIKELIHOOD]
+
+**The ordered density and hidden-route law.** Coordinate ties have probability zero. Write the $k$ skyline points in the unique order $x_1<\cdots<x_k$ and $y_1>\cdots>y_k$, and let $\Omega_k$ denote this open ordered region. With Lebesgue measure on each $\Omega_k$ and counting measure over $k$, the density is
+
+```math
+g_{N,\mu,k}(s)=(N)_k\prod_{i=1}^k f(x_i,y_i)\,
+                  \mu(D(s))^{N-k},\qquad 1\le k\le N,
+\quad (N)_k=\frac{N!}{(N-k)!}.
+```
+
+There are $(N)_k$ assignments of distinct sample labels to the ordered visible positions. All remaining labels must lie in $D(s)$, and that condition is sufficient to introduce no new minimum. Independence gives the last factor. These assignments partition all tie-free labeled configurations, proving normalization. There is **no additional division by $k!$** on this ordered space.
+
+Given the visible labels and skyline, the hidden labeled routes are independent with conditional law $\mu(A\cap D(s))/\mu(D(s))$. This is a regular conditional-density statement, not conditioning on an event of positive mass at one exact continuous skyline. If $k=N$, the hidden vector is empty and the zeroth power is one. If $k<N$ and $\mu(D(s))=0$, the stratum density is zero there and no truncated law is required at that exceptional point. Invisible routes are thus neither newly observed points nor unconstrained draws from the original law. [SKYLINE-LIKELIHOOD]
+
+**Common support and the complete singular stratum.** Specialize to the pair used above: $n$ product-uniform routes versus $m=n+1$ routes with $c=n/m$ and
+
+```math
+F_c(x,y)=1-(1-xy)^c,\qquad
+f_c(x,y)=c(1-xy)^{c-2}(1-cxy)>0.
+```
+
+Let $D_0$ and $D_c$ be the dominated-region masses under the two route laws. For $k\le n$, cancellation of the falling factorials gives the exact likelihood ratio of skyline laws
+
+```math
+L_k(s)=\frac{m}{m-k}\prod_{i=1}^k f_c(x_i,y_i)
+             \frac{D_c(s)^{m-k}}{D_0(s)^{n-k}}.
+```
+
+Both densities are positive on every common ordered stratum. Hence the entire singular part of the alternative is $B=\{K=m\}$, with mass $p_n>0$; there is no additional singular set inside $A=\{K\le n\}$. In particular the full forward divergence is infinite. A fixed interior certificate from §2.25 is only one event inside $B$ in this $m$-route model. It need not capture every possible skyline with $m$ minima. [SKYLINE-LIKELIHOOD]
+
+**The full support certificate is factorially rare.** The following argument uses the actual joint density, not independence of its coordinate ranks. For $t=xy$,
+
+```math
+\partial_x\partial_y\log f_c(x,y)
+ =\frac{2-c}{(1-t)^2}-\frac{c}{(1-ct)^2}>0.
+```
+
+Integrating this inequality over a nondegenerate rectangle gives strict total positivity of order two. Conditional on the increasing, distinct $x$ and $y$ order statistics, a rank assignment has weight proportional to the product of its paired densities. Reversing any concordant pair strictly decreases that product. Repeated swaps reach the fully reversed assignment, whose weight is strictly below the average of the $m!$ assignment weights. All $m$ routes are minimal precisely in that reversed assignment. Integrating its conditional probability, and using positive density on an open antichain region for the lower bound, proves
+
+```math
+0<p_n<\frac1{m!}.
+```
+
+Waiting only for $B$ on independent fresh vectors therefore has alternative mean $1/p_n>m!$ and never stops under the baseline. Its alternative miss probability after $T$ vectors is $(1-p_n)^T$. These are statements about this support-only method, not lower bounds for every test: the common strata also contain likelihood information. [SKYLINE-LIKELIHOOD]
+
+**Ordinary information remains after the certificate is removed.** Normalize the alternative on $A$, writing $Q_1^A=Q_1(\cdot\mid A)$. Relative to the baseline skyline law $Q_0$, its density is $L/(1-p_n)$. For every fixed $n\ge1$,
+
+```math
+0<\mathrm{KL}(Q_1^A\Vert Q_0)<\infty,
+\qquad
+0<\mathrm{KL}(Q_0\Vert Q_1^A)<\infty.
+```
+
+For finiteness, $f_c\ge c$ and $D_c\ge cD_0$ give $L\ge c^mD_0$. Also $\log^+f_c(x,y)\le(2-c)[-\log(1-x)]$. The region $D(s)$ contains a visible point's upper rectangle, so $-\log D_0$ is bounded by the sum of $-\log(1-X_j)-\log(1-Y_j)$ over the underlying routes. These sums have finite expectation in both worlds: each marginal term has mean one under the uniform law and $1/c$ under the stated alternative. Taking logarithms of the exact likelihood now bounds both needed positive parts by these integrable quantities and finite $n$-dependent constants. Conditioning on $A$ multiplies the expectation bound by at most $1/(1-p_n)$. The negative part of a probability-density KL integrand is controlled by $-r\log r\le1/e$ for $0<r<1$.
+
+For strictness, use the $k=1$ stratum. Its likelihood tends to one as $x,y$ tend to zero. Instead hold $y$ in an interior compact interval and put $x=1-\varepsilon$. Here $D_0=\varepsilon(1-y)$ and
+
+```math
+D_c=\varepsilon^c+(1-y)^c-(1-y+\varepsilon y)^c
+    =\varepsilon^c+O(\varepsilon),
+\qquad
+L_1=C(y)\varepsilon^{cn-(n-1)}(1+o(1))
+    =C(y)\varepsilon^{1/m}(1+o(1))\longrightarrow0,
+```
+
+where $C(y)>0$. Continuity makes this nonconstancy a distinction on positive-measure neighborhoods, not just on null boundary points. Normalizing cannot make the two laws equal, so both finite divergences are positive. At $n=1$ the count on common support is always one, yet the visible coordinates still carry this information. [SKYLINE-LIKELIHOOD]
+
+The density and conditional divergences do not supply a sharp large-$n$ rate, a finite-query implementation, or an optimal testing rule. Those conclusions require their own moment, tail, extraction and resource arguments. In particular, removing the singular support certificate is different from discarding all discriminating information, while an infinite forward divergence is different from an efficient finite-sample test.
+
 ## 3. The information hidden between target and audit marginals
 
 Let target $`\Theta`$, source type $`T`$, report $`Y`$, and verifier $`V`$ be binary. The target and type are independent and uniform. The report is $`9/10`$-accurate for a good source and $`1/2`$-accurate for a bad source. The verifier is $`4/5`$-accurate and conditionally independent of the report given $`(\Theta,T)`$. Define
@@ -5811,3 +5930,8 @@ These exact source editions retain their own proposal, repair and execution scop
 [CP09-KL-REVIEW]: https://api.github.com/repos/theislampill/orthemology/git/blobs/8753df7f4b6bef586619c189ff6a74ac784e757b
 
 [CP09-PANEL]: https://api.github.com/repos/theislampill/orthemology/git/blobs/fb05690672522a0ba5e8ce8497cba1ec8ccabd5c
+
+[CP09-READOUT]: https://api.github.com/repos/theislampill/orthemology/git/blobs/6b94bb3513a3c6feda47a85c60c7f1dd60fd6bfe
+[CP09-READOUT-REVIEW]: https://api.github.com/repos/theislampill/orthemology/git/blobs/94c8c7cd740e946536cb42b2f67d69d985ddbf94
+
+[SKYLINE-LIKELIHOOD]: https://api.github.com/repos/theislampill/orthemology/git/blobs/651035bd014b84ac3b994fae2d9eae29e2f2429a

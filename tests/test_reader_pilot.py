@@ -10114,5 +10114,202 @@ class ReviewedGovernanceOriginalPinControls(unittest.TestCase):
         candidate=deepcopy(self.current);next(r for r in candidate['objects'] if r.get('repository_path')==self.OWNER).pop('git_blob')
         self.assertFalse(self.base.permitted(candidate))
 
+class ContinuationProviderAdmissionControls(unittest.TestCase):
+    """Exact unchanged providers are not newly authored scientific works."""
+
+    def setUp(self):
+        import ast
+        import os
+        import stat
+        import types
+        self.tmp = tempfile.TemporaryDirectory(prefix='provider-admission-control-')
+        self.addCleanup(self.tmp.cleanup)
+        self.repo = Path(self.tmp.name)
+        self.revision = '7' * 40
+        self.map_path = 'docs/provenance/v5-research-continuations/SOURCE_MAP.json'
+        self.copy_root = 'experiments/orthemology-v5-continuations/source-store/'
+        self.originals, self.current, sources = {}, {}, []
+        for i in range(39):
+            body = ('-- ordinary provider fixture %02d\n' % i).encode()
+            identity = hashlib.sha256(body).hexdigest()
+            blob = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+            old = self.copy_root + identity + '.lean'
+            new = 'formal/type-theory/Fixture%02d.lean' % i
+            self.originals[old] = dict(path=old, kind='blob', mode='100644', git_oid=blob, bytes=len(body))
+            self.current[new] = (blob, identity, len(body))
+            node = self.repo / new
+            node.parent.mkdir(parents=True, exist_ok=True)
+            node.write_bytes(body)
+            sources.append(dict(id='source-%03d' % i, origin='a' * 64, member='Fixture%02d.lean' % i,
+                                original_sha256=identity, original_bytes=len(body), path=new,
+                                sha256=identity, bytes=len(body), projection='EXACT', derivation=None))
+        self.document = {'sources': [dict(sources[i % 39], id='source-%03d' % i) for i in range(206)]}
+        self.state = None
+        self.index_calls = {}
+        self.native_calls = []
+        self.owners = {'baseline': {'commit': self.revision, 'tree': '8' * 40},
+                       'source_additions': [], 'baseline_work_population': {'count': 448}}
+        self.cross = {'sources': {}, 'works': [{'key': 'original-work', 'role': 'component'}]}
+        self.continuation_owners = {}
+        self.env = dict(Path=Path, os=os, stat=stat, hashlib=hashlib, re=__import__('re'), json=json,
+                        subprocess=types.SimpleNamespace(run=self.native), CONTINUATION_COPY_ROOT=self.copy_root,
+                        CONTINUATION_OWNER_PATHS=('unused-evidence', 'unused-readme', self.map_path, 'unused-registry'),
+                        CONTINUATION_OWNER_CURRENT={})
+        names = {'safe_path', 'reviewed_indexed_modification', 'check_continuation_provider_additions',
+                 'corpus_currentness_context'}
+        tree = ast.parse(MODULE.read_text())
+        nodes = [n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name in names]
+        exec(compile(ast.Module(body=nodes, type_ignores=[]), '<actual-provider-admission-owner>', 'exec'), self.env)
+        self.env.update(check_continuation_owner_edition=lambda *a:(self.continuation_owners, []),
+                        status_owner_edition=lambda *a:{}, check_fixture_consumer_edition=lambda *a:({}, None, []),
+                        check_source_additions=lambda *a:({}, []), check_historical_sources=lambda *a:({}, []),
+                        SUCCESSOR_INPUT_REGISTRY='unused-input', PMR007_ROUNDS_PARENT='unused-rounds',
+                        MEDIATOR_GUIDE='unused-mediator', SUCCESSOR_CALCULUS_GUIDES=(), ADMIN_GUIDES=(), TYPED_GUIDES=())
+        self.sync_map()
+
+    def sync_map(self):
+        body = (json.dumps(self.document, sort_keys=True) + '\n').encode()
+        node = self.repo / self.map_path
+        node.parent.mkdir(parents=True, exist_ok=True)
+        node.write_bytes(body)
+        blob = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+        self.env['CONTINUATION_OWNER_CURRENT'][self.map_path] = (blob, hashlib.sha256(body).hexdigest(), len(body))
+        self.continuation_owners[self.map_path] = dict(path=self.map_path, kind='blob', mode='100644', git_oid=blob, bytes=len(body))
+
+    def native(self, args, **kwargs):
+        self.native_calls.append(tuple(args))
+        self.assertEqual(Path(kwargs['cwd']), self.repo)
+        names = args[args.index('--') + 1:]
+        if 'ls-tree' in args:
+            self.assertEqual(args[args.index('ls-tree') + 2], self.revision)
+            if all(n in self.originals for n in names):
+                self.assertEqual(set(names), set(self.originals))
+                rows = []
+                for n in sorted(names):
+                    row = self.originals[n]
+                    mode = '100755' if self.state == 'history-mode' else row['mode']
+                    blob = '0' * 40 if self.state == 'history-blob' else row['git_oid']
+                    rows.append((mode + ' blob ' + blob + '\t' + n).encode() + b'\0')
+                if self.state == 'history-missing': rows.pop()
+                return subprocess.CompletedProcess(args, 1 if self.state == 'history-failure' else 0, b''.join(rows), b'')
+            self.assertEqual(len(names), 1)
+            self.assertIn(names[0], self.current)
+            present = (('100644 blob ' + self.current[names[0]][0] + '\t' + names[0]).encode() + b'\0'
+                       if self.state == 'original-destination-present' else b'')
+            return subprocess.CompletedProcess(args, 1 if self.state == 'absence-query-failure' else 0, present, b'')
+        self.assertIn('ls-files', args)
+        self.assertEqual(len(names), 1)
+        name = names[0]
+        self.assertIn(name, self.current)
+        self.index_calls[name] = self.index_calls.get(name, 0) + 1
+        blob = self.current[name][0]
+        if self.state == 'index' or self.state == 'late-index' and self.index_calls[name] == 2:
+            blob = '0' * 40
+        stage = '1' if self.state == 'conflict' else '0'
+        if self.state == 'late-body' and self.index_calls[name] == 2:
+            (self.repo / name).write_bytes(b'changed after read\n')
+        body = ('100644 ' + blob + ' ' + stage + '\t' + name).encode() + b'\0'
+        return subprocess.CompletedProcess(args, 0, b'' if self.state == 'missing-index' else body, b'')
+
+    def admission(self):
+        self.assertIn('check_continuation_provider_additions', self.env)
+        return self.env['check_continuation_provider_additions'](
+            self.repo, self.originals, self.continuation_owners, self.owners['baseline']['commit'])
+
+    def test_current_context_admits_exact_original_provider_copies(self):
+        before = deepcopy((self.owners, self.cross, self.originals))
+        contexts, errors = self.env['corpus_currentness_context'](
+            self.repo, self.originals, self.owners, self.cross)
+        self.assertEqual(errors, [])
+        self.assertEqual(set(contexts[0]), set(self.current))
+        self.assertEqual((self.owners, self.cross, self.originals), before)
+        self.assertEqual(self.owners['baseline_work_population']['count'], 448)
+
+    def test_exact_complete_provider_set_has_no_partial_admission(self):
+        admitted, errors = self.admission()
+        self.assertEqual(errors, [])
+        self.assertEqual(set(admitted), set(self.current))
+        for name, row in admitted.items():
+            self.assertEqual((row['kind'], row['mode'], row['git_oid'], row['bytes']),
+                             ('blob', '100644', self.current[name][0], self.current[name][2]))
+
+    def test_original_owner_context_does_not_admit_new_providers(self):
+        self.continuation_owners.clear()
+        self.assertEqual(self.admission(), ({}, []))
+        self.assertEqual(self.native_calls, [])
+
+    def test_map_pin_and_original_census_identity_are_required(self):
+        first = next(iter(self.originals))
+        for change in ('map-bytes', 'census-blob', 'census-mode', 'census-size', 'destination-in-census'):
+            with self.subTest(change=change):
+                original = deepcopy(self.originals)
+                if change == 'map-bytes': (self.repo / self.map_path).write_bytes(b'{}')
+                elif change == 'destination-in-census': self.originals[next(iter(self.current))] = dict(self.originals[first])
+                else: self.originals[first][{'census-blob':'git_oid','census-mode':'mode','census-size':'bytes'}[change]] = {'census-blob':'0'*40,'census-mode':'100755','census-size':1}[change]
+                admitted, errors = self.admission()
+                self.assertEqual(admitted, {}); self.assertTrue(errors)
+                self.originals = original
+                self.sync_map()
+
+    def test_original_queries_cannot_fail_or_mask_missing_or_changed_rows(self):
+        for state in ('history-failure', 'history-mode', 'history-blob', 'history-missing',
+                      'original-destination-present', 'absence-query-failure'):
+            with self.subTest(state=state):
+                self.state = state
+                admitted, errors = self.admission()
+                self.assertEqual(admitted, {}); self.assertTrue(errors)
+
+    def test_current_index_and_late_changes_are_refused(self):
+        for state in ('index', 'missing-index', 'conflict', 'late-index', 'late-body'):
+            with self.subTest(state=state):
+                self.state = state; self.index_calls = {}
+                originals = {n:(self.repo/n).read_bytes() for n in self.current}
+                admitted, errors = self.admission()
+                self.assertEqual(admitted, {}); self.assertTrue(errors)
+                for name, body in originals.items(): (self.repo/name).write_bytes(body)
+
+    def test_missing_corrupt_executable_linked_current_provider_is_refused(self):
+        import os
+        name = next(iter(self.current)); node = self.repo / name; body = node.read_bytes()
+        for state in ('missing', 'corrupt', 'executable', 'symlink', 'hardlink'):
+            with self.subTest(state=state):
+                peer = self.repo / ('peer-' + state)
+                if state == 'missing': node.unlink()
+                elif state == 'corrupt': node.write_bytes(b'changed\n')
+                elif state == 'executable': node.chmod(0o755)
+                else:
+                    peer.write_bytes(body); node.unlink()
+                    if state == 'symlink': node.symlink_to(peer)
+                    else: os.link(peer, node)
+                admitted, errors = self.admission()
+                self.assertEqual(admitted, {}); self.assertTrue(errors)
+                if node.exists() or node.is_symlink(): node.unlink()
+                node.write_bytes(body)
+
+    def test_complete_source_ids_provenance_and_exact_projection_are_required(self):
+        original = deepcopy(self.document)
+        for change in ('missing-row', 'duplicate-id', 'projection', 'derivation', 'original-sha', 'original-size', 'bool-size', 'outside-provider'):
+            with self.subTest(change=change):
+                row = self.document['sources'][0]
+                if change == 'missing-row': self.document['sources'].pop()
+                elif change == 'duplicate-id': row['id'] = self.document['sources'][1]['id']
+                else:
+                    field, value = {'projection':('projection','PROJECT'), 'derivation':('derivation','changed'),
+                                    'original-sha':('original_sha256','f'*64), 'original-size':('original_bytes',1),
+                                    'bool-size':('bytes',True), 'outside-provider':('path','formal/unreviewed/Fixture00.lean')}[change]
+                    row[field] = value
+                self.sync_map()
+                admitted, errors = self.admission()
+                self.assertEqual(admitted, {}); self.assertTrue(errors)
+                self.document = deepcopy(original); self.sync_map()
+
+    def test_unrelated_ordinary_file_is_not_an_admitted_provider(self):
+        other = 'formal/type-theory/Unreviewed.lean'
+        (self.repo / other).write_bytes(b'-- unreviewed\n')
+        admitted, errors = self.admission()
+        self.assertEqual(errors, [])
+        self.assertNotIn(other, admitted)
+        self.assertEqual(len(admitted), 39)
+
 if __name__ == "__main__":
     unittest.main()

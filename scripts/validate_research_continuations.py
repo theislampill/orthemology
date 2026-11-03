@@ -97,6 +97,12 @@ def path_in(root, name, exists=True):
 def source_bytes(root, row):
     """Preserve source-ID identity while using a qualified absent current copy."""
     path = path_in(root, row['path'], exists=False)
+    original_body = None
+    current_guards = _source.continuation_formal_current_paths()
+    if row['path'] in current_guards:
+        original_body = _source.continuation_copy_bytes(
+            root, current_guards[row['path']],
+            row['sha256'], row['bytes'], source=row)
     if row['path'] in _source.FORMAL_CONTINUATION_PATHS:
         return _source.continuation_formal_source_bytes(root, row)
     if row['path'] in _source.CONTINUATION_FORMAL_RETARGET_PATHS:
@@ -111,6 +117,8 @@ def source_bytes(root, row):
     body = path.read_bytes()
     require((len(body), hashlib.sha256(body).hexdigest()) == (row['bytes'], row['sha256']),
             'Source digest/size mismatch: ' + row['id'])
+    require(original_body is None or body == original_body,
+            'Ordinary guard differs from authenticated original: ' + row['id'])
     return body
 
 

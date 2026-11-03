@@ -1457,9 +1457,9 @@ CONTINUATION_OWNER_CURRENT = {'docs/provenance/v5-research-continuations/EVIDENC
  'docs/provenance/v5-research-continuations/README.md': ('25b47c9b01a2e1bff5d98b66e95968a94cbfd8ca',
                                                          '1afc3bdde01b03fdfa58b325d2089f95d972554a1af63ce1e7ca231501c5b6f0',
                                                          47487),
- 'docs/provenance/v5-research-continuations/SOURCE_MAP.json': ('a98763ceb0e638bd055b77c83f7e7b9899c52930',
-                                                               'b434046568c41e56d060282975e7e7829bbed77b85bfb4e47108e9810da93384',
-                                                               5960211),
+ 'docs/provenance/v5-research-continuations/SOURCE_MAP.json': ('c5da80acfdf209cb3c96a73576f362be1f5be292',
+                                                               'e7cce0f3ad6c7742ea2b3702963dfad8920e06e3f1208f15656d926922e64725',
+                                                               5942902),
  'experiments/orthemology-v5-continuations/registry.json': ('d8a37112646af3922ffe6a7ee86d1ded72996b54',
                                                             '53eff919af5543ce3750f988c0b1c10422dd3ba883f9fbfc77b4840650a86258',
                                                             175135)}
@@ -1698,6 +1698,72 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
     return list(dict.fromkeys(errors))
 
 
+def check_continuation_provider_additions(repo, baseline_rows, continuation_owners, baseline):
+    """Bind unchanged ordinary providers without creating scientific work entries."""
+    path = CONTINUATION_OWNER_PATHS[2]
+    if path not in continuation_owners:
+        return {}, []
+    try:
+        if not isinstance(baseline, str) or not re.fullmatch(r'[0-9a-f]{40}', baseline):
+            raise ValueError('original baseline must be an immutable commit')
+        expected = CONTINUATION_OWNER_CURRENT[path]
+        owner = continuation_owners[path]
+        if (owner.get('kind'), owner.get('mode'), owner.get('git_oid'), owner.get('bytes')) != (
+                'blob', '100644', expected[0], expected[2]):
+            raise ValueError('source-map owner is not the reviewed current edition')
+        body = safe_path(Path(repo), path).read_bytes()
+        identity = (hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest(),
+                    hashlib.sha256(body).hexdigest(), len(body))
+        if identity != expected:
+            raise ValueError('source-map current bytes differ')
+        sources = json.loads(body)['sources']
+        selected = [r for r in sources if isinstance(r.get('path'), str)
+                    and r['path'].startswith('formal/type-theory/')]
+        if len(selected) != 206 or len({r['id'] for r in selected}) != 206:
+            raise ValueError('ordinary provider source-ID population differs')
+        providers, originals = {}, {}
+        for row in selected:
+            current, sha, size = row['path'], row['sha256'], row['bytes']
+            if (not current.endswith('.lean') or not isinstance(row['id'], str) or not row['id']
+                    or not re.fullmatch(r'[0-9a-f]{64}', sha)
+                    or type(size) is not int or size <= 0
+                    or row['projection'] != 'EXACT' or row['derivation'] is not None
+                    or row['original_sha256'] != sha
+                    or type(row['original_bytes']) is not int or row['original_bytes'] != size):
+                raise ValueError('ordinary provider is not an exact original source')
+            original = CONTINUATION_COPY_ROOT + sha + '.lean'
+            previous = baseline_rows.get(original, {})
+            blob = previous.get('git_oid')
+            if (current in baseline_rows or previous.get('kind') != 'blob'
+                    or previous.get('mode') != '100644' or previous.get('bytes') != size
+                    or not isinstance(blob, str) or not re.fullmatch(r'[0-9a-f]{40}', blob)):
+                raise ValueError('original provider or destination census identity differs')
+            binding = (blob, sha, size)
+            if current in providers and providers[current] != binding:
+                raise ValueError('one ordinary provider has inconsistent source identities')
+            providers[current] = binding
+            originals[original] = blob
+        if len(providers) != 39 or len(originals) != 39:
+            raise ValueError('ordinary provider destination or original population differs')
+        original_tree = subprocess.run(
+            ['git', '--no-replace-objects', '--literal-pathspecs', 'ls-tree', '-z', baseline,
+             '--', *sorted(originals)], cwd=repo, capture_output=True, check=False)
+        expected_tree = b''.join(('100644 blob ' + originals[name] + '\t' + name + '\0').encode()
+                                 for name in sorted(originals))
+        if original_tree.returncode or original_tree.stdout != expected_tree:
+            raise ValueError('original provider tree receiving differs or failed')
+        admitted = {}
+        for name, binding in sorted(providers.items()):
+            # Reuse successful original-absence, exact mode/index/body and TOCTOU checks.
+            if reviewed_indexed_modification(repo, (name, baseline, None, binding)) != {name}:
+                raise ValueError('ordinary provider current receiving is incomplete')
+            admitted[name] = {'path': name, 'kind': 'blob', 'mode': '100644',
+                              'git_oid': binding[0], 'bytes': binding[2]}
+        return admitted, []
+    except (KeyError, TypeError, ValueError, OSError, UnicodeError) as exc:
+        return {}, ['continuation-provider: ' + str(exc)]
+
+
 def corpus_currentness_context(repo, indexed, owners, cross):
     """Return the existing authenticated contexts and every qualification error."""
     errors = []
@@ -1715,6 +1781,13 @@ def corpus_currentness_context(repo, indexed, owners, cross):
     errors.extend(fixture_errors)
     additions, addition_errors = check_source_additions(repo, indexed, owners, cross)
     errors.extend(addition_errors)
+    providers, provider_errors = check_continuation_provider_additions(
+        repo, indexed, continuation_owners, owners.get("baseline", {}).get("commit"))
+    errors.extend(provider_errors)
+    if set(additions).intersection(providers):
+        fail("continuation-provider", "ordinary provider overlaps authored-source admission")
+    else:
+        additions.update(providers)
     historical, historical_errors = check_historical_sources(repo, indexed, owners, cross, additions)
     errors.extend(historical_errors)
     navigation = {}
