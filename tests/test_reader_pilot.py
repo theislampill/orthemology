@@ -10311,5 +10311,106 @@ class ContinuationProviderAdmissionControls(unittest.TestCase):
         self.assertNotIn(other, admitted)
         self.assertEqual(len(admitted), 39)
 
+
+class ReviewedFrontierTestEditions(unittest.TestCase):
+    """The two exact live-control editions use the existing ordinary-file guard."""
+    CONTRACTS = {'tests/test_pmr007_deep_bk_public_snapshot.py': ('tests/test_pmr007_deep_bk_public_snapshot.py',
+                                                  '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c',
+                                                  ('249a89266da20b19a84131e7b27a0814aaadd54f',
+                                                   'fd6dbafefb2eb6b24119c0d94634251df621d30122c246f690cce146ed5c9ce5',
+                                                   12480),
+                                                  ('338a965b1d3464dcc71571057cb3749e6db4d2f6',
+                                                   '393836cabe9e060109fa747c907f8d80c4df23cd5c739eb2efe56879e71df900',
+                                                   18014)),
+ 'tests/test_pmr007_deep_bv_semantic_reissue.py': ('tests/test_pmr007_deep_bv_semantic_reissue.py',
+                                                   '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c',
+                                                   ('b932096c9490c9e31bfc3f596f2990a4dfd1e8ba',
+                                                    '334034b9019f5f27ca2fcac36e568982bda3d7d6e7c2daca40e565d16792a37f',
+                                                    9724),
+                                                   ('c58ba28e58995bba573184dac867ef38673abfc1',
+                                                    '5ee60a37fb6fa5a18f5bc78a47c1d342a7dee7b3ea4a0862473782ca114e156f',
+                                                    14419))}
+    PATHS = tuple(CONTRACTS)
+    fixture = ReviewedAuthorityControls.fixture
+    currentness = ReviewedAuthorityControls.currentness
+    test_exact_two_owner_editions_and_requested_subset = ReviewedAuthorityControls.test_exact_three_owner_editions_and_requested_subset
+    test_wrong_missing_or_nonordinary_current_owner_refuses = ReviewedAuthorityControls.test_wrong_missing_or_nonordinary_current_owner_refuses
+    test_history_index_and_native_failures_refuse = ReviewedAuthorityControls.test_history_index_and_native_failures_refuse
+    test_currentness_admits_only_requested_qualified_modifications = ReviewedAuthorityControls.test_currentness_admits_only_requested_qualified_modifications
+    test_deletion_type_change_addition_and_unrelated_edit_refuse = ReviewedAuthorityControls.test_deletion_type_change_addition_and_unrelated_edit_refuse
+    test_unchanged_positive_and_extra_path_refusal = ReviewedAuthorityControls.test_unchanged_positive_and_extra_path_refusal
+
+    def test_only_exact_reviewed_frontier_test_contracts_are_admitted(self):
+        import ast
+        tree = ast.parse((ROOT / 'scripts/check_reader_pilot.py').read_bytes())
+        table = next(n for n in tree.body if isinstance(n, ast.Assign)
+                     and any(isinstance(t, ast.Name) and t.id == 'REVIEWED_AUTHORITY_EDITS'
+                             for t in n.targets))
+        contracts = ast.literal_eval(table.value)
+        for path, expected in self.CONTRACTS.items():
+            with self.subTest(path=path):
+                self.assertEqual(contracts.get(path), expected)
+        self.assertNotIn('tests/', contracts)
+
+
+class ReviewedFrontierOriginalPinControls(unittest.TestCase):
+    """Preserve both original live-test bytes as exact historical REUSE objects."""
+    PINS = {'tests/test_pmr007_deep_bk_public_snapshot.py': ('249a89266da20b19a84131e7b27a0814aaadd54f',
+                                                  'fd6dbafefb2eb6b24119c0d94634251df621d30122c246f690cce146ed5c9ce5',
+                                                  12480,
+                                                  '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+ 'tests/test_pmr007_deep_bv_semantic_reissue.py': ('b932096c9490c9e31bfc3f596f2990a4dfd1e8ba',
+                                                   '334034b9019f5f27ca2fcac36e568982bda3d7d6e7c2daca40e565d16792a37f',
+                                                   9724,
+                                                   '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
+
+    def setUp(self):
+        previous = ReviewedGovernanceOriginalPinControls()
+        previous.setUp()
+        self.base = previous.base
+        self.prior = previous.current
+        for path, (_, identity, size, _) in self.PINS.items():
+            row = dict(repository_path=path, source_sha256=identity, public_sha256=identity,
+                       source_bytes=size, public_bytes=size, disposition='REUSE', role='unchanged-role')
+            for document in (self.base.original, self.prior):
+                document['objects'].append(deepcopy(row))
+        self.current = self.base.pinned(self.prior, self.PINS)
+
+    def test_prior_and_complete_two_test_coordinates_are_accepted(self):
+        self.assertTrue(self.base.permitted(self.prior))
+        self.assertTrue(self.base.permitted(self.current))
+
+    def test_partial_pair_and_each_identity_coordinate_or_role_change_refuse(self):
+        for path in self.PINS:
+            for field, value in (('repository_revision', 'HEAD'), ('git_blob', '0' * 40),
+                                 ('source_sha256', '0' * 64), ('public_sha256', '0' * 64),
+                                 ('source_bytes', 1), ('public_bytes', 1),
+                                 ('disposition', 'PROJECT'), ('role', 'unreviewed')):
+                with self.subTest(path=path, field=field):
+                    changed = deepcopy(self.current)
+                    next(r for r in changed['objects'] if r.get('repository_path') == path)[field] = value
+                    self.assertFalse(self.base.permitted(changed))
+            changed = deepcopy(self.current)
+            row = next(r for r in changed['objects'] if r.get('repository_path') == path)
+            row.pop('repository_revision')
+            row.pop('git_blob')
+            self.assertFalse(self.base.permitted(changed))
+
+    def test_missing_duplicate_reordered_and_unrelated_objects_refuse(self):
+        for kind in ('missing', 'duplicate', 'reordered', 'unrelated', 'metadata'):
+            with self.subTest(kind=kind):
+                changed = deepcopy(self.current)
+                if kind == 'missing':
+                    changed['objects'].pop()
+                elif kind == 'duplicate':
+                    changed['objects'].append(deepcopy(changed['objects'][-1]))
+                elif kind == 'reordered':
+                    changed['objects'].reverse()
+                elif kind == 'unrelated':
+                    changed['objects'][0]['role'] = 'unreviewed'
+                else:
+                    changed['schema'] = 'unreviewed'
+                self.assertFalse(self.base.permitted(changed))
+
 if __name__ == "__main__":
     unittest.main()

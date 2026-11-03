@@ -1490,6 +1490,194 @@ where $C(y)>0$. Continuity makes this nonconstancy a distinction on positive-mea
 
 The density and conditional divergences do not supply a sharp large-$n$ rate, a finite-query implementation, or an optimal testing rule. Those conclusions require their own moment, tail, extraction and resource arguments. In particular, removing the singular support certificate is different from discarding all discriminating information, while an infinite forward divergence is different from an efficient finite-sample test.
 
+### 2.28 Sharp information and vector cost in the ideal skyline channel
+
+For the known pair in §2.27, common-support information has a sharp scale despite the infinite forward divergence. Keep $m=n+1$, fresh independent vectors, and retention without mutation. Write $Q_0,Q_1$ for the full skyline laws of $n$ product-uniform routes and $m$ routes with density $f_{n/m}$, respectively. As $m\to\infty$,
+
+```math
+\mathrm{KL}(Q_0\Vert Q_1)\sim\frac{(\log m)^2}{4m^4},
+\qquad
+H^2(Q_0,Q_1)\sim\frac{(\log m)^2}{8m^4},
+\qquad
+H^2(P,Q)=\int(\sqrt{dP}-\sqrt{dQ})^2.
+```
+
+The Hellinger convention has **no factor $1/2$**, and both expressions include the alternative-only stratum $K=m$. For each fixed $0<\alpha<1/2$, this yields $\Theta_\alpha(m^4/\log^2m)$ vector cost in the ideal experiment revealing each complete exact skyline: a lower bound on baseline expected started-vector cost for common adaptive protocols, and a matching-order fixed-sample upper bound. It does not make forward KL finite or turn exact coordinates into a finite-query observation. The proof below separates moment transfer, entropy integration and the resource statement. [SHARP-SKYLINE]
+
+**A local score with a controlled remainder.** Let $E$ be the lower undominated region, $U=|E|$, $Z=mU$, $M=K-Z$, and
+
+```math
+A=\sum_{(x,y)\in S}xy-m\int_E xy\,dx\,dy,
+\qquad V=\frac{M^2-K}{2m^2}+\frac{2A}{m}.
+```
+
+Expanding the exact common-support likelihood from §2.27 gives
+
+```math
+\log L=V+R,\qquad |R|\le40(K/m+U)^3
+\quad\text{on }\{K/m\le1/2,\ U\le1/2\}.
+```
+
+The downset property of $E$ bounds each visible product by $U$ and each integral $\int_E(xy)^j$ by $U^{j+1}$, controlling the expansion terms. The bound is local, not a global Taylor estimate. Under the fixed-count uniform law, the record and area identities give, with $h=H_n$ and $H_n^{(2)}=\sum_{j\le n}j^{-2}$,
+
+```math
+\mathbb E_0M^2=h+O(\log^2m/m),\qquad
+\mathbb E_0K=h,\qquad
+\operatorname{Var}_0K=h-H_n^{(2)},\qquad
+\mathbb E_0K^2=h^2+h-H_n^{(2)}.
+```
+
+These facts do not assert exact centering of $V$: even $\mathbb E_0M=-1/m$, rather than zero. The needed sharp quantity is the second raw moment of the score. [SKYLINE-SCORE] [SKYLINE-BASELINE]
+
+**Poisson compensation and the fourth moment.** Introduce an auxiliary uniform Poisson process $\Pi_m$ of intensity $m$ on the unit square, including its empty skyline. Its skyline density is $m^K e^{-Z}$. Changing the intensity to $me^{-t}$ and using normalization gives the exact identity
+
+```math
+\mathbb E_\Pi\exp[-tK+(1-e^{-t})Z]=1.
+```
+
+In particular $\mathbb E_\Pi M=0$ and $\mathbb E_\Pi M^2=\mathbb E_\Pi Z=:a_m$. Integrating the empty-lower-rectangle probability gives
+
+```math
+a_m=\int_0^m(\log m-\log u)e^{-u}\,du=\log m+O(1).
+```
+
+Conditional on the Poisson count $N$, $K$ has the ordinary uniform-record law, including $K=0$ when $N=0$. Thus
+$\operatorname{Var}_\Pi K=\mathbb E(H_N-H_N^{(2)})+\operatorname{Var}(H_N)=O(\log m)$: on $m/2\le N\le2m$, $H_N-\log m$ is bounded, and the two Poisson tails control its squared remainder. Since $Z=K-M$, this also gives $\operatorname{Var}_\Pi Z=O(\log m)$ and $\mathbb E_\Pi Z^2=a_m^2+O(\log m)$.
+
+The dyadic empty-rectangle argument supplies, for every fixed positive integer $r$,
+
+```math
+\|Z\|_{r,\Pi}\le1+\lceil\log_2m\rceil(r!)^{1/r}.
+```
+
+Indeed each nonnegative band variable has strict tail at most $e^{-t}$, hence $r$th moment at most $r!$ by layer cake; Minkowski needs no independence between bands. Constants may depend on fixed $r$. Four derivatives of the normalized tilt give
+
+```math
+\mathbb E_\Pi M^4
+=6\mathbb E_\Pi(M^2Z)+4\mathbb E_\Pi(MZ)
+ -3\mathbb E_\Pi Z^2+\mathbb E_\Pi Z.
+```
+
+First Cauchy–Schwarz and the raw $Z^2$ bound give $\mathbb E_\Pi M^4=O(\log^2m)$. Centering $Z$ at $a_m$ then sharpens the two mixed terms to
+$\mathbb E_\Pi(M^2Z)=a_m^2+O(\log^{3/2}m)$ and
+$\mathbb E_\Pi(MZ)=O(\log m)$. Therefore
+
+```math
+\mathbb E_\Pi M^4\sim3\log^2m.
+```
+
+The mixed term has a plus sign and has not been discarded. This derives the coefficient without assuming a Gaussian limit. [SKYLINE-POISSON] [SHARP-SKYLINE]
+
+**Uniform integrability makes conditioning legitimate.** Differentiation through order six is justified at each finite $m$ by Poisson exponential moments: $K\le N$ and $0\le Z\le m$. The sixth derivative has expectation zero and is
+
+```math
+M^6-15M^4Z-20M^3Z+45M^2Z^2-15M^2Z
+ +60MZ^2-6MZ-15Z^3+25Z^2-Z.
+```
+
+Put $F_6=\mathbb E_\Pi|M|^6$ and $\ell=1+\log m$. Each mixed term $M^iZ^j$ has $i\le4$ and $i+2j\le6$. Hölder and the fixed-order area moments bound its absolute expectation by $C_{i,j}F_6^{i/6}\ell^j$; larger integer moments cover any noninteger exponent. Dividing by $\ell^3$ yields, for $x=F_6/\ell^3$,
+
+```math
+x\le C(1+x^{1/6}+x^{1/3}+x^{1/2}+x^{2/3}).
+```
+
+Hence $x$ is bounded, and $M^4/\log^2m$ is uniformly integrable under the varying Poisson laws.
+
+The conditional hidden-point law gives the exact density of the fixed-count skyline relative to $\Pi_m$:
+
+```math
+r_n(s)=\frac{\Pr\{\operatorname{Poi}(m(1-U))=n-K\}}
+                   {\Pr\{\operatorname{Poi}(m)=n\}}.
+```
+
+The numerator is zero for a negative index and, when $n\ge1$, for the empty skyline. On $U\le1/2$, the Poisson mode bound and Stirling inequalities give $r_n\le2e^{1/24}<3$. Also $K+Z=O_{\mathsf P}(\log m)$ and $M=O_{\mathsf P}(\sqrt{\log m})$ under $\Pi_m$. Setting $v=m-Z$ and $q=m-1-K$ gives $q-v=-M-1=o_{\mathsf P}(\sqrt m)$ and $q/m,v/m\to1$. The local Stirling expansion of the Poisson mass therefore proves $r_n\to1$ in probability. The truncated density $r_n1_{\{U\le1/2\}}$ is bounded, so uniform integrability transfers the fourth moment on this region. On its complement, the fixed-count empty-rectangle tail is superpolynomially small and $|M|\le m$. Consequently
+
+```math
+\mathbb E_0M^4\sim3\log^2m.
+```
+
+Neither convergence in probability alone nor conditioning on a count has been used as a general moment-transfer principle. In particular, the Poisson zero-mean identity is not transferred. [SKYLINE-POISSON] [SHARP-SKYLINE]
+
+**From the score to an integrated likelihood square.** The fixed-count identities and Cauchy–Schwarz now imply
+$\mathbb E_0(M^2K)=h^2+O(\log^{3/2}m)+o(\log m)$, and hence
+$\mathbb E_0(M^2-K)^2\sim2\log^2m$. The weighted compensation identity
+
+```math
+\mathbb E_\Pi A^2
+=m\int_{(0,1)^2}(xy)^2e^{-mxy}\,dx\,dy
+\le\frac{2\log m+1/9}{m^2}
+```
+
+and the same restricted-density and complement-tail argument give
+$\mathbb E_0(A/m)^2=O(\log m/m^4)$. The random undominated region is not assumed independent of the process. The second term in $V$ is therefore negligible in $L^2$, proving
+
+```math
+\mathbb E_0V^2\sim\frac{\log^2m}{2m^4}.
+```
+
+For the Taylor step, take $J=\lceil\log_2n\rceil$, $t=20\log m$ and
+
+```math
+B_m=eH_m+t+(m/n)(1+Jt),\quad
+\beta_m=(J+1)m^{-20},\quad G_m=\{K+mU\le B_m\}.
+```
+
+Both full skyline laws satisfy $Q_i(G_m^c)\le\beta_m$. For the alternative count, a shared-uniform coupling orders the conditional coordinate quantiles and dominates its lower-record count by an ordinary uniform-record count. It does not assume independent alternative record indicators. The area bound uses the common one-rectangle void probability and the dyadic union bound. Thus $B_m=O(\log^2m)$, and eventually $G_m$ is in common support and in the local expansion region. On it,
+
+```math
+\sup_{G_m}|\log L|\le23(B_m/m)^2\longrightarrow0,
+\qquad
+\mathbb E_0[R^2 1_{G_m}]=O(\log^6m/m^6).
+```
+
+Globally under $Q_0$, $|V|\le5$, so the omitted score square is at most $25\beta_m$. The $L^2$ triangle inequality then yields
+
+```math
+\mathbb E_0[(\log L)^2 1_{G_m}]\sim\frac{\log^2m}{2m^4}.
+```
+
+The global logarithm envelope $\|\log L\|_{2,Q_0}\le4m^2$ is retained for exceptional entropy; it is not itself a sharp second-moment estimate. [SKYLINE-COUNT] [SKYLINE-POISSON] [SHARP-SKYLINE]
+
+**The full divergences, including singular mass.** Let $p_n=Q_1(K=m)$ and $\phi(v)=-\log v+v-1$. Because $\mathbb E_0L=1-p_n$, the exact identities are
+
+```math
+\mathrm{KL}(Q_0\Vert Q_1)=\mathbb E_0\phi(L)+p_n,
+\qquad H^2(Q_0,Q_1)=\mathbb E_0(\sqrt L-1)^2+p_n.
+```
+
+On $G_m$, uniform Taylor expansion gives $\phi(e^a)\sim a^2/2$ and $(e^{a/2}-1)^2\sim a^2/4$, with the ratios extended continuously at zero. On the complement, $\phi(L)\le|\log L|+L+1$, so its expectation is at most
+$4m^2\sqrt{\beta_m}+2\beta_m=o(\log^2m/m^4)$. The $L$ term needs the **alternative** tail bound, not just the baseline one. The Hellinger remainder is at most $2\beta_m$ since $(\sqrt L-1)^2\le1+L$. Finally §2.27 gives $0<p_n<1/m!$, negligible at this scale. This proves the two stated constants for the unconditioned laws, without deleting or renormalizing the singular stratum. [SHARP-SKYLINE]
+
+**Testing and actual started-vector cost.** Write $\mathcal D_m=\mathrm{KL}(Q_0\Vert Q_1)$ and $\rho_m=\int\sqrt{dQ_0\,dQ_1}=1-H^2/2$. A likelihood-ratio test at threshold one on $R$ independent exact skylines has sum of errors at most $\rho_m^R$. An observation with $K=m$ is assigned to world 1. Thus
+
+```math
+R=\left\lceil\frac{\log(1/\alpha)}{-\log\rho_m}\right\rceil
+\sim16\log(1/\alpha)\frac{m^4}{\log^2m}
+```
+
+makes each error at most $\alpha$. This is the asymptotic of an affinity-based sufficient budget, not the exact optimal testing constant. The likelihood is a Borel function of the exact coordinates for the known pair.
+
+Conversely, enlarge any common adaptive history by revealing a vector's entire skyline at its first observation. Each new reveal contributes conditional reverse information $\mathcal D_m$; retained endpoint answers are functions of that reveal, and common world-independent policy randomization contributes none. For every finite actual-action horizon $T$,
+
+```math
+\mathrm{KL}(\mathcal H_{0,T}\Vert\mathcal H_{1,T})
+\le\mathcal D_m\mathbb E_0N_T.
+```
+
+Suppose $\Pr_0\{\text{finite stop, decision 0}\}\ge1-\alpha$ and
+$\Pr_1\{\text{finite stop, decision 1}\}\ge1-\alpha$. Binary data processing for the terminal-0 events, monotone convergence and lower semicontinuity give
+
+```math
+\mathbb E_0N\ge\frac{\operatorname{kl}(1-\alpha,\alpha)}{\mathcal D_m},
+\qquad
+\frac{\operatorname{kl}(1-\alpha,\alpha)}{\mathcal D_m}
+\sim4\operatorname{kl}(1-\alpha,\alpha)\frac{m^4}{\log^2m}.
+```
+
+Every fresh vector is charged from its first observation, including one queried forever; infinite expectation is allowed. Correctness conditional only on termination is insufficient. The lower bound applies to endpoint protocols too, while the upper bound uses the stronger ideal exact-skyline observation. Together they establish the fixed-confidence order for ideal baseline or worst-world expected vector cost. [SKYLINE-POISSON] [SHARP-SKYLINE]
+
+**What the rate does not implement.** The asymptotic has no effective numerical cutoff, all-$n$ budget, all-confidence guarantee or larger-class minimax assertion. Exact skyline extraction, finite-precision likelihood evaluation and endpoint-query costs remain separate. In particular no finite-geometric score algorithm is adopted here: its equality-only decision statement needs the intended $\ge$ threshold correction before such adoption. The mathematical ideal-channel theorem supplies neither that procedural correction nor a physical realization.
+
 ## 3. The information hidden between target and audit marginals
 
 Let target $`\Theta`$, source type $`T`$, report $`Y`$, and verifier $`V`$ be binary. The target and type are independent and uniform. The report is $`9/10`$-accurate for a good source and $`1/2`$-accurate for a bad source. The verifier is $`4/5`$-accurate and conditionally independent of the report given $`(\Theta,T)`$. Define
@@ -5935,3 +6123,9 @@ These exact source editions retain their own proposal, repair and execution scop
 [CP09-READOUT-REVIEW]: https://api.github.com/repos/theislampill/orthemology/git/blobs/94c8c7cd740e946536cb42b2f67d69d985ddbf94
 
 [SKYLINE-LIKELIHOOD]: https://api.github.com/repos/theislampill/orthemology/git/blobs/651035bd014b84ac3b994fae2d9eae29e2f2429a
+
+[SHARP-SKYLINE]: https://api.github.com/repos/theislampill/orthemology/git/blobs/95a544a08a4d29d3db1cb0584ae57538a3a223ac
+[SKYLINE-SCORE]: https://api.github.com/repos/theislampill/orthemology/git/blobs/8ec02672bb555c06cc212514e561fe7b40e9efda
+[SKYLINE-BASELINE]: https://api.github.com/repos/theislampill/orthemology/git/blobs/12e47a63dd7f047be456d62a61b684e59cee7b32
+[SKYLINE-POISSON]: https://api.github.com/repos/theislampill/orthemology/git/blobs/1caa7aea0cb34844ecdf3710b535992bd170c3b2
+[SKYLINE-COUNT]: https://api.github.com/repos/theislampill/orthemology/git/blobs/cc529b668b68fc42cfecdfeb2ed62bd402f200c6

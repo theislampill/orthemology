@@ -758,6 +758,15 @@ def _permitted_projection_consumer_pins(original, candidate):
             ('af71a10aa182f32795e7736c23e0a620073b994a',
              '3b75bca002978c6c47dc5120e9114fc8c601b7f7f6da36bdf061799b899fc1e5',
              45554, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
+    # The two reviewed frontier live-test owners keep their exact original evidence.
+    frontier_test_consumers = {'tests/test_pmr007_deep_bk_public_snapshot.py': ('249a89266da20b19a84131e7b27a0814aaadd54f',
+                                                      'fd6dbafefb2eb6b24119c0d94634251df621d30122c246f690cce146ed5c9ce5',
+                                                      12480,
+                                                      '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+     'tests/test_pmr007_deep_bv_semantic_reissue.py': ('b932096c9490c9e31bfc3f596f2990a4dfd1e8ba',
+                                                       '334034b9019f5f27ca2fcac36e568982bda3d7d6e7c2daca40e565d16792a37f',
+                                                       9724,
+                                                       '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
     for bindings in (earlier, next24, combined, dict(combined, **fixtures),
                      dict(combined, **fixtures, **replay_input),
                      dict(combined, **fixtures, **replay_input, **calculus_fixture),
@@ -766,7 +775,10 @@ def _permitted_projection_consumer_pins(original, candidate):
                      dict(combined, **fixtures, **replay_input, **calculus_fixture,
                           **digest_consumers, **attribution_consumers),
                      dict(combined, **fixtures, **replay_input, **calculus_fixture,
-                          **digest_consumers, **attribution_consumers, **governance_consumers)):
+                          **digest_consumers, **attribution_consumers, **governance_consumers),
+                     dict(combined, **fixtures, **replay_input, **calculus_fixture,
+                          **digest_consumers, **attribution_consumers, **governance_consumers,
+                          **frontier_test_consumers)):
         expected = deepcopy(original)
         try:
             for path, (blob, identity, size, revision) in bindings.items():
@@ -1145,7 +1157,23 @@ REVIEWED_AUTHORITY_EDITS = {'scripts/validate_candidate_state.py': ('scripts/val
                                           None,
                                           ('efe2457f0f37360cb651a581e20931f123c0c4c5',
                                            '8fcf08ed2d1fb40700318880977743412abc2fbe8c2a19d50036a502505169a7',
-                                           11482))}
+                                           11482)),
+ 'tests/test_pmr007_deep_bk_public_snapshot.py': ('tests/test_pmr007_deep_bk_public_snapshot.py',
+                                                  '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c',
+                                                  ('249a89266da20b19a84131e7b27a0814aaadd54f',
+                                                   'fd6dbafefb2eb6b24119c0d94634251df621d30122c246f690cce146ed5c9ce5',
+                                                   12480),
+                                                  ('338a965b1d3464dcc71571057cb3749e6db4d2f6',
+                                                   '393836cabe9e060109fa747c907f8d80c4df23cd5c739eb2efe56879e71df900',
+                                                   18014)),
+ 'tests/test_pmr007_deep_bv_semantic_reissue.py': ('tests/test_pmr007_deep_bv_semantic_reissue.py',
+                                                   '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c',
+                                                   ('b932096c9490c9e31bfc3f596f2990a4dfd1e8ba',
+                                                    '334034b9019f5f27ca2fcac36e568982bda3d7d6e7c2daca40e565d16792a37f',
+                                                    9724),
+                                                   ('c58ba28e58995bba573184dac867ef38673abfc1',
+                                                    '5ee60a37fb6fa5a18f5bc78a47c1d342a7dee7b3ea4a0862473782ca114e156f',
+                                                    14419))}
 
 
 def reviewed_authority_modifications(repo, paths):

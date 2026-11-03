@@ -64848,7 +64848,9 @@
       "repository_path": "tests/test_pmr007_deep_bv_semantic_reissue.py",
       "public_sha256": "334034b9019f5f27ca2fcac36e568982bda3d7d6e7c2daca40e565d16792a37f",
       "public_bytes": 9724,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "b932096c9490c9e31bfc3f596f2990a4dfd1e8ba"
     },
     {
       "source_sha256": "33407d7e19612417187161c92ba7a5e779cec84c6b6f76f7da91b86a47e8be45",
@@ -328420,7 +328422,9 @@
       "repository_path": "tests/test_pmr007_deep_bk_public_snapshot.py",
       "public_sha256": "fd6dbafefb2eb6b24119c0d94634251df621d30122c246f690cce146ed5c9ce5",
       "public_bytes": 12480,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "249a89266da20b19a84131e7b27a0814aaadd54f"
     },
     {
       "source_sha256": "fd6fee41eff2c405032e4fb911174a9ffcadd71a3c724a13dc6d3bf16e3725ca",

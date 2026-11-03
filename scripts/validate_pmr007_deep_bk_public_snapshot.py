@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
-"""Validate the exact PMR-007 Deep A-BK snapshot and public correction ceiling."""
+"""Validate current public correction custody and authority boundaries.
+
+Historical snapshot membership/byte validation belongs to its exact Git edition;
+this current owner does not revalidate or claim a PASS for that snapshot.
+"""
 
 from resolve_t20_v6_source import (
     digest_record_view_bytes, digest_record_view_text,
-    digest_record_view_is_file, digest_record_view_paths,
+    digest_record_view_is_file,
 )
 
 
@@ -55,7 +59,6 @@ PRIVATE_PATTERN = re.compile(
     r"screen-threadFlyOut)"
 )
 SHA256_PATTERN = re.compile(r"[0-9a-f]{64}")
-EXPECTED_SNAPSHOT_FILES = 1186
 EXPECTED_REPOSITORY_SOURCE_PAIRS = {
     ("DEEP_BG", "docs/project-closure/ar8r-v11/programs/AR8R-TRANSCENDENTAL-BRIDGE-AND-RIVAL-LEDGER-V11.yaml"),
     ("DEEP_BG", "docs/project-closure/ar8r-v11/programs/ar8r-r5-minimal-nonintegration-control.md"),
@@ -162,49 +165,54 @@ def _load_yaml_mapping(path, label, issues):
     return value
 
 
-def _manifest_rows(path):
-    rows = []
-    row_count = 0
-    malformed_rows = 0
-    unsafe_paths = 0
-    duplicate_paths = 0
-    listed_paths = set()
-    parse_issues = []
-    for line_number, line in enumerate(digest_record_view_text(path, encoding="utf-8").splitlines(), 1):
-        if not line.strip():
+def _current_public_source_privacy(root, issues):
+    """Check present public files without reconstructing a historical member set."""
+    snapshot = root / SNAPSHOT_REL
+    target = root
+    for part in SNAPSHOT_REL.parts:
+        target = target / part
+        if target.is_symlink():
+            issues.append("current public source root contains a symlink")
+            return 0, 0, 0
+    if not snapshot.exists():
+        return 0, 0, 0
+    if not snapshot.is_dir():
+        issues.append("current public source root is not a directory")
+        return 0, 0, 0
+    checked = non_utf8 = private_paths = 0
+    try:
+        paths = sorted(snapshot.rglob("*"))
+    except OSError:
+        issues.append("current public sources could not be enumerated")
+        return 0, 0, 0
+    for path in paths:
+        if path.is_symlink():
+            issues.append("current public source symlink is forbidden: %s" % path.relative_to(snapshot))
             continue
-        row_count += 1
-        parts = line.split(None, 1)
-        if len(parts) != 2 or not SHA256_PATTERN.fullmatch(parts[0]):
-            malformed_rows += 1
-            parse_issues.append("malformed snapshot SHA256SUMS row %d" % line_number)
+        if not path.is_file():
             continue
-        digest, raw_relative = parts
-        relative = _safe_manifest_path(raw_relative)
-        if relative is None:
-            unsafe_paths += 1
-            parse_issues.append("unsafe snapshot SHA256SUMS path at line %d" % line_number)
+        checked += 1
+        try:
+            text = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            non_utf8 += 1
+            issues.append("current public source is not UTF-8 text: %s" % path.relative_to(snapshot))
+            try:
+                text = path.read_bytes().decode("utf-8", errors="replace")
+            except OSError:
+                issues.append("current public source is unreadable: %s" % path.relative_to(snapshot))
+                continue
+        except OSError:
+            issues.append("current public source is unreadable: %s" % path.relative_to(snapshot))
             continue
-        if relative in listed_paths:
-            duplicate_paths += 1
-            parse_issues.append("duplicate snapshot SHA256SUMS path at line %d" % line_number)
-            continue
-        listed_paths.add(relative)
-        rows.append((line_number, digest, relative))
-    return {
-        "rows": rows,
-        "row_count": row_count,
-        "listed_paths": listed_paths,
-        "malformed_rows": malformed_rows,
-        "unsafe_paths": unsafe_paths,
-        "duplicate_paths": duplicate_paths,
-        "issues": parse_issues,
-    }
+        private_paths += len(PRIVATE_PATTERN.findall(text))
+    if private_paths:
+        issues.append("private path or browser locator leaked into current public sources")
+    return checked, non_utf8, private_paths
 
 
 def validate(root=ROOT):
     root = pathlib.Path(root)
-    snapshot = root / SNAPSHOT_REL
     correction_path = root / CORRECTION_REL
     crosswalk_path = root / CROSSWALK_REL
     required_text_paths = [
@@ -213,81 +221,9 @@ def validate(root=ROOT):
         root / EQUATION_REL,
     ]
     issues = []
-    snapshot_hash_mismatches = 0
-    snapshot_manifest_malformed_rows = 0
-    snapshot_manifest_unsafe_paths = 0
-    snapshot_manifest_duplicate_paths = 0
-    snapshot_manifest_read_errors = 0
-    manifest_path = snapshot / "SHA256SUMS"
-    if not digest_record_view_is_file(manifest_path):
-        issues.append("snapshot SHA256SUMS is missing")
-        manifest_rows = []
-        manifest_row_count = 0
-        listed_paths = set()
-    else:
-        try:
-            manifest = _manifest_rows(manifest_path)
-        except (OSError, UnicodeDecodeError):
-            snapshot_manifest_read_errors = 1
-            issues.append("snapshot SHA256SUMS is not readable UTF-8 text")
-            manifest_rows = []
-            manifest_row_count = 0
-            listed_paths = set()
-        else:
-            manifest_rows = manifest["rows"]
-            manifest_row_count = manifest["row_count"]
-            listed_paths = manifest["listed_paths"]
-            snapshot_manifest_malformed_rows = manifest["malformed_rows"]
-            snapshot_manifest_unsafe_paths = manifest["unsafe_paths"]
-            snapshot_manifest_duplicate_paths = manifest["duplicate_paths"]
-            issues.extend(manifest["issues"])
-
-    actual_paths = set()
-    for path in digest_record_view_paths(root, snapshot):
-        relative = path.relative_to(snapshot).as_posix()
-        if (digest_record_view_is_file(path) or path.is_symlink()) and relative != "SHA256SUMS":
-            actual_paths.add(relative)
-    snapshot_manifest_coverage_exact = (
-        manifest_row_count == EXPECTED_SNAPSHOT_FILES
-        and len(listed_paths) == EXPECTED_SNAPSHOT_FILES
-        and listed_paths == actual_paths
-        and snapshot_manifest_malformed_rows == 0
-        and snapshot_manifest_unsafe_paths == 0
-        and snapshot_manifest_duplicate_paths == 0
-        and snapshot_manifest_read_errors == 0
+    current_public_files, current_public_non_utf8, current_public_private_paths = (
+        _current_public_source_privacy(root, issues)
     )
-    if not snapshot_manifest_coverage_exact:
-        issues.append("snapshot SHA256SUMS coverage mismatch")
-
-    snapshot_root = snapshot.resolve()
-    for line_number, expected, relative in manifest_rows:
-        target = snapshot / pathlib.PurePosixPath(relative)
-        target_is_safe_file = (
-            digest_record_view_is_file(target)
-            and not target.is_symlink()
-            and target.resolve().is_relative_to(snapshot_root)
-        )
-        if not target_is_safe_file or sha256(target) != expected:
-            snapshot_hash_mismatches += 1
-            issues.append("snapshot hash mismatch at SHA256SUMS line %d" % line_number)
-
-    private_paths_in_snapshot = 0
-    snapshot_non_utf8_files = 0
-    for relative in sorted(actual_paths):
-        target = snapshot / pathlib.PurePosixPath(relative)
-        if target.is_symlink():
-            issues.append("snapshot symlink is forbidden: %s" % relative)
-            continue
-        try:
-            text = digest_record_view_text(target, encoding="utf-8")
-        except UnicodeDecodeError:
-            snapshot_non_utf8_files += 1
-            issues.append("snapshot member is not UTF-8 text: %s" % relative)
-            text = digest_record_view_bytes(target).decode("utf-8", errors="replace")
-        private_paths_in_snapshot += len(PRIVATE_PATTERN.findall(text))
-    if private_paths_in_snapshot:
-        issues.append("private path or browser locator leaked into public snapshot")
-
     repository_source_hash_mismatches = 0
     repository_source_unsafe_paths = 0
     repository_source_malformed_rows = 0
@@ -440,18 +376,13 @@ def validate(root=ROOT):
         issues.append("Deep BK owner-decision correction is incomplete")
 
     return {
-        "schema": "ar8r-pmr007-deep-bk-public-validation-receipt-v1",
-        "result": "FAIL" if issues else "PASS_WITH_PARTIAL_REPRODUCTION_CEILING",
-        "snapshot_manifest_rows": manifest_row_count,
-        "snapshot_manifest_distinct_paths": len(listed_paths),
-        "snapshot_actual_files": len(actual_paths),
-        "snapshot_manifest_coverage_exact": snapshot_manifest_coverage_exact,
-        "snapshot_manifest_duplicate_paths": snapshot_manifest_duplicate_paths,
-        "snapshot_manifest_unsafe_paths": snapshot_manifest_unsafe_paths,
-        "snapshot_manifest_malformed_rows": snapshot_manifest_malformed_rows,
-        "snapshot_manifest_read_errors": snapshot_manifest_read_errors,
-        "snapshot_hash_mismatches": snapshot_hash_mismatches,
-        "snapshot_non_utf8_files": snapshot_non_utf8_files,
+        "schema": "ar8r-pmr007-public-correction-validation-receipt-v1",
+        "result": "FAIL" if issues else "PASS_CURRENT_CORRECTIONS_ONLY",
+        "validation_scope": "CURRENT_CORRECTION_AND_AUTHORITY_BOUNDARIES",
+        "historical_snapshot_validation": "NOT_RUN",
+        "current_public_files_checked": current_public_files,
+        "current_public_non_utf8_files": current_public_non_utf8,
+        "private_paths_in_current_public_sources": current_public_private_paths,
         "repository_source_rows": len(repository_sources),
         "repository_source_exact_set": repository_source_exact_set,
         "repository_source_unsafe_paths": repository_source_unsafe_paths,
@@ -460,7 +391,6 @@ def validate(root=ROOT):
         "crosswalk_values_exact": crosswalk_values_exact,
         "authority_ceiling_exact": authority_ceiling_exact,
         "private_exclusion_rows": len(private_exclusions),
-        "private_paths_in_public_snapshot": private_paths_in_snapshot,
         "private_paths_in_public_corrections": private_paths,
         "self_contained_public_rereview_reproduction": False,
         "issues": issues,

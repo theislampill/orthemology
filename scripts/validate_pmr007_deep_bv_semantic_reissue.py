@@ -86,6 +86,43 @@ def load_bk_validator(root, issues):
     return module
 
 
+def _current_correction_boundaries_valid(receipt):
+    """Accept current custody/privacy/authority checks, not a historical replay."""
+    if not isinstance(receipt, dict):
+        return False
+    exact_fields = {
+        "schema": "ar8r-pmr007-public-correction-validation-receipt-v1",
+        "result": "PASS_CURRENT_CORRECTIONS_ONLY",
+        "validation_scope": "CURRENT_CORRECTION_AND_AUTHORITY_BOUNDARIES",
+        "historical_snapshot_validation": "NOT_RUN",
+    }
+    if any(receipt.get(key) != value for key, value in exact_fields.items()):
+        return False
+    if any(receipt.get(key) is not True for key in (
+        "repository_source_exact_set", "crosswalk_values_exact", "authority_ceiling_exact",
+    )):
+        return False
+    exact_counts = {
+        "current_public_non_utf8_files": 0,
+        "private_paths_in_current_public_sources": 0,
+        "repository_source_rows": 12,
+        "repository_source_unsafe_paths": 0,
+        "repository_source_malformed_rows": 0,
+        "repository_source_hash_mismatches": 0,
+        "private_exclusion_rows": 4,
+        "private_paths_in_public_corrections": 0,
+    }
+    if any(type(receipt.get(key)) is not int or receipt[key] != value
+           for key, value in exact_counts.items()):
+        return False
+    return (
+        type(receipt.get("current_public_files_checked")) is int
+        and receipt["current_public_files_checked"] >= 0
+        and receipt.get("self_contained_public_rereview_reproduction") is False
+        and receipt.get("issues") == []
+    )
+
+
 def validate(root=ROOT):
     root = pathlib.Path(root)
     source = root / SOURCE_REL
@@ -281,16 +318,12 @@ def validate(root=ROOT):
 
     bk_validator = load_bk_validator(root, issues)
     if bk_validator is None:
-        deep_bk_exact_snapshot_unchanged = False
+        deep_bk_current_boundaries_valid = False
     else:
         deep_bk_receipt = bk_validator.validate(root)
-        deep_bk_exact_snapshot_unchanged = (
-            deep_bk_receipt.get("result") == "PASS_WITH_PARTIAL_REPRODUCTION_CEILING"
-            and deep_bk_receipt.get("snapshot_hash_mismatches") == 0
-            and deep_bk_receipt.get("snapshot_manifest_coverage_exact") is True
-        )
-    if not deep_bk_exact_snapshot_unchanged:
-        issues.append("exact Deep A-BK snapshot changed or failed validation")
+        deep_bk_current_boundaries_valid = _current_correction_boundaries_valid(deep_bk_receipt)
+    if not deep_bk_current_boundaries_valid:
+        issues.append("Deep A-BK current correction or authority boundary failed validation")
 
     executable_reproduction_established = (
         executable_reproduction_claimed and not issues
@@ -310,7 +343,7 @@ def validate(root=ROOT):
         "original_response_linked_bytes_unavailable": unavailable,
         "authority_ceiling_exact": authority_ceiling_exact,
         "result_index_exact": result_index_exact,
-        "deep_bk_exact_snapshot_unchanged": deep_bk_exact_snapshot_unchanged,
+        "deep_bk_current_boundaries_valid": deep_bk_current_boundaries_valid,
         "executable_reproduction_claimed": executable_reproduction_claimed,
         "executable_reproduction_established": executable_reproduction_established,
         "issues": issues,
