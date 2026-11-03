@@ -75722,7 +75722,9 @@
       "repository_path": "scripts/validate_cross_record_semantics.py",
       "public_sha256": "3b75bca002978c6c47dc5120e9114fc8c601b7f7f6da36bdf061799b899fc1e5",
       "public_bytes": 45554,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "af71a10aa182f32795e7736c23e0a620073b994a"
     },
     {
       "source_sha256": "3b75dc79a6d216883105d623de6fdf69d41825ee9c065b7c911f85ea1dec49d8",

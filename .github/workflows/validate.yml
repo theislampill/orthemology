@@ -171,7 +171,9 @@ jobs:
       - name: JSON schemas + machine-readable examples
         run: python scripts/validate_schemas.py
       - name: Cross-record semantics
-        run: python scripts/validate_cross_record_semantics.py
+        run: |
+          python scripts/validate_cross_record_semantics.py
+          python tests/test_cross_record_semantics.py
       - name: Negative fixtures + invalid-record corpus
         run: python scripts/validate_negative_fixtures.py
       - name: Recursive path-aware mutation testing (per-family scope printed)

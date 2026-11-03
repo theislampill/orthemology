@@ -1309,6 +1309,68 @@ Infinite expected cost satisfies the inequality trivially. Correctness merely co
 
 The exact historical review binds the final source SHA256 `1c2fd5cf4e8006205cbd61562d88eb5da72d4952f335b17952540ec9f1a1d544`, after corrections to actual-action indexing and the interior-reuse exclusion. Its symbolic and quadrature diagnostics corroborate only bounded calculations: resolution agreement is not certified quadrature error, and the analytic argument carries the asymptotic claim. This exposition adds no source-program, empirical or kernel execution and does not transfer the historical verdict to a new edition automatically. [CP09-KL-REVIEW]
 
+### 2.25 Interior panels have an exact planar probe threshold
+
+Allowing interior commands on the **same unchanged threshold vector** creates a different channel from face-minimum observation. A route with threshold $(x,y)$ returns one at $(a,b)$ exactly when $x\leq a$ and $y\leq b$; the endpoint is the OR of finitely many routes. Bits are separately readable, noiseless and nonlatched. Under this explicit two-dimensional interface, a finite labelled panel has a computable minimum route count, and the first possible one-sided support separation between $n$ and $n+1$ full-support route laws occurs at depth $2n+1$. Neither statement is a sample-rate or physical-retention claim. [CP09-PANEL]
+
+**The deterministic minimum.** Remove duplicate positive commands and any positive lying above another positive. List the remaining minimal positive antichain as $q_i=(a_i,b_i)$, with $a_1<\cdots<a_p$ and $b_1>\cdots>b_p$. For a negative $z=(u,v)$ define
+
+```math
+j(z)=\max(\{i:a_i\leq u\}\cup\{0\}),\qquad
+k(z)=\min(\{i:b_i\leq v\}\cup\{p+1\}).
+```
+
+The panel is consistent precisely when $j(z)<k(z)$ for every negative: no positive may lie below a negative. Retain the negatives with $1\leq j<k\leq p$ and associate their cut intervals $\{j,\ldots,k-1\}$. Let $\tau$ be the smallest number of cuts hitting all these intervals, zero for an empty family. The least number of routes realizing the panel is
+
+```math
+d=0\quad(p=0),\qquad d=1+\tau\quad(p>0).
+```
+
+This formula allows threshold coordinates in $[0,1]$, including equality. It is not applied to inconsistent panels.
+
+To prove it, one route covers a consecutive interval of minimal-positive indices: its first-coordinate condition selects a suffix and its second-coordinate condition a prefix. From any $r$ realizing routes, start at the leftmost uncovered index and choose a covering interval with largest right endpoint. Assign the block through that endpoint to this route, then repeat. Each chosen route is used once, so this partitions all positives into at most $r$ blocks. For a block $[l,h]$, the corner threshold $(a_l,b_h)$ covers precisely that block of minimal positives. Any original route covering it has threshold below this corner. Thus the corner cannot hit a negative if the original route avoids every negative.
+
+The block-corner route would hit a negative $z$ exactly when $l\leq j(z)$ and $h\geq k(z)$. Such a block exists precisely when no cut lies between $j(z)$ and $k(z)$. Negatives with $j=0$ or $k=p+1$ cannot hit a block corner. Hence every realization yields a hitting set with at most $r-1$ cuts, and a minimum hitting set yields $\tau+1$ corner routes realizing all original labels. With no positives the empty inventory suffices. This also proves the consistency criterion.
+
+The usual interval greedy algorithm supplies an exact certificate: choose the smallest right endpoint, discard intervals it hits, and repeat. Its chosen witness intervals are pairwise disjoint, so every hitting set needs at least that many cuts; the greedy set attains the bound. The corner routes certify realizability and the disjoint intervals certify its minimum. [CP09-PANEL]
+
+If $P,N$ count the original positive and negative probes, including repetitions, then for nonempty positives
+
+```math
+d\leq\min(P,N+1).
+```
+
+Indeed $d\leq p\leq P$, while selecting one cut per retained negative gives $\tau\leq N$. Forcing at least $m\geq1$ routes therefore needs $P\geq m$ and $N\geq m-1$, or at least $2m-1$ probes. The converse is not a claim about every panel of that size. A sharp witness is a strict interior staircase of $m$ positive points $q_i$ together with the $m-1$ negative connectors $(a_i,b_{i+1})$: each connector forces cut $i$, so $d=m$. For instance take $a_i=i/(m+1)$ and $b_i=(m+1-i)/(m+1)$.
+
+**Open realizations, not zero-probability duplicates.** Call a consistent panel boundary-admissible when all its positives have both coordinates strictly positive and none of its negatives is $(1,1)$. Every panel from a nonempty inventory with thresholds in $(0,1]^2$ has this property. For any $r\geq\max(1,d)$, such a panel has a nonempty open set of realizing $r$-route vectors in $((0,1)^2)^r$.
+
+When positives exist, move every realizing block corner downward in both coordinates by a sufficiently small positive amount. Every corner coordinate is positive, and for each corner–negative pair at least one nonhit coordinate has a strict positive gap. Finitely many such constraints allow one small displacement preserving every gap while making all intended hits strict and all thresholds interior. A small open neighborhood retains all labels. To reach exactly $r>d$ routes, add thresholds strictly above one witness in both coordinates and below one. Anything they hit is already hit by that witness, and all negatives remain strictly missed. Positive gaps again give a joint open neighborhood; no exact duplicate thresholds or positive probability of equality is assumed. With no positives, each negative has a coordinate below one, so all routes sufficiently close to $(1,1)$ miss every negative. The empty panel is included.
+
+The conditions cannot be discarded. A source threshold $(0,0)$ hits command $(0,0)$, whereas an open-square-supported target never does. An empty source inventory misses $(1,1)$, whereas every nonempty target hits it. Thus zero-route combinatorial realizability does not imply open realizability by a positive inventory. Upper-boundary source coordinates and threshold–command equality, in contrast, cause no difficulty. [CP09-PANEL]
+
+**A bounded adaptive support theorem.** Fix $n\geq1$. The target has exactly $n$ independent routes, each giving positive probability to every nonempty open rectangle in $(0,1)^2$. The source has any fixed $k\geq1$ routes with an arbitrary joint law supported on $((0,1]^2)^k$; source independence, continuous margins and full support are unnecessary. Use one common measurable policy of depth at most $2n$, with a common standard-Borel random seed independent of the vector. Then
+
+```math
+\mathcal L_{\rm source}(\text{transcript})
+\ll\mathcal L_{\rm target}(\text{transcript}).
+```
+
+The transcript may include the seed, selected commands, stopping and outputs. Fix a seed $s$ and pad stopped paths with common dummy symbols, giving finitely many possible bit/stop leaves. Along each leaf the commands form a fixed panel of at most $2n$ probes. If an allowed source vector realizes it, the panel is consistent and boundary-admissible. Its minimum $d$ is at most $n$, since $d\geq n+1$ would require $2n+1$ probes. The open-realization lemma supplies a nonempty open set of $n$-route target vectors with the same labels. They follow the same adaptive path because every earlier bit agrees. This open set contains a product of open rectangles, which has positive target probability by independence and full support.
+
+Let $K_i(s,b)$ be the conditional probability of leaf $b$. The argument gives $K_{\rm source}(s,b)>0\Rightarrow K_{\rm target}(s,b)>0$. For any measurable event $E$ of the full transcript, with common seed law $\rho$ and transcript map $T(s,b)$,
+
+```math
+P_i(E)=\int\sum_b\mathbf1_E(T(s,b))K_i(s,b)\,\rho(ds).
+```
+
+Measurable commands and comparisons make these finite-leaf kernels measurable. If the target integral is zero, each nonnegative summand vanishes almost everywhere; leafwise support inclusion makes the source integral zero too. This proves the asserted absolute continuity without conditioning on a positive-probability exact seed, selecting realizing thresholds measurably, or assuming a uniform probability lower bound. Projection preserves it if the seed or commands are hidden. World-dependent policies, vector-correlated seeds and additional informative observations are different contracts.
+
+At $2n+1$ fixed probes, the staircase with $m=n+1$ requires $n+1$ routes and is impossible under $n$. Its open realizations give positive probability under independent full-support $(n+1)$-route laws. Thus the depth threshold is sharp. If both laws are independent full-support laws supported in the open square, their transcript laws through depth $2n$ are mutually absolutely continuous: in the reverse direction every realized $n$-route panel can be openly realized and padded to $n+1$ at any finite depth. Absolute continuity alone implies neither finite KL nor a quantitative error or sample bound; it must not be substituted for the face-only information theorem. [CP09-PANEL]
+
+**Why the dimension matters.** In three dimensions, mark $(2/3,1/3,1/3)$, $(1/3,2/3,1/3)$ and $(1/3,1/3,2/3)$ positive and $(1/3,1/3,1/3)$ negative. The meet of every pair of positives is the negative, so a route covering two positives would also hit the negative. Three routes are necessary. The strict thresholds $(1/2,1/6,1/6)$ and its two coordinate permutations suffice. Four probes therefore force three routes, below the planar value $2m-1=5$. The ordered-antichain/interval proof is genuinely two-dimensional, not a theorem about every monotone instrument.
+
+These are ordinary mathematical arguments under the stated observation laws. The source's finite-grid controls and its predecessor's kernel-checked staircase witness do not supply a new kernel proof of minimum-panel complexity or arbitrary measurable adaptive policies. No original controls, new experiment or physical realization is asserted here. [CP09-PANEL]
+
 ## 3. The information hidden between target and audit marginals
 
 Let target $`\Theta`$, source type $`T`$, report $`Y`$, and verifier $`V`$ be binary. The target and type are independent and uniform. The report is $`9/10`$-accurate for a good source and $`1/2`$-accurate for a bad source. The verifier is $`4/5`$-accurate and conditionally independent of the report given $`(\Theta,T)`$. Define
@@ -5747,3 +5809,5 @@ These exact source editions retain their own proposal, repair and execution scop
 
 [CP09-KL-RATE]: https://api.github.com/repos/theislampill/orthemology/git/blobs/f78244c657922e59291a613448a2205787e7be2d
 [CP09-KL-REVIEW]: https://api.github.com/repos/theislampill/orthemology/git/blobs/8753df7f4b6bef586619c189ff6a74ac784e757b
+
+[CP09-PANEL]: https://api.github.com/repos/theislampill/orthemology/git/blobs/fb05690672522a0ba5e8ce8497cba1ec8ccabd5c

@@ -82,11 +82,41 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # omitted or padded projection is detected, never trusted.
 try:
     import yaml
-    with open(os.path.join(ROOT, "docs", "claim-reason-requirements.yaml"),
-              encoding="utf-8") as _f:
-        REASON_RULES = yaml.safe_load(_f)["rules"]
+    _documents = {}
+    for _name in ("claim-reason-requirements.yaml", "governance-requirements.yaml",
+                  "verdict-registry.yaml"):
+        with open(os.path.join(ROOT, "docs", _name), encoding="utf-8") as _f:
+            _documents[_name] = yaml.safe_load(_f)
+    _core = _documents["verdict-registry.yaml"]["core_path"]
+    if (not isinstance(_core, list) or not _core
+            or any(not isinstance(v, str) or not v for v in _core)
+            or len(set(_core)) != len(_core)):
+        raise ValueError("the required verdict registry has no valid finite core")
+    for _name in ("claim-reason-requirements.yaml", "governance-requirements.yaml"):
+        _rules = _documents[_name]["rules"]
+        if not isinstance(_rules, dict) or set(_rules) != set(_core):
+            raise ValueError("required rule table must cover exactly the verdict core")
+        if any(not isinstance(rule, dict) or not isinstance(rule.get("when"), str)
+               or not rule["when"].strip() for rule in _rules.values()):
+            raise ValueError("required rules must carry nonempty typed conditions")
+        _shape_key = "claim_shape" if _name.startswith("claim-") else "input_shape"
+        _shape = _documents[_name][_shape_key]
+        if not isinstance(_shape, dict):
+            raise ValueError("required rule table has no declared input shape")
+        for _rule in _rules.values():
+            _condition = _rule["when"]
+            _known = _condition == "always" or _condition in _shape
+            if _shape_key == "claim_shape":
+                _known = _known or (_condition.startswith("not_") and _condition[4:] in _shape)
+                _known = _known or (_condition.startswith("claim_type=")
+                                    and bool(_condition.split("=", 1)[1]))
+            if not _known:
+                raise ValueError("required rule uses an undeclared condition")
+    REASON_RULES = _documents["claim-reason-requirements.yaml"]["rules"]
+    GOVERNANCE_RULES = _documents["governance-requirements.yaml"]["rules"]
 except Exception:
-    REASON_RULES = None
+    # Configuration failure is reported by collect_issues, never a silent pass.
+    REASON_RULES = GOVERNANCE_RULES = None
 
 
 def reason_required(verdict, claim_shape):
@@ -162,6 +192,9 @@ def _time_of(episode):
 def collect_issues(parts):
     """Return a list of semantic-issue strings for one bundle of parts."""
     issues = []
+    if not REASON_RULES or not GOVERNANCE_RULES:
+        issues.append("required rule configuration is missing or malformed; "
+                      "governance adequacy cannot be established")
     issues.extend(naive_timestamp_issues(parts, "parts"))
 
     def inst_of(s):
@@ -615,6 +648,16 @@ def collect_issues(parts):
     for vr in verdicts:
         vid = vr.get("episode_id", "?")
         statuses, req = vr["statuses"], vr["required_path"]
+
+        # The declared episode path cannot remove the shipped unconditional
+        # obligations. Conditional closure/robustness shape reconstruction is
+        # deliberately not inferred from this outcome-bearing record.
+        if GOVERNANCE_RULES:
+            omitted = [v for v, rule in GOVERNANCE_RULES.items()
+                       if rule["when"] == "always" and v not in req]
+            if omitted:
+                issues.append("%s: required_path omits unconditional governance "
+                              "requirement(s) %s" % (vid, omitted))
 
         missing = [v for v in req if v not in statuses]
         if missing:

@@ -752,13 +752,21 @@ def _permitted_projection_consumer_pins(original, candidate):
                                       '240dd79778d8fded8744873ddfc298e3206fa120dbe0417b50198983975efff0',
                                       34750,
                                       '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
+    # One reviewed validator successor retains its exact original public source.
+    governance_consumers = {
+        'scripts/validate_cross_record_semantics.py':
+            ('af71a10aa182f32795e7736c23e0a620073b994a',
+             '3b75bca002978c6c47dc5120e9114fc8c601b7f7f6da36bdf061799b899fc1e5',
+             45554, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
     for bindings in (earlier, next24, combined, dict(combined, **fixtures),
                      dict(combined, **fixtures, **replay_input),
                      dict(combined, **fixtures, **replay_input, **calculus_fixture),
                      dict(combined, **fixtures, **replay_input, **calculus_fixture,
                           **digest_consumers),
                      dict(combined, **fixtures, **replay_input, **calculus_fixture,
-                          **digest_consumers, **attribution_consumers)):
+                          **digest_consumers, **attribution_consumers),
+                     dict(combined, **fixtures, **replay_input, **calculus_fixture,
+                          **digest_consumers, **attribution_consumers, **governance_consumers)):
         expected = deepcopy(original)
         try:
             for path, (blob, identity, size, revision) in bindings.items():
@@ -1055,10 +1063,14 @@ def reviewed_indexed_modification(repo, contract):
         return (hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest(),
                 hashlib.sha256(body).hexdigest(), len(body))
     tree = git('ls-tree', '-z', revision, '--', path)
-    if tree != ('100644 blob ' + original[0] + '\t' + path + '\0').encode():
-        raise ValueError('reviewed source edition predecessor tree differs')
-    if identity(git('cat-file', 'blob', revision + ':' + path)) != original:
-        raise ValueError('reviewed source edition predecessor bytes differ')
+    if original is None:
+        if tree != b'':
+            raise ValueError('reviewed source addition predecessor is not absent')
+    else:
+        if tree != ('100644 blob ' + original[0] + '\t' + path + '\0').encode():
+            raise ValueError('reviewed source edition predecessor tree differs')
+        if identity(git('cat-file', 'blob', revision + ':' + path)) != original:
+            raise ValueError('reviewed source edition predecessor bytes differ')
     expected = ('100644 ' + current[0] + ' 0\t' + path + '\0').encode()
     if git('ls-files', '--stage', '-z', '--', path) != expected:
         raise ValueError('reviewed source edition index differs')
@@ -1092,7 +1104,9 @@ def reviewed_sourcing_ledger_modifications(repo):
     return reviewed_indexed_modification(repo, REVIEWED_SOURCING_LEDGER)
 
 
-# Exact three-owner successor from independently reviewed reconstruction8fd004ba.
+# The original three-owner successor remains exact (reviewed reconstruction8fd004ba).
+# The independently reviewed governed-path owner and genuinely new live test below
+# use the same indexed-edition guard, with authenticated absence only for that test.
 # This temporary migration contract neither adopts science nor admits arbitrary edits.
 REVIEWED_AUTHORITY_EDITS = {'scripts/validate_candidate_state.py': ('scripts/validate_candidate_state.py',
                                          'c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce',
@@ -1117,7 +1131,21 @@ REVIEWED_AUTHORITY_EDITS = {'scripts/validate_candidate_state.py': ('scripts/val
                                     17484),
                                    ('35dfb35cb5e190ee81caea56ccc59a5083882fb1',
                                     'cd3cd8df68677335cb7a08457e2791058c8f01b14d41d68e85019313c958cf22',
-                                    13417))}
+                                    13417)),
+ 'scripts/validate_cross_record_semantics.py': ('scripts/validate_cross_record_semantics.py',
+                                                'c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce',
+                                                ('af71a10aa182f32795e7736c23e0a620073b994a',
+                                                 '3b75bca002978c6c47dc5120e9114fc8c601b7f7f6da36bdf061799b899fc1e5',
+                                                 45554),
+                                                ('bcb8ae0680493508bd4a1a6431b598778a09b16a',
+                                                 '24e0a43664c74a76282228f090835e70652ffccaa292f5497ebd76fc3eda1982',
+                                                 48293)),
+ 'tests/test_cross_record_semantics.py': ('tests/test_cross_record_semantics.py',
+                                          'c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce',
+                                          None,
+                                          ('efe2457f0f37360cb651a581e20931f123c0c4c5',
+                                           '8fcf08ed2d1fb40700318880977743412abc2fbe8c2a19d50036a502505169a7',
+                                           11482))}
 
 
 def reviewed_authority_modifications(repo, paths):
@@ -1615,7 +1643,9 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                 errors.append('corpus-currentness: reviewed sourcing ledger: ' + str(exc))
         authority_paths = set()
         authority_requests = {path for status, path in zip(values[::2], values[1::2])
-                              if status == 'M' and path in REVIEWED_AUTHORITY_EDITS}
+                              if path in REVIEWED_AUTHORITY_EDITS
+                              and status == ('A' if (REVIEWED_AUTHORITY_EDITS[path] is not None
+                                  and REVIEWED_AUTHORITY_EDITS[path][2] is None) else 'M')}
         if authority_requests:
             try:
                 authority_paths = reviewed_authority_modifications(repo, authority_requests)
@@ -1642,7 +1672,9 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                       for status, path in zip(values[::2], values[1::2])
                       if path not in editable and not
                       ((status == "M" and path in sourcing_paths)
-                        or (status == "M" and path in authority_paths)
+                        or (path in authority_paths and status == ('A' if (
+                            REVIEWED_AUTHORITY_EDITS[path] is not None
+                            and REVIEWED_AUTHORITY_EDITS[path][2] is None) else 'M'))
                         or (status == "D" and path in HISTORICAL_PROSE and path in historical_paths)
                         or (status == "D" and path in allowed_duplicates)
                         or (status == "D" and path in administrative_paths)
