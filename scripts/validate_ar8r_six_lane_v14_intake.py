@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate immutable six-lane V14 proposal custody and correction overlays."""
+"""Validate current six-lane boundaries and Specialist A/B source custody."""
 
 from __future__ import annotations
 
@@ -28,11 +28,6 @@ INTAKE_REL = pathlib.Path(
     "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake"
 )
 PACKAGES = {
-    "central": {
-        "manifest": "SHA256SUMS",
-        "manifest_sha256": "161bba2290408e313d08fa19e38adaec2b4c54ae36be2c37662a9398248ede81",
-        "files": 178,
-    },
     "specialist-a": {
         "manifest": "SHA256SUMS",
         "manifest_sha256": "f19fb30506f0d91cd0ababbe48c2f39ab0d075d5ae9b683fdf87717e26cf371f",
@@ -235,13 +230,20 @@ def validate(root=ROOT, intake_override=None):
     if source_hash_mismatches:
         issues.append("source hash mismatch")
 
-    for path in digest_record_view_paths(root, intake):
-        if not digest_record_view_is_file(path):
+    # Current privacy follows physically present files, not historical recovery.
+    for path in intake.rglob("*"):
+        if path.is_symlink():
+            issues.append(f"symlink forbidden in current intake: {path.relative_to(intake)}")
+            continue
+        if not path.is_file():
             continue
         try:
-            text = digest_record_view_text(path, encoding="utf-8")
+            text = path.read_text(encoding="utf-8")
         except UnicodeDecodeError:
             issues.append(f"non-UTF-8 public intake member: {path.relative_to(intake)}")
+            continue
+        except OSError:
+            issues.append(f"unreadable public intake member: {path.relative_to(intake)}")
             continue
         private_path_findings += len(PRIVATE_PATTERN.findall(text))
     if private_path_findings:
@@ -412,8 +414,9 @@ def validate(root=ROOT, intake_override=None):
         )
 
     return {
-        "schema": "ar8r-six-lane-v14-intake-validation-v1",
-        "result": "FAIL" if issues else "PASS_PROPOSAL_CUSTODY_AND_BOUNDED_SOURCE_INTAKE",
+        "schema": "ar8r-six-lane-v14-current-intake-validation-v1",
+        "result": "FAIL" if issues else "PASS_CURRENT_INTAKE_AND_SPECIALIST_CUSTODY",
+        "historical_central_snapshot_validation": "NOT_RUN",
         "lane_count": lane_count,
         "source_file_counts": counts,
         "source_hash_mismatches": source_hash_mismatches,

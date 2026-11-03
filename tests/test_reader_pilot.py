@@ -10412,5 +10412,98 @@ class ReviewedFrontierOriginalPinControls(unittest.TestCase):
                     changed['schema'] = 'unreviewed'
                 self.assertFalse(self.base.permitted(changed))
 
+
+class ReviewedCentralIntakeTestEdition(unittest.TestCase):
+    """The exact central-intake live-control edition use the existing ordinary-file guard."""
+    CONTRACTS = {'tests/test_ar8r_six_lane_v14_intake.py': ('tests/test_ar8r_six_lane_v14_intake.py',
+                                            '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c',
+                                            ('c0b79431bafc486c71a083b3b8afdec0db431236',
+                                             '548d4358ca89755bbfd29b2df9a4b6b2b6ca36541cc5994e523198c40ddea26c',
+                                             11625),
+                                            ('dd04dd4c43f2bc1d7bd5aaa7f84a4c36c039cfc8',
+                                             '15572c197d20db12d80668db0c8009459bfa5911a59d6c788f7e9ef92e9499f4',
+                                             25046))}
+    PATHS = tuple(CONTRACTS)
+    fixture = ReviewedAuthorityControls.fixture
+    currentness = ReviewedAuthorityControls.currentness
+    def test_exact_owner_edition_and_requested_subset(self):
+        module, repo, calls = self.fixture()
+        self.assertEqual(module.reviewed_authority_modifications(repo, set(self.PATHS)), set(self.PATHS))
+        self.assertEqual(module.reviewed_authority_modifications(repo, set()), set())
+    test_wrong_missing_or_nonordinary_current_owner_refuses = ReviewedAuthorityControls.test_wrong_missing_or_nonordinary_current_owner_refuses
+    test_history_index_and_native_failures_refuse = ReviewedAuthorityControls.test_history_index_and_native_failures_refuse
+    test_currentness_admits_only_requested_qualified_modifications = ReviewedAuthorityControls.test_currentness_admits_only_requested_qualified_modifications
+    test_deletion_type_change_addition_and_unrelated_edit_refuse = ReviewedAuthorityControls.test_deletion_type_change_addition_and_unrelated_edit_refuse
+    test_unchanged_positive_and_extra_path_refusal = ReviewedAuthorityControls.test_unchanged_positive_and_extra_path_refusal
+
+    def test_only_exact_reviewed_intake_test_contract_is_admitted(self):
+        import ast
+        tree = ast.parse((ROOT / 'scripts/check_reader_pilot.py').read_bytes())
+        table = next(n for n in tree.body if isinstance(n, ast.Assign)
+                     and any(isinstance(t, ast.Name) and t.id == 'REVIEWED_AUTHORITY_EDITS'
+                             for t in n.targets))
+        contracts = ast.literal_eval(table.value)
+        for path, expected in self.CONTRACTS.items():
+            with self.subTest(path=path):
+                self.assertEqual(contracts.get(path), expected)
+        self.assertNotIn('tests/', contracts)
+
+
+class ReviewedCentralIntakeOriginalPinControls(unittest.TestCase):
+    """Preserve the original intake live-test bytes as exact historical REUSE objects."""
+    PINS = {'tests/test_ar8r_six_lane_v14_intake.py': ('c0b79431bafc486c71a083b3b8afdec0db431236',
+                                            '548d4358ca89755bbfd29b2df9a4b6b2b6ca36541cc5994e523198c40ddea26c',
+                                            11625,
+                                            '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
+
+    def setUp(self):
+        previous = ReviewedFrontierOriginalPinControls()
+        previous.setUp()
+        self.base = previous.base
+        self.prior = previous.current
+        for path, (_, identity, size, _) in self.PINS.items():
+            row = dict(repository_path=path, source_sha256=identity, public_sha256=identity,
+                       source_bytes=size, public_bytes=size, disposition='REUSE', role='unchanged-role')
+            for document in (self.base.original, self.prior):
+                document['objects'].append(deepcopy(row))
+        self.current = self.base.pinned(self.prior, self.PINS)
+
+    def test_prior_and_complete_intake_coordinate_are_accepted(self):
+        self.assertTrue(self.base.permitted(self.prior))
+        self.assertTrue(self.base.permitted(self.current))
+
+    def test_partial_pin_and_each_identity_coordinate_or_role_change_refuse(self):
+        for path in self.PINS:
+            for field, value in (('repository_revision', 'HEAD'), ('git_blob', '0' * 40),
+                                 ('source_sha256', '0' * 64), ('public_sha256', '0' * 64),
+                                 ('source_bytes', 1), ('public_bytes', 1),
+                                 ('disposition', 'PROJECT'), ('role', 'unreviewed')):
+                with self.subTest(path=path, field=field):
+                    changed = deepcopy(self.current)
+                    next(r for r in changed['objects'] if r.get('repository_path') == path)[field] = value
+                    self.assertFalse(self.base.permitted(changed))
+            for field in ('repository_revision', 'git_blob'):
+                with self.subTest(path=path, missing=field):
+                    changed = deepcopy(self.current)
+                    row = next(r for r in changed['objects'] if r.get('repository_path') == path)
+                    row.pop(field)
+                    self.assertFalse(self.base.permitted(changed))
+
+    def test_missing_duplicate_reordered_and_unrelated_objects_refuse(self):
+        for kind in ('missing', 'duplicate', 'reordered', 'unrelated', 'metadata'):
+            with self.subTest(kind=kind):
+                changed = deepcopy(self.current)
+                if kind == 'missing':
+                    changed['objects'].pop()
+                elif kind == 'duplicate':
+                    changed['objects'].append(deepcopy(changed['objects'][-1]))
+                elif kind == 'reordered':
+                    changed['objects'].reverse()
+                elif kind == 'unrelated':
+                    changed['objects'][0]['role'] = 'unreviewed'
+                else:
+                    changed['schema'] = 'unreviewed'
+                self.assertFalse(self.base.permitted(changed))
+
 if __name__ == "__main__":
     unittest.main()

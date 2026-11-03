@@ -767,6 +767,11 @@ def _permitted_projection_consumer_pins(original, candidate):
                                                        '334034b9019f5f27ca2fcac36e568982bda3d7d6e7c2daca40e565d16792a37f',
                                                        9724,
                                                        '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
+    # The reviewed current intake test preserves its original evidence edition.
+    intake_test_consumer = {'tests/test_ar8r_six_lane_v14_intake.py': ('c0b79431bafc486c71a083b3b8afdec0db431236',
+                                                '548d4358ca89755bbfd29b2df9a4b6b2b6ca36541cc5994e523198c40ddea26c',
+                                                11625,
+                                                '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
     for bindings in (earlier, next24, combined, dict(combined, **fixtures),
                      dict(combined, **fixtures, **replay_input),
                      dict(combined, **fixtures, **replay_input, **calculus_fixture),
@@ -778,7 +783,10 @@ def _permitted_projection_consumer_pins(original, candidate):
                           **digest_consumers, **attribution_consumers, **governance_consumers),
                      dict(combined, **fixtures, **replay_input, **calculus_fixture,
                           **digest_consumers, **attribution_consumers, **governance_consumers,
-                          **frontier_test_consumers)):
+                          **frontier_test_consumers),
+                     dict(combined, **fixtures, **replay_input, **calculus_fixture,
+                          **digest_consumers, **attribution_consumers, **governance_consumers,
+                          **frontier_test_consumers, **intake_test_consumer)):
         expected = deepcopy(original)
         try:
             for path, (blob, identity, size, revision) in bindings.items():
@@ -1173,7 +1181,15 @@ REVIEWED_AUTHORITY_EDITS = {'scripts/validate_candidate_state.py': ('scripts/val
                                                     9724),
                                                    ('c58ba28e58995bba573184dac867ef38673abfc1',
                                                     '5ee60a37fb6fa5a18f5bc78a47c1d342a7dee7b3ea4a0862473782ca114e156f',
-                                                    14419))}
+                                                    14419)),
+ 'tests/test_ar8r_six_lane_v14_intake.py': ('tests/test_ar8r_six_lane_v14_intake.py',
+                                            '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c',
+                                            ('c0b79431bafc486c71a083b3b8afdec0db431236',
+                                             '548d4358ca89755bbfd29b2df9a4b6b2b6ca36541cc5994e523198c40ddea26c',
+                                             11625),
+                                            ('dd04dd4c43f2bc1d7bd5aaa7f84a4c36c039cfc8',
+                                             '15572c197d20db12d80668db0c8009459bfa5911a59d6c788f7e9ef92e9499f4',
+                                             25046))}
 
 
 def reviewed_authority_modifications(repo, paths):

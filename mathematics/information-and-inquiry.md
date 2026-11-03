@@ -1676,7 +1676,65 @@ $\Pr_1\{\text{finite stop, decision 1}\}\ge1-\alpha$. Binary data processing for
 
 Every fresh vector is charged from its first observation, including one queried forever; infinite expectation is allowed. Correctness conditional only on termination is insufficient. The lower bound applies to endpoint protocols too, while the upper bound uses the stronger ideal exact-skyline observation. Together they establish the fixed-confidence order for ideal baseline or worst-world expected vector cost. [SKYLINE-POISSON] [SHARP-SKYLINE]
 
-**What the rate does not implement.** The asymptotic has no effective numerical cutoff, all-$n$ budget, all-confidence guarantee or larger-class minimax assertion. Exact skyline extraction, finite-precision likelihood evaluation and endpoint-query costs remain separate. In particular no finite-geometric score algorithm is adopted here: its equality-only decision statement needs the intended $\ge$ threshold correction before such adoption. The mathematical ideal-channel theorem supplies neither that procedural correction nor a physical realization.
+**What the rate does not implement.** The asymptotic has no effective numerical cutoff, all-$n$ budget, all-confidence guarantee or larger-class minimax assertion. Exact skyline extraction, finite-precision likelihood evaluation and endpoint-query costs remain separate.
+
+**The finite-score comparator must include strict exceedance.** The separate finite-geometric source states its intended decision in terms of $R$ observed rational scores $J_{L,1},\ldots,J_{L,R}$ and a rational threshold $t$: choose world 1 exactly when
+
+```math
+\sum_{r=1}^R J_{L,r}\ge Rt,
+```
+
+including equality, and choose world 0 otherwise. Its result statement and §6 use this predicate, but the historical procedural step 4 says to choose 1 on equality and 0 otherwise. That sentence must be read with the correction **“at least the threshold,”** not as an equality-only test. For example, one score 3 at threshold 2 is accepted by the intended rule and rejected by equality alone; a tie is accepted by both. The two inspected `decide` and `run_plan` function excerpts already use `>=`. This is a text-versus-code distinction, not an observed failure of those functions. [FINITE-GEOMETRIC-SCORE] [FINITE-GEOMETRIC-COMPARATOR]
+
+The direction matters to the source's conditional error argument. For $e>0$, if $|\bar J_L-\bar J|\le e$, $t=b+2e$ and the alternative ideal mean is at least $b+4e$, a world-1 error under the corrected rule has $\bar J_L<t$, hence the ideal mean exceeds $\bar J$ by more than $e$. The equality-only rule additionally rejects observations above $t$ and lacks that containment. The historical edition and its literal sentence are preserved as provenance; this corrected exposition does not certify the approximation, mean-gap or variance premises. Nor does it adopt the extractor, finite-geometric algorithm, eventual error budget, query-cost result or physical instrument. Those require their own complete proof and implementation assessment, not just the comparator correction.
+
+### 2.29 Finite grids recover the rounded skyline
+
+An exact skyline and a finite rounded skyline are different readouts. The latter nevertheless has a deterministic extraction theorem. Let $S$ be a finite multiset of $N$ points in $[0,1]^2$, held unchanged throughout all queries, and suppose the available noiseless oracle is
+
+```math
+B(a,b)=1\quad\Longleftrightarrow\quad
+\exists(x,y)\in S:\ x\le a,\ y\le b.
+```
+
+For an integer $L\ge1$, put $Q_L(x)=\lceil Lx\rceil$, including $Q_L(0)=0$. Queries at $(a/L,b/L)$ are exactly queries on the integer multiset $S_L=\{(Q_L(x),Q_L(y)):(x,y)\in S\}$, because $x\le j/L$ iff $Q_L(x)\le j$. Count distinct minimal locations, not duplicate labels, and denote the original and rounded counts by $K,K_L$. [FINITE-SKYLINE-READOUT]
+
+**What rounding preserves.** Always $K_L\le K$. A rounded minimum has an original point mapping to it. Descending a finite dominance chain gives an original minimal ancestor; monotonicity of $Q_L$ places that ancestor's image below the rounded minimum, so the two images must coincide. Thus every rounded minimum is the image of an original one. If no two labeled points share a coordinate bin in either coordinate, all strict coordinate orders are preserved and $K_L=K$. This is a sufficient condition, not a condition the extractor observes or certifies. Without it, strict loss is possible: $(1/4,1/2)$ and $(1/2,1/4)$ are two minima, but at $L=1$ both round to $(1,1)$.
+
+**The finite procedure and its query bound.** Work in integer indices, initially setting $b=L$ and the output list empty. While $b\ge0$:
+
+1. Query $B(1,b/L)$; on a miss, terminate.
+2. Binary-search $0,\ldots,L$ for the least $a$ with $B(a/L,b/L)=1$.
+3. Binary-search $0,\ldots,b$ for the least $y$ with $B(a/L,y/L)=1$.
+4. Output $(a,y)$ and set $b=y-1$.
+
+Both searches have an already-known true upper endpoint. A quantized point supplies the second search's hit. Its first coordinate cannot be below $a$, by the first search, and its second cannot be below $y$, by the second; hence $(a,y)$ is occupied. A point strictly dominating it would violate one of those same least-hit properties, so it is globally minimal. Any other minimum in the current search region must have second coordinate below $y$: points with both coordinates at least $(a,y)$ are dominated, and a point with a smaller first coordinate in the old ceiling has already been excluded. Points excluded in earlier rounds have higher second coordinate and cannot dominate a later output. Induction therefore gives all and only the rounded minima, in strictly increasing first and decreasing second coordinate order.
+
+This proof includes ties and duplicate locations. An empty input ends at the first miss; a minimum with $y=0$ ends the loop without a negative-coordinate query. Points at 0 or 1 need no exceptional search rule. If $d_L=\lceil\log_2(L+1)\rceil$, each search uses at most $d_L$ new queries, and the actual oracle-call count satisfies
+
+```math
+T\le K_L+1+2K_Ld_L\le1+N(1+2d_L).
+```
+
+Every existence probe and a possible terminal miss are included. A singleton search needs no new query; cached answers could reduce the count but are not assumed. When only an upper bound $N\le m$ is known, replacing $N$ by $m$ gives a usable deterministic bound without observing the hidden route count. This is a bound for the stipulated exact oracle, not a bound on physical duration, precision, retention, reset or arithmetic cost. [FINITE-SKYLINE-READOUT]
+
+**A distributional bridge for counts, not exact coordinates.** For the known pair in §2.27, either coordinate of an alternative route has CDF $1-(1-t)^c$, $c=n/(n+1)$. Its largest nonzero-bin probability is at most $L^{-c}$, since $(r+1)^c-r^c\le1$ for integers $r\ge0$ and $0<c\le1$. The uniform world's bin masses $1/L$ satisfy the same bound; the singleton zero bin has probability zero. For two independent routes, a same-bin probability is $\sum_jp_j^2\le\max_jp_j$. A union bound over the two coordinates and route pairs therefore gives, in either world,
+
+```math
+\Pr(K_L\ne K)\le m(m-1)L^{-c},\qquad m=n+1.
+```
+
+No independence between the two coordinates of one route is used. For a fixed positive integer $R$ of retained vectors, coupling rounded and original counts on the same routes gives failure probability at most $Rm(m-1)L^{-c}$ that any count differs. That union bound itself needs no independence between vectors; any separate statistical test still needs its own reset/independence assumptions.
+
+For $0<\eta<1$, choose $A=m(m-1)R/\eta$ and $L=\max(1,\lceil A^{m/n}\rceil)$. If $A=p/q$ is positive rational, compute the least positive integer satisfying
+
+```math
+L^nq^m\ge p^m.
+```
+
+Integer doubling finds a true upper endpoint and integer binary search finds the least one. This realizes the ceiling without floating-point powers. The resulting coupling failure is at most $\eta$. If a specified ideal count test on these $R$ vectors already has per-world error at most $\alpha$, applying its identical threshold and tie convention to the extracted counts has error at most $\alpha+\eta$: on the event that all counts match, the decisions are identical. This implication does not itself establish the ideal test's moments, choice of $R$, small-$n$ fallback or asymptotic rate. [FINITE-SKYLINE-READOUT]
+
+The deterministic output is the quantized minimal antichain. It neither certifies the collision-free event nor recovers arbitrary original real coordinates or dominated routes. Accordingly, the ideal sharp rate in §2.28, this extraction theorem and a finite score-test guarantee are separate results. Expected or total query asymptotics, a comparison with face-only tests, noise tolerance and a physical realization require additional arguments; none follows merely from the finite-query bound above.
 
 ## 3. The information hidden between target and audit marginals
 
@@ -6129,3 +6187,8 @@ These exact source editions retain their own proposal, repair and execution scop
 [SKYLINE-BASELINE]: https://api.github.com/repos/theislampill/orthemology/git/blobs/12e47a63dd7f047be456d62a61b684e59cee7b32
 [SKYLINE-POISSON]: https://api.github.com/repos/theislampill/orthemology/git/blobs/1caa7aea0cb34844ecdf3710b535992bd170c3b2
 [SKYLINE-COUNT]: https://api.github.com/repos/theislampill/orthemology/git/blobs/cc529b668b68fc42cfecdfeb2ed62bd402f200c6
+
+[FINITE-GEOMETRIC-SCORE]: https://api.github.com/repos/theislampill/orthemology/git/blobs/b4a993ae5430dd04d6ccf316011e9dac4f0f4164
+[FINITE-GEOMETRIC-COMPARATOR]: https://api.github.com/repos/theislampill/orthemology/git/blobs/1d0c78e5619eb924404551e0cdb4f87b315bf583
+
+[FINITE-SKYLINE-READOUT]: https://api.github.com/repos/theislampill/orthemology/git/blobs/0f3dfe5549fa141ddf1e7622fd4c90ebfcf83b31

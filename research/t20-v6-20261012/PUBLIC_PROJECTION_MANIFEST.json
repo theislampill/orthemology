@@ -107902,7 +107902,9 @@
       "repository_path": "tests/test_ar8r_six_lane_v14_intake.py",
       "public_sha256": "548d4358ca89755bbfd29b2df9a4b6b2b6ca36541cc5994e523198c40ddea26c",
       "public_bytes": 11625,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "c0b79431bafc486c71a083b3b8afdec0db431236"
     },
     {
       "source_sha256": "549467cdc8a13f3163aca76b2c0afe85a1903da83e8e445fc0c5a3c5c9591f82",
