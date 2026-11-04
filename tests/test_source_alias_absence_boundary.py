@@ -1656,4 +1656,101 @@ class FrontierHistoryProtectedCallerControls(unittest.TestCase):
         self.assertEqual([c[0] for c in calls],['qualifier','currentness'])
 
 
+
+
+class FiveAdmissionConsumerControls(unittest.TestCase):
+    """Finite source routing only; native execution is forbidden by these tests."""
+    @classmethod
+    def setUpClass(cls):
+        import importlib.util
+        import sys
+        from unittest.mock import patch
+        root = pathlib.Path(__file__).resolve().parents[1]
+        spec = importlib.util.spec_from_file_location('admission_consumer_resolver', root/'scripts/resolve_t20_v6_source.py')
+        cls.resolver = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.resolver)
+        with patch.dict(sys.modules, {'resolve_t20_v6_source': cls.resolver}):
+            spec = importlib.util.spec_from_file_location('admission_consumer_reconciliation', root/'scripts/validate_ar8r_reconciliation.py')
+            cls.reconciliation = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(cls.reconciliation)
+        prefix='docs/project-closure/ar8r-v11/post-merge-proposals/'
+        cls.expected=(
+            (prefix+'pmr007-deep-a-bk/VALIDATION_RECEIPTS/PMR-007_DEEP_AV_ADMISSION_OVERLAY.yaml','ecde8d1ac50a0959f8fc125c40249247e1c042f2','599f0207a02a638dc2e53b50766179fb6b6167608938046820ebfa9158a8d159',1779),
+            (prefix+'pmr007-deep-a-bk/VALIDATION_RECEIPTS/PMR-007_DEEP_AW_ADMISSION_OVERLAY.yaml','162e12e8d746785ff7a210ef2332cc9d28394308','a8b1cf0796fa111b235c960f9c8ebeb2acefa4160232be9fb0a6bd75b06a2cce',1915),
+            (prefix+'pmr007-deep-a-bk/VALIDATION_RECEIPTS/PMR-007_DEEP_AX_ADMISSION_OVERLAY.yaml','ec1d6f36e8732838b75e5e13f1dc9ee4d13eba36','31dbcfef0f5d5c09180b6e76cf2f7d93c358203e9309882cf862f0a599142044',2043),
+            (prefix+'pmr007-deep-a-bk/VALIDATION_RECEIPTS/PMR-007_DEEP_AZ_ADMISSION_OVERLAY.yaml','c49af723cd201395b573d2c0485572f0f6872d6f','c3df6e580955354e8fa69babaecea741374247749abbd8d1f3ecaf609e8473eb',1986),
+            (prefix+'pmr007-rounds11-20/VALIDATION_RECEIPTS/PMR-007_FRONTIER_ROUND20_ADMISSION_OVERLAY.yaml','3a899e07d8b8e5dba0c930e44f8dc604f49a0e2b','bc08b1adc1322d9d44a8d9f2305d4c127ac235455cffeaf053ea50bac840ece8',1936),
+        )
+
+    def setUp(self):
+        self.area=self.enterContext(tempfile.TemporaryDirectory(prefix='five-admission-consumer-'))
+        self.root=pathlib.Path(self.area)
+        self.enterContext(patch.object(self.resolver.subprocess,'run',side_effect=AssertionError('native process forbidden')))
+
+    def rows(self):
+        return [dict(source_sha256=sha,source_action='include',source_bytes=size,role='qualified_metadata',
+                     declared_eligibility_basis='reviewed_distribution_metadata',required_dependencies=[],
+                     disposition='REUSE',repository_path=path,public_sha256=sha,public_bytes=size,
+                     publication_basis='exact_existing_public_repository_object')
+                for path,blob,sha,size in self.expected]
+
+    def test_exact_five_production_coordinates(self):
+        self.assertEqual(getattr(self.resolver,'ADMISSION_RECORD_MEMBERS',None),self.expected)
+        self.assertEqual(getattr(self.resolver,'ADMISSION_RECORD_PATHS',None),frozenset(x[0] for x in self.expected))
+        self.assertEqual(getattr(self.resolver,'ADMISSION_RECORD_ROUNDS_PATH',None),self.expected[-1][0])
+
+    def test_five_actual_source_routes_reach_mandatory_supplier(self):
+        function=getattr(self.resolver,'admission_record_public_bytes',None)
+        self.assertTrue(callable(function),'missing exact public route')
+        with patch.object(self.resolver,'admission_record_public_bytes',side_effect=ValueError('required native supply unavailable')) as supply:
+            for row in self.rows():
+                with self.assertRaisesRegex(ValueError,'required native supply unavailable'):
+                    self.resolver.source_bytes(self.root,row)
+            self.assertEqual(supply.call_count,5)
+
+    def test_every_public_field_is_preserved_before_supply(self):
+        function=getattr(self.resolver,'admission_record_public_bytes',None)
+        self.assertTrue(callable(function),'missing exact public row gate')
+        with patch.object(self.resolver,'admission_record_bytes',return_value=b'inert result') as supply:
+            for row in self.rows():
+                self.assertEqual(function(self.root,row),b'inert result')
+                for key in row:
+                    altered=dict(row);altered[key]=None
+                    before=supply.call_count
+                    with self.assertRaises((ValueError,TypeError)):function(self.root,altered)
+                    self.assertEqual(supply.call_count,before)
+            self.assertEqual(supply.call_count,5)
+
+    def test_unselected_source_is_not_supplied(self):
+        function=getattr(self.resolver,'admission_record_public_bytes',None)
+        self.assertTrue(callable(function),'missing closed public route')
+        with patch.object(self.resolver,'admission_record_public_bytes',side_effect=AssertionError('unselected fallback')):
+            row=self.rows()[0];row['repository_path']='docs/unselected-admission.yaml'
+            with self.assertRaises((ValueError,OSError)):self.resolver.source_bytes(self.root,row)
+
+    def test_round20_member_calls_the_same_required_supplier(self):
+        self.assertTrue(hasattr(self.reconciliation,'admission_record_bytes'),'missing required member route')
+        selected=self.expected[-1][0]
+        with patch.object(self.reconciliation,'admission_record_bytes',return_value=b'inert original') as supply:
+            self.assertEqual(self.reconciliation._pmr007_deep_member_bytes(self.root,selected),b'inert original')
+            supply.assert_called_once_with(self.root,selected)
+        with patch.object(self.reconciliation,'admission_record_bytes',side_effect=ValueError('native unavailable')):
+            with self.assertRaisesRegex(ValueError,'native unavailable'):
+                self.reconciliation._pmr007_deep_member_bytes(self.root,selected)
+
+    def test_four_bk_members_do_not_expand_rounds_dispatch(self):
+        self.assertTrue(hasattr(self.reconciliation,'admission_record_bytes'),'missing closed member route')
+        with patch.object(self.reconciliation,'admission_record_bytes',side_effect=AssertionError('overbroad supplier')):
+            for name,_,_,_ in self.expected[:4]:
+                with self.assertRaises((ValueError,OSError)):
+                    self.reconciliation._pmr007_deep_member_bytes(self.root,name)
+
+    def test_original130_and_native98_gates_remain_mandatory(self):
+        v=self.reconciliation
+        for name in ['_pmr007_rounds_original_members','pmr007_rounds_duplicate_paths']:
+            with patch.object(v,'_pmr007_rounds_original_members',return_value={}):
+                with patch.object(v,name,side_effect=ValueError('mandatory '+name)):
+                    self.assertEqual(v.validate_pmr007_rounds_snapshot(self.root),['mandatory '+name])
+
+
 if __name__ == '__main__': unittest.main()

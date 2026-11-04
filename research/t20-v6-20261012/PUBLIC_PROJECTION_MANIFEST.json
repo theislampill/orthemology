@@ -4265,7 +4265,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cn_authority_indexed_anchor_primary_check_v1_failed_results.json",
       "public_sha256": "039a58147dd5aa9ea3b96a050971c67293e97a96a13e361dce3db5e714f196fc",
       "public_bytes": 2799,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "785651477832ccbb072cc75af50155b177148a2a"
     },
     {
       "source_sha256": "039bc09711ec2739bc094eff98637148f02b8ccedcf7622339bc85486a68f704",
@@ -29679,7 +29681,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_co_profile_correction_primary_check_v2_results.json",
       "public_sha256": "17d3572cc0866dff23438a8b5cd185d7052456e8dbded683f65dd3304955c5a6",
       "public_bytes": 603,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "b355d3d8ec253779fa4a4998d486d6c11c128a7f"
     },
     {
       "source_sha256": "17d7b1d17c47659642b672d0f84cc06f166ee6cc27ce1fcce11480b4a8957497",
@@ -33836,7 +33840,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cs/PMR007_DEEP_CS_REFINEMENT_LATTICE_MODEL_V1.yaml",
       "public_sha256": "1aff4e8f6e17bc8625cecbce36ce60b18a60aaedd25872b509f6496d811eb84b",
       "public_bytes": 738,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "188a4d22366041568a9d3b34816159763176247c"
     },
     {
       "source_sha256": "1b015122ffa448f516b3d4ef372ae105a20b009569d7a4b8de72bcbda6a3c553",
@@ -37756,7 +37762,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cp_eligible_ui_experiment_primary_check_v1_results.json",
       "public_sha256": "1e3f646e1df4be1c865c2b1a052237196c1db486f77aa7f76c95f1d6409bdc83",
       "public_bytes": 757,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "6c6063513181fee22875150d9e36f8b8296bd6f4"
     },
     {
       "source_sha256": "1e418dd648b8e1e99dfd0a04775132248afa83f3290357f35368ff561501c4c5",
@@ -40453,7 +40461,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_ct/PMR007_DEEP_CT_PARTIAL_INTERVENTION_MODEL_V1.yaml",
       "public_sha256": "2051a104e5708ed3d359b10c015db876e8c75a229843598a7c6f660532a828f6",
       "public_bytes": 782,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "f364375dc4acb7bc750c01f112af1fd4253a1aa7"
     },
     {
       "source_sha256": "2056d5dd23163a3bc08c5e7ac74d1d09fc83e5ba0e0cb10cfab751d6783488dc",
@@ -40707,7 +40717,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cr/PMR007_DEEP_CR_SOURCE_RESTRICTION_MODEL_V1.yaml",
       "public_sha256": "207dcc4f28697598805b7242776bd8ca0c539111b2fff25eb0f6d3bd999b5c44",
       "public_bytes": 1340,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "dd2ec65d7b6bb9732b022cf3ffe9afc06b7af68a"
     },
     {
       "source_sha256": "207eeb9d46e6013d578a08a1c60089c8833a9685c2bf5f114060b73d4ec9e670",
@@ -44590,7 +44602,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cs_distinct_fibre_cover_rereview_results.json",
       "public_sha256": "2384534787c19c7c8a27c7cf59ad32a865a4e25fc18d2918c5a55424d2437c4f",
       "public_bytes": 248,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "dd4f79acaeb8395d8612d5500305e1df090a7a78"
     },
     {
       "source_sha256": "2384eda00cc27f056af7a4e484195a5da4b3ac97348fa36c8b2673467fcb8478",
@@ -47249,7 +47263,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cq/PMR007_DEEP_CQ_NORM_UNCERTAIN_RESTORATION_MODEL_V2.yaml",
       "public_sha256": "258e982a41350546b4bba775088b10cc1a1fc9ca8dbb07be548ddbab85158679",
       "public_bytes": 3383,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "dd3ecc53b8c02865acce709205babe160a241c5d"
     },
     {
       "source_sha256": "258ebb21d114acd2d9f8c29afacddb8a85c5334753e303b68efbaec810adbe68",
@@ -49224,7 +49240,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_ct_partial_domain_primary_check_v1_results.json",
       "public_sha256": "26ed4259faa972bbf56f2691de6085a8b3e9c17ae0bac3899612d5d567e8fd8f",
       "public_bytes": 3882,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "9a52c8eb568a33e83f9c1a8f6d0e6b71294eb111"
     },
     {
       "source_sha256": "26ef19818cab9b2188bc903bebba4dfe6b48017d080b0424f6a7aeb013237eca",
@@ -50064,7 +50082,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cl/PMR007_DEEP_CL_ARCHITECTURE_ANCHOR_REGISTRY_V2.yaml",
       "public_sha256": "27aa21fac900517a75a0cef30fe99e928c4f43c679c407e7db0bc96fc07d3318",
       "public_bytes": 3162,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "9d4365ce30e5d4ba08f622ba925429ef58d83431"
     },
     {
       "source_sha256": "27ab66e7430cb7f0975843a49003d2cf49d1a4bbc87ec761879a722e6d484d98",
@@ -57479,7 +57499,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_ck/PMR007_DEEP_CK_SOURCE_FORMAL_WORLD_MODELS_V2.yaml",
       "public_sha256": "2da6b0cfdde4ea5d5871d17eb3282169df1daf85bcaf4efdf5a14ff982f7738d",
       "public_bytes": 4686,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "1f81a89d311d51b6aa77c24c7c0b2f371e80af43"
     },
     {
       "source_sha256": "2da752980ddbc420dd8e52b63e595a834f325accf1e00e688aa320dc1701482a",
@@ -64916,7 +64938,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cl/PMR007_DEEP_CL_ARCHITECTURE_ANCHOR_REGISTRY_V1.yaml",
       "public_sha256": "3350c31b6aeae6a13ea23837fb1817fed485f6ad8d11964ba7c22bf6720832bb",
       "public_bytes": 2454,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "f0f12ecc568086ba133836b786dc0cb7b89e5128"
     },
     {
       "source_sha256": "335200da429bed68c467aef19f257e90dfdc0690971d22822a7018f51e98161d",
@@ -72502,7 +72526,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_ct_partial_domain_primary_check_v2_results.json",
       "public_sha256": "3906cf8498d6858014e7112a4238ad6796690dd7c9ffb86e97b66494cdf2946b",
       "public_bytes": 1168,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "488f34eeb82faa575976fcfbee7ab2e7ba4a627f"
     },
     {
       "source_sha256": "390d196fccc5cfa2483343f288daf71a7af0148c8157412201c55698ab2aa36a",
@@ -83296,7 +83322,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_ct/PMR-007_DEEP_CT_ADMISSION_OVERLAY.yaml",
       "public_sha256": "412593543dd7a13ddf77da5c780125b3b9d47b480176949d5ddc63672050da51",
       "public_bytes": 1127,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "b4f5b958c6b25087f1d7d934d5700bf85bb3b905"
     },
     {
       "source_sha256": "41278054bd626e2c0b50a6ff887b63ac27311415eeabb3a7e40f60958205502b",
@@ -85930,7 +85958,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cp_eligible_ui_experiment_primary_check_v2_results.json",
       "public_sha256": "430e46e3e718fcbbce9688139b8e7e2418be806f662a2fabd36688ed5eb5ca5b",
       "public_bytes": 740,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "80f42ef3444bc86186c3979c5c9027b274bdd0b1"
     },
     {
       "source_sha256": "4310e03f1c0e285f845e76bb72ea3f131b59d6c8a641f1abaf05580336296e09",
@@ -93240,7 +93270,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cn/PMR-007_DEEP_CN_ADMISSION_OVERLAY.yaml",
       "public_sha256": "4964c5c38a109deb4f680a526deb9b80c9169ed485d6e3e6ec3f8c3524b5c916",
       "public_bytes": 1694,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "07340bd737e98c68b7bd499398c0b14733473a0b"
     },
     {
       "source_sha256": "4964cdf9c30805054f6fe726d3a91e2b057f63d337e54842adfe4788a24d3881",
@@ -96472,7 +96504,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cn_authority_indexed_anchor_primary_check_v3_results.json",
       "public_sha256": "4bf52e1ff74a0384a6db5645cd44f5b0871f84a083a6b18317283409c652a0d1",
       "public_bytes": 2795,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "45f0bccbd77cd6ca4af186884b012a8ed968a037"
     },
     {
       "source_sha256": "4bf80ec63703e2accf02ebde6acfcaed0ca92055bebb57d9fcac3ff8452ee9db",
@@ -110059,7 +110093,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_co/PMR-007_DEEP_CO_ADMISSION_OVERLAY.yaml",
       "public_sha256": "561bd97f52d5b076668e0b643215fc64378499d44c8fd3f3f491d1b9935858ef",
       "public_bytes": 1518,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "5d7b3607d263060f8cd27f4b70f78c5ea858b03c"
     },
     {
       "source_sha256": "561bf733e7071c28d73537bb12a7ede5216bf9db4062224e77b35fbe3ddf10d1",
@@ -133851,7 +133887,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cm/PMR-007_DEEP_CM_ADMISSION_OVERLAY.yaml",
       "public_sha256": "67f7b3d658ea5ace55558ab590fd0c6cfffef95f15bf295f3fc7443bfe49120d",
       "public_bytes": 1473,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "27eaaf7620fa0d9cbb475ef471fb8ab9ec574ef9"
     },
     {
       "source_sha256": "67fb44b1b6948fa75ea4edf459cead9bf7d49e8e664f772c9b9033fc67458c7e",
@@ -144935,7 +144973,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cq/PMR-007_DEEP_CQ_ADMISSION_OVERLAY.yaml",
       "public_sha256": "70609844141c6fe0f177ea9f0c0078c1f204f0f49e81975dde97940d94403183",
       "public_bytes": 1968,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "4037fcd491eba593dadbaab5a89a3fdca61319ca"
     },
     {
       "source_sha256": "70630d5b703fb3262e123b8424c19580e95bf604db3e9eb5d364653c333fdf13",
@@ -150461,7 +150501,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_co/PMR007_DEEP_CO_PROFILE_MEASURABLE_CORRECTION_MODELS_V1.yaml",
       "public_sha256": "745a3a7e41cc9c452a0be4e76b58468d18add7fe86a229effd0365d5c092d8f6",
       "public_bytes": 1439,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "d5cccbe6b4b76936a304852cdf64a67f4f0bfab7"
     },
     {
       "source_sha256": "745c3c5a2bd14b379b508953e0f5f9f279489253da72f99c4a54d9719782f5b9",
@@ -155531,7 +155573,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cm_objective_fitted_function_primary_check_v1_results.json",
       "public_sha256": "780fd0f7bce609988e0e0e92c468b735c5ee2fe04e587ee459a0f740a2c78381",
       "public_bytes": 525,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "204ad8f25f3217bdd67d50e8330287cd51d0ed66"
     },
     {
       "source_sha256": "78107db66b6fdb840910b5895d38ac45501c54c066f83282bf332221f472ee02",
@@ -163431,7 +163475,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cr/PMR007_DEEP_CR_SOURCE_RESTRICTION_MODEL_V2.yaml",
       "public_sha256": "7e0ce54a6a3f1fb53e816ba8019314ed7bf037803e340ebac69da34b868b50ba",
       "public_bytes": 2515,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "e2a37b6a0c1e1584ac209eb8bf0432a13f7d60d9"
     },
     {
       "source_sha256": "7e0f9f6e2f73cce84f56b423dca66b587683c98beda8ba1d2f2571cd87eac202",
@@ -171376,7 +171422,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_co/PMR007_DEEP_CO_PROFILE_MEASURABLE_CORRECTION_MODELS_V2.yaml",
       "public_sha256": "8406e983c4c36d7803c8cec61bd97e4ad70b0bb77b9e485a9a67450b18edf317",
       "public_bytes": 1935,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "2ba1b3b358e7505354ac44d20e644a44f2bafb1d"
     },
     {
       "source_sha256": "8408e647f8e363f745564b3a3ae8b12a622002119d3273df18a06414a15140b7",
@@ -171991,7 +172039,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cl_anchor_cover_primary_check_v2_results.json",
       "public_sha256": "8484e8099295969760ddab0223778b482e260e1eb69a7c0bd2f802e722aa76f6",
       "public_bytes": 2407,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "673281f18f0b593948d2df7ea7dbb734027b5dd5"
     },
     {
       "source_sha256": "8485a2156b943ce569af6f219d69d7d24b00b41b04b8225a68d7480d2d70522d",
@@ -176558,7 +176608,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cp/PMR-007_DEEP_CP_ADMISSION_OVERLAY.yaml",
       "public_sha256": "87c4d60944526bcbe32ea002d913fbd374e8633270aa11c5aeede226424c76c5",
       "public_bytes": 1754,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "3ff592b02ff973d55d457a5b2a17012333a9260f"
     },
     {
       "source_sha256": "87c5e259513267a09e61f486c28ad84a22850e3aa4530033ba66a698feaa9b74",
@@ -176873,7 +176925,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cs_partition_refinement_primary_check_v2_results.json",
       "public_sha256": "8808624a3bbb09426f95603981ca84e104f96c977d4dc091913b2a69040040e8",
       "public_bytes": 369,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "7a2fa6e4e6180ca950b3b44dfdf5f8a3b80588ff"
     },
     {
       "source_sha256": "8809aaa6be249e916bff9d3ce9b164ee6abed2abf1bbdf810175e94a13f73b1b",
@@ -206197,7 +206251,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_ck/PMR007_DEEP_CK_SOURCE_FORMAL_WORLD_MODELS_V1.yaml",
       "public_sha256": "9eae438bebd069f2ada1ab861bda8290c0b44bd2f3ad0202a4093096ef9e7ca4",
       "public_bytes": 2491,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "2a4ec7fecc1bc1c724323d62ecd71dde5ffcea10"
     },
     {
       "source_sha256": "9eaffaa788991447cf64938183de0e982b467d333dd9a369f11c0c99a0be595c",
@@ -207299,7 +207355,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cs_partition_refinement_primary_check_v1_results.json",
       "public_sha256": "9f9266588d75cbc61b3b763bbd2ff6c1daf04986ef4087e1123ba569d4328d02",
       "public_bytes": 352,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "0adc064cf4b9d7e2b3ba05687f6a48e72d30b98d"
     },
     {
       "source_sha256": "9f9c141a5156b7f75ecb1b6d8878a763adcf4d89b27fe53c8b5c3532f5932189",
@@ -209345,7 +209403,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cp/PMR007_DEEP_CP_ELIGIBLE_UI_EXPERIMENT_REGISTRY_V2.yaml",
       "public_sha256": "a1498322eb840c7cb9d88e4c65d0503ac264da961d96d93fe34d589d52e3e42f",
       "public_bytes": 4084,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "d9466caca6cf9213595bdfa489d413251fba67b6"
     },
     {
       "source_sha256": "a14b05727241fc1d4582f0f96b12b56fdf9df2693da57a8db9df8366b925c0f1",
@@ -209678,7 +209738,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cp_distinct_bisimulation_rereview_results.json",
       "public_sha256": "a185c8b2f37dbd743de6abfa2e109a10e125a155e143235498910e6b5f10592f",
       "public_bytes": 1053,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "f89950fa8dea2251d7f2a5c9f98b126e30d07e6b"
     },
     {
       "source_sha256": "a188a93fb25a7fa14c4dbd571c04d94100e70b494b49c72eb5583284a4263a04",
@@ -214995,7 +215057,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_co_profile_correction_primary_check_v1_results.json",
       "public_sha256": "a5a8b61ed789e0ee3aa3eee2aad28a2da8f16c5e58c3aa61eff9b6e92913f6a6",
       "public_bytes": 408,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "e1eb7e352c4fe70e59ae0cff91ddeeb04c4cbb4e"
     },
     {
       "source_sha256": "a5a9b01483c594abecff4933575aac5798b8972d9c796156bd0447babb0d87ec",
@@ -231096,7 +231160,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cn/PMR007_DEEP_CN_AUTHORITY_INDEXED_ANCHOR_MODELS_V1.yaml",
       "public_sha256": "b239062074fcd058f173aed1898fbeece56974673b62cccdce97e8c7cf27c6a8",
       "public_bytes": 2363,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "91eac41938d9363f29b2aaa6cc356d3662f2f721"
     },
     {
       "source_sha256": "b23a29280092fbd97069435766b0e04018d137f46fa181c7ab80c6067f688ea1",
@@ -244717,7 +244783,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cn_authority_indexed_anchor_primary_check_v2_results.json",
       "public_sha256": "bc5c47709a4e783c6d35327215cd8c0c73402a22fd6cebcfb4a554a18aab5646",
       "public_bytes": 2795,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "1f37d6723ddbd1d13d70c58b550a1e6807e1ad0a"
     },
     {
       "source_sha256": "bc60a9b4ee8fc40bdfaab4204a0059e4cec2ad7a10b083e091ae59d4df0e6eb8",
@@ -256292,7 +256360,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cm/PMR007_DEEP_CM_OBJECTIVE_FITTED_FUNCTION_MODELS_V2.yaml",
       "public_sha256": "c564bf8c94d16ac02b089acb320107a7a7502dbe6b638b6fde987d773b0b9023",
       "public_bytes": 2751,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "95dc33114b1b10d7926fd13069ef966e5cbb2ca5"
     },
     {
       "source_sha256": "c567cdc28bf50cc6cfd95397c82696ed63d07a486ffd59ec2196202b86dd6c0a",
@@ -259849,7 +259919,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cm_objective_fitted_function_primary_check_v2_results.json",
       "public_sha256": "c82f11ce9d56c5adfde56942cc0b5b725bf445802139aa3ad151ac6908a01f5c",
       "public_bytes": 565,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "f44d983d728803f8c2427f95eaaaf6b8c521e7c7"
     },
     {
       "source_sha256": "c82fece5084fe2c4b2de3c5c543db5201315a47ef0257d3f0ef448298553bf3e",
@@ -264786,7 +264858,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cs/PMR007_DEEP_CS_REFINEMENT_LATTICE_MODEL_V2.yaml",
       "public_sha256": "cbb0e891acd1bd80b5bfeb12951eb92cb63294a37f796ce814aae4f8efe2444f",
       "public_bytes": 1319,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "13d956d17c456cc4e05c5f4206cd14fe1c99a9dc"
     },
     {
       "source_sha256": "cbb3835fcebdc008e849b8d022397c4b61015e918386164075f118e11286db2d",
@@ -267159,7 +267233,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cl_anchor_cover_primary_check_v1_results.json",
       "public_sha256": "cd83895b3ef8ec0501fe0cb21e37d0c9f3c86b03278e51835e51f1876cf76959",
       "public_bytes": 8832,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "5fd34db7773639f256f3ebec7aed4cbafc1aabac"
     },
     {
       "source_sha256": "cd89549c2faccccfb09cec9d8075837162b0ef8dc6ef287bb4e10d5e47a1c427",
@@ -275070,7 +275146,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cn/PMR007_DEEP_CN_AUTHORITY_INDEXED_ANCHOR_MODELS_V2.yaml",
       "public_sha256": "d3787af3cf0554f39fb62f630fb3804cda9f985036d22aa1d615b48e6fc4e614",
       "public_bytes": 3891,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "4ba04371b0d153e2385e770c892dfe08ca992906"
     },
     {
       "source_sha256": "d37aead971b082fd7337af8f0abe53f17c8cb65e50917512267fa93d692bcb9b",
@@ -283964,7 +284042,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cm/PMR007_DEEP_CM_OBJECTIVE_FITTED_FUNCTION_MODELS_V1.yaml",
       "public_sha256": "da7d7fddfb87dc56eadfd6bcc5a605601ad847aa5ee97263ba2a1a7eecec7160",
       "public_bytes": 2451,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "da75ddf4e9288e0b788f22837964e14976b6e956"
     },
     {
       "source_sha256": "da7df346b09fdb58eea1cf1d03781c816275375599d3736d92e7d938608169aa",
@@ -293795,7 +293875,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cq/PMR007_DEEP_CQ_NORM_UNCERTAIN_RESTORATION_MODEL_V1.yaml",
       "public_sha256": "e246434684eaa9e6b5c2e203c1dd5dd6dc7cd0f6aa00cb69f34f178f05823910",
       "public_bytes": 2755,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "45b7c1b3e61ab2616702ae6a291e582f10d3d74c"
     },
     {
       "source_sha256": "e246ed01428f4cbb07ad92d17e4ea049f689d4d80d6f8a90f118ff2782046b56",
@@ -296371,7 +296453,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_ct/PMR007_DEEP_CT_PARTIAL_INTERVENTION_MODEL_V2.yaml",
       "public_sha256": "e4160767e9d9622a6408c0f39868f802688433ad68d86fe342a015dfd1bff5bd",
       "public_bytes": 2098,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "9cda0d95b4da50eda06e527eb4b75d6771fa67b9"
     },
     {
       "source_sha256": "e4173cd03770949ebbc557621f86fdc720b1a9abf342ae696c9ed015b4a0082d",
@@ -306291,7 +306375,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_ck/PMR007_DEEP_CK_CONCRETE_ARCHITECTURE_MAP_V1.yaml",
       "public_sha256": "ebcc532f9981f0d2a25be1e05e83f1d2a240e6c5696518f6a896823f0d030853",
       "public_bytes": 3918,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "ffc8b62232dfc42ce07ea1aa43d8d458f5a4e8d3"
     },
     {
       "source_sha256": "ebccf653f1a0eb372a84cd0ac2019bbe97132042d503fe58c8f22c56469f3286",
@@ -310403,7 +310489,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cp/PMR007_DEEP_CP_ELIGIBLE_UI_EXPERIMENT_REGISTRY_V1.yaml",
       "public_sha256": "ef27f520e22cab9c3d19c70b8a21287f52695770f98980d2fb310d7feb3b584e",
       "public_bytes": 3033,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "4c90195800538c0f8bab0841bf61c50a0e975e5e"
     },
     {
       "source_sha256": "ef287673aab0256f3fa15feb7b67a75050b6f0bc7565d54983e9e56efb647957",
@@ -310803,7 +310891,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cl/PMR-007_DEEP_CL_ADMISSION_OVERLAY.yaml",
       "public_sha256": "ef987bf8670007688841e9ddaa2fc6e85455a67644751b010223801a3a926908",
       "public_bytes": 1390,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "26f53b5f13e3f71a82643d261cc6e1a5f3a593ac"
     },
     {
       "source_sha256": "efa17dacc68ad38974ef160824174272b4679b4067f7ae8c297463603d144a68",
@@ -323826,7 +323916,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_ct_distinct_conflict_graph_rereview_results.json",
       "public_sha256": "fa16d66f6c7527eb0164c6f4a1151fb2d0ab8a760159ab1fe62dc71f55b22494",
       "public_bytes": 975,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "1a5e61df2ecc45fd07d6fbc3d07fbb6f244ec42b"
     },
     {
       "source_sha256": "fa1be9695198f10435fc31a6c8f511e85d41b59051f666f575df61abef248d04",
@@ -326669,7 +326761,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cs/PMR-007_DEEP_CS_ADMISSION_OVERLAY.yaml",
       "public_sha256": "fc35f95ca8d802f6191898806961ec1e4dcac0ba9d535253387bc564b8e86ffa",
       "public_bytes": 928,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "13b662a5c995a191670c7394335f08ea2fbd4d0a"
     },
     {
       "source_sha256": "fc37b99d7ffeda53d6b4e59f6ad22e8585b60b2059a4dd08493b544d62261bbe",

@@ -5311,6 +5311,94 @@ def reissue_administrative_custody(root, source, source_rel):
         unchanged()
 
 
+
+ADMISSION_RECORD_MEMBERS = (('docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/VALIDATION_RECEIPTS/PMR-007_DEEP_AV_ADMISSION_OVERLAY.yaml',
+  'ecde8d1ac50a0959f8fc125c40249247e1c042f2',
+  '599f0207a02a638dc2e53b50766179fb6b6167608938046820ebfa9158a8d159',
+  1779),
+ ('docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/VALIDATION_RECEIPTS/PMR-007_DEEP_AW_ADMISSION_OVERLAY.yaml',
+  '162e12e8d746785ff7a210ef2332cc9d28394308',
+  'a8b1cf0796fa111b235c960f9c8ebeb2acefa4160232be9fb0a6bd75b06a2cce',
+  1915),
+ ('docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/VALIDATION_RECEIPTS/PMR-007_DEEP_AX_ADMISSION_OVERLAY.yaml',
+  'ec1d6f36e8732838b75e5e13f1dc9ee4d13eba36',
+  '31dbcfef0f5d5c09180b6e76cf2f7d93c358203e9309882cf862f0a599142044',
+  2043),
+ ('docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/VALIDATION_RECEIPTS/PMR-007_DEEP_AZ_ADMISSION_OVERLAY.yaml',
+  'c49af723cd201395b573d2c0485572f0f6872d6f',
+  'c3df6e580955354e8fa69babaecea741374247749abbd8d1f3ecaf609e8473eb',
+  1986),
+ ('docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20/VALIDATION_RECEIPTS/PMR-007_FRONTIER_ROUND20_ADMISSION_OVERLAY.yaml',
+  '3a899e07d8b8e5dba0c930e44f8dc604f49a0e2b',
+  'bc08b1adc1322d9d44a8d9f2305d4c127ac235455cffeaf053ea50bac840ece8',
+  1936))
+ADMISSION_RECORD_MEMBERS_SHA256 = 'e13bb10720526a2fecb8ed18aec931cd1605fb5fc7353771d8b0266311547a5b'
+ADMISSION_RECORD_PATHS = frozenset(row[0] for row in ADMISSION_RECORD_MEMBERS)
+ADMISSION_RECORD_PUBLIC_MEMBERS = (('docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/VALIDATION_RECEIPTS/PMR-007_DEEP_AV_ADMISSION_OVERLAY.yaml',
+  'cad4d409f461c0bc91773a80663af6a7bd39f8892c021dcb18602bf8e91ffd33'),
+ ('docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/VALIDATION_RECEIPTS/PMR-007_DEEP_AW_ADMISSION_OVERLAY.yaml',
+  '8734042294f02d1c8038db2215e761c49475697580eee712b8405fc0cf887a1b'),
+ ('docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/VALIDATION_RECEIPTS/PMR-007_DEEP_AX_ADMISSION_OVERLAY.yaml',
+  '4506ed0f6b9dcd5202201679e77270c2a989eb6cb0bac8911e8d49787b417f27'),
+ ('docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/VALIDATION_RECEIPTS/PMR-007_DEEP_AZ_ADMISSION_OVERLAY.yaml',
+  '7bf180c55981a04d86fef854ba623ea3f3a035bb9ec45271400659f8f0502fce'),
+ ('docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20/VALIDATION_RECEIPTS/PMR-007_FRONTIER_ROUND20_ADMISSION_OVERLAY.yaml',
+  '8af5c3baa17b0420f84264948216f0a65ae29bec14f63b1a567db4a8d1f1eca7'))
+ADMISSION_RECORD_PUBLIC_MEMBERS_SHA256 = 'b5a8901bae2ea0e55ccf6765f8146365c2087e2ba3e5f14919c50dfa736fd202'
+ADMISSION_RECORD_ROUNDS_PATH = 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20/VALIDATION_RECEIPTS/PMR-007_FRONTIER_ROUND20_ADMISSION_OVERLAY.yaml'
+
+
+def admission_record_bytes(root, path, identity=None, size=None):
+    """Read one of five exact original admissions, never a generic fallback.
+
+    The unchanged whole original176 gate, exact five native coordinates and
+    staged/current-node guards remain mandatory even when a file is present.
+    This supplies bytes, not historical execution, authority adoption or custody.
+    """
+    encoded = json.dumps(ADMISSION_RECORD_MEMBERS, sort_keys=True, ensure_ascii=False,
+                         separators=(',', ':'), allow_nan=False).encode('utf-8')
+    members = {name: (blob, sha256, length) for name, blob, sha256, length in ADMISSION_RECORD_MEMBERS}
+    if (len(ADMISSION_RECORD_MEMBERS) != 5 or len(members) != 5
+            or frozenset(members) != ADMISSION_RECORD_PATHS
+            or digest(encoded) != ADMISSION_RECORD_MEMBERS_SHA256
+            or not isinstance(path, str) or path not in members):
+        raise ValueError('unqualified admission original binding')
+    root = _digest_record_root(root)
+    initial = _digest_record_state(root, path)
+    _digest_record_catalog(root)
+    actual = _administrative_git(root, 'ls-tree', '-rz', '--full-tree', DIGEST_RECORD_BASE,
+                                 '--', *sorted(members))
+    expected = b''.join(('100644 blob ' + members[name][0] + '\t' + name + '\0').encode('utf-8')
+                        for name in sorted(members))
+    if actual != expected:
+        raise ValueError('admission original path, blob or mode differs')
+    blob, pinned_identity, pinned_size = members[path]
+    body = _digest_record_bound_bytes(root, path, blob, initial)
+    if (digest(body) != pinned_identity or len(body) != pinned_size
+            or (identity is not None and identity != pinned_identity)
+            or (size is not None and size != pinned_size)):
+        raise ValueError('admission original content identity differs')
+    body.decode('utf-8')
+    return body
+
+
+def admission_record_public_bytes(root, row):
+    """Retain all fields of the five existing public metadata roles."""
+    encoded = json.dumps(ADMISSION_RECORD_PUBLIC_MEMBERS, sort_keys=True, ensure_ascii=False,
+                         separators=(',', ':'), allow_nan=False).encode('utf-8')
+    members = dict(ADMISSION_RECORD_PUBLIC_MEMBERS)
+    if (len(ADMISSION_RECORD_PUBLIC_MEMBERS) != 5 or len(members) != 5
+            or frozenset(members) != ADMISSION_RECORD_PATHS
+            or digest(encoded) != ADMISSION_RECORD_PUBLIC_MEMBERS_SHA256
+            or not isinstance(row, dict) or row.get('repository_path') not in members):
+        raise ValueError('unqualified admission public row')
+    identity = digest(json.dumps(row, sort_keys=True, ensure_ascii=False,
+                                 separators=(',', ':'), allow_nan=False).encode('utf-8'))
+    if identity != members[row['repository_path']]:
+        raise ValueError('admission complete public row differs')
+    return admission_record_bytes(root, row['repository_path'], row['public_sha256'], row['public_bytes'])
+
+
 def _continuation_git(root, *args):
     result = subprocess.run(['git', '--no-replace-objects', '--literal-pathspecs', *args],
                             cwd=root, capture_output=True, check=False)
@@ -6750,7 +6838,9 @@ def source_bytes(root, row):
     path = pathlib.PurePosixPath(row['repository_path'])
     if path.is_absolute() or '..' in path.parts or '\\' in str(path):
         raise ValueError('unsafe source path')
-    if str(path) in DIGEST_RECORD_PATHS:
+    if str(path) in ADMISSION_RECORD_PATHS:
+        body = admission_record_public_bytes(root, row)
+    elif str(path) in DIGEST_RECORD_PATHS:
         body = digest_record_public_bytes(root, row)
     elif str(path) == SUCCESSOR_FIXTURE_PATH:
         body = successor_fixture_source_bytes(root, row)

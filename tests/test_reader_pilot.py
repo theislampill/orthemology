@@ -9609,7 +9609,7 @@ class Digest176ReaderContractTests(unittest.TestCase):
         ns = self.namespace
         for name in ('CHECKPOINT_COPY_PATHS', 'CHECKPOINT_RECORD_COPY_PATHS',
                      'CHECKPOINT_PACKAGE_COPY_PATHS', 'FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS',
-                     'CHECKPOINT_CODE_COPY_PATHS', 'DIGEST_RECORD_PATHS',
+                     'CHECKPOINT_CODE_COPY_PATHS', 'DIGEST_RECORD_PATHS','ADMISSION_RECORD_PATHS',
                      'SUCCESSOR_INPUT_PATHS', 'GENERATED_FIXTURE_PATHS',
                      'ADMIN_RECORD_PATHS', 'ADMIN_GUIDES', 'CONTINUATION_OWNER_PATHS',
                      'TYPED_GUIDES', 'SUCCESSOR_CALCULUS_GUIDES'):
@@ -9753,7 +9753,7 @@ class ReviewedSourcingLedgerControls(unittest.TestCase):
             CONTINUATION_COPY_ROOT='unused-continuation/',SUCCESSOR_INPUT_REGISTRY='unused-input',
             SUCCESSOR_CALCULUS_MAP='unused-calculus',MEDIATOR_GUIDE='unused-guide')
         for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS',
-            'FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS','CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','SUCCESSOR_INPUT_PATHS',
+            'FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS','CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','ADMISSION_RECORD_PATHS','SUCCESSOR_INPUT_PATHS',
             'GENERATED_FIXTURE_PATHS','ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS',
             'FIXTURE_CONSUMER_ORIGINAL','HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'):
             namespace[name]=set()
@@ -9869,7 +9869,7 @@ class ReviewedAuthorityControls(unittest.TestCase):
             PMR007_ROUNDS_FORMALIZATION='unused-formal',CONTINUATION_COPY_ROOT='unused-copy/',SUCCESSOR_INPUT_REGISTRY='unused-input',
             SUCCESSOR_CALCULUS_MAP='unused-map',MEDIATOR_GUIDE='unused-guide',REVIEWED_AUTHORITY_EDITS={p:None for p in self.PATHS})
         for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS','FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS',
-                     'CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','SUCCESSOR_INPUT_PATHS','GENERATED_FIXTURE_PATHS',
+                     'CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','ADMISSION_RECORD_PATHS','SUCCESSOR_INPUT_PATHS','GENERATED_FIXTURE_PATHS',
                      'ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS','FIXTURE_CONSUMER_ORIGINAL',
                      'HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'):ns[name]=set()
         for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_duplicate_paths',
@@ -10055,7 +10055,7 @@ class ReviewedGovernanceEditionControls(unittest.TestCase):
                   REVIEWED_AUTHORITY_EDITS={self.OWNER: (self.OWNER, 'a'*40, ('old', 'old', 1), ('new', 'new', 2)),
                                             self.ADDED: (self.ADDED, 'a'*40, None, ('new', 'new', 2))})
         for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS','FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS',
-                     'CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','SUCCESSOR_INPUT_PATHS','GENERATED_FIXTURE_PATHS',
+                     'CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','ADMISSION_RECORD_PATHS','SUCCESSOR_INPUT_PATHS','GENERATED_FIXTURE_PATHS',
                      'ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS','FIXTURE_CONSUMER_ORIGINAL',
                      'HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'): ns[name] = set()
         for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_duplicate_paths',
@@ -10633,7 +10633,7 @@ class CertificateProviderAdditionControls(unittest.TestCase):
                   SUCCESSOR_INPUT_REGISTRY='unused-input', SUCCESSOR_CALCULUS_MAP='unused-map',
                   MEDIATOR_GUIDE='unused-guide', REVIEWED_AUTHORITY_EDITS=self.contracts())
         for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS',
-                     'FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS','CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','SUCCESSOR_INPUT_PATHS',
+                     'FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS','CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','ADMISSION_RECORD_PATHS','SUCCESSOR_INPUT_PATHS',
                      'GENERATED_FIXTURE_PATHS','ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS',
                      'FIXTURE_CONSUMER_ORIGINAL','HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'):
             ns[name] = set()
@@ -10721,7 +10721,7 @@ class CertificateProviderAbsenceControls(unittest.TestCase):
             PMR007_ROUNDS_FORMALIZATION='unused-formal', CONTINUATION_COPY_ROOT='unused-copy/',
             SUCCESSOR_INPUT_REGISTRY='unused-input', SUCCESSOR_CALCULUS_MAP='unused-map', MEDIATOR_GUIDE='unused-guide')
         for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS',
-            'FORMAL_COPY_PATHS','CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','SUCCESSOR_INPUT_PATHS',
+            'FORMAL_COPY_PATHS','CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','ADMISSION_RECORD_PATHS','SUCCESSOR_INPUT_PATHS',
             'GENERATED_FIXTURE_PATHS','ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS',
             'FIXTURE_CONSUMER_ORIGINAL','HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'):
             ns[name] = set()
@@ -10792,7 +10792,7 @@ def _frontier_history_test_reader():
         MEDIATOR_GUIDE='unused-guide', REVIEWED_AUTHORITY_EDITS={})
     for name in ('REFACTOR_EDIT_PATHS HISTORICAL_PROSE CHECKPOINT_COPY_PATHS CHECKPOINT_RECORD_COPY_PATHS '
                  'CHECKPOINT_PACKAGE_COPY_PATHS FORMAL_COPY_PATHS FORMAL_PROVIDER_PATHS CHECKPOINT_CODE_COPY_PATHS '
-                 'DIGEST_RECORD_PATHS SUCCESSOR_INPUT_PATHS GENERATED_FIXTURE_PATHS ADMIN_RECORD_PATHS ADMIN_GUIDES '
+                 'DIGEST_RECORD_PATHS ADMISSION_RECORD_PATHS SUCCESSOR_INPUT_PATHS GENERATED_FIXTURE_PATHS ADMIN_RECORD_PATHS ADMIN_GUIDES '
                  'CONTINUATION_OWNER_PATHS STATUS_RECORD_OWNERS FIXTURE_CONSUMER_ORIGINAL TYPED_GUIDES SUCCESSOR_CALCULUS_GUIDES').split():
         ns[name]=set()
     for name in ('pmr007_deep_duplicate_paths pmr007_rounds_duplicate_paths checkpoint_duplicate_paths '
@@ -11089,6 +11089,713 @@ class ReviewedReissueBwOriginalPinControls(unittest.TestCase):
                 for document in (original, candidate):
                     next(row for row in document['objects'] if row.get('repository_path') == path)[field] = value
                 self.assertFalse(self.base.permitted(candidate, original))
+
+
+class FiveAdmissionCurrentnessTests(unittest.TestCase):
+    """Actual currentness and ordinary-file guards with inert native suppliers."""
+    def setUp(self):
+        import ast
+        self.reader = _frontier_history_test_reader()
+        tree = ast.parse((ROOT / 'scripts/resolve_t20_v6_source.py').read_bytes())
+        rows = next(ast.literal_eval(n.value) for n in tree.body
+                    if isinstance(n, ast.Assign) and any(isinstance(t, ast.Name)
+                    and t.id == 'ADMISSION_RECORD_MEMBERS' for t in n.targets))
+        self.paths = sorted(row[0] for row in rows)
+        self.assertEqual(len(self.paths), 5)
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.repo = Path(self.tmp.name)
+        self.bodies = {p: ('inert admission fixture ' + str(i) + '\n').encode()
+                       for i, p in enumerate(self.paths)}
+        self.reader.ADMISSION_RECORD_MEMBERS = tuple((p,
+            hashlib.sha1(b'blob ' + str(len(b)).encode() + b'\0' + b).hexdigest(),
+            hashlib.sha256(b).hexdigest(), len(b)) for p, b in self.bodies.items())
+        self.reader.ADMISSION_RECORD_PATHS = frozenset(self.paths)
+        self.reader.PMR007_DEEP_PREFIX = ('docs/project-closure/ar8r-v11/'
+            'post-merge-proposals/pmr007-deep-a-ap')
+        self.reader.PMR007_ROUNDS_PREFIX = ('docs/project-closure/ar8r-v11/'
+            'post-merge-proposals/pmr007-rounds11-20')
+        self.reader.PMR007_ROUNDS_FORMALIZATION = self.reader.PMR007_ROUNDS_PREFIX + '/formalization.md'
+        self.events = []
+        self.supplier_failure = None
+        self.navigation_failure = None
+        self.rounds_failure = None
+        self.supplier_effect = None
+        self.diffs = {True: [], False: []}
+        def supplier(root, path):
+            self.events.append(('supplier', path))
+            if self.supplier_failure:
+                raise self.supplier_failure
+            if self.supplier_effect:
+                self.supplier_effect(path)
+            return self.bodies[path]
+        def rounds(root):
+            self.events.append(('rounds98', None))
+            if self.rounds_failure:
+                raise self.rounds_failure
+            return set()
+        def navigation(root, *, indexed):
+            self.events.append(('navigation', indexed))
+            if self.navigation_failure:
+                raise self.navigation_failure
+            return self.reader.PMR007_ROUNDS_FORMALIZATION
+        def diff(root, args):
+            import types
+            cached = '--cached' in args
+            self.events.append(('diff', cached))
+            raw = ''.join(status + '\0' + path + '\0' for status, path in self.diffs[cached])
+            return types.SimpleNamespace(returncode=0, stdout=raw.encode())
+        self.reader.admission_record_bytes = supplier
+        self.reader.pmr007_rounds_duplicate_paths = rounds
+        self.reader.pmr007_rounds_formalization_navigation = navigation
+        self.reader.readonly_git_diff = diff
+
+    def run_change(self, changes, *, cached=True):
+        self.diffs = {True: [], False: []}
+        self.diffs[cached] = changes
+        return self.reader.check_corpus_currentness(self.repo, 'c' * 40)
+
+    def write(self, path, body=None):
+        node = self.repo / path
+        node.parent.mkdir(parents=True, exist_ok=True)
+        node.write_bytes(self.bodies[path] if body is None else body)
+        return node
+
+    def test_each_exact_absence_in_index_and_worktree(self):
+        for path in self.paths:
+            for cached in (True, False):
+                with self.subTest(path=path, cached=cached):
+                    self.events.clear()
+                    self.assertEqual(self.run_change([('D', path)], cached=cached), [])
+                    self.assertIn(('supplier', path), self.events)
+
+    def test_all_five_absent(self):
+        self.assertEqual(self.run_change([('D', p) for p in self.paths]), [])
+        self.assertEqual({p for kind, p in self.events if kind == 'supplier'}, set(self.paths))
+
+    def test_no_change_does_not_request_history(self):
+        self.assertEqual(self.run_change([]), [])
+        self.assertFalse(any(kind == 'supplier' for kind, _ in self.events))
+
+    def test_added_modified_and_type_changes_are_not_absences(self):
+        for status in ('A', 'M', 'T'):
+            with self.subTest(status=status):
+                self.events.clear()
+                self.assertTrue(self.run_change([(status, self.paths[0])]))
+                self.assertFalse(any(kind == 'supplier' for kind, _ in self.events))
+
+    def test_unselected_missing_path_is_not_admitted(self):
+        self.assertTrue(self.run_change([('D', self.paths[0] + '-other')]))
+        self.assertFalse(any(kind == 'supplier' for kind, _ in self.events))
+
+    def test_native_supplier_refusal_cannot_admit(self):
+        for exc in (ValueError('original176'), OSError('index'), UnicodeError('body')):
+            with self.subTest(exc=type(exc).__name__):
+                self.supplier_failure = exc
+                self.assertTrue(self.run_change([('D', self.paths[0])]))
+
+    def test_present_exact_record_is_not_an_absence(self):
+        self.write(self.paths[0])
+        self.assertTrue(self.run_change([('D', self.paths[0])]))
+
+    def test_present_corrupt_record_is_not_an_absence(self):
+        self.write(self.paths[0], b'wrong')
+        self.assertTrue(self.run_change([('D', self.paths[0])]))
+
+    def test_selected_symlink_refused(self):
+        path = self.paths[0]
+        target = self.repo / 'target'
+        target.write_bytes(self.bodies[path])
+        node = self.repo / path
+        node.parent.mkdir(parents=True, exist_ok=True)
+        node.symlink_to(target)
+        self.assertTrue(self.run_change([('D', path)]))
+
+    def test_ancestor_symlink_refused(self):
+        (self.repo / 'elsewhere').mkdir()
+        (self.repo / 'docs').symlink_to(self.repo / 'elsewhere', target_is_directory=True)
+        self.assertTrue(self.run_change([('D', self.paths[0])]))
+
+    def test_absent_to_present_drift_refused(self):
+        self.supplier_effect = lambda path: self.write(path)
+        self.assertTrue(self.run_change([('D', self.paths[0])]))
+
+    def test_present_to_absent_drift_refused(self):
+        path = self.paths[0]
+        self.write(path)
+        self.supplier_effect = lambda p: (self.repo / p).unlink()
+        self.assertTrue(self.run_change([('D', path)]))
+
+    def test_rounds98_and_navigation_remain_mandatory(self):
+        path = next(p for p in self.paths if '/pmr007-rounds11-20/' in p)
+        self.assertEqual(self.run_change([('D', path)]), [])
+        self.assertIn(('rounds98', None), self.events)
+        self.assertIn(('navigation', True), self.events)
+        self.assertIn(('supplier', path), self.events)
+        self.assertLess(self.events.index(('rounds98', None)), self.events.index(('supplier', path)))
+        self.assertLess(self.events.index(('navigation', True)), self.events.index(('supplier', path)))
+
+    def test_rounds98_failure_is_not_suppressed(self):
+        path = next(p for p in self.paths if '/pmr007-rounds11-20/' in p)
+        self.rounds_failure = ValueError('mandatory98')
+        self.assertTrue(self.run_change([('D', path)]))
+
+    def test_navigation_failure_is_not_suppressed(self):
+        path = next(p for p in self.paths if '/pmr007-rounds11-20/' in p)
+        self.navigation_failure = ValueError('mandatory navigation')
+        self.assertTrue(self.run_change([('D', path)]))
+
+    def test_worktree_refusal_not_hidden_by_index_pass(self):
+        path = self.paths[0]
+        self.diffs = {True: [('D', path)], False: [('M', path)]}
+        self.assertTrue(self.reader.check_corpus_currentness(self.repo, 'c' * 40))
+
+    def test_index_refusal_not_hidden_by_worktree_pass(self):
+        path = self.paths[0]
+        self.diffs = {True: [('M', path)], False: [('D', path)]}
+        self.assertTrue(self.reader.check_corpus_currentness(self.repo, 'c' * 40))
+
+    def test_unrelated_change_not_hidden_by_qualified_absence(self):
+        self.assertTrue(self.run_change([('D', self.paths[0]), ('D', 'unreviewed/source.yaml')]))
+
+    def test_wrong_native_return_refused(self):
+        path = self.paths[0]
+        self.bodies[path] = b'wrong native body'
+        self.assertTrue(self.run_change([('D', path)]))
+
+    def test_nonbytes_native_return_refused(self):
+        path = self.paths[0]
+        self.bodies[path] = 'not bytes'
+        self.assertTrue(self.run_change([('D', path)]))
+
+
+
+# Exact47 current-reader admission controls. Synthetic bytes, inert native leaf.
+# Append to tests/test_reader_pilot.py; reuse its existing AST fixture classes.
+CENTRAL47_EXPECTED_REVISION = '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'
+CENTRAL47_EXPECTED_RECORDS = {'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cl_anchor_cover_primary_check_v1_results.json': ('5fd34db7773639f256f3ebec7aed4cbafc1aabac',
+                                                                                                                                                                                     'cd83895b3ef8ec0501fe0cb21e37d0c9f3c86b03278e51835e51f1876cf76959',
+                                                                                                                                                                                     8832),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cl_anchor_cover_primary_check_v2_results.json': ('673281f18f0b593948d2df7ea7dbb734027b5dd5',
+                                                                                                                                                                                     '8484e8099295969760ddab0223778b482e260e1eb69a7c0bd2f802e722aa76f6',
+                                                                                                                                                                                     2407),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cm_objective_fitted_function_primary_check_v1_results.json': ('204ad8f25f3217bdd67d50e8330287cd51d0ed66',
+                                                                                                                                                                                                  '780fd0f7bce609988e0e0e92c468b735c5ee2fe04e587ee459a0f740a2c78381',
+                                                                                                                                                                                                  525),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cm_objective_fitted_function_primary_check_v2_results.json': ('f44d983d728803f8c2427f95eaaaf6b8c521e7c7',
+                                                                                                                                                                                                  'c82f11ce9d56c5adfde56942cc0b5b725bf445802139aa3ad151ac6908a01f5c',
+                                                                                                                                                                                                  565),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cn_authority_indexed_anchor_primary_check_v1_failed_results.json': ('785651477832ccbb072cc75af50155b177148a2a',
+                                                                                                                                                                                                        '039a58147dd5aa9ea3b96a050971c67293e97a96a13e361dce3db5e714f196fc',
+                                                                                                                                                                                                        2799),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cn_authority_indexed_anchor_primary_check_v2_results.json': ('1f37d6723ddbd1d13d70c58b550a1e6807e1ad0a',
+                                                                                                                                                                                                 'bc5c47709a4e783c6d35327215cd8c0c73402a22fd6cebcfb4a554a18aab5646',
+                                                                                                                                                                                                 2795),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cn_authority_indexed_anchor_primary_check_v3_results.json': ('45f0bccbd77cd6ca4af186884b012a8ed968a037',
+                                                                                                                                                                                                 '4bf52e1ff74a0384a6db5645cd44f5b0871f84a083a6b18317283409c652a0d1',
+                                                                                                                                                                                                 2795),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_co_profile_correction_primary_check_v1_results.json': ('e1eb7e352c4fe70e59ae0cff91ddeeb04c4cbb4e',
+                                                                                                                                                                                           'a5a8b61ed789e0ee3aa3eee2aad28a2da8f16c5e58c3aa61eff9b6e92913f6a6',
+                                                                                                                                                                                           408),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_co_profile_correction_primary_check_v2_results.json': ('b355d3d8ec253779fa4a4998d486d6c11c128a7f',
+                                                                                                                                                                                           '17d3572cc0866dff23438a8b5cd185d7052456e8dbded683f65dd3304955c5a6',
+                                                                                                                                                                                           603),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cp_distinct_bisimulation_rereview_results.json': ('f89950fa8dea2251d7f2a5c9f98b126e30d07e6b',
+                                                                                                                                                                                      'a185c8b2f37dbd743de6abfa2e109a10e125a155e143235498910e6b5f10592f',
+                                                                                                                                                                                      1053),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cp_eligible_ui_experiment_primary_check_v1_results.json': ('6c6063513181fee22875150d9e36f8b8296bd6f4',
+                                                                                                                                                                                               '1e3f646e1df4be1c865c2b1a052237196c1db486f77aa7f76c95f1d6409bdc83',
+                                                                                                                                                                                               757),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cp_eligible_ui_experiment_primary_check_v2_results.json': ('80f42ef3444bc86186c3979c5c9027b274bdd0b1',
+                                                                                                                                                                                               '430e46e3e718fcbbce9688139b8e7e2418be806f662a2fabd36688ed5eb5ca5b',
+                                                                                                                                                                                               740),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cs_distinct_fibre_cover_rereview_results.json': ('dd4f79acaeb8395d8612d5500305e1df090a7a78',
+                                                                                                                                                                                     '2384534787c19c7c8a27c7cf59ad32a865a4e25fc18d2918c5a55424d2437c4f',
+                                                                                                                                                                                     248),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cs_partition_refinement_primary_check_v1_results.json': ('0adc064cf4b9d7e2b3ba05687f6a48e72d30b98d',
+                                                                                                                                                                                             '9f9266588d75cbc61b3b763bbd2ff6c1daf04986ef4087e1123ba569d4328d02',
+                                                                                                                                                                                             352),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_cs_partition_refinement_primary_check_v2_results.json': ('7a2fa6e4e6180ca950b3b44dfdf5f8a3b80588ff',
+                                                                                                                                                                                             '8808624a3bbb09426f95603981ca84e104f96c977d4dc091913b2a69040040e8',
+                                                                                                                                                                                             369),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_ct_distinct_conflict_graph_rereview_results.json': ('1a5e61df2ecc45fd07d6fbc3d07fbb6f244ec42b',
+                                                                                                                                                                                        'fa16d66f6c7527eb0164c6f4a1151fb2d0ab8a760159ab1fe62dc71f55b22494',
+                                                                                                                                                                                        975),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_ct_partial_domain_primary_check_v1_results.json': ('9a52c8eb568a33e83f9c1a8f6d0e6b71294eb111',
+                                                                                                                                                                                       '26ed4259faa972bbf56f2691de6085a8b3e9c17ae0bac3899612d5d567e8fd8f',
+                                                                                                                                                                                       3882),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/checks/pmr007_deep_ct_partial_domain_primary_check_v2_results.json': ('488f34eeb82faa575976fcfbee7ab2e7ba4a627f',
+                                                                                                                                                                                       '3906cf8498d6858014e7112a4238ad6796690dd7c9ffb86e97b66494cdf2946b',
+                                                                                                                                                                                       1168),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_ck/PMR007_DEEP_CK_CONCRETE_ARCHITECTURE_MAP_V1.yaml': ('ffc8b62232dfc42ce07ea1aa43d8d458f5a4e8d3',
+                                                                                                                                                                             'ebcc532f9981f0d2a25be1e05e83f1d2a240e6c5696518f6a896823f0d030853',
+                                                                                                                                                                             3918),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_ck/PMR007_DEEP_CK_SOURCE_FORMAL_WORLD_MODELS_V1.yaml': ('2a4ec7fecc1bc1c724323d62ecd71dde5ffcea10',
+                                                                                                                                                                              '9eae438bebd069f2ada1ab861bda8290c0b44bd2f3ad0202a4093096ef9e7ca4',
+                                                                                                                                                                              2491),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_ck/PMR007_DEEP_CK_SOURCE_FORMAL_WORLD_MODELS_V2.yaml': ('1f81a89d311d51b6aa77c24c7c0b2f371e80af43',
+                                                                                                                                                                              '2da6b0cfdde4ea5d5871d17eb3282169df1daf85bcaf4efdf5a14ff982f7738d',
+                                                                                                                                                                              4686),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cl/PMR-007_DEEP_CL_ADMISSION_OVERLAY.yaml': ('26f53b5f13e3f71a82643d261cc6e1a5f3a593ac',
+                                                                                                                                                                   'ef987bf8670007688841e9ddaa2fc6e85455a67644751b010223801a3a926908',
+                                                                                                                                                                   1390),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cl/PMR007_DEEP_CL_ARCHITECTURE_ANCHOR_REGISTRY_V1.yaml': ('f0f12ecc568086ba133836b786dc0cb7b89e5128',
+                                                                                                                                                                                '3350c31b6aeae6a13ea23837fb1817fed485f6ad8d11964ba7c22bf6720832bb',
+                                                                                                                                                                                2454),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cl/PMR007_DEEP_CL_ARCHITECTURE_ANCHOR_REGISTRY_V2.yaml': ('9d4365ce30e5d4ba08f622ba925429ef58d83431',
+                                                                                                                                                                                '27aa21fac900517a75a0cef30fe99e928c4f43c679c407e7db0bc96fc07d3318',
+                                                                                                                                                                                3162),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cm/PMR-007_DEEP_CM_ADMISSION_OVERLAY.yaml': ('27eaaf7620fa0d9cbb475ef471fb8ab9ec574ef9',
+                                                                                                                                                                   '67f7b3d658ea5ace55558ab590fd0c6cfffef95f15bf295f3fc7443bfe49120d',
+                                                                                                                                                                   1473),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cm/PMR007_DEEP_CM_OBJECTIVE_FITTED_FUNCTION_MODELS_V1.yaml': ('da75ddf4e9288e0b788f22837964e14976b6e956',
+                                                                                                                                                                                    'da7d7fddfb87dc56eadfd6bcc5a605601ad847aa5ee97263ba2a1a7eecec7160',
+                                                                                                                                                                                    2451),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cm/PMR007_DEEP_CM_OBJECTIVE_FITTED_FUNCTION_MODELS_V2.yaml': ('95dc33114b1b10d7926fd13069ef966e5cbb2ca5',
+                                                                                                                                                                                    'c564bf8c94d16ac02b089acb320107a7a7502dbe6b638b6fde987d773b0b9023',
+                                                                                                                                                                                    2751),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cn/PMR-007_DEEP_CN_ADMISSION_OVERLAY.yaml': ('07340bd737e98c68b7bd499398c0b14733473a0b',
+                                                                                                                                                                   '4964c5c38a109deb4f680a526deb9b80c9169ed485d6e3e6ec3f8c3524b5c916',
+                                                                                                                                                                   1694),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cn/PMR007_DEEP_CN_AUTHORITY_INDEXED_ANCHOR_MODELS_V1.yaml': ('91eac41938d9363f29b2aaa6cc356d3662f2f721',
+                                                                                                                                                                                   'b239062074fcd058f173aed1898fbeece56974673b62cccdce97e8c7cf27c6a8',
+                                                                                                                                                                                   2363),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cn/PMR007_DEEP_CN_AUTHORITY_INDEXED_ANCHOR_MODELS_V2.yaml': ('4ba04371b0d153e2385e770c892dfe08ca992906',
+                                                                                                                                                                                   'd3787af3cf0554f39fb62f630fb3804cda9f985036d22aa1d615b48e6fc4e614',
+                                                                                                                                                                                   3891),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_co/PMR-007_DEEP_CO_ADMISSION_OVERLAY.yaml': ('5d7b3607d263060f8cd27f4b70f78c5ea858b03c',
+                                                                                                                                                                   '561bd97f52d5b076668e0b643215fc64378499d44c8fd3f3f491d1b9935858ef',
+                                                                                                                                                                   1518),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_co/PMR007_DEEP_CO_PROFILE_MEASURABLE_CORRECTION_MODELS_V1.yaml': ('d5cccbe6b4b76936a304852cdf64a67f4f0bfab7',
+                                                                                                                                                                                        '745a3a7e41cc9c452a0be4e76b58468d18add7fe86a229effd0365d5c092d8f6',
+                                                                                                                                                                                        1439),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_co/PMR007_DEEP_CO_PROFILE_MEASURABLE_CORRECTION_MODELS_V2.yaml': ('2ba1b3b358e7505354ac44d20e644a44f2bafb1d',
+                                                                                                                                                                                        '8406e983c4c36d7803c8cec61bd97e4ad70b0bb77b9e485a9a67450b18edf317',
+                                                                                                                                                                                        1935),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cp/PMR-007_DEEP_CP_ADMISSION_OVERLAY.yaml': ('3ff592b02ff973d55d457a5b2a17012333a9260f',
+                                                                                                                                                                   '87c4d60944526bcbe32ea002d913fbd374e8633270aa11c5aeede226424c76c5',
+                                                                                                                                                                   1754),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cp/PMR007_DEEP_CP_ELIGIBLE_UI_EXPERIMENT_REGISTRY_V1.yaml': ('4c90195800538c0f8bab0841bf61c50a0e975e5e',
+                                                                                                                                                                                   'ef27f520e22cab9c3d19c70b8a21287f52695770f98980d2fb310d7feb3b584e',
+                                                                                                                                                                                   3033),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cp/PMR007_DEEP_CP_ELIGIBLE_UI_EXPERIMENT_REGISTRY_V2.yaml': ('d9466caca6cf9213595bdfa489d413251fba67b6',
+                                                                                                                                                                                   'a1498322eb840c7cb9d88e4c65d0503ac264da961d96d93fe34d589d52e3e42f',
+                                                                                                                                                                                   4084),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cq/PMR-007_DEEP_CQ_ADMISSION_OVERLAY.yaml': ('4037fcd491eba593dadbaab5a89a3fdca61319ca',
+                                                                                                                                                                   '70609844141c6fe0f177ea9f0c0078c1f204f0f49e81975dde97940d94403183',
+                                                                                                                                                                   1968),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cq/PMR007_DEEP_CQ_NORM_UNCERTAIN_RESTORATION_MODEL_V1.yaml': ('45b7c1b3e61ab2616702ae6a291e582f10d3d74c',
+                                                                                                                                                                                    'e246434684eaa9e6b5c2e203c1dd5dd6dc7cd0f6aa00cb69f34f178f05823910',
+                                                                                                                                                                                    2755),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cq/PMR007_DEEP_CQ_NORM_UNCERTAIN_RESTORATION_MODEL_V2.yaml': ('dd3ecc53b8c02865acce709205babe160a241c5d',
+                                                                                                                                                                                    '258e982a41350546b4bba775088b10cc1a1fc9ca8dbb07be548ddbab85158679',
+                                                                                                                                                                                    3383),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cr/PMR007_DEEP_CR_SOURCE_RESTRICTION_MODEL_V1.yaml': ('dd2ec65d7b6bb9732b022cf3ffe9afc06b7af68a',
+                                                                                                                                                                            '207dcc4f28697598805b7242776bd8ca0c539111b2fff25eb0f6d3bd999b5c44',
+                                                                                                                                                                            1340),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cr/PMR007_DEEP_CR_SOURCE_RESTRICTION_MODEL_V2.yaml': ('e2a37b6a0c1e1584ac209eb8bf0432a13f7d60d9',
+                                                                                                                                                                            '7e0ce54a6a3f1fb53e816ba8019314ed7bf037803e340ebac69da34b868b50ba',
+                                                                                                                                                                            2515),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cs/PMR-007_DEEP_CS_ADMISSION_OVERLAY.yaml': ('13b662a5c995a191670c7394335f08ea2fbd4d0a',
+                                                                                                                                                                   'fc35f95ca8d802f6191898806961ec1e4dcac0ba9d535253387bc564b8e86ffa',
+                                                                                                                                                                   928),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cs/PMR007_DEEP_CS_REFINEMENT_LATTICE_MODEL_V1.yaml': ('188a4d22366041568a9d3b34816159763176247c',
+                                                                                                                                                                            '1aff4e8f6e17bc8625cecbce36ce60b18a60aaedd25872b509f6496d811eb84b',
+                                                                                                                                                                            738),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cs/PMR007_DEEP_CS_REFINEMENT_LATTICE_MODEL_V2.yaml': ('13d956d17c456cc4e05c5f4206cd14fe1c99a9dc',
+                                                                                                                                                                            'cbb0e891acd1bd80b5bfeb12951eb92cb63294a37f796ce814aae4f8efe2444f',
+                                                                                                                                                                            1319),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_ct/PMR-007_DEEP_CT_ADMISSION_OVERLAY.yaml': ('b4f5b958c6b25087f1d7d934d5700bf85bb3b905',
+                                                                                                                                                                   '412593543dd7a13ddf77da5c780125b3b9d47b480176949d5ddc63672050da51',
+                                                                                                                                                                   1127),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_ct/PMR007_DEEP_CT_PARTIAL_INTERVENTION_MODEL_V1.yaml': ('f364375dc4acb7bc750c01f112af1fd4253a1aa7',
+                                                                                                                                                                              '2051a104e5708ed3d359b10c015db876e8c75a229843598a7c6f660532a828f6',
+                                                                                                                                                                              782),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_ct/PMR007_DEEP_CT_PARTIAL_INTERVENTION_MODEL_V2.yaml': ('9cda0d95b4da50eda06e527eb4b75d6771fa67b9',
+                                                                                                                                                                              'e4160767e9d9622a6408c0f39868f802688433ad68d86fe342a015dfd1bff5bd',
+                                                                                                                                                                              2098)}
+
+
+def _central47_test_reader():
+    import ast, types, os, stat
+    module = _frontier_history_test_reader()
+    ns = module.__dict__
+    ns.update(json=json, Counter=__import__('collections').Counter,
+              ADMISSION_RECORD_PATHS=set())
+    # No real native operation is available in this isolated namespace.
+    def forbidden(*args, **kwargs):
+        raise AssertionError('native leaf must be explicitly supplied by the fixture')
+    ns['_administrative_git'] = forbidden
+    tree = ast.parse((ROOT / 'scripts/check_reader_pilot.py').read_bytes())
+    nodes = []
+    for node in tree.body:
+        if isinstance(node, ast.FunctionDef) and node.name in ('check_central_public_absences', 'check'):
+            nodes.append(node)
+        elif isinstance(node, ast.Assign):
+            for target in node.targets:
+                if isinstance(target, ast.Name) and target.id.startswith('CENTRAL_PUBLIC_HISTORY_'):
+                    ns[target.id] = ast.literal_eval(node.value)
+    exec(compile(ast.Module(body=nodes, type_ignores=[]), 'actual-central47-reader', 'exec'), ns)
+    return module
+
+
+class Central47ProductionContractTests(unittest.TestCase):
+    def test_exact47_native_identity_population_and_revision(self):
+        module = _central47_test_reader()
+        self.assertEqual(getattr(module, 'CENTRAL_PUBLIC_HISTORY_REVISION', None), CENTRAL47_EXPECTED_REVISION)
+        self.assertEqual(getattr(module, 'CENTRAL_PUBLIC_HISTORY_RECORDS', None), CENTRAL47_EXPECTED_RECORDS)
+
+    def test_local_complete_pin_table_is_the_same_exact47_plus_revision(self):
+        import ast
+        tree = ast.parse((ROOT / 'scripts/check_reader_pilot.py').read_bytes())
+        fn = next(n for n in tree.body if isinstance(n, ast.FunctionDef)
+                  and n.name == '_permitted_projection_consumer_pins')
+        expected = {p: (*v, CENTRAL47_EXPECTED_REVISION) for p, v in CENTRAL47_EXPECTED_RECORDS.items()}
+        matching = []
+        for node in ast.walk(fn):
+            if isinstance(node, ast.Dict):
+                try: value = ast.literal_eval(node)
+                except (ValueError, TypeError): continue
+                if isinstance(value, dict) and set(value) == set(expected): matching.append(value)
+        self.assertEqual(matching, [expected], 'one exact literal final pin population is mandatory')
+
+
+class Central47AbsenceTests(unittest.TestCase):
+    """Only tiny synthetic files are written; original metadata paths remain exact."""
+    def setUp(self):
+        import types
+        self.reader = _central47_test_reader()
+        self.assertTrue(callable(getattr(self.reader, 'check_central_public_absences', None)),
+                        'missing mandatory exact47 current-reader admission')
+        self.tmp = tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.paths = sorted(CENTRAL47_EXPECTED_RECORDS)
+        self.bodies = {p: ('central synthetic %02d\n' % i).encode() for i, p in enumerate(self.paths)}
+        def identity(body):
+            return (hashlib.sha1(b'blob '+str(len(body)).encode()+b'\0'+body).hexdigest(),
+                    hashlib.sha256(body).hexdigest(), len(body))
+        self.identity = identity
+        self.records = {p: identity(b) for p, b in self.bodies.items()}
+        self.reader.CENTRAL_PUBLIC_HISTORY_RECORDS = self.records
+        self.reader.CENTRAL_PUBLIC_HISTORY_REVISION = CENTRAL47_EXPECTED_REVISION
+        self.baseline = {p: dict(path=p, kind='blob', mode='100644', git_oid=v[0], bytes=v[2])
+                         for p, v in self.records.items()}
+        self.manifest = self.root / 'research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json'
+        self.manifest.parent.mkdir(parents=True)
+        self.document = {'schema': 'inert-central47-projection', 'objects': [
+            dict(source_sha256=sha, source_action='include', source_bytes=size,
+                 role='qualified_metadata', declared_eligibility_basis='reviewed_distribution_metadata',
+                 required_dependencies=[], disposition='REUSE', repository_path=p,
+                 public_sha256=sha, public_bytes=size, publication_basis='exact_existing_public_repository_object',
+                 repository_revision=CENTRAL47_EXPECTED_REVISION, git_blob=blob)
+            for p, (blob, sha, size) in self.records.items()]}
+        self.save_manifest()
+        self.tree = b''.join(('100644 blob '+self.records[p][0]+'\t'+p+'\0').encode() for p in self.paths)
+        self.index = b''; self.index_reads = 0; self.native_calls = []
+        self.commit_type = b'commit\n'; self.bad_blob = False; self.failure = False
+        self.index_drift = False; self.mutate_once = None
+        def native(repo, *args):
+            self.assertEqual(Path(repo), self.root)
+            self.native_calls.append(args)
+            if self.failure: raise ValueError('synthetic native evidence unavailable')
+            if args == ('cat-file', '-t', CENTRAL47_EXPECTED_REVISION): return self.commit_type
+            if args == ('ls-tree', '-z', CENTRAL47_EXPECTED_REVISION, '--', *self.paths): return self.tree
+            if args == ('ls-files', '--stage', '-z', '--', *self.paths):
+                self.index_reads += 1
+                return b'changed\0' if self.index_drift and self.index_reads > 1 else self.index
+            if len(args) == 3 and args[:2] == ('cat-file', 'blob'):
+                found = [self.bodies[p] for p in self.paths if self.records[p][0] == args[2]]
+                self.assertEqual(len(found), 1, 'only selected synthetic native blobs may be queried')
+                if self.mutate_once:
+                    effect, self.mutate_once = self.mutate_once, None
+                    effect()
+                return found[0] + (b'wrong' if self.bad_blob is True or self.bad_blob == args[2] else b'')
+            raise AssertionError('unexpected native command '+repr(args))
+        self.reader._administrative_git = native
+
+    def save_manifest(self):
+        self.manifest.write_text(json.dumps(self.document, sort_keys=True)+'\n')
+
+    def present(self, path):
+        p = self.root/path; p.parent.mkdir(parents=True, exist_ok=True);p.write_bytes(self.bodies[path]);return p
+
+    def qualify(self):
+        return self.reader.check_central_public_absences(self.root, self.baseline)
+
+    def refuse(self):
+        absent, errors = self.qualify();self.assertEqual(absent, set());self.assertTrue(errors)
+
+    def test_all47_absent_and_full_present(self):
+        absent, errors = self.qualify();self.assertEqual(errors, []);self.assertEqual(absent, set(self.paths))
+        for p in self.paths: self.present(p)
+        absent, errors = self.qualify();self.assertEqual(errors, []);self.assertEqual(absent, set())
+
+    def test_staged_absence_and_present_index_subsets_are_accepted(self):
+        kept = set(self.paths[::3])
+        for p in kept: self.present(p)
+        # Original tracked entries can remain for unstaged absence; a subset
+        # can remain after staged deletion. Both stay exact mode/blob/stage 0.
+        for indexed in (self.paths, sorted(kept), []):
+            self.index = b''.join(('100644 '+self.records[p][0]+' 0\t'+p+'\0').encode() for p in indexed)
+            absent, errors = self.qualify();self.assertEqual(errors, []);self.assertEqual(absent, set(self.paths)-kept)
+
+    def test_each_of13_projection_fields_is_required_and_exact(self):
+        original = deepcopy(self.document)
+        for field in original['objects'][0]:
+            for mutate in ('missing', 'wrong'):
+                with self.subTest(field=field, mutate=mutate):
+                    self.document = deepcopy(original); row = self.document['objects'][0]
+                    if mutate == 'missing': row.pop(field)
+                    else: row[field] = ['unexpected'] if field == 'required_dependencies' else 'wrong'
+                    self.save_manifest(); self.refuse()
+        self.document = original;self.save_manifest()
+
+    def test_each_selected_projection_row_is_mandatory(self):
+        original = deepcopy(self.document)
+        for i in range(47):
+            with self.subTest(omitted=i):
+                self.document = deepcopy(original);self.document['objects'].pop(i);self.save_manifest();self.refuse()
+
+    def test_duplicate_extra_field_and_malformed_document_refuse(self):
+        original = deepcopy(self.document)
+        for kind in ('duplicate', 'extra-field', 'not-list', 'not-dict', 'bad-json'):
+            with self.subTest(kind=kind):
+                self.document = deepcopy(original)
+                if kind == 'duplicate': self.document['objects'].append(deepcopy(self.document['objects'][0]))
+                elif kind == 'extra-field': self.document['objects'][0]['extra'] = True
+                elif kind == 'not-list': self.document['objects'] = {}
+                elif kind == 'not-dict': self.document['objects'][0] = None
+                self.save_manifest()
+                if kind == 'bad-json': self.manifest.write_text('{')
+                self.refuse()
+
+    def test_unrelated_projection_rows_do_not_expand_absence_permission(self):
+        unrelated = deepcopy(self.document['objects'][0]);unrelated['repository_path'] = 'unrelated.json'
+        self.document['objects'].append(unrelated);self.save_manifest()
+        absent, errors = self.qualify();self.assertEqual(errors, []);self.assertEqual(absent, set(self.paths));self.assertNotIn('unrelated.json', absent)
+
+    def test_pathless_unrelated_projection_shapes_do_not_expand_permission(self):
+        shapes = [
+            {'source_sha256': 'a'*64, 'source_action': 'identity_only', 'disposition': 'IDENTITY_ONLY', 'availability': 'held_excluded', 'exclusion_categories': ['explicit_owner_private_custody_only']},
+            {'source_sha256': 'b'*64, 'source_action': 'include', 'disposition': 'NOT_PUBLISHED'},
+            {'source_sha256': 'c'*64, 'source_action': 'omit', 'disposition': 'IDENTITY_ONLY'},
+        ]
+        self.document['objects'].extend(shapes); self.save_manifest()
+        absent, errors = self.qualify()
+        self.assertEqual(errors, []); self.assertEqual(absent, set(self.paths))
+        for path in self.paths: self.present(path)
+        absent, errors = self.qualify()
+        self.assertEqual(errors, []); self.assertEqual(absent, set())
+
+    def test_pathless_or_malformed_selected_rows_still_refuse(self):
+        original = deepcopy(self.document)
+        for missing, value in [(True, None), (False, None), (False, 7), (False, [])]:
+            with self.subTest(missing=missing, value=value):
+                self.document = deepcopy(original)
+                if missing: del self.document['objects'][0]['repository_path']
+                else: self.document['objects'][0]['repository_path'] = value
+                self.save_manifest(); self.refuse()
+
+    def test_explicit_malformed_unrelated_path_still_refuses(self):
+        original = deepcopy(self.document)
+        for value in [None, 7, [], {}]:
+            with self.subTest(value=value):
+                self.document = deepcopy(original)
+                self.document['objects'].append({'repository_path': value})
+                self.save_manifest(); self.refuse()
+
+    def test_original_census_each_mode_kind_blob_size_and_missing_refuse(self):
+        path=self.paths[0]; original=deepcopy(self.baseline)
+        for field,value in [('kind','tree'),('mode','100755'),('git_oid','0'*40),('bytes',1),('absent',None)]:
+            with self.subTest(field=field):
+                self.baseline=deepcopy(original)
+                if field=='absent':self.baseline.pop(path)
+                else:self.baseline[path][field]=value
+                self.refuse()
+
+    def test_noncommit_wrong_tree_and_native_blob_refuse(self):
+        self.commit_type=b'blob\n';self.refuse();self.commit_type=b'commit\n'
+        old=self.tree;self.tree=self.tree.replace(b'100644',b'100755',1);self.refuse();self.tree=old
+        self.bad_blob=True;self.refuse()
+
+    def test_missing_duplicate_extra_reordered_original_tree_refuse(self):
+        original=self.tree; rows=original.split(b'\0')[:-1]
+        for candidate in (rows[:-1],rows+rows[:1],rows+[b'100644 blob '+b'0'*40+b'\tunrelated'],list(reversed(rows))):
+            with self.subTest(candidate=len(candidate)):
+                self.tree=b'\0'.join(candidate)+b'\0';self.refuse()
+        self.tree=original
+
+    def test_conflict_wrong_mode_blob_extra_duplicate_and_unterminated_index_refuse(self):
+        p=self.paths[0];r=('100644 '+self.records[p][0]+' 0\t'+p).encode()
+        for candidate in (r.replace(b' 0\t',b' 1\t')+b'\0',r.replace(b'100644',b'100755')+b'\0',
+                          r.replace(self.records[p][0].encode(),b'0'*40)+b'\0',r+b'\0'+r+b'\0',
+                          r.replace(p.encode(),b'unrelated')+b'\0',r):
+            with self.subTest(candidate=candidate[:20]):self.index=candidate;self.refuse()
+
+    def test_every_selected_native_blob_is_authenticated(self):
+        for path in self.paths:
+            with self.subTest(path=path):
+                self.bad_blob=self.records[path][0];self.refuse()
+        self.bad_blob=False
+
+    def test_empty_missing_or_extra_native_population_cannot_bypass_guard(self):
+        original=self.records
+        for changed in ({},dict(list(original.items())[:-1]),dict(original,unrelated=next(iter(original.values())))):
+            with self.subTest(population=len(changed)):
+                self.reader.CENTRAL_PUBLIC_HISTORY_RECORDS=changed;self.refuse()
+        self.reader.CENTRAL_PUBLIC_HISTORY_RECORDS=original
+
+    def test_native_refusal_does_not_admit_any_path(self):
+        self.failure=True;self.refuse()
+
+    def test_present_corrupt_symlink_hardlink_executable_directory_fifo_refuse(self):
+        import os
+        p=self.present(self.paths[0]);p.write_bytes(b'corrupt');self.refuse();p.unlink()
+        target=self.root/'outside';target.write_bytes(self.bodies[self.paths[0]])
+        p.symlink_to(target);self.refuse();p.unlink()
+        os.link(target,p);self.refuse();p.unlink()
+        self.present(self.paths[0]).chmod(0o755);self.refuse();p.chmod(0o644);p.unlink()
+        p.mkdir();self.refuse();p.rmdir();os.mkfifo(p)
+        with frontier_mock.patch.object(self.reader.os,'open',side_effect=OSError('FIFO must never open')) as opened:
+            self.refuse();opened.assert_not_called()
+
+    def test_manifest_missing_symlink_hardlink_executable_refuse(self):
+        import os
+        saved=self.manifest.read_bytes();self.manifest.unlink();self.refuse()
+        other=self.root/'manifest-copy';other.write_bytes(saved)
+        self.manifest.symlink_to(other);self.refuse();self.manifest.unlink()
+        os.link(other,self.manifest);self.refuse();self.manifest.unlink()
+        self.manifest.write_bytes(saved);self.manifest.chmod(0o755);self.refuse()
+
+    def test_index_change_during_qualification_refuses(self):
+        self.index_drift=True;self.refuse()
+
+    def test_absent_to_present_and_present_to_absent_drift_refuse(self):
+        self.mutate_once=lambda:self.present(self.paths[0]);self.refuse()
+        p=self.root/self.paths[0];self.mutate_once=lambda:p.unlink();self.refuse()
+
+    def test_equal_bytes_replacement_and_manifest_drift_refuse(self):
+        p=self.present(self.paths[0])
+        def replace():p.unlink();self.present(self.paths[0])
+        self.mutate_once=replace;self.refuse()
+        self.mutate_once=lambda:self.manifest.write_bytes(self.manifest.read_bytes()+b' ')
+        self.refuse()
+
+
+class Central47OriginalPinControls(unittest.TestCase):
+    PINS = {p: (*v, CENTRAL47_EXPECTED_REVISION) for p,v in CENTRAL47_EXPECTED_RECORDS.items()}
+    def setUp(self):
+        previous=ReviewedReissueBwOriginalPinControls();previous.setUp()
+        self.base=previous.base;self.prior=previous.current
+        for p,(_,sha,size,_) in self.PINS.items():
+            row=dict(repository_path=p,source_sha256=sha,public_sha256=sha,source_bytes=size,public_bytes=size,
+                     disposition='REUSE',role='qualified_metadata',declared_eligibility_basis='reviewed_distribution_metadata',
+                     required_dependencies=[],source_action='include',publication_basis='exact_existing_public_repository_object')
+            for doc in (self.base.original,self.prior):doc['objects'].append(deepcopy(row))
+        self.current=self.base.pinned(self.prior,self.PINS)
+
+    def test_prior_reissue_stage_and_complete47_stage_remain_accepted(self):
+        self.assertTrue(self.base.permitted(self.prior));self.assertTrue(self.base.permitted(self.current))
+
+    def test_partial47_and_each_coordinate_identity_or_role_mutation_refuse(self):
+        for path in self.PINS:
+            for fields in (('repository_revision',),('git_blob',),('repository_revision','git_blob')):
+                with self.subTest(path=path, fields=fields):
+                    changed=deepcopy(self.current);r=next(r for r in changed['objects'] if r.get('repository_path')==path)
+                    for field in fields:r.pop(field)
+                    self.assertFalse(self.base.permitted(changed))
+        p=next(iter(self.PINS))
+        for field,value in [('repository_revision','HEAD'),('git_blob','0'*40),('source_sha256','0'*64),('public_sha256','0'*64),
+                            ('source_bytes',1),('public_bytes',1),('role','authored_code'),('disposition','PROJECT'),
+                            ('source_action','exclude'),('required_dependencies',['extra']),('publication_basis','other'),
+                            ('declared_eligibility_basis','other')]:
+            with self.subTest(field=field):
+                changed=deepcopy(self.current);next(r for r in changed['objects'] if r.get('repository_path')==p)[field]=value
+                self.assertFalse(self.base.permitted(changed))
+
+    def test_missing_duplicate_reordered_extra_row_and_top_level_change_refuse(self):
+        for kind in ('missing','duplicate','reordered','extra','metadata'):
+            with self.subTest(kind=kind):
+                changed=deepcopy(self.current)
+                if kind=='missing':changed['objects'].pop()
+                elif kind=='duplicate':changed['objects'].append(deepcopy(changed['objects'][-1]))
+                elif kind=='reordered':changed['objects'].reverse()
+                elif kind=='extra':changed['objects'].append({'repository_path':'unrelated'})
+                else:changed['schema']='changed'
+                self.assertFalse(self.base.permitted(changed))
+
+    def test_no_original_identity_rebinding_or_prior_stage_omission(self):
+        p=next(iter(self.PINS))
+        for field,value in [('source_sha256','0'*64),('public_sha256','0'*64),('source_bytes',1),('public_bytes',1),('disposition','PROJECT')]:
+            with self.subTest(field=field):
+                original=deepcopy(self.base.original);current=deepcopy(self.current)
+                for document in (original,current):next(r for r in document['objects'] if r.get('repository_path')==p)[field]=value
+                self.assertFalse(self.base.permitted(current,original))
+        prior_paths=set(ReviewedReissueBwOriginalPinControls.PINS)|set(ReviewedCodexOriginalPinControls.PINS)
+        for p in prior_paths:
+            changed=deepcopy(self.current);r=next(r for r in changed['objects'] if r.get('repository_path')==p)
+            r.pop('repository_revision');r.pop('git_blob');self.assertFalse(self.base.permitted(changed))
+
+    def test_exact_candidate_delta_is_only_two_fields_for_all47(self):
+        self.assertTrue(self.base.permitted(self.current))
+        for p,(blob,sha,size,rev) in self.PINS.items():
+            old=next(r for r in self.prior['objects'] if r.get('repository_path')==p)
+            new=next(r for r in self.current['objects'] if r.get('repository_path')==p)
+            self.assertEqual(new,dict(old,repository_revision=rev,git_blob=blob))
+
+
+class Central47CurrentnessTests(unittest.TestCase):
+    def gate(self, changes, qualified):
+        import inspect,types
+        reader=_central47_test_reader();fn=reader.check_corpus_currentness
+        self.assertIn('central_paths',inspect.signature(fn).parameters,'missing exact47 currentness parameter')
+        reader.CENTRAL_PUBLIC_HISTORY_RECORDS=CENTRAL47_EXPECTED_RECORDS
+        raw=''.join(status+'\0'+p+'\0' for status,p in changes).encode()
+        reader.readonly_git_diff=lambda *a:types.SimpleNamespace(returncode=0,stdout=raw)
+        return fn(Path('.'),'c'*40,central_paths=qualified)
+
+    def test_only_qualified_exact_D_paths_are_admitted(self):
+        paths=sorted(CENTRAL47_EXPECTED_RECORDS)
+        self.assertEqual(self.gate([('D',p) for p in paths],set(paths)),[])
+        self.assertEqual(self.gate([],set()),[])
+
+    def test_unqualified_modified_added_renamed_and_unrelated_refuse(self):
+        p=next(iter(CENTRAL47_EXPECTED_RECORDS))
+        for status in ('M','A','T'):
+            with self.subTest(status=status):self.assertTrue(self.gate([(status,p)],{p}))
+        self.assertTrue(self.gate([('D',p)],set()))
+        self.assertTrue(self.gate([('D',p+'-other')],{p+'-other'}))
+        self.assertTrue(self.gate([('D',p),('M','unrelated')],{p}))
+
+
+class Central47MainDispatchTests(unittest.TestCase):
+    def test_main_always_runs_qualifier_retains_errors_and_passes_paths(self):
+        import types
+        reader=_central47_test_reader();events=[];selected={next(iter(CENTRAL47_EXPECTED_RECORDS))}
+        reader.entries_at=lambda *a:[]
+        reader.corpus_currentness_context=lambda *a:(({}, {}, {}, {}, {}),['context-sentinel'])
+        reader.check_frontier_record_absences=lambda *a:(set(),['frontier-sentinel'])
+        def central(repo,baseline):events.append(('central',baseline));return selected,['central-fatal-sentinel']
+        reader.check_central_public_absences=central
+        def currentness(*args,**kwargs):events.append(('currentness',args,kwargs));return ['currentness-sentinel']
+        reader.check_corpus_currentness=currentness
+        reader.check_collection_dispositions=lambda *a:['collection-sentinel']
+        reader.check_collection_result_routes=lambda *a:['route-sentinel']
+        reader.Counter=__import__('collections').Counter;reader.PROBES=set()
+        reader.yaml=types.SimpleNamespace(safe_load=lambda _: {'artifacts':[]},YAMLError=ValueError)
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);profile=root/'profile';profile.write_text('{}')
+            reader.safe_path=lambda *a:profile
+            owners={'schema':'orthemology-reader-owner-map-v1','external_body_admissions':[],
+                    'baseline':{'commit':'c'*40},'collections':[],'publication_profile':'profile'}
+            cross={'schema':'orthemology-reader-crosswalk-v1','coverage_stage':'reader-candidate'}
+            errors=reader.check(root,owners,cross)
+        self.assertEqual([e[0] for e in events],['central','currentness'])
+        self.assertEqual(events[0][1],{})
+        call=events[1];supplied=call[2].get('central_paths',call[1][8] if len(call[1])>8 else set())
+        self.assertEqual(supplied,selected)
+        self.assertEqual(set(errors),{'context-sentinel','frontier-sentinel','central-fatal-sentinel',
+                                     'currentness-sentinel','collection-sentinel','route-sentinel'})
 
 
 if __name__ == "__main__":

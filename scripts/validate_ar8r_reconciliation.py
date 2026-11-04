@@ -5,6 +5,7 @@ from __future__ import annotations
 
 from resolve_t20_v6_source import (
     DIGEST_RECORD_PATHS, digest_record_view_bytes, digest_record_view_paths, digest_record_view_is_file,
+    ADMISSION_RECORD_ROUNDS_PATH, admission_record_bytes,
 )
 
 
@@ -253,6 +254,8 @@ def _pmr007_deep_regular_file(repo: Path, relative: str) -> Path:
 
 def _pmr007_deep_member_bytes(repo: Path, relative: str) -> bytes:
     """Exact finite digest provider or the existing ordinary snapshot member."""
+    if relative == ADMISSION_RECORD_ROUNDS_PATH:
+        return admission_record_bytes(repo, relative)
     if relative in DIGEST_RECORD_PATHS:
         return digest_record_view_bytes(Path(repo) / relative)
     path = _pmr007_deep_regular_file(repo, relative)
@@ -515,6 +518,10 @@ def validate_pmr007_rounds_snapshot(repo: Path = ROOT) -> list[str]:
                 issues.append('pmr007-rounds-member-identity-mismatch:' + relative)
         actual = {path.relative_to(snapshot).as_posix() for path in digest_record_view_paths(repo, snapshot)
                   if (digest_record_view_is_file(path) or path.is_symlink()) and path != snapshot / 'SHA256SUMS'}
+        # The distinct Round20 original is not one of the 98 canonical copies.
+        # Its ordinary absence is counted only after required native byte supply.
+        admission_record_bytes(repo, ADMISSION_RECORD_ROUNDS_PATH)
+        actual.add(ADMISSION_RECORD_ROUNDS_PATH[len(PMR007_ROUNDS_PREFIX) + 1:])
         if actual != set(members) - missing:
             issues.append('pmr007-rounds-internal-sha256sums-coverage-mismatch')
         if missing:
