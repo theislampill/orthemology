@@ -1544,6 +1544,198 @@ def check_historical_sources(repo, baseline_rows, owners, cross, additions):
     return admitted, errors
 
 
+# Exact historical-only source disposition; scientific preservation review36daa0ce.
+# No retrieval fallback or physical-removal authority is introduced.
+FRONTIER_HISTORY_REVISION = "c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce"
+FRONTIER_HISTORY_RECORDS = {'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/ARCHIVE_BUILD_BOUNDARY.yaml': ('2fbf5bd4723e8cf18eb73d75b645e4824024595d',
+                                                                                                     '24fcefce930bcf6871159c511338ad0098efa14b7b0db4a23275c846a9bf2e06',
+                                                                                                     214),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_DEPENDENCY_AND_FLYWHEEL_UPDATES/PMR-007_DEEP_BA_BE_CENTRAL_DELTA.yaml': ('ee8117f9eccd6beff3a4566a1c84e31024d726f9',
+                                                                                                                                                        '8ccb2fb0327b33bef5f52ad760071ea66a4bdaede43404751c942eba31a53f4b',
+                                                                                                                                                        858),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_DEPENDENCY_AND_FLYWHEEL_UPDATES/PMR-007_POST_BF_WHOLE_FRONTIER_SELECTION_GATE_V1.yaml': ('17df8182f9c2103cff22fd5600fbe1a20e0dbff3',
+                                                                                                                                                                        '78c2a19ceaf8cb75885530d6daa294cd517d5a5d542492cfb1e96a2c918d9409',
+                                                                                                                                                                        1844),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_DEPENDENCY_AND_FLYWHEEL_UPDATES/ROLLING_CUSTODY_RECEIPT_DEEP_BA_BE.yaml': ('19cf575f33d16a6713d6b0f8f0583b3a61ea1c24',
+                                                                                                                                                          'c15468c0fb3ef5f5af3f935ba99bc31058d5e87fb3dd6f0c382936e255b8c12e',
+                                                                                                                                                          594),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_DEPENDENCY_AND_FLYWHEEL_UPDATES/WHOLE_PROGRAM_FRONTIER_ROTATION_LEDGER_AQ_AZ_V1.yaml': ('0f28511582bd8dd88aeb04ceae51f6ec39285d2c',
+                                                                                                                                                                       'af232e953969e9c1241aaa5b637c0b89f605ad576ba305306f538f56f2148769',
+                                                                                                                                                                       4002),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEAN_AND_FORMALIZATION_MAP/PMR007_FORMALIZATION_MAP.yaml': ('3f750ec2e38a57a54430838e5e6216076c6bd712',
+                                                                                                                                           '8086b738be42e797f586013a04df50279bdef42433bc9476a9b79d637191dc56',
+                                                                                                                                           5727),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEAN_AND_FORMALIZATION_MAP/PMR007_FORMALIZATION_MAP_AQ_AZ.yaml': ('332790bffbf674d8e411152ef5def65c4d7a96e0',
+                                                                                                                                                 'aec05a3eee4341155f0052285584f5dc383c0360b7b774d6f99c9ffe5bf3b7a6',
+                                                                                                                                                 1548),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/CURRENT_STATE_AZ.yaml': ('01fb91076b226c8401f90a288953440e302c4b15',
+                                                                                                                       '84a8a45b7be1fceaf95f96e113aba85d1416b198631273ecf1db0bbaf0f4e020',
+                                                                                                                       981),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BF_ADMISSION_OVERLAY.yaml': ('30b810373b157d4737bd6f61f9dc3148c8742f62',
+                                                                                                                                        'fe56e099f2fed7663b10ad999c3412886a969ee68f7ab7e308ee2345b3ec29a9',
+                                                                                                                                        2406),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BG_ADMISSION_OVERLAY.yaml': ('838f850f6379eb03005edeaacd3f071760bc8475',
+                                                                                                                                        'f2544e177f4b7c5019ac8174096f8f96fd2ffb7d940e7c68bcc733489c702c93',
+                                                                                                                                        2140),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BH_ADMISSION_OVERLAY.yaml': ('e6a215a34d29fd39651e0a9735cb17c0c9853a0f',
+                                                                                                                                        '88f126c762f4df8d3cc59bc9f415c72ed0ee02fd9358eedc1cd4444be6be5434',
+                                                                                                                                        2405),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BI_ADMISSION_OVERLAY.yaml': ('df2493d4e78ca1e42127f68363dec9aa1f6080eb',
+                                                                                                                                        'e9de900f77f56ed5cce8965c6d4caedfecc31e0f0eccabeaf7930458c373f22a',
+                                                                                                                                        2310),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BJ_ADMISSION_OVERLAY.yaml': ('29cc4ab62d494797730aa60d7f34af7da46d6e5b',
+                                                                                                                                        '1f47ce410b0a302535f0fcba98bc59a5d16cb351bb6d477de3417ceec479fd13',
+                                                                                                                                        1946),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BK_ADMISSION_OVERLAY.yaml': ('eac537ebad72e3fc5e36088b1fb3aad301b4db8e',
+                                                                                                                                        'd17636bb0d84a0ff5edd86c92396898ac6733d4e2aeb59c0ac699d9556747314',
+                                                                                                                                        1806),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PROPOSED_RESULT_INDEX_AQ_AZ.yaml': ('5c2c1286fcbb4ad504b5a9c409007b57fb25df56',
+                                                                                                                                  '7e364381bc13ff9e9bbe901d1a03aef9b2dac3c2e6d491f86bb19791d97c4384',
+                                                                                                                                  2437),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PROPOSED_RESULT_INDEX_BA_BE.yaml': ('b4a46f072602c85ff68b98331b464e9f9d21f788',
+                                                                                                                                  '8baf2f274c6689728f59de60a75df13d8d03e562613675c3435db539c7f0134d',
+                                                                                                                                  1179)}
+FRONTIER_HISTORY_SUPPORT = {'consolidated-foundations': 'foundations/received-actuality-and-intrinsic-necessity.md',
+ 'consolidated-information-and-inquiry': 'mathematics/information-and-inquiry.md',
+ 'consolidated-objective-normativity': 'foundations/objective-normativity-and-corrective-cognition.md'}
+
+
+def _frontier_record_file_state(repo, path, identity, *, allow_absent=False):
+    """Read one ordinary fixed identity and retain its complete stable file state."""
+    node = Path(repo)
+    for ancestor in (node, *node.parents):
+        if ancestor.is_symlink():
+            raise ValueError('frontier record root contains a symlink')
+    for part in path.split('/'):
+        if part in ('', '.', '..', '.git') or '\\' in part:
+            raise ValueError('unsafe frontier record path')
+        node = node / part
+        try:
+            entry = node.lstat()
+        except FileNotFoundError:
+            if allow_absent:
+                return None
+            raise ValueError('current frontier support is absent')
+        if stat.S_ISLNK(entry.st_mode):
+            raise ValueError('frontier record path contains a symlink')
+        if node != Path(repo) / path and not stat.S_ISDIR(entry.st_mode):
+            raise ValueError('frontier record ancestor is not a directory')
+    if (not stat.S_ISREG(entry.st_mode) or entry.st_nlink != 1
+            or entry.st_mode & 0o111 or entry.st_size != identity[2]):
+        raise ValueError('frontier record is not an ordinary exact-sized file')
+    fd = os.open(node, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
+    with os.fdopen(fd, 'rb') as stream:
+        before = os.fstat(stream.fileno())
+        if (not stat.S_ISREG(before.st_mode) or before.st_nlink != 1
+                or before.st_mode & 0o111 or before.st_size != identity[2]):
+            raise ValueError('frontier record is not an ordinary exact-sized file')
+        body = stream.read()
+        after = os.fstat(stream.fileno())
+    fields = ('st_dev', 'st_ino', 'st_mode', 'st_nlink', 'st_size', 'st_mtime_ns', 'st_ctime_ns')
+    state = tuple(getattr(before, name) for name in fields)
+    final = node.lstat()
+    actual = (hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest(),
+              hashlib.sha256(body).hexdigest(), len(body))
+    if (actual != identity or state != tuple(getattr(after, n) for n in fields)
+            or state != tuple(getattr(final, n) for n in fields)):
+        raise ValueError('frontier record bytes or file state differ')
+    return state
+
+
+def check_frontier_record_absences(repo, baseline_rows, owners, cross, additions):
+    """Qualify sixteen reviewed historical absences, never supply a read fallback.
+
+    This is source/work/support receiving, not scientific review, custody or
+    permission to delete. All originals authenticate before any absence returns.
+    """
+    declared = owners.get('frontier_history_disposition')
+    if declared is None:
+        return set(), []
+    paths = sorted(FRONTIER_HISTORY_RECORDS)
+    expected = {'role': 'historical-only', 'repository_revision': FRONTIER_HISTORY_REVISION,
+                'source_paths': paths, 'reading_sources': sorted(FRONTIER_HISTORY_SUPPORT),
+                'basis': 'scientific-consolidation-review'}
+    try:
+        if declared != expected or len(paths) != 16:
+            raise ValueError('exact reviewed sixteen-record disposition is required')
+        def git(*args):
+            result = subprocess.run(['git', '--no-replace-objects', '--literal-pathspecs', *args],
+                                    cwd=repo, capture_output=True, check=False)
+            if result.returncode:
+                raise ValueError('frontier record native identity evidence unavailable')
+            return result.stdout
+        states = {}
+        for path in paths:
+            blob, sha, size = FRONTIER_HISTORY_RECORDS[path]
+            row = baseline_rows.get(path, {})
+            if (row.get('kind'), row.get('mode'), row.get('git_oid'), row.get('bytes')) != (
+                    'blob', '100644', blob, size):
+                raise ValueError('frontier record original census identity differs')
+            states[path] = _frontier_record_file_state(repo, path, (blob, sha, size), allow_absent=True)
+        sources = cross.get('sources', {})
+        if any(source.get('path') in FRONTIER_HISTORY_RECORDS for source in sources.values()):
+            raise ValueError('a current crosswalk source still requires a historical record')
+        support_states = {}
+        review_key = expected['basis']
+        review_source = sources.get(review_key, {})
+        review = additions.get(review_source.get('path'), {})
+        if review.get('key') != review_key or review.get('role') != 'review':
+            raise ValueError('current exact review support is required')
+        for key, path in FRONTIER_HISTORY_SUPPORT.items():
+            source = sources.get(key, {})
+            admission = additions.get(path, {})
+            if (source.get('path') != path or admission.get('key') != key
+                    or admission.get('role') != 'work-source'
+                    or review_key not in admission.get('supporting_source_keys', [])
+                    or not admission.get('work_keys')
+                    or not set(admission['work_keys']) <= set(review.get('work_keys', []))):
+                raise ValueError('current frontier science and review relationship differs')
+        for key, path in {**FRONTIER_HISTORY_SUPPORT, review_key: review_source['path']}.items():
+            source, admission = sources[key], additions[path]
+            identity = (admission['git_oid'], admission['sha256'], admission['bytes'])
+            if admission.get('mode') != '100644' or source.get('sha256') != identity[1]:
+                raise ValueError('current frontier support metadata differs')
+            support_states[path] = (identity, _frontier_record_file_state(repo, path, identity))
+        support_paths = sorted(support_states)
+        support_index = b''.join(('100644 ' + support_states[p][0][0] + ' 0\t' + p + '\0').encode()
+                                 for p in support_paths)
+        if git('ls-files', '--stage', '-z', '--', *support_paths) != support_index:
+            raise ValueError('current frontier support index differs')
+        revision = FRONTIER_HISTORY_REVISION
+        if git('cat-file', '-t', revision) != b'commit\n':
+            raise ValueError('frontier record original revision is not a commit')
+        expected_tree = b''.join(('100644 blob ' + FRONTIER_HISTORY_RECORDS[p][0] + '\t' + p + '\0').encode()
+                                 for p in paths)
+        if git('ls-tree', '-z', revision, '--', *paths) != expected_tree:
+            raise ValueError('frontier record original tree population differs')
+        indexed = git('ls-files', '--stage', '-z', '--', *paths)
+        expected_index = {('100644 ' + FRONTIER_HISTORY_RECORDS[p][0] + ' 0\t' + p).encode() for p in paths}
+        rows = indexed.split(b'\0')
+        if (rows[-1] != b'' or len(rows[:-1]) != len(set(rows[:-1]))
+                or not set(rows[:-1]) <= expected_index):
+            raise ValueError('frontier record index differs or is conflicted')
+        for path in paths:
+            identity = FRONTIER_HISTORY_RECORDS[path]
+            body = git('cat-file', 'blob', identity[0])
+            actual = (hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest(),
+                      hashlib.sha256(body).hexdigest(), len(body))
+            if actual != identity:
+                raise ValueError('frontier record original body identity differs')
+        if git('ls-files', '--stage', '-z', '--', *paths) != indexed:
+            raise ValueError('frontier record index changed during qualification')
+        if any(_frontier_record_file_state(repo, p, FRONTIER_HISTORY_RECORDS[p], allow_absent=True) != states[p]
+               for p in paths):
+            raise ValueError('frontier record actual absence set or present state changed')
+        if any(_frontier_record_file_state(repo, p, identity) != before
+               for p, (identity, before) in support_states.items()):
+            raise ValueError('current frontier support changed during qualification')
+        if git('ls-files', '--stage', '-z', '--', *support_paths) != support_index:
+            raise ValueError('current frontier support index changed during qualification')
+        return {p for p in paths if states[p] is None}, []
+    except (KeyError, TypeError, ValueError, OSError, UnicodeError) as exc:
+        return set(), ['frontier-history: ' + str(exc)]
+
+
 CONTINUATION_OWNER_PATHS = (
     "docs/provenance/v5-research-continuations/EVIDENCE_BINDINGS.json",
     "docs/provenance/v5-research-continuations/README.md",
@@ -1633,7 +1825,7 @@ def check_continuation_owner_edition(repo, baseline_rows):
 
 
 def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths=(), navigation_paths=(),
-                            continuation_owners=(), fixture_owners=()):
+                            continuation_owners=(), fixture_owners=(), frontier_paths=()):
     """New/changed tracked sources cannot disappear behind a frozen census.
 
     Compare the index and actual worktree separately with the approved commit.
@@ -1645,6 +1837,7 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
     errors = []
     editable = REFACTOR_EDIT_PATHS | set(admitted_paths)
     duplicate_paths = {}
+    qualified_frontier = (set(frontier_paths) & set(FRONTIER_HISTORY_RECORDS)) if frontier_paths else set()
     continuation_paths = None
     for cached in (True, False):
         result = readonly_git_diff(repo,
@@ -1663,7 +1856,7 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
         for prefix, qualify in ((PMR007_DEEP_PREFIX, pmr007_deep_duplicate_paths),
                                 (PMR007_ROUNDS_PREFIX, pmr007_rounds_duplicate_paths)):
             if prefix not in duplicate_paths and any(
-                    status == "D" and path.startswith(prefix + "/")
+                    status == "D" and path.startswith(prefix + "/") and path not in qualified_frontier
                     for status, path in zip(values[::2], values[1::2])):
                 try:
                     duplicate_paths[prefix] = qualify(Path(repo))
@@ -1781,7 +1974,8 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                       " requires source-baseline and work/support disposition review"
                       for status, path in zip(values[::2], values[1::2])
                       if path not in editable and not
-                      ((status == "M" and path in sourcing_paths)
+                      ((status == "D" and path in qualified_frontier)
+                        or (status == "M" and path in sourcing_paths)
                         or (path in authority_paths and status == ('A' if (
                             REVIEWED_AUTHORITY_EDITS[path] is not None
                             and REVIEWED_AUTHORITY_EDITS[path][2] is None) else 'M'))
@@ -1962,8 +2156,10 @@ def check(repo, owners, cross):
     (additions, historical, navigation, continuation_owners, fixture_owners), context_errors = (
         corpus_currentness_context(repo, indexed, owners, cross))
     errors.extend(context_errors)
+    frontier_paths, frontier_errors = check_frontier_record_absences(repo, indexed, owners, cross, additions)
+    errors.extend(frontier_errors)
     errors.extend(check_corpus_currentness(repo, owners["baseline"]["commit"], additions,
-                                          historical, navigation, continuation_owners, fixture_owners))
+                                          historical, navigation, continuation_owners, fixture_owners, frontier_paths))
     errors.extend(check_collection_dispositions(rows, owners, cross))
     errors.extend(check_collection_result_routes(repo, owners, cross))
     if owners["baseline"].get("tree"):

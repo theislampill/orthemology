@@ -1999,8 +1999,10 @@ def public_fixture_consumers(repo, state, value, audit):
     with adapter.bounded_git_environment():
         indexed = boundary.currentness_baseline(reader, owner, (repo/PUBLIC_FIXTURE_CENSUS).read_bytes())
         contexts, context_errors = reader.corpus_currentness_context(repo, indexed, owner, cross)
-        result['currentness_errors'] = context_errors + reader.check_corpus_currentness(
-            repo, owner['baseline']['commit'], *contexts)
+        frontier_paths, frontier_errors = reader.check_frontier_record_absences(
+            repo, indexed, owner, cross, contexts[0])
+        result['currentness_errors'] = context_errors + frontier_errors + reader.check_corpus_currentness(
+            repo, owner['baseline']['commit'], *contexts, frontier_paths)
     result['reader_boundary'] = boundary.receipt()
     require(public_fixture_index(repo) == saved_index, 'Actual consumer changed the raw native index')
     if audit.absent:

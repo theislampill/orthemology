@@ -1571,4 +1571,89 @@ class PublicFixtureReconciliationCommandControls(unittest.TestCase):
 
 
 
+
+
+class FrontierHistoryProtectedCallerControls(unittest.TestCase):
+    """Exact protected adapter/caller spans with metadata-only inert leaves."""
+    def sources(self):
+        return Path(__file__).resolve().parents[1] / 'scripts'
+
+    def project(self, change=None):
+        import hashlib
+        source=(self.sources()/'source_alias_absence_reader.py').read_bytes()
+        tree=ast.parse(source)
+        cls=next(n for n in tree.body if isinstance(n,ast.ClassDef) and n.name=='HeldReaderDiffBoundary')
+        fn=next(n for n in cls.body if isinstance(n,ast.FunctionDef) and n.name=='currentness_baseline')
+        paths=['ordinary/history-%02d.yaml'%i for i in range(16)]
+        identities={p:('%040x'%(i+1),'a'*64,i+10) for i,p in enumerate(paths)}
+        rows={p:('100644','blob',v[0]) for p,v in identities.items()}
+        rows['ordinary/unrelated.md']=('100644','blob','b'*40)
+        reader=types.SimpleNamespace(CONTINUATION_OWNER_ORIGINAL={},FIXTURE_CONSUMER_ORIGINAL={},HISTORICAL_PROSE={},FRONTIER_HISTORY_RECORDS=identities)
+        owner={'baseline':{'commit':'c'*40,'tree':'d'*40},'entries_sha256':'e'*64}
+        census={'schema':'orthemology-reader-census-v1','baseline':owner['baseline'],'entries_sha256':owner['entries_sha256'],'external_body_admissions':[],'population':{'tracked_entries':len(rows)}}
+        body=json.dumps(census).encode();queries=[]
+        boundary=types.SimpleNamespace(baseline='c'*40,initial_metadata={},metadata=lambda:{},held={})
+        def native(*args):
+            queries.append(args)
+            if args==('rev-parse','--verify','c'*40+'^{commit}'):return ('c'*40+'\n').encode()
+            if args==('rev-parse','--verify','c'*40+'^{tree}'):return ('d'*40+'\n').encode()
+            if args==('ls-tree','-r','-z','--full-tree','c'*40):return b''.join((mode+' '+kind+' '+oid+'\t'+p+'\0').encode() for p,(mode,kind,oid) in sorted(rows.items()))
+            raise AssertionError('unselected native request')
+        boundary.git_metadata=native
+        if change:change(reader,rows,boundary)
+        scope={'hashlib':hashlib,'json':json,'BASELINE':'c'*40,'CENSUS_SHA256':hashlib.sha256(body).hexdigest()}
+        exec(compile(ast.Module(body=[fn],type_ignores=[]),'actual-currentness-baseline','exec'),scope)
+        return scope[fn.name](boundary,reader,owner,body),identities,queries
+
+    def test_exact_sixteen_sizes_only_and_metadata_queries(self):
+        rows,identities,queries=self.project()
+        self.assertEqual({p:rows[p]['bytes'] for p in identities},{p:v[2] for p,v in identities.items()})
+        self.assertIsNone(rows['ordinary/unrelated.md']['bytes'])
+        self.assertEqual(len(queries),3)
+        self.assertFalse(any('cat-file' in q or '-l' in q for q in queries))
+
+    def test_wrong_original_mode_blob_or_invalid_size_refused(self):
+        for kind in ('mode','blob','size'):
+            def change(reader,rows,boundary):
+                p=next(iter(reader.FRONTIER_HISTORY_RECORDS));oid,sha,size=reader.FRONTIER_HISTORY_RECORDS[p]
+                if kind=='mode':rows[p]=('100755','blob',oid)
+                elif kind=='blob':rows[p]=('100644','blob','f'*40)
+                else:reader.FRONTIER_HISTORY_RECORDS[p]=(oid,sha,-1)
+            with self.subTest(kind=kind),self.assertRaises(RuntimeError):self.project(change)
+
+    def test_held_path_or_alias_never_enters_size_projection(self):
+        for direct in (True,False):
+            def change(reader,rows,boundary):
+                p=next(iter(reader.FRONTIER_HISTORY_RECORDS))
+                boundary.held={p if direct else 'held/other':{'published_metadata':{'git_blob':reader.FRONTIER_HISTORY_RECORDS[p][0]}}}
+            with self.subTest(direct=direct),self.assertRaisesRegex(RuntimeError,'Held'):self.project(change)
+
+    def call(self,qualifier_errors):
+        import contextlib
+        tree=ast.parse((self.sources()/'check_source_alias_absence.py').read_bytes())
+        fn=next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='public_fixture_consumers')
+        block=next(n for n in fn.body if isinstance(n,ast.With) and 'currentness_baseline' in ast.unparse(n))
+        calls=[];contexts=({'science':{}},{},{},{},{})
+        def qualifier(*args):calls.append(('qualifier',args));return {'exact-old'},qualifier_errors
+        def currentness(*args):calls.append(('currentness',args));return ['existing-currentness-error']
+        reader=types.SimpleNamespace(corpus_currentness_context=lambda *a:(contexts,['existing-context-error']),check_frontier_record_absences=qualifier,check_corpus_currentness=currentness)
+        area=Path(self.enterContext(tempfile.TemporaryDirectory()));(area/'census.json').write_bytes(b'fixture')
+        indexed={'exact-old':{'bytes':7}};owner={'baseline':{'commit':'c'*40}};cross={'sources':{}}
+        scope=dict(adapter=types.SimpleNamespace(bounded_git_environment=contextlib.nullcontext),boundary=types.SimpleNamespace(currentness_baseline=lambda *a:indexed),reader=reader,repo=area,owner=owner,cross=cross,PUBLIC_FIXTURE_CENSUS='census.json',result={})
+        exec(compile(ast.Module(body=[block],type_ignores=[]),'actual-protected-currentness-call','exec'),scope)
+        return scope['result'],calls,contexts,indexed,owner,cross
+
+    def test_actual_caller_routes_only_qualified_paths_and_all_errors(self):
+        result,calls,contexts,indexed,owner,cross=self.call(['frontier-original-refused'])
+        self.assertEqual([c[0] for c in calls],['qualifier','currentness'])
+        self.assertIs(calls[0][1][1],indexed);self.assertIs(calls[0][1][2],owner);self.assertIs(calls[0][1][3],cross);self.assertIs(calls[0][1][4],contexts[0])
+        self.assertEqual(calls[1][1][2:-1],contexts);self.assertEqual(calls[1][1][-1],{'exact-old'})
+        self.assertEqual(result['currentness_errors'],['existing-context-error','frontier-original-refused','existing-currentness-error'])
+
+    def test_empty_frontier_errors_preserve_existing_error_channels(self):
+        result,calls,*_=self.call([])
+        self.assertEqual(result['currentness_errors'],['existing-context-error','existing-currentness-error'])
+        self.assertEqual([c[0] for c in calls],['qualifier','currentness'])
+
+
 if __name__ == '__main__': unittest.main()

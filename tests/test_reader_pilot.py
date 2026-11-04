@@ -10776,5 +10776,196 @@ class CertificateProviderAbsenceControls(unittest.TestCase):
         self.assertTrue(self.gate([('D',self.EXPECTED[0]),('M','unrelated.md')])[0])
 
 
+from unittest import mock as frontier_mock
+
+
+def _frontier_history_test_reader():
+    """Isolate exact reader functions with inert unrelated native predicates."""
+    import ast, types, os, stat
+    module = types.ModuleType('frontier_history_live_controls')
+    ns = module.__dict__
+    root = 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk'
+    ns.update(Path=Path, hashlib=hashlib, subprocess=subprocess, os=os, stat=stat,
+        PMR007_DEEP_PREFIX=root, PMR007_ROUNDS_PREFIX='unused-rounds',
+        PMR007_ROUNDS_FORMALIZATION='unused-formalization', CONTINUATION_COPY_ROOT='unused-continuation',
+        SUCCESSOR_INPUT_REGISTRY='unused-registry', SUCCESSOR_CALCULUS_MAP='unused-calculus',
+        MEDIATOR_GUIDE='unused-guide', REVIEWED_AUTHORITY_EDITS={})
+    for name in ('REFACTOR_EDIT_PATHS HISTORICAL_PROSE CHECKPOINT_COPY_PATHS CHECKPOINT_RECORD_COPY_PATHS '
+                 'CHECKPOINT_PACKAGE_COPY_PATHS FORMAL_COPY_PATHS FORMAL_PROVIDER_PATHS CHECKPOINT_CODE_COPY_PATHS '
+                 'DIGEST_RECORD_PATHS SUCCESSOR_INPUT_PATHS GENERATED_FIXTURE_PATHS ADMIN_RECORD_PATHS ADMIN_GUIDES '
+                 'CONTINUATION_OWNER_PATHS STATUS_RECORD_OWNERS FIXTURE_CONSUMER_ORIGINAL TYPED_GUIDES SUCCESSOR_CALCULUS_GUIDES').split():
+        ns[name]=set()
+    for name in ('pmr007_deep_duplicate_paths pmr007_rounds_duplicate_paths checkpoint_duplicate_paths '
+                 'checkpoint_record_duplicate_paths checkpoint_package_duplicate_paths formal_duplicate_paths '
+                 'formal_provider_absences checkpoint_code_duplicate_paths digest_record_absences').split():
+        ns[name]=lambda *args:set()
+    ns['binding_record_candidate']=lambda path:False
+    ns['status_record_candidate']=lambda path:False
+    ns['readonly_git_diff']=lambda *args:None
+    tree=ast.parse((ROOT/'scripts/check_reader_pilot.py').read_bytes())
+    names={'_frontier_record_file_state','check_frontier_record_absences','check_corpus_currentness'}
+    selected=[n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name in names]
+    for node in tree.body:
+        if isinstance(node,ast.Assign):
+            for target in node.targets:
+                if isinstance(target,ast.Name) and target.id.startswith('FRONTIER_HISTORY_'):
+                    ns[target.id]=ast.literal_eval(node.value)
+    exec(compile(ast.Module(body=selected,type_ignores=[]),'actual-reader-frontier-functions','exec'),ns)
+    return module
+
+
+class FrontierHistoryAbsenceTests(unittest.TestCase):
+    """Exact synthetic native responses; no original Git/history execution."""
+    def setUp(self):
+        self.reader = _frontier_history_test_reader()
+        import tempfile
+        import types
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.paths = ['docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/retired-%02d.yaml' % i for i in range(16)]
+        self.bodies = {p: ('original %s\n' % p).encode() for p in self.paths}
+        def identity(b):
+            return (hashlib.sha1(b'blob '+str(len(b)).encode()+b'\0'+b).hexdigest(), hashlib.sha256(b).hexdigest(), len(b))
+        self.identity = identity
+        self.records = {p: identity(b) for p,b in self.bodies.items()}
+        self.support = {'current-a':'science/a.md', 'current-b':'science/b.md', 'current-c':'science/c.md'}
+        self.additions = {}
+        self.cross = {'sources': {}, 'reader_journeys': []}
+        for key,path in dict(self.support, **{'scientific-consolidation-review':'docs/review.md'}).items():
+            body = ('accepted '+key+'\n').encode(); node=self.root/path;node.parent.mkdir(parents=True,exist_ok=True);node.write_bytes(body)
+            oid,sha,size=identity(body)
+            row={'key':key,'path':path,'mode':'100644','git_oid':oid,'sha256':sha,'bytes':size,
+                 'role':'review' if key=='scientific-consolidation-review' else 'work-source',
+                 'work_keys':['work-a','work-b','work-c'] if key=='scientific-consolidation-review' else ['work-'+key[-1]],
+                 'supporting_source_keys':[] if key=='scientific-consolidation-review' else ['scientific-consolidation-review']}
+            self.additions[path]=row;self.cross['sources'][key]={'path':path,'sha256':sha}
+        self.baseline={p:{'path':p,'kind':'blob','mode':'100644','git_oid':v[0],'bytes':v[2]} for p,v in self.records.items()}
+        self.declared={'role':'historical-only','repository_revision':'c'*40,'source_paths':self.paths,
+                       'reading_sources':sorted(self.support),'basis':'scientific-consolidation-review'}
+        self.owners={'frontier_history_disposition':self.declared}
+        self.tree=b''.join(('100644 blob '+self.records[p][0]+'\t'+p+'\0').encode() for p in self.paths)
+        self.index=b'';self.original_type=b'commit\n';self.bad_blob=False;self.index_reads=0;self.change_index=False;self.change_presence=False
+        def native(argv, **kw):
+            args=argv[3:]
+            if args==['cat-file','-t','c'*40]: out=self.original_type
+            elif args==['ls-tree','-z','c'*40,'--',*self.paths]: out=self.tree
+            elif len(args)==3 and args[:2]==['cat-file','blob']:
+                out=next(b for p,b in self.bodies.items() if self.records[p][0]==args[2])
+                if self.bad_blob: out+=b'wrong'
+                if self.change_presence:
+                    node=self.root/self.paths[0];node.parent.mkdir(parents=True,exist_ok=True);node.write_bytes(self.bodies[self.paths[0]])
+            elif args==['ls-files','--stage','-z','--',*self.paths]:
+                self.index_reads+=1;out=self.index
+                if self.change_index and self.index_reads>1:out=b'conflict'
+            elif args[:4]==['ls-files','--stage','-z','--'] and set(args[4:])==set(self.additions):
+                self.support_reads+=1
+                out=b''.join(('100644 '+self.additions[p]['git_oid']+' 0\t'+p+'\0').encode() for p in sorted(self.additions))
+                if self.bad_support_index or (self.change_support_index and self.support_reads>1):out=b'wrong'
+            else: raise AssertionError('unpermitted native command: '+repr(argv))
+            return types.SimpleNamespace(returncode=0,stdout=out,stderr=b'')
+        self.native=native
+        self.bad_support_index=False
+        self.change_support_index=False
+        self.support_reads=0
+
+    def qualify(self):
+        self.assertTrue(callable(getattr(self.reader,'check_frontier_record_absences',None)), 'missing exact absence qualifier')
+        with frontier_mock.patch.multiple(self.reader, FRONTIER_HISTORY_RECORDS=self.records, FRONTIER_HISTORY_REVISION='c'*40,
+                                 FRONTIER_HISTORY_SUPPORT=self.support, create=True), frontier_mock.patch.object(self.reader.subprocess,'run',side_effect=self.native):
+            return self.reader.check_frontier_record_absences(self.root,self.baseline,self.owners,self.cross,self.additions)
+
+    def refuse(self):
+        paths,errors=self.qualify();self.assertEqual(paths,set());self.assertTrue(errors)
+
+    def test_exact_all_absent(self):
+        paths,errors=self.qualify();self.assertEqual(errors,[]);self.assertEqual(paths,set(self.paths))
+
+    def test_present_exact_is_not_admitted(self):
+        p=self.paths[0];n=self.root/p;n.parent.mkdir(parents=True);n.write_bytes(self.bodies[p])
+        paths,errors=self.qualify();self.assertEqual(errors,[]);self.assertEqual(paths,set(self.paths[1:]))
+
+    def test_present_corrupt_or_symlink_or_executable_refused(self):
+        p=self.paths[0];n=self.root/p;n.parent.mkdir(parents=True);n.write_bytes(b'corrupt');self.refuse()
+        n.write_bytes(self.bodies[p]);n.chmod(0o755);self.refuse();n.chmod(0o644);n.unlink();n.symlink_to(self.root/'science/a.md');self.refuse()
+
+    def test_nonregular_present_refused_before_open_and_nonblocking(self):
+        import os
+        p=self.paths[0];n=self.root/p;n.parent.mkdir(parents=True);os.mkfifo(n)
+        with frontier_mock.patch.object(self.reader.os,'open',side_effect=OSError('test blocks FIFO open')) as opened:
+            self.refuse();opened.assert_not_called()
+        n.unlink()
+        real_open=os.open
+        with frontier_mock.patch.object(self.reader.os,'open',wraps=real_open) as opened:
+            paths,errors=self.qualify();self.assertEqual(errors,[])
+            self.assertTrue(opened.call_args_list)
+            self.assertTrue(all(call.args[1] & os.O_NONBLOCK for call in opened.call_args_list))
+
+    def test_missing_or_wrong_disposition_refused(self):
+        self.owners={};paths,errors=self.qualify();self.assertEqual(paths,set());self.assertEqual(errors,[])
+        self.owners={'frontier_history_disposition':dict(self.declared,role='current')};self.refuse()
+        self.owners={'frontier_history_disposition':dict(self.declared,source_paths=self.paths[:-1])};self.refuse()
+
+    def test_wrong_original_census_or_native_tree_refused(self):
+        self.baseline[self.paths[0]]['mode']='100755';self.refuse();self.baseline[self.paths[0]]['mode']='100644'
+        self.tree=self.tree.replace(b'100644',b'100755',1);self.refuse()
+
+    def test_wrong_commit_or_original_blob_refused(self):
+        self.original_type=b'blob\n';self.refuse();self.original_type=b'commit\n';self.bad_blob=True;self.refuse()
+
+    def test_changed_or_conflicted_index_refused(self):
+        self.index=('100755 '+self.records[self.paths[0]][0]+' 0\t'+self.paths[0]+'\0').encode();self.refuse()
+        self.index=b'';self.change_index=True;self.index_reads=0;self.refuse()
+
+    def test_changed_absence_set_refused(self):
+        self.change_presence=True;self.refuse()
+
+    def test_wrong_current_science_or_review_refused(self):
+        for p in ('science/a.md','docs/review.md'):
+            node=self.root/p;before=node.read_bytes();node.write_bytes(before+b'wrong');self.refuse();node.write_bytes(before)
+
+    def test_missing_review_relationship_refused(self):
+        self.additions['science/a.md']['supporting_source_keys']=[];self.refuse()
+        self.additions['science/a.md']['supporting_source_keys']=['scientific-consolidation-review']
+        self.additions['docs/review.md']['role']='work-source';self.refuse()
+
+    def test_current_source_path_dependency_refused(self):
+        self.cross['sources']['still-current']={'path':self.paths[0],'sha256':self.records[self.paths[0]][1]};self.refuse()
+
+    def test_native_failure_refused(self):
+        import types
+        self.native=lambda *a,**k:types.SimpleNamespace(returncode=1,stdout=b'',stderr=b'unavailable')
+        self.refuse()
+
+    def test_wrong_or_changed_current_support_index_refused(self):
+        self.bad_support_index=True;self.refuse()
+        self.bad_support_index=False;self.support_reads=0;self.change_support_index=True;self.refuse()
+
+class FrontierHistoryCurrentnessTests(unittest.TestCase):
+    def setUp(self):
+        self.reader = _frontier_history_test_reader()
+
+    def check_change(self, status, admitted=True, unknown=False):
+        import types
+        path=next(iter(self.reader.FRONTIER_HISTORY_RECORDS))
+        if unknown: path+='-unreviewed'
+        diff=types.SimpleNamespace(returncode=0,stdout=(status+'\0'+path+'\0').encode())
+        with frontier_mock.patch.object(self.reader,'readonly_git_diff',return_value=diff), \
+             frontier_mock.patch.object(self.reader,'pmr007_deep_duplicate_paths',return_value=set()) as old:
+            result=self.reader.check_corpus_currentness(Path('.'),'c'*40,frontier_paths={path} if admitted else set())
+        return result,old.call_count
+
+    def test_exact_qualified_d_avoids_unrelated_duplicate_gate(self):
+        errors,calls=self.check_change('D');self.assertEqual(errors,[]);self.assertEqual(calls,0)
+
+    def test_modified_added_and_unreviewed_refused(self):
+        for status in ('M','A'):
+            with self.subTest(status=status): self.assertTrue(self.check_change(status)[0])
+        errors,calls=self.check_change('D',unknown=True);self.assertTrue(errors);self.assertEqual(calls,1)
+
+    def test_missing_qualification_retains_original_guard(self):
+        errors,calls=self.check_change('D',admitted=False);self.assertTrue(errors);self.assertEqual(calls,1)
+
+
 if __name__ == "__main__":
     unittest.main()

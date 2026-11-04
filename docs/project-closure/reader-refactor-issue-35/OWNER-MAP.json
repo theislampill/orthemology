@@ -600,9 +600,9 @@
       "key": "scientific-consolidation-review",
       "path": "docs/scientific-consolidation-review.md",
       "mode": "100644",
-      "git_oid": "52b5eb196154f33f67fc09bc4894f9be4c68806c",
-      "bytes": 544308,
-      "sha256": "cbd96fe40ec7ce735f2f125906b1228443b6eb83b8c2e4fd8f263cf8e39c2a66",
+      "git_oid": "d66f539091e75722d65e1a61437d47eee7a51832",
+      "bytes": 548168,
+      "sha256": "a7ad025b6be8284b75cb87a19b4febe8117da9f04bc7fa057fc59e650e7a83d9",
       "role": "review",
       "work_keys": [
         "received-actuality-and-intrinsic-necessity",
@@ -1356,5 +1356,33 @@
       "reading_source": "consolidated-information-and-inquiry",
       "basis": "scientific-consolidation-review"
     }
-  ]
+  ],
+  "frontier_history_disposition": {
+    "role": "historical-only",
+    "repository_revision": "c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce",
+    "source_paths": [
+      "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/ARCHIVE_BUILD_BOUNDARY.yaml",
+      "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_DEPENDENCY_AND_FLYWHEEL_UPDATES/PMR-007_DEEP_BA_BE_CENTRAL_DELTA.yaml",
+      "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_DEPENDENCY_AND_FLYWHEEL_UPDATES/PMR-007_POST_BF_WHOLE_FRONTIER_SELECTION_GATE_V1.yaml",
+      "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_DEPENDENCY_AND_FLYWHEEL_UPDATES/ROLLING_CUSTODY_RECEIPT_DEEP_BA_BE.yaml",
+      "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_DEPENDENCY_AND_FLYWHEEL_UPDATES/WHOLE_PROGRAM_FRONTIER_ROTATION_LEDGER_AQ_AZ_V1.yaml",
+      "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEAN_AND_FORMALIZATION_MAP/PMR007_FORMALIZATION_MAP.yaml",
+      "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEAN_AND_FORMALIZATION_MAP/PMR007_FORMALIZATION_MAP_AQ_AZ.yaml",
+      "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/CURRENT_STATE_AZ.yaml",
+      "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BF_ADMISSION_OVERLAY.yaml",
+      "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BG_ADMISSION_OVERLAY.yaml",
+      "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BH_ADMISSION_OVERLAY.yaml",
+      "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BI_ADMISSION_OVERLAY.yaml",
+      "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BJ_ADMISSION_OVERLAY.yaml",
+      "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BK_ADMISSION_OVERLAY.yaml",
+      "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PROPOSED_RESULT_INDEX_AQ_AZ.yaml",
+      "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PROPOSED_RESULT_INDEX_BA_BE.yaml"
+    ],
+    "reading_sources": [
+      "consolidated-foundations",
+      "consolidated-information-and-inquiry",
+      "consolidated-objective-normativity"
+    ],
+    "basis": "scientific-consolidation-review"
+  }
 }

@@ -21,9 +21,9 @@ RESOLVER_SHA256 = '5f1fb30afe993f714bbf1e30e1a08d9842eeb0e61558066fc7cfad162a535
 
 BASELINE = "0784acddd4770f1190f758f264ba52b2b110bd27"
 
-OWNER_MAP_SHA256 = '3eae8828f2a8025f95ea64b0d845ea3b930aabf33f22dcca1ea119ba21abe533'
+OWNER_MAP_SHA256 = '48543322cd839e1783358377a73ffc51f93b3bdb2cac8ad25c5425ff5f30175b'
 
-READER_SHA256 = '6cee458c310f52f799ab7e2d2da07ff42035c06bba386b049621a7e2fcf475c5'
+READER_SHA256 = '4a9d9e6b2ce72a57f6706137cdce5d13976f157c0c53661187f70ba1cd75a6d6'
 
 CENSUS_SHA256 = '65980c4d2dd19936212a03ed650d0cb69cf4147e72098607fac9dbce39eb8461'
 
@@ -206,7 +206,7 @@ class HeldReaderDiffBoundary:
             raise RuntimeError("Reader baseline population differs from pinned census")
         held_oids = {row["published_metadata"]["git_blob"] for row in self.held.values()}
         for originals in (reader.CONTINUATION_OWNER_ORIGINAL, reader.FIXTURE_CONSUMER_ORIGINAL,
-                          reader.HISTORICAL_PROSE):
+                          reader.HISTORICAL_PROSE, reader.FRONTIER_HISTORY_RECORDS):
             for path, (oid, _, size) in originals.items():
                 if path in self.held or oid in held_oids:
                     raise RuntimeError("Held identity cannot enter a sized public context")
