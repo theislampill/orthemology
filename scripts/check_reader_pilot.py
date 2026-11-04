@@ -831,6 +831,40 @@ def _permitted_projection_consumer_pins(original, candidate):
         'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_ct/PMR007_DEEP_CT_PARTIAL_INTERVENTION_MODEL_V1.yaml': ('f364375dc4acb7bc750c01f112af1fd4253a1aa7', '2051a104e5708ed3d359b10c015db876e8c75a229843598a7c6f660532a828f6', 782, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
         'docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_ct/PMR007_DEEP_CT_PARTIAL_INTERVENTION_MODEL_V2.yaml': ('9cda0d95b4da50eda06e527eb4b75d6771fa67b9', 'e4160767e9d9622a6408c0f39868f802688433ad68d86fe342a015dfd1bff5bd', 2098, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
     }
+    abk_public = {
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AQ_SOURCE_COMPATIBLE_ARCHITECTURE_MODELS_V2.yaml': ('bb110c6493c333eb7ae8b6b09610f53715424a4c', 'b460af8e73d3db6db8ed6223dc24a548b5519efd175eeefca03433d76c690520', 3307, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AR_PROVENANCE_ROOT_EVIDENCE_MODELS_V2.yaml': ('475c318bb1ae3b5db3f0fce01f06d4bf66724409', 'ab7398b15130cdf60bbc1131403a6dbb5008651d876ff56405b43b1716a29a18', 2004, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AV_NEUTRAL_BRIDGE_INTERPOLATION_MODELS_V2.yaml': ('3c89aa19631f03d2fc1814ad3045cc06bb49fd5c', '991763b96ac886e37c4ff01dfb6e4f3961cda00b57ada958f97aa3b18ddd5a05', 1509, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AW_PROVENANCE_ROOT_ROBUST_DIAGNOSIS_MODELS_V2.yaml': ('0d0a7223aa0ff2ee6e4da155b12ee06df152874c', 'be1e7519b3007a18bf856c4e0baf29b0684b729c6d4b42e753274c10198b457a', 1444, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AX_SOURCE_TESTIMONY_WORLD_GATE_MODELS_V2.yaml': ('86b3609b228da4e42b50a365bc7b094413719437', '1c3a637ff73691d0f4e7303384c17fbd1b4291626073ced5db4d448b58d611c9', 1461, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AZ_CROSSED_SEMANTIC_INTERVENTION_MODELS_V2.yaml': ('f7e067f1195c13211cd8a067c560ba96b4b49e54', '993a403134973bcd90c3c8ead4b9140ab7a4111f6866bf471150a97deae13f44', 1149, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BA_INTERFACE_RELATIVE_CAUSAL_QUOTIENT_MODELS_V1.yaml': ('8c90bb5a7e6608f9219361fb21d14dcd374ab267', '9f01b79e842c9e25a9deccc1f316956a5f25ab52970a87c8a474d89529c66d02', 1215, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BB_JOINT_CAUSAL_INTERFACE_MODELS_V1.yaml': ('cf33648d43be6aa32f9f6112abe4be83caeaa5c4', 'c71f4dd9e225f8fe8da3f5d581daaff8bc37bddfaf886691c068d82db558b053', 875, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BC_UNIVERSAL_INTERFACE_EXPERIMENT_PARITY_MODELS_V1.yaml': ('d8fe3c0b6b5e38d64a508a95c83ae1810e1a27fe', '82beb4c893c0d12eb9727d20ad1428b1aa45397ae567725ddfece1571b4c833c', 660, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BD_LATENT_SOURCE_ORIENTATION_MODELS_V2.yaml': ('c20193aeee354f6fb17727e889062893cd8cc2c8', 'be48fe63092df4f66ff66a0fe52ffbf50c8bfd11f3c05ce67a443fb54bf4c02d', 2159, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BE_CROSS_LANE_JOINT_INTERACTION_MODELS_V2.yaml': ('69367d117baefe6702b7bcdc22042042bf8e3923', '40e08b9ef186620e9eb988e7e556694bfc94b94e3dd308d15a682ca03dca2291', 1605, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BF_IMPERSONAL_LATENT_REALIZATION_MODELS_V2.yaml': ('36ad7d6244e5d54eeb650d0f360acd6a45a53c0c', '4ea76f85945aca04192fb5beb74db8b9d3d0307a254de2b329d917d39674aca7', 2069, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BG_INTEGRATED_R5_COMMON_MODEL_V2.yaml': ('23ae320500f7788577a3a9e62f37786b93cee2a2', '97d7482dbf3ed4b50de79699cedc77067323b095dfd6c7eb3afb557acdfcfcc4', 1769, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BH_TRUTH_CALIBRATED_CORRECTION_MODELS_V2.yaml': ('e272acb828534d7e09b890f07017e172fb9d7dd4', '14bc65a43c165e7c71208fc873160cdcf88cc5be50e49a49cbb68adfbaf55f33', 1646, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BI_FINITE_ARTICULABILITY_MODELS_V2.yaml': ('ee15782926dbe3ae049c5fc9ccfa530f1866a58f', '27a4e79b4b11916d4047ad7677db26735f886ed7cbb2b01d5bd89754f33da080', 1333, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BK_NECESSITY_CONCRETENESS_MODELS_V2.yaml': ('01adca7afe96d67a0da61ccb8787c9e267e9208e', 'd6e99abc7d0038a9ff47cb02809d52e8004251b79d5e2164b3aad0dcca66c616', 1082, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BA_ADMISSION_OVERLAY.yaml': ('132b73791a09d81358e33e1f7d9698959c9146a2', '49f6ed3dda0270e58cb85b44c762be4e31620af9deac7249eac364be899e90fa', 1560, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BB_ADMISSION_OVERLAY.yaml': ('23e4ce4a982031b1730c365bca1ec6a3684ea436', '8dd3b5e550662103f8f00b647219d4756a9e182fd6a5b86ae2782812e1e730fe', 1674, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BC_ADMISSION_OVERLAY.yaml': ('0cdaac12accc57d203c0272eda273279d2b792b8', 'c9ead1aeaf5d93742865ef8015556fed11f85b9f9813e9a23c7804400683978a', 1719, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BD_ADMISSION_OVERLAY.yaml': ('6546f5ba202e9fb5e256c22379f61a42069f6665', 'bc66bf8cea8fa9f454ea2cf7c97a0a1e33d50521a1646c519f12c8adbd8e5ab2', 1788, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BE_ADMISSION_OVERLAY.yaml': ('a532439c13d961df272781b0b7d49a6213d136a6', '12f4e83b712fa0d58b100169644aa17561a74fe6221466e50752d417c07f185b', 1774, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AT_NEUTRAL_INTERVENTIONAL_TRACE_MODELS_V1.yaml': ('81939539fe9ae4b34412e9af80243b69dade62dd', '0ed0bc80aefa85b01a682fbd8d9f0c579b3316372f7dc50a7bd054e0787b7877', 2379, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AV_NEUTRAL_BRIDGE_INTERPOLATION_MODELS_V1.yaml': ('8535624b656ca283113d322fecbc566290912f4e', '82cee72fcc9a4135275de39175a69d5b603ca62eaf2d3c9f87df9fabeed5c82c', 1292, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AW_PROVENANCE_ROOT_ROBUST_DIAGNOSIS_MODELS_V1.yaml': ('6471321e88bf946175d204afb78650463332f70b', '132d6bc9ea2de7927682ff4822ad611c3f5d43af17329130df2aeeac13cb8b69', 1042, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AX_SOURCE_TESTIMONY_WORLD_GATE_MODELS_V1.yaml': ('c7a8d6fa611e9a5f7535f701ceb66b0805fe7c17', 'a5429ef4ae52c5a62c13eb56d9b2098673b2b04013a051e22aa87648c853b993', 1549, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AZ_CROSSED_SEMANTIC_INTERVENTION_MODELS_V1.yaml': ('84eb89781eb35bbf74dfa74e78ee32bc332a7e89', 'b5d353a56596143c1f02001e571e2d4bfd635331c08bf26530f6850b77c3a29f', 955, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BD_LATENT_SOURCE_RELIABILITY_ORIENTATION_MODELS_V1.yaml': ('d8fb38df99a36119cdfd9d0cd7b027599d304256', '1433c3131749f686a2823fe0e9d7c27d6f6b1b4b64c05ff7d0bbd747bf3f5c6c', 2345, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BE_CROSS_LANE_JOINT_INTERACTION_MODELS_V1.yaml': ('991381e40dbc0a041a79b3375bba389320c3af14', 'bcc3caaf8ee5fe6910de9b0f4eb80939388fed07ae02e307437723a5a2825e72', 1362, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BF_IMPERSONAL_LATENT_REALIZATION_MODELS_V1.yaml': ('7c94adf7f1f36a636ba8cf24139fcdea66269e9d', 'db4f7664cd22dc28425e5fa5da03cac18645ec3b72856b87ec5f11aee5a104fb', 1375, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BH_TRUTH_CALIBRATED_CORRECTION_MODELS_V1.yaml': ('3996ff60410db02f1ccd11f9cba4f36b1ba8f0b7', '864b04f56a250ed8ad05dacfbd4970a0343367a0b0feaecab2bba9de34a13066', 1455, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BI_FINITE_ARTICULABILITY_MODELS_V1.yaml': ('68add8fc26f0f801b6e4b20ead7d5b93681be1cc', '4a4e5b750c57c3b4a65934c7edd4de495a74ce00c0d8eadd511651bb93eda0e5', 910, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+        'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BK_NECESSITY_CONCRETENESS_MODELS_V1.yaml': ('19306d597907bb1fc1508e484d250b82e7905555', '1317a7369c5daf99935a085cd03b8b60eeec87c3c6ce640f4494d17acab8f966', 1041, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+    }
     for bindings in (earlier, next24, combined, dict(combined, **fixtures),
                      dict(combined, **fixtures, **replay_input),
                      dict(combined, **fixtures, **replay_input, **calculus_fixture),
@@ -856,7 +890,11 @@ def _permitted_projection_consumer_pins(original, candidate):
                      dict(combined, **fixtures, **replay_input, **calculus_fixture,
                           **digest_consumers, **attribution_consumers, **governance_consumers,
                           **frontier_test_consumers, **intake_test_consumer, **codex_test_consumer,
-                          **reissue_test_consumer, **central_public)):
+                          **reissue_test_consumer, **central_public),
+                     dict(combined, **fixtures, **replay_input, **calculus_fixture,
+                          **digest_consumers, **attribution_consumers, **governance_consumers,
+                          **frontier_test_consumers, **intake_test_consumer, **codex_test_consumer,
+                          **reissue_test_consumer, **central_public, **abk_public)):
         expected = deepcopy(original)
         try:
             for path, (blob, identity, size, revision) in bindings.items():
@@ -1756,6 +1794,166 @@ CENTRAL_PUBLIC_HISTORY_RECORDS = {
 }
 
 
+ABK_PUBLIC_HISTORY_REVISION = '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'
+ABK_PUBLIC_HISTORY_RECORDS = {
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AQ_SOURCE_COMPATIBLE_ARCHITECTURE_MODELS_V2.yaml': ('bb110c6493c333eb7ae8b6b09610f53715424a4c', 'b460af8e73d3db6db8ed6223dc24a548b5519efd175eeefca03433d76c690520', 3307),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AR_PROVENANCE_ROOT_EVIDENCE_MODELS_V2.yaml': ('475c318bb1ae3b5db3f0fce01f06d4bf66724409', 'ab7398b15130cdf60bbc1131403a6dbb5008651d876ff56405b43b1716a29a18', 2004),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AV_NEUTRAL_BRIDGE_INTERPOLATION_MODELS_V2.yaml': ('3c89aa19631f03d2fc1814ad3045cc06bb49fd5c', '991763b96ac886e37c4ff01dfb6e4f3961cda00b57ada958f97aa3b18ddd5a05', 1509),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AW_PROVENANCE_ROOT_ROBUST_DIAGNOSIS_MODELS_V2.yaml': ('0d0a7223aa0ff2ee6e4da155b12ee06df152874c', 'be1e7519b3007a18bf856c4e0baf29b0684b729c6d4b42e753274c10198b457a', 1444),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AX_SOURCE_TESTIMONY_WORLD_GATE_MODELS_V2.yaml': ('86b3609b228da4e42b50a365bc7b094413719437', '1c3a637ff73691d0f4e7303384c17fbd1b4291626073ced5db4d448b58d611c9', 1461),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AZ_CROSSED_SEMANTIC_INTERVENTION_MODELS_V2.yaml': ('f7e067f1195c13211cd8a067c560ba96b4b49e54', '993a403134973bcd90c3c8ead4b9140ab7a4111f6866bf471150a97deae13f44', 1149),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BA_INTERFACE_RELATIVE_CAUSAL_QUOTIENT_MODELS_V1.yaml': ('8c90bb5a7e6608f9219361fb21d14dcd374ab267', '9f01b79e842c9e25a9deccc1f316956a5f25ab52970a87c8a474d89529c66d02', 1215),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BB_JOINT_CAUSAL_INTERFACE_MODELS_V1.yaml': ('cf33648d43be6aa32f9f6112abe4be83caeaa5c4', 'c71f4dd9e225f8fe8da3f5d581daaff8bc37bddfaf886691c068d82db558b053', 875),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BC_UNIVERSAL_INTERFACE_EXPERIMENT_PARITY_MODELS_V1.yaml': ('d8fe3c0b6b5e38d64a508a95c83ae1810e1a27fe', '82beb4c893c0d12eb9727d20ad1428b1aa45397ae567725ddfece1571b4c833c', 660),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BD_LATENT_SOURCE_ORIENTATION_MODELS_V2.yaml': ('c20193aeee354f6fb17727e889062893cd8cc2c8', 'be48fe63092df4f66ff66a0fe52ffbf50c8bfd11f3c05ce67a443fb54bf4c02d', 2159),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BE_CROSS_LANE_JOINT_INTERACTION_MODELS_V2.yaml': ('69367d117baefe6702b7bcdc22042042bf8e3923', '40e08b9ef186620e9eb988e7e556694bfc94b94e3dd308d15a682ca03dca2291', 1605),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BF_IMPERSONAL_LATENT_REALIZATION_MODELS_V2.yaml': ('36ad7d6244e5d54eeb650d0f360acd6a45a53c0c', '4ea76f85945aca04192fb5beb74db8b9d3d0307a254de2b329d917d39674aca7', 2069),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BG_INTEGRATED_R5_COMMON_MODEL_V2.yaml': ('23ae320500f7788577a3a9e62f37786b93cee2a2', '97d7482dbf3ed4b50de79699cedc77067323b095dfd6c7eb3afb557acdfcfcc4', 1769),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BH_TRUTH_CALIBRATED_CORRECTION_MODELS_V2.yaml': ('e272acb828534d7e09b890f07017e172fb9d7dd4', '14bc65a43c165e7c71208fc873160cdcf88cc5be50e49a49cbb68adfbaf55f33', 1646),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BI_FINITE_ARTICULABILITY_MODELS_V2.yaml': ('ee15782926dbe3ae049c5fc9ccfa530f1866a58f', '27a4e79b4b11916d4047ad7677db26735f886ed7cbb2b01d5bd89754f33da080', 1333),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BK_NECESSITY_CONCRETENESS_MODELS_V2.yaml': ('01adca7afe96d67a0da61ccb8787c9e267e9208e', 'd6e99abc7d0038a9ff47cb02809d52e8004251b79d5e2164b3aad0dcca66c616', 1082),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BA_ADMISSION_OVERLAY.yaml': ('132b73791a09d81358e33e1f7d9698959c9146a2', '49f6ed3dda0270e58cb85b44c762be4e31620af9deac7249eac364be899e90fa', 1560),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BB_ADMISSION_OVERLAY.yaml': ('23e4ce4a982031b1730c365bca1ec6a3684ea436', '8dd3b5e550662103f8f00b647219d4756a9e182fd6a5b86ae2782812e1e730fe', 1674),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BC_ADMISSION_OVERLAY.yaml': ('0cdaac12accc57d203c0272eda273279d2b792b8', 'c9ead1aeaf5d93742865ef8015556fed11f85b9f9813e9a23c7804400683978a', 1719),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BD_ADMISSION_OVERLAY.yaml': ('6546f5ba202e9fb5e256c22379f61a42069f6665', 'bc66bf8cea8fa9f454ea2cf7c97a0a1e33d50521a1646c519f12c8adbd8e5ab2', 1788),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BE_ADMISSION_OVERLAY.yaml': ('a532439c13d961df272781b0b7d49a6213d136a6', '12f4e83b712fa0d58b100169644aa17561a74fe6221466e50752d417c07f185b', 1774),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AT_NEUTRAL_INTERVENTIONAL_TRACE_MODELS_V1.yaml': ('81939539fe9ae4b34412e9af80243b69dade62dd', '0ed0bc80aefa85b01a682fbd8d9f0c579b3316372f7dc50a7bd054e0787b7877', 2379),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AV_NEUTRAL_BRIDGE_INTERPOLATION_MODELS_V1.yaml': ('8535624b656ca283113d322fecbc566290912f4e', '82cee72fcc9a4135275de39175a69d5b603ca62eaf2d3c9f87df9fabeed5c82c', 1292),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AW_PROVENANCE_ROOT_ROBUST_DIAGNOSIS_MODELS_V1.yaml': ('6471321e88bf946175d204afb78650463332f70b', '132d6bc9ea2de7927682ff4822ad611c3f5d43af17329130df2aeeac13cb8b69', 1042),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AX_SOURCE_TESTIMONY_WORLD_GATE_MODELS_V1.yaml': ('c7a8d6fa611e9a5f7535f701ceb66b0805fe7c17', 'a5429ef4ae52c5a62c13eb56d9b2098673b2b04013a051e22aa87648c853b993', 1549),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AZ_CROSSED_SEMANTIC_INTERVENTION_MODELS_V1.yaml': ('84eb89781eb35bbf74dfa74e78ee32bc332a7e89', 'b5d353a56596143c1f02001e571e2d4bfd635331c08bf26530f6850b77c3a29f', 955),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BD_LATENT_SOURCE_RELIABILITY_ORIENTATION_MODELS_V1.yaml': ('d8fb38df99a36119cdfd9d0cd7b027599d304256', '1433c3131749f686a2823fe0e9d7c27d6f6b1b4b64c05ff7d0bbd747bf3f5c6c', 2345),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BE_CROSS_LANE_JOINT_INTERACTION_MODELS_V1.yaml': ('991381e40dbc0a041a79b3375bba389320c3af14', 'bcc3caaf8ee5fe6910de9b0f4eb80939388fed07ae02e307437723a5a2825e72', 1362),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BF_IMPERSONAL_LATENT_REALIZATION_MODELS_V1.yaml': ('7c94adf7f1f36a636ba8cf24139fcdea66269e9d', 'db4f7664cd22dc28425e5fa5da03cac18645ec3b72856b87ec5f11aee5a104fb', 1375),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BH_TRUTH_CALIBRATED_CORRECTION_MODELS_V1.yaml': ('3996ff60410db02f1ccd11f9cba4f36b1ba8f0b7', '864b04f56a250ed8ad05dacfbd4970a0343367a0b0feaecab2bba9de34a13066', 1455),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BI_FINITE_ARTICULABILITY_MODELS_V1.yaml': ('68add8fc26f0f801b6e4b20ead7d5b93681be1cc', '4a4e5b750c57c3b4a65934c7edd4de495a74ce00c0d8eadd511651bb93eda0e5', 910),
+    'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BK_NECESSITY_CONCRETENESS_MODELS_V1.yaml': ('19306d597907bb1fc1508e484d250b82e7905555', '1317a7369c5daf99935a085cd03b8b60eeec87c3c6ce640f4494d17acab8f966', 1041),
+}
+
+
+def check_abk_public_absences(repo, baseline_rows):
+    """Qualify only the fixed32 public records after exact pinned-reader admission.
+
+    Original native objects, whole selected projection rows and ordinary current
+    nodes are mandatory even when every working file is present. No corruption
+    becomes a fallback, and only stable physical absence grants a D allowance.
+    """
+    try:
+        paths = sorted(ABK_PUBLIC_HISTORY_RECORDS)
+        revision = ABK_PUBLIC_HISTORY_REVISION
+        if len(paths) != 32 or revision != '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c':
+            raise ValueError('exact abk public population and revision are required')
+        states = {}
+        for path in paths:
+            blob, digest, size = ABK_PUBLIC_HISTORY_RECORDS[path]
+            row = baseline_rows.get(path, {})
+            if (row.get('kind'), row.get('mode'), row.get('git_oid'), row.get('bytes')) != (
+                    'blob', '100644', blob, size):
+                raise ValueError('abk original census identity differs')
+            states[path] = _frontier_record_file_state(repo, path, (blob, digest, size), allow_absent=True)
+        manifest_path = 'research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json'
+        node = Path(repo)
+        for ancestor in (node, *node.parents):
+            if ancestor.is_symlink():
+                raise ValueError('abk projection root contains a symlink')
+        for part in manifest_path.split('/'):
+            node = node / part
+            entry = node.lstat()
+            if stat.S_ISLNK(entry.st_mode):
+                raise ValueError('abk projection path contains a symlink')
+            if node != Path(repo) / manifest_path and not stat.S_ISDIR(entry.st_mode):
+                raise ValueError('abk projection ancestor is not a directory')
+        if not stat.S_ISREG(entry.st_mode) or entry.st_nlink != 1 or entry.st_mode & 0o111:
+            raise ValueError('abk projection must be an ordinary file')
+        fields = ('st_dev', 'st_ino', 'st_mode', 'st_nlink', 'st_size', 'st_mtime_ns', 'st_ctime_ns')
+        state = tuple(getattr(entry, name) for name in fields)
+        fd = os.open(node, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
+        with os.fdopen(fd, 'rb') as stream:
+            before = os.fstat(stream.fileno())
+            if (not stat.S_ISREG(before.st_mode) or before.st_nlink != 1 or before.st_mode & 0o111
+                    or tuple(getattr(before, name) for name in fields) != state):
+                raise ValueError('abk projection descriptor differs')
+            manifest_bytes = stream.read()
+            after = os.fstat(stream.fileno())
+        if (tuple(getattr(after, name) for name in fields) != state
+                or tuple(getattr(node.lstat(), name) for name in fields) != state):
+            raise ValueError('abk projection changed during reading')
+        manifest_identity = (hashlib.sha1(b'blob ' + str(len(manifest_bytes)).encode() + b'\0'
+                                         + manifest_bytes).hexdigest(),
+                             hashlib.sha256(manifest_bytes).hexdigest(), len(manifest_bytes))
+        if _frontier_record_file_state(repo, manifest_path, manifest_identity) != state:
+            raise ValueError('abk projection initial state differs')
+        def unique_object(pairs):
+            result = {}
+            for key, value in pairs:
+                if key in result:
+                    raise ValueError('duplicate abk projection JSON key')
+                result[key] = value
+            return result
+        manifest = json.loads(manifest_bytes.decode('utf-8'), object_pairs_hook=unique_object)
+        if not isinstance(manifest, dict) or not isinstance(manifest.get('objects'), list):
+            raise ValueError('abk projection object list is required')
+        selected = {}
+        for row in manifest['objects']:
+            if not isinstance(row, dict):
+                raise ValueError('abk projection has a non-object row')
+            # Unpublished/identity-only metadata has no repository path.
+            # Only the fixed selected population can grant absence permission.
+            if 'repository_path' not in row:
+                continue
+            path = row['repository_path']
+            if not isinstance(path, str):
+                raise ValueError('abk projection has an invalid path')
+            if path in ABK_PUBLIC_HISTORY_RECORDS:
+                if path in selected:
+                    raise ValueError('abk projection selected row is duplicated')
+                selected[path] = row
+        if set(selected) != set(paths):
+            raise ValueError('abk projection selected population differs')
+        for path in paths:
+            blob, digest, size = ABK_PUBLIC_HISTORY_RECORDS[path]
+            expected = dict(source_sha256=digest, source_action='include', source_bytes=size,
+                            role='qualified_metadata', declared_eligibility_basis='reviewed_distribution_metadata',
+                            required_dependencies=[], disposition='REUSE', repository_path=path,
+                            public_sha256=digest, public_bytes=size,
+                            publication_basis='exact_existing_public_repository_object',
+                            repository_revision=revision, git_blob=blob)
+            if selected[path] != expected:
+                raise ValueError('abk projection selected row identity or policy differs')
+        def git(*args):
+            return _administrative_git(repo, *args)
+        if git('cat-file', '-t', revision) != b'commit\n':
+            raise ValueError('abk original revision is not a commit')
+        expected_tree = b''.join(('100644 blob ' + ABK_PUBLIC_HISTORY_RECORDS[p][0]
+                                 + '\t' + p + '\0').encode() for p in paths)
+        if git('ls-tree', '-z', revision, '--', *paths) != expected_tree:
+            raise ValueError('abk original tree population differs')
+        indexed = git('ls-files', '--stage', '-z', '--', *paths)
+        expected_index = {('100644 ' + ABK_PUBLIC_HISTORY_RECORDS[p][0]
+                          + ' 0\t' + p).encode() for p in paths}
+        index_rows = indexed.split(b'\0')
+        if (index_rows[-1] != b'' or len(index_rows[:-1]) != len(set(index_rows[:-1]))
+                or not set(index_rows[:-1]) <= expected_index):
+            raise ValueError('abk index differs or is conflicted')
+        for path in paths:
+            expected = ABK_PUBLIC_HISTORY_RECORDS[path]
+            body = git('cat-file', 'blob', expected[0])
+            actual = (hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest(),
+                      hashlib.sha256(body).hexdigest(), len(body))
+            if actual != expected:
+                raise ValueError('abk original body identity differs')
+        if git('ls-files', '--stage', '-z', '--', *paths) != indexed:
+            raise ValueError('abk index changed during qualification')
+        if any(_frontier_record_file_state(repo, p, ABK_PUBLIC_HISTORY_RECORDS[p], allow_absent=True)
+               != states[p] for p in paths):
+            raise ValueError('abk absence or present file state changed')
+        if _frontier_record_file_state(repo, manifest_path, manifest_identity) != state:
+            raise ValueError('abk projection state changed during qualification')
+        return {p for p in paths if states[p] is None}, []
+    except (KeyError, TypeError, ValueError, OSError, UnicodeError) as exc:
+        return set(), ['abk-public-history: ' + str(exc)]
+
+
 def check_central_public_absences(repo, baseline_rows):
     """Qualify only the fixed47 public records after exact pinned-reader admission.
 
@@ -2062,7 +2260,7 @@ def check_continuation_owner_edition(repo, baseline_rows):
 
 
 def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths=(), navigation_paths=(),
-                            continuation_owners=(), fixture_owners=(), frontier_paths=(), central_paths=()):
+                            continuation_owners=(), fixture_owners=(), frontier_paths=(), central_paths=(), abk_paths=()):
     """New/changed tracked sources cannot disappear behind a frozen census.
 
     Compare the index and actual worktree separately with the approved commit.
@@ -2076,6 +2274,7 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
     duplicate_paths = {}
     qualified_frontier = (set(frontier_paths) & set(FRONTIER_HISTORY_RECORDS)) if frontier_paths else set()
     qualified_central = (set(central_paths) & set(CENTRAL_PUBLIC_HISTORY_RECORDS)) if central_paths else set()
+    qualified_abk = (set(abk_paths) & set(ABK_PUBLIC_HISTORY_RECORDS)) if abk_paths else set()
     continuation_paths = None
     for cached in (True, False):
         result = readonly_git_diff(repo,
@@ -2237,6 +2436,7 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                       if path not in editable and not
                       ((status == "D" and path in qualified_frontier)
                         or (status == "D" and path in qualified_central)
+                        or (status == "D" and path in qualified_abk)
                         or (status == "M" and path in sourcing_paths)
                         or (path in authority_paths and status == ('A' if (
                             REVIEWED_AUTHORITY_EDITS[path] is not None
@@ -2423,8 +2623,10 @@ def check(repo, owners, cross):
     errors.extend(frontier_errors)
     central_paths, central_errors = check_central_public_absences(repo, indexed)
     errors.extend(central_errors)
+    abk_paths, abk_errors = check_abk_public_absences(repo, indexed)
+    errors.extend(abk_errors)
     errors.extend(check_corpus_currentness(repo, owners["baseline"]["commit"], additions,
-                                          historical, navigation, continuation_owners, fixture_owners, frontier_paths, central_paths))
+                                          historical, navigation, continuation_owners, fixture_owners, frontier_paths, central_paths, abk_paths))
     errors.extend(check_collection_dispositions(rows, owners, cross))
     errors.extend(check_collection_result_routes(repo, owners, cross))
     if owners["baseline"].get("tree"):

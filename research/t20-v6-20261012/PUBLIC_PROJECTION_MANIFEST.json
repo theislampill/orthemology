@@ -18778,7 +18778,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AT_NEUTRAL_INTERVENTIONAL_TRACE_MODELS_V1.yaml",
       "public_sha256": "0ed0bc80aefa85b01a682fbd8d9f0c579b3316372f7dc50a7bd054e0787b7877",
       "public_bytes": 2379,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "81939539fe9ae4b34412e9af80243b69dade62dd"
     },
     {
       "source_sha256": "0ed1215a6c5f17854b6296574ecb100f2656468bff89741142b14731a367e926",
@@ -23940,7 +23942,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BE_ADMISSION_OVERLAY.yaml",
       "public_sha256": "12f4e83b712fa0d58b100169644aa17561a74fe6221466e50752d417c07f185b",
       "public_bytes": 1774,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "a532439c13d961df272781b0b7d49a6213d136a6"
     },
     {
       "source_sha256": "12f9b02dd86de69bbf00180ef25720eda6d89c2a794ca2a90f1aa68307088621",
@@ -24198,7 +24202,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BK_NECESSITY_CONCRETENESS_MODELS_V1.yaml",
       "public_sha256": "1317a7369c5daf99935a085cd03b8b60eeec87c3c6ce640f4494d17acab8f966",
       "public_bytes": 1041,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "19306d597907bb1fc1508e484d250b82e7905555"
     },
     {
       "source_sha256": "131835e4454eac5a8db657fd428ce509810b0dbd73e183f4c20b9fcf5f13937e",
@@ -24302,7 +24308,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AW_PROVENANCE_ROOT_ROBUST_DIAGNOSIS_MODELS_V1.yaml",
       "public_sha256": "132d6bc9ea2de7927682ff4822ad611c3f5d43af17329130df2aeeac13cb8b69",
       "public_bytes": 1042,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "6471321e88bf946175d204afb78650463332f70b"
     },
     {
       "source_sha256": "1330265dea8726ea18b9d824aba45bfad553e76f9d9161d69f1f564dcb0ee57e",
@@ -25413,7 +25421,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BD_LATENT_SOURCE_RELIABILITY_ORIENTATION_MODELS_V1.yaml",
       "public_sha256": "1433c3131749f686a2823fe0e9d7c27d6f6b1b4b64c05ff7d0bbd747bf3f5c6c",
       "public_bytes": 2345,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "d8fb38df99a36119cdfd9d0cd7b027599d304256"
     },
     {
       "source_sha256": "1439a09a76d447eab43404473ae4ef668c4caf82fe0d5ab8edd5e99c345d39e1",
@@ -26039,7 +26049,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BH_TRUTH_CALIBRATED_CORRECTION_MODELS_V2.yaml",
       "public_sha256": "14bc65a43c165e7c71208fc873160cdcf88cc5be50e49a49cbb68adfbaf55f33",
       "public_bytes": 1646,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "e272acb828534d7e09b890f07017e172fb9d7dd4"
     },
     {
       "source_sha256": "14bd0e1a3790c598d22ee912cca3738457e6fead54435c92b9ba89e2b153154e",
@@ -35410,7 +35422,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AX_SOURCE_TESTIMONY_WORLD_GATE_MODELS_V2.yaml",
       "public_sha256": "1c3a637ff73691d0f4e7303384c17fbd1b4291626073ced5db4d448b58d611c9",
       "public_bytes": 1461,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "86b3609b228da4e42b50a365bc7b094413719437"
     },
     {
       "source_sha256": "1c3d2c79e4a8bd1b17a8ba3d61308da9355766e28126c75375ac4d4b2784efcc",
@@ -50069,7 +50083,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BI_FINITE_ARTICULABILITY_MODELS_V2.yaml",
       "public_sha256": "27a4e79b4b11916d4047ad7677db26735f886ed7cbb2b01d5bd89754f33da080",
       "public_bytes": 1333,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "ee15782926dbe3ae049c5fc9ccfa530f1866a58f"
     },
     {
       "source_sha256": "27aa21fac900517a75a0cef30fe99e928c4f43c679c407e7db0bc96fc07d3318",
@@ -82883,7 +82899,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BE_CROSS_LANE_JOINT_INTERACTION_MODELS_V2.yaml",
       "public_sha256": "40e08b9ef186620e9eb988e7e556694bfc94b94e3dd308d15a682ca03dca2291",
       "public_bytes": 1605,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "69367d117baefe6702b7bcdc22042042bf8e3923"
     },
     {
       "source_sha256": "40e374a62246636ffdbd424f517094dbaa7a7d00cc177675bed19377598e44fd",
@@ -94032,7 +94050,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BA_ADMISSION_OVERLAY.yaml",
       "public_sha256": "49f6ed3dda0270e58cb85b44c762be4e31620af9deac7249eac364be899e90fa",
       "public_bytes": 1560,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "132b73791a09d81358e33e1f7d9698959c9146a2"
     },
     {
       "source_sha256": "49f701fd59cd65e07c51ab3ed647bd128884a88adea7afbb3a32ec59ac37b02e",
@@ -94449,7 +94469,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BI_FINITE_ARTICULABILITY_MODELS_V1.yaml",
       "public_sha256": "4a4e5b750c57c3b4a65934c7edd4de495a74ce00c0d8eadd511651bb93eda0e5",
       "public_bytes": 910,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "68add8fc26f0f801b6e4b20ead7d5b93681be1cc"
     },
     {
       "source_sha256": "4a4f6a9bdeb453589108b65967198d217090a19cd84099cc4fec7d25b1aac5a3",
@@ -99897,7 +99919,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BF_IMPERSONAL_LATENT_REALIZATION_MODELS_V2.yaml",
       "public_sha256": "4ea76f85945aca04192fb5beb74db8b9d3d0307a254de2b329d917d39674aca7",
       "public_bytes": 2069,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "36ad7d6244e5d54eeb650d0f360acd6a45a53c0c"
     },
     {
       "source_sha256": "4eac7e530c1069eb0afc639797ad949d8712bb102232c565a974c1a5a4b86334",
@@ -169694,7 +169718,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BC_UNIVERSAL_INTERFACE_EXPERIMENT_PARITY_MODELS_V1.yaml",
       "public_sha256": "82beb4c893c0d12eb9727d20ad1428b1aa45397ae567725ddfece1571b4c833c",
       "public_bytes": 660,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "d8fe3c0b6b5e38d64a508a95c83ae1810e1a27fe"
     },
     {
       "source_sha256": "82c5ec562a1e1735bf6b99df71de351f95b31ed7866999afe60ce59680e50995",
@@ -169756,7 +169782,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AV_NEUTRAL_BRIDGE_INTERPOLATION_MODELS_V1.yaml",
       "public_sha256": "82cee72fcc9a4135275de39175a69d5b603ca62eaf2d3c9f87df9fabeed5c82c",
       "public_bytes": 1292,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "8535624b656ca283113d322fecbc566290912f4e"
     },
     {
       "source_sha256": "82cfb1ca1489aaaa92a1b92ba524d2bb4cc7b0aa1ce9d4d91869bf890706a71a",
@@ -174572,7 +174600,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BH_TRUTH_CALIBRATED_CORRECTION_MODELS_V1.yaml",
       "public_sha256": "864b04f56a250ed8ad05dacfbd4970a0343367a0b0feaecab2bba9de34a13066",
       "public_bytes": 1455,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "3996ff60410db02f1ccd11f9cba4f36b1ba8f0b7"
     },
     {
       "source_sha256": "864d8e84ae9ed159c8bc09ff25a1405e0626323d0b2d4cc098f81a9f0e59fc6c",
@@ -184228,7 +184258,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BB_ADMISSION_OVERLAY.yaml",
       "public_sha256": "8dd3b5e550662103f8f00b647219d4756a9e182fd6a5b86ae2782812e1e730fe",
       "public_bytes": 1674,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "23e4ce4a982031b1730c365bca1ec6a3684ea436"
     },
     {
       "source_sha256": "8dd52f566f206b1547a4ed91e938fcc6886ca073feb9cb980e12365ad0079253",
@@ -197323,7 +197355,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BG_INTEGRATED_R5_COMMON_MODEL_V2.yaml",
       "public_sha256": "97d7482dbf3ed4b50de79699cedc77067323b095dfd6c7eb3afb557acdfcfcc4",
       "public_bytes": 1769,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "23ae320500f7788577a3a9e62f37786b93cee2a2"
     },
     {
       "source_sha256": "97d84da58df799d182b9316e3f7f5f038dc6bb093642d5e773a253311712ecf9",
@@ -199085,7 +199119,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AV_NEUTRAL_BRIDGE_INTERPOLATION_MODELS_V2.yaml",
       "public_sha256": "991763b96ac886e37c4ff01dfb6e4f3961cda00b57ada958f97aa3b18ddd5a05",
       "public_bytes": 1509,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "3c89aa19631f03d2fc1814ad3045cc06bb49fd5c"
     },
     {
       "source_sha256": "991940e23db86312193fb720a13464fcc7281ef392116447c4a98b4a0950d95f",
@@ -199287,7 +199323,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AZ_CROSSED_SEMANTIC_INTERVENTION_MODELS_V2.yaml",
       "public_sha256": "993a403134973bcd90c3c8ead4b9140ab7a4111f6866bf471150a97deae13f44",
       "public_bytes": 1149,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "f7e067f1195c13211cd8a067c560ba96b4b49e54"
     },
     {
       "source_sha256": "993f2a9bd764459e531c508b43ef279db02b4d6092d131efcb736a6ecb5f0c22",
@@ -206659,7 +206697,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BA_INTERFACE_RELATIVE_CAUSAL_QUOTIENT_MODELS_V1.yaml",
       "public_sha256": "9f01b79e842c9e25a9deccc1f316956a5f25ab52970a87c8a474d89529c66d02",
       "public_bytes": 1215,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "8c90bb5a7e6608f9219361fb21d14dcd374ab267"
     },
     {
       "source_sha256": "9f03ff3558aa44196699857f69c1f7e52e947b917db6115953d79bfebb90a6b1",
@@ -214507,7 +214547,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AX_SOURCE_TESTIMONY_WORLD_GATE_MODELS_V1.yaml",
       "public_sha256": "a5429ef4ae52c5a62c13eb56d9b2098673b2b04013a051e22aa87648c853b993",
       "public_bytes": 1549,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "c7a8d6fa611e9a5f7535f701ceb66b0805fe7c17"
     },
     {
       "source_sha256": "a54653b4207b15fcb2079f6bc3094a71cf026aeee9a56d8426f05ac604862b98",
@@ -222156,7 +222198,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AR_PROVENANCE_ROOT_EVIDENCE_MODELS_V2.yaml",
       "public_sha256": "ab7398b15130cdf60bbc1131403a6dbb5008651d876ff56405b43b1716a29a18",
       "public_bytes": 2004,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "475c318bb1ae3b5db3f0fce01f06d4bf66724409"
     },
     {
       "source_sha256": "ab75bda498b69399793d93165f60431fa64e02feec8fac7d9589cfbcc83a5569",
@@ -234232,7 +234276,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AQ_SOURCE_COMPATIBLE_ARCHITECTURE_MODELS_V2.yaml",
       "public_sha256": "b460af8e73d3db6db8ed6223dc24a548b5519efd175eeefca03433d76c690520",
       "public_bytes": 3307,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "bb110c6493c333eb7ae8b6b09610f53715424a4c"
     },
     {
       "source_sha256": "b46250133b88ef8291a8c3ea0b219591528177f2f25b8599389a27ac9c4391ba",
@@ -235974,7 +236020,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AZ_CROSSED_SEMANTIC_INTERVENTION_MODELS_V1.yaml",
       "public_sha256": "b5d353a56596143c1f02001e571e2d4bfd635331c08bf26530f6850b77c3a29f",
       "public_bytes": 955,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "84eb89781eb35bbf74dfa74e78ee32bc332a7e89"
     },
     {
       "source_sha256": "b5d9589e118c96137ee5f6c90f81fc3391687d62cdafb2d4c80fdd69319cc725",
@@ -244850,7 +244898,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BD_ADMISSION_OVERLAY.yaml",
       "public_sha256": "bc66bf8cea8fa9f454ea2cf7c97a0a1e33d50521a1646c519f12c8adbd8e5ab2",
       "public_bytes": 1788,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "6546f5ba202e9fb5e256c22379f61a42069f6665"
     },
     {
       "source_sha256": "bc6a168b60eff983f554486237e1f2d64e27d676c5c79ed2a16d87952a5ceb55",
@@ -245380,7 +245430,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BE_CROSS_LANE_JOINT_INTERACTION_MODELS_V1.yaml",
       "public_sha256": "bcc3caaf8ee5fe6910de9b0f4eb80939388fed07ae02e307437723a5a2825e72",
       "public_bytes": 1362,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "991381e40dbc0a041a79b3375bba389320c3af14"
     },
     {
       "source_sha256": "bcc7910dfd0e44a27ba8ce46c364eb3d0fea8131a715dfbd97e42d37801e5592",
@@ -247127,7 +247179,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AW_PROVENANCE_ROOT_ROBUST_DIAGNOSIS_MODELS_V2.yaml",
       "public_sha256": "be1e7519b3007a18bf856c4e0baf29b0684b729c6d4b42e753274c10198b457a",
       "public_bytes": 1444,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "0d0a7223aa0ff2ee6e4da155b12ee06df152874c"
     },
     {
       "source_sha256": "be1fbdf78ae5fd6109e407c677e1341623eb12c05deecac0fbecf28f0855374a",
@@ -247373,7 +247427,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BD_LATENT_SOURCE_ORIENTATION_MODELS_V2.yaml",
       "public_sha256": "be48fe63092df4f66ff66a0fe52ffbf50c8bfd11f3c05ce67a443fb54bf4c02d",
       "public_bytes": 2159,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "c20193aeee354f6fb17727e889062893cd8cc2c8"
     },
     {
       "source_sha256": "be4d4a395884925c858424b5af36571b56883f31c2521099e2460dbfba05effc",
@@ -258485,7 +258541,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BB_JOINT_CAUSAL_INTERFACE_MODELS_V1.yaml",
       "public_sha256": "c71f4dd9e225f8fe8da3f5d581daaff8bc37bddfaf886691c068d82db558b053",
       "public_bytes": 875,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "cf33648d43be6aa32f9f6112abe4be83caeaa5c4"
     },
     {
       "source_sha256": "c7286644949414b4ff8c75508b0aa058df41053988dab872288d5caf32438105",
@@ -262320,7 +262378,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BC_ADMISSION_OVERLAY.yaml",
       "public_sha256": "c9ead1aeaf5d93742865ef8015556fed11f85b9f9813e9a23c7804400683978a",
       "public_bytes": 1719,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "0cdaac12accc57d203c0272eda273279d2b792b8"
     },
     {
       "source_sha256": "c9f0231ecbd1a219bca41dd906c5d8754a57d5bf45ce14d9c6c10e4ce4547146",
@@ -279554,7 +279614,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BK_NECESSITY_CONCRETENESS_MODELS_V2.yaml",
       "public_sha256": "d6e99abc7d0038a9ff47cb02809d52e8004251b79d5e2164b3aad0dcca66c616",
       "public_bytes": 1082,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "01adca7afe96d67a0da61ccb8787c9e267e9208e"
     },
     {
       "source_sha256": "d6eb775698f26c8b13eaee6c6e063bb343680b1b0b0ec781a18ab0b2cc2e68b3",
@@ -285069,7 +285131,9 @@
       "repository_path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BF_IMPERSONAL_LATENT_REALIZATION_MODELS_V1.yaml",
       "public_sha256": "db4f7664cd22dc28425e5fa5da03cac18645ec3b72856b87ec5f11aee5a104fb",
       "public_bytes": 1375,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "7c94adf7f1f36a636ba8cf24139fcdea66269e9d"
     },
     {
       "source_sha256": "db508c0c6834b03e05e2ceb5a4292dc86f21f80865ec120155c8efe29fe57878",

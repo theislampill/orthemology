@@ -11777,6 +11777,7 @@ class Central47MainDispatchTests(unittest.TestCase):
         reader.check_frontier_record_absences=lambda *a:(set(),['frontier-sentinel'])
         def central(repo,baseline):events.append(('central',baseline));return selected,['central-fatal-sentinel']
         reader.check_central_public_absences=central
+        reader.check_abk_public_absences=lambda *a:(set(),[])
         def currentness(*args,**kwargs):events.append(('currentness',args,kwargs));return ['currentness-sentinel']
         reader.check_corpus_currentness=currentness
         reader.check_collection_dispositions=lambda *a:['collection-sentinel']
@@ -12086,6 +12087,509 @@ class PublicCheckpointIndependentCurrentnessTests(unittest.TestCase):
                  if isinstance(n, ast.ImportFrom) and n.module == 'resolve_t20_v6_source'
                  for a in n.names}
         self.assertTrue({'CHECKPOINT_PUBLIC_COPY_PATHS', 'checkpoint_public_duplicate_paths'} <= names)
+
+
+# Additive exact32 admission controls. Real original programs/native calls are forbidden.
+ABK32_EXPECTED_REVISION = '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'
+ABK32_EXPECTED_RECORDS = {'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AQ_SOURCE_COMPATIBLE_ARCHITECTURE_MODELS_V2.yaml': ('bb110c6493c333eb7ae8b6b09610f53715424a4c',
+                                                                                                                                                                  'b460af8e73d3db6db8ed6223dc24a548b5519efd175eeefca03433d76c690520',
+                                                                                                                                                                  3307),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AR_PROVENANCE_ROOT_EVIDENCE_MODELS_V2.yaml': ('475c318bb1ae3b5db3f0fce01f06d4bf66724409',
+                                                                                                                                                            'ab7398b15130cdf60bbc1131403a6dbb5008651d876ff56405b43b1716a29a18',
+                                                                                                                                                            2004),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AV_NEUTRAL_BRIDGE_INTERPOLATION_MODELS_V2.yaml': ('3c89aa19631f03d2fc1814ad3045cc06bb49fd5c',
+                                                                                                                                                                '991763b96ac886e37c4ff01dfb6e4f3961cda00b57ada958f97aa3b18ddd5a05',
+                                                                                                                                                                1509),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AW_PROVENANCE_ROOT_ROBUST_DIAGNOSIS_MODELS_V2.yaml': ('0d0a7223aa0ff2ee6e4da155b12ee06df152874c',
+                                                                                                                                                                    'be1e7519b3007a18bf856c4e0baf29b0684b729c6d4b42e753274c10198b457a',
+                                                                                                                                                                    1444),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AX_SOURCE_TESTIMONY_WORLD_GATE_MODELS_V2.yaml': ('86b3609b228da4e42b50a365bc7b094413719437',
+                                                                                                                                                               '1c3a637ff73691d0f4e7303384c17fbd1b4291626073ced5db4d448b58d611c9',
+                                                                                                                                                               1461),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_AZ_CROSSED_SEMANTIC_INTERVENTION_MODELS_V2.yaml': ('f7e067f1195c13211cd8a067c560ba96b4b49e54',
+                                                                                                                                                                 '993a403134973bcd90c3c8ead4b9140ab7a4111f6866bf471150a97deae13f44',
+                                                                                                                                                                 1149),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BA_INTERFACE_RELATIVE_CAUSAL_QUOTIENT_MODELS_V1.yaml': ('8c90bb5a7e6608f9219361fb21d14dcd374ab267',
+                                                                                                                                                                      '9f01b79e842c9e25a9deccc1f316956a5f25ab52970a87c8a474d89529c66d02',
+                                                                                                                                                                      1215),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BB_JOINT_CAUSAL_INTERFACE_MODELS_V1.yaml': ('cf33648d43be6aa32f9f6112abe4be83caeaa5c4',
+                                                                                                                                                          'c71f4dd9e225f8fe8da3f5d581daaff8bc37bddfaf886691c068d82db558b053',
+                                                                                                                                                          875),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BC_UNIVERSAL_INTERFACE_EXPERIMENT_PARITY_MODELS_V1.yaml': ('d8fe3c0b6b5e38d64a508a95c83ae1810e1a27fe',
+                                                                                                                                                                         '82beb4c893c0d12eb9727d20ad1428b1aa45397ae567725ddfece1571b4c833c',
+                                                                                                                                                                         660),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BD_LATENT_SOURCE_ORIENTATION_MODELS_V2.yaml': ('c20193aeee354f6fb17727e889062893cd8cc2c8',
+                                                                                                                                                             'be48fe63092df4f66ff66a0fe52ffbf50c8bfd11f3c05ce67a443fb54bf4c02d',
+                                                                                                                                                             2159),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BE_CROSS_LANE_JOINT_INTERACTION_MODELS_V2.yaml': ('69367d117baefe6702b7bcdc22042042bf8e3923',
+                                                                                                                                                                '40e08b9ef186620e9eb988e7e556694bfc94b94e3dd308d15a682ca03dca2291',
+                                                                                                                                                                1605),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BF_IMPERSONAL_LATENT_REALIZATION_MODELS_V2.yaml': ('36ad7d6244e5d54eeb650d0f360acd6a45a53c0c',
+                                                                                                                                                                 '4ea76f85945aca04192fb5beb74db8b9d3d0307a254de2b329d917d39674aca7',
+                                                                                                                                                                 2069),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BG_INTEGRATED_R5_COMMON_MODEL_V2.yaml': ('23ae320500f7788577a3a9e62f37786b93cee2a2',
+                                                                                                                                                       '97d7482dbf3ed4b50de79699cedc77067323b095dfd6c7eb3afb557acdfcfcc4',
+                                                                                                                                                       1769),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BH_TRUTH_CALIBRATED_CORRECTION_MODELS_V2.yaml': ('e272acb828534d7e09b890f07017e172fb9d7dd4',
+                                                                                                                                                               '14bc65a43c165e7c71208fc873160cdcf88cc5be50e49a49cbb68adfbaf55f33',
+                                                                                                                                                               1646),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BI_FINITE_ARTICULABILITY_MODELS_V2.yaml': ('ee15782926dbe3ae049c5fc9ccfa530f1866a58f',
+                                                                                                                                                         '27a4e79b4b11916d4047ad7677db26735f886ed7cbb2b01d5bd89754f33da080',
+                                                                                                                                                         1333),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_COUNTERMODEL_FILES/PMR007_DEEP_BK_NECESSITY_CONCRETENESS_MODELS_V2.yaml': ('01adca7afe96d67a0da61ccb8787c9e267e9208e',
+                                                                                                                                                          'd6e99abc7d0038a9ff47cb02809d52e8004251b79d5e2164b3aad0dcca66c616',
+                                                                                                                                                          1082),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BA_ADMISSION_OVERLAY.yaml': ('132b73791a09d81358e33e1f7d9698959c9146a2',
+                                                                                                                                        '49f6ed3dda0270e58cb85b44c762be4e31620af9deac7249eac364be899e90fa',
+                                                                                                                                        1560),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BB_ADMISSION_OVERLAY.yaml': ('23e4ce4a982031b1730c365bca1ec6a3684ea436',
+                                                                                                                                        '8dd3b5e550662103f8f00b647219d4756a9e182fd6a5b86ae2782812e1e730fe',
+                                                                                                                                        1674),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BC_ADMISSION_OVERLAY.yaml': ('0cdaac12accc57d203c0272eda273279d2b792b8',
+                                                                                                                                        'c9ead1aeaf5d93742865ef8015556fed11f85b9f9813e9a23c7804400683978a',
+                                                                                                                                        1719),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BD_ADMISSION_OVERLAY.yaml': ('6546f5ba202e9fb5e256c22379f61a42069f6665',
+                                                                                                                                        'bc66bf8cea8fa9f454ea2cf7c97a0a1e33d50521a1646c519f12c8adbd8e5ab2',
+                                                                                                                                        1788),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_LEDGER_UPDATES/PMR-007_DEEP_BE_ADMISSION_OVERLAY.yaml': ('a532439c13d961df272781b0b7d49a6213d136a6',
+                                                                                                                                        '12f4e83b712fa0d58b100169644aa17561a74fe6221466e50752d417c07f185b',
+                                                                                                                                        1774),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AT_NEUTRAL_INTERVENTIONAL_TRACE_MODELS_V1.yaml': ('81939539fe9ae4b34412e9af80243b69dade62dd',
+                                                                                                                                                                  '0ed0bc80aefa85b01a682fbd8d9f0c579b3316372f7dc50a7bd054e0787b7877',
+                                                                                                                                                                  2379),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AV_NEUTRAL_BRIDGE_INTERPOLATION_MODELS_V1.yaml': ('8535624b656ca283113d322fecbc566290912f4e',
+                                                                                                                                                                  '82cee72fcc9a4135275de39175a69d5b603ca62eaf2d3c9f87df9fabeed5c82c',
+                                                                                                                                                                  1292),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AW_PROVENANCE_ROOT_ROBUST_DIAGNOSIS_MODELS_V1.yaml': ('6471321e88bf946175d204afb78650463332f70b',
+                                                                                                                                                                      '132d6bc9ea2de7927682ff4822ad611c3f5d43af17329130df2aeeac13cb8b69',
+                                                                                                                                                                      1042),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AX_SOURCE_TESTIMONY_WORLD_GATE_MODELS_V1.yaml': ('c7a8d6fa611e9a5f7535f701ceb66b0805fe7c17',
+                                                                                                                                                                 'a5429ef4ae52c5a62c13eb56d9b2098673b2b04013a051e22aa87648c853b993',
+                                                                                                                                                                 1549),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_AZ_CROSSED_SEMANTIC_INTERVENTION_MODELS_V1.yaml': ('84eb89781eb35bbf74dfa74e78ee32bc332a7e89',
+                                                                                                                                                                   'b5d353a56596143c1f02001e571e2d4bfd635331c08bf26530f6850b77c3a29f',
+                                                                                                                                                                   955),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BD_LATENT_SOURCE_RELIABILITY_ORIENTATION_MODELS_V1.yaml': ('d8fb38df99a36119cdfd9d0cd7b027599d304256',
+                                                                                                                                                                           '1433c3131749f686a2823fe0e9d7c27d6f6b1b4b64c05ff7d0bbd747bf3f5c6c',
+                                                                                                                                                                           2345),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BE_CROSS_LANE_JOINT_INTERACTION_MODELS_V1.yaml': ('991381e40dbc0a041a79b3375bba389320c3af14',
+                                                                                                                                                                  'bcc3caaf8ee5fe6910de9b0f4eb80939388fed07ae02e307437723a5a2825e72',
+                                                                                                                                                                  1362),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BF_IMPERSONAL_LATENT_REALIZATION_MODELS_V1.yaml': ('7c94adf7f1f36a636ba8cf24139fcdea66269e9d',
+                                                                                                                                                                   'db4f7664cd22dc28425e5fa5da03cac18645ec3b72856b87ec5f11aee5a104fb',
+                                                                                                                                                                   1375),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BH_TRUTH_CALIBRATED_CORRECTION_MODELS_V1.yaml': ('3996ff60410db02f1ccd11f9cba4f36b1ba8f0b7',
+                                                                                                                                                                 '864b04f56a250ed8ad05dacfbd4970a0343367a0b0feaecab2bba9de34a13066',
+                                                                                                                                                                 1455),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BI_FINITE_ARTICULABILITY_MODELS_V1.yaml': ('68add8fc26f0f801b6e4b20ead7d5b93681be1cc',
+                                                                                                                                                           '4a4e5b750c57c3b4a65934c7edd4de495a74ce00c0d8eadd511651bb93eda0e5',
+                                                                                                                                                           910),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/REJECTED_AND_BLOCKED_EVIDENCE/PMR007_DEEP_BK_NECESSITY_CONCRETENESS_MODELS_V1.yaml': ('19306d597907bb1fc1508e484d250b82e7905555',
+                                                                                                                                                            '1317a7369c5daf99935a085cd03b8b60eeec87c3c6ce640f4494d17acab8f966',
+                                                                                                                                                            1041)}
+
+def _abk32_test_reader():
+    import ast
+    module = _central47_test_reader()
+    ns = module.__dict__
+    tree = ast.parse((ROOT / 'scripts/check_reader_pilot.py').read_bytes())
+    nodes = []
+    for node in tree.body:
+        if isinstance(node, ast.FunctionDef) and node.name == 'check_abk_public_absences':
+            nodes.append(node)
+        elif isinstance(node, ast.Assign):
+            for target in node.targets:
+                if isinstance(target, ast.Name) and target.id.startswith('ABK_PUBLIC_HISTORY_'):
+                    ns[target.id] = ast.literal_eval(node.value)
+    exec(compile(ast.Module(body=nodes, type_ignores=[]), 'actual-abk32-reader', 'exec'), ns)
+    return module
+
+class ABK32ProductionContractTests(unittest.TestCase):
+    def test_exact32_native_identity_population_and_revision(self):
+        module = _abk32_test_reader()
+        self.assertEqual(getattr(module, 'ABK_PUBLIC_HISTORY_REVISION', None), ABK32_EXPECTED_REVISION)
+        self.assertEqual(getattr(module, 'ABK_PUBLIC_HISTORY_RECORDS', None), ABK32_EXPECTED_RECORDS)
+
+    def test_local_complete_pin_table_is_the_same_exact32_plus_revision(self):
+        import ast
+        tree = ast.parse((ROOT / 'scripts/check_reader_pilot.py').read_bytes())
+        fn = next(n for n in tree.body if isinstance(n, ast.FunctionDef)
+                  and n.name == '_permitted_projection_consumer_pins')
+        expected = {p: (*v, ABK32_EXPECTED_REVISION) for p, v in ABK32_EXPECTED_RECORDS.items()}
+        matching = []
+        for node in ast.walk(fn):
+            if isinstance(node, ast.Dict):
+                try: value = ast.literal_eval(node)
+                except (ValueError, TypeError): continue
+                if isinstance(value, dict) and set(value) == set(expected): matching.append(value)
+        self.assertEqual(matching, [expected], 'one exact literal final pin population is mandatory')
+
+
+class ABK32AbsenceTests(unittest.TestCase):
+    """Only tiny synthetic files are written; original metadata paths remain exact."""
+    def setUp(self):
+        import types
+        self.reader = _abk32_test_reader()
+        self.assertTrue(callable(getattr(self.reader, 'check_abk_public_absences', None)),
+                        'missing mandatory exact32 current-reader admission')
+        self.tmp = tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.paths = sorted(ABK32_EXPECTED_RECORDS)
+        self.bodies = {p: ('abk synthetic %02d\n' % i).encode() for i, p in enumerate(self.paths)}
+        def identity(body):
+            return (hashlib.sha1(b'blob '+str(len(body)).encode()+b'\0'+body).hexdigest(),
+                    hashlib.sha256(body).hexdigest(), len(body))
+        self.identity = identity
+        self.records = {p: identity(b) for p, b in self.bodies.items()}
+        self.reader.ABK_PUBLIC_HISTORY_RECORDS = self.records
+        self.reader.ABK_PUBLIC_HISTORY_REVISION = ABK32_EXPECTED_REVISION
+        self.baseline = {p: dict(path=p, kind='blob', mode='100644', git_oid=v[0], bytes=v[2])
+                         for p, v in self.records.items()}
+        self.manifest = self.root / 'research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json'
+        self.manifest.parent.mkdir(parents=True)
+        self.document = {'schema': 'inert-central47-projection', 'objects': [
+            dict(source_sha256=sha, source_action='include', source_bytes=size,
+                 role='qualified_metadata', declared_eligibility_basis='reviewed_distribution_metadata',
+                 required_dependencies=[], disposition='REUSE', repository_path=p,
+                 public_sha256=sha, public_bytes=size, publication_basis='exact_existing_public_repository_object',
+                 repository_revision=ABK32_EXPECTED_REVISION, git_blob=blob)
+            for p, (blob, sha, size) in self.records.items()]}
+        self.save_manifest()
+        self.tree = b''.join(('100644 blob '+self.records[p][0]+'\t'+p+'\0').encode() for p in self.paths)
+        self.index = b''; self.index_reads = 0; self.native_calls = []
+        self.commit_type = b'commit\n'; self.bad_blob = False; self.failure = False
+        self.index_drift = False; self.mutate_once = None
+        def native(repo, *args):
+            self.assertEqual(Path(repo), self.root)
+            self.native_calls.append(args)
+            if self.failure: raise ValueError('synthetic native evidence unavailable')
+            if args == ('cat-file', '-t', ABK32_EXPECTED_REVISION): return self.commit_type
+            if args == ('ls-tree', '-z', ABK32_EXPECTED_REVISION, '--', *self.paths): return self.tree
+            if args == ('ls-files', '--stage', '-z', '--', *self.paths):
+                self.index_reads += 1
+                return b'changed\0' if self.index_drift and self.index_reads > 1 else self.index
+            if len(args) == 3 and args[:2] == ('cat-file', 'blob'):
+                found = [self.bodies[p] for p in self.paths if self.records[p][0] == args[2]]
+                self.assertEqual(len(found), 1, 'only selected synthetic native blobs may be queried')
+                if self.mutate_once:
+                    effect, self.mutate_once = self.mutate_once, None
+                    effect()
+                return found[0] + (b'wrong' if self.bad_blob is True or self.bad_blob == args[2] else b'')
+            raise AssertionError('unexpected native command '+repr(args))
+        self.reader._administrative_git = native
+
+    def save_manifest(self):
+        self.manifest.write_text(json.dumps(self.document, sort_keys=True)+'\n')
+
+    def present(self, path):
+        p = self.root/path; p.parent.mkdir(parents=True, exist_ok=True);p.write_bytes(self.bodies[path]);return p
+
+    def qualify(self):
+        return self.reader.check_abk_public_absences(self.root, self.baseline)
+
+    def refuse(self):
+        absent, errors = self.qualify();self.assertEqual(absent, set());self.assertTrue(errors)
+
+    def test_all32_absent_and_full_present(self):
+        absent, errors = self.qualify();self.assertEqual(errors, []);self.assertEqual(absent, set(self.paths))
+        for p in self.paths: self.present(p)
+        absent, errors = self.qualify();self.assertEqual(errors, []);self.assertEqual(absent, set())
+
+    def test_staged_absence_and_present_index_subsets_are_accepted(self):
+        kept = set(self.paths[::3])
+        for p in kept: self.present(p)
+        # Original tracked entries can remain for unstaged absence; a subset
+        # can remain after staged deletion. Both stay exact mode/blob/stage 0.
+        for indexed in (self.paths, sorted(kept), []):
+            self.index = b''.join(('100644 '+self.records[p][0]+' 0\t'+p+'\0').encode() for p in indexed)
+            absent, errors = self.qualify();self.assertEqual(errors, []);self.assertEqual(absent, set(self.paths)-kept)
+
+    def test_each_of13_projection_fields_is_required_and_exact(self):
+        original = deepcopy(self.document)
+        for field in original['objects'][0]:
+            for mutate in ('missing', 'wrong'):
+                with self.subTest(field=field, mutate=mutate):
+                    self.document = deepcopy(original); row = self.document['objects'][0]
+                    if mutate == 'missing': row.pop(field)
+                    else: row[field] = ['unexpected'] if field == 'required_dependencies' else 'wrong'
+                    self.save_manifest(); self.refuse()
+        self.document = original;self.save_manifest()
+
+    def test_each_selected_projection_row_is_mandatory(self):
+        original = deepcopy(self.document)
+        for i in range(32):
+            with self.subTest(omitted=i):
+                self.document = deepcopy(original);self.document['objects'].pop(i);self.save_manifest();self.refuse()
+
+    def test_duplicate_extra_field_and_malformed_document_refuse(self):
+        original = deepcopy(self.document)
+        for kind in ('duplicate', 'extra-field', 'not-list', 'not-dict', 'bad-json'):
+            with self.subTest(kind=kind):
+                self.document = deepcopy(original)
+                if kind == 'duplicate': self.document['objects'].append(deepcopy(self.document['objects'][0]))
+                elif kind == 'extra-field': self.document['objects'][0]['extra'] = True
+                elif kind == 'not-list': self.document['objects'] = {}
+                elif kind == 'not-dict': self.document['objects'][0] = None
+                self.save_manifest()
+                if kind == 'bad-json': self.manifest.write_text('{')
+                self.refuse()
+
+    def test_unrelated_projection_rows_do_not_expand_absence_permission(self):
+        unrelated = deepcopy(self.document['objects'][0]);unrelated['repository_path'] = 'unrelated.json'
+        self.document['objects'].append(unrelated);self.save_manifest()
+        absent, errors = self.qualify();self.assertEqual(errors, []);self.assertEqual(absent, set(self.paths));self.assertNotIn('unrelated.json', absent)
+
+    def test_pathless_unrelated_projection_shapes_do_not_expand_permission(self):
+        shapes = [
+            {'source_sha256': 'a'*64, 'source_action': 'identity_only', 'disposition': 'IDENTITY_ONLY', 'availability': 'held_excluded', 'exclusion_categories': ['explicit_owner_private_custody_only']},
+            {'source_sha256': 'b'*64, 'source_action': 'include', 'disposition': 'NOT_PUBLISHED'},
+            {'source_sha256': 'c'*64, 'source_action': 'omit', 'disposition': 'IDENTITY_ONLY'},
+        ]
+        self.document['objects'].extend(shapes); self.save_manifest()
+        absent, errors = self.qualify()
+        self.assertEqual(errors, []); self.assertEqual(absent, set(self.paths))
+        for path in self.paths: self.present(path)
+        absent, errors = self.qualify()
+        self.assertEqual(errors, []); self.assertEqual(absent, set())
+
+    def test_pathless_or_malformed_selected_rows_still_refuse(self):
+        original = deepcopy(self.document)
+        for missing, value in [(True, None), (False, None), (False, 7), (False, [])]:
+            with self.subTest(missing=missing, value=value):
+                self.document = deepcopy(original)
+                if missing: del self.document['objects'][0]['repository_path']
+                else: self.document['objects'][0]['repository_path'] = value
+                self.save_manifest(); self.refuse()
+
+    def test_explicit_malformed_unrelated_path_still_refuses(self):
+        original = deepcopy(self.document)
+        for value in [None, 7, [], {}]:
+            with self.subTest(value=value):
+                self.document = deepcopy(original)
+                self.document['objects'].append({'repository_path': value})
+                self.save_manifest(); self.refuse()
+
+    def test_original_census_each_mode_kind_blob_size_and_missing_refuse(self):
+        path=self.paths[0]; original=deepcopy(self.baseline)
+        for field,value in [('kind','tree'),('mode','100755'),('git_oid','0'*40),('bytes',1),('absent',None)]:
+            with self.subTest(field=field):
+                self.baseline=deepcopy(original)
+                if field=='absent':self.baseline.pop(path)
+                else:self.baseline[path][field]=value
+                self.refuse()
+
+    def test_noncommit_wrong_tree_and_native_blob_refuse(self):
+        self.commit_type=b'blob\n';self.refuse();self.commit_type=b'commit\n'
+        old=self.tree;self.tree=self.tree.replace(b'100644',b'100755',1);self.refuse();self.tree=old
+        self.bad_blob=True;self.refuse()
+
+    def test_missing_duplicate_extra_reordered_original_tree_refuse(self):
+        original=self.tree; rows=original.split(b'\0')[:-1]
+        for candidate in (rows[:-1],rows+rows[:1],rows+[b'100644 blob '+b'0'*40+b'\tunrelated'],list(reversed(rows))):
+            with self.subTest(candidate=len(candidate)):
+                self.tree=b'\0'.join(candidate)+b'\0';self.refuse()
+        self.tree=original
+
+    def test_conflict_wrong_mode_blob_extra_duplicate_and_unterminated_index_refuse(self):
+        p=self.paths[0];r=('100644 '+self.records[p][0]+' 0\t'+p).encode()
+        for candidate in (r.replace(b' 0\t',b' 1\t')+b'\0',r.replace(b'100644',b'100755')+b'\0',
+                          r.replace(self.records[p][0].encode(),b'0'*40)+b'\0',r+b'\0'+r+b'\0',
+                          r.replace(p.encode(),b'unrelated')+b'\0',r):
+            with self.subTest(candidate=candidate[:20]):self.index=candidate;self.refuse()
+
+    def test_every_selected_native_blob_is_authenticated(self):
+        for path in self.paths:
+            with self.subTest(path=path):
+                self.bad_blob=self.records[path][0];self.refuse()
+        self.bad_blob=False
+
+    def test_empty_missing_or_extra_native_population_cannot_bypass_guard(self):
+        original=self.records
+        for changed in ({},dict(list(original.items())[:-1]),dict(original,unrelated=next(iter(original.values())))):
+            with self.subTest(population=len(changed)):
+                self.reader.ABK_PUBLIC_HISTORY_RECORDS=changed;self.refuse()
+        self.reader.ABK_PUBLIC_HISTORY_RECORDS=original
+
+    def test_native_refusal_does_not_admit_any_path(self):
+        self.failure=True;self.refuse()
+
+    def test_present_corrupt_symlink_hardlink_executable_directory_fifo_refuse(self):
+        import os
+        p=self.present(self.paths[0]);p.write_bytes(b'corrupt');self.refuse();p.unlink()
+        target=self.root/'outside';target.write_bytes(self.bodies[self.paths[0]])
+        p.symlink_to(target);self.refuse();p.unlink()
+        os.link(target,p);self.refuse();p.unlink()
+        self.present(self.paths[0]).chmod(0o755);self.refuse();p.chmod(0o644);p.unlink()
+        p.mkdir();self.refuse();p.rmdir();os.mkfifo(p)
+        with frontier_mock.patch.object(self.reader.os,'open',side_effect=OSError('FIFO must never open')) as opened:
+            self.refuse();opened.assert_not_called()
+
+    def test_manifest_missing_symlink_hardlink_executable_refuse(self):
+        import os
+        saved=self.manifest.read_bytes();self.manifest.unlink();self.refuse()
+        other=self.root/'manifest-copy';other.write_bytes(saved)
+        self.manifest.symlink_to(other);self.refuse();self.manifest.unlink()
+        os.link(other,self.manifest);self.refuse();self.manifest.unlink()
+        self.manifest.write_bytes(saved);self.manifest.chmod(0o755);self.refuse()
+
+    def test_index_change_during_qualification_refuses(self):
+        self.index_drift=True;self.refuse()
+
+    def test_absent_to_present_and_present_to_absent_drift_refuse(self):
+        self.mutate_once=lambda:self.present(self.paths[0]);self.refuse()
+        p=self.root/self.paths[0];self.mutate_once=lambda:p.unlink();self.refuse()
+
+    def test_equal_bytes_replacement_and_manifest_drift_refuse(self):
+        p=self.present(self.paths[0])
+        def replace():p.unlink();self.present(self.paths[0])
+        self.mutate_once=replace;self.refuse()
+        self.mutate_once=lambda:self.manifest.write_bytes(self.manifest.read_bytes()+b' ')
+        self.refuse()
+
+
+class ABK32OriginalPinControls(unittest.TestCase):
+    PINS = {p: (*v, ABK32_EXPECTED_REVISION) for p,v in ABK32_EXPECTED_RECORDS.items()}
+    def setUp(self):
+        previous=Central47OriginalPinControls();previous.setUp()
+        self.base=previous.base;self.prior=previous.current
+        for p,(_,sha,size,_) in self.PINS.items():
+            row=dict(repository_path=p,source_sha256=sha,public_sha256=sha,source_bytes=size,public_bytes=size,
+                     disposition='REUSE',role='qualified_metadata',declared_eligibility_basis='reviewed_distribution_metadata',
+                     required_dependencies=[],source_action='include',publication_basis='exact_existing_public_repository_object')
+            for doc in (self.base.original,self.prior):doc['objects'].append(deepcopy(row))
+        self.current=self.base.pinned(self.prior,self.PINS)
+
+    def test_prior_reissue_stage_and_complete32_stage_remain_accepted(self):
+        self.assertTrue(self.base.permitted(self.prior));self.assertTrue(self.base.permitted(self.current))
+
+    def test_partial32_and_each_coordinate_identity_or_role_mutation_refuse(self):
+        for path in self.PINS:
+            for fields in (('repository_revision',),('git_blob',),('repository_revision','git_blob')):
+                with self.subTest(path=path, fields=fields):
+                    changed=deepcopy(self.current);r=next(r for r in changed['objects'] if r.get('repository_path')==path)
+                    for field in fields:r.pop(field)
+                    self.assertFalse(self.base.permitted(changed))
+        p=next(iter(self.PINS))
+        for field,value in [('repository_revision','HEAD'),('git_blob','0'*40),('source_sha256','0'*64),('public_sha256','0'*64),
+                            ('source_bytes',1),('public_bytes',1),('role','authored_code'),('disposition','PROJECT'),
+                            ('source_action','exclude'),('required_dependencies',['extra']),('publication_basis','other'),
+                            ('declared_eligibility_basis','other')]:
+            with self.subTest(field=field):
+                changed=deepcopy(self.current);next(r for r in changed['objects'] if r.get('repository_path')==p)[field]=value
+                self.assertFalse(self.base.permitted(changed))
+
+    def test_missing_duplicate_reordered_extra_row_and_top_level_change_refuse(self):
+        for kind in ('missing','duplicate','reordered','extra','metadata'):
+            with self.subTest(kind=kind):
+                changed=deepcopy(self.current)
+                if kind=='missing':changed['objects'].pop()
+                elif kind=='duplicate':changed['objects'].append(deepcopy(changed['objects'][-1]))
+                elif kind=='reordered':changed['objects'].reverse()
+                elif kind=='extra':changed['objects'].append({'repository_path':'unrelated'})
+                else:changed['schema']='changed'
+                self.assertFalse(self.base.permitted(changed))
+
+    def test_no_original_identity_rebinding_or_prior_stage_omission(self):
+        p=next(iter(self.PINS))
+        for field,value in [('source_sha256','0'*64),('public_sha256','0'*64),('source_bytes',1),('public_bytes',1),('disposition','PROJECT')]:
+            with self.subTest(field=field):
+                original=deepcopy(self.base.original);current=deepcopy(self.current)
+                for document in (original,current):next(r for r in document['objects'] if r.get('repository_path')==p)[field]=value
+                self.assertFalse(self.base.permitted(current,original))
+        prior_paths=set(Central47OriginalPinControls.PINS)|set(ReviewedReissueBwOriginalPinControls.PINS)|set(ReviewedCodexOriginalPinControls.PINS)
+        for p in prior_paths:
+            changed=deepcopy(self.current);r=next(r for r in changed['objects'] if r.get('repository_path')==p)
+            r.pop('repository_revision');r.pop('git_blob');self.assertFalse(self.base.permitted(changed))
+
+    def test_exact_candidate_delta_is_only_two_fields_for_all32(self):
+        self.assertTrue(self.base.permitted(self.current))
+        for p,(blob,sha,size,rev) in self.PINS.items():
+            old=next(r for r in self.prior['objects'] if r.get('repository_path')==p)
+            new=next(r for r in self.current['objects'] if r.get('repository_path')==p)
+            self.assertEqual(new,dict(old,repository_revision=rev,git_blob=blob))
+
+
+class ABK32CurrentnessTests(unittest.TestCase):
+    def gate(self, changes, qualified):
+        import inspect,types
+        reader=_abk32_test_reader();fn=reader.check_corpus_currentness
+        self.assertIn('abk_paths',inspect.signature(fn).parameters,'missing exact32 currentness parameter')
+        reader.ABK_PUBLIC_HISTORY_RECORDS=ABK32_EXPECTED_RECORDS
+        raw=''.join(status+'\0'+p+'\0' for status,p in changes).encode()
+        reader.readonly_git_diff=lambda *a:types.SimpleNamespace(returncode=0,stdout=raw)
+        return fn(Path('.'),'c'*40,abk_paths=qualified)
+
+    def test_only_qualified_exact_D_paths_are_admitted(self):
+        paths=sorted(ABK32_EXPECTED_RECORDS)
+        self.assertEqual(self.gate([('D',p) for p in paths],set(paths)),[])
+        self.assertEqual(self.gate([],set()),[])
+
+    def test_unqualified_modified_added_renamed_and_unrelated_refuse(self):
+        p=next(iter(ABK32_EXPECTED_RECORDS))
+        for status in ('M','A','T'):
+            with self.subTest(status=status):self.assertTrue(self.gate([(status,p)],{p}))
+        self.assertTrue(self.gate([('D',p)],set()))
+        self.assertTrue(self.gate([('D',p+'-other')],{p+'-other'}))
+        self.assertTrue(self.gate([('D',p),('M','unrelated')],{p}))
+
+
+class ABK32AllMemberControls(unittest.TestCase):
+    # Reuse fixture helpers, not inherited test methods. Ordinary discovery
+    # therefore runs each of the 33 additive methods exactly once.
+    setUp = ABK32AbsenceTests.setUp
+    save_manifest = ABK32AbsenceTests.save_manifest
+    present = ABK32AbsenceTests.present
+    qualify = ABK32AbsenceTests.qualify
+    refuse = ABK32AbsenceTests.refuse
+    def test_all_present_still_requires_all32_native_bodies(self):
+        for path in self.paths: self.present(path)
+        absent, errors = self.qualify()
+        self.assertEqual(errors, []); self.assertEqual(absent, set())
+        queried = [args[2] for args in self.native_calls if args[:2] == ('cat-file', 'blob')]
+        self.assertEqual(__import__('collections').Counter(queried),
+                         __import__('collections').Counter(v[0] for v in self.records.values()))
+
+    def test_each_current_present_member_corruption_refuses(self):
+        for path in self.paths: self.present(path)
+        for path in self.paths:
+            with self.subTest(path=path):
+                file = self.root/path; file.write_bytes(b'corrupt')
+                self.refuse(); file.write_bytes(self.bodies[path])
+
+
+class ABK32MainDispatchTests(unittest.TestCase):
+    def test_main_requires_central_then_abk_retains_both_errors_and_paths(self):
+        import types
+        reader=_abk32_test_reader(); events=[]
+        central_selected={next(iter(CENTRAL47_EXPECTED_RECORDS))}
+        abk_selected={next(iter(ABK32_EXPECTED_RECORDS))}
+        reader.entries_at=lambda *a:[]
+        reader.corpus_currentness_context=lambda *a:(({}, {}, {}, {}, {}),['context-sentinel'])
+        reader.check_frontier_record_absences=lambda *a:(set(),['frontier-sentinel'])
+        def central(repo,baseline):events.append(('central',baseline));return central_selected,['central-fatal-sentinel']
+        def abk(repo,baseline):events.append(('abk',baseline));return abk_selected,['abk-fatal-sentinel']
+        reader.check_central_public_absences=central
+        reader.check_abk_public_absences=abk
+        def currentness(*args,**kwargs):events.append(('currentness',args,kwargs));return ['currentness-sentinel']
+        reader.check_corpus_currentness=currentness
+        reader.check_collection_dispositions=lambda *a:['collection-sentinel']
+        reader.check_collection_result_routes=lambda *a:['route-sentinel']
+        reader.Counter=__import__('collections').Counter; reader.PROBES=set()
+        reader.yaml=types.SimpleNamespace(safe_load=lambda _: {'artifacts':[]},YAMLError=ValueError)
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);profile=root/'profile';profile.write_text('{}')
+            reader.safe_path=lambda *a:profile
+            owners={'schema':'orthemology-reader-owner-map-v1','external_body_admissions':[],
+                    'baseline':{'commit':'c'*40},'collections':[],'publication_profile':'profile'}
+            cross={'schema':'orthemology-reader-crosswalk-v1','coverage_stage':'reader-candidate'}
+            errors=reader.check(root,owners,cross)
+        self.assertEqual([e[0] for e in events],['central','abk','currentness'])
+        self.assertEqual(events[0][1],{}); self.assertEqual(events[1][1],{})
+        call=events[2]
+        self.assertEqual(call[2].get('central_paths',call[1][8] if len(call[1])>8 else set()),central_selected)
+        self.assertEqual(call[2].get('abk_paths',call[1][9] if len(call[1])>9 else set()),abk_selected)
+        self.assertEqual(set(errors),{'context-sentinel','frontier-sentinel','central-fatal-sentinel',
+                                     'abk-fatal-sentinel','currentness-sentinel','collection-sentinel','route-sentinel'})
 
 
 if __name__ == "__main__":
