@@ -155487,7 +155487,9 @@
       "repository_path": "tests/test_ar8r_codex_corpus_synthesis_v14.py",
       "public_sha256": "7801ae286ca0b8c8c4c1bce7e73aedc9dfb914474d66ea58c029c756ea1ef67e",
       "public_bytes": 46305,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "b5aa03c18c2e9df149f460955184bec83a6b46a0"
     },
     {
       "source_sha256": "7808397d7c49e8dc8a4249aacd7507acff8ab5ec114f7c591facd627b4ff9f17",

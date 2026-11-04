@@ -772,6 +772,11 @@ def _permitted_projection_consumer_pins(original, candidate):
                                                 '548d4358ca89755bbfd29b2df9a4b6b2b6ca36541cc5994e523198c40ddea26c',
                                                 11625,
                                                 '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
+    # The reviewed current Codex test preserves its original evidence edition.
+    codex_test_consumer = {'tests/test_ar8r_codex_corpus_synthesis_v14.py': ('b5aa03c18c2e9df149f460955184bec83a6b46a0',
+                                                       '7801ae286ca0b8c8c4c1bce7e73aedc9dfb914474d66ea58c029c756ea1ef67e',
+                                                       46305,
+                                                       '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
     for bindings in (earlier, next24, combined, dict(combined, **fixtures),
                      dict(combined, **fixtures, **replay_input),
                      dict(combined, **fixtures, **replay_input, **calculus_fixture),
@@ -786,7 +791,10 @@ def _permitted_projection_consumer_pins(original, candidate):
                           **frontier_test_consumers),
                      dict(combined, **fixtures, **replay_input, **calculus_fixture,
                           **digest_consumers, **attribution_consumers, **governance_consumers,
-                          **frontier_test_consumers, **intake_test_consumer)):
+                          **frontier_test_consumers, **intake_test_consumer),
+                     dict(combined, **fixtures, **replay_input, **calculus_fixture,
+                          **digest_consumers, **attribution_consumers, **governance_consumers,
+                          **frontier_test_consumers, **intake_test_consumer, **codex_test_consumer)):
         expected = deepcopy(original)
         try:
             for path, (blob, identity, size, revision) in bindings.items():
@@ -1189,7 +1197,15 @@ REVIEWED_AUTHORITY_EDITS = {'scripts/validate_candidate_state.py': ('scripts/val
                                              11625),
                                             ('dd04dd4c43f2bc1d7bd5aaa7f84a4c36c039cfc8',
                                              '15572c197d20db12d80668db0c8009459bfa5911a59d6c788f7e9ef92e9499f4',
-                                             25046))}
+                                             25046)),
+ 'tests/test_ar8r_codex_corpus_synthesis_v14.py': ('tests/test_ar8r_codex_corpus_synthesis_v14.py',
+                                                   '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c',
+                                                   ('b5aa03c18c2e9df149f460955184bec83a6b46a0',
+                                                    '7801ae286ca0b8c8c4c1bce7e73aedc9dfb914474d66ea58c029c756ea1ef67e',
+                                                    46305),
+                                                   ('851669b52eabe0a9262c8f7a5ca9cc2cd57971a8',
+                                                    'f535c52b5d47ef2fe21b8663d52505762dac7e7b8124c1b3cc5afb44f9c9f8d6',
+                                                    35766))}
 
 
 def reviewed_authority_modifications(repo, paths):

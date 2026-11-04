@@ -1736,6 +1736,100 @@ Integer doubling finds a true upper endpoint and integer binary search finds the
 
 The deterministic output is the quantized minimal antichain. It neither certifies the collision-free event nor recovers arbitrary original real coordinates or dominated routes. Accordingly, the ideal sharp rate in §2.28, this extraction theorem and a finite score-test guarantee are separate results. Expected or total query asymptotics, a comparison with face-only tests, noise tolerance and a physical realization require additional arguments; none follows merely from the finite-query bound above.
 
+### 2.30 A finite geometric score attains the vector order
+
+The extra step from §§2.28–2.29 to a finite test is to recover **area as well as count**, and to prove a score's mean separation under both full laws. Keep the known pair: $n\ge2$, $m=n+1$, $c=n/m$, $n$ iid product-uniform routes in world 0 and $m$ iid routes with CDF $1-(1-xy)^c$ in world 1. Queries use the stipulated noiseless rational-endpoint oracle on an unchanged retained vector; resets supply independent fresh vectors. Put $h=H_n$, $M=K-mU$ and
+
+```math
+J=M^2-K,\qquad b_n=\mathbb E_0J.
+```
+
+For fixed positive rational $\alpha,\eta$ with $\alpha+\eta<1$, a finite rational procedure below has per-world error at most $\alpha+\eta$ **for all sufficiently large $n$**. It uses $\Theta_{\alpha,\eta}(m^4/\log^2m)$ independent vectors. This is an additional score argument, not a consequence of the extraction theorem alone. [FINITE-GEOMETRIC-SCORE]
+
+**The signal and its nonzero center.** With $V=J/(2m^2)+2A/m$ as in §2.28 and $\Lambda$ denoting its common-support likelihood, the already established inputs are
+
+```math
+\mathbb E_0J^2\sim2h^2,\qquad
+\mathbb E_0(A/m)^2=O(h/m^4),\qquad
+\|(\log\Lambda-V)1_{G_m}\|_2=o(h/m^2).
+```
+
+On the shrinking window $G_m$, $\sup|\log\Lambda|\to0$ and $\|\log\Lambda\,1_{G_m}\|_2=O(h/m^2)$. The exponential remainder therefore gives
+$\|(\Lambda-1-V)1_{G_m}\|_2=o(h/m^2)$. Multiplying by $J$ and using Cauchy–Schwarz yields
+
+```math
+\mathbb E_0[J(\Lambda-1)1_{G_m}]
+=\frac{\mathbb E_0J^2}{2m^2}+2\mathbb E_0(JA/m)
+ +o(h^2/m^2)\sim\frac{h^2}{m^2}.
+```
+
+Here $2\mathbb E_0(JA/m)=O(h^{3/2}/m^2)$ is lower order. The global bounds $|J|\le m^2$, $|V|\le5$ on baseline support and the **two full-law** tails $Q_i(G_m^c)\le\beta_m$ justify replacing window moments and changing measure. In particular, the alternative-only stratum is included in the discarded term bounded by $2m^2\beta_m$, not removed by conditioning. Uniform $\Lambda\to1$ on the window likewise transfers the raw second moment; each omitted second-moment tail is at most $m^4\beta_m$. Thus
+
+```math
+\mathbb E_1J-b_n\sim h^2/m^2,\qquad
+\operatorname{Var}_0J\sim2h^2,\qquad
+\operatorname{Var}_1J\sim2h^2.
+```
+
+For the variance subtraction, the exact baseline formula, writing $a=H_m$ and $g=H_m^{(2)}$, is
+
+```math
+b_n=-\frac{2a}{m}+\frac{2}{m^2}
+    -\frac{a^2-g-4}{m+1}-\frac{2(a+1)}{(m+1)^2}.
+```
+
+It is rational and $O(h^2/m)=o(h)$, so both squared means are negligible compared with $h^2$. It is generally **not zero**: replacing it by its limiting value would lose the relevant finite-$n$ centering. No alternative fourth-moment formula is assumed. [SHARP-SKYLINE] [SKYLINE-BASELINE] [FINITE-GEOMETRIC-SCORE]
+
+**The finite prescription.** Compute exact rational harmonics and set
+
+```math
+R=\left\lceil\frac{192m^4}{\alpha h^2}\right\rceil,\qquad
+L=\max\left\{\left\lceil\frac{32m^5}{h^2}\right\rceil,
+              \left\lceil\left(\frac{m(m-1)R}{\eta}\right)^{m/n}\right\rceil\right\},
+\qquad t=b_n+\frac{h^2}{4m^2}.
+```
+
+The power ceiling uses the integer inequality from §2.29: if $m(m-1)R/\eta=p/q$, choose the least positive integer $L_{\rm collision}$ with $L_{\rm collision}^{n}q^m\ge p^m$. Doubling followed by integer binary search terminates, without a floating-point or exact-real exponent oracle.
+
+On each of $R$ fresh retained vectors, extract the rounded minimal corners $(a_i,b_i)$, ordered by increasing first coordinate, and set $a_{K_L+1}=L$. Their rational uncovered area and score are
+
+```math
+U_L=\frac{a_1L+\sum_{i=1}^{K_L}(a_{i+1}-a_i)b_i}{L^2},
+\qquad J_L=(K_L-mU_L)^2-K_L.
+```
+
+For an empty output set take $U_L=1$, $K_L=0$; this is an algorithmic boundary, not an empty vector in either statistical world. Computing area from these same corners uses no additional oracle queries and no observation of the hidden actual route count. Choose world 1 iff $\sum_{r=1}^R J_{L,r}\ge Rt$, **including strict exceedance and equality**, and world 0 otherwise. This is the corrected predicate in §2.28, not the historical equality-only sentence. All arithmetic and extraction terminate under the supplied oracle/reset contract. [FINITE-SKYLINE-READOUT] [FINITE-GEOMETRIC-SCORE]
+
+**Why the finite errors are controlled.** Upward rounding loses at most $2/L$ area from each upper dominated rectangle, so deterministically $0\le U_L-U\le2m/L$. Let $C$ mean that all $R$ vectors have no two labeled routes sharing a bin in either coordinate. On $C$, $K_L=K$, hence
+
+```math
+|J_L-J|\le m|U_L-U|\,|2K-m(U+U_L)|
+          \le4m^3/L\le e,\qquad e=\frac{h^2}{8m^2}.
+```
+
+The score difference has no fixed sign. The marginal-bin bound in §2.29 gives $Q_i(C^c)\le Rm(m-1)L^{-c}\le\eta$; no independence of $C$ from the scores or between a route's coordinates is used. For sufficiently large $n$, the moment equivalents give $\mathbb E_1J-b_n\ge4e$ and both variances at most $3h^2$. On $C$, a wrong world-0 decision forces $\bar J-b_n\ge e$; a wrong world-1 decision forces $\mathbb E_1J-\bar J>e$, since $t=b_n+2e$. Apply Chebyshev to the **unconditioned ideal** averages on the independent vectors, then pay the coupling failure separately:
+
+```math
+Q_i(\text{wrong decision})
+\le\eta+\frac{3h^2}{Re^2}
+=\eta+\frac{192m^4}{Rh^2}\le\eta+\alpha.
+```
+
+Neither conditional moments on $C$ nor an unconditional score-bias bound has been assumed. This proves existence of an eventual cutoff, not a computed numerical $n_0$. [FINITE-GEOMETRIC-SCORE]
+
+**What resources are bounded.** Put $d_L=\lceil\log_2(L+1)\rceil$. The actual extraction bound and $K_L\le K$ give
+
+```math
+T\le1+m(1+2d_L),\qquad
+\mathbb E_iT\le1+(1+2d_L)H_m.
+```
+
+The second inequality uses $\mathbb E_0K=H_n$ and the additional shared-uniform count coupling $\mathbb E_1K\le H_m$, not independent Joe record indicators or an unreceived exact alternative mean. At fixed $\alpha,\eta$, $R=\Theta(m^4/h^2)$ and the prescribed $L$ is polynomially bounded, so $d_L=O(\log m)$. Consequently total oracle calls are $O(m^4)$ in expectation in either world and $O(m^5/\log m)$ deterministically in the worst case. These are mathematical **upper bounds**, not query-optimal rates or physical durations. [SKYLINE-COUNT] [FINITE-SKYLINE-READOUT] [FINITE-GEOMETRIC-SCORE]
+
+For fixed $0<\varepsilon<1/2$, choose positive rational $\alpha,\eta$ with $\alpha+\eta\le\varepsilon$. The procedure uses exactly $R$ started vectors and meets §2.28's known-pair lower-bound contract: common policies, independent fresh vectors, unconditional terminal correctness and charging every vector from its first observation. Thus the independent-vector order is $\Theta_\varepsilon(m^4/\log^2m)$, including optimal baseline expected and worst-world expected started-vector cost. This does not prove an exact optimal constant, endpoint-query optimality, a growing-confidence bound or unknown-pair minimax performance. [SHARP-SKYLINE]
+
+The construction is finite for each supplied $n\ge2$, but its accuracy guarantee is only eventual; no effective cutoff, all-$n$ budget or $n=1$ fallback is established here. Rational arithmetic cost, physical precision, noisy observation, retention and reset availability remain separate. This mathematical transfer does not certify the complete historical program or its execution. Its exact scientific inputs and the additional count argument suffice for the theorem; three historical source-binding/review declarations remain unreceived, so the historical package's review and currentness claims remain unknown.
+
 ## 3. The information hidden between target and audit marginals
 
 Let target $`\Theta`$, source type $`T`$, report $`Y`$, and verifier $`V`$ be binary. The target and type are independent and uniform. The report is $`9/10`$-accurate for a good source and $`1/2`$-accurate for a bad source. The verifier is $`4/5`$-accurate and conditionally independent of the report given $`(\Theta,T)`$. Define

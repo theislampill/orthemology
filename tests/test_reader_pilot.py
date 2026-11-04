@@ -10505,5 +10505,99 @@ class ReviewedCentralIntakeOriginalPinControls(unittest.TestCase):
                     changed['schema'] = 'unreviewed'
                 self.assertFalse(self.base.permitted(changed))
 
+
+
+class ReviewedCodexTestEdition(unittest.TestCase):
+    """The exact Codex live-control edition use the existing ordinary-file guard."""
+    CONTRACTS = {'tests/test_ar8r_codex_corpus_synthesis_v14.py': ('tests/test_ar8r_codex_corpus_synthesis_v14.py',
+                                                       '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c',
+                                                       ('b5aa03c18c2e9df149f460955184bec83a6b46a0',
+                                                        '7801ae286ca0b8c8c4c1bce7e73aedc9dfb914474d66ea58c029c756ea1ef67e',
+                                                        46305),
+                                                       ('851669b52eabe0a9262c8f7a5ca9cc2cd57971a8',
+                                                        'f535c52b5d47ef2fe21b8663d52505762dac7e7b8124c1b3cc5afb44f9c9f8d6',
+                                                        35766))}
+    PATHS = tuple(CONTRACTS)
+    fixture = ReviewedAuthorityControls.fixture
+    currentness = ReviewedAuthorityControls.currentness
+    def test_exact_owner_edition_and_requested_subset(self):
+        module, repo, calls = self.fixture()
+        self.assertEqual(module.reviewed_authority_modifications(repo, set(self.PATHS)), set(self.PATHS))
+        self.assertEqual(module.reviewed_authority_modifications(repo, set()), set())
+    test_wrong_missing_or_nonordinary_current_owner_refuses = ReviewedAuthorityControls.test_wrong_missing_or_nonordinary_current_owner_refuses
+    test_history_index_and_native_failures_refuse = ReviewedAuthorityControls.test_history_index_and_native_failures_refuse
+    test_currentness_admits_only_requested_qualified_modifications = ReviewedAuthorityControls.test_currentness_admits_only_requested_qualified_modifications
+    test_deletion_type_change_addition_and_unrelated_edit_refuse = ReviewedAuthorityControls.test_deletion_type_change_addition_and_unrelated_edit_refuse
+    test_unchanged_positive_and_extra_path_refusal = ReviewedAuthorityControls.test_unchanged_positive_and_extra_path_refusal
+
+    def test_only_exact_reviewed_codex_test_contract_is_admitted(self):
+        import ast
+        tree = ast.parse((ROOT / 'scripts/check_reader_pilot.py').read_bytes())
+        table = next(n for n in tree.body if isinstance(n, ast.Assign)
+                     and any(isinstance(t, ast.Name) and t.id == 'REVIEWED_AUTHORITY_EDITS'
+                             for t in n.targets))
+        contracts = ast.literal_eval(table.value)
+        for path, expected in self.CONTRACTS.items():
+            with self.subTest(path=path):
+                self.assertEqual(contracts.get(path), expected)
+        self.assertNotIn('tests/', contracts)
+
+
+class ReviewedCodexOriginalPinControls(unittest.TestCase):
+    """Preserve the original codex live-test bytes as exact historical REUSE objects."""
+    PINS = {'tests/test_ar8r_codex_corpus_synthesis_v14.py': ('b5aa03c18c2e9df149f460955184bec83a6b46a0',
+                                                       '7801ae286ca0b8c8c4c1bce7e73aedc9dfb914474d66ea58c029c756ea1ef67e',
+                                                       46305,
+                                                       '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
+
+    def setUp(self):
+        previous = ReviewedCentralIntakeOriginalPinControls()
+        previous.setUp()
+        self.base = previous.base
+        self.prior = previous.current
+        for path, (_, identity, size, _) in self.PINS.items():
+            row = dict(repository_path=path, source_sha256=identity, public_sha256=identity,
+                       source_bytes=size, public_bytes=size, disposition='REUSE', role='unchanged-role')
+            for document in (self.base.original, self.prior):
+                document['objects'].append(deepcopy(row))
+        self.current = self.base.pinned(self.prior, self.PINS)
+
+    def test_prior_and_complete_codex_coordinate_are_accepted(self):
+        self.assertTrue(self.base.permitted(self.prior))
+        self.assertTrue(self.base.permitted(self.current))
+
+    def test_partial_pin_and_each_identity_coordinate_or_role_change_refuse(self):
+        for path in self.PINS:
+            for field, value in (('repository_revision', 'HEAD'), ('git_blob', '0' * 40),
+                                 ('source_sha256', '0' * 64), ('public_sha256', '0' * 64),
+                                 ('source_bytes', 1), ('public_bytes', 1),
+                                 ('disposition', 'PROJECT'), ('role', 'unreviewed')):
+                with self.subTest(path=path, field=field):
+                    changed = deepcopy(self.current)
+                    next(r for r in changed['objects'] if r.get('repository_path') == path)[field] = value
+                    self.assertFalse(self.base.permitted(changed))
+            for field in ('repository_revision', 'git_blob'):
+                with self.subTest(path=path, missing=field):
+                    changed = deepcopy(self.current)
+                    row = next(r for r in changed['objects'] if r.get('repository_path') == path)
+                    row.pop(field)
+                    self.assertFalse(self.base.permitted(changed))
+
+    def test_missing_duplicate_reordered_and_unrelated_objects_refuse(self):
+        for kind in ('missing', 'duplicate', 'reordered', 'unrelated', 'metadata'):
+            with self.subTest(kind=kind):
+                changed = deepcopy(self.current)
+                if kind == 'missing':
+                    changed['objects'].pop()
+                elif kind == 'duplicate':
+                    changed['objects'].append(deepcopy(changed['objects'][-1]))
+                elif kind == 'reordered':
+                    changed['objects'].reverse()
+                elif kind == 'unrelated':
+                    changed['objects'][0]['role'] = 'unreviewed'
+                else:
+                    changed['schema'] = 'unreviewed'
+                self.assertFalse(self.base.permitted(changed))
+
 if __name__ == "__main__":
     unittest.main()
