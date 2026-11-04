@@ -2728,8 +2728,7 @@ class CheckpointRecordCopyMigrationTests(unittest.TestCase):
         formal = source._formal_copy_catalog()
         for relative, blob, identity, size in cls.CONTEXT_MEMBERS:
             path = str(pathlib.PurePosixPath(cls.CONTEXT_SOURCE).parent / relative)
-            binding = dict(canonical=path, blob=blob, sha256=identity, bytes=size, mode='100644')
-            body = source._checkpoint_bound_bytes(projection.ROOT, path, binding)
+            body = source.formal_copy_bytes(projection.ROOT, path, identity, size)
             if cls.bodies.setdefault(path, body) != body:
                 raise AssertionError('original-context fixture body conflicts')
             # These five original-context dependencies now authenticate their
@@ -5066,6 +5065,108 @@ class StatusProjectionCompositionControls(unittest.TestCase):
         result, calls = self._gate(diff_status=1)
         self.assertTrue(result)
         self.assertEqual(calls, [])
+
+class CheckpointRecordContextDispatchTests(unittest.TestCase):
+    """Test only the five-context fixture loop; native provenance is not replayed."""
+
+    def fixture_context(self, mutation=None):
+        test_tree = ast.parse(Path(__file__).read_text(encoding='utf-8'))
+        fixture = next(n for n in test_tree.body if isinstance(n, ast.ClassDef)
+                       and n.name == 'CheckpointRecordCopyMigrationTests')
+        constants = {n.targets[0].id: ast.literal_eval(n.value) for n in fixture.body
+                     if isinstance(n, ast.Assign) and isinstance(n.targets[0], ast.Name)
+                     and n.targets[0].id in ('CONTEXT_SOURCE', 'CONTEXT_MEMBERS')}
+        cls = types.SimpleNamespace(**constants, bodies={})
+        owner_path = projection.ROOT / 'scripts/resolve_t20_v6_source.py'
+        owner = ast.parse(owner_path.read_text(encoding='utf-8'))
+        rows = ast.literal_eval(next(n.value for n in owner.body if isinstance(n, ast.Assign)
+                    and any(isinstance(t, ast.Name) and t.id == 'FORMAL_COPY_MEMBERS' for t in n.targets)))
+        catalog = {a: dict(canonical=c, blob=b, sha256=h, bytes=z, mode='100644')
+                   for a, c, b, h, z in rows}
+        aliases = [str(pathlib.PurePosixPath(cls.CONTEXT_SOURCE).parent / r[0])
+                   for r in cls.CONTEXT_MEMBERS]
+        if len(aliases) != 5 or len(set(aliases)) != 5:
+            raise AssertionError('five distinct fixture aliases required')
+        expected = {a: dict(catalog[a]) for a in aliases}
+        body = b'synthetic-provenance-leaf-result'
+        if mutation == 'identity':
+            row = list(cls.CONTEXT_MEMBERS[0]); row[2] = '0' * 64
+            cls.CONTEXT_MEMBERS = (tuple(row),) + cls.CONTEXT_MEMBERS[1:]
+        elif mutation == 'size':
+            row = list(cls.CONTEXT_MEMBERS[0]); row[3] += 1
+            cls.CONTEXT_MEMBERS = (tuple(row),) + cls.CONTEXT_MEMBERS[1:]
+        elif mutation == 'mode':
+            catalog[aliases[0]]['mode'] = '120000'
+        elif mutation == 'logical-conflict':
+            cls.bodies[aliases[0]] = b'conflicting logical fixture'
+        elif mutation == 'retained-conflict':
+            cls.bodies[expected[aliases[0]]['canonical']] = b'conflicting retained fixture'
+        elif mutation == 'missing-route':
+            del catalog[aliases[0]]
+        calls = []
+        def bound_bytes(root, alias, binding):
+            # An inert provenance boundary, not a replacement native verifier.
+            # Only the exact selected retained route supplies a synthetic body.
+            if mutation == 'native-refusal':
+                raise ValueError('synthetic native provenance refusal')
+            if binding.get('canonical') == alias:
+                raise FileNotFoundError('historical alias is absent in this fixture')
+            if {k: v for k, v in binding.items() if k != 'mode'} != {
+                    k: v for k, v in expected[alias].items() if k != 'mode'}:
+                raise ValueError('fixture retained binding differs')
+            calls.append((alias, dict(binding)))
+            return body
+        source = types.SimpleNamespace(_formal_copy_catalog=lambda: catalog,
+                                       _checkpoint_bound_bytes=bound_bytes)
+        reader = next(n for n in owner.body if isinstance(n, ast.FunctionDef)
+                      and n.name == 'formal_copy_bytes')
+        scope = dict(FORMAL_COPY_PATHS=frozenset(catalog), _formal_copy_catalog=lambda: catalog,
+                     _checkpoint_bound_bytes=bound_bytes)
+        exec(compile(ast.Module(body=[reader], type_ignores=[]), str(owner_path), 'exec'), scope)
+        source.formal_copy_bytes = scope['formal_copy_bytes']
+        setup = next(n for n in fixture.body if isinstance(n, ast.FunctionDef) and n.name == 'setUpClass')
+        start = next(i for i, n in enumerate(setup.body) if isinstance(n, ast.Assign)
+                     and any(isinstance(t, ast.Name) and t.id == 'formal' for t in n.targets))
+        end = next(i for i, n in enumerate(setup.body) if isinstance(n, ast.Assign)
+                   and any(isinstance(t, ast.Name) and t.id == 'manifest' for t in n.targets))
+        selected = ast.Module(body=setup.body[start:end], type_ignores=[])
+        exec(compile(selected, str(Path(__file__)), 'exec'),
+             dict(cls=cls, source=source, projection=projection, pathlib=pathlib))
+        return calls, cls.bodies, expected, body
+
+    def test_absent_aliases_use_all_five_exact_retained_routes(self):
+        try:
+            calls, bodies, expected, body = self.fixture_context()
+        except OSError as error:
+            self.fail(f'fixture still requires absent historical alias: {error}')
+        self.assertEqual(dict(calls), expected)
+        self.assertEqual(len(calls), 5)
+        for alias, binding in expected.items():
+            self.assertEqual(bodies[alias], body)
+            self.assertEqual(bodies[binding['canonical']], body)
+
+    def test_requested_identity_and_size_cannot_drift(self):
+        for mutation in ('identity', 'size'):
+            with self.subTest(mutation=mutation), self.assertRaises(ValueError):
+                self.fixture_context(mutation)
+
+    def test_retained_mode_cannot_drift(self):
+        with self.assertRaises(AssertionError):
+            self.fixture_context('mode')
+
+    def test_logical_and_retained_fixture_conflicts_are_rejected(self):
+        for mutation in ('logical-conflict', 'retained-conflict'):
+            with self.subTest(mutation=mutation), self.assertRaises(AssertionError):
+                self.fixture_context(mutation)
+
+    def test_missing_retained_route_is_not_success(self):
+        with self.assertRaises((ValueError, KeyError)):
+            self.fixture_context('missing-route')
+
+    def test_native_provenance_refusal_is_not_suppressed(self):
+        with self.assertRaises(ValueError):
+            self.fixture_context('native-refusal')
+
 
 if __name__ == '__main__':
     unittest.main()

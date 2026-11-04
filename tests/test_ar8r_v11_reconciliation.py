@@ -869,7 +869,7 @@ class TestAr8rV11Reconciliation(unittest.TestCase):
             self.assertIn("pmr007-deep-execution-verification-class-overclaim", aggregate_issues)
             self.assertIn("pmr007-deep-broad-ledger-boundary-mismatch", aggregate_issues)
 
-    def test_pmr007_deep_a_bk_snapshot_is_exact_reproducible_and_fail_closed(self):
+    def test_pmr007_deep_a_bk_history_and_current_authority_remain_bounded(self):
         receipt = self.load_yaml(PMR007_DEEP_BK_RECEIPT)
         self.assertEqual(
             receipt["source_archive"]["sha256"],
@@ -907,21 +907,6 @@ class TestAr8rV11Reconciliation(unittest.TestCase):
             )
         )
 
-        listed = set()
-        for line in (PMR007_DEEP_BK_PROPOSAL / "SHA256SUMS").read_text(encoding="utf-8").splitlines():
-            digest, relative = line.split(maxsplit=1)
-            relative = relative.lstrip("*").replace("\\", "/")
-            target = PMR007_DEEP_BK_PROPOSAL / relative
-            self.assertTrue(target.is_file(), relative)
-            self.assertEqual(hashlib.sha256(target.read_bytes()).hexdigest(), digest, relative)
-            listed.add(relative)
-        actual = {
-            path.relative_to(PMR007_DEEP_BK_PROPOSAL).as_posix()
-            for path in PMR007_DEEP_BK_PROPOSAL.rglob("*")
-            if path.is_file() and path.name != "SHA256SUMS"
-        }
-        self.assertEqual(len(listed), 1186)
-        self.assertEqual(listed, actual)
 
         execution = self.load_yaml(PMR007_DEEP_BK_EXECUTION)
         self.assertEqual(execution["bf_through_bk_checks"]["scripts_executed"], 13)
@@ -931,6 +916,7 @@ class TestAr8rV11Reconciliation(unittest.TestCase):
         self.assertEqual(execution["authority_effect"], "NONE")
 
         validator = self.load_validator()
+        self.assertEqual(validator.validate_pmr007_deep_bk_current(ROOT), [])
         validate_deep_bk = getattr(validator, "validate_pmr007_deep_bk_proposal", None)
         self.assertIsNotNone(validate_deep_bk, "missing Deep A-BK fail-closed validator")
         if validate_deep_bk is not None:
@@ -2211,6 +2197,119 @@ class Pmr007RoundsDuplicateAliasTests(unittest.TestCase):
         _duplicate_fixture_git(self.repo, "update-index", "--chmod=+x", "--", self.navigation)
         self.assertTrue(self.reader.check_corpus_currentness(self.repo, self.baseline))
 
+
+
+class CurrentBkReconciliationConsumerTests(unittest.TestCase):
+    """Exercise the real reconciliation call site without historical packets."""
+
+    @staticmethod
+    def current_receipt():
+        return {
+            'schema': 'ar8r-pmr007-public-correction-validation-receipt-v1',
+            'result': 'PASS_CURRENT_CORRECTIONS_ONLY',
+            'validation_scope': 'CURRENT_CORRECTION_AND_AUTHORITY_BOUNDARIES',
+            'historical_snapshot_validation': 'NOT_RUN',
+            'repository_source_exact_set': True, 'crosswalk_values_exact': True,
+            'authority_ceiling_exact': True, 'current_public_files_checked': 0,
+            'current_public_non_utf8_files': 0, 'private_paths_in_current_public_sources': 0,
+            'repository_source_rows': 12, 'repository_source_unsafe_paths': 0,
+            'repository_source_malformed_rows': 0, 'repository_source_hash_mismatches': 0,
+            'private_exclusion_rows': 4, 'private_paths_in_public_corrections': 0,
+            'self_contained_public_rereview_reproduction': False, 'issues': [],
+        }
+
+    def call_current_section(self, receipt, failure=None):
+        import ast
+        import types
+        tree = ast.parse(RECONCILIATION_VALIDATOR.read_text(encoding='utf-8'))
+        packet = next(n for n in tree.body if isinstance(n, ast.FunctionDef)
+                      and n.name == 'validate_packet')
+        def contains(node, name):
+            return any(isinstance(n, ast.Name) and n.id == name for n in ast.walk(node))
+        start = next(i for i, n in enumerate(packet.body)
+                     if contains(n, 'validate_pmr007_deep_bk_proposal')) + 1
+        end = next(i for i, n in enumerate(packet.body)
+                   if contains(n, 'validate_visible_source_manifest'))
+        selected = packet.body[start:end]
+        helpers = [n for n in tree.body if isinstance(n, ast.FunctionDef)
+                   and n.name == 'validate_pmr007_deep_bk_current']
+        function = ast.FunctionDef(name='selected', args=ast.arguments(
+            posonlyargs=[], args=[], vararg=None, kwonlyargs=[], kw_defaults=[],
+            kwarg=None, defaults=[]), body=selected + [ast.Return(
+                value=ast.Name(id='issues', ctx=ast.Load()))], decorator_list=[])
+        predicate_path = ROOT / 'scripts/validate_pmr007_deep_bv_semantic_reissue.py'
+        predicate_tree = ast.parse(predicate_path.read_text(encoding='utf-8'))
+        predicate = next(n for n in predicate_tree.body if isinstance(n, ast.FunctionDef)
+                         and n.name == '_current_correction_boundaries_valid')
+        contract = types.ModuleType('selected_current_contract')
+        exec(compile(ast.Module(body=[predicate], type_ignores=[]), str(predicate_path),
+                     'exec'), contract.__dict__)
+        def validate(root):
+            if failure is not None:
+                raise failure
+            return receipt
+        owner = types.SimpleNamespace(validate=validate)
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            scope = dict(ROOT=root, PMR007_DEEP_BK_PROPOSAL=root / 'absent-history',
+                         issues=[], hashlib=hashlib, Any=object, Path=Path)
+            code = ast.fix_missing_locations(ast.Module(body=helpers + [function], type_ignores=[]))
+            exec(compile(code, str(RECONCILIATION_VALIDATOR), 'exec'), scope)
+            with mock.patch.dict(sys.modules, {
+                    'validate_pmr007_deep_bk_public_snapshot': owner,
+                    'validate_pmr007_deep_bv_semantic_reissue': contract}):
+                return scope['selected']()
+
+    def test_current_contract_needs_no_historical_snapshot(self):
+        self.assertEqual(self.call_current_section(self.current_receipt()), [])
+
+    def test_historical_pass_cannot_replace_current_contract(self):
+        receipt = self.current_receipt()
+        for key, value in [('result', 'PASS'), ('historical_snapshot_validation', 'PASS'),
+                           ('validation_scope', 'HISTORICAL_SNAPSHOT')]:
+            with self.subTest(key=key):
+                changed = dict(receipt, **{key: value})
+                self.assertIn('pmr007-deep-bk-current-correction-boundary-failed',
+                              self.call_current_section(changed))
+
+    def test_missing_or_malformed_current_receipt_is_rejected(self):
+        receipt = self.current_receipt()
+        for changed in [None, [], {}, *[{k: v for k, v in receipt.items() if k != key}
+                                       for key in receipt]]:
+            with self.subTest(receipt=changed):
+                self.assertIn('pmr007-deep-bk-current-correction-boundary-failed',
+                              self.call_current_section(changed))
+
+    def test_current_authority_and_source_guards_are_required(self):
+        for key in ('repository_source_exact_set', 'crosswalk_values_exact', 'authority_ceiling_exact'):
+            for value in (False, 1):
+                with self.subTest(key=key, value=value):
+                    self.assertTrue(self.call_current_section(dict(self.current_receipt(), **{key: value})))
+
+    def test_current_privacy_and_count_failures_are_rejected(self):
+        receipt = self.current_receipt()
+        for key, value in receipt.items():
+            if type(value) is int:
+                for replacement in (-1, True, value + 1):
+                    if key == 'current_public_files_checked' and type(replacement) is int and replacement >= 0:
+                        continue
+                    with self.subTest(key=key, value=replacement):
+                        self.assertTrue(self.call_current_section(dict(receipt, **{key: replacement})))
+
+    def test_current_issues_and_reproduction_promotion_are_rejected(self):
+        for changed in (dict(self.current_receipt(), issues=['failed current privacy']),
+                        dict(self.current_receipt(), self_contained_public_rereview_reproduction=True)):
+            self.assertTrue(self.call_current_section(changed))
+
+    def test_current_owner_read_failure_is_not_success(self):
+        for error in (OSError('unavailable current owner'), ValueError('malformed current owner')):
+            with self.subTest(error=type(error).__name__):
+                self.assertIn('pmr007-deep-bk-current-correction-unavailable',
+                              self.call_current_section(None, error))
+
+    def test_successful_current_count_may_change_without_restoring_history(self):
+        self.assertEqual(self.call_current_section(dict(self.current_receipt(),
+                         current_public_files_checked=17)), [])
 
 
 if __name__ == "__main__":

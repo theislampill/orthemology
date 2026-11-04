@@ -2766,6 +2766,19 @@ def validate_task7_public_privacy() -> list[str]:
     return list(dict.fromkeys(issues))
 
 
+def validate_pmr007_deep_bk_current(root: Path) -> list[str]:
+    """Use the current correction owner without replaying historical membership."""
+    try:
+        from validate_pmr007_deep_bk_public_snapshot import validate
+        from validate_pmr007_deep_bv_semantic_reissue import _current_correction_boundaries_valid
+        receipt = validate(root)
+    except (ImportError, OSError, ValueError):
+        return ["pmr007-deep-bk-current-correction-unavailable"]
+    if not _current_correction_boundaries_valid(receipt):
+        return ["pmr007-deep-bk-current-correction-boundary-failed"]
+    return []
+
+
 def validate_packet() -> list[str]:
     issues: list[str] = []
     for path in (
@@ -3140,29 +3153,7 @@ def validate_packet() -> list[str]:
             PMR007_DEEP_BK_CORRECTION.read_text(encoding="utf-8"),
         )
     )
-    deep_bk_sums = PMR007_DEEP_BK_PROPOSAL / "SHA256SUMS"
-    deep_bk_listed: set[str] = set()
-    if not deep_bk_sums.is_file():
-        issues.append("pmr007-deep-bk-missing-internal-sha256sums")
-    else:
-        for line in deep_bk_sums.read_text(encoding="utf-8").splitlines():
-            if not line.strip():
-                continue
-            digest, relative = line.split(maxsplit=1)
-            relative = relative.lstrip("*").replace("\\", "/")
-            target = PMR007_DEEP_BK_PROPOSAL / relative
-            deep_bk_listed.add(relative)
-            if not target.is_file():
-                issues.append(f"pmr007-deep-bk-missing-checksummed-member:{relative}")
-            elif hashlib.sha256(target.read_bytes()).hexdigest() != digest:
-                issues.append(f"pmr007-deep-bk-member-hash-mismatch:{relative}")
-        deep_bk_actual = {
-            path.relative_to(PMR007_DEEP_BK_PROPOSAL).as_posix()
-            for path in PMR007_DEEP_BK_PROPOSAL.rglob("*")
-            if path.is_file() and path.name != "SHA256SUMS"
-        }
-        if len(deep_bk_listed) != 1186 or deep_bk_listed != deep_bk_actual:
-            issues.append("pmr007-deep-bk-internal-sha256sums-coverage-mismatch")
+    issues.extend(validate_pmr007_deep_bk_current(ROOT))
 
     issues.extend(validate_visible_source_manifest(load_yaml(VISIBLE_SOURCE_MANIFEST)))
     issues.extend(validate_file_card_archive_conflicts(load_yaml(FILE_CARD_ARCHIVE_CONFLICTS)))
