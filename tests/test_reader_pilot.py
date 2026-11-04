@@ -9608,7 +9608,7 @@ class Digest176ReaderContractTests(unittest.TestCase):
             raise AssertionError('unrelated original-body qualifier was invoked')
         ns = self.namespace
         for name in ('CHECKPOINT_COPY_PATHS', 'CHECKPOINT_RECORD_COPY_PATHS',
-                     'CHECKPOINT_PACKAGE_COPY_PATHS', 'FORMAL_COPY_PATHS',
+                     'CHECKPOINT_PACKAGE_COPY_PATHS', 'FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS',
                      'CHECKPOINT_CODE_COPY_PATHS', 'DIGEST_RECORD_PATHS',
                      'SUCCESSOR_INPUT_PATHS', 'GENERATED_FIXTURE_PATHS',
                      'ADMIN_RECORD_PATHS', 'ADMIN_GUIDES', 'CONTINUATION_OWNER_PATHS',
@@ -9620,7 +9620,7 @@ class Digest176ReaderContractTests(unittest.TestCase):
             ns[name] = 'synthetic-unrelated/' + name
         for name in ('pmr007_deep_duplicate_paths', 'pmr007_rounds_duplicate_paths',
                      'checkpoint_duplicate_paths', 'checkpoint_record_duplicate_paths',
-                     'checkpoint_package_duplicate_paths', 'formal_duplicate_paths',
+                     'checkpoint_package_duplicate_paths', 'formal_duplicate_paths','formal_provider_absences',
                      'checkpoint_code_duplicate_paths', 'digest_record_absences',
                      'pmr007_rounds_formalization_navigation', 'continuation_duplicate_paths',
                      'successor_input_absences', 'successor_calculus_map_absences',
@@ -9753,12 +9753,12 @@ class ReviewedSourcingLedgerControls(unittest.TestCase):
             CONTINUATION_COPY_ROOT='unused-continuation/',SUCCESSOR_INPUT_REGISTRY='unused-input',
             SUCCESSOR_CALCULUS_MAP='unused-calculus',MEDIATOR_GUIDE='unused-guide')
         for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS',
-            'FORMAL_COPY_PATHS','CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','SUCCESSOR_INPUT_PATHS',
+            'FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS','CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','SUCCESSOR_INPUT_PATHS',
             'GENERATED_FIXTURE_PATHS','ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS',
             'FIXTURE_CONSUMER_ORIGINAL','HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'):
             namespace[name]=set()
         for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_duplicate_paths',
-            'checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths','formal_duplicate_paths',
+            'checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths','formal_duplicate_paths','formal_provider_absences',
             'checkpoint_code_duplicate_paths','digest_record_absences'):
             namespace[name]=lambda *a:set()
         namespace.update(binding_record_candidate=lambda p:False,status_record_candidate=lambda p:False)
@@ -9868,12 +9868,12 @@ class ReviewedAuthorityControls(unittest.TestCase):
         ns.update(REFACTOR_EDIT_PATHS=set(),PMR007_DEEP_PREFIX='unused-deep',PMR007_ROUNDS_PREFIX='unused-rounds',
             PMR007_ROUNDS_FORMALIZATION='unused-formal',CONTINUATION_COPY_ROOT='unused-copy/',SUCCESSOR_INPUT_REGISTRY='unused-input',
             SUCCESSOR_CALCULUS_MAP='unused-map',MEDIATOR_GUIDE='unused-guide',REVIEWED_AUTHORITY_EDITS={p:None for p in self.PATHS})
-        for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS','FORMAL_COPY_PATHS',
+        for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS','FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS',
                      'CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','SUCCESSOR_INPUT_PATHS','GENERATED_FIXTURE_PATHS',
                      'ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS','FIXTURE_CONSUMER_ORIGINAL',
                      'HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'):ns[name]=set()
         for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_duplicate_paths',
-                     'checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths','formal_duplicate_paths',
+                     'checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths','formal_duplicate_paths','formal_provider_absences',
                      'checkpoint_code_duplicate_paths','digest_record_absences'):ns[name]=lambda *a:set()
         ns.update(binding_record_candidate=lambda p:False,status_record_candidate=lambda p:False)
         def qualify(repo,requested):
@@ -10054,12 +10054,12 @@ class ReviewedGovernanceEditionControls(unittest.TestCase):
                   SUCCESSOR_INPUT_REGISTRY='unused-input', SUCCESSOR_CALCULUS_MAP='unused-map', MEDIATOR_GUIDE='unused-guide',
                   REVIEWED_AUTHORITY_EDITS={self.OWNER: (self.OWNER, 'a'*40, ('old', 'old', 1), ('new', 'new', 2)),
                                             self.ADDED: (self.ADDED, 'a'*40, None, ('new', 'new', 2))})
-        for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS','FORMAL_COPY_PATHS',
+        for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS','FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS',
                      'CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','SUCCESSOR_INPUT_PATHS','GENERATED_FIXTURE_PATHS',
                      'ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS','FIXTURE_CONSUMER_ORIGINAL',
                      'HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'): ns[name] = set()
         for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_duplicate_paths',
-                     'checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths','formal_duplicate_paths',
+                     'checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths','formal_duplicate_paths','formal_provider_absences',
                      'checkpoint_code_duplicate_paths','digest_record_absences'): ns[name] = lambda *a: set()
         ns.update(binding_record_candidate=lambda p: False, status_record_candidate=lambda p: False)
         def qualify(repo, requested):
@@ -10633,12 +10633,12 @@ class CertificateProviderAdditionControls(unittest.TestCase):
                   SUCCESSOR_INPUT_REGISTRY='unused-input', SUCCESSOR_CALCULUS_MAP='unused-map',
                   MEDIATOR_GUIDE='unused-guide', REVIEWED_AUTHORITY_EDITS=self.contracts())
         for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS',
-                     'FORMAL_COPY_PATHS','CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','SUCCESSOR_INPUT_PATHS',
+                     'FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS','CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','SUCCESSOR_INPUT_PATHS',
                      'GENERATED_FIXTURE_PATHS','ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS',
                      'FIXTURE_CONSUMER_ORIGINAL','HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'):
             ns[name] = set()
         for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_duplicate_paths',
-                     'checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths','formal_duplicate_paths',
+                     'checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths','formal_duplicate_paths','formal_provider_absences',
                      'checkpoint_code_duplicate_paths','digest_record_absences'):
             ns[name] = lambda *args: set()
         ns.update(binding_record_candidate=lambda p: False, status_record_candidate=lambda p: False)
@@ -10697,6 +10697,83 @@ class CertificateProviderAdditionControls(unittest.TestCase):
                 with self.subTest(path=path, state=state):
                     module, repo, _ = self._absent_fixture(path, state)
                     with self.assertRaises(ValueError): module.reviewed_authority_modifications(repo, {path})
+
+
+
+
+class CertificateProviderAbsenceControls(unittest.TestCase):
+    """Six authenticated old providers only; current owners are never deletion allowances."""
+    EXPECTED = ('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/CertificateFrontier.lean',
+        'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/Controls.lean',
+        'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/independent-review/ScopeChecks.lean',
+        'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/CostBlind.lean',
+        'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/CurrentCost.lean',
+        'research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/InfinitePrice.lean')
+
+    def gate(self, changes, qualified=None, error=False, population=None, receiver=None, repo=None):
+        import ast, types
+        function = next(n for n in ast.parse((ROOT / 'scripts/check_reader_pilot.py').read_bytes()).body
+                        if isinstance(n, ast.FunctionDef) and n.name == 'check_corpus_currentness')
+        module = types.ModuleType('exact_formal_provider_absence_gate')
+        ns = module.__dict__
+        ns.update(Path=Path, subprocess=subprocess, REFACTOR_EDIT_PATHS=set(), REVIEWED_AUTHORITY_EDITS={},
+            PMR007_DEEP_PREFIX='unused-deep', PMR007_ROUNDS_PREFIX='unused-rounds',
+            PMR007_ROUNDS_FORMALIZATION='unused-formal', CONTINUATION_COPY_ROOT='unused-copy/',
+            SUCCESSOR_INPUT_REGISTRY='unused-input', SUCCESSOR_CALCULUS_MAP='unused-map', MEDIATOR_GUIDE='unused-guide')
+        for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS',
+            'FORMAL_COPY_PATHS','CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','SUCCESSOR_INPUT_PATHS',
+            'GENERATED_FIXTURE_PATHS','ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS',
+            'FIXTURE_CONSUMER_ORIGINAL','HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'):
+            ns[name] = set()
+        for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_duplicate_paths',
+            'checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths','formal_duplicate_paths',
+            'checkpoint_code_duplicate_paths','digest_record_absences'):
+            ns[name] = lambda *args: set()
+        ns['FORMAL_PROVIDER_PATHS'] = set(self.EXPECTED) if population is None else population
+        calls = []
+        def qualify(repo):
+            calls.append(repo)
+            if receiver is not None: return receiver(repo)
+            if error: raise ValueError('exact native provider receiving failed')
+            return set(self.EXPECTED) if qualified is None else qualified
+        ns.update(formal_provider_absences=qualify, binding_record_candidate=lambda p: False,
+                  status_record_candidate=lambda p: False,
+                  readonly_git_diff=lambda *a, **k: subprocess.CompletedProcess([],0,
+                    ''.join(status+'\0'+path+'\0' for status,path in changes).encode(),b''))
+        exec(compile(ast.Module(body=[function], type_ignores=[]), 'actual-six-provider-currentness', 'exec'), ns)
+        return module.check_corpus_currentness(Path('inert-exact-root') if repo is None else repo, 'original-baseline'), calls
+
+    def test_exact_six_absences_require_current_identity(self):
+        errors, calls = self.gate([('D', path) for path in self.EXPECTED])
+        self.assertEqual(errors, [])
+        self.assertEqual(len(calls), 1)
+
+    def test_missing_and_failed_qualification_refuse(self):
+        for path in self.EXPECTED:
+            with self.subTest(path=path):
+                self.assertTrue(self.gate([('D', path)], qualified=set())[0])
+                self.assertTrue(self.gate([('D', path)], error=True)[0])
+                self.assertTrue(self.gate([('D', path)], qualified=set(self.EXPECTED)-{path})[0])
+
+    def test_modifications_additions_and_type_changes_still_refuse(self):
+        for path in self.EXPECTED:
+            for status in ('M','A','T'):
+                with self.subTest(path=path,status=status):
+                    errors,calls=self.gate([(status,path)])
+                    self.assertTrue(errors);self.assertEqual(calls,[])
+
+    def test_current_destinations_and_unrelated_old_paths_refuse(self):
+        for path in ('formal/certificate-frontier/CertificateFrontier.lean',
+                     'formal/certificate-frontier/run-primary.sh', self.EXPECTED[0]+'.unreviewed'):
+            for status in ('D','M','A','T'):
+                with self.subTest(path=path,status=status):
+                    errors,calls=self.gate([(status,path)])
+                    self.assertTrue(errors);self.assertEqual(calls,[])
+
+    def test_empty_or_omitted_dispatch_population_fails_closed(self):
+        self.assertTrue(self.gate([('D',self.EXPECTED[0])],population=set())[0])
+        self.assertEqual(self.gate([]),([],[]))
+        self.assertTrue(self.gate([('D',self.EXPECTED[0]),('M','unrelated.md')])[0])
 
 
 if __name__ == "__main__":

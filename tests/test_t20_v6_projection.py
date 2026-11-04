@@ -5184,7 +5184,7 @@ class CertificateFrontierProviderControls(unittest.TestCase):
         tree = ast.parse(filename.read_text(encoding='utf-8'))
         functions = {'digest', '_formal_tuple_binding', '_formal_copy_catalog',
                      '_formal_current_provider_catalog', '_formal_row_digest', '_formal_public_source_bytes', 'formal_copy_bytes',
-                     'formal_duplicate_paths', '_checkpoint_bound_bytes', '_regular_current_bytes'}
+                     'formal_duplicate_paths', 'formal_provider_absences', '_checkpoint_bound_bytes', '_regular_current_bytes'}
         nodes = [node for node in tree.body if
                  isinstance(node, ast.FunctionDef) and node.name in functions or
                  isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and
@@ -5537,6 +5537,136 @@ class CertificateFrontierRunnerControls(unittest.TestCase):
             r,_=self.invoke(mode=mode,output=self.base/mode)
             self.assertNotEqual(r.returncode,0)
 
+
+
+
+
+class CertificateProviderNativeAbsenceControls(unittest.TestCase):
+    """Actual six-source qualification with native Git/object operations inert."""
+    EXPECTED = CertificateFrontierProviderControls.EXPECTED
+
+    def fixture(self, state='valid', selected=0):
+        source = CertificateFrontierProviderControls._source()
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        root = pathlib.Path(temp.name)
+        catalog = source._formal_current_provider_catalog()
+        bodies, calls = {}, []
+        for canonical, current in self.EXPECTED:
+            body = (pathlib.Path(__file__).resolve().parents[1] / current).read_bytes()
+            binding = catalog[canonical]
+            self.assertEqual((len(body),hashlib.sha256(body).hexdigest()),(binding['bytes'],binding['sha256']))
+            bodies[binding['blob']] = body
+            node = root / current
+            node.parent.mkdir(parents=True,exist_ok=True)
+            node.write_bytes(body)
+        def git(repo,*args):
+            self.assertEqual(repo,root);calls.append(args)
+            if args[0]=='ls-tree':
+                self.assertEqual(args[:4],('ls-tree','-z',source.CHECKPOINT_COPY_BASE,'--'))
+                names = tuple(dict.fromkeys(args[4:]))
+                rows = [('100644 blob '+catalog[name]['blob']+'\t'+name+'\0').encode() for name in names]
+                if state=='wrong-tree': return b''.join(rows).replace(b'100644',b'100755')
+                if state=='failed-history': raise ValueError('original tree unavailable')
+                return b''.join(rows)
+            if args[0]=='ls-files':
+                self.assertEqual(args[:4],('ls-files','--stage','-z','--'))
+                rows=[]
+                for name in args[4:]:
+                    match=[b for b in catalog.values() if b['current']==name]
+                    if match:rows.append(('100644 '+match[0]['blob']+' 0\t'+name+'\0').encode())
+                result=b''.join(rows)
+                if state=='wrong-index':result=result.replace(b' 0\t',b' 1\t')
+                if state=='missing-index':result=b''
+                return result
+            raise AssertionError('unexpected native operation')
+        def obj(repo,kind,oid):
+            self.assertEqual(repo,root)
+            if kind=='commit':
+                self.assertEqual(oid,source.CHECKPOINT_COPY_BASE)
+                return b'inert authenticated original commit boundary'
+            self.assertEqual(kind,'blob');self.assertIn(oid,bodies)
+            return bodies[oid]+(b'wrong original' if state=='wrong-original' else b'')
+        source._continuation_git=git;source._continuation_object=obj
+        source.status_record_provider=lambda p:False
+        old,current=self.EXPECTED[selected];node=root/current
+        if state=='wrong-body':node.write_bytes(b'wrong current body')
+        if state=='missing-body':node.unlink()
+        if state=='executable':node.chmod(0o755)
+        if state=='current-symlink':
+            ordinary=root/'ordinary';ordinary.write_bytes(node.read_bytes());node.unlink();node.symlink_to(ordinary)
+        if state in ('present-valid','present-corrupt','old-symlink'):
+            target=root/old;target.parent.mkdir(parents=True,exist_ok=True)
+            if state=='old-symlink':target.symlink_to(node)
+            else:target.write_bytes(node.read_bytes() if state=='present-valid' else b'corrupt old provider')
+        return source,root,calls
+
+    def test_all_six_real_ordinary_bodies_allow_exact_old_absences(self):
+        source,root,calls=self.fixture()
+        self.assertEqual(source.formal_provider_absences(root),{old for old,_ in self.EXPECTED})
+        self.assertEqual(sum(args[0]=='ls-tree' for args in calls),6)
+        self.assertEqual(sum(args[0]=='ls-files' for args in calls),6)
+        self.assertEqual({args[4] for args in calls if args[0]=='ls-tree'}, {old for old,_ in self.EXPECTED})
+        self.assertEqual(len(source.FORMAL_COPY_PATHS),71)
+        self.assertTrue(set(source.FORMAL_PROVIDER_PATHS).isdisjoint(source.FORMAL_COPY_PATHS))
+
+    def test_present_valid_provider_is_not_reported_absent(self):
+        source,root,_=self.fixture('present-valid')
+        self.assertEqual(source.formal_provider_absences(root),{old for old,_ in self.EXPECTED[1:]})
+
+    def test_corrupt_or_symlink_present_provider_refuses_whole_class(self):
+        for state in ('present-corrupt','old-symlink'):
+            with self.subTest(state=state):
+                source,root,_=self.fixture(state)
+                with self.assertRaises(ValueError):source.formal_provider_absences(root)
+
+    def test_wrong_or_missing_current_identity_refuses_whole_class(self):
+        for state in ('wrong-body','missing-body','executable','current-symlink','wrong-index','missing-index'):
+            with self.subTest(state=state):
+                source,root,_=self.fixture(state)
+                with self.assertRaises(ValueError):source.formal_provider_absences(root)
+
+    def test_original_tree_mode_blob_and_failed_history_refuse(self):
+        for state in ('wrong-tree','wrong-original','failed-history'):
+            with self.subTest(state=state):
+                source,root,_=self.fixture(state)
+                with self.assertRaises(ValueError):source.formal_provider_absences(root)
+
+    def test_omitted_or_redirected_tuple_refuses_before_native_calls(self):
+        source,root,calls=self.fixture()
+        original=source.FORMAL_CURRENT_PROVIDERS
+        for values in ((),original[:-1],((original[0][0],'formal/certificate-frontier/Unreviewed.lean'),*original[1:])):
+            with self.subTest(values=values),patch.object(source,'FORMAL_CURRENT_PROVIDERS',values):
+                with self.assertRaises(ValueError):source.formal_provider_absences(root)
+        self.assertEqual(calls,[])
+
+    def test_changed_original_catalog_refuses_before_native_calls(self):
+        source,root,calls=self.fixture()
+        with patch.object(source,'FORMAL_COPY_MEMBERS',source.FORMAL_COPY_MEMBERS[:-1]):
+            with self.assertRaises(ValueError):source.formal_provider_absences(root)
+        self.assertEqual(calls,[])
+
+    def test_actual_reader_receives_only_native_authenticated_absences(self):
+        filename=pathlib.Path(__file__).resolve().parent/'test_reader_pilot.py'
+        cls=next(n for n in ast.parse(filename.read_bytes()).body
+                 if isinstance(n,ast.ClassDef) and n.name=='CertificateProviderAbsenceControls')
+        ns=dict(unittest=unittest,Path=pathlib.Path,subprocess=__import__('subprocess'),
+                ROOT=filename.parent.parent)
+        exec(compile(ast.Module(body=[cls],type_ignores=[]),'actual-reader-live-fixture','exec'),ns)
+        gate=ns['CertificateProviderAbsenceControls']().gate
+        changes=[('D',old) for old,_ in self.EXPECTED]
+        source,root,_=self.fixture()
+        self.assertEqual(gate(changes,receiver=source.formal_provider_absences,repo=root)[0],[])
+        for state in ('present-valid','present-corrupt','wrong-body','wrong-tree','wrong-index'):
+            with self.subTest(state=state):
+                source,root,_=self.fixture(state)
+                self.assertTrue(gate(changes,receiver=source.formal_provider_absences,repo=root)[0])
+
+    def test_each_provider_individually_requires_its_exact_body(self):
+        for selected in range(6):
+            with self.subTest(selected=selected):
+                source,root,_=self.fixture('wrong-body',selected=selected)
+                with self.assertRaises(ValueError):source.formal_provider_absences(root)
 
 
 if __name__ == '__main__':

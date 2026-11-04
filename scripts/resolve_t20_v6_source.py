@@ -2208,6 +2208,7 @@ FORMAL_CURRENT_PROVIDERS = (('research/t20-live-20261009/checkpoints/CP23/warran
  ('research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/InfinitePrice.lean',
   'formal/certificate-frontier/mutations/InfinitePrice.lean'))
 FORMAL_CURRENT_PROVIDERS_SHA256 = 'e1e7f0842bba4e09d1a4008e9b2a17029fd329b9414f6360695d5091fe98852a'
+FORMAL_PROVIDER_PATHS = frozenset(canonical for canonical, _ in FORMAL_CURRENT_PROVIDERS)
 
 FORMAL_COPY_MEMBERS = (('experiments/orthemology-v5-continuations/source-store/0f8e551de28b6bdf549e0d2ecba0932bb2758b8ff57aaf5f1cf5956d7d88d8cd.lean',
   'experiments/orthemology-v5/source/lean/GeneratedExamples.lean',
@@ -6388,6 +6389,16 @@ def formal_copy_bytes(root, path, identity=None, size=None):
         raise ValueError('formal requested identity differs')
     current = providers.get(binding['canonical'], {}).get('current')
     return _checkpoint_bound_bytes(root, path, binding, current=current)
+
+
+def formal_provider_absences(root):
+    """Authenticate all six migrated providers before returning actual old absences."""
+    result = set()
+    for canonical in _formal_current_provider_catalog():
+        formal_copy_bytes(root, canonical)
+        if not os.path.lexists(pathlib.Path(root) / canonical):
+            result.add(canonical)
+    return result
 
 
 def formal_duplicate_paths(root):
