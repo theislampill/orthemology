@@ -46,6 +46,7 @@ from resolve_t20_v6_source import (
     ADMIN_GUIDES, ADMIN_PUBLIC_GUIDE_PATHS, ADMIN_RECORD_BASE, administrative_guide_source_bytes,
     PUBLIC_READER_NOTE_PATHS, CONTINUATION_REGISTRY_PATH, CONTINUATION_REGISTRY_REVISION,
     CHECKPOINT_COPY_PATHS, checkpoint_duplicate_paths,
+    CHECKPOINT_PUBLIC_COPY_PATHS, checkpoint_public_duplicate_paths,
     CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths,
     CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_duplicate_paths,
     FORMAL_COPY_PATHS, formal_duplicate_paths,
@@ -2104,9 +2105,10 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
         # provider. A class qualifier admits actual absences only; neither a
         # staged modification nor a corrupt present alias gains an allowance.
         for key, population, qualify in (
-                ("checkpoint-copy", CHECKPOINT_COPY_PATHS, checkpoint_duplicate_paths),
-                ("checkpoint-record", CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths),
-                ("checkpoint-package", CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_duplicate_paths),
+                ("checkpoint-public", CHECKPOINT_PUBLIC_COPY_PATHS, checkpoint_public_duplicate_paths),
+                ("checkpoint-copy", set(CHECKPOINT_COPY_PATHS) - CHECKPOINT_PUBLIC_COPY_PATHS, checkpoint_duplicate_paths),
+                ("checkpoint-record", set(CHECKPOINT_RECORD_COPY_PATHS) - CHECKPOINT_PUBLIC_COPY_PATHS, checkpoint_record_duplicate_paths),
+                ("checkpoint-package", set(CHECKPOINT_PACKAGE_COPY_PATHS) - CHECKPOINT_PUBLIC_COPY_PATHS, checkpoint_package_duplicate_paths),
                 ("formal-copy", FORMAL_COPY_PATHS, formal_duplicate_paths),
             ("formal-provider", FORMAL_PROVIDER_PATHS, formal_provider_absences),
                 ("checkpoint-code", CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_duplicate_paths),

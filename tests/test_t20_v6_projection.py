@@ -3834,6 +3834,8 @@ class FormalCurrentCompositionControls(unittest.TestCase):
         namespace = getattr(module, function).__globals__
         namespace.update(self.source.__dict__)
         namespace.update(BASE='unused-synthetic-baseline', REFACTOR_EDIT_PATHS=set(),
+            REVIEWED_AUTHORITY_EDITS={}, formal_provider_absences=unrelated,
+            ADMISSION_RECORD_PATHS=set(),
             HISTORICAL_PROSE={}, HISTORICAL_PROSE_PUBLIC_PATHS=set(), HISTORICAL_PROSE_REVISIONS={},
             TYPED_GUIDES={}, ADMIN_GUIDES={}, ADMIN_RECORD_PATHS=set(),
             SUCCESSOR_CALCULUS_GUIDES={}, SUCCESSOR_CALCULUS_MAP='unused-calculus',
@@ -3843,7 +3845,7 @@ class FormalCurrentCompositionControls(unittest.TestCase):
             PMR007_ROUNDS_FORMALIZATION='unused-formalization',
             continuation_owners=types.SimpleNamespace(PRESERVATION_OWNER_PATHS=set()))
         for name in ('pmr007_deep_duplicate_paths', 'pmr007_rounds_duplicate_paths',
-                     'checkpoint_duplicate_paths', 'checkpoint_record_duplicate_paths',
+                     'checkpoint_public_duplicate_paths', 'checkpoint_duplicate_paths', 'checkpoint_record_duplicate_paths',
                      'checkpoint_package_duplicate_paths', 'checkpoint_code_duplicate_paths',
                      'digest_record_absences', 'mediator_guide_source_bytes',
                      'status_record_absences'):
@@ -4080,9 +4082,11 @@ class StatusSourceViewMigrationTests(unittest.TestCase):
             raise AssertionError('unrelated history or original-body qualifier invoked')
         requests = []
         namespace = {'Path': Path, 'REFACTOR_EDIT_PATHS': set(), 'HISTORICAL_PROSE': {},
+                     'FORMAL_PROVIDER_PATHS': set(), 'formal_provider_absences': unexpected,
+                     'REVIEWED_AUTHORITY_EDITS': {}, 'ADMISSION_RECORD_PATHS': set(),
                      'FIXTURE_CONSUMER_ORIGINAL': {}, 'binding_record_candidate': lambda path: False,
                      'status_record_candidate': lambda path: path == self.STATUS}
-        for name in ('CHECKPOINT_COPY_PATHS', 'CHECKPOINT_RECORD_COPY_PATHS',
+        for name in ('CHECKPOINT_PUBLIC_COPY_PATHS', 'CHECKPOINT_COPY_PATHS', 'CHECKPOINT_RECORD_COPY_PATHS',
                      'CHECKPOINT_PACKAGE_COPY_PATHS', 'FORMAL_COPY_PATHS',
                      'CHECKPOINT_CODE_COPY_PATHS', 'DIGEST_RECORD_PATHS', 'SUCCESSOR_INPUT_PATHS',
                      'GENERATED_FIXTURE_PATHS', 'ADMIN_RECORD_PATHS', 'ADMIN_GUIDES',
@@ -4093,7 +4097,7 @@ class StatusSourceViewMigrationTests(unittest.TestCase):
                      'SUCCESSOR_CALCULUS_MAP', 'MEDIATOR_GUIDE'):
             namespace[name] = 'unrelated/' + name
         for name in ('pmr007_deep_duplicate_paths', 'pmr007_rounds_duplicate_paths',
-                     'checkpoint_duplicate_paths', 'checkpoint_record_duplicate_paths',
+                     'checkpoint_public_duplicate_paths', 'checkpoint_duplicate_paths', 'checkpoint_record_duplicate_paths',
                      'checkpoint_package_duplicate_paths', 'formal_duplicate_paths',
                      'checkpoint_code_duplicate_paths', 'digest_record_absences',
                      'pmr007_rounds_formalization_navigation', 'continuation_duplicate_paths',
@@ -4559,7 +4563,7 @@ class StatusOwnerEditionResponseTests(unittest.TestCase):
         cross = {'schema': 'orthemology-reader-crosswalk-v1', 'coverage_stage': 'reader-candidate'}
         # Only unrelated collection populations are empty. The two owner rows,
         # native objects, files and stage rows pass the actual admission helper.
-        for name in ('CHECKPOINT_COPY_PATHS', 'CHECKPOINT_RECORD_COPY_PATHS',
+        for name in ('CHECKPOINT_PUBLIC_COPY_PATHS', 'CHECKPOINT_COPY_PATHS', 'CHECKPOINT_RECORD_COPY_PATHS',
                      'CHECKPOINT_PACKAGE_COPY_PATHS', 'FORMAL_COPY_PATHS',
                      'CHECKPOINT_CODE_COPY_PATHS', 'DIGEST_RECORD_PATHS', 'SUCCESSOR_INPUT_PATHS',
                      'GENERATED_FIXTURE_PATHS', 'ADMIN_RECORD_PATHS', 'ADMIN_GUIDES',
@@ -4576,7 +4580,7 @@ class StatusOwnerEditionResponseTests(unittest.TestCase):
         def unexpected(*args, **kwargs):
             raise AssertionError('unrelated source qualification must not run')
         for name in ('pmr007_deep_duplicate_paths', 'pmr007_rounds_duplicate_paths',
-                     'checkpoint_duplicate_paths', 'checkpoint_record_duplicate_paths',
+                     'checkpoint_public_duplicate_paths', 'checkpoint_duplicate_paths', 'checkpoint_record_duplicate_paths',
                      'checkpoint_package_duplicate_paths', 'formal_duplicate_paths',
                      'checkpoint_code_duplicate_paths', 'digest_record_absences',
                      'pmr007_rounds_formalization_navigation', 'continuation_duplicate_paths',

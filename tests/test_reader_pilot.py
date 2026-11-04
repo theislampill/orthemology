@@ -9607,7 +9607,7 @@ class Digest176ReaderContractTests(unittest.TestCase):
         def unexpected(*args, **kwargs):
             raise AssertionError('unrelated original-body qualifier was invoked')
         ns = self.namespace
-        for name in ('CHECKPOINT_COPY_PATHS', 'CHECKPOINT_RECORD_COPY_PATHS',
+        for name in ('CHECKPOINT_PUBLIC_COPY_PATHS', 'CHECKPOINT_COPY_PATHS', 'CHECKPOINT_RECORD_COPY_PATHS',
                      'CHECKPOINT_PACKAGE_COPY_PATHS', 'FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS',
                      'CHECKPOINT_CODE_COPY_PATHS', 'DIGEST_RECORD_PATHS','ADMISSION_RECORD_PATHS',
                      'SUCCESSOR_INPUT_PATHS', 'GENERATED_FIXTURE_PATHS',
@@ -9619,7 +9619,7 @@ class Digest176ReaderContractTests(unittest.TestCase):
                      'SUCCESSOR_INPUT_REGISTRY', 'SUCCESSOR_CALCULUS_MAP', 'MEDIATOR_GUIDE'):
             ns[name] = 'synthetic-unrelated/' + name
         for name in ('pmr007_deep_duplicate_paths', 'pmr007_rounds_duplicate_paths',
-                     'checkpoint_duplicate_paths', 'checkpoint_record_duplicate_paths',
+                     'checkpoint_public_duplicate_paths', 'checkpoint_duplicate_paths', 'checkpoint_record_duplicate_paths',
                      'checkpoint_package_duplicate_paths', 'formal_duplicate_paths','formal_provider_absences',
                      'checkpoint_code_duplicate_paths', 'digest_record_absences',
                      'pmr007_rounds_formalization_navigation', 'continuation_duplicate_paths',
@@ -9752,12 +9752,12 @@ class ReviewedSourcingLedgerControls(unittest.TestCase):
             PMR007_ROUNDS_PREFIX='unused-rounds',PMR007_ROUNDS_FORMALIZATION='unused-round-guide',
             CONTINUATION_COPY_ROOT='unused-continuation/',SUCCESSOR_INPUT_REGISTRY='unused-input',
             SUCCESSOR_CALCULUS_MAP='unused-calculus',MEDIATOR_GUIDE='unused-guide')
-        for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS',
+        for name in ('CHECKPOINT_PUBLIC_COPY_PATHS', 'CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS',
             'FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS','CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','ADMISSION_RECORD_PATHS','SUCCESSOR_INPUT_PATHS',
             'GENERATED_FIXTURE_PATHS','ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS',
             'FIXTURE_CONSUMER_ORIGINAL','HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'):
             namespace[name]=set()
-        for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_duplicate_paths',
+        for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_public_duplicate_paths', 'checkpoint_duplicate_paths',
             'checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths','formal_duplicate_paths','formal_provider_absences',
             'checkpoint_code_duplicate_paths','digest_record_absences'):
             namespace[name]=lambda *a:set()
@@ -9868,11 +9868,11 @@ class ReviewedAuthorityControls(unittest.TestCase):
         ns.update(REFACTOR_EDIT_PATHS=set(),PMR007_DEEP_PREFIX='unused-deep',PMR007_ROUNDS_PREFIX='unused-rounds',
             PMR007_ROUNDS_FORMALIZATION='unused-formal',CONTINUATION_COPY_ROOT='unused-copy/',SUCCESSOR_INPUT_REGISTRY='unused-input',
             SUCCESSOR_CALCULUS_MAP='unused-map',MEDIATOR_GUIDE='unused-guide',REVIEWED_AUTHORITY_EDITS={p:None for p in self.PATHS})
-        for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS','FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS',
+        for name in ('CHECKPOINT_PUBLIC_COPY_PATHS', 'CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS','FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS',
                      'CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','ADMISSION_RECORD_PATHS','SUCCESSOR_INPUT_PATHS','GENERATED_FIXTURE_PATHS',
                      'ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS','FIXTURE_CONSUMER_ORIGINAL',
                      'HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'):ns[name]=set()
-        for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_duplicate_paths',
+        for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_public_duplicate_paths', 'checkpoint_duplicate_paths',
                      'checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths','formal_duplicate_paths','formal_provider_absences',
                      'checkpoint_code_duplicate_paths','digest_record_absences'):ns[name]=lambda *a:set()
         ns.update(binding_record_candidate=lambda p:False,status_record_candidate=lambda p:False)
@@ -10054,11 +10054,11 @@ class ReviewedGovernanceEditionControls(unittest.TestCase):
                   SUCCESSOR_INPUT_REGISTRY='unused-input', SUCCESSOR_CALCULUS_MAP='unused-map', MEDIATOR_GUIDE='unused-guide',
                   REVIEWED_AUTHORITY_EDITS={self.OWNER: (self.OWNER, 'a'*40, ('old', 'old', 1), ('new', 'new', 2)),
                                             self.ADDED: (self.ADDED, 'a'*40, None, ('new', 'new', 2))})
-        for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS','FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS',
+        for name in ('CHECKPOINT_PUBLIC_COPY_PATHS', 'CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS','FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS',
                      'CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','ADMISSION_RECORD_PATHS','SUCCESSOR_INPUT_PATHS','GENERATED_FIXTURE_PATHS',
                      'ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS','FIXTURE_CONSUMER_ORIGINAL',
                      'HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'): ns[name] = set()
-        for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_duplicate_paths',
+        for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_public_duplicate_paths', 'checkpoint_duplicate_paths',
                      'checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths','formal_duplicate_paths','formal_provider_absences',
                      'checkpoint_code_duplicate_paths','digest_record_absences'): ns[name] = lambda *a: set()
         ns.update(binding_record_candidate=lambda p: False, status_record_candidate=lambda p: False)
@@ -10632,12 +10632,12 @@ class CertificateProviderAdditionControls(unittest.TestCase):
                   PMR007_ROUNDS_FORMALIZATION='unused-formal', CONTINUATION_COPY_ROOT='unused-copy/',
                   SUCCESSOR_INPUT_REGISTRY='unused-input', SUCCESSOR_CALCULUS_MAP='unused-map',
                   MEDIATOR_GUIDE='unused-guide', REVIEWED_AUTHORITY_EDITS=self.contracts())
-        for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS',
+        for name in ('CHECKPOINT_PUBLIC_COPY_PATHS', 'CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS',
                      'FORMAL_COPY_PATHS','FORMAL_PROVIDER_PATHS','CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','ADMISSION_RECORD_PATHS','SUCCESSOR_INPUT_PATHS',
                      'GENERATED_FIXTURE_PATHS','ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS',
                      'FIXTURE_CONSUMER_ORIGINAL','HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'):
             ns[name] = set()
-        for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_duplicate_paths',
+        for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_public_duplicate_paths', 'checkpoint_duplicate_paths',
                      'checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths','formal_duplicate_paths','formal_provider_absences',
                      'checkpoint_code_duplicate_paths','digest_record_absences'):
             ns[name] = lambda *args: set()
@@ -10720,12 +10720,12 @@ class CertificateProviderAbsenceControls(unittest.TestCase):
             PMR007_DEEP_PREFIX='unused-deep', PMR007_ROUNDS_PREFIX='unused-rounds',
             PMR007_ROUNDS_FORMALIZATION='unused-formal', CONTINUATION_COPY_ROOT='unused-copy/',
             SUCCESSOR_INPUT_REGISTRY='unused-input', SUCCESSOR_CALCULUS_MAP='unused-map', MEDIATOR_GUIDE='unused-guide')
-        for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS',
+        for name in ('CHECKPOINT_PUBLIC_COPY_PATHS', 'CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS',
             'FORMAL_COPY_PATHS','CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','ADMISSION_RECORD_PATHS','SUCCESSOR_INPUT_PATHS',
             'GENERATED_FIXTURE_PATHS','ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS',
             'FIXTURE_CONSUMER_ORIGINAL','HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'):
             ns[name] = set()
-        for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_duplicate_paths',
+        for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_public_duplicate_paths', 'checkpoint_duplicate_paths',
             'checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths','formal_duplicate_paths',
             'checkpoint_code_duplicate_paths','digest_record_absences'):
             ns[name] = lambda *args: set()
@@ -10790,12 +10790,12 @@ def _frontier_history_test_reader():
         PMR007_ROUNDS_FORMALIZATION='unused-formalization', CONTINUATION_COPY_ROOT='unused-continuation',
         SUCCESSOR_INPUT_REGISTRY='unused-registry', SUCCESSOR_CALCULUS_MAP='unused-calculus',
         MEDIATOR_GUIDE='unused-guide', REVIEWED_AUTHORITY_EDITS={})
-    for name in ('REFACTOR_EDIT_PATHS HISTORICAL_PROSE CHECKPOINT_COPY_PATHS CHECKPOINT_RECORD_COPY_PATHS '
+    for name in ('REFACTOR_EDIT_PATHS HISTORICAL_PROSE CHECKPOINT_PUBLIC_COPY_PATHS CHECKPOINT_COPY_PATHS CHECKPOINT_RECORD_COPY_PATHS '
                  'CHECKPOINT_PACKAGE_COPY_PATHS FORMAL_COPY_PATHS FORMAL_PROVIDER_PATHS CHECKPOINT_CODE_COPY_PATHS '
                  'DIGEST_RECORD_PATHS ADMISSION_RECORD_PATHS SUCCESSOR_INPUT_PATHS GENERATED_FIXTURE_PATHS ADMIN_RECORD_PATHS ADMIN_GUIDES '
                  'CONTINUATION_OWNER_PATHS STATUS_RECORD_OWNERS FIXTURE_CONSUMER_ORIGINAL TYPED_GUIDES SUCCESSOR_CALCULUS_GUIDES').split():
         ns[name]=set()
-    for name in ('pmr007_deep_duplicate_paths pmr007_rounds_duplicate_paths checkpoint_duplicate_paths '
+    for name in ('pmr007_deep_duplicate_paths pmr007_rounds_duplicate_paths checkpoint_public_duplicate_paths checkpoint_duplicate_paths '
                  'checkpoint_record_duplicate_paths checkpoint_package_duplicate_paths formal_duplicate_paths '
                  'formal_provider_absences checkpoint_code_duplicate_paths digest_record_absences').split():
         ns[name]=lambda *args:set()
@@ -11796,6 +11796,296 @@ class Central47MainDispatchTests(unittest.TestCase):
         self.assertEqual(supplied,selected)
         self.assertEqual(set(errors),{'context-sentinel','frontier-sentinel','central-fatal-sentinel',
                                      'currentness-sentinel','collection-sentinel','route-sentinel'})
+
+
+# Fixed public87 acceptance controls: no protected bodies or original execution.
+import ast
+import collections
+import os
+import types
+from unittest import mock
+import resolve_t20_v6_source as resolver
+EXPECTED_PUBLIC_CATALOG_SHA256 = '8387856c594d746d32f24b06e300ab87b9f539bb74b159638751a7c8db974868'
+
+class PublicCheckpointContractTests(unittest.TestCase):
+    def setUp(self):
+        self.assertTrue(callable(getattr(resolver, '_checkpoint_public_copy_catalog', None)),
+                        'fixed public87 catalog is required')
+        self.assertTrue(callable(getattr(resolver, 'checkpoint_public_duplicate_paths', None)),
+                        'fixed public87 guard is required')
+
+    def test_exact_membership_and_retained_graph(self):
+        cat = resolver._checkpoint_public_copy_catalog()
+        self.assertEqual(len(cat), 87)
+        self.assertEqual(set(cat), resolver.CHECKPOINT_PUBLIC_COPY_PATHS)
+        self.assertEqual(len({v['canonical'] for v in cat.values()}), 71)
+        self.assertFalse(set(cat) & {v['canonical'] for v in cat.values()})
+        self.assertEqual(len({v['blob'] for v in cat.values()}), 66)
+        encoded = json.dumps(resolver.CHECKPOINT_PUBLIC_COPY_MEMBERS, separators=(',', ':')).encode()
+        self.assertEqual(hashlib.sha256(encoded).hexdigest(), EXPECTED_PUBLIC_CATALOG_SHA256)
+
+    def test_changed_catalog_digest_rejected(self):
+        with mock.patch.object(resolver, 'CHECKPOINT_PUBLIC_COPY_CATALOG_SHA256', '0'*64):
+            with self.assertRaises(ValueError): resolver._checkpoint_public_copy_catalog()
+
+    def test_missing_or_extra_population_rejected(self):
+        values = resolver.CHECKPOINT_PUBLIC_COPY_MEMBERS
+        for rows in (values[:-1], values + (values[0],)):
+            with self.subTest(count=len(rows)), mock.patch.object(resolver, 'CHECKPOINT_PUBLIC_COPY_MEMBERS', rows):
+                with self.assertRaises(ValueError): resolver._checkpoint_public_copy_catalog()
+
+    def test_changed_original_catalog_binding_rejected(self):
+        original = resolver._checkpoint_copy_catalog()
+        selected = next(p for p in original if p in resolver.CHECKPOINT_PUBLIC_COPY_PATHS)
+        for key, value in [('canonical', 'wrong/provider'), ('blob', '0'*40), ('sha256', '0'*64),
+                           ('bytes', -1), ('mode', '100755'), ('prior_canonical', 'wrong/prior')]:
+            changed = {p:dict(row) for p,row in original.items()}; changed[selected][key] = value
+            with self.subTest(field=key), mock.patch.object(resolver, '_checkpoint_copy_catalog', return_value=changed):
+                with self.assertRaises(ValueError): resolver._checkpoint_public_copy_catalog()
+
+    def test_every_member_checked_even_when_present(self):
+        checked=[]
+        with mock.patch.object(resolver, '_checkpoint_copy_bound_bytes', side_effect=lambda r,p,b:checked.append(p)), \
+             mock.patch.object(resolver.os.path, 'lexists', return_value=True):
+            self.assertEqual(resolver.checkpoint_public_duplicate_paths(Path('inert')), set())
+        self.assertEqual(collections.Counter(checked), collections.Counter(resolver.CHECKPOINT_PUBLIC_COPY_PATHS))
+
+    def test_only_actual_absence_returned(self):
+        paths=sorted(resolver.CHECKPOINT_PUBLIC_COPY_PATHS); absent=set(paths[::2]);checked=[]
+        with mock.patch.object(resolver, '_checkpoint_copy_bound_bytes', side_effect=lambda r,p,b:checked.append(p)), \
+             mock.patch.object(resolver.os.path, 'lexists', side_effect=lambda p:str(p).removeprefix('inert/') not in absent):
+            self.assertEqual(resolver.checkpoint_public_duplicate_paths(Path('inert')), absent)
+        self.assertEqual(len(checked), 87)
+
+    def test_provider_predicate_failure_never_grants_absence(self):
+        with mock.patch.object(resolver, '_checkpoint_copy_bound_bytes', side_effect=ValueError('provider failed')):
+            with self.assertRaisesRegex(ValueError, 'provider failed'):
+                resolver.checkpoint_public_duplicate_paths(Path('inert'))
+
+    def test_no_unrestricted_population_argument(self):
+        with self.assertRaises(TypeError): resolver.checkpoint_public_duplicate_paths(Path('inert'), set())
+
+
+class PublicCheckpointCurrentnessTests(unittest.TestCase):
+    """Real reader dispatch with inert unrelated gates; native proof is separate."""
+    def setUp(self):
+        self.assertTrue(hasattr(resolver, 'CHECKPOINT_PUBLIC_COPY_PATHS'), 'fixed public87 population required')
+        tree=ast.parse((ROOT/'scripts/check_reader_pilot.py').read_bytes())
+        fn=next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='check_corpus_currentness')
+        ns={name:set() for name in {n.id for n in ast.walk(fn) if isinstance(n,ast.Name) and n.id.isupper()}}
+        ns.update(Path=Path, os=os, PMR007_DEEP_PREFIX='unused-deep', PMR007_ROUNDS_PREFIX='unused-rounds',
+                  CONTINUATION_COPY_ROOT='unused-continuation', SUCCESSOR_INPUT_REGISTRY='unused-input',
+                  SUCCESSOR_CALCULUS_MAP='unused-calculus', MEDIATOR_GUIDE='unused-guide',
+                  PMR007_ROUNDS_FORMALIZATION='unused-formalization', REVIEWED_AUTHORITY_EDITS={})
+        self.changed=[];self.legacy=[];self.calls=0;self.allowed=set(resolver.CHECKPOINT_PUBLIC_COPY_PATHS);self.fault=False
+        def qualify(root):
+            self.calls+=1
+            if self.fault:raise ValueError('fixed public gate failed')
+            return self.allowed
+        ns['checkpoint_public_duplicate_paths']=qualify
+        ns['CHECKPOINT_PUBLIC_COPY_PATHS']=resolver.CHECKPOINT_PUBLIC_COPY_PATHS
+        for name in ['CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS','CHECKPOINT_CODE_COPY_PATHS']:
+            ns[name]=getattr(resolver,name)
+        for name in ['checkpoint_duplicate_paths','checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths']:
+            def legacy(root, name=name):
+                self.legacy.append(name)
+                raise ValueError('legacy whole-class evidence required')
+            ns[name]=legacy
+        for name in ['pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','formal_duplicate_paths','formal_provider_absences','checkpoint_code_duplicate_paths','digest_record_absences']:
+            ns[name]=lambda root:set()
+        ns.update(binding_record_candidate=lambda p:False,status_record_candidate=lambda p:False)
+        def diff(root,args):
+            rows=self.changed if not isinstance(self.changed,dict) else self.changed['cached' if '--cached' in args else 'worktree']
+            return types.SimpleNamespace(returncode=0,stdout=b''.join((s+'\0'+p+'\0').encode() for s,p in rows))
+        ns['readonly_git_diff']=diff
+        exec(compile(ast.Module(body=[fn],type_ignores=[]),'real-currentness-function','exec'),ns)
+        self.ns=ns;self.paths=sorted(self.allowed)
+    def check(self):return self.ns['check_corpus_currentness'](Path('inert'),'inert-base')
+    def test_all87_deletions_use_only_fixed_gate(self):
+        self.changed=[('D',p) for p in self.paths]
+        self.assertEqual(self.check(),[]);self.assertEqual(self.calls,1);self.assertEqual(self.legacy,[])
+    def test_no_change_does_not_invoke_gate(self):
+        self.assertEqual(self.check(),[]);self.assertEqual(self.calls,0)
+    def test_partial_deletion_still_requires_complete_guard(self):
+        self.changed=[('D',self.paths[0])];self.assertEqual(self.check(),[]);self.assertEqual(self.calls,1)
+    def test_failed_guard_refuses(self):
+        self.changed=[('D',self.paths[0])];self.fault=True;self.assertTrue(self.check())
+    def test_absence_not_returned_refuses(self):
+        self.changed=[('D',self.paths[0])];self.allowed=set();self.assertTrue(self.check())
+    def test_modification_never_gets_deletion_permission(self):
+        for status in ['M','A','T']:
+            with self.subTest(status=status):self.changed=[(status,self.paths[0])];self.assertTrue(self.check())
+    def test_unrelated_change_refuses(self):
+        self.changed=[('D',self.paths[0]),('D','unrelated/path')];self.assertTrue(self.check())
+    def test_mixed_restricted_deletion_keeps_legacy_guard(self):
+        restricted=next(p for p in resolver.CHECKPOINT_COPY_PATHS if p not in self.allowed)
+        self.changed=[('D',self.paths[0]),('D',restricted)]
+        self.assertTrue(self.check());self.assertIn('checkpoint_duplicate_paths',self.legacy)
+    def test_cached_and_worktree_are_both_checked(self):
+        self.changed={'cached':[('D',self.paths[0])],'worktree':[('M',self.paths[0])]}
+        self.assertTrue(self.check());self.assertEqual(self.calls,1)
+    def test_code52_deletion_keeps_own_guard(self):
+        path=next(iter(resolver.CHECKPOINT_CODE_COPY_PATHS));calls=[]
+        self.ns['checkpoint_code_duplicate_paths']=lambda root:calls.append(root) or {path}
+        self.changed=[('D',self.paths[0]),('D',path)]
+        self.assertEqual(self.check(),[]);self.assertEqual(len(calls),1)
+
+# Additional fixed-public87 controls. Reuse the preceding author fixtures only.
+class PublicCheckpointIndependentBindingTests(unittest.TestCase):
+    setUp = PublicCheckpointContractTests.setUp
+
+    def test_population_set_drift_refused(self):
+        paths = resolver.CHECKPOINT_PUBLIC_COPY_PATHS
+        for changed in (set(paths) - {next(iter(paths))}, set(paths) | {'unselected/path'}):
+            with self.subTest(population=len(changed)), mock.patch.object(resolver, 'CHECKPOINT_PUBLIC_COPY_PATHS', changed):
+                with self.assertRaises(ValueError):
+                    resolver._checkpoint_public_copy_catalog()
+
+    def test_record_and_package_source_bindings_cannot_drift(self):
+        for name in ('_checkpoint_record_copy_catalog', '_checkpoint_package_copy_catalog'):
+            original = getattr(resolver, name)()
+            selected = next(p for p in original if p in resolver.CHECKPOINT_PUBLIC_COPY_PATHS)
+            for field, value in (('canonical', 'wrong/provider'), ('blob', '0'*40),
+                                 ('sha256', '0'*64), ('bytes', -1), ('mode', '100755'),
+                                 ('prior_canonical', 'wrong/prior')):
+                changed = {p: dict(row) for p, row in original.items()}
+                changed[selected][field] = value
+                with self.subTest(catalog=name, field=field), mock.patch.object(resolver, name, return_value=changed):
+                    with self.assertRaises(ValueError):
+                        resolver._checkpoint_public_copy_catalog()
+
+    def test_every_native_call_receives_exact_original_binding(self):
+        expected = resolver._checkpoint_public_copy_catalog()
+        root = Path('inert')
+        calls = []
+        def native(r, path, binding):
+            self.assertEqual(r, root)
+            self.assertIn(path, expected)
+            self.assertEqual(binding, expected[path])
+            calls.append(path)
+        with mock.patch.object(resolver, '_checkpoint_copy_bound_bytes', side_effect=native), \
+             mock.patch.object(resolver.os.path, 'lexists', return_value=False):
+            self.assertEqual(resolver.checkpoint_public_duplicate_paths(root), set(expected))
+        self.assertEqual(collections.Counter(calls), collections.Counter(expected.keys()))
+        self.assertTrue(any(row.get('prior_canonical') for row in expected.values()))
+
+    def test_late_native_failure_cannot_return_partial_allowance(self):
+        count = []
+        def native(root, path, binding):
+            count.append(path)
+            if len(count) == 87:
+                raise ValueError('last selected native predicate failed')
+        with mock.patch.object(resolver, '_checkpoint_copy_bound_bytes', side_effect=native), \
+             mock.patch.object(resolver.os.path, 'lexists', return_value=False):
+            with self.assertRaisesRegex(ValueError, 'last selected native predicate failed'):
+                resolver.checkpoint_public_duplicate_paths(Path('inert'))
+        self.assertEqual(len(set(count)), 87)
+
+    def test_new_fixed_guard_never_calls_old_whole_classes(self):
+        from contextlib import ExitStack
+        with ExitStack() as stack:
+            for name in ('checkpoint_duplicate_paths', 'checkpoint_record_duplicate_paths', 'checkpoint_package_duplicate_paths'):
+                stack.enter_context(mock.patch.object(resolver, name, side_effect=AssertionError('whole-class body execution forbidden')))
+            stack.enter_context(mock.patch.object(resolver, '_checkpoint_copy_bound_bytes', return_value=b'inert'))
+            stack.enter_context(mock.patch.object(resolver.os.path, 'lexists', return_value=False))
+            self.assertEqual(resolver.checkpoint_public_duplicate_paths(Path('inert')), set(resolver.CHECKPOINT_PUBLIC_COPY_PATHS))
+
+    def test_native_old_class_and_public_source_bytes_unchanged(self):
+        expected = {
+            '_checkpoint_bound_bytes': 'b76238ab942e9ac067ecfdb3bdc8be7ff8cb1b04dc6196e7eef9e8c5bc0f0aad',
+            '_checkpoint_copy_bound_bytes': '9c7cea2fadcffc7920831068906a8278df2e8478ef4f1fe3b894cf6ad86a69b8',
+            'checkpoint_duplicate_paths': '0a9b1c4f4800d4d5ac017f0c6b379efd570d378363b5fa9bb9da423368409488',
+            'checkpoint_record_duplicate_paths': '81683e67dad673cedaae25e6826fafa9ebd7141fedd0c686d49ec6d2373e89b5',
+            'checkpoint_package_duplicate_paths': '67473a94e2fbe96877f40d12fbbb15ee86c0a37054ee3ac31a76450a0a4f729c',
+            'source_bytes': '495d9d04ab7bbc84c9cadb90e8495928a27b26236151a2e9b246c00765b4d57a',
+        }
+        source = (ROOT/'scripts/resolve_t20_v6_source.py').read_text()
+        tree = ast.parse(source)
+        got = {n.name: hashlib.sha256(ast.get_source_segment(source, n).encode()).hexdigest()
+               for n in tree.body if isinstance(n, ast.FunctionDef) and n.name in expected}
+        self.assertEqual(got, expected)
+
+
+class PublicCheckpointIndependentCurrentnessTests(unittest.TestCase):
+    setUp = PublicCheckpointCurrentnessTests.setUp
+    check = PublicCheckpointCurrentnessTests.check
+
+    def _outside(self, population):
+        return next(p for p in getattr(resolver, population) if p not in resolver.CHECKPOINT_PUBLIC_COPY_PATHS)
+
+    def test_each_unselected_class_still_requires_its_whole_guard(self):
+        for population, guard in (
+                ('CHECKPOINT_COPY_PATHS', 'checkpoint_duplicate_paths'),
+                ('CHECKPOINT_RECORD_COPY_PATHS', 'checkpoint_record_duplicate_paths'),
+                ('CHECKPOINT_PACKAGE_COPY_PATHS', 'checkpoint_package_duplicate_paths')):
+            with self.subTest(population=population):
+                self.legacy.clear()
+                self.changed = [('D', self.paths[0]), ('D', self._outside(population))]
+                errors = self.check()
+                self.assertTrue(errors)
+                self.assertEqual(self.legacy, [guard])
+                self.assertTrue(any('legacy whole-class evidence required' in e for e in errors))
+
+    def test_all_three_unselected_triggers_survive_across_both_diffs(self):
+        self.changed = {
+            'cached': [('D', self.paths[0]), ('D', self._outside('CHECKPOINT_COPY_PATHS'))],
+            'worktree': [('D', self._outside('CHECKPOINT_RECORD_COPY_PATHS')),
+                         ('D', self._outside('CHECKPOINT_PACKAGE_COPY_PATHS'))],
+        }
+        errors = self.check()
+        self.assertEqual(self.calls, 1)
+        self.assertEqual(collections.Counter(self.legacy), collections.Counter((
+            'checkpoint_duplicate_paths', 'checkpoint_record_duplicate_paths', 'checkpoint_package_duplicate_paths')))
+        self.assertEqual(sum('legacy whole-class evidence required' in e for e in errors), 3)
+
+    def test_unselected_old_guard_success_is_not_disabled(self):
+        calls = []
+        rows = []
+        for population, guard in (
+                ('CHECKPOINT_COPY_PATHS', 'checkpoint_duplicate_paths'),
+                ('CHECKPOINT_RECORD_COPY_PATHS', 'checkpoint_record_duplicate_paths'),
+                ('CHECKPOINT_PACKAGE_COPY_PATHS', 'checkpoint_package_duplicate_paths')):
+            path = self._outside(population)
+            rows.append(('D', path))
+            self.ns[guard] = lambda root, path=path, guard=guard: calls.append(guard) or {path}
+        self.changed = [('D', self.paths[0]), *rows]
+        self.assertEqual(self.check(), [])
+        self.assertEqual(len(calls), 3)
+        self.assertEqual(self.calls, 1)
+
+    def test_fixed_guard_error_types_stay_fatal_in_currentness(self):
+        for fault in (ValueError('selected-native-value'), OSError('selected-native-os'), UnicodeError('selected-native-unicode')):
+            with self.subTest(error=type(fault).__name__):
+                self.changed = [('D', self.paths[0])]
+                def fail(root):
+                    raise fault
+                self.ns['checkpoint_public_duplicate_paths'] = fail
+                errors = self.check()
+                self.assertTrue(any(str(fault) in e for e in errors))
+                self.assertTrue(any(self.paths[0] in e for e in errors))
+
+    def test_worktree_only_selected_deletion_is_qualified(self):
+        self.changed = {'cached': [], 'worktree': [('D', self.paths[-1])]}
+        self.assertEqual(self.check(), [])
+        self.assertEqual(self.calls, 1)
+        self.assertEqual(self.legacy, [])
+
+    def test_failed_or_malformed_diff_cannot_be_hidden(self):
+        for result in (types.SimpleNamespace(returncode=1, stdout=b''),
+                       types.SimpleNamespace(returncode=0, stdout=b'D\0'),
+                       types.SimpleNamespace(returncode=0, stdout=b'D\0\xff\0')):
+            with self.subTest(result=result):
+                self.ns['readonly_git_diff'] = lambda root, args, result=result: result
+                errors = self.check()
+                self.assertTrue(errors)
+                self.assertTrue(any('corpus-currentness:' in e for e in errors))
+
+    def test_reader_has_real_fixed_population_and_guard_import(self):
+        tree = ast.parse((ROOT/'scripts/check_reader_pilot.py').read_bytes())
+        names = {a.asname or a.name for n in tree.body
+                 if isinstance(n, ast.ImportFrom) and n.module == 'resolve_t20_v6_source'
+                 for a in n.names}
+        self.assertTrue({'CHECKPOINT_PUBLIC_COPY_PATHS', 'checkpoint_public_duplicate_paths'} <= names)
 
 
 if __name__ == "__main__":
