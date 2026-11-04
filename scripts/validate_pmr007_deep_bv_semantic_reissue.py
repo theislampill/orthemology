@@ -4,6 +4,7 @@
 from resolve_t20_v6_source import (
     digest_record_view_bytes, digest_record_view_text,
     digest_record_view_is_file, digest_record_view_paths,
+    reissue_administrative_custody,
 )
 
 
@@ -123,7 +124,8 @@ def _current_correction_boundaries_valid(receipt):
     )
 
 
-def validate(root=ROOT):
+def _validate_current_reissue(root=ROOT, supplied_members=None):
+    supplied_members = supplied_members or {}
     root = pathlib.Path(root)
     source = root / SOURCE_REL
     issues = []
@@ -139,6 +141,7 @@ def validate(root=ROOT):
             for path in digest_record_view_paths(root, source)
             if digest_record_view_is_file(path) or path.is_symlink()
         }
+        actual_paths.update(supplied_members)
     else:
         issues.append("semantic-reissue source directory is missing")
     source_coverage_exact = actual_paths == set(EXPECTED_SOURCE_HASHES)
@@ -146,7 +149,7 @@ def validate(root=ROOT):
         issues.append("semantic-reissue source coverage mismatch")
 
     for relative in sorted(actual_paths):
-        target = source / pathlib.PurePosixPath(relative)
+        target = supplied_members.get(relative, source / pathlib.PurePosixPath(relative))
         if target.is_symlink():
             issues.append(f"semantic-reissue symlink is forbidden: {relative}")
             continue
@@ -348,6 +351,30 @@ def validate(root=ROOT):
         "executable_reproduction_established": executable_reproduction_established,
         "issues": issues,
     }
+
+
+
+def validate(root=ROOT):
+    root = pathlib.Path(root)
+    source = root / SOURCE_REL
+    try:
+        with reissue_administrative_custody(root, source, SOURCE_REL) as supplied:
+            receipt = _validate_current_reissue(root, supplied_members=supplied)
+            receipt["administrative_record_custody"] = {
+                "status": "AUTHENTICATED_ORIGINAL_A7FF" if supplied else "CURRENT_PHYSICAL",
+                "supplied_original_members": sorted(supplied),
+            }
+            return receipt
+    except (ValueError, OSError) as error:
+        return {
+            "schema": 'ar8r-pmr007-deep-bv-semantic-reissue-validation-v1',
+            "result": "FAIL",
+            "source_coverage_exact": False,
+            "issues": ["administrative/source validation refused: " + str(error)],
+            "administrative_record_custody": {
+                "status": "UNAVAILABLE", "supplied_original_members": [],
+            },
+        }
 
 
 def main():

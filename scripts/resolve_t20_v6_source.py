@@ -7,6 +7,7 @@ certify scientific acceptance. Same-named historical variants stay separate.
 from __future__ import annotations
 import argparse
 import collections
+import contextlib
 import hashlib
 import json
 import os
@@ -5182,6 +5183,134 @@ def digest_record_view_paths(root, directory):
     return observed
 
 
+REISSUE_ADMINISTRATIVE_MEMBERS = {'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/source-files': {'AR8R_PMR007_CURRENT_CONTINUATION_AFTER_DEEP_BV.yaml': ('0f8aa23d121b878e33eff684a16a855cffe1d033',
+                                                                                                                                                                '33bb04fd451ce53cddc960b8d68644b94cc9e46d71c3a19fc0ccc907af2dc024',
+                                                                                                                                                                2047),
+                                                                                                        'CURRENT_STATE_AFTER_DEEP_BV.yaml': ('2afcbc69028216632b2e5ca19d4a481836cbca04',
+                                                                                                                                             'bc308dd3f282f97a3a37ee07e241f6ff23f28ff0d66f6d90364d5271f2716eb8',
+                                                                                                                                             1063),
+                                                                                                        'PMR-007_DEEP_BV_ADMISSION_HASHES.sha256': ('17efc7b69d646800939033f0acb8f1f05d21ff78',
+                                                                                                                                                    'b56fc1918d77d262b62934720b9ed158ca69d003d0ddca00c96c082b9455122e',
+                                                                                                                                                    1416),
+                                                                                                        'PMR-007_DEEP_BV_ADMISSION_OVERLAY.yaml': ('86e7bbce0c921af914cdf71e17cff01b0aa2a562',
+                                                                                                                                                   'f773831cb11d784fecc50ec62bbaf79bf85faf4f78218b91e254228da224664b',
+                                                                                                                                                   968),
+                                                                                                        'PMR007_POST_BK_BURDEN_DELTA_BL_BV_V4.yaml': ('74dbce6bf02222a82af2d3d4011d578c163a6b83',
+                                                                                                                                                      'a3f8ac872dd9cd9c9693a31226d4d4337e308e8d5b3a3ac645c5e866c1596edb',
+                                                                                                                                                      960),
+                                                                                                        'PMR007_POST_BK_FORMALIZATION_QUEUE_THROUGH_BV_V4.yaml': ('dc26952e97974326479c3e5c5422c616380de741',
+                                                                                                                                                                  '59265431d8b93edc58275a008a3b89535646cbf6ad514590d45301470d4ac4fd',
+                                                                                                                                                                  665)},
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/source-files': {'OWNER_ADOPTION_STATUS.yaml': ('10ef21c92ad0db567c30c99fd4fd0f1cc38cb3c8',
+                                                                                                                                       '674ac1161e272a283b26073ed9f55cf5c95649c4ec7a11861132390f8ef3aabf',
+                                                                                                                                       277),
+                                                                                                        'PROPOSAL/ledgers/BURDEN_DELTA_BW_CJ.yaml': ('07822485fda8a5eb0abed27dbd29da5c4792efab',
+                                                                                                                                                     '59da586a3d1ddfd3a0b7aa51be1f5ce9ab6cc3119743047bec18272fff0d23bb',
+                                                                                                                                                     1954),
+                                                                                                        'PROPOSAL/ledgers/CURRENT_STATE.yaml': ('196c1b3145c6d4a26e113c98651965d1a776c5bc',
+                                                                                                                                                'fbcd7d146e0daf7b2221b7089b32308a6628b30fcaff584800081280440ca936',
+                                                                                                                                                1658),
+                                                                                                        'PROPOSAL/ledgers/FORMALIZATION_QUEUE.yaml': ('08af5df54f3b499eb9d6d1dd382d8f53c09cb725',
+                                                                                                                                                      '89dfffe04758237f6c5346f9053c89ba27496d79ac671be9fe0228e9c8ab9166',
+                                                                                                                                                      3670),
+                                                                                                        'PROPOSAL/ledgers/FRONTIER_ROTATION.yaml': ('1625088161407e16d5f91852359d36ead29771fb',
+                                                                                                                                                    '5faaac10c286d60e54222e2af35069ca9e8b884e2e0698223c075a12e0bfb833',
+                                                                                                                                                    986),
+                                                                                                        'PROPOSAL/ledgers/SOURCE_USE_REGISTER.yaml': ('af97f1dc655103130918844b1ecdb0e3fa9063af',
+                                                                                                                                                      'c0b465cd7bef741616f7f718e34465f1953e061d2c4426368df932a58200b96f',
+                                                                                                                                                      1415),
+                                                                                                        'PROPOSAL/ledgers/TIMING_CUSTODY.yaml': ('fab6447e314868b70645610d0fcfb8804486cb00',
+                                                                                                                                                 'c73a65e15b01c188444274577c914327f98177ae60784ccd8d4c8525eb2c3292',
+                                                                                                                                                 474)}}
+REISSUE_ADMINISTRATIVE_MANIFESTS = {'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/source-files': ('docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/SOURCE_SHA256SUMS',
+                                                                                                        'c6f0b051b2c69760fd615552658e50a5e73df596'),
+ 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/source-files': ('docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/SOURCE_SHA256SUMS',
+                                                                                                        '4dfe2a49af3454bda4b0a611236fa5e1d3a21346')}
+
+
+@contextlib.contextmanager
+def reissue_administrative_custody(root, source, source_rel):
+    """Supply only thirteen fixed administrative originals, never optional acceptance.
+
+    All existing package membership, content, parse, privacy, authority and
+    replay checks still consume these ordinary files. No typed index or checker
+    is eligible. Present corruption and unavailable native custody fail closed.
+    """
+    source_rel = pathlib.PurePosixPath(source_rel).as_posix()
+    if source_rel not in REISSUE_ADMINISTRATIVE_MEMBERS:
+        raise ValueError('unqualified reissue administrative source')
+    root = pathlib.Path(root).absolute()
+    source = pathlib.Path(source).absolute()
+    if source.is_symlink():
+        raise ValueError('reissue source directory is a symlink')
+    if not source.is_dir():
+        raise ValueError('reissue source directory is missing')
+    _digest_record_root(source)
+    members = REISSUE_ADMINISTRATIVE_MEMBERS[source_rel]
+    initial_local = {name: _digest_record_state(source, name) for name in members}
+    missing = {name for name, state in initial_local.items() if state is None}
+    if not missing:
+        yield {}
+        return
+    root = _digest_record_root(root)
+    if source != root / source_rel:
+        raise ValueError('reissue historical supply requires the exact original source')
+    # Consume the existing whole 176-coordinate gate; do not repin or bypass it.
+    manifest_path, manifest_blob = REISSUE_ADMINISTRATIVE_MANIFESTS[source_rel]
+    if _digest_record_catalog(root).get(manifest_path) != manifest_blob:
+        raise ValueError('reissue original manifest coordinate differs')
+    paths = {source_rel + '/' + name: pins for name, pins in members.items()}
+    raw = _administrative_git(root, 'ls-tree', '-rz', '--full-tree', DIGEST_RECORD_BASE,
+                              '--', *sorted(paths))
+    observed = {}
+    for entry in raw.split(b'\0'):
+        if not entry:
+            continue
+        metadata, encoded_path = entry.split(b'\t', 1)
+        mode, kind, blob = metadata.decode('ascii').split()
+        path = encoded_path.decode('utf-8')
+        if (path not in paths or path in observed or mode != '100644'
+                or kind != 'blob' or blob != paths[path][0]):
+            raise ValueError('reissue original administrative coordinate differs')
+        observed[path] = blob
+    if set(observed) != set(paths):
+        raise ValueError('reissue original administrative membership differs')
+    stages = {}
+    for path, (blob, identity, size) in paths.items():
+        staged = _administrative_git(root, 'ls-files', '--stage', '-z', '--', path)
+        expected = ('100644 ' + blob + ' 0\t' + path + '\0').encode()
+        if staged not in (b'', expected):
+            raise ValueError('reissue administrative staged identity differs')
+        stages[path] = staged
+    bodies = {}
+    for name, (blob, identity, size) in members.items():
+        path = source_rel + '/' + name
+        body = _digest_record_bound_bytes(root, path, blob, initial_local[name])
+        if len(body) != size or digest(body) != identity:
+            raise ValueError('reissue original administrative bytes differ')
+        if name in missing:
+            bodies[name] = body
+    def unchanged():
+        for name, initial in initial_local.items():
+            path = source_rel + '/' + name
+            if _digest_record_state(root, path) != initial:
+                raise ValueError('reissue administrative presence or node changed')
+            if _administrative_git(root, 'ls-files', '--stage', '-z', '--', path) != stages[path]:
+                raise ValueError('reissue administrative index changed')
+    unchanged()
+    with tempfile.TemporaryDirectory(prefix='reissue-administrative-originals-') as temporary:
+        supplied = {}
+        for name, body in bodies.items():
+            target = pathlib.Path(temporary) / pathlib.PurePosixPath(name)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            with target.open('xb') as stream:
+                stream.write(body)
+            target.chmod(0o644)
+            supplied[name] = target
+        yield supplied
+        unchanged()
+
+
 def _continuation_git(root, *args):
     result = subprocess.run(['git', '--no-replace-objects', '--literal-pathspecs', *args],
                             cwd=root, capture_output=True, check=False)
@@ -5294,11 +5423,36 @@ def _continuation_bound_bytes(root, path, binding, *, current=None):
     return body
 
 
+def _continuation_auditsupport_binding(path):
+    """Preserve the four source memberships without rebuilding the copy catalogue."""
+    continuation_formal_current_paths()
+    alias, former, canonical, blob, identity, size = CONTINUATION_FORMAL_RETARGETS[0]
+    if path != alias:
+        raise ValueError('not the exact AuditSupport continuation alias')
+    origin = '866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086'
+    members = (
+        'sources/p01-repaired/AuditSupport.lean',
+        'sources/p01-successor/AuditSupport.lean',
+        'sources/p01-dependent/AuditSupport.lean',
+        'sources/p01-canonical-projection/AuditSupport.lean',
+    )
+    current = 'formal/type-theory/' + pathlib.PurePosixPath(canonical).name
+    sources = [dict(id='src-' + origin[:16] + '-' + hashlib.sha256(member.encode()).hexdigest()[:16],
+                    origin=origin, member=member, original_sha256=identity,
+                    original_bytes=size, path=current, sha256=identity, bytes=size,
+                    projection='EXACT', derivation=None) for member in members]
+    return dict(canonical=former, sha256=identity, bytes=size, blob=blob, sources=sources,
+                legacy_tree='08a6452e50e8e4791d02410d1c1732875e520f2e')
+
+
 def continuation_copy_bytes(root, path, identity=None, size=None, source=None):
     """Authenticate an exact current copy; never recover arbitrary missing files."""
     if not re.fullmatch(re.escape(CONTINUATION_COPY_ROOT) + r'[0-9a-f]{64}\.lean', path):
         raise ValueError('unqualified continuation copy path')
-    binding = _continuation_copy_catalog(root).get(path)
+    continuation_formal_current_paths()
+    binding = (_continuation_auditsupport_binding(path)
+               if path in CONTINUATION_FORMAL_RETARGET_PATHS
+               else _continuation_copy_catalog(root).get(path))
     if (binding is None or (identity is not None and identity != binding['sha256'])
             or (size is not None and size != binding['bytes'])
             or (source is not None and source not in binding['sources'])):

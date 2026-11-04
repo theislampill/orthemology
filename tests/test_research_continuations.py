@@ -1310,6 +1310,8 @@ class ContinuationCatalogProvenanceTests(unittest.TestCase):
                     patch.object(self.resolver, 'CONTINUATION_FORMAL_CURRENT_PATHS', dispatch), \
                     patch.object(self.resolver, '_regular_current_bytes',
                                  side_effect=lambda root, path: bodies[path]), \
+                    patch.object(self.resolver, '_continuation_auditsupport_binding',
+                                 side_effect=lambda path: self.resolver._continuation_copy_catalog(root)[path]), \
                     patch.object(self.resolver, '_continuation_formal_bound_bytes',
                                  return_value=b'X' * len(body) if wrong_native_body else body), \
                     patch.object(self.resolver, '_continuation_git',
@@ -1439,6 +1441,210 @@ class ContinuationCatalogProvenanceTests(unittest.TestCase):
 
     def test_unchanged_default_provider_helpers_still_accept_their_exact_owner(self):
         self.assertEqual(self.guarded_current_provider(default_helpers=True), b'-- guard fixture\n')
+
+
+class AuditSupportBindingTests(unittest.TestCase):
+    """Finite catalogue extraction only; the authenticated native leaf is inert."""
+
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location(
+            'auditsupport_binding_resolver', SCRIPT.with_name('resolve_t20_v6_source.py'))
+        cls.resolver = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.resolver)
+
+    def setUp(self):
+        self.root = SCRIPT.parents[1]
+        self.alias, self.former, self.canonical, self.blob, self.identity, self.size = (
+            self.resolver.CONTINUATION_FORMAL_RETARGETS[0])
+        self.current = 'formal/type-theory/' + Path(self.canonical).name
+        origin = '866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086'
+        members = (
+            'sources/p01-repaired/AuditSupport.lean',
+            'sources/p01-successor/AuditSupport.lean',
+            'sources/p01-dependent/AuditSupport.lean',
+            'sources/p01-canonical-projection/AuditSupport.lean',
+        )
+        self.sources = [dict(
+            id='src-' + origin[:16] + '-' + hashlib.sha256(member.encode()).hexdigest()[:16],
+            origin=origin, member=member, original_sha256=self.identity,
+            original_bytes=self.size, path=self.current, sha256=self.identity,
+            bytes=self.size, projection='EXACT', derivation=None,
+        ) for member in members]
+        self.expected = dict(canonical=self.former, sha256=self.identity,
+                             bytes=self.size, blob=self.blob, sources=self.sources,
+                             legacy_tree='08a6452e50e8e4791d02410d1c1732875e520f2e')
+
+    def finite_helper(self):
+        helper = getattr(self.resolver, '_continuation_auditsupport_binding', None)
+        self.assertTrue(callable(helper), 'finite AuditSupport binding helper is absent')
+        return helper
+
+    def selected_read(self, source=None, identity=None, size=None):
+        with patch.object(self.resolver, '_continuation_copy_catalog',
+                          side_effect=AssertionError('selected alias still reads catalogue')) as catalog, \
+                patch.object(self.resolver, '_regular_current_bytes',
+                             side_effect=AssertionError('selected alias reads metadata')) as metadata, \
+                patch.object(Path, 'read_bytes',
+                             side_effect=AssertionError('unexpected file read')), \
+                patch.object(Path, 'read_text',
+                             side_effect=AssertionError('unexpected text read')), \
+                patch('builtins.open', side_effect=AssertionError('unexpected open')), \
+                patch.object(self.resolver, '_continuation_formal_bound_bytes',
+                             return_value=b'inert authenticated leaf') as native:
+            result = self.resolver.continuation_copy_bytes(
+                self.root, self.alias, identity=identity, size=size, source=source)
+            self.assertEqual(result, b'inert authenticated leaf')
+            catalog.assert_not_called()
+            metadata.assert_not_called()
+            native.assert_called_once_with(self.root, self.alias, self.expected)
+
+    def test_exact_four_complete_binding_rows(self):
+        self.assertEqual(self.finite_helper()(self.alias), self.expected)
+        self.assertEqual(len({row['id'] for row in self.expected['sources']}), 4)
+
+    def test_finite_helper_rejects_every_foreign_path_kind(self):
+        helper = self.finite_helper()
+        for path in (self.former, self.canonical, self.current,
+                     self.resolver.CONTINUATION_COPY_ROOT + '1' * 64 + '.lean',
+                     self.alias + '/', '../AuditSupport.lean'):
+            with self.subTest(path=path), self.assertRaises(ValueError):
+                helper(path)
+
+    def test_selected_alias_reads_no_catalogue_or_metadata(self):
+        self.selected_read(self.sources[0], self.identity, self.size)
+
+    def test_all_four_original_source_memberships_are_accepted(self):
+        for source in self.sources:
+            with self.subTest(source_id=source['id']):
+                self.selected_read(deepcopy(source), self.identity, self.size)
+
+    def test_optional_source_none_retains_existing_contract(self):
+        self.selected_read()
+
+    def test_every_changed_source_field_is_refused_before_native_leaf(self):
+        changes = dict(id='wrong', origin='0' * 64, member='other/AuditSupport.lean',
+                       original_sha256='0' * 64, original_bytes=self.size + 1,
+                       path=self.former, sha256='0' * 64, bytes=self.size + 1,
+                       projection='PROJECT', derivation='unqualified')
+        with patch.object(self.resolver, '_continuation_copy_catalog',
+                          side_effect=AssertionError('catalogue fallback')), \
+                patch.object(self.resolver, '_continuation_formal_bound_bytes') as native:
+            for source in self.sources:
+                for field, value in changes.items():
+                    changed = dict(source, **{field: value})
+                    with self.subTest(source_id=source['id'], field=field), self.assertRaises(ValueError):
+                        self.resolver.continuation_copy_bytes(self.root, self.alias, source=changed)
+            native.assert_not_called()
+
+    def test_omitted_source_fields_are_refused(self):
+        with patch.object(self.resolver, '_continuation_copy_catalog',
+                          side_effect=AssertionError('catalogue fallback')), \
+                patch.object(self.resolver, '_continuation_formal_bound_bytes') as native:
+            for source in self.sources:
+                for field in source:
+                    changed = dict(source)
+                    del changed[field]
+                    with self.subTest(source_id=source['id'], omitted=field), self.assertRaises(ValueError):
+                        self.resolver.continuation_copy_bytes(self.root, self.alias, source=changed)
+            native.assert_not_called()
+
+    def test_extra_source_fields_are_refused(self):
+        with patch.object(self.resolver, '_continuation_copy_catalog',
+                          side_effect=AssertionError('catalogue fallback')), \
+                patch.object(self.resolver, '_continuation_formal_bound_bytes') as native:
+            for source in self.sources:
+                with self.subTest(source_id=source['id']), self.assertRaises(ValueError):
+                    self.resolver.continuation_copy_bytes(
+                        self.root, self.alias, source=dict(source, unqualified_extra=True))
+            native.assert_not_called()
+
+    def test_coherent_but_unlisted_source_membership_is_refused(self):
+        source = dict(self.sources[0])
+        source['member'] = 'sources/p01-other/AuditSupport.lean'
+        source['id'] = ('src-' + source['origin'][:16] + '-'
+                        + hashlib.sha256(source['member'].encode()).hexdigest()[:16])
+        with patch.object(self.resolver, '_continuation_copy_catalog',
+                          side_effect=AssertionError('catalogue fallback')), \
+                patch.object(self.resolver, '_continuation_formal_bound_bytes') as native:
+            with self.assertRaises(ValueError):
+                self.resolver.continuation_copy_bytes(self.root, self.alias, source=source)
+            native.assert_not_called()
+
+    def test_requested_identity_and_size_remain_exact(self):
+        with patch.object(self.resolver, '_continuation_copy_catalog',
+                          side_effect=AssertionError('catalogue fallback')), \
+                patch.object(self.resolver, '_continuation_formal_bound_bytes') as native:
+            for identity, size in (('0' * 64, self.size), (self.identity, self.size + 1)):
+                with self.subTest(identity=identity, size=size), self.assertRaises(ValueError):
+                    self.resolver.continuation_copy_bytes(
+                        self.root, self.alias, identity=identity, size=size, source=self.sources[0])
+            native.assert_not_called()
+
+    def test_native_provenance_failure_propagates_without_fallback(self):
+        failure = ValueError('inert original-provenance refusal')
+        with patch.object(self.resolver, '_continuation_copy_catalog',
+                          side_effect=AssertionError('catalogue fallback')), \
+                patch.object(self.resolver, '_continuation_formal_bound_bytes',
+                             side_effect=failure) as native:
+            with self.assertRaises(ValueError) as caught:
+                self.resolver.continuation_copy_bytes(self.root, self.alias, source=self.sources[0])
+            self.assertIs(caught.exception, failure)
+            native.assert_called_once_with(self.root, self.alias, self.expected)
+
+    def test_tuple_set_and_map_corruption_refuse_before_dispatch(self):
+        rows = list(self.resolver.CONTINUATION_FORMAL_RETARGETS)
+        altered = list(rows[0])
+        altered[4] = '0' * 64
+        rows[0] = tuple(altered)
+        mutations = (
+            ('CONTINUATION_FORMAL_RETARGETS', tuple(rows)),
+            ('CONTINUATION_FORMAL_RETARGET_PATHS', frozenset()),
+            ('CONTINUATION_FORMAL_RETARGET_PATHS', frozenset((self.alias, 'extra'))),
+            ('CONTINUATION_FORMAL_CURRENT_PATHS', {}),
+            ('CONTINUATION_FORMAL_CURRENT_PATHS', {self.current: 'wrong'}),
+            ('CONTINUATION_FORMAL_CURRENT_PATHS', {self.current: self.alias, 'extra': self.alias}),
+        )
+        for variant, (name, value) in enumerate(mutations):
+            with self.subTest(constant=name, variant=variant), \
+                    patch.object(self.resolver, name, value), \
+                    patch.object(self.resolver, '_continuation_copy_catalog',
+                                 side_effect=AssertionError('corrupt dispatch reached catalogue')) as catalog, \
+                    patch.object(self.resolver, '_continuation_formal_bound_bytes') as native:
+                with self.assertRaises(ValueError):
+                    self.resolver.continuation_copy_bytes(self.root, self.alias, source=self.sources[0])
+                catalog.assert_not_called()
+                native.assert_not_called()
+
+    def test_other_route_keeps_catalogue_dispatch_and_exact_binding(self):
+        helper = self.finite_helper()
+        path = self.resolver.CONTINUATION_COPY_ROOT + '1' * 64 + '.lean'
+        binding = dict(canonical='retained/Other.lean', sha256='1' * 64, bytes=17,
+                       blob='2' * 40, sources=[{'id': 'other-source'}], legacy_tree='3' * 40)
+        with patch.object(self.resolver, '_continuation_auditsupport_binding',
+                          wraps=helper) as finite, \
+                patch.object(self.resolver, '_continuation_copy_catalog',
+                             return_value={path: binding}) as catalog, \
+                patch.object(self.resolver, '_continuation_formal_bound_bytes',
+                             return_value=b'other inert leaf') as native:
+            self.assertEqual(self.resolver.continuation_copy_bytes(
+                self.root, path, '1' * 64, 17, {'id': 'other-source'}), b'other inert leaf')
+            finite.assert_not_called()
+            catalog.assert_called_once_with(self.root)
+            native.assert_called_once_with(self.root, path, binding)
+
+    def test_other_route_retains_whole_row_membership_refusal(self):
+        self.finite_helper()
+        path = self.resolver.CONTINUATION_COPY_ROOT + '1' * 64 + '.lean'
+        binding = dict(canonical='retained/Other.lean', sha256='1' * 64, bytes=17,
+                       blob='2' * 40, sources=[{'id': 'other-source'}], legacy_tree='3' * 40)
+        with patch.object(self.resolver, '_continuation_copy_catalog',
+                          return_value={path: binding}) as catalog, \
+                patch.object(self.resolver, '_continuation_formal_bound_bytes') as native:
+            with self.assertRaises(ValueError):
+                self.resolver.continuation_copy_bytes(self.root, path, source={'id': 'wrong'})
+            catalog.assert_called_once_with(self.root)
+            native.assert_not_called()
 
 
 if __name__=='__main__':unittest.main(verbosity=2)

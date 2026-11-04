@@ -460,5 +460,162 @@ class CurrentCentralIntakeTests(unittest.TestCase):
         self.assertFalse(receipt['specialist_a_checks_reproduced'])
 
 
+
+class SpecialistBOriginalCustodyTests(unittest.TestCase):
+    """Owner-local transport controls; actual original inputs are qualified separately."""
+    def setUp(self):
+        import hashlib
+        from unittest import mock
+        self.mock = mock
+        self.v = load_validator()
+        self.assertTrue(callable(getattr(self.v, 'specialist_b_source_custody', None)),
+                        'mandatory Specialist B ordinary supplier is absent')
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        self.root = pathlib.Path(temporary.name)
+        self.intake = self.root / self.v.INTAKE_REL
+        self.intake.mkdir(parents=True)
+        self.source = self.intake / 'specialist-b/source-files'
+        self.prefix = (self.v.INTAKE_REL / 'specialist-b/source-files').as_posix()
+        self.data = b'Ordinary synthetic source.\n'
+        self.manifest = hashlib.sha256(self.data).hexdigest().encode() + b'  evidence.txt\n'
+        self.expected = {'evidence.txt': hashlib.sha256(self.data).hexdigest()}
+        self.contract = {'manifest': 'MANIFEST.sha256', 'files': 2,
+                         'manifest_sha256': hashlib.sha256(self.manifest).hexdigest()}
+        self.bodies = {'evidence.txt': self.data, 'MANIFEST.sha256': self.manifest}
+        self.blobs = {name: hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+                      for name, body in self.bodies.items()}
+        self.raw = b''.join(('100644 blob ' + self.blobs[name] + '\t' + self.prefix + '/' + name + '\0').encode()
+                            for name in sorted(self.bodies))
+        self.calls = []
+        def parse(path, expected_digest, issues):
+            self.calls.append(('manifest', path, expected_digest))
+            self.assertEqual(path, self.source / 'MANIFEST.sha256')
+            self.assertEqual(expected_digest, self.contract['manifest_sha256'])
+            return dict(self.expected)
+        def tree(root, *args):
+            self.calls.append(('tree', args))
+            self.assertEqual(args, ('ls-tree', '-rz', '--full-tree', self.v.DIGEST_RECORD_BASE,
+                                    '--', self.prefix))
+            return self.raw
+        def bound(root, path, blob, initial):
+            name = pathlib.PurePosixPath(path).relative_to(self.prefix).as_posix()
+            self.assertIsNone(initial)
+            self.assertEqual(blob, self.blobs[name])
+            self.calls.append(('body', name))
+            return self.bodies[name]
+        self.parse = parse
+        self.bound = bound
+        for name, value in {'PACKAGES': dict(self.v.PACKAGES, **{'specialist-b': self.contract}),
+                            'parse_manifest': parse, '_administrative_git': tree,
+                            '_digest_record_bound_bytes': bound}.items():
+            patch = mock.patch.object(self.v, name, value); patch.start(); self.addCleanup(patch.stop)
+
+    def custody(self):
+        return self.v.specialist_b_source_custody(self.root, self.intake)
+
+    def test_absent_exact_input_is_materialized_once_and_removed(self):
+        with self.custody() as source:
+            self.assertNotEqual(source, self.source)
+            self.assertEqual({p.name: p.read_bytes() for p in source.iterdir()}, self.bodies)
+            self.assertFalse(any(p.is_symlink() for p in source.iterdir()))
+            self.assertEqual([x[0] for x in self.calls], ['manifest', 'tree', 'body', 'body'])
+        self.assertFalse(source.exists())
+        self.assertFalse(self.source.exists())
+
+    def test_present_partial_or_corrupt_source_is_not_replaced(self):
+        self.source.mkdir(parents=True)
+        (self.source / 'unexpected.txt').write_text('corrupt current source')
+        with self.custody() as source:
+            self.assertEqual(source, self.source)
+            self.assertEqual(self.calls, [])
+            self.assertEqual((source / 'unexpected.txt').read_text(), 'corrupt current source')
+
+    def test_required_native_manifest_refusal_propagates(self):
+        with self.mock.patch.object(self.v, 'parse_manifest', side_effect=OSError('native176 unavailable')):
+            with self.assertRaises(OSError):
+                with self.custody(): pass
+        self.assertEqual(self.calls, [])
+
+    def test_original_manifest_error_or_count_cannot_be_skipped(self):
+        def failed(path, expected, issues):
+            issues.append('manifest mismatch')
+            return self.expected
+        with self.mock.patch.object(self.v, 'parse_manifest', failed):
+            with self.assertRaises(ValueError):
+                with self.custody(): pass
+        self.expected.clear()
+        with self.assertRaises(ValueError):
+            with self.custody(): pass
+        self.assertFalse(any(c[0] == 'body' for c in self.calls))
+
+    def test_tree_mode_membership_and_duplicate_are_checked(self):
+        original = self.raw
+        for raw in (original.replace(b'100644', b'100755', 1), original + original.split(b'\0')[0] + b'\0',
+                    original.replace(b'evidence.txt', b'other.txt'), b''):
+            with self.subTest(raw=raw):
+                self.raw = raw
+                with self.assertRaises(ValueError):
+                    with self.custody(): pass
+        self.assertFalse(any(c[0] == 'body' for c in self.calls))
+
+    def test_native_body_or_index_failure_cannot_be_skipped(self):
+        with self.mock.patch.object(self.v, '_digest_record_bound_bytes', side_effect=ValueError('index changed')):
+            with self.assertRaises(ValueError):
+                with self.custody(): pass
+        self.assertFalse(self.source.exists())
+
+    def test_every_original_body_hash_is_required_before_yield(self):
+        for name in self.bodies:
+            with self.subTest(name=name):
+                def wrong(root, path, blob, initial):
+                    body = self.bound(root, path, blob, initial)
+                    return body + b'drift' if path.endswith('/' + name) else body
+                with self.mock.patch.object(self.v, '_digest_record_bound_bytes', wrong):
+                    with self.assertRaises(ValueError):
+                        with self.custody(): pass
+        self.assertFalse(self.source.exists())
+
+    def test_missing_source_cannot_use_an_unrelated_intake_root(self):
+        unrelated = self.root / 'other-intake'; unrelated.mkdir()
+        with self.assertRaises(ValueError):
+            with self.v.specialist_b_source_custody(self.root, unrelated): pass
+        self.assertEqual(self.calls, [])
+
+    def test_current_source_appearing_during_authentication_refuses(self):
+        def appearing(root, path, blob, initial):
+            value = self.bound(root, path, blob, initial)
+            self.source.mkdir(parents=True, exist_ok=True)
+            return value
+        with self.mock.patch.object(self.v, '_digest_record_bound_bytes', appearing):
+            with self.assertRaises(ValueError):
+                with self.custody(): pass
+        self.assertTrue(self.source.is_dir())
+
+    def test_current_source_appearing_during_validation_refuses(self):
+        with self.assertRaises(ValueError):
+            with self.custody() as supplied:
+                self.source.mkdir(parents=True)
+        self.assertFalse(supplied.exists())
+        self.assertTrue(self.source.is_dir())
+
+    def test_lexical_and_symlink_repository_aliases_refuse(self):
+        link = self.root / 'linked'; link.symlink_to(self.root, target_is_directory=True)
+        with self.assertRaises(ValueError):
+            with self.v.specialist_b_source_custody(link, link / self.v.INTAKE_REL): pass
+        lexical = self.root / 'missing' / '..'
+        with self.assertRaises(ValueError):
+            with self.v.specialist_b_source_custody(lexical, lexical / self.v.INTAKE_REL): pass
+        self.assertEqual(self.calls, [])
+
+    def test_existing_source_symlink_is_not_followed(self):
+        outside = self.root / 'outside'; outside.mkdir()
+        self.source.parent.mkdir(parents=True)
+        self.source.symlink_to(outside, target_is_directory=True)
+        with self.assertRaises(ValueError):
+            with self.custody(): pass
+        self.assertEqual(self.calls, [])
+
+
 if __name__ == "__main__":
     unittest.main()

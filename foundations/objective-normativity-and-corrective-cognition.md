@@ -310,6 +310,22 @@ Even an underived modal order, exact additive revision increments, nonproduct co
 
 A logical qualification is necessary. Failure of exact identification does **not** mean that every profile-invariant predicate fails to entail the target. A predicate that is false in both cases may entail the target vacuously; a predicate true only on other, uniformly positive fibres may genuinely be sufficient. To refute the implication $`G(D(w))\Rightarrow T(w)`$ using the differing pair, the proposed structural achievement $`G`$ must actually hold on that pair, including its negative member. The stronger unqualified nonentailment formulation in the inherited target-relabeling note therefore needs this restriction. [S7]
 
+#### Collision obstructions for arbitrary profiles and targets
+
+The two obstruction arguments also hold without finiteness or a Boolean target. Let $`M,P,Q`$ be arbitrary types and let $`p:M\to P`$ and $`t:M\to Q`$. Say that $`t`$ is constant on the fibres of $`p`$ when
+
+```math
+\forall m_1,m_2\in M,\qquad
+p(m_1)=p(m_2)\ \Longrightarrow\ t(m_1)=t(m_2).
+```
+
+If a supplied pair has equal profiles and unequal targets, fibre constancy is impossible: applying the displayed implication to that pair immediately contradicts the target inequality. This argument needs neither a finite case class nor an extension of a classifier outside its attained image. [Packet-local logical signatures, repaired edition, lines 16–30][b29-profile-obstructions]
+
+Suppose instead that $`M`$ is nonempty and the declared class has **target-changing twin closure**: for every $`m\in M`$ there is an $`m'\in M`$ with $`p(m')=p(m)`$ and $`t(m')\ne t(m)`$. Choose one $`m`$ using nonemptiness and take its stipulated twin. The preceding collision argument again refutes fibre constancy. The nonempty premise cannot be dropped: on an empty case class, both twin closure and fibre constancy hold vacuously. [Packet-local logical signatures, repaired edition, lines 32–47][b29-profile-obstructions]
+
+These are conditional obstructions on the declared model class. They neither construct an admissible collision nor establish twin closure for a particular epistemic, metaphysical or theological account. They do not replace the actual-attainment condition for refuting a proposed sufficient predicate described above. The finite Boolean factorization statement remains as stated; no general classifier-extension result is added here. The cited repair is distinct from the historical failed source edition, and this argument makes no new compiler, axiom-readback or project-integration claim.
+
+
 #### The finite norm-fixing result and its admission limits
 
 The norm-fixing study supplies a useful example of a successful review whose scope remains narrow. Its [cold audit][receipt-a-05] accepted the finite fibre-factorization argument, including extension of a classifier outside the attained image, with no blocking defect. The [repair disposition][receipt-a-04] therefore records no change to the frozen candidate while still requiring a distinct rereview. The result does not make the truth target objective or warranted by definition: that target is independently specified, and allowing a proposed account of function to assign it freely would empty the truth-link test of its intended force.
@@ -1305,6 +1321,12 @@ The nuisance premise is substantive. A token can carry an authenticated source v
 
 The crossed-design study gives a precise prospective experiment at this limited interface. Let $`F`$ be forms, $`C`$ declared contents and $`a(f,c)`$ the deterministic response under a feasible common intervention setting both. With at least two forms and contents and a nontrivial response alphabet, complete knowledge of the table decides whether responses are constant across forms at fixed content and vary across contents. Invariance is exactly factorization through the content coordinate; nonconstancy of the resulting content map supplies the additional sensitivity condition. Diagonal observations alone cannot decide it: a form-following and a content-following response can agree wherever the observed form and content happen to be paired. [R359-AZ]
 
+The target of identification matters here. For a finite cell set $`X`$, output alphabet $`Y`$, declared hypothesis class $`\mathcal H\subseteq Y^X`$ and observed cells $`D\subseteq X`$, the observations identify the **entire hypothesis** exactly when the restriction map $`\operatorname{res}_D:\mathcal H\to Y^D`$ is injective. A failure is precisely a pair of distinct hypotheses agreeing on every observed cell. Classifying only a property of the hypothesis is weaker: its value need merely be constant on each restriction fibre. These are different targets, even when they use the same response table. [specialist-a-deletion]
+
+If $`\mathcal H=Y^X`$ and $`|Y|\geq2`$, every proper deletion defeats full identification: change one omitted coordinate and nothing observed changes. But take three binary cells and the constrained class $`y_2=y_0\mathbin{\mathrm{XOR}}y_1`$. Cells zero and one identify the whole member because they determine the third. In the constant-profile class $`\{000,111\}`$, one cell suffices. Thus the unrestricted conclusion cannot be transferred merely by counting omitted cells; the allowed hypotheses and the target must remain fixed. These examples do not themselves establish a warranted structural class, feasible causal intervention, actual architecture or source truth.
+
+The A-R2 record reports **2,106** class/deletion cases, eleven proper deletions of unrestricted binary tables and five mutant rejections. Those are historical reports, not fresh executions; its Lean criterion was reported as source-only without parse, elaboration, kernel, project-build or axiom checks. The elementary argument above does not depend on those reports. [specialist-a-deletion]
+
 For the unrestricted finite table class, omitting any cell prevents a universally correct classifier. Start with a nonconstant content-only table and change the response at just the omitted cell. Every received entry remains the same, while the changed table fails form invariance because another form at that content retains its former response. This necessity result concerns worst-case classification over that unrestricted class. A warranted parametric, compositional, monotone or source-constrained class can reduce the measurements needed; some particular partial tables can already establish failure. In the stochastic extension, the objects compared are complete interventional response distributions, not single sampled outputs. The finite identification statement supplies neither finite-sample accuracy nor the feasibility of the proposed interventions.
 
 Semantic interpretation, positivity, consistency, absence of interference, fixed episode and history, source and version stability, and a candidate-independent coding and intervention design are all required for the intended application. Without the semantic premise the table concerns labels. With it, an impersonal semantic processor can still realize the full table. Intrinsic or constitutive content, intentional uptake, proper function, personality and wisdom remain further targets. This preserves the positive gain—an explicit test of form versus declared-content mediation—without presenting it as a test that already discriminates a personal ground from the strongest semantic impersonal rival.
@@ -1457,14 +1479,24 @@ When the premise does hold, one personal implementation and one eligible imperso
 
 **Two ways a comparison can legitimately change.** A restriction computed wholly from unchanged evidence E has the form r=g∘E. If E(m)=E(m′), then r(m)=r(m′); appending r cannot split that collision. On a retained fibre, such a filter either retains both models or rejects both. An independent source, constitutive, metaphysical or resource premise can restrict the class differently, but its warrant is not inherited from the old profile. A prior preference is also not the same as excluding an implementation. This restates the relevant factorization consequence for class selection, without treating every external restriction as false or circular. [COMMON-CB]
 
-Resource evidence is one possible genuinely additional premise. Fix shared cost coordinates, units, measurement rules, a realization class Rₐ for each architecture a, and a vector budget b. For budget-pass evidence, the remaining architecture set is
+Resource evidence is one possible genuinely additional premise. Raw memory or latency belongs to a realization, not automatically to its observed profile: state splitting, dead states and alternative encodings can change cost without changing that profile. To compare profiles rather than arbitrarily chosen representatives, fix a finite registered realization set $`R`$, a common profile map $`E`$ and a scalar cost $`c`$ in common units. For an attained profile $`p\in E(R)`$, define
+
+```math
+c_*(p)=\min\{c(r):r\in R,\ E(r)=p\}.
+```
+
+The fibre is nonempty and finite, so its minimum is attained. Reordering the registry or changing the chosen representative does not change this set of costs and therefore cannot change $`c_*(p)`$. Enlarging the realization class or changing the cost interpretation can change the minimum. This is a bound within the frozen registry, not a lower bound over unregistered realizations. [Registered resource comparison, scalar correction][specialist-a-resource]
+
+Vector costs must retain joint attainability. If two realizations of the same profile have costs (1,10) and (10,1), their coordinatewise minimum is (1,1), yet neither realization meets budget (1,1). For a finite attainable cost set, keeping its Pareto-minimal vectors preserves every coordinatewise budget-feasibility answer: any feasible vector has a Pareto-minimal attainable vector no larger in any coordinate, obtained by descending through the finite set; conversely such a minimal vector is itself attainable. A separately warranted scalar aggregation rule may serve a different comparison, but independently minimizing coordinates can manufacture an unavailable realization. [Registered resource comparison, vector correction][specialist-a-resource]
+
+Accordingly, fix shared cost coordinates, units, compiler, decoder and measurement rules, a complete declared realization class $`R_a`$ for each architecture $`a`$, and a vector budget $`b`$. For budget-pass evidence, the remaining architecture set is
 
 ```math
 \mathcal F_b=\{a:\exists r\in R_a,\ \operatorname{cost}(r)\le b
                           \text{ coordinatewise}\}.
 ```
 
-Within this model, exact architecture identification requires F_b to be a singleton: two feasible architectures both explain the same pass, while one supplies the unique compatible label. An empty set indicates failure of the supplied class or premises to explain a genuine pass; it does not identify an architecture. Expected and worst-case costs must not be exchanged, nor may rival realizations be silently omitted. Pareto-incomparable vectors provide no canonical scalar winner without a separately warranted aggregation rule. No common measured architecture discriminator or complete rival realization class was established by the reissue. [COMMON-CA]
+Within this model, exact architecture identification requires $`\mathcal F_b`$ to be a singleton: two feasible architectures both explain the same pass, while one supplies the unique compatible label. An empty set indicates failure of the supplied class or premises to explain a genuine pass; it does not identify an architecture. Expected and worst-case costs must not be exchanged, nor may rival realizations be silently omitted. One observed high-cost implementation does not exclude an unregistered low-cost implementation. Pareto-incomparable vectors provide no canonical scalar winner without a separately warranted aggregation rule. No common measured architecture discriminator or complete rival realization class was established by the reissue. [COMMON-CA] [specialist-a-resource]
 
 A positive intervention effect can also exclude a **strictly restricted** rival class without identifying a person. In the reissue's finite potential-response model, if every unit response is constant across the declared intervention and fixed mixture weights aggregate those responses, the aggregate is constant. A nonzero exact effect therefore excludes that constant-response class. The converse fails: two equally weighted units with binary responses 0→1 and 1→0 have invariant aggregate 1/2 despite both varying. Plurality is not strict separability; coordinated plural and coupled impersonal systems remain possible members of the declared comparison. A null aggregate effect does not prove independent units, and sampled equality is not equality of the complete law. [COMMON-CE]
 
@@ -2862,3 +2894,9 @@ These exact source editions retain their own proposal, repair and execution scop
 - `checks/pmr007_deep_ct_partial_domain_primary_check_v2_results.json`. Git blob `488f34eeb82faa575976fcfbee7ab2e7ba4a627f`.
 
 [CPCT-CT]: #cpct-ct
+
+[specialist-a-resource]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/rounds/SPA-R3_RESOURCE_QUOTIENT.md
+
+[b29-profile-obstructions]: https://api.github.com/repos/theislampill/orthemology/git/blobs/23160036165f4907606f77987f79756aa6c81727
+
+[specialist-a-deletion]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/rounds/SPA-R2_DELETION_CLASS_CRITERION.md

@@ -778,6 +778,8 @@ def _permitted_projection_consumer_pins(original, candidate):
                                                        '7801ae286ca0b8c8c4c1bce7e73aedc9dfb914474d66ea58c029c756ea1ef67e',
                                                        46305,
                                                        '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
+    # The reviewed BW test preserves its exact original public evidence.
+    reissue_test_consumer = {'tests/test_pmr007_deep_bw_cj_semantic_reissue.py': ('a33743bf20cddf6363021f938a1cef2e0e9baf84', '22f0d82eabb228d0d6d0b0c10a5146bf93ca17b6877d34a169cb8986c1f0710e', 6275, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c')}
     for bindings in (earlier, next24, combined, dict(combined, **fixtures),
                      dict(combined, **fixtures, **replay_input),
                      dict(combined, **fixtures, **replay_input, **calculus_fixture),
@@ -795,7 +797,11 @@ def _permitted_projection_consumer_pins(original, candidate):
                           **frontier_test_consumers, **intake_test_consumer),
                      dict(combined, **fixtures, **replay_input, **calculus_fixture,
                           **digest_consumers, **attribution_consumers, **governance_consumers,
-                          **frontier_test_consumers, **intake_test_consumer, **codex_test_consumer)):
+                          **frontier_test_consumers, **intake_test_consumer, **codex_test_consumer),
+                     dict(combined, **fixtures, **replay_input, **calculus_fixture,
+                          **digest_consumers, **attribution_consumers, **governance_consumers,
+                          **frontier_test_consumers, **intake_test_consumer, **codex_test_consumer,
+                          **reissue_test_consumer)):
         expected = deepcopy(original)
         try:
             for path, (blob, identity, size, revision) in bindings.items():
@@ -1196,9 +1202,9 @@ REVIEWED_AUTHORITY_EDITS = {'scripts/validate_candidate_state.py': ('scripts/val
                                             ('c0b79431bafc486c71a083b3b8afdec0db431236',
                                              '548d4358ca89755bbfd29b2df9a4b6b2b6ca36541cc5994e523198c40ddea26c',
                                              11625),
-                                            ('dd04dd4c43f2bc1d7bd5aaa7f84a4c36c039cfc8',
-                                             '15572c197d20db12d80668db0c8009459bfa5911a59d6c788f7e9ef92e9499f4',
-                                             25046)),
+                                            ('9c5c787c71490d4e4f7807df028e02ba510a0dc5',
+                                             '8fbf27f3b400015c472a16d4a23ff63ee8ef050409f4f875564b1cda2ef0e6b4',
+                                             33249)),
  'tests/test_ar8r_codex_corpus_synthesis_v14.py': ('tests/test_ar8r_codex_corpus_synthesis_v14.py',
                                                    '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c',
                                                    ('b5aa03c18c2e9df149f460955184bec83a6b46a0',
@@ -1254,7 +1260,8 @@ REVIEWED_AUTHORITY_EDITS = {'scripts/validate_candidate_state.py': ('scripts/val
                                                      None,
                                                      ('8402995d37601853f80ddd7f989cc4fe4c600950',
                                                       '95fb6990e711f319f5bd15e610269bb8bfd462f3f9a718b06324c2ed381495cf',
-                                                      3298))}
+                                                      3298)),
+ 'tests/test_pmr007_deep_bw_cj_semantic_reissue.py': ('tests/test_pmr007_deep_bw_cj_semantic_reissue.py', '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c', ('a33743bf20cddf6363021f938a1cef2e0e9baf84', '22f0d82eabb228d0d6d0b0c10a5146bf93ca17b6877d34a169cb8986c1f0710e', 6275), ('1c3cad17a21642e63b1e264f88ef403173c1dd1b', '71703c3507b08e5da55e749afc3af8128444e833ac66c9e6b1b57e97235c2afc', 37844))}
 
 
 def reviewed_authority_modifications(repo, paths):

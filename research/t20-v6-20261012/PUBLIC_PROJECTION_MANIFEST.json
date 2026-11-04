@@ -43908,7 +43908,9 @@
       "repository_path": "tests/test_pmr007_deep_bw_cj_semantic_reissue.py",
       "public_sha256": "22f0d82eabb228d0d6d0b0c10a5146bf93ca17b6877d34a169cb8986c1f0710e",
       "public_bytes": 6275,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "a33743bf20cddf6363021f938a1cef2e0e9baf84"
     },
     {
       "source_sha256": "22f54b462e0c20ad50b1a23c529d99ba0fa1ed61435d6063ff49ececd754a8b6",

@@ -10420,9 +10420,9 @@ class ReviewedCentralIntakeTestEdition(unittest.TestCase):
                                             ('c0b79431bafc486c71a083b3b8afdec0db431236',
                                              '548d4358ca89755bbfd29b2df9a4b6b2b6ca36541cc5994e523198c40ddea26c',
                                              11625),
-                                            ('dd04dd4c43f2bc1d7bd5aaa7f84a4c36c039cfc8',
-                                             '15572c197d20db12d80668db0c8009459bfa5911a59d6c788f7e9ef92e9499f4',
-                                             25046))}
+                                            ('9c5c787c71490d4e4f7807df028e02ba510a0dc5',
+                                             '8fbf27f3b400015c472a16d4a23ff63ee8ef050409f4f875564b1cda2ef0e6b4',
+                                             33249))}
     PATHS = tuple(CONTRACTS)
     fixture = ReviewedAuthorityControls.fixture
     currentness = ReviewedAuthorityControls.currentness
@@ -10965,6 +10965,130 @@ class FrontierHistoryCurrentnessTests(unittest.TestCase):
 
     def test_missing_qualification_retains_original_guard(self):
         errors,calls=self.check_change('D',admitted=False);self.assertTrue(errors);self.assertEqual(calls,1)
+
+
+
+
+class ReviewedReissueBwTestEdition(unittest.TestCase):
+    """One exact BW test successor, using the existing native/ordinary guard."""
+    CONTRACTS = {
+        'tests/test_pmr007_deep_bw_cj_semantic_reissue.py': (
+            'tests/test_pmr007_deep_bw_cj_semantic_reissue.py',
+            '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c',
+            ('a33743bf20cddf6363021f938a1cef2e0e9baf84',
+             '22f0d82eabb228d0d6d0b0c10a5146bf93ca17b6877d34a169cb8986c1f0710e', 6275),
+            ('1c3cad17a21642e63b1e264f88ef403173c1dd1b',
+             '71703c3507b08e5da55e749afc3af8128444e833ac66c9e6b1b57e97235c2afc', 37844)),
+    }
+    PATHS = tuple(CONTRACTS)
+    fixture = ReviewedAuthorityControls.fixture
+    currentness = ReviewedAuthorityControls.currentness
+    test_wrong_missing_or_nonordinary_current_owner_refuses = ReviewedAuthorityControls.test_wrong_missing_or_nonordinary_current_owner_refuses
+    test_history_index_and_native_failures_refuse = ReviewedAuthorityControls.test_history_index_and_native_failures_refuse
+    test_currentness_admits_only_requested_qualified_modifications = ReviewedAuthorityControls.test_currentness_admits_only_requested_qualified_modifications
+    test_deletion_type_change_addition_and_unrelated_edit_refuse = ReviewedAuthorityControls.test_deletion_type_change_addition_and_unrelated_edit_refuse
+    test_unchanged_positive_and_extra_path_refusal = ReviewedAuthorityControls.test_unchanged_positive_and_extra_path_refusal
+
+    def test_exact_guard_accepts_only_requested_subset(self):
+        module, repo, calls = self.fixture()
+        self.assertEqual(module.reviewed_authority_modifications(repo, set(self.PATHS)), set(self.PATHS))
+        self.assertEqual(module.reviewed_authority_modifications(repo, set()), set())
+        self.assertTrue(any('ls-tree' in call for call in calls))
+        self.assertTrue(any('cat-file' in call for call in calls))
+        self.assertEqual(sum('ls-files' in call for call in calls), 2)
+
+    def test_exact_production_contract_not_editable_wildcard(self):
+        import ast
+        tree = ast.parse((ROOT / 'scripts/check_reader_pilot.py').read_bytes())
+        tables = {}
+        for node in tree.body:
+            if isinstance(node, ast.Assign):
+                for target in node.targets:
+                    if isinstance(target, ast.Name) and target.id in (
+                            'REVIEWED_AUTHORITY_EDITS', 'REFACTOR_EDIT_PATHS'):
+                        if target.id == 'REFACTOR_EDIT_PATHS':
+                            # The existing owner uses finite set unions and
+                            # string comprehensions, as in Digest176's setup.
+                            namespace = {}
+                            exec(compile(ast.Module(body=[node], type_ignores=[]),
+                                         'actual-refactor-path-constant', 'exec'),
+                                 {'__builtins__': {}}, namespace)
+                            tables[target.id] = namespace[target.id]
+                        else:
+                            tables[target.id] = ast.literal_eval(node.value)
+        self.assertEqual(set(tables), {'REVIEWED_AUTHORITY_EDITS', 'REFACTOR_EDIT_PATHS'})
+        for path, contract in self.CONTRACTS.items():
+            with self.subTest(path=path):
+                self.assertEqual(tables['REVIEWED_AUTHORITY_EDITS'].get(path), contract)
+                self.assertNotIn(path, tables['REFACTOR_EDIT_PATHS'])
+        for wildcard in ('tests/', 'tests/*', 'tests/test_pmr007_deep_'):
+            self.assertNotIn(wildcard, tables['REVIEWED_AUTHORITY_EDITS'])
+            self.assertNotIn(wildcard, tables['REFACTOR_EDIT_PATHS'])
+
+
+class ReviewedReissueBwOriginalPinControls(unittest.TestCase):
+    """The final complete pin stage follows, and does not replace, Codex pins."""
+    PINS = {
+        'tests/test_pmr007_deep_bw_cj_semantic_reissue.py': (
+            'a33743bf20cddf6363021f938a1cef2e0e9baf84',
+            '22f0d82eabb228d0d6d0b0c10a5146bf93ca17b6877d34a169cb8986c1f0710e',
+            6275, '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'),
+    }
+
+    def setUp(self):
+        previous = ReviewedCodexOriginalPinControls()
+        previous.setUp()
+        self.base = previous.base
+        self.prior = previous.current
+        for path, (_, identity, size, _) in self.PINS.items():
+            row = dict(repository_path=path, source_sha256=identity, public_sha256=identity,
+                       source_bytes=size, public_bytes=size, disposition='REUSE', role='unchanged-role')
+            for document in (self.base.original, self.prior):
+                document['objects'].append(deepcopy(row))
+        self.current = self.base.pinned(self.prior, self.PINS)
+
+    def test_codex_prior_and_complete_bw_final_stage_accepted(self):
+        self.assertTrue(self.base.permitted(self.prior))
+        self.assertTrue(self.base.permitted(self.current))
+
+    test_partial_pin_and_each_identity_coordinate_or_role_change_refuse = ReviewedCodexOriginalPinControls.test_partial_pin_and_each_identity_coordinate_or_role_change_refuse
+    test_missing_duplicate_reordered_and_unrelated_objects_refuse = ReviewedCodexOriginalPinControls.test_missing_duplicate_reordered_and_unrelated_objects_refuse
+
+    def test_only_revision_and_blob_are_added_to_original_bw_row(self):
+        path, (blob, identity, size, revision) = next(iter(self.PINS.items()))
+        old = next(row for row in self.prior['objects'] if row.get('repository_path') == path)
+        current = next(row for row in self.current['objects'] if row.get('repository_path') == path)
+        self.assertEqual((old['source_sha256'], old['public_sha256'], old['source_bytes'], old['public_bytes']),
+                         (identity, identity, size, size))
+        self.assertEqual(current, dict(old, repository_revision=revision, git_blob=blob))
+        for field, value in (('publication_basis', 'unreviewed'),
+                             ('required_dependencies', ['unreviewed']),
+                             ('declared_eligibility_basis', 'unreviewed')):
+            with self.subTest(field=field):
+                changed = deepcopy(self.current)
+                next(row for row in changed['objects'] if row.get('repository_path') == path)[field] = value
+                self.assertFalse(self.base.permitted(changed))
+
+    def test_final_bw_stage_cannot_omit_prior_codex_stage(self):
+        for path in ReviewedCodexOriginalPinControls.PINS:
+            for fields in (('git_blob',), ('repository_revision',), ('git_blob', 'repository_revision')):
+                with self.subTest(path=path, fields=fields):
+                    changed = deepcopy(self.current)
+                    row = next(row for row in changed['objects'] if row.get('repository_path') == path)
+                    for field in fields:
+                        row.pop(field)
+                    self.assertFalse(self.base.permitted(changed))
+
+    def test_corrupt_original_identity_cannot_be_rebound(self):
+        path = next(iter(self.PINS))
+        for field, value in (('source_sha256', '0' * 64), ('public_sha256', '0' * 64),
+                             ('source_bytes', 1), ('public_bytes', 1), ('disposition', 'PROJECT')):
+            with self.subTest(field=field):
+                original = deepcopy(self.base.original)
+                candidate = deepcopy(self.current)
+                for document in (original, candidate):
+                    next(row for row in document['objects'] if row.get('repository_path') == path)[field] = value
+                self.assertFalse(self.base.permitted(candidate, original))
 
 
 if __name__ == "__main__":

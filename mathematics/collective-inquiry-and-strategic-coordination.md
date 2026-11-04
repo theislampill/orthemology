@@ -218,6 +218,23 @@ Both records preserve the diagnostic controls: many copies of one nonzero direct
 The [scoped admission][receipt-au-01] records finite-dimensional linear balance and rank monotonicity, while leaving root authentication, claim relevance, testimonial and causal independence, truth, tawātur warrant, common knowledge and authorization to their own evidence. Rank does not decide numerical, carrier, episode or lineage identity, and it does not restore the earlier TAC/SAC terminology or establish operational future repair capacity. Nonlinear, stochastic and adaptive synchronization require a further model. The mathematical ancestry is standard linear algebra; the earlier synchronization, provenance and authenticated-access studies are related sources or interfaces, not recovered historical theorem identities. External review remains open and owner adoption pending. The algebraic component can inform those wider inquiries without completing them.
 
 
+### 1.5 Finite mutual knowledge and common knowledge
+
+The evidence-accounting results above leave a different question open: how many levels of mutual knowledge are needed for common knowledge in a declared finite model? Fix a nonempty finite set of worlds *W*, two agents *A* and *B*, equivalence accessibility relations $`R_A,R_B`$, and a fixed proposition valuation. Write $`K_i\psi(w)`$ when $`\psi`$ holds at every world accessible to agent *i* from *w*, and put $`E\psi=K_A\psi\land K_B\psi`$. Define $`E^0\varphi=\varphi`$ and $`E^{k+1}\varphi=E(E^k\varphi)`$. Common knowledge $`C\varphi`$ at *w* means that $`\varphi`$ holds throughout the reflexive-transitive closure of $`R_A\cup R_B`$ from *w*. These are model-relative information conditions, not conclusions about an actual communication channel. [Finite common-knowledge radius, frozen model][specialist-a-radius]
+
+Let $`d(w)`$ be the greatest shortest-path distance from *w* to a world in its union-accessibility component. Then
+
+```math
+C\varphi(w)\quad\Longleftrightarrow\quad E^{d(w)}\varphi(w),
+\qquad d(w)\leq |W|-1.
+```
+
+**Proof.** Induction on *k* identifies $`E^k\varphi(w)`$ with truth of $`\varphi`$ at every endpoint of a length-*k* path whose edges each belong to one of the two relations. Reflexivity lets a shorter path be padded by repeated visits to its last world. Thus the same condition says that $`\varphi`$ holds at every world at distance at most *k*. At $`k=d(w)`$ this set is the entire reachable component, which is exactly the definition of common knowledge. Each shortest path can be chosen without repeated vertices, giving the stated bound. For an isolated world, $`d(w)=0`$ and the convention $`E^0\varphi=\varphi`$ covers the same result. A particular valuation may settle earlier; the radius guarantees closure throughout the component. ∎ [Finite common-knowledge radius, result][specialist-a-radius]
+
+The distinction from one round is already visible in three worlds. Let *A*'s information partition be $`\{0,1\}\mid\{2\}`$ and *B*'s be $`\{0\}\mid\{1,2\}`$. Let $`\varphi`$ be true at 0 and 1 and false at 2. At world 0, both agents individually know $`\varphi`$, so $`E\varphi(0)`$ holds. But the alternating path $`0\mathrel{R_A}1\mathrel{R_B}2`$ reaches a false world. In particular *A* cannot know that everybody knows: at its accessible world 1, *B* considers world 2 possible. Hence $`E^2\varphi(0)`$ and $`C\varphi(0)`$ both fail, and $`d(0)=2`$. [Finite common-knowledge radius, countermodel][specialist-a-radius]
+
+The radius is a depth in this fixed accessibility structure, not a count of messages, acknowledgements or successful actions. The theorem does not establish that messages were delivered, that acknowledgements are reliable, that agents share clocks, that the stipulated valuation is actually true, or that a source is warranted or independent. A communication process that changes the model must justify its own update rules. Copying and synchronization can be assessed by §1.4's ancestry and rank results while these further epistemic conditions remain unestablished; the finite theorem identifies the additional condition rather than supplying it by analogy. [Finite common-knowledge radius, conclusion ceiling][specialist-a-radius]
+
 ## 2. Evidence profiles and locally possible responses
 
 ### 2.1 What scalarization does and does not lose
@@ -275,6 +292,14 @@ Let *Z* be global configurations, $`o_i:Z\to O_i`$ a local observation, *S*<sub>
 **Proposition 3 — Local implementability.** There is a local response function $`a_i:O_i\to S_i`$ realizing $`\pi_i=a_i\circ o_i`$ on all global configurations exactly when π<sub>i</sub> is constant on every fibre of *o*<sub>*i*</sub>. The same statement holds for local histories and history-dependent responses. [5, §3][r5]
 
 **Proof.** A function of a local view cannot distinguish two identical views. Conversely fibre constancy assigns a well-defined response to every attained view. Choose any fixed response for unattained views; nonemptiness of *S*<sub>*i*</sub> permits that extension. ∎
+
+**One policy for an initial belief.** The same factorization becomes a joint control requirement in a finite deterministic system with common actions $`A=\{0,1\}`$, fixed observation $`o:S\to O`$, transition law and nonempty initial belief $`B\subseteq S`$. Restrict attention to stationary strategies and a co-Büchi condition: eventually the trajectory stays in a declared good set. In a finite deterministic system under a stationary policy, this is equivalent to requiring that the eventual cycle be entirely good.
+
+An observation policy $`\tau:O\to A`$ wins from every state in $`B`$ exactly when there is **one** state policy $`\sigma:S\to A`$, constant on every observation fibre, that wins from every state in $`B`$. Forward, use $`\sigma=\tau\circ o`$. Backward, fibre constancy defines $`\tau`$ on attained observations; choose action zero on unattained observations. The two policies then induce the same trajectory from every initial state. The quantifier is one shared witness for all states, not a separate winning witness for each. [specialist-a-uniform]
+
+The distinction has an explicit four-state counterexample. Let $`s_0,s_1`$ have the same observation, with a good absorbing sink $`g`$ and a bad absorbing sink $`b`$. At $`s_0`$, actions zero and one lead to $`g`$ and $`b`$ respectively; at $`s_1`$ reverse them. Each initial state is individually perfect-information winning, and a nonuniform state policy can win from both. No observation-based stationary policy wins from belief $`\{s_0,s_1\}`$: its common first action sends one possible initial state to the permanently bad sink.
+
+This is a specialization of local implementability, not a new fixed-point method. The source separately reports **204,504** two/three-state enumeration cases, **8,234** statewise-false-sufficiency countermodels and six mutant rejections. The displayed four-state proof is not asserted to belong to that enumerated population. Those counts remain historical reports, and the reported source-only Lean factorization draft is not a verified project-level co-Büchi result. No randomized, adversarial-nondeterministic, history-dependent, infinite-state, asynchronous-protocol or metaphysical conclusion is imported. [specialist-a-uniform]
 
 A source-monitoring component may know a bit *b* while an action component sees the same signal at $`b=0`$ and $`b=1`$. If the safe action must be $`\mathrm{repair}_b`$, no local action rule can always succeed. A licensed channel that communicates *b* makes it possible. A centralized description that simply lets the chooser inspect *b* has changed the information architecture.
 
@@ -3912,3 +3937,7 @@ The following exact public editions are the theorem and proof texts used in §7.
 [EXP-margin]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/00743077f4ad01f106967f1200f4d8a0d2b04cd48c568ad0a82ab4ae38b9b5c3.lean
 [EXP-test]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/e38e3a972bbdf859b854b42c44a7cbf4d83c0f5b2fb7566d2f726f155572bfee.lean
 [EXP-rotor]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/experiments/orthemology-v5-continuations/source-store/3804ba91149f9672a3c6e8c878c53a6661c74cb11f15069fbb7c9b5afb555703.lean
+
+[specialist-a-radius]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/rounds/SPA-R5_COMMON_KNOWLEDGE_RADIUS.md
+
+[specialist-a-uniform]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/rounds/SPA-R4_OBSERVATION_COBUCHI.md

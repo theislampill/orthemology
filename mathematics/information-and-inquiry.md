@@ -493,6 +493,22 @@ The distinct historical review used propagation of distinguishable state pairs i
 
 The source note relates this construction to empirical state-representation and kernel-alignment studies, while preserving their different objects. A kernel geometry may agree without preserving all controlled traces; quotient-isomorphic systems may use different geometries. Neither the hippocampal comparison nor representation alignment establishes that a measured system realizes this exact minimal quotient. Their role here is motivation for a possible comparison, not reproduction, semantic authentication or a unique mechanism result. The stochastic causal-state literature supplies related ancestry at another contract, not an imported stochastic theorem for the present deterministic construction. [R44-BA01]
 
+**Fixed-depth prediction and the clock contract.** The complete-system theorem above should not be confused with counting state identifiers at one prescribed depth. In the binary deterministic horizon-two interface, let $`H_1`$ be the histories actually reachable after the first intervention. For $`h\in H_1`$, define its residual signature by the two possible next outputs,
+
+```math
+\sigma(h)=(o(h,0),o(h,1)).
+```
+
+At this depth, the minimum number of attained deterministic state identifiers is $`|\sigma(H_1)|`$. Indeed, an encoder $`e:H_1\to S`$ and a common decoder $`D:S\times\{0,1\}\to\{0,1\}`$ satisfying $`D(e(h),u)=o(h,u)`$ cannot give the same identifier to different signatures: the separating continuation would demand two outputs from the same state/input pair. Conversely, one identifier for each attained signature, decoded by its selected coordinate, realizes both continuation outputs. This upper bound concerns the remaining single step; it does not supply the transition congruence or whole-machine minimality proved above. [specialist-a-predictive]
+
+Thus complete-history storage can retain distinctions irrelevant to the remaining prediction. Relabelling or splitting stored states does not change the number of distinct attained signatures. Changing entries at histories unreachable under the same fixed first-step law and intervention protocol does not change it either. This is not invariance under a change in which histories or interventions are admitted.
+
+Deletion can erase a real distinction. For example, take first output $`y_1=a_1`$ and second output $`y_2=a_1u`$, with binary inputs. The two reachable first-step histories have signatures $`(0,0)`$ and $`(0,1)`$. Keeping only continuation $`u=0`$ merges them, although $`u=1`$ distinguishes them. Safety of such deletion is relative to the structural hypothesis class and the retained continuation family, not merely the number of tested inputs.
+
+The depth qualification is load-bearing. Consider instead the interface that outputs $`0`$ at the first step and $`1`$ at the second, regardless of inputs. Every history in $`H_1`$ has signature $`(1,1)`$, so one identifier suffices **at that depth**. Reusing the same sole identifier before and after the first step with one stationary decoder fails: repeating input $`0`$ would require both $`D(s,0)=0`$ and $`D(s,0)=1`$. An external clock permits $`D_0(s,u)=0`$ and $`D_1(s,u)=1`$, but its storage and the termination convention are then part of the machine contract. The local count is not a free whole-machine resource saving.
+
+These two examples make the source's deletion and clock qualifications explicit; they are not additional historical experiments. The source reports checks over **1,024** binary horizon-two tables and seven mutant rejections. Those remain reported execution history, not fresh replay or a premise of the proof. This is the finite deterministic predictive-quotient/Myhill–Nerode analogue, not a novelty or stochastic/measurable extension claim. Any resource comparison still requires a fixed machine, clock, decoder, units and complete rival realization class; the quotient does not identify an architecture or establish a metaphysical conclusion. [specialist-a-predictive]
+
 <a id="receipt44-joint-dynamics"></a>
 
 ### 2.8 Joint interfaces, dynamic closure and nonproduct support
@@ -1347,6 +1363,45 @@ Indeed $d\leq p\leq P$, while selecting one cut per retained negative gives $\ta
 When positives exist, move every realizing block corner downward in both coordinates by a sufficiently small positive amount. Every corner coordinate is positive, and for each corner–negative pair at least one nonhit coordinate has a strict positive gap. Finitely many such constraints allow one small displacement preserving every gap while making all intended hits strict and all thresholds interior. A small open neighborhood retains all labels. To reach exactly $r>d$ routes, add thresholds strictly above one witness in both coordinates and below one. Anything they hit is already hit by that witness, and all negatives remain strictly missed. Positive gaps again give a joint open neighborhood; no exact duplicate thresholds or positive probability of equality is assumed. With no positives, each negative has a coordinate below one, so all routes sufficiently close to $(1,1)$ miss every negative. The empty panel is included.
 
 The conditions cannot be discarded. A source threshold $(0,0)$ hits command $(0,0)$, whereas an open-square-supported target never does. An empty source inventory misses $(1,1)$, whereas every nonempty target hits it. Thus zero-route combinatorial realizability does not imply open realizability by a positive inventory. Upper-boundary source coordinates and threshold–command equality, in contrast, cause no difficulty. [CP09-PANEL]
+
+**Certificate probability is not sampling efficiency.** For the strict $m$-positive staircase just described, let $E$ be the event that every $q_i$ is hit and every connector is missed. A route covering $q_i$ without hitting a connector lies exactly in
+
+```math
+S_i=\{(x,y):x\leq a_i,\ y\leq b_i,
+\ x>a_{i-1}\text{ if }i>1,
+\ y>b_{i+1}\text{ if }i<m\}.
+```
+
+The neighboring connector misses force the two strict lower bounds; monotonicity then excludes all other connectors. These regions are disjoint and each covers only its own positive. With exactly $m$ routes, the witness-count argument leaves no spare route: $E$ is precisely the disjoint union of assignments placing one labeled route in every $S_i$. For independent route laws $\mu_1,\ldots,\mu_m$,
+
+```math
+\Pr(E)=\sum_{\pi\in\mathfrak S_m}
+             \prod_{j=1}^{m}\mu_j(S_{\pi(j)}).
+```
+
+For iid routes this becomes $p=m!\prod_i p_i$, where $p_i=\mu(S_i)$. Independence alone does not supply the factorial simplification. For the stipulated continuous threshold law $F_c(a,b)=1-(1-ab)^c$, set $a_0=b_{m+1}=0$ and $B_i=(a_{i-1},a_i]\times(b_{i+1},b_i]$. Zero axis mass gives $\mu(S_i)=\mu(B_i)$, so
+
+```math
+p_i=F_c(a_i,b_i)-F_c(a_{i-1},b_i)
+       -F_c(a_i,b_{i+1})+F_c(a_{i-1},b_{i+1})>0.
+```
+
+Strict widths/heights and the positive interior density justify positivity. With boundary atoms, retain $S_i$ rather than discarding axis mass. Independent full-support route laws suffice for positive certificate probability; full support of each marginal alone does not. If all occurrences copy one common threshold pair, the certificate is impossible for $m\geq2$. Dependent routes generally obey neither the product nor permanent formula, although the pathwise count bound remains valid. The displayed formulas also concern exactly $m$ routes, not an arbitrary larger inventory. [CP09-INTERIOR-PROBABILITY]
+
+In the $n$-product-uniform versus $(n+1)$-iid stipulated-law pair, take $m=n+1$. Then $E$ has baseline probability zero and alternative probability $p>0$, so the finite panel's forward KL is infinite. This does not contradict the finite forward KL of exact face minima: the interior channel is a different observation. For $n=1$, the three queries $(1/3,2/3),(2/3,1/3),(1/3,1/3)$ give
+
+```math
+p=\frac{30-8\sqrt{14}}9\simeq0.0074156562.
+```
+
+Nor does infinite KL imply an efficient certificate strategy. The disjoint iid regions give $\sum_i p_i\leq1$, hence
+
+```math
+p=m!\prod_i p_i\leq\frac{m!}{m^m}
+\leq2^{-\lfloor m/2\rfloor}.
+```
+
+For independent fresh retained vectors with this fixed panel, waiting for the first certificate has mean $1/p\geq m^m/m!$ under the alternative and never terminates under the baseline. It is not a two-sided terminally correct decision rule. A fixed budget $N$ that declares the alternative iff a certificate appears has zero baseline error and alternative error $(1-p)^N$; this is a statement about that particular strategy, not every full-transcript test or an optimal interior design. Within each vector all panel probes must still share its unchanged thresholds: redrawing between positives and connectors destroys the witness argument. These probability and waiting claims are ordinary proofs, not additional kernel theorems or a physical-access claim. [CP09-INTERIOR-PROBABILITY]
 
 **A bounded adaptive support theorem.** Fix $n\geq1$. The target has exactly $n$ independent routes, each giving positive probability to every nonempty open rectangle in $(0,1)^2$. The source has any fixed $k\geq1$ routes with an arbitrary joint law supported on $((0,1]^2)^k$; source independence, continuous margins and full support are unnecessary. Use one common measurable policy of depth at most $2n$, with a common standard-Borel random seed independent of the vector. Then
 
@@ -6286,3 +6341,7 @@ These exact source editions retain their own proposal, repair and execution scop
 [FINITE-GEOMETRIC-COMPARATOR]: https://api.github.com/repos/theislampill/orthemology/git/blobs/1d0c78e5619eb924404551e0cdb4f87b315bf583
 
 [FINITE-SKYLINE-READOUT]: https://api.github.com/repos/theislampill/orthemology/git/blobs/0f3dfe5549fa141ddf1e7622fd4c90ebfcf83b31
+
+[CP09-INTERIOR-PROBABILITY]: https://api.github.com/repos/theislampill/orthemology/git/blobs/5dfdd66444601c47ba4c32272eb29fb1371bdc87
+
+[specialist-a-predictive]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/rounds/SPA-R12_PREDICTIVE_QUOTIENT.md

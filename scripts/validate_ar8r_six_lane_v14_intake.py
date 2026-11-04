@@ -6,10 +6,13 @@ from __future__ import annotations
 from resolve_t20_v6_source import (
     digest_record_view_bytes, digest_record_view_text,
     digest_record_view_is_file, digest_record_view_paths,
+    DIGEST_RECORD_BASE, _administrative_git, _digest_record_root,
+    _binding_record_present, _digest_record_bound_bytes,
 )
 
 
 import argparse
+from contextlib import contextmanager
 import hashlib
 import json
 import os
@@ -198,7 +201,91 @@ def rerun_specialist_a(source: pathlib.Path, issues: list[str]) -> bool:
         return exact
 
 
+@contextmanager
+def specialist_b_source_custody(root, intake):
+    """Require the exact original B29 when its entire current directory is absent.
+
+    Present or partial current custody is never replaced. Historical transport
+    is the existing local native a7ff/176 gate, not a private archive or network.
+    The yielded original directory is temporary ordinary input to every existing
+    content, parse, privacy and original/repair acceptance check.
+    """
+    root = pathlib.Path(root).absolute()
+    intake = pathlib.Path(intake).absolute()
+    source = intake / "specialist-b/source-files"
+    if source.is_symlink():
+        raise ValueError("Specialist B source directory is a symlink")
+    if source.exists():
+        _digest_record_root(source.parent)
+        yield source
+        return
+    if intake != root / INTAKE_REL:
+        raise ValueError("Specialist B original custody requires the exact intake root")
+    root = _digest_record_root(root)
+    relative_root = (INTAKE_REL / "specialist-b/source-files").as_posix()
+    if _binding_record_present(root, relative_root):
+        raise ValueError("Specialist B current source node changed")
+    contract = PACKAGES["specialist-b"]
+    issues = []
+    # The absent original manifest uses the unchanged mandatory a7ff/176
+    # catalogue and native body/index checks. Its pinned bytes are not optional.
+    expected = parse_manifest(source / contract["manifest"], contract["manifest_sha256"], issues)
+    if issues or len(expected) + 1 != contract["files"]:
+        raise ValueError("Specialist B original manifest is unavailable or differs")
+    raw = _administrative_git(root, "ls-tree", "-rz", "--full-tree", DIGEST_RECORD_BASE,
+                              "--", relative_root)
+    bindings = {}
+    for entry in raw.split(b"\0"):
+        if not entry:
+            continue
+        metadata, encoded_path = entry.split(b"\t", 1)
+        mode, kind, blob = metadata.decode("ascii").split()
+        path = encoded_path.decode("utf-8")
+        relative = path.removeprefix(relative_root + "/")
+        if (not path.startswith(relative_root + "/") or mode != "100644"
+                or kind != "blob" or not re.fullmatch(r"[0-9a-f]{40}", blob)
+                or relative in bindings or relative not in set(expected) | {contract["manifest"]}
+                or ".." in pathlib.PurePosixPath(relative).parts or "\\" in relative):
+            raise ValueError("Specialist B original tree coordinate differs")
+        bindings[relative] = blob
+    if set(bindings) != set(expected) | {contract["manifest"]}:
+        raise ValueError("Specialist B original tree membership differs")
+    bodies = {}
+    for relative, blob in sorted(bindings.items()):
+        body = _digest_record_bound_bytes(root, relative_root + "/" + relative, blob, None)
+        wanted = contract["manifest_sha256"] if relative == contract["manifest"] else expected[relative]
+        if hashlib.sha256(body).hexdigest() != wanted:
+            raise ValueError("Specialist B original member hash differs")
+        bodies[relative] = body
+    if _binding_record_present(root, relative_root):
+        raise ValueError("Specialist B current source appeared during authentication")
+    with tempfile.TemporaryDirectory(prefix="specialist-b-original-") as temporary:
+        supplied = pathlib.Path(temporary) / "source-files"
+        supplied.mkdir()
+        for relative, body in bodies.items():
+            target = supplied / pathlib.PurePosixPath(relative)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            with target.open("xb") as stream:
+                stream.write(body)
+            target.chmod(0o644)
+        yield supplied
+        if _binding_record_present(root, relative_root):
+            raise ValueError("Specialist B current source appeared during validation")
+
+
 def validate(root=ROOT, intake_override=None):
+    root = pathlib.Path(root)
+    intake = pathlib.Path(intake_override) if intake_override else root / INTAKE_REL
+    with specialist_b_source_custody(root, intake) as supplied:
+        receipt = _validate_current_intake(root, intake_override, supplied)
+        receipt["specialist_b_source_custody"] = (
+            "CURRENT_PHYSICAL" if supplied == intake.absolute() / "specialist-b/source-files"
+            else "AUTHENTICATED_ORIGINAL_A7FF"
+        )
+        return receipt
+
+
+def _validate_current_intake(root, intake_override, b_source_directory):
     root = pathlib.Path(root)
     intake = pathlib.Path(intake_override) if intake_override else root / INTAKE_REL
     issues: list[str] = []
@@ -207,12 +294,14 @@ def validate(root=ROOT, intake_override=None):
     private_path_findings = 0
 
     for lane, contract in PACKAGES.items():
-        source = intake / lane / "source-files"
+        source = b_source_directory if lane == "specialist-b" else intake / lane / "source-files"
         manifest = source / contract["manifest"]
         expected = parse_manifest(manifest, contract["manifest_sha256"], issues)
         actual_paths = {
             path.relative_to(source).as_posix()
-            for path in digest_record_view_paths(root, source)
+            for path in (source.rglob("*") if source == b_source_directory
+                         and source != intake.absolute() / "specialist-b/source-files"
+                         else digest_record_view_paths(root, source))
             if digest_record_view_is_file(path) or path.is_symlink()
         } if source.is_dir() else set()
         counts[lane] = len(actual_paths)
@@ -230,26 +319,30 @@ def validate(root=ROOT, intake_override=None):
     if source_hash_mismatches:
         issues.append("source hash mismatch")
 
-    # Current privacy follows physically present files, not historical recovery.
-    for path in intake.rglob("*"):
-        if path.is_symlink():
-            issues.append(f"symlink forbidden in current intake: {path.relative_to(intake)}")
-            continue
-        if not path.is_file():
-            continue
-        try:
-            text = path.read_text(encoding="utf-8")
-        except UnicodeDecodeError:
-            issues.append(f"non-UTF-8 public intake member: {path.relative_to(intake)}")
-            continue
-        except OSError:
-            issues.append(f"unreadable public intake member: {path.relative_to(intake)}")
-            continue
-        private_path_findings += len(PRIVATE_PATTERN.findall(text))
+    # Both current intake and authenticated original input receive physical scans.
+    scan_roots = [intake]
+    if b_source_directory != intake.absolute() / "specialist-b/source-files":
+        scan_roots.append(b_source_directory)
+    for scan_root in scan_roots:
+        for path in scan_root.rglob("*"):
+            if path.is_symlink():
+                issues.append(f"symlink forbidden in current intake: {path.relative_to(scan_root)}")
+                continue
+            if not path.is_file():
+                continue
+            try:
+                text = path.read_text(encoding="utf-8")
+            except UnicodeDecodeError:
+                issues.append(f"non-UTF-8 public intake member: {path.relative_to(scan_root)}")
+                continue
+            except OSError:
+                issues.append(f"unreadable public intake member: {path.relative_to(scan_root)}")
+                continue
+            private_path_findings += len(PRIVATE_PATTERN.findall(text))
     if private_path_findings:
         issues.append("private path, browser locator, or token-like text leaked into intake")
 
-    structured_files_parsed = parse_structured(intake, issues)
+    structured_files_parsed = sum(parse_structured(scan_root, issues) for scan_root in scan_roots)
 
     try:
         ledger = yaml.safe_load(digest_record_view_text(intake / "AR8R-SIX-LANE-V14-INTEGRATION-LEDGER.yaml", encoding="utf-8"))
@@ -320,7 +413,7 @@ def validate(root=ROOT, intake_override=None):
     if not specialist_a_repaired_lean_receipts_exact:
         issues.append("Specialist A repaired Lean receipt mismatch")
 
-    b_source = intake / "specialist-b/source-files/SpecialistBBridgeSignatures.lean"
+    b_source = b_source_directory / "SpecialistBBridgeSignatures.lean"
     b_repaired = intake / "specialist-b/intake-review/lean/SpecialistBBridgeSignatures.repaired.lean"
     specialist_b_original_lean_failure_recorded = (
         sha256(b_source) == "e18b1e03b970b4d355008eb64ba3f502a23e9c36797ecb009d6487e923c97015"
