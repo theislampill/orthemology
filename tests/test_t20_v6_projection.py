@@ -3543,6 +3543,8 @@ class FormalCopyMigrationTests(unittest.TestCase):
             cls.bodies[alias] = body
             if cls.bodies.setdefault(binding['canonical'], body) != body:
                 raise AssertionError('retained formal body conflicts')
+        for canonical, provider in source._formal_current_provider_catalog().items():
+            cls.bodies[provider['current']] = cls.bodies[canonical]
         cls.public = [r for r in json.loads((projection.ROOT / projection.MANIFEST).read_bytes())['objects']
                       if r.get('repository_path') in source.FORMAL_COPY_PATHS]
         cls.continuations = [r for r in json.loads((projection.ROOT /
@@ -3720,7 +3722,7 @@ class FormalCurrentCompositionControls(unittest.TestCase):
     def setUp(self):
         self.source = self._module('resolve_t20_v6_source.py', {
             'digest', '_formal_tuple_binding', '_formal_copy_catalog', '_formal_row_digest',
-            '_formal_public_source_bytes', '_continuation_formal_bound_bytes', 'source_bytes',
+            '_formal_public_source_bytes', '_continuation_formal_bound_bytes', 'continuation_formal_current_paths', 'source_bytes',
             'binding_record_candidate', 'is_binding_record',
             'status_record_candidate'}, source_constants=True)
         self.source.DIGEST_RECORD_PATHS = frozenset()
@@ -3803,17 +3805,18 @@ class FormalCurrentCompositionControls(unittest.TestCase):
         alias, former, canonical, blob, identity, size = self.source.CONTINUATION_FORMAL_RETARGETS[0]
         binding = dict(canonical=former, blob=blob, sha256=identity, bytes=size, sources=[])
         calls = []
-        def checkpoint(root, path, value):
-            calls.append(('former', path, value['canonical']))
+        def checkpoint(root, path, value, *, current):
+            calls.append(('former', path, value['canonical'], current))
             return b'inert-provider-interface'
-        def continuation(root, path, value):
-            calls.append(('prior', path, value['canonical']))
+        def continuation(root, path, value, *, current):
+            calls.append(('prior', path, value['canonical'], current))
             return b'inert-endpoint-interface'
         with patch.object(self.source, '_checkpoint_bound_bytes', create=True, side_effect=checkpoint) as original, \
              patch.object(self.source, '_continuation_bound_bytes', create=True, side_effect=continuation) as endpoint:
             self.assertEqual(self.source._continuation_formal_bound_bytes('unused', alias, binding),
                              b'inert-endpoint-interface')
-            self.assertEqual(calls, [('former', former, canonical), ('prior', alias, canonical)])
+            current = 'formal/type-theory/' + pathlib.PurePosixPath(canonical).name
+            self.assertEqual(calls, [('former', former, canonical, current), ('prior', alias, canonical, current)])
             endpoint.reset_mock()
             original.side_effect = ValueError('corrupt former provider')
             with self.assertRaisesRegex(ValueError, 'corrupt former provider'):
@@ -5166,6 +5169,374 @@ class CheckpointRecordContextDispatchTests(unittest.TestCase):
     def test_native_provenance_refusal_is_not_suppressed(self):
         with self.assertRaises(ValueError):
             self.fixture_context('native-refusal')
+
+
+
+
+class CertificateFrontierProviderControls(unittest.TestCase):
+    """Exact current-provider routing; native history is an inert authenticated boundary."""
+
+    EXPECTED = (('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/CertificateFrontier.lean', 'formal/certificate-frontier/CertificateFrontier.lean'), ('research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/Controls.lean', 'formal/certificate-frontier/Controls.lean'), ('research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/independent-review/ScopeChecks.lean', 'formal/certificate-frontier/ScopeChecks.lean'), ('research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/CostBlind.lean', 'formal/certificate-frontier/mutations/CostBlind.lean'), ('research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/CurrentCost.lean', 'formal/certificate-frontier/mutations/CurrentCost.lean'), ('research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/InfinitePrice.lean', 'formal/certificate-frontier/mutations/InfinitePrice.lean'))
+
+    @classmethod
+    def _source(cls):
+        filename = pathlib.Path(__file__).resolve().parents[1] / 'scripts/resolve_t20_v6_source.py'
+        tree = ast.parse(filename.read_text(encoding='utf-8'))
+        functions = {'digest', '_formal_tuple_binding', '_formal_copy_catalog',
+                     '_formal_current_provider_catalog', '_formal_row_digest', '_formal_public_source_bytes', 'formal_copy_bytes',
+                     'formal_duplicate_paths', '_checkpoint_bound_bytes', '_regular_current_bytes'}
+        nodes = [node for node in tree.body if
+                 isinstance(node, ast.FunctionDef) and node.name in functions or
+                 isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and
+                 t.id.startswith(('FORMAL_', 'CHECKPOINT_', 'CONTINUATION_FORMAL_')) for t in node.targets)]
+        module = types.ModuleType('certificate_frontier_provider_fixture')
+        module.__dict__.update(hashlib=hashlib, json=json, pathlib=pathlib,
+                               collections=collections, os=os, re=re, stat=stat)
+        exec(compile(ast.fix_missing_locations(ast.Module(body=nodes, type_ignores=[])),
+                     str(filename), 'exec'), module.__dict__)
+        module._continuation_git = unittest.mock.Mock(side_effect=AssertionError('native Git is forbidden'))
+        module._continuation_object = unittest.mock.Mock(side_effect=AssertionError('native objects are forbidden'))
+        return module
+
+    def setUp(self):
+        self.source = self._source()
+        self.catalog = self.source._formal_copy_catalog()
+        self.destinations = dict(self.EXPECTED)
+        self.aliases = {p: b for p, b in self.catalog.items() if b['canonical'] in self.destinations}
+        self.assertEqual(len(self.aliases), 16)
+
+    def test_all_sixteen_aliases_route_through_exact_new_provider(self):
+        calls = []
+        def receive(root, path, binding, *, current=None):
+            calls.append((path, binding, current))
+            return b'exact boundary'
+        self.source._checkpoint_bound_bytes = receive
+        for path, binding in self.aliases.items():
+            self.assertEqual(self.source.formal_copy_bytes('unused-root', path), b'exact boundary')
+            self.assertEqual(calls[-1], (path, binding, self.destinations[binding['canonical']]))
+
+    def test_six_complete_public_rows_keep_original_role_and_provenance(self):
+        filename = pathlib.Path(__file__).resolve().parents[1] / 'research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json'
+        rows = [row for row in json.loads(filename.read_text())['objects']
+                if row.get('repository_path') in self.aliases]
+        self.assertEqual(len(rows), 6)
+        self.source._checkpoint_bound_bytes = unittest.mock.Mock(return_value=b'inert exact native boundary')
+        for row in rows:
+            self.assertEqual(self.source._formal_public_source_bytes('unused-root', row), b'inert exact native boundary')
+            path = row['repository_path']
+            binding = self.aliases[path]
+            self.source._checkpoint_bound_bytes.assert_called_with('unused-root', path, binding,
+                current=self.destinations[binding['canonical']])
+            for field in row:
+                altered = dict(row, **{field: 'invalid full-row field'})
+                with self.subTest(path=path, field=field), self.assertRaises(ValueError):
+                    self.source._formal_public_source_bytes('unused-root', altered)
+
+    def test_all_six_old_provider_requests_keep_original_coordinate(self):
+        self.source._checkpoint_bound_bytes = unittest.mock.Mock(return_value=b'body')
+        for canonical, current in self.EXPECTED:
+            binding = next(b for b in self.catalog.values() if b['canonical'] == canonical)
+            self.source.formal_copy_bytes('unused-root', canonical)
+            self.source._checkpoint_bound_bytes.assert_called_with('unused-root', canonical, binding, current=current)
+
+    def test_all_six_ordinary_requests_keep_original_coordinate(self):
+        self.source._checkpoint_bound_bytes = unittest.mock.Mock(return_value=b'body')
+        for canonical, current in self.EXPECTED:
+            binding = next(b for b in self.catalog.values() if b['canonical'] == canonical)
+            self.source.formal_copy_bytes('unused-root', current)
+            self.source._checkpoint_bound_bytes.assert_called_with('unused-root', canonical, binding, current=current)
+
+    def test_other_fifty_five_formal_aliases_keep_default_provider(self):
+        self.source._checkpoint_bound_bytes = unittest.mock.Mock(return_value=b'body')
+        for path, binding in self.catalog.items():
+            if path not in self.aliases:
+                self.source.formal_copy_bytes('unused-root', path)
+                self.source._checkpoint_bound_bytes.assert_called_with('unused-root', path, binding, current=None)
+
+    def test_requested_identity_and_unknown_coordinate_refused(self):
+        self.source._checkpoint_bound_bytes = unittest.mock.Mock(side_effect=AssertionError('must refuse before receiving'))
+        for canonical, current in self.EXPECTED:
+            for path in (canonical, current):
+                for kwargs in ({'identity': '0' * 64}, {'size': -1}):
+                    with self.assertRaises(ValueError):
+                        self.source.formal_copy_bytes('unused-root', path, **kwargs)
+        with self.assertRaises(ValueError):
+            self.source.formal_copy_bytes('unused-root', 'formal/certificate-frontier/Unknown.lean')
+        self.source._checkpoint_bound_bytes.assert_not_called()
+
+    def test_missing_or_redirected_provider_tuple_refused_before_dispatch(self):
+        original = self.source.FORMAL_CURRENT_PROVIDERS
+        self.source._checkpoint_bound_bytes = unittest.mock.Mock(side_effect=AssertionError('must refuse before receiving'))
+        mutations = (original[:-1], (), ((original[0][0], 'formal/certificate-frontier/Wrong.lean'), *original[1:]))
+        for values in mutations:
+            with patch.object(self.source, 'FORMAL_CURRENT_PROVIDERS', values):
+                for path in (next(iter(self.aliases)), self.EXPECTED[0][0], self.EXPECTED[0][1]):
+                    with self.assertRaises(ValueError):
+                        self.source.formal_copy_bytes('unused-root', path)
+        self.source._checkpoint_bound_bytes.assert_not_called()
+
+    def test_original_catalog_guard_remains_required(self):
+        self.source._checkpoint_bound_bytes = unittest.mock.Mock(side_effect=AssertionError('must refuse before receiving'))
+        with patch.object(self.source, 'FORMAL_COPY_MEMBERS', self.source.FORMAL_COPY_MEMBERS[:-1]):
+            with self.assertRaises(ValueError):
+                self.source.formal_copy_bytes('unused-root', self.EXPECTED[0][1])
+        self.source._checkpoint_bound_bytes.assert_not_called()
+
+    def test_duplicate_catalogue_uses_new_provider_without_new_absence_members(self):
+        calls = []
+        self.source._checkpoint_bound_bytes = lambda root, path, binding, **kw: calls.append((path, binding, kw.get('current')))
+        with patch.object(self.source.os.path, 'lexists', return_value=False):
+            self.assertEqual(self.source.formal_duplicate_paths('unused-root'), set(self.catalog))
+        self.assertEqual(len(calls), 71)
+        for path, binding, current in calls:
+            self.assertEqual(current, self.destinations.get(binding['canonical']))
+        self.assertTrue(set(self.destinations).isdisjoint(self.source.FORMAL_COPY_PATHS))
+
+    def _native_fixture(self):
+        # This fixture exercises the unchanged exact native owner, but never Git.
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        root = pathlib.Path(self.temp.name)
+        alias, canonical, current = 'old/alias.lean', 'old/provider.lean', 'formal/certificate-frontier/Fixture.lean'
+        body = b'-- synthetic exact ordinary provider\n'
+        blob = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+        binding = dict(canonical=canonical, blob=blob, sha256=hashlib.sha256(body).hexdigest(), bytes=len(body), mode='100644')
+        target = root / current
+        target.parent.mkdir(parents=True)
+        target.write_bytes(body)
+        def git(repo, *args):
+            if args[0] == 'ls-tree':
+                return b''.join(('100644 blob ' + blob + '\t' + name + '\0').encode() for name in dict.fromkeys((alias, canonical)))
+            if args[0] == 'ls-files':
+                return ('100644 ' + blob + ' 0\t' + current + '\0').encode()
+            raise AssertionError('unexpected native operation')
+        self.source._continuation_git = git
+        self.source._continuation_object = lambda repo, kind, oid: body if kind == 'blob' else b'inert exact commit'
+        self.source.status_record_provider = lambda p: False
+        return root, alias, canonical, current, body, binding
+
+    def test_native_owner_accepts_exact_new_body_and_original_pair(self):
+        root, alias, canonical, current, body, binding = self._native_fixture()
+        self.assertEqual(self.source._checkpoint_bound_bytes(root, alias, binding, current=current), body)
+
+    def test_native_owner_refuses_corrupt_present_old_alias_or_provider(self):
+        root, alias, canonical, current, body, binding = self._native_fixture()
+        for path in (alias, canonical):
+            target = root / path
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(b'wrong old body')
+            with self.assertRaises(ValueError):
+                self.source._checkpoint_bound_bytes(root, alias, binding, current=current)
+            target.write_bytes(body)
+        self.assertEqual(self.source._checkpoint_bound_bytes(root, alias, binding, current=current), body)
+
+    def test_native_owner_refuses_wrong_original_tree_and_blob(self):
+        root, alias, canonical, current, body, binding = self._native_fixture()
+        with patch.object(self.source, '_continuation_git', return_value=b''):
+            with self.assertRaises(ValueError):
+                self.source._checkpoint_bound_bytes(root, alias, binding, current=current)
+        self.source._continuation_object = lambda *args: b'wrong original'
+        with self.assertRaises(ValueError):
+            self.source._checkpoint_bound_bytes(root, alias, binding, current=current)
+
+    def test_native_owner_refuses_wrong_or_missing_current_index(self):
+        root, alias, canonical, current, body, binding = self._native_fixture()
+        original = self.source._continuation_git
+        for row in (b'', ('100755 ' + binding['blob'] + ' 0\t' + current + '\0').encode(),
+                    ('100644 ' + '0' * 40 + ' 0\t' + current + '\0').encode()):
+            self.source._continuation_git = lambda repo, *args, row=row: row if args[0] == 'ls-files' else original(repo, *args)
+            with self.assertRaises(ValueError):
+                self.source._checkpoint_bound_bytes(root, alias, binding, current=current)
+
+    def test_native_owner_refuses_wrong_or_missing_current_body(self):
+        root, alias, canonical, current, body, binding = self._native_fixture()
+        target = root / current
+        target.write_bytes(b'wrong current body')
+        with self.assertRaises(ValueError):
+            self.source._checkpoint_bound_bytes(root, alias, binding, current=current)
+        target.unlink()
+        with self.assertRaises(ValueError):
+            self.source._checkpoint_bound_bytes(root, alias, binding, current=current)
+
+    def test_native_owner_refuses_old_symlink_and_current_executable(self):
+        root, alias, canonical, current, body, binding = self._native_fixture()
+        target = root / alias
+        target.parent.mkdir(parents=True)
+        target.symlink_to(root / current)
+        with self.assertRaises(ValueError):
+            self.source._checkpoint_bound_bytes(root, alias, binding, current=current)
+        target.unlink()
+        (root / current).chmod(0o755)
+        with self.assertRaises(ValueError):
+            self.source._checkpoint_bound_bytes(root, alias, binding, current=current)
+
+
+# Synthetic control flow only; never executes a real Lean compiler or historical driver.
+CERTIFICATE_FRONTIER_SOURCES = ['CertificateFrontier.lean','Controls.lean','ScopeChecks.lean',
+         'mutations/CostBlind.lean','mutations/CurrentCost.lean','mutations/InfinitePrice.lean']
+
+CERTIFICATE_FRONTIER_SYNTHETIC_TOOLS = '''#!/usr/bin/env python3
+from pathlib import Path
+import json,os,sys
+args=sys.argv[1:]
+mode=os.environ.get('SYNTHETIC_MODE','good')
+record={'tool':Path(sys.argv[0]).name,'argv':args,'cwd':os.getcwd(),'lean_path':os.environ.get('LEAN_PATH')}
+with open(os.environ['SYNTHETIC_TRACE'],'a') as f:f.write(json.dumps(record)+'\\n')
+if Path(sys.argv[0]).name=='lake':
+ if args!=['env','printenv','LEAN_PATH']:sys.exit(8)
+ if mode=='lake-failure':sys.exit(1)
+ print(os.environ['SYNTHETIC_DEPS']);sys.exit(0)
+if args==['--version']:
+ print('Lean (version '+('4.20.0' if mode=='wrong-version' else '4.19.0')+', synthetic control-flow only)');sys.exit(0)
+source=Path(args[-1])
+if not source.is_file():print('error: missing input');sys.exit(1)
+if mode=='positive-failure:'+source.name:print('error: synthetic positive failure');sys.exit(1)
+if mode=='no-output:'+source.name:sys.exit(0)
+if source.parent.name=='mutations':
+ if mode=='unexpected-success:'+source.name:sys.exit(0)
+ if mode=='unrelated-error:'+source.name:print('error: unknown module');sys.exit(1)
+ if mode=='partial-diagnostic:'+source.name:print("tactic 'decide' proved that the proposition");sys.exit(1)
+ print("error: tactic 'decide' proved that the proposition");print('is false')
+ if mode=='timeout:'+source.name:sys.exit(124)
+ if mode=='signal:'+source.name:sys.exit(137)
+ sys.exit(1)
+if '-o' not in args:sys.exit(9)
+Path(args[args.index('-o')+1]).write_bytes(b'SYNTHETIC OLEAN, NOT A LEAN RESULT')
+sys.exit(0)
+'''
+
+class CertificateFrontierRunnerControls(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(prefix='frontier-runner-controls-')
+        self.addCleanup(self.tmp.cleanup)
+        self.base = Path(self.tmp.name)
+        self.src = self.base/'ordinary source'
+        self.src.mkdir()
+        source_root = projection.ROOT / 'formal/certificate-frontier'
+        if source_root.exists():
+            shutil.copytree(source_root,self.src,dirs_exist_ok=True)
+        self.bin = self.base/'explicit toolchain';self.bin.mkdir()
+        for tool in ('lean','lake'):
+            p=self.bin/tool;p.write_text(CERTIFICATE_FRONTIER_SYNTHETIC_TOOLS);p.chmod(0o755)
+        self.mathlib=self.base/'explicit mathlib';self.mathlib.mkdir()
+        self.deps=self.mathlib/'deps';self.deps.mkdir()
+        self.trace=self.base/'trace.jsonl'
+        self.out=self.base/'fresh output'
+
+    def invoke(self, profile='primary', mode='good', output=None):
+        runner=self.src/('run-'+profile+'.sh')
+        self.assertTrue(runner.is_file(),'ordinary current runner not yet implemented: '+runner.name)
+        env=dict(os.environ,LEAN_PATH='/untrusted/historical/oleans',SYNTHETIC_MODE=mode,
+                 SYNTHETIC_TRACE=str(self.trace),SYNTHETIC_DEPS=str(self.deps))
+        r=subprocess.run(['bash',str(runner),str(self.bin),str(self.mathlib),str(output or self.out)],
+                         cwd=self.base,env=env,capture_output=True,text=True,timeout=10)
+        rows=[json.loads(x) for x in self.trace.read_text().splitlines()] if self.trace.exists() else []
+        return r,rows
+
+    def source_snapshot(self):
+        return {str(p.relative_to(self.src)):hashlib.sha256(p.read_bytes()).hexdigest()
+                for p in self.src.rglob('*') if p.is_file()}
+
+    def test_primary_exact_protocol_and_source_nonmutation(self):
+        before=self.source_snapshot();r,rows=self.invoke();self.assertEqual(r.returncode,0,r.stderr)
+        calls=[x for x in rows if x['tool']=='lean' and x['argv']!=['--version']]
+        self.assertEqual([Path(x['argv'][-1]).name for x in calls],
+             ['CertificateFrontier.lean','Controls.lean','CostBlind.lean','CurrentCost.lean','InfinitePrice.lean'])
+        self.assertEqual([x['argv'] for x in rows if x['tool']=='lake'],[['env','printenv','LEAN_PATH']])
+        for x in calls:
+            self.assertEqual(x['argv'][:3],['-t0','-DwarningAsError=true','--root='+str(self.src)])
+            self.assertEqual(x['lean_path'],str(self.out)+':'+str(self.deps))
+            self.assertEqual(x['cwd'],str(self.mathlib))
+        self.assertEqual(before,self.source_snapshot())
+        self.assertTrue((self.out/'CertificateFrontier.olean').is_file())
+        self.assertTrue((self.out/'Controls.olean').is_file())
+        self.assertFalse((self.out/'ScopeChecks.olean').exists())
+        self.assertEqual(r.stdout.count('Expected rejection:'),3)
+
+    def test_scope_review_is_not_primary(self):
+        r,rows=self.invoke('scope-review');self.assertEqual(r.returncode,0,r.stderr)
+        calls=[x for x in rows if x['tool']=='lean' and x['argv']!=['--version']]
+        self.assertEqual([Path(x['argv'][-1]).name for x in calls],['CertificateFrontier.lean','ScopeChecks.lean','Controls.lean'])
+        self.assertNotIn('Expected rejection:',r.stdout)
+        self.assertFalse((self.out/'mutations').exists())
+
+    def test_review_keeps_optional_controls_semantics(self):
+        p=self.src/'Controls.lean'
+        if p.exists():p.unlink()
+        r,rows=self.invoke('scope-review');self.assertEqual(r.returncode,0,r.stderr)
+        calls=[x for x in rows if x['tool']=='lean' and x['argv']!=['--version']]
+        self.assertEqual([Path(x['argv'][-1]).name for x in calls],['CertificateFrontier.lean','ScopeChecks.lean'])
+
+    def test_primary_requires_all_five_inputs_before_compiler(self):
+        for name in ['CertificateFrontier.lean','Controls.lean']+CERTIFICATE_FRONTIER_SOURCES[3:]:
+            with self.subTest(name=name):
+                p=self.src/name;original=p.read_bytes();p.unlink()
+                r,rows=self.invoke();self.assertNotEqual(r.returncode,0);self.assertEqual(rows,[])
+                p.write_bytes(original)
+
+    def test_review_requires_scope_before_compiler(self):
+        (self.src/'ScopeChecks.lean').unlink()
+        r,rows=self.invoke('scope-review');self.assertNotEqual(r.returncode,0);self.assertEqual(rows,[])
+
+    def test_symlink_input_is_not_an_ordinary_source(self):
+        p=self.src/'Controls.lean';b=p.read_bytes();p.unlink();target=self.base/'elsewhere.lean';target.write_bytes(b);p.symlink_to(target)
+        r,rows=self.invoke();self.assertNotEqual(r.returncode,0);self.assertEqual(rows,[])
+
+    def test_unexpected_mutation_success_is_rejected_for_each_fixture(self):
+        for name in CERTIFICATE_FRONTIER_SOURCES[3:]:
+            with self.subTest(name=name):
+                out=self.base/('success-'+Path(name).stem)
+                r,_=self.invoke(mode='unexpected-success:'+Path(name).name,output=out)
+                self.assertNotEqual(r.returncode,0);self.assertIn('unexpectedly compiled',r.stderr)
+
+    def test_unrelated_or_partial_diagnostics_are_not_expected_rejection(self):
+        for mode in ('unrelated-error','partial-diagnostic'):
+            for name in CERTIFICATE_FRONTIER_SOURCES[3:]:
+                with self.subTest(mode=mode,name=name):
+                    out=self.base/(mode+Path(name).stem)
+                    r,_=self.invoke(mode=mode+':'+Path(name).name,output=out)
+                    self.assertNotEqual(r.returncode,0)
+
+    def test_timeout_or_signal_status_cannot_pass_with_false_diagnostic(self):
+        for mode in ('timeout','signal'):
+            r,_=self.invoke(mode=mode+':CostBlind.lean',output=self.base/mode)
+            self.assertNotEqual(r.returncode,0)
+
+    def test_positive_failures_stop_each_protocol(self):
+        for profile,names in [('primary',['CertificateFrontier.lean','Controls.lean']),
+                              ('scope-review',['CertificateFrontier.lean','ScopeChecks.lean','Controls.lean'])]:
+            for name in names:
+                with self.subTest(profile=profile,name=name):
+                    r,_=self.invoke(profile,mode='positive-failure:'+name,output=self.base/(profile+name))
+                    self.assertNotEqual(r.returncode,0)
+
+    def test_existing_output_cannot_supply_stale_oleans(self):
+        self.out.mkdir();(self.out/'CertificateFrontier.olean').write_bytes(b'old')
+        r,rows=self.invoke();self.assertNotEqual(r.returncode,0);self.assertEqual(rows,[])
+
+    def test_success_without_fresh_olean_cannot_fall_back_to_dependencies(self):
+        for profile,names in [('primary',['CertificateFrontier.lean','Controls.lean']),
+                              ('scope-review',['CertificateFrontier.lean','ScopeChecks.lean','Controls.lean'])]:
+            for name in names:
+                with self.subTest(profile=profile,name=name):
+                    r,_=self.invoke(profile,mode='no-output:'+name,output=self.base/(profile+name))
+                    self.assertNotEqual(r.returncode,0)
+
+    def test_output_cannot_write_into_source_dependency_or_toolchain(self):
+        for parent in (self.src,self.mathlib,self.bin):
+            with self.subTest(parent=str(parent)):
+                r,rows=self.invoke(output=parent/'forbidden')
+                self.assertNotEqual(r.returncode,0);self.assertEqual(rows,[]);self.assertFalse((parent/'forbidden').exists())
+
+    def test_explicit_tools_and_environment_fail_closed(self):
+        p=self.bin/'lean';p.rename(self.bin/'not-lean')
+        r,rows=self.invoke();self.assertNotEqual(r.returncode,0);self.assertEqual(rows,[])
+
+    def test_named_version_and_dependency_failure_are_not_success(self):
+        for mode in ('wrong-version','lake-failure'):
+            r,_=self.invoke(mode=mode,output=self.base/mode)
+            self.assertNotEqual(r.returncode,0)
+
 
 
 if __name__ == '__main__':

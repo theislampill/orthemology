@@ -10599,5 +10599,105 @@ class ReviewedCodexOriginalPinControls(unittest.TestCase):
                     changed['schema'] = 'unreviewed'
                 self.assertFalse(self.base.permitted(changed))
 
+
+
+class CertificateProviderAdditionControls(unittest.TestCase):
+    """Eight exact ordinary destinations; no generic formal-source or deletion waiver."""
+    CONTRACTS = {'formal/certificate-frontier/CertificateFrontier.lean': ('formal/certificate-frontier/CertificateFrontier.lean', '0784acddd4770f1190f758f264ba52b2b110bd27', None, ('208cf6e6250c6ff50d0b03575a6ae7926b70d1ed', '5e799995b95e37105dff8dfe10e5ba78dfe44034334353bcf66107069e8a67e0', 12278)), 'formal/certificate-frontier/Controls.lean': ('formal/certificate-frontier/Controls.lean', '0784acddd4770f1190f758f264ba52b2b110bd27', None, ('1c6b8900e600c63e30f0aa83f49f7db8211a7cdf', '7d49f0df7d1b5eb633e6edebf17bc0a967eeff1718b9e1cc3fcab1513afb5132', 2410)), 'formal/certificate-frontier/ScopeChecks.lean': ('formal/certificate-frontier/ScopeChecks.lean', '0784acddd4770f1190f758f264ba52b2b110bd27', None, ('2efba39e95c7b0cf38b246654d64f16e099f8e31', '6218ff6fa7b6e5b304859c2f4ad3d512118f1a3c9b68ec7e446d6cc1cd2d78a6', 1345)), 'formal/certificate-frontier/mutations/CostBlind.lean': ('formal/certificate-frontier/mutations/CostBlind.lean', '0784acddd4770f1190f758f264ba52b2b110bd27', None, ('01cef9257fc16b90c16ae14ca9e65aef41cdd787', 'c05bf6d3207aeeaa7dddc222092c73d44f73ecc5eab5c8d465485a9a540d5776', 227)), 'formal/certificate-frontier/mutations/CurrentCost.lean': ('formal/certificate-frontier/mutations/CurrentCost.lean', '0784acddd4770f1190f758f264ba52b2b110bd27', None, ('9ad7316c3906603cd262cb781736078b18cd14a5', '876039d480a1415531f1f099679c5094327caf35c7933a36550e09692de1e83d', 249)), 'formal/certificate-frontier/mutations/InfinitePrice.lean': ('formal/certificate-frontier/mutations/InfinitePrice.lean', '0784acddd4770f1190f758f264ba52b2b110bd27', None, ('ffa13821c157cd943b1bcb5f6aa514c917f198b1', '0b2d8b2584f48d343d753a373161e28f93c397982ce9ab4c098b8daf16db31fe', 293)), 'formal/certificate-frontier/run-primary.sh': ('formal/certificate-frontier/run-primary.sh', '0784acddd4770f1190f758f264ba52b2b110bd27', None, ('fb83caac96791a44fcfb3001cae2e4be03a91b9c', '9a3980fefd48afc8ba9dd2bec1741110c0ab191a088e52fc3e07500c0c88fd95', 3589)), 'formal/certificate-frontier/run-scope-review.sh': ('formal/certificate-frontier/run-scope-review.sh', '0784acddd4770f1190f758f264ba52b2b110bd27', None, ('8402995d37601853f80ddd7f989cc4fe4c600950', '95fb6990e711f319f5bd15e610269bb8bfd462f3f9a718b06324c2ed381495cf', 3298))}
+    OWNER = ReviewedGovernanceEditionControls.OWNER
+
+    def contracts(self):
+        import ast
+        tree = ast.parse((ROOT / 'scripts/check_reader_pilot.py').read_bytes())
+        table = next(n for n in tree.body if isinstance(n, ast.Assign) and
+                     any(isinstance(t, ast.Name) and t.id == 'REVIEWED_AUTHORITY_EDITS' for t in n.targets))
+        return ast.literal_eval(table.value)
+
+    def test_exact_eight_contracts_are_explicit_not_a_prefix_allowance(self):
+        actual = self.contracts()
+        self.assertEqual(len(self.CONTRACTS), 8)
+        for path, expected in self.CONTRACTS.items():
+            with self.subTest(path=path): self.assertEqual(actual.get(path), expected)
+        self.assertNotIn('formal/', actual)
+        self.assertNotIn('formal/certificate-frontier/', actual)
+
+    def gate(self, changes, qualification='valid'):
+        import ast, types
+        tree = ast.parse((ROOT / 'scripts/check_reader_pilot.py').read_bytes())
+        function = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == 'check_corpus_currentness')
+        module = types.ModuleType('certificate_provider_currentness')
+        ns = module.__dict__
+        ns.update(Path=Path, subprocess=subprocess, REFACTOR_EDIT_PATHS=set(),
+                  PMR007_DEEP_PREFIX='unused-deep', PMR007_ROUNDS_PREFIX='unused-rounds',
+                  PMR007_ROUNDS_FORMALIZATION='unused-formal', CONTINUATION_COPY_ROOT='unused-copy/',
+                  SUCCESSOR_INPUT_REGISTRY='unused-input', SUCCESSOR_CALCULUS_MAP='unused-map',
+                  MEDIATOR_GUIDE='unused-guide', REVIEWED_AUTHORITY_EDITS=self.contracts())
+        for name in ('CHECKPOINT_COPY_PATHS','CHECKPOINT_RECORD_COPY_PATHS','CHECKPOINT_PACKAGE_COPY_PATHS',
+                     'FORMAL_COPY_PATHS','CHECKPOINT_CODE_COPY_PATHS','DIGEST_RECORD_PATHS','SUCCESSOR_INPUT_PATHS',
+                     'GENERATED_FIXTURE_PATHS','ADMIN_RECORD_PATHS','CONTINUATION_OWNER_PATHS','STATUS_RECORD_OWNERS',
+                     'FIXTURE_CONSUMER_ORIGINAL','HISTORICAL_PROSE','ADMIN_GUIDES','TYPED_GUIDES','SUCCESSOR_CALCULUS_GUIDES'):
+            ns[name] = set()
+        for name in ('pmr007_deep_duplicate_paths','pmr007_rounds_duplicate_paths','checkpoint_duplicate_paths',
+                     'checkpoint_record_duplicate_paths','checkpoint_package_duplicate_paths','formal_duplicate_paths',
+                     'checkpoint_code_duplicate_paths','digest_record_absences'):
+            ns[name] = lambda *args: set()
+        ns.update(binding_record_candidate=lambda p: False, status_record_candidate=lambda p: False)
+        calls = []
+        def qualify(repo, paths):
+            calls.append(set(paths))
+            if qualification == 'error': raise ValueError('exact provider receiving failed')
+            return set(paths) if qualification == 'valid' else set()
+        ns['reviewed_authority_modifications'] = qualify
+        ns['readonly_git_diff'] = lambda *a, **k: subprocess.CompletedProcess([], 0,
+            ''.join(status+'\0'+path+'\0' for status, path in changes).encode(), b'')
+        exec(compile(ast.Module(body=[function],type_ignores=[]),'actual-certificate-currentness','exec'), ns)
+        return module.check_corpus_currentness(Path('inert-currentness-root'),'original-baseline'), calls
+
+    def test_all_eight_additions_require_successful_exact_receiving(self):
+        expected = set(self.CONTRACTS)
+        errors, calls = self.gate([('A', path) for path in expected])
+        self.assertEqual(errors, [])
+        self.assertEqual(calls, [expected, expected])
+        for state in ('error', 'empty'):
+            self.assertTrue(self.gate([('A', path) for path in expected], state)[0])
+
+    def test_modification_type_deletion_and_unrelated_addition_refuse(self):
+        for path in self.CONTRACTS:
+            for status in ('M', 'D', 'T'):
+                with self.subTest(path=path, status=status):
+                    errors, calls = self.gate([(status, path)])
+                    self.assertTrue(errors); self.assertEqual(calls, [])
+        self.assertTrue(self.gate([('A', 'formal/certificate-frontier/Unreviewed.lean')])[0])
+        self.assertEqual(self.gate([]), ([], []))
+
+    def _absent_fixture(self, path, state='valid'):
+        self.ADDED = path
+        return ReviewedGovernanceEditionControls.fixture(self, state, path)
+
+    def test_each_destination_requires_successful_empty_original_tree(self):
+        for path in self.CONTRACTS:
+            module, repo, calls = self._absent_fixture(path)
+            self.assertEqual(module.reviewed_authority_modifications(repo, {path}), {path})
+            self.assertFalse(any('cat-file' in command for command in calls))
+            for state in ('preexisting', 'empty-predecessor', 'failed-history-query'):
+                with self.subTest(path=path, state=state):
+                    module, repo, _ = self._absent_fixture(path, state)
+                    with self.assertRaises(ValueError): module.reviewed_authority_modifications(repo, {path})
+
+    def test_each_destination_requires_current_regular_identity(self):
+        for path in self.CONTRACTS:
+            for state in ('wrong-body', 'missing', 'executable', 'symlink', 'hardlink'):
+                with self.subTest(path=path, state=state):
+                    module, repo, _ = self._absent_fixture(path, state)
+                    with self.assertRaises((ValueError, OSError)): module.reviewed_authority_modifications(repo, {path})
+
+    def test_each_destination_requires_index_and_TOCTOU_stability(self):
+        for path in self.CONTRACTS:
+            for state in ('index-conflict', 'late-index', 'late-body'):
+                with self.subTest(path=path, state=state):
+                    module, repo, _ = self._absent_fixture(path, state)
+                    with self.assertRaises(ValueError): module.reviewed_authority_modifications(repo, {path})
+
+
 if __name__ == "__main__":
     unittest.main()

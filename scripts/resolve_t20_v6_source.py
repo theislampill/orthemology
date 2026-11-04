@@ -2193,6 +2193,22 @@ def digest(body):
 # Exact formal aliases retain full arguments, witnesses, false controls,
 # licenses and original logical module coordinates. Source acquisition and
 # staging confer no fresh Lean result, historical replay or research adoption.
+
+# Exact current destinations; the original71 source/proof identities stay below.
+FORMAL_CURRENT_PROVIDERS = (('research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/CertificateFrontier.lean',
+  'formal/certificate-frontier/CertificateFrontier.lean'),
+ ('research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/Controls.lean',
+  'formal/certificate-frontier/Controls.lean'),
+ ('research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/independent-review/ScopeChecks.lean',
+  'formal/certificate-frontier/ScopeChecks.lean'),
+ ('research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/CostBlind.lean',
+  'formal/certificate-frontier/mutations/CostBlind.lean'),
+ ('research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/CurrentCost.lean',
+  'formal/certificate-frontier/mutations/CurrentCost.lean'),
+ ('research/t20-live-20261009/supplement/S01/warranted-discrimination-kernel-20261009/mutations/InfinitePrice.lean',
+  'formal/certificate-frontier/mutations/InfinitePrice.lean'))
+FORMAL_CURRENT_PROVIDERS_SHA256 = 'e1e7f0842bba4e09d1a4008e9b2a17029fd329b9414f6360695d5091fe98852a'
+
 FORMAL_COPY_MEMBERS = (('experiments/orthemology-v5-continuations/source-store/0f8e551de28b6bdf549e0d2ecba0932bb2758b8ff57aaf5f1cf5956d7d88d8cd.lean',
   'experiments/orthemology-v5/source/lean/GeneratedExamples.lean',
   'e28a54b251fb81375367099fdcff50f182c2692e',
@@ -6329,22 +6345,56 @@ def _formal_copy_catalog():
     return result
 
 
+def _formal_current_provider_catalog():
+    """Join six ordinary destinations to their unchanged original source identities."""
+    _formal_tuple_binding(FORMAL_CURRENT_PROVIDERS, 6, FORMAL_CURRENT_PROVIDERS_SHA256)
+    original = _formal_copy_catalog()
+    result, destinations = {}, set()
+    for canonical, current in FORMAL_CURRENT_PROVIDERS:
+        if (canonical in result or current in destinations
+                or not current.startswith('formal/certificate-frontier/')
+                or not current.endswith('.lean') or '\\' in current or '\0' in current
+                or any(part in ('', '.', '..', '.git') for part in current.split('/'))):
+            raise ValueError('formal current provider coordinate differs')
+        matches = [binding for binding in original.values() if binding['canonical'] == canonical]
+        if not matches or any(binding != matches[0] for binding in matches):
+            raise ValueError('formal original provider identity differs')
+        result[canonical] = dict(matches[0], current=current)
+        destinations.add(current)
+    if (len(result) != 6 or len(destinations) != 6
+            or sum(binding['canonical'] in result for binding in original.values()) != 16):
+        raise ValueError('formal current provider population differs')
+    return result
+
+
 def formal_copy_bytes(root, path, identity=None, size=None):
-    """Read a finite exact body at its original logical source coordinate."""
-    if not isinstance(path, str) or path not in FORMAL_COPY_PATHS:
+    """Read exact current bytes while retaining each original native coordinate."""
+    # Validate the complete dispatch before deciding which source route applies.
+    original = _formal_copy_catalog()
+    providers = _formal_current_provider_catalog()
+    if not isinstance(path, str):
         raise ValueError('unqualified formal source path')
-    binding = _formal_copy_catalog()[path]
+    if path in original:
+        binding = original[path]
+    else:
+        selected = [row for canonical, row in providers.items()
+                    if path in (canonical, row['current'])]
+        if len(selected) != 1:
+            raise ValueError('unqualified formal source path')
+        binding = {key: value for key, value in selected[0].items() if key != 'current'}
+        path = binding['canonical']
     if ((identity is not None and identity != binding['sha256'])
             or (size is not None and size != binding['bytes'])):
         raise ValueError('formal requested identity differs')
-    return _checkpoint_bound_bytes(root, path, binding)
+    current = providers.get(binding['canonical'], {}).get('current')
+    return _checkpoint_bound_bytes(root, path, binding, current=current)
 
 
 def formal_duplicate_paths(root):
     """Authenticate the complete class before admitting actual source absences."""
     result = set()
     for path, binding in _formal_copy_catalog().items():
-        _checkpoint_bound_bytes(root, path, binding)
+        formal_copy_bytes(root, path)
         if not os.path.lexists(pathlib.Path(root) / path):
             result.add(path)
     return result
