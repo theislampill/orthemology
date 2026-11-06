@@ -854,6 +854,120 @@ N\ge\left\lceil\frac{2\sqrt n}{L}
 
 When $`p\le\eta`$ there is no positive alphabet-size conclusion; when $`L=0`$ one only obtains $`p\le\eta`$; and $`p-\eta=1`$ is impossible for finite N,L. The Gaussian marginal and complete-mediation assumptions belong to *Q*. Allowing finite additivity in the event-transport step does not transport Gaussian entropy or conditional independence to *P*. All attainment claims retain their fixed-horizon and retrospective scope. [10][r10]
 
+### 6.6 Finite-additive concentration and the weakest capture contradiction
+
+The earlier information lower bound has stronger probability assumptions than are needed for a concentration obstruction. Let P be an ordinary real-valued, nonnegative, normalized, finitely additive probability. Require measurability of the interval, tail, rectangle and sum events used. Suppose Y and Z have interval-rectangle independence and Z has the interval and tail probabilities of an ordinary centered Gaussian with variance v>0. Mutual independence among noise increments is insufficient: an earlier state may encode its future increments. [N250A-246]
+
+For a bounded interval I of length L contained in [−R,R], fix δ>0 and M>R. Partition [−M,M] into finitely many interval cells C_j of length at most δ, treating endpoints so they form a disjoint finite partition. On Y∈C_j and Y+Z∈I, Z lies in an interval of length at most L+δ. Since the Gaussian density is bounded by c_v=1/√(2πv), independence and positivity give
+
+P(Y∈C_j, Y+Z∈I) ≤ P(Y∈C_j)c_v(L+δ).
+
+Finite summation bounds the contribution with |Y|≤M by c_v(L+δ). On the remaining part of the sum event, |Z|>M−R. Therefore
+
+P(Y+Z∈I) ≤ c_v(L+δ)+P(|Z|>M−R).
+
+The Gaussian marginal's tight tail makes the second term arbitrarily small, and δ can then be arbitrarily small. Ordinary real-order comparison yields
+
+P(Y+Z∈I) ≤ L/√(2πv).
+
+No countable sum under P, countable additivity of the joint law or tightness of Y is used. The tail of Z controls large compensating Y on the particular sum event. [N250A-246]
+
+Now fix one terminal law and suppose X₀=X₋ₙ+Z_n for every positive integer n, with Z_n∼N(0,n) independent of X₋ₙ in the stated sense. For every bounded I,
+
+P(X₀∈I) ≤ |I|/√(2πn) for all n,
+
+so P(X₀∈I)=0. A single independently warranted capture P(X₀∈I)>0 contradicts this package. Full terminal tightness and countable additivity of the terminal marginal are convenient stronger sufficient premises, not the weakest ones. All horizons must concern the same terminal law. A realized finite value or one successful reading does not itself warrant positive prospective capture; conditioning on a terminal observation can also destroy historical independence. Innovation, capture and interpretation must remain in the same probability and information state. [N250A-246] [N250A-249]
+
+### 6.7 Quantitative separation from independence
+
+Let P_n be an actual pair law with the block recurrence, Gaussian block marginal and the same terminal law at every horizon. Let Q_n be a lawful independent benchmark on the same measurable pair-event domain. Define event total variation by
+
+d_TV(P_n,Q_n)=sup_E |P_n(E)−Q_n(E)|,
+
+whose maximum for probability laws is one, including under finite additivity. For E_I={(y,z):y+z∈I}, write p_I=P(X₀∈I). Concentration under Q_n gives
+
+d_TV(P_n,Q_n) ≥ max(0,p_I−|I|/√(2πn)).
+
+This is a separating-event proof, not an invocation of coupling or Radon–Nikodym characterizations. One fixed capture p_I>0 gives liminf d_TV≥p_I. If the one terminal law is tight, choose I_ε with mass at least 1−ε first, hold that interval fixed as n increases, then let ε decrease. The result is d_TV(P_n,Q_n)→1. Tightness alone gives no rate uniform over all terminal laws. None of this says the noise increments cease to be mutually iid; the dependence measured is between state and future block. [N250A-246] [N250A-249]
+
+Benchmark existence must not be hidden in notation. For a countably additive state marginal ν_n, its usual product with γ_n=N(0,n) is canonical. For a real-valued finitely additive ν_n on the full Borel σ-algebra of R, at least one benchmark on B(R²) is
+
+Q_n(E)=∫_fa γ_n({z:(y,z)∈E}) dν_n(y).
+
+The inner section probability is bounded Borel. Uniform approximation by Borel simple functions defines the outer positive normalized integral; pointwise addition of disjoint sections proves finite additivity. Rectangles have value ν_n(A)γ_n(B), giving both marginals and independence. The construction fixes an integration order. It neither proves uniqueness among all finitely additive extensions nor lets rectangle values determine every Borel value by countably additive uniqueness. On a smaller event algebra, retain benchmark existence as a premise unless the required domain and integration hypotheses have been established. [N250A-249]
+
+### 6.8 A coherent diffuse history and positive controls
+
+The missing bounded-capture premise is real, not a technical omission that pointwise finiteness repairs. On Ω=R×R^Z, give the noise coordinates their ordinary countably additive iid Gaussian law Q, put X₀=x, and define every X_t by the finite signed innovation sum from zero. All positions are finite and every recurrence holds pointwise. For positive integers R, let P_R make x uniform on [−R,R] independently of the noise. A fixed nonprincipal-ultrafilter limit of P_R on every Borel event defines one ordinary real-valued normalized finitely additive μ with the same entire noise marginal Q. [N250A-246]
+
+To obtain full past/future independence, fix t and compare P_R with the law reanchored uniformly at X_t. The event-total-variation difference is bounded by
+
+E_Q[min(1,|S_t|/(2R))]→0,
+
+using the distance between translated uniform intervals and ordinary dominated convergence under Q. Under the reanchored law, past states and noise depend on X_t and earlier noise and are independent of future noise. The error bound is uniform over all Borel events, so factorization passes to μ for the full past state/noise and future-innovation σ-fields at every fixed t. Reanchoring also gives stationarity and translation-invariant position marginals. Every bounded position interval has μ-probability zero although every position is finite. The position law is not countably additive; the noise law remains so. No countable intersection is used to obtain the pointwise recurrences, and no effective sampler follows from the nonconstructive ultrafilter. This constructs one coherent zero-capture law, not all non-tight entrance laws or a concrete metaphysical realization. [N250A-246]
+
+The anchored notation is not a barrier to finite forward interventions. Replacing ξ_j by a with δ=a−ξ_j while shifting x by δ for j<0 and by zero otherwise leaves X_t unchanged for t≤j and adds δ for t>j. For finite replacement set J, the anchor shift is Σ_{j∈J,j<0}(a_j−ξ_j), and the state shift at t is Σ_{j∈J,j<t}(a_j−ξ_j). Distinct replacements commute. These are Borel pushforwards, not conditioning on null Gaussian events. Unchanged innovations retain their joint Gaussian law, and past/future factorization survives because transformed past and future use their corresponding original information. This supplies abstract finite-intervention semantics; it does not establish physical manipulability, and divergent infinite anchor shifts block an automatic extension to arbitrary infinite recombination. [N250A-246]
+
+Three controls prevent overgeneralization. First, ordinary iid Gaussian increments anchored at X₀=0 obey every recurrence but make X₋ₙ depend on its future block. Equations and mutually iid noise do not supply freshness. Second, for 0<|a|<1 the two-sided Gaussian autoregression
+
+X_t=Σ_{j≥0}a^j ξ_{t−1−j}
+
+converges in L² and almost surely, and countable additivity supplies one common probability-one set for every integer t. It has tight stationary variance 1/(1−a²), fresh future innovations and infinitely many nonzero coefficients. Its n-block innovation variance (1−a^{2n})/(1−a²) stays bounded, so it fails the accumulating-variance premise rather than refuting concentration. Nonzero coefficients are not automatically concrete productive contributions. Third, X_t=t with deterministic innovation one is a nonstationary countably additive bi-infinite entrance law for translation even though Z admits no countably additive invariant probability. It fails the spreading-noise premise; absence of a stationary law alone is insufficient. [N250A-246] [N250A-249]
+
+Searching successively for |X₀|≤m terminates at a finite stage on every sample, but μ(success by m)=0 for every fixed m. The eventual-termination event has probability one. The difference is the absent continuity-from-below principle, not a contradiction, an implemented search algorithm or a finite-expected-runtime result. [N250A-246] [N250A-249]
+
+### 6.9 Operational capture and a law-specific diachronic test
+
+#### Positive capture from an actual access contract
+
+A same-law operational premise can supply precisely the capture that M1 requires. If a valid capture C has prospective chance at least s>0 and C⊆{X₀∈I} for a bounded operating range, then P(X₀∈I)≥s. This requires a warranted chance of delivery, not merely conditional soundness of delivered reports, a direction to try, or one actual successful episode. [N250A-247]
+
+The budget need not be fixed in advance. Let T≥0 be resource use and require a finite b(m) for each finite m such that
+
+C∩{T≤m}⊆{|X₀|≤b(m)}.
+
+Finite subadditivity gives
+
+P(C)≤P(|X₀|≤b(m))+P(T>m).
+
+If P(C)≥s>0, one tail bound P(T>m)<s already implies positive bounded mass. A tight T marginal suffices; independence between T and X₀ is unnecessary. Under the diffuse μ, any such magnitude-sensitive acquisition with tight resource marginal therefore has zero success probability. Randomizing the budget with a countably additive finite-valued law does not restore the guarantee. This rejects μ as a model of that justified task, not as a possible law under every task. [N250A-247]
+
+The actual correction does not yet identify this magnitude-sensitive task. A sign query has just two faithful outputs and a positive-half-line probability of 1/2 under μ, while both output inverse images are unbounded. Finite semantic output therefore need not be bounded magnitude capture. A bounded encoding of the corrected sentence does not automatically retain Gaussian additive dynamics. Actual target/evidence/subject fidelity, conditional safety, positive opportunity, prior chance and posterior knowledge must remain distinct. If μ is an objective history law rather than the agent's operative previsions, the bridge to those previsions is also a substantive premise. [N250A-247]
+
+#### Positive-mass reports with zero conditional chance in every cell
+
+The diffuse law itself supports a concrete nonconglomerability test. Put N=1+floor(|X₀|), so each {N=n} is μ-null, and A={ξ₀≥0}, with μ(A)=1/2. From independent Gaussian coordinate ξ₁ construct an integer K with q_n=2^(−n), independent of A in the ordinary noise marginal. Report R=N on A and R=K on Aᶜ. The Borel cells H_n={R=n} form a countable exhaustive partition, with
+
+μ(H_n)=q_n/2>0,  μ(A∩H_n)=0,  μ(A|H_n)=0 for all n.
+
+These are ordinary positive-denominator ratios, not arbitrary choices on null reports. No independence between N and A is needed. The sum of the cell masses is 1/2 even though their union is the full space, a permitted failure of countable additivity. [N250A-247]
+
+Suppose μ supplies the agent's operative valuations, R is eventually disclosed without extra information about A, an A-ticket remains transferable until that disclosure and can later settle, small stakes have additive state-independent value, costs and delay do not alter the comparison, and the agent accepts each contemporaneously favorable offer or precommits to that policy. For 0<ε<1/4, buy the unit A-ticket for 1/2−ε and sell after any exact report for ε. Each transaction has expected gain ε at its own information state. Their combined payoff is the fixed loss −1/2+2ε<0. There are two bounded transactions on each history, not an infinite portfolio. The second trade has negative prior expectation; the example does not contradict static finite-bet coherence. [N250A-247]
+
+The action opportunities matter. The report may require arbitrarily long but pointwise finite acquisition; formula measurability is not an algorithm, and exact floor identification from approximate real names has a boundary problem. Memory, counterparty, transferability and settlement must persist across that duration. Timing or other revealed information can change the posterior. A defender may reject this access contract, reject compulsory acceptance of every local favorable offer, or choose a dynamically sophisticated policy that rejects the dominated composite. Those responses restrict the operational policy without making μ's static event probabilities inconsistent. [N250A-247]
+
+#### Finite deadlines restore the omitted residual branch
+
+Schedule report R at stage R. At deadline m put Q_m=Σ_{n≤m}q_n=1−2^(−m) and D_m={R>m}. Then
+
+μ(R≤m)=Q_m/2,  μ(D_m)=1−Q_m/2,
+
+μ(A∩D_m)=1/2,  μ(A|D_m)=1/(2−Q_m)>1/2.
+
+Ordinary finite-partition averaging holds. Trading only on reports received by m no longer produces uniform loss: retaining the ticket is profitable when A holds on D_m. Trading also on D_m requires its higher correct valuation, not ε. Eventual arrival itself is the whole space and leaves μ(A|eventual arrival)=1/2, despite all exact-report conditionals being zero. The issue is admissibility of the completed non-tight information schedule, not the number of transactions. [N250A-247]
+
+For a purely forecasting version, quadratic loss is L(p,A)=(p−1_A)². Retaining p=1/2 loses 1/4 everywhere. Updating to each exact-report posterior gives p=0 and prior expected loss μ(A)=1/2, although every report assigns the update conditional expected loss zero rather than 1/4. Thus this completed update policy loses the usual prior averaging justification for value of information. Ignoring the report remains an option; no universal scoring-based epistemology is assumed. At finite deadline the conditional forecasts are zero on H₁,…,H_m and 1/(2−Q_m) on D_m, with prior expected loss
+
+(1−Q_m)/[2(2−Q_m)]≤1/4.
+
+These finite-stage forecasts converge pointwise to zero and their expected losses tend to zero, while the limiting forecast's expected loss is 1/2. This is failure of bounded convergence under μ, pinpointing the extra continuity or operational warrant required to pass to the completed protocol. [N250A-247]
+
+Two weaker proposals should not be conflated with this argument. Positivity and finite linearity exclude uniform sure loss from a static finite set of bounded bets at μ-fair prices. But g=1/(N+1) is positive at every sample and has expectation zero because g≤1_{N≤m}+1/(m+1); selling it for zero gives everywhere-strict loss with no uniform positive lower bound. Rejecting that trade uses a stronger strict-dominance norm and may require arbitrarily fine physical payoff precision. Likewise, “my value is finite” has μ-probability one but does not select a positive-mass bounded cell. Comparative or reflection principles across all cells require their own warrant; any finite check leaves an unbounded residual. [N250A-247]
+
+Null actual capture does not admit ratio conditioning under μ alone, though a separately assessed full conditional model or revision could specify an update. If a rival task law Q gives capture C positive probability and a two-model mixture gives both laws positive prior weights, observing C sets the μ-component's posterior weight to zero by ordinary mixture conditioning. This is a valid bounded calculation, not metaphysical impossibility. When Q gives positive probability to every bounded reporting cell, the same elimination at every exact report reproduces nonconglomerability at the model-label level; it does not independently validate the whole acquisition/update policy. A tight posterior also cannot be combined silently with an unconditional freshness law. [N250A-247]
+
+These weaker-additivity concentration and access results do not extend the entropy or finite-mediator theorems of §§6.1–6.4 beyond their countably additive hypotheses. The source research assessment and its quantitative review retain distinct historical scopes; no new execution, primary inspection, general priority or kernel validation is claimed. Effective witness search and budget refusal remain separately treated in [Measure, computability and finite warrant](measure-computability-and-finite-warrant.md#51-the-effective-search-and-its-premises). [N250A-246] [N250A-247] [N250A-249]
+
 ## 7. Temporal learning, coordinated restoration and model transfer
 
 ### 7.1 A mixed equilibrium need not restore a target
@@ -3527,6 +3641,10 @@ The preceding constructions distinguish a winning policy from justified cognitio
 
 Let eligible, defeated and authoritative be predicates on candidate grounds W. Token sufficiency means that some eligible witness is authoritative. If every eligible witness is defeated and defeat excludes authority for each witness, token sufficiency is impossible: take the alleged sufficient witness and apply those two premises to it. Defeating one designated whole is weaker. On Bool let only true be defeated and only false authoritative, with both eligible. The whole true is defeated while a sufficient proper-subset witness false remains. An alternative route is explicit upward sufficiency: if any eligible authoritative witness would make the whole authoritative, insufficiency of the whole excludes all such witnesses. Neither closure premise follows merely from naming a basis complete. [T07F034]
 
+The source-bound cold assessment makes the intended quantifier explicit: defeat must apply to **every eligible sufficient witness wholly supported by the full token basis, for the same judgment and respect**. Its countermodel to defeating only the whole records an acknowledged formalization obligation, not a newly discovered refutation of that stronger intended meaning. Upward sufficiency is one possible repair, but it is substantive where adding defeaters can undermine authority; witness-relative defeat states the intended condition without making all normative reasoning monotone. Calling existential token sufficiency “exclusive closure” would add a further claim: existence of one token-supported sufficient witness does not say that every possible authority is token-supported. [N250A-011]
+
+The concrete exact-byte correction below leaves its recovery standard, source identification, inferential resources and scoped permissions intact. It therefore witnesses retained-standard correction, not the existence of an objectively justified correction whose entire authority basis is defeated. Shrinking that basis after the correction to include only the failed first-order checker would manufacture radicality. The assessment's five responses are an overlapping dialectical taxonomy: a retained meta-standard denies full-basis radicality; a trans-state standard supplies a different kind of authority; a holistic fixed point still needs a constitution and selection warrant; a primitive normative fact remains a logical option; and relativization or error theory rejects or weakens the robust correction premise. Holistic and primitive accounts can also be trans-state accounts. Bare unconstrained predicates do not prove that these responses exhaust all cases without an authority-existence/classification premise. The report preserves the historical unadopted status of that assessment and derives no proper-function theory, source necessity, Wisdom or common metaphysical bearer from the local checker. [N250A-011] [N250A-015] [N250A-016]
+
 An exact criterion for target t accepts x precisely when x=t. Two criteria adequate for that same target have the same extension, though they may use different implementations. A representation f preserves this exact criterion at t precisely when the fibre of f(t) is the singleton {t}. To preserve exactness at every target is precisely to make f injective. The proofs substitute the equality criterion in each direction; a wrong x with f(x)=f(t) is the explicit false acceptance when singleton-fibre adequacy fails. A useful normalization can therefore preserve one declared standard without preserving an exact-byte standard. The representation and the standard must be specified together. [T07F034]
 
 For source evidence class E_U, recipient class E_V, relation R and claims p,q, define robust validity by truth at every admitted evidence-world. Suppose each v in E_V is related to some u in E_U, and related admitted pairs carry p(u) to q(v). Source robust validity then gives recipient robust validity by selecting that covering u. The backward coverage premise is necessary for this transport schema **uniformly over all predicates**: use p=True and q(v)=“some admitted source u relates to v.” It is not necessary for every fixed independently warranted q. A Unit source related only to false in a Bool recipient class preserves the claim v=false on related pairs while failing at true. The same missing coverage does not prevent the independently true constant claim. Actual truth additionally requires that the actual world belongs to the evidence class. This robust model is not a definition of all ordinary epistemic warrant. [T07F034]
@@ -3548,6 +3666,10 @@ An actual fault set of size at most B taints at most B+c−1 labels. Conversely 
 For two families F,G chosen once outside all map/fault quantifiers, the safety-and-availability contract is feasible exactly at the threshold m≥3k+1 under the stated parameter restrictions. The lower bound does not assume uniform families: choose a k-set T and P avoiding it, so |P|≤m−k; choose min(k,|P|) labels of P, extend to a k-set and obtain R avoiding them. Then |P∩R|≤|P|−min(k,|P|), incompatible with the required overlap >k below the threshold. All (m−k)-subsets attain the upper bound. These are fixed families, not families updated after learning the hidden map. [T07F106]
 
 The Option-valued canonical root map is a representation, not another physical assumption. Any map whose equality fibres are exactly A and the singleton outside labels has the same counts. The source map reports cardinality-preserving fault transport in both directions, restricted to actual image roots, and correspondence to the earlier representative-index and Bool/Nat interfaces. Its audit file requests axiom and signature readbacks for these count, image, availability, fixed-family and correspondence statements. Those commands are not their outputs. The theorem map's historical acceptance statements are not a new compilation or a proof that a physical service satisfies the premises; its A–C packet explicitly does not establish the dynamic cancellation story or covering-search optimum. The latter requires the separate argument next. [T07F106] [T07F035]
+
+The complete attribution review and target specification now supply the more precise warrant for that historical formalization claim. They report all-parameter acceptance of the root-image equivalence, actual-root availability and arbitrary fixed-family threshold, together with representation transport and separately bound actual-root corollaries. They do not count covering/search closure, physical cancellation or temporal applicability as part of those A–C targets. In particular, “every fault set of at most B actual roots leaves an untainted shared root” is equivalent to the shared **actual image** having more than B members: if its size is at most B, the whole shared image is an admissible fault set. Combining the fixed-family threshold with n=m−c+1 gives the sharp actual-root minimum n=3B+2c−1, an excess 2(c−1) over the known-attribution comparison 3B+1. The comparison does not itself establish either design's operational applicability. [N250A-000] [N250A-001]
+
+Two admitted Python checkers retain different finite representations of this interface. One constructs explicit partitions and images for 2≤m≤7; the other represents labels and root images by bit masks for 3≤m≤7 and separately checks selected minimum constructions. Both expose alias bridges, maximal-taint realizations and the failure of counting two aliased cancellation labels as two actual roots. Their finite domains do not replace the generic proof. The review reports fresh Lean compilation and a transitive standard-axiom audit against its pinned dependencies, while disclosing reused dependency libraries and a wrapper needed to run the regression/supplement stages absent from the central entry point alone. Reading those reports and checker bodies here is neither a new kernel replay nor an inspection of the unadmitted dependencies they cite. [N250A-000] [N250A-029] [N250A-030]
 
 The direct deletion and regression witnesses retain all these parameter restrictions. For B=1,c=2, the fixed-family threshold is m=7 rather than6; for B=1,c=3 it is m=10 rather than9. Aliased labels count as one root, while disjoint label sets can meet through the same collapsed class. The controls separately remove positive B, positive c, realizable class size, realizable taint size, family availability and pair safety. Impossible class/fault sizes can make universal clauses vacuous. Transport of faults under a root renaming is restricted to the actual image; arbitrary unused codomain labels are not faults of the original system. These are the concrete discriminators for the theorem above, not new thresholds obtained by counting fixtures. [R750A-501] [R750A-502]
 
@@ -3604,6 +3726,26 @@ The corner cases are substantive: feasible covers are positive even at k=0 (the 
 [F939-C878]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/eef155e9c645c1bdfdb87ffd57d3f58531929a020d017fbdba77aa01e824d925/SourceCorrespondence.lean
 [F939-C901]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/f6e89ecca07f5b16f4200ce6673dfa1a96db3a5ce4379f6c73cb9eac85010efe/RandomizedSearch.lean
 [F939-C910]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/fab177fbbf567d5e7d5b99ef627d7d33ba7f863b8a9c8d4c1f5ad84476f52b7c/IndependentChecks.lean
+
+#### Trading additional roots for fewer opaque attempts
+
+The known-root instance makes the resource tradeoff explicit. With n actual roots, lifetime fault budget B, repair-path size q and revocation size r, retain q+r>n+B and q,r≤n−B. Complementing each repair path gives a block of size n−q, so the exact opaque macro-attempt cap is C(n,n−q,B). For fixed n,B,r, the smallest safe path has q=n+B−r+1. Feasibility forces r≥2B+1. Across feasible thresholds, r=n−B and q=2B+1 maximize the complement size and minimize the attempt count:
+
+```math
+M_{\mathrm{opt}}(n,B)=C(n,n-2B-1,B).
+```
+
+To justify the minimization, extend each smaller covering block to the larger permitted size. Coverage survives and the number of distinct blocks cannot increase. The improvement buys more revocation witnesses and actual root modules; it does not minimize every resource at once. A portfolio of M prebuilt q-gate branches uses qM gate occurrences but only n independently failing roots. Selection, shared writers and independently reachable control ports remain charged supports. [N250A-024]
+
+For B=1 and n≥4, the blocks must cover n singleton faults and each has n−3 points. Counting gives M≥ceil(n/(n−3)); partitioning the points into groups of at most n−3 and extending the groups to blocks attains it. Thus n=4,5,6 require respectively 4,3,2 attempts, and every n≥6 still requires two. One cannot suffice because its nonempty path contains a potentially faulty root. For B=2 the reported frontier at n=7,8,9,10 is respectively 21,11,8,6 attempts, with q=5 and r=n−2. The corresponding gate-occurrence counts are 105,55,40,30. The upper sides depend on the separately supplied covering witnesses; the admitted checker shows how those witnesses are validated, but those witness files were not opened or rerun here. [N250A-024] [N250A-027]
+
+The pair-incidence lower argument is elementary. Every point of a (v,b,2)-cover must occur in at least ceil((v−1)/(b−1)) blocks; counting incidences then gives M≥ceil(v ceil((v−1)/(b−1))/b). This supplies the frontier's lower bounds except at (v,b)=(9,4), where it gives only seven. The extra obstruction is worth retaining rather than replacing it by a solver label. Suppose seven four-point blocks covered all pairs of nine points. Every point occurs at least three times, and the 28 incidences force one point x to occur four times and the other eight to occur three times. Each other point has nine companion slots for eight companions, so it has exactly one repeated companion. [N250A-024]
+
+Among the four x-blocks, four of the other points occur twice and four once. A twice-occurring point uses its entire repetition allowance on x and lies in exactly one non-x block. Represent each such point by the pair of x-blocks containing it. The four pairs are distinct edges of a four-vertex graph: duplicate edges would make two such points meet twice. Four distinct edges have a disjoint pair, because a pairwise-intersecting edge family has at most three edges, either a star or a triangle. The corresponding two points must meet in a non-x block. No third twice-occurring point can fill that block, since its pair of x-blocks meets one of their disjoint pairs and would repeat a companion. No once-occurring point can fill it either: its one x-block likewise repeats a companion. The two required remaining places cannot be filled. This contradiction excludes seven, and the source's eight-block witness supplies the upper side. The general incidence reduction remains an ordinary proof; only the small four-edge fact is separately reported as a finite kernel check. [N250A-024] [N250A-027]
+
+The full-action covering review preserves two distinctions that these numbers could conceal. Its opacity condition applies only on failed prefixes still compatible with the fixed bad world; it need not identify observations after success or on unreachable histories. The defective-start bridge equates achievement with an intervention only when the target initially fails; an initially correct target needs zero attempts. The accepted v2 review reports that this bridge corrected an objective-correspondence gap and that a malformed opacity-deletion test was replaced by a well-typed loss-of-information mutation. A failure at syntax or binder inference is not thereby credited as testing the intended premise. The current source statements and explicit mutation drivers preserve those distinctions without a fresh compiler run. [N250A-005] [N250A-006] [N250A-008] [N250A-009]
+
+The finite semantic controls also distinguish an almost-sure cap from an expectation. Uniformly permuting the four minimum paths gives mean first success 5/2 in every fixed one-fault world, while the almost-sure cap remains four and the probability of failing by three is 1/4. A reliable failed-root identity permits a two-attempt strategy on the same four roots: after failure, avoid the disclosed root. This changes the observation contract. The reviewer's controls additionally use complete prior commands and replies, fresh nonordinal history-dependent nonces and one fixed repair body, so their adaptive examples do not depend on identifying arbitrary nonce policies with ordinal renamings. All reported counts remain bounded corroboration; the fixed-world probability quantifier and general cap retain the independent proofs above. [N250A-005] [N250A-007] [N250A-010]
 
 #### Temporal interlocks need all of their independent duties
 
@@ -3693,6 +3835,16 @@ Two source variants illustrate the distinction between semantic correctness and 
 The direct finite-input definition adds an operationally significant validation order. It first checks positive q,n,k and literal lengths q·n·k·n for rows, q·n·k for priorities, and q,n,k for the coding lists. A failed shape gate returns false before enumerating the claimed finite carriers or performing row arithmetic. Sparse-menu validation rejects repeated support/state keys, repeated support or action members, and out-of-range entries; absent menu records mean the empty menu. Exact sameInput compares every structured field, including interpretation strings, rather than only the induced probabilities. The language supplies data and validation, not a solver or a winning-policy witness. [F189B-828](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/e05d663571ba1cdf8e2ad04f19442721d4f03ee5bca46c0ad185e5d2c2f0e0c6/CertificateData.lean)
 
 The certificate grammar gives each used component state exactly one link record, containing paths to and from a chosen root; the no-duplicates condition applies to the records' state keys. It checks full candidate-row closure and requires each numerically matching rival to attain an even minimum on the component. Node obligations have exactly the state×candidate keys, with no duplicates; every nonempty proper live-support update must reference a submitted child containing the successor. Layout checks the submitted supports, not an enumeration of all unlisted supports, while body validation checks every submitted node before query lookup. These are positive finite certificate interfaces under their precise syntax. The positive-input-binding mutant drops sameInput only on the positive branch: its changed input still accepts the body, contradicting its retained false assertion. That demonstrates the necessity of the omitted binding check for the submitted-record contract, not unsoundness of the structural theorem. No test has been rerun here. [F189B-842](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/e41f1506d7b17c76bdc11929d6f31c73512549f55c7281f9ea85d37f597b372a/CertificateSyntax.lean) [F189B-870](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/ed99c3cbd5253c1fa6412801136653d1b94675c23afb003f80c02187cb5d5b5c/MutationPositiveDropsInput.lean)
+
+#### The earlier existence interface and its exact execution evidence
+
+The independent existence-calculus review confirms the inherited positive endpoint used in §7.15: for a valid fixed finite rational input and query, **there exists an accepted finite body if and only if a common lawful almost-sure parity policy exists**. It is not the claim that every submitted body passes on a winning query. Its arbitrary measurable-seed premise also yields a finite body, while the submitted syntax's finite size does not establish autonomous finite-state policy sufficiency. The cited Bernoulli control uses good priority 2 and bad priority 1 under minimum-even parity; changing good priority to 0 would change that particular co-Büchi comparison. These are properties of the earlier existence interface, not limits withdrawing the later signed service or direct controller. [N250C-127] [N250C-132]
+
+The same review fixes two operational qualifications beyond the structural argument. A polynomial verification-cost argument charges explicit materialized input and AST bit length, including rational numerators/denominators; it promises neither polynomial certificate size nor a verified bit-cost counter. And independence from the synthesizer holds at the finite typed-data interface. It does not authorize executing arbitrary Lean or Python from an untrusted producer. A trusted constructor/decoder enforcing finite indices and syntax remains necessary; the scientific replay runner is not a wire-format parser or upload service. [N250C-127] [N250C-128]
+
+The historical full portable execution was of v2, while v4 retains identical scientific/control sources. The v3→v4 diff changes a result-metadata literal to distinguish **no added invocation heartbeat override** from two preserved inherited source settings of 800000 in FiniteChainTrajectory and GeneratedParitySuccess. It changes no command, order, control or resource budget. The review qualifies that exact bridge; it does not claim a fresh full execution of the different wrapper bytes. All eight new modules use defaults. The author's portable runner rebuilds its 87-module inherited closure and eight new production modules, while the independent runner can instead qualify 95 existing production source/object bindings and explicitly record reuse. [N250C-129] [N250C-130] [N250C-131] [N250C-133]
+
+Both runners refuse optimized Python and distinguish the intended concrete mutation rejection from an unrelated error. The independent five mutations remove all-receipt closure, rival parity, full numerical row matching, used-menu licensing or exact state/candidate keys. Their control logic tests changed executable predicates rather than reasserting the original soundness theorem. The acceptance reports successful checks at its historical boundary; this incorporation only reads that code and report. Official external objects remain trusted, C generation is not linked standalone execution, and none of these results authenticates the declared worldly model, grant authority or occurrence. [N250C-127] [N250C-130] [N250C-131]
 
 ## 8. What final judgments identify about evidence use
 
@@ -4527,3 +4679,95 @@ The following exact public editions are the theorem and proof texts used in §7.
 [HC462]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/7c11c21b07e296136e93287e8017d90b8f8dc8485ed04d3286e3d8c5dbd12f92/SupplementaryControls.lean
 [HC476]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/7ef35cb6890a6b3f721188d3fe569ea2b49faf06001403fbe89b3d4790aa333c/HiddenChangeTailTransport.lean
 [HC497]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/850b3c60a6c6f7e44807a4e50bdae1f3789962a52b6716622fc06a08db5a14b5/HiddenChangePrefixSafety.lean
+
+
+
+## Exact sources for source-warrant and interlock qualifications
+
+These exact-public bodies were read as scientific prose or source code. Review replay statements are attributed historical evidence; no new execution or inspection of their referenced originals is claimed. Batch indices identify the present250-file cohort; manifest indices preserve its admission-source identities.
+
+- **N250A-000**, cohort row0, manifest28395: [REVIEW.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/ff64060c0e14ba67437f92f5b714aa7018941c26b9afdf2aa86aba9cbe8bad69/REVIEW.md). Exact repository path `experiments/orthemology-v5-successors/source-store/ff64060c0e14ba67437f92f5b714aa7018941c26b9afdf2aa86aba9cbe8bad69/REVIEW.md`; SHA-256 `ff64060c0e14ba67437f92f5b714aa7018941c26b9afdf2aa86aba9cbe8bad69`; 12,511 bytes. Role: authored_argument.
+
+[N250A-000]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/ff64060c0e14ba67437f92f5b714aa7018941c26b9afdf2aa86aba9cbe8bad69/REVIEW.md
+
+- **N250A-001**, cohort row1, manifest25383: [SPEC.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/e39f418d04d5bb4e5e7a8866150a0aca063a79da707d450f48afbf43623785b1/SPEC.md). Exact repository path `experiments/orthemology-v5-successors/source-store/e39f418d04d5bb4e5e7a8866150a0aca063a79da707d450f48afbf43623785b1/SPEC.md`; SHA-256 `e39f418d04d5bb4e5e7a8866150a0aca063a79da707d450f48afbf43623785b1`; 2,340 bytes. Role: authored_argument.
+
+[N250A-001]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/e39f418d04d5bb4e5e7a8866150a0aca063a79da707d450f48afbf43623785b1/SPEC.md
+
+- **N250A-005**, cohort row5, manifest27900: [REVIEW_V2.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/faebf1a57d91ef459e12cedbb7cac455ff1d2e2476f1b2fc6347d2f20ae96180/REVIEW_V2.md). Exact repository path `experiments/orthemology-v5-successors/source-store/faebf1a57d91ef459e12cedbb7cac455ff1d2e2476f1b2fc6347d2f20ae96180/REVIEW_V2.md`; SHA-256 `faebf1a57d91ef459e12cedbb7cac455ff1d2e2476f1b2fc6347d2f20ae96180`; 17,392 bytes. Role: authored_argument.
+
+[N250A-005]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/faebf1a57d91ef459e12cedbb7cac455ff1d2e2476f1b2fc6347d2f20ae96180/REVIEW_V2.md
+
+- **N250A-006**, cohort row6, manifest14399: [check_primary_mutants.py](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/812dd6c8f15770791b87e2e94ac2c49858a2a58a17817aba50f4d78d8eddd6ae/check_primary_mutants.py). Exact repository path `experiments/orthemology-v5-successors/source-store/812dd6c8f15770791b87e2e94ac2c49858a2a58a17817aba50f4d78d8eddd6ae/check_primary_mutants.py`; SHA-256 `812dd6c8f15770791b87e2e94ac2c49858a2a58a17817aba50f4d78d8eddd6ae`; 2,169 bytes. Role: authored_code.
+
+[N250A-006]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/812dd6c8f15770791b87e2e94ac2c49858a2a58a17817aba50f4d78d8eddd6ae/check_primary_mutants.py
+
+- **N250A-007**, cohort row7, manifest25903: [independent_semantics.py](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/e849927a94d6290db9ae5d34eea6ba0155fd266451c2261864c7daf97811fdc3/independent_semantics.py). Exact repository path `experiments/orthemology-v5-successors/source-store/e849927a94d6290db9ae5d34eea6ba0155fd266451c2261864c7daf97811fdc3/independent_semantics.py`; SHA-256 `e849927a94d6290db9ae5d34eea6ba0155fd266451c2261864c7daf97811fdc3`; 5,072 bytes. Role: authored_code.
+
+[N250A-007]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/e849927a94d6290db9ae5d34eea6ba0155fd266451c2261864c7daf97811fdc3/independent_semantics.py
+
+- **N250A-008**, cohort row8, manifest2511: [SPEC.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/177e21118d8a6c7e1df00c591729671122a534235dc76fe915d40e77e7423362/SPEC.md). Exact repository path `experiments/orthemology-v5-successors/source-store/177e21118d8a6c7e1df00c591729671122a534235dc76fe915d40e77e7423362/SPEC.md`; SHA-256 `177e21118d8a6c7e1df00c591729671122a534235dc76fe915d40e77e7423362`; 8,399 bytes. Role: authored_argument.
+
+[N250A-008]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/177e21118d8a6c7e1df00c591729671122a534235dc76fe915d40e77e7423362/SPEC.md
+
+- **N250A-009**, cohort row9, manifest14817: [mutation_controls.py](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/84cc407e25b40c3886f12d117669c9dd28254eaf47cd233de441a556c6244d4f/mutation_controls.py). Exact repository path `experiments/orthemology-v5-successors/source-store/84cc407e25b40c3886f12d117669c9dd28254eaf47cd233de441a556c6244d4f/mutation_controls.py`; SHA-256 `84cc407e25b40c3886f12d117669c9dd28254eaf47cd233de441a556c6244d4f`; 2,000 bytes. Role: authored_code.
+
+[N250A-009]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/84cc407e25b40c3886f12d117669c9dd28254eaf47cd233de441a556c6244d4f/mutation_controls.py
+
+- **N250A-010**, cohort row10, manifest5960: [semantic_controls.py](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/36b9b9141d3fec557bc5f95467861ae1eea980ce56f6821f1c3fa6019de3a5be/semantic_controls.py). Exact repository path `experiments/orthemology-v5-successors/source-store/36b9b9141d3fec557bc5f95467861ae1eea980ce56f6821f1c3fa6019de3a5be/semantic_controls.py`; SHA-256 `36b9b9141d3fec557bc5f95467861ae1eea980ce56f6821f1c3fa6019de3a5be`; 7,183 bytes. Role: authored_code.
+
+[N250A-010]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/36b9b9141d3fec557bc5f95467861ae1eea980ce56f6821f1c3fa6019de3a5be/semantic_controls.py
+
+- **N250A-011**, cohort row11, manifest9875: [CANDIDATE_E_COLD_ASSESSMENT.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/59ac68fa9278932de6f35d30ef219bc7af9eca63e84f843e4b256103c2afb16e/CANDIDATE_E_COLD_ASSESSMENT.md). Exact repository path `experiments/orthemology-v5-successors/source-store/59ac68fa9278932de6f35d30ef219bc7af9eca63e84f843e4b256103c2afb16e/CANDIDATE_E_COLD_ASSESSMENT.md`; SHA-256 `59ac68fa9278932de6f35d30ef219bc7af9eca63e84f843e4b256103c2afb16e`; 11,404 bytes. Role: authored_argument.
+
+[N250A-011]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/59ac68fa9278932de6f35d30ef219bc7af9eca63e84f843e4b256103c2afb16e/CANDIDATE_E_COLD_ASSESSMENT.md
+
+- **N250A-015**, cohort row15, manifest457: [SPECIFICATION.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/0455329eb125848dbdb0601e5e75221804355094382cdf20cd004e59dded8603/SPECIFICATION.md). Exact repository path `experiments/orthemology-v5-successors/source-store/0455329eb125848dbdb0601e5e75221804355094382cdf20cd004e59dded8603/SPECIFICATION.md`; SHA-256 `0455329eb125848dbdb0601e5e75221804355094382cdf20cd004e59dded8603`; 6,894 bytes. Role: authored_argument.
+
+[N250A-015]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/0455329eb125848dbdb0601e5e75221804355094382cdf20cd004e59dded8603/SPECIFICATION.md
+
+- **N250A-016**, cohort row16, manifest14893: [TRANSPORT_ARGUMENT.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/855b8f438e5d5f05b53e2d6ee151375a1601d3e568f53b31316b336f07f3def1/TRANSPORT_ARGUMENT.md). Exact repository path `experiments/orthemology-v5-successors/source-store/855b8f438e5d5f05b53e2d6ee151375a1601d3e568f53b31316b336f07f3def1/TRANSPORT_ARGUMENT.md`; SHA-256 `855b8f438e5d5f05b53e2d6ee151375a1601d3e568f53b31316b336f07f3def1`; 21,081 bytes. Role: authored_argument.
+
+[N250A-016]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/855b8f438e5d5f05b53e2d6ee151375a1601d3e568f53b31316b336f07f3def1/TRANSPORT_ARGUMENT.md
+
+- **N250A-024**, cohort row24, manifest8404: [COVERING_TRADEOFF.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/4d5425b42dad562700a7572a84a077dbcf9330de54b10dd6c755df0d10d8fde4/COVERING_TRADEOFF.md). Exact repository path `experiments/orthemology-v5-successors/source-store/4d5425b42dad562700a7572a84a077dbcf9330de54b10dd6c755df0d10d8fde4/COVERING_TRADEOFF.md`; SHA-256 `4d5425b42dad562700a7572a84a077dbcf9330de54b10dd6c755df0d10d8fde4`; 9,259 bytes. Role: authored_argument.
+
+[N250A-024]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/4d5425b42dad562700a7572a84a077dbcf9330de54b10dd6c755df0d10d8fde4/COVERING_TRADEOFF.md
+
+- **N250A-027**, cohort row27, manifest11844: [verify_covering.py](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/6b256ec341909c8848aa48bfe79cd4e0061c0d601db1f5bff87035447f7b6262/verify_covering.py). Exact repository path `experiments/orthemology-v5-successors/source-store/6b256ec341909c8848aa48bfe79cd4e0061c0d601db1f5bff87035447f7b6262/verify_covering.py`; SHA-256 `6b256ec341909c8848aa48bfe79cd4e0061c0d601db1f5bff87035447f7b6262`; 4,295 bytes. Role: authored_code.
+
+[N250A-027]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/6b256ec341909c8848aa48bfe79cd4e0061c0d601db1f5bff87035447f7b6262/verify_covering.py
+
+- **N250A-029**, cohort row29, manifest11077: [independent_root_image_checks.py](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/648e72d299627c267578358b64bbaa9c227fd44fcb13bf9756a6296bdb58a851/independent_root_image_checks.py). Exact repository path `experiments/orthemology-v5-successors/source-store/648e72d299627c267578358b64bbaa9c227fd44fcb13bf9756a6296bdb58a851/independent_root_image_checks.py`; SHA-256 `648e72d299627c267578358b64bbaa9c227fd44fcb13bf9756a6296bdb58a851`; 3,260 bytes. Role: authored_code.
+
+[N250A-029]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/648e72d299627c267578358b64bbaa9c227fd44fcb13bf9756a6296bdb58a851/independent_root_image_checks.py
+
+- **N250A-030**, cohort row30, manifest22315: [verify_attribution.py](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/c85728a3e6274ab1f2e37421191baa80d7ada449f4e3c3f6f68d9982c222d93b/verify_attribution.py). Exact repository path `experiments/orthemology-v5-successors/source-store/c85728a3e6274ab1f2e37421191baa80d7ada449f4e3c3f6f68d9982c222d93b/verify_attribution.py`; SHA-256 `c85728a3e6274ab1f2e37421191baa80d7ada449f4e3c3f6f68d9982c222d93b`; 10,325 bytes. Role: authored_code.
+
+[N250A-030]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/c85728a3e6274ab1f2e37421191baa80d7ada449f4e3c3f6f68d9982c222d93b/verify_attribution.py
+
+
+
+### Exact public bridges for bounded access and source warrant
+
+- **N250A-246**, cohort row 246, manifest 1061: [FRESH_HISTORIES_BOUNDED_OBSERVATION_AND_ORIGINAL_SUPPORT_v4.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab/FRESH_HISTORIES_BOUNDED_OBSERVATION_AND_ORIGINAL_SUPPORT_v4.md); exact repository path `experiments/orthemology-v5-successors/source-store/09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab/FRESH_HISTORIES_BOUNDED_OBSERVATION_AND_ORIGINAL_SUPPORT_v4.md`; SHA-256 `09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab`; 27,006 bytes.
+
+[N250A-246]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab/FRESH_HISTORIES_BOUNDED_OBSERVATION_AND_ORIGINAL_SUPPORT_v4.md
+
+- **N250A-247**, cohort row 247, manifest 21613: [BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942/BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md); exact repository path `experiments/orthemology-v5-successors/source-store/c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942/BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md`; SHA-256 `c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942`; 31,721 bytes.
+
+[N250A-247]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942/BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md
+
+- **N250A-249**, cohort row 249, manifest 10710: [QUANTITATIVE_AND_CAPTURE_PUBLIC_v1.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/6130a832114b87dcdefbdf60841fe8785f62549ee175adf7dbf25670f880430d/QUANTITATIVE_AND_CAPTURE_PUBLIC_v1.md); exact repository path `experiments/orthemology-v5-successors/source-store/6130a832114b87dcdefbdf60841fe8785f62549ee175adf7dbf25670f880430d/QUANTITATIVE_AND_CAPTURE_PUBLIC_v1.md`; SHA-256 `6130a832114b87dcdefbdf60841fe8785f62549ee175adf7dbf25670f880430d`; 9,511 bytes.
+
+[N250A-249]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/6130a832114b87dcdefbdf60841fe8785f62549ee175adf7dbf25670f880430d/QUANTITATIVE_AND_CAPTURE_PUBLIC_v1.md
+
+## Exact public sources for the Ninth argument and evidence reconciliation
+
+[N250C-127]: https://github.com/theislampill/orthemology/blob/542170635a2b01c57d02d1e01eb195c588509dc5/experiments/orthemology-v5-successors/source-store/cdad7bcf0ae847fa3319f164eb7a755a25a51a053982372664b68b92e8beb8a7/INDEPENDENT_REVIEW.md "Next-250 cohort index 127; SHA-256 cdad7bcf0ae847fa3319f164eb7a755a25a51a053982372664b68b92e8beb8a7"
+[N250C-128]: https://github.com/theislampill/orthemology/blob/542170635a2b01c57d02d1e01eb195c588509dc5/experiments/orthemology-v5-successors/source-store/3e2a5c75831131a63a130104c673e49cdb9bb0410a43de4de22b9a73910dbb68/README.md "Next-250 cohort index 128; SHA-256 3e2a5c75831131a63a130104c673e49cdb9bb0410a43de4de22b9a73910dbb68"
+[N250C-129]: https://github.com/theislampill/orthemology/blob/542170635a2b01c57d02d1e01eb195c588509dc5/experiments/orthemology-v5-successors/source-store/b4a5ad9929b7617104eae93884fee9cbfd071b82b090bf30d3b5052e524f4fba/V3_V4_REPLAY_METADATA_DIFF.txt "Next-250 cohort index 129; SHA-256 b4a5ad9929b7617104eae93884fee9cbfd071b82b090bf30d3b5052e524f4fba"
+[N250C-130]: https://github.com/theislampill/orthemology/blob/542170635a2b01c57d02d1e01eb195c588509dc5/experiments/orthemology-v5-successors/source-store/d8b1bc636da5cb56b05801ca3961188a9b3cf04e406f3beb26bea82d5da3ba64/replay_review.py "Next-250 cohort index 130; SHA-256 d8b1bc636da5cb56b05801ca3961188a9b3cf04e406f3beb26bea82d5da3ba64"
+[N250C-131]: https://github.com/theislampill/orthemology/blob/542170635a2b01c57d02d1e01eb195c588509dc5/experiments/orthemology-v5-successors/source-store/144df48b2fdf2371f8a70fe0e6d4363f88ad61af58a516f9ad6101eb6820f969/DEPENDENCY_TRUST.md "Next-250 cohort index 131; SHA-256 144df48b2fdf2371f8a70fe0e6d4363f88ad61af58a516f9ad6101eb6820f969"
+[N250C-132]: https://github.com/theislampill/orthemology/blob/542170635a2b01c57d02d1e01eb195c588509dc5/experiments/orthemology-v5-successors/source-store/d436f50c8e1335b48d694d22636e554fa2388783645e4e5cbf604417ce6a8f34/README.md "Next-250 cohort index 132; SHA-256 d436f50c8e1335b48d694d22636e554fa2388783645e4e5cbf604417ce6a8f34"
+[N250C-133]: https://github.com/theislampill/orthemology/blob/542170635a2b01c57d02d1e01eb195c588509dc5/experiments/orthemology-v5-successors/source-store/119fee26d6e3b3a642d03e8fe6af25e7671ac9d06fb0c8954a0bf2f0234e806a/replay.py "Next-250 cohort index 133; SHA-256 119fee26d6e3b3a642d03e8fe6af25e7671ac9d06fb0c8954a0bf2f0234e806a"
