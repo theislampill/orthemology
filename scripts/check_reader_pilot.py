@@ -2620,7 +2620,7 @@ def read_batch_reader_sources(repo, sources):
 
 
 # Exact selected remainder source rows; existing work and read scopes are retained.
-SUCCESSOR_REMAINDER_BATCH_READER_ROWS_SHA256 = 'e8875ecdf4fdbd3b34f9b7682dd679729adf7afd7c2f6fd0381df418ae4d7fe7'
+SUCCESSOR_REMAINDER_BATCH_READER_ROWS_SHA256 = 'c6067cd32b584345e77c104b1c8796e4874987b9106cde98baf79552825d903d'
 
 
 def remainder_batch_reader_sources(repo, sources, *, required=False):
