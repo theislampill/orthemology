@@ -122,6 +122,37 @@ h:\Pi x:A.\mathrm{Id}_{B(x)}(px,qx),
 
 it produces $`I:\mathrm{Id}_{\Pi x:A.B(x)}(p,q)`$. Pointwise semantic agreement alone is not its premise. Universal extensionality likewise requires an actual derivation at the fresh type parameter. These are proof rules, not semantic reflection principles.
 
+#### Literal binder and scope equations for extensionality
+
+The displayed product-extensionality family uses the actual shifted application
+$`p^\uparrow x=\mathrm{app}(\mathrm{pren}(\mathrm{succ},p),\mathrm{var}(0))`$.
+The source's substitution operations satisfy
+
+```math
+\mathrm{inst}\bigl(\mathrm{subst}(\mathrm{pup}(\mathrm{var}\circ\mathrm{succ}),B),
+                    \mathrm{var}(0)\bigr)=B,
+\qquad
+\mathrm{eval}(\mathrm{pren}(\mathrm{succ},p),x::\eta)
+=\mathrm{eval}(p,\eta),
+```
+
+and therefore $`\mathrm{eval}(p^\uparrow x,x::\eta)=\mathrm{eval}(p,\eta)x`$.
+For the first equation, compose the lifted shift with the substitution whose
+head is $`\mathrm{var}(0)`$ and whose tail is the variable map. The composite is
+literally the identity at both zero and every successor index. Structural
+substitution composition and identity give the result. The evaluation equation
+follows from polynomial renaming at the shifted environment.
+
+If $`A`$ is type-scoped at $`n`$, $`B`$ at $`n+1`$, and both $`p,q`$ are scoped
+at $`n`$, then $`p^\uparrow x,q^\uparrow x`$ are scoped at $`n+1`$. The inner
+identity family is type-scoped at $`n+1`$, its product at $`n`$, and
+$`\mathrm{Id}_{\Pi A.B}(p,q)`$ at $`n`$. Likewise, type scope of $`B`$ and term
+scope of $`p,q`$ at $`n`$ give scope of both $`\mathrm{Id}_B(p,q)`$ and
+$`\mathrm{Id}_{\forall\alpha.B}(p,q)`$ at $`n`$. These statements follow by
+unfolding the respective scope clauses and the shifted-variable bound.
+Type weakening maps a telescope without changing its length. These are raw
+binder and scope facts; they add neither a conversion generator nor a
+structural admission rule to the extended judgment. [Literal schema equations][R0002-L001]
 ## 2. Church numbers and the exact pair-state compiler
 
 Define
@@ -228,6 +259,22 @@ The result tests one carrier and one pair of arguments. It neither promotes Raw 
 
 There is also an ordinary erased-lambda distinction. Expanding the combinators gives $`\lambda n.n(\lambda x.x)(\lambda x.x)`$ and $`\lambda n.\lambda x.x`$. They are distinct beta-eta normal forms, so the usual confluence theorem for untyped lambda calculus rules out beta-eta conversion between them. This observation concerns untyped conversion; it does not invalidate the typed identity just constructed. The historical probe report records this lambda analysis separately from its Lean-checked declarations. [Probe report and qualification boundary][probe-report]
 
+<a id="t20-generic-probe-literal-witnesses"></a>
+
+**The literal open-to-closed witnesses.** The selected probe supplies the explicit context, carrier formation, endpoint typings and scope witnesses used above. In $\Theta=\mathrm{theta}([N],\mathrm{Raw},I)$ the proof occupies index $0$ and the varying endpoint index $1$. Its motive `Id Raw (var 0) i` is formed by erasing the proof coordinate to Raw; its instances are literally $R$ and $\mathrm{Id}_{\mathrm{Raw}}(nII,I)$. The conversion $J(d,y,e)\simeq d$ is stated for **all** polynomials $d,y,e$, preserving the particular target type when used in the typing rule. [R250-235, lines 13–67][R250-235]
+
+The closed $F$ and $G$ above have scope zero, and $C=N\to\mathrm{Raw}$ is formed in every valid telescope. Their beta-conversion equations hold for every polynomial argument $v$. In the pointwise step the literal renamed terms `leftPoint = (pren Nat.succ F) (var 0)` and `rightPoint = (pren Nat.succ G) (var 0)` equal $Fn$ and $Gn$. The left point retains type $R$ as well as Raw; the right point has Raw type. Instead of leaving the endpoint transport implicit, the source forms the motive `Id Raw (var 0) (G (var 2))` in $\Theta$. Its instances are precisely $\mathrm{Id}_{\mathrm{Raw}}(I,Gn)$ and `pointType = Id Raw leftPoint rightPoint`. The first is proved by $I$ using $G$'s beta conversion; $J$ and proof conversion give `Has [N] i pointType`. Product introduction therefore gives the **particular** closed witness `Has [] G (pi N pointType)`, since $G=[n]I$. Together with the formed function identity, formed family, endpoint typings and scope witnesses, this supplies the unchanged `piExt` rule's premises for `HasE [] i (identity C F G)`. Inhabitation is also explicit: `inputNumeral 0 : N` and $G:C$ both have original `Has` typings. [R250-235, lines 69–174][R250-235]
+
+The file changes no inherited calculus, conversion, compiler or endpoint and explicitly does not prove the literal identity between the compilations of $x$ and $x+0$. It requests axiom listings for `raw_unit_probe`, `point_identity`, `F_has`, `G_has` and `closed_probe_identity`; reading those commands is not obtaining their output. This incorporation does not execute the source or its imported dependencies and makes no new axiom-audit or kernel-check claim. [R250-235, lines 1–7, 176–182][R250-235]
+
+### 3.1 Three exact judgment controls
+
+The inhabited endpoint result does not erase the distinction between a conversion premise, the original typing judgment and its extensional extension. Three short controls isolate those boundaries. In the first, the requested type is `PolyConvPlus p q`, while the supplied term is `PolyConvPlus.refl p`, whose reflexive endpoints are `p` and `p`. The expected type mismatch concerns that supplied proof term; it is not a nonderivability theorem for `PolyConvPlus p q`. [Reflexivity control](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/0b5e02f6d3fe4c131085bd28a33dd0ffb2fb6eccfae2698318751fc285777f5d/ReflexivityCannotReplacePremise.lean)
+
+The second control requests `Has [] (jPoly (.atom .i) q (.atom .i)) (.identity Q Fp Fq)` and supplies `inhabited_endpoint_identity`. The latter is an extended identity witness, not an ordinary `Has` proof. The control therefore does not license casting a theorem of the extensional judgment into the original judgment. It also does not establish that every possible ordinary derivation of the target is absent. [Judgment-cast control](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/248b5ba9b09a97396153d47c9c373720afac702cc787e69ba98e88b5b6161c30/WrongJudgmentCast.lean)
+
+The third retains `HasE` and the same displayed proof polynomial but requests `(.identity Q Fp Fp)` instead of the exact `(.identity Q Fp Fq)` endpoint statement furnished by `inhabited_endpoint_identity`. Its expected rejection is a mismatch of that exact theorem statement, not noninhabitation of the reflexive identity: the source expressly records that the reflexive identity is derivable. These controls import the existing endpoint module without adding a derivation rule. Their expected elaboration failures are source-specified tests, not freshly observed compiler results, and none is substituted for the independent semantic separation arguments elsewhere in this work. [Exact-endpoint control](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/4105a1e224403f5dc9fecada98c0e902cd391cb402ef4781936ce2e03a6bfd88/WrongEndpointReadback.lean)
+
 ## 4. A fixed witness for the exact scalar-fusion obligation
 
 For a closed polynomial $`k`$ with an original base derivation $`\vdash_0 k:T`$, define
@@ -290,6 +337,22 @@ One proof uses soundness in an interpretation where identity evidence is represe
 The fixed polynomial $`c_3`$ is not a finite bound on the derivations that could assign it a type. The forward proof above can use an arbitrary identity derivation inside $`J`$ and erase its entire proof argument. Inverting the outer $`K`$ applications of $`c_3`$ as though its last rules must have been product introductions is therefore invalid. Removing the identity-elimination step leaves a derivation of $`W(I)`$, not $`W(k)`$.
 
 A normal proof polynomial can conceal complicated type annotations and an essential dependent transport. Neither a short normal form nor finitely many failed searches bounds those annotations. [Proof-theoretic obstruction][failed-routes]
+
+<a id="t20-scalar-contract-and-rejection-boundaries"></a>
+
+**The literal statement and judgment boundary.** The statement and motive contracts independently spell out the same literal endpoint bindings, scalar type, threefold abstraction, coordinate-4 motive, local judgments and four equivalent obligations already displayed in §§2 and 4. Those statements are retained at that scope, without replacing either compiled endpoint or asserting that an equivalent obligation is inhabited. [R250-123, lines 7–23][R250-123] [R250-040, lines 5–18][R250-040]
+
+The general canonicalization contract also retains two prerequisites for arbitrary telescopes: from `HasE Γ r A` one obtains both `Scoped Γ.length r` and `FormE Γ A`. For any closed identity at **any** carrier and endpoints, not just the compiler pair, the closed canonicalization statement is equivalently
+
+```math
+(\exists r,\ \vdash_E r:\mathrm{Id}_A(p,q))
+\quad\Longleftrightarrow\quad
+\vdash_E I:\mathrm{Id}_A(p,q).
+```
+
+The nontrivial implication consumes the supplied derivation; the reverse chooses $r=I$. This is a proof-polynomial result within $E$, not an implication from semantic equality to syntactic derivability. [R250-046, lines 3–12][R250-046]
+
+Two deliberately restricted source attempts guard this distinction. `CanonicalizationRed.lean` imports only `ExtensionalRepairSyntax` and then invokes `ClosedProofCanonicalisation.canonical_identity` at the same general closed identity statement. Its companion positive contract instead imports `ClosedProofCanonicalisation`. `RejectCurrentLaundering.lean` attempts to use `literal_reverse` to turn `HasE [] c3 (W q)` into the **original** judgment `Has [] i literalB`, whereas the positive direction contract concludes `HasE`, not `Has`. These exact import-surface and judgment-boundary attempts are negative-control targets. The selected bodies contain no rejection logs; no compilation was performed here. A failed import or elaboration, even if separately observed, would not by itself be a mathematical counterexample or a proof that every possible original-calculus derivation is absent. The independent separation arguments elsewhere in this chapter retain their own evidence and scope. [R250-089, lines 1–5][R250-089] [R250-164, lines 1–4][R250-164]
 
 ## 5. Full-PER semantics and uniform iteration
 
@@ -1697,6 +1760,133 @@ The scientific contribution of this section is the reconciled account: whole-lab
 
 
 
+### 10.10 A normalization theorem for a different calculus
+
+A theorem about weak and strong normalization cannot be transferred merely because both source systems have typing, conversion and an operation called erasure. The family-245 assessment concerns the exact pure-type-system calculus in OpenAI's pinned normalization study. Its system-wide hypothesis ranges over every legal annotated expression and type in every valid context. Checking one closed polynomial or its proof component is a different premise. [R250-093]
+
+There are two structural mismatches. Pure-type-system conversion changes the assigned type while retaining the subject expression and its typed generation witnesses. The assessed `HasE.conv` rule instead changes the term polynomial at the same type through symmetric conversion plus a scope condition; reverse conversion can introduce a discarded subterm without a typing derivation for that subterm. Moreover, the upstream mode-label erasure retains applications, annotations and binders, whereas the actual `J` polynomial discards endpoint and proof coordinates. Equality of terminology supplies neither a typed translation nor an operational simulation.
+
+Three controls identify what a proposed bridge would have to repair. First, the inherited Raw interface permits a non-weakly-normalizing $`\Omega`$. A faithful positive-step simulation into a globally weakly normalizing pure type system conflicts with the inherited nonnormalization and reflection facts; making the raw term an inert quotation changes that operational claim. Second, a reflexive identity can have the normal proof polynomial $`I`$ while its endpoint annotation contains $`\Omega`$. The proof polynomial alone therefore does not satisfy the upstream premise about legal annotated types. Third, reverse conversion at an ordinary closed reflexive identity carrier admits $`KI\Omega`$. It reduces to $`I`$, but reduction may continue forever in its discarded argument. That particular derivation uses neither Raw typing nor the `J` or extensionality rules. Restricting only the final carrier or requiring closedness does not establish strong normalization. These are the assessment's written rule instantiations using inherited lemmas, not new kernel executions here. They agree with the distinction between normalizing representatives and stronger properties of a supplied representation developed above.
+
+The genuinely finite `FiniteDerives` fragment excludes backward conversion and already has its inherited `P01Candidates.finite_SN` theorem. Reproving that fragment through a pure type system would still require elaboration, system-wide weak normalization and nonempty-step simulation; it supplies no missing bridge for the unrestricted target. Likewise, normalizing the fixed witness $`c_3`$ cannot construct or normalize the complete derivation at its exact identity type. A target-specific derivation-normalization argument must preserve contexts, carriers and endpoints, cover every unchanged constructor and establish the needed canonical-form result. The family-245 theorem alone supplies none of these premises. The assessment records its literal scalar-fusion target as open. That historical source status is not a current claim overriding or reopening the exact-calculus independence and certificate results in §§8–9 and §11.
+
+The negative transfer decision was based on a complete 72-page paper reading and bounded inspection of critical interfaces and proof stages. The recorded audit checked 33 upstream module identities (29,547 source lines), 30 target-root identities, 82 frozen scalar predecessors and four scalar sources. Identity checks are not a claim that every tactic or transitive Mathlib proof was independently read. Neither upstream nor target Lean was executed for that assessment. The upstream Lean 4.34.1/Mathlib pin and local Lean 4.19.0 pin remain distinct; importing a theorem or upgrading the toolchain is not justified by this inapplicability finding. [R250-093]
+
+### 10.11 Typed telescopes, recursive universal types and exact source preservation
+
+The representation boundaries above do not prevent a positive typed construction. A separate syntax-generated telescope nucleus makes arbitrary typed dependent products, sums and identities coherent under their stated formation rules; a recursive `All` extension then joins this dependence to universal type binding. These are explicit candidate calculi and translations, not new rules silently added to the original judgment or its extensional successor. In particular, their positive substitution and contextual-J results retain the raw I/SKK obstruction and do not imply normalization or equality reflection through arbitrary heterogeneous links. [T11R81] [T11R76]
+
+#### 10.11.1 Derive semantic laws from formation rather than assume them
+
+For a telescope Γ, D expresses admissible valuations, E relates two valuations in one parameter environment, and H relates valuations across the two endpoints of a relation environment. The unary type predicate F and heterogeneous predicate G are defined before their laws. A formed type receives a partial-equivalence-relation interpretation only after the induction establishing its laws. The distinction matters because arbitrary raw type syntax need not have lawful transport. [T11R118] [T11R81]
+
+The relation-law package contains symmetry, transitivity and stability under raw conversion. Endpoint self-relatedness follows from symmetry and transitivity, rather than being an extra universal reflexivity claim about all raw terms. The context package proves admissible endpoints, symmetry and transitivity for E, endpoint conditions for H, two-sided respect of H under E, and the strong diagonal equation H(diagρ,η,ξ) iff E(ρ,η,ξ). The type package likewise proves F is a PER on admissible valuations, transport of F along E, separate left/right endpoint conditions for G, respect under the two endpoint PERs, two-sided valuation invariance, and the diagonal identification of G with F for **E-related**, possibly unequal, valuations. These records are induction conclusions; they are not covert formation premises. [T11R118]
+
+Context extension illustrates why the conditions are not redundant. When the new head is related at the left valuation, its right endpoint must be transported to the right valuation before that extended valuation is declared admissible. Symmetry and transitivity similarly transport the head relation; heterogeneous respect uses both endpoint relations and then valuation invariance. For a typed identity A(p,q), transport also uses the fundamental properties of **both** endpoint polynomials p and q. Raw conversion alone does not supply these typed endpoint premises. A fundamental typing is a heterogeneous preservation statement for every admissible relation environment; its unary consequence follows by the context and type diagonal laws. [T11R118]
+
+The constants and finite-leaf bridge keep this construction anchored to the accepted finite interpretation. For a nondependent arrow, F is the usual related-argument preservation condition. Its heterogeneous G requires each endpoint function separately to preserve its own domain relation, as well as the cross-endpoint mapping of the supplied Link. The I, K and S fundamental cases follow from their corresponding link lemmas under the relevant context/type laws. Translating a finite type code preserves its exact unary and heterogeneous interpretation; an existing `FiniteDerives t C` yields the fundamental interpretation of the unchanged atom t. This is not reconstruction of t or replacement of its literal source polynomial by an extensionally convenient term. [T11R137]
+
+The public packaging makes the resulting objects explicit. `formedObject` has relation exactly F; `formedLink` has relation exactly G between the separately constructed endpoint objects. A dependent fibre is the formed body PER at an admissible argument, and Bottom outside that argument domain. Related arguments yield equal fibre PERs by formation-law transport. Consequently formed Pi and Sigma agree with the corresponding dependent PER constructions, and formed typed identity agrees with `IdPER` at the evaluated endpoints. These are equality statements at the selected interpretation, not canonical carrier equality independent of it. Raw still types Ω, and the retained theorem that Ω has no normal reduct remains. The typed construction therefore does not establish normalization of every term it types. [T11R76]
+
+#### 10.11.2 Both coordinates of contextual J remain present
+
+The contextual identity eliminator has a motive depending on an endpoint **and a proof coordinate**. The representation constructs a motive object over the accepted intrinsic identity context, proves its coherence from E-transport, and represents the submitted identity proof and base case with their exact polynomials. It then invokes the actual accepted contextual J operation. The output code is literally `jPoly d y e`; pulling the motive along the point substitution agrees with the represented target type `motiveAt B y e`, provided the displayed formation and typing hypotheses are supplied. One may not replace that target by a motive depending only on y or replace the proof e by literal I without the relevant equations. [T11R90]
+
+A concrete positive witness uses context [Idα(x,y),α,α], with de Bruijn positions proof0, endpoint1 and original endpoint2. Its motive is a dependent sum whose first component is an α-identity from the original endpoint to the new endpoint, and whose second component states Raw identity of the proof coordinate with I. The base is the pair (I,I). Simultaneous substitution gives the exact base and target types, including the shift beneath the Sigma binder; the literal J term is typed at that target and satisfies its fundamental relation. [T11R151]
+
+The witness is not confined to a Raw-refining carrier or a literal reflexivity token. Choose the parameter PER interpreting polymorphic identity, which relates I and SKK although they are not source-convertible. Evaluate the context at original endpoint I, new endpoint SKK and proof I I. The proof is convertible to I but is not literally I. The same J derivation remains valid, exercising both the changed endpoint and nonliteral proof coordinate. This establishes the intended typed coherence, not raw conversion of I and SKK. [T11R151]
+
+Related controls explain the limits. Total links from a total PER to Raw and back can relate nonconvertible endpoints without reflecting equality on either side. A one-sided identity predicate can admit a witness outside its purported right identity PER. An unformed Raw-indexed family can contain I over one related index while failing over the other. Inspecting proof syntax is not invariant under conversion. Finally, reverse raw conversion can introduce a discarded out-of-scope argument: closed I is convertible to K I var0, whose polynomial is not scoped at depth0. These are source-level separating theorems and countermodels; neither a name such as “Link” nor raw convertibility alone grants the absent transport or scope law. No fresh execution of their axiom-print requests is reported here. [T11R21]
+
+#### 10.11.3 Recursive All requires two distinct binder lifts
+
+The extension's types contain parameters, Bottom, Raw, arbitrary typed Pi and Sigma, typed Id, and recursively generated All. There is no object-language universe or Type:Type. All binds a **type parameter**: it shifts free type parameters in the surrounding telescope while leaving term indices alone. Pi and Sigma bind a **term variable**: substitution must lift term indices in the body and in every replacement type. Literal renaming, composition, top cancellation and mixed-substitution equations keep these lifts separate, including both coordinates of the J motive. Confusing the two lifts would change open dependent replacements even if some closed examples survived. [T11R81]
+
+The guide's construction defines raw unary and heterogeneous predicates together by structural recursion. At All, unary uniformity invokes the heterogeneous predicate of the strictly smaller body. It does not first assume the desired PER or soundness theorem. Finite telescope valuations are total evaluator environments with an unused zero tail; type weakening leaves term coordinates intact. Raw term-substitution and type-renaming equations precede formation-law proofs. [T11R81]
+
+Semantic replacement is conditional on an exact image match relative to a lawful source relation environment: separate unary endpoints, the heterogeneous relation and both diagonal image equations are required. This is a metatheorem hypothesis, not a new typing premise. In the structural induction on the target type, the source environment stays frozen when the target valuation gains a term prefix; syntactic weakening of replacement images cancels that prefix semantically. Under All, it extends by the newly selected PERs and Link. Instantiation obtains the image hypotheses from **smaller replacement-formation conclusions**, evaluating image PERs separately at the two target valuations and taking their actual heterogeneous predicate as the Link. No formation theorem for the substituted result is used to justify the substitution theorem itself. [T11R81]
+
+The formation and typing induction then carries the smaller body results as hereditary conclusions. All introduction derives uniformity at arbitrary Links, including diagonal endpoint environments. All elimination and finite imports use the smaller replacement laws. The strong diagonal argument permits unequal E-related valuations; its reverse direction changes the right valuation by invariance, transports the within-endpoint relation, and applies respect to the right result. It does not identify the two valuations. Intrinsic mixed representation subsequently proves equality of image parameter environments along unary E while retaining the genuine heterogeneous relation for independently evaluated endpoints. Unary context equality is not substituted for cross-endpoint relation preservation. [T11R81]
+
+These construction details are stated in the inherited proof guide, whose exact dependency and review digests are preserved in its source. The guide reports a frozen47-module nucleus and an automated independent contract review, not human-specialist validation. This integration does not rerun or independently recheck every imported module. The positive direct witnesses below retain their own inspected declarations and explicit dependencies. [T11R81]
+
+The mixed-algebra source makes capture precautions into equations. Write `mixed σ τ A` for simultaneous term/type substitution and `psub` for substitution in a term. Its composition law is
+
+```text
+mixed σ₂ τ₂ (mixed σ₁ τ₁ A)
+ = mixed (n ↦ psub σ₂ (σ₁ n)) (n ↦ mixed σ₂ τ₂ (τ₁ n)) A.
+```
+
+Input term substitution changes only the polynomial replacement family: `mixed σ τ (subst δ A) = mixed (n ↦ psub σ (δ n)) τ A`. Output substitution acts on both images: `subst δ (mixed σ τ A) = mixed (n ↦ psub δ (σ n)) (n ↦ subst δ (τ n)) A`. The two-coordinate J motive requires two lifts:
+
+```text
+mixed σ τ (motiveAt B y e)
+ = motiveAt (mixed (pup (pup σ)) (n ↦ wk (wk (τ n))) B)
+            (psub σ y) (psub σ e).
+```
+
+A replacement with a free term and a free type parameter shifts both when it crosses the respective binders. Literal positive capture examples and rejected unshifted equations separate these operations. If `TyScoped n A`, `ScopedSub n m σ`, and every `τ k` is `TyScoped m`, then `mixed σ τ A` is `TyScoped m`. These are exact substitution and scope results, not merely naming conventions. [F250-165]
+
+For semantic transport put `EvalImages σ η(n) = eval (σ n) η`. Under `ImageMatch τ r η ξ s`, the three equations are
+
+```text
+F (mixed σ τ A) r.left η t u = F A s.left (EvalImages σ η) t u
+F (mixed σ τ A) r.right ξ t u = F A s.right (EvalImages σ ξ) t u
+G (mixed σ τ A) r η ξ t u = G A s (EvalImages σ η) (EvalImages σ ξ) t u.
+```
+
+`ImageMatch` supplies left, right, cross and both diagonal image conditions at frozen base valuations. The source environment `s` stays frozen through term binders while replacement images weaken; the All case needs the two diagonal clauses as well as the cross clause. These hypotheses belong to the substitution metatheorem, not to new formation rules and not to a licence to treat arbitrary raw target types as lawful. They make precise the semantic transport used in §10.11.3. [F250-173]
+
+#### 10.11.4 Open replacements and a joined dependent universal witness
+
+The finite syntactic substitution interface uses an explicit list of term components. Each telescope declaration is instantiated using its previously supplied tail components; replacement types may depend on **all variables of the full target context**. Unused term-image entries are atom-zero, whereas unused type-image entries are Bottom. An identity list agrees with the total variable map only on the finite scope in question. Its action is proved by scoped extensionality; it is not globally equal to the total identity function. [T11R81] [T11R139]
+
+An explicit replacement is Id Raw(var0,var0) in target context [Raw]. It is formed and genuinely open: it is not scoped at depth0. Mapping the sole source parameter to this type and its sole term component to I gives a mixed context map from the target into the source [Param0], and preserves the source variable's typing as the literal I at that replacement. The All-elimination map also accepts this open replacement. At the unused index1, the one-component identity list returns atom-zero, not var1, giving a direct refutation of the alleged global identity-tail equation. No closedness restriction on replacements can be added without excluding this positive example. [T11R139]
+
+The joined example is
+
+Q = All α. Pi x:α. Sigma y:α. Id α x y.
+
+Its witness q is the exact bracket abstraction of the open pair (var0,I). The body is formed and q is typed before All introduction. Instantiating Q with **Q itself** yields exactly Pi Q (Sigma Q (Id Q var1 var0)); All elimination supplies that typing and its fundamental interpretation. This self-instantiation is in the declared recursive grammar, not an assertion of Type:Type or a change to the canonical source conversion. [T11R16]
+
+Polymorphic I can similarly be instantiated at any formed replacement A, yielding the arrow A→A. The controls instantiate it at an open identity over [α,α], at an inhabited dependent Sigma over [α], and at the Raw-specialized Sigma family. The open pair relates (I,I) to (SKK,I) across the corresponding unequal related valuations while retaining ¬Conv(I,SKK). With Raw indices, both fibres at I and SKK are inhabited by their own pairs, but the I-pair does not inhabit the SKK fibre: nonemptiness does not collapse the dependent family into a constant relation. [T11R16] [T11R151]
+
+Capture protection is visible in the exact nested equation. Substituting the open Sigma replacement through All followed by Pi Raw shifts the outer term occurrence to var2, while the inner identity's bound endpoint remains var0 and its type parameter becomes Param1. Both binder effects are necessary. This is a literal syntax equation, accompanied by independently meaningful inhabitation and relation controls, rather than an appeal to a vague claim that substitution is “capture avoiding.” [T11R16]
+
+#### 10.11.5 Translate retained legacy derivations without changing their code
+
+The recursive extension also has a constructor-faithful translation of the entire old type grammar. Parameters, Bottom and Raw remain themselves; old untyped identity becomes typed identity at Raw; arrows become nondependent typed Pi; old Pi and Sigma bind Raw; All is recursively translated wherever it occurs. Term-index substitution, instantiation, motive substitution, type renaming, both lifts and type substitution commute with this translation by structural induction. Finite-code embedding translates to its exact finite interpretation. This is a grammar translation, not literal equality of old and new type syntax. [T11R49]
+
+A `RawContext` provides an actual finite syntactic typing of every in-range variable at Raw. Such contexts extend by Raw and survive type weakening. Any scoped polynomial is typed at Raw by induction on variables, atoms and applications. The identity context Theta requires care: its newest declaration is Id, not Raw, so the explicit proof-erasure rule is needed to obtain Raw access there. A supported legacy motive is first formed in an all-Raw context and then transported unchanged into Theta. [T11R49]
+
+Two transport interfaces must remain distinct. A total identity-polynomial substitution is used only as a syntax-scoped interface. The finite component substitution instead has atom-zero term padding and Bottom type padding. Its action on a formed, scoped type is the identity by the finite-identity theorem; no invalid global equality between its padded function and Poly.var is used. This supplies formation transport into any suitable RawContext, including the two-coordinate J context. [T11R49]
+
+The derivation translation consumes the accepted **Type-valued retained tree before its erasure** to the old Prop judgment. Its support predicate checks every displayed term and type at the actual term-binder depth, including both identity endpoints, implicit All replacement types, Pi/Sigma bodies and arguments, the two-extra-coordinate J motive and displayed conversion endpoints. All binding does not add a term coordinate. Internal hidden histories of a PolyConv certificate are not traversed. Thus support of a retained derivation is stronger than scope of its final term, but is not a claim to inspect every internal conversion witness. [T11R66]
+
+Induction on this retained tree translates every old rule, including All introduction/elimination and genuinely nonfinite dependent All, with **exactly the old polynomial**. There is no Prop-to-Type reification and no reconstruction of imported finite atoms. The applications, dependent introductions/eliminations and J cases use the appropriate commuting equations and separately supplied formation/scoping premises; conversion retains the actual displayed conversion and target scope. Erasing the retained tree still recovers its original old judgment. Concrete witnesses include polymorphic identity, an open identity replacement involving var0, the nonfinite dependent-All tree with literal abstract K, and its self-instantiation. These examples broaden the explicit grammar comparison beyond the finite nucleus without changing that nucleus's prior restriction. [T11R66]
+
+#### 10.11.6 The retained boundary and evidence scope
+
+The twelve sources contribute different things: syntax and derivation translations, semantic-law proofs, exact intrinsic packaging/J, positive joined witnesses, separating countermodels, structural controls and an explanatory dependency guide. The substitution-readback file is different again: it requests definitions and checks for index/type composition, their interchange, finite-prefix elimination/completeness, typed and mixed substitution, and open two-sort, J, Sigma and source-changing substitution controls. Its `#print`, `#check` and `#print axioms` commands preserve the intended inspection surface; their presence supplies no new output or replay result. The structural and endpoint files' own audit commands have the same limitation. [T11R44] [T11R139] [T11R21]
+
+The positive results do not establish raw eta, equality reflection through arbitrary Links, normalization, higher identity, arbitrary frontend correctness, canonical unary carrier equality, full U11 closure or numerical identity of actual bearers. Typed Id here is equality in the selected PER, with witnesses convertible to I; it is not a universal equation between source conversion and semantic relatedness. Formation and fundamental premises are doing real work, as the Raw-family and one-sided-endpoint countermodels demonstrate. Preserve those premises while crediting the exact code-preserving translations, genuinely open substitution and joined dependent/impredicative witnesses that have been obtained. [T11R81] [T11R21] [T11R151]
+
+#### Exact sources for the typed-telescope extension
+
+[T11R16]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/0469bca07f0057d734ea479380f4e33cc45e6f673ab1aa71be93ca141c549912/AllJoinedControls.lean
+[T11R21]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/05b13737c47cf4987d0a8892a8e791930a8da714684d8acaccb4dac81e1d2f9e/IndependentEndpointControls.lean
+[T11R44]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/0a0b469b9b874b9ec4bf6d1d3c94e4214a14d7ca90961b0d6e6b14cbd4a76137/SubstitutionReadback.lean
+[T11R49]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/0d2d2c2d2aba2dadd6f194b86b1ba87c693a9f3cebe0fc4fda5cc0391c7a192e/AllLegacySyntax.lean
+[T11R66]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/1272802684942dfd8e4009ce772f2685cdd5550fad4ae1fb36059245d39435fa/AllLegacyDerivations.lean
+[T11R76]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/15f1fd5429884678f073c9b7bb302a2711567ef7952de7de8160c606ddaf2c66/TypedBoundaryResults.lean
+[T11R81]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/18db66b880752841d3103651ee62224312bd37c2b030a77b44011f56439b4140/PROOF_GUIDE.md
+[T11R90]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/1be1692557b5ec60b7b0170f0682c0503b1d9ea76ca582ff95a3a8af66517f8d/TypedContextualJ.lean
+[T11R118]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/234d778b12696c34cf7d61f5fa0c75b4f3e488d14b29f09aef89ea6a12ac8a12/TypedLaws.lean
+[T11R137]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/29ef624541635cd7a2ae00c5c19de93895472b7c676d63ce6c2d8233b7614834/TypedConstants.lean
+[T11R139]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/29f0417393cb5dcc24173c892f385de9cab9ceb721ca85a417b3cfd04727006c/AllStructuralChecks.lean
+[T11R151]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/2f5d21fa81bed6dbabc6659a9f695983e9dafad5f9d36656c23d9988b209527b/TypedPositiveControls.lean
+
+
 ## 11. Exact finite certification for a nested unary language
 
 Section 9.3 already exhibits the exact certificate that separates $`x`$ from its literal compiled $`x+0`$ implementation at the level of proof systems. The broader positive result is an algorithm for the entire declared unary language, followed by a sound extension that can use its certificates inside every inherited rule. These are two obligations: a complete semantic decision procedure for a restricted source language, and a proof that adding its introduction rule preserves the original contextual semantics. Neither follows just from seeing one accepted certificate. [Mathematical Companion, entries 7–9 and theorem appendix][unary-companion]
@@ -1820,6 +2010,28 @@ The structural denotation proof covers every source constructor and yields an ac
 \mathrm{Has}\,[]\,p_e:(N\to N).
 ```
 
+The operational compiler interface is stronger than the particular uses of it
+in the semantic proof. For every expression $`e`$, every total term environment
+$`\eta`$, every raw input $`u`$ and every natural $`n`$, it gives
+
+```math
+\operatorname{NatObs}(u,n)
+\quad\Longrightarrow\quad
+\operatorname{NatObs}\bigl(\mathrm{eval}(p_e,\eta)\,u,
+                           \llbracket e\rrbracket(n)\bigr).
+```
+
+The sole input premise here is the displayed observation. The raw input need
+not be the canonical numeral, marker-free, or supplied with a typing or
+semantic-membership certificate. The compiled endpoint is the literal
+$`p_e=e.\mathrm{closed}`$ already typed above. Its scope-zero property gives
+$`\mathrm{eval}(p_e,\eta)=\mathrm{eval}(p_e,\zeta)`$ for every $`\eta`$, so the
+arbitrary environment introduces no valuation of a free endpoint variable.
+The observation-only input contract is the retained compiler theorem exercised
+by the source controls. The subsequent F/G argument additionally uses actual
+endpoint typings and related-input membership to establish the semantic
+relation; those additional premises belong to that argument, not to this
+operational observation interface. [Unary compiler interface controls][R0002-L159]
 To expose the semantic bridge, define the all-environment endpoint condition
 
 ```math
@@ -1895,6 +2107,48 @@ Each of the eighteen old typing cases applies its original semantic lemma to the
 
 For the new constructor, the target-formation induction hypothesis supplies its hereditary type laws, and section 11.6 supplies the certificate identity at all required valuations. This holds in particular at every pair admitted by $`H(\Gamma,R,\eta,\xi)`$. The witness $`I`$ satisfies the two conversion clauses reflexively. This completes the mutual induction and yields whole-rule soundness, not merely the soundness of an isolated certificate leaf.
 
+Three conditional interfaces make the inherited laws explicit. Write
+$`E(\Gamma,\rho,\eta,\xi)`$ for the original unary context relation,
+$`\operatorname{diagEnv}(\rho)`$ for its diagonal heterogeneous relation
+environment, and $`R_\ell,R_r`$ for the two unary endpoints of a relation
+environment $`R`$. For an actual extended typing,
+
+```math
+\mathrm{HasC}\,\Gamma\,p:A,
+\qquad E(\Gamma,\rho,\eta,\xi)
+\quad\Longrightarrow\quad
+F(A,\rho,\eta,\mathrm{eval}(p,\eta),\mathrm{eval}(p,\xi)).
+```
+
+For an actual $`\mathrm{FormC}\,\Gamma\,A`$ derivation, and arbitrary raw
+$`t,u`$, the strong diagonal law is
+
+```math
+E(\Gamma,\rho,\eta,\xi)
+\quad\Longrightarrow\quad
+\bigl[G(A,\operatorname{diagEnv}(\rho),\eta,\xi,t,u)
+\Longleftrightarrow F(A,\rho,\eta,t,u)\bigr].
+```
+
+The same formation premise gives two-sided invariance:
+
+```math
+E(\Gamma,R_\ell,\eta,\eta'),\quad
+E(\Gamma,R_r,\xi,\xi')
+\quad\Longrightarrow\quad
+\bigl[G(A,R,\eta,\xi,t,u)
+\Longleftrightarrow G(A,R,\eta',\xi',t,u)\bigr].
+```
+
+For the first statement, specialize the fundamental theorem to the diagonal
+relation environment. The context diagonal law converts the given $`E`$
+premise into its required $`H`$ premise, and the formed target's diagonal law
+then yields $`F`$. The latter two statements are respectively the diagonal and
+invariance clauses of the hereditary type laws obtained by the mutual
+formation proof. Thus these consequences keep their exact $`\mathrm{HasC}`$
+or $`\mathrm{FormC}`$ and compatibility premises. The special certificate leaf's
+all-valuation fact in §11.6 does not remove those premises from the general
+interfaces. [Certificate extension relation laws][R0002-L150]
 ### 11.8 Exact completeness at the closed compiled interface
 
 For source expressions $`e,f`$ and their literal endpoints, the following are equivalent:
@@ -2002,6 +2256,201 @@ This does not contradict the supplied-typing Church decision procedure of §6.3 
 
 These arguments preserve the exact source statements and their imported compiler, standardness and full-PER interfaces. The 138-module source/import closure is a source-identity result, not a new build or kernel replay. The exact accepted A05/CP3 artifact and its source, toolchain, search-root and axiom-readback join remain unreceived. The displayed `#print axioms` requests in the sources are not received axiom outputs, and this consolidation neither adopts an unverified toolchain nor claims new Lean execution.
 
+
+## 13. Effective observations: the exact semantic bridge and its limits
+
+The effective observation results distinguish three things that a statement about “deciding identity” can otherwise obscure: the supplied typing evidence, the semantic relation being decided, and the representation of the numerical computation. They concern the fixed research P01AC interfaces. They do not, merely by sharing syntax or terminology, adopt those interfaces as a different canonical calculus. The finite certificate result of §11 and the semantic index-family result of §12 consequently coexist with the following conditional observer theorem. [R250-C27-196][R250-C27-210]
+
+### 13.1 Canonical tests recover the typed relation, not raw endpoint conversion
+
+Let $`N`$ be the Church carrier and $`C=N\to\mathrm{Raw}`$. For two closed polynomials with **both** current typing derivations $`\mathrm{Has}\;[]\;p\;C`$ and $`\mathrm{Has}\;[]\;q\;C`$, the exact interface equates
+
+```math
+\forall\rho\;F(C,\rho,\eta_0)(\llbracket p\rrbracket_{\eta_0},
+                                  \llbracket q\rrbracket_{\eta_0})
+\quad\Longleftrightarrow\quad
+\forall n\;\operatorname{Conv}
+ (\llbracket p\rrbracket_{\eta_0}\,\overline n,
+  \llbracket q\rrbracket_{\eta_0}\,\overline n).
+```
+
+Here $`\overline n`$ is the retained canonical source numeral. The corresponding identity statement ranges over all relation environments in the original $`G`$ interpretation and keeps the actual closed term environment $`\eta_0`$. Its displayed semantic proof coordinates are both $`I`$. This is a semantic identity equivalence, not an assertion that a current source derivation of that identity exists. [R250-C27-210]
+
+The forward direction can specialize to canonical inputs because their semantic membership is known. The reverse direction needs more than tests on a list of numerals: Church standardness and the two endpoint typings transfer the tests to arbitrary **related, potentially different** inputs $`x,y`$. For every $`\rho`$ and $`F(N,\rho,\eta_0)(x,y)`$, the conclusion compares $`p\,x`$ with $`q\,y`$. The same-index interface likewise keeps both self-membership premises and each term's uniform iteration equation; equality of the iteration indices is not a substitute for those premises. [R250-C27-210]
+
+The small rejected-interface sources mark these exact boundaries. Reusing left typing as right typing, omitting the semantic-membership input to standardness, supplying validity at only one environment, or using a same-argument pointwise equation as a cross-argument equation fails to supply the displayed theorem's contract. The analogous Boolean observation interface also requires right Boolean self-membership; its control deliberately supplies the left proof twice. The wrong-raw-endpoint control tries to replace the semantic endpoint relation by raw conversion of the endpoint terms themselves. None of these failed applications is, on its own, a theorem that every possible proof of the stronger claim is impossible. They are exact negative interface fixtures, and their compiler rejection has not been rerun by this exposition. [R250-C27-55][R250-C27-191][R250-C27-214][R250-C27-103][R250-C27-241][R250-C27-223]
+
+### 13.2 The universal observer retains its representation hypotheses
+
+Fix a term $`U`$ and a binary predicate $`H(e,n)`$. The source constructs the literal $`\operatorname{universalTester}(U,e)`$ at $`C`$ and a constant endpoint returning the observer numeral $`\nu_0`$. Its current typing, closedness and target formation do not require that $`U`$ terminate. Use a separate notation $`\nu_n`$ for the observer's literal `numeral n`, with $`\nu_0=K I`$ and $`\nu_{n+1}=\operatorname{numericSucc}\,\nu_n`$. The canonical Church inputs $`\overline n`$ above and these observer numerals are distinct retained syntax conventions, not silently interchangeable terms. Observation of the tester on canonical input $`\overline n`$ converts to $`U\,\nu_e\,\nu_n`$. The semantic theorem then assumes **both** representation clauses:
+
+```math
+H(e,n)\Rightarrow\operatorname{Conv}(U\,\nu_e\,\nu_n,\nu_0),
+\qquad
+\neg H(e,n)\Rightarrow\neg\operatorname{Conv}(U\,\nu_e\,\nu_n,\nu_0).
+```
+
+Under these clauses, endpoint validity, and equivalently the original semantic identity validity, holds exactly when $`\forall n\;H(e,n)`$. For necessity, a failed $`H(e,n)`$ contradicts the canonical test at that $`n`$ using the negative representation clause. For sufficiency, each positive representation instance gives its canonical test and the typed semantic bridge supplies the full relation. Thus typing the tester is not an oracle for its semantic identity. [R250-C27-196, `universal_endpoint_valid_iff_total`, `original_universal_identity_iff_total`][R250-C27-196]
+
+A stronger negative premise is sometimes easier to supply: the exact marker-erased observation has no raw normal form. Conversion to the actual normal zero numeral would, by the inherited joining property for conversion and normality of that numeral, supply such a normal form. The source therefore derives nonconversion and passes it to the same observer theorem. Marker replacement is tied to the retained source conversion theorem; for a marker-free $`U`$ the displayed numerical observation is unchanged by that replacement. This is not an identification of an unspecified external machine language with the source reduction relation. [R250-C27-196, `raw_no_normal_form_excludes_zero`, `erased_no_normal_form_excludes_zero`, `original_universal_identity_iff_total_of_no_normal_form`][R250-C27-196]
+
+The existence of a universal representer for an external computation, its two representation properties, its coding, and any hierarchy classification remain additional obligations. $`H`$ is arbitrary in this theorem; neither its computability nor the existence of a representing $`U`$ is obtained merely by introducing them as parameters. The exact-interface examples explicitly retain those parameters rather than claiming a hierarchy theorem. Similarly, a representation of an observation function cannot be supplied again where the distinct step function's representation is required. [R250-C27-210][R250-C27-211]
+
+### 13.3 Boolean observations and a finite positive typing gate
+
+For $`C_B=N\to B`$, with $`B`$ the inherited impredicative Boolean type, self-related Boolean outputs have one of the two uniform selection behaviors. Given **both current typings**, the Boolean interface equates semantic endpoint validity with all canonical Boolean tests, and invalidity with the defined finite mismatch predicate. The primitive-recursive compiler retains its input-environment representation premise. For a fixed binary primitive-recursive program $`f`$, the literal family $`\operatorname{simFamily}(f,e)`$ has semantic identity with the constant choice exactly when $`\forall n\;f(n,e)=0`$, using the source's actual input order. A finite testing budget cannot be promoted to the all-tests premise. These are the stated contracts; they do not by themselves establish a complexity classification for untyped bare input codes. [R250-C27-226][R250-C27-88]
+
+The positive gate supplies a different, genuinely constructive connection between a finite numerical witness and **current typing**. Its search state at counter $`n`$ unfolds to the next counter when the numerical result is zero and to $`I`$ when it is nonzero. If some $`n`$ satisfies $`f(n,e)\ne0`$, induction over the finite distance to that witness gives conversion of the gate to $`I`$. The supplied witness need not be the first nonzero value: an earlier nonzero value also terminates the search. [R250-C27-231, `state_choice`, `state_halts`, `gate_halts`][R250-C27-231]
+
+For a closed **pure** endpoint $`q`$ already currently typed at $`C_B`$, the gate applied to $`q`$ is then currently typed at $`C_B`$. The proof uses closed pure conversion and the original conversion rule, not an undeclared semantic-to-syntactic completeness principle. For an additionally currently typed endpoint $`r`$, the same halting witness gives
+
+```math
+\operatorname{BoolValid}(\operatorname{gate}(\operatorname{simFamily}(f,e))\,q,r)
+\quad\Longleftrightarrow\quad
+\operatorname{BoolValid}(q,r).
+```
+
+Purity is a premise on the endpoint being gated; the displayed theorem does not add that premise to $`r`$. This preserves the original endpoint equality as well as typing. [R250-C27-231, `gated_has`, `gated_valid_iff`][R250-C27-231]
+
+The negative interface is explicitly conditional. If the observation at canonical input zero converts to neither Boolean choice, Boolean standardness contradicts current typing. The source does **not** prove that a nonhalting gate has this no-observation property. Therefore the finite positive proof is not a completed halting/typability equivalence, and the missing operational nonhalting argument cannot be replaced by the absence of a discovered finite witness. [R250-C27-231, opening scope notice and `noHas_of_no_observation`][R250-C27-231]
+
+### 13.4 Proof audits, boundary controls and what their evidence establishes
+
+The audit sources serve a different purpose from the preceding mathematical bridges. The Boolean audit maintains authored declaration and theorem inventories, examines the selected namespace's closure and axioms, and separately inventories unsafe or partial runtime auxiliaries. The all-project audit chooses theorem roots by their actual originating modules, rejects an empty selection, allows only the listed ordinary axioms `propext`, `Quot.sound` and `Classical.choice`, and traverses checked dependency types, available bodies, inductive constructors and recursor right-hand sides. It rejects unsafe, partial, unchecked or unapproved-axiom dependencies and refuses a traversal whose bounded worklist is not exhausted. This selection is not a claim to audit every file in an arbitrary repository or to verify the native compiler. [R250-C27-98][R250-C27-234]
+
+The deliberately contaminated inputs distinguish the failure modes: an unsafe definition; explicit `sorry`/admitted proofs of falsehood; custom-axiom dependencies; and partial-recursion implementation dependencies, including the compiled `_unsafe_rec` rather than just a safe-looking public wrapper. Their role is to challenge the audit's rejection behavior, not to add their false statements to the accepted theory. The recorded sources identify these as negative fixtures. This consolidation does not claim that the auditor or those rejection tests were newly executed, and requested axiom listings are not received outputs. [R250-C27-12][R250-C27-13][R250-C27-85][R250-C27-94][R250-C27-125][R250-C27-131][R250-C27-146][R250-C27-179][R250-C27-200][R250-C27-233]
+
+Other small controls preserve mathematical premises rather than audit trust: missing positivity cannot justify the sparse polynomial zero-test argument; reversing truncated subtraction changes its numerical expression; and index $`2`$ does not meet the bound for `Fin 2`. Their exact retained source bytes remain necessary to replay those particular controls. A readable account can absorb their substantive warning without treating a prose description as a replacement executable test or reporting an unperformed rejection as passed. [R250-C27-95][R250-C27-163][R250-C27-172]
+
+The distinction between proof closure and runtime closure is substantive. The runtime auditor follows erased computational values rather than treating erased proof or type arguments as executable data. It rejects computational choice, admitted terms, unsafe or partial values, runtime axioms and unclassified opaque values; selected authored native replacements/externs are refused while inherited native boundaries are inventoried. Its 200,000-step traversal limit is fail-closed on an unexhausted worklist. Proof closure may allow the stated ordinary logical axioms without thereby authorizing noncomputable choice as runtime code. Neither closure is independent verification of compiler optimizations, foreign functions or replacement implementations. [R250-C27-187][R250-C27-169]
+
+The additional closure probes exercise direct partial roots, partial definitions behind safe-looking wrappers, unsafe dependencies and custom or admitted falsehoods. They preserve the distinction between the checked declaration and its actual computational implementation. The opaque-control source requests audits of the selected unary roots and `normalise`, `distinguishingInput` and `Expr.closed`; those commands are not themselves an obtained audit result. The package explicitly identifies `Lean.opaqueId` as a permitted standard opaque boundary and records that the safe-looking public surrogate of a partial definition was an inherited known issue, not a newly discovered theorem. [R250-C27-3][R250-C27-20][R250-C27-32][R250-C27-41][R250-C27-56][R250-C27-57][R250-C27-65][R250-C27-96][R250-C27-158][R250-C27-167][R250-C27-236][R250-C27-247][R250-C27-77]
+
+The retained scope declaration also distinguishes empty-context fragment completeness for `HasC` from its all-context soundness theorem with the original H/E compatibility assumptions. It does not change `Has`, `HasPlus` or `HasE`. Its accepted-map descriptions of inherited roots, unary checker/certificate modules, renewal/lookahead modules and the fixed-computable-matrix policy reduction are source-reported historical scopes, not new replay results. A computable callback theorem is not a native-code exporter or an arbitrary-program totality checker, and finite enumeration need not be lexicographic. Written hierarchy normal forms/strictness and upper bounds, syntax-total evaluator claims, randomized measure and population arguments, sparse-normalization variants, philosophical warrants, empirical claims and applications remain outside that package's kernel acceptance map. The tested Python JSON reference checker is not a proved refinement of its wire parser to the Lean checker. Exact surviving historical records, digest-only anchors and new archive verification have different evidential roles: archive assurance adds no mathematical theorem. [R250-C27-77]
+
+The independent kernel-check source compares the old and Plus constructor signatures **after explicit renaming**, including `PolyConv` to `PolyConvPlus`. Its count checks are Ctx2→2, Form7→7 and Has18→20. The conversion constructors remain exactly refl, symm, trans, app, i, k, s and bridge. The two new Has schemas are specific:
+
+- PiExt requires formed A, B under A::Γ and Pi A B; typed p and q at Pi A B; the pointwise family `Id B ((pren succ p) var0) ((pren succ q) var0)`, its formed Pi and a witness h; and the formed target `Id (Pi A B) p q`. It requires `Scoped Γ.length` for p,q,h, `TyScoped Γ.length A` and `TyScoped (Γ.length+1) B`. Its conclusion uses literal I as target identity evidence.
+- AllExt requires formed B in `twkTel Γ`, formed All B, p and q typed at All B, formed `Id B p q` and a witness h in `twkTel Γ`, and formed target `Id (All B) p q`. It requires `Scoped Γ.length` for p,q,h and `TyScoped Γ.length B`; again literal I is the evidence.
+
+The checker preserves the old F clauses, uses the axiom whitelist `propext`, `Quot.sound`, `Classical.choice`, rejects candidate axioms, and includes a declaration-count sanity check of at least156 candidate declarations. Unsafe compiler auxiliaries may exist, but no safe declaration's logical dependency closure may reach unsafe or partial declarations. The witness dependency graph must use piExt at `arrow_identity_has` and allExt at `separation_has`, without importing the has/form/fundamental soundness declarations as circular justification. Literal typing, separation and Raw-boundary checks remain distinct. These are concrete audit algorithms and theorem-shaped controls, not fresh successful audit logs; reading them changes neither the original/bridge/extensional judgment distinction nor their evidence status. [F250-138]
+
+## 14. Arithmetic interfaces and exact expression-machine refinement
+
+### 14.1 Sparse coefficients and the positivity required by zero tests
+
+A sparse natural polynomial is a finite list of pairs `(a,c)`, with exponent vector `a : Fin r → Nat` and natural coefficient `c`. This representation admits repeated exponent vectors and zero coefficients. Its meaning is the sum of the corresponding monomials, so equality of lists is unnecessarily strong and equality of their exponent supports is too weak. The effective coefficient comparison aggregates all entries at each exponent. It checks the exponents occurring in either list; any absent exponent has coefficient zero. The source proves that this comparison holds exactly when the two represented multivariate polynomials are equal. Appending represents addition, while the distributive multiplication routine adds exponent vectors and multiplies coefficients. Neither operation needs to discard duplicates before the semantics is correct. [F250-153]
+
+The zero test has a stronger premise than general polynomial evaluation. If every supplied coordinate is strictly positive, every monomial value is positive. With natural coefficients, there is no cancellation. Thus the represented polynomial evaluates to zero at that valuation exactly when its aggregated coefficients all vanish, equivalently when the mathematical polynomial is zero. At a boundary valuation containing a zero coordinate, a nonzero monomial can vanish; with signed coefficients, cancellation can make a nonzero polynomial vanish. Neither case is covered by this argument. The formal `SparsePolynomial` interface proves coefficient and zero-test laws; using those laws in a larger normalization or complexity theorem requires the additional language and proof of that theorem.
+
+### 14.2 Arithmetic compilation preserves the question being asked
+
+The auxiliary arithmetic language contains natural constants, variables, addition and multiplication. The root extension retains the imported expression grammar through `Root.old`; its new constructor adds only a root equality test between two auxiliary arithmetic expressions, with literal outputs1 and0. Thus the whole root language is not restricted to arithmetic alone. Primitive-recursive predecessor, reverse subtraction and equality implement the numerical operations in the declared argument order. Compiling and closing a root expression supplies an actually typed endpoint at the finite-arity curried natural carrier. The observation theorem relates that endpoint to its numerical denotation for represented input tuples. [F250-101]
+
+For the formed, closed identity endpoints compiled from two root expressions, endpoint validity is equivalent to equality of their denotations at **every** valuation. The corresponding original F-identity, G-identity and semantic-witness statements retain that universal quantifier. In particular, the root test comparing arithmetic expressions `p` and `q` is equivalent to the constant-zero expression exactly when no valuation makes their values equal. This is an exact semantic reduction for the specified syntax. The module does not itself supply DPRM, a universal Diophantine representation or an arithmetical-hierarchy classification. Written classifications using such results must retain those additional premises, rather than attributing them to this compiler interface alone.
+
+### 14.3 A stack-machine refinement includes faults and the continuation
+
+A separate expression evaluator uses a work stack of expression/ready pairs, a value stack and a meter. A step with nonempty work ticks the meter before doing the selected operation, including when the expression is already marked ready. A step with empty work leaves the configuration unchanged. The expression grammar's natural-number operators include truncated subtraction, division with value zero at zero divisor, modulus with `a mod 0 = a`, comparisons returning0 or1, and powers of two. These are the model's declared operations, not a claim about every host language's exception semantics. [F250-117] [F250-242]
+
+Let `cost(e)` be the source's exact syntax cost. For arbitrary pending work `tail`, preexisting values `vs`, dictionary `d` and initial meter `m`, the central refinement equation is
+
+```text
+runSteps(d, cost(e), ((e,false)::tail, vs, m))
+  = do (v,out) ← reference(d,e,m)
+       return (tail, v::vs, out).
+```
+
+The equation is equality of the result type, not merely equality of successful values. On failure it preserves the complete failure record, including fault kind and tick. Splitting a run after `cost(e)` therefore gives the continuation equation for any additional number `n` of steps: first perform the reference expression computation, then continue from the unchanged pending work with its one new value. This does not require the pending work or preexisting stack to be empty. [F250-117] [F250-242]
+
+For a well-formed expression started through the expression wrapper, success returns its source numerical denotation and increases the step counter by exactly `cost(e)`. With no resource limits, evaluation succeeds. More strongly, for each fixed expression, dictionary and starting count, the source supplies finite bounds using `starting count + cost(e)` and `neededBits(d,e)` that suffice for success. This existence result neither promises a fixed bound uniform over all inputs nor identifies these abstract ticks with wall-clock time or machine instructions. [F250-117] [F250-242]
+
+Failures of the well-formed expression wrapper can only be step-limit, integer-storage or exponent-storage failures. Value-stack underflow and stack-invariant failure are excluded at that wrapper interface; they are still possible for arbitrary malformed machine configurations. Any two successful budget settings return the same numerical value. The safety theorem does not assert budget monotonicity or turn a resource refusal into a mathematical negative answer. [F250-215]
+
+The concrete controls fix details that a value-only paraphrase would lose. A register read can return a large preexisting dictionary value with zero new integer-storage allowance, whereas construction of a constant or arithmetic result is checked. A missing register reads zero, and writing one key retains other keys. The tick occurs before a ready-state underflow check, so an exhausted step budget can take precedence over that stack fault. In the power example with exponent8, a bit allowance8 yields an exponent-storage fault at tick3 while allowance9 permits256; an insufficient step budget instead fails at tick3. Swapping subexpressions can change which resource fault occurs first. These are specified source controls, not fresh observations of CPython. [F250-242]
+
+Two intentional mutations test that exact contract. `PowerFaultMutant` replaces the power-specific guard with a generic check of the computed power, while retaining the old refinement claim. `ReadyTickMutant` omits the tick on ready visits while retaining the old cost and fault claims. Both can preserve some successful arithmetic values while violating the required trace-level result. Their expected rejection is not reported as freshly executed here. The refinement is a theorem about the declared algorithm model; neither it nor its controls certify a JSON parser, the CPython interpreter, native compilation, or an unexamined implementation. [F250-104] [F250-240]
+
+## 15. The written completeness landscape and its exact input domains
+
+The Fifteenth Mathematical Compendium's first five papers establish a connected written theory beyond the individual formal interfaces in §§11–14. The distinction is substantive: a checked semantic bridge is not, by itself, a checked computability classification; conversely, a written proof supported by such a bridge is not erased because the whole metatheorem was not encoded in Lean. The results below concern the unchanged current `Has` judgement and original paired interpretations F/G, unless explicitly stated otherwise. They do not supply a HasE scalar-fusion witness or reopen the exact noninhabitation and internal-independence results retained in §§8–9. The compendium and later companion's descriptions of that target as OPEN are historical statuses of those sources, not the present verdict. [F250-C168]
+
+The source's bounded prior-art comparison credits established Church classification and computability methods without conflating targets. Hinze's *Church numerals, twice!* uses System F with inductive types, parametricity and η-conversion for the Church/Peano inverse and fold correspondence. It is precedent for classification/iteration, not automatically the no-added-η P01AC F/G arbitrary-inhabitant observation theorem or a current-Has counter compiler. Pistone–Tranchini's *What’s Decidable About (Atomic) Polymorphism?* studies typed-context Boolean/natural observations: its atomic-F numerical-equivalence decision result, ML/F₁ undecidability and general atomic-F contextual-congruence undecidability do not themselves establish these fixed-carrier hierarchy levels or the bare/annotated boundary. A relation-preserving transfer is still required. The comparison is bounded source reading, not a priority claim or exhaustive literature review. [F250-C168, Relation to established methods]
+
+### 15.1 Raw-valued identity has an exact second-level classification
+
+Let N be the Church-natural type and C=N→Raw. For closed endpoint polynomials p,q, let D(p,q) assert scope and both current endpoint typings at C, and let V(p,q) assert their F-relation in every unary environment. The bare coded set is E={⟨p,q⟩:D(p,q) and V(p,q)}; malformed codes are excluded. The annotated set additionally requires the *supplied* finite endpoint typing certificates to validate, rather than searching for different certificates when the supplied ones fail.
+
+Every semantic natural has a unique iteration index. Canonical observations u_n realize every index, and two semantic naturals with the same index are related in the required relation. With both endpoint typings, these facts give
+
+V(p,q) iff for every n, P u_n ≃ Q u_n,
+
+where P,Q are endpoint evaluations and ≃ is raw conversion. For the reverse direction, take arbitrary cross-related inputs x,y of common index n. Endpoint soundness and the same-index relation transport P x to P u_n and Q u_n to Q y; the canonical hypothesis completes the chain. This is not an assertion that arbitrary environments or unapplied programs are identical.
+
+Finite annotated typing and conversion derivations have recursive validators. Put both endpoint certificates and the nth conversion certificate in one finite witness w. The bare target therefore has a matrix ∀n∃w R(z,n,w) with recursive R. At n=0 the witness supplies typing; the additional existential typing search does not introduce a third alternation. The annotated version fixes those typing certificates in the input.
+
+For hardness, fix a pure I/K/S representation of the partial computation H(e,n) which returns zero exactly when machine e halts on n. The imported representation premise supplies a single finite pure term U: defined computations convert to the corresponding numeral, while undefined computations have **no pure weak normal form**. The chosen pure numerals satisfy ν₀=KI and νₙ₊₁=SBνₙ, where B=S(KS)K. A fixed bracket-abstraction template makes p_e a currently typed C endpoint testing Uν_e on the iteration generated by its N input; q is the constant ν₀ endpoint. Current Raw typing admits these templates without a termination premise. On u_n their outputs convert respectively to Uν_eν_n and ν₀.
+
+If e is total, every canonical test agrees and hence V(p_e,q). If it is not total at n, such agreement would give Uν_eν_n ≃ ν₀. Retract the inert raw constructors to I while fixing pure I/K/S and application; every raw step retracts to a pure step. Together with confluence and the pure normal endpoint, this would provide a pure weak normal form, contradicting the imported undefined-computation condition. Mere failure to *observe* termination would not suffice. This gives a total computable reduction of totality, and both coded identity sets are Π₂-complete.
+
+The conclusions apply to one fixed carrier, not every type. On the typed family, neither validity nor invalidity is recursively enumerable. For validity, a program that halts on input n precisely when a fixed machine has not halted within n steps reduces nonhalting to totality. For invalidity, a program that waits for that fixed machine before halting on every input reduces nonhalting to failure of totality. Thus malformed-input rejection is not responsible for either obstruction. Distinct raw-normal constant outputs also give infinitely many inequivalent currently typed endpoints at this fixed carrier.
+
+No recursively enumerable sound and complete positive *or negative* finite-proof system with effective target projection can characterize this typed Raw family: enumeration of its proofs would enumerate the corresponding forbidden set. This preserves the established sound positive HasE repairs while excluding their unrestricted completeness. Finite canonical successes do not prove the universal claim: a machine can halt on exactly a prescribed finite set of inputs. A finite list of conversion obligations is not decidable merely because its length is finite; supplied valid derivations make checking finite, while discovering arbitrary conversions is a different task.
+
+**Evidence boundary.** The canonical bridge, observer equations under explicit assumptions, and pure/raw reflection interfaces have checked components. Existence and matching of the universal pure representer, finite-code construction, totality/hierarchy classification and certificate impossibility are written metamathematics. Historical compiler and axiom readbacks in the compendium are not new executions of this consolidation. [F250-C168, Paper 1]
+
+### 15.2 Boolean observations change both the bound and the role of typing
+
+Let B be the Church-Boolean carrier and C_B=N→B. Every self-related Boolean has exactly one of the two marker observations. On currently typed endpoints, inequality is equivalent to a finite mismatch witness: a canonical input n and two finite conversion derivations to opposite markers. The mismatch set M is recursively enumerable. On valid annotated endpoint certificates, semantic equality is therefore Π₁.
+
+The lower bound uses a finite-arity primitive-recursion compiler with current typings and adequacy on arbitrary semantic natural observations, not a supposition that every partial computation can inhabit B. A fixed primitive-recursive bounded-halting characteristic χ(n,e) is zero for all n exactly when e never halts. Compile its fixed finite description and specialize the machine index. The endpoint p_e and constant-zero q have current typings for every e, and V_B(p_e,q) iff e never halts. Enumerating and validating finite endpoint derivations yields the required certificates on every input e, because their existence is already proved. This extraction-independent search is a total computable annotation map. Thus annotated Boolean identity is Π₁-complete and its complement is Σ₁-complete.
+
+There is no partial computable distinguishing bound which terminates on **every valid annotated input** and bounds a distinguishing n whenever the endpoints differ. If there were, finitely many output-bit searches would terminate by Boolean standardness; agreement through the bound would decide the Π₁-complete identity problem. For each fixed syntax-size bound the finite maximum of least distinguishing inputs still exists. What fails is a computable uniform majorant, not those individual finite maxima or bounds for separately restricted fragments.
+
+Bare input changes the classification. Let D be the recursively enumerable set of endpoint pairs with both current typings. Then E_B=D\M, a difference of two recursively enumerable sets. To prove matching hardness, the source constructs an explicit search gate G_{p_e}. If e halts, applying that gate to a currently typed endpoint preserves its typing and required behavior. If e never halts, its application to **any closed q** cannot be typed at C_B. The latter conclusion is stronger than saying the gate itself lacks a normal form: after forward translation to lambda syntax, deterministic weak-head reduction repeatedly exposes the next recursive state, with every finite trailing argument preserved. It therefore cannot be beta-convertible to either marker variable. Current typing would, by soundness and Boolean standardness at canonical zero, require exactly such a marker conversion.
+
+Combining gate index e with the earlier bounded-halting endpoint p_j gives
+
+(G_{p_e} p_j,q₀) ∈ E_B iff e halts and j never halts.
+
+Any difference U\V of enumerable sets reduces to this pair by using machines that halt on entry into U and V. Hence bare Boolean identity is d.c.e.-complete. Fixing the closed endpoint q₀ gives e halts iff `Has [] (G_{p_e} q₀) C_B`, so typability at this **one fixed type** is Σ₁-complete. The negative gate argument does not deny ordinary Raw typing, import strong normalization for the current calculus, or identify non-normalization of an unapplied term with non-typability of its observations.
+
+For both carriers, universal original F-identity at proof I, universal original G-identity at I, and existence of a uniform semantic polynomial witness are equivalent to the endpoint semantic relation, using diagonal environments for the converse G implication. These are semantic identity claims, not derivations of current `Has` at the identity type.
+
+**Evidence boundary.** Boolean standardness, mismatch equivalence, the general finite primitive-recursion compiler and original F/G transfers have checked components. The concrete machine arithmetic/indexing, finite-code and hierarchy proofs, and complete gate nonhalting argument remain written mathematics at the reported scope. The narrower conditional interfaces in §13 are not silently promoted into whole-theorem kernel formalizations. [F250-C168, Papers 2–3]
+
+### 15.3 An exactly decidable multivariate fragment
+
+For each finite arity r, let E_r consist of natural constants, the r variables, addition, multiplication, and arbitrary finite nesting of `if t=0 then e else f`. It contains neither subtraction, negative coefficients, arbitrary equality tests, recursion constructors nor embedded arbitrary P01AC programs. The literal compiler produces currently typed endpoints at C₀=N, C_{r+1}=N→C_r; its arbitrary-observation adequacy relates numerical equality to the original semantic relation with independently related arguments at every arrow.
+
+For each zero/nonzero coordinate mask S, specialize dead variables to zero and compute a finite nonnegative coefficient map NF_S(e). On the mask cell, a nonzero supported monomial is strictly positive and all others nonnegative. Thus a test is zero throughout that cell exactly when its map is zero; every conditional selects one fixed branch there. Structural induction proves normalization adequacy even with nested zero tests. Nonnegativity is essential: x−y would not have a fixed zero status on the all-positive cell.
+
+Conversely any finite table of S-normal nonnegative polynomial maps is realized by a depth-r decision tree testing each coordinate for zero, with the prescribed polynomial at each leaf. The fragment therefore denotes exactly these piecewise-polynomial functions. To prove uniqueness rather than assume it, subtract two different maps in the integers. A nonzero polynomial with individual degrees d_i cannot vanish on a Cartesian grid with d_i+1 distinct values in each variable: induction on the number of variables reduces to the univariate root bound. Consequently it suffices, on each mask, to test dead coordinates at zero and live coordinates at 1,…,d_i+1, where d_i is the maximum exponent appearing in either normalized map.
+
+Taking the union of those grids gives a computable complete test with cardinality Σ_S ∏_{i∈S}(d_i+1). Empty products equal one: the all-zero mask contributes its zero tuple; arity zero contributes the unique empty tuple; degree-zero live coordinates still contribute test value one. Different tables have a bounded distinguishing tuple. Coefficient-table certificates and evaluation-grid certificates are finite, recursively checked, sound and complete for the exact source inputs. The implementation must bind arity, syntax, coefficients or evaluations and, when supplied externally, the *literal* compiled endpoints; accepting an unrelated or merely conversion-equivalent endpoint changes the problem.
+
+Thus numerical equality, equality of every mask map, agreement on the finite grid, original semantic endpoint/identity validity and existence of a semantic witness coincide for this fragment. No current syntactic identity witness or arbitrary-endpoint decision procedure follows. The sparse formal interfaces in §14 retain their own exact scope; the compendium additionally supplies this written completeness argument and its checked compiler/certificate components. [F250-C168, Paper 4]
+
+### 15.4 One root equality test crosses the general boundary, but not at arity one
+
+Let A_r be pure natural arithmetic trees (constants, variables, addition, multiplication). Define R_r as the **disjoint union** of old E_r expressions and a root expression test(P,Q), with P,Q∈A_r, returning one when P=Q and zero otherwise. This is not closure under nested new tests. `ZeroTest(r,P,Q)` means ∀v P(v)≠Q(v), so it concerns *absence of roots*, not ordinary polynomial identity.
+
+The written lower bound imports the established Diophantine representation premise: each enumerable set has an integer polynomial H(a,y) whose nonnegative roots in y characterize membership of a. Fix one H representing halting, aggregate coefficients, split them into nonnegative H⁺ and H⁻, and specialize a=e. The resulting fixed-tree substitution e↦(P_e,Q_e) is computable, and
+
+e does not halt iff ∀y P_e(y)≠Q_e(y).
+
+Existence of the fixed finite H suffices to prove existence of this computable map; no uniform polynomial-selector algorithm or unprovided runnable reducer is being asserted. The witness arity is some fixed finite m, not a specified number. Unused-variable padding extends hardness to all r≥m. Enumeration of a root is the matching negative semidecision. Hence ZeroTest, and universal equality of R_r expressions against old zero, are Π₁-complete. The numerical/original-semantic compiler bridge transfers the classification to the exact source-presented endpoints.
+
+This excludes every enumerable sound complete positive finite-certificate format, and every total effective complete finite testing bound for the whole extension. The mask proof fails specifically because equality of two positive polynomials can vary within one cell: x=y holds at (1,1) but not (1,2). This does not erase the positive mask result.
+
+There is also a positive unary boundary. For a nonzero integer polynomial H(x)=a_d x^d+Σ_{i<d}a_i x^i with d≥1, put B(H)=1+Σ_{i<d}|a_i|; use B=1 for nonzero constants and, for bookkeeping only, zero. At natural n≥B(H), the leading term dominates the sum of lower terms, since |a_d|≥1 and n exceeds that coefficient sum. Nonzero H therefore cannot vanish there.
+
+Each old unary expression has a polynomial tail from its positive mask, valid for n≥1. Each new root test has constant tail one if P−Q is the zero map, and otherwise constant tail zero after B(P−Q). Compute tail data (b_s,T_s),(b_t,T_t); let B=max(b_s,b_t), H=T_s−T_t and M=max(B,B(H)). Equality at every n=0,…,M forces H=0 (otherwise M distinguishes), and verifies all earlier exceptions. It is therefore equivalent to universal equality. This covers cancellation, constants and differences confined to zero, but only the declared grammar, not arbitrary nested root-test extensions. Arity zero is direct evaluation. The unspecified hardness arity must accordingly be at least two; no classification of every arity ≥2 follows.
+
+**Evidence boundary.** The DPRM existence premise is externally sourced to Matiyasevich–Robinson, *Two universal 3-quantifier representations of recursively enumerable sets*, §§1–3, equation (3), corrected translation [arXiv:0802.1052](https://arxiv.org/abs/0802.1052). It is not a new axiom in the checked compiler. The written classification supplies no concrete representing coefficients or numerical fixed-arity bound. The unary finite criterion is written mathematics, not a claimed new executable or kernel theorem. [F250-C168, Paper 5]
+
+
+The Twentieth companion's later transfer assessment does not import a normalization theorem from the inspected pure-type-system endpoint. That endpoint assumes weak normalization of legal expressions in its annotated grammar; its conversion and annotation-preserving erasure do not match HasE's proof-term-changing conversion and discarded proof coordinates. A weakly normalizing converted HasE term can contain a divergent discarded raw argument. The endpoint therefore supplies neither the original identity witness nor the required derivation-normalization theorem. This is a completed negative transfer assessment, not evidence that all normalization routes are impossible. [F250-C220, Part 3]
 
 ## References and formal sources
 
@@ -2123,3 +2572,82 @@ These exact public guides identify the reported results, historical review scope
 [FAMILY-BOUNDED]: https://github.com/theislampill/orthemology/blob/d7d0ad63acaaf33cbe22c72ac7408087a46ba9b8/research/t20-v6-20261012/sources/bc669cde2038e1ce800f5697afc4a244ce544371f37134054054a95273d6298a/BoundedHaltingPR.lean
 [FAMILY-ENCODED]: https://github.com/theislampill/orthemology/blob/d7d0ad63acaaf33cbe22c72ac7408087a46ba9b8/research/t20-v6-20261012/sources/54c9b4616f23e904484432cac6f6936b724b42f48621fffa60ad957217b2e4b0/EncodedCertificateSyntax.lean
 [FAMILY-CODEC]: https://github.com/theislampill/orthemology/blob/d7d0ad63acaaf33cbe22c72ac7408087a46ba9b8/research/t20-v6-20261012/sources/0eccaf3087d1ca760b5ab5b1c51b044e73250f971b0dae3624489bd647e7051a/CodecDeriveEncodable.lean
+
+[R250-123]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/25a1623204ffb54724a7396ade2d5333c3c025f0d95c7950c84be98376b2e28f/StatementContract.lean
+[R250-040]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/09a3eb40ec65389a7b06a2d7a829d94f76d3bdb6958476c4dc728ea01029c5f0/MotiveAndDirectionContract.lean
+[R250-046]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/0a87d4ddb3cba9f45ac2cdd298668cfc6403f75aa06d7e6877f774cde7dd049c/CanonicalizationContract.lean
+[R250-089]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/1b83248dc6fe0975f18099558e0a30332105019bd6c282598d32fe50510efea3/CanonicalizationRed.lean
+[R250-164]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/3238b21fe5dae7149de4e1c622e78a50ed723df0cac20ed654247cd2bcee8678/RejectCurrentLaundering.lean
+[R250-235]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/43e824a746ef624e8d783e89d62d3dc95108042cb311f931cd868cbe5cf76028/GenericIdentityCarrierProbe.lean
+[R250-093]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/1db37f08cdb7a7d8e31fef95b48e4c6720c29f1550ca0549d8e7905bc9aff5e4/CORPUS_AND_TRANSFER_SCOPE.md "Retained public DERIVED assessment projection; Git 2288057541be6de7c9c876cb62fea97ab1ed55cc; SHA-256 1db37f08cdb7a7d8e31fef95b48e4c6720c29f1550ca0549d8e7905bc9aff5e4"
+
+
+## Exact formal sources for supplementary scope and relation interfaces
+
+[R0002-L001]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/00283060fbb1f8940432f4929b6062fdebe709f4d871e772a4035caafe11a2ac/ExtensionalRepairLemmas.lean
+[R0002-L150]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/2f02facf2dc87a4aa99f9f9f7efa8e56d8ddfba8c21a395085e99af01c6ec635/UnaryCertificateSoundness.lean
+[R0002-L159]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/30cf8db7d8ab013db0cbc6a4dbc4690ece90ba1c244be65335ee2d2424738f9b/UnaryExpressionsControls.lean
+
+
+## Exact sources for effective-observation contracts and audit boundaries
+
+[R250-C27-3]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/0071d28c2d0a9556d6e79f7cbd93d0a40abeb0cd7b72e9f6d51d255852f6e960/IndependentOpaqueControls.lean
+[R250-C27-12]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/03088e5132be807c660b49e3123ce77d0c623e809049b708187ad8b4df94ad16/AuditorRejectsUnsafe.lean
+[R250-C27-13]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/035488a9c3f940f49a253424cfb66abd33a2573b632563bef64128304ad73b06/RejectAdmittedProof.lean
+[R250-C27-20]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/058cb1413a84322e942f5b2084f79069037cd1f6ed83c64e1b8d137803c3a3eb/PartialDirect.lean
+[R250-C27-32]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/07e42ee1e0a132ee35dd7b991872b6beefcb3f5501c3a7ac3748786e82b2857d/CustomAxiom.lean
+[R250-C27-41]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/09b240911c6d829ab6240ff2d62e2d2a3b1a56dfd8ac7544ca6ee8ea8a24a072/RejectAddedAxiom.lean
+[R250-C27-55]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/0f4ffb7dc60be26f65ed1bb8a3935d0aa2dc0337293fcb35926b1e453e380c7d/MissingRightTyping.lean
+[R250-C27-56]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/0f83919009a9d4a831dbcbbfd6edcafafbc83f88a08a0336ad2fabad838133b7/PartialWrappedRuntime.lean
+[R250-C27-57]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/0fad4c30e7a4cf0ab4995ef57982463e9dc95089b1106f0393ab8c388959a855/CustomAxiom.lean
+[R250-C27-65]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/11ed533d8d1138c9daac9f751b2addec32a2d5c1f1e5aff05baac50d2edeb3b3/PartialWrappedKernel.lean
+[R250-C27-77]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/16b94ff32abefcd72d84455b06b045963112d7ffb2b8204d217dc6713097daf5/SCOPE.md
+[R250-C27-85]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/1ab5ef3f02f0160c5a10cb729039f13eff5595d6a4292438223e2c2e1c27a45e/AuditorRejectsPartial.lean
+[R250-C27-88]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/1b784056a804d4de0c5012dedd87744bcff93ae5699eb2cc5ba571f02d6c5d66/FiniteBudgetIsNotAllTests.lean
+[R250-C27-94]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/1de016f96f7f084ab621a08b9c2636a451ca0b32586c911030a7b11cbd4b0b85/AuditorRejectsPartial.lean
+[R250-C27-95]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/1e20d933f325cddddab82ecbb6d4050c0474f67f5474891832eff17767bdbf2a/INDEPENDENT_MissingPositivity.lean
+[R250-C27-96]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/1e6aac21a4bd79427610e382d58bbc15a213bf1f8129971e19e99e672f32cc8d/PartialRootKernel.lean
+[R250-C27-98]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/1ed43a78a52fb5e570d06ddd9f53484c90d4e25892ebbb310480708009fdbafd/BooleanKernelAudit.lean
+[R250-C27-103]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/1f2385be631a4330db9df6c1f23aadf61798eb0331c25d209a50460698adcaa2/OneEnvironmentIsNotEndpointValidity.lean
+[R250-C27-125]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/25eee1be267c97ef0e48e6915e0c8672bd152cca4241b4335425fbf6f3930968/AuditorRejectsCustomAxiom.lean
+[R250-C27-131]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/286da8e4766b9f20526b1fb99aa15ad9354a46b3972436cf3c639460c533dcbc/RejectAdmittedProof.lean
+[R250-C27-146]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/2d9e7402c87fa7e111673fe5dc9d57966a373fd6bcd72412ce95ff81121e2462/AuditorRejectsSorry.lean
+[R250-C27-158]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/30541a1f508fde3e9ff271f8d3880bd13c93a2b4455d532a9fb79e1e62d65d28/UnsafeDependency.lean
+[R250-C27-163]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/3212592033b944ca2fc633e88ac834fd6a35b4d7a6ae377cdd78c25461ae269d/WrongSubtractionOrder.lean
+[R250-C27-167]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/33372a5efbdce29a8cb5c3965ea031032de84f48eaf982e42abaf9e6220f12b9/AuditorRejectsCustomAxiom.lean
+[R250-C27-169]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/34472a86cae8e55cd75aa953f85bf46f28f5c22c53074b60d1a1004442bf8769/RuntimeChoice.lean
+[R250-C27-172]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/34c2d6d13a3633e6fb05aa33dfee1800a5eca3ae18f5b190b18592e41fdc7958/WrongProjectionBound.lean
+[R250-C27-179]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/359de6231a4b1393e537f7760d4f05c883ab24c7cd48fc654ffbb4fdaecc5eab/RejectCustomAxiom.lean
+[R250-C27-187]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/37d0cd8f7c90cb94a720051955e8d47624505e34f42ba6b1bcba10c66c60b162/RuntimeAudit.lean
+[R250-C27-191]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/38f0cafee5502b9a8e5d569cee3c15c86a03c968607bfd1a617bc3e10ade098a/MissingRightMembership.lean
+[R250-C27-196]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/3a2c534f00f0d5c4e8a2bde6c8bf057078d03a8c37338eeea2a90f14c8d994aa/EffectivePartialObserver.lean
+[R250-C27-200]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/3ac0153ee816a8d41afa96b630bd06ed54e5be0db2e51567407f399ff2e4e17c/INDEPENDENT_Admission.lean
+[R250-C27-210]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/3e62bef5fdeec0239669961fdc5144bc54b4764cd58fc55b125890f2e4e881cf/CheckComplexityInterfaces.lean
+[R250-C27-211]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/3e9cff8a2e5a338230bde4a074595cb50672756682ae6f90f12835fd868021d4/MissingStepRepresentation.lean
+[R250-C27-214]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/3f6c905cf2363c713795aa75a1edd21fd6b3cc3c312572ca2fd8d9949b596254/MissingSemanticInput.lean
+[R250-C27-223]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/410a9a8ecea276190996a85380f2eb49ee387a5ceff9373e2802c33fb02712b3/WrongRawEndpointRelation.lean
+[R250-C27-226]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/41593f408c8f8f6543f1b9824d24c5ea3e3340e1c8d7adc3ce0cd6aa0c2de618/CheckBooleanInterfaces.lean
+[R250-C27-231]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/42727d6803bc6c8f42102dd56b5473036d83b6aa1b8746b94995db2b7c559033/BareBooleanGatePositive.lean
+[R250-C27-233]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/42fa7a899fe0ed22831d4799c49f96d4848c902464654ca198bc7715b1781fb1/AuditorRejectsSorry.lean
+[R250-C27-234]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/4354990c11644d1df339494be74a63ec016ec0f432ae07fd4dfd7cc07fa9c58f/AllProjectProofAudit.lean
+[R250-C27-236]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/43fad5b422f303cd474f2015448ce369ac7c234cd4e1a1fbb9151fb356f3c01b/PartialRootRuntime.lean
+[R250-C27-241]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/4493327fb512ac8184def34bf332f3e6be5504ee2b199e8c4c940ff796224e74/PointwiseIsNotCrossArgument.lean
+[R250-C27-247]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/4541dc01f4e2eeae660b97bebea6ae366eef55edd83c75b5db38373b53381206/AdmittedProof.lean
+
+
+## Exact sources for formal and operational interfaces
+
+[F250-101]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/1f12008a084bae138d375e7a9abe05004284f99e688db06a474b0eabbc3d2a82/PolynomialTestBoundary.lean
+[F250-104]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/1f8bbfa5aae143f4ade726c4dc56c1390814c20bf0cce54b6cb5007b6fd8f554/PowerFaultMutant.lean
+[F250-117]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/22d97f7d120194c258791867028edddc5921b8d3ea65d35f73723336019a1077/PythonExprMachine.lean
+[F250-138]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/29efba63a8bb81d82a0a3c8fb2bbab68cab27036be5c550adf3b1c87c588b9f0/IndependentKernelChecks.lean
+[F250-153]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/2fa686bbe04f48f71db17446ec3b75fcc26356c04d142b2dd1f1c3a3e58c7b0a/SparsePolynomial.lean
+[F250-165]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/327cf7b9d6679924b7047a76dbefe1fd632bae72cc3524539a2feedca491b367/AllMixedAlgebra.lean
+[F250-173]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/352395bd515bdc85e3c4112ca9c9b0f541d6f336bb3ad716bef1ee5198762d09/AllSemanticSubstitution.lean
+[F250-215]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/3f962df5e2b98f0b294ee2726b10b0c10e2fdfc11cdecee8b22f965c7ab05a25/PythonExprSafety.lean
+[F250-240]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/4457b5564e7cec234f3515899fc5b67dbce32a9b233ba3c19249bd5f9f9745ba/ReadyTickMutant.lean
+[F250-242]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/44afb191c7a8d17e7b561a8d9629ed4094a247110e3b44f0bf8041c2e2fd7de8/ReviewerContract.lean
+
+[F250-C168]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md
+
+[F250-C220]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/40e374a62246636ffdbd424f517094dbaa7a7d00cc177675bed19377598e44fd/MATHEMATICAL_COMPANION.md
