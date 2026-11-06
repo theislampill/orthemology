@@ -12,6 +12,8 @@ from v5_successor_fixtures import (AREA, PROV, OLD, OLDPROV, add_suite, digest,
     fixture_suite_validator, fixture_receipt_validator, make_bundle, put, put_bytes, raw_hash, rebind, save_bundle, source)
 
 SCRIPT = Path(__file__).resolve().parents[1] / 'scripts/validate_v5_successors.py'
+# Production replay helpers import their pinned siblings during interface checks.
+sys.path.insert(0, str(SCRIPT.parent))
 
 
 class SuccessorTests(unittest.TestCase):

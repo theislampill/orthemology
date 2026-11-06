@@ -40,6 +40,8 @@ from resolve_t20_v6_source import (
     STATUS_RECORD_OWNER_BASE, STATUS_RECORD_OWNER_TREE, status_owner_edition,
     status_record_candidate, status_record_absences,
     SUCCESSOR_FIXTURE_PATH,
+    SUCCESSOR_READ_BATCH_PATHS, successor_read_batch_absences,
+    SUCCESSOR_REMAINDER_BATCH_PATHS, successor_remainder_batch_absences,
 )
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -157,7 +159,9 @@ def check_object(root, row):
         path = root / relative
         if path.is_symlink() or not path.resolve().is_relative_to(root.resolve()):
             raise ValueError('source symlink or escaped root')
-        if (relative.as_posix() in DIGEST_RECORD_PATHS
+        if (relative.as_posix() in SUCCESSOR_READ_BATCH_PATHS
+                or relative.as_posix() in SUCCESSOR_REMAINDER_BATCH_PATHS
+                or relative.as_posix() in DIGEST_RECORD_PATHS
                 or relative.as_posix() == SUCCESSOR_FIXTURE_PATH
                 or binding_record_candidate(relative.as_posix())
                 or relative.as_posix() in SUCCESSOR_INPUT_PATHS
@@ -257,6 +261,8 @@ def check_preserved_roots(root, objects):
     digest_authenticated = None
     input_registry_authenticated = None
     input_absences_authenticated = None
+    read_batch_absences_authenticated = None
+    remainder_batch_absences_authenticated = None
     calculus_absences_authenticated = None
     binding_absences_authenticated = None
     calculus_guides_authenticated = set()
@@ -339,6 +345,22 @@ def check_preserved_roots(root, objects):
                     input_absences_authenticated = successor_input_absences(root)
                 except (ValueError, OSError):
                     pass  # Only authenticated physically absent originals qualify.
+            if read_batch_absences_authenticated is None and any(
+                    status == 'D' and path in SUCCESSOR_READ_BATCH_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                read_batch_absences_authenticated = set()
+                try:
+                    read_batch_absences_authenticated = successor_read_batch_absences(root)
+                except (ValueError, OSError):
+                    pass  # No exception without all original native identities.
+            if remainder_batch_absences_authenticated is None and any(
+                    status == 'D' and path in SUCCESSOR_REMAINDER_BATCH_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                remainder_batch_absences_authenticated = set()
+                try:
+                    remainder_batch_absences_authenticated = successor_remainder_batch_absences(root)
+                except (ValueError, OSError):
+                    pass  # No exception without all original native identities.
             if calculus_absences_authenticated is None and any(
                     status == 'D' and path == SUCCESSOR_CALCULUS_MAP
                     for status, path in zip(changes[::2], changes[1::2])):
@@ -383,6 +405,8 @@ def check_preserved_roots(root, objects):
                         (status == 'D' and path in (code_authenticated or ())) or
                         (status == 'D' and path in (digest_authenticated or ())) or
                         (status == 'D' and path in (input_absences_authenticated or ())) or
+                        (status == 'D' and path in (read_batch_absences_authenticated or ())) or
+                        (status == 'D' and path in (remainder_batch_absences_authenticated or ())) or
                         (status == 'D' and path in (calculus_absences_authenticated or ())) or
                         (status == 'M' and path in calculus_guides_authenticated) or
                         (status == 'M' and path == SUCCESSOR_INPUT_REGISTRY

@@ -66,6 +66,18 @@ def _reader_fixture_entries(repo, revision, paths):
 
 
 
+def _bind_unselected_successor_route_families(namespace):
+    """Keep unrelated first250 families inert in the historical fixture domain."""
+    namespace.setdefault('ADMISSION_RECORD_PATHS', frozenset())
+    namespace.setdefault('SUCCESSOR_READ_BATCH_PATHS', frozenset())
+    namespace.setdefault('SUCCESSOR_REMAINDER_BATCH_PATHS', frozenset())
+    def unexpected(*args, **kwargs):
+        raise AssertionError('unselected successor route must not be used by this fixture')
+    for name in ('successor_read_batch_public_bytes', 'successor_remainder_batch_public_bytes',
+                 'successor_read_batch_bytes', 'successor_remainder_batch_bytes'):
+        namespace.setdefault(name, unexpected)
+
+
 class CompleteValidationTests(unittest.TestCase):
     """Exercise the real inventory and gate, with read-only corrupted overlays."""
 
@@ -3267,6 +3279,7 @@ class HistoricalSuccessorFixtureRouteTests(unittest.TestCase):
                      'ADMIN_PUBLIC_GUIDE_PATHS': (), 'HISTORICAL_PROSE': {},
                      'CHECKPOINT_CODE_COPY_PATHS': (), 'CHECKPOINT_RECORD_COPY_PATHS': (),
                      'CHECKPOINT_COPY_PATHS': (), 'CONTINUATION_COPY_ROOT': 'synthetic/other-continuation/'}
+        _bind_unselected_successor_route_families(namespace)
         exec(compile(ast.Module(body=nodes, type_ignores=[]), str(resolver), 'exec'), namespace)
         self.resolver = namespace
         projection = self.SOURCE_ROOT / 'validate_t20_v6_projection.py'
@@ -3276,6 +3289,7 @@ class HistoricalSuccessorFixtureRouteTests(unittest.TestCase):
                                     BASE=namespace['HISTORICAL_PROSE_REVISION'],
                                     binding_record_candidate=lambda path: False,
                                     source_bytes=namespace['source_bytes'])
+        _bind_unselected_successor_route_families(projection_namespace)
         exec(compile(ast.Module(body=nodes, type_ignores=[]), str(projection), 'exec'), projection_namespace)
         self.projection = projection_namespace
 

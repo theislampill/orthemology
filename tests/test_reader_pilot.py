@@ -23,6 +23,28 @@ MODULE = ROOT / "scripts" / "check_reader_pilot.py"
 sys.path.insert(0, str(MODULE.parent))
 
 
+def _bind_unselected_successor_fixture_names(namespace):
+    """Bind new unrelated families in AST-isolated historical-reader fixtures.
+
+    These fixtures supply synthetic populations, not production source identities.
+    No new family is admitted here; a qualifier call is an unexpected operation.
+    Full-module source-provider controls qualify the real first250 independently.
+    """
+    for name in ('SUCCESSOR_READ_BATCH_PATHS', 'SUCCESSOR_REMAINDER_BATCH_PATHS'):
+        namespace.setdefault(name, frozenset())
+    def unexpected(*args, **kwargs):
+        raise AssertionError('unselected successor qualifier invoked by isolated fixture')
+    for name in ('successor_read_batch_absences', 'successor_remainder_batch_absences'):
+        namespace.setdefault(name, unexpected)
+    def unselected_sources(repo, sources, **kwargs):
+        selected = namespace['SUCCESSOR_READ_BATCH_PATHS'] | namespace['SUCCESSOR_REMAINDER_BATCH_PATHS']
+        if any(isinstance(row, dict) and row.get('path') in selected for row in sources.values()):
+            raise AssertionError('selected successor source needs an explicit fixture provider')
+        return {}
+    for name in ('read_batch_reader_sources', 'remainder_batch_reader_sources'):
+        namespace.setdefault(name, unselected_sources)
+
+
 class ReaderPilotTests(unittest.TestCase):
     def setUp(self):
         self.assertTrue(MODULE.exists(), "reader pilot checker has not been implemented")
@@ -9451,6 +9473,7 @@ class Digest176ReaderContractTests(unittest.TestCase):
         if len(nodes) != 3:
             raise AssertionError('the exact operational function/constant population changed')
         cls.namespace = {'Path': Path, 'REVIEWED_AUTHORITY_EDITS': {}}
+        _bind_unselected_successor_fixture_names(cls.namespace)
         exec(compile(ast.Module(body=nodes, type_ignores=[]),
                      'reader-digest176-operational-interface', 'exec'), cls.namespace)
         # Preserve the actual finite status selector in this metadata-only
@@ -9686,6 +9709,7 @@ class ReviewedSourcingLedgerControls(unittest.TestCase):
         self.assertEqual({n.name for n in nodes}, names)
         module=types.ModuleType('inert_sourcing_ledger')
         module.__dict__.update(Path=Path,hashlib=hashlib,os=os,stat=stat,subprocess=subprocess,REVIEWED_AUTHORITY_EDITS={})
+        _bind_unselected_successor_fixture_names(module.__dict__)
         exec(compile(ast.Module(body=nodes,type_ignores=[]),str(self.SOURCE),'exec'),module.__dict__)
         return module
 
@@ -9807,6 +9831,7 @@ class ReviewedAuthorityControls(unittest.TestCase):
         self.assertEqual({n.name for n in nodes},names,'exact reviewed authority owner is missing')
         module=types.ModuleType('isolated_reviewed_authority')
         module.__dict__.update(Path=Path,hashlib=hashlib,os=os,stat=stat,subprocess=subprocess)
+        _bind_unselected_successor_fixture_names(module.__dict__)
         exec(compile(ast.Module(body=nodes,type_ignores=[]),'actual-reviewed-authority-functions','exec'),module.__dict__)
         temp=tempfile.TemporaryDirectory();self.addCleanup(temp.cleanup);repo=Path(temp.name)
         identity=lambda b:(hashlib.sha1(b'blob '+str(len(b)).encode()+b'\0'+b).hexdigest(),hashlib.sha256(b).hexdigest(),len(b))
@@ -9968,6 +9993,7 @@ class ReviewedGovernanceEditionControls(unittest.TestCase):
         self.assertEqual({n.name for n in nodes}, names)
         module = types.ModuleType('reviewed_governance_editions')
         module.__dict__.update(Path=Path, hashlib=hashlib, os=os, stat=stat)
+        _bind_unselected_successor_fixture_names(module.__dict__)
         exec(compile(ast.Module(body=nodes, type_ignores=[]), 'exact-edition-functions', 'exec'), module.__dict__)
         tmp = tempfile.TemporaryDirectory(); self.addCleanup(tmp.cleanup); repo = Path(tmp.name)
         identity = lambda b: (hashlib.sha1(b'blob ' + str(len(b)).encode() + b'\0' + b).hexdigest(),
@@ -10159,6 +10185,7 @@ class ContinuationProviderAdmissionControls(unittest.TestCase):
                  'corpus_currentness_context'}
         tree = ast.parse(MODULE.read_text())
         nodes = [n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name in names]
+        _bind_unselected_successor_fixture_names(self.env)
         exec(compile(ast.Module(body=nodes, type_ignores=[]), '<actual-provider-admission-owner>', 'exec'), self.env)
         self.env.update(check_continuation_owner_edition=lambda *a:(self.continuation_owners, []),
                         status_owner_edition=lambda *a:{}, check_fixture_consumer_edition=lambda *a:({}, None, []),
@@ -10650,6 +10677,7 @@ class CertificateProviderAdditionControls(unittest.TestCase):
         ns['reviewed_authority_modifications'] = qualify
         ns['readonly_git_diff'] = lambda *a, **k: subprocess.CompletedProcess([], 0,
             ''.join(status+'\0'+path+'\0' for status, path in changes).encode(), b'')
+        _bind_unselected_successor_fixture_names(ns)
         exec(compile(ast.Module(body=[function],type_ignores=[]),'actual-certificate-currentness','exec'), ns)
         return module.check_corpus_currentness(Path('inert-currentness-root'),'original-baseline'), calls
 
@@ -10740,6 +10768,7 @@ class CertificateProviderAbsenceControls(unittest.TestCase):
                   status_record_candidate=lambda p: False,
                   readonly_git_diff=lambda *a, **k: subprocess.CompletedProcess([],0,
                     ''.join(status+'\0'+path+'\0' for status,path in changes).encode(),b''))
+        _bind_unselected_successor_fixture_names(ns)
         exec(compile(ast.Module(body=[function], type_ignores=[]), 'actual-six-provider-currentness', 'exec'), ns)
         return module.check_corpus_currentness(Path('inert-exact-root') if repo is None else repo, 'original-baseline'), calls
 
@@ -10810,6 +10839,7 @@ def _frontier_history_test_reader():
             for target in node.targets:
                 if isinstance(target,ast.Name) and target.id.startswith('FRONTIER_HISTORY_'):
                     ns[target.id]=ast.literal_eval(node.value)
+    _bind_unselected_successor_fixture_names(ns)
     exec(compile(ast.Module(body=selected,type_ignores=[]),'actual-reader-frontier-functions','exec'),ns)
     return module
 
@@ -11435,6 +11465,7 @@ def _central47_test_reader():
             for target in node.targets:
                 if isinstance(target, ast.Name) and target.id.startswith('CENTRAL_PUBLIC_HISTORY_'):
                     ns[target.id] = ast.literal_eval(node.value)
+    _bind_unselected_successor_fixture_names(ns)
     exec(compile(ast.Module(body=nodes, type_ignores=[]), 'actual-central47-reader', 'exec'), ns)
     return module
 
@@ -11899,6 +11930,7 @@ class PublicCheckpointCurrentnessTests(unittest.TestCase):
             rows=self.changed if not isinstance(self.changed,dict) else self.changed['cached' if '--cached' in args else 'worktree']
             return types.SimpleNamespace(returncode=0,stdout=b''.join((s+'\0'+p+'\0').encode() for s,p in rows))
         ns['readonly_git_diff']=diff
+        _bind_unselected_successor_fixture_names(ns)
         exec(compile(ast.Module(body=[fn],type_ignores=[]),'real-currentness-function','exec'),ns)
         self.ns=ns;self.paths=sorted(self.allowed)
     def check(self):return self.ns['check_corpus_currentness'](Path('inert'),'inert-base')
@@ -12201,6 +12233,7 @@ def _abk32_test_reader():
             for target in node.targets:
                 if isinstance(target, ast.Name) and target.id.startswith('ABK_PUBLIC_HISTORY_'):
                     ns[target.id] = ast.literal_eval(node.value)
+    _bind_unselected_successor_fixture_names(ns)
     exec(compile(ast.Module(body=nodes, type_ignores=[]), 'actual-abk32-reader', 'exec'), ns)
     return module
 

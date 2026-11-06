@@ -57,6 +57,8 @@ from resolve_t20_v6_source import (
     GENERATED_FIXTURE_PATHS, generated_fixture_absences,
     SUCCESSOR_CALCULUS_MAP, SUCCESSOR_CALCULUS_GUIDES, successor_calculus_map_absences,
     successor_calculus_guide_source_bytes,
+    SUCCESSOR_READ_BATCH_PATHS, successor_read_batch_bytes, successor_read_batch_absences,
+    SUCCESSOR_REMAINDER_BATCH_PATHS, successor_remainder_batch_bytes, successor_remainder_batch_absences,
     binding_record_candidate, is_binding_record, binding_record_bytes, binding_record_absences,
     status_record_candidate, status_record_absences, STATUS_RECORD_OWNERS, status_owner_edition,
 )
@@ -2311,7 +2313,9 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                 ("formal-copy", FORMAL_COPY_PATHS, formal_duplicate_paths),
             ("formal-provider", FORMAL_PROVIDER_PATHS, formal_provider_absences),
                 ("checkpoint-code", CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_duplicate_paths),
-                ("historical-digest", DIGEST_RECORD_PATHS, digest_record_absences)):
+                ("historical-digest", DIGEST_RECORD_PATHS, digest_record_absences),
+                ("successor-read-batch", SUCCESSOR_READ_BATCH_PATHS, successor_read_batch_absences),
+                ("successor-remainder-batch", SUCCESSOR_REMAINDER_BATCH_PATHS, successor_remainder_batch_absences)):
             if key not in duplicate_paths and any(
                     status == "D" and path in population
                     for status, path in zip(values[::2], values[1::2])):
@@ -2596,6 +2600,44 @@ def corpus_currentness_context(repo, indexed, owners, cross):
     return (additions, historical, navigation, continuation_owners, fixture_owners), errors
 
 
+# Exact existing reader keys, paths, identities and read scopes for the 31 originals.
+# This does not remove work/support ownership or reclassify historical evidence.
+SUCCESSOR_READ_BATCH_READER_ROWS_SHA256 = '3e7fc81b94a3a30d321296144e23d2568383ac22e7a9742317ade853811de3cf'
+
+
+def read_batch_reader_sources(repo, sources):
+    """Authenticate the unchanged finite reader rows before native source reads."""
+    selected = {key: row for key, row in sources.items()
+                if isinstance(row, dict) and row.get("path") in SUCCESSOR_READ_BATCH_PATHS}
+    if not selected:
+        return {}
+    raw = json.dumps(selected, sort_keys=True, ensure_ascii=False,
+                     separators=(",", ":"), allow_nan=False).encode("utf-8")
+    if hashlib.sha256(raw).hexdigest() != SUCCESSOR_READ_BATCH_READER_ROWS_SHA256:
+        raise ValueError("read-batch reader key/path/identity/scope population differs")
+    return {row["path"]: successor_read_batch_bytes(repo, row["path"])
+            for row in selected.values()}
+
+
+# Exact selected remainder source rows; existing work and read scopes are retained.
+SUCCESSOR_REMAINDER_BATCH_READER_ROWS_SHA256 = '6fd2333aa0daecaf2fc16c264478f31c3e3b145df17837140cd30a0be8e27ee2'
+
+
+def remainder_batch_reader_sources(repo, sources, *, required=False):
+    """Authenticate the unchanged finite reader rows before native source reads."""
+    selected = {key: row for key, row in sources.items()
+                if isinstance(row, dict) and row.get("path") in SUCCESSOR_REMAINDER_BATCH_PATHS}
+    if not selected and not required:
+        return {}
+    raw = json.dumps(selected, sort_keys=True, ensure_ascii=False,
+                     separators=(",", ":"), allow_nan=False).encode("utf-8")
+    if hashlib.sha256(raw).hexdigest() != SUCCESSOR_REMAINDER_BATCH_READER_ROWS_SHA256:
+        raise ValueError("remainder-batch reader key/path/identity/scope population differs")
+    return {row["path"]: successor_remainder_batch_bytes(repo, row["path"])
+            for row in selected.values()}
+
+
+
 def check(repo, owners, cross):
     """Return precise mechanical errors; an empty list is not semantic acceptance."""
     repo = Path(repo)
@@ -2687,11 +2729,26 @@ def check(repo, owners, cross):
             fail("owner", str(path) + ": " + str(exc))
 
     sources = cross.get("sources", {})
+    try:
+        read_batch_sources = read_batch_reader_sources(repo, sources)
+    except (TypeError, ValueError, OSError) as exc:
+        fail("read-batch-source", str(exc))
+        read_batch_sources = {}
+    try:
+        remainder_batch_sources = remainder_batch_reader_sources(
+            repo, sources, required=cross.get("coverage_stage") == "reader-candidate")
+    except (TypeError, ValueError, OSError) as exc:
+        fail("remainder-batch-source", str(exc))
+        remainder_batch_sources = {}
     for key, source in sources.items():
         try:
             path = source["path"]
-            binding_record = is_binding_record(repo, path)
-            body = (binding_record_bytes(repo, path) if binding_record else
+            read_batch_source = path in SUCCESSOR_READ_BATCH_PATHS
+            remainder_batch_source = path in SUCCESSOR_REMAINDER_BATCH_PATHS
+            binding_record = False if read_batch_source or remainder_batch_source else is_binding_record(repo, path)
+            body = (read_batch_sources[path] if read_batch_source else
+                    remainder_batch_sources[path] if remainder_batch_source else
+                    binding_record_bytes(repo, path) if binding_record else
                     historical[path] if path in historical else navigation[path]
                     if path in navigation else administrative_record_bytes(repo, path)
                     if path in ADMIN_RECORD_PATHS else successor_input_bytes(repo, path)
@@ -2708,7 +2765,7 @@ def check(repo, owners, cross):
             if oid != continuation_owners.get(path, row)["git_oid"]:
                 fail("baseline-source" if path in indexed else "source-addition",
                      path + " differs from the independently bound source")
-            mode = ("100644" if binding_record or path in historical or path in ADMIN_RECORD_PATHS or path in SUCCESSOR_INPUT_PATHS else
+            mode = ("100644" if read_batch_source or remainder_batch_source or binding_record or path in historical or path in ADMIN_RECORD_PATHS or path in SUCCESSOR_INPUT_PATHS else
                     "100755" if safe_path(repo, path).stat().st_mode & 0o111 else "100644")
             if mode != row["mode"]:
                 fail("source-mode", path + " changed executable mode")

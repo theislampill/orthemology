@@ -581,10 +581,16 @@ def _sources(bundle, root):
         path = path_in(root, row['public_path'], exists=row['public_path'] not in historical
                        and row['public_path'] not in _source.SUCCESSOR_INPUT_PATHS and not binding_record
                        and row['public_path'] not in _source.DIGEST_RECORD_PATHS
-                       and row['public_path'] not in _source.FORMAL_SUCCESSOR_PATHS)
+                       and row['public_path'] not in _source.FORMAL_SUCCESSOR_PATHS
+                       and row['public_path'] not in _source.SUCCESSOR_READ_BATCH_PATHS
+                       and row['public_path'] not in _source.SUCCESSOR_REMAINDER_BATCH_PATHS)
         prefix = AREA + '/source-store/' + row['public_sha256'] + '/'
         require(row['public_path'].startswith(prefix), 'Wrong public source content-addressed path')
-        if binding_record:
+        if row['public_path'] in _source.SUCCESSOR_READ_BATCH_PATHS:
+            raw = _source.successor_read_batch_source_bytes(root, row)
+        elif row['public_path'] in _source.SUCCESSOR_REMAINDER_BATCH_PATHS:
+            raw = _source.successor_remainder_batch_source_bytes(root, row)
+        elif binding_record:
             raw = _source.binding_record_successor_bytes(root, row)
         elif row['public_path'] in _source.DIGEST_RECORD_PATHS:
             raw = _source.digest_record_successor_bytes(root, row)
@@ -651,8 +657,18 @@ def _allowlist(bundle, root, sources):
                       **_source.TYPED_V5_SOURCE_IDS}
         binding_record = _source.is_binding_record(root, name)
         path = path_in(root, name, exists=name not in historical and name not in _source.SUCCESSOR_INPUT_PATHS
-                       and not binding_record and name not in _source.FORMAL_SUCCESSOR_PATHS)
-        if binding_record:
+                       and not binding_record and name not in _source.FORMAL_SUCCESSOR_PATHS
+                       and name not in _source.SUCCESSOR_READ_BATCH_PATHS
+                       and name not in _source.SUCCESSOR_REMAINDER_BATCH_PATHS)
+        if name in _source.SUCCESSOR_READ_BATCH_PATHS:
+            raw = _source.successor_read_batch_allowlist_bytes(root, row)
+            if not path.exists():
+                authenticated_absent.add(name)
+        elif name in _source.SUCCESSOR_REMAINDER_BATCH_PATHS:
+            raw = _source.successor_remainder_batch_allowlist_bytes(root, row)
+            if not path.exists():
+                authenticated_absent.add(name)
+        elif binding_record:
             require(row['kind'] == 'SOURCE' and bool(row['source_ids']),
                     'Binding record allowlist source role differs')
             raw = _source.binding_record_bytes(root, name, row['sha256'], row['bytes'])
@@ -758,7 +774,13 @@ def _suite(suite, sources, reviews, root, validator):
         require(row['source_id'] in suite['source_ids'], 'Suite target source mismatch')
         enum(row['domain'], DOMAINS); enum(row['calculus'], CALCULI)
         require(row['target_sha256'] == text_digest(row['declaration']), 'Changed expected target hash')
-        text = path_in(root, sources[row['source_id']]['public_path']).read_text(encoding='utf-8')
+        target_source = sources[row['source_id']]
+        if target_source['public_path'] in _source.SUCCESSOR_READ_BATCH_PATHS:
+            text = _source.successor_read_batch_source_bytes(root, target_source).decode('utf-8')
+        elif target_source['public_path'] in _source.SUCCESSOR_REMAINDER_BATCH_PATHS:
+            text = _source.successor_remainder_batch_source_bytes(root, target_source).decode('utf-8')
+        else:
+            text = path_in(root, target_source['public_path']).read_text(encoding='utf-8')
         require(row['declaration'] in text, 'Suite target declaration missing from source')
     for row in indexed(suite['controls'], 'id').values():
         keys(row, {'id', 'source_id', 'target_id', 'role', 'expected_outcome', 'expected_outcome_sha256'})

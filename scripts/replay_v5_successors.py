@@ -324,7 +324,11 @@ def public_bytes(root, source):
     require(name.startswith('experiments/orthemology-v5-successors/source-store/' + expected + '/'), 'Source is not content-addressed')
     require(type(source['public_bytes']) is int and source['public_bytes'] >= 0, 'Invalid source length')
     from resolve_t20_v6_source import SUCCESSOR_INPUT_PATHS, successor_input_source_bytes
-    if name in DIGEST_RECORD_PATHS:
+    if name in _formal_sources.SUCCESSOR_READ_BATCH_PATHS:
+        data = _formal_sources.successor_read_batch_source_bytes(root, source)
+    elif name in _formal_sources.SUCCESSOR_REMAINDER_BATCH_PATHS:
+        data = _formal_sources.successor_remainder_batch_source_bytes(root, source)
+    elif name in DIGEST_RECORD_PATHS:
         data = digest_record_successor_bytes(root, source)
     elif name in _formal_sources.FORMAL_SUCCESSOR_PATHS:
         data = _formal_sources.successor_formal_source_bytes(root, source)

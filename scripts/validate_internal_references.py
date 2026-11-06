@@ -48,6 +48,8 @@ from resolve_t20_v6_source import (
     ADMIN_RECORD_PATHS, administrative_record_bytes,
     CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_copy_bytes,
     SUCCESSOR_INPUT_PATHS, successor_input_bytes,
+    SUCCESSOR_READ_BATCH_PATHS, successor_read_batch_bytes,
+    SUCCESSOR_REMAINDER_BATCH_PATHS, successor_remainder_batch_bytes,
     SUCCESSOR_CALCULUS_MAP, successor_calculus_map_bytes,
     GENERATED_FIXTURE_PATHS, generated_fixture_bytes,
     is_binding_record, binding_record_bytes,
@@ -417,7 +419,52 @@ def _digest_record_reference(src, cited):
     return None
 
 
+def _successor_read_batch_reference(src, cited):
+    """Resolve finite preserved source coordinates before ordinary exists()."""
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for path in candidates:
+        if path in SUCCESSOR_READ_BATCH_PATHS:
+            try:
+                successor_read_batch_bytes(ROOT, path)
+                return True
+            except (ValueError, OSError):
+                return False
+    return None
+
+
+def _successor_remainder_batch_reference(src, cited):
+    """Resolve finite preserved source coordinates before ordinary exists()."""
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for path in candidates:
+        if path in SUCCESSOR_REMAINDER_BATCH_PATHS:
+            try:
+                successor_remainder_batch_bytes(ROOT, path)
+                return True
+            except (ValueError, OSError):
+                return False
+    return None
+
+
+
 def _resolves(src, cited):
+    read_batch = _successor_read_batch_reference(src, cited)
+    if read_batch is not None:
+        return read_batch
+    remainder_batch = _successor_remainder_batch_reference(src, cited)
+    if remainder_batch is not None:
+        return remainder_batch
     historical_digest = _digest_record_reference(src, cited)
     if historical_digest is not None:
         return historical_digest
