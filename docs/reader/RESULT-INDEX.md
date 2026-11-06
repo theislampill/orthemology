@@ -171,7 +171,7 @@ These entries preserve **twelve existing result scopes across six works**, not t
 
 Current exposition: [Opaque representations and typing][typed-t13-opaque-current].
 
-**`T13-OPAQUE-REPRESENTATION`.** The [opaque-atom paper][t13-opaque] gives an exposed polynomial `p` and a whole opaque atom `q` whose raw evaluations are literally equal, but only `p` has the specified polymorphic identity type. The proof covers every original typing rule through whole-label replacement and its stated side conditions. The opaque `q` can still have type `Raw`; the failure concerns its prescribed representation at the specified target.
+**`T13-OPAQUE-REPRESENTATION`.** The [incorporated opaque-atom argument][t13-opaque] gives an exposed polynomial `p` and a whole opaque atom `q` whose raw evaluations are literally equal, but only `p` has the specified polymorphic identity type. The proof covers every original typing rule through whole-label replacement and its stated side conditions. The opaque `q` can still have type `Raw`; the failure concerns its prescribed representation at the specified target.
 
 The discarded-loop corollary shows that having a finite typable representative modulo raw conversion does not suffice for that opaque representation. This is **not** a counterexample to forward subject reduction, and it does not show that no other inhabitant exists. Its evidence is ordinary written mathematics; no new Lean status is assigned here.
 
@@ -495,7 +495,7 @@ The positive result is an exact syntactic/semantic preservation theorem for a sp
 
 [t14-group]: ../../experiments/orthemology-v5-successors/groups/t14-identity/README.md
 
-[t13-opaque]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md
+[t13-opaque]: ../../logic/encodings-and-witnesses.md#102-whole-label-replacement-in-the-original-calculus
 [typed-t13-opaque-current]: ../../logic/encodings-and-witnesses.md#103-equal-evaluation-need-not-preserve-a-supplied-typing
 
 [t13-bridge]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md

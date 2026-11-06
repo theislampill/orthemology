@@ -101,7 +101,7 @@ The [learning route](APPLICATIONS.md#learning-without-silently-changing-the-anal
 
 Current exposition: [Opaque representations and typing][typed-t13-opaque-current]; [The atom/application bridge][typed-t13-bridge-current].
 
-The [opaque-atom study][t13-opaque] supplies a negative example for a particular representation at a particular type. The [atom/application bridge][t13-bridge] shows a positive, separately specified repair for closed conversion. Neither result by itself answers whether *any* proof exists of every semantically true identity.
+The [incorporated opaque-atom study][t13-opaque] supplies a negative example for a particular representation at a particular type. The [atom/application bridge][t13-bridge] shows a positive, separately specified repair for closed conversion. Neither result by itself answers whether *any* proof exists of every semantically true identity.
 
 Current exposition: [The historical residual identity question][typed-t13-residual-current]; [Full-rule separation and the closed criterion][typed-t14-separation-current].
 
@@ -265,7 +265,7 @@ The [continuation quotient](../../mathematics/physical-realisation-and-continuat
 [t12-integer]: ../../experiments/orthemology-v5-successors/source-store/6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md
 [t12-clarification]: ../../experiments/orthemology-v5-successors/source-store/32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68/OBSERVATION_ROUTE_CLARIFICATION_v1.md
 
-[t13-opaque]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md
+[t13-opaque]: ../../logic/encodings-and-witnesses.md#102-whole-label-replacement-in-the-original-calculus
 [typed-t13-opaque-current]: ../../logic/encodings-and-witnesses.md#103-equal-evaluation-need-not-preserve-a-supplied-typing
 
 [t13-bridge]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
