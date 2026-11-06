@@ -619,6 +619,24 @@ and let $`L_h`$ contain those $`s\in T`$ for which every prefix passes this test
 
 Every path through $`T`$ supplies all the required finite extensions; the reverse inclusion follows from $`L_h\subseteq T`$. On the diagonal target, $`L_h`$ therefore still has nodes at every level, an effective finite planner obtained by finite search, and no computable path. The random zero-success and closed-generation population obstructions depend on its path set and carry over. The witness in a lookahead test is an extension in the original $`T`$, not a recursively assumed witness to all future lookahead tests. Totality of $`h`$ is a premise, not something this procedure decides. The source's implemented search order may differ from a lexicographic mathematical presentation; correctness does not require identical selected words.
 
+<a id="third-cohort-b-callable-lookahead"></a>
+
+The callback-control source makes a separate implementation obligation visible. It defines a lookahead demand using classical choice from a nonempty natural type, supplies a mathematical `Computable` witness, and applies the lookahead-plan computability theorem. It then asks the runtime auditor to inspect the resulting plan. A proof that the denoted function is computable is not itself extraction of callable code from that particular choice-based definition. The mathematical result in this section retains any total computable demand; a concrete implementation must additionally expose an acceptable executable dependency path. The audit request is not a returned audit verdict. [T750B630]
+
+The finite-horizon and final-prefix probes test other boundaries: `FinitePlansAreCommitted` tries to use the negated commitment theorem as a positive commitment, and `FinalPrefixDropped` asserts away the substantive last-prefix check. Neither is a counterexample to finite planning or a successful improvement of the lookahead theorem. Their deliberate rejection roles remain available alongside the positive primitive-recursive slice and `allBelow` interfaces; no compiler run is claimed here. [T750B591] [T750B635] [T750B663]
+
+[T750B591]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/9d06738e0b4b33535dfb831a52477513b7cc1f52f0836e5224f0d3020cc814d7/FinitePlansAreCommitted.lean
+[T750B630]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/ab3b2d674761b6750ba2adf9232f43f756c659af46c0ec822d25db6bb4181ced/IndependentCallbackChoice.lean
+[T750B635]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/aca58cdca71b8ce183557e3120c7b3290e4992072e633e4a186160dd27258bee/FinalPrefixDropped.lean
+[T750B663]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/b1f51a3e9950a2161392eaf5ff50ad8799cdff6af27955f600dd2d31b64337a8/BasicsRequired.lean
+
+The direct lookahead implementation makes the handoff boundary explicit: `prefixScan` checks every prefix length from zero through the length of the submitted word, **including the final word**. Supplementary witnesses are finite descendants in the base diagonal tree. Equality of infinite path sets holds for every natural-valued h; computability of the finite checker additionally requires computability of h. Thus semantic preservation is not restricted to a fixed lookahead bound, and the computable case is not restricted to primitive recursion. [T750-C739]
+
+The synthesis skeleton controls retain a related nontriviality: its one-bit prefixes pass, `[false,false]` fails while `[false,true]` passes, and its all-false infinite path is excluded by decoding to the base no-computable-path tree. Root admission and a convenient constant-looking choice therefore cannot replace the skeleton argument. These are source-defined checks and proof interfaces, not observations from a fresh run. [T750-C740]
+
+[T750-C739]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/c8e17f92b95417997380e0638c3b6ed04cd15a7146587b8f728085d4306d8d8f/LookaheadAdmission.lean
+[T750-C740]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/c99404e18f06c9a30d827cd20430ca369f507392872127c5a3abd08a60758fda/SkeletonRequired.lean
+
 ### 9.8 The complexity depends on the input language
 
 The companion fixes a decidable syntax of primitive-recursive programs for finite-word predicates. A malformed code denotes the root-only tree; a well-formed code is made rooted and prefix closed by requiring its predicate at every nonempty prefix. Each individual membership predicate is primitive recursive. Universal evaluation over arbitrary primitive-recursive syntax is total computable, but is not itself primitive recursive. That distinction is essential when forming the uniform index sets.
@@ -731,6 +749,25 @@ The reduction takes a **fixed supplied computable matrix** R(a,x,y,z). A partial
 [S250-L420]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/6f25b7d9aec7c81b3fe1b0e40cd772e51179bdb54015e99557098b29a2843c16/PolicySynthesisReduction.lean
 [S250-L271]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/4a83380de4407eb2bf0e481ee5845901633d22f55251e10992221b035852366e/PrunedWitness.lean
 
+#### Exact finite execution and the committed-output obstruction
+
+The direct `ContractComputability` provider proves primitive-recursive data flow for encoding, state abstraction, initialization, execution, migration, termination and request processing. Its prefix-fold identity equates `finiteProcess` with the nth configuration and gives a finite run of the supplied length. The input is finite supplied data; the result does not generate an arbitrary infinite external input stream. [R750A-516]
+
+`CommittedOutput` supplies the extraction step rather than a uniform waiting-time assumption. A partial-recursive search finds the first snapshot exposing bit i. Unbounded output makes that search total, commitment/prefix monotonicity makes the discovered bit independent of which later snapshot is used, and prefix closure gives a computable infinite path. On the diagonal tree this contradicts its no-computable-path theorem. Hence a computable committed always-admitted snapshot process cannot have unbounded output there, however slowly it grows. This retains the existing obstruction for one enacted lineage without extending it to arbitrary revisable finite plans. [R750A-546]
+
+`LookaheadFiniteSearch` enumerates each finite binary level and scans a supplied finite candidate list for the first successful computable predicate. Membership and acceptance give its soundness/completeness; potentially unbounded finite runtimes of those total tests yield no uniform runtime bound. The positive lookahead controls explicitly allow any supplied **Computable**, not merely primitive-recursive, demand, include zero-demand/base and finite-horizon cases, and separate a supplementary base-tree witness from recursively self-extending future witnesses. `ComponentRequired` similarly contrasts cuts at every index with only the initial cut. Its concrete assertions/readbacks, and the `CommitmentRequired` and `CoreAxioms` requests, are interfaces to the existing results rather than new executions or independent proofs. [R750A-549] [R750A-564] [R750A-529] [R750A-559] [R750A-515]
+
+The renewal `RuntimeAudit` follows erased computational values for its named roots, excluding computational classical choice, admitted terms, unsafe/partial values, runtime axioms and unclassified opaques. It logs inherited native/extern boundaries while rejecting authored replacements. Logical proof closure, erased runtime closure and correctness of compiler optimization/native code remain three different obligations. Its source was read; no audit log was obtained. [R750A-560]
+
+[R750A-515]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/88e13feb084cbf5c1daf78535b82b9dc95869101b864c44435bc48fc5c41350e/CoreAxioms.lean
+[R750A-516]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/88e7aa5eb4f1bed37339d1d0261187e952446045ad73b6269cd431d01868152c/ContractComputability.lean
+[R750A-529]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/8d448d2292cdbd98764a76cf63e5dd45a04b5cfd85855cb33fe20492d67c9895/ComponentRequired.lean
+[R750A-546]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/925cd1dbd1d1de0a22e97f98e90c56021bb02c6fbaf5d09bb521dbb547f12d16/CommittedOutput.lean
+[R750A-549]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/9388b8b6d7042ed71e9aa05779e583536d868c40c1feee0c3ed479554c514553/LookaheadFiniteSearch.lean
+[R750A-559]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/9649b19e648fbb346367bdb7d45bc6d624f726fc1d3d96cb8bf66d27168bc561/CommitmentRequired.lean
+[R750A-560]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/965e9a4442cf178d1e2dcc639c95c3f514ae791e4bf9019742bee3360b314efa/RuntimeAudit.lean
+[R750A-564]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/97b01697251ae01ebc1963c7b81695cac8617849757dc3c6d98fb12c67787c81/PositiveControls.lean
+
 <a id="effective-countable-law-recovery"></a>
 
 ### 9.11 A full moment name and an indexed law are different outputs
@@ -794,6 +831,11 @@ so $\|x-x_*\|\le\|x-Tx\|/(1-\kappa)$. A small residual gives a certified error o
 
 The effective assertions in the guide apply to a supplied **computable selected operator**. A classical theorem that some row can be selected from each admissible set does not automatically supply an algorithm for those choices. This is the same existence-versus-effective-access distinction used in §§9.1–9.10, now at the operator level. The guide credits its classical ancestry and later inherited sources separately; its exact finite checks are not proofs of general computability or uniform nonselection. [GUIDE105-G062]
 
+
+The selected renewal audit sources retain different evidence roles. `CoreAxioms` requests axiom readbacks for progress-cut primitive recursion, row-totality/unbounded-cut equivalence, component and synthesis computable-path equivalences, mathematical-path existence, the computable-matrix/policy reduction and checker-code validity. It does not contain the returned axiom lists. `RuntimeChoice` deliberately defines a noncomputable `Classical.choice` value and asks the runtime auditor to inspect it; it is a rejection probe against promoting mathematical choice into effective code, not an extracted controller. Neither source was executed for this discussion. [T750-C677] [T750-C667]
+
+[T750-C677]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/b6cb178b2e7cd1e360eeb2bef59c274e86f3c1844047c59ffa3517df61870913/CoreAxioms.lean
+[T750-C667]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/b33bd6e8846e35bd017c38aeea303771cd627ce3ca2d0a00073e60b11786b217/RuntimeChoice.lean
 
 ## 10. Exact sources, contribution and limits
 

@@ -5517,6 +5517,14 @@ Retaining only cheapest label cuts is insufficient. For supports {a₁}, {a₂,b
 
 Derivability warrants truth only if available primitives are true and the chosen rules preserve the truth interpretation. An ungrounded cycle supplies no proof of itself. Failure of represented derivability does not prove falsity or eliminate an unrepresented warranted route. The occurrence control similarly separates an authenticated past duty, continuing historical force, prospective permission, present applicability and available implementation. Revoking future standing does not erase an established past duty; deleting evidence is another operation. A truthful-duty inference consumes resolved source/content attribution rather than finding it in a string, and ordinary defeasible testimony remains separate. The companion reports comparisons of its Python analyzer against a finite baseline over 2,325 rule systems and 9,300 availability profiles; these are historical bounded checks, not a general Python-to-Lean refinement theorem. [F250-C220, Part 3]
 
+The exact grounded-support argument preserves two degenerate cases which matter to retraction: a claim with an empty support cannot be defeated by removing roots, whereas a claim with no supports is already underivable. A cycle with no primitive or zero-premise rule gives no finite proof. A zero-premise rule is permitted, but its truth still belongs to the rule-soundness premise. The independent controls include both the three-support example above and the six-edge three-by-two bipartite support family: minimizing label cardinality before identifying roots can lose a cheaper root cut. The full inclusion-minimal archive is the quantity that transports. [T750-C670] [T750-C683]
+
+The archive can be chosen **before** any later fixed origin map is supplied: for every such map, map all archived minimal label cuts and inclusion-minimize the images. This is a useful quantifier-order result, not discovery or authentication of that map. The written argument fixes meanings and positive rules while roots are retracted; negative premises, new roots and changed interpretations lie outside that exact survival theorem. Its reported 2,589 antichain/partition cases and forty first failures at four labels are a bounded historical minimality check, separate from the 2,325-system/9,300-profile analyzer comparison. The public scope retains truthful duty attribution, present applicability and prospective authority as distinct inputs; it does not infer jurisdiction from historical wording. [T750-C674] [T750-C683]
+
+[T750-C670]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/b4ca5075b192243907387ac792ce3b37aa109dcfd3f5d38a44a864b10ace36d2/IndependentControls.lean
+[T750-C674]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/b636b305a4d3619801150abf980370cde666a594f8f874eb25cf389c11b6b128/RESEARCH_SCOPE_PUBLIC.md
+[T750-C683]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/b7dd5174207871abbff81e4c499bf74eabc7305402c7d88971e8b12bf96b4037/EXACT_PROBLEM_AND_WRITTEN_PROOF.md
+
 ### Exact probabilities behind the two-word copying control
 
 At independent per-position retention p=1/4, word 00 gives masses 9/16,6/16,1/16 to empty,0,00; word 01 gives 9/16,3/16,3/16,1/16 to empty,0,1,01. All other traces of length at most two have zero mass. Both normalize, and their total variation is 1/4. Copying one realized trace M>0 times is an injective deterministic encoding, preserving total variation and the optimal equal-prior success 5/8; M=0 gives success 1/2. The bound includes arbitrary real randomized policies under the formal ordered-field assumptions, not just a finite rational policy grid. [F250-C220, Part 3]
@@ -5620,6 +5628,42 @@ These orbit arguments belong to classical randomization-test theory. The compani
 The practical consequence is a binding obligation: report the coordinates, legitimate conditioning, population and schedule, full response/availability null, assignment family, statistic and certified numerical scope together. A valid theorem cannot turn a provisional design premise into an observed experimental fact. [AI288]
 
 [AI288]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/4e314f3943df0600fb2166031a696dd1d4a80e9afe407a58d7d9371447091401/Mathematical_Companion_Content_v2.md
+
+The exact public projection of the dated seventeenth mathematical companion provides another source witness for §§9.15.1–9.15.5, already substantively incorporated from [AI288]. Its contribution is the ordinary argument, not a new Lean verification: the full response/availability sharp null and world-conditional assignment law remain separate; fair marginals permit a complement-pair absolute-tail value1; rectangular adaptive intervals give the exact3/4 versus best-product5/8 discriminator; and directed endpoint-product tails give only an upper bound when summed for a two-sided event. Coarsening, unfinished-subtree estimates and Monte Carlo certificates must retain the upper-bound direction for the entire robust optimum. The block-orbit argument needs joint independent-flip invariance, not each block's marginal symmetry; the common-coin1/32 false reference remains its separating example. This source adds attribution to those existing arguments, not a second discovery or evidence authenticating an actual assignment mechanism. [R750A-576]
+
+[R750A-576]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/9b0885cfa2484979b818d968e0785880742a809214e571fca875820d39809cce/Orthemology_Seventeenth_Mathematical_Companion_Final_v1_20261005.md
+
+<a id="third-cohort-b-recorded-coordinate-certificate"></a>
+
+#### 9.15.6 A recorded-coordinate certificate with a separate lower bound
+
+The finite application scope fixes a more specific statistic than the general family above. In the exported game/roster/round population, each game has total opportunity weight one divided by the number K of games, each roster member has equal weight within that game, and each of 48 scheduled rounds has equal weight. Thus an opportunity in game g has weight wᵢ=1/(K m_g 48). Agreement rounds remain coordinates, with disagreement indicator Eᵢ=0. For an available final-state forecast Fᵢ∈[0,100] and local cue direction Lᵢ∈{0,1}, put Bᵢ=(2Lᵢ−1)(Fᵢ/50−1), Yᵢ=Bᵢ, and aᵢ=wᵢEᵢYᵢ; absent responses instead have Yᵢ=0. A present forecast of 50 is available and neutral, whereas a malformed nonempty forecast fails the stated validation. Neither correctness nor reward flags define availability. The zero for an absent response is a zero recorded contribution, not an imputed belief. [T750B652]
+
+With Aᵢ the local-left/global-left sign, the retained statistic is t=|ΣaᵢAᵢ|, coefficient mass L=Σ|aᵢ| and squared mass V=Σaᵢ². The descriptive side-specific field also named V denotes available weighted disagreement mass, not this squared mass. The aggregate identities relating side masses and signed response masses are consistency checks; they do not reconstruct omitted rows or establish what participants saw. Final-state forecasts need not be scoring-time snapshots.
+
+For Γ≥1 and the full-prefix rectangular family with conditional sign probabilities in [1/(1+Γ), Γ/(1+Γ)], let D=((Γ−1)/(Γ+1))L. The source's service encloses min(1,2 exp(−max(t−D,0)²/(2V))), returning one at t=0 or V=0. It is an upper bound rather than the exact robust tail, and no finite Γ has been established as the archive's historical assignment mechanism. The maintained sharp null freezes the complete recorded response and availability trajectory; conditional assignment validity, legitimate fixed inputs, the schedule and population remain separate premises. [T750B652]
+
+The enclosure has an explicit finite arithmetic proof. For rational x≥0, choose k with y=x/2ᵏ≤1/8. Alternating Taylor sums bracket exp(−y). Round the lower endpoint down and the upper endpoint up on a dyadic grid, then square k times with outward rounding. Squaring is monotone on the nonnegative endpoints, so induction preserves inclusion. Upward rounding prevents a positive upper bound from becoming zero solely through underflow. This gives an absolute enclosure, not relative accuracy for tiny probabilities; an upper decimal display also rounds upward.
+
+An upper bound of one cannot prove nonrejection by a lower bound on the true tail. The separate certificate supplies that missing direction under two strict aggregate inequalities. Put M=1/(K·48), so |aᵢ|≤M. If
+
+\[
+100t^2<121V,\qquad 1000000M^2<3721V,
+\]
+
+then z=t/√V<11/10 and Σ|aᵢ|³/V^(3/2)≤M/√V<61/1000. For independent fair signs, the external Berry–Esseen input with constant weakened to one bounds the distribution-function error by that third-moment ratio. Its attributed source is Tyurin, *New estimates of the convergence rate in the Lyapunov theorem* (2009), Theorem 7; that theorem's proof is not reproduced here. [T750B652]
+
+The normal comparison is elementary: exp(−v)≤1−v+v²/2 and 1/√(2π)<5/12 imply Φ(11/10)<53/60. Using the inclusive two-sided tail, retaining atoms at either threshold, gives
+
+\[
+\Pr_{\rm fair}(|S|\ge t)>7/30-2(61/1000)=167/1500>1/20.
+\]
+
+The fair law belongs to each stated Γ-family, so the robust supremum is at least this fair tail. This does not lower-bound every individual law in the family. Equality in either strict predicate fails this particular sufficient certificate. At t=0 the inclusive tail is one; t>0 with V=0 is inconsistent with the fixed coefficient sum.
+
+The lower certificate was selected after inspection of the aggregate and is not a prospective test plan. Its conclusion is conditional nonrejection for this statistic, not equivalence, power, latent source reliance, a cognitive mechanism or historical design validity. The exact aggregate values and predicate outcomes are not newly recomputed here; neither primary rows nor the external theorem proof were acquired for this incorporation. [T750B652]
+
+[T750B652]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/b03cdb548ca0d5b3b24a75af9906e968fa29140dd064e1032119b41a3a867f71/FINITE_MATH_SCOPE.md
 
 ## 10. Assumptions, negative results, and open scope
 
