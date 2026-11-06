@@ -146,7 +146,7 @@ f: if x=0 then (if y=0 then 7 else y+1)
    else xy+x+y+1
 ```
 
-Their four zero/nonzero cells have the same respective polynomials: `7`, `y+1`, `x+1`, and `xy+x+y+1`. This is not random testing: complete mask normalisation is justified by the grammar's nonnegative arithmetic and zero tests. The [source example][t15-paper-4] and [Python reference][t15-json-reference] make the input and certificate inspectable; the [Lean checker][t15-checker-lean] has its own complete typed interface.
+Their four zero/nonzero cells have the same respective polynomials: `7`, `y+1`, `x+1`, and `xy+x+y+1`. This is not random testing: complete mask normalisation is justified by the grammar's nonnegative arithmetic and zero tests. The [normalisation and certificate argument][t15-paper-4] explains completeness; the [Python reference][t15-json-reference] makes the input and certificate formats inspectable; the [Lean checker][t15-checker-lean] has its own complete typed interface.
 
 A contrasting source example compares `x` with `x²`. Agreement at zero and one is insufficient: the positive cell's degree-bound grid includes `1,2,3` and finds the witness `2`. Arity zero has an empty-tuple **input**, not no inputs. Missing that cell or using a fixed arbitrary test budget would break the contract.
 
@@ -296,13 +296,13 @@ First identify future-behaviour classes conditional on retained side information
 
 [t14-certificates]: ../../experiments/orthemology-v5-successors/source-store/2c16dbf40f6a945785b51ddc230a0e1f78004fe716a0412492b4345be8c95734/Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md
 
-[t15-paper-4]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#restricted-semantic-identity-completeness-for-natural-number-expressions-in-p01ac
+[t15-paper-4]: ../../logic/encodings-and-witnesses.md#153-an-exactly-decidable-multivariate-fragment
 
 [t15-json-reference]: ../../experiments/orthemology-v5-successors/source-store/8f5ba88d07447c8c92d49161f82118f805cae707404b477c81936828103d60ef/certificate_checker.py
 
 [t15-checker-lean]: ../../experiments/orthemology-v5-successors/source-store/989b586bcd7b333e62c4a811f9d094c8347b5f89f703b0c4a2618b9f85124f02/IdentityChecker.lean
 
-[t15-paper-6]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#what-final-answers-can-identify-about-collective-evidence-use
+[t15-paper-6]: ../../mathematics/collective-inquiry-and-strategic-coordination.md#8-what-final-judgments-identify-about-evidence-use
 
 [t15-attribution-guide]: ../../experiments/orthemology-v5-successors/groups/t15-attribution/README.md
 

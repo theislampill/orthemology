@@ -527,17 +527,17 @@ The positive result is an exact syntactic/semantic preservation theorem for a sp
 
 [t15-identity-owner]: ../../experiments/orthemology-v5-successors/groups/t15-identity/README.md
 
-[t15-paper-1]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#exact-complexity-of-original-semantic-identity
+[t15-paper-1]: ../../logic/encodings-and-witnesses.md#151-raw-valued-identity-has-an-exact-second-level-classification
 
-[t15-paper-2]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#boolean-identity-completeness
+[t15-paper-2]: ../../logic/encodings-and-witnesses.md#152-boolean-observations-change-both-the-bound-and-the-role-of-typing
 
-[t15-paper-3]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#bare-boolean-identity-and-fixed-type-typability
+[t15-paper-3]: ../../logic/encodings-and-witnesses.md#152-boolean-observations-change-both-the-bound-and-the-role-of-typing
 
-[t15-paper-4]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#restricted-semantic-identity-completeness-for-natural-number-expressions-in-p01ac
+[t15-paper-4]: ../../logic/encodings-and-witnesses.md#153-an-exactly-decidable-multivariate-fragment
 
-[t15-paper-5]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#polynomial-equality-tests-and-the-boundary-of-effective-semantic-identity-completeness
+[t15-paper-5]: ../../logic/encodings-and-witnesses.md#154-one-root-equality-test-crosses-the-general-boundary-but-not-at-arity-one
 
-[t15-paper-6]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#what-final-answers-can-identify-about-collective-evidence-use
+[t15-paper-6]: ../../mathematics/collective-inquiry-and-strategic-coordination.md#8-what-final-judgments-identify-about-evidence-use
 
 [t15-checker-lean]: ../../experiments/orthemology-v5-successors/source-store/989b586bcd7b333e62c4a811f9d094c8347b5f89f703b0c4a2618b9f85124f02/IdentityChecker.lean
 
