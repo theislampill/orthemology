@@ -1350,6 +1350,23 @@ N_{d,2}=\sum_{i=0}^{d}(-1)^i\binom di(2^{d-i}-1)^d.
 
 First require each row to be nonempty, then exclude empty columns. At $`d=2`$, there are seven relations, requiring three fixed-length bits. Restricting to bijective alignments instead gives $`d!`$ relations and $`\lceil\log_2(d!)\rceil`$ bits. This is elementary counting applied to a specified task family, not a claim that one Boolean question or every continuation requires exponential storage. A restricted generative relation class or genuine later source access can have a different budget.
 
+#### A finite attributed-reading fixture keeps absence distinct from choice
+
+The exact occurrence README and checker give a documentary control for the joint-binding problem. They specify seven manually interpreted claim records, of which six supply all three antecedent coordinates and one supplies (M,M,unspecified). The complete-record projection is the two-row relation
+
+```math
+R=\{(M,M,G),(G,G,G)\}.
+```
+
+The product of its coordinate projections adds exactly (G,M,G) and (M,G,G). Thus independently preserving the three marginal alternatives loses the first-two-coordinate equality that every supplied complete reading retains. This is a calculation under the fixture's declared interpretation, not a newly authenticated reading of its underlying sources. [Q250B-071] [Q250B-072]
+
+Unspecified content is not a wildcard. The checker excludes the partial record from the complete relation: it licenses neither (M,M,M) nor a newly completed (M,M,G) on that partial record's authority alone. The complete (M,M,G) row has its other complete-record support. Copying a record preserves the same distinct claim identifiers and complete relation, rather than adding an independent acquisition or reading. The source also separates a work's direct exposition from its report of another person's view; occurrence order does not establish exclusive final preference, and a reported group label is not a measured population. [Q250B-071] [Q250B-072]
+
+The seven frozen contract hashes include work, role, antecedents, attributed holder/selector and qualifications. They detect drift in those supplied fields. They do not prove the attribution or interpretation, independently acquire the named earlier authorities, or authenticate primary wording. The checker imports a separate source_rows.json fixture, which has not been opened or reconstructed in this reconciliation. The public description expressly excludes Arabic certification, a religious verdict and a live-application result. These boundaries preserve the positive finite relational example without turning its internal consistency into world-facing warrant. [Q250B-071] [Q250B-072]
+
+[Q250B-071]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/2ee521ec9c1a5508b4c8f6be80d87265b736a64e3eac6125e77566d7eba8f5c6/README.md
+[Q250B-072]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/3a34860f74ea5bf75b4ed1cf8322a21abbd65985dabc9a85aa14fc25e44d24b7/check.py
+
 #### Shared authority and future competence are not copied into existence
 
 An authentic grant permitting one of two successor roles to perform one exclusive operation can make each role's solo continuation possible without permitting both uses simultaneously. Copying the grant or translating its wording does not reset its allocation, expiry or use count. A genuinely shareable grant can permit both; branching itself is not the defect.
