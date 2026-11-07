@@ -10,12 +10,12 @@ One physical suite may support several explicitly bound families. Repeated impor
 
 | Result | Evidence form | Fresh evidence | Physical suite |
 | --- | --- | --- | --- |
-| [T07-CRITERION-V3](#t07-criterion-v3) | MIXED / REFERENCE_EXECUTION | FRESH_KERNEL_COMPONENTS | [D04-T07-CRITERION-ORIGINAL](../../suites/D04-T07-CRITERION-ORIGINAL.json) |
-| [T07-DYNAMIC-V2](#t07-dynamic-v2) | MIXED / UNBOUNDED_MODEL | FRESH_KERNEL_COMPONENTS | [D04-T07-DYNAMIC-ORIGINAL](../../suites/D04-T07-DYNAMIC-ORIGINAL.json) |
-| [T07-UNKNOWN-ROOT-ABC](#t07-unknown-root-abc) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D04-T07-ATTRIBUTION-ORIGINAL](../../suites/D04-T07-ATTRIBUTION-ORIGINAL.json) |
-| [T07-COVERING-OPAQUE](#t07-covering-opaque) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D04-T07-COVERING-ORIGINAL](../../suites/D04-T07-COVERING-ORIGINAL.json) |
-| [T07-FINITE-HISTORY](#t07-finite-history) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D04-T07-HISTORY-ORIGINAL](../../suites/D04-T07-HISTORY-ORIGINAL.json) |
-| [T07-COMPILED-COMPOSITION](#t07-compiled-composition) | MIXED / REFERENCE_EXECUTION | FRESH_KERNEL_COMPONENTS | [D04-T07-COMPOSITION-ORIGINAL](../../suites/D04-T07-COMPOSITION-ORIGINAL.json) |
+| [T07-CRITERION-V3](#t07-criterion-v3) | MIXED / REFERENCE_EXECUTION | FRESH_KERNEL_COMPONENTS | [D04-T07-CRITERION-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D04-T07-CRITERION-ORIGINAL.json) |
+| [T07-DYNAMIC-V2](#t07-dynamic-v2) | MIXED / UNBOUNDED_MODEL | FRESH_KERNEL_COMPONENTS | [D04-T07-DYNAMIC-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D04-T07-DYNAMIC-ORIGINAL.json) |
+| [T07-UNKNOWN-ROOT-ABC](#t07-unknown-root-abc) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D04-T07-ATTRIBUTION-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D04-T07-ATTRIBUTION-ORIGINAL.json) |
+| [T07-COVERING-OPAQUE](#t07-covering-opaque) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D04-T07-COVERING-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D04-T07-COVERING-ORIGINAL.json) |
+| [T07-FINITE-HISTORY](#t07-finite-history) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D04-T07-HISTORY-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D04-T07-HISTORY-ORIGINAL.json) |
+| [T07-COMPILED-COMPOSITION](#t07-compiled-composition) | MIXED / REFERENCE_EXECUTION | FRESH_KERNEL_COMPONENTS | [D04-T07-COMPOSITION-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D04-T07-COMPOSITION-ORIGINAL.json) |
 
 ## Replay status and retained attempts
 

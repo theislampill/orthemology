@@ -342,5 +342,2900 @@
         }
       }
     }
+  ],
+  "invalid_fixtures": [
+    {
+      "id": "I01-empty-task-analysis",
+      "why": "an analysis whose task is the empty string and which declares no other D1 component: the R4 declaration contract requires every component to carry a nonempty value or an explicit typed disposition, and '' is neither",
+      "expect_layer": "schema",
+      "schema": "analysis.schema.json",
+      "instance": {
+        "analysis_id": "AN-1",
+        "version": "1",
+        "task": "",
+        "repertoire_ref": "rep-1"
+      }
+    },
+    {
+      "id": "I02-empty-id-metaortheme",
+      "why": "a metaortheme type with an empty mu_id: a governing type that cannot be named cannot be cited by a token",
+      "expect_layer": "schema",
+      "schema": "metaortheme.schema.json",
+      "instance": {
+        "mu_id": "",
+        "version": "1",
+        "governed_component": "E",
+        "states": {
+          "members": [
+            "s1",
+            "s2"
+          ]
+        },
+        "exclusivity": "exclusive",
+        "selector": {
+          "kind": "instrument-reading",
+          "description": "read the instrument"
+        },
+        "meta_policy": "act on the obtaining state",
+        "provenance": {
+          "authority": "auth",
+          "warrant": "w",
+          "scope": "sc"
+        }
+      }
+    },
+    {
+      "id": "I03-duplicate-state-metaortheme",
+      "why": "a metaortheme whose declared state set repeats a member: S_mu is a SET, and a repeated member silently changes what 'exhaustive' and 'exclusive' mean",
+      "expect_layer": "schema",
+      "schema": "metaortheme.schema.json",
+      "instance": {
+        "mu_id": "mu-1",
+        "version": "1",
+        "governed_component": "E",
+        "states": {
+          "members": [
+            "s1",
+            "s1"
+          ]
+        },
+        "exclusivity": "exclusive",
+        "selector": {
+          "kind": "instrument-reading",
+          "description": "read the instrument"
+        },
+        "meta_policy": "act on the obtaining state",
+        "provenance": {
+          "authority": "auth",
+          "warrant": "w",
+          "scope": "sc"
+        }
+      }
+    },
+    {
+      "id": "I04-bare-string-selector-metaortheme",
+      "why": "a metaortheme whose selector is a bare string: a state-selecting procedure that cannot be inspected for kind and description is not a declared selector",
+      "expect_layer": "schema",
+      "schema": "metaortheme.schema.json",
+      "instance": {
+        "mu_id": "mu-1",
+        "version": "1",
+        "governed_component": "E",
+        "states": {
+          "members": [
+            "s1",
+            "s2"
+          ]
+        },
+        "exclusivity": "exclusive",
+        "selector": "read the instrument",
+        "meta_policy": "act on the obtaining state",
+        "provenance": {
+          "authority": "auth",
+          "warrant": "w",
+          "scope": "sc"
+        }
+      }
+    },
+    {
+      "id": "I05-empty-anchor-metaorthemma",
+      "why": "a metaorthemma whose anchor identity is empty: a case-bound token bound to no case",
+      "expect_layer": "schema",
+      "schema": "metaorthemma.schema.json",
+      "instance": {
+        "token_id": "tok-1",
+        "of_type": {
+          "mu_id": "mu-1",
+          "mu_version": "1"
+        },
+        "analysis": {
+          "analysis_id": "AN-1",
+          "version": "1"
+        },
+        "anchor": {
+          "identity_key": "",
+          "version": "1"
+        },
+        "governed_component": "E",
+        "binding": {
+          "datum": "d"
+        },
+        "scope": {
+          "no_claim_dependency_reason": "no ledger accompanies this fixture"
+        },
+        "binder": {
+          "actor": "binder-1",
+          "binding_warrant": "w",
+          "binding_time": "2026-07-01"
+        },
+        "validity": {
+          "effective_from": "2026-07-01"
+        },
+        "no_separate_executor_reason": "no executor is designated separately from the binder in this fixture"
+      }
+    },
+    {
+      "id": "I06-plural-metaorthemma-type",
+      "why": "a metaorthemma carrying two of_type entries. Single-typing is the R4 rule; many-to-many MetaInst is an unimplemented future extension, and a record that assumes it must not validate against the shipped model",
+      "expect_layer": "schema",
+      "schema": "metaorthemma.schema.json",
+      "instance": {
+        "token_id": "tok-1",
+        "of_type": [
+          {
+            "mu_id": "mu-1",
+            "mu_version": "1"
+          },
+          {
+            "mu_id": "mu-2",
+            "mu_version": "1"
+          }
+        ],
+        "analysis": {
+          "analysis_id": "AN-1",
+          "version": "1"
+        },
+        "anchor": {
+          "identity_key": "k",
+          "version": "1"
+        },
+        "governed_component": "E",
+        "binding": {
+          "datum": "d"
+        },
+        "scope": {
+          "no_claim_dependency_reason": "no ledger accompanies this fixture"
+        },
+        "binder": {
+          "actor": "binder-1",
+          "binding_warrant": "w",
+          "binding_time": "2026-07-01"
+        },
+        "validity": {
+          "effective_from": "2026-07-01"
+        },
+        "no_separate_executor_reason": "no executor is designated separately from the binder in this fixture"
+      }
+    },
+    {
+      "id": "I07-empty-metaorthemma-binding",
+      "why": "a metaorthemma with an empty binding map: by the M1 zero-burden rule a token exists only where material binding exists",
+      "expect_layer": "schema",
+      "schema": "metaorthemma.schema.json",
+      "instance": {
+        "token_id": "tok-1",
+        "of_type": {
+          "mu_id": "mu-1",
+          "mu_version": "1"
+        },
+        "analysis": {
+          "analysis_id": "AN-1",
+          "version": "1"
+        },
+        "anchor": {
+          "identity_key": "k",
+          "version": "1"
+        },
+        "governed_component": "E",
+        "binding": {},
+        "scope": {
+          "no_claim_dependency_reason": "no ledger accompanies this fixture"
+        },
+        "binder": {
+          "actor": "binder-1",
+          "binding_warrant": "w",
+          "binding_time": "2026-07-01"
+        },
+        "validity": {
+          "effective_from": "2026-07-01"
+        },
+        "no_separate_executor_reason": "no executor is designated separately from the binder in this fixture"
+      }
+    },
+    {
+      "id": "I08-unresolved-residual-without-queue",
+      "why": "a residual disposed 'unresolved' with no responsible queue and no next review condition: an abandoned burden wearing an honest-sounding label",
+      "expect_layer": "schema",
+      "schema": "claim-ledger.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "claims": [
+          {
+            "claim_id": "q-1",
+            "proposition": "the fixture's subject holds",
+            "target": {
+              "identity_key": "k",
+              "version": "1"
+            },
+            "analysis": {
+              "analysis_id": "AN-1",
+              "version": "1"
+            },
+            "property_class": "structural",
+            "success_surface": "the fixture's declared surface",
+            "evidence_inapplicable_reason": "this fixture registers no evidence item",
+            "verification_status": "provisional"
+          }
+        ],
+        "residuals": [
+          {
+            "burden_id": "b-1",
+            "description": "the fixture's burden",
+            "disposition": "unresolved"
+          }
+        ]
+      }
+    },
+    {
+      "id": "I09-deferred-residual-without-trigger",
+      "why": "a residual disposed 'deferred' with neither a trigger nor a review date: deferral with no condition of return is indistinguishable from dropping the burden",
+      "expect_layer": "schema",
+      "schema": "claim-ledger.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "claims": [
+          {
+            "claim_id": "q-1",
+            "proposition": "the fixture's subject holds",
+            "target": {
+              "identity_key": "k",
+              "version": "1"
+            },
+            "analysis": {
+              "analysis_id": "AN-1",
+              "version": "1"
+            },
+            "property_class": "structural",
+            "success_surface": "the fixture's declared surface",
+            "evidence_inapplicable_reason": "this fixture registers no evidence item",
+            "verification_status": "provisional"
+          }
+        ],
+        "residuals": [
+          {
+            "burden_id": "b-1",
+            "description": "the fixture's burden",
+            "disposition": "deferred"
+          }
+        ]
+      }
+    },
+    {
+      "id": "I10-transferred-residual-without-receiver",
+      "why": "a residual disposed 'transferred' with no receiver and no transfer record: a burden transferred to nobody has not been transferred",
+      "expect_layer": "schema",
+      "schema": "claim-ledger.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "claims": [
+          {
+            "claim_id": "q-1",
+            "proposition": "the fixture's subject holds",
+            "target": {
+              "identity_key": "k",
+              "version": "1"
+            },
+            "analysis": {
+              "analysis_id": "AN-1",
+              "version": "1"
+            },
+            "property_class": "structural",
+            "success_surface": "the fixture's declared surface",
+            "evidence_inapplicable_reason": "this fixture registers no evidence item",
+            "verification_status": "provisional"
+          }
+        ],
+        "residuals": [
+          {
+            "burden_id": "b-1",
+            "description": "the fixture's burden",
+            "disposition": "transferred"
+          }
+        ]
+      }
+    },
+    {
+      "id": "I11-owner-assigned-residual-without-owner",
+      "why": "a residual disposed 'owner-assigned' with no owner and no acceptance state: assignment requires someone to have been assigned, and to have accepted or not",
+      "expect_layer": "schema",
+      "schema": "claim-ledger.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "claims": [
+          {
+            "claim_id": "q-1",
+            "proposition": "the fixture's subject holds",
+            "target": {
+              "identity_key": "k",
+              "version": "1"
+            },
+            "analysis": {
+              "analysis_id": "AN-1",
+              "version": "1"
+            },
+            "property_class": "structural",
+            "success_surface": "the fixture's declared surface",
+            "evidence_inapplicable_reason": "this fixture registers no evidence item",
+            "verification_status": "provisional"
+          }
+        ],
+        "residuals": [
+          {
+            "burden_id": "b-1",
+            "description": "the fixture's burden",
+            "disposition": "owner-assigned"
+          }
+        ]
+      }
+    },
+    {
+      "id": "I12-risk-accepted-residual-without-risk-record",
+      "why": "a residual disposed 'risk-accepted' with no risk owner, rationale, scope or review trigger: unbounded, unowned, unreviewable risk acceptance",
+      "expect_layer": "schema",
+      "schema": "claim-ledger.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "claims": [
+          {
+            "claim_id": "q-1",
+            "proposition": "the fixture's subject holds",
+            "target": {
+              "identity_key": "k",
+              "version": "1"
+            },
+            "analysis": {
+              "analysis_id": "AN-1",
+              "version": "1"
+            },
+            "property_class": "structural",
+            "success_surface": "the fixture's declared surface",
+            "evidence_inapplicable_reason": "this fixture registers no evidence item",
+            "verification_status": "provisional"
+          }
+        ],
+        "residuals": [
+          {
+            "burden_id": "b-1",
+            "description": "the fixture's burden",
+            "disposition": "risk-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "id": "I13-validated-resolved-without-evidence",
+      "why": "a residual disposed 'validated-resolved' with neither evidence nor verdict references: 'done' is not a disposition",
+      "expect_layer": "schema",
+      "schema": "claim-ledger.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "claims": [
+          {
+            "claim_id": "q-1",
+            "proposition": "the fixture's subject holds",
+            "target": {
+              "identity_key": "k",
+              "version": "1"
+            },
+            "analysis": {
+              "analysis_id": "AN-1",
+              "version": "1"
+            },
+            "property_class": "structural",
+            "success_surface": "the fixture's declared surface",
+            "evidence_inapplicable_reason": "this fixture registers no evidence item",
+            "verification_status": "provisional"
+          }
+        ],
+        "residuals": [
+          {
+            "burden_id": "b-1",
+            "description": "the fixture's burden",
+            "disposition": "validated-resolved"
+          }
+        ]
+      }
+    },
+    {
+      "id": "I14-payload-free-handoff",
+      "why": "a handoff packet carrying no state claims, no evidence, no authority claims, no residual obligations and no requested action: a correctly addressed envelope that transports nothing",
+      "expect_layer": "schema",
+      "schema": "handoff.schema.json",
+      "instance": {
+        "packet_id": "pkt-1",
+        "packet_version": "1",
+        "sender_episode": "e1",
+        "receiver_episode": "e2",
+        "edge_label": "handoff",
+        "subject": {
+          "identity_key": "k",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "id": "I15-handoff-state-claim-without-valid-for-version",
+      "why": "a handoff whose state claim omits valid_for_version: a claim crossing an edge without the (kappa, v) it was established for is exactly how stale evidence propagates",
+      "expect_layer": "schema",
+      "schema": "handoff.schema.json",
+      "instance": {
+        "packet_id": "pkt-1",
+        "packet_version": "1",
+        "sender_episode": "e1",
+        "receiver_episode": "e2",
+        "edge_label": "handoff",
+        "subject": {
+          "identity_key": "k",
+          "version": "1"
+        },
+        "state_claims": [
+          {
+            "claim_id": "q-1",
+            "scope": "the whole subject",
+            "analysis_id": "AN-1",
+            "analysis_version": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "I16-skeletal-audit-ready-episode",
+      "why": "an episode declaring record_mode 'audit-ready' while carrying an empty actor, no evidence and no evidence_absent_reason, an empty placement, and neither a claim ledger nor a verdict record: the skeletal record the R3 schemas accepted, now rejected on its own audit claim",
+      "expect_layer": "schema",
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "record_mode": "audit-ready",
+        "occurrence": {
+          "identity_key": "k",
+          "version": "1",
+          "kind": "case"
+        },
+        "actor": "",
+        "analysis": {
+          "analysis_id": "AN-1",
+          "version": "1"
+        },
+        "time": "",
+        "placement": {},
+        "observation": "",
+        "evidence": [],
+        "warrant": null,
+        "policy": "",
+        "verdict_record_ref": null
+      }
+    },
+    {
+      "id": "I17-verdict-without-objectivity-index",
+      "why": "a verdict record with no index block. Pathway adequacy is objective GIVEN an analysis, an evaluating actor, a decision time and an information state; a record that omits them overstates its own objectivity (finding B3)",
+      "expect_layer": "schema",
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "required_path": [
+          "EVIDENCE_SUPPORT"
+        ],
+        "statuses": {
+          "EVIDENCE_SUPPORT": "pass"
+        },
+        "pathway_state": "adequate"
+      }
+    },
+    {
+      "id": "I18-free-form-relspec",
+      "why": "a verdict record whose rel_spec is a free-form prose string. PROCEDURE_RELIABLE requires a named procedure, reference class, risk stratum, metric, threshold, protocol, evidence basis and a pre-outcome declaration timestamp — none of which a sentence supplies",
+      "expect_layer": "schema",
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "index": {
+          "analysis_id": "AN-1",
+          "analysis_version": "1",
+          "actor": "reviewer",
+          "decision_time": "2026-07-01T12:00:00Z",
+          "information_state": "the statuses recorded in this fixture, as available at decision time"
+        },
+        "required_path": [
+          "PROCEDURE_RELIABLE"
+        ],
+        "statuses": {
+          "PROCEDURE_RELIABLE": "pass"
+        },
+        "pathway_state": "adequate",
+        "rel_spec": {
+          "q-1": "reference class: everything; metric: it usually works"
+        }
+      }
+    },
+    {
+      "id": "I19-free-form-perturbspec",
+      "why": "a verdict record whose perturb_spec is a free-form prose string. ROBUST_NEIGHBORHOOD requires a declared neighborhood — an enumeration or a measure, invariants, varied fields, a rebinding rule and a failure criterion",
+      "expect_layer": "schema",
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "index": {
+          "analysis_id": "AN-1",
+          "analysis_version": "1",
+          "actor": "reviewer",
+          "decision_time": "2026-07-01T12:00:00Z",
+          "information_state": "the statuses recorded in this fixture, as available at decision time"
+        },
+        "required_path": [
+          "ROBUST_NEIGHBORHOOD"
+        ],
+        "statuses": {
+          "ROBUST_NEIGHBORHOOD": "pass"
+        },
+        "pathway_state": "adequate",
+        "perturb_spec": {
+          "q-1": "we tried some similar cases and it held up"
+        }
+      }
+    },
+    {
+      "id": "I20-perturbspec-without-enumeration-or-measure",
+      "why": "a PerturbSpec declaring neither a finite enumeration nor a probability measure: the neighborhood is named but never delimited, so 'robust over it' says nothing checkable",
+      "expect_layer": "schema",
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "index": {
+          "analysis_id": "AN-1",
+          "analysis_version": "1",
+          "actor": "reviewer",
+          "decision_time": "2026-07-01T12:00:00Z",
+          "information_state": "the statuses recorded in this fixture, as available at decision time"
+        },
+        "required_path": [
+          "ROBUST_NEIGHBORHOOD"
+        ],
+        "statuses": {
+          "ROBUST_NEIGHBORHOOD": "pass"
+        },
+        "pathway_state": "adequate",
+        "perturb_spec": {
+          "q-1": {
+            "neighborhood_family": "the fixture's declared family",
+            "invariants": [
+              "policy"
+            ],
+            "varied_fields": [
+              "marker_presence"
+            ],
+            "metaorthemma_rebinding_rule": "no token is rebound",
+            "failure_criterion": "any probe disagreeing with ground truth",
+            "version": "1",
+            "validity": {
+              "effective_from": "2026-01-01T00:00:00Z",
+              "expiry": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "I21-verdict-missing-required-statuses",
+      "why": "a verdict record whose required path demands PROCEDURE_RELIABLE but records no status for it, while still summarising the pathway as adequate: the conjunction is over the WHOLE required path, so an unrecorded conjunct makes the record unreadable as a claim, not silently true",
+      "expect_layer": "semantic",
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "index": {
+          "analysis_id": "AN-1",
+          "analysis_version": "1",
+          "actor": "reviewer",
+          "decision_time": "2026-07-01T12:00:00Z",
+          "information_state": "the statuses recorded in this fixture, as available at decision time"
+        },
+        "required_path": [
+          "EVIDENCE_SUPPORT",
+          "PROCEDURE_RELIABLE"
+        ],
+        "statuses": {
+          "EVIDENCE_SUPPORT": "pass"
+        },
+        "pathway_state": "adequate"
+      }
+    },
+    {
+      "id": "I22-na-without-reason-outside-required-path",
+      "why": "a not-applicable status on ROUTE_QUALITY, which is NOT on the required path, with no recorded reason. R3 checked na_reasons only inside required_path; 'not tested' is never 'not applicable' anywhere in the record",
+      "expect_layer": "semantic",
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "index": {
+          "analysis_id": "AN-1",
+          "analysis_version": "1",
+          "actor": "reviewer",
+          "decision_time": "2026-07-01T12:00:00Z",
+          "information_state": "the statuses recorded in this fixture, as available at decision time"
+        },
+        "required_path": [
+          "EVIDENCE_SUPPORT"
+        ],
+        "statuses": {
+          "EVIDENCE_SUPPORT": "pass",
+          "ROUTE_QUALITY": "not-applicable"
+        },
+        "pathway_state": "adequate"
+      }
+    },
+    {
+      "id": "I23-contradicted-pathway-summary",
+      "why": "a required verdict fails while the record summarises the pathway as adequate: pathway aggregation must recompute from the statuses, never be asserted alongside them",
+      "expect_layer": "semantic",
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "index": {
+          "analysis_id": "AN-1",
+          "analysis_version": "1",
+          "actor": "reviewer",
+          "decision_time": "2026-07-01T12:00:00Z",
+          "information_state": "the statuses recorded in this fixture, as available at decision time"
+        },
+        "required_path": [
+          "EVIDENCE_SUPPORT",
+          "PROCEDURE_RELIABLE"
+        ],
+        "statuses": {
+          "EVIDENCE_SUPPORT": "pass",
+          "PROCEDURE_RELIABLE": "fail"
+        },
+        "pathway_state": "adequate"
+      }
+    },
+    {
+      "id": "I24-claim-path-collapsed-into-episode-path",
+      "why": "a claim whose own ReqReason projection is entirely passing is recorded as 'defective' because the episode-level pathway is defective (a downstream closure failure). This is finding B2: claim-relative reasoning adequacy is not the episode-level pathway state, and a routing or closure failure must not retroactively flip a soundly reached claim",
+      "expect_layer": "semantic",
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "index": {
+          "analysis_id": "AN-1",
+          "analysis_version": "1",
+          "actor": "reviewer",
+          "decision_time": "2026-07-01T12:00:00Z",
+          "information_state": "the statuses recorded in this fixture, as available at decision time"
+        },
+        "required_path": [
+          "EVIDENCE_SUPPORT",
+          "PROCEDURE_RELIABLE",
+          "CLOSURE_TRUTHFUL"
+        ],
+        "statuses": {
+          "EVIDENCE_SUPPORT": "pass",
+          "PROCEDURE_RELIABLE": "pass",
+          "CLOSURE_TRUTHFUL": "fail"
+        },
+        "pathway_state": "defective",
+        "claim_reasoning_paths": [
+          {
+            "claim_id": "q-1",
+            "req_reason": [
+              "EVIDENCE_SUPPORT",
+              "PROCEDURE_RELIABLE"
+            ],
+            "reasoning_path_adequate": "defective"
+          }
+        ]
+      }
+    },
+    {
+      "id": "I25-relspec-declared-after-the-result",
+      "why": "a RelSpec whose declared_at falls after the decision time it is used to assess. A reliability figure chosen once the outcome is known is a rationalisation, and the pre-outcome declaration requirement is what makes PROCEDURE_RELIABLE non-circular",
+      "expect_layer": "semantic",
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "index": {
+          "analysis_id": "AN-1",
+          "analysis_version": "1",
+          "actor": "reviewer",
+          "decision_time": "2026-07-01T12:00:00Z",
+          "information_state": "the statuses recorded in this fixture, as available at decision time"
+        },
+        "required_path": [
+          "PROCEDURE_RELIABLE"
+        ],
+        "statuses": {
+          "PROCEDURE_RELIABLE": "pass"
+        },
+        "pathway_state": "adequate",
+        "rel_spec": {
+          "q-1": {
+            "procedure_id": "proc-1",
+            "procedure_version": "1",
+            "reference_class": "the fixture's declared reference class",
+            "risk_stratum": "illustrative",
+            "metric": "precision",
+            "threshold": 0.9,
+            "evaluation_protocol": "retrospective adjudication",
+            "evidence_basis": "the fixture's declared basis",
+            "declared_at": "2026-12-31T00:00:00Z",
+            "validity": {
+              "effective_from": "2026-01-01T00:00:00Z",
+              "expiry": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "I26-perturbspec-invariant-also-varied",
+      "why": "a PerturbSpec that lists 'policy' as both invariant and varied. The neighborhood is then incoherent: whatever the probes show, it is not that the result survives varying one thing while the other is held fixed",
+      "expect_layer": "semantic",
+      "schema": "verdict-record.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "index": {
+          "analysis_id": "AN-1",
+          "analysis_version": "1",
+          "actor": "reviewer",
+          "decision_time": "2026-07-01T12:00:00Z",
+          "information_state": "the statuses recorded in this fixture, as available at decision time"
+        },
+        "required_path": [
+          "ROBUST_NEIGHBORHOOD"
+        ],
+        "statuses": {
+          "ROBUST_NEIGHBORHOOD": "pass"
+        },
+        "pathway_state": "adequate",
+        "perturb_spec": {
+          "q-1": {
+            "neighborhood_family": "the fixture's declared family",
+            "enumeration": [
+              "probe-A",
+              "probe-B"
+            ],
+            "invariants": [
+              "policy"
+            ],
+            "varied_fields": [
+              "marker_presence",
+              "policy"
+            ],
+            "metaorthemma_rebinding_rule": "no token is rebound",
+            "failure_criterion": "any probe disagreeing with ground truth",
+            "version": "1",
+            "validity": {
+              "effective_from": "2026-01-01T00:00:00Z",
+              "expiry": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "I27-claim-dependency-cycle",
+      "why": "two claims each depending on the other. A dependency cycle means neither claim's standing can be discharged by the other, while the ledger reads as though both are supported",
+      "expect_layer": "semantic",
+      "schema": "claim-ledger.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "claims": [
+          {
+            "claim_id": "q-1",
+            "proposition": "the fixture's subject holds",
+            "target": {
+              "identity_key": "k",
+              "version": "1"
+            },
+            "analysis": {
+              "analysis_id": "AN-1",
+              "version": "1"
+            },
+            "property_class": "structural",
+            "success_surface": "the fixture's declared surface",
+            "evidence_inapplicable_reason": "this fixture registers no evidence item",
+            "verification_status": "provisional",
+            "depends_on_claims": [
+              "q-2"
+            ]
+          },
+          {
+            "claim_id": "q-2",
+            "proposition": "the fixture's subject holds",
+            "target": {
+              "identity_key": "k",
+              "version": "1"
+            },
+            "analysis": {
+              "analysis_id": "AN-1",
+              "version": "1"
+            },
+            "property_class": "structural",
+            "success_surface": "the fixture's declared surface",
+            "evidence_inapplicable_reason": "this fixture registers no evidence item",
+            "verification_status": "provisional",
+            "depends_on_claims": [
+              "q-1"
+            ]
+          }
+        ],
+        "residuals": [
+          {
+            "burden_id": "b-1",
+            "description": "the fixture's burden",
+            "disposition": "unresolved",
+            "responsible_queue": "q",
+            "next_review_condition": "at the next review"
+          }
+        ]
+      }
+    },
+    {
+      "id": "I28-token-anchored-to-another-occurrence",
+      "why": "a schema-complete episode whose governing token is anchored to a different occurrence and a different analysis than the episode itself: the token governs a case that is not the case being decided",
+      "expect_layer": "semantic",
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "e1",
+        "record_mode": "minimal",
+        "occurrence": {
+          "identity_key": "k",
+          "version": "1",
+          "kind": "case"
+        },
+        "actor": "a",
+        "analysis": {
+          "analysis_id": "AN-1",
+          "version": "1"
+        },
+        "time": "2026-07-01T12:00:00Z",
+        "placement": {
+          "axis": "v"
+        },
+        "observation": "what the episode saw",
+        "evidence": [],
+        "warrant": null,
+        "policy": "p",
+        "verdict_record_ref": null,
+        "meta_tokens": [
+          {
+            "token_id": "tok-1",
+            "of_type": {
+              "mu_id": "mu-1",
+              "mu_version": "1"
+            },
+            "analysis": {
+              "analysis_id": "AN-OTHER",
+              "version": "9"
+            },
+            "anchor": {
+              "identity_key": "OTHER-CASE",
+              "version": "9"
+            },
+            "governed_component": "E",
+            "binding": {
+              "datum": "d"
+            },
+            "scope": {
+              "no_claim_dependency_reason": "no ledger accompanies this fixture"
+            },
+            "binder": {
+              "actor": "binder-1",
+              "binding_warrant": "w",
+              "binding_time": "2026-07-01"
+            },
+            "validity": {
+              "effective_from": "2026-07-01"
+            },
+            "no_separate_executor_reason": "no executor is designated separately from the binder in this fixture"
+          }
+        ]
+      }
+    },
+    {
+      "id": "I29-analysis-self-inheritance",
+      "why": "a compact analysis that inherits from ITSELF: the inheritance graph must be acyclic and self-inheritance is forbidden (D1)",
+      "expect_layer": "semantic",
+      "schema": "analysis.schema.json",
+      "instance": {
+        "analysis_id": "an-self",
+        "version": "1.0",
+        "inherits_from": {
+          "analysis_id": "an-self",
+          "version": "1.0"
+        }
+      }
+    },
+    {
+      "id": "I30-analysis-inheritance-cycle",
+      "why": "two compact analyses inheriting from one another, each supplying no constitutive component: the cycle means there is no root full declaration anywhere (audit probe 6.1)",
+      "expect_layer": "semantic",
+      "parts": [
+        {
+          "schema": "analysis.schema.json",
+          "instance": {
+            "analysis_id": "an-a",
+            "version": "1.0",
+            "inherits_from": {
+              "analysis_id": "an-b",
+              "version": "1.0"
+            }
+          }
+        },
+        {
+          "schema": "analysis.schema.json",
+          "instance": {
+            "analysis_id": "an-b",
+            "version": "1.0",
+            "inherits_from": {
+              "analysis_id": "an-a",
+              "version": "1.0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "I31-analysis-unresolved-chain",
+      "why": "a compact analysis chain whose parent never resolves in the bundle: the compact form is admissible ONLY with a resolvable parent, so the effective analysis cannot be materialized",
+      "expect_layer": "semantic",
+      "parts": [
+        {
+          "schema": "analysis.schema.json",
+          "instance": {
+            "analysis_id": "an-child",
+            "version": "1.0",
+            "inherits_from": {
+              "analysis_id": "an-mid",
+              "version": "1.0"
+            }
+          }
+        },
+        {
+          "schema": "analysis.schema.json",
+          "instance": {
+            "analysis_id": "an-mid",
+            "version": "1.0",
+            "inherits_from": {
+              "analysis_id": "an-ghost",
+              "version": "1.0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "I32-token-collision-across-episodes",
+      "why": "the same embedded token_id in two different episodes: token identity is GLOBALLY unique across the bundle (D3); the pre-repair validator checked uniqueness only within each episode",
+      "expect_layer": "semantic",
+      "parts": [
+        {
+          "schema": "orthing-episode.schema.json",
+          "instance": {
+            "episode_id": "ep-one",
+            "record_mode": "minimal",
+            "occurrence": {
+              "identity_key": "occ-x",
+              "version": "v1",
+              "kind": "case"
+            },
+            "observation": "observed state of occ-x",
+            "evidence": [
+              {
+                "evidence_id": "ev-ep-one",
+                "channel": "inspection",
+                "property_class": "behavioral",
+                "scope": "occ-x @ v1",
+                "provenance": "inspector",
+                "validity": "this case"
+              }
+            ],
+            "actor": "actor-ep-one",
+            "warrant": "warrant-1",
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0",
+              "task": "classify occ-x"
+            },
+            "time": "2026-07-10T10:00:00Z",
+            "policy": "declared policy",
+            "placement": {
+              "kind": "class-a"
+            },
+            "verdict_record_ref": null,
+            "meta_tokens": [
+              {
+                "token_id": "tok-shared",
+                "of_type": {
+                  "mu_id": "mu-x",
+                  "mu_version": "1.0"
+                },
+                "analysis": {
+                  "analysis_id": "an-x",
+                  "version": "1.0"
+                },
+                "anchor": {
+                  "identity_key": "occ-x",
+                  "version": "v1"
+                },
+                "governed_component": "V",
+                "binding": {
+                  "threshold": 1
+                },
+                "scope": {
+                  "no_claim_dependency_reason": "illustrative token; no claim depends on it"
+                },
+                "binder": {
+                  "actor": "binder-1",
+                  "binding_warrant": "bw-1",
+                  "binding_time": "2026-07-01T00:00:00Z"
+                },
+                "validity": {
+                  "effective_from": "2026-07-01T00:00:00Z",
+                  "expiry": null,
+                  "superseded_by": null
+                },
+                "no_separate_executor_reason": "episode actor executes under the same warrant"
+              }
+            ]
+          }
+        },
+        {
+          "schema": "orthing-episode.schema.json",
+          "instance": {
+            "episode_id": "ep-two",
+            "record_mode": "minimal",
+            "occurrence": {
+              "identity_key": "occ-x",
+              "version": "v1",
+              "kind": "case"
+            },
+            "observation": "observed state of occ-x",
+            "evidence": [
+              {
+                "evidence_id": "ev-ep-two",
+                "channel": "inspection",
+                "property_class": "behavioral",
+                "scope": "occ-x @ v1",
+                "provenance": "inspector",
+                "validity": "this case"
+              }
+            ],
+            "actor": "actor-ep-two",
+            "warrant": "warrant-1",
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0",
+              "task": "classify occ-x"
+            },
+            "time": "2026-07-10T10:00:00Z",
+            "policy": "declared policy",
+            "placement": {
+              "kind": "class-a"
+            },
+            "verdict_record_ref": null,
+            "meta_tokens": [
+              {
+                "token_id": "tok-shared",
+                "of_type": {
+                  "mu_id": "mu-x",
+                  "mu_version": "1.0"
+                },
+                "analysis": {
+                  "analysis_id": "an-x",
+                  "version": "1.0"
+                },
+                "anchor": {
+                  "identity_key": "occ-x",
+                  "version": "v1"
+                },
+                "governed_component": "V",
+                "binding": {
+                  "threshold": 1
+                },
+                "scope": {
+                  "no_claim_dependency_reason": "illustrative token; no claim depends on it"
+                },
+                "binder": {
+                  "actor": "binder-1",
+                  "binding_warrant": "bw-1",
+                  "binding_time": "2026-07-01T00:00:00Z"
+                },
+                "validity": {
+                  "effective_from": "2026-07-01T00:00:00Z",
+                  "expiry": null,
+                  "superseded_by": null
+                },
+                "no_separate_executor_reason": "episode actor executes under the same warrant"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "I33-standalone-token-unowned",
+      "why": "a standalone metaorthemma record with neither owning_episode nor a declared external scope: its claim scope is uncheckable (D4/D6)",
+      "expect_layer": "semantic",
+      "schema": "metaorthemma.schema.json",
+      "instance": {
+        "token_id": "tok-orphan",
+        "of_type": {
+          "mu_id": "mu-x",
+          "mu_version": "1.0"
+        },
+        "analysis": {
+          "analysis_id": "an-x",
+          "version": "1.0"
+        },
+        "anchor": {
+          "identity_key": "occ-x",
+          "version": "v1"
+        },
+        "governed_component": "V",
+        "binding": {
+          "threshold": 1
+        },
+        "scope": {
+          "no_claim_dependency_reason": "illustrative token; no claim depends on it"
+        },
+        "binder": {
+          "actor": "binder-1",
+          "binding_warrant": "bw-1",
+          "binding_time": "2026-07-01T00:00:00Z"
+        },
+        "validity": {
+          "effective_from": "2026-07-01T00:00:00Z",
+          "expiry": null,
+          "superseded_by": null
+        },
+        "no_separate_executor_reason": "episode actor executes under the same warrant"
+      }
+    },
+    {
+      "id": "I34-token-scope-foreign-claim",
+      "why": "a token owned by an episode but scoping a claim its owning episode's ledger does not contain: scope must resolve against the OWNING episode's ledger(s), not any ledger (D4)",
+      "expect_layer": "semantic",
+      "parts": [
+        {
+          "schema": "orthing-episode.schema.json",
+          "instance": {
+            "episode_id": "ep-own",
+            "record_mode": "minimal",
+            "occurrence": {
+              "identity_key": "occ-x",
+              "version": "v1",
+              "kind": "case"
+            },
+            "observation": "observed state of occ-x",
+            "evidence": [
+              {
+                "evidence_id": "ev-ep-own",
+                "channel": "inspection",
+                "property_class": "behavioral",
+                "scope": "occ-x @ v1",
+                "provenance": "inspector",
+                "validity": "this case"
+              }
+            ],
+            "actor": "actor-ep-own",
+            "warrant": "warrant-1",
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0",
+              "task": "classify occ-x"
+            },
+            "time": "2026-07-10T10:00:00Z",
+            "policy": "declared policy",
+            "placement": {
+              "kind": "class-a"
+            },
+            "verdict_record_ref": null
+          }
+        },
+        {
+          "schema": "claim-ledger.schema.json",
+          "instance": {
+            "episode_id": "ep-own",
+            "claims": [
+              {
+                "claim_id": "c-real",
+                "proposition": "occ-x is class-a",
+                "target": {
+                  "identity_key": "occ-x",
+                  "version": "v1"
+                },
+                "property_class": "behavioral",
+                "success_surface": "occ-x as measured",
+                "evidence_ids": [
+                  "ev-ep-own"
+                ],
+                "verification_status": "validated",
+                "analysis": {
+                  "analysis_id": "an-x",
+                  "version": "1.0"
+                }
+              }
+            ],
+            "residuals": [
+              {
+                "burden_id": "b-ep-own",
+                "description": "verify the placement",
+                "disposition": "validated-resolved",
+                "evidence_refs": [
+                  "ev-ep-own"
+                ],
+                "verdict_refs": [
+                  "ep-own"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "schema": "metaorthemma.schema.json",
+          "instance": {
+            "token_id": "tok-stray",
+            "of_type": {
+              "mu_id": "mu-x",
+              "mu_version": "1.0"
+            },
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0"
+            },
+            "anchor": {
+              "identity_key": "occ-x",
+              "version": "v1"
+            },
+            "governed_component": "V",
+            "binding": {
+              "threshold": 1
+            },
+            "scope": {
+              "claims": [
+                "c-ghost"
+              ]
+            },
+            "binder": {
+              "actor": "binder-1",
+              "binding_warrant": "bw-1",
+              "binding_time": "2026-07-01T00:00:00Z"
+            },
+            "validity": {
+              "effective_from": "2026-07-01T00:00:00Z",
+              "expiry": null,
+              "superseded_by": null
+            },
+            "no_separate_executor_reason": "episode actor executes under the same warrant",
+            "owning_episode": "ep-own"
+          }
+        }
+      ]
+    },
+    {
+      "id": "I35-gc-ghost-mu-edition",
+      "why": "a governing configuration naming a metaortheme edition the bundle does not declare, while the bundle declares another edition of the same mu_id: unresolved mu_refs must be diagnosed (D5)",
+      "expect_layer": "semantic",
+      "parts": [
+        {
+          "schema": "metaortheme.schema.json",
+          "instance": {
+            "mu_id": "mu-x",
+            "version": "1.0",
+            "governed_component": "V",
+            "states": {
+              "members": [
+                "s1",
+                "s2"
+              ],
+              "partition": true
+            },
+            "exclusivity": "exclusive",
+            "selector": {
+              "kind": "inspection",
+              "description": "declared selector"
+            },
+            "meta_policy": "s1: accept; s2: reject",
+            "provenance": {
+              "authority": "board",
+              "warrant": "minute-1",
+              "scope": "occ-x cases"
+            }
+          }
+        },
+        {
+          "schema": "orthing-episode.schema.json",
+          "instance": {
+            "episode_id": "ep-gc",
+            "record_mode": "minimal",
+            "occurrence": {
+              "identity_key": "occ-x",
+              "version": "v1",
+              "kind": "case"
+            },
+            "observation": "observed state of occ-x",
+            "evidence": [
+              {
+                "evidence_id": "ev-ep-gc",
+                "channel": "inspection",
+                "property_class": "behavioral",
+                "scope": "occ-x @ v1",
+                "provenance": "inspector",
+                "validity": "this case"
+              }
+            ],
+            "actor": "actor-ep-gc",
+            "warrant": "warrant-1",
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0",
+              "task": "classify occ-x"
+            },
+            "time": "2026-07-10T10:00:00Z",
+            "policy": "declared policy",
+            "placement": {
+              "kind": "class-a"
+            },
+            "verdict_record_ref": null,
+            "governing_configuration": {
+              "mu_refs": [
+                {
+                  "mu_id": "mu-x",
+                  "mu_version": "2.0"
+                }
+              ],
+              "precedence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "I36-precedence-self-edge",
+      "why": "a precedence self-edge [mu-x, mu-x]: the precedence relation over governing types is irreflexive (D5)",
+      "expect_layer": "semantic",
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "ep-prec-self",
+        "record_mode": "minimal",
+        "occurrence": {
+          "identity_key": "occ-x",
+          "version": "v1",
+          "kind": "case"
+        },
+        "observation": "observed state of occ-x",
+        "evidence": [
+          {
+            "evidence_id": "ev-ep-prec-self",
+            "channel": "inspection",
+            "property_class": "behavioral",
+            "scope": "occ-x @ v1",
+            "provenance": "inspector",
+            "validity": "this case"
+          }
+        ],
+        "actor": "actor-ep-prec-self",
+        "warrant": "warrant-1",
+        "analysis": {
+          "analysis_id": "an-x",
+          "version": "1.0",
+          "task": "classify occ-x"
+        },
+        "time": "2026-07-10T10:00:00Z",
+        "policy": "declared policy",
+        "placement": {
+          "kind": "class-a"
+        },
+        "verdict_record_ref": null,
+        "governing_configuration": {
+          "mu_refs": [
+            {
+              "mu_id": "mu-x",
+              "mu_version": "1.0"
+            }
+          ],
+          "precedence": [
+            [
+              "mu-x",
+              "mu-x"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "I37-precedence-cycle",
+      "why": "a precedence cycle mu-a -> mu-b -> mu-a: precedence must be an acyclic strict partial order over declared governing types (D5)",
+      "expect_layer": "semantic",
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "ep-prec-cycle",
+        "record_mode": "minimal",
+        "occurrence": {
+          "identity_key": "occ-x",
+          "version": "v1",
+          "kind": "case"
+        },
+        "observation": "observed state of occ-x",
+        "evidence": [
+          {
+            "evidence_id": "ev-ep-prec-cycle",
+            "channel": "inspection",
+            "property_class": "behavioral",
+            "scope": "occ-x @ v1",
+            "provenance": "inspector",
+            "validity": "this case"
+          }
+        ],
+        "actor": "actor-ep-prec-cycle",
+        "warrant": "warrant-1",
+        "analysis": {
+          "analysis_id": "an-x",
+          "version": "1.0",
+          "task": "classify occ-x"
+        },
+        "time": "2026-07-10T10:00:00Z",
+        "policy": "declared policy",
+        "placement": {
+          "kind": "class-a"
+        },
+        "verdict_record_ref": null,
+        "governing_configuration": {
+          "mu_refs": [
+            {
+              "mu_id": "mu-a",
+              "mu_version": "1.0"
+            },
+            {
+              "mu_id": "mu-b",
+              "mu_version": "1.0"
+            }
+          ],
+          "precedence": [
+            [
+              "mu-a",
+              "mu-b"
+            ],
+            [
+              "mu-b",
+              "mu-a"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "I38-token-outside-governing-config",
+      "why": "an embedded token whose of_type is not among the episode's declared governing configuration mu_refs: embedded tokens must agree with the governing configuration (D5)",
+      "expect_layer": "semantic",
+      "schema": "orthing-episode.schema.json",
+      "instance": {
+        "episode_id": "ep-tok-outside",
+        "record_mode": "minimal",
+        "occurrence": {
+          "identity_key": "occ-x",
+          "version": "v1",
+          "kind": "case"
+        },
+        "observation": "observed state of occ-x",
+        "evidence": [
+          {
+            "evidence_id": "ev-ep-tok-outside",
+            "channel": "inspection",
+            "property_class": "behavioral",
+            "scope": "occ-x @ v1",
+            "provenance": "inspector",
+            "validity": "this case"
+          }
+        ],
+        "actor": "actor-ep-tok-outside",
+        "warrant": "warrant-1",
+        "analysis": {
+          "analysis_id": "an-x",
+          "version": "1.0",
+          "task": "classify occ-x"
+        },
+        "time": "2026-07-10T10:00:00Z",
+        "policy": "declared policy",
+        "placement": {
+          "kind": "class-a"
+        },
+        "verdict_record_ref": null,
+        "meta_tokens": [
+          {
+            "token_id": "tok-outside",
+            "of_type": {
+              "mu_id": "mu-undeclared",
+              "mu_version": "1.0"
+            },
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0"
+            },
+            "anchor": {
+              "identity_key": "occ-x",
+              "version": "v1"
+            },
+            "governed_component": "V",
+            "binding": {
+              "threshold": 1
+            },
+            "scope": {
+              "no_claim_dependency_reason": "illustrative token; no claim depends on it"
+            },
+            "binder": {
+              "actor": "binder-1",
+              "binding_warrant": "bw-1",
+              "binding_time": "2026-07-01T00:00:00Z"
+            },
+            "validity": {
+              "effective_from": "2026-07-01T00:00:00Z",
+              "expiry": null,
+              "superseded_by": null
+            },
+            "no_separate_executor_reason": "episode actor executes under the same warrant"
+          }
+        ],
+        "governing_configuration": {
+          "mu_refs": [
+            {
+              "mu_id": "mu-x",
+              "mu_version": "1.0"
+            }
+          ],
+          "precedence": []
+        }
+      }
+    },
+    {
+      "id": "I39-audit-ready-silent-external-analysis",
+      "why": "an audit-ready episode citing an analysis that resolves nowhere in the bundle, with no external_refs declaration: a SILENT external reference (D6, audit probe 6.6)",
+      "expect_layer": "semantic",
+      "parts": [
+        {
+          "schema": "orthing-episode.schema.json",
+          "instance": {
+            "episode_id": "ep-silent",
+            "record_mode": "audit-ready",
+            "occurrence": {
+              "identity_key": "occ-x",
+              "version": "v1",
+              "kind": "case"
+            },
+            "observation": "observed state of occ-x",
+            "evidence": [
+              {
+                "evidence_id": "ev-ep-silent",
+                "channel": "inspection",
+                "property_class": "behavioral",
+                "scope": "occ-x @ v1",
+                "provenance": "inspector",
+                "validity": "this case"
+              }
+            ],
+            "actor": "actor-ep-silent",
+            "warrant": "warrant-1",
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0",
+              "task": "classify occ-x"
+            },
+            "time": "2026-07-10T10:00:00Z",
+            "policy": "declared policy",
+            "placement": {
+              "kind": "class-a"
+            },
+            "verdict_record_ref": "ep-silent",
+            "claim_ledger_ref": "ep-silent"
+          }
+        },
+        {
+          "schema": "claim-ledger.schema.json",
+          "instance": {
+            "episode_id": "ep-silent",
+            "claims": [
+              {
+                "claim_id": "c-1",
+                "proposition": "occ-x is class-a",
+                "target": {
+                  "identity_key": "occ-x",
+                  "version": "v1"
+                },
+                "property_class": "behavioral",
+                "success_surface": "occ-x as measured",
+                "evidence_ids": [
+                  "ev-ep-silent"
+                ],
+                "verification_status": "validated",
+                "analysis": {
+                  "analysis_id": "an-x",
+                  "version": "1.0"
+                }
+              }
+            ],
+            "residuals": [
+              {
+                "burden_id": "b-ep-silent",
+                "description": "verify the placement",
+                "disposition": "validated-resolved",
+                "evidence_refs": [
+                  "ev-ep-silent"
+                ],
+                "verdict_refs": [
+                  "ep-silent"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "I40-audit-ready-unresolved-external-ref",
+      "why": "an audit-ready episode whose declared external reference carries resolution_status 'unresolved': audit-readiness cannot rest on unresolved references (D6)",
+      "expect_layer": "semantic",
+      "parts": [
+        {
+          "schema": "orthing-episode.schema.json",
+          "instance": {
+            "episode_id": "ep-unres",
+            "record_mode": "audit-ready",
+            "occurrence": {
+              "identity_key": "occ-x",
+              "version": "v1",
+              "kind": "case"
+            },
+            "observation": "observed state of occ-x",
+            "evidence": [
+              {
+                "evidence_id": "ev-ep-unres",
+                "channel": "inspection",
+                "property_class": "behavioral",
+                "scope": "occ-x @ v1",
+                "provenance": "inspector",
+                "validity": "this case"
+              }
+            ],
+            "actor": "actor-ep-unres",
+            "warrant": "warrant-1",
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0",
+              "task": "classify occ-x"
+            },
+            "time": "2026-07-10T10:00:00Z",
+            "policy": "declared policy",
+            "placement": {
+              "kind": "class-a"
+            },
+            "verdict_record_ref": "ep-unres",
+            "claim_ledger_ref": "ep-unres",
+            "external_refs": [
+              {
+                "kind": "analysis",
+                "ref": "an-x@1.0",
+                "registry": "org analysis register",
+                "resolution_status": "unresolved"
+              },
+              {
+                "kind": "occurrence",
+                "ref": "occ-x@v1",
+                "registry": "org case registry",
+                "resolution_status": "resolved-external"
+              }
+            ]
+          }
+        },
+        {
+          "schema": "claim-ledger.schema.json",
+          "instance": {
+            "episode_id": "ep-unres",
+            "claims": [
+              {
+                "claim_id": "c-1",
+                "proposition": "occ-x is class-a",
+                "target": {
+                  "identity_key": "occ-x",
+                  "version": "v1"
+                },
+                "property_class": "behavioral",
+                "success_surface": "occ-x as measured",
+                "evidence_ids": [
+                  "ev-ep-unres"
+                ],
+                "verification_status": "validated",
+                "analysis": {
+                  "analysis_id": "an-x",
+                  "version": "1.0"
+                }
+              }
+            ],
+            "residuals": [
+              {
+                "burden_id": "b-ep-unres",
+                "description": "verify the placement",
+                "disposition": "validated-resolved",
+                "evidence_refs": [
+                  "ev-ep-unres"
+                ],
+                "verdict_refs": [
+                  "ep-unres"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "I41-mixed-offset-postdated-relspec",
+      "why": "a RelSpec declared at 11:00-04:00 (= 15:00Z) against a 12:00Z decision time: lexicographic string comparison accepts it ('11:...' < '12:...'), timezone-aware UTC ordering must reject it as a post-outcome declaration (D7, audit probe 6.7)",
+      "expect_layer": "semantic",
+      "parts": [
+        {
+          "schema": "orthing-episode.schema.json",
+          "instance": {
+            "episode_id": "ep-mixed-offset",
+            "record_mode": "minimal",
+            "occurrence": {
+              "identity_key": "occ-x",
+              "version": "v1",
+              "kind": "case"
+            },
+            "observation": "observed state of occ-x",
+            "evidence": [
+              {
+                "evidence_id": "ev-ep-mixed-offset",
+                "channel": "inspection",
+                "property_class": "behavioral",
+                "scope": "occ-x @ v1",
+                "provenance": "inspector",
+                "validity": "this case"
+              }
+            ],
+            "actor": "actor-ep-mixed-offset",
+            "warrant": "warrant-1",
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0",
+              "task": "classify occ-x"
+            },
+            "time": "2026-07-10T10:00:00Z",
+            "policy": "declared policy",
+            "placement": {
+              "kind": "class-a"
+            },
+            "verdict_record_ref": null,
+            "meta_tokens": [
+              {
+                "token_id": "tok-mo",
+                "of_type": {
+                  "mu_id": "mu-x",
+                  "mu_version": "1.0"
+                },
+                "analysis": {
+                  "analysis_id": "an-x",
+                  "version": "1.0"
+                },
+                "anchor": {
+                  "identity_key": "occ-x",
+                  "version": "v1"
+                },
+                "governed_component": "V",
+                "binding": {
+                  "threshold": 1
+                },
+                "scope": {
+                  "no_claim_dependency_reason": "illustrative token; no claim depends on it"
+                },
+                "binder": {
+                  "actor": "binder-1",
+                  "binding_warrant": "bw-1",
+                  "binding_time": "2026-07-01T00:00:00Z"
+                },
+                "validity": {
+                  "effective_from": "2026-07-01T00:00:00Z",
+                  "expiry": null,
+                  "superseded_by": null
+                },
+                "no_separate_executor_reason": "episode actor executes under the same warrant"
+              }
+            ]
+          }
+        },
+        {
+          "schema": "verdict-record.schema.json",
+          "instance": {
+            "episode_id": "ep-mixed-offset",
+            "required_path": [
+              "EVIDENCE_SUPPORT",
+              "PROCEDURE_RELIABLE",
+              "EVIDENCE_CURRENT",
+              "GOV_CONFIG_ADEQUATE",
+              "GOV_POLICY_ADEQUATE",
+              "GOV_TOKEN_ADEQUATE",
+              "EXECUTION_FAITHFUL",
+              "EX_ANTE_JUSTIFIED"
+            ],
+            "statuses": {
+              "EVIDENCE_SUPPORT": "pass",
+              "PROCEDURE_RELIABLE": "pass",
+              "EVIDENCE_CURRENT": "pass",
+              "GOV_CONFIG_ADEQUATE": "pass",
+              "GOV_POLICY_ADEQUATE": "pass",
+              "GOV_TOKEN_ADEQUATE": "pass",
+              "EXECUTION_FAITHFUL": "pass",
+              "EX_ANTE_JUSTIFIED": "pass",
+              "RESULT_CORRECT": "pass",
+              "TOKEN_TRUTH_LINKED": "pass"
+            },
+            "pathway_state": "adequate",
+            "index": {
+              "analysis_id": "an-x",
+              "analysis_version": "1.0",
+              "actor": "reviewer-1",
+              "decision_time": "2026-07-10T12:00:00Z",
+              "information_state": "the recorded evidence as available at 2026-07-10T12:00:00Z"
+            },
+            "rel_spec": {
+              "c-any": {
+                "procedure_id": "scan-log-marker-check",
+                "procedure_version": "scanner 4.2 under gate policy release-compliance 1.0",
+                "reference_class": "all artifacts gated by scanner 4.2 under analysis release-compliance 1.0",
+                "risk_stratum": "release gate: a false clean permits a noncompliant artifact to ship",
+                "metric": "sensitivity: the fraction of noncompliant artifacts the gate rejects",
+                "threshold": 0.99,
+                "evaluation_protocol": "paired metamorphic probes over compliant and noncompliant artifacts, adjudicated against the scanner's own findings",
+                "evidence_basis": "none measured: the marker-string check was never evaluated against noncompliant artifacts, which is why PROCEDURE_RELIABLE fails here",
+                "declared_at": "2026-07-10T11:00:00-04:00",
+                "validity": {
+                  "effective_from": "2026-06-01T00:00:00Z",
+                  "expiry": null
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "I42-naive-timestamp-relspec",
+      "why": "a timezone-naive RelSpec declaration time where pre-outcome ordering matters: naive timestamps must be rejected wherever ordering matters (D7)",
+      "expect_layer": "semantic",
+      "parts": [
+        {
+          "schema": "orthing-episode.schema.json",
+          "instance": {
+            "episode_id": "ep-naive-ts",
+            "record_mode": "minimal",
+            "occurrence": {
+              "identity_key": "occ-x",
+              "version": "v1",
+              "kind": "case"
+            },
+            "observation": "observed state of occ-x",
+            "evidence": [
+              {
+                "evidence_id": "ev-ep-naive-ts",
+                "channel": "inspection",
+                "property_class": "behavioral",
+                "scope": "occ-x @ v1",
+                "provenance": "inspector",
+                "validity": "this case"
+              }
+            ],
+            "actor": "actor-ep-naive-ts",
+            "warrant": "warrant-1",
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0",
+              "task": "classify occ-x"
+            },
+            "time": "2026-07-10T10:00:00Z",
+            "policy": "declared policy",
+            "placement": {
+              "kind": "class-a"
+            },
+            "verdict_record_ref": null,
+            "meta_tokens": [
+              {
+                "token_id": "tok-nt",
+                "of_type": {
+                  "mu_id": "mu-x",
+                  "mu_version": "1.0"
+                },
+                "analysis": {
+                  "analysis_id": "an-x",
+                  "version": "1.0"
+                },
+                "anchor": {
+                  "identity_key": "occ-x",
+                  "version": "v1"
+                },
+                "governed_component": "V",
+                "binding": {
+                  "threshold": 1
+                },
+                "scope": {
+                  "no_claim_dependency_reason": "illustrative token; no claim depends on it"
+                },
+                "binder": {
+                  "actor": "binder-1",
+                  "binding_warrant": "bw-1",
+                  "binding_time": "2026-07-01T00:00:00Z"
+                },
+                "validity": {
+                  "effective_from": "2026-07-01T00:00:00Z",
+                  "expiry": null,
+                  "superseded_by": null
+                },
+                "no_separate_executor_reason": "episode actor executes under the same warrant"
+              }
+            ]
+          }
+        },
+        {
+          "schema": "verdict-record.schema.json",
+          "instance": {
+            "episode_id": "ep-naive-ts",
+            "required_path": [
+              "EVIDENCE_SUPPORT",
+              "PROCEDURE_RELIABLE",
+              "EVIDENCE_CURRENT",
+              "GOV_CONFIG_ADEQUATE",
+              "GOV_POLICY_ADEQUATE",
+              "GOV_TOKEN_ADEQUATE",
+              "EXECUTION_FAITHFUL",
+              "EX_ANTE_JUSTIFIED"
+            ],
+            "statuses": {
+              "EVIDENCE_SUPPORT": "pass",
+              "PROCEDURE_RELIABLE": "pass",
+              "EVIDENCE_CURRENT": "pass",
+              "GOV_CONFIG_ADEQUATE": "pass",
+              "GOV_POLICY_ADEQUATE": "pass",
+              "GOV_TOKEN_ADEQUATE": "pass",
+              "EXECUTION_FAITHFUL": "pass",
+              "EX_ANTE_JUSTIFIED": "pass",
+              "RESULT_CORRECT": "pass",
+              "TOKEN_TRUTH_LINKED": "pass"
+            },
+            "pathway_state": "adequate",
+            "index": {
+              "analysis_id": "an-x",
+              "analysis_version": "1.0",
+              "actor": "reviewer-1",
+              "decision_time": "2026-07-10T12:00:00Z",
+              "information_state": "the recorded evidence as available at 2026-07-10T12:00:00Z"
+            },
+            "rel_spec": {
+              "c-any": {
+                "procedure_id": "scan-log-marker-check",
+                "procedure_version": "scanner 4.2 under gate policy release-compliance 1.0",
+                "reference_class": "all artifacts gated by scanner 4.2 under analysis release-compliance 1.0",
+                "risk_stratum": "release gate: a false clean permits a noncompliant artifact to ship",
+                "metric": "sensitivity: the fraction of noncompliant artifacts the gate rejects",
+                "threshold": 0.99,
+                "evaluation_protocol": "paired metamorphic probes over compliant and noncompliant artifacts, adjudicated against the scanner's own findings",
+                "evidence_basis": "none measured: the marker-string check was never evaluated against noncompliant artifacts, which is why PROCEDURE_RELIABLE fails here",
+                "declared_at": "2026-07-10T08:00:00",
+                "validity": {
+                  "effective_from": "2026-06-01T00:00:00Z",
+                  "expiry": null
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "I43-inverted-token-validity",
+      "why": "a token whose validity interval is inverted (effective_from after expiry): interval ordering on timezone-aware UTC instants (D7)",
+      "expect_layer": "semantic",
+      "schema": "metaorthemma.schema.json",
+      "instance": {
+        "token_id": "tok-inverted",
+        "of_type": {
+          "mu_id": "mu-x",
+          "mu_version": "1.0"
+        },
+        "analysis": {
+          "analysis_id": "an-x",
+          "version": "1.0"
+        },
+        "anchor": {
+          "identity_key": "occ-x",
+          "version": "v1"
+        },
+        "governed_component": "V",
+        "binding": {
+          "threshold": 1
+        },
+        "scope": {
+          "external_scope": "org token registry; dependent claims live outside this bundle"
+        },
+        "binder": {
+          "actor": "binder-1",
+          "binding_warrant": "bw-1",
+          "binding_time": "2026-07-01T00:00:00Z"
+        },
+        "validity": {
+          "effective_from": "2026-07-10T00:00:00Z",
+          "expiry": "2026-07-01T00:00:00Z",
+          "superseded_by": null
+        },
+        "no_separate_executor_reason": "episode actor executes under the same warrant"
+      }
+    },
+    {
+      "id": "I44-req-reason-omission",
+      "why": "a verdict record whose recorded claim projection omits the failing GOV_TOKEN_ADEQUATE although the ledger claim declares token dependencies: ReqReason_q must match the governance derivation, so the omission cannot manufacture claim-level adequacy (D8, audit section 5)",
+      "expect_layer": "semantic",
+      "parts": [
+        {
+          "schema": "orthing-episode.schema.json",
+          "instance": {
+            "episode_id": "ep-omit",
+            "record_mode": "minimal",
+            "occurrence": {
+              "identity_key": "occ-x",
+              "version": "v1",
+              "kind": "case"
+            },
+            "observation": "observed state of occ-x",
+            "evidence": [
+              {
+                "evidence_id": "ev-ep-omit",
+                "channel": "inspection",
+                "property_class": "behavioral",
+                "scope": "occ-x @ v1",
+                "provenance": "inspector",
+                "validity": "this case"
+              }
+            ],
+            "actor": "actor-ep-omit",
+            "warrant": "warrant-1",
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0",
+              "task": "classify occ-x"
+            },
+            "time": "2026-07-10T10:00:00Z",
+            "policy": "declared policy",
+            "placement": {
+              "kind": "class-a"
+            },
+            "verdict_record_ref": null,
+            "meta_tokens": [
+              {
+                "token_id": "tok-omit",
+                "of_type": {
+                  "mu_id": "mu-x",
+                  "mu_version": "1.0"
+                },
+                "analysis": {
+                  "analysis_id": "an-x",
+                  "version": "1.0"
+                },
+                "anchor": {
+                  "identity_key": "occ-x",
+                  "version": "v1"
+                },
+                "governed_component": "V",
+                "binding": {
+                  "threshold": 1
+                },
+                "scope": {
+                  "claims": [
+                    "c-omit"
+                  ]
+                },
+                "binder": {
+                  "actor": "binder-1",
+                  "binding_warrant": "bw-1",
+                  "binding_time": "2026-07-01T00:00:00Z"
+                },
+                "validity": {
+                  "effective_from": "2026-07-01T00:00:00Z",
+                  "expiry": null,
+                  "superseded_by": null
+                },
+                "no_separate_executor_reason": "episode actor executes under the same warrant"
+              }
+            ]
+          }
+        },
+        {
+          "schema": "claim-ledger.schema.json",
+          "instance": {
+            "episode_id": "ep-omit",
+            "claims": [
+              {
+                "claim_id": "c-omit",
+                "proposition": "occ-x is class-a",
+                "target": {
+                  "identity_key": "occ-x",
+                  "version": "v1"
+                },
+                "property_class": "behavioral",
+                "success_surface": "occ-x as measured",
+                "evidence_ids": [
+                  "ev-ep-omit"
+                ],
+                "verification_status": "validated",
+                "analysis": {
+                  "analysis_id": "an-x",
+                  "version": "1.0"
+                },
+                "depends_on_tokens": [
+                  "tok-omit"
+                ]
+              }
+            ],
+            "residuals": [
+              {
+                "burden_id": "b-ep-omit",
+                "description": "verify the placement",
+                "disposition": "validated-resolved",
+                "evidence_refs": [
+                  "ev-ep-omit"
+                ],
+                "verdict_refs": [
+                  "ep-omit"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "schema": "verdict-record.schema.json",
+          "instance": {
+            "episode_id": "ep-omit",
+            "required_path": [
+              "EVIDENCE_SUPPORT",
+              "PROCEDURE_RELIABLE",
+              "EVIDENCE_CURRENT",
+              "GOV_CONFIG_ADEQUATE",
+              "GOV_POLICY_ADEQUATE",
+              "GOV_TOKEN_ADEQUATE",
+              "EXECUTION_FAITHFUL",
+              "EX_ANTE_JUSTIFIED"
+            ],
+            "statuses": {
+              "EVIDENCE_SUPPORT": "pass",
+              "PROCEDURE_RELIABLE": "pass",
+              "EVIDENCE_CURRENT": "pass",
+              "GOV_CONFIG_ADEQUATE": "pass",
+              "GOV_POLICY_ADEQUATE": "pass",
+              "GOV_TOKEN_ADEQUATE": "fail",
+              "EXECUTION_FAITHFUL": "pass",
+              "EX_ANTE_JUSTIFIED": "pass",
+              "RESULT_CORRECT": "pass",
+              "TOKEN_TRUTH_LINKED": "fail"
+            },
+            "pathway_state": "defective",
+            "index": {
+              "analysis_id": "an-x",
+              "analysis_version": "1.0",
+              "actor": "reviewer-1",
+              "decision_time": "2026-07-10T12:00:00Z",
+              "information_state": "the recorded evidence as available at 2026-07-10T12:00:00Z"
+            },
+            "claim_reasoning_paths": [
+              {
+                "claim_id": "c-omit",
+                "req_reason": [
+                  "EVIDENCE_SUPPORT",
+                  "PROCEDURE_RELIABLE",
+                  "EVIDENCE_CURRENT",
+                  "GOV_CONFIG_ADEQUATE",
+                  "GOV_POLICY_ADEQUATE",
+                  "EXECUTION_FAITHFUL",
+                  "EX_ANTE_JUSTIFIED"
+                ],
+                "reasoning_path_adequate": "adequate"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "I45-naive-decision-time",
+      "why": "a timezone-naive decision_time on a verdict record's objectivity index: after the R4 fresh-review hardening, EVERY timestamp field carrying a time-of-day must be a timezone-aware instant, not only the fields an ordering currently consumes (D7 extension)",
+      "expect_layer": "semantic",
+      "parts": [
+        {
+          "schema": "orthing-episode.schema.json",
+          "instance": {
+            "episode_id": "ep-naive-ts",
+            "record_mode": "minimal",
+            "occurrence": {
+              "identity_key": "occ-x",
+              "version": "v1",
+              "kind": "case"
+            },
+            "observation": "observed state of occ-x",
+            "evidence": [
+              {
+                "evidence_id": "ev-ep-naive-ts",
+                "channel": "inspection",
+                "property_class": "behavioral",
+                "scope": "occ-x @ v1",
+                "provenance": "inspector",
+                "validity": "this case"
+              }
+            ],
+            "actor": "actor-ep-naive-ts",
+            "warrant": "warrant-1",
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0",
+              "task": "classify occ-x"
+            },
+            "time": "2026-07-10T10:00:00Z",
+            "policy": "declared policy",
+            "placement": {
+              "kind": "class-a"
+            },
+            "verdict_record_ref": null,
+            "meta_tokens": [
+              {
+                "token_id": "tok-nt",
+                "of_type": {
+                  "mu_id": "mu-x",
+                  "mu_version": "1.0"
+                },
+                "analysis": {
+                  "analysis_id": "an-x",
+                  "version": "1.0"
+                },
+                "anchor": {
+                  "identity_key": "occ-x",
+                  "version": "v1"
+                },
+                "governed_component": "V",
+                "binding": {
+                  "threshold": 1
+                },
+                "scope": {
+                  "no_claim_dependency_reason": "illustrative token; no claim depends on it"
+                },
+                "binder": {
+                  "actor": "binder-1",
+                  "binding_warrant": "bw-1",
+                  "binding_time": "2026-07-01T00:00:00Z"
+                },
+                "validity": {
+                  "effective_from": "2026-07-01T00:00:00Z",
+                  "expiry": null,
+                  "superseded_by": null
+                },
+                "no_separate_executor_reason": "episode actor executes under the same warrant"
+              }
+            ]
+          }
+        },
+        {
+          "schema": "verdict-record.schema.json",
+          "instance": {
+            "episode_id": "ep-naive-ts",
+            "required_path": [
+              "EVIDENCE_SUPPORT",
+              "PROCEDURE_RELIABLE",
+              "EVIDENCE_CURRENT",
+              "GOV_CONFIG_ADEQUATE",
+              "GOV_POLICY_ADEQUATE",
+              "GOV_TOKEN_ADEQUATE",
+              "EXECUTION_FAITHFUL",
+              "EX_ANTE_JUSTIFIED"
+            ],
+            "statuses": {
+              "EVIDENCE_SUPPORT": "pass",
+              "PROCEDURE_RELIABLE": "pass",
+              "EVIDENCE_CURRENT": "pass",
+              "GOV_CONFIG_ADEQUATE": "pass",
+              "GOV_POLICY_ADEQUATE": "pass",
+              "GOV_TOKEN_ADEQUATE": "pass",
+              "EXECUTION_FAITHFUL": "pass",
+              "EX_ANTE_JUSTIFIED": "pass",
+              "RESULT_CORRECT": "pass",
+              "TOKEN_TRUTH_LINKED": "pass"
+            },
+            "pathway_state": "adequate",
+            "index": {
+              "analysis_id": "an-x",
+              "analysis_version": "1.0",
+              "actor": "reviewer-1",
+              "decision_time": "2026-07-10T12:00:00",
+              "information_state": "the recorded evidence as available at 2026-07-10T12:00:00Z"
+            },
+            "rel_spec": {
+              "c-any": {
+                "procedure_id": "scan-log-marker-check",
+                "procedure_version": "scanner 4.2 under gate policy release-compliance 1.0",
+                "reference_class": "all artifacts gated by scanner 4.2 under analysis release-compliance 1.0",
+                "risk_stratum": "release gate: a false clean permits a noncompliant artifact to ship",
+                "metric": "sensitivity: the fraction of noncompliant artifacts the gate rejects",
+                "threshold": 0.99,
+                "evaluation_protocol": "paired metamorphic probes over compliant and noncompliant artifacts, adjudicated against the scanner's own findings",
+                "evidence_basis": "none measured: the marker-string check was never evaluated against noncompliant artifacts, which is why PROCEDURE_RELIABLE fails here",
+                "declared_at": "2026-07-10T08:00:00Z",
+                "validity": {
+                  "effective_from": "2026-06-01T00:00:00Z",
+                  "expiry": null
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "I46-audit-ready-implicit-claim-type",
+      "why": "an audit-ready record's ledger claim declares no explicit claim_type: the placement default is a declaration escape hatch at audit-ready strength (R5 claim-shape hardening, audit M4)",
+      "expect_layer": "semantic",
+      "parts": [
+        {
+          "schema": "orthing-episode.schema.json",
+          "instance": {
+            "episode_id": "ep-omit",
+            "record_mode": "audit-ready",
+            "occurrence": {
+              "identity_key": "occ-x",
+              "version": "v1",
+              "kind": "case"
+            },
+            "observation": "observed state of occ-x",
+            "evidence": [
+              {
+                "evidence_id": "ev-ep-omit",
+                "channel": "inspection",
+                "property_class": "behavioral",
+                "scope": "occ-x @ v1",
+                "provenance": "inspector",
+                "validity": "this case"
+              }
+            ],
+            "actor": "actor-ep-omit",
+            "warrant": "warrant-1",
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0",
+              "task": "classify occ-x"
+            },
+            "time": "2026-07-10T10:00:00Z",
+            "policy": "declared policy",
+            "placement": {
+              "kind": "class-a"
+            },
+            "verdict_record_ref": "inline-below",
+            "meta_tokens": [
+              {
+                "token_id": "tok-omit",
+                "of_type": {
+                  "mu_id": "mu-x",
+                  "mu_version": "1.0"
+                },
+                "analysis": {
+                  "analysis_id": "an-x",
+                  "version": "1.0"
+                },
+                "anchor": {
+                  "identity_key": "occ-x",
+                  "version": "v1"
+                },
+                "governed_component": "V",
+                "binding": {
+                  "threshold": 1
+                },
+                "scope": {
+                  "claims": [
+                    "c-omit"
+                  ]
+                },
+                "binder": {
+                  "actor": "binder-1",
+                  "binding_warrant": "bw-1",
+                  "binding_time": "2026-07-01T00:00:00Z"
+                },
+                "validity": {
+                  "effective_from": "2026-07-01T00:00:00Z",
+                  "expiry": null,
+                  "superseded_by": null
+                },
+                "no_separate_executor_reason": "episode actor executes under the same warrant"
+              }
+            ],
+            "external_refs": [
+              {
+                "kind": "analysis",
+                "ref": "an-x@1.0",
+                "registry": "org analysis register",
+                "resolution_status": "resolved-external"
+              },
+              {
+                "kind": "occurrence",
+                "ref": "occ-x@v1",
+                "registry": "org case registry",
+                "resolution_status": "resolved-external"
+              },
+              {
+                "kind": "metaortheme",
+                "ref": "mu-x@1.0",
+                "registry": "org standards register",
+                "resolution_status": "resolved-external"
+              }
+            ],
+            "claim_ledger_ref": "inline-below"
+          }
+        },
+        {
+          "schema": "claim-ledger.schema.json",
+          "instance": {
+            "episode_id": "ep-omit",
+            "claims": [
+              {
+                "claim_id": "c-omit",
+                "proposition": "occ-x is class-a",
+                "target": {
+                  "identity_key": "occ-x",
+                  "version": "v1"
+                },
+                "property_class": "behavioral",
+                "success_surface": "occ-x as measured",
+                "evidence_ids": [
+                  "ev-ep-omit"
+                ],
+                "verification_status": "validated",
+                "analysis": {
+                  "analysis_id": "an-x",
+                  "version": "1.0"
+                },
+                "depends_on_tokens": [
+                  "tok-omit"
+                ]
+              }
+            ],
+            "residuals": [
+              {
+                "burden_id": "b-ep-omit",
+                "description": "verify the placement",
+                "disposition": "validated-resolved",
+                "evidence_refs": [
+                  "ev-ep-omit"
+                ],
+                "verdict_refs": [
+                  "ep-omit"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "schema": "verdict-record.schema.json",
+          "instance": {
+            "episode_id": "ep-omit",
+            "required_path": [
+              "EVIDENCE_SUPPORT",
+              "PROCEDURE_RELIABLE",
+              "EVIDENCE_CURRENT",
+              "GOV_CONFIG_ADEQUATE",
+              "GOV_POLICY_ADEQUATE",
+              "GOV_TOKEN_ADEQUATE",
+              "EXECUTION_FAITHFUL",
+              "EX_ANTE_JUSTIFIED"
+            ],
+            "statuses": {
+              "EVIDENCE_SUPPORT": "pass",
+              "PROCEDURE_RELIABLE": "pass",
+              "EVIDENCE_CURRENT": "pass",
+              "GOV_CONFIG_ADEQUATE": "pass",
+              "GOV_POLICY_ADEQUATE": "pass",
+              "GOV_TOKEN_ADEQUATE": "fail",
+              "EXECUTION_FAITHFUL": "pass",
+              "EX_ANTE_JUSTIFIED": "pass",
+              "RESULT_CORRECT": "pass",
+              "TOKEN_TRUTH_LINKED": "fail"
+            },
+            "pathway_state": "defective",
+            "index": {
+              "analysis_id": "an-x",
+              "analysis_version": "1.0",
+              "actor": "reviewer-1",
+              "decision_time": "2026-07-10T12:00:00Z",
+              "information_state": "the recorded evidence as available at 2026-07-10T12:00:00Z"
+            },
+            "claim_reasoning_paths": [
+              {
+                "claim_id": "c-omit",
+                "req_reason": [
+                  "EVIDENCE_SUPPORT",
+                  "PROCEDURE_RELIABLE",
+                  "EVIDENCE_CURRENT",
+                  "GOV_CONFIG_ADEQUATE",
+                  "GOV_POLICY_ADEQUATE",
+                  "GOV_TOKEN_ADEQUATE",
+                  "EXECUTION_FAITHFUL",
+                  "EX_ANTE_JUSTIFIED"
+                ],
+                "reasoning_path_adequate": "defective"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "I47-currency-exempt-undeclared-scope",
+      "why": "a claim sets currency_exempt: true with no recorded rationale and no fixed-record/provenance scope (R5 claim-shape hardening, audit M4); its req_reason also silently drops EVIDENCE_CURRENT relative to the pre-exemption projection",
+      "expect_layer": "semantic",
+      "parts": [
+        {
+          "schema": "orthing-episode.schema.json",
+          "instance": {
+            "episode_id": "ep-omit",
+            "record_mode": "minimal",
+            "occurrence": {
+              "identity_key": "occ-x",
+              "version": "v1",
+              "kind": "case"
+            },
+            "observation": "observed state of occ-x",
+            "evidence": [
+              {
+                "evidence_id": "ev-ep-omit",
+                "channel": "inspection",
+                "property_class": "behavioral",
+                "scope": "occ-x @ v1",
+                "provenance": "inspector",
+                "validity": "this case"
+              }
+            ],
+            "actor": "actor-ep-omit",
+            "warrant": "warrant-1",
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0",
+              "task": "classify occ-x"
+            },
+            "time": "2026-07-10T10:00:00Z",
+            "policy": "declared policy",
+            "placement": {
+              "kind": "class-a"
+            },
+            "verdict_record_ref": null,
+            "meta_tokens": [
+              {
+                "token_id": "tok-omit",
+                "of_type": {
+                  "mu_id": "mu-x",
+                  "mu_version": "1.0"
+                },
+                "analysis": {
+                  "analysis_id": "an-x",
+                  "version": "1.0"
+                },
+                "anchor": {
+                  "identity_key": "occ-x",
+                  "version": "v1"
+                },
+                "governed_component": "V",
+                "binding": {
+                  "threshold": 1
+                },
+                "scope": {
+                  "claims": [
+                    "c-omit"
+                  ]
+                },
+                "binder": {
+                  "actor": "binder-1",
+                  "binding_warrant": "bw-1",
+                  "binding_time": "2026-07-01T00:00:00Z"
+                },
+                "validity": {
+                  "effective_from": "2026-07-01T00:00:00Z",
+                  "expiry": null,
+                  "superseded_by": null
+                },
+                "no_separate_executor_reason": "episode actor executes under the same warrant"
+              }
+            ]
+          }
+        },
+        {
+          "schema": "claim-ledger.schema.json",
+          "instance": {
+            "episode_id": "ep-omit",
+            "claims": [
+              {
+                "claim_id": "c-omit",
+                "proposition": "occ-x is class-a",
+                "target": {
+                  "identity_key": "occ-x",
+                  "version": "v1"
+                },
+                "property_class": "behavioral",
+                "success_surface": "occ-x as measured",
+                "evidence_ids": [
+                  "ev-ep-omit"
+                ],
+                "verification_status": "validated",
+                "analysis": {
+                  "analysis_id": "an-x",
+                  "version": "1.0"
+                },
+                "depends_on_tokens": [
+                  "tok-omit"
+                ],
+                "currency_exempt": true
+              }
+            ],
+            "residuals": [
+              {
+                "burden_id": "b-ep-omit",
+                "description": "verify the placement",
+                "disposition": "validated-resolved",
+                "evidence_refs": [
+                  "ev-ep-omit"
+                ],
+                "verdict_refs": [
+                  "ep-omit"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "schema": "verdict-record.schema.json",
+          "instance": {
+            "episode_id": "ep-omit",
+            "required_path": [
+              "EVIDENCE_SUPPORT",
+              "PROCEDURE_RELIABLE",
+              "EVIDENCE_CURRENT",
+              "GOV_CONFIG_ADEQUATE",
+              "GOV_POLICY_ADEQUATE",
+              "GOV_TOKEN_ADEQUATE",
+              "EXECUTION_FAITHFUL",
+              "EX_ANTE_JUSTIFIED"
+            ],
+            "statuses": {
+              "EVIDENCE_SUPPORT": "pass",
+              "PROCEDURE_RELIABLE": "pass",
+              "EVIDENCE_CURRENT": "pass",
+              "GOV_CONFIG_ADEQUATE": "pass",
+              "GOV_POLICY_ADEQUATE": "pass",
+              "GOV_TOKEN_ADEQUATE": "fail",
+              "EXECUTION_FAITHFUL": "pass",
+              "EX_ANTE_JUSTIFIED": "pass",
+              "RESULT_CORRECT": "pass",
+              "TOKEN_TRUTH_LINKED": "fail"
+            },
+            "pathway_state": "defective",
+            "index": {
+              "analysis_id": "an-x",
+              "analysis_version": "1.0",
+              "actor": "reviewer-1",
+              "decision_time": "2026-07-10T12:00:00Z",
+              "information_state": "the recorded evidence as available at 2026-07-10T12:00:00Z"
+            },
+            "claim_reasoning_paths": [
+              {
+                "claim_id": "c-omit",
+                "req_reason": [
+                  "EVIDENCE_SUPPORT",
+                  "PROCEDURE_RELIABLE",
+                  "GOV_CONFIG_ADEQUATE",
+                  "GOV_POLICY_ADEQUATE",
+                  "GOV_TOKEN_ADEQUATE",
+                  "EXECUTION_FAITHFUL",
+                  "EX_ANTE_JUSTIFIED"
+                ],
+                "reasoning_path_adequate": "defective"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "I48-robustness-silently-disabled",
+      "why": "the episode's governed required path owes and scores ROBUST_NEIGHBORHOOD, but an individual ledger claim declares robustness_obligation: false — a claim cannot silently disable an imposed robustness obligation (R5 claim-shape hardening, audit M4)",
+      "expect_layer": "semantic",
+      "parts": [
+        {
+          "schema": "orthing-episode.schema.json",
+          "instance": {
+            "episode_id": "ep-omit",
+            "record_mode": "minimal",
+            "occurrence": {
+              "identity_key": "occ-x",
+              "version": "v1",
+              "kind": "case"
+            },
+            "observation": "observed state of occ-x",
+            "evidence": [
+              {
+                "evidence_id": "ev-ep-omit",
+                "channel": "inspection",
+                "property_class": "behavioral",
+                "scope": "occ-x @ v1",
+                "provenance": "inspector",
+                "validity": "this case"
+              }
+            ],
+            "actor": "actor-ep-omit",
+            "warrant": "warrant-1",
+            "analysis": {
+              "analysis_id": "an-x",
+              "version": "1.0",
+              "task": "classify occ-x"
+            },
+            "time": "2026-07-10T10:00:00Z",
+            "policy": "declared policy",
+            "placement": {
+              "kind": "class-a"
+            },
+            "verdict_record_ref": null,
+            "meta_tokens": [
+              {
+                "token_id": "tok-omit",
+                "of_type": {
+                  "mu_id": "mu-x",
+                  "mu_version": "1.0"
+                },
+                "analysis": {
+                  "analysis_id": "an-x",
+                  "version": "1.0"
+                },
+                "anchor": {
+                  "identity_key": "occ-x",
+                  "version": "v1"
+                },
+                "governed_component": "V",
+                "binding": {
+                  "threshold": 1
+                },
+                "scope": {
+                  "claims": [
+                    "c-omit"
+                  ]
+                },
+                "binder": {
+                  "actor": "binder-1",
+                  "binding_warrant": "bw-1",
+                  "binding_time": "2026-07-01T00:00:00Z"
+                },
+                "validity": {
+                  "effective_from": "2026-07-01T00:00:00Z",
+                  "expiry": null,
+                  "superseded_by": null
+                },
+                "no_separate_executor_reason": "episode actor executes under the same warrant"
+              }
+            ]
+          }
+        },
+        {
+          "schema": "claim-ledger.schema.json",
+          "instance": {
+            "episode_id": "ep-omit",
+            "claims": [
+              {
+                "claim_id": "c-omit",
+                "proposition": "occ-x is class-a",
+                "target": {
+                  "identity_key": "occ-x",
+                  "version": "v1"
+                },
+                "property_class": "behavioral",
+                "success_surface": "occ-x as measured",
+                "evidence_ids": [
+                  "ev-ep-omit"
+                ],
+                "verification_status": "validated",
+                "analysis": {
+                  "analysis_id": "an-x",
+                  "version": "1.0"
+                },
+                "depends_on_tokens": [
+                  "tok-omit"
+                ],
+                "robustness_obligation": false
+              }
+            ],
+            "residuals": [
+              {
+                "burden_id": "b-ep-omit",
+                "description": "verify the placement",
+                "disposition": "validated-resolved",
+                "evidence_refs": [
+                  "ev-ep-omit"
+                ],
+                "verdict_refs": [
+                  "ep-omit"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "schema": "verdict-record.schema.json",
+          "instance": {
+            "episode_id": "ep-omit",
+            "required_path": [
+              "EVIDENCE_SUPPORT",
+              "PROCEDURE_RELIABLE",
+              "EVIDENCE_CURRENT",
+              "GOV_CONFIG_ADEQUATE",
+              "GOV_POLICY_ADEQUATE",
+              "GOV_TOKEN_ADEQUATE",
+              "EXECUTION_FAITHFUL",
+              "EX_ANTE_JUSTIFIED",
+              "ROBUST_NEIGHBORHOOD"
+            ],
+            "statuses": {
+              "EVIDENCE_SUPPORT": "pass",
+              "PROCEDURE_RELIABLE": "pass",
+              "EVIDENCE_CURRENT": "pass",
+              "GOV_CONFIG_ADEQUATE": "pass",
+              "GOV_POLICY_ADEQUATE": "pass",
+              "GOV_TOKEN_ADEQUATE": "fail",
+              "EXECUTION_FAITHFUL": "pass",
+              "EX_ANTE_JUSTIFIED": "pass",
+              "RESULT_CORRECT": "pass",
+              "TOKEN_TRUTH_LINKED": "fail",
+              "ROBUST_NEIGHBORHOOD": "pass"
+            },
+            "pathway_state": "defective",
+            "index": {
+              "analysis_id": "an-x",
+              "analysis_version": "1.0",
+              "actor": "reviewer-1",
+              "decision_time": "2026-07-10T12:00:00Z",
+              "information_state": "the recorded evidence as available at 2026-07-10T12:00:00Z"
+            },
+            "claim_reasoning_paths": [
+              {
+                "claim_id": "c-omit",
+                "req_reason": [
+                  "EVIDENCE_SUPPORT",
+                  "PROCEDURE_RELIABLE",
+                  "EVIDENCE_CURRENT",
+                  "GOV_CONFIG_ADEQUATE",
+                  "GOV_POLICY_ADEQUATE",
+                  "GOV_TOKEN_ADEQUATE",
+                  "EXECUTION_FAITHFUL",
+                  "EX_ANTE_JUSTIFIED"
+                ],
+                "reasoning_path_adequate": "defective"
+              }
+            ]
+          }
+        }
+      ]
+    }
   ]
 }

@@ -1,5 +1,0 @@
-import SignedControllerService
-open OrthemicCertificate.Signed
-#check solveCompiled
-#check solveCompiled_correct
-#print axioms solveCompiled_correct

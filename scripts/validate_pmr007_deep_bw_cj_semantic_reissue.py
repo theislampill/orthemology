@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 """Validate the bounded Deep BW-CJ semantic custody reissue."""
 
+from resolve_t20_v6_source import (
+    digest_record_view_bytes, digest_record_view_text,
+    digest_record_view_is_file, digest_record_view_paths,
+    reissue_administrative_custody,
+)
+
+
 import argparse
 import hashlib
 import importlib.util
@@ -44,7 +51,7 @@ PRIVATE_PATTERN = re.compile(
 
 
 def sha256(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(digest_record_view_bytes(path)).hexdigest()
 
 
 def load_mapping(path, label, issues):
@@ -63,14 +70,14 @@ def load_mapping(path, label, issues):
 
 
 def parse_source_manifest(path, issues):
-    if not path.is_file():
+    if not digest_record_view_is_file(path):
         issues.append("semantic-reissue SOURCE_SHA256SUMS is missing")
         return {}, False
     exact_digest = sha256(path) == EXPECTED_SOURCE_MANIFEST_SHA256
     observed = {}
     malformed = False
     try:
-        lines = path.read_text(encoding="utf-8").splitlines()
+        lines = digest_record_view_text(path, encoding="utf-8").splitlines()
     except (OSError, UnicodeDecodeError):
         lines = []
         malformed = True
@@ -201,7 +208,8 @@ def rerun_checker(reissue, issues):
     return reproduced_ok, semantic_match, byte_match, pass_count
 
 
-def validate(root=ROOT, reissue_override=None, provenance_override=None):
+def _validate_current_reissue(root=ROOT, reissue_override=None, provenance_override=None, supplied_members=None):
+    supplied_members = supplied_members or {}
     root = pathlib.Path(root)
     reissue = pathlib.Path(reissue_override) if reissue_override else root / REISSUE_REL
     source = reissue / "source-files"
@@ -217,9 +225,10 @@ def validate(root=ROOT, reissue_override=None, provenance_override=None):
     if source.is_dir():
         actual_paths = {
             path.relative_to(source).as_posix()
-            for path in source.rglob("*")
-            if path.is_file() or path.is_symlink()
+            for path in digest_record_view_paths(root, source)
+            if digest_record_view_is_file(path) or path.is_symlink()
         }
+        actual_paths.update(supplied_members)
     else:
         issues.append("semantic-reissue source directory is missing")
     source_coverage_exact = actual_paths == set(expected_hashes)
@@ -227,12 +236,12 @@ def validate(root=ROOT, reissue_override=None, provenance_override=None):
         issues.append("semantic-reissue source coverage mismatch")
 
     for relative in sorted(actual_paths):
-        target = source / pathlib.PurePosixPath(relative)
+        target = supplied_members.get(relative, source / pathlib.PurePosixPath(relative))
         if target.is_symlink():
             issues.append(f"semantic-reissue symlink is forbidden: {relative}")
             continue
         try:
-            text = target.read_text(encoding="utf-8")
+            text = digest_record_view_text(target, encoding="utf-8")
         except (OSError, UnicodeDecodeError):
             issues.append(f"semantic-reissue member is not readable UTF-8: {relative}")
             continue
@@ -392,6 +401,31 @@ def validate(root=ROOT, reissue_override=None, provenance_override=None):
         "v1_false_pass_detected": detected_v1_false_pass,
         "issues": issues,
     }
+
+
+
+def validate(root=ROOT, reissue_override=None, provenance_override=None):
+    root = pathlib.Path(root)
+    reissue = pathlib.Path(reissue_override) if reissue_override else root / REISSUE_REL
+    source = reissue / "source-files"
+    try:
+        with reissue_administrative_custody(root, source, SOURCE_REL) as supplied:
+            receipt = _validate_current_reissue(root, reissue_override, provenance_override, supplied_members=supplied)
+            receipt["administrative_record_custody"] = {
+                "status": "AUTHENTICATED_ORIGINAL_A7FF" if supplied else "CURRENT_PHYSICAL",
+                "supplied_original_members": sorted(supplied),
+            }
+            return receipt
+    except (ValueError, OSError) as error:
+        return {
+            "schema": 'ar8r-pmr007-deep-bw-cj-semantic-reissue-validation-v1',
+            "result": "FAIL",
+            "source_coverage_exact": False,
+            "issues": ["administrative/source validation refused: " + str(error)],
+            "administrative_record_custody": {
+                "status": "UNAVAILABLE", "supplied_original_members": [],
+            },
+        }
 
 
 def main():

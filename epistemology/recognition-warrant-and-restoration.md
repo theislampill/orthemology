@@ -1,0 +1,1192 @@
+# Recognition, Warrant, Defeat and Restoration
+
+## Abstract
+
+A correct answer does not identify the cognitive achievement that produced it. Perception, inference, testimony, recollection, newly acquired recognition and compliance can converge on the same sentence while differing in their grounds. Conversely, a person may retain knowledge after losing an argument, fail to act on something known, or gain a valuable mode of encounter without first having lacked warranted belief. This chapter develops a unified account of those distinctions. It preserves the affirmative case for basic recognition and truth-directed proper function; explains how local rational correction can proceed through surviving cognitive capacities; separates the defeat of a particular ground from forgetting, falsity and loss of permission; and states what evidence would be needed to identify restoration. Complete finite arguments show why an output profile can fail to identify its epistemic or causal target, why sensitivity need not pass to a weaker proposition, and why lower-order marginal change is neither necessary nor sufficient for a specified restoration. Relevant-logic proofs distinguish genuinely relevant grounds from a complete conjunction of merely material premises, while preserving the difference between an internal conditional, derivability and actual knowledge. The philosophical arguments retain their source and theological scope. The mathematical results establish consequences of explicit models; they do not measure a person's fiṭrah, prove a complete theory of knowledge, or authenticate a historical recognition episode.
+
+**Edition and scope.** This is a new public, source-bound exposition of Orthemology's research on recognition and corrective inquiry. It does not replace or silently revise the accepted edition of Paper 2, any other accepted paper, or a private manuscript. Its arguments and examples are presented here in full at their stated scope. Earlier source assessments inform this synthesis; independent qualification of this edition and owner adoption are separate decisions.
+
+## 1. What an epistemic appraisal is about
+
+Consider someone who says, “The lamp is lit.” Several questions arise. Is the proposition true? Does the person believe it? Did the lamp's appearance appropriately ground the belief? Was a remembered report the actual basis instead? Was the person simply repeating an expected answer? Could an identified defeater undermine one route while leaving another intact? These questions concern different relations even when the spoken words coincide.
+
+We use **recognition** for a cognitive apprehension of an object, feature or truth under some content. The word alone does not establish accuracy or warrant. **Basic recognition** is recognition whose operative epistemic basis is not an inference from other believed propositions. **Warrant** concerns the epistemic standing of a belief or route; **warrant sufficient for knowledge** is stronger than mere confidence, blamelessness, or some degree of evidential support. Knowledge is factive: what is known is true. This vocabulary leaves substantive disagreements among accounts of warrant open rather than defining them away. [7, 10–12]
+
+Five objects of appraisal should remain distinct:
+
+| Object | Question |
+|---|---|
+| A proposition | Is this content true, with its subject, time and qualifications fixed? |
+| An occurrence of belief | Does this person believe that content now? |
+| Its operative ground | What perception, known premise, testimony or retained cognition actually supports it? |
+| A cognitive exercise | Does this use of a capacity have the relevant truth connection in its actual setting? |
+| A practical response | What does the person assent to, undertake, communicate or do? |
+
+The distinctions do not make warranted cognition inaccessible in principle. They prevent one observation from doing work it cannot do. A competent calculation may positively establish knowledge; an ordinary perceptual episode may positively warrant a judgment; a genuine recollection may preserve a previously acquired truth. An investigator's inability to provide a complete theory of those capacities does not itself defeat their operation. Equally, a favorable description of a capacity does not authenticate every alleged exercise of it. [12, 16–18]
+
+An appraisal must retain its target. Knowing that a movement will prevail differs from knowing that its leader is a prophet. Knowing a proposition differs from knowing that a particular source asserted it. A false assertion about what holds now does not falsify an earlier true assertion about an earlier time. Recipient, content, time, relevant evidence and source scope belong to the question being answered; they are not permissions to make truth depend on preference. [11, 15, 25]
+
+## 2. Basic recognition and the possibility of rational correction
+
+### 2.1 Why cognition need not await reflective certification
+
+The affirmative foundational argument begins with the role of inference. An inference can extend knowledge when its premises are known and competently used. It cannot confer all of its premises' warrant merely by being written as a valid sequence. If every proposed starting point in a finite chain receives support only from an earlier inference, the chain has not yet supplied an independently warranted starting point. Requiring a prior proof of the reliability of every faculty adds another task that itself uses cognition. It does not place the subject outside cognition to certify cognition from nowhere. This supports the foundational account's distinction between first-order knowing and reflective knowledge of how one knows. It is not, by itself, a complete refutation of coherentism or infinitism. [1, 10, 12, 17]
+
+On that account, a sound exercise of perception, understanding, memory or basic recognition can provide positive epistemic standing without the subject first demonstrating a theory of the faculty. The positive claim is about a suitably functioning, truth-responsive capacity in its relevant circumstances. It is not the principle that every sincere seeming is true, that every inherited belief is warranted, or that an alleged basic belief is immune to specific criticism.
+
+This also explains why a bad explanation need not defeat an independently warranted judgment. Someone may know a familiar fact through perception and later give a mistaken account of how perception works. The later account cannot have been the historical source of the earlier knowledge. If that account is refuted, the refutation reaches it and any actual dependencies upon it. It does not acquire universal reach merely because both the good perception and the bad explanation involve the same person. [12, 16]
+
+There is a further distinction between **occasion** and **ground**. An invalid argument can direct someone's attention to a truth that they then recognize through a competent, independently warranted capacity. The invalid inference does not warrant the conclusion in its defective respect; its causal role in occasioning the insight is compatible with the insight having another ground. Likewise, instruction can occasion genuinely new basic recognition. “Newly learned” and “noninferentially warranted” are not contradictory descriptions. [12]
+
+### 2.2 Fiṭrah as a normative disposition
+
+In the Atharī and Taymiyyan account reconstructed by the consulted research, *fiṭrah* is a native normative disposition relevant to cognition and desire. It is not simply a memorized list of propositions, one isolated faculty, or an observed numerical variable. The account gives sound recognition of the Creator and fundamental fittingness a positive role; reasoning, experience and report can make relevant objects available, clarify their significance and remove impediments. Its theological applications depend on its substantive claims about the Creator, truth, good and human constitution. Those applications are not conclusions of a neutral statistical model. [1, 5–6, 10, 20]
+
+The dependence of cognition on such a constitution does not identify all of the following:
+
+- A capacity or disposition that is present but not currently exercised.
+- A present recognition of a particular content.
+- The ability to articulate that content.
+- An inferential demonstration offered for it.
+- A report of assent or a corresponding practical action.
+
+A disposition can develop; a teacher can direct attention; an impairment can obstruct exercise. The source argument distinguishes learning what was not previously known, recollecting what was forgotten, and becoming willing to pursue what was not previously willed. Thus a reminder can genuinely benefit cognition without proving that its result reproduces an earlier episode of knowledge. [12, 20]
+
+The theological attribution matters. The positive reconstruction here is a specified Taymiyyan line of argument, with later Atharī expositions and modern scholarly interpretations. It does not speak for all Ashʿarī, Māturīdī, Muʿtazilī or Islamic philosophical accounts. Modern comparisons with proper functionalism can illuminate an argument without making a classical author a proponent of every condition in a modern epistemology. Doko and Turner jointly develop one relevant modern comparison; the contrast between concrete and ideal reason is their interpretive use of an earlier distinction reported from C. Stephen Evans, not classical terminology. [5–6, 11]
+
+### 2.3 Local impairment does not entail global cognitive disablement
+
+An apparent objection to restoration is circular: reasoning requires sound cognition, while sound cognition supposedly requires prior restoration. The objection becomes decisive only if **every** local impairment removes **every** usable cognitive ground. Constitutive dependence on one cognitive nature does not establish that universal premise.
+
+Suppose a disputed report supports a claim through route A. A person also knows a comparison fact through route B and competently uses it to expose an inconsistency in the report. If the alleged defect in A does not defeat B's perception, memory, interpretation or inference, B can warrant a local correction. The person need not first establish that their entire cognitive life is sound. This is genuine dependence on surviving cognition, not certification from a perspective outside all cognition. [17]
+
+The source argument for this reading is substantive. Ibn Taymiyyah distinguishes conviction with knowledge from unsupported conviction, allows mistaken self-appraisal, locates errors in particular causes, and makes known premises central to competent inference. He also allows a practice to remove some error without guaranteeing every further beneficial truth. The preserved text contains an unresolved comparative clause about premise counts; no conclusion here depends on repairing it or deriving a numerical law that fewer premises always make cognition better. [4, 17]
+
+The surviving result is consequently limited in the right way. Removing defective support, correctly rejecting an error, and acquiring warranted positive recognition are different achievements. The first can occur without the second; the second can occur without a completed positive account. Conversely, a specific challenge to a capacity shared by A and B can reach both routes if its grounds really do so. Local correction is available through surviving grounds; it is not a guarantee that some ground survives every possible defeat.
+
+### 2.4 Acquisition, immediate recognition and reflective explanation
+
+The distinction between foundational and inferential cognition has several axes. The route by which someone first learned a proposition, the ground presently sustaining it, the immediacy with which it is now grasped, its modal status, and the explanation later offered for it need not coincide. A linguistic competence can be acquired through teaching and then exercised without consciously deriving each understood sentence. A mathematical conclusion can first be reached by inference and later be directly recalled. Its being experienced as necessary does not erase the inference that established it. The sound-reason source lists an inference from foundational premises under “empirical necessity”; that placement is coherent only if it concerns the conclusion's subsequently immediate or compelling status, rather than classifying its acquisition as noninferential. Logical necessity, psychological irresistibility and epistemic warrant remain different claims. [10–12]
+
+The source's proposed foundations include sensory and introspective awareness, classical rational principles, ordinary linguistic understanding, and native theistic, moral and causal recognition. This is an affirmative epistemological proposal, with its own standards of sound exercise. Its examples do not show that every perceptual appearance is certain, that every philosophical logic accepts the same principles, or that a particular interpretation of causality is an uncontested datum. Identifying something as foundational within the account explains its role there; its application still answers to relevant defeaters. Similarly, a substantive methodological thesis such as naturalism or an unrestricted empiricism must be distinguished from an ordinary observation. It should be assessed as the actual thesis being relied on, rather than automatically diagnosed as either a foundation or a deformation.
+
+The source models the qalb, or heart as cognitive subject, as receptive to truth and the fiṭrah as a native orientation or potency. Encounter with an appropriate sign occasions an exercise of that potency. This preserves a positive account of why theistic recognition could be properly basic without being an articulated proposition present before all experience. It does not supply a neurological localization, an innate inventory of sentences, or evidence that every apparently spontaneous judgment came from the posited disposition. The particular claims about the heart, activation and impairment are themselves interpretative and explanatory claims. A challenge to those claims must be answered at that level; the source's classification of some first-order recognitions as basic cannot make its entire operational theory axiomatic. [10–12]
+
+There are two different positive roles for argument. An argument can occasion attention to something then independently recognized, as in §4.1. It can also be an operative inference through which a previously unknown conclusion becomes known. The sound-reason source's reminder-oriented passages should be read with its own §5, which expressly allows knowledge through inference, and with the source-controlled distinction in §2.2 between new cognition, recollection and practical change. Neither the teacher's prior knowledge nor the learner's prior capacity establishes that the learner already knew the particular conclusion. “Argument clears; signs activate” is consequently a pedagogical proposal for some cases, not a universal account of how all knowledge is acquired. [10, 12]
+
+The source's four-stage account—reception, impression, configuration and projection—can help distinguish contact with an object, an initial seeming, integration with other contents and formation of an explanatory framework. Its value is analytic: an initial error need not contaminate every later comparison, and a framework can guide subsequent attention. The stages have not been established here as an invariant psychological sequence. A coherent projection can systematically misdescribe the world; its coherence alone does not supply the missing truth relation. Likewise, identifying one illusion can exhibit a competent local correction without proving the general reliability of every faculty. The intelligibility of the world to thought supplies a substantive explanatory question. The source's theological interpretation of that correspondence requires its source-adequacy premises, developed in [Objective Normativity and Corrective Cognition, §4](../foundations/objective-normativity-and-corrective-cognition.md#4-intelligibility-and-its-ground), rather than following from the four stage names. [10]
+
+The positive introspective proposal includes love, intelligence, agency, moral obligation, gratitude and beauty. The source interprets their coherence, and the apparent reach of some beyond any finite object, as signs of an adequate source of cognitive and practical life. This is an explanatory argument about the character and origin of those achievements. The occurrence of a desire or feeling alone does not establish an external object satisfying it, and calling a projection appropriate does not distinguish recognition from wishful interpretation. Its stronger warrant must come from the source-adequacy and perfection argument, with the actuality, content and eligibility of the introspective datum independently defended. That preserves the proposal's philosophical force without making a feeling an infallible measurement. [10]
+
+Corrective engagement can nevertheless use the distinctions practically. Clarify an interlocutor's actual premise and the meaning of a disputed term; test a specific inconsistency; supply an argument or encounter appropriate to the difficulty; and reassess what changed. Inherited conditions, present capacity, access to correction and knowingly maintained resistance matter differently to responsibility. The source appeals to prophetic instruction as a remedy for initial deprivation. That is its theological explanation of an offered corrective, not evidence that every person has actually received an adequate opportunity. Motive, culpability, the presence of a particular impairment, and the causal efficacy of the response require their own grounds. Neither dissent nor a failure to answer immediately establishes them. The aim is a warranted cognitive or practical benefit of the specified kind, rather than a preferred utterance obtained by any means. [10–12, 24]
+
+
+#### Acquired efficacy and its present exercise
+
+An explanation of how a capacity acquired its efficacy need not compete with an explanation of its present triggering. A physically sufficient present state can have a causally relevant acquisition history, even if that history is itself physically realized. The contrary inference confuses completeness with respect to immediate inputs with completeness with respect to the question being explained. This is a restricted non-entailment result, not a reconstruction or refutation of an author's entire theory. The following example makes its positive content and its limits explicit. [SC-ASSESS] [SC-MODEL]
+
+The source study also preserves the substantive reply to Baker's recruitment objection. On its account of Dretske's 1991 response, earlier token recruitment helps constitute a later token's indicator function; the historical property can then explain that later token's efficacy. This is not the later exercise causing its own acquisition. Nor is the proposed function simply a fixed movement-producing disposition: its effects can vary with other representations, motivation and context, including cases of misrepresentation. The simple same-role circle therefore does not establish a contradiction in the actual reply. The further question is whether the historical property adequately constitutes the relevant intentional content, rather than merely identifying an antecedent of a contentful capacity. If that identification is warranted, demanding another independent physical push would not refute it. The model below does not settle that identification. [SC-ASSESS] [SC-SOURCES]
+
+**A fixed-cue acquisition theorem.** In a declared sequence of taste trials, let $`X_t,N_t\in\{0,1\}`$ represent appearance and noxiousness. They are separately variable attributes, not random variables assumed probabilistically independent. The cue and discomfort signals are $`C_t=X_t`$ and $`P_t=N_t`$. With initial weight $`W_0=0`$, stipulate
+
+$$
+W_{t+1}=W_t\lor(X_t\land N_t),\qquad
+E=W_n\land X_{\mathrm{test}}.
+$$
+
+The target of the cue remains appearance throughout; it does not change to harmfulness during evaluation. Trial exposures are supplied independently of the later response policy. Thus the construction does not assume that an avoiding animal would nevertheless ingest the next object. Its signaling, memory, update law and response organization are stipulated resources, not an explanation of their evolutionary origin or an empirical model of an animal. [SC-MODEL]
+
+For any finite training history $`H=((X_0,N_0),\ldots,(X_{n-1},N_{n-1}))`$, induction gives
+
+$$
+F(H):=W_n=\bigvee_{t<n}(X_t\land N_t),\qquad
+E=F(H)\land X_{\mathrm{test}}.
+$$
+
+For the empty history the disjunction is false, as required by $`W_0=0`$. Appending one trial takes the previous disjunction or the new conjunction, which is exactly the disjunction for the longer history. This proves the formula for every finite history, rather than inferring it from a bounded enumeration. [SC-MODEL]
+
+Now compare $`H_+=((1,1),(0,0))`$ and $`H_-=((1,0),(0,1))`$. Each contains one target appearance and one discomfort episode. Nevertheless $`F(H_+)=1`$ and $`F(H_-)=0`$. With the same target test cue, their outputs differ. Prior **pairing**, not merely cue and discomfort totals, matters under the stated intervention semantics. Present sufficiency of weight and cue is therefore compatible with dependence on acquisition history. More generally, an expression $`E=G(F(H),c)`$ alone proves no such dependence: $`F`$ or the relevant part of $`G`$ might be constant. One needs witnesses $`h_1,h_0,c`$ with $`G(F(h_1),c)\ne G(F(h_0),c)`$. These two histories and $`c=1`$ supply them. [SC-MODEL]
+
+**What the controls exclude.** A pain-only learner with update $`W_{t+1}=W_t\lor N_t`$ assigns weight one to both histories. It also learns after the non-target painful trial $`(X,N)=(0,1)`$, where the pairing learner does not. This explains the failure of the source study's initial proposal: setting $`P=X\land N`$ makes $`C\land P=P`$ on lawful trials, erasing the proposed distinction from sensitization. The repaired model uses $`P=N`$ and retains all four possible single-trial inputs. This is a meaningful rejected claim and repair, not an additional successful experiment. [SC-MODEL] [SC-REVIEW]
+
+A disconnected learner keeps $`W=0`$ regardless of history; an available cue does not by itself install an effective response. A preset keeps $`W=1`$. After $`H_+`$, the preset and acquired learner have the same modeled test-time weight and the same output for every test cue. Under the alternative training history $`H_-`$, only the acquired learner changes. Consequently the present response map does not identify **this specified acquisition route**. The comparison equates test state and response law, not every physical feature of the retained learning mechanisms. It also does not imply that designed, inherited, preset or faithfully copied systems are globally meaningless or unwarranted: they may have other relevant histories and functions. [SC-MODEL] [SC-PRESET]
+
+The harmless-lookalike case supplies a different limit. After $`H_+`$, test appearance $`X_{\mathrm{test}}=1`$ and noxiousness $`N_{\mathrm{test}}=0`$ still produce avoidance. The cue correctly indicates appearance; avoidance does not entail noxiousness. There is no modeled belief whose falsity or lack of warrant has thereby been established. The response weight is not Dretske's representational indicator function, and an appended field named “content” would not establish that function. [SC-MODEL]
+
+**Mediation and permissible comparison.** Joint intervention fixing $`W_n=w`$ and $`X_{\mathrm{test}}=x`$ gives $`E=w\land x`$, independently of the training history. This is not a claim about arbitrary observational conditioning: deterministic histories may provide no observational overlap at fixed weight. In an extended model where history also influences the test cue, fixing only the weight would not block that other path. Equally, changing past training is not a future continuation from a completely fixed present state. The example gives no pair of completely present-state-identical systems that diverge under the same future inputs and laws. [SC-MODEL]
+
+These distinctions identify a real historical explanatory role without naturalizing a mind. Indication, acquiring a response, content's efficacy as content, present rational basing, conscious understanding of necessity and warrant are different achievements. Reppert's stronger content-and-necessity challenge cannot be answered merely by substituting conditioning for inference; conversely, a physically sustained environmental relation cannot be dismissed simply because an arbitrary retrospective label would be idle. The required further work concerns the actual content-identification and reason-guidance claims, not a demand for a second simultaneous trigger. Section 4.1 develops the separate question of which present content is a belief's ground. [SC-ASSESS] [SC-SOURCES]
+
+An analogous restraint applies to productive identification. A coarse test readout can conceal a historical difference, but a past-training intervention is not automatically an admissible continuation instrument from another theory. Nor are an acquired configuration and a current trigger two independently original complete producers. The model depends on its sensor, learning law, formation and current conditions. Transport to whole-field original provision would have to preserve those roles and the sense of completeness; merely renaming them would not do so. This neither supplies nor defeats the affirmative source-adequacy arguments elsewhere in this work. [SC-MODEL] [SC-TRANSPORT]
+
+The source reports checks of 341 histories of lengths zero through four, 1,364 history/test cases and 2,728 mediator clamps, together with the specified controls. Those overlapping historical checks are not independent experiments, empirical probabilities or fresh execution here. The general result rests on the displayed induction and explicit witnesses. The source's later review binds the repaired model and post-response appraisal, not the earlier version before the 1991 reply was recovered. [SC-MODEL] [SC-REVIEW]
+
+## 3. Proper function, truth and the actual exercise
+
+### 3.1 Function is more than frequent success
+
+A reliable pattern, an assigned function, proper operation, truth and warrant answer different questions. A behavior can be frequent without being a function. A mechanism can perform its assigned function while that function promotes deception. An organism's selected effect, an artifact's intended purpose and a component's contribution to an organization are distinct kinds of functional explanation. None should be silently replaced with an epistemic claim about truth-directed cognition. [21–23]
+
+There are four useful levels:
+
+| Level | What it establishes | What remains to be justified |
+|---|---|---|
+| Stable performance | A pattern persists or succeeds on a chosen measure | Why that measure is appropriate |
+| Function fixation | A history, role, organization, intention or other defended relation determines the function | Why fulfilling it is truth-conducive |
+| Epistemic function | The function has an adequate relation to the specified truth target | Whether this exercise operates appropriately |
+| Warranted cognitive achievement | The relevant grounds, operation, circumstances and defeat conditions are satisfied | The exact scope and degree of the resulting epistemic standing |
+
+A selected signaling practice can favor deception; a perfectly implemented objective can be harmful; a coherent equilibrium can be false. These examples do not deny biological, organizational or artifact functions. They defeat an inference from the existence of one kind of function to every stronger kind of normative or epistemic success. A primitive truth-linked norm, or an impersonal truth-tracking capacity, is also a live conditional alternative to a personal-source explanation. Choosing among those accounts requires further argument. Merely calling the successful mechanism “designed” does not establish a wise designer. [21–23]
+
+The positive proper-function account is richer than the success-only account. Plantinga requires truth-directed functioning in an appropriate environment under a suitably successful design plan. His later discussion adds attention to the particular exercise's local setting: a normally functioning observer can read a stopped clock at the one moment its display is correct. He treats his more precise probabilistic repair as tentative and distinguishes some warrant from warrant sufficient for knowledge. This is a substantive constraint on epistemic luck, not an empirical diagnostic supplied by the present chapter. [7, 18]
+
+Plantinga also rejects a proposed counterfactual characterization of local favorability. The proposal says that, were this exercise to produce a belief in this local environment, the belief would be true. Footnote 194 requires the absence of a sufficiently close exercise of that kind with a false outcome; actual truth of antecedent and consequent alone does not settle the counterfactual. His counterexample is a driver who sees a real barn in a district containing many fake barns. By accident, mist screens the nearby fakes. On his stipulated comparison, the relevant counterfactual holds, yet the screening is accidental relative to the truth-directed functioning at issue. He therefore judges the belief insufficiently warranted for knowledge, not wholly unwarranted. The case challenges that particular sufficient condition, not every possible anti-luck theory. His subsequent probability proposal remains tentative, with a context-sensitive threshold; it is not a settled numerical test for a person's warrant. [7, 18]
+
+The source-relative fiṭrah account likewise includes an account of the disposition's origin, its proper aim, its sound exercise and relevant circumstances. Those premises can explain more within that account than a bare output statistic does. Their explanatory force remains conditional on their truth and application; the output does not independently prove them.
+
+### 3.2 Operation, accuracy and warrant must not be collapsed
+
+Three statements can be separately true or false: a mechanism operated according to its relevant function; this particular answer was accurate; the subject's resulting belief had the required epistemic standing. A well-functioning but fallible capacity can err. A lucky guess can be accurate. A generally reliable route can face a particular undefeated undercutter. A sufficient-case description must keep those relations visible. [7, 22, 25]
+
+For example, suppose a person carefully reads a display while unaware that the relevant instrument has broken. Improving attention may improve the reading without repairing the instrument's relation to the world. If the person then obtains an independent adequate measurement, that route may ground the correct conclusion. Its success does not retroactively make the broken indication reliable. The corrective task must follow the actual defective dependency; securing the preferred answer is insufficient. [18]
+
+There is a corresponding distinction in the assessment of a reasoning episode. A long episode can contain both a sound inference about q and an unrelated failure in later delivery or administration. Assessing q requires the dependencies relevant to q, determined by their actual evidential and causal roles, not every event that happens to share the episode. Conversely, excluding a genuinely load-bearing failure merely because it is inconvenient would understate those dependencies. Claim-relative assessment preserves both a correct result and the exact failure elsewhere. [11]
+
+### 3.3 The truth-profile criterion
+
+The following elementary result makes one limitation exact. Let W be a finite nonempty set of admitted situations, let $`D:W\to P`$ be the complete profile available for an appraisal, and let $`T:W\to\{0,1\}`$ be a separately specified target. A target may concern truth, a source relation or a stipulated restoration condition. A profile is **exactly sufficient for this target** when a function $`f:D(W)\to\{0,1\}`$ satisfies $`f(D(w))=T(w)`$ for every $`w\in W`$.
+
+**Proposition 1 — Exact target recovery.** Such a function exists if and only if T is constant on each fibre of D:
+
+```math
+D(w)=D(w')\quad\Longrightarrow\quad T(w)=T(w').
+```
+
+**Proof.** If f exists, equal profiles receive the same f-value, so their target values coincide. Conversely, if the displayed condition holds, define f at an attained profile p to be the target value of any situation with profile p. Constancy makes this well-defined, and its composition with D is T. ∎
+
+The result does not prove that a proposed pair of situations is physically or metaphysically possible. That belongs to the justification of W. It also does not make exact recoverability necessary for every form of probabilistic evidence or fallible knowledge. It identifies the precise obstruction to an **exact profile-only verdict** over the admitted class. [21, 23–24]
+
+If two admitted models share all recorded success, stability and trajectory data but differ on a truth-linking relation, those data alone cannot identify that relation. A richer observation can remove the obstruction when it supplies relevant information. Merely renaming the same profile “proper function” cannot. Likewise, a theory that already includes a justified truth-directed selection history or an adequate source relation does not refute the proposition: it has supplied information the poorer profile omitted.
+
+### 3.4 Necessary truth does not identify its operative ground
+
+**Proposition 2 — Probability of a necessary target.** Suppose a probability model has a target Q true at every admitted state. For every event A of positive probability,
+
+```math
+\Pr(Q\mid A)=1.
+```
+
+**Proof.** Q is the whole state space, so $`A\cap Q=A`$ and $`\Pr(Q\mid A)=\Pr(A)/\Pr(A)=1`$. ∎
+
+This output-truth probability cannot distinguish a competent proof from irrelevant assent to the same necessary proposition. Adding further circumstances to A does not solve that problem while Q remains true throughout the model. One may instead investigate whether a relevant ground was actually understood and used; that is a different target requiring appropriate evidence. The observation does not refute every account of epistemic probability, nor does it require introducing impossible worlds to evaluate a necessary theological claim. [18]
+
+The positive route remains straightforward in a suitable case. Someone who knows $`7+4=11`$, knows that adding one preserves equality, and competently applies that knowledge can establish $`7+5=12`$. The operative known contents and their actual use do explanatory work that the bare fact of the conclusion's necessity does not do. Writing the proof beside another person's identical answer does not establish that it grounded that person's belief.
+
+### 3.5 Declaring the bearer and the claim
+
+The phrase “sound reason” can describe a faculty, a governing norm, a represented rule, a particular argument, its execution or its conclusion. Those bearers have different failure conditions. The comparative account of concrete and sound reason therefore treats assessment as a product of **object level, mode of instantiation, normative status and result status**. A concretely instantiated argument is not defective merely because it is concrete; an ideal specification is not correct merely because it is described as ideal. A community's historically embodied rationality is a composite of premises, inferential practices, semantic conventions, authorities, abstractions, incentives and exclusions. One dated reasoning episode is a different object. Neither should be silently substituted for the other. [11]
+
+The following distinctions preserve that product without requiring a separate material object for every abstract rule.
+
+| Bearer | Relevant assessment |
+|---|---|
+| Cognitive faculty | Whether the relevant capacity is healthy and suitably exercised; its condition is not identical to every output. |
+| Repeatable governing standard | Whether the rule is adequate for the analysis and task. A rule governing an admitted part of an analysis can function as a metaortheme; not every rational truth has that role. |
+| Actor's represented standard | Whether the actor's representation is faithful and adequate, at the stated time and analysis. |
+| Material case-bound governing token | Whether the standard is bound to the correct case, sources, edition, calibration, parameters, time and scope. This is the role of a metaorthemma. |
+| Execution | Whether the actual operation faithfully follows the applicable token or rule. |
+| Judgment or placement | Whether this result agrees with the independently fixed target, and whether its actual path is connected to that truth. |
+
+Across those bearers, the source distinguishes eight dimensions: faculty condition, premise or source soundness, governing-standard adequacy, token adequacy, execution fidelity, inferential validity, result correctness and truth linkage. Several dimensions can apply to one bearer. In particular, a valid inferential form does not supply the truth or warrant of its premises, while true or warranted premises do not make every inference from them valid. The six bearer rows therefore locate objects of appraisal; they do not replace the distinct requirements applicable to those objects. [11]
+
+A correct rule and correct binding can coexist with an unfaithful execution. A defective binding can be followed perfectly. A higher-order appraisal can propose a new rule without that proposal thereby becoming an admitted governing type. These are different repair tasks. Under the current token convention each material governing token has one direct type; several applicable types require several linked tokens or an expressly composite type. A many-to-many extension is not supplied by this exposition. Where there is no material case-specific binding or separate validity burden, the rule and execution suffice: the account does not postulate an invisible token merely to populate every row. [11]
+
+Formal repeatability also does not require a separately subsisting universal. For a declared analysis A, a concrete case m and a type o, $`\mathrm{Inst}_A(m,o)`$ records the indexed instantiation claim, while $`O^*(m;A)`$ specifies the governed adequate resolution. The relevant objectivity concerns the truth of those indexed applications, not a further entity inferred solely from using a type. The reported Taymiyyan comparison treats external objects as individuated particulars and universals as abstracted in the mind; this is a source-relative caution here, not adoption of a complete metaphysics of universals. A formal type does not by itself require a self-standing realm of types, an additional entity called orthability or a second eternal grammar. Nor does mental conceivability, abstraction or a model representation alone establish external possibility, actual existence or an unseen mode. A warranted external conclusion remains possible through independently supported external premises and an explicitly justified bridge. These restrictions do not refute a substantive ontology that supplies its own further reasons. [11]
+
+For a claim q in episode e, fix its complete appraisal index: analysis and version, governance regime, occurrence and version, actor, decision time, and the relevant information and evidence then available. Let $`R_q(e)`$ be the reasoning requirements genuinely relevant to q, selected from the whole episode's requirements by its actual dependencies. Define the declared assessment predicates
+
+```math
+\begin{aligned}
+A_q(e)&:=\bigwedge_{r\in R_q(e)}\mathrm{Pass}(r,e),\\
+S_q(e)&:=A_q(e)\land T_q(e),
+\end{aligned}
+```
+
+where $`T_q(e)`$ means that this claim's actual operative route is truth-linked. In this contract truth linkage includes correctness of the fixed claim and excludes mere accidental agreement. $`A_q`$ is pathway adequacy and is nonfactive; $`S_q`$ is strict claim-level soundness. Neither is a definition of Plantingian warrant or of every philosophically permissible use of “sound.” Ex ante justification, belief, actual correctness and knowledge retain their separate meanings. An empty requirement list is not evidence that a substantive inference has been adequately assessed: the list's adequacy and applicability must themselves be justified. [11]
+
+**Claim-preserving extension.** If an extended episode retains q's index, its relevant requirements and their verdicts, and its truth-linking relation, then it retains $`S_q`$, even if an unrelated later delivery fails.
+
+**Proof.** Every conjunct defining $`A_q`$ has the same value in the two episodes, and $`T_q`$ has the same value. Their conjunction is therefore unchanged. ∎
+
+The converse qualification is essential. If the alleged delivery was needed for the recipient's actual understanding, or a later finding defeats an originally relied-on premise, the relevant dependencies or appraisal time have changed. The proposition then supplies no exemption. For two claims q and r in the same episode, $`S_q=1`$ and $`S_r=0`$ can both hold. An episode-level assertion must say whether it means all claims, some claim, or a particular claim; it cannot replace that quantifier with one unqualified flag.
+
+All four result/pathway combinations remain meaningful. Adequate reasoning can reach the correct conclusion; a procedurally adequate and ex ante justified fallible route can miss; a defective route can accidentally be right; and both route and conclusion can fail. Actual truth is not enough for $`T_q`$. Conversely, a rare false result need not show that every prior step was unreasonable. Indexing the assessment to the actor's information makes the question precise; it does not make its answer whatever the actor believes. The applicable tolerance and governed level likewise belong to the truth condition of a placement, not to an arbitrary retrospective adjustment of it. [11]
+
+This precise typing also protects the externalist account. Plantinga's own exposition does not initially define “design plan” as proof of a conscious designer. It distinguishes the truth aim, success of the plan and suitability of the environment, and it later refines the local-environment condition. The four-condition summary in the sound-reason source is therefore a useful orientation, with its fuller qualifications retained in §3.1; it is not an exhaustive sufficient test, a theological identity theorem, or a questionnaire. [7, 10] The subject need not possess this assessment vocabulary to know. Its purpose is to keep the investigator's claims faithful to the particular cognitive achievement.
+
+
+## 4. Occasion, operative ground and inferential transmission
+
+### 4.1 Directing attention is not necessarily supplying a premise
+
+Suppose an instruction leads a person to inspect a lamp. The lamp's visible condition then grounds the belief that it is lit. The instruction contributed causally to the encounter; it need not be a premise from which the illumination was inferred. If the person instead uses the instruction to interpret an ambiguous appearance, or relies on both routes, the case changes. The relevant question concerns what actually does the epistemic work. [19]
+
+Dretske's inspected treatment already distinguishes information carried by an experience from the informative feature that produces the belief. The attention example therefore does not refute that requirement. It instead blocks the further attribution that the belief was inferred from every meaningful upstream state. [8, 19]
+
+The joint work of Dretske and Enç makes a further qualification: the operative cue need not itself causally guarantee the truth. Persistent correlations in the environment can support acquired recognition; their Toby/Sally comparison distinguishes such ecological reliability from correlations merely experienced by a learner. The earlier, stronger causal condition must not be presented as their settled account. Their later proposal remains exploratory and concerns a necessary condition, whose satisfaction alone does not supply a complete analysis of knowledge. [19]
+
+This distinction protects both positive cognition and fair criticism of a theory. A genuinely informative perceptual route can warrant the conclusion even when a nominated inferential attribution fails. Failure to explain every further form of basing is a limit of the inspected account, not a proof that it assigns content no present role or that naturalistic epistemology has been refuted.
+
+The stronger content-sensitive version of the attention case grants more than a bare instruction. Let P be that the lever is raised, R that a raised lever implies an illuminated adjacent lamp, and Q that the lamp is illuminated. Hold fixed the relevant contents and their antecedently acquired functions. In a reference inference, the subject actually uses P and R as grounds for Q; its warranted version additionally needs adequate grounds, competent use and no relevant undefeated defeater. In the contrasting episode, **accepting P as true**, rather than merely entertaining a lever concept, intelligently directs inspection. The subject has not yet inferred Q from P/R and then accepts Q on an independently adequate perception. The same illuminated lamp, attended to for another reason, would normally support the same belief. P does not bias its interpretation, and P/R are not covert additional grounds. Both routes can be meaningful and warranted. If interpretation is biased, the source depends epistemically on P, or both grounds operate, this restricted contrast must be reassessed. It establishes noninference from the nominated P/R, not absence of every inference in the process. [SC-BASING]
+
+The distinction also avoids a false choice between reflective reasoning and irrational association. The inherited comparison treats Buckner's structured, context-sensitive associative practical inference as a serious positive case, while keeping its explanatory/intensional adequacy distinct from ecological epistemic appraisal and from a completed theory of theoretical knowledge. His intensional criterion excludes mere recognition-based choice, and the proposed lower boundary remains qualified. Boghossian's selected conscious, voluntary theoretical target is not all automatic cognition; Siegel challenges a universal requirement of separate self-aware reckoning without identifying every causal transition as inference. Patronnikov's associative-inference argument is expressly conditional on disputed justification views. None supplies a neutral settled definition to be inserted unargued into a proof against naturalism. A bad inference can still be an inference; another good ground can sustain a conclusion despite defeat of one candidate premise. Neither the word “associative” nor success at an endpoint settles these classifications. [SC-BASING] [SC-BASING-SOURCES]
+
+A discriminating appraisal therefore concerns the actual present role: response to the grounds' support and relevant defeat, as distinct from priming, motor preparation, attention placement or opportunity to consult another source. The subject's represented task matters. Verbal report is not always necessary, and retrospective explanation is not automatically the earlier basis. The familiar factor-through condition applies only after admissible cases and the target are independently warranted: if a selected readout identifies cases with different actual bases, it cannot by itself recover that basis. Merely recovering a causal path still does not turn each edge into an inferential ground. A manipulated meaning, destroyed semantic function or changed task is not automatically a clean intervention on the original claim. No new rationality bit or two-path simulation can supply its own epistemic interpretation. [SC-TRANSPORT]
+
+The relevant source studies retain their access and theory limits. Dretske's chapter 4 allows richer current representational and motivational interaction and points to chapter 6; the latter was not acquired in that comparison, and the complete 1993 chapter likewise remained outside its verified scope. These are specific limits of those studies, not a current universal access claim or a refutation of the uninspected account. The acquisition result in §2.4, this premise-relative distinction and the later operative-feature correction above are compatible positive contributions. None converts incomplete naturalization into an evidential penalty against every particular cognition, or downgrades the independently supported recognition and source appraisals. [SC-BASING] [SC-BASING-SOURCES]
+
+### 4.2 A complete finite sensitivity counterexample
+
+The stronger question grants genuine inference and asks whether a proposed epistemic condition transfers with it. Let Q and A be propositions and define $`P=Q\land A`$. Thus P entails Q by logical form. Order three worlds by increasing distance from the actual world, as shown below; e is a fixed nonfactive evidential condition.
+
+| World | Distance | Q | A | P | e present |
+|---|---:|---:|---:|---:|---:|
+| $`w_0`$ — actual | 0 | 1 | 1 | 1 | 1 |
+| $`w_1`$ | 1 | 1 | 0 | 0 | 0 |
+| $`w_2`$ | 2 | 0 | 0 | 0 | 1 |
+
+Define $`S(e,X)`$ to mean that e is absent at the nearest world where X is false. This is the counterfactual semantics of this example, not an assumption about every interpretation of sensitivity.
+
+**Proposition 3 — Sensitivity need not pass to a consequence.** In this model $`S(e,P)`$ holds while $`S(e,Q)`$ fails, although $`P\models Q`$.
+
+**Proof.** The nearest not-P world is $`w_1`$, where e is absent. The nearest not-Q world is $`w_2`$, where e is present. Both evaluations use the same ordering and the same e. ∎
+
+To obtain an epistemological conflict, additional premises are indispensable. Grant that the subject knows P at $`w_0`$, competently deduces Q while retaining that knowledge, and thereby believes Q. Suppose further that the complete operative basis for Q is the nonfactive e persisting at $`w_2`$, that there is no additional factive or otherwise conclusive ground, and that knowing Q requires $`S(e,Q)`$. Those assumptions deny knowledge of Q. An unrestricted principle transmitting knowledge through the granted competent deduction affirms it. The enlarged package is inconsistent; the truth table alone neither supplies knowledge of P nor shows that the deduction was irrational. [19]
+
+The strongest alternative concerns the ground of the inference. If the fact P itself is the operative reason for Q, it is absent at every not-Q world because P entails Q. Therefore $`S(P,Q)`$ holds. This removes the displayed sensitivity failure without proving that this factive ground was actually used or that sensitivity is sufficient for knowledge. The disagreement concerns the proper individuation of the reason, not whether a true P can coexist with a false Q.
+
+The ordering also matters. Insert a world at distance $`3/2`$ where Q, A and e are all false. The nearest not-P world remains $`w_1`$, but the nearest not-Q world becomes the inserted world; both sensitivity tests now pass. No empirical conclusion follows without a justified interpretation of the alternatives and the operative ground. The underlying closure dispute belongs to the published exchange between Dretske and Hawthorne; the finite example is an expository reconstruction, not a new refutation of a view that openly accepts restricted transmission. [8, 19]
+
+### 4.3 Necessary conclusions and different senses of implication
+
+A necessary conclusion raises a further difficulty for a sensitivity account. If ordinary possibility excludes every state in which the conclusion is false, a test based only on such states can become vacuous. Proposition 2 exposes the corresponding problem for a truth probability: competent calculation and irrelevant assent can both receive probability one. An account that distinguishes them must attend to the ground and its actual use. That does not require treating a false arithmetic proposition as an ordinary metaphysical possibility.
+
+Adams, Barker and Clarke distinguish true belief supported by actually operative, sensitive reasons from stronger conditions involving the subject's appraisal and resistance to defeat. Known facts as well as experiences can serve as reasons. In their account, a fact used in a new inference need not transmit every earlier experience through which the subject acquired knowledge of that fact. The later belief's ground therefore cannot be identified merely by tracing every causal predecessor of its acquisition. Their treatment of necessary truths appeals to relevant conditionals; their arithmetic example grants sensitive testimony and a subsequent intellectual experience. Those grants describe a substantive sufficient case. The necessity of the answer alone does not establish them. [30, especially pp. 16 n.19 and 24–27]
+
+Barker and Adams also explicitly state an implication-to-counterfactual bridge in their discussion of closure. They restrict the intended inference to a competent, immediate use of a known premise; permit combined reasons; and exclude using a supposedly known fact whose knowledge presupposes the very conclusion at issue. Their account treats basing and the subjunctive relation as primitive rather than promising a reduction of every epistemic notion. A criticism that simply announces a missing bridge or a missing reductive definition would therefore misstate the account. The legitimate question is what justifies that bridge for the kind of implication and the complete actual ground being used. [31, pp. 222 n.1, 225 nn.12–13, 226–228 and n.21]
+
+The following distinctions make that question precise. Let P be a premise and N a target.
+
+| Relation | What it says | What it does not supply by itself |
+|---|---|---|
+| The material conditional $`P\supset N:=\neg P\lor N`$ is true at a valuation | That valuation does not make P true and N false | A connection between the contents or the subject's operative reasons |
+| $`P\models_{\mathrm{CL}}N`$ | Every classical valuation satisfying P also satisfies N | A relevant object-language conditional or a fact about actual cognitive use |
+| $`\Gamma\vdash_R N`$ | N is derivable in the specified calculus from the premises in $`\Gamma`$ | An unrestricted deduction theorem internalizing that derivation as $`B\to_R N`$ |
+| $`P\to_R N`$ | The indicated relevant conditional is an object-language formula | An epistemic interpretation of P, N, or the conditional |
+| N is known through P | A subject has the appropriate true belief and epistemic relation to its actual ground | A classification recoverable from designation in a logical matrix alone |
+
+A relevant conditional can enter an account of a counterfactual without the symbols themselves settling that philosophical interpretation. The calculations below use the standard propositional calculus R, with the exact axioms stated in §4.4. They test proposed logical implications within that calculus. They do not identify every R algebra as a model of the richer account of knowledge. Likewise, an R theorem provides a precise target that follows without premises; calling it a theorem does not equate all philosophical necessities with provability in R. [32–36]
+
+This distinction becomes decisive when $`N=Q\to_R Q`$. Identity makes N an R theorem, so N is derivable from every premise set. Nevertheless, an internal formula $`B\to_R N`$ can fail. There is no contradiction between these claims: one concerns derivation of N, the other derivation or designation of a different formula containing an implication. The negative result in §4.6 preserves the first claim throughout.
+
+### 4.4 A positive theorem for genuinely relevant grounds
+
+The positive case should be proved before testing weaker replacements. Work in the constant-free propositional language with conjunction, disjunction, negation and relevant implication. In this subsection, $`\to`$ abbreviates $`\to_R`$. Formula letters in the axiom table permit arbitrary substitution. The axiomatization is that displayed by Bimbó, Dunn and Ferenz; neither an actuality operator nor an optional truth constant or fusion connective is added. [32, pp. 176–177]
+
+| Scheme | Formula |
+|---|---|
+| A1 | $`X\to X`$ |
+| A2 | $`(X\to Y)\to((Z\to X)\to(Z\to Y))`$ |
+| A3 | $`(X\to(X\to Y))\to(X\to Y)`$ |
+| A4 | $`(X\to(Y\to Z))\to(Y\to(X\to Z))`$ |
+| A5 | $`(X\to((Y\to W)\to Z))\to((Y\to W)\to(X\to Z))`$ |
+| A6 | $`(X\land Y)\to X`$ |
+| A7 | $`(X\land Y)\to Y`$ |
+| A8 | $`((Z\to X)\land(Z\to Y))\to(Z\to(X\land Y))`$ |
+| A9 | $`(((X\to X)\land(Y\to Y))\to Z)\to Z`$ |
+| A10 | $`X\to(X\lor Y)`$ |
+| A11 | $`X\to(Y\lor X)`$ |
+| A12 | $`((X\to Z)\land(Y\to Z))\to((X\lor Y)\to Z)`$ |
+| A13 | $`(X\land(Y\lor Z))\to((X\land Y)\lor(X\land Z))`$ |
+| A14 | $`(X\to\neg X)\to\neg X`$ |
+| A15 | $`(X\to\neg Y)\to(Y\to\neg X)`$ |
+| A16 | $`\neg\neg X\to X`$ |
+
+The two rules are **modus ponens**, from X and $`X\to Y`$ infer Y, and **adjunction**, from X and Y infer $`X\land Y`$. These rules, rather than an unrestricted rule for introducing a conditional from a derivation under an assumption, govern the proofs below.
+
+**Proposition 3A — The complete relevant ground supports sensitivity.** For arbitrary formulas P and N, put $`H=P\to_R N`$ and $`B=P\land H`$. Then R proves both
+
+```math
+B\to_R N,
+\qquad
+\neg N\to_R\neg B.
+```
+
+**Proof.** The following derivation supplies every axiom instance and use of modus ponens. “MP i, j” uses the conditional at line i and its antecedent at line j. The abbreviations H and B stand for the formulas just defined; they are not additional axioms. [34–35]
+
+| Line | Formula | Justification |
+|---:|---|---|
+| 1 | $`B\to P`$ | A6 |
+| 2 | $`B\to H`$ | A7 |
+| 3 | $`H\to((B\to P)\to(B\to N))`$ | A2 |
+| 4 | $`[H\to((B\to P)\to(B\to N))]\to[(B\to P)\to(H\to(B\to N))]`$ | A4 |
+| 5 | $`(B\to P)\to(H\to(B\to N))`$ | MP 4, 3 |
+| 6 | $`H\to(B\to N)`$ | MP 5, 1 |
+| 7 | $`[H\to(B\to N)]\to[(B\to H)\to(B\to(B\to N))]`$ | A2 |
+| 8 | $`(B\to H)\to(B\to(B\to N))`$ | MP 7, 6 |
+| 9 | $`B\to(B\to N)`$ | MP 8, 2 |
+| 10 | $`[B\to(B\to N)]\to(B\to N)`$ | A3 |
+| 11 | $`B\to N`$ | MP 10, 9 |
+| 12 | $`\neg N\to\neg N`$ | A1 |
+| 13 | $`(\neg N\to\neg N)\to(N\to\neg\neg N)`$ | A15 |
+| 14 | $`N\to\neg\neg N`$ | MP 13, 12 |
+| 15 | $`(N\to\neg\neg N)\to[(B\to N)\to(B\to\neg\neg N)]`$ | A2 |
+| 16 | $`(B\to N)\to(B\to\neg\neg N)`$ | MP 15, 14 |
+| 17 | $`B\to\neg\neg N`$ | MP 16, 11 |
+| 18 | $`(B\to\neg\neg N)\to(\neg N\to\neg B)`$ | A15 |
+| 19 | $`\neg N\to\neg B`$ | MP 18, 17 |
+
+Line 11 establishes the first formula and line 19 the second. No assumption about the necessity of N was used. The proof therefore applies to arbitrary substitutions for P and N. ∎
+
+Conjunction projections supply both components of B. Composition and exchange use the conditional component; contraction discharges the repeated use of B. The last part derives the required contraposition without importing a classical equivalence as a new rule. This explains why the whole ground matters: the proof uses P **and** its relevant connection to N.
+
+An epistemic application adds separate facts. The subject must know the relevant contents without presupposing the conclusion, actually use them in a competent inference, and thereby believe N on the combined factive ground. The interpretation of the relevant conditional must also fit the intended counterfactual account. Under those conditions the theorem supplies the sensitivity component of the proposed analysis; it does not manufacture the knowledge of the premises, the basing relation, or their competent use. In the account's stated sufficient case, the resulting true belief can therefore qualify as generic knowledge. A constant assenter who does not use the known facts has not met that case description merely by reporting the same answer. [30–31, 34]
+
+The arithmetic example in §3.4 makes the additional content visible. From $`7+4=11`$, equality preservation under adding one yields $`(7+4)+1=11+1`$. The identities $`(7+4)+1=7+5`$ and $`11+1=12`$ then yield $`7+5=12`$. A competent use of independently known laws explains how the conclusion can be reached. The propositional proof above is not a formalization of relevant arithmetic proving all those nonlogical laws or their particular conditional. It either takes the appropriate relevant implication as justified input or applies after an independently justified relevant derivation supplies it. The classical observation that every premise entails an independent logical theorem cannot replace that input.
+
+There is also no demand that the learner articulate this entire logical or epistemological analysis. The theorem explains the relation attributed to an actual ground. It does not add reflective self-certification to every ordinary act of knowing. Nor can an observer insert N itself as a supposedly known ground to explain the learner's first knowledge of N. The non-presupposition condition excludes that shortcut.
+
+### 4.5 Why a premise-only countermodel is insufficient
+
+A smaller algebra separates material truth from relevant implication but also exhibits a serious limit of that separation. Use values
+
+```math
+D_4=\{-2,-1,1,2\},\qquad D_4^+=\{1,2\}.
+```
+
+The positive values are **designated**. Negation sends x to $`-x`$; conjunction and disjunction are ordinary minimum and maximum in the displayed order. Define the conditional by
+
+```math
+I_4(x,y)=
+\begin{cases}
+\max(-x,y),&x\le y,\\
+\min(-x,y),&x>y.
+\end{cases}
+```
+
+Its complete table is small enough to inspect directly.
+
+| $`I_4`$ | $`-2`$ | $`-1`$ | $`1`$ | $`2`$ |
+|---|---:|---:|---:|---:|
+| $`-2`$ | 2 | 2 | 2 | 2 |
+| $`-1`$ | −2 | 1 | 1 | 2 |
+| $`1`$ | −2 | −1 | 1 | 2 |
+| $`2`$ | −2 | −2 | −2 | 2 |
+
+The predecessor finite controls verified designation of the stated R axiom schemes and preservation by both rules for this algebra. The resulting soundness claim is a finite axiom-and-rule check followed by induction on proofs, not a completeness theorem or a model of cognitive episodes. The retained checker and independent review record those historical checks; no new execution is implied by presenting the table here. [34, 38–39]
+
+Let $`N=Q\to_R Q`$ and assign $`Q=1`$, $`P=2`$. The target has value 1, and its negation has value −1. The material conditional $`M=\neg P\lor N`$ has value 1. Yet both $`P\to_R N`$ and $`\neg N\to_R\neg P`$ have value −2. Thus designation of P and M does not force either of these **premise-only** relevant conditionals. The target is an R identity theorem. Its classical counterpart $`Q\supset Q`$ is also a theorem and follows classically from every premise; that comparison does not convert an arbitrary classical consequence into the relevant connection that failed here. The two arrows retain their different interpretations.
+
+It would be a mistake to stop there. If M was also used as a reason, omitting it would fail to examine the complete ground. Put $`B_m=P\land M`$. At the same valuation, $`B_m=1`$, and both $`B_m\to_R N`$ and $`\neg N\to_R\neg B_m`$ are designated. This is not an accidental rescue of one row.
+
+**Proposition 3B — The four-valued control preserves every positive target's full material ground.** For every $`p\in D_4`$ and every $`n\in\{1,2\}`$, let
+
+```math
+b=\min\bigl(p,\max(-p,n)\bigr).
+```
+
+Then $`I_4(b,n)`$ and $`I_4(-n,-b)`$ are positive.
+
+**Proof.** If $`p\le n`$, then $`\max(-p,n)\ge p`$, so $`b=p\le n`$. If $`p>n`$, the only possibility is $`p=2,n=1`$, giving $`b=1=n`$. Consequently $`b\le n`$ in every case. The first branch of the conditional gives
+
+```math
+I_4(b,n)=\max(-b,n)>0.
+```
+
+Also $`-n\le-b`$, so
+
+```math
+I_4(-n,-b)=\max(n,-b)>0.
+```
+
+Both inequalities follow from $`n>0`$. ∎
+
+For the identity target, n is positive at every valuation of Q, so the proposition includes the whole identity case. The algebra therefore cannot supply the stronger counterexample to a complete material ground. Conversely, success in this one sound algebra does not prove that the corresponding formulas are theorems of R. The larger countermodel below resolves exactly that remaining question. It strengthens the negative result without retracting the valid positive theorem or misreporting this failed attempted counterexample. [34, 36, 38]
+
+### 4.6 A countermodel to the complete material-ground shortcut
+
+The required stronger algebra is an eight-valued matrix described by Standefer, who attributes its variable-sharing construction to the Anderson–Belnap tradition. His stated soundness for R, rather than an assumed cognitive interpretation, is the technical premise used here. The formulas use only the propositional reduct of that construction. [33, Theorem 4 and Table 2, pp. 270–271]
+
+Its values are
+
+```math
+V=\{-3,-2,-1,-0,+0,+1,+2,+3\},
+\qquad
+V^+=\{+0,+1,+2,+3\}.
+```
+
+These are eight **labels**, including two distinct labels $`-0`$ and $`+0`$. They are not the real numbers in their usual order. Negation exchanges the matching signed labels. For conjunction and disjunction, identify the values with the following subsets of a three-element set and take intersection and union.
+
+| Value | Subset |
+|---|---|
+| $`-3`$ | $`\varnothing`$ |
+| $`-2`$ | $`\{\beta\}`$ |
+| $`-1`$ | $`\{\alpha\}`$ |
+| $`-0`$ | $`\{\alpha,\beta\}`$ |
+| $`+0`$ | $`\{\gamma\}`$ |
+| $`+1`$ | $`\{\alpha,\gamma\}`$ |
+| $`+2`$ | $`\{\beta,\gamma\}`$ |
+| $`+3`$ | $`\{\alpha,\beta,\gamma\}`$ |
+
+Negation is still the signed-label exchange just specified, not an instruction to use ordinary set complement. This subset presentation makes the lattice operations explicit while preserving the source's distinct negation operation. Designation amounts to containing $`\gamma`$. It therefore has the usual Boolean behavior under conjunction, disjunction and negation, even though the relevant conditional carries more structure.
+
+The conditional is defined by the entire following table; the row is its antecedent and the column its consequent.
+
+| $`\to_R`$ | $`-3`$ | $`-2`$ | $`-1`$ | $`-0`$ | $`+0`$ | $`+1`$ | $`+2`$ | $`+3`$ |
+|---|---|---|---|---|---|---|---|---|
+| $`-3`$ | +3 | +3 | +3 | +3 | +3 | +3 | +3 | +3 |
+| $`-2`$ | −3 | +2 | −3 | +2 | −3 | −3 | +2 | +3 |
+| $`-1`$ | −3 | −3 | +1 | +1 | −3 | +1 | −3 | +3 |
+| $`-0`$ | −3 | −3 | −3 | +0 | −3 | −3 | −3 | +3 |
+| $`+0`$ | −3 | −2 | −1 | −0 | +0 | +1 | +2 | +3 |
+| $`+1`$ | −3 | −3 | −1 | −1 | −3 | +1 | −3 | +3 |
+| $`+2`$ | −3 | −2 | −3 | −2 | −3 | −3 | +2 | +3 |
+| $`+3`$ | −3 | −3 | −3 | −3 | −3 | −3 | −3 | +3 |
+
+Soundness means that every instance of an R axiom is designated and both inference rules preserve designation. Induction on a derivation then shows that every theorem is designated under every valuation, and that formulas derived from designated assumptions remain designated. The historical author and independent controls checked the displayed sixteen schemes and the two rules with this exact finite table; they did not claim a proof-assistant kernel verification. The table, lattice and specified calculus are the mathematical content needed to inspect the countermodel. [33, 36, 38–39]
+
+**Proposition 3C — Full material grounds do not force an internal relevant implication, even for an identity theorem.** Let P and Q be different propositional atoms and put
+
+```math
+N=Q\to_R Q,\qquad
+M=\neg P\lor N,\qquad
+B_m=P\land M.
+```
+
+There is a valuation in an R-sound matrix at which P, N, M and $`B_m`$ are all designated, their negations are all undesignated, but both $`B_m\to_R N`$ and $`\neg N\to_R\neg B_m`$ are undesignated.
+
+**Proof.** Assign $`P=+1`$ and $`Q=+2`$. The diagonal entry gives $`N=+2`$, so $`\neg N=-2`$. Since $`\neg P=-1`$, the subset union defining M gives
+
+```math
+M=\{\alpha\}\cup\{\beta,\gamma\}
+  =\{\alpha,\beta,\gamma\}=+3.
+```
+
+Taking the meet with P gives $`B_m=+1`$. Thus $`\neg M=-3`$ and $`\neg B_m=-1`$. The two relevant table entries are
+
+```math
+(+1)\to_R(+2)=-3,
+\qquad
+(-2)\to_R(-1)=-3.
+```
+
+They evaluate the claimed full-ground implication and sensitivity formula respectively. Every asserted designation and undesignation now follows from the explicit labels. ∎
+
+The diagonal of the table is designated everywhere, and the negation of every diagonal entry is undesignated. Hence the target really is the required identity theorem; the example does not evade the question by assigning a false or inconsistently designated target. Moreover, it does not omit M: $`B_m`$ is the conjunction of both proposed material premises.
+
+Let $`\Gamma=\{P,M\}`$. The valuation shows that neither $`B_m\to_R N`$ nor $`\neg N\to_R\neg B_m`$ follows from $`\Gamma`$ by the stated calculus. Adding $`B_m`$ and N to that premise set does not change this refutation, because all four remain designated at the same valuation. Nevertheless,
+
+```math
+\vdash_R N,\qquad
+\Gamma\vdash_R N,\qquad
+B_m\vdash_R N.
+```
+
+The target is also a semantic consequence of every premise set in this matrix. The negative result must therefore not be stated as “the complete ground does not entail N.” It concerns the internal relevant implication and the separately displayed sensitivity formula. Replacing either by ordinary consequence would erase the result's central distinction.
+
+### 4.7 A complementary structural proof
+
+The explicit valuation is sufficient for Proposition 3C. A variable-sharing argument explains why the obstruction extends beyond that particular identity target. It is a different proof presentation, not a second independently interpreted epistemic model.
+
+**Variable-sharing lemma.** If a constant-free formula $`X\to_R Y`$ is an R theorem, X and Y share at least one propositional atom.
+
+**Proof.** In the eight-valued matrix, the sets
+
+```math
+S_1=\{-1,+1\},\qquad S_2=\{-2,+2\}
+```
+
+are separately closed under negation, meet, join and relevant implication. Negation exchanges the two members of each pair. For meet and join each pair is a chain in the specified subset lattice. For implication, the two restricted tables both have the pattern
+
+```math
+\begin{array}{c|cc}
+&-i&+i\\\hline
+-i&+i&+i\\
++i&-i&+i
+\end{array}
+\qquad(i=1,2).
+```
+
+Every conditional with antecedent in $`S_1`$ and consequent in $`S_2`$ has value −3, as the four relevant entries of the full table show. If X and Y have disjoint atoms, assign every atom of X to $`S_1`$ and every atom of Y to $`S_2`$. Structural induction keeps the value of X in the first pair and Y in the second. Their conditional is then undesignated. Soundness excludes theoremhood. Constant-freeness matters: the argument assigns each atomic starting value and does not admit extra logical constants or operators with values outside the relevant pair. ∎ [33, 37]
+
+**Proposition 3D — The material-ground schema has a variable-sharing obstruction.** Let P be an atom and N a constant-free formula containing no P. Put $`M=\neg P\lor N`$ and $`B_m=P\land M`$. Then $`B_m\to_R N`$ is not an R theorem. In particular, this applies when N is a theorem on disjoint atoms, such as $`Q\to_R Q`$.
+
+**Proof.** Put $`C=P\land\neg P`$. Here C is an auxiliary formula in a metatheoretic proof, not an asserted actual premise or a purportedly known contradiction. The following derivation proves $`C\to_R B_m`$ and displays what would follow if $`B_m\to_R N`$ were a theorem. Again the table abbreviates $`\to_R`$ by $`\to`$.
+
+| Line | Formula | Justification |
+|---:|---|---|
+| 1 | $`C\to P`$ | A6 |
+| 2 | $`C\to\neg P`$ | A7 |
+| 3 | $`\neg P\to M`$ | A10 |
+| 4 | $`(\neg P\to M)\to((C\to\neg P)\to(C\to M))`$ | A2 |
+| 5 | $`(C\to\neg P)\to(C\to M)`$ | MP 4, 3 |
+| 6 | $`C\to M`$ | MP 5, 2 |
+| 7 | $`(C\to P)\land(C\to M)`$ | Adjunction 1, 6 |
+| 8 | $`((C\to P)\land(C\to M))\to(C\to B_m)`$ | A8 |
+| 9 | $`C\to B_m`$ | MP 8, 7 |
+| 10 | $`B_m\to N`$ | Supposed theorem, for reductio |
+| 11 | $`(B_m\to N)\to((C\to B_m)\to(C\to N))`$ | A2 |
+| 12 | $`(C\to B_m)\to(C\to N)`$ | MP 11, 10 |
+| 13 | $`C\to N`$ | MP 12, 9 |
+
+If line 10 were an R theorem, every line would be an R theorem. But line 13 has only P in its antecedent and none in its consequent, contrary to the lemma. Therefore line 10 is not a theorem. ∎ [36–37]
+
+The proof does not assume that N is false, nor that the material premises can describe an actual knower of a contradiction. It isolates a restriction on internal implication. The identity-target instance is both a necessary-target control and an example of the general obstruction. Proposition 3C separately establishes failure of the sensitivity formula under the complete designated grounds; the variable-sharing proof need not be inflated into an additional epistemological claim to be useful.
+
+### 4.8 What proposed repairs actually change
+
+The complete-ground countermodel distinguishes several repairs that otherwise sound alike. At its valuation, duplicating P or M or regrouping their conjunction does not change $`B_m=+1`$. Adding the formula $`\neg(P\land\neg P)`$ also leaves that value unchanged: $`P\land\neg P=-1`$, so its negation is +1. Neither repetition nor this explicit consistency formula repairs the failed conditional.
+
+Replacing M by the relevant conditional $`H=P\to_R N`$ is a substantive strengthening. At the countervaluation, H has value −3, so the new combined ground $`P\land H`$ is undesignated. The example therefore does not meet the strengthened premise. Proposition 3A proves the general positive result for that genuinely relevant ground; the larger matrix does not overturn it.
+
+Adding the target itself is another change. At the same valuation,
+
+```math
+B_m\land N=+0,\qquad
+(B_m\land N)\to_R N=+2,\qquad
+\neg N\to_R\neg(B_m\land N)=+2.
+```
+
+This removes the displayed algebraic failure. It does not explain the subject's first knowledge of N if treating N as a known reason already presupposes that knowledge. An independently acquired route to N can matter, but its actual availability and use must be established rather than inserted after the fact.
+
+Classical equivalence cannot silently substitute for either repair. In Boolean logic,
+
+```math
+P\land(\neg P\lor N)
+\quad\text{is equivalent to}\quad P\land N.
+```
+
+In the displayed eight-valued algebra, the first expression has value +1 and the second +0. They agree in designation here, but they are not interchangeable values in a relevant conditional. Ordinary classical reasoning about a conclusion's truth remains available at its stated level; it does not thereby establish every internal relevant conditional demanded by a stronger account.
+
+The strongest philosophical reply is therefore intact. The intended implication may be substantively relevant, with an independently justified counterfactual interpretation; or the account may impose an additional bridge restricting its admissible models beyond bare R. Barker and Adams expressly include such a bridge, and Adams, Barker and Clarke explicitly appeal to relevant conditionals. An arbitrary R-sound matrix need not satisfy that stronger theory. The result shows that the bridge is extra to the material truth conditions and R alone; it does not show that the bridge is incoherent or that the authors intended a merely material reading. [30–31, 34, 36]
+
+### 4.9 Scope of the epistemological conclusion
+
+Neither finite matrix includes predicates for knowing, cognitive competence, actual basing, proper function, or a subject's justified response to a defeater. Assigning designated values to purported grounds consequently cannot establish a subject-level counterexample to knowledge closure. Such a counterexample would have to satisfy the source theory's complete antecedent, including genuine knowledge and competent non-presupposing use, and then establish failure of its conclusion. The present countermodel establishes a logical non-entailment required to distinguish proposed arguments for closure, not that stronger epistemic result.
+
+A related failed attempt reinforces this limit. Suppose two experiential reasons are assigned different intensional values and a separate annotation calls one competent and the other a guess. Swapping their values can swap a sensitivity verdict while leaving those annotations untouched. Unless the model connects the descriptions of competence and actual use to the intensional interpretation, it has not tested the fully specified routes. The earlier finite control preserved this underdetermination; it supplied no new refutation of an account that already distinguishes relevant grounding from constant assent. [34, 38]
+
+For an initial nonfactive seeming E, its occurrence, its content N, and the fact that the subject bases belief on E do not by themselves prove $`\neg N\to_R\neg E`$. A sufficient-case account may posit that relation. Applying it to a particular cognitive capacity then requires an independently warranted interpretation of the capacity, the episode and the relevant circumstances. The source's reference to existing conditions and laws constrains its implicative subjunctive; it is not an independently supplied procedure that identifies all such conditions in every case. The same limit applies to the mathematical testimony and intellectual experience in its example. [30–31, 34]
+
+The resulting open question is substantive: what makes this actual reason appropriately related to this target, and what evidence warrants that attribution? It is not answered by freely reassigning matrix values or increasing a table's size. Conversely, our lack of a complete reductive explanation is not a first-order defeater for a learner's independently warranted mathematical knowledge. Nor is a general proper-function requirement silently a fourth clause in the cited account's generic-knowledge definition. A stronger appraisal must be defended as such. On that account, errors on other questions do not automatically remove every locally grounded instance of generic knowledge. Its distinction between generic knowledge and stronger subject-perspective standings also prevents treating every misleading defeater as an automatic loss of all knowledge.
+
+Necessary theological recognition is subject to the same evidential restraint. The algebra neither posits a metaphysically possible state in which a necessary Creator does not exist nor measures a person's recognition. It cannot substitute a contingent prediction for the necessary target, or turn an unexplained capacity into a refuted one. The affirmative source-relative arguments and the distinctions between acquisition, present exercise and reflective explanation in §§2–3 remain separate from this formal test.
+
+What has been established is a coherent pair of results. Complete relevant grounds have the positive proof in Proposition 3A. Complete **material** grounds, even with a theorem as their target, do not in R alone provide the internal implication or sensitivity that the positive proof uses. Propositions 3B–3D identify why an initially plausible counterexample was insufficient, supply the corrected countermodel, and explain its structural source. All of these results concern the grounds and relations actually specified. None licenses silently changing a known premise, deleting an operative component, presupposing the target, or converting an algebraic designation into a verdict about a person's knowledge.
+
+## 5. Particular recognition and cumulative grounds
+
+### 5.1 Identification need not require prior firsthand acquaintance
+
+Knowing that exactly one object satisfies a description and identifying it under another presentation are distinguishable. A buyer may know which uniquely described item is owed while being unable to identify it among items later displayed. Yet mediated evidence can also supply genuine identifying knowledge: distinctive properties, connected testimony, effects and competent inference can identify an unseen person. Prior sight of that individual is not a universal prerequisite. [1, 13]
+
+The preserved Taymiyyan discussion explicitly allows those mediated identifying routes. It distinguishes the existence of a particular from further identification and permits several ways of acquiring knowledge of a distinctive property. Its theological application adds specific disputed doctrinal premises; the general permission for mediated identification does not itself settle them.
+
+For an effect to identify a bearer, the effect's relevant connection to that bearer must be known and used. Mere association of a name with a description does not supply every needed identity link. Conversely, genuinely earned role knowledge should not be demoted to an empty hypothetical description because the bearer has not been seen. First acquisition of identifying content, recollection, and identification across presentations remain separate questions. The examined materials do not newly authenticate a person's initial Creator-recognition history. That limit on a historical investigation is not a new condition that ordinary knowers must satisfy before they can know. [13]
+
+### 5.2 Several insufficient grounds can jointly discriminate
+
+A single indication may leave several explanations plausible. A second can bear on a different explanation; a third can constrain how the first two fit together. The force of their combination depends on their contents and relations, not merely on their count. One need not require each consideration to be conclusive before allowing any cumulative knowledge. [3, 14]
+
+Ibn Taymiyyah's treatment of the reported Heraclius inquiry illustrates this positive position. The inquiry asks about ancestry, earlier claimants, prior truthfulness, followers, defections, conflict, agreements and teaching. The author explains why particular answers weigh against particular alternatives. Absence of royal ancestry weakens a dynastic-restoration explanation; absence of an earlier local claimant weakens a copying explanation; a sustained truthful practice bears on a fabrication explanation. He acknowledges that unusual departures can occur. These are reasons bearing on alternatives, not deductive exclusions of every conceivable motive.
+
+The source then attributes certain knowledge to the inquirer and explicitly defends acquisition through mutually strengthening indications that need not suffice individually. Its historical and theological background remains part of that appraisal. The conclusion is stronger than the bare availability of multiple independently sufficient routes, but it is not a universal numerical aggregation law or a newly authenticated account of the conversation. A textual variant affects one sentence about whether parts suffice independently; the adjoining report-strengthening examples support the cumulative reading without making that disputed particle its sole premise. [3, 14]
+
+Honesty bears directly on intentional fabrication; it does not by itself establish accurate interpretation, freedom from sincere error, unrestricted veracity or the fidelity of later transmission. The additional appeals to teaching, experience, circumstances and corroboration require their own relevant grounds. Those distinctions limit the transfer of the cumulative appraisal without making every merely imaginable alternative an equally credible explanation or an established defeater. [14]
+
+Dependence must be assessed at the relevant level. Two accounts may share the true event that explains their agreement without sharing a contaminating error. Conversely, two accounts that never directly interacted may still copy an intermediary. Distinct documents, speakers or questions do not automatically establish independent evidence. In the transmitted-report sense of *tawātur*, the cited account considers report number, reporter characteristics, surrounding indications and the recipient's knowledge together; it rejects one fixed count for all cases. General transmitted teaching and fine details with a different transmission history also require distinct appraisals. [1, 3, 6, 14]
+
+El-Tobgui's reconstruction further describes a broader use of convergence to vindicate basic human cognition. This is not equivalent to a survey majority proving a proposition. Its force depends on a defended account of sound cognition and of the relevant sources of agreement. A shared origin by itself establishes neither identical epistemic functioning in every token nor freedom from common error. Subjecting every evaluator to the same standards avoids an exemption for the evaluator; symmetry alone does not end every justificatory regress or establish an independent truth connection. [6, 11–12]
+
+A knower need not be able to enumerate every ground that contributed to cumulative understanding. Inarticulacy does not establish lack of knowledge. The converse also holds: a later researcher's elegant reconstruction does not prove that its grounds operated in the earlier episode. A sound present reconstruction can establish a present route without rewriting the acquisition history. [14]
+
+### 5.3 Convergence, shared error and the scope of a source claim
+
+The sound-reason account proposes a strong use of tawātur: wide convergence among sound cognizers can help vindicate basic cognition itself. El-Tobgui explicitly presents this generalized epistemological use in his own article's abstract; that confirms the modern interpretation's stated subject, not a newly collated classical text or a measured pan-human consensus. The stronger claims in the sound-reason source—universal theistic recognition, impossibility of shared error and priority over every contrary argument—need the corresponding source, population and epistemic premises. They are not observations established by this chapter. [6, 10, 40]
+
+The difference between non-collusion and independence is decisive. Consider an elementary common-cause model. A binary source U has probability $`p\in(0,1)`$ of being wrong about a fixed target. Let every one of n reports copy U, so $`X_1=\cdots=X_n=U`$. The reports agree with probability one, while their unanimous error probability remains p for every n. Even if the reporters never contact one another, a shared curriculum, intermediary or error-producing condition can play U's role. This is a probability model showing why agreement and absence of direct collusion alone do not entail independence or truth. It does not establish that an actual tradition's convergence has that explanation.
+
+The positive alternative is equally substantive. Independently warranted indications can constrain different credible alternatives, as in §5.2; source dependence can be investigated rather than presumed; a source may have domain competence; and a recipient may possess relevant contextual knowledge. The decisive evidence is the content-sensitive joint support, not the presence of many names. Evaluator symmetry requires that the investigator's own premises, source selection and execution be assessable under the same standards. It removes a privileged exemption. Several symmetrical evaluators can nevertheless inherit one error, so symmetry and corroboration do not by themselves prove non-circularity or end regress. [11, 14]
+
+One especially circular procedure would define a sound cognizer as someone who assents to q, then use agreement among sound cognizers to establish q. Independent evidence of impairment can legitimately affect an appraisal; dissent alone cannot supply that evidence. The candidate corruption mechanisms in the source—inherited unexamined premises, desire, conjecture, doubt, ulterior purpose, habit and imitation—are hypotheses requiring discriminating evidence. Some doubt can be an appropriate response to defective support. A classification that treats every disconfirming observation as further corruption prevents the proposed test from discriminating its alternatives. This limits an evidential use of the doctrine without denying the doctrine's independently defended normative content. [10–11]
+
+Source-related questions must also retain their objects. Generic theistic recognition, the possibility of disclosure, the occurrence of a messenger's statement, fidelity of a transmitted text, that messenger's authority, a particular teaching's content, and a person's practical response are different claims. A sound route to one does not establish all the others. The appropriate order is to identify the report and its provenance, understand its content and context, then assess the authority and epistemic consequence actually claimed. A reason–revelation conflict can arise through an invalid inference, false premise, equivocation, misinterpreted or unauthenticated report, scope mismatch, mental/external confusion, or a genuinely unresolved conflict. The diagnosis requires evidence for the particular defect; neither an authority assertion nor a blanket allegation of naturalistic bias resolves the case. [10–11; §8]
+
+The source history remains specific. The concrete/ideal contrast is a modern interpretive lens, jointly applied by Enis Doko and Jamie B. Turner; their cited Evans locus remains reported rather than independently read. Turner's separate natural-signs article has a 2021 online publication and a 2022 journal issue; its subject is not authority for silently substituting Evans's 2010 book for the reported 1998 attribution. His common-sense treatment is a separate book chapter published online in 2023. The original compilation is a route to those works, not one original authorial text. Classical meanings of clear reason, the ontology of fiṭrah and the precise textual versus synthetic corruption list retain their verification questions. [5, 11, 41–42]
+
+
+### 5.4 Distinctive characteristics, reported voices and first recognition
+
+The positive identification claim in §5.1 has a connected textual argument behind it. The public source study [13] reads an antecedent discussion of prior recognitional awareness together with the adjoining report of Ibn Abī Mūsā's position and Ibn Taymiyyah's own response. Keeping those voices distinct matters. A proposition quoted for consideration is not thereby the responding author's conclusion; an author's qualified reconciliation of that proposition is not acceptance of its strongest unrestricted reading. The study's result is an affirmative source interpretation: mediated evidence can ground genuine particular identification. It is neither discovery of an additional primary argument nor a new authentication of the original electronic witnesses. [13]
+
+The antecedent discussion permits a general necessary-existent proof while distinguishing it from recognition of the particular at issue. Its examples of signs include finding a direction or recognizing a person already known. Those examples explain recovery and recognition under another presentation. They do not by themselves supply a universal rule that every identifying episode requires earlier firsthand sight. The adjoining statement that identification requires hearing belongs to the reported Ibn Abī Mūsā position. In the connected response, marked by the author's own *qultu*, Ibn Taymiyyah distinguishes proving that a particular exists from identifying it, then expressly permits identification of Muhammad without having seen him through connected historical characteristics. A reading that reduces every mediated route to impersonal existence knowledge would remove the identifying result that the response itself allows. [13, continuous source context through received 9:9–11]
+
+The argument also concerns how the identifying characteristic is known. Its acquisition need not begin with sight of the bearer: testimony, inference and effects can supply relevant knowledge. Consequently, insisting that an effect can never help identify an unseen source would introduce a restriction the account rejects. But the positive route contains a real connection: the evidence must concern this bearer as the bearer of the distinctive characteristic. An effect's merely accompanying a name, or an investigator's later assigning a description to it, does not establish that connection in the subject's cognition. The distinction is between grounds that actually identify and indications whose needed relation has not been supplied, not between firsthand evidence as inherently admissible and mediated evidence as inherently defective. [13]
+
+The adjacent absent-sale-item example prevents a different overreach. A real particular can be uniquely specified without the buyer yet having the further identification needed in a new encounter. To make the difference explicit, suppose a contract uniquely specifies the item with a certain serial number. Two outwardly indistinguishable items are later presented with their numbers concealed. In one possible arrangement the contracted item is on the left; in another it is on the right. The contract and all the buyer's present visible evidence are the same, while the answer to “which presented item is it?” differs. The buyer's descriptive knowledge can remain true and substantive in both arrangements. It does not settle that additional question. This is an explanatory construction of the source's contrast, not a report that the original passage contains this serial-number example. [13, received 9:12–15]
+
+There is an equally direct positive case. Suppose the buyer now obtains adequately warranted evidence of each displayed item's number and competently matches the unique contracted number. That evidence supplies the previously missing connection, even if the buyer has never seen the contracted item before. The inference uses the actual matching characteristic and its uniqueness; it does not depend on prior visual acquaintance. These paired cases illustrate the existing target-relative criterion in §3.3. For an exact verdict based solely on the stipulated profile, the evidence must distinguish admitted alternatives that disagree about the specified identification. This does not make elimination of every merely imaginable alternative a condition of ordinary fallible knowledge. Nor do the cases show that every singular thought reduces to a description, that every identifying route is inferential, or that the first acquisition of reference has been explained by assigning labels to a model.
+
+The theological continuation is more specific than the general identifying claim. In the source study's reading of the connected paragraphs, Ibn Taymiyyah identifies God's being above the world as a distinctive characteristic in his own positive argument. He permits fiṭrah, inference and prophetic report as routes, while recording disagreement about whether the characteristic is rationally accessible or known through revelation. That particular predication and its claimed accessibility are substantive, disputed theological premises. The passage's allowance for mediated identification does not independently prove them; nor does their being disputed erase the affirmative identifying route that the author defends under them. No account of the attribute's mode follows merely from recording its role in this argument. [13, electronic division 015, received continuation through the next named speaker]
+
+The same continuation considers a possible objection and a hearing-only reply before specifying respects in which Ibn Abī Mūsā's statement can be correct. These include learning names, learning particular revealed attributes, receiving instruction that guides reason, and describing the route many people in fact take. Each reconciliation has a different object. A name can be learned through testimony although some identifying knowledge of its bearer is available through an effect. A revealed attribute can require disclosure although another characteristic is rationally accessible. Instruction can occasion or guide a rational recognition without every resulting judgment being accepted solely on the instructor's say-so. And a common historical route is not a proof that all other routes are impossible. Attributing the whole exchange to one undifferentiated voice would conceal precisely these alternatives. [13]
+
+This leaves three questions about acquisition distinct. A subject may acquire identifying content for the first time, recover content previously possessed, or connect a known particular with another presentation. Evidence of one event does not automatically establish either of the other two. The source study's positive result corrects an overly restrictive reading of admissible routes; it does not settle its inherited stronger question about the first Creator-recognition and whatever prior conceptual or particular awareness that recognition involves. The study records that its predecessor already rejected compulsory acquaintance. Its reconciliation therefore adds the adjoining source's affirmative identifying argument rather than refuting a premise that the predecessor never adopted. [13]
+
+The remaining historical question is concrete: which characteristics or effects were known, how their connection to the intended bearer was apprehended, and whether those grounds operated before the later name or reflective explanation. A later same-bearer deduction can contribute real present identifying knowledge without establishing that earlier chronology. Conversely, earned knowledge of an original source's role is not reduced to an empty hypothetical description merely because no firsthand encounter occurred. The foundation arguments supply the identifying material they actually warrant; applying that material to a contextual token or a particular name still has its own connection to establish.
+
+An investigator's incomplete acquisition history is not itself a defeater for the subject. The affirmative first-order account in §2 permits competent recognition without a separately completed theory of how that recognition arose. The stronger historical claim needs evidence because it describes a particular acquisition episode, not because ordinary knowledge must wait for an investigator's reconstruction. A warranted mediated identification can therefore stand while the historical question about first reference remains unresolved. This preserves both the positive source argument and its actual limit. [13]
+
+
+<a id="mediated-identification-preservation-scope"></a>
+
+The later mediated-identification preservation guide confirms that the preceding result is partial inherited source reconciliation, not primary rediscovery. It retains the positive allowance for mediated identification while leaving first-reference chronology, stronger individual and cross-presentation grounds, actual uptake, token authentication and epistemic de re modal warrant unresolved at their respective scopes. Those unresolved historical or stronger claims do not erase an identifying route whose grounds are actually warranted. Conversely, preserving a guide and its report hashes does not resolve them by renewed primary-source inspection. [GUIDE105-G088]
+
+
+## 6. Knowing, assenting and acting
+
+### 6.1 A practical obstacle can leave cognition intact
+
+Ibn al-Qayyim's discussion of knowledge and action supplies a direct correction to the inference “the person did not follow the truth, therefore the person did not know it.” He distinguishes a complete determinant, whose effect follows, from a contributing disposition whose operation can be impeded by a missing condition or an opposing motive. Knowing, loving, intending and acting are not identical demands. On that account, an intervention can remove a practical impediment while leaving the person's knowledge intact. [2, 12]
+
+The same discussion prevents an opposite exaggeration. Nonperformance can be associated with weakening, obscuring or eventual loss of knowledge. Some denials of “knowledge” in practical contexts concern missing fruits; others concern a changed cognitive state. Neither interpretation should be imposed on every passage. The conclusion is a distinction to investigate in a specified case, not an assurance that knowledge always survives refusal.
+
+A return to the Heraclius narrative gives a particularly useful control. The source attributes knowledge of the expected prophet's identity to Heraclius. The neighboring report attributes conviction of future ascendancy to Abū Sufyān. The two have different subjects and propositional objects. Confidence about success cannot be substituted for recognition of prophetic identity. [15]
+
+The source's later discussion of religious assent also has practical content: it distinguishes some response of the heart from the full response, and allows impediments to the latter. The narrative's expressed wish to reach the prophet can therefore coexist with an impeded outward approach. Failure of the full response is weaker than absence of every relevant response. This is an interpretive consistency argument, not a claim that the wish alone diagnoses complete faith, nor a transfer of that religiously specific requirement to every ordinary known proposition. The ambiguous or disputed textual clauses are unnecessary to that narrower reconciliation. [3, 15]
+
+Conduct can consequently be relevant evidence without being an infallible readout of cognition. An appropriate appraisal asks what proposition was allegedly known, what response the account says should follow, whether the relevant opportunity and capacity obtained, and whether the evidence concerns a whole response or every response. Disagreement alone supplies no diagnosis of a person's motive, culpability or interior condition.
+
+### 6.2 Further encounter can improve cognition after warranted belief
+
+The request in Qurʾān 2:260 supplies a different positive case. Abraham affirms belief while asking to be shown revivification and seeking reassurance. On the inspected exegetical reading, the ensuing instruction answers a real further aim: encountering a manifestation can add something that repeating the central assertion does not. The request's content and purpose precede the response, so the explanation is more informative than defining the desired good as whatever occurred. [9, 29]
+
+The commentaries must retain their differences. Ibn Kathīr foregrounds movement from knowledge to sight and also transmits an intrusive-thought report; al-Ṭabarī prefers an intrusive-suggestion account while also connecting the showing with increased certainty. The evidence does not establish either unanimous exclusion of all disturbance or a simple mutually exclusive doctrinal opposition. Both retain the affirmative answer in the exchange. The instruction and assurance in the verse are also distinct from a separate narration of every step's execution.
+
+The philosophical point has a precise substitution test. Hold the central affirmed proposition fixed and replace the requested showing with repeated words or an induced feeling of firmness. The replacement does not preserve the requested mode of encounter. It may offer another benefit, but it has not accomplished the same task merely because the recipient still says the same sentence. Nor does the example rank every perception above every testimony: the source and event have their specified inherited warrant. A further cognitive benefit does not establish that the earlier belief was unwarranted, that every belief remained identical, or that numerical confidence rose by a measurable amount. [29]
+
+## 7. Defeat, forgetting and surviving grounds
+
+### 7.1 Different changes require different responses
+
+“The evidence was withdrawn” is too coarse to determine what happens to knowledge. At least the following events must be separated. [16]
+
+| Event | Immediate consequence | Further conclusion that does not follow from that event alone |
+|---|---|---|
+| A proof becomes inaccessible | Replay or public demonstration may be blocked | Its premises are false, or the subject has forgotten |
+| A derivation is found invalid | That defective inferential step does not support its conclusion | The conclusion is false or every other route fails |
+| A source attribution is undermined | Testimony relying on that attribution requires reassessment | Independently observed contents are false |
+| A relevant premise loses support | Dependent use of that ground is undercut | The negation of the premise has been established |
+| Permission to use or publish expires | Permitted action changes | A historical truth becomes false |
+| A warranted refutation establishes not-q | Knowledge of q at that same fixed content is excluded | A different, earlier time-indexed claim was false |
+| Knowledge is forgotten or corrupted in memory | Present cognitive access or retention changes | The original acquisition was unwarranted |
+
+The difference between defeat and forgetting is especially consequential. A person can remember an argument and acquire a reason not to trust it. A person can forget an argument without encountering evidence against it. A person can also retain a known conclusion or a competence while losing the ability to reproduce its acquisition history. Neither the presence nor absence of a stored text settles these cases.
+
+### 7.2 A sufficient surviving-route case
+
+Let a subject's belief concern q, and let d defeat support through route A. A positive retention case requires a suitable route B for the same content, actually acquired or presently exercised, appropriately retained where necessary, and independent of the **defeated dependence**. Independence here is not a demand for probabilistic independence, completely disjoint propositions or a second cognitive nature. Two routes may use the same known premise while obtaining warrant for it differently. Conversely, two different documents may fail together because they rely on the same discredited attribution. [16–17]
+
+Suppose a learner knows an arithmetic identity through a competent calculation and later receives a flawed teacher's explanation of the same identity. Discovering the flaw need not remove the calculation's warrant. If the explanation instead supplies an indispensable premise for the learner's only operative route, its failure matters differently. A sound proof available only to an observer is not a surviving ground for the learner merely because it could have been learned.
+
+This sufficient-case argument does not define every possible form of knowledge. It identifies what an asserted alternative route must actually contribute. When the continued operation of B is uncertain, the uncertainty concerns that episode's classification. It must not be inflated into the requirement that everyone prove a reflective theory of their own cognition. An established positive appraisal is not defeated by a merely imagined alternative. [12, 16]
+
+A source-wide challenge can be broader than a proof-local challenge. If an authenticating argument warrants a source's truthfulness throughout a specified reporting domain, an authenticated false report inside that domain conflicts with the unrestricted premise. Different file identities do not prevent the conflict. A claim outside the domain, an inauthentic quotation or a mistranslated content does not supply the same counterexample. Source, interpretation and domain must first be correctly bound. [1, 16, 28]
+
+If every genuinely operative route within an established scope is defeated, and no adequate retention route survives, the affirmative appraisal must be suspended or withdrawn to that extent. This does not entail q's falsity. A finite catalogue with no eligible certificate establishes a statement about its catalogue; it does not by itself exhaust all human grounds. Actual uptake, memory and present basing are not reducible to the current inventory of files. [16]
+
+### 7.3 Recovering a retention appraisal from present records
+
+A record of the evidence presently available is not necessarily a record of how a subject acquired or retained a belief. This is a substantive limit even if the record is accurate and includes a posterior probability. The missing fact may concern the subject's actual use of a ground, rather than another proposition to be added to a list of supporting contents. The following application makes the limit conditional and exact. It applies Proposition 1 to the acquisition and retention distinction; it is not a new general theorem or a classification of an observed person. [16]
+
+Fix a finite nonempty set $`\mathcal H`$ of admitted acquisition and retention histories. Each history includes the episode and time of appraisal, the same proposition q, and a specified defeater d. Let $`C:\mathcal H\to\mathcal C`$ describe the complete **selected present record**: for example, the currently retained evidence items, their declared availability and any probability summary derived from them. “Complete” here means complete for the chosen record, not a complete description of the subject. Let $`T:\mathcal H\to\{0,1\}`$ express a separately justified target, such as whether a particular adequate ground B was actually acquired or exercised, remains appropriately operative or retained, and is independent of the dependence defeated by d. This is a target about B; it is not a proposed definition of every form of knowledge.
+
+**Conditional recovery claim.** The selected record determines T exactly on the admitted histories if and only if
+
+```math
+C(h)=C(h')\quad\Longrightarrow\quad T(h)=T(h')
+\qquad(h,h'\in\mathcal H).
+```
+
+To prove necessity, suppose an exact appraisal $`f:C(\mathcal H)\to\{0,1\}`$ exists. If two histories have the same record, then $`T(h)=f(C(h))=f(C(h'))=T(h')`$. For sufficiency, assume the displayed implication. For each record actually realized by some history, assign the common target value of the histories producing it. The implication makes this assignment unambiguous, and it gives $`f(C(h))=T(h)`$ for every admitted h. This is precisely the fibre criterion, now applied to retention.
+
+Consequently, suppose the admitted histories include $`h_+`$ and $`h_-`$ with identical present evidence items and identical probability summaries, but with $`T(h_+)=1`$ and $`T(h_-)=0`$. No rule using only that selected record can return the correct target on both. Adding a probability summary already determined by the same items cannot remove the collision: a function of equal inputs has equal outputs. Neither a more confident label nor a more elaborate computation supplies the absent distinction.
+
+There is a possible epistemic instance of this pattern. One learner has acquired a result by a competent independent calculation and retains that ground; another has merely repeated the same result from the teacher whose relevant testimony is now defeated. Suppose their surviving documents and assigned probabilities coincide. If the actual acquisition, retention and defeat facts establish the specified difference, the records do not determine whether that independent ground survives. The conclusion does not assume that the second learner has no conceivable other ground. It concerns the particular retained route being appraised. Nor does imagining these two histories establish that either describes a real learner: their admissibility and the contrasting target values require evidence outside the selected record. [16–17]
+
+The same caution applies to a model that simply appends a Boolean field called “warranted.” Its two values can stipulate the desired answer without measuring or explaining it. A defensible additional observation must instead bear on the relevant episode: a competent acquisition, continuing retention or use, an actual connection to the same content, and the scope of the defeated dependency. The model's exact-recovery proof establishes only what follows once those meanings and admissible histories are justified. It does not authenticate them.
+
+### 7.4 Deleting a factor and observing a retraction
+
+A related distinction appears in probabilistic representations. Suppose a current assessment is computed by multiplying a prior by likelihood factors for the evidence items being retained. Removing an item and recomputing the product is a defined operation on that representation. Learning that an item has been retracted is a new observation. The two operations agree only under additional assumptions about what the retraction conveys and how the earlier evidence is represented. Neither operation, by itself, describes the erasure of a subject's knowledge or the loss of a learned capacity. [16]
+
+Here is an explanatory calculation, not a new empirical finding. Let $`\Theta\in\{0,1\}`$ be an ordinary uncertain hypothesis with equal prior probabilities. Let E be a possible observation, with
+
+```math
+\Pr(\Theta=1)=\Pr(\Theta=0)=\frac12,
+\qquad
+\Pr(E\mid\Theta=1)=\frac23,
+\qquad
+\Pr(E\mid\Theta=0)=\frac13.
+```
+
+Bayes' rule gives $`\Pr(\Theta=1\mid E)=2/3`$. A representation that retains only the prior and the likelihood factor for E returns to $`1/2`$ when that factor is deleted. This is an algebraic fact about the stated representation.
+
+Now let R denote an observed retraction after E. Suppose its conditional law is
+
+```math
+\Pr(R\mid\Theta=1,E)=\frac14,
+\qquad
+\Pr(R\mid\Theta=0,E)=1.
+```
+
+For completeness, set $`\Pr(R\mid\Theta=i,\neg E)=0`$ for both values of i. These specifications define a coherent finite joint distribution. Its nonzero and zero cases can be checked directly:
+
+| Hypothesis | Observation and subsequent event | Joint probability |
+|---|---|---:|
+| $`\Theta=1`$ | E and R | $`1/12`$ |
+| $`\Theta=1`$ | E and not-R | $`1/4`$ |
+| $`\Theta=1`$ | not-E and not-R | $`1/6`$ |
+| $`\Theta=0`$ | E and R | $`1/6`$ |
+| $`\Theta=0`$ | E and not-R | $`0`$ |
+| $`\Theta=0`$ | not-E and not-R | $`1/3`$ |
+
+The omitted not-E-and-R cases have probability zero. All entries are nonnegative and their sum is one. Conditioning on the actual observation of both E and R therefore gives
+
+```math
+\Pr(\Theta=1\mid E,R)
+=\frac{\Pr(\Theta=1,E,R)}{\Pr(E,R)}
+=\frac{1/12}{1/12+1/6}
+=\frac13.
+```
+
+The three values are distinct: the assessment after E is $`2/3`$; deletion of its factor returns $`1/2`$; receipt of R under the specified channel yields $`1/3`$. Thus an observed retraction need not return an assessment to its pre-observation state. In this model the retraction is more likely under the negative hypothesis, so it contributes information of its own.
+
+The converse warning also matters. Keep the same prior and E, but give R the same positive conditional probability $`a\in(0,1]`$ under both hypotheses, conditional on E. Then
+
+```math
+\Pr(\Theta=1\mid E,R)
+=\frac{a(1/3)}{a(1/3)+a(1/6)}
+=\frac23.
+```
+
+In this second model, receipt of R leaves the E-conditioned probability unchanged. The two models have the same assessment before R and different justified assessments after it. A bare notice that evidence has been withdrawn does not determine the update until the event's meaning and likelihood relation are supplied. R may denote a permission change, a reliability failure, a correction of content or something else; those descriptions cannot be interchanged without an argument.
+
+These calculations do not say that every discovery of unreliability is adequately treated by conditioning in a previously accepted model. If the discovery undermines that model's own likelihood assumptions, the assumptions themselves require revision. They also do not say that the original evidence must remain an admissible ground after an undercutter. The point is narrower: removing a formal factor, receiving a new event and revising a model are different operations. Their epistemic interpretation must track the actual source and failure, rather than being supplied by the arithmetic alone.
+
+### 7.5 What a bounded retention account must establish
+
+The negative result in §7.3 does not demand an unlimited transcript. It demands an adequate summary for the target and scope actually claimed. Histories may differ in incidental details while having exactly the same acquisition, continuing ground and defeater relations relevant to the appraisal. Such differences need not be retained. Conversely, present sufficiency for one question does not establish sufficiency for a later question about a source-wide undercutter, a new content or a changed action. The allowable questions and dependencies determine which distinctions matter. [16]
+
+For a fixed finite family of explicitly specified appraisals, the criterion can be stated without a new theory. A summary suffices for the family precisely when histories with equal summaries agree on **each** target. Necessity follows by applying any proposed decoder for each target to equal summaries. For sufficiency, define each target's decoder by its common value on a summary class, just as in §7.3. This gives a mathematical test of adequacy; defining the summary to be the desired target values is not, by itself, a practical way to obtain those values. The observations used to justify the summary still need their own warrant.
+
+A positive retention appraisal has corresponding substantive burdens. The content must be the same, or the relevant change in content and time must be identified. The alternative ground must have been acquired, retained or presently exercised by this subject, rather than merely being available to an observer. Any required continuity must survive the actual impairment; an earlier acquisition alone does not prove that memory is now intact. Finally, the reason defeating the original route must be traced to its genuine scope. A shared source or faculty can transmit defeat to apparently separate records, while two uses of the same proposition can rest on differently warranted grounds. These are reasons for a particular sufficient-case appraisal, not requirements that the subject recite a theory of their own cognition. [16–17]
+
+This account also preserves legitimate narrower results. A finite collection may correctly determine which of its certificates remain eligible and the cost of replacing them. A permission change may correctly alter what may be used or issued. Those outputs can be exact for their declared contracts while leaving actual acquisition, retention and basing unsettled. Conversely, losing the record that once certified a result does not automatically cancel a retained competence. Reconstructing a proof for an assessor establishes that the proof can be reconstructed; it does not establish that the learner has retained its ground. [16]
+
+The appropriate positive conclusion remains possible and substantial: where competent acquisition or present exercise, relevant continuity and independence from the actual defeater are established, the particular ground survives despite loss of another route or loss of its public record. Where those conditions are genuinely unsettled, the appraisal remains unsettled to that extent. Neither administrative deletion nor formal recoverability decides the matter on its own.
+
+## 8. Source truth, recipient warrant and communicated authority
+
+### 8.1 A source does not transmit every status automatically
+
+Exact words, correct interpretation, truth, authority, reception and action have distinct roles. A faithful copy can preserve a false statement. A true proposition can be uttered without authority. A competent authority in one domain can be mistaken outside it. An accurate text may be inaccessible to a particular recipient or incomprehensible in its language. A recipient may understand a warranted teaching but fail to act. [25]
+
+Even within a source-relative account that accepts revelation, revelation of a source does not make every translation faithful. In a theological interpretation, attribution to an author, the author's reporting domain and the intended referent matter. A conditionally accepted source premise cannot silently become a neutral proof of every wider metaphysical proposition attached to it. The formal conjunction of source and recipient conditions is a description of an evidential task; an account of warrant is still needed to explain which conditions are sufficient for which epistemic standing. [22, 25]
+
+**Positive role-based transmission.** These distinctions permit a sufficient route that does not require a name, uniqueness or prior acquaintance. Fix an assertion token and its resolved content $p$ across the relevant evidence alternatives. In an idealized factive, deductively closed knowledge model, suppose the recipient knows both that every bearer of an eligible role $F$ is veracious in the relevant domain and that some bearer of $F$ intentionally asserts or adopts **this very token with content $p$ within that domain**. Then the recipient knows $p$.
+
+**Proof.** At each admitted evidence alternative, take the bearer supplied by the ownership premise at that alternative. The known veracity premise applies to that same bearer and assertion, so $p$ is true there. It is therefore true throughout the recipient's evidence alternatives, which gives knowledge of $p$ in the stated model. The witness may differ between alternatives: neither one rigidly identified bearer nor a choice of witnesses shared across alternatives is required. ∎
+
+The co-reference within the premise does indispensable work. Knowing that some eligible bearer exists and that someone asserted $p$ would not suffice; nor would identifying the token's productive cause without establishing intentional assertion or adoption. Conversely, several eligible candidates can remain possible owners without preventing knowledge of this fixed content. Knowing that a particular fixed bearer owns the token is a stronger conclusion requiring the appropriate role-to-bearer link. The argument is ordinary quantifier reasoning under the stated epistemic assumptions, already implicit in the inherited testimony interfaces—not a new authentication method or a demand for an acquaintance-only theory of reference. [Source-interface assessment](https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/reference-acquisition-audit/ASSESSMENT.md#L50-L64)
+
+Fixed content matters equally. If “me” refers to different owners, identical wording can express different propositions; an imperative also introduces force, authority and action-target questions beyond assertoric truth. Even knowing an obligation does not by itself identify its practical target or present applicability. For an actual recipient, warranted source evidence, comprehension and competent uptake must supply the premises and inference represented by the ideal model. Merely entering an ownership or knowledge flag in a record supplies none of them. [Historical logical review](https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/reference-acquisition-audit/INDEPENDENT_CHALLENGE.md#L18-L30)
+
+It is particularly important to separate **available support for believing** from **a warranted belief actually held**. Someone may have adequate available reasons yet fail to take them up. The phrase “warranted belief without belief” would conceal that difference. Likewise, warrant, assent and execution cannot be inferred from a record saying that the relevant evidence was delivered. A delivery record concerns reception; comprehension and operative uptake require their own evidence.
+
+Local truth connection and general trustworthiness are not equivalent. Fix six ordinary propositions $`P_0,\ldots,P_5`$ with unchanged contents and independently varying truth values. A speaker accurately observes those values and follows one stable policy: report the correct answer about $`P_0`$ and the opposite of the truth about each of $`P_1,\ldots,P_5`$. One truthful component can help disguise five lies. At each of the $`2^6=64`$ valuations, exactly one asserted literal is true and five are false, so the communicated conjunction is always false. No target is renamed to whichever component happens to be true. [selective-truth-control]
+
+Let E be the fixed event of asserting $`P_0`$, rather than its negation. The policy gives $`E\leftrightarrow P_0`$ throughout this domain. All 32 false-$`P_0`$ alternatives lack E, so any choice of closest false-target alternatives within the stipulated domain preserves that absence. Fix an actual valuation where $`P_0`$ is true. Replacing E by the occurrence of its entire particular assertion sequence does not defeat the result: every false-$`P_0`$ alternative changes the first assertion and therefore lacks that sequence. The true observation that those assertions occurred must not be confused with their false communicated conjunction. These conclusions follow directly from the policy, without treating a historical execution count as a proof.
+
+This is a coherence result, not a verdict that the recipient knows $`P_0`$. Suppose the recipient comprehends and accepts every answer through the same general procedure, without a marker for the truthful component or independent knowledge of the selective policy. Comprehension does not supply that missing appraisal. The source return uses the construction against the particular claim in Adams, Barker and Clarke's 2017 tax-lawyer reply that the stipulated local tracking is incompatible with the speaker's untrustworthy character. It does not claim that their developed account overlooks content-relative reasons, settle the whole exchange, or authenticate this modal domain for an actual person. Broader basing, competence and method conditions require substantive assessment. Defining “untrustworthy about $`P_0`$” as failure to track $`P_0`$ excludes the example by changing its premise. Conversely, this one local truth connection cannot certify the source or its other assertions.
+
+Nor does this construction transfer unchanged to a necessarily true target. If N holds throughout the admitted possibilities, the bare requirement that no false-N alternative contain the evidence is vacuous for both constant assent and an appropriately responsive route. As §§3.4 and 4.9 emphasize, appropriate grounds and their actual use remain substantive. This is no objection to knowledge of necessary truths or a refutation of the 2017 account's relevant-conditionals treatment. Replacing necessary Creator-existence with the contingent prediction of a particular rescue changes the target: neither success nor failure of that prediction settles the original recognition claim. The positive possibilities of competent recognition and warranted testimony remain intact.
+
+### 8.2 Truthful explanation has a real content requirement
+
+The source argument about commissioned guidance is stronger than the claim that a respected person utters some true propositions. It concerns truthful, successful explanation in a specified domain. Within that account, three claims cannot all be retained:
+
+1. The authenticating evidence establishes truthful and successful explanatory delivery of the teaching to the relevant recipients.
+2. The correctly interpreted, authenticated discourse genuinely indicates an incompatible false teaching.
+3. No appropriately warranted clarification makes the intended truth available within the undertaking.
+
+The second and third claims describe a failure excluded by the first. The contradiction requires all three at their actual scope. It does not decide in advance whether a disputed case requires revising the alleged meaning, attribution, domain membership, absence of clarification or authenticating premise. [1, 28]
+
+An unexpressed true intention is not sufficient explanation to the recipients. Nor does independent discovery that q is true establish that q is what this source communicated. A successful correction must supply the missing source-and-content relation through suitable linguistic competence, context, reliable instruction or another adequately grounded route.
+
+Exact autograph recovery is not universally necessary for that relation. Two admissible wordings can convey the same relevant teaching with adequately warranted attribution. If an exact wording or recitation is itself required, however, it becomes part of the target and cannot be dismissed as an irrelevant variant. An imagined hidden rescue provides no actual route; an imagined historical alternative provides no automatic defeat of an established one. [28]
+
+### 8.3 Original delivery is not a theorem of perpetual access
+
+At time $`t_0`$, suppose a source clearly and truthfully communicates q to an audience that understands it. At a later time $`t_1`$, an intervening loss leaves a different audience without adequate access. If the premises contain no continuing access undertaking for that later audience and no corresponding unexcused epistemic obligation, original success and later inaccessibility are consistent. This is a countermodel to the bare temporal inference, not a historical claim about a scripture. [28]
+
+A stronger conclusion can follow from a genuinely stronger premise: successful discharge of an enduring undertaking to make this content accessible to these recipients under these circumstances. Another route invokes a specifically defended bridge from an unexcused obligation of warranted uptake to adequate epistemic opportunity. The opportunity must fit the task; the possibility of accidentally guessing the correct answer is not enough. Culpable earlier neglect, a present duty to inquire, communal preservation duties and a current individual duty of knowledgeable assent are different matters. The word “obligation” does not erase those distinctions.
+
+<a id="publicity-and-omission-evidence"></a>
+
+### 8.4 A stronger publicity claim needs its own evidence
+
+The publicity and omission notes report no additional specifically responsive argument within their supplied records. Their finite omission comparison is substantially duplicate and does not authenticate an abridgement event. The narrower positive source link and the stronger expected-publicity challenge both remain. Failure to find a further argument in a bounded record is not proof that none exists anywhere, while the lack of an authenticated omission event prevents that comparison from becoming a historical defeater by itself. These are no-new-result notes, not new discoveries or a withdrawal of the positive source account. [GUIDE105-G095]
+
+This preserves the distinction in §8.3 between truthful original delivery and a defended continuing-access undertaking. A broader publicity expectation can be assessed if its content, intended audience, transmission conditions and grounds are supplied. Neither the mere existence of a preserved report nor an unverified hypothesis about omitted material supplies those premises. The raw sources referenced by the notes remain external to their portable evidence, and no new source-byte inspection or historical authentication is claimed here. [GUIDE105-G095]
+
+
+## 9. What would constitute restoration?
+
+### 9.1 Restoration needs a specified change
+
+Restoration is an improvement relative to a target, from a specified prior impairment, through some relevant transition. Without a target and an account of the impairment, “restored” can mean only that an investigator likes the later answer. Without an actual transition, it can mean only that the original condition was misclassified. Without a causal relation, it does not establish that the intervention produced the improvement. [20, 24, 26]
+
+Several positive outcomes remain valuable even when they are not restoration of an earlier knowledge episode: new learning, a fresh competent recognition, recovered access to a surviving ground, a newly warranted testimony, a sound inference, and removal of a practical obstacle. None needs to be misdescribed as recovery to count as a genuine benefit. [12, 17]
+
+Output agreement cannot distinguish them by itself. Memorization can produce the expected answer without the posited dispositional change. Social pressure can change a report while private assent is unchanged. An appropriate new recognition may not be reported because of fear, language limitations or a response policy. A generic inferential strategy may provide a correct answer without using the specific capacity a theory posits. A temporarily suppressed objection can reappear without the target mechanism ever having been repaired. These are distinct possible mechanisms, not diagnoses established about any participant. [24]
+
+Proposition 1 applies when an admitted pair has the same observations but different target labels. Its conclusion concerns the adequacy of the observations for that exact target over that model class. It does not prove that a latent state exists merely because it was included in a model, nor that a questionnaire measures theological fiṭrah. A stronger measurement claim requires a defended construct, an adequate observation relation, appropriate source and bearer applicability, and evidence against the relevant alternative mechanisms.
+
+### 9.2 Matched intervention distinguishes a causal gain from a spontaneous one
+
+Consider a finite deterministic transition model with an operation $`a\in\{0,1\}`$ and a matched background b. Let $`s_a(b)`$ be the terminal state, Q the specified target, D the recorded discharge of the relevant burden, R the result of the required whole-target reassessment, and C the adequacy of the evidence's source and version binding. Define the following **particular matched causal claim**, not a universal analysis of causation:
+
+```math
+\begin{aligned}
+L(b)\quad\Longleftrightarrow\quad&Q(s_1(b))=1\ \land\ Q(s_0(b))=0\\
+&\land\ D(s_1(b))=\mathrm{landed}\ \land\ D(s_0(b))\ne\mathrm{landed}\\
+&\land\ R(s_1(b))=\mathrm{pass}\ \land\ C(b)=\mathrm{pass}.
+\end{aligned}
+```
+
+The words “landed” and “pass” name the specified model's checks; writing those labels supplies no empirical verification of them.
+
+**Proposition 4 — Actual before-and-after improvement is insufficient for L.** There are two models with the same observed change under $`a=1`$ but different values of L.
+
+**Proof.** Start both models with target false and the burden not discharged. In the causal model set $`Q(s_a)=a`$ and let D be landed exactly when $`a=1`$. In the spontaneous model set $`Q(s_a)=1`$ and D landed for both operation values, because a background event produces the improvement. Let the required reassessment and source checks pass in both. Under the performed operation $`a=1`$, both show the same improvement. Under no operation, only the causal model fails the target and discharge checks. Thus L holds only in the causal model. ∎
+
+The complete tuple of the two target values, two discharge values, reassessment and source checks determines L by its definition. A poorer profile determines L exactly when L is constant on its fibres, by Proposition 1. Neither statement establishes that an actual intervention has supplied a justified no-operation comparison. This preserves the distinction between observing improvement and causally attributing it. [26]
+
+### 9.3 Lower-order measurements can miss a complete target change
+
+Let $`n\ge3`$ and let $`\Omega=\{0,1\}^n`$. Write $`U_0`$ and $`U_1`$ for the uniform distributions on the strings with even and odd parity respectively.
+
+**Proposition 5 — Identical proper-subset marginals.** Every marginal of $`U_0`$ on fewer than n coordinates equals the corresponding marginal of $`U_1`$, although their full parity targets differ with probability one.
+
+**Proof.** Fix k<n coordinates and any assignment to them. There are $`2^{n-k}`$ completions. Flipping one unassigned coordinate pairs each even completion with an odd completion, so exactly $`2^{n-k-1}`$ have each parity. Each parity class has $`2^{n-1}`$ strings. The probability of the fixed assignment under either distribution is therefore $`2^{n-k-1}/2^{n-1}=2^{-k}`$. This holds for every assignment and every proper subset. But even parity has probability one under $`U_0`$ and zero under $`U_1`$. ∎
+
+For a matched operation, take the same uniformly distributed first n−1 bits under both conditions. Without the operation, choose the last bit to make parity odd; with it, choose the last bit to make parity even. Every matched background changes the parity target, while every proper-subset marginal stays fixed. Pairwise marginal movement is therefore unnecessary for this exact target change.
+
+The converse also fails. Let $`\delta_0`$ concentrate on the all-zero string and define $`\mu_\lambda=(1-\lambda)\delta_0+\lambda U_0`$ for $`0\le\lambda\le1`$. Every distribution in this family has even parity with probability one. But a two-coordinate marginal assigns probability $`1-3\lambda/4`$ to 00 and $`\lambda/4`$ to each of 01, 10 and 11. Thus changing λ changes the pairwise profile while the specified parity target stays true: there is no false-to-true restoration of that target. These calculations prove both non-necessity and non-sufficiency on the declared finite class. [27]
+
+This construction concerns particular marginals and a specified parity target. It makes no claim about every embedding, geometric metric or psychological measure. Nor does it show that a human intervention changes a latent disposition. Its value is to expose an actual information loss in a proposed observation scheme before such a scheme is credited with more than it records.
+
+### 9.4 The remaining empirical task
+
+A defensible study would distinguish the construct from its measured indicators, state its target and impairment hypotheses before inspecting outcomes, and compare plausible mechanisms such as learning, recollection, compliance, prior knowledge and temporary suppression. Its causal claims would need a suitable design, its measurements appropriate validation, and any stability claim an adequate follow-up horizon. Cross-language or cross-group comparisons would require evidence that the measurements have the same relevant meaning. These are consequences of the specific identification problems above, not a claim that a new study has been executed. [24]
+
+The inspected proposal's purported checker was absent from its public intake, and its repaired formal signatures were thinner than several prose claims. Its intake correction therefore permits source and finite-schema use, not independent reproduction of that missing checker or adoption of the wider proposal. The finite proofs written in this chapter stand on their displayed assumptions and arguments; they confer no retrospective empirical or machine-checking credit on that packet. [24–25]
+
+### 9.5 An explicit restoration model and its strongest justified verdict
+
+A model of restoration should distinguish the latent disposition D, an occlusion or impairment condition, occurrent recognition, assent, verbal report and behavior. Fix a person or system i, a domain or proposition q, an intervention j and times $`t_0<t_1`$. A source-relative restoration proposal is
+
+```math
+\begin{aligned}
+\mathrm{Restore}(i,j,q,t_0,t_1):={}&
+ \mathrm{Impaired}(D_{t_0})\land\mathrm{Healthier}(D_{t_1})\\
+ &\land\mathrm{Lands}(j,i)\land
+ \mathrm{Causes}(j,D_{t_0},D_{t_1})
+ \land\mathrm{SourceCompatible}(D_{t_1},q).
+\end{aligned}
+```
+
+This is a declared target, not an observed state of a soul or a universal definition of rehabilitation. “Healthier” needs a fixed comparison; “causes” needs a specified causal account; source compatibility needs an authenticated interpretation and applicability to the bearer. Recipient warrant is a further target. The formula intentionally does not identify any of those with reporting the expected sentence. It also does not require that q was formerly known: rehabilitation of a disposition can make a new recognition possible. Recovery of an earlier knowledge episode would add its own historical condition. [24]
+
+The two failures of output-only assessment can be shown together. Admit four histories with the following properties; the report and behavior columns jointly form the selected evidence E.
+
+| History | Observed pre/post report and behavior | Posited latent and causal facts | Restore |
+|---|---|---|---:|
+| Genuine repair with manifestation | No target response, then target response | Prior impairment; appropriate intervention repairs it and the target manifests | 1 |
+| Memorization or compliance | The same no-response/response sequence | Expected answer is learned or reported while the target disposition remains impaired | 0 |
+| Genuine repair without manifestation | No target response at either time | Appropriate repair occurs, but fear, language or response policy blocks the measured manifestation | 1 |
+| No repair | The same unchanged sequence | Impairment persists and no repair occurs | 0 |
+
+Each pair shares its complete declared E and differs on Restore. By Proposition 1 no E-only rule classifies both members of either pair correctly. A rule identifying improved output with restoration admits a false positive in the first pair and a false negative in the second. The proof is conditional on admitting the displayed histories with their contrasting causal facts. It does not establish that either mechanism occurred in any actual participant, nor does lack of report prove hidden repair. [24]
+
+Several further controls preserve the mechanism distinctions. Experimenter expectancy can change output without the claimed causal route. Suppressing an objection temporarily can alter a response without repairing the relevant disposition. A generic reasoning strategy can produce a genuinely correct answer without exercising the source-specific capacity under study. A proxy can mean different things across languages or populations. Confidence or coherence can be measured without thereby measuring theological fiṭrah. Finally, truth and assent can coincide through luck or despite defeat. These alternatives concern different coordinates; adding them all to a list does not establish their prevalence or make every actual appraisal indeterminate.
+
+There is a constructive response to nonidentification. For a finite nonempty admitted class $`\mathcal M`$, an evidence map E and binary target R, define at each attained observation e
+
+```math
+\mathcal R(e)=\{R(m):m\in\mathcal M,\ E(m)=e\},
+\qquad
+\ell(e)=\min\mathcal R(e),\quad u(e)=\max\mathcal R(e).
+```
+
+**Proposition — Conservative restoration appraisal.** R is confirmed at e precisely when $`\ell(e)=u(e)=1`$, excluded precisely when both are zero, and otherwise remains undetermined by E over this class. If $`E'=(E,A)`$ adds an observation under the same model and target interpretation, then at each attained $`e'=(e,a)`$
+
+```math
+\mathcal R'(e')\subseteq\mathcal R(e),
+\qquad \ell(e)\le\ell'(e')\le u'(e')\le u(e).
+```
+
+**Proof.** The first statement follows from the possible target values on the fibre. The refined fibre is contained in the old fibre, so its nonempty target set is a subset and its minimum cannot decrease or maximum increase. ∎
+
+This supplies the strongest uniformly correct categorical verdict available from the chosen evidence and admitted models. It does not require a binary answer on every case. A calibrated exclusion of the compliance explanation can turn an ambiguous fibre into a confirmed one; independently excluding genuine repair can turn it into an excluded one. The evidence or premise that removes the alternative must be warranted. Merely defining A to equal the desired answer is not a measurement. If a larger rival class is later admitted, the possible-value set can widen again. If an observation lies outside the model's image, the model has failed to cover that observation; an empty fibre is not confirmation by vacuity.
+
+An alleged complete certificate consequently needs more than a favorable score. It must specify its source and construct, state space, impairment comparison, intervention and causal landing, measurement relation and validation, separate recognition/assent/report/behavior outcomes, source compatibility, recipient warrant if claimed, defeaters and rival mechanisms, follow-up horizon and stability criterion, and the exact model class. The positive conclusion under those justified conditions is identification or estimation of that operational target. Identifying it with a theological disposition remains a further source-and-world bridge. A personally realized, impersonally realized or distributed latent model can share the same observations; a latent variable alone establishes neither de se apprehension nor property dualism. [24]
+
+### 9.6 What a comparative study can identify
+
+The preceding model explains why a useful empirical design needs comparators, temporally ordered observations, follow-up, independent measurements of the proposed mechanism and deliberate tests of the rival explanations. Randomization and blinding where feasible, prespecified missing-data and exclusion rules, negative-control interventions and outcomes, cross-group measurement checks and tests against scripted response generators address different threats. A successful classifier of a report remains a classifier of that report until its relation to the intended construct is established. None of these studies is reported as executed here. The public source is a proposed study contract; its missing historical checker and limited formal intake remain at the boundary stated in §9.4. [24]
+
+Even an idealized comparative study has an exact limitation and a useful positive result. Let $`Y_0,Y_1\in\{0,1\}`$ denote a **validated operational outcome** for the same unit at the same follow-up time without and with the intervention. Assume a coherent fixed population, consistency of the assigned treatment with the observed outcome, treatment comparability sufficient to identify both marginal probabilities, and no unmodeled interference or treatment-version change. Write $`p_a=\Pr(Y_a=1)`$ and $`b=\Pr(Y_0=0,Y_1=1)`$. These are population quantities, not yet an assessment of any named individual or the full restoration conjunction.
+
+**Proposition — Sharp bounds on beneficial operational change.** Knowing the two marginals alone gives exactly
+
+```math
+\max(0,p_1-p_0)\ \le\ b\ \le\ \min(p_1,1-p_0).
+```
+
+**Proof.** The joint table, parameterized by b, must be
+
+| $`(Y_0,Y_1)`$ | Probability |
+|---|---:|
+| $`(0,0)`$ | $`1-p_0-b`$ |
+| $`(0,1)`$ | $`b`$ |
+| $`(1,0)`$ | $`p_0-p_1+b`$ |
+| $`(1,1)`$ | $`p_1-b`$ |
+
+Nonnegativity of the four entries gives the bounds. Conversely every b in that interval makes all entries nonnegative, their sum one and their marginals $`p_0,p_1`$. Thus every permitted value is achieved by a joint distribution. ∎
+
+For $`p_0=p_1=1/2`$, half unchanged failures and half unchanged successes give b=0. Half benefited units and half harmed units give b=1/2, with identical observable marginals. Repeating the randomized design more precisely estimates those marginals but cannot select a coupling the design has not identified. If an independently justified monotonicity condition $`Y_1\ge Y_0`$ excludes harm, the third row is zero and $`b=p_1-p_0`$. A positive mean difference already guarantees at least that much beneficial operational change without monotonicity. These are genuine gains from the comparative evidence.
+
+This algebra is an elementary consequence of the proposed state/outcome distinction, not a new causal theorem or experimental result. It assumes the marginals are identified exactly; finite samples add estimation uncertainty. The no-treatment follow-up outcome is not automatically the observed pre-intervention condition. Moreover, beneficial change in a validated proxy need not satisfy the disposition, causal-mechanism and source-compatibility clauses in §9.5. A study can therefore establish a worthwhile average benefit or a lower bound on benefit while leaving individual causal restoration, recipient warrant and theological identification unestablished. That precise conclusion is stronger and more useful than either an unsupported restoration claim or a blanket assertion that empirical inquiry can establish nothing.
+
+
+<a id="negative-synthetic-restoration-pilot"></a>
+
+#### A negative synthetic pilot and its corrected evidential scope
+
+The distinctions above have a concrete historical application. A completed internal synthetic pilot tested a proposed shortcut-burden intervention under eight frozen seeds. Its public custody summary reports the following results; the operation and control whole-field measurements must not be silently expanded into a three-arm whole-field comparison. [PILOT-SUMMARY] [PILOT-RECEIPT]
+
+| Recorded measure | Reported result |
+|---|---|
+| Anti-shortcut accuracy: baseline, operation and control | 1.00 in all three arms |
+| Whole-field accuracy: operation and control | 1.00 in both arms |
+| Median hidden-layer CKA | 0.9971370697021484 |
+| T299 causal-landing success | 0 of 8 seeds |
+| Tested T300 profile-blindness support condition | False in all eight seeds |
+
+Perfect recorded accuracy and high representational alignment were therefore not evidence that the proposed causal burden had been discharged. The admitted interpretation is that this pilot failed to instantiate a live shortcut burden at its declared evidential class. That is a scoped appraisal of the tested mechanism, not a deduction from high accuracy alone and not a demonstration that the general theoretical distinction between a profile and its target is false. The reported landing and support outcomes are the pilot's recorded criteria; the public summaries do not independently establish the adequacy of their original implementation. [PILOT-RECEIPT]
+
+The subsequent design audit matters to the interpretation. The baseline corpus contained all **44** source configurations; each seed's anti-cue pool contained **42–44**. Evaluation rows were sample-distinct but their supports overlapped. Shared starting weights and matched compute likewise did not make the runs case-paired: the operation and control runs were independently sampled. The result is therefore neither a support-disjoint generalization test nor a paired causal-effect estimate. Section 9.6 explains the related distinction between comparative outcomes and an identified unit-level causal change; it does not turn this pilot into the idealized identified design assumed by that proposition. [PILOT-SUMMARY] [PILOT-RECEIPT]
+
+The source-reported audit **143** repaired the evidential-class and design interpretation without changing the numerical results. Its subsequent rereview **144** is reported as passing with nonblocking scope notes. These are inherited review declarations, not a new inspection of the underlying run records, checker or full rereview. The receipt's preregistration label likewise describes its internal history: the public summary expressly disclaims an externally preregistered study or external validation of the framework. [PILOT-SUMMARY] [PILOT-RECEIPT]
+
+The exact tested configuration was retired, rather than scheduled for an unchanged rerun. A successor would require materially different support separation, an identified causal design, or a changed intervention/control identification strategy. The negative result supplies no general claim about restorative efficacy, humans, language models, theological fiṭrah, source truth or the Platonic Representation Hypothesis. It preserves a useful failed empirical instantiation while leaving the theoretical family active. No experiment is rerun here; successful prediction, warranted cognition and causal restoration remain different achievements. [PILOT-SUMMARY] [PILOT-RECEIPT]
+
+#### Human study endpoints, reporting repairs and the limits of reanalysis
+
+The operational distinction also has a human-study application. Three retained reports from October 2026 distinguish positive psychological findings, particular reporting defects and an unexecuted reanalysis. Their empirical reading is inherited here: the first reports methods/results inspection of two modern studies and abstract/indexed-text inspection of a third; the second reports publisher and supporting-material checks. This is not a new primary-study verification, systematic review, replication or participant-level analysis. It neither withdraws the affirmative recognitional account in §§1–3 nor turns that account into prior certification of every cited experiment. Earlier source reports themselves distinguished first-order warranted recognition from its complete theoretical explanation and explicitly declined blanket authentication of cited empirical work. [FITRAH-EMPIRICAL] [FITRAH-REANALYSIS]
+
+**Mortality framing and the object of endorsement.** The retained account of Tracy, Hart and Martens's *Death and Science* reports five adult samples of 122, 352, 832, 269 and 99. Participants imagined personal death or dental pain and evaluated passages associated with Behe/intelligent-design theory or Dawkins/evolution. The six-item outcome combined four author evaluations with two theory ratings; separate theory-only results were also reported. Studies 1, 2 and 5 used both passages, Study 3 used one matched-content passage, and Study 4 crossed mortality framing, a Sagan passage and one author/theory assignment. Study 1 increased design endorsement; Studies 2–3 primarily reduced evolution endorsement, with nonsignificant design increases. The report describes an opposite design response under the Sagan package in Study 4 and a reversed direction in the natural-science sample of Study 5. Religiosity itself did not increase. These conditional findings should not be collapsed into a universal tendency in one direction. [FITRAH-EMPIRICAL]
+
+The measured content matters independently of significance. The passages combine scientific assertions, named authorities and rhetorical assessments; the Sagan material combines meaning in scientific inquiry with truth-seeking, problem-solving and caution about answers outside science. Its content, authoritative attribution and extra reading/delay were not independently crossed with matched controls: the no-Sagan condition lacked a neutral passage. A reproduced interaction would therefore concern that experimental package, not identify meaning alone as its mechanism. The theory items ask about evidential support and explanations of life's origins. Agreement with biological evolution is logically compatible with a creator using secondary causes; disagreement with an author's argument is not rejection of every creator proposition. Neither the composite nor the theory-only scale measures exactly one original source, source independence, metaphysical truth or warranted recognition. Conversely, these endpoint limits do not refute the metaphysical propositions. [FITRAH-REANALYSIS]
+
+**Speeded judgments provide a positive but differently specified result.** The inherited Järnefelt–Canfield–Kelemen account reports adult analysed samples of 352 North Americans, 148 association-recruited North American atheists and 151 Finnish nonbelievers. Randomized conditions compared 865-ms and unspeeded judgments, and general-being with human-making wording, using forty natural photographs alongside artifact, geometric-shape and cartoon controls. Time pressure increased creation endorsement among nonbelievers, particularly under general-being wording; human-making endorsement remained lower. The source records exclusion-sensitivity analyses and a tendency not fully eliminated by measured nature/Earth agency beliefs. That is positive evidence about a persistent broad agency/design response, including among some reflective nonbelievers. It is not a newborn study, an experimentally upbringing-free sample, a universal monotheistic-content measure or a calibrated truth-tracking test. The unspecified agent permits multiple interpretations, and speed by itself gives no epistemic priority to an answer. [FITRAH-EMPIRICAL]
+
+**A selected clinical association has a different scope again.** The retained Dervic account concerns 371 already-depressed psychiatric inpatients, affiliation and lifetime suicide-attempt history. It reports group differences in attempts and several background characteristics, but no difference in depression, hopelessness or stressful-life-event scores; the indexed results describe attenuation after adjustment for moral objections. Its access ceiling was the abstract and indexed relevant text, not a continuously read full PDF. These observations may inform a question about protective factors within that sample. They do not identify affiliation with atheism, classify atheism as illness, estimate general-population psychiatric prevalence, establish disbelief as a cause, or establish religious truth. No patient-level or clinical recommendation follows here. [FITRAH-EMPIRICAL]
+
+**Two reporting inconsistencies do not erase the compatible effects.** The reanalysis report preserved the following arithmetic from printed statistics. The ordinary probabilities are upper-tail F probabilities or two-sided t probabilities; a directional t interpretation needs an independently justified direction and is not a default license to halve an ANOVA probability. [FITRAH-REANALYSIS]
+
+| Reported endpoint | Printed statistic | Ordinary p | Directional t equivalent |
+|---|---:|---:|---:|
+| Study 4 theory-only Sagan mortality × author interaction | F(1,131)=2.69 | .103379 | .051689 |
+| Study 4 theory-only three-way interaction | F(1,257)=6.07 | .014405 | .007203 |
+| Study 4 theory-only design simple effect within Sagan | t(64)=2.86 | .005714 | .002857 |
+| Study 5 theory-only evolution simple effect | t(94)=1.47 | .144901 | .072451 |
+| Study 5 theory-only interaction | F(1,94)=5.17 | .025256 | .012628 |
+| Study 5 theory-only design simple effect | t(94)=3.23 | .001706 | .000853 |
+| Study 5 six-item evolution simple effect, explicitly one-tailed | t(94)=1.80 | .075069 | .037534 |
+
+For an F statistic with numerator degree of freedom one, $`F_{1,\nu}`$ has the distribution of $`T_\nu^2`$. Thus its upper-tail probability at f equals $`2\Pr(T_\nu\ge\sqrt f)`$; the last column displays the corresponding one-sided tail, not an estimate from recovered observations. At the displayed inputs, F=2.69 and t=1.47 cannot support their associated p<.05 assertions even on the favourable directional interpretation. Allowing rounding to the nearest .01 still gives directional lower limits approximately .051531 and .071777, respectively. The report therefore identifies two incompatible printed combinations, not which field is wrong, misconduct or experimental failure. The other rows retain their own status: in particular the Study 4 theory-only three-way interaction and design simple effect remain arithmetically compatible with p<.05. It would be equally wrong to infer that the entire framing result disappears or that it concerns only author liking. [FITRAH-REANALYSIS]
+
+**The unexecuted reanalysis asks a sharper question than a comparison of p-values.** Let M mark mortality versus dental pain, S mark Sagan versus no Sagan, and T the assigned theory. For endpoint E define
+
+```math
+d(E,S,T)=\mathbb E[E\mid M=1,S,T]-\mathbb E[E\mid M=0,S,T],\qquad
+D(E,T)=d(E,1,T)-d(E,0,T).
+```
+
+The design-theory moderation is $`D(E,\mathrm{IDT})`$; the three-way contrast is $`D(E,\mathrm{ET})-D(E,\mathrm{IDT})`$, up to coding. Neither is an individual simple effect. A reversal additionally requires the two component directions and their uncertainty, not merely a significant three-way contrast. The planned endpoint-specific question is $`D(\mathrm{theory},\mathrm{IDT})-D(\mathrm{author},\mathrm{IDT})`$. Its uncertainty depends on the actual within-person covariance of the two endpoint types: $`\operatorname{Var}(U-V)=\operatorname{Var}(U)+\operatorname{Var}(V)-2\operatorname{Cov}(U,V)`$. Marginal t/F values do not supply that covariance. Significance for one endpoint and nonsignificance for another is not itself a significant difference; failure to find a difference is not equivalence without a justified margin. [FITRAH-PLAN]
+
+The plan would first reproduce the documented six- and two-item standard-score analyses, then show two theory items and four author items separately on their original 1–7 scale, retaining all eight cells, counts, missingness, uncertainty and both directions of results. Its small planned testing family contains the design-theory moderation and the endpoint-type contrast, using ordinary two-sided inference with raw and Holm-adjusted values. This is an alternative sensitivity specification written after the published results were known, not a claim about the authors' prespecified family or a preregistration. A later follow-up subset cannot replace the original sample as a pre-treatment baseline. [FITRAH-PLAN]
+
+That branch was not executed. The bounded public search located articles, supporting passages and pooled summary materials, but not authenticated target participant-level condition assignments, six item responses, inclusion/missingness decisions and adequate scoring/model documentation. Pooled means cannot recover the eight-cell variances or within-person covariance; invented participant rows would add assumptions rather than restore observations. Recruited N=269 versus the N=265 implied by residual df=257 in an ordinary saturated eight-cell model is a documentation question, not permission to invent four exclusions. The reports' searches and unsuccessful publisher/fallback routes do not establish universal data absence; nor does an HTTP403 establish that a dataset is absent. No author was contacted and no participant was recruited. [FITRAH-REANALYSIS] [FITRAH-PLAN]
+
+Reopening requires an authenticated, lawfully usable, appropriately deidentified Study 4 release with a documented provenance chain, conditions, scoring, standardization and exclusions, or separately authorized outreach. Do not republish participant rows or proceed through an unmet provenance/deidentification gate. Any eventual output must distinguish aggregate secondary-data analysis from a new experiment or replication with new participants. Even perfect reanalysis cannot separate uncrossed package components or manufacture an unmeasured Creator/warrant construct. The appropriate preservation is therefore affirmative where the response evidence warrants it, critical about the two specific numerical combinations, and explicit about what remains unidentified. The reports give no fresh child-study, universal faculty or clinical-reliability certificate, and no blanket defeater of adequately grounded recognition. [FITRAH-EMPIRICAL] [FITRAH-REANALYSIS] [FITRAH-PLAN]
+
+<a id="textual-observation-and-warrant"></a>
+
+### 9.7 What an observation-fibre obstruction establishes
+
+The textual-recovery assessment applies the established observation-fibre principle to a specified interpretive problem. If two admitted possibilities produce the same available observation and disagree about the target, no decoder of that observation can return the exact target in both. For a metric-valued target, if the two target values are distance $d$ apart, any one estimate at that shared observation is at distance at least $d/2$ from one of them: the contrary would violate the triangle inequality. This is a worst-case statement about the stipulated pair and observation. A posterior error requires a separately supplied probability model. [GUIDE105-G032]
+
+The premise is where an actual application can fail. Raw observations are not the same object as moments of a probability law. Failure to reconstruct a composite target is not automatically failure to reconstruct each nominated component. And a mathematically admitted pair is not thereby a pair of historically or theologically warranted alternatives. The source assessment expressly withholds that latter promotion. It supplies a bounded mathematical check and a written scope analysis, not a historical countermodel or a new external scholarly review. Its normalized local text projections also do not assert original-byte identity of the supplied texts. [GUIDE105-G032]
+
+A separate occurrence/warrant crosswalk is narrower still: its actual application uses seven manual source records and one absorbing excluded-view state. Excluding a work from that declared view is an operation on availability; it is not, by definition, a source defeater or revocation of authority. No reinclusion operation is claimed. The model does not cover a whole document store, human cognition, new historical interpretation or actual philosophical warrant. Its separate direct-signature implementation is an internal control, not independent review; its source reports independent review pending at freeze. [GUIDE105-G047]
+
+These distinctions allow a finite model to be exact without overextending its meaning. The target, admitted alternatives, observation service and interpretation of exclusion must be fixed before an obstruction is transferred to actual warrant. The positive survival and restoration cases already developed in §§7–9 remain available when their substantive acquisition, continuity and defeater premises hold. An inability to reconstruct an assessor's record does not alone establish that a subject has lost a warranted ground. [GUIDE105-G032] [GUIDE105-G047]
+
+
+## 10. A coherent discipline of corrective inquiry
+
+Corrective inquiry can begin with substantive commitments and still be responsive to reasons. A teacher may direct attention toward a truth already known to the teacher; that pedagogical aim is not automatically the learner's ground. A learner may retain a warranted conclusion while rejecting a defective explanation, or legitimately suspend a conclusion when its only adequate support fails. Neither always retaining the preferred answer nor always discarding it after one route fails is an adequate rule. The response should follow the content and reach of the established defect. [16–18]
+
+Fair scrutiny also concerns how a claim is presented. Ibn al-Qayyim's discussion of attractive and hostile descriptions asks the reader to inspect meaning rather than let verbal admiration or aversion decide it, and to extend comparable attention to a rival's claim. A neutral restatement can therefore remove a real obstacle to understanding. Its evidential role remains specific: the content must actually be held fixed. A formulation that resolves an ambiguity may change the reader's understood content, while habitual allegiance may preserve assent across genuinely equivalent formulations. Stability is not itself a test of the operative truth-connected ground; changed judgment is not itself evidence of irrational susceptibility. Competent scrutiny can also produce new knowledge rather than recover an old state. This gives a positive discipline of inquiry without manufacturing a behavioral authentication test. [2, 12]
+
+The positive account developed here has three connected parts. First, sound first-order cognition can warrant belief without waiting for a complete reflective theory. Second, inquiry can improve that cognition through actual known contents, better interpretation, additional evidence, local correction and more adequate encounter. Third, the reach of every achievement remains tied to its object: truth does not alone establish basing, a true source does not automatically confer every recipient's warrant, and successful output does not identify restoration.
+
+The logical results sharpen the same discipline. A relevant connection used with a known premise supplies a positive inferential route; a necessary target and materially true premises alone do not supply that connection. The failure concerns the specified internal conditional, not the target's derivability or an independently established instance of knowledge. Retaining the complete ground and its actual use is essential to both the positive argument and a fair negative test.
+
+The unresolved questions are substantive. A complete theory of operative basing remains contested; the inspected historical sources do not newly identify an initial Creator-recognition episode; source-relative fiṭrah claims do not yet supply a validated neutral measurement; and the formal examples do not establish causal efficacy in people or trained systems. These limits preserve the distinctions needed to investigate those questions. They do not erase the positive arguments already available or convert uncertainty about an explanation into an automatic defeater of ordinary knowledge.
+
+## Sources and attribution
+
+Classical page references below preserve the editions and electronic witnesses identified by the public source studies. This synthesis directly reads those studies and their relevant corrections and reviews; it does not claim a fresh Arabic manuscript collation or independent authentication of narrated events. Modern publication metadata, Plantinga's cited section, Dretske's operative-feature passage and Hawthorne's factive-reason qualification were also checked at their linked public sources. A source-relative doctrinal argument, a historical author's positive appraisal, our analytical reconstruction, and an actual-world finding remain distinct.
+
+### Primary and comparative literature
+
+1. Ibn Taymiyyah. *Darʾ taʿāruḍ al-ʿaql wa-l-naql*. Edition-labelled electronic witness of the Imam Muhammad ibn Saud Islamic University second edition, 1411/1991. Relevant units: 5:269–286, [truth and particular routes](https://www.islamweb.net/ar/library/content/413/960/); 7:419–430, [cognition, recollection and learning](https://islamweb.net/ar/library/index.php?ID=560&bk_no=413&idfrom=1327&idto=1329&page=bookcontents_ver3); 8:530–535, [recognition and retrospective explanation](https://www.islamweb.net/ar/library/content/413/1594/); and 9:9–15 with adjoining continuation, [mediated identification](https://www.islamweb.net/ar/library/content/413/1596/). The teacher and fiṭrah discussion is preserved in the [electronic division](https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-014.html); the inherited cross-edition pagination issue is not silently resolved here. Also *Majmūʿ al-Fatāwā* 18:48–51, [qualitative conditions of tawātur](https://www.islamweb.net/ar/library/content/22/1787/).
+2. Ibn al-Qayyim. *Miftāḥ dār al-saʿāda*. Edited by ʿAbd al-Raḥmān ibn Ḥasan ibn Qāʾid, third edition, 1440/2019, Dār ʿAṭāʾāt al-ʿIlm / Dār Ibn Ḥazm. [Received electronic witness](https://ibnelqayem.com/ar/media/download/86), vol. 1, 243–278 on knowing and acting and 393–399 on content-sensitive scrutiny. Edition and reading limits are preserved in sources 12 and 16.
+3. Ibn Taymiyyah. *Sharḥ al-Aṣbahāniyyah*. Edited by Muḥammad ibn ʿAwdah al-Saʿwī, Maktabat Dār al-Minhāj, first-edition notice 1430 AH; catalogue material also bears 1428 AH. [Public edition](https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf). Printed 550–561: cumulative inquiry; 637–640: knowing and articulating grounds; 658–670: religious assent and practical response; 683–688: error, agreement and transmission. These are printed pages, not PDF positions.
+4. Ibn Taymiyyah. *Intiṣār li-ahl al-athar*, published under the name *Naqḍ al-manṭiq*. Edited by ʿAbd al-Raḥmān ibn Ḥasan Qāʾid, third edition, 1440/2019. [Public edition](https://islamcontent.com/storage/contents/19669/ar-alaintisar-liahl-alathr.pdf), 44–49 and 265–276. The unresolved comparative clause and the editorial correction discussed by source 17 are not treated as independent premises.
+5. Enis Doko and Jamie B. Turner. “Islamic Religious Epistemology.” In Jonathan Fuqua, John Greco and Tyler McNabb (eds.), *The Cambridge Handbook of Religious Epistemology*, Cambridge University Press, 2023, 148–162. DOI: [10.1017/9781009047180.013](https://doi.org/10.1017/9781009047180.013). Their reference to C. Stephen Evans, *Faith Beyond Reason: A Kierkegaardian Account* (1998), p. 94, is reported attribution; that Evans page has not been independently verified here.
+6. Carl Sharif El-Tobgui. “From Legal Theory to Erkenntnistheorie: Ibn Taymiyya on Tawātur as the Ultimate Guarantor of Human Cognition.” *Oriens* 46(1–2), 2018, 6–61. DOI: [10.1163/18778372-04601002](https://doi.org/10.1163/18778372-04601002). Modern scholarly reconstruction, distinct from fresh verification of each classical locus.
+7. Alvin Plantinga. *Warranted Christian Belief*. Oxford University Press, 2000, chapter 5 §II, 153–161, [public text](https://ccel.org/ccel/plantinga/warrant3.v.iii.ii.html). The local-environment correction is tentative at its most specific probabilistic formulation.
+8. Fred Dretske, “The Case against Closure” and “Reply to Hawthorne”; John Hawthorne, “The Case for Closure.” In Matthias Steup, John Turri and Ernest Sosa (eds.), *Contemporary Debates in Epistemology*, second edition, Wiley, 2014, 27–59, [chapter text](https://fitelson.org/epistemology/text_ch2.pdf). See especially Dretske 38–39, Hawthorne 43, 45–49 and 55 n.16, and Dretske 57. The joint Dretske–Enç comparison is inherited through the independently reviewed source study in reference 19; no unread book chapter receives reading credit.
+9. Qurʾān [2:260](https://quran.com/al-baqarah/260), with Ibn Kathīr's [commentary](https://quran.com/al-baqarah/260/tafsirs/ar-tafsir-ibn-kathir) and al-Ṭabarī's initial interpretive discussion as read and distinguished in reference 29. The reported exegetical reading is not a new authentication of subsidiary reports.
+
+### Public Orthemology sources
+
+The following references identify substantive predecessors by title and exact Git blob in the [pinned public source edition][public-source-edition]. Their administrative filenames are unnecessary to the arguments above. Broader sources contain material outside this chapter; inclusion here does not establish their whole-file replaceability. The compact incorporation record separately states the exact reading and replacement scope.
+
+10. Orthemology. *Sound reason and basic epistemology*. Git blob `d7fa4425d014225940cbbbe86983f8d9a3dc3da5`, in the [pinned public source edition][public-source-edition].
+11. Orthemology. *Concrete and sound reason*. Git blob `c294af22d812a5fe59858ebf2686045d5726aa3a`, in the [pinned public source edition][public-source-edition].
+12. Orthemology. *Corrective recognition; positive warrant and content-sensitive scrutiny*. Git blobs `7af5f53633183c7669d4df84eef19a1535a2c1e2`, `96ff8977cbd47c293b53cd9e205c2491e59e15a2`, in the [pinned public source edition][public-source-edition].
+13. Orthemology. *Particular recognition through properties and effects*. Git blob `3b96cfe8416383cf74a3de3dbb28bceb1fe3df71`, in the [pinned public source edition][public-source-edition].
+14. Orthemology. *Corroboration from individually insufficient grounds; independent source-transfer review*. Git blobs `a796a48b5fe663f8e66c576204cb1cea7d376e90`, `3c33881081fca06d60802578721d56c222aff172`, in the [pinned public source edition][public-source-edition].
+15. Orthemology. *Two recognition contents and the practical effect they do not settle*. Git blob `3d87d5de4964b80eaa2ab2ad830a574323111b45`, in the [pinned public source edition][public-source-edition].
+16. Orthemology. *Evidence withdrawal and continued epistemic warrant*. Git blob `61052ed8686bcb464340c111617776785f24477c`, in the [pinned public source edition][public-source-edition].
+17. Orthemology. *Local correction and surviving cognitive capacity*. Git blob `6738ca59780be14b52f136565d3be4f0e124130d`, in the [pinned public source edition][public-source-edition].
+18. Orthemology. *Local resolution in corrective warrant*. Git blob `27efecf273d71015f7db03c2ab46f7a3350fdad2`, in the [pinned public source edition][public-source-edition].
+19. Orthemology. *Present information use and premise-relative rational basing; inferential transmission and independent reviews*. Git blobs `43b3e3570b12a68360b1d8f586f53385ba2406cf`, `ae3af6d0fe18cb7a42c32920e6a67e5aee1f3465`, `5d3a75a206afc1250bb3d8e77d0acfec35271d7f`, `f950fe390433d00b47c38ed5dbc1cd11ddcda5c7`, in the [pinned public source edition][public-source-edition].
+20. Orthemology. *Fiṭrah, impairment, reminder and restoration: source finding*. Git blob `7d842e7013509fddcc373dcdcdd2ab8ac8640ab3`, in the [pinned public source edition][public-source-edition].
+21. Orthemology. *Norm-fixer adequacy and proper function*. Git blob `ddca52efdef3b2fdd5b24edca6578aea65f176df`, in the [pinned public source edition][public-source-edition].
+22. Orthemology. *Fiṭrah proper-function closure and neutral realization parity, corrected version*. Git blob `cb3a334595b25ac2d2819cb17f9ed7e5582ab082`, in the [pinned public source edition][public-source-edition].
+23. Orthemology. *Target relabeling and epistemic proper-function authority, corrected version*. Git blob `7d3f715eabc83463e9217840ea643f95855701d0`, in the [pinned public source edition][public-source-edition].
+24. Orthemology. *Fiṭrah, occlusion, reminder and restoration: proposed identification model and intake correction*. Git blobs `9e73d8d55194aecf6743dc65a758adf2dc7a3850`, `98781176fe14912cb0ee6d1c541793e4bb906aab`, `c2817d65685bac1984ab631ff0966b406c9afe31`, in the [pinned public source edition][public-source-edition].
+25. Orthemology. *Source truth, authority, recipient warrant and execution*. Git blob `d6e1c9401c252710c79550a429af2e6fb4da8acf`, in the [pinned public source edition][public-source-edition].
+26. Orthemology. *Matched intervention and causal burden discharge*. Git blob `09aab3ce1a1c1e06ab42e2945fe1928cb5095ebe`, in the [pinned public source edition][public-source-edition].
+27. Orthemology. *Lower-order alignment and causal restoration*. Git blob `d13c504037255a6bd1a0a8c8d10aa3c6ae7baf3d`, in the [pinned public source edition][public-source-edition].
+28. Orthemology. *Truthful guidance, intended content and continuing access*. Git blobs `bebe846f6a921ed66ef07d67e182f41132bc432c`, `9937501e7a7c376026c26c1ce863522a9a699a26`, in the [pinned public source edition][public-source-edition].
+29. Orthemology. *Responsive demonstration after affirmed belief*. Git blob `29102e45882eb30b187973b1d0ffab4f3cc421aa`, in the [pinned public source edition][public-source-edition].
+
+### Further sources on relevant inference and epistemic grounds
+
+30. Fred Adams, John A. Barker and Murray Clarke. “Knowledge as Fact-Tracking True Belief.” *Manuscrito* 40(4), 2017, 1–30. DOI: [10.1590/0100-6045.2017.V40N4.FA](https://doi.org/10.1590/0100-6045.2017.V40N4.FA), [public article](https://www.scielo.br/j/man/a/JS5dxNB79fZvM9pJxRk3HzF/?format=pdf&ilang=pt_BR&lang=en). The relevant loci concern actual reasons, inference, note 19, and the relevant-conditional treatment of necessary truths, especially 24–27. Receipt of those loci does not stand for reading every cited antecedent.
+31. John A. Barker and Fred Adams. “Epistemic Closure and Skepticism.” *Logos & Episteme* 1(2), 2010, 221–246, [journal PDF](https://logos-and-episteme.acadiasi.ro/wp-content/uploads/2015/02/EPISTEMIC-CLOSURE-AND-SKEPTICISM.pdf). Relevant loci: 222 n.1; 225 nn.12–13; 226–228, especially 228 n.21. The stated implication-to-counterfactual bridge is explicit in the source.
+32. Katalin Bimbó, J. Michael Dunn and Nicholas Ferenz. “Two manuscripts, one by Routley, one by Meyer: The origins of the Routley–Meyer semantics for relevance logics.” *Australasian Journal of Logic* 15(2), 2018, 171–209. DOI: [10.26686/ajl.v15i2.4066](https://doi.org/10.26686/ajl.v15i2.4066), [journal PDF](https://ojs.wgtn.ac.nz/ajl/article/download/4066/4314/). The exact R axiom schemes and inference rules used here are Definition 1.1 on 176–177; this is a specific primary-source use rather than whole-paper reading credit.
+33. Shawn Standefer. “Actual Issues for Relevant Logics.” *Ergo* 7(8), 2020, 241–276. DOI: [10.3998/ergo.12405314.0007.008](https://doi.org/10.3998/ergo.12405314.0007.008), [author PDF](https://shawn-standefer.github.io/pdfs/actual.pdf). Theorem 4 and Table 2, 270–271, supply the source-controlled eight-valued construction and its R soundness. Standefer credits the earlier Anderson–Belnap argument; this chapter does not claim fresh receipt of the original book's corresponding pages.
+34. Orthemology. *Necessary truth sensitivity and operative factive grounds*. Git blob `15e864dd9b9a31a5203f31fe9b080261afc7de4e`, in the [pinned public source edition][public-source-edition].
+35. Orthemology. *Relevant factive-ground derivation*. Git blob `18b3ceb2bcca924387899a9d51f3fd035967eac7`, in the [pinned public source edition][public-source-edition]. The same mathematical body occurs in two original locations; it is one proof, not independent corroboration by duplication.
+36. Orthemology. *Full material grounds and necessary targets in System R*. Git blob `cf657a78f972b7f98190139b2275a3381d288b66`, in the [pinned public source edition][public-source-edition]. Its logical results and scope corrections are incorporated here; its comparisons with separate research subjects do not receive incorporation credit from this chapter.
+37. Orthemology. *Variable-sharing reduction for a complete material ground*. Git blob `512266ec363346b6302292f69dafad32f1e067a9`, in the [pinned public source edition][public-source-edition].
+38. Orthemology. *Independent reviews of relevant factive grounds and of the complete material-ground countermodel*. Git blobs `3cd0c0e14555bff15d6330e8d370ed973370a1f0` and `06c55230d94f3d33c683dceef0e46fac7a1b77cb`, in the [pinned public source edition][public-source-edition]. These historical assessments qualify their identified predecessors, not this new edition automatically.
+39. Orthemology. *Finite and syntactic verification sources for relevant-ground derivations and countermodels*. Author/checker Git blobs `eb286b579e9623019ed9d8e83f879b353e87f1ff` and `0ee6ad92faab953fa513dc5754dfc88e6a8111b8`; independent/checker Git blobs `e43f97484b910ca766b8ed8c2f37156e05633847` and `5dd45b6da09394d289379a5c5ff55eb142741c42`, in the [pinned public source edition][public-source-edition]. These executable controls remain separately retained; the present exposition does not claim that it reran them or replaces their functions with prose.
+
+[public-source-edition]: https://github.com/theislampill/orthemology/commit/a7ff0e33d1a299db640041c46b1af81ca70851f6
+
+
+### Further source controls for soundness and restoration
+
+40. Carl Sharif El-Tobgui. *From Legal Theory to Erkenntnistheorie*, [author's institutional record and abstract](https://scholarworks.brandeis.edu/esploro/outputs/journalArticle/From-Legal-Theory-to-Erkenntnistheorie-Ibn/9924027312401921). This fresh check confirms the article's stated generalized tawātur interpretation and the metadata in reference 6. It is not a new complete reading of the article or a classical primary-source verification.
+41. Jamie B. Turner. “Ibn Taymiyya on theistic signs and knowledge of God.” *Religious Studies* 58(3), 2022, 583–597; first published online 20 May 2021. [Publisher's abstract and metadata](https://www.cambridge.org/core/journals/religious-studies/article/abs/ibn-taymiyya-on-theistic-signs-and-knowledge-of-god/8969C76512D2DD2588CAA0484747B6BE), DOI [10.1017/S0034412521000159](https://doi.org/10.1017/S0034412521000159). The check is bounded to the bibliographic distinction and stated natural-signs subject.
+42. Jamie B. Turner. “Ibn Taymiyya's ‘Common-Sense’ Philosophy.” In *Pluralizing Philosophy's Past*, 197–212, 2023. [Publisher's chapter record](https://link.springer.com/chapter/10.1007/978-3-031-13405-0_14), first online 22 March 2023, DOI [10.1007/978-3-031-13405-0_14](https://doi.org/10.1007/978-3-031-13405-0_14). This is a distinct chapter, not the 2022 natural-signs article. The fresh reading covers metadata and abstract, not its complete argument. Reference 5's joint authorship, title and page range were separately checked at the [Cambridge chapter record](https://www.cambridge.org/core/books/abs/cambridge-handbook-of-religious-epistemology/islamic-religious-epistemology/2F9CECA50D6203FB0350C244F1F3EA9E); the reported Evans page remains unverified.
+
+
+## Source guides for the additional arguments and qualifications
+
+These exact public guides identify the reported results, historical review scopes and dependencies used in the additional discussion. A guide citation does not claim receipt or renewed verification of every linked proof, primary source or execution record.
+
+- [GUIDE105-G032] T20 supplemental reading: textual recovery and warrant.
+- [GUIDE105-G047] Bounded occurrence/warrant crosswalk.
+- [GUIDE105-G088] Additive intermediate source evidence.
+- [GUIDE105-G095] Additive intermediate source evidence.
+
+[GUIDE105-G032]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/59643f825a88914fea7b92bff8154281556fb76eeb8713c5ea1e5e64a6c14550/README.md
+[GUIDE105-G047]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/826c89636c09c597d3f7e6f0d2fa3350bd5feb22f07379c2a206ea8b9a0660a5/README.md
+[GUIDE105-G088]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/defc84b7b2d2169234b6d64f08222c262dba3dd4631da45d83831e8f56fb57e3/README.md
+[GUIDE105-G095]: https://github.com/theislampill/orthemology/blob/561b6bffea7af95a5eed767ba2e37d9dcc34f31e/research/t20-v6-20261012/sources/e3eac749f6848eb9ba987f8f67f7911608bcb6e42361393c1ea070550f750516/README.md
+
+### Sources for the bounded negative synthetic pilot
+
+- [PILOT-SUMMARY] Orthemology public research. *T299/T300 historical synthetic pilot — negative at the tested evidential class*. Public custody summary, exact Git blob `43bdd734d262ce320d6bfa8586f3ac5dc4ab8992`. This summary is not the underlying execution packet or an externally preregistered study.
+- [PILOT-RECEIPT] Orthemology public research. *AR8R T299/T300 admitted negative-pilot receipt*. Exact Git blob `26b728be49a47e513cd9c9abc31761e05972e384`. The reported audit, rereview and retirement are inherited history; no new empirical execution or independent authentication of the original review is claimed.
+
+[PILOT-SUMMARY]: https://api.github.com/repos/theislampill/orthemology/git/blobs/43bdd734d262ce320d6bfa8586f3ac5dc4ab8992
+[PILOT-RECEIPT]: https://api.github.com/repos/theislampill/orthemology/git/blobs/26b728be49a47e513cd9c9abc31761e05972e384
+[selective-truth-control]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/research/t20-live-20261009/checkpoints/CP19/recognition-operative-content-20261009/REPORT.md
+
+
+[SC-ASSESS]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/structuring-cause-reply/INDEPENDENT_ASSESSMENT.md
+[SC-MODEL]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/structuring-cause-reply/MODEL_AND_TRANSPORT.md
+[SC-SOURCES]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/structuring-cause-reply/PUBLIC_SOURCE_SUMMARIES.md
+[SC-REVIEW]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/structuring-cause-reply/REVIEW_RECEIPT.md
+[SC-BASING]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/structuring-cause-basing-addendum/ASSESSMENT.md
+[SC-PRESET]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/structuring-cause-basing-addendum/PRESET_SCOPE_CLARIFICATION.md
+[SC-TRANSPORT]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/structuring-cause-basing-addendum/MATHEMATICAL_TRANSPORT.md
+[SC-BASING-SOURCES]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/research/t20-live-20261009/checkpoints/CP04/t20-next-frontier-20261008/structuring-cause-basing-addendum/PUBLIC_SOURCE_SUMMARIES.md
+
+**Inherited acquisition and basing references.** Sections 2.4 and 4.1 directly synthesize the public studies and their repairs. The following locators and access scopes are retained from those studies, not newly authenticated primary readings, edition collations or empirical replications. Their historical reviewers' reading and execution declarations likewise remain attributed. The basing review's four-file binding does not extend to all acquisition metadata. Exact old records remain necessary for those historical claims.
+
+- Dretske, [“Mental Events as Structuring Causes of Behaviour”](https://academic.oup.com/book/50168/chapter-abstract/422029519) (1993), pp. 121–136, DOI 10.1093/oso/9780198239291.003.0008: abstract only in the source study; no full-chapter credit. [“Psychological vs. Biological Explanations of Behavior”](https://store.behavior.org/httpdocs/resources/157.pdf), *Behavior and Philosophy* 32 (2004), 167–177: complete later article reported, especially 170–171 and 174–176; its revised presentation and footnote 7 are not proof of the inaccessible chapter's detailed contents.
+- Baker, [“Dretske on the Explanatory Role of Belief”](https://uh.edu/~garson/BakeronDretske.pdf), *Philosophical Studies* 63 (1991), 99–111, especially 107–109; Dretske, [“How Beliefs Explain: Reply to Baker”](https://www.uh.edu/~garson/Dretske%27s%20Reply%20to%20Baker.pdf), 63 (1991), 113–117: both complete readings reported, with the later review returning to Baker 107–109 and the complete reply. Baker's footnote 17 connects an earlier version to Dretske's 1990 presentation; the received exchange is not an unanswered objection.
+- Reppert, [“The Argument from Reason”](https://www.theistic.net/papers/V.Reppert/ReppertAFR.pdf) (1998): the study reports fresh targeted inspection of displayed pp. 19–25, adjacent 26 visible and a visual return to 23–25, not a new complete reading of the surrounding paper at that stage.
+- Dretske, *Explaining Behavior*, [chapter 4, “The Explanatory Role of Belief”](https://www.uh.edu/~garson/DretskeExplanCh.4.PDF), pp. 79–107: whole-chapter OCR coverage with annotated-passage gaps and decisive visual checks at 104–107 reported. The scan's printing is unverified; the work's 1988 hardcover and 1991 paperback are distinguished by the inherited [publisher locator](https://mitpress.mit.edu/9780262040945/explaining-behavior/). Chapter 6 was not acquired in this study.
+- Buckner, [“Rational Inference: The Lowest Bounds”](https://web.mit.edu/6.034/www/6.s077/Buckner-2017-Philosophy_and_Phenomenological_Research.pdf), 2017 online-first, later *Philosophy and Phenomenological Research* 98(3) (2019), 697–724, DOI 10.1111/phpr.12455: all 28 online-first pages, notes and references reported read; animal studies not independently replicated.
+- Siegel, [“Inference without reckoning”](https://dash.harvard.edu/server/api/core/bitstreams/7312037e-6d0f-6bd4-e053-0100007fdf3b/content), manuscript for the 2019 *Reasoning* volume: full 19-page manuscript, notes and bibliography reported; attention passage at 14–15. Repository-cover metadata ambiguity is retained; this is not credit for reading a 2017 book chapter.
+- Boghossian, [“What is inference?”](https://paulboghossian.com/pb/files/WhatIsInference.pdf), *Philosophical Studies* 169 (2014), 1–18, online 2012: complete article and references reported, with the stated theoretical-reasoning scope.
+- Patronnikov, [“Associative Inferential Transitions”](https://link.springer.com/article/10.1007/s12136-025-00632-8), *Acta Analytica* 40 (2025), 731–752: complete argument and 21 notes reported; empirical examples not independently verified, and justification assumptions remain contested.
+
+
+**Inherited empirical-source reports for §9.6.** The following are the exact public 2026 reports used here, not fresh authentication of the external articles, protected originals or participant data.
+
+[FITRAH-EMPIRICAL]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/fitrah-warrant-bridge/empirical-check/empirical_findings.md
+[FITRAH-REANALYSIS]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/README.md
+[FITRAH-PLAN]: https://github.com/theislampill/orthemology/blob/c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce/research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/prospective_reanalysis_plan.md
+
+- [FITRAH-EMPIRICAL] Fiṭrah empirical citation and inheritance check (8 October 2026). Exact public Git blob a5a0443e3d2eda649e3c2bca5c692d54373860fe.
+- [FITRAH-REANALYSIS] Public study reproducibility and endpoint check (8 October 2026). Exact public Git blob bebaa7d466d0a29946fba86a11d61cb75c874fb2.
+- [FITRAH-PLAN] Focused secondary data reanalysis plan (8 October 2026). Exact public Git blob de97bafb68a2a2069c047de8e7db70337dbfc60e.
+
+
+The reports identify Tracy, Hart and Martens (2011), *Death and Science*, DOI 10.1371/journal.pone.0017349; Järnefelt, Canfield and Kelemen (2015), *Cognition* 140:72–88, DOI 10.1016/j.cognition.2015.02.005; and Dervic et al. (2004), *Religious Affiliation and Suicide Attempt*, DOI 10.1176/appi.ajp.161.12.2303. These bibliographic identifiers and reported access levels are inherited; their presence is not a new primary-reading claim.

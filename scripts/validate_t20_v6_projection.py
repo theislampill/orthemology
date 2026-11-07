@@ -5,6 +5,9 @@ All registered bodies are checked regardless of suffix. This is source integrity
 publication boundary and current-record binding, not mathematical acceptance.
 """
 from __future__ import annotations
+
+from resolve_t20_v6_source import DIGEST_RECORD_PATHS, digest_record_absences
+
 import collections
 import hashlib
 import json
@@ -13,6 +16,33 @@ import re
 import sys
 import subprocess
 from functools import lru_cache
+
+import validate_v5_successors as continuation_owners
+
+from resolve_t20_v6_source import (
+    HISTORICAL_PROSE, HISTORICAL_PROSE_PUBLIC_PATHS, HISTORICAL_PROSE_REVISION,
+    historical_source_bytes, source_bytes, MEDIATOR_GUIDE, mediator_guide_source_bytes,
+    HISTORICAL_PROSE_REVISIONS, MEDIATOR_APPROXIMATION, FISHER_AUDIT, readonly_git_diff,
+    TYPED_GUIDES, typed_guide_source_bytes,
+    ADMIN_GUIDES, administrative_guide_source_bytes,
+    CONTINUATION_COPY_ROOT, continuation_duplicate_paths,
+    CHECKPOINT_COPY_PATHS, checkpoint_duplicate_paths,
+    CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths,
+    CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_duplicate_paths,
+    FORMAL_COPY_PATHS, formal_duplicate_paths,
+    CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_duplicate_paths,
+    CONTINUATION_REGISTRY_PATH, SUCCESSOR_INPUT_PATHS, GENERATED_FIXTURE_PATHS,
+    SUCCESSOR_INPUT_REGISTRY, successor_input_registry_document, successor_input_absences,
+    SUCCESSOR_CALCULUS_MAP, SUCCESSOR_CALCULUS_GUIDES, successor_calculus_map_absences,
+    successor_calculus_guide_source_bytes,
+    binding_record_candidate, binding_record_absences, binding_record_public_bytes,
+    STATUS_RECORD_OWNERS, STATUS_RECORD_OWNER_ORIGINAL,
+    STATUS_RECORD_OWNER_BASE, STATUS_RECORD_OWNER_TREE, status_owner_edition,
+    status_record_candidate, status_record_absences,
+    SUCCESSOR_FIXTURE_PATH,
+    SUCCESSOR_READ_BATCH_PATHS, successor_read_batch_absences,
+    SUCCESSOR_REMAINDER_BATCH_PATHS, successor_remainder_batch_absences,
+)
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 PREFIX = 'research/t20-v6-20261012'
@@ -129,7 +159,21 @@ def check_object(root, row):
         path = root / relative
         if path.is_symlink() or not path.resolve().is_relative_to(root.resolve()):
             raise ValueError('source symlink or escaped root')
-        if row.get('repository_revision') is not None:
+        if (relative.as_posix() in SUCCESSOR_READ_BATCH_PATHS
+                or relative.as_posix() in SUCCESSOR_REMAINDER_BATCH_PATHS
+                or relative.as_posix() in DIGEST_RECORD_PATHS
+                or relative.as_posix() == SUCCESSOR_FIXTURE_PATH
+                or binding_record_candidate(relative.as_posix())
+                or relative.as_posix() in SUCCESSOR_INPUT_PATHS
+                or relative.as_posix() in GENERATED_FIXTURE_PATHS
+                or relative.as_posix() in HISTORICAL_PROSE
+                or relative.as_posix() == CONTINUATION_REGISTRY_PATH
+                or relative.as_posix() in CHECKPOINT_RECORD_COPY_PATHS
+                or relative.as_posix() in FORMAL_COPY_PATHS
+                or relative.as_posix() in CHECKPOINT_CODE_COPY_PATHS
+                or (relative.as_posix().startswith(CONTINUATION_COPY_ROOT) and relative.suffix == '.lean')):
+            body = source_bytes(root, row)
+        elif row.get('repository_revision') is not None:
             if disposition != 'REUSE' or row['repository_revision'] != BASE:
                 raise ValueError('invalid pinned historical reuse')
             body = subprocess.check_output(['git', 'show', BASE + ':' + relative.as_posix()], cwd=root)
@@ -158,6 +202,259 @@ def check_object(root, row):
             errors.append('unqualified binary source')
     return errors
 
+
+def check_preserved_roots(root, objects):
+    """Keep every protected baseline obligation and its finite typed changes.
+
+    The original bodies and both proof occurrences authenticate before an
+    absence can be admitted. Changed bytes, modes, renames or other removals
+    are not historical-source dispositions. All source-universe rows remain.
+    A complete authenticated current continuation-owner edition has its
+    separate M-only admission; its original public bodies remain pinned.
+    """
+    errors, authenticated = [], set()
+    for path, (blob, identity, size) in HISTORICAL_PROSE.items():
+        try:
+            if path in HISTORICAL_PROSE_PUBLIC_PATHS:
+                row = objects.get(identity, {})
+                if row.get('repository_path') != path:
+                    raise ValueError('historical public source path differs')
+                source_bytes(root, row)
+            else:
+                historical_source_bytes(root, path, HISTORICAL_PROSE_REVISIONS[path], blob)
+            authenticated.add(path)
+        except (KeyError, OSError, ValueError, subprocess.CalledProcessError) as exc:
+            errors.append('historical prose: ' + path + ': ' + str(exc))
+    guide_authenticated = False
+    try:
+        mediator_guide_source_bytes(root, allow_original=True)
+        guide_authenticated = True
+    except (ValueError, OSError):
+        pass  # A guide change is never excused when this finite check fails.
+    typed_guides_authenticated = set()
+    for path in TYPED_GUIDES:
+        try:
+            typed_guide_source_bytes(root, path, allow_original=True)
+            typed_guides_authenticated.add(path)
+        except (ValueError, OSError):
+            pass  # No exception for a changed, missing or unsafe guide.
+    administrative_guides_authenticated = set()
+    for path in ADMIN_GUIDES:
+        try:
+            administrative_guide_source_bytes(root, path, allow_original=True)
+            administrative_guides_authenticated.add(path)
+        except (ValueError, OSError):
+            pass  # A changed, missing or unsafe guide receives no allowance.
+    protected = ['experiments/orthemology-v5', 'experiments/orthemology-v5-continuations',
+                 'experiments/orthemology-v5-successors', 'docs/provenance/v5-consolidation',
+                 'docs/provenance/v5-research-continuations', 'docs/provenance/v5-successors',
+                 'research/t20-live-20261009']
+    # Check both boundaries: a staged M/T/A must not disappear behind a
+    # combined worktree D or an unstaged return to original bytes.
+    copy_authenticated = None
+    owner_authenticated = None
+    checkpoint_authenticated = None
+    record_authenticated = None
+    package_authenticated = None
+    formal_authenticated = None
+    code_authenticated = None
+    digest_authenticated = None
+    input_registry_authenticated = None
+    input_absences_authenticated = None
+    read_batch_absences_authenticated = None
+    remainder_batch_absences_authenticated = None
+    calculus_absences_authenticated = None
+    binding_absences_authenticated = None
+    calculus_guides_authenticated = set()
+    for cached in (True, False):
+        result = readonly_git_diff(root,
+            ['git', '--no-replace-objects', 'diff', *(['--cached'] if cached else []),
+             '--no-ext-diff', '--no-textconv', '--no-renames', '--name-status',
+             '-z', BASE, '--', *protected])
+        try:
+            changes = result.stdout.decode('utf-8').rstrip('\0').split('\0') if result.stdout else []
+            if result.returncode or len(changes) % 2:
+                raise ValueError('protected baseline comparison unavailable')
+            status_owners_authenticated = set()
+            if any(status == 'M' and path in STATUS_RECORD_OWNERS
+                   for status, path in zip(changes[::2], changes[1::2])):
+                try:
+                    original_status_owners = {
+                        path: {'path': path, 'kind': 'blob', 'mode': '100644',
+                               'git_oid': blob, 'bytes': size}
+                        for path, (blob, identity, size) in STATUS_RECORD_OWNER_ORIGINAL.items()}
+                    status_owners_authenticated = set(status_owner_edition(
+                        root, original_status_owners,
+                        {'commit': STATUS_RECORD_OWNER_BASE, 'tree': STATUS_RECORD_OWNER_TREE}))
+                except (ValueError, OSError):
+                    pass  # Only the complete authenticated owner edition admits M.
+            status_absences_authenticated = set()
+            status_requests = {path for status, path in zip(changes[::2], changes[1::2])
+                               if status == 'D' and status_record_candidate(path)}
+            if status_requests:
+                try:
+                    status_absences_authenticated = status_record_absences(root, status_requests)
+                except (ValueError, OSError):
+                    pass  # A missing or invalid proof cannot admit any selected D.
+            if binding_absences_authenticated is None and any(
+                    status == 'D' and binding_record_candidate(path)
+                    for status, path in zip(changes[::2], changes[1::2])):
+                binding_absences_authenticated = binding_record_absences(root)
+            if copy_authenticated is None and any(
+                    status == 'D' and path.startswith(CONTINUATION_COPY_ROOT)
+                    for status, path in zip(changes[::2], changes[1::2])):
+                copy_authenticated = continuation_duplicate_paths(root)
+            if checkpoint_authenticated is None and any(
+                    status == 'D' and path in CHECKPOINT_COPY_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                checkpoint_authenticated = checkpoint_duplicate_paths(root)
+            if record_authenticated is None and any(
+                    status == 'D' and path in CHECKPOINT_RECORD_COPY_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                record_authenticated = checkpoint_record_duplicate_paths(root)
+            if package_authenticated is None and any(
+                    status == 'D' and path in CHECKPOINT_PACKAGE_COPY_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                package_authenticated = checkpoint_package_duplicate_paths(root)
+            if formal_authenticated is None and any(
+                    status == 'D' and path in FORMAL_COPY_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                formal_authenticated = formal_duplicate_paths(root)
+            if code_authenticated is None and any(
+                    status == 'D' and path in CHECKPOINT_CODE_COPY_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                code_authenticated = checkpoint_code_duplicate_paths(root)
+            if digest_authenticated is None and any(
+                    status == 'D' and path in DIGEST_RECORD_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                digest_authenticated = digest_record_absences(root)
+            if input_registry_authenticated is None and any(
+                    status == 'M' and path == SUCCESSOR_INPUT_REGISTRY
+                    for status, path in zip(changes[::2], changes[1::2])):
+                input_registry_authenticated = False
+                try:
+                    successor_input_registry_document(root)
+                    input_registry_authenticated = True
+                except (ValueError, OSError):
+                    pass  # No allowance for a changed or unsafe registry edition.
+            if input_absences_authenticated is None and any(
+                    status == 'D' and path in SUCCESSOR_INPUT_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                input_absences_authenticated = set()
+                try:
+                    input_absences_authenticated = successor_input_absences(root)
+                except (ValueError, OSError):
+                    pass  # Only authenticated physically absent originals qualify.
+            if read_batch_absences_authenticated is None and any(
+                    status == 'D' and path in SUCCESSOR_READ_BATCH_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                read_batch_absences_authenticated = set()
+                try:
+                    read_batch_absences_authenticated = successor_read_batch_absences(root)
+                except (ValueError, OSError):
+                    pass  # No exception without all original native identities.
+            if remainder_batch_absences_authenticated is None and any(
+                    status == 'D' and path in SUCCESSOR_REMAINDER_BATCH_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                remainder_batch_absences_authenticated = set()
+                try:
+                    remainder_batch_absences_authenticated = successor_remainder_batch_absences(root)
+                except (ValueError, OSError):
+                    pass  # No exception without all original native identities.
+            if calculus_absences_authenticated is None and any(
+                    status == 'D' and path == SUCCESSOR_CALCULUS_MAP
+                    for status, path in zip(changes[::2], changes[1::2])):
+                calculus_absences_authenticated = set()
+                try:
+                    calculus_absences_authenticated = successor_calculus_map_absences(root)
+                except (ValueError, OSError):
+                    pass  # Only the exact historical view may be absent.
+            for path in SUCCESSOR_CALCULUS_GUIDES:
+                if any(status == 'M' and changed == path
+                       for status, changed in zip(changes[::2], changes[1::2])):
+                    try:
+                        successor_calculus_guide_source_bytes(root, path)
+                        calculus_guides_authenticated.add(path)
+                    except (ValueError, OSError):
+                        pass  # No broad allowance for edited provenance text.
+            if owner_authenticated is None and any(
+                    status == 'M' and path in continuation_owners.PRESERVATION_OWNER_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                owner_authenticated = set()
+                try:
+                    # The projection gate needs these four literal owner
+                    # descriptors, not a replacement preservation inventory.
+                    original_owners = {
+                        path: {'path': path, 'bytes': size, 'sha256': identity,
+                               'git_blob_sha1': blob}
+                        for path, (blob, identity, size) in
+                        continuation_owners.PRESERVATION_OWNER_ORIGINAL.items()}
+                    owner_authenticated = set(
+                        continuation_owners._preservation_owner_bytes(root, original_owners))
+                except (ValueError, OSError):
+                    pass  # No modification allowance for an unqualified edition.
+            if any(not ((status == 'D' and path in authenticated) or
+                        (status == 'D' and path in status_absences_authenticated) or
+                        (status == 'M' and path in status_owners_authenticated) or
+                        (status == 'D' and path in (copy_authenticated or ())) or
+                        (status == 'D' and path in (checkpoint_authenticated or ())) or
+                        (status == 'D' and path in (record_authenticated or ())) or
+                        (status == 'D' and path in (binding_absences_authenticated or ())) or
+                        (status == 'D' and path in (package_authenticated or ())) or
+                        (status == 'D' and path in (formal_authenticated or ())) or
+                        (status == 'D' and path in (code_authenticated or ())) or
+                        (status == 'D' and path in (digest_authenticated or ())) or
+                        (status == 'D' and path in (input_absences_authenticated or ())) or
+                        (status == 'D' and path in (read_batch_absences_authenticated or ())) or
+                        (status == 'D' and path in (remainder_batch_absences_authenticated or ())) or
+                        (status == 'D' and path in (calculus_absences_authenticated or ())) or
+                        (status == 'M' and path in calculus_guides_authenticated) or
+                        (status == 'M' and path == SUCCESSOR_INPUT_REGISTRY
+                         and input_registry_authenticated) or
+                        (status == 'M' and path == MEDIATOR_GUIDE and guide_authenticated) or
+                        (status == 'M' and path in typed_guides_authenticated) or
+                        (status == 'M' and path in administrative_guides_authenticated) or
+                        (status == 'M' and path in (owner_authenticated or ())))
+                   for status, path in zip(changes[::2], changes[1::2])):
+                errors.append('preserved v5 or prior T20 baseline changed')
+        except (ValueError, UnicodeError):
+            errors.append('preserved v5 or prior T20 baseline comparison unavailable')
+
+    return list(dict.fromkeys(errors))
+
+
+def check_public_inventory(root, rows, controls):
+    """Keep every manifest row and authenticate each finite historical absence."""
+    declared = {r['repository_path'] for r in rows if r['disposition'] in ('ADD_EXACT', 'PROJECT')}
+    expected = declared | set(controls['files']) | {MANIFEST, PREFIX + '/PUBLIC_CONTROLS.json'}
+    actual = {p.relative_to(root).as_posix() for p in (root / PREFIX).rglob('*') if p.is_file()}
+    for historical in (MEDIATOR_APPROXIMATION, FISHER_AUDIT):
+        if historical not in expected or historical in actual:
+            continue
+        selected = [r for r in rows if r.get('repository_path') == historical]
+        try:
+            if len(selected) != 1:
+                raise ValueError('missing or duplicate approximation owner')
+            source_bytes(root, selected[0])
+        except (KeyError, OSError, ValueError, subprocess.CalledProcessError):
+            return ['public inventory has an unqualified historical absence']
+        expected.remove(historical)
+    missing_bindings = [r for r in rows if r.get('repository_path') in expected - actual
+                        and binding_record_candidate(r['repository_path'])]
+    if missing_bindings:
+        try:
+            qualified = binding_record_absences(root)
+            for row in missing_bindings:
+                if row['repository_path'] in qualified:
+                    binding_record_public_bytes(root, row)
+                    expected.remove(row['repository_path'])
+        except (KeyError, OSError, ValueError):
+            return ['public inventory has an unqualified binding-record absence']
+    if actual != expected:
+        return ['public inventory differs: ' + str(sorted(actual ^ expected)[:10])]
+    return []
+
+
 def validate(root=ROOT):
     manifest_bytes = (root / MANIFEST).read_bytes()
     manifest = json.loads(manifest_bytes)
@@ -177,12 +474,7 @@ def validate(root=ROOT):
         errors.append('selection count or saved reuse differs')
     baseline_paths = set(subprocess.check_output(
         ['git', 'ls-tree', '-r', '--name-only', BASE], cwd=root, text=True).splitlines())
-    protected = ['experiments/orthemology-v5', 'experiments/orthemology-v5-continuations',
-                 'experiments/orthemology-v5-successors', 'docs/provenance/v5-consolidation',
-                 'docs/provenance/v5-research-continuations', 'docs/provenance/v5-successors',
-                 'research/t20-live-20261009']
-    if subprocess.check_output(['git', 'diff', '--name-only', BASE, '--'] + protected, cwd=root):
-        errors.append('preserved v5 or prior T20 baseline changed')
+    errors.extend(check_preserved_roots(root, by_hash))
     for path, binding in _origin_records(str(root)).items():
         owner = by_hash.get(binding['source_sha256'], {})
         if owner.get('repository_path') != path or owner.get('public_sha256') != binding['public_sha256']:
@@ -203,7 +495,6 @@ def validate(root=ROOT):
             elif row['disposition'] in ('REUSE', 'ADD_EXACT', 'PROJECT') and by_hash[dependency]['disposition'] not in ('REUSE', 'ADD_EXACT', 'PROJECT'):
                 errors.append('declared publication dependency is not available: ' + row['source_sha256'])
     # Manifest inventory is explicit; generated controls and navigation are separate.
-    declared = {r['repository_path'] for r in rows if r['disposition'] in ('ADD_EXACT', 'PROJECT')}
     controls_bytes = (root / PREFIX / 'PUBLIC_CONTROLS.json').read_bytes()
     controls = json.loads(controls_bytes)
     for label, body in [('manifest', manifest_bytes), ('control inventory', controls_bytes)]:
@@ -218,10 +509,7 @@ def validate(root=ROOT):
         text = body.decode('utf-8')
         if private_locators(text) or private_uuid(text, sha256(body)) or re.search(r'(?:library-file:|project-file:|sandbox:/|libfile_[A-Za-z0-9]{12,}|file-[A-Za-z0-9]{16,})', text):
             errors.append('private identifier in public control: ' + relative)
-    expected = declared | set(controls['files']) | {MANIFEST, PREFIX + '/PUBLIC_CONTROLS.json'}
-    actual = {p.relative_to(root).as_posix() for p in (root / PREFIX).rglob('*') if p.is_file()}
-    if actual != expected:
-        errors.append('public inventory differs: ' + str(sorted(actual ^ expected)[:10]))
+    errors.extend(check_public_inventory(root, rows, controls))
     register_bytes = (root / PREFIX / 'research-v6/synthesis/CROSS_CONTRIBUTIONS.json').read_bytes()
     register = json.loads(register_bytes)
     if sha256(register_bytes) != CONTRIBUTION_REGISTER:

@@ -18,6 +18,60 @@ jobs:
         run: python scripts/provision_ci_infrastructure.py
       - name: Install exact version-locked dependencies (requirements-ci.lock.txt; no live web checks anywhere in CI)
         run: pip install --quiet -r requirements-ci.lock.txt
+      - name: Source-alias admission and evidence controls
+        env:
+          PYTHONPATH: scripts
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          python -B tests/test_source_alias_absence_population.py
+          PUBLIC123_REVISION_RESOURCES="$(mktemp -d "$RUNNER_TEMP/r0002-public123-boundary.XXXXXX")" python -B tests/test_source_alias_absence_boundary.py
+          PUBLIC123_REVISION_RESOURCES="$(mktemp -d "$RUNNER_TEMP/r0002-public123-evidence.XXXXXX")" python -B tests/test_source_alias_absence_evidence.py
+      - name: Previously failed continuation receipt controls
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          python -B tests/test_research_continuations.py ActualEvidenceAssociationTests.test_array_receipt_has_descriptive_validation_failure ActualEvidenceAssociationTests.test_qualified_original_controls_require_provenance
+          python -B -O tests/test_research_continuations.py ActualEvidenceAssociationTests.test_array_receipt_has_descriptive_validation_failure ActualEvidenceAssociationTests.test_qualified_original_controls_require_provenance
+      - name: Combined public source-alias absence and exact restoration
+        id: source_alias_absence
+        if: github.event_name == 'pull_request'
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: setsid --wait python -B scripts/check_source_alias_absence.py run
+      - name: Receive bounded source-alias evidence
+        if: ${{ always() && github.event_name == 'pull_request' && steps.source_alias_absence.outcome != 'skipped' }}
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -B scripts/check_source_alias_absence.py export
+      - name: Preserve bounded source-alias evidence
+        if: ${{ always() && github.event_name == 'pull_request' && steps.source_alias_absence.outcome != 'skipped' }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: r0002-source-alias-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/r0002-source-alias-receipts/
+          if-no-files-found: error
+          include-hidden-files: false
+          archive: true
+      - name: Public123 generated-source absence and exact restoration
+        id: public_fixture123
+        if: ${{ github.event_name == 'pull_request' && steps.source_alias_absence.outcome == 'success' }}
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: setsid --wait python -B scripts/check_source_alias_absence.py run-fixtures --state "$RUNNER_TEMP/r0002-public-fixtures123-absence"
+      - name: Receive bounded public123 evidence
+        if: ${{ always() && github.event_name == 'pull_request' && steps.public_fixture123.outcome != 'skipped' }}
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -B scripts/check_source_alias_absence.py export-fixtures --state "$RUNNER_TEMP/r0002-public-fixtures123-absence"
+      - name: Preserve bounded public123 evidence
+        if: ${{ always() && github.event_name == 'pull_request' && steps.public_fixture123.outcome != 'skipped' }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: r0002-public-fixtures123-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/r0002-public-fixtures123-receipts/
+          if-no-files-found: error
+          include-hidden-files: false
+          archive: true
       - name: Dependency lock consistency
         run: |
           python tests/test_dependency_lock.py
@@ -84,7 +138,7 @@ jobs:
         run: python scripts/validate_review_state.py
       - name: R7E Sol independent-review control plane (Decision 0034)
         run: python tests/test_r7e_sol_review_state.py
-      - name: Complete R7 candidate-topology contract (Decision 0034)
+      - name: Current decision authority and retained historical authority controls
         run: python tests/test_candidate_state.py
       - name: R7E provenance and immutable candidate-ledger contract (Decision 0034)
         run: |
@@ -117,7 +171,9 @@ jobs:
       - name: JSON schemas + machine-readable examples
         run: python scripts/validate_schemas.py
       - name: Cross-record semantics
-        run: python scripts/validate_cross_record_semantics.py
+        run: |
+          python scripts/validate_cross_record_semantics.py
+          python tests/test_cross_record_semantics.py
       - name: Negative fixtures + invalid-record corpus
         run: python scripts/validate_negative_fixtures.py
       - name: Recursive path-aware mutation testing (per-family scope printed)
@@ -166,7 +222,7 @@ jobs:
         run: python scripts/validate_meta_noetic_memetics.py
       - name: Project layer map + firewall (R7B, Phase H)
         run: python scripts/validate_layer_map.py
-      - name: Candidate-state / pre-merge decision status (R7C 0026; R7D 0029 live-head gate)
+      - name: Current candidate decision authority and source ownership
         run: python scripts/validate_candidate_state.py
       - name: Public experiment-readiness conformance (R7D, Decision 0029)
         run: python scripts/validate_public_readiness.py

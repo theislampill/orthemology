@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 """Validate bounded, nonauthoritative AR8R external challenge custody."""
 
+from resolve_t20_v6_source import (
+    digest_record_view_bytes, digest_record_view_text,
+    digest_record_view_is_file, digest_record_view_paths,
+)
+
+
 import argparse
 import hashlib
 import json
@@ -32,17 +38,17 @@ PRIVATE_PATTERN = re.compile(
 
 
 def sha256(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(digest_record_view_bytes(path)).hexdigest()
 
 
 def parse_manifest(path, expected_digest, issues):
-    if not path.is_file() or sha256(path) != expected_digest:
+    if not digest_record_view_is_file(path) or sha256(path) != expected_digest:
         issues.append(f"challenge source manifest mismatch: {path.parent.name}")
         return {}, False
     observed = {}
     malformed = False
     try:
-        lines = path.read_text(encoding="utf-8").splitlines()
+        lines = digest_record_view_text(path, encoding="utf-8").splitlines()
     except (OSError, UnicodeDecodeError):
         lines = []
         malformed = True
@@ -66,6 +72,17 @@ def parse_manifest(path, expected_digest, issues):
     return observed, not malformed
 
 
+def prepare_challenger_b_inputs(source, destination):
+    """Stage the original public input context without executing its checker."""
+    for item in source.iterdir():
+        if item.is_file():
+            shutil.copy2(item, destination / item.name)
+    for name in ("MANIFEST.sha256", "reviewed_source_sha256.txt"):
+        target = destination / name
+        if not target.exists():
+            target.write_bytes(digest_record_view_bytes(source / name))
+
+
 def rerun_challenger_b(source, issues):
     script = source / "deep_bv_challenger_countermodels.py"
     supplied_result = source / "deep_bv_challenger_results.json"
@@ -76,9 +93,7 @@ def rerun_challenger_b(source, issues):
         return False
     with tempfile.TemporaryDirectory() as temporary:
         temporary = pathlib.Path(temporary)
-        for item in source.iterdir():
-            if item.is_file():
-                shutil.copy2(item, temporary / item.name)
+        prepare_challenger_b_inputs(source, temporary)
         environment = os.environ.copy()
         environment["PYTHONUTF8"] = "1"
         completed = subprocess.run(
@@ -125,8 +140,8 @@ def validate(root=ROOT, challenges_override=None):
         expected, manifest_valid = parse_manifest(challenge / "SOURCE_SHA256SUMS", expected_manifest_digest, issues)
         actual = {
             path.relative_to(source).as_posix()
-            for path in source.rglob("*")
-            if path.is_file() or path.is_symlink()
+            for path in digest_record_view_paths(root, source)
+            if digest_record_view_is_file(path) or path.is_symlink()
         } if source.is_dir() else set()
         counts[name] = len(actual)
         if not manifest_valid or actual != set(expected) or len(actual) != EXPECTED_SOURCE_COUNTS[name]:
@@ -137,7 +152,7 @@ def validate(root=ROOT, challenges_override=None):
                 issues.append(f"challenge symlink is forbidden: {name}/{relative}")
                 continue
             try:
-                text = target.read_text(encoding="utf-8")
+                text = digest_record_view_text(target, encoding="utf-8")
             except (OSError, UnicodeDecodeError):
                 issues.append(f"challenge member is not UTF-8: {name}/{relative}")
                 continue
@@ -145,11 +160,11 @@ def validate(root=ROOT, challenges_override=None):
             if expected.get(relative) != sha256(target):
                 source_hash_mismatches += 1
 
-    for path in challenges.rglob("*"):
-        if not path.is_file() or "source-files" in path.parts:
+    for path in digest_record_view_paths(root, challenges):
+        if not digest_record_view_is_file(path) or "source-files" in path.parts:
             continue
         try:
-            private_path_findings += len(PRIVATE_PATTERN.findall(path.read_text(encoding="utf-8")))
+            private_path_findings += len(PRIVATE_PATTERN.findall(digest_record_view_text(path, encoding="utf-8")))
         except (OSError, UnicodeDecodeError):
             issues.append(f"challenge review member is not UTF-8: {path.relative_to(challenges).as_posix()}")
     if private_path_findings:
@@ -164,25 +179,25 @@ def validate(root=ROOT, challenges_override=None):
 
     original_lean = challenger_b / "source-files/DeepBVCommonInterventionCriterion.lean"
     try:
-        original_text = original_lean.read_text(encoding="utf-8")
+        original_text = digest_record_view_text(original_lean, encoding="utf-8")
     except (OSError, UnicodeDecodeError):
         original_text = ""
     challenger_b_original_lean_failure_recorded = (
         "spec : CommonInterventionSpec\n" in original_text
         and "  syntax : Syntax" in original_text
         and sha256(original_lean) == "62663384281c23ff599d0e4bef14c81b9e6f29a4732ed609760b71520adedfe4"
-    ) if original_lean.is_file() else False
+    ) if digest_record_view_is_file(original_lean) else False
     if not challenger_b_original_lean_failure_recorded:
         issues.append("Challenger B original Lean failure surface is not preserved")
 
     repaired = challenger_b / "intake-review/DeepBVCommonInterventionCriterion.repaired.lean"
     receipt_path = challenger_b / "intake-review/LEAN_INTAKE_RECEIPT.json"
     try:
-        receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+        receipt = json.loads(digest_record_view_text(receipt_path, encoding="utf-8"))
     except (OSError, UnicodeDecodeError, json.JSONDecodeError):
         receipt = {}
     challenger_b_repaired_lean_receipt_exact = (
-        repaired.is_file()
+        digest_record_view_is_file(repaired)
         and sha256(repaired) == "7b666912629790cb01cbfe8bfcde829238ade5f31bf776728e2f1d911b9fedd3"
         and receipt.get("source_draft_status") == "PARSE_ELABORATION_FAILED"
         and receipt.get("repaired_draft_sha256") == sha256(repaired)

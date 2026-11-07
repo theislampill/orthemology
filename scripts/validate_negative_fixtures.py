@@ -7,10 +7,10 @@ each malformed record must be rejected at its declared layer:
   expect_layer=semantic -> it must be schema-valid (by design) AND flagged by
                            validate_cross_record_semantics.collect_issues.
 
-Part 2 — R4 invalid-fixture corpus (tests/invalid/*.json): one file per
-malformed class from the R4 read-only baseline audit's probe, plus the classes
-the probe did not reach. Same two-layer contract as Part 1; each file carries
-its own {id, why, expect_layer, schema, instance}.
+Part 2 — invalid_fixtures in the same data owner: all 48 malformed classes
+from the baseline probes and subsequent corrections. Each complete single
+record or cross-record bundle retains its id, reason and expected rejection
+layer. Original loose files are not inputs to this consumer.
 
 Part 3 — mutation tests (tests/schema-mutations/mutation-spec.json): for every
 positive example part, enumerate deterministic mutants (drop each required
@@ -22,6 +22,7 @@ families live in scripts/validate_recursive_mutations.py.
 import copy
 import json
 import os
+import re
 import sys
 
 from jsonschema import Draft202012Validator
@@ -57,6 +58,47 @@ def schema_accepts(schemas, registry, sname, inst):
     return not list(v.iter_errors(inst))
 
 
+
+def invalid_fixtures(document):
+    """Load the complete declared rejection corpus, refusing silent shrinkage."""
+    rows = document.get("invalid_fixtures")
+    if not isinstance(rows, list):
+        raise ValueError("invalid_fixtures must contain the complete rejection corpus")
+    seen = set()
+    for row in rows:
+        if not isinstance(row, dict):
+            raise ValueError("each invalid fixture must be an object")
+        identity = row.get("id", "")
+        if not isinstance(identity, str) or not re.fullmatch(r"I[0-9]{2,}-[a-z0-9-]+", identity):
+            raise ValueError("invalid fixture has no stable class identity")
+        number = int(identity.split("-", 1)[0][1:])
+        if number in seen:
+            raise ValueError("duplicate invalid fixture class: " + identity)
+        seen.add(number)
+        if not isinstance(row.get("why"), str) or not row["why"].strip():
+            raise ValueError("invalid fixture needs its original reason: " + identity)
+        layer = row.get("expect_layer")
+        if layer not in ("schema", "semantic"):
+            raise ValueError("unknown rejection layer: " + identity)
+        if 1 <= number <= 48 and layer != ("schema" if number <= 20 else "semantic"):
+            raise ValueError("original rejection layer changed: " + identity)
+        if "parts" in row:
+            parts = row["parts"]
+            if "schema" in row or "instance" in row:
+                raise ValueError("ambiguous single/bundle fixture: " + identity)
+        else:
+            parts = [row]
+        if not isinstance(parts, list) or not parts or any(
+                not isinstance(p, dict) or not isinstance(p.get("schema"), str)
+                or not isinstance(p.get("instance"), dict) for p in parts):
+            raise ValueError("invalid fixture has no complete record bundle: " + identity)
+    missing = set(range(1, 49)) - seen
+    if missing:
+        raise ValueError("missing original invalid classes: " + ", ".join(
+            "I%02d" % n for n in sorted(missing)))
+    return rows
+
+
 def main():
     schemas, registry = load_schemas()
 
@@ -79,21 +121,15 @@ def main():
     check("negative suite covers both layers", n_schema >= 4 and n_semantic >= 3,
           "schema=%d semantic=%d" % (n_schema, n_semantic))
 
-    # Part 2: the R4 invalid-fixture corpus, one file per malformed class.
-    # A fixture is either single-record ({schema, instance}) or, for defects
-    # that only exist BETWEEN records (inheritance cycles, cross-episode token
-    # collisions, scope leakage), a multi-record bundle ({parts: [...]}) — the
-    # R4 independent-review extension.
-    idir = os.path.join(ROOT, "tests", "invalid")
+    # Part 2: complete single-record and cross-record rejection witnesses.
+    # The existing data owner now retains every class in one reviewable suite.
     i_schema = i_semantic = 0
-    for fn in sorted(os.listdir(idir)):
-        if not fn.endswith(".json"):
-            continue
-        f = json.load(open(os.path.join(idir, fn), encoding="utf-8"))
-        keys = ("id", "why", "expect_layer") + (("parts",) if "parts" in f
-                                                else ("schema", "instance"))
-        for key in keys:
-            check("invalid fixture %s declares %s" % (fn, key), key in f)
+    try:
+        invalid = invalid_fixtures(neg)
+    except ValueError as exc:
+        check("invalid corpus declares its complete original population", False, str(exc))
+        invalid = []
+    for f in invalid:
         parts = f["parts"] if "parts" in f else [{"schema": f["schema"],
                                                   "instance": f["instance"]}]
         accepted = all(schema_accepts(schemas, registry, p["schema"], p["instance"])
@@ -110,7 +146,7 @@ def main():
             issues = collect_issues(parts)
             check("invalid %s flagged by cross-record semantics" % f["id"], bool(issues))
     check("invalid corpus covers the audited classes at both layers",
-          i_schema >= 15 and i_semantic >= 6,
+          i_schema >= 20 and i_semantic >= 28,
           "schema=%d semantic=%d" % (i_schema, i_semantic))
 
     # Part 3: deterministic mutation testing over positive examples

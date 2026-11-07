@@ -14,7 +14,6 @@ authored:
     evidence_bindings: docs/provenance/v5-successors/EVIDENCE_BINDINGS.json
     original_obligations: docs/provenance/v5-successors/OBLIGATION_CROSSWALK.json
     twelve_avenues: docs/provenance/v5-successors/TWELVE_AVENUES.json
-    calculus_map: docs/provenance/v5-successors/CALCULUS_MAP.json
     verification: docs/provenance/v5-successors/INTEGRATION_VERIFICATION.json
     sixteenth_guide: experiments/orthemology-v5-successors/groups/t16-successor/README.md
     sixteenth_fresh_scientific_execution: NOT_RUN
@@ -156,9 +155,9 @@ authored:
     meniscus: MENISCUS_NOT_REACHED
     natural_closure: NATURAL_CLOSURE_NOT_REACHED
 derived:
-  source_tree_digest: d4f239f11445dcf2fc0670374696382f9aa786bf9e15c638d5cbc04f47d3e565
+  source_tree_digest: 7ff5c7a5dbd3286ac290c371c4d1f385dfd441976f3ddfd67a93fa92ea19b849
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 16103
+  tracked_files: 14443
   decision_ids:
   - '0001'
   - '0002'

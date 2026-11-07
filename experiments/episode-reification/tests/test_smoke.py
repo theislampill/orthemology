@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """ER-1 deterministic smoke tests. NOT an experiment; produces no result.
 
-1. committed fixtures equal regeneration;
+1. seeded public rendering is deterministic without committed fixture files;
 2. both arm renderings cover every fact key (information-match contract);
 3. schemas compile; mock answer records validate;
 4. mock (synthetic_smoke) records traverse the frozen analysis end-to-end
    with no outcome adjudication.
 """
+import argparse
 import io
 import json
 import os
@@ -25,46 +26,40 @@ def check(name, ok, detail=""):
         FAILS.append(name)
 
 
-def snapshot():
-    out = {}
-    fx = os.path.join(PKT, "fixtures")
-    for base, _d, fns in os.walk(fx):
-        for fn in fns:
-            p = os.path.join(base, fn)
-            out[os.path.relpath(p, fx)] = io.open(p, encoding="utf-8").read()
-    return out
-
-
 def main():
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--public-only", action="store_true",
+                    help="check public rendering only, without scoring or synthetic runs")
+    args = ap.parse_args()
     import yaml
-    before = snapshot()
-    subprocess.check_call([sys.executable, os.path.join(PKT, "scripts", "generate_fixtures.py")],
-                          stdout=subprocess.DEVNULL)
-    after = snapshot()
-    check("committed fixtures equal regeneration", before == after)
-    if before != after:
-        for rel, content in before.items():
-            io.open(os.path.join(PKT, "fixtures", rel), "w",
-                    encoding="utf-8", newline="").write(content)
-
-    spec = yaml.safe_load(io.open(os.path.join(PKT, "E1-E5-SPEC.yaml"), encoding="utf-8"))
-    cases = {c["id"]: c for c in spec["cases"]}
-    check("five cases specified", sorted(cases) == ["E1", "E2", "E3", "E4", "E5"])
-    check("E5 carries both neighbors",
-          [n["id"] for n in cases["E5"].get("neighbors", [])] == ["E5a", "E5b"])
-
-    # information-match: every fact key appears in both renderings
-    for cid in cases:
-        d = os.path.join(PKT, "fixtures", cid)
-        facts = yaml.safe_load(io.open(os.path.join(d, "facts.yaml"), encoding="utf-8"))
-        log = io.open(os.path.join(d, "baseline-log.md"), encoding="utf-8").read()
-        ep = json.load(io.open(os.path.join(d, "treatment-episode.json"), encoding="utf-8"))
+    sys.path.insert(0, os.path.join(PKT, "scripts"))
+    from generate_fixtures import CASES, public_files
+    rendered = public_files()
+    check("public rendering is deterministic", rendered == public_files())
+    check("complete five-case public population", sorted(CASES) == ["E1", "E2", "E3", "E4", "E5"]
+          and len(rendered) == 15)
+    for cid, canonical in CASES.items():
+        facts = yaml.safe_load(rendered[cid + "/facts.yaml"])
+        log = rendered[cid + "/baseline-log.md"]
+        ep = json.loads(rendered[cid + "/treatment-episode.json"])
         n_facts = len(facts["fact_keys"])
         n_log = sum(1 for ln in log.splitlines() if ln[:1].isdigit())
         n_ep = len([k for k in ep if k not in ("schema", "case", "title")])
         check("%s renderings carry every fact atom (%d)" % (cid, n_facts),
               n_log == n_facts and n_ep == n_facts,
               "log=%d episode=%d" % (n_log, n_ep))
+        check("%s preserves the actual premises in both arms" % cid,
+              all(sentence in log and ep[field] == value
+                  for _key, sentence, field, value in canonical["facts"]))
+    if args.public_only:
+        print("TOTAL: %d failures; public rendering only, no experiment" % len(FAILS))
+        sys.exit(1 if FAILS else 0)
+
+    spec = yaml.safe_load(io.open(os.path.join(PKT, "E1-E5-SPEC.yaml"), encoding="utf-8"))
+    cases = {c["id"]: c for c in spec["cases"]}
+    check("five cases specified", sorted(cases) == ["E1", "E2", "E3", "E4", "E5"])
+    check("E5 carries both neighbors",
+          [n["id"] for n in cases["E5"].get("neighbors", [])] == ["E5a", "E5b"])
 
     from jsonschema import Draft202012Validator
     out_schema = json.load(io.open(os.path.join(PKT, "OUTPUT.schema.json"), encoding="utf-8"))

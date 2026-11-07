@@ -1,6 +1,6 @@
 # Post-merge proposal custody
 
-The `pmr007-rounds11-20` directory is an exact, public-safe copy of the final sanitized repository-update proposal recovered from the authenticated research thread. Its internal files are preserved without correction so their original hashes remain testable.
+The original `pmr007-rounds11-20` import is the exact, public-safe copy of the final sanitized repository-update proposal recovered from the authenticated research thread. Its complete 131-file edition is retained at Git commit `a7ff0e33d1a299db640041c46b1af81ca70851f6`. The current snapshot preserves its unchanged 130-row hash manifest and requires its 32 distinct or context-dependent members; 98 exact same-relative copies may resolve through `pmr007-deep-a-bk` under the finite snapshot gate. The existing rounds adoption-boundary correction records those current routes and their limits; original source bytes and hashes remain testable.
 
 The packet is evidence and a proposal, not adopted repository theory. Every listed PMR result remains a new post-merge scoped result with no historical identity, open external review, pending owner adoption, and no historical theorem-origin credit.
 

@@ -41,7 +41,7 @@ class Pmr007DeepBvSemanticReissueTests(unittest.TestCase):
         self.assertEqual(receipt["regenerated_response_linked_files"], 26)
         self.assertEqual(receipt["original_response_linked_bytes_unavailable"], 26)
         self.assertTrue(receipt["authority_ceiling_exact"])
-        self.assertTrue(receipt["deep_bk_exact_snapshot_unchanged"])
+        self.assertTrue(receipt["deep_bk_current_boundaries_valid"])
         self.assertFalse(receipt["executable_reproduction_claimed"])
         self.assertFalse(receipt["executable_reproduction_established"])
 
@@ -217,6 +217,99 @@ class Pmr007DeepBvSemanticReissueTests(unittest.TestCase):
         self.assertEqual(receipt["result"], "FAIL")
         self.assertFalse(receipt["source_coverage_exact"])
         self.assertGreater(receipt["private_path_findings"], 0)
+
+
+class CurrentCorrectionBoundaryTests(unittest.TestCase):
+    def setUp(self):
+        self.validator = load_validator()
+        self.check = getattr(self.validator, "_current_correction_boundaries_valid", None)
+        self.assertTrue(callable(self.check), "current correction receipt owner is missing")
+        self.receipt = {
+            "schema": "ar8r-pmr007-public-correction-validation-receipt-v1",
+            "result": "PASS_CURRENT_CORRECTIONS_ONLY",
+            "validation_scope": "CURRENT_CORRECTION_AND_AUTHORITY_BOUNDARIES",
+            "historical_snapshot_validation": "NOT_RUN",
+            "current_public_files_checked": 0,
+            "current_public_non_utf8_files": 0,
+            "private_paths_in_current_public_sources": 0,
+            "repository_source_rows": 12,
+            "repository_source_exact_set": True,
+            "repository_source_unsafe_paths": 0,
+            "repository_source_malformed_rows": 0,
+            "repository_source_hash_mismatches": 0,
+            "crosswalk_values_exact": True,
+            "authority_ceiling_exact": True,
+            "private_exclusion_rows": 4,
+            "private_paths_in_public_corrections": 0,
+            "self_contained_public_rereview_reproduction": False,
+            "issues": [],
+        }
+
+    def test_current_boundary_pass_does_not_require_historical_snapshot(self):
+        self.assertTrue(self.check(self.receipt))
+        self.assertFalse(any(key.startswith("snapshot_") for key in self.receipt))
+
+    def test_current_privacy_file_count_is_not_a_historical_denominator(self):
+        for count in (0, 1, 1186, 1200):
+            with self.subTest(count=count):
+                self.assertTrue(self.check(dict(self.receipt, current_public_files_checked=count)))
+
+    def test_legacy_snapshot_receipt_is_not_a_current_authority_receipt(self):
+        self.assertFalse(self.check({"result": "PASS_WITH_PARTIAL_REPRODUCTION_CEILING",
+                                    "snapshot_hash_mismatches": 0,
+                                    "snapshot_manifest_coverage_exact": True}))
+
+    def test_nonmapping_receipts_fail_closed(self):
+        for value in (None, False, [], "PASS", 0):
+            with self.subTest(value=value):
+                self.assertFalse(self.check(value))
+
+    def test_each_required_current_boundary_field_is_required(self):
+        for key in self.receipt:
+            with self.subTest(key=key):
+                value = dict(self.receipt)
+                del value[key]
+                self.assertFalse(self.check(value))
+
+    def test_schema_result_scope_and_historical_claim_are_exact(self):
+        for key in ("schema", "result", "validation_scope", "historical_snapshot_validation"):
+            with self.subTest(key=key):
+                value = dict(self.receipt)
+                value[key] = "PASS"
+                self.assertFalse(self.check(value))
+
+    def test_each_current_guard_boolean_is_exact(self):
+        for key in ("repository_source_exact_set", "crosswalk_values_exact", "authority_ceiling_exact"):
+            for bad in (False, 1, "True"):
+                with self.subTest(key=key, value=bad):
+                    value = dict(self.receipt)
+                    value[key] = bad
+                    self.assertFalse(self.check(value))
+
+    def test_each_count_and_error_counter_is_typed_and_bounded(self):
+        for key in ("current_public_files_checked", "current_public_non_utf8_files",
+                    "private_paths_in_current_public_sources", "repository_source_rows",
+                    "repository_source_unsafe_paths", "repository_source_malformed_rows",
+                    "repository_source_hash_mismatches", "private_exclusion_rows",
+                    "private_paths_in_public_corrections"):
+            bad_values = (-1, True, "0", None)
+            if key != "current_public_files_checked":
+                bad_values += (self.receipt[key] + 1,)
+            for bad in bad_values:
+                with self.subTest(key=key, value=bad):
+                    value = dict(self.receipt)
+                    value[key] = bad
+                    self.assertFalse(self.check(value))
+
+    def test_issues_and_self_contained_reproduction_cannot_be_promoted(self):
+        for key, bad in (("issues", ["failed boundary"]), ("issues", None),
+                         ("issues", {}), ("issues", ""),
+                         ("self_contained_public_rereview_reproduction", True),
+                         ("self_contained_public_rereview_reproduction", 0)):
+            with self.subTest(key=key, value=bad):
+                value = dict(self.receipt)
+                value[key] = bad
+                self.assertFalse(self.check(value))
 
 
 if __name__ == "__main__":
