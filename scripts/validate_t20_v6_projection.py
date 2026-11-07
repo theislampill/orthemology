@@ -6,7 +6,7 @@ publication boundary and current-record binding, not mathematical acceptance.
 """
 from __future__ import annotations
 
-from resolve_t20_v6_source import DIGEST_RECORD_PATHS, digest_record_absences
+from resolve_t20_v6_source import DIGEST_RECORD_PATHS, digest_record_absences, NEW250_PATHS, new250_validate_rows
 
 import collections
 import hashlib
@@ -159,7 +159,8 @@ def check_object(root, row):
         path = root / relative
         if path.is_symlink() or not path.resolve().is_relative_to(root.resolve()):
             raise ValueError('source symlink or escaped root')
-        if (relative.as_posix() in SUCCESSOR_READ_BATCH_PATHS
+        if (relative.as_posix() in NEW250_PATHS
+                or relative.as_posix() in SUCCESSOR_READ_BATCH_PATHS
                 or relative.as_posix() in SUCCESSOR_REMAINDER_BATCH_PATHS
                 or relative.as_posix() in DIGEST_RECORD_PATHS
                 or relative.as_posix() == SUCCESSOR_FIXTURE_PATH
@@ -464,6 +465,10 @@ def validate(root=ROOT):
     if manifest.get('scientific_acceptance') is not False or manifest.get('t21_started') is not False:
         errors.append('unauthorized scientific state')
     rows = manifest['objects']
+    try:
+        new250_validate_rows(rows)
+    except (ValueError, KeyError, TypeError) as exc:
+        errors.append(str(exc))
     by_hash = {r['source_sha256']: r for r in rows}
     if len(rows) != 28478 or len(by_hash) != len(rows):
         errors.append('source universe missing or duplicated')

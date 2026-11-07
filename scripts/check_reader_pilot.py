@@ -7,6 +7,8 @@ a competing scientific registry. This checker is read-only and does not fetch
 URLs, execute source payloads, extract theorems, or infer semantic acceptance.
 """
 
+from resolve_t20_v6_source import (NEW250_PATHS, new250_absences, new250_provider_additions, new250_reader_sources)
+
 from resolve_t20_v6_source import (DIGEST_RECORD_PATHS, digest_record_absences,
     ADMISSION_RECORD_MEMBERS, ADMISSION_RECORD_PATHS, admission_record_bytes, _administrative_git)
 
@@ -2274,6 +2276,16 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
     errors = []
     editable = REFACTOR_EDIT_PATHS | set(admitted_paths)
     duplicate_paths = {}
+    try:
+        duplicate_paths['new250'] = new250_absences(repo) if NEW250_PATHS else set()
+        old_classes = (CHECKPOINT_COPY_PATHS, CHECKPOINT_RECORD_COPY_PATHS, CHECKPOINT_PACKAGE_COPY_PATHS,
+                       FORMAL_COPY_PATHS, FORMAL_PROVIDER_PATHS, CHECKPOINT_CODE_COPY_PATHS,
+                       DIGEST_RECORD_PATHS, SUCCESSOR_READ_BATCH_PATHS, SUCCESSOR_REMAINDER_BATCH_PATHS)
+        if any(NEW250_PATHS.intersection(population) for population in old_classes):
+            raise ValueError('NEW250 overlaps an existing finite provider')
+    except (ValueError, OSError, UnicodeError) as exc:
+        errors.append('corpus-currentness: NEW250 evidence: ' + str(exc))
+        duplicate_paths['new250'] = set()
     qualified_frontier = (set(frontier_paths) & set(FRONTIER_HISTORY_RECORDS)) if frontier_paths else set()
     qualified_central = (set(central_paths) & set(CENTRAL_PUBLIC_HISTORY_RECORDS)) if central_paths else set()
     qualified_abk = (set(abk_paths) & set(ABK_PUBLIC_HISTORY_RECORDS)) if abk_paths else set()
@@ -2333,7 +2345,7 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
             except (ValueError, OSError, UnicodeError) as exc:
                 errors.append("corpus-currentness: rounds navigation: " + str(exc))
         if continuation_paths is None and any(
-                status == "D" and path.startswith(CONTINUATION_COPY_ROOT)
+                status == "D" and path.startswith(CONTINUATION_COPY_ROOT) and path not in NEW250_PATHS
                 for status, path in zip(values[::2], values[1::2])):
             try:
                 continuation_paths = continuation_duplicate_paths(Path(repo))
@@ -2559,6 +2571,13 @@ def corpus_currentness_context(repo, indexed, owners, cross):
         fail("continuation-provider", "ordinary provider overlaps authored-source admission")
     else:
         additions.update(providers)
+    try:
+        packed_additions = new250_provider_additions(repo)
+        if set(packed_additions).intersection(additions) or set(packed_additions).intersection(indexed):
+            raise ValueError('NEW250 provider overlaps baseline or authored additions')
+        additions.update(packed_additions)
+    except (ValueError, OSError) as exc:
+        fail('new250-provider', str(exc))
     historical, historical_errors = check_historical_sources(repo, indexed, owners, cross, additions)
     errors.extend(historical_errors)
     navigation = {}
@@ -2730,6 +2749,11 @@ def check(repo, owners, cross):
 
     sources = cross.get("sources", {})
     try:
+        new250_sources = new250_reader_sources(repo, sources)
+    except (ValueError, TypeError, OSError) as exc:
+        fail('new250-source', str(exc))
+        new250_sources = {}
+    try:
         read_batch_sources = read_batch_reader_sources(repo, sources)
     except (TypeError, ValueError, OSError) as exc:
         fail("read-batch-source", str(exc))
@@ -2743,10 +2767,12 @@ def check(repo, owners, cross):
     for key, source in sources.items():
         try:
             path = source["path"]
+            new250_source = path in NEW250_PATHS
             read_batch_source = path in SUCCESSOR_READ_BATCH_PATHS
             remainder_batch_source = path in SUCCESSOR_REMAINDER_BATCH_PATHS
-            binding_record = False if read_batch_source or remainder_batch_source else is_binding_record(repo, path)
-            body = (read_batch_sources[path] if read_batch_source else
+            binding_record = False if new250_source or read_batch_source or remainder_batch_source else is_binding_record(repo, path)
+            body = (new250_sources[path] if new250_source else
+                    read_batch_sources[path] if read_batch_source else
                     remainder_batch_sources[path] if remainder_batch_source else
                     binding_record_bytes(repo, path) if binding_record else
                     historical[path] if path in historical else navigation[path]
@@ -2765,7 +2791,7 @@ def check(repo, owners, cross):
             if oid != continuation_owners.get(path, row)["git_oid"]:
                 fail("baseline-source" if path in indexed else "source-addition",
                      path + " differs from the independently bound source")
-            mode = ("100644" if read_batch_source or remainder_batch_source or binding_record or path in historical or path in ADMIN_RECORD_PATHS or path in SUCCESSOR_INPUT_PATHS else
+            mode = ("100644" if new250_source or read_batch_source or remainder_batch_source or binding_record or path in historical or path in ADMIN_RECORD_PATHS or path in SUCCESSOR_INPUT_PATHS else
                     "100755" if safe_path(repo, path).stat().st_mode & 0o111 else "100644")
             if mode != row["mode"]:
                 fail("source-mode", path + " changed executable mode")

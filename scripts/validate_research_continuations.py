@@ -96,6 +96,8 @@ def path_in(root, name, exists=True):
 
 def source_bytes(root, row):
     """Preserve source-ID identity while using a qualified absent current copy."""
+    if row.get('path') in _source.NEW250_PATHS:
+        return _source.new250_continuation_bytes(root, row)
     path = path_in(root, row['path'], exists=False)
     original_body = None
     current_guards = _source.continuation_formal_current_paths()
@@ -425,6 +427,7 @@ def _validate(root):
         require(type(row['bytes']) is int and row['bytes']>0,'Invalid archive size')
         for parent in row['parents']:
             require(parent['archive'] in archives,'Unknown parent archive');nonempty(parent['member'])
+    _source.new250_validate_rows(data['source_map']['sources'], continuation=True)
     sources=indexed(data['source_map']['sources'],'id');require(sources,'Empty source map')
     checked_files={}
     for row in sources.values():

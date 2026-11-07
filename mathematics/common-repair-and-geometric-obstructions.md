@@ -101,6 +101,8 @@ D_b^2D_F(v,p)[u,u]
 
 The divergence and projection framework originates with Bregman [1]. The results below concern simultaneous repair under several standards, rather than priority for that framework.
 
+The retained SmoothRigidity body uses a different argument convention locally: bregman F G v b is defined as F(b)−F(v)−G(v)(b−v), but bregman_gain uses the forecast-gradient difference G(c)−G(b), and totalDiv_eq_sum identifies it with the truth-first scalar divergence. Those displayed equations cannot simply be transferred through that definition. Equations (2)–(5) above retain the correct truth-first convention; the discrepancy is in this source body, not in those identities. [Exact retained source](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/15b7bbe674ea84ca5d397afe1991b34e35a1da870f6870ba2cc31b7398b48316/SmoothRigidity.lean)
+
 ## 2. Quadratic repair: exact compatibility and quantitative separation
 
 ### 2.1 A directionwise equivalence
@@ -306,6 +308,8 @@ F(x)=\sum_i f_i(x_i),\qquad G(x)=\sum_i g_i(x_i),
 ```
 
 where the scalar functions are finite and continuous on $`[0,1]`$, are $`C^2`$ on $`(0,1)`$, and satisfy $`f_i'',g_i''>0`$ there. Truth vectors lie in $`[0,1]^n`$, and every coordinate varies on $`C`$, so every $`p\in\mathrm{ri}C`$ has coordinates in $`(0,1)`$.
+
+The retained SmoothScalar body also weakens a premise that its later declarations consume: Score.positive states 0≤ddf(x), whereas the strict monotonicity arguments and local_curvature_sandwich use it as 0<ddf(x). Zero curvature satisfies the displayed field but cannot supply a positive local quadratic lower bound. The strict-curvature assumption above is therefore not replaceable by that source's nonnegative field. [Exact retained source](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/1600f5abe4ff749aebaf21f543ceaa5e997ed2da43c1ab122aaaf1e69b93e277/SmoothScalar.lean)
 
 Suppose a common weak repair exists along $`\varepsilon_\nu\downarrow0`$. Equation (3) gives
 $`D_F(p,c_\nu)\leq D_F(p,b_{\varepsilon_\nu})=O(\varepsilon_\nu^2)`$.
@@ -1369,6 +1373,45 @@ The common-repair conclusion and its usable scale have different quantifiers. A 
 
 A valid radius must control actual losses and actual membership inequalities together. A leading positive quadratic coefficient alone is insufficient if its remainder or an admissible-hull boundary is not controlled. The explicit-scale guide reports exact rational evaluation of all twenty actual constraints and a copied polynomial oracle as a test helper. It makes no general runtime-refinement claim for that helper. The specific fixture and its arithmetic proof are not supplied by the guide, so no additional numerical radius is inferred here. The directly readable coefficient argument in §§9.3–9.4 retains its own complete proof.
 
+The direct polynomial sources give a rowwise alternative to (65). Use five groups of four constraints: the two normalized gain factors, the four candidate barycentric weights, and the lower and upper coordinate margins of the disturbed forecast. Each has the exact form $`a_j+\varepsilon R_j(\varepsilon)`$, with $`a_j>0`$. Use the following coefficient budgets $`M_j`$ on $`0\leq\varepsilon\leq1`$:
+
+| Constraint group | Constant term $`a_j`$ | Remainder and budget |
+|---|---|---|
+| Quadratic gain factor | $`\Gamma_G`$ from (63) | $`R_G`$ from the exact gain identity; sum of its absolute coefficients |
+| Nonlinear gain factor | $`\Gamma_F`$ from (63) | $`R_F`$ from the exact gain identity; sum of its absolute coefficients |
+| Candidate barycentric weight | Original weight $`\lambda_i`$ in (58) | $`\lambda_i^{(1)}+\varepsilon\lambda_i^{(2)}`$; budget $`\lvert\lambda_i^{(1)}\rvert+\lvert\lambda_i^{(2)}\rvert`$ |
+| Lower input-cube margin | $`p_i`$ | $`h_i`$; budget $`\lvert h_i\rvert`$ |
+| Upper input-cube margin | $`1-p_i`$ | $`-h_i`$; budget $`\lvert h_i\rvert`$ |
+
+Here $`\lambda_i^{(1)}`$ and $`\lambda_i^{(2)}`$ are the linear and quadratic coefficients obtained by substituting (61) into (58). In that order they are
+
+```math
+\begin{aligned}
+\lambda^{(1)}&=(\mu-h_z-h_w,\ h_z-\mu,\ h_w-\mu,\ \mu),\\
+\lambda^{(2)}&=(\beta-2\gamma,\ \gamma-\beta,\ \gamma-\beta,\ \beta).
+\end{aligned}
+```
+
+The absolute coefficient sum bounds each polynomial remainder on this interval. Define
+
+```math
+\delta_{20}=\frac{1}{1+\sum_{j=1}^{20}2(M_j+1)/a_j}.
+```
+
+Then $`0<\delta_{20}\leq1`$ and $`\delta_{20}<a_j/[2(M_j+1)]`$ for every row. Consequently, if $`0<\varepsilon<\delta_{20}`$,
+
+```math
+a_j+\varepsilon R_j(\varepsilon)
+\geq a_j-\varepsilon M_j>\frac{a_j}{2}>0.
+```
+
+The two actual gains are these positive factors multiplied by $`\varepsilon^2`$. The other rows give positive candidate weights and an input in the open cube; positive weights on the four truths also put the candidate in the open cube. This proves the stated repair for the same interior context and transverse direction. The construction is finite arithmetic for rational inputs. It is a sufficient, input-dependent radius, without an optimality, uniformity or mixed-rank extension claim. The direct coefficient, radius and twenty-row binding proofs are in [PolynomialBounds][formal-rowwise-budgets], [ConstraintBounds][formal-rowwise-radius] and [ExplicitANDScale][formal-twenty-row-repair].
+
+One exact polynomial-bound source must be distinguished from this absolute-budget argument: its `budget` definition sums signed coefficients, although its nonnegativity and absolute-value proof scripts use absolute summands. A single coefficient −1 already separates those quantities. Its independently stated strict-gain implication still explicitly requires a nonnegative remainder budget and the displayed small-scale bound. This is a discrepancy in that exact source body, not in the absolute-coefficient argument above, and no compiler rejection is reported. [Baseline141-68](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/research/t20-v6-20261012/sources/0dea756ab9e040ca57587e3017bb52993bec6fa720694ffa48daf99e6fa3ac2a/PolynomialBounds.lean)
+
+For the data $`(s,z,w,h_1,h_2,h_z,h_w)=(1/4,1/2,1/2,1,0,0,0)`$, the [companion scale-audit source][formal-scale-fixture] states $`\delta_{20}=31562496/25265441833`$ and contains an arithmetic proof script. This records the source's fixture claim; no new kernel execution or independent numerical evaluation is asserted.
+
+
 The geometry-boundary guide also separates proof layers. Its kernel scope covers the critical-zero and finite linear-programming certificates, boundary readback and exact primal/dual binding. The mixed-rank extension and exponential positive comparator are ordinary results at that earlier seal; their later formalization and the full-jet flat-perturbation work have separate identities. An earlier seal cannot be retroactively described as certifying those later additions. [GUIDE105-G044]
 
 The unsuccessful auditor normalization attempts and the deliberately rejected mutations are retained historical failures. They do not count as accepted source qualification. General optimized-regret asymptotics remain ordinary mathematics where the guide says so. These records add evidence boundaries to the existing positive constructions and obstructions; they do not alter the source proofs or create another common-repair result from the number of successful build modules. [GUIDE105-G023] [GUIDE105-G040] [GUIDE105-G044]
@@ -1600,6 +1643,12 @@ The [geometry proof review][geometry-proof-review], [finite-hull review][finite-
 [formal-geometry]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-continuations/source-store/6aed37421110678ab4ce732ee00ba61dc97397ffadc5f16941169309d1ccc44e.lean
 [formal-product]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-continuations/source-store/eb26c550b7ab1aaa3f74a29ffe945d8d00c84913b0cb8b588b3f88420b89bc13.lean
 [formal-lp]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-continuations/source-store/bcbdbaca18e8c2f5ab3c25e38b19587b128e215719ae3d9fc7823d7823935ed2.lean
+
+[formal-rowwise-budgets]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/c26354ffa7da15f07620f32c208bd5afef75ec5e26d0be4a535621aa25e9c6f6.lean
+[formal-rowwise-radius]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/446be356118af1bc2ea8af2adedbfdd3c861172169a6e9261a537349d8210247.lean
+[formal-twenty-row-repair]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/5800709b1381958aaa2e30ae8ca0da34fb2af1df6fafe1200b65d37183eacca9.lean
+[formal-scale-fixture]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/48480e64f691652b5204acb7fcf07a895513d952a2889ff5c9858a922893b9ba.lean
+
 
 [approximate-iff-source]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/e46c8d347ed1864c6c65270b0b7e90eef0146815804bb9f783fa465cd3fbc8bc.md
 [block-classification-pre-review]: https://github.com/theislampill/orthemology/blob/b4d58482ae00f138782276ee5c4034c48bb2df19/docs/provenance/v5-research-continuations/notes/b0ec9163de7f6deb49f44bb10ef1f279151ee78a30b9d2dd7ca9736d8bb62750.md

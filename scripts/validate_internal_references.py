@@ -24,7 +24,7 @@ ends once the path exists.
 Deterministic; offline.
 """
 
-from resolve_t20_v6_source import DIGEST_RECORD_PATHS, digest_record_bytes
+from resolve_t20_v6_source import DIGEST_RECORD_PATHS, digest_record_bytes, NEW250_PATHS, new250_source_bytes
 
 from validate_ar8r_reconciliation import _pmr007_deep_member_bytes
 
@@ -458,7 +458,33 @@ def _successor_remainder_batch_reference(src, cited):
 
 
 
+def _new250_reference(src, cited):
+    # Candidate spelling is checked before normalization; unsafe selected spellings
+    # fail terminally rather than gaining an ordinary-existence exemption.
+    if not isinstance(cited, str):
+        return None
+    candidates = [cited]
+    directory = os.path.dirname(src)
+    while directory:
+        candidates.append(directory + '/' + cited)
+        directory = os.path.dirname(directory)
+    selected = [p for p in candidates if os.path.normpath(p) in NEW250_PATHS]
+    if not selected:
+        return None
+    for path in selected:
+        if any(c in path for c in ('\\', '\0', ':')) or path.startswith('/') or any(x in ('', '.', '..') for x in path.split('/')):
+            return False
+        try:
+            new250_source_bytes(ROOT, path)
+        except (ValueError, OSError):
+            return False
+    return True
+
+
 def _resolves(src, cited):
+    new250 = _new250_reference(src, cited)
+    if new250 is not None:
+        return new250
     read_batch = _successor_read_batch_reference(src, cited)
     if read_batch is not None:
         return read_batch
@@ -621,6 +647,11 @@ def main():
             continue
         corpus_text[src] = text
         for cited, line in _citation_occurrences(src, text, root=ROOT, successor_sources=successor_sources):
+            new250 = _new250_reference(src, cited)
+            if new250 is not None:
+                if not new250:
+                    missing.setdefault(cited + ' (invalid NEW250 provider)', set()).add(src)
+                continue
             if cited in exempt:
                 continue
             if cited.startswith(".."):

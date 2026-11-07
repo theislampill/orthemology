@@ -485,6 +485,8 @@ This is the classical Nash–Kakutani argument, not a new existence theorem. Emp
 
 Existence does not give a selection rule, uniqueness, an effective solver or convergence of play. The map $`F(x)=1-x`$ has a fixed point but its iterates from 0 alternate forever. A one-player payoff can even reward a false answer more highly than a true one. The unique equilibrium would then be false under the independently supplied truth predicate.
 
+A separate stationary-row construction uses less than a general best-response fixed-point theorem. A continuous linear map preserving a nonempty compact convex subset of a real normed space has Cesàro orbit averages in that set; telescoping bounds their fixed-point residual by2M/(n+1). A convergent subsequence therefore yields a fixed point, without asserting convergence of the original orbit. For a nonempty finite state set, choosing one probability row from each fixed nonempty allowed row set gives such a stationary law. These row sets are indexed by state, not by the candidate probability vector. In the rational finite linear-constraint formulation, a stationary law and rows give balanced flow f(i,j)=p(i)r(i,j). Conversely positive-mass rows are recovered by division, while zero-mass rows require the independently supplied nonempty allowed-row sets. The retained unexecuted source proves these conditional constructions, not rational-vertex enumeration, effective selection, uniqueness or a general nonlinear/Kakutani result. [F109C-029](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/262dbaf5d6ad39cce576ce7ef7aa247612d0b1ef9222459c8d3a3b719ded4770.lean) [F109C-031](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/3dc9af004d538724b19288fcb169c4e65b62d12e251c29ae0b154ad14e4d5c85.lean) [F109C-032](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/a78f6f3705b95c704edf0721f493a8c6ee8ddcf6ff8e76ce8bc1b122e7401915.lean)
+
 ### 3.3 Changing inquiry can change incentives
 
 Inquiry affects strategic possibilities as well as conclusions. Suppose a fixed analysis offers researchers two actions: independent pre-disclosure discovery *D* and stopping *S*. Before public disclosure, both are available and *D* pays 1 while *S* pays 0. The unique equilibrium is (D,D). Correct publication changes the public state and makes *D* unavailable by its declared meaning; (S,S) becomes the unique equilibrium. The analysis and feasibility rule remain fixed; the state to which they apply changed. If strategy or player sets change, compare equilibria through explicit transport maps or a common tagged space rather than subtracting differently typed sets. [7, Proposition 8.6][r7]
@@ -610,6 +612,8 @@ B=\frac{1-x_1^{\mathrm{final}}}{2}
 ```
 
 is certainly 0 under λ<sub>+</sub> and certainly 1 under λ<sub>−</sub>. Pairwise operations have made a previously hidden higher-order relation decisive for a unary question. [8, §4][r8]
+
+The retained finite parity sources distinguish three proof surfaces. The three-bit rational tables give equal profiles for every proper mask but opposite parity targets; mixing half the even law with a point mass at000 retains the even target while changing every pairwise00 probability from1/4 to5/8. For general ordered fixed/free masks, recursive enumeration is proved duplicate-free and characterized by mask satisfaction and parity. With at least one free coordinate, each parity class has2^(free−1) compatible words and normalized marginal2^(−fixed). The denominator argument requires positive length. This list-based probability bridge does not turn the separately defined coordinate-cube properMarginalTarget proposition into a theorem. A genuine convex mixture also needs its coefficient between0 and1; the more general mixture identities are algebraic, not a claim of uniformity on the union of supports. These remain unexecuted source declarations. [F109C-025](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/db49f44c8e562db1034304ac770bdac6fd884fb45e596b254f7e8f21d6400fa6.lean) [F109C-026](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/527e11239cdf880b52993f1737560c5dbfb7f3fb1424a9302e8f4cd2acc50ba7.lean) [F109C-027](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/6fc53381792db1d718fffb1e207db3e469d88147ddbaa8d0037614939441b11f.lean) [F109C-030](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/34518db955169af9a1bb9756ad41e10370b0560130b9f537e7b7e0749f044dd1.lean)
 
 Give two players actions 0 and 1 and payoffs
 
@@ -1071,6 +1075,8 @@ For attainment, form a finite transportation network. A source supplies row *a* 
 The max-flow/min-cut theorem therefore supplies an *R*-supported subcoupling of mass $`1-\delta`$. [22][flow] Its residual row masses *r*<sub>*a*</sub> and column masses *s*<sub>*b*</sub> are nonnegative and each total δ. If $`\delta=0`$, the subcoupling is already complete. Otherwise add the table $`r_as_b/\delta`$. A positive residual row and positive residual column cannot be related: adding the smaller residual along that relation edge would augment the maximum flow. The added mass therefore lies entirely outside *R*, and its total is exactly δ. Both full marginals are restored. ∎
 
 For binary agreement, $`R=\{(0,0),(1,1)\}`$, the deficit is $`|\mu(0)-\nu(0)|`$. Marginals $`(4/5,1/5)`$ and $`(1/5,4/5)`$ force disagreement probability 3/5. The joint table with masses $`1/5,3/5,0,1/5`$ in the order 00,01,10,11 attains it. Equal fair marginals have zero deficit, even though independent sampling disagrees with probability 1/2. The marginals do not determine the deployed coupling.
+
+The retained effect-calculus control makes the same distinction with raw terms. Its fair expression outputs I and SKK with mass1/2 each. Their independent marginal product gives the raw-unrelated pair mass1/4, whereas the shared coupling gives that pair zero mass. This cross-run relational coupling does not force repeated syntax within one run to share a sample: applying two copies of the expression produces the mixed application with mass1/4. Zero/full weights, the nonreduced weight2/4 and colliding branches are separate exact source controls. They are import-relative proof text, not a new execution or a soundness theorem for every effect implementation. [B141-100](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/research/t20-v6-20261012/sources/13f390fdabb6bfea8bc91a3fedb9320c14b7e4817335759bfba3d5240bfc289e/IndependentEffectControls-attempt1.lean)
 
 #### Licenses and incentives restrict the available couplings
 
@@ -2023,6 +2029,8 @@ The identity follows by evaluating measurable rectangles and cancelling the two 
 
 Every measurable function of the feedback, including the shifted unused row-oracle tail, consequently remains independent of the residual seed under that conditional input law. Its marginal in `posterior_seed_unused_tail_product` is explicitly the pushforward of **conditioned feedback**. The theorem does not itself identify that marginal with a fresh iid oracle. Fresh-tail identification and equality with the restarted policy's original history law are further distributional steps; conditional product structure alone cannot replace them. This is a distinction between two probability identities, not an additional independence assumption imposed on the observed action count. [Q250E-141]
 
+The retained FeedbackRequests body has a separate local freshness discrepancy: its outside-U branch assigns every request the key inr 0, while its nodup/injectivity proof and branch witness use the outside-action count. A history with two outside-U acquisitions repeats that key. The source's request-family declarations therefore do not by themselves supply the distinct-slot condition needed for the probability argument; this does not change the conditional product identity above. [Exact retained source](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/156650deb9e1da991c644f8cdfb984f2bd270d12db3ba755153cc133b0aa7568/FeedbackRequests.lean)
+
 [Q250E-153]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/9608772a6948c3dfb69d95659d27b5f6b961aece08ccc09afc594b63cd264ba6/ResidualSeedPosterior.lean
 [Q250E-141]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/0f37e47723087f1ad72667012a3abac927ae29162a14625cc58dfae754346115/PosteriorFeedbackProduct.lean
 
@@ -2062,6 +2070,11 @@ D_{\theta,\lambda}(a)
 This finite-alphabet strong law follows by applying the indicator argument in §7.8 to each symbol. All log increments are bounded because the alphabets are finite and the probabilities are positive. Jensen's inequality for the strictly concave logarithm gives $`D_{\theta,\lambda}(a)\ge0`$, with equality exactly when the two probability vectors agree: apply it to $`P_{\lambda,a}(y)/P_{\theta,a}(y)`$, whose P<sub>θ,a</sub>-weighted mean is one.
 
 Work on the probability-one intersection of these finitely many strong-law events. For every informative action, a sufficiently long stack-prefix sum is at least half its positive mean times its length. An action sampled finitely often contributes an eventually fixed finite amount; a noninformative action contributes zero. It follows that the total log ratio tends to positive infinity whenever at least one distinguishing action is sampled infinitely often. This reasoning uses complete stack-prefix limits and then evaluates them at the actual counts; it does not assume that adaptively selected observations form an unconditioned random subsequence.
+
+The prefix argument has a slightly more general pathwise form. Write S_a(n) for the log-score sum of the first n observations in action a's stack. On one common probability-one event, every informative action has S_a(n) tending to positive infinity, while an action with identical compared laws has S_a(n)=0. A real sequence tending to positive infinity has a range bounded below: its tail exceeds a fixed threshold, and its finitely many earlier terms have a finite minimum. Thus every action's prefix-score range has a lower bound on this event.
+
+Now choose any family of natural-valued prefix clocks N_a(t). They need not be monotone, measurable or chosen independently of the sample path. If N_b(t) tends to infinity for at least one informative action b, then S_b(N_b(t)) tends to infinity, and the sum over the remaining finitely many actions stays bounded below. Consequently the total sampled prefix score tends to infinity. The probability-one event is selected before quantifying over all clocks. This strengthens the actual-count argument without asserting that arbitrary clocks are causally implementable. It concerns complete prefixes, not selected nonprefix samples, and requires a distinguishing clock to tend to infinity, not merely be unbounded along a subsequence. Strict positivity of the compared finite laws remains necessary for this logarithmic theorem. [N250-056]
+
 
 Call a candidate λ harmful under θ if $`U_\lambda\nsubseteq G_\theta`$. Self-verification of U<sub>λ</sub> implies that some $`b\in U_\lambda`$ distinguishes λ from θ: otherwise $`\theta\in E_\lambda(U_\lambda)`$ would require $`U_\lambda\subseteq G_\theta`$. If this harmful candidate were selected at infinitely many plan boundaries, every action in its plan, including *b*, would be executed infinitely often. The log ratio above would then tend to positive infinity. Eventually $`L_t(\theta)>L_t(\lambda)`$, so λ could no longer maximize likelihood at a boundary. This is a contradiction.
 
@@ -2219,6 +2232,9 @@ necessity argument, which additionally needs the recursive exits
 treated in §7.13. This is the explicit greatest-kernel step requested
 by the support-elimination review [53].
 
+The finite greatest-kernel calculation has two useful monotonicities. Keep the rival family and action universe fixed. Write fine(θ,η,a) and coarse(θ,η,a) for indistinguishability relations and suppose fine implies coarse at every action. Every support self-verifying for the coarse relation is then self-verifying for the fine relation: a rival agreeing in the finer sense on every action also agrees in the coarser sense and must already accept that support. Consequently the greatest coarse self-verifying kernel is contained in the greatest fine kernel. Likewise, enlarging every rival's target from Gη to G′η with Gη⊆G′η preserves every previously self-verifying support and enlarges the greatest kernel. These are combinatorial conclusions; for a fixed allowed menu they also apply to the intersected targets. They do not by themselves establish monotonicity of the whole recursive restoration problem when observation support updates, successor obligations or permission menus change. [N250-108]
+
+
 #### One policy, with immediate interruption
 
 Choose one witnessing list for every certified support and every live candidate, with a fixed tie rule. This is a finite collection of finite choices. At entry to a support *B*, reset the within-phase likelihoods to one. At each completed-plan boundary, choose a live candidate maximizing the likelihood of the observations acquired since this phase began, and load its list. During a plan, retain the remaining suffix rather than recomputing the plan after each observation.
@@ -2264,6 +2280,27 @@ c_{B;\theta,\sigma}(v)
 ```
 
 This is the affinity of the two subprobability laws for completing the whole list without changing support. Each factor lies in $`[0,1]`$ by Cauchy–Schwarz and normalization. The full-row affinity equals one only when the two probability vectors agree: equality in Cauchy–Schwarz makes their square-root vectors proportional, and their unit norms make them equal.
+
+A finite support block can also be represented on a common coordinate alphabet without revealing unused observations. Fix a finite action set A, a selected subset U, an observation filler y₀ and nonnegative normalized action laws p_a. For w∈Y^A define
+
+\[
+M_p^U(w)=\prod_{a\in A}b_{p,a}(w_a),\qquad
+b_{p,a}(y)=
+\begin{cases}
+p_a(y),&a\in U,\\
+\mathbf 1_{\{y_0\}}(y),&a\notin U.
+\end{cases}
+\]
+
+Each coordinate has total mass one, so distributing the finite sum over coordinates proves that M_p^U is normalized. A nonfiller value at any unselected coordinate makes its mass zero. For two action-law families p,q, distributing the finite product and square roots gives
+
+\[
+\operatorname{aff}(M_p^U,M_q^U)
+=\prod_{a\in U}\operatorname{aff}(p_a,q_a).
+\]
+
+The omitted coordinates contribute affinity one, not additional samples. If some selected action has different normalized rows, its affinity is strictly below one, while the other factors lie in [0,1], so the block affinity is strictly below one. Zeros in the rows are allowed. This is a law-encoding identity; binding it to an actual acquisition procedure still requires the fresh-feedback and causal-access argument. The ordered stopped lists above additionally retain multiplicity, first-exit truncation and the exit-triggering action; a finite-set encoding must not erase those distinctions. [N250-058]
+
 
 Let $`b_{B,\theta}(\sigma)`$ be the number of occurrences in v<sub>B,σ</sub> that are outside G<sub>θ</sub>, counting multiplicity. If this number is positive, then
 
@@ -2348,6 +2385,42 @@ The finite transcript-tree form keeps the terminal affinity visible for nonnegat
 The branch identity is $`\sum_y A((a,y)::h)=A(h)\operatorname{aff}(K_{\theta,a},K_{\sigma,a})`$. Induction uses this identity and the selector inequality only where σ is selected; it does not assume a conditional-expectation decrement. At the empty history, a strictly positive affinity deficit bounds every finite selection count by its reciprocal. For normalized rows, unequal rows give that deficit by the squared square-root-distance identity. The supremum bound on finite expected counts still needs the actual-law and monotone-count identification before it becomes an infinite-expectation statement. [Q250C-114]
 
 The dependent-alphabet version permits each experiment a to have its own finite outcome type and each row to have mass at most one. It proves the same budget without normalising surviving rows. Its reciprocal conclusion explicitly assumes affinity less than one; normalization and mere row inequality are not silently imported into the subprobability statement. This is the relevant finite-tree interface for support-killed continuation mass, rather than a replacement law conditioned on survival. [Q250C-091]
+
+The same raw affinity calculation constructs the local potential used in the general reset bound below. Fix a finite comparison-model set Θ. At phase p, each experiment label a∈Θ has its own finite outcome alphabet. Let K(p,η,a,y) be nonnegative and normalized for every model η, and let Q be the subprobability kernel obtained by setting its exit outcomes to zero. Use the same causal selector for every compared model. Write m_η(p,h) for its Q-history mass and
+
+```math
+H_\eta(p,h)=\sqrt{m_\theta(p,h)m_\eta(p,h)},
+\qquad
+V(p,h)=\sum_{\eta\in\Theta}w(p,\eta)H_\eta(p,h),
+\quad w(p,\eta)\ge0.
+```
+
+Suppose the selected label a satisfies m_θ(p,h)≤m_a(p,h), and its real charge c(p,a) obeys
+
+```math
+c(p,a)\le w(p,a)
+ \bigl(1-\operatorname{aff}(Q(p,\theta,a),Q(p,a,a))\bigr).
+```
+
+Each subprobability affinity is at most one. The child-affinity identity therefore gives
+
+```math
+\begin{aligned}
+V(p,h)-\sum_yV(p,(a,y)::h)
+ &=\sum_\eta w(p,\eta)H_\eta(p,h)
+      \bigl(1-\operatorname{aff}(Q(p,\theta,a),Q(p,\eta,a))\bigr)\\
+ &\ge w(p,a)m_\theta(p,h)
+      \bigl(1-\operatorname{aff}(Q(p,\theta,a),Q(p,a,a))\bigr)\\
+ &\ge c(p,a)m_\theta(p,h).
+\end{aligned}
+```
+
+The middle step uses H_a(p,h)≥m_θ(p,h). Exit children have zero Q-mass and zero potential, so this is also the current-charge-plus-continuing-child inequality. At an empty local history, V(p,∅)=∑_ηw(p,η). A uniform bound C on these sums, invariant preservation on positive true-model exits, and strict decrease of a natural phase rank supply the generic guarded reset bound below. The local construction and that rank implication do not require a finite phase set when such a common cap is supplied. The coefficient inequality is a substantive hypothesis; an arbitrary choice of weights need not satisfy it. Real charges need not separately be nonnegative for this algebraic implication. [N250-073] [N250-074]
+
+For the finite live-controller interface, require a live initial candidate in every phase and, for every live candidate's planned list, either a positive candidate-probability exit witness or live self-verification. Suppose the true model remains live and the rank decreases on every positive true-model exit. A nonnegative charge whose positivity implies a bad live candidate's plan has a strictly positive survival-affinity deficit. Taking its weight to be the charge divided by that deficit on true-live positive-charge phases, and zero outside those cases, discharges the displayed coefficient condition. A live likelihood maximizer supplies m_θ≤m_a. Finitely many phases and candidates then give a finite global cap. These premises do not require live sets to be nested: permanent exclusion of removed models remains a separate property of the support-update controller. [N250-072]
+
+If the charge is specifically the full planned bad-occurrence count, the normalized full stopped kernel also generates the reset trajectory described below. Its actual finite-prefix expectation identity and the uniform bound imply that its integer planned charge is eventually zero almost surely. The resulting statement is eventual goodness of the selected **planned blocks at generated block-transition indices, including continuing blocks**. The abstract theorem does not require nonempty plans and supplies no physical-clock conclusion on its own. The existing executed-prefix domination, nonempty-record clock and acquired-history information arguments are the additional steps needed for actual physical actions. Merely knowing that a positive charge implies a bad plan would not establish that domination. These are written law and budget arguments, not new source-program or kernel execution receipts. [N250-071]
+
 
 #### Resetting likelihoods while retaining the probability of an exit
 
@@ -2443,6 +2516,16 @@ This generic identity does not equate every historical implementation
 with the particular policy of this section or supply a new kernel
 execution receipt.
 
+The final budget-to-eventuality step has an abstract form that needs no independence. For any measure μ and sets E_i, suppose one finite C≥0 bounds ∑_{i<n}μ(E_i) for every n. The nonnegative series is the supremum of these prefix sums, so ∑_iμ(E_i)≤C. The union of events after time N has measure at most the corresponding series tail, which tends to zero. Hence μ-almost every point belongs to only finitely many E_i. If the E_i are measurable, nonnegative integration also gives
+
+```math
+\int\sum_{i\ge0}\mathbf 1_{E_i}\,d\mu
+ =\sum_{i\ge0}\mu(E_i).
+```
+
+Probability normalization of μ is unnecessary. To use a finite-tree bound, one must separately identify or bound the actual prefix event-measure sum by the tree cost, then bound that cost uniformly. This interface alone does not construct an infinite path law or prove its finite-cylinder contract; the generated-kernel construction above supplies those obligations in the controller application. [N250-069]
+
+
 <a id="reset-budget-rank-and-full-exit-mass"></a>
 
 The generic reset budget makes its hypotheses explicit. Let m(p,h) be the unnormalized continuing-history mass, r(p) a natural phase rank, and V(p,h)≥0 a local potential with V(p,∅)≤C for one C≥0. Suppose the current charge times m, plus the sum of V over continuing children, is at most V(p,h). Suppose also that every **positive true-model exit** strictly decreases r; no rank condition is needed on zero-mass branches. For the full-mass reset recurrence above, finite-horizon induction yields
@@ -2454,6 +2537,39 @@ U_n(p,\varnothing)\le(r(p)+1)C.
 ```
 
 At an exit the successor root bound is at most r(p)C and is multiplied by m(p,h)K_θ(p,a,y). At a continuing child the same rank term is multiplied by its continuing-history mass. Summing both kinds of branch uses the **full** normalized row, while the local-potential inequality pays the current charge. Thus no conditioning on the ultimately surviving phase enters the bound. The rank controls resets, not live-model exclusion or physical-action domination; those remain the separate invariants already stated. [Q250E-150]
+
+The same finite-horizon induction permits a state-dependent continuation reserve. Let m(p,h) be the continuing-history mass, V(p,h) a nonnegative local potential and D(p) a nonnegative reserve on an invariant family of phases. Assume that the local current-charge-plus-continuing-child inequality is paid by V, that every positive true-model exit preserves the invariant, and that each such exit to q satisfies
+
+\[
+V(q,\varnothing)+D(q)\le D(p).
+\]
+
+Then the full-mass reset recurrence satisfies
+
+\[
+U_n(p,h)\le V(p,h)+D(p)m(p,h).
+\]
+
+For an exit, induction bounds the successor at its empty local history by V(q,∅)+D(q), which is at most D(p); the term is multiplied by the original exit mass. For a continuing child, induction retains the local potential and scales the reserve by that child's continuing mass. Summing both kinds of reserve term uses the full normalized observation row and returns D(p)m(p,h). The remaining local terms are paid by the one-step inequality. Zero-mass exits contribute zero and need no fictitious successor witness. This real-valued recurrence theorem needs nonnegative V, D and kernel values; it does not separately assume nonnegative current charges. A physical nonnegative-cost application has that additional interpretation. [N250-055]
+
+For a finite phase set with a directed admissible edge relation p→q and a natural rank strictly decreasing along every edge, fix real local charges c(p). Define the additive chain certificate by well-founded recursion:
+
+\[
+B(p)=c(p)+\max\bigl(\{0\}\cup\{B(q):p\to q\}\bigr).
+\]
+
+The zero baseline is present because strict rank excludes a self-edge. If c is nonnegative, so is B. Each successor budget lies below the displayed continuation term. If C≥0 bounds every local charge, strong induction on rank gives B(p)≤(rank(p)+1)C: each successor's rank plus one is at most rank(p).
+
+More precisely, B is the least bound within the following additive certificate class. If W satisfies c(p)≤W(p) and c(p)+W(q)≤W(p) on every edge, then B(p)≤W(p). Inductively B(q)≤W(q); every successor term and the zero baseline are therefore at most W(p)−c(p), giving the claim. This leastness statement itself does not require nonnegative c or W. It compares certificates for the fixed graph and local charges, not statistical policies or possible observation schemes. The support-chain maximum below is the corresponding application-specific construction, and its warning against a globally optimal cost claim remains in force. [N250-055]
+
+A supplied continuation reserve also has a conditional finite-prefix form. Use the local potential V(p,h) and true-model mass m(p,h) just described. On invariant phases suppose the current charge times m plus the continuing-child V values is at most V(p,h), and every positive true-model exit to q satisfies V(q,∅)+D(q)≤D(p). Define Ψ(p,h)=V(p,h)/m(p,h)+D(p) when m(p,h)>0, and Ψ(p,h)=0 otherwise. For any invariant state x with positive mass, under the original normalized observation row,
+
+    c(x) + Σ_y K_θ(y|x) Ψ(T(x,y)) ≤ Ψ(x).
+
+For a positive-probability continuation the new mass is m(x)K_θ(y|x), so multiplication by its observation probability cancels the corresponding denominator. For a positive exit the successor mass is one and the reserve inequality applies. A zero-probability branch contributes zero; nonnegativity of V handles its unused local-potential term. Divide the local step inequality by the positive predecessor mass and sum using normalization. This is conditioning on an acquired finite prefix, not on never exiting. Nonnegative D makes Ψ nonnegative; the displayed algebraic drift itself does not require a sign assumption on D or the current real charge. Existence of V,D and the local/exit inequalities remains a hypothesis, not a consequence of normalization. [N250-079]
+
+The positive-mass guard cannot be erased. In a two-phase control, every observation exits from the initial phase to a zero-cost terminal phase. Give the initial empty history potential one, every nonempty killed history potential zero, and continuation reserve zero. The original observation row is normalized; the unnormalized local drift and exit allowance hold at every history. But an impossible nonempty initial-phase history has killed mass zero while its next charge is still one. Defining its normalized potential to be zero would make an unguarded normalized drift demand $1\le0$. This countercontrol leaves the zero-mass-valid unnormalized recurrence intact. It is a written source example, not a new execution result. [N250-114]
+
 
 `ResetLaw` proves that the full finite tree has total leaf mass m(p,h), and that leaf-weighted accumulated cost equals U_n(p,h) plus the pre-existing accumulated charge times m(p,h). `ResetTrajectory` separately constructs a normalized reset kernel and an infinite Ionescu–Tulcea trajectory with the prescribed finite causal compositions. These are the finite-tree and law-construction providers for the expectation argument above, rather than an assumption that two objects called a process have identical laws. [Q250E-151] [Q250E-152]
 
@@ -2476,6 +2592,28 @@ D_{B,\theta}
 ```
 
 The maximum ranges over finitely many smaller certified supports. The bound is attached to the chosen witnesses; it is not an optimal cost claim.
+
+For the same fixed finite phase-plan family, the maximum can be restricted to its potential positive-probability exits. Fix the true model θ for the analysis. Put p→_θq when θ is live in p and there are an experiment label a and an incomplete stopped record y with positive full stopped probability under θ whose public successor is q. This relation includes every such label and record in the declared total phase-plan family. It need not certify that a particular history makes the likelihood selector choose that label. The graph describes possible exits of the family, not an observed sample path or a graph supplied to the controller. Positive-exit invariant preservation and the natural rank make it acyclic. [N250-065]
+
+Let c_p=∑_ηw(p,η) be the local nonnegative phase charge from the weighted estimate. Define
+
+```math
+D^{\mathrm{exit}}_{p,\theta}
+ =c_p+\max\bigl(\{0\}\cup
+       \{D^{\mathrm{exit}}_{q,\theta}:p\to_\theta q\}\bigr).
+```
+
+The full-mass induction now charges a successor only through an edge of this graph. Its continuation reserve is the displayed maximum; every positive exit's successor budget is at most that reserve. Continuing children retain the local potential, and the full normalized row pays the reserve exactly as in the reset recurrence. This bounds every reset horizon by D^exit at its initial phase. Induction on rank also gives
+
+```math
+D^{\mathrm{exit}}_{p,\theta}
+ \le (r(p)+1)\sum_q c_q.
+```
+
+In the recursive support specialization, use the same fixed witnesses and local charges as in D_{B,θ}. Every potential positive exit leads to a smaller certified support containing θ, so induction on support size gives D^exit_{B,θ}≤D_{B,θ}. This comparison is an ordinary consequence of the two recurrences with those shared choices; it is not a claim that arbitrary historical implementations use the same phase family. General state-dependent continuation reserves and leastness within an additive-certificate class remain distinct from this kernel-induced choice of graph. [N250-065]
+
+The recorded-block and physical-clock transfer proved below applies to this refined reset bound. Thus the specified recursive physical law has expected total bad-action count at most D^exit, every deterministic physical-time prefix has the same expectation bound, and for integer k≥1 the count tail is at most D^exit/k. The total bad count is finite almost surely. θ may index this analysis bound without entering the policy. The graph maximum is neither an optimal-policy cost nor a tail bound on the time of the final error. No fresh execution or stronger nonanticipation claim for a historical completed-record decoder follows. [N250-066]
+
 
 **Theorem (recursive constructive restoration).** If $`W(B_0)`$ holds, the single policy just constructed is licensed on every feasible action-consistent finite history, for every seed. Under each $`\theta\in B_0`$, its total number N<sub>bad</sub> of physical actions outside G<sub>θ</sub> satisfies
 
@@ -2500,9 +2638,62 @@ T_0=0,\qquad T_{j+1}=T_j+e_j.
 
 These intervals cover the physical action clock and *T*<sub>*j*</sub> tends to infinity. The old suffix contributes no executed actions. The initial controller state has no completed-action record and is not counted as a block. Every later block contains its actual exit action when present. Summing block charges therefore counts all physical bad actions exactly; domination by the full planned charge supplies the bound already proved.
 
+The underlying cost identity is pathwise and permits some empty blocks. For a sequence b_n of finite executed lists, let T_n=Σ_{j<n}|b_j| and assume T_n tends to infinity. The map (n,i)↦T_n+i, for 0≤i<|b_n|, is a bijection from actual block positions to physical times: empty blocks contribute no positions, and unbounded total length covers every time. Thus for any nonnegative extended-real action cost c,
+
+    Σ_{t≥0} c(flatten(b)_t) = Σ_{n≥0} Σ_{i<|b_n|} c(b_n[i]).
+
+This is an equality even if both sides are infinite, obtained by reindexing a nonnegative series. It establishes neither a finite budget nor action-time nonanticipation. The source's displayed equality for its total fallback decoder uses the stronger assumption that every block is nonempty; unbounded length alone is not asserted to validate that decoder on every sequence. The concrete stopped blocks above satisfy the stronger condition on their stated probability-one event. [N250-081]
+
+The retained RecursivePhysicalDecoder body has an explicit indexing discrepancy at this transfer: recursivePhysicalAction is defined from the records x(n), while the eventual-good proof's blocks and the measurable decoder supplied later use x(n+1). Its nonempty theorem applies to the latter, post-initial records. The displayed proof therefore needs that exact record shift reconciled; it does not establish that including the initial empty record satisfies the decoder's nonempty-block contract. [Exact retained source](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/1a927bf75b4f6dc804b546e647e34a9bfe8c4f22aa736d53da260538110cb689/RecursivePhysicalDecoder.lean)
+
+
 Markov's inequality gives the count tail. Finite expectation of this nonnegative extended integer count implies that it is finite almost surely. A finite set of bad physical times has a finite maximum, which proves eventual target goodness. The controller continues to issue actions; no finite zero-error stopping declaration or observable final-error certificate follows. $`\square`$
 
 The source's canonical policy theorem has this finite expected physical-cost interface. The ordinary proof above supplies a direct phase calculation and the displayed support-chain bound; it is not a fresh execution of the source's formal development or a claim that two historical implementations have identical whole-state laws. [38]
+
+The preceding phase proof is one application of a general acquired-history drift principle. Fix a deterministic policy f on finite histories and nonnegative normalized finite observation laws P_a. Start a history PMF μ₀ at the empty record. From h, draw y with law P_{f(h)} and append (f(h),y); let μ_{n+1} be the resulting mixture over μ_n. Induction gives mass zero unless h has length n and is action-consistent, and otherwise gives the product of its acquired observation probabilities. The joint-history identity already established in Information and Inquiry, §9.9, therefore identifies μ_n with the original canonical experiment's n-step history marginal. A policy ignoring its common private seed has this same marginal for every probability law of that seed. This uses the actual acquired-law identity, not an assumption that equally named processes coincide. [N250-061] [N250-060]
+
+Let c(a) and V(h) take values in the nonnegative extended reals. Suppose I holds at the empty history, is preserved whenever P_{f(h)}(y)>0, and implies the one-step inequality
+
+\[
+c(f(h))+\sum_y P_{f(h)}(y)V(h\mathbin{\frown}(f(h),y))\le V(h).
+\]
+
+Induction on μ_n places I on its positive-mass support. Expanding the next-step mixture then proves
+
+\[
+\mathbb E\!\left[\sum_{t<n}c(a_t)+V(H_n)\right]
+\le V(\varnothing).
+\]
+
+The accumulated history cost is exactly the physical prefix cost, because the action stored in the newly appended pair is the action just issued. Dropping the nonnegative terminal potential and taking monotone limits yields
+
+\[
+\mathbb E\sum_{t\ge0}c(a_t)\le V(\varnothing)
+\]
+
+in the original canonical action law. Neither an optional-stopping argument nor a uniform pointwise path bound is required. A finite numerical conclusion requires V(∅)<∞; an arbitrary extended-real potential does not supply it. If I also implies f(h)∈D for one fixed action set D, take c=1 outside D and V=0. The expected total bad cost is zero, so almost every action path lies in D at every time. Fixing any seed r of a measurable shared policy gives the same conclusion for its Dirac-r law by applying this argument to f(h)=π(r,h). No conclusion about its other seeds follows. [N250-060] [N250-062]
+
+A finite causal action tree supplies one systematic way to build such a potential. A shared, model-independent total spawning function assigns to every macro-state q an action-bearing node (label, observation-indexed children), not a leaf-only tree. Its erased label specifies the next physical action, which is issued before the observation chooses a residual subtree. A leaf records a macro-state q and resets directly to that state's specified action-bearing spawned node. Replay of the acquired history reconstructs the next node without reading a future observation. Labels may contain additional public state and be mapped to physical actions. Stored action fields do not validate forged histories: the probability argument still uses actual action-consistent histories. [N250-063] [N250-064]
+
+For a real nonnegative terminal certificate F(q), define a leaf's value as F(q), and an action node's value as its real nonnegative action cost plus the P-weighted values of its children. Require the macro invariant only on leaves reached along positive observation branches. Suppose the tree rooted at the spawned node of every invariant macro-state is valid and has root value at most F(q). At a residual action node, replacing a positively reached leaf's terminal value by the value of its action-bearing spawned node cannot increase the one-step continuation value; zero-probability children contribute zero. The value of the replayed residual node, embedded into the nonnegative extended reals, consequently satisfies the history drift inequality. At initial invariant state q₀ this proves
+
+\[
+\mathbb E\sum_{t\ge0}c(a_t)\le F(q_0)<\infty
+\]
+
+for the constructed seed-ignoring policy in the original canonical action law. The certificate is real-valued and nonnegative; its existence and spawn inequalities are substantive hypotheses. Analysis costs, laws and potentials may be indexed by the true model, but the public spawned policy must remain the same policy in the comparison. [N250-063] [N250-064]
+
+For an ordered stopped plan, unfolding the tree value gives exactly the stopped-record expectation of the cost of the executed prefix plus F at the recorded terminal state. It includes the action producing exit and excludes the abandoned suffix. This equality uses normalization; the further inequality replacing executed cost by full planned cost uses nonnegative action costs and stopped masses. This general tree certificate packages the existing physical-prefix accounting rather than weakening its chronology or importing the completed-episode measurability shortcut rejected below. These are source-backed algebraic and law arguments, not new execution or kernel receipts. [N250-063]
+
+For the source's recursive causal policy, the one-step certificate is derived from the chosen recursive witnesses rather than supplied as an additional assumption. A macro-state consists of a certified support p and its acquired continuing-plan history h. Its valid-state condition says that the true model θ is still in p and its continuing-history mass m_θ(p,h) is positive. This holds at the empty initial history. A positive completed outcome multiplies that mass by a positive observation-record probability. A positive exit retains θ in the exact smaller support and restarts the local history at mass one. Impossible outcomes need no true-model invariant. [N250-091] [N250-093]
+
+Let Φ_θ(p,h) be the weighted sum of square-root products of the true and candidate continuing-history masses, with the guarded bad-count/survival-deficit weights, and let R_θ(p) be the continuation reserve from the potential positive-exit graph. On valid states the macro potential is Φ_θ(p,h)/m_θ(p,h)+R_θ(p). Live likelihood maximization and the recursive progress-or-self-verification witness give the local charge inequality; the chain reserve pays each positive exit. Thus the full normalized stopped-record law satisfies: full planned bad count plus expected successor macro potential is at most the current macro potential. At an empty history, this potential equals the recursive exit-chain budget. The true model indexes this analysis, not the policy. [N250-091]
+
+Expand each stopped plan into a tree that issues one action before branching on its acquired observation, and respawn at a completion or exit leaf. The expected cost of the executed prefix plus its leaf potential is no greater than the full planned charge plus that same expected potential. The preceding inequality therefore supplies the tree certificate for the shared history-only policy directly in the canonical action law. Together with the separately proved licence invariant, this gives one measurable seed-ignoring policy licensed at every feasible action-consistent history, whose expected total bad-action count is bounded by its chain potential for every initially live model. No extra rank, drift, representation or law-equality premise is requested from the caller. [N250-087] [N250-089] [N250-086]
+
+This canonical route is distinct from defining a physical law by pushing the recorded trajectory through its decoder. That recorded route has its own total-cost bound; its definition does not assert equality with the canonical action law. The canonical construction obtains its bound directly, so it does not need that equality or the invalid inference from completed-record measurability to physical-time nonanticipation. Neither route supplies a new execution receipt. [N250-094] [N250-095] [N250-087]
+
 
 #### Completed episode records and the information available at an action
 
@@ -2522,6 +2713,15 @@ specified probability-one event, so concatenation covers the physical
 clock; a total decoder's fallback outside that event affects none of
 these almost-sure conclusions. These are the record and clock
 properties used in the preceding count argument.
+
+The record transfer admits an explicit initial-charge convention. Let S_j be the recorded-state chain, X_j its controller projection, and g(S) and c(X) nonnegative extended-real charges. Suppose every possible update outcome satisfies g(update(S,y))≤c(X), and projecting that update gives exactly the controller update with the same original observation probabilities. Finite summation and induction give, from any initial recorded state S₀,
+
+    E[Σ_{j=0}^n g(S_j)] ≤ g(S₀) + E[Σ_{j=0}^{n−1} c(X_j)].
+
+The right sum is empty when n=0. The pointwise domination is a premise, including on zero-probability outcomes. If one finite C bounds every controller prefix expectation, monotone convergence bounds total recorded expectation by C+g(S₀). Natural-valued recorded charges are consequently eventually zero almost surely. The concrete completed-action charge assigns zero to the initial no-record placeholder; an arbitrary g need not, so its initial term cannot be discarded. Each transition stores the old phase, chosen label and outcome even when controller memory resets. These are generated block-transition steps, including continuing blocks, not only phase changes. [N250-082] [N250-083] [N250-084]
+
+A related zero-cost implication is stronger in time but stronger in hypothesis. For a Markov kernel on a countable measurable state space with measurable singletons and any nonnegative extended-real f, assume the one-step integral of f is zero from every state. Finite trajectory integration then makes E[f(S_{n+1})]=0 for every n. Nonnegativity and countable intersection give f(S_{n+1})=0 for every n on one probability-one event, for each declared initial state. This says nothing about f(S₀); a merely finite nonzero budget gives eventual zero for integer charges, not this all-positive-times assertion. [N250-078]
+
 
 Measurability in finitely many completed episode records alone is
 weaker than action-time nonanticipation. If one episode contains two
@@ -2737,6 +2937,17 @@ The stable-support argument now supplies a nonempty self-verifying set within $`
 A zero-mass observation branch likewise cannot inherit a success statement by conditioning on it. The exact support restriction removes that branch from every model for which it is impossible. Finally, nonempty *B*<sub>0</sub> is necessary: with no live models the policy's universal success and feasible-history legality conditions are vacuous, whereas $`W(\varnothing)`$ is false.
 
 This characterization concerns the stated finite fixed controlled laws, exact support menus and common causal history policy. It establishes neither a finite-memory bound nor a finite zero-error declaration, and it does not convert every successful policy into a finite-expectation one. The public menu and target assignments remain application premises. The source's formal closure and original reviewer controls retain their separate execution scope; the ordinary proof here does not claim a fresh kernel build or an unrestricted policy-realization theorem.
+
+The existence characterization also has an almost-sure observed-licensing form. For each initially live model, require that under the actual observed-history law the action issued at time t belongs to Γ(B(H_t)) for every t, outside one null set of histories. This checks the support before acquiring the next observation. It is weaker than requiring the original randomized policy to be licensed for every seed at every feasible action-consistent history. For example, let the seed be Boolean with law concentrated at false, let the policy always issue its seed, and let every observation be a fair bit. With menu {false}, its observed experiment is licensed almost surely, while the unused true seed issues an unlicensed action. That seed has measure zero. [N250-053]
+
+Retain finite fixed nonnegative normalized laws, measurable common policy, a common probability seed law and nonempty initial support B₀. Under these hypotheses the following existence conditions remain equivalent: the recursive certificate W(B₀); a policy almost surely licensed in this observed-history sense and almost surely eventually target-good under every live model; and a possibly different almost surely observed-licensed policy having finite expected total target-bad physical cost under every live model. The finite bound may depend on the live model. This does not give every almost-sure winner finite expectation or alter the original policy on its null seeds. [N250-054]
+
+For the forward necessity argument, common seed selection must preserve two properties, not only target success. More generally, let E_θ be any measurable observable-history event with probability one under model θ, in addition to almost-sure target success. Pull both events back to the same product experiment of private seed and feedback. Their intersection has full product measure. Product-measure integration gives, for almost every seed, both properties almost surely over feedback. Intersect these seed sets over the finitely many live models and choose one common seed. The selected deterministic policy simultaneously preserves success and E_θ for every model. No model-dependent seed or success-conditioned posterior is introduced. [N250-054]
+
+Apply this with E_θ equal to the all-time observed-license event. If the selected fixed-seed policy issued an unlicensed action at a feasible action-consistent prefix h, some model remaining in B(h) would assign that prefix positive product probability. On that prefix its next action is already fixed and violates the pre-action menu. The observed-license event would therefore fail with positive probability under that model, contradicting the selected seed's almost-sure licensing. Thus the fixed seed satisfies the feasible action-consistent pointwise contract needed by the necessity proof. This argument does not apply to an impossible observation branch or a forged action prefix. [N250-053] [N250-054]
+
+Conversely, the recursive certificate already constructs a policy licensed at every feasible consistent history with a finite physical-cost budget; its actual histories have that property almost surely. Finite expected integer bad count implies eventual goodness as proved above. These two implications give the stated existence equivalences. The original action sequence alone cannot replace the acquired history in this license: the same constant action paired with two different revealing observations can yield different singleton live supports. The source controls isolate precisely this feedback dependence and the pre-action time index. They are written mathematical examples, not newly executed tests, and neither licensing formulation authenticates the menu's normative authority. [N250-053] [N250-054]
+
 
 ### 7.14 Stateful learning with revealing observations
 
@@ -2973,6 +3184,12 @@ For a round that deletes bad pairs globally across all current maximal component
 
 [Q250E-143]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/d16d51d77c59f0538952e1401e105e699fd6d2648df3aa3db8dbf3c09888a253/PruningKernel.lean
 
+<a id="finite-parity-output-harness-boundary"></a>
+
+A separate `IndependentOracle.lean` supplies a finite output harness rather than an in-file oracle comparison. It decodes two states, four pairs and three models, with base-4 row labels, priorities 0–5, live/allowed masks and a candidate reduced modulo three. Its 4,096 literal inputs include eight row/priority choices for each of the 256 graph codes with all models and pairs enabled, followed by 2,048 inputs varying the masks. This exhausts the first block's graph coordinate, not the full input product. `solve` calls the imported `SCCPruning.parityOutput`; `main` prints the case index, encoded component family and used-source-state union. No expected answers, comparator or semantic correctness theorem occur in this file. The title alone therefore supplies no independent verification, and the fixture count is not a newly observed passing result. Imported definitions and any external comparison remain separate obligations. [B141-031]
+
+[B141-031]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/07154b236eb9d635c08e069fe79c09d6aca25b3ea71ba4e503657ac4f89809ca/IndependentOracle.lean
+
 The outer region reference has a different fuel bound. Its state-set descent stabilizes within the finite state count. Its support recursion is independent of excess fuel once the fuel is at least |B|: the allowed-pair test consults lower regions only for proper child supports, whose cardinalities are smaller. Strong induction on B therefore equates those child regions for any two sufficient fuel values, equates the stage operators, and identifies the bounded result with a fixed point using the canonical child regions. This is the support-recursion argument, not a bound on statistical running time. [Q250E-148]
 
 [Q250E-148]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/ca456e211d02a994192809bac318ae3a75684f163daf2f9037346b84517b347a/RegionAlgorithm.lean
@@ -2987,6 +3204,11 @@ The original generated-policy providers distinguish a semantic witness from a la
 
 In that generated controller, the all-compatible-history safety invariant holds for **every** Boolean rejection test, including arbitrary false positives. Statistical accuracy is needed for convergence, not for hard-menu licensing. The actual-run equations reconstruct the source labels from observed receipts, keep the global departure count, test the newly completed history, and clear retained components on support change or rejection. Once support is fixed, the index changes by zero or one; equal index preserves the retained component. The true-candidate non-rejection argument and the cyclic barrier then supply eventual phase constancy, after which an option-valued retained mode either stays empty or keeps one component. The latter arithmetic fact needs no finiteness assumption on the type of retained objects. Fair closed-set navigation and recurrent-row matching exclude the permanently empty mode and yield the stated parity result. [Q250C-095] [Q250C-098] [Q250C-104] [Q250C-105] [Q250C-106] [Q250C-107] [Q250C-108] [Q250C-128] [Q250C-130] [Q250C-133]
 
+There is a restrictive case in which an exact law-preserving simplification is available. Fix a selector select(s) and make every support-indexed menu at s the singleton {select(s)}. For any lawful Unit-seed policy, every supported raw-stack run then takes that action at its current observed state. Induction using the same next-unused stack cells identifies its complete acquired-history trajectory with the observation-only policy h↦select(observedState(s₀,h)). The supported stacks have full measure, so their complete Markov history laws agree for each initially live model. The original generated controller specializes this way when the initial state is winning, for any Boolean rejection test. This does not assert equality on arbitrary unsupported histories or compile its unused classical phase choices, and it gives no such simplification for general menus. [C250-131]
+
+[C250-131]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/9e29299170a95e9c0c6845df2ae03def4ff28d5465d2f70fc53f4e93f1073942.lean
+
+
 #### Posterior determinism as a law-preserving visible-state construction
 
 A finite hidden-state system can meet the observed-state hypothesis through an exact information-preserving construction, provided its **actual joint kernel** is posterior-deterministic. Let Q be a finite hidden-state set, O an observation alphabet and A the actions. The supplied rational probability row is $`T(o,q'\mid q,a)`$, summing to one over (o,q′). Posterior determinism means that for each (q,a,o) at most one q′ has positive mass. Define
@@ -2998,6 +3220,10 @@ p_o(q,a)=\sum_{q'}T(o,q'\mid q,a),
 ```
 
 The successor is undefined at zero observation probability. Independent observation and next-state marginals cannot replace this joint kernel: two correlated positive pairs can determine a unique state after each observation even though their product marginals would not. The controller is not given q or the hidden initial state. [57]
+
+<a id="baseline141-checker-derived-posterior-determinism"></a>
+
+The exact CheckerKernel source supplies a concrete posterior-deterministic joint kernel. At a universal live state it pushes one normalized fair bit through the receipt/successor map; otherwise it uses the action-selected point mass. Distinct branch tags separate live successors, while a shared terminal receipt identifies the same absorbing top or bottom state. The cell update checks a claimed head-symbol mismatch and the shifted-head bounds before interpreting even an accepting destination. Thus this construction derives posterior determinism rather than assuming it; it does not by itself supply a whole-machine simulation, complexity lower bound or fresh compiled verification. [Exact source](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/074270a22703df806c0615cb6ed17ad90de60e37a9d7e6dcefdcd2695e5a696c/CheckerKernel.lean#L37-L122)
 
 Let Θ be the positive support of the initial distribution on Q, with k=|Θ|≤|Q|. Treat the initial state θ as a fixed hidden tag. A visible descriptor is a partial function f:Θ⇀Q, together with the last observation $`\ell\in O\cup\{\bot\}`$. Initially f(θ)=θ for each tag and ℓ=⊥. Given action a and new observation o, define the next descriptor by
 
@@ -3349,6 +3575,63 @@ The distinction between execution and proof is equally concrete. A finite compar
 
 The executable exhaustive reference has two separate finite-fuel arguments. Forward reachability grows the current set by its one-step successors; each nonstable round increases cardinality, so $`|S|`$ rounds from a singleton suffice and agree with ordinary reflexive-transitive reachability. End-component checking uses that bounded relation. Maximal components are then selected by enumerating subsets of the current pair set, and pruning is iterated for the initial pair-set cardinality, recomputing components and row-matching rivals. The resulting target equals the existential target over **all** qualifying components, including nonmaximal ones. This source implementation is an exponential powerset reference, not the polynomial MEC implementation discussed in the ordinary algorithm bound above. [Q250C-094] [Q250C-096] [Q250C-103]
 
+A separate SCC-based finite reference replaces that component enumeration without changing the target predicate. For a finite pair set U, its deletion step retains a pair only when it has nonempty successors, each successor is a source in the current pair set, and each can reach back to the pair's source. Every original end component survives. After |U| rounds the retained set is stable. For each remaining pair, take all retained pairs whose sources are mutually reachable with its source; the finite image of these clusters is the returned family. The path-restriction proof supplies connectivity inside each cluster, while stability supplies successor closure. The authored membership theorem identifies this family with exactly the maximal end components of U and bounds its size by |U|. This construction uses finite image rather than a powerset. [N250-026]
+
+The computational definitions propagate this replacement through the target and region constructions. The parity step computes these components and removes attained odd-minimum pairs for row-matching rivals; the final output recomputes components after the bounded parity iteration. Explicit equalities identify the step, every-fuel iteration, output, target states and normalized-row Markov target with the earlier reference, preserving its supplied licensing boundary. The support-recursive version then calls this SCC target in its own region stage and supplies its own smaller-fuel result to the recursion. It agrees with the previous region at every fuel and inherits fuel independence once the fuel is at least the live-support cardinality. [N250-025] [N250-027]
+
+The semantic certificate exported by that recursive substitution is directional: every supplied common lawful winning policy lies in its canonical computed region, and absence from the region excludes the corresponding semantic winning predicate for the stated arbitrary measurable private-seed class. These files do not independently supply the converse policy construction. Nor do the pair-count and finite-image bounds prove an end-to-end runtime bound; the source expressly makes no polynomial claim for the outer support recursion. The broader sufficiency argument and algorithm bound above retain their separate evidence. [N250-027] [N250-026]
+
+A separate endpoint composes this exact region equality with the imported common-policy sufficiency theorem. It states that SCC-region membership is equivalent to semantic winning for the deterministic Unit-seed interface, and constructs a common winning history policy from an accepted state. It also transfers acceptance of the hidden quarter-coin learning control and rejection of the observationally indistinguishable opposite-objective control. This is a dependency-relative written theorem and witness definition, not an extracted SCC runtime controller or a new polynomial bound for the support recursion. [BRIDGE18-065]
+
+[BRIDGE18-065]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/ae63b326ef9679d9dbf26ac60c6db7e80b11cf7b33a6073f6a7d4eecca40846e.lean#L13-L50
+
+The SCC-root control declarations distinguish incompatible rival minima from a common even action. Their locally defined one-state, two-action, two-model fixture has identical transition rows. When each action has priority 1 in one model and 2 in the other, the declared output is empty; when action 0 has priority 1 and action 1 has priority 2 in both models, the declared output is the full state set. A separate declaration checks the latter directly at the region stage, with an empty lower-region function. These are read proof declarations, not newly executed controls or general policy witnesses; their conclusions concern returned state sets rather than an exposed list of retained actions. [N250-028]
+
+<a id="three-state-mec-parity-output-harness"></a>
+
+The distinct three-state `IndependentMECOracle` harness uses four pairs and three models in two modes: 6,688 literal inputs call the imported maximal-end-component routine, and 2,048 call its parity output. The first 4,096 exhaust the successor-set codes for the fixed source assignment (0,0,1,2) with all pairs allowed; the next 2,592 supply 32 inputs for each of the 81 source assignments. Neither block exhausts the full input product. Its base-7 priority decoder includes 0–3 and 2^70, 2^70+1, 2^70+2. For each case it requests the index, encoded component family and used-source-state union, without an in-file expected-answer comparison. These are the source's concrete finite test inputs, not observed passing results. [B141-084]
+
+[B141-084]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/115b4d54a43a288330e43d2d9418e0798cae4e0a42abd13b71029f4fe347d373/IndependentOracle.lean
+
+[N250-026]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/0fb9bc5ce1b5e4dd1b3201cbbd90240a3893568e49322091f4ed60ec81b4b4f8.lean#L10-L216
+[N250-025]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/38b0e0f11834330a0246ce64fc4e0e1b66d91a418cb1d10de4c823ffe4b0ef88.lean#L13-L115
+[N250-027]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/4242f94baec8eecb32d81f35ef25edd36ddb23115b0ae9413754aa5e35a5032c.lean#L4-L104
+[N250-028]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/b5a1069b7076bc6ae8d32c9ae06f1632443f44c7aa95692ff38f02f7ecba4fd6.lean#L47-L73
+
+[N250-053]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/4d1a2a93b929d3fbac602ff474d9c9d0073e7ec74daa841916f15d4ae226828f.lean
+[N250-054]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/1a4efc42a9a182af53edc3a25b96efef555df58d2f97db486ff59acf22f00810.lean
+[N250-055]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/27948e1a1aed25219306410c6c81fa531b1df6837dbd60b654d01f52d0aa270b.lean
+[N250-056]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/e47004a10354c5e357042b82e30a1f0b2237c5efbe1b84137d7ac8b252d54caa.lean
+[N250-058]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/ca68bf5fbf40b48fa167681754349c1a4810ed2648894b078da3a316609dc40d.lean
+[N250-060]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/a2f15697c1af301d038255706cf3ebd5b3ea7f18a4c3dd37c0e957b9956c7ae9.lean
+[N250-061]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/3b3edbf54647b1347fede8b3a86fcdd17a9b5523d205fdc24bb9c53c7965370c.lean
+[N250-062]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/65752a2ce2e7252d52efa6b4a9c9ecc1d2135c03134b5a423dab0ed973ca9354.lean
+[N250-063]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/1d42a06db22cc2e080d50483c68df519d268e4ed50d0a23c9209b88064bbc7c9.lean
+[N250-064]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/406c9522933dd4fc8dc32bdb73c161984999d9201c69717d3447b3d5f7a1e97b.lean
+[N250-065]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/3a13128e581c70a00e1f64501293f2ba3b4137c3fbff21e7c57911d4a291bcf0.lean
+[N250-066]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/bd2f2cfb8b72caa988325ac5f62355fe2812e3f28aa3a4dd37ea3193e12b0f27.lean
+[N250-069]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/3e43549488d2af9f0b02f9e63733ae8a304c3e46c2efe7687aa5e7ea58b10e0a.lean
+[N250-071]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/36d2033ee4f3ab03315ac39eb3d5d5136f303a0f4e82b0fc8dacf872a617761a.lean
+[N250-072]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/af2e47783b00fafb9ec13633b8480acc962bd343c943d1d4f03673d5a54ffed7.lean
+[N250-073]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/735a5da929af86fa1996e756f5debdabf77b3be983f2b373e4d320ad3245e067.lean
+[N250-074]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/5e14a625c10df302da844b569995bedf42645ca3c624d9b5fcef920892742f10.lean
+[N250-078]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/30f92e1727d50f112a79b8ab92237bc71d931dfa21e5591a992f5b991acfaee5.lean
+[N250-079]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/188335c22604c9606c73bec89e9987d32036d74d28f2c8df655ec70efa85e33c.lean
+[N250-081]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/2e5d03186629139de5b9fd786e812dde4869ae550fb752a4828fa4839d88572a.lean
+[N250-082]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/f8f7e9ff23cfeb214b7ed284e38fe7e57ed9a69f844c7ec3a36e1945091d038a.lean
+[N250-083]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/b9d7a503652c0476ec10b1825ccc882ca9e23ca53b1b9d7b9ab2c9a2e1308347.lean
+[N250-084]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/a2ca7fd6c6527081fe8f2783686755724cbecba1ed838c2a1c3d725ab190b479.lean
+[N250-086]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/1a784e59481b23df540b1627523ac79fcd9dfc2c02228483c6957f701d3e7397.lean
+[N250-087]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/6d4bebc7005e13148507bfb1673e395cc7d405c19c7eb5efc3844087365ce119.lean
+[N250-089]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/cf9ae1b55c3159c813495af65224155e4ddf12e5c8245fbbf4e90645751ef655.lean
+[N250-091]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/7b4d87b65c97d0d42b61d25aa81635ee6f1be7d72bcb0d49a08ea859aa960e44.lean
+[N250-093]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/5ab7faee89f837fe1e53325f9b496f5c6a9567e36514f12056a4abf9681f9943.lean
+[N250-094]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/7e1836f52ebe4ea8d57dddf716e8b47ba294384195c764f3a3f45dd68683ceb0.lean
+[N250-095]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/3bcf5f5e350078473135778e0a9c0c81d4fde3e19426a0ea20541b5fed787fd8.lean
+[N250-108]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/e69b816ffff722823cba3f4d90ec5bc89c78f5c1315ecbc3057e3abd022bc72f.lean
+[N250-114]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/95cb6d9955e1dbf8634cf96c3558cf43a2537b53ba1358da90046895a0a89486.lean
+
+
 The normalized rational-row adapter proves that no candidate-positive support exit is equivalent to total internal mass one, and, for a live candidate, identifies the internal-successor graph with its actual positive-support graph. Full-row matching transfers this equality without renormalization. A computed target state therefore supplies a concrete component and an actual uniform or deterministic round-robin operating law that wins for every **matching** live model; every retained pair recurs, including higher odd priorities. A common lawful policy for all of B follows locally only with matching for every live model and menu inclusion, automatically reducing to the singleton-target case. Navigation from other region states remains a separate obligation. [Q250C-084] [Q250C-086] [Q250C-127]
 
 The rational actual-source bridge guide isolates another boundary: its source theorem is deterministic for explicit seeds. Probability and finite-history transport require separately stated external finite-law conditions; that bridge does not itself provide a new formal probability theorem. A deterministic function can be placed under many seed distributions. Identifying its output law requires the distribution and its relation to the acquired history, not only correctness of the function on each seed. The actual-law constructions already given in this chapter supply their own declared probabilistic premises. [GUIDE105-G064]
@@ -3410,7 +3693,25 @@ J_N=q(N+m-1)+2m(N+m)=\alpha N+\beta,
 \quad\alpha=q+2m,\quad\beta=q(m-1)+2m^2.
 ```
 
+The segment bound has a concrete finite rank. Write a segment's exact label as (B,r,E), with surviving support B, phase index r and retained component E (or none), and let b(E) be 0 in navigation and 1 in operation. While r<L and B is nonempty, the rank
+
+  2((m−|B|)L+r)+b(E) < 2mL
+
+is nondecreasing and increases strictly whenever that exact label changes. Within an unchanged support and phase, a retained component persists; a proper support decrease moves to a later support block even when the phase resets. Consequently both segment starts and segment ends number at most 2mL, with the initial segment and final truncated transition counted. Taking L=N+m yields the displayed terminal-transition bound. The full retained component, rather than its mode bit alone, belongs to the label; persistence is what makes the smaller rank valid. [C250-060]
+
+[C250-060]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/64552452a5b3c33b0ca8b41db2f289752e2269f1186073fc63d1d435830fc3f4.lean
+
+
 This census is specific to the generated policy's retained global counts and phase/support bookkeeping. Resetting the pair counts at each phase would destroy the cross-phase count budget. The index and segment invariants are inherited controller obligations, not consequences of a generic concentration inequality. [EXP-charge][EXP-cutoff]
+
+The finite-law bridge has two different conclusions. For the exact policy that chooses from its recursively updated memory, the history-memory marginal equals the finite transition law. For an arbitrary history-dependent policy, the frozen-rotor estimate instead bounds survival of a particular killed monitor under that policy's actual history law. To turn that estimate into a bound on a charged interval, a separate comparison must show that survival of the interval implies survival of the monitor, with the correct initial memory and action choices. The source's monitor contract also kills action disagreement, so termination for that reason cannot silently be counted as progress of the actual interval. On a positive complete-prefix cylinder, the deterministic Unit-seed restart retains the original history through the policy h_tail ↦ π(h_tail ++ h); it does not reset the accumulated history or introduce fresh private randomness. [C250-028] [C250-033] [C250-020] The separately read monitor-domination and generated-slice sources supply the action-disagreement kill and exact snapshot-alignment interfaces; these are local source statements, not a newly executed dependency closure. [C250-048] [C250-042]
+
+[C250-020]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/22fcc846c7197032c096c4a1108f472d202cc2d955eda18c26b1ac45647e10e7.lean
+[C250-028]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/a369e895e1453c0a6038211d5a7af4e563c2ee7f5b1206b8f19e13a4ae456501.lean
+[C250-033]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/69bfe9ce79b5a98458bd449f743d8ff42c8f056dc18044f799c7c9b24dcf0ae3.lean
+[C250-042]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/2d53a8a4a670137b5f721c09b5e91fd8de8ba5b98297eb3cab2f9cec7391b81b.lean
+[C250-048]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/b08cd9badccd646da565ca174c09ce6d327fa1e19dc89e1d8bea314784d02178.lean
+
 
 A dangerous slot is an actual chronological interval whose actions may incur bad cost; a matching good operating interval can have infinite elapsed duration but no bad cost. The source retains the zero-cost gaps on the original physical path. For a deterministic horizon T, let L<sub>j,T</sub> be the number of dangerous actions in its j-th progress slot, with zero for absent slots. The accurate-prefix census bounds the bad prefix by the sum of the first JN such lengths. At a dangerous slot's complete finite starting history, the augmented navigation argument gives a chance at least pᴰ of progress within D steps. Iterating this conditional bound gives
 
@@ -3937,6 +4238,8 @@ The randomized boundary keeps the world outside the coin outcome. Under a probab
 The full-action independent check makes the failure quantitative. Put m=|α| and k=B+c−1. Assume B,c≥1, k≤m, a probability seed measure, all action supports in one q-uniform finite family, and opacity for every seed on compatible failed prefixes. If N<C(m,m−q,k), then one fixed actual-root world has failure **outer measure** at least 1/binomial(m,k). Finite subadditivity over the maximal-world failure sets yields that inverse-cardinality bound; no measurability of each seed-policy event is silently added. Opacity need not constrain reachable post-success histories, and the source supplies such a richer post-success example. The result covers adaptive full-action policies, not just a fixed query order. [F939-C910]
 
 The corner cases are substantive: feasible covers are positive even at k=0 (the empty universe has one empty world and cover number1); there is no zero-attempt hit; oversized nonexistent worlds and zero measures can make universal or almost-everywhere promises vacuous. Smaller fault sets are handled by extension to a maximal set. Translating the hit bound into actual restoration still uses the defective initial target, as in the repair-state bridge above. These source theorems add no physical authentication, new execution or seed-dependent choice of the adverse world. [F939-C910]
+
+The exact `zero_measure_allowed` source exposes this premise boundary: its first cap theorem quantifies over an arbitrary measure while selecting a seed from almost-everywhere success; its second, fixed-world failure theorem explicitly assumes a probability measure. Almost-everywhere promises under the zero measure cannot supply that seed. The omitted premise is local to the first source statement, not a weakening of the probability-law result above or an observed compiler-rejection claim. [Baseline141-73](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/research/t20-v6-20261012/sources/0ef76811bdf4c6521f5da0d2d92f6b38c242593b1704f17a09e5ae02c7229dca/zero_measure_allowed.lean)
 
 [F939-C878]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/eef155e9c645c1bdfdb87ffd57d3f58531929a020d017fbdba77aa01e824d925/SourceCorrespondence.lean
 [F939-C901]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/f6e89ecca07f5b16f4200ce6673dfa1a96db3a5ce4379f6c73cb9eac85010efe/RandomizedSearch.lean

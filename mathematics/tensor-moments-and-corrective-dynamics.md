@@ -465,6 +465,10 @@ In particular, this replaces the top missing grade in (3). The resulting system 
 
 For rational support points, a separating vector can be found by a finite exact search. Use $`v(t)=(1,t,\ldots,t^{m-1})`$. Each pair contributes a nonzero polynomial with at most $`m-1`$ roots. Some integer among $`0,\ldots,(m-1)N(N-1)/2`$ therefore separates all points. Arbitrary real support descriptions do not automatically give an effective equality test. Nor does exact interpolation imply stability: nearby projected support values can make its coefficients poorly conditioned.
 
+<a id="baseline141-projection-field-boundary"></a>
+
+The separate finite-moment boundary source states recovery for empty and singleton supports, including dimension zero; an injectively enumerated zero-dimensional support necessarily has at most one point. Its general separating-projection interface assumes an infinite field. Over a finite field K, enumerating all of K² gives distinct support points but no injective scalar projection, since that would require |K|²≤|K|. This limits an extension of the projection argument to other fields, not the real-valued theorem above. The source depends on the imported projection/recovery theorem; no new compiled verification is asserted. [Exact source](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/085afba3f65a33d1ae7ea555dcfefefe93ad148f376e25259c953f58851ade31/Checks.lean#L11-L54)
+
 The cutoff is sharp in the worst case within this family of moment records. Place $`N`$ distinct points on the line $`\kappa_j=(x_j,1-x_j)`$. The equations $`\sum_jh_jx_j^r=0`$ for $`0\le r\le N-2`$ have a nonzero solution $`h`$. The full Vandermonde matrix implies $`\sum_jh_jx_j^{N-1}\ne0`$. Small positive and negative perturbations of uniform weights in direction $`h`$ are positive laws with equal lower moments and different next moments. This is not a lower bound on every conceivable state encoding. The original weights themselves are already a finite encoding.
 
 ### 2.3 Exact continuation and a single discriminating experiment

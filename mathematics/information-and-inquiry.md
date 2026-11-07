@@ -3014,6 +3014,11 @@ we have $`K_0=\{0\}`$, $`W_{\rm core}=\{0,1\}`$ and $`W_{\rm pers}=\{0,1,2\}`$. 
 
 A simpler certificate need not compute the whole winning region. Supply $`W\subseteq\mathrm{Safe}`$ and $`r:W\to\mathbb N`$. Admit a certificate at $`s`$ only if its selected action has nonempty successors in $`W`$, every successor has rank at most $`r(s)`$ at a target state and strictly less at a non-target state, and its model/version and non-temporal guards hold. Choosing such an object at every visited state keeps the play in $`W`$ and permits at most $`r(s_0)`$ non-target visits. This follows by induction and strict descent in $`\mathbb N`$. A common admitted certificate for each actual information bucket is sufficient for the same argument. It is not a characterization of all partial-observation co-Büchi strategies.
 
+Transferring a rank through a finite relation requires specifying which alternatives the relation preserves. Let F(q) be the source alternatives represented at destination state q. If every alternative in each successor fibre has a predecessor in the current fibre and each such source step decreases rank by one (with natural subtraction), the maximum rank over F(q) contracts. When all represented zero-rank alternatives jointly imply the destination target, that maximum gives a uniform persistence horizon. Forward matching alone does not suffice: a stale positive-rank alternative can remain in the destination fibre without any source predecessor even though every current source alternative has some matching successor.
+
+A different contract permits a minimum. Suppose fibres are nonempty, every current source alternative has a matching successor for every selected destination step, every destination bad label reflects to each represented source alternative, and each source edge satisfies1_bad(p)+r(p′)≤r(p). A minimizing current witness then transfers the same inequality to the minimum rank over the fibre. It bounds total bad visits and implies eventual goodness, but gives no deadline for the last bad visit. The stronger pairwise reflection, rather than the weaker universal-zero target condition, is what licenses this lower envelope. Safety, licensing, nonblocking, readout agreement and inclusion of every physical successor remain separate obligations when applying either relation to a controller. [N250-219] [N250-216]
+
+
 Nor does one successful present selection establish future information sufficiency. Let an initial state have one valid waiting certificate whose hidden successors are $`x`$ and $`y`$. They have the same next observation. At $`x`$, only one action reaches a target $`g`$, while the other loops at $`x`$; at $`y`$, the roles reverse. Let $`g`$ be the only target, give ranks $`2,1,1,0`$ to the initial state, $`x,y,g`$, respectively, and let $`g`$ remain at itself. The present cell needs one certificate, but the merged future cell needs two. A message sent before the adversary chooses this fresh hidden branch cannot reveal its outcome. Observable history can reduce later ambiguity only when it actually distinguishes the relevant states. [13]
 
 #### Review history and finite verification
@@ -3105,6 +3110,8 @@ Also require preservation of the frozen claim's meaning under the declared seman
 This structural argument does not prove that the original reasons are sound, independently validate an authority assertion, or infer acyclicity from an arbitrary graph map. Any required logical validity or acyclicity is a separate input/output condition. A new independent source root likewise requires its own evidence; forwarding or reformatting a certificate does not create one.
 
 The decisive failure modes are concrete. An obligation absent from $`D_i`$ cannot become discharged by being called preserved. Equal version/claim labels do not permit a second edge to substitute an alien reason node or dependency graph. Pairwise compatibility is not a composable path; a revoked source cannot be made current by dropping its invalidator; permission to receive a delegation need not include permission to redelegate it; and a changed claim meaning breaks semantic transport. [16]
+
+The separate P03 proposal makes the graph and warrant premises explicit in different types. Each finite reason DAG carries a strictly rising natural rank; an edge-preserving composite therefore cannot identify endpoints joined by a nonempty walk, although disconnected vertices need not be mapped injectively. Its nonempty frame-indexed paths force complete output/input adjacency, surjective graph maps, local evidence preservation or revalidation, semantic equivalence squares and explicit intermediate redelegation. Initial reason soundness then yields final soundness and target closure, together with a root-step trace and a guarded authority trace. Such a trace is not direct transitive authority. If each root step is equality, the trace yields endpoint equality; an arbitrary root-step trace does not itself establish equal roots. A fixed Policy and its epoch field supply no automatic validity after policy changes or independent test of real currentness. The audit file requests declaration and axiom readbacks rather than containing their results. These unverified proposal sources do not recover a historical VCT declaration, establish zero-edge closure or complete VCT/TRC. [F109C-038](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/6e04a5bd8477118c5d8c4e3fcc4987c89163833778d185f1632e1679180727c0.lean) [F109C-039](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/e7b6e0df73f1ed2e8de8e2301c30237a644979e99a0dab437d0e3bb02ea398de.lean) [F109C-040](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/a1e0123fa5e9a7b64b08effdc318eeef8178b235f9817accc56f9c9c15a5d885.lean)
 
 Finally, on fixed states, predicates, observations and successor relations, restricting eligible actions makes $`\mathrm{Pre}`$ pointwise smaller. Monotonicity of the least, greatest and nested fixed points gives
 
@@ -3584,6 +3591,10 @@ The antichains themselves need not grow by set inclusion: a better pair can repl
 
 The theorem preserves Pareto possibilities, not every exact proof support. For example, a leaf proof of $`q`$ requiring $`a`$ and a self-rule additionally requiring $`b`$ give a two-node proof with support $`\{a,b\}`$ dominated by the leaf with support $`\{a\}`$. If a different task requires an **exact** support, delete an ancestor–descendant pair only when both judgement and subtree support agree. This preserves support, does not increase cost, and still decreases node count. Along a branch supports are nested and can strictly shrink at most $`m`$ times; within each of at most $`m+1`$ constant-support blocks, no judgement repeats after pruning. Height $`n(m+1)`$ therefore suffices to attain the minimum price of every occurring exact support. It does not enumerate every proof or preserve its full derivation structure.
 
+The separate guarded-tree interface permits a rule to inspect the ordered vector of child supports. Replacing a child with a valid proof of the same judgement and exact support preserves that vector and hence every surviving guard; merely shrinking support need not do so. Nonnegative occurrence prices and strict node-count decrease then give a no-repeat representative by least-node selection, without assuming a finite grammar. Its separate finite-rule candidate construction reads every premise from the old numeric table, retains the old value and minimizes enabled candidates at the exact output support. Missing entries disable a candidate rather than supply zero-cost premises. These source proofs distinguish structural pruning and a synchronous numeric update from the witness-bearing Pareto recurrence above; they alone give neither global iteration convergence nor an effective implementation of arbitrary guards. [B141-049](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/research/t20-v6-20261012/sources/0a6faff768aa8aaa09dbddb48a155c7135d06b0762e522c7835d19d8c798d8b2/GuardedTree.lean) [B141-056](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/research/t20-v6-20261012/sources/0beb06d67a2f88a0e128e70e4f39e9f6a7bbc32d34092be4cf8942684ba6ab6d/Candidates.lean)
+
+The exact `IgnoreRootJudgement` source illustrates a separate witness-checking failure. Its Boolean acceptance condition checks tree validity, support and cost but replaces the requested root equality by q=q; the following characterization nevertheless claims judgement(t)=q. The downstream first-match search and cost-extraction interfaces rely on that missing check. This source-local mismatch is not evidence against the correctly scoped tree argument above, nor an observed run of the verifier. [Baseline141-76](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/research/t20-v6-20261012/sources/0f4b238e057dbd4c207f694d6fa28be8b0c21a3ffa59868f83c4577e1cde8afe/IgnoreRootJudgement.lean)
+
 #### Sharing needs a whole-graph argument
 
 **Theorem 18 — Finite shared-graph compilation.** Under the shared-graph contract, every finite proof graph is dominated by one with at most one node for each fully scoped judgement. Its exact terminal frontier is consequently computable by finite rule-choice enumeration.
@@ -3752,6 +3763,9 @@ impossible there. The interior strict-repair construction and these weak
 endpoint statements have different domains. These computations explain
 the controls; they do not claim a new execution of the historical audit
 fixtures.
+
+The endpoint uniqueness has a quantitative, asymmetric form. For $`0<\epsilon\le1/4`$, a good report at $`0<\alpha\le1`$ satisfies $`1/2<q\le1/2+\alpha\epsilon(1+\epsilon)`$. At $`0\le\alpha<1`$ it satisfies $`1/2+\epsilon-2\epsilon(1-\alpha)\le q<1/2+\epsilon`$. The endpoints themselves admit only $`q=1/2`$ and $`q=1/2+\epsilon`$, respectively. Thus the successful cells approach the endpoint oracle reports through punctured neighborhoods, in the same score units and with coherence retained. The constants cannot be casually tightened: at $`\epsilon=1/4`$, $`\alpha=1/2,q=63/100`$ is good but exceeds $`1/2+\alpha\epsilon`$; $`\alpha=99/100,q=747/1000`$ is good but lies below $`1/2+\epsilon-\epsilon(1-\alpha)`$. These are countercontrols to those two replacements, not a claim that every displayed bound is globally optimal. [Endpoint cells](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/48fa3944856cc27e03bdf6bd43de8634710ac38bf990d2b5836684e799d5146b.lean#L5-L64); [literal controls](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/9773ca285989ab98561575eaed3fbc14c7951813af4e456073f8ee9a80f46df9.lean#L15-L27).
+
 
 #### A finite-sample lower bound and the meaning of a fresh observation
 
@@ -3930,6 +3944,49 @@ fresh observations from a common growing sample, and apply the preceding estimat
 Indeed, (31) bounds failure at opportunity *t* by *δ*<sub>t</sub>. For every *T*, the probability of any failure after *T* is at most $`\sum_{t\geq T}\delta_t`$, which tends to zero. Thus only finitely many failures occur almost surely. Reusing a growing sample makes failures at different opportunities dependent; the summable union bound, or first Borel–Cantelli lemma, needs no independence between those failure events. ∎
 
 The availability and target-preservation premises matter. Equation (32) does not make harmful exploration harmless or grant access to a sensor. It concerns the correctness of issued actions at the declared opportunities. If every recurring disturbance itself counts as a bad physical state, infinitely many disturbances already prevent eventual uninterrupted physical coherence. Sampling and interstage latency must likewise be classified by the actual target contract.
+
+A different policy can certify the reports it issues without promising that it will issue a report at every opportunity. Fix one real selector parameter $a\in[0,1]$. Let the actual receipt stream have the infinite product Bernoulli($a$) law, and at opportunity $n\ge0$ use exactly its first $n+1$ bits. Choose a rational budget $0\le\delta<1$ and set
+
+\[
+\beta_n=\frac{\delta}{2(n+1)(n+2)}.
+\]
+
+At a word with $k$ ones, require rational endpoints $0\le l_n\le u_n\le1$ satisfying the exact outward checks
+
+\[
+l_n=0\ \text{or}\ \Pr_{l_n}\{K_{n+1}\ge k\}\le\beta_n,
+\qquad
+u_n=1\ \text{or}\ \Pr_{u_n}\{K_{n+1}\le k\}\le\beta_n.
+\]
+
+Here the tails include ties. For any finite family of nonnegative masses, the mass of observations whose own inclusive upper-tail value is at most $\beta$ is at most $\beta$: choose a minimum-statistic observation in that set, which places the set inside its upper tail. A maximum-statistic observation gives the lower-tail version. Bernoulli product expectations preserve coordinatewise increasing statistics as the parameter increases. Consequently each displayed bracket misses the true $a$ with probability at most $2\beta_n$, including $a=0,1$. The finite-prefix masses are derived from the same infinite product law. Since
+
+\[
+\sum_{n<N}2\beta_n=\delta-\frac{\delta}{N+1},
+\]
+
+the probability that any bracket ever misses $a$ is at most $\delta$. Reusing prefixes does not require independence between these error events. [N250-117] [N250-119] [N250-120] [N250-121] [N250-131]
+
+The checks can be met at every finite requested precision by exact rational outward bisection on $[0,1]$: retain a lower endpoint whose upper tail is at most $\beta_n$, and an upper endpoint whose lower tail is at most $\beta_n$, with endpoints 0 and 1 for the degenerate counts. The condition $\beta_n<1/2$ prevents the two certified endpoints from crossing. This proves safety at any chosen number of bisection steps, not a prescribed width or a stopping-time guarantee. Grouping word masses by the count gives the exact binomial polynomial, replacing $2^{n+1}$ word terms by $n+2$ count terms per tail evaluation. The grouped and enumerated procedures agree for every input; arithmetic bit complexity is a separate matter. [N250-125] [N250-132] [N250-134]
+
+The exact interval-minimax derivation appears below in the relative-tolerance discussion; here its value is used as a finite certificate. Given that word's rational disturbance $e$ and tolerance $\eta$, first check $0\le e\le1/4$. Set
+
+\[
+q_* =\frac12+\frac{l_n+u_n}{2}e-\frac{u_n-l_n}{2}e^2,
+\qquad
+V=q_*^2-\left(l_n(1/2+e)^2+(1-l_n)/4\right).
+\]
+
+Emit the coherent rational report $(q_*,1-q_*)$ only when the endpoint validity checks and $V\le\eta$ hold; otherwise abstain. For valid inputs this test rejects exactly when no coherent real report meets tolerance at both truth vertices uniformly over the whole real interval. Accepted reports are sound whenever $a\in[l_n,u_n]$. Thus for every finite precision schedule and every finite-word-dependent rational choice of disturbance and tolerance, the probability that any issued report ever violates coherence or either stated excess bound is at most $\delta$. No hidden value of $a$ enters the algorithm. [N250-123] [N250-130] [N250-133]
+
+The retained RationalRepairCertificate body does not implement that displayed inequality in the same direction: its Option checker accepts eta≤rationalValue, while its soundness proof asks the accepted comparison to supply robustValue≤eta after casting. Equality hides the difference, but distinct tolerances do not. Its soundness and rejection declarations must therefore remain tied to this exact source-local comparison discrepancy rather than being treated as an implementation of the V≤eta service above. [Exact retained source](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/1969605abab6e1c91bee2db13f8e4ea9a05c8c08a6de59a8f0fe769624575999/RationalRepairCertificate.lean)
+
+More strongly, each opportunity's incorrect-emission event has probability at most $2\beta_n$. These events are measurable finite-prefix events, so nonnegative integration gives expected total incorrect emissions at most $\delta$. Almost surely only finitely many incorrect reports are emitted. Neither statement promises eventual emission, bounds abstentions or latency, or controls the time of the final error. This is a different contract from the always-issued empirical learner above. [N250-129]
+
+If a fresh independent selector chooses which complementary truth-coordinate squared error is charged, its conditional expected charge is exactly the weighted score used here; the source product law supplies the joint acquired-word/next-selector identity. The certificate then protects expected charge at each truth state. It need not improve the realized charge on every selector draw, and the mathematical identity does not establish that an external service implements this contract. [N250-118]
+
+The binomial tails also admit an exact sequential evaluation. Starting from t_0=(1−p)^n, update t_{i+1}=t_i(n−i)p/((i+1)(1−p)) for p≠1 and sum the selected terms for i=0,…,n. At p=1 use the point mass at i=n instead: the ordinary recurrence is invalid there. The inclusive lower and upper tails agree identically with the reference rational tails, so every finite bisection precision and the resulting Option-valued audit repair agree with the reference procedure. Its actual-law anytime and expected incorrect-emission guarantees therefore transfer unchanged, with the same finite-history input contract and possible abstention. This is a source-level arithmetic refinement, not a measured runtime or bit-complexity result. [N250-138] [N250-140] [N250-141]
+
 
 #### A shared feedback controller with literal score targets
 
@@ -4210,6 +4267,35 @@ The proof of Lemma 19 with *D*<sub>α</sub>+*η* in place of *D*<sub>α</sub> yi
 
 The relative scale cannot be dropped [40]. The constant coherent output *q* = 1/2, without any query, satisfies (38) for every $`\alpha\in[0,1]`$ when *η* = *ε* ≥ 0. At the two vertices its excess losses are respectively $`-\alpha\epsilon-\alpha\epsilon^2`$ and $`\alpha\epsilon-\alpha\epsilon^2`$, each at most *ε*. Hence vanishing absolute tolerance alone does not retain the obstruction. This establishes an order-of-magnitude separation between the sublinear regime and a sufficient linear tolerance. It does not assert that every positive linear coefficient suffices or determine an exact minimax coefficient for arbitrary standard families.
 
+A closed interval of possible standards admits a sharper, exact robust certificate at a single disturbance. Let $`0\le l\le u\le1`$ and $`0\le\epsilon\le1/4`$. Write the two excess losses as
+
+```math
+E_0(a,q)=q^2-\tfrac14-a\epsilon(1+\epsilon),\qquad
+E_1(a,q)=(1-q)^2-\tfrac14+a\epsilon(1-\epsilon).
+```
+
+Their opposite monotonicities in $`a`$ reduce uniform correctness over $`[l,u]`$ to $`E_0(l,q)\le\eta`$ and $`E_1(u,q)\le\eta`$. The unique coherent minimax report equalizes those two endpoint losses:
+
+```math
+q_*=\tfrac12+\tfrac{l+u}{2}\epsilon-\tfrac{u-l}{2}\epsilon^2,
+\qquad V=E_0(l,q_*)=E_1(u,q_*).
+```
+
+A coherent report meeting tolerance $`\eta`$ for every standard in the interval exists **if and only if** $`V\le\eta`$; $`q_*`$ supplies it. Here a negative tolerance means strict improvement at both truth vertices. This interval-specific finite-disturbance value is distinct from the infinite-event minimax success probabilities discussed below. [Exact robust certificate and uniqueness](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/1762b3ce9b4c3d11826eb724c1d15468d8ddda69666da3e06f332979288b4c31.lean#L17-L114).
+
+For midpoint $`m=(l+u)/2`$ and half-width $`d=(u-l)/2`$,
+
+```math
+V=d\epsilon-m(1-m)\epsilon^2-2md\epsilon^3+d^2\epsilon^4.
+```
+
+The sufficient width condition $`d\le m(1-m)\epsilon`$ ensures a non-worsening common report. Conversely, $`V\ge(7/8)d\epsilon-(1/4)\epsilon^2`$ implies $`d\le(2/7)\epsilon`$ whenever $`\epsilon>0`$ and $`V\le0`$. These are sufficient and necessary width bounds, not equivalent tests; the exact value test handles the boundary cases. If intervals cover the true standard simultaneously at every outcome and time, applying that test gives the literal loss guarantee even when the reporting time or disturbance depends on the data. The certificate assumes that simultaneous coverage and does not itself supply a confidence sequence, a sampling bound, or a probability-of-coverage theorem. [Covered-time certificate and width bounds](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/1762b3ce9b4c3d11826eb724c1d15468d8ddda69666da3e06f332979288b4c31.lean#L116-L168).
+
+For a finite probability mixture of coherent reports q_i with weights w_i, let m=Σ_i w_i q_i and W=Σ_i w_i(q_i−m)². With the disturbance ε fixed as above, either truth-state excess satisfies Σ_i w_i E_j(a,q_i)=E_j(a,m)+W. Thus the interval minimax value V just defined satisfies V+W≤max{Σ_i w_i E_0(l,q_i),Σ_i w_i E_1(u,q_i)}. Finite randomisation cannot improve this minimax expected excess and pays its full variance; this says nothing about the success probability of an individual realised report. [N250-139]
+
+A distinct exact regret source retains the one-variance decomposition but states its final lower bound with twice the variance. The displayed proof adds the mean-report bound only once after the decomposition. That source-local strengthening is not established by the written argument and is not substituted for V+W above; its axiom-print commands are not received verification outputs. [Baseline141-69](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/research/t20-v6-20261012/sources/0e049d60882d1d09263625806cea69649ff127e71797d91c3eee637991fe2e9d/RandomisedRepairRegret.lean)
+
+
 #### Sharpness and the finite-class contrast
 
 **Proposition 26 — Exact atomic success.** Draw one guess *g* from a probability law *ρ* supported on [0,1], never query, leave the guess unchanged, and issue $`q_t=1/2+g\epsilon_t`$. In the actual evaluator (36), for each true $`\alpha\in[0,1]`$,
@@ -4340,6 +4426,9 @@ C_\alpha\leq1+\frac{56}{\alpha(1-\alpha)\varepsilon^2}
 ```
 
 Tonelli justifies summing these probabilities without independence of the errors across reporting times. Finite expectation implies almost-sure eventual weak repair, and the same radius argument gives eventual strict repair in the interior. For this clock the exact endpoint weak costs are $`(C_0,C_1)=(0,1)`$. The displayed interior bound is uniform on every compact interval $`[\eta,1-\eta]`$ with η>0. This is the retained empirical learner and sharper ordinary bound, not a new learner inferred from a simulation. [48–49]
+
+At either endpoint, the actual receipt law is almost surely constant, so every empirical report after at least one receipt is the unique weakly correct endpoint report and contributes zero expected failures. The endpoint-one cost1 above comes entirely from the pre-receipt initial report q0=1/2; a clock beginning after the first receipt has endpoint costs(0,0). [N250-143]
+
 
 The divergence of the bound near an endpoint is not merely an artifact of that learner. Suppose first that an arbitrary common policy eventually repairs α=0 almost surely. On the counterfactual all-zero history let
 
@@ -4576,7 +4665,69 @@ Consequently the same optimal cumulative orders, finite-budget iff a,b>1, determ
 
 Both density envelopes matter. A pure endpoint prior has zero empirical post-acquisition cost and cannot be assigned arbitrary positive lower tail powers. Lower comparability alone cannot control the upper rate: adding a uniform component to a prior with faster endpoint powers preserves those weaker lower bounds but introduces the critical uniform-prior risk. A full-prior inverse-moment slogan is also false in the presence of atoms. For $`\mu=(1/2)\delta_0+(1/2)\mathrm{Beta}(2,2)`$, the interior integral of $`1/[\alpha(1-\alpha)]`$ is 3, while its full extended integral is infinite. The endpoint atom has zero actual post-acquisition error cost. It must not be inserted into a zero-variance upper formula as if the formula's infinite value were an error count. [54]
 
+The punctured inverse moment also has an exact counting interpretation that needs no endpoint density. Let ν be the restriction of any Borel measure μ to (0,1), and define
+
+\[
+F_0(n)=\nu\{x:x\leq1/(n+1)\},\qquad
+F_1(n)=\nu\{x:1-x\leq1/(n+1)\}.
+\]
+
+For each interior x, the numbers of qualifying indices n≥0 are respectively ⌊1/x⌋ and ⌊1/(1−x)⌋. Nonnegative Tonelli therefore gives
+
+\[
+\sum_{n\geq0}\bigl(F_0(n)+F_1(n)\bigr)
+=\int_{(0,1)}\left(\lfloor1/x\rfloor+\lfloor1/(1-x)\rfloor\right)\,d\mu(x).
+\]
+
+For 0<d≤1, ⌊1/d⌋≤1/d≤2⌊1/d⌋. Together with 1/[x(1−x)]=1/x+1/(1−x), this proves that the displayed series is finite exactly when the punctured inverse-variance moment is finite. No measure-finiteness assumption is needed for this full-series equivalence. If μ is finite, the same finiteness equivalence holds after any deterministic finite index cutoff. Indeed, starting at N replaces each floor by its nonnegative integer difference from N; equivalently the removed finite sum has finite measure. For n≥1 the two terms are exactly μ((0,1/(n+1)]) and μ([1−1/(n+1),1)), retaining atoms at the cutoff while excluding endpoint atoms. This counts mass in punctured endpoint neighborhoods; it does not by itself identify a policy's error probability or make the inverse moment a necessary condition for every prior. The separate experiment and lower-growth assumptions remain essential, as the sparse-prior example in §9.10 shows. [C250-023]
+
+[C250-023]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/e2a61649f0ca59b94c3dd8ae0e578f49ab9b40ef111592036b4691479d7842d3.lean
+
+
 The density theorem does not cover uncontrolled singular endpoint tails, holes in the positive lower envelope, unbounded slowly varying factors, changing α, informative extra feedback or control-dependent sampling. The Beta continuous-CDF maximizer argument is not imported across atoms; no exact Bayes selector or computable argmax is asserted for this larger class. An α-revealing seed would permit the exact report qα everywhere and defeat the universal lower bound, which is why the independent-information contract is substantive. These statistical guarantees authenticate neither a scoring source nor any normative or metaphysical authority.
+
+A separate lower bound needs endpoint growth rather than a density. For the same fixed-disturbance experiment, write G₀(x)=μ((0,x]) and G₁(x)=μ([1−x,1)), excluding endpoint atoms. Fix a deterministic n≥1, 0<x≤1/16 and nx≤1. Suppose κ₀,κ₁>0 and, for i=0,1,
+
+\[
+G_i(2x)\ge(1+\kappa_i)G_i(x),\qquad
+G_i(8x)\ge(1+\kappa_i)G_i(4x).
+\]
+
+Then every common measurable reporting policy with the fixed independent seed law of this experiment has nth-report failure probability
+
+\[
+p_n(\pi)\ge e^{-16}\bigl(\kappa_0G_0(x)+\kappa_1G_1(x)\bigr).
+\]
+
+Here is the missing-mass argument. The accepted parameter interval has left multiplicative width at most 5/3 and reflected right width at most 9/5, proved separately. Thus one real report cannot be accepted in both (x,2x] and (4x,8x], or in both reflected annuli [1−2x,1−x) and [1−8x,1−4x). At least one whole annulus on each side is missed. The two growth inequalities make each relevant annulus have mass at least κᵢGᵢ(x). On the left annuli, α≤8x≤1/2 and nα≤8 imply (1−α)ⁿ≥e⁻¹⁶; reflection gives αⁿ≥e⁻¹⁶ on the right. These are unnormalized failure-and-prefix masses. Fixing the seed fixes the reports after the zero and one words, so integrating the pointwise inequalities preserves them. The two words are disjoint for n≥1, permitting addition. [C250-013]
+
+This is a lower bound at the stated scales, not a density-free upper rate or a finite-budget equivalence for arbitrary priors. It retains deterministic acquisition and the complete independent-information contract. Endpoint atoms are excluded from G₀,G₁; they need not be removed from μ. The gaps in §9.10's sparse prior can violate the growth premise, so an infinite punctured inverse moment alone still does not imply this policy lower bound.
+
+The local growth bound also gives a necessary condition for finite total risk. Write G₀(x)=μ((0,x]) and G₁(x)=μ([1−x,1)) for the preceding punctured endpoint masses. Suppose μ is finite and some x₀>0 and γ>0 satisfy
+
+\[
+G_i(2x)\ge(1+\gamma)G_i(x)
+\quad(i=0,1;\ 0<x\le x_0).
+\]
+
+Choose N≥15 with 4/(N+1)≤x₀. For every n≥N+1, apply the annular bound at x=1/n, using growth at x and 4x. Under the same fixed-parameter, independent-information reporting experiment,
+
+\[
+p_n(\pi)\ge e^{-16}\gamma
+\bigl(G_0(1/n)+G_1(1/n)\bigr).
+\]
+
+Consequently, finite summed report-failure risk forces these endpoint masses to have a summable tail. The earlier count/moment identity, with F_i(n)=G_i(1/(n+1)) for n≥1, and finite μ to remove the initial cutoff, then gives
+
+\[
+\int_{(0,1)}\frac{d\mu(\alpha)}{\alpha(1-\alpha)}<\infty.
+\]
+
+Separate positive endpoint growth factors may be replaced by their minimum. This is a density-free necessary condition, not an upper risk bound or an equivalence for arbitrary priors. Endpoint atoms remain excluded from the moment, and sparse endpoint mass that fails the growth hypothesis remains outside this implication. [C250-047]
+
+[C250-013]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/66dce1aa30b7f75987a9e145e3fc82051c97f08082fedaa5938ac49cf8759ff6.lean
+[C250-047]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/c79a4d9c42440f1ccb6b92d48f650c657fe164baf82610520893b48d9b64ebab.lean
+
 
 
 ### 9.9 Common observations, acquired-history laws and physical action time
@@ -4613,6 +4764,13 @@ K\cap\bigcap_\theta G_\theta\ne\varnothing.
 
 This establishes compatible target values, not that the controller ever visits their total intersection. For $`K=[0,1]`$, $`G_n=[0,1/(n+1)]`$ and $`X_t=1/(t+1)`$, every individual target eventually contains the sequence, but the total intersection is $`\{0\}`$ and the sequence never reaches it. Without finite actions or a compact confinement condition, even compatibility can fail: on $`A=\mathbb N`$, take $`G_n=\{a:a\ge n\}`$ and $`X_t=t`$.
 
+The compact-intersection argument has a more general topological form: it needs neither a metric nor a countable model family, provided the stated almost-everywhere eventual-membership hypotheses hold and the targets are closed in the ambient topology. One compact target already supplies confinement, since its eventual membership transfers to the same nonzero lower reference. For continuous real-valued scores, each target defined by all inequalities loss(θ,j,a)≤baseline(θ,j) is closed, even for infinitely many standards j. The result therefore yields a common weakly nonworsening point in a compact confinement set. In a finite-dimensional coordinate space, the convex hull of finitely many truth vectors is compact; with almost-everywhere eventual confinement to that hull, the same lower-reference condition and eventual simultaneous success for its finitely many truth-vector standards, the finite weighted-quadratic specialization gives a point in the hull satisfying every stated nonworsening inequality. Positivity of the weights is not required for continuity and closedness, and normative legitimacy remains separate. No controller or measurable choice rule is thereby constructed. [BRIDGE18-068]
+
+Closedness is essential even with genuine compact confinement and identical nonzero probability laws. Take X_n=1/(n+1), C=[0,1], and G_θ=(0,1/(θ+1)]. Every fixed target eventually contains the sequence, but their total intersection is empty. The excluded limit point 0 is exactly what invalidates the compact closed-set argument. [BRIDGE18-067]
+
+[BRIDGE18-068]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/874ceabb1267306eaff41f28fa4e2450c47d6bc10cdde2e7cee4ce5819dd1b10.lean#L9-L114
+[BRIDGE18-067]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/a6fdb6988be16dd35cca26cc8573d98c0b5f4828ef340446cc315d9d613c7d58.lean#L9-L51
+
 The lower-reference assumption concerns complete paths. Consistent references on every finite observation prefix do not suffice. Compare the all-one Dirac sequence with independent fair bits. On each finite prefix, the all-one Dirac law is a nonzero common lower reference, but the complete all-one path has probability zero under the fair law. The controller that outputs 0 until the first observed zero and 1 thereafter succeeds eventually at $`\{0\}`$ in the Dirac model and at $`\{1\}`$ in the fair model. Thus prefix domination must be joined to an appropriate continuation argument before it can support a tail impossibility. This is precisely the role of the killed continuations in Theorem 22 and in the controlled-restoration necessity proof.
 
 #### Recurrence gives a positive event, not an observable last exit
@@ -4637,6 +4795,8 @@ F(U,N)=E_U\cap\{\forall t\ge N:\ X_t\in U\}.
 Some deterministic $`N`$ therefore gives a positive-probability event $`F(U,N)`$. Under eventual target success, a positive such cell can be chosen with $`U\subseteq G_\theta`$. [recurrence-review], [recurrence-scope]
 
 The exact recurrent-set condition is needed when concluding that a rival must accept every member of $`U`$. An arbitrary superset may contain actions that are never used. Strict positivity of the chosen cell is also needed for transfer; mere nonnegative probability says nothing. Finiteness of $`A`$ cannot be omitted from this selection: the sequence $`X_t=t`$ uses every natural-number action only once. Finally, $`N`$ is selected from a countable cover after establishing positive probability. It is neither a policy-observable final probe nor a stopping time, and no deterministic bound on all last errors follows.
+
+The exact archived RecurrentSupport body must be distinguished from this mathematical intersection: its tailEvent definition contains only eventual membership in U, but its later union equality and proof steps treat that event as also asserting exact recurrent support. On a one-point space with the constant-false Boolean stream and U={false,true}, every plain tail event is the whole space and the exact-U event is empty. This source-specific mismatch does not alter the displayed F(U,N) definition above. The singleton Dirac-law and delayed-tail controls in RecurrenceControls do not repair the general definition. These are independently reviewed source-inspection findings, not compiler output or a new accepted formal proof. [baseline141 source 3](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/00d3dd907810ac19318d4104620143cfc0c570d639c3f902ffd4dada3eedff69/RecurrentSupport.lean) [baseline141 source 8](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/01424ad1211d5f0b6bcda17fa67ea01b177c1bd6e0c93ce42eab12025c49ef7e/RecurrenceControls.lean)
 
 The substantive next step is an actual-law comparison. In the finite full-support model, a rival agreeing with the source on every action in $`U`$ has equivalent seed-and-prefix laws at each fixed $`N`$ and the same continuation after the process is killed on leaving $`U`$. That transfers positive mass of $`F(U,N)`$. The recurrence argument supplies the event; it does not supply those law identities. The controlled-restoration theorem consequently has one common policy before its universal model quantifier. Model-specific successful policies cannot discharge it. [necessity-proof], [micro-equivalence-review]
 
@@ -4898,6 +5058,77 @@ The identity for $`1-\rho`$ as half the sum of two squared square-root differenc
 ```
 
 Sum over adjacent pairs and divide by $`Z`$. This proof uses the weights proportional to the support locations and the attained classical Bayes selector. It neither supplies an algorithm for exact infinite maximization nor licenses adjacent-minimum equality for arbitrary weights. [sparse-crossover], [sparse-nonconvex-review]
+
+#### Atomic power weights and the actual expected count
+
+The atomic case also admits an exact extension to power weights. Keep $`0<\varepsilon\leq1/4`$, $`0<a_i\leq1/2`$ and $`a_{i+1}\leq a_i/2`$, and fix any real $`p>0`$. Put
+
+```math
+Z_p=\sum_{i\geq0}a_i^p,
+\qquad
+\mu_p=Z_p^{-1}\sum_{i\geq0}a_i^p\delta_{a_i},
+\qquad
+S_p=\sum_{i\geq0}\frac{a_{i+1}^p}{a_i}
+                 \log\frac{a_i}{a_{i+1}}.
+```
+
+Half-separation makes $`Z_p`$ finite and positive. For adjacent support points define the unnormalized word overlap
+
+```math
+B_{i,p}(n)=\sum_{k=0}^n\binom nk
+\min\left\{
+a_i^p a_i^k(1-a_i)^{n-k},
+a_{i+1}^p a_{i+1}^k(1-a_{i+1})^{n-k}
+\right\}.
+```
+
+On the positive report clock, the optimal actual expected failure count is attained and equals
+
+```math
+C_\infty(\mu_p)=\frac1{Z_p}\sum_{n\geq1}\sum_{i\geq0}B_{i,p}(n).
+```
+
+The infimum ranges over all measurable real-report policies using the full ordered history and an independent seed with any fixed probability law. One deterministic policy attains it. At a word with $`k`$ ones, the scores $`a_i^p a_i^k(1-a_i)^{n-k}`$ form a positive summable sequence with an attained mode. Concavity of $`(p+k)\log x+(n-k)\log(1-x)`$ gives the two monotone sides needed for adjacent-minimum equality. A report can be accepted at at most one support point; reporting $`1/2+\varepsilon a_i`$ at a modal point attains the conditional minimum. Choosing such a mode at each finite word gives one coherent deterministic policy for all times. This is a classical existence argument; it supplies no effective algorithm for exact maximization over the infinite support.
+
+The overlap lifetime has the explicit bounds
+
+```math
+\frac{p e^{-p}}{4Z_p}S_p
+\ \leq\ C_\infty(\mu_p)
+\ \leq\ \frac{128(p+1)}{Z_p}S_p.
+```
+
+For the lower estimate, fix adjacent points $`u=a_i`$, $`v=a_{i+1}`$, put $`L=\log(u/v)`$, and let $`X=pL/(2u)`$. For each integer $`0\leq n\leq\lfloor X\rfloor`$, the inequalities $`\log(1-x)\geq-2x`$ for $`0\leq x\leq1/2`$ and $`v\log(u/v)\leq u`$ imply
+
+```math
+u^p(1-u)^n\geq v^p,
+\qquad
+v^p(1-v)^n\geq v^p e^{-p}.
+```
+
+The all-zero-word overlap is therefore at least $`v^p e^{-p}`$. Shifting from $`n`$ to $`n+1`$ loses at most a factor of two, because $`1-u,1-v\geq1/2`$. There are $`\lfloor X\rfloor+1\geq X`$ starting indices, so their genuine positive-time contributions total at least $`(p e^{-p}/4)(v^p/u)L`$.
+
+For the upper estimate set
+
+```math
+s=\frac1{4(p+1)L},\qquad
+A_s=u^s v^{1-s}+(1-u)^s(1-v)^{1-s}.
+```
+
+Since $`L\geq\log2\geq1/2`$, we have $`0<s\leq1/2`$. The square-root affinity deficit is $`1-A_{1/2}\geq u/32`$; convexity in $`s`$ gives $`1-A_s\geq su/16`$. Applying $`\min(A,B)\leq A^sB^{1-s}`$ to each weighted word likelihood and summing by the binomial theorem gives
+
+```math
+B_{i,p}(n)\leq v^p
+ \exp\!\left(\frac{p}{4(p+1)}\right)A_s^n
+ \leq2v^p A_s^n.
+```
+
+Thus $`\sum_{n\geq1}B_{i,p}(n)\leq2v^p/(1-A_s)\leq128(p+1)(v^p/u)L`$. Summing both bounds over adjacent pairs and dividing by $`Z_p`$ proves the displayed comparison using only nonnegative sums, including when they diverge.
+
+Thus there exists an allowed policy with finite expected lifetime count exactly when $`S_p`$ is finite. If $`S_p`$ diverges, every allowed policy has infinite expected count. At $`p=1`$ the upper bound is the preceding $`256S/Z`$ bound, and the atomic lower bound becomes $`S/(4eZ)`$.
+
+The exact proof source constructs the Bernoulli product stream conditional on one fixed latent index, takes its product with the independent seed law, derives finite-word cylinder masses and report measurability, and proves the expectation identity by nonnegative integration. The accompanying contract probe expands the literal law and count, verifies that only acquired receipt positions enter a report, and shows that clipping reports to $`[0,1]`$ preserves the finiteness criterion. The set of one positions retains the ordered word; it is not replaced by its cardinality for competing policies. The ordinary observation transport below relates this direct Bernoulli-product representation to the uniform-innovation interface. An optional time-zero report adds at most one and is not included in the displayed exact identity. This power-weight theorem concerns strictly positive atomic support; cluster spread and added endpoint atoms require their separate arguments. [ProcessExpectation](../experiments/orthemology-v5-continuations/source-store/f428c83592fbda3cb3297f4fcebd0e067e4e8bfbfecb646ce3a059947479da4c.lean), [ProcessContractProbe](../experiments/orthemology-v5-continuations/source-store/027ca9df3825b18c022bf5a6d4cfddcd44677598f78adc16d212a49796fadbf6.lean).
+
 
 #### Strict width, the critical width, and the shape of a component
 
@@ -5583,6 +5814,8 @@ To make the inferential target explicit, write E_i for fixed eligibility, R_i fo
 
 For a known joint law Q, use the inclusive tail r_Q(t)=Q{T≥t} and p_Q=r_Q(T_observed). Ordering the finitely many statistic values shows Q{p_Q≤α}≤α. Ties remain in the tail. For a declared family 𝒬 containing the actual conditional assignment law, p_*=sup_{Q∈𝒬}r_Q(T_observed) is also valid, because p_*≥p_Q pointwise for that actual law. A certified upper bound U(t)≥sup_Q r_Q(t), capped at one, preserves validity. A fitted or simulated candidate Q supplies only a lower bound on the supremum and cannot justify robust rejection. Rejection challenges the sharp null jointly with the stated design premises, not an unspecified physical mechanism in isolation.
 
+An exact finite-tail source preserves a contrasting boundary error: its upper-tail definition uses a strict comparison, while its purported superuniformity proof bounds by an inclusive tail. On a one-point unit-mass space the strict tail is zero, so the asserted bound fails at threshold zero. Its lower-tail definition retains ties, and its final inversion bound explicitly requires two parameter-to-tail implications. Reading those scripts supplies neither a repaired upper-tail theorem nor a new execution result. [Baseline141-80](https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/research/t20-v6-20261012/sources/10780531ee594695d0d79701d7c452e5feee3ec074032251cdcbc78394d158c3/FiniteTailCoverage.lean)
+
 The family matters decisively. Suppose Ω is closed under global complementation and the only condition is that each assignment coordinate is marginally fair. For any observed sign array A, the distribution placing probability one-half on A and one-half on −A meets those marginals and has constant |Σ_i a_i A_i| at the observed threshold (here the coefficients are held fixed). Thus the robust absolute-linear-statistic p-value is one. Even requiring strictly positive sequential conditional probabilities without a quantitative lower bound leaves supremum one on the full cube: mix that two-point law with an arbitrarily small uniform component. The supremum need not be attained by a strictly positive law. This is not a claim that every statistic is useless under fair marginals; for the corresponding one-sided linear statistic, this argument gives a lower bound one-half at a positive observed value, and one at a nonpositive value. Nor does the two-point argument apply to an arbitrary support lacking the complement assignment.
 
 A known joint law, independent coordinate biases, a common unknown Bernoulli bias, rectangular sequential intervals, known blocking and permutation symmetry are different assumptions. They cannot be substituted for one another on the strength of the words “random placement.” One realized assignment array does not establish all counterfactual-prefix propensities.
@@ -5806,6 +6039,30 @@ The nonconvexity review separately reports a terminal actual-process Lean noncon
 The actual-process comparison has a separate history. The paired review establishes the real-prior pushforward, support and moment identities, and the literal predicate relation; its initial before-and-after policy representations still differed [sparse-paired-review]. The later transport review discharges the full stream-law, history-encoding, policy, indicator and nonnegative-cost transport [sparse-transport-review]. The recorded selections contain eight paired and thirteen transport footprints, 37 expanded declarations and seven independent probes. The source identities cover 20 paired and 21 transport dependency files or objects; the independent rational grid records 12,985 assertions and the author's grid 34,973. The portable replay route described in the accompanying README has a full 22-source/137-path option, but the reported actual verification was incremental. Neither this exposition nor that incremental report claims a fresh execution of that full option or a fresh upstream bootstrap [sparse-transport-readme]. The reviewer had contributed to the earlier sparse-prior proof, but did not author the new bridge and transport implementations; that supports the stated implementation/contract review, not a claim of independent discovery or priority.
 
 The observation-loss report records four fresh modules and eight selected standard-only axiom footprints. Its comparison with Hutter is an interface analysis, not a new proof or re-execution of the cited prediction theorems. Across these historical formal reports, the listed standard dependencies are `propext`, `Classical.choice` and `Quot.sound`. Their reported kernel and dependency results remain attached to the exact original bodies and environments. Reading them here is not a new kernel run, receipt of every historical raw output, or certification of the whole new prose.
+
+The power-weighted atomic statement above is supported by complete reading of the exact `ProcessExpectation` and `ProcessContractProbe` bodies. Their later sections contain the countable Bayes argument, actual-process expectation identity, all-policy lower bound and attained-policy finiteness criterion, despite retained earlier comments describing finite-only or unfinished stages. That juxtaposition is a source chronology and prose-scope issue; it is not evidence that the later argument is absent. The reading does not establish a fresh Lean or kernel run, a new axiom audit, or an effective infinite-support selector. The direct Bernoulli-process proof also remains distinct from the separately described uniform-innovation and policy-transport implementation. No historical build, test or dependency count above is enlarged by this reading.
+
+[N250-117]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/53460179667b4cbd53f86b780ae15d4cdefbaa7d3b8896dce05c2e8b02ce1e52.lean
+[N250-118]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/85aa05cb15f73c3ef6441c00a5a8e270120fd5e877fc7a88e4445cce1089cb24.lean
+[N250-119]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/f48619991474ed415fe560dabeef1e47b90856de0c4eed3b4201bef4ca801c6a.lean
+[N250-120]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/f7c79b0cab33c9888eba0f0e29edbfdcb50d1f2cf11bd95d6e0256ae986e08c0.lean
+[N250-121]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/e9efe25a7e4bc22b9e7893f412a6107a9d1757d557e3a1ca44d6d752c95c1659.lean
+[N250-123]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/ce7c17727753d78a199ba2ecda1e2a0b1a81f6c50852785ff6cf45f9e727d9fe.lean
+[N250-125]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/c19e8558e4ecc76bea8179ed299e0aae3cf7475a07f044134a86eadf259daec3.lean
+[N250-129]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/fc8e020c0aafc12028cb50598457f1550a7c3bbf4f41c7f8d3453ca87d62f232.lean
+[N250-130]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/79a5b2d5533226c48b2a885eb720a35046436343800e272615a3a661680a762d.lean
+[N250-131]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/27726774f9c65cd5827f9ff1a7f9e840e6d0332bb1ab10b63afd10d26244ae9d.lean
+[N250-132]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/5cfdcb3bda7d8d7d55eea2b9326425f9b260f0b4d7c7c9019448817bd8a76f23.lean
+[N250-133]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/9d069a77d114d1e80f3f7b15db5d54fe03175d6e541109937de2c7a958082922.lean
+[N250-134]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/eb18e890efec80015ba7bbf459af9fd56793e093438c24732b76e4f259a3b37b.lean
+[N250-138]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/d0bfff3a85c8f035689d070bea224f9aa589ce55c49281d1ba92a16dab8c8e24.lean
+[N250-139]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/d2c72c3060eda128041de85af4d88b285eb8c65946ef001a47c64b6a36f950d5.lean
+[N250-140]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/a0c27a8fae15d29478f02ca1e2b6942a9bc2e9a753f8d8e03550a363273c0cae.lean
+[N250-141]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/aa8b2c0127df7638c071a3db1094aced7f9398f5165760b5376ef6430519fd57.lean
+[N250-143]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/767c03eb45ca269af3e4fd66df22061620c5f6a17daf861711cdbfab5c660d1f.lean
+[N250-216]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/e5ede6ba73201e6e3f332d10af259185596644d7e01f90f2544800fe6f685c2b.lean
+[N250-219]: https://github.com/theislampill/orthemology/blob/ffca0abdf25079ef7639fe19776a21db60272fc4/experiments/orthemology-v5-continuations/source-store/bfce50158f65cd757948eb2db6e9e7b885bd9c18ce8d2db3e8c4e481777d2828.lean
+
 
 The rational implementation records preserve a different kind of evidence. The initial contract and independent candidate-one review distinguish the correct rational decision formulas from the missing uncapped reporting family, the in-domain decimal-parser failure and a missed mutation [sparse-rational-contract], [sparse-candidate1-review]. The later scope clarification and README introduce the uncapped typed core while retaining the guarded interfaces [sparse-unbounded-scope], [sparse-unbounded-readme]. The effective theorem supplies the rational rank bound, finite search and cost proof [sparse-effective-theorem]. The parser correction identifies the restrictive host guard as a transport failure on an otherwise admitted input [sparse-parser-correction]. The final exact-version review then assesses the repaired interface and added zero-width coverage [sparse-rational-final-review], [sparse-rational-review-readme]. None of those later results erases the earlier partial verdict.
 
