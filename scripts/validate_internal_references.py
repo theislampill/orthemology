@@ -481,6 +481,9 @@ def _new250_reference(src, cited):
     return True
 
 
+from resolve_t20_v6_source import NEXT250
+
+
 def _resolves(src, cited):
     new250 = _new250_reference(src, cited)
     if new250 is not None:
@@ -530,6 +533,9 @@ def _resolves(src, cited):
     historical = _historical_projection_reference(src, cited)
     if historical is not None:
         return historical
+    next250 = NEXT250.reference_candidate(ROOT, cited)
+    if next250 is not None:
+        return next250
     if os.path.exists(os.path.join(ROOT, cited)):
         return True
     if cited.startswith(CONTINUATION_COPY_ROOT) and cited.endswith('.lean'):
@@ -540,6 +546,10 @@ def _resolves(src, cited):
             return False
     directory = os.path.dirname(src)
     while True:
+        raw_candidate = os.path.join(directory, cited) if directory else cited
+        next250 = NEXT250.reference_candidate(ROOT, raw_candidate)
+        if next250 is not None:
+            return next250
         if os.path.exists(os.path.normpath(os.path.join(ROOT, directory, cited))):
             return True
         if not directory:

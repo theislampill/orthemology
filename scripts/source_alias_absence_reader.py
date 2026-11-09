@@ -17,13 +17,13 @@ import subprocess
 
 import sys
 
-RESOLVER_SHA256 = '3522530292762acb9f314dd0b4ed492f9ed66f3d51a71554069e5199af11dac7'
+RESOLVER_SHA256 = 'b548e78e4d614fa72a0b15d13c2e25fe4b2b4ac955ace4aedd2e2773f9cfba51'
 
 BASELINE = "0784acddd4770f1190f758f264ba52b2b110bd27"
 
-OWNER_MAP_SHA256 = '9253de4293e49c71bd1bdb2e4fb660bf6d439cc4774e06edeb28d25a0e155947'
+OWNER_MAP_SHA256 = 'a564fdf2a5ece743ced2bfe48e37a577913046c1ab106b148bcfffc97fd3f1d4'
 
-READER_SHA256 = '4eb05251d3171e26a96a655fa97bd373fe800ff5296aed3552027c4551f191b8'
+READER_SHA256 = 'b40ef37da0b7044df7e3b639153fb85b050eedf2c7e9acd5eeafa0e4a2f61139'
 
 CENSUS_SHA256 = '65980c4d2dd19936212a03ed650d0cb69cf4147e72098607fac9dbce39eb8461'
 
@@ -123,7 +123,7 @@ class HeldReaderDiffBoundary:
                     if not stat.S_ISDIR(node.lstat().st_mode):
                         raise RuntimeError("Held path has a nonordinary ancestor")
                 info = (Path(link_root) / path).lstat()
-                if (not stat.S_ISREG(info.st_mode) or stat.S_IMODE(info.st_mode) != 0o644
+                if (not stat.S_ISREG(info.st_mode) or stat.S_IMODE(info.st_mode) not in (0o400, 0o644)
                         or info.st_size != row["bytes"] or info.st_nlink != len(links)):
                     raise RuntimeError("Held path metadata or hardlink count changed")
                 current = {"device": info.st_dev, "inode": info.st_ino, "mode": stat.S_IMODE(info.st_mode),

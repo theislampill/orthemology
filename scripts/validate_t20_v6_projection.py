@@ -142,6 +142,9 @@ def origin_reference_text(src, text, root):
     except (OSError, KeyError, ValueError, TypeError):
         return text
 
+from resolve_t20_v6_source import NEXT250, NEXT250_PATHS
+
+
 def check_object(root, row):
     errors = []
     identity = row.get('source_sha256', '')
@@ -179,7 +182,9 @@ def check_object(root, row):
                 raise ValueError('invalid pinned historical reuse')
             body = subprocess.check_output(['git', 'show', BASE + ':' + relative.as_posix()], cwd=root)
         else:
-            body = path.read_bytes()
+            NEXT250.reject_alias(row['repository_path'])
+            body = (NEXT250.public_bytes(root, row) if row['repository_path'] in NEXT250.paths
+                    else path.read_bytes())
     except (KeyError, OSError, ValueError, subprocess.CalledProcessError):
         return errors + ['missing or unsafe public source']
     if sha256(body) != row.get('public_sha256') or len(body) != row.get('public_bytes'):
@@ -426,6 +431,11 @@ def check_preserved_roots(root, objects):
 
 def check_public_inventory(root, rows, controls):
     """Keep every manifest row and authenticate each finite historical absence."""
+    try:
+        NEXT250.validate_rows(rows)
+        next_absent = NEXT250.snapshot(root)[1]
+    except (ValueError, OSError, KeyError):
+        return ['NEXT250 public inventory binding differs']
     declared = {r['repository_path'] for r in rows if r['disposition'] in ('ADD_EXACT', 'PROJECT')}
     expected = declared | set(controls['files']) | {MANIFEST, PREFIX + '/PUBLIC_CONTROLS.json'}
     actual = {p.relative_to(root).as_posix() for p in (root / PREFIX).rglob('*') if p.is_file()}
@@ -451,6 +461,7 @@ def check_public_inventory(root, rows, controls):
                     expected.remove(row['repository_path'])
         except (KeyError, OSError, ValueError):
             return ['public inventory has an unqualified binding-record absence']
+    expected -= next_absent
     if actual != expected:
         return ['public inventory differs: ' + str(sorted(actual ^ expected)[:10])]
     return []

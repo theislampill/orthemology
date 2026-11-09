@@ -30,3 +30,4 @@ experiments/orthemology-v5-successors/source-store/** -text
 
 # Preserve the original CRLF bytes of this source projection.
 research/t20-live-20261009/checkpoints/CP19/independent-five-front-supplement/extracted/T20_Independent_Five_Front_Supplement/SOURCE_LEDGER.csv -text
+docs/provenance/r0002-next250-receiver/RECEIVER.bin -diff -text

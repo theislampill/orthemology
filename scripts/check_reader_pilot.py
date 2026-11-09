@@ -7,6 +7,8 @@ a competing scientific registry. This checker is read-only and does not fetch
 URLs, execute source payloads, extract theorems, or infer semantic acceptance.
 """
 
+from resolve_t20_v6_source import NEXT250
+
 from resolve_t20_v6_source import (NEW250_PATHS, new250_absences, new250_provider_additions, new250_reader_sources)
 
 from resolve_t20_v6_source import (DIGEST_RECORD_PATHS, digest_record_absences,
@@ -1240,7 +1242,16 @@ def reviewed_sourcing_ledger_modifications(repo):
 # The independently reviewed governed-path owner and genuinely new live test below
 # use the same indexed-edition guard, with authenticated absence only for that test.
 # This temporary migration contract neither adopts science nor admits arbitrary edits.
-REVIEWED_AUTHORITY_EDITS = {'scripts/validate_candidate_state.py': ('scripts/validate_candidate_state.py',
+REVIEWED_AUTHORITY_EDITS = {
+ '.gitattributes': ('.gitattributes',
+                   '0784acddd4770f1190f758f264ba52b2b110bd27',
+                   ('92d2f4dd081139c9bcd97759b7920e86ee6b5b38',
+                    '70e8d3d8c90547f026df30f42870b60bf17c48bd642a9d7f336cb109e658dc70',
+                    1871),
+                   ('95a8280b070ac0babbefb477f25fa7f1f5ed3c6d',
+                    '09180182f40a449c28b2b3e5a4b1f1cbe8f48f13963ec6d2de402d660a1dc209',
+                    1935)),
+ 'scripts/validate_candidate_state.py': ('scripts/validate_candidate_state.py',
                                          'c47eeb419ea3cdcfbbc0191ded6ddd7223b353ce',
                                          ('f978626577743edc5f18a90edcc9661b3935f91c',
                                           '8808f2d7278885021b2fb812b5149dd157e9e53fcae49e24b3bea9353dc68215',
@@ -2277,6 +2288,11 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
     editable = REFACTOR_EDIT_PATHS | set(admitted_paths)
     duplicate_paths = {}
     try:
+        duplicate_paths['next250'] = NEXT250.snapshot(repo)[1]
+    except (ValueError, OSError) as exc:
+        errors.append('corpus-currentness: NEXT250 evidence: ' + str(exc))
+        duplicate_paths['next250'] = set()
+    try:
         duplicate_paths['new250'] = new250_absences(repo) if NEW250_PATHS else set()
         old_classes = (CHECKPOINT_COPY_PATHS, CHECKPOINT_RECORD_COPY_PATHS, CHECKPOINT_PACKAGE_COPY_PATHS,
                        FORMAL_COPY_PATHS, FORMAL_PROVIDER_PATHS, CHECKPOINT_CODE_COPY_PATHS,
@@ -2578,6 +2594,13 @@ def corpus_currentness_context(repo, indexed, owners, cross):
         additions.update(packed_additions)
     except (ValueError, OSError) as exc:
         fail('new250-provider', str(exc))
+    try:
+        next_additions = NEXT250.snapshot(repo)[2]
+        if set(next_additions).intersection(additions) or set(next_additions).intersection(indexed):
+            raise ValueError('NEXT250 provider overlaps baseline or authored additions')
+        additions.update(next_additions)
+    except (ValueError, OSError) as exc:
+        fail('next250-provider', str(exc))
     historical, historical_errors = check_historical_sources(repo, indexed, owners, cross, additions)
     errors.extend(historical_errors)
     navigation = {}
@@ -2748,6 +2771,15 @@ def check(repo, owners, cross):
             fail("owner", str(path) + ": " + str(exc))
 
     sources = cross.get("sources", {})
+    def physical_reader_source(key, source):
+        nonlocal next250_source
+        path = source['path']
+        NEXT250.reject_alias(path)
+        if path in NEXT250.paths:
+            body = NEXT250.reader_source(repo, key, source)
+            next250_source = True
+            return body
+        return safe_path(repo, path).read_bytes()
     try:
         new250_sources = new250_reader_sources(repo, sources)
     except (ValueError, TypeError, OSError) as exc:
@@ -2767,6 +2799,7 @@ def check(repo, owners, cross):
     for key, source in sources.items():
         try:
             path = source["path"]
+            next250_source = False
             new250_source = path in NEW250_PATHS
             read_batch_source = path in SUCCESSOR_READ_BATCH_PATHS
             remainder_batch_source = path in SUCCESSOR_REMAINDER_BATCH_PATHS
@@ -2778,7 +2811,7 @@ def check(repo, owners, cross):
                     historical[path] if path in historical else navigation[path]
                     if path in navigation else administrative_record_bytes(repo, path)
                     if path in ADMIN_RECORD_PATHS else successor_input_bytes(repo, path)
-                    if path in SUCCESSOR_INPUT_PATHS else safe_path(repo, path).read_bytes())
+                    if path in SUCCESSOR_INPUT_PATHS else physical_reader_source(key, source))
         except (KeyError, ValueError, OSError) as exc:
             fail("unsafe-source", str(key) + ": " + str(exc))
             continue
@@ -2791,7 +2824,7 @@ def check(repo, owners, cross):
             if oid != continuation_owners.get(path, row)["git_oid"]:
                 fail("baseline-source" if path in indexed else "source-addition",
                      path + " differs from the independently bound source")
-            mode = ("100644" if new250_source or read_batch_source or remainder_batch_source or binding_record or path in historical or path in ADMIN_RECORD_PATHS or path in SUCCESSOR_INPUT_PATHS else
+            mode = ("100644" if next250_source or new250_source or read_batch_source or remainder_batch_source or binding_record or path in historical or path in ADMIN_RECORD_PATHS or path in SUCCESSOR_INPUT_PATHS else
                     "100755" if safe_path(repo, path).stat().st_mode & 0o111 else "100644")
             if mode != row["mode"]:
                 fail("source-mode", path + " changed executable mode")
