@@ -36650,19 +36650,19 @@ class FiniteSourceProvider:
             raise ValueError('NEXT250 reader key/path/hash/scope differs')
         return self.source_bytes(root, path)
 
-NEXT250_BINDING = {'catalog_identity': ['6ba0b56cd873dcf85e71232aec3ec5fce1e69bc8',
-                      '4e7fc5f848d0313251dd0034a747594bec5aed19431c720bafc64949dc736e63',
+NEXT250_BINDING = {'catalog_identity': ['70957223650309f4e9b980654efb56b16209af7e',
+                      '8605759987d50e5804a3834469d1b9bf4d55fbc43f93c2a1e156f204653b3a78',
                       1907430],
  'catalog_path': 'docs/provenance/r0002-next250-receiver/CATALOG.json',
- 'consumer_contexts': {'crosswalk': {'identity': ['6b04bc2803d75ef8df6e378e96e09474faf8e80b',
-                                                  '72a2380f49b2828200d4de827ceb406de373a81fee7e26ed1372ee0de074f54a',
-                                                  2131549],
+ 'consumer_contexts': {'crosswalk': {'identity': ['b26ec3c6fc027429d9e946241e2a4bbdba6e94cf',
+                                                  '26c56396f14357a68211edfadfe63da458e5088dead6b90c527d4a460ee0fd07',
+                                                  2137469],
                                      'origin': 'qualified_provisional',
                                      'path': 'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json',
                                      'role': 'consumer_context'},
-                       'owner_map': {'identity': ['fbb854c0c484dffb448c4d92a0ef125e2ccabb50',
-                                                  'a564fdf2a5ece743ced2bfe48e37a577913046c1ab106b148bcfffc97fd3f1d4',
-                                                  70255],
+                       'owner_map': {'identity': ['52c026fba8bd1e7c1731d0cb2e40e8f3c25acefa',
+                                                  '9c95893d4729de63e0e6682ff15a8320d1c509238c3174882e025bf10a87d164',
+                                                  70256],
                                      'origin': 'qualified_provisional',
                                      'path': 'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json',
                                      'role': 'consumer_context'},
@@ -36673,9 +36673,9 @@ NEXT250_BINDING = {'catalog_identity': ['6ba0b56cd873dcf85e71232aec3ec5fce1e69bc
                                         'path': 'research/t20-v6-20261012/CURRENT_SOURCE_GRAPH.json',
                                         'role': 'consumer_context'}},
  'consumer_logic_sha256': '23053d63903133a3fcaf25b8743b8935dd68f42c6b735735fe2cc802c9f5f2eb',
- 'fallback_reachability': {'identity': ['2837803810fed3c7f34ae56cc11158723934fbce',
-                                        '4667be90ac7c5bf6e748a6af2a70f78409670780f5e6d9ac811b24c6649b9159',
-                                        3308267],
+ 'fallback_reachability': {'identity': ['916ec28537baa7ca8a7b5bad75324f5f7ee2cb35',
+                                        '75ab9da52466cbf336db36baa06b43729ee9f97f9437046f57baf1d6006f32ad',
+                                        3600267],
                            'origin': 'reviewed_receipt',
                            'path': 'docs/provenance/r0002-next250-receiver/FALLBACK-REACHABILITY.json',
                            'role': 'fallback_reachability'},
@@ -41575,99 +41575,77 @@ NEXT250_BINDING = {'catalog_identity': ['6ba0b56cd873dcf85e71232aec3ec5fce1e69bc
                                                                             'role': 'consumer_context'},
                      'research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json': {'origin': 'published',
                                                                                   'role': 'source_universe'}},
- 'provisional_input': {'expected_document': {'independent_review_sha256': 'e7e68d1d45095fd279c81217e9bd20f8c98cab7d2a7ac3d3b59b69855e7592fc',
-                                             'permitted_changes': [{'after_entry': '100644 blob '
-                                                                                   '6b04bc2803d75ef8df6e378e96e09474faf8e80b\t'
-                                                                                   'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json\x00',
+ 'provisional_input': {'expected_document': {'independent_review_sha256': 'dd66adde613d6bc8e88a8ca85c288c857634a86f333b2bf7e11f55d35cbe4860',
+                                             'permitted_changes': [{'after_entry': '100644 blob b26ec3c6fc027429d9e946241e2a4bbdba6e94cf\tdocs/project-closure/reader-refactor-issue-35/CROSSWALK.json\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     'e49086822ee0890afe1ff69ffa51420535057f18\t'
                                                                                     'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json\x00',
                                                                     'path': 'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json'},
-                                                                   {'after_entry': '100644 blob '
-                                                                                   'fbb854c0c484dffb448c4d92a0ef125e2ccabb50\t'
-                                                                                   'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json\x00',
+                                                                   {'after_entry': '100644 blob 52c026fba8bd1e7c1731d0cb2e40e8f3c25acefa\tdocs/project-closure/reader-refactor-issue-35/OWNER-MAP.json\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     'b66252a9172042969b378b3f61d5e44aaea9a579\t'
                                                                                     'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json\x00',
                                                                     'path': 'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json'},
-                                                                   {'after_entry': '100644 blob '
-                                                                                   'f6072b8d03f5519dabd9dbd9560d0251385e2e28\t'
-                                                                                   'docs/scientific-consolidation-review.md\x00',
+                                                                   {'after_entry': '100644 blob e16b99296b64ecc941d229ec3a0a9ab69360017d\tdocs/scientific-consolidation-review.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '51f428e66251a856688ddde9dde31d6edccbf0b5\t'
                                                                                     'docs/scientific-consolidation-review.md\x00',
                                                                     'path': 'docs/scientific-consolidation-review.md'},
-                                                                   {'after_entry': '100644 blob '
-                                                                                   'bbd24a249094165ad3e2c32fe8ecdeee523c9f75\t'
-                                                                                   'foundations/received-actuality-and-intrinsic-necessity.md\x00',
+                                                                   {'after_entry': '100644 blob 5904cae2c6b7b7425a13701f2413a87567c3287d\tfoundations/received-actuality-and-intrinsic-necessity.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     'c6ce79cbcda9cdbea001c0b2ee070d03aacd5e6d\t'
                                                                                     'foundations/received-actuality-and-intrinsic-necessity.md\x00',
                                                                     'path': 'foundations/received-actuality-and-intrinsic-necessity.md'},
-                                                                   {'after_entry': '100644 blob '
-                                                                                   '4171c13b8ca1acaebdff695491b4fcc2841b2590\t'
-                                                                                   'logic/encodings-and-witnesses.md\x00',
+                                                                   {'after_entry': '100644 blob 63ff3e56f2c4202be131c2aa985253074985de0f\tlogic/encodings-and-witnesses.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '4b2512d85b428a4dcf0387aa979789220271dbba\t'
                                                                                     'logic/encodings-and-witnesses.md\x00',
                                                                     'path': 'logic/encodings-and-witnesses.md'},
-                                                                   {'after_entry': '100644 blob '
-                                                                                   '2320fc5cf9115e05918fbf2022ce8dbfec6736bf\t'
-                                                                                   'mathematics/collective-inquiry-and-strategic-coordination.md\x00',
+                                                                   {'after_entry': '100644 blob ff743ef14f51c758201955319d03c56324fdac9d\tmathematics/collective-inquiry-and-strategic-coordination.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '43abe9e55cd41a464e04e4e8c9780b7c6c7cbdf8\t'
                                                                                     'mathematics/collective-inquiry-and-strategic-coordination.md\x00',
                                                                     'path': 'mathematics/collective-inquiry-and-strategic-coordination.md'},
-                                                                   {'after_entry': '100644 blob '
-                                                                                   '9bb3a0a5bf98fe13cf5bdc83664b5d99087b3f21\t'
-                                                                                   'mathematics/common-repair-and-geometric-obstructions.md\x00',
+                                                                   {'after_entry': '100644 blob 51b82ecc4f644c6f5f23f3f38296f8a11248f118\tmathematics/common-repair-and-geometric-obstructions.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '3c9a25aa339821fb6e2f95941872bdfb17fd2f7a\t'
                                                                                     'mathematics/common-repair-and-geometric-obstructions.md\x00',
                                                                     'path': 'mathematics/common-repair-and-geometric-obstructions.md'},
-                                                                   {'after_entry': '100644 blob '
-                                                                                   'b232830e86a08db8d11989f6634f42cd43815539\t'
-                                                                                   'mathematics/information-and-inquiry.md\x00',
+                                                                   {'after_entry': '100644 blob 010dc1502e7dc4f4f4c2e7e49b3e6568b09ea4f3\tmathematics/information-and-inquiry.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '08d11adf48d2ef9742b30517d786c15f7b3ca05f\t'
                                                                                     'mathematics/information-and-inquiry.md\x00',
                                                                     'path': 'mathematics/information-and-inquiry.md'},
-                                                                   {'after_entry': '100644 blob '
-                                                                                   '8aaae293963ead254c3b514e0809cf3d7141b925\t'
-                                                                                   'mathematics/measure-computability-and-finite-warrant.md\x00',
+                                                                   {'after_entry': '100644 blob 0bf1342720afcf52e4ef7b030f1410a529b1c199\tmathematics/measure-computability-and-finite-warrant.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '194d23bed7613b48e7ccdecb823bdb4bd6b6f712\t'
                                                                                     'mathematics/measure-computability-and-finite-warrant.md\x00',
                                                                     'path': 'mathematics/measure-computability-and-finite-warrant.md'},
-                                                                   {'after_entry': '100644 blob '
-                                                                                   '0518a47f5c924c6c3f93f4caae87513a62168be1\t'
-                                                                                   'mathematics/physical-realisation-and-continuation.md\x00',
+                                                                   {'after_entry': '100644 blob 909edeaed16f8d75c855dfdcf3ab23c58a100896\tmathematics/physical-realisation-and-continuation.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     'a51c8d74f3c09368a50ea5c8a8213a2339f366c8\t'
                                                                                     'mathematics/physical-realisation-and-continuation.md\x00',
                                                                     'path': 'mathematics/physical-realisation-and-continuation.md'},
-                                                                   {'after_entry': '100644 blob '
-                                                                                   '4ac36c2f58a593ac2242429660e0a6d363745836\t'
-                                                                                   'mathematics/tensor-moments-and-corrective-dynamics.md\x00',
+                                                                   {'after_entry': '100644 blob 7f30ef3447431e5f27f9bb4f85c48e3b3c8e81de\tmathematics/tensor-moments-and-corrective-dynamics.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '03efeffe49c72abda647b601df1925f08c8f2f4d\t'
                                                                                     'mathematics/tensor-moments-and-corrective-dynamics.md\x00',
                                                                     'path': 'mathematics/tensor-moments-and-corrective-dynamics.md'}],
                                              'published_base': {'commit': 'cdbb59bab4859e2046b3add9ae69f0b976741374',
                                                                 'tree': 'be2c04c112093404492cd2c69f252bd956d7bf2f'},
-                                             'tree': '2b18fdc9af60bfdfb2c91a19b01c605b39599c44',
+                                             'tree': '19caa3fed59399e91ddcc49e335d6500e38fb715',
                                              'verdict': 'QUALIFIED_PROVISIONAL_INPUT'},
-                       'qualification': {'identity': ['19426f793f6115f7640c5d0bf7a37a9b133d09da',
-                                                      'cee7ef992c699fee42e7526214fdaa505a55ca8eebfd17b9543019d2eba334a5',
+                       'qualification': {'identity': ['3d82e2b06d05e80dcee1cdf544645faae508a1a0',
+                                                      'a2a84b2da9c9f4c31b1ab2f9f67fca210c03b3cc3193b67c489af99cdec9257a',
                                                       4263],
                                          'origin': 'reviewed_receipt',
                                          'path': 'docs/provenance/r0002-next250-receiver/PROVISIONAL-QUALIFICATION.json',
                                          'role': 'provisional_qualification'},
-                       'tree': '2b18fdc9af60bfdfb2c91a19b01c605b39599c44'},
+                       'tree': '19caa3fed59399e91ddcc49e335d6500e38fb715'},
  'published_base': {'commit': 'cdbb59bab4859e2046b3add9ae69f0b976741374',
                     'tree': 'be2c04c112093404492cd2c69f252bd956d7bf2f'},
- 'reachability_acceptance': {'identity': ['8a2180b488d595586503ef3a1445627603d365e0',
-                                          '69042b41f0146018ab4004dea1da75516a2292999ad0050617393f82a33f1781',
+ 'reachability_acceptance': {'identity': ['7d04856d2604db23a9a487af5d7262898d3365a2',
+                                          'd68add892a2740551d202f3b7708d74aae5c331744d265bc4c6a5cb9e0e90a83',
                                           1659113],
                              'origin': 'reviewed_receipt',
                              'path': 'docs/provenance/r0002-next250-receiver/FALLBACK-ACCEPTANCE.json',

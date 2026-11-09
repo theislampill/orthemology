@@ -4,9 +4,9 @@
     "consumer_contexts": {
       "crosswalk": {
         "identity": [
-          "6b04bc2803d75ef8df6e378e96e09474faf8e80b",
-          "72a2380f49b2828200d4de827ceb406de373a81fee7e26ed1372ee0de074f54a",
-          2131549
+          "b26ec3c6fc027429d9e946241e2a4bbdba6e94cf",
+          "26c56396f14357a68211edfadfe63da458e5088dead6b90c527d4a460ee0fd07",
+          2137469
         ],
         "origin": "qualified_provisional",
         "path": "docs/project-closure/reader-refactor-issue-35/CROSSWALK.json",
@@ -14,9 +14,9 @@
       },
       "owner_map": {
         "identity": [
-          "fbb854c0c484dffb448c4d92a0ef125e2ccabb50",
-          "a564fdf2a5ece743ced2bfe48e37a577913046c1ab106b148bcfffc97fd3f1d4",
-          70255
+          "52c026fba8bd1e7c1731d0cb2e40e8f3c25acefa",
+          "9c95893d4729de63e0e6682ff15a8320d1c509238c3174882e025bf10a87d164",
+          70256
         ],
         "origin": "qualified_provisional",
         "path": "docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json",
@@ -33,7 +33,7 @@
         "role": "consumer_context"
       }
     },
-    "provisional_tree": "2b18fdc9af60bfdfb2c91a19b01c605b39599c44",
+    "provisional_tree": "19caa3fed59399e91ddcc49e335d6500e38fb715",
     "published_base": {
       "commit": "cdbb59bab4859e2046b3add9ae69f0b976741374",
       "tree": "be2c04c112093404492cd2c69f252bd956d7bf2f"
@@ -33855,9 +33855,9 @@
   },
   "receipt": {
     "identity": [
-      "2837803810fed3c7f34ae56cc11158723934fbce",
-      "4667be90ac7c5bf6e748a6af2a70f78409670780f5e6d9ac811b24c6649b9159",
-      3308267
+      "916ec28537baa7ca8a7b5bad75324f5f7ee2cb35",
+      "75ab9da52466cbf336db36baa06b43729ee9f97f9437046f57baf1d6006f32ad",
+      3600267
     ],
     "origin": "reviewed_receipt",
     "path": "docs/provenance/r0002-next250-receiver/FALLBACK-REACHABILITY.json",
