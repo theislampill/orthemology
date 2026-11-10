@@ -8,6 +8,7 @@ URLs, execute source payloads, extract theorems, or infer semantic acceptance.
 """
 
 from resolve_t20_v6_source import NEXT250
+from resolve_t20_v6_source import AFTER3384_PATHS, after3384_absences
 
 from resolve_t20_v6_source import (NEW250_PATHS, new250_absences, new250_provider_additions, new250_reader_sources)
 
@@ -2336,6 +2337,7 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
         # provider. A class qualifier admits actual absences only; neither a
         # staged modification nor a corrupt present alias gains an allowance.
         for key, population, qualify in (
+                ("after3384", AFTER3384_PATHS, after3384_absences),
                 ("checkpoint-public", CHECKPOINT_PUBLIC_COPY_PATHS, checkpoint_public_duplicate_paths),
                 ("checkpoint-copy", set(CHECKPOINT_COPY_PATHS) - CHECKPOINT_PUBLIC_COPY_PATHS, checkpoint_duplicate_paths),
                 ("checkpoint-record", set(CHECKPOINT_RECORD_COPY_PATHS) - CHECKPOINT_PUBLIC_COPY_PATHS, checkpoint_record_duplicate_paths),

@@ -50,6 +50,7 @@ from resolve_t20_v6_source import (
     SUCCESSOR_INPUT_PATHS, successor_input_bytes,
     SUCCESSOR_READ_BATCH_PATHS, successor_read_batch_bytes,
     FIRST50_ASSURANCE_PATHS, first50_assurance_bytes,
+    AFTER3384_PATHS, after3384_bytes,
     SUCCESSOR_REMAINDER_BATCH_PATHS, successor_remainder_batch_bytes,
     SUCCESSOR_CALCULUS_MAP, successor_calculus_map_bytes,
     GENERATED_FIXTURE_PATHS, generated_fixture_bytes,
@@ -520,7 +521,32 @@ def _after3134_reference(src, cited):
 
 
 
+def _after3384_reference(src, cited):
+    # Candidate spelling is checked before normalization; unsafe selected spellings
+    # fail terminally rather than gaining an ordinary-existence exemption.
+    if not isinstance(cited, str):
+        return None
+    candidates = [cited]
+    directory = os.path.dirname(src)
+    while directory:
+        candidates.append(directory + '/' + cited)
+        directory = os.path.dirname(directory)
+    selected = [p for p in candidates if os.path.normpath(p.replace("\\", "/")) in AFTER3384_PATHS]
+    if not selected:
+        return None
+    for path in selected:
+        if any(c in path for c in ('\\', '\0', ':')) or path.startswith('/') or any(x in ('', '.', '..') for x in path.split('/')):
+            return False
+        try:
+            after3384_bytes(ROOT, path)
+        except (ValueError, OSError):
+            return False
+    return True
+
 def _resolves(src, cited):
+    after3384 = _after3384_reference(src, cited)
+    if after3384 is not None:
+        return after3384
     new250 = _new250_reference(src, cited)
     if new250 is not None:
         return new250

@@ -1,11 +1,21 @@
 {
-  "consumer_logic_sha256": "23053d63903133a3fcaf25b8743b8935dd68f42c6b735735fe2cc802c9f5f2eb",
+  "verdict": "ACCEPT_FINITE_FALLBACK_EVIDENCE",
+  "receipt": {
+    "identity": [
+      "bccd23dc45a9bf578f7fbd38b0652814f366abd1",
+      "d912b3a3fbda797fa17f4aabfd05c353d45d305118a8a2d6fe0a869df175dd2a",
+      5160267
+    ],
+    "origin": "reviewed_receipt",
+    "path": "docs/provenance/r0002-next250-receiver/FALLBACK-REACHABILITY.json",
+    "role": "fallback_reachability"
+  },
   "input_edition": {
     "consumer_contexts": {
       "crosswalk": {
         "identity": [
-          "830904b94ee94ecdb30d3bb64eb11216f7f39669",
-          "53132b6f9bd4085e59f7d4ba5cb8d20989ebe048a65b33504df124cf1f75f5fa",
+          "a1512460c35d029a6313f6dd88dca50678ebf628",
+          "23d32ed8e273ad29d61769910ece47cfd12f85937f128c05d8b9d28c48c03203",
           2142889
         ],
         "origin": "qualified_provisional",
@@ -14,8 +24,8 @@
       },
       "owner_map": {
         "identity": [
-          "8534dc7890775cc8b27f61ebcc77daa939221eb5",
-          "0a99a4ac4cfe1ab2f820b018763b95f05cf9246b1bb89c6572b287824b0f305f",
+          "c90d6da0dc3a44d380889cb1d3b3e3299e15afc5",
+          "7853252cad4959c088eaac90f2b41d54cf8515d1056f397999dd63fca81486e6",
           70256
         ],
         "origin": "qualified_provisional",
@@ -33,7 +43,7 @@
         "role": "consumer_context"
       }
     },
-    "provisional_tree": "baf39d878eeef92fc9485e05cb3d0980db1930c6",
+    "provisional_tree": "27be793db5cd6f563814fadf87d5a52cf9836b86",
     "published_base": {
       "commit": "cdbb59bab4859e2046b3add9ae69f0b976741374",
       "tree": "be2c04c112093404492cd2c69f252bd956d7bf2f"
@@ -33853,15 +33863,5 @@
       "role": "source_universe"
     }
   },
-  "receipt": {
-    "identity": [
-      "1ec051048d031b6387afad958c2399371ffc075d",
-      "e67323294657b7596d569446c3d65e65c78271ea3281c003d21f650701c4229a",
-      4885267
-    ],
-    "origin": "reviewed_receipt",
-    "path": "docs/provenance/r0002-next250-receiver/FALLBACK-REACHABILITY.json",
-    "role": "fallback_reachability"
-  },
-  "verdict": "ACCEPT_FINITE_FALLBACK_EVIDENCE"
+  "consumer_logic_sha256": "23053d63903133a3fcaf25b8743b8935dd68f42c6b735735fe2cc802c9f5f2eb"
 }
