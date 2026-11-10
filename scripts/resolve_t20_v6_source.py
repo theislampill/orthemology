@@ -54018,6 +54018,469 @@ NEXT250 = FiniteSourceProvider(NEXT250_BINDING, _New250Walk, _new250_path,
 NEXT250_PATHS = NEXT250.paths
 
 
+# Exact first50 assurance-code receiving from retained public history.
+# This changes byte receiving only, not roles, publication rows or assurance claims.
+FIRST50_ASSURANCE_BASE = 'cdbb59bab4859e2046b3add9ae69f0b976741374'
+FIRST50_ASSURANCE_TREE = 'be2c04c112093404492cd2c69f252bd956d7bf2f'
+FIRST50_ASSURANCE_MEMBERS = (('research/t20-v6-20261012/sources/0cc23ffba9563b235da34cc767fbba8cceda9fc06860f01ed2a8c0d970bbf72e/PortableReadback.lean',
+  '100644',
+  '9a5c427a95e033bd5a21a2a3a17b9a6b002261d5',
+  '0cc23ffba9563b235da34cc767fbba8cceda9fc06860f01ed2a8c0d970bbf72e',
+  3168,
+  'ADD_EXACT',
+  '674c4291aa6be392b5a970bd43fa9bb607b665b1786742a1e7b4977da4c9db59'),
+ ('research/t20-v6-20261012/sources/0ee57a25f2f903a802c81535ee9d1db01016fe51afd27e374ec6a49ff40f5cce/ReviewerReadback.lean',
+  '100644',
+  'be83abf1a9121323ce237cf246ff341c444a1bf8',
+  '0ee57a25f2f903a802c81535ee9d1db01016fe51afd27e374ec6a49ff40f5cce',
+  1860,
+  'ADD_EXACT',
+  '43a640774cfd88badb523b84bd9199f69fefc30f5aeff0cf4448d285de4a41d0'),
+ ('research/t20-v6-20261012/sources/0f6159a0d8c4e8a86ab9fafe83f97d9962cc6fadeaeab020ba3d89b0aaab2a8d/PortableReadback.lean',
+  '100644',
+  '035c241c27b022704327274b5baee672bad1284a',
+  '0f6159a0d8c4e8a86ab9fafe83f97d9962cc6fadeaeab020ba3d89b0aaab2a8d',
+  17937,
+  'ADD_EXACT',
+  '6c03cbc4904d67adb075cf4c7f82ea294874e3420e468b17a5e4a2b56469e6f1'),
+ ('research/t20-v6-20261012/sources/127421c9f375405d0de3bb21ce3a18b67102c3a5d21c0d6fb37f55e56791eef7/PortableReadback.lean',
+  '100644',
+  '9eeaa335d03c768353d5d54fab12bcc2f6b36b73',
+  '127421c9f375405d0de3bb21ce3a18b67102c3a5d21c0d6fb37f55e56791eef7',
+  7139,
+  'ADD_EXACT',
+  'ef9299109486a05c4d6d6d2029f3ed4823607ba1eba864cea742e0a7157574d9'),
+ ('research/t20-v6-20261012/sources/12addbebf3009f79e2aa85c8f539577acf919db42969f0767885dec8bd35f15f/PortableReadback.lean',
+  '100644',
+  '09cd307b940d190183e83891572996648ea5d717',
+  '12addbebf3009f79e2aa85c8f539577acf919db42969f0767885dec8bd35f15f',
+  11060,
+  'ADD_EXACT',
+  '14215c51fa0d73122b18abe40741ff3612bae33ba199d000708a11e8c17b8a9c'),
+ ('research/t20-v6-20261012/sources/130197f4a894ccb6d920c56523d6f0ae56fec2c1dd39b7054b03dbded3e2327c/PortableReadback.lean',
+  '100644',
+  '197690508d494192fa472e2498fd897027b38ad8',
+  '130197f4a894ccb6d920c56523d6f0ae56fec2c1dd39b7054b03dbded3e2327c',
+  11452,
+  'ADD_EXACT',
+  '29cc8b07f8ada3ff25304a6451e51e1117935edcaf72ce707acad67c393ea970'),
+ ('research/t20-v6-20261012/sources/13e1e2d445400a5f00ab41538372b8f4e7ad54a9fa6985f00da2c0a283a7e9a0/DeltaReadback.lean',
+  '100644',
+  '396543c134274cc5b87f2bf5bea153e07c0d6065',
+  '13e1e2d445400a5f00ab41538372b8f4e7ad54a9fa6985f00da2c0a283a7e9a0',
+  741,
+  'ADD_EXACT',
+  'ec51b255543611009e5cf7dfddfe35beb2fe72213bc78bb7c6183ecb18e32c45'),
+ ('research/t20-v6-20261012/sources/143c0d36fdb6aaf96ef89600e0a4195b53039f0e881aa9467d02628cbf85e676/interim-dependency-order.txt',
+  '100644',
+  'c77816ff37e4a23be788c35a0a73e6ee3b70537a',
+  '143c0d36fdb6aaf96ef89600e0a4195b53039f0e881aa9467d02628cbf85e676',
+  258,
+  'ADD_EXACT',
+  '2258ab5ee0dd110c335063f6d8694a601d6a4ad7d2522a85bfc03c5fb87102ee'),
+ ('research/t20-v6-20261012/sources/14bb05a8111df7e082f0a46eae14e47d3a8ed73c327fae18d8bf9320d8f990ad/ControlReadback.lean',
+  '100644',
+  '71c2e1500d39d9e0cbc97963d372987bc0b66e88',
+  '14bb05a8111df7e082f0a46eae14e47d3a8ed73c327fae18d8bf9320d8f990ad',
+  2781,
+  'ADD_EXACT',
+  '21128ce1cdd6f9bccdc500bf257dfadb2605ca055657302e0dd04225e106a13f'),
+ ('research/t20-v6-20261012/sources/1e6c5e57625c7686c5236e1b5a81239fcc6892242170049e8d734718288eb681/Readback.lean',
+  '100644',
+  '33bd3c3b7924ff3309af3f8b03d9b0781f1ba1d5',
+  '1e6c5e57625c7686c5236e1b5a81239fcc6892242170049e8d734718288eb681',
+  3916,
+  'ADD_EXACT',
+  '5ab26d84cb3891c0acc4934c4a6e06d2479d5febee52bcef02486b25febd2b25'),
+ ('research/t20-v6-20261012/sources/1eec5eb77b1f9578dd619a1a02accb021f788f87d10b009bc799046d41da934e/ControlsReadback.lean',
+  '100644',
+  '9bb77ea9c51a36ac6be17fabc42e6f1192b98cda',
+  '1eec5eb77b1f9578dd619a1a02accb021f788f87d10b009bc799046d41da934e',
+  1661,
+  'ADD_EXACT',
+  '89a12fec05595f2347f3a61aa70c562f46fb17e9fa9662bf03d51546a708eabe'),
+ ('research/t20-v6-20261012/sources/1f8815ad6c2b6589ce0b20216d01cf7783d60a50e54d29cb405d3636d7dd5bb1/Readback.lean',
+  '100644',
+  '638bd8a39ebf408ca3fcbf01f305e6012c70f0d2',
+  '1f8815ad6c2b6589ce0b20216d01cf7783d60a50e54d29cb405d3636d7dd5bb1',
+  16989,
+  'ADD_EXACT',
+  '0d33529a055e99e6842f242bc57cfef3dfa5497b956b028221dce7db45d070a1'),
+ ('research/t20-v6-20261012/sources/1fd377bf8429edc3493270401348a289bd07d2f9f03c7174170fe0557abcaea0/PortableReadback.lean',
+  '100644',
+  '95bddcfad17dd8987134299cabb9ac1e3c5fde29',
+  '1fd377bf8429edc3493270401348a289bd07d2f9f03c7174170fe0557abcaea0',
+  3955,
+  'ADD_EXACT',
+  '82559af86d65ba47fa61dff2a4e568fe326e6fe4ba50949d285ce4b0ae0c5c1f'),
+ ('research/t20-v6-20261012/sources/206e2e127293486b11c9f56fa57b26d19124a66d3c39ab6ccaf5ff369a21bc9c/IndependentControlsAudit.lean',
+  '100644',
+  '86acaf8b1060f0ebde46a45870696f3ce3dd3c43',
+  '206e2e127293486b11c9f56fa57b26d19124a66d3c39ab6ccaf5ff369a21bc9c',
+  1738,
+  'ADD_EXACT',
+  '05bee38a0db470bdfdca4bbb84ba07654a4f09798b7e2fa0e9851e9112cb8a8c'),
+ ('research/t20-v6-20261012/sources/216e6f9dfd2a1cdfa9867838b4b723d88a596378bd30e301e7eba3ec64b682b8/ControlsReadback.lean',
+  '100644',
+  '439fc6779d4bc61f885ae28a4399256a30df49f5',
+  '216e6f9dfd2a1cdfa9867838b4b723d88a596378bd30e301e7eba3ec64b682b8',
+  868,
+  'ADD_EXACT',
+  'a8bc735e538e563717e2fd791981696e899f7147602c4b03c6b984e7a7c37c28'),
+ ('research/t20-v6-20261012/sources/2197e755afdf88e1e9f49f7edbfcd8fe0913127b9a87cfcb7d0e57cdefbbaa34/TargetReadback.lean',
+  '100644',
+  '5198f189298ce74d396d0179d51ff2826f163213',
+  '2197e755afdf88e1e9f49f7edbfcd8fe0913127b9a87cfcb7d0e57cdefbbaa34',
+  749,
+  'ADD_EXACT',
+  '162bacff4380db99d344286566e6a7ed20d7566c1adfd94ab18b6ae1f7918daa'),
+ ('research/t20-v6-20261012/sources/22e137cd9ee07b59d37eea5be5dcbfa4fbde6114b0f47b781381811043475684/PortableReadback.lean',
+  '100644',
+  '4a9d7a81d13e074d43b9d4e0509274cd627c7713',
+  '22e137cd9ee07b59d37eea5be5dcbfa4fbde6114b0f47b781381811043475684',
+  3035,
+  'ADD_EXACT',
+  '13b45ed1df07d15eeb855d400cc471d1606e0a8f744ec328eac821a42f9c1c1a'),
+ ('docs/project-closure/ar8r-v11/fable-research/lean/T299/Receipts.lean',
+  '100644',
+  '0266069ada62cf7cbeba1021c8b91e0fe7810641',
+  '254f9bd045afce5439a1dfb7f7571fad81f305af62b790d691e8a750f2f56593',
+  698,
+  'REUSE',
+  '22cef33773fb4b05328ac24a17e0e33b927b230c1a73fe01fd77675336c659a7'),
+ ('research/t20-v6-20261012/sources/2565e4d17403bbbd5dae5a69116aeff6ece4ecd1818e6b3c3fe342df65f24655/AllAxioms.lean',
+  '100644',
+  'a4708c26efad34e9d995971eb426486c5bc464a6',
+  '2565e4d17403bbbd5dae5a69116aeff6ece4ecd1818e6b3c3fe342df65f24655',
+  20134,
+  'ADD_EXACT',
+  '38f16dad9ca9ba9fbcf8440eb8a93ff0fc715093b3c70e993ae6dc94f6652982'),
+ ('research/t20-v6-20261012/sources/266c2db0957f669410dd3636c0884ac2dd5e051eead1daeac37c055135fda2cb/ControlsReadback.lean',
+  '100644',
+  '8f146654964b9976b89128265fac1f020a206e9f',
+  '266c2db0957f669410dd3636c0884ac2dd5e051eead1daeac37c055135fda2cb',
+  1795,
+  'ADD_EXACT',
+  '7860626ffd7bf06becad58ee21cfbe1d61813e810ae0d4fa578be8dbf3518b24'),
+ ('research/t20-v6-20261012/sources/2676034587f0c47605480144df011011534e59eb847a5014beeb3ab34b0979a1/ControlsReadback.lean',
+  '100644',
+  '3924cf420a8e55719ae5023f28df9816c0ffb8a7',
+  '2676034587f0c47605480144df011011534e59eb847a5014beeb3ab34b0979a1',
+  1373,
+  'ADD_EXACT',
+  '5890df2ede0bfcf1944c0388b6fbddc5d4c51e6983e5f937989f5a4f7d216713'),
+ ('research/t20-v6-20261012/sources/27d2de121135bb5d2aa66109d89a10d1ae8e5800c893d856865e26b3ccc7ae97/PortableReadback.lean',
+  '100644',
+  '8dbbaf18137bad142524acadfc9e061e32490f53',
+  '27d2de121135bb5d2aa66109d89a10d1ae8e5800c893d856865e26b3ccc7ae97',
+  4332,
+  'ADD_EXACT',
+  'b92987492304d55737bc3cc6b9aeca36f58231c20ca7ebb5a6372122dee2354b'),
+ ('research/t20-v6-20261012/sources/282e3e1dc2e0f5bce8ce5ea2f5b82dbdb9a7f2fb8f1cdfee5a9a6ed65c339227/InspectControlAxioms.lean',
+  '100644',
+  'f876f913338092ada8ac726b2d4624b24b6cc34b',
+  '282e3e1dc2e0f5bce8ce5ea2f5b82dbdb9a7f2fb8f1cdfee5a9a6ed65c339227',
+  451,
+  'ADD_EXACT',
+  'b903909d23760fe0ae01a7180549e60326155fced0050525f5d6fb9e49a12807'),
+ ('research/t20-v6-20261012/sources/2923d394a3d888545fba9abe3b37554078931c96b5dce24bd6c6c729019b1eb5/InspectPrefixAxioms.lean',
+  '100644',
+  '256b12f379167223ff52016c3cd2c7e71e1dca4e',
+  '2923d394a3d888545fba9abe3b37554078931c96b5dce24bd6c6c729019b1eb5',
+  424,
+  'ADD_EXACT',
+  'e4cda0239bf5eda3f21922ffb2a9d7cd686ff56e243d664c9ed211e65222aa79'),
+ ('research/t20-v6-20261012/sources/2a710c6580c04034a0e127259dbdb19196ed66de4241bfc1f39dde2c97edf36d/ControlReadback.lean',
+  '100644',
+  'b310d3202e906a15879e1a2c3e322ed011f1c2ca',
+  '2a710c6580c04034a0e127259dbdb19196ed66de4241bfc1f39dde2c97edf36d',
+  1954,
+  'ADD_EXACT',
+  '31d16125e5e6d98063d5c12a543322238ba5b66769cb8d2cfa9b57efe2f5a48c'),
+ ('research/t20-v6-20261012/sources/2ec20871cb25773e5d0f1df937289fcbf621b98c065d8773a7dc45686566dce5/Audit.lean',
+  '100644',
+  '4d77c887500030bca1d3859175b98caae38305f0',
+  '2ec20871cb25773e5d0f1df937289fcbf621b98c065d8773a7dc45686566dce5',
+  3468,
+  'ADD_EXACT',
+  'ebe4c626a7d3c2351cbc180ac88f89bad3213df57af54e43cd9f697dc91edbf0'),
+ ('research/t20-v6-20261012/sources/2f4f94bfd81dc38b431e9902b823d59df08287c979642f12ae5458a55aac31af/AllNamedDeclarations.lean',
+  '100644',
+  '5cf3819d4c6e21e7ef4dbb09d48fecea144bb94f',
+  '2f4f94bfd81dc38b431e9902b823d59df08287c979642f12ae5458a55aac31af',
+  55591,
+  'ADD_EXACT',
+  '5eb4b19bd3331e18ce41b32ecc9b45e44eaaffd518257dc75d532ea3e40522b0'),
+ ('research/t20-v6-20261012/sources/2fbc363b24c809a86ae26eaa664c4f86665bee0b67999ec2d1eac17927a8da20/Readback.lean',
+  '100644',
+  '753ea60e08f20db68cb87dd5466a0d702cd886d2',
+  '2fbc363b24c809a86ae26eaa664c4f86665bee0b67999ec2d1eac17927a8da20',
+  1580,
+  'ADD_EXACT',
+  '0cc6663ea469e0b342edbdd8b8e7759e3dc71de77dc67c9125e60acfe564706f'),
+ ('research/t20-v6-20261012/sources/30165f317e7a97e690d5f10f9a3fa10809c0f7ff8bdb7417d365b0f9d8054f83/Readback.lean',
+  '100644',
+  'acec550dfa2607115f55d94a70c52e1c54881fd3',
+  '30165f317e7a97e690d5f10f9a3fa10809c0f7ff8bdb7417d365b0f9d8054f83',
+  6612,
+  'ADD_EXACT',
+  '6368e211c8965384fffdcdfbda33b0cc5865f65d77a3e4d5160a188e152de024'),
+ ('research/t20-v6-20261012/sources/30855e654d13348468d4e9c94adf167379aa4fb8d734dab1109e599d7f50def6/TargetReadback.lean',
+  '100644',
+  '48a68604ac1019d78d40cab9a9246a04b2919913',
+  '30855e654d13348468d4e9c94adf167379aa4fb8d734dab1109e599d7f50def6',
+  502,
+  'ADD_EXACT',
+  '4c02ccf59b8251465e26045883d71fcd4d96557d59bbefaf96a7b9abbb98611f'),
+ ('research/t20-v6-20261012/sources/30f5938f84ff963ea89bc02fbfb1dd289c4ad8af643bb8e669c6e8c77bfa429f/Audit.lean',
+  '100644',
+  'dbb87b681273202aeac12259d837d9774d4cc83f',
+  '30f5938f84ff963ea89bc02fbfb1dd289c4ad8af643bb8e669c6e8c77bfa429f',
+  6330,
+  'ADD_EXACT',
+  '08fc157e9fc3475ebcf2b1f59064309503ee3424c5cfb4958c78154bc3f77ff8'),
+ ('research/t20-v6-20261012/sources/3195be3445002d11b65d1ffbcbfe70817e4a1fe9983428ce8440a1d9d6d88bac/Readback.lean',
+  '100644',
+  'e9ad8bd4593c1b463ba3445c2c0fd81d6f1c17de',
+  '3195be3445002d11b65d1ffbcbfe70817e4a1fe9983428ce8440a1d9d6d88bac',
+  810,
+  'ADD_EXACT',
+  '26c47e768355121bbba2f02de76c98765df2868cf4452df42c2d79f6739f2f4b'),
+ ('research/t20-v6-20261012/sources/340253b40f985c01f320042a5eeedae801f541e628c90c1c8ac843c905573bff/candidate-interim-order.txt',
+  '100644',
+  'e4a841c99892dc267271880b0490cdd24126952a',
+  '340253b40f985c01f320042a5eeedae801f541e628c90c1c8ac843c905573bff',
+  240,
+  'ADD_EXACT',
+  '6433882ff1c3d54edcba9ab5c675251d3094d658dababfa42f28b5f02267c400'),
+ ('research/t20-v6-20261012/sources/39ff71924ca0707e700f1de4de7e99c1772982e2271e8e39e5179396e038b2b5/Inspect.lean',
+  '100644',
+  'f2320964ff2193144803fc393f1b122937c74127',
+  '39ff71924ca0707e700f1de4de7e99c1772982e2271e8e39e5179396e038b2b5',
+  324,
+  'ADD_EXACT',
+  'b5852e75ae997a2ad0917fd4803bd5c073ca42c3a33ec991b4391fa0d7f33dc8'),
+ ('research/t20-v6-20261012/sources/3d6a5dd701a308446340c7ce3dcd87079223b9eb17298f9f61b848cb0dc44dce/InspectFiniteSupport.lean',
+  '100644',
+  '98271f0be47f4dc21f32044556ecbc25a2eceabe',
+  '3d6a5dd701a308446340c7ce3dcd87079223b9eb17298f9f61b848cb0dc44dce',
+  242,
+  'ADD_EXACT',
+  'f85d6ef6823ee9a05c34dd96eda460acf4e68d926198d14970afcce45dcb8cbe'),
+ ('research/t20-v6-20261012/sources/3d7e1278b69457ed8649581a8ea9af78311ef756fd4dad9eb607e24732d7e6c0/FullTypesAxioms.lean',
+  '100644',
+  '03688eb1b29aea02cb197d7f8100b4451268f6af',
+  '3d7e1278b69457ed8649581a8ea9af78311ef756fd4dad9eb607e24732d7e6c0',
+  37772,
+  'ADD_EXACT',
+  '90282e4fbd323478d9f9a191bb7f82e4135bb9ffca3a9a6c0f997c116311df10'),
+ ('research/t20-v6-20261012/sources/3f647001e9d003715530ec101e918f4b90f72c8849c3fc6741c1d4675330b359/ControlsReadback.lean',
+  '100644',
+  'de1e85d39621ad016382eb10ee5edcb1d6ce1c0a',
+  '3f647001e9d003715530ec101e918f4b90f72c8849c3fc6741c1d4675330b359',
+  998,
+  'ADD_EXACT',
+  'f82ee285b9c14353a7dbf4615196efeab6921b6d1af629e335ccd8b718369d04'),
+ ('research/t20-v6-20261012/sources/40c7420baf52365a6ab2d02c6e3b6921f49b2f52557d39a40213bab49abef4d4/Audit.lean',
+  '100644',
+  'b201232df38ce69ebeacb5406e7b9963c6d77a37',
+  '40c7420baf52365a6ab2d02c6e3b6921f49b2f52557d39a40213bab49abef4d4',
+  9351,
+  'ADD_EXACT',
+  'f9db7e8c642d5beebccd4ac2c78b933efcf6b59aa6aeb28a2b9957e8dfbc50e6'),
+ ('research/t20-v6-20261012/sources/40f74e22148aa9814c4453c5688c1859ffb7fafd8315d8370a54c9416e102fff/Audit.lean',
+  '100644',
+  '3661b14a55b9de282d9c699ecc7f7c44113a6352',
+  '40f74e22148aa9814c4453c5688c1859ffb7fafd8315d8370a54c9416e102fff',
+  4551,
+  'ADD_EXACT',
+  '158bda71826bb485546c5b2f1cbef48daaeee91992b3a744f072745e70f8dbf5'),
+ ('research/t20-v6-20261012/sources/426ca8fc33dd2c7a5e8f8c6b5fede63161d2d503996514ef00e6d723664a5d26/AllAxioms.lean',
+  '100644',
+  '5656c521ec460af018cbccc3e78add7b40187e3a',
+  '426ca8fc33dd2c7a5e8f8c6b5fede63161d2d503996514ef00e6d723664a5d26',
+  14879,
+  'ADD_EXACT',
+  '434806b180761350a8456447e764859d400d6258b71fc58cb8126bb29a17a177'),
+ ('research/t20-v6-20261012/sources/42eb109d5604c8fa18af85669f1734cec9fcc5083ff3cbc5cc88481d2d28d8d2/Readback.lean',
+  '100644',
+  '010d2ce59c4ae2969d47383fb426a1eeb817e836',
+  '42eb109d5604c8fa18af85669f1734cec9fcc5083ff3cbc5cc88481d2d28d8d2',
+  4672,
+  'ADD_EXACT',
+  '39b96eef2cf23f5cda4ec18318d320daa230214fbbb3be8b28e91d9901e85380'),
+ ('research/t20-v6-20261012/sources/430b0c2180360cacc1910264615aaccd23ea0d8e3431ab35b2c6e8a3d1bc1db9/PortableReadback.lean',
+  '100644',
+  '8a3251d559cd044bfa819511c50ce920a05d256a',
+  '430b0c2180360cacc1910264615aaccd23ea0d8e3431ab35b2c6e8a3d1bc1db9',
+  9551,
+  'ADD_EXACT',
+  '5124281fafb6b476c92af05fa68bc2f8b49fb802347747846bce3693da6844a1'),
+ ('research/t20-v6-20261012/sources/4378eb40d202935bae81417e0ffac08385966ae1a41561b0a5915b2c64958880/TargetReadback.lean',
+  '100644',
+  '900b1698eccce6e972677e8058025c47729a0f47',
+  '4378eb40d202935bae81417e0ffac08385966ae1a41561b0a5915b2c64958880',
+  29825,
+  'ADD_EXACT',
+  'd9602d4abafd30d9b1a4aeb36f8429179d579c153b30d1988dbbb1e6dea6f97b'),
+ ('research/t20-v6-20261012/sources/43794be51a1853e046a097e119b3b6d92d3af6cd7966c161ebd858338e1c20ec/Readback.lean',
+  '100644',
+  'fdb9d28cb275bee2e141100ae14fd412ab2f36e2',
+  '43794be51a1853e046a097e119b3b6d92d3af6cd7966c161ebd858338e1c20ec',
+  11799,
+  'ADD_EXACT',
+  '830fe92be01333590491607a2b98e0175704c2078d5229cd7fde482d0ef085f1'),
+ ('research/t20-v6-20261012/sources/440bacaa9b2e84e4b49af71dd6174a68d7eb30d96794020e0ba7e649f1496911/InspectAllAxioms.lean',
+  '100644',
+  '2fb37a3064e325c0ac7fbeb9d2439fdce70cd6c2',
+  '440bacaa9b2e84e4b49af71dd6174a68d7eb30d96794020e0ba7e649f1496911',
+  7081,
+  'ADD_EXACT',
+  'f953b7cba0e5b2cf42bb48cccb3289e7b69d9e5c6967f1553edd494b5f2a2871'),
+ ('research/t20-v6-20261012/sources/47a73c2476d6a03eb0cb47bbb20df72b0931d510a84815fa4014b3a4a6d19ba4/PortableReadback.lean',
+  '100644',
+  '2920d153c6ab60ff2310d35b514896794eede115',
+  '47a73c2476d6a03eb0cb47bbb20df72b0931d510a84815fa4014b3a4a6d19ba4',
+  3793,
+  'ADD_EXACT',
+  'b6b77c39bf3bb18de1d68e1c4695b28f38d166d9015558e02de5a1ea38079d35'),
+ ('research/t20-v6-20261012/sources/4cd9a18b12b32c758448f35d006edde8213ab1aa144da716ded928146c9dc435/IndependentInterimReadback-4cd9a18b12b32c758448f35d006edde8213ab1aa144da716ded928146c9dc435.lean',
+  '100644',
+  '7e96fe1cb875dbbbbec9ebbcbb074848cbee8589',
+  '4cd9a18b12b32c758448f35d006edde8213ab1aa144da716ded928146c9dc435',
+  23195,
+  'ADD_EXACT',
+  '7462c5c9b22ff0790d774efd32cc4295189204660d8f0d458d6ea2a1982c9e13'),
+ ('research/t20-v6-20261012/sources/4db5a4bc24f4ce6b7a39f867d091389aea280fbdac28fb2165993879716a0398/PortableReadback.lean',
+  '100644',
+  '39a1fc0b13d5e150dad3b99a03b059f8add854e6',
+  '4db5a4bc24f4ce6b7a39f867d091389aea280fbdac28fb2165993879716a0398',
+  5126,
+  'ADD_EXACT',
+  'ff71b67b58c25fcbb0957fb3f8eabfb867299c9d2e07ebcd3821605cd6541ac2'),
+ ('research/t20-v6-20261012/sources/4f8206e7a36d90a687d2c08e513c7af0742da971c1071c28b617e83769a39543/InspectTypeCode2.lean',
+  '100644',
+  'b940d442594f8d3256f31bb6e4ee8a0c219e8e05',
+  '4f8206e7a36d90a687d2c08e513c7af0742da971c1071c28b617e83769a39543',
+  175,
+  'ADD_EXACT',
+  '6b8364cc086179b8441ede389eec02af099dbe9e2065166cbebdc38608c1130b'),
+ ('research/t20-v6-20261012/sources/51eeb269a8abede78be1fef51a8b9b8cb477a7bd73b29be75357011047f63749/SuiteAxioms.lean',
+  '100644',
+  '9e48aa4c2b8d859c7338413af0b669a948cb6970',
+  '51eeb269a8abede78be1fef51a8b9b8cb477a7bd73b29be75357011047f63749',
+  2735,
+  'ADD_EXACT',
+  '01346a266f2d2c6058484753a0301707e5ffe52a9dc9c009f82b6c0b991236a3'))
+FIRST50_ASSURANCE_MEMBERS_SHA256 = 'a6bcb9d9f20107a3ee037f339a79b4aefb36f0279750e986acefc1b5220546dc'
+FIRST50_ASSURANCE_PATHS = frozenset(row[0] for row in FIRST50_ASSURANCE_MEMBERS)
+FIRST50_ASSURANCE_ADD_EXACT_PATHS = frozenset(
+    row[0] for row in FIRST50_ASSURANCE_MEMBERS if row[5] == 'ADD_EXACT')
+
+
+def _first50_assurance_catalog():
+    _formal_tuple_binding(FIRST50_ASSURANCE_MEMBERS, 50, FIRST50_ASSURANCE_MEMBERS_SHA256)
+    members = {path: (mode, blob, identity, size, disposition, public_row)
+               for path, mode, blob, identity, size, disposition, public_row in FIRST50_ASSURANCE_MEMBERS}
+    if (len(members) != 50 or frozenset(members) != FIRST50_ASSURANCE_PATHS
+            or len(FIRST50_ASSURANCE_ADD_EXACT_PATHS) != 49
+            or {path for path, value in members.items() if value[4] == 'ADD_EXACT'}
+                != set(FIRST50_ASSURANCE_ADD_EXACT_PATHS)
+            or sum(value[4] == 'REUSE' for value in members.values()) != 1):
+        raise ValueError('first50 assurance finite population differs')
+    for path, (mode, blob, identity, size, disposition, public_row) in members.items():
+        relative = pathlib.PurePosixPath(path)
+        if (relative.is_absolute() or '..' in relative.parts or relative.as_posix() != path
+                or '\\' in path or ':' in path or mode != '100644'
+                or not isinstance(size, int) or isinstance(size, bool) or size < 0
+                or disposition not in ('ADD_EXACT', 'REUSE')
+                or not re.fullmatch('[0-9a-f]{40}', blob)
+                or not re.fullmatch('[0-9a-f]{64}', identity)
+                or not re.fullmatch('[0-9a-f]{64}', public_row)):
+            raise ValueError('first50 assurance original path/mode/identity differs')
+    return members
+
+
+def first50_assurance_bytes(root, path):
+    """Authenticate one complete original coordinate before admitting absence."""
+    members = _first50_assurance_catalog()
+    if not isinstance(path, str) or path not in members:
+        raise ValueError('path is outside the finite first50 assurance source class')
+    root = _digest_record_root(root).absolute()
+    mode, blob, identity, size, _, _ = members[path]
+    node = _successor_input_path(root, path)
+    present = os.path.lexists(node)
+    witness = None
+    if present:
+        body, witness = _successor_input_regular(root, path)
+        oid = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+        if (oid, digest(body), len(body)) != (blob, identity, size):
+            raise ValueError('first50 assurance present original bytes differ: ' + path)
+    arguments = ('ls-files', '--stage', '-z', '--', path)
+    before_index = _administrative_git(root, *arguments)
+    if before_index not in (b'', (mode + ' ' + blob + ' 0\t' + path + '\0').encode()):
+        raise ValueError('first50 assurance staged original mode/blob/stage differs: ' + path)
+    revision = FIRST50_ASSURANCE_BASE
+    if not re.fullmatch('[0-9a-f]{40}', revision):
+        raise ValueError('first50 assurance pinned original revision differs')
+    try:
+        commit = _administrative_git(root, 'cat-file', 'commit', revision)
+        if hashlib.sha1(b'commit ' + str(len(commit)).encode() + b'\0' + commit).hexdigest() != revision:
+            raise ValueError('first50 assurance native commit identity differs')
+        if commit.split(b'\n', 1)[0] != ('tree ' + FIRST50_ASSURANCE_TREE).encode():
+            raise ValueError('first50 assurance native commit tree differs')
+        expected = (mode + ' blob ' + blob + '\t' + path + '\0').encode()
+        if _administrative_git(root, 'ls-tree', '-z', revision, '--', path) != expected:
+            raise ValueError('first50 assurance original path/mode/blob differs')
+        original = _administrative_git(root, 'cat-file', 'blob', blob)
+    except (OSError, ValueError) as exc:
+        raise ValueError('first50 assurance pinned public Git prerequisite unavailable or changed: ' + path) from exc
+    oid = hashlib.sha1(b'blob ' + str(len(original)).encode() + b'\0' + original).hexdigest()
+    if (oid, digest(original), len(original)) != (blob, identity, size):
+        raise ValueError('first50 assurance historical original bytes differ: ' + path)
+    if _administrative_git(root, *arguments) != before_index:
+        raise ValueError('first50 assurance original index changed during qualification')
+    node = _successor_input_path(root, path)
+    if present:
+        fields = ('st_dev', 'st_ino', 'st_mode', 'st_nlink', 'st_size', 'st_mtime_ns', 'st_ctime_ns')
+        if tuple(getattr(node.lstat(), field) for field in fields) != witness:
+            raise ValueError('first50 assurance present original changed during qualification')
+    elif os.path.lexists(node):
+        raise ValueError('first50 assurance original absence changed during qualification')
+    return original
+
+
+def first50_assurance_absences(root):
+    """Only authenticated physical absences qualify; M/T/A never qualify."""
+    root = _digest_record_root(root).absolute()
+    result = set()
+    arguments = ('ls-files', '--stage', '-z', '--', *sorted(FIRST50_ASSURANCE_PATHS))
+    before_index = _administrative_git(root, *arguments)
+    for path in _first50_assurance_catalog():
+        first50_assurance_bytes(root, path)
+        if not os.path.lexists(_successor_input_path(root, path)):
+            result.add(path)
+    if _administrative_git(root, *arguments) != before_index:
+        raise ValueError('first50 assurance finite original index changed during qualification')
+    if any(os.path.lexists(_successor_input_path(root, path)) for path in result):
+        raise ValueError('first50 assurance finite original absence changed during qualification')
+    return result
+
+
+def first50_assurance_public_bytes(root, row):
+    members = _first50_assurance_catalog()
+    if not isinstance(row, dict) or row.get('repository_path') not in members:
+        raise ValueError('public row is outside the finite first50 assurance class')
+    _, _, identity, size, disposition, public_row = members[row['repository_path']]
+    if (row.get('role') != 'assurance_code' or row.get('disposition') != disposition
+            or row.get('repository_revision') is not None
+            or row.get('source_sha256') != identity or row.get('public_sha256') != identity
+            or row.get('source_bytes') != size or row.get('public_bytes') != size
+            or _formal_row_digest(row) != public_row):
+        raise ValueError('first50 assurance complete original public role/projection row differs')
+    return first50_assurance_bytes(root, row['repository_path'])
+
+
 def source_bytes(root, row):
     raw_path = row.get("repository_path")
     if isinstance(raw_path, str) and str(pathlib.PurePosixPath(raw_path)) in NEW250_PATHS:
@@ -54026,7 +54489,9 @@ def source_bytes(root, row):
     path = pathlib.PurePosixPath(row['repository_path'])
     if path.is_absolute() or '..' in path.parts or '\\' in str(path):
         raise ValueError('unsafe source path')
-    if str(path) in SUCCESSOR_READ_BATCH_PATHS:
+    if str(path) in FIRST50_ASSURANCE_PATHS:
+        body = first50_assurance_public_bytes(root, row)
+    elif str(path) in SUCCESSOR_READ_BATCH_PATHS:
         body = successor_read_batch_public_bytes(root, row)
     elif str(path) in SUCCESSOR_REMAINDER_BATCH_PATHS:
         body = successor_remainder_batch_public_bytes(root, row)

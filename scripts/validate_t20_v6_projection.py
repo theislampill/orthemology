@@ -41,6 +41,7 @@ from resolve_t20_v6_source import (
     status_record_candidate, status_record_absences,
     SUCCESSOR_FIXTURE_PATH,
     SUCCESSOR_READ_BATCH_PATHS, successor_read_batch_absences,
+    FIRST50_ASSURANCE_PATHS, FIRST50_ASSURANCE_ADD_EXACT_PATHS, first50_assurance_absences,
     SUCCESSOR_REMAINDER_BATCH_PATHS, successor_remainder_batch_absences,
 )
 
@@ -163,6 +164,7 @@ def check_object(root, row):
         if path.is_symlink() or not path.resolve().is_relative_to(root.resolve()):
             raise ValueError('source symlink or escaped root')
         if (relative.as_posix() in NEW250_PATHS
+                or relative.as_posix() in FIRST50_ASSURANCE_PATHS
                 or relative.as_posix() in SUCCESSOR_READ_BATCH_PATHS
                 or relative.as_posix() in SUCCESSOR_REMAINDER_BATCH_PATHS
                 or relative.as_posix() in DIGEST_RECORD_PATHS
@@ -461,6 +463,19 @@ def check_public_inventory(root, rows, controls):
                     expected.remove(row['repository_path'])
         except (KeyError, OSError, ValueError):
             return ['public inventory has an unqualified binding-record absence']
+    missing_first50 = (expected - actual) & FIRST50_ASSURANCE_ADD_EXACT_PATHS
+    if missing_first50:
+        try:
+            qualified = first50_assurance_absences(root)
+            for path in sorted(missing_first50):
+                selected = [r for r in rows if r.get('repository_path') == path]
+                if (len(selected) != 1 or selected[0].get('disposition') != 'ADD_EXACT'
+                        or path not in qualified):
+                    raise ValueError('first50 assurance absence lacks its exact additive row')
+                source_bytes(root, selected[0])
+            expected -= missing_first50
+        except (KeyError, OSError, ValueError, TypeError):
+            return ['public inventory has an unqualified first50 assurance absence']
     expected -= next_absent
     if actual != expected:
         return ['public inventory differs: ' + str(sorted(actual ^ expected)[:10])]

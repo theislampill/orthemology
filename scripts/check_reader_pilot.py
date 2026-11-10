@@ -62,6 +62,7 @@ from resolve_t20_v6_source import (
     SUCCESSOR_CALCULUS_MAP, SUCCESSOR_CALCULUS_GUIDES, successor_calculus_map_absences,
     successor_calculus_guide_source_bytes,
     SUCCESSOR_READ_BATCH_PATHS, successor_read_batch_bytes, successor_read_batch_absences,
+    FIRST50_ASSURANCE_PATHS, first50_assurance_absences,
     SUCCESSOR_REMAINDER_BATCH_PATHS, successor_remainder_batch_bytes, successor_remainder_batch_absences,
     binding_record_candidate, is_binding_record, binding_record_bytes, binding_record_absences,
     status_record_candidate, status_record_absences, STATUS_RECORD_OWNERS, status_owner_edition,
@@ -2296,7 +2297,8 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
         duplicate_paths['new250'] = new250_absences(repo) if NEW250_PATHS else set()
         old_classes = (CHECKPOINT_COPY_PATHS, CHECKPOINT_RECORD_COPY_PATHS, CHECKPOINT_PACKAGE_COPY_PATHS,
                        FORMAL_COPY_PATHS, FORMAL_PROVIDER_PATHS, CHECKPOINT_CODE_COPY_PATHS,
-                       DIGEST_RECORD_PATHS, SUCCESSOR_READ_BATCH_PATHS, SUCCESSOR_REMAINDER_BATCH_PATHS)
+                       DIGEST_RECORD_PATHS, SUCCESSOR_READ_BATCH_PATHS, SUCCESSOR_REMAINDER_BATCH_PATHS,
+                       FIRST50_ASSURANCE_PATHS)
         if any(NEW250_PATHS.intersection(population) for population in old_classes):
             raise ValueError('NEW250 overlaps an existing finite provider')
     except (ValueError, OSError, UnicodeError) as exc:
@@ -2343,6 +2345,7 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                 ("checkpoint-code", CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_duplicate_paths),
                 ("historical-digest", DIGEST_RECORD_PATHS, digest_record_absences),
                 ("successor-read-batch", SUCCESSOR_READ_BATCH_PATHS, successor_read_batch_absences),
+                ("first50-assurance", FIRST50_ASSURANCE_PATHS, first50_assurance_absences),
                 ("successor-remainder-batch", SUCCESSOR_REMAINDER_BATCH_PATHS, successor_remainder_batch_absences)):
             if key not in duplicate_paths and any(
                     status == "D" and path in population
