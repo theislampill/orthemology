@@ -570,9 +570,9 @@
       "key": "consolidated-foundations",
       "path": "foundations/received-actuality-and-intrinsic-necessity.md",
       "mode": "100644",
-      "git_oid": "5904cae2c6b7b7425a13701f2413a87567c3287d",
-      "bytes": 1138886,
-      "sha256": "205fc32fc42abcd4c1ac910960e3472155f5f0d3e59d26d5ad919f3d0aba68f0",
+      "git_oid": "731141ce71900bd17d067259b6c6277c09fd1001",
+      "bytes": 1166894,
+      "sha256": "32d57538330d8b835b0ffd52847d34cd5273a27981b4c55351f56aab5f693f27",
       "role": "work-source",
       "work_keys": [
         "received-actuality-and-intrinsic-necessity"
@@ -585,9 +585,9 @@
       "key": "consolidated-information-and-inquiry",
       "path": "mathematics/information-and-inquiry.md",
       "mode": "100644",
-      "git_oid": "010dc1502e7dc4f4f4c2e7e49b3e6568b09ea4f3",
-      "bytes": 1009305,
-      "sha256": "e9a02577fb8e613b8fffed67439d457c4fff1b5fae6bb2e94e3a834a6c257537",
+      "git_oid": "2d0aede239b9dda6ff38a7be082e187f41563e62",
+      "bytes": 1092390,
+      "sha256": "37655bb52e7b1b4e4cb640e13b931685c8ef86e99d08936fec67da38846c95e8",
       "role": "work-source",
       "work_keys": [
         "information-retained-by-inquiry"
@@ -600,9 +600,9 @@
       "key": "scientific-consolidation-review",
       "path": "docs/scientific-consolidation-review.md",
       "mode": "100644",
-      "git_oid": "e16b99296b64ecc941d229ec3a0a9ab69360017d",
-      "bytes": 650099,
-      "sha256": "f1ac8312e50d05933f4816e1f2c3dc3df6bddca358cff3d30d03823c5a2aafec",
+      "git_oid": "32570320e75c4cd15cd755543c9709a258ca041f",
+      "bytes": 652411,
+      "sha256": "d59191cf1526217dc534fcf0f71b41023c5867db351410c3dd0b98c7f5f8fda0",
       "role": "review",
       "work_keys": [
         "received-actuality-and-intrinsic-necessity",
@@ -638,9 +638,9 @@
       "key": "consolidated-encodings-and-witnesses",
       "path": "logic/encodings-and-witnesses.md",
       "mode": "100644",
-      "git_oid": "63ff3e56f2c4202be131c2aa985253074985de0f",
-      "bytes": 634518,
-      "sha256": "1c7f31af12f0b11be39f49cd8f172a3143c66de6dc35e66f7e45bf6d2b289099",
+      "git_oid": "9127633081884445347bee70c94d836b9cfd224d",
+      "bytes": 643193,
+      "sha256": "c1073f3ad256be172b987e92e6514bafea16a6ba700278861a31f6b5ae6cccc7",
       "role": "work-source",
       "work_keys": [
         "encodings-and-witnesses"
@@ -653,9 +653,9 @@
       "key": "consolidated-collective-inquiry",
       "path": "mathematics/collective-inquiry-and-strategic-coordination.md",
       "mode": "100644",
-      "git_oid": "ff743ef14f51c758201955319d03c56324fdac9d",
-      "bytes": 900258,
-      "sha256": "77d2f3bf29304e37d60f451e652935531e4496a805317dd74da800f6aa38e175",
+      "git_oid": "40276212e5314d740b1bffaead1523add2878091",
+      "bytes": 930817,
+      "sha256": "04e9ccf86ea81018ba64ee7a68226e225ad34cc4067ea99c4c17e5efe1cb5ea7",
       "role": "work-source",
       "work_keys": [
         "collective-inquiry-and-strategic-coordination"
@@ -668,9 +668,9 @@
       "key": "consolidated-tensor-moments",
       "path": "mathematics/tensor-moments-and-corrective-dynamics.md",
       "mode": "100644",
-      "bytes": 276424,
-      "sha256": "750a9a2b5f38d47b7388c1b7c5f219f5611e0b028260536352ddbc3b0cdbbf8d",
-      "git_oid": "7f30ef3447431e5f27f9bb4f85c48e3b3c8e81de",
+      "bytes": 306851,
+      "sha256": "086910525790b9e8f6697591002eea3907339881e40eb83480bb74edc92c884d",
+      "git_oid": "afd134f3e9f6285e0d309d93e31265ae89b77a56",
       "role": "work-source",
       "work_keys": [
         "tensor-moments-and-corrective-dynamics"
@@ -683,9 +683,9 @@
       "key": "consolidated-common-repair",
       "path": "mathematics/common-repair-and-geometric-obstructions.md",
       "mode": "100644",
-      "bytes": 142266,
-      "sha256": "d411237d82b4134fe75e926cd4177389305380ef301417e5f4da6091fc943b58",
-      "git_oid": "51b82ecc4f644c6f5f23f3f38296f8a11248f118",
+      "bytes": 148311,
+      "sha256": "e2955c67f49fab7718bf2142f9f28694a951516a0bc10bfc78a152ff5b387245",
+      "git_oid": "3ad7bf90aed9c722b3b0af13ec7049c6e4e45975",
       "role": "work-source",
       "work_keys": [
         "common-repair-and-geometric-obstructions"
@@ -728,9 +728,9 @@
       "key": "consolidated-measure-computability-and-finite-warrant",
       "path": "mathematics/measure-computability-and-finite-warrant.md",
       "mode": "100644",
-      "git_oid": "0bf1342720afcf52e4ef7b030f1410a529b1c199",
-      "bytes": 222040,
-      "sha256": "6066ecb411df69cd6e0232ea004bd8c0c0e2242db0e246b04b69118adbe6b86d",
+      "git_oid": "de600980e70db016292b73f2770e4513974f8a8a",
+      "bytes": 230410,
+      "sha256": "dba2989857afd907ed6d68452e0059be39f1aab103588f6cb4b004373bf47823",
       "role": "work-source",
       "work_keys": [
         "measure-computability-and-finite-warrant"
@@ -743,9 +743,9 @@
       "key": "consolidated-physical-realisation-and-continuation",
       "path": "mathematics/physical-realisation-and-continuation.md",
       "mode": "100644",
-      "git_oid": "909edeaed16f8d75c855dfdcf3ab23c58a100896",
-      "bytes": 481393,
-      "sha256": "3a37e82aeaf7a16e69e03d603026e12e6e78d8af434ea40133ae915f4e12dbf2",
+      "git_oid": "20f3553125d1f984642ce1619de5fcf1ef79ff20",
+      "bytes": 498758,
+      "sha256": "e1e1133a6156e6f5e73dc1de69df8479c4727a4ccef0063064cbf6ddec04c4e3",
       "role": "work-source",
       "work_keys": [
         "physical-realisation-and-continuation"
