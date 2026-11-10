@@ -4,8 +4,8 @@
     "consumer_contexts": {
       "crosswalk": {
         "identity": [
-          "3e3ff28bc0fed5f35ba91326178e72cae502ec16",
-          "7ae4a01093550a2392045022597b3cf3e3eb5db9e5a1431ce6268583a81328ae",
+          "830904b94ee94ecdb30d3bb64eb11216f7f39669",
+          "53132b6f9bd4085e59f7d4ba5cb8d20989ebe048a65b33504df124cf1f75f5fa",
           2142889
         ],
         "origin": "qualified_provisional",
@@ -14,8 +14,8 @@
       },
       "owner_map": {
         "identity": [
-          "8af9cbd7722f12e693250e449236dc508e70833b",
-          "3d9b048136fea427aad39634f916dba790524525c5357c513c053c8d4dcfaa5a",
+          "8534dc7890775cc8b27f61ebcc77daa939221eb5",
+          "0a99a4ac4cfe1ab2f820b018763b95f05cf9246b1bb89c6572b287824b0f305f",
           70256
         ],
         "origin": "qualified_provisional",
@@ -33,7 +33,7 @@
         "role": "consumer_context"
       }
     },
-    "provisional_tree": "3440829abda8c83ea39edbb790b7f4a821441e9f",
+    "provisional_tree": "baf39d878eeef92fc9485e05cb3d0980db1930c6",
     "published_base": {
       "commit": "cdbb59bab4859e2046b3add9ae69f0b976741374",
       "tree": "be2c04c112093404492cd2c69f252bd956d7bf2f"
@@ -33855,9 +33855,9 @@
   },
   "receipt": {
     "identity": [
-      "bc6e5933cdcfc77c083c9cfe9d732d9fb6b74ff3",
-      "9056b8897f4eeac07d54a418597f9837e2c2e8830644dcff80dcf922668b291d",
-      4593267
+      "1ec051048d031b6387afad958c2399371ffc075d",
+      "e67323294657b7596d569446c3d65e65c78271ea3281c003d21f650701c4229a",
+      4885267
     ],
     "origin": "reviewed_receipt",
     "path": "docs/provenance/r0002-next250-receiver/FALLBACK-REACHABILITY.json",

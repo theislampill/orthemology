@@ -49,6 +49,7 @@ from resolve_t20_v6_source import (
     CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_copy_bytes,
     SUCCESSOR_INPUT_PATHS, successor_input_bytes,
     SUCCESSOR_READ_BATCH_PATHS, successor_read_batch_bytes,
+    FIRST50_ASSURANCE_PATHS, first50_assurance_bytes,
     SUCCESSOR_REMAINDER_BATCH_PATHS, successor_remainder_batch_bytes,
     SUCCESSOR_CALCULUS_MAP, successor_calculus_map_bytes,
     GENERATED_FIXTURE_PATHS, generated_fixture_bytes,
@@ -80,6 +81,17 @@ PATH_PATTERN = (
     r"[A-Za-z0-9._/\\-]+\.(?:py|jsonl?|yaml|yml|md|bib|txt)(?![A-Za-z0-9._/\\-])"
 )
 PATH_RE = re.compile(PATH_PATTERN)
+AFTER3134_LOCAL_CITATION_PATHS = ('research/t20-v6-20261012/sources/00886c74d7ac5ff0f278e737bb58141bd6097be134dbba2f728cd2aae5565882/runtime-evidence-report.md',
+ 'research/t20-v6-20261012/sources/00c38a528d3d8030627eb4dd8e11aa44bb6abfa122efd2da26ece4e8e93a8a58/RESULT.md',
+ 'research/t20-v6-20261012/sources/01b1232252abaaa24a2f90914962d0ad1120528822fcb62cf15e8d0432efb2d7/INTEGRATION_SCOPE_NOTE.md',
+ 'research/t20-v6-20261012/sources/03e404e76236427cd39283618483ecfc5df9424beb0ebfeb2ffbef0b1620676b/PointAtomBoundary.md',
+ 'research/t20-v6-20261012/sources/03f4349692c72952bd2fe5d84dba33c4193826e42859870061b07c3f87f4db6c/REVIEW.md',
+ 'research/t20-v6-20261012/sources/04a4223bc4666a986b8c3a3c085913715a4a02ea7adb47b92dfbe5fd764f5930/REVIEW.md')
+AFTER3134_LOCAL_CITATION_RE = re.compile(
+    r"(?<![A-Za-z0-9._/\\-])(?:"
+    + "|".join(re.escape(path) for path in AFTER3134_LOCAL_CITATION_PATHS)
+    + r")(?![A-Za-z0-9._/\\-])"
+)
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)#\s]+)(?:#[^)]*)?\)")
 CREATE_LINE_RE = re.compile(
     rf"^\s*-\s+Create:\s+(?:`{PATH_PATTERN}`|{PATH_PATTERN})\s*$"
@@ -484,10 +496,37 @@ def _new250_reference(src, cited):
 from resolve_t20_v6_source import NEXT250
 
 
+def _after3134_reference(src, cited):
+    # Candidate spelling is checked before normalization; unsafe selected spellings
+    # fail terminally rather than gaining an ordinary-existence exemption.
+    if not isinstance(cited, str):
+        return None
+    candidates = [cited]
+    directory = os.path.dirname(src)
+    while directory:
+        candidates.append(directory + '/' + cited)
+        directory = os.path.dirname(directory)
+    selected = [p for p in candidates if os.path.normpath(p) in FIRST50_ASSURANCE_PATHS]
+    if not selected:
+        return None
+    for path in selected:
+        if any(c in path for c in ('\\', '\0', ':')) or path.startswith('/') or any(x in ('', '.', '..') for x in path.split('/')):
+            return False
+        try:
+            first50_assurance_bytes(ROOT, path)
+        except (ValueError, OSError):
+            return False
+    return True
+
+
+
 def _resolves(src, cited):
     new250 = _new250_reference(src, cited)
     if new250 is not None:
         return new250
+    after3134 = _after3134_reference(src, cited)
+    if after3134 is not None:
+        return after3134
     read_batch = _successor_read_batch_reference(src, cited)
     if read_batch is not None:
         return read_batch
@@ -590,6 +629,8 @@ def _citation_occurrences(src, text, *, root=None, successor_sources=None):
         field = re.fullmatch(r'\s*"source_path":\s*("(?:[^"\\]|\\.)*")\s*,?\s*', line)
         if field and json.loads(field.group(1)) in selectors:
             continue
+        for cited in AFTER3134_LOCAL_CITATION_RE.findall(line):
+            yield cited, line
         for cited in PATH_RE.findall(line):
             if cited.replace("\\", "/") in original_driver_members:
                 continue
@@ -649,18 +690,33 @@ def main():
     packet_locators = set()
     successor_locators = set()
     missing = {}
-    corpus_text = {}
+    stream_liveness = all(p and "\n" not in p for p in exempt)
+    liveness_counts = {p: 0 for p in exempt}
+    corpus_text = None if stream_liveness else {}
     for src in corpus:
         try:
             text = io.open(os.path.join(ROOT, src), encoding="utf-8").read()
         except (UnicodeDecodeError, OSError):
             continue
-        corpus_text[src] = text
+        if stream_liveness:
+            normalized_liveness_text = text.replace("\\", "/")
+            for p in exempt:
+                liveness_counts[p] += (normalized_liveness_text.count(p)
+                                       - normalized_liveness_text.count("- " + p)
+                                       - normalized_liveness_text.count("  - path: " + p))
+            del normalized_liveness_text
+        else:
+            corpus_text[src] = text
         for cited, line in _citation_occurrences(src, text, root=ROOT, successor_sources=successor_sources):
             new250 = _new250_reference(src, cited)
             if new250 is not None:
                 if not new250:
                     missing.setdefault(cited + ' (invalid NEW250 provider)', set()).add(src)
+                continue
+            after3134 = _after3134_reference(src, cited)
+            if after3134 is not None:
+                if not after3134:
+                    missing.setdefault(cited + ' (invalid After3134 provider)', set()).add(src)
                 continue
             if cited in exempt:
                 continue
@@ -695,9 +751,10 @@ def main():
           "; ".join("%s <- %s" % (p, sorted(s)[:2]) for p, s in sorted(missing.items())[:6]))
 
     # exemptions must stay live: an exemption nobody cites any more is stale state
-    blob = "\n".join(corpus_text.values()).replace("\\", "/")
+    blob = None if stream_liveness else "\n".join(corpus_text.values()).replace("\\", "/")
     for p in sorted(exempt):
-        others = blob.count(p) - blob.count("- " + p) - blob.count("  - path: " + p)
+        others = (liveness_counts[p] if stream_liveness else
+                  blob.count(p) - blob.count("- " + p) - blob.count("  - path: " + p))
         check("exemption %s is still actually cited somewhere" % p, others > 0,
               "no document cites it any more — remove the stale exemption")
 
