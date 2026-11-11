@@ -4,7 +4,7 @@
     "commit": "cdbb59bab4859e2046b3add9ae69f0b976741374",
     "tree": "be2c04c112093404492cd2c69f252bd956d7bf2f"
   },
-  "tree": "2212e4da16c3c54589727f490151cd35bdd4ef51",
+  "tree": "b0f0774a9fa1bd0578f9655de6ac326d06a6a26a",
   "permitted_changes": [
     {
       "path": ".gitattributes",
@@ -14,42 +14,42 @@
     {
       "path": "docs/current-state.yaml",
       "before_entry": "100644 blob 6a3c85e8efe6aa0940a5c8b8f38047468c7ecd18\tdocs/current-state.yaml\u0000",
-      "after_entry": "100644 blob f13965ebee79dea5273c47d13a66da139a2f5255\tdocs/current-state.yaml\u0000"
+      "after_entry": "100644 blob d64fad235274e2f9e1ae1df027157f76cb6caf91\tdocs/current-state.yaml\u0000"
     },
     {
       "path": "docs/project-closure/reader-refactor-issue-35/CROSSWALK.json",
       "before_entry": "100644 blob e49086822ee0890afe1ff69ffa51420535057f18\tdocs/project-closure/reader-refactor-issue-35/CROSSWALK.json\u0000",
-      "after_entry": "100644 blob 4ce3e404d53d2209a29b71e7d227b0ed981aea2f\tdocs/project-closure/reader-refactor-issue-35/CROSSWALK.json\u0000"
+      "after_entry": "100644 blob b63278393b9a6d1e819bbdb3295f886560b738a4\tdocs/project-closure/reader-refactor-issue-35/CROSSWALK.json\u0000"
     },
     {
       "path": "docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json",
       "before_entry": "100644 blob b66252a9172042969b378b3f61d5e44aaea9a579\tdocs/project-closure/reader-refactor-issue-35/OWNER-MAP.json\u0000",
-      "after_entry": "100644 blob b5c4204951b99f539c59285248a764bb101d7fb8\tdocs/project-closure/reader-refactor-issue-35/OWNER-MAP.json\u0000"
+      "after_entry": "100644 blob 703baf4a832efe9b5391349e548bcf5ef40ccbc0\tdocs/project-closure/reader-refactor-issue-35/OWNER-MAP.json\u0000"
     },
     {
       "path": "docs/provenance/RELEASE-MANIFEST.sha256",
       "before_entry": "100644 blob ae8284a18197dcbe7257f505facdd605eca6c569\tdocs/provenance/RELEASE-MANIFEST.sha256\u0000",
-      "after_entry": "100644 blob f9ab28fbbcf47bf5610ee6fa3932855e4c09ded4\tdocs/provenance/RELEASE-MANIFEST.sha256\u0000"
+      "after_entry": "100644 blob 6194938fc66afb860425128caff1f319cb8316cf\tdocs/provenance/RELEASE-MANIFEST.sha256\u0000"
     },
     {
       "path": "docs/provenance/r0002-next250-receiver/CATALOG.json",
       "before_entry": "",
-      "after_entry": "100644 blob b14d9a3d8a7f51396fa72b3d8ab832ebb3bd679e\tdocs/provenance/r0002-next250-receiver/CATALOG.json\u0000"
+      "after_entry": "100644 blob aa79fd094b80391560bf3d85efb4b9f6cc2f624a\tdocs/provenance/r0002-next250-receiver/CATALOG.json\u0000"
     },
     {
       "path": "docs/provenance/r0002-next250-receiver/FALLBACK-ACCEPTANCE.json",
       "before_entry": "",
-      "after_entry": "100644 blob 7a31fcc5bb514ed40d04f0e9cf3d6b0fee4e110b\tdocs/provenance/r0002-next250-receiver/FALLBACK-ACCEPTANCE.json\u0000"
+      "after_entry": "100644 blob 146bc61bd2474afb995d881d553ab638b85dfd52\tdocs/provenance/r0002-next250-receiver/FALLBACK-ACCEPTANCE.json\u0000"
     },
     {
       "path": "docs/provenance/r0002-next250-receiver/FALLBACK-REACHABILITY.json",
       "before_entry": "",
-      "after_entry": "100644 blob 1223bc1ec29f5cbc0c933601735d5b2e158146f0\tdocs/provenance/r0002-next250-receiver/FALLBACK-REACHABILITY.json\u0000"
+      "after_entry": "100644 blob e30a8252afd757d07ad2228e53607ab12aa217de\tdocs/provenance/r0002-next250-receiver/FALLBACK-REACHABILITY.json\u0000"
     },
     {
       "path": "docs/provenance/r0002-next250-receiver/PROVISIONAL-QUALIFICATION.json",
       "before_entry": "",
-      "after_entry": "100644 blob 571e14ccdf0561929bab0d4192fc9b7f005e40a7\tdocs/provenance/r0002-next250-receiver/PROVISIONAL-QUALIFICATION.json\u0000"
+      "after_entry": "100644 blob 9b99222b4aeb232cdf958b5cb0c1b95ebd43c26b\tdocs/provenance/r0002-next250-receiver/PROVISIONAL-QUALIFICATION.json\u0000"
     },
     {
       "path": "docs/provenance/r0002-next250-receiver/RECEIVER.bin",
@@ -59,27 +59,27 @@
     {
       "path": "docs/scientific-consolidation-review.md",
       "before_entry": "100644 blob 51f428e66251a856688ddde9dde31d6edccbf0b5\tdocs/scientific-consolidation-review.md\u0000",
-      "after_entry": "100644 blob 74cf002561101742fdbbfdd18642348967e5983d\tdocs/scientific-consolidation-review.md\u0000"
+      "after_entry": "100644 blob 83571da6157c71f9abd69940be10e95ff587441b\tdocs/scientific-consolidation-review.md\u0000"
     },
     {
       "path": "epistemology/recognition-warrant-and-restoration.md",
       "before_entry": "100644 blob 2f3f67292ca7eac2db192dcf366e91f7818b7058\tepistemology/recognition-warrant-and-restoration.md\u0000",
-      "after_entry": "100644 blob 3dd11fd5a6efdcc469be36f16abd6b9544631d10\tepistemology/recognition-warrant-and-restoration.md\u0000"
+      "after_entry": "100644 blob 470e1b4d4421fe9bc3aa0714edd20583f15fc561\tepistemology/recognition-warrant-and-restoration.md\u0000"
     },
     {
       "path": "foundations/objective-normativity-and-corrective-cognition.md",
       "before_entry": "100644 blob 6079b7b3bc922546aa0ac6157eda79cb1baa8a30\tfoundations/objective-normativity-and-corrective-cognition.md\u0000",
-      "after_entry": "100644 blob 551a337c32542e191b45d44006c5984147c56e39\tfoundations/objective-normativity-and-corrective-cognition.md\u0000"
+      "after_entry": "100644 blob e767c5aa5084de58b9270c98f6d4a64444929b44\tfoundations/objective-normativity-and-corrective-cognition.md\u0000"
     },
     {
       "path": "foundations/received-actuality-and-intrinsic-necessity.md",
       "before_entry": "100644 blob c6ce79cbcda9cdbea001c0b2ee070d03aacd5e6d\tfoundations/received-actuality-and-intrinsic-necessity.md\u0000",
-      "after_entry": "100644 blob bbf4f77d07599c4cf507940bdd29ffc553478bd6\tfoundations/received-actuality-and-intrinsic-necessity.md\u0000"
+      "after_entry": "100644 blob 222d59b3abea37b10a761ec228d676f09324a260\tfoundations/received-actuality-and-intrinsic-necessity.md\u0000"
     },
     {
       "path": "logic/encodings-and-witnesses.md",
       "before_entry": "100644 blob 4b2512d85b428a4dcf0387aa979789220271dbba\tlogic/encodings-and-witnesses.md\u0000",
-      "after_entry": "100644 blob d47cc8ba5a8dbc677f0d1c13cb309b3fadb53f18\tlogic/encodings-and-witnesses.md\u0000"
+      "after_entry": "100644 blob d0005333f56d6821d607db620403ae6c71fcf1eb\tlogic/encodings-and-witnesses.md\u0000"
     },
     {
       "path": "mathematics/collective-inquiry-and-strategic-coordination.md",
@@ -89,27 +89,27 @@
     {
       "path": "mathematics/common-repair-and-geometric-obstructions.md",
       "before_entry": "100644 blob 3c9a25aa339821fb6e2f95941872bdfb17fd2f7a\tmathematics/common-repair-and-geometric-obstructions.md\u0000",
-      "after_entry": "100644 blob 541b157e8053f7255fc8c241db982f3b28705cc2\tmathematics/common-repair-and-geometric-obstructions.md\u0000"
+      "after_entry": "100644 blob f2a0d6b50924a0caca932bc9ccdcc390e21ff6fa\tmathematics/common-repair-and-geometric-obstructions.md\u0000"
     },
     {
       "path": "mathematics/information-and-inquiry.md",
       "before_entry": "100644 blob 08d11adf48d2ef9742b30517d786c15f7b3ca05f\tmathematics/information-and-inquiry.md\u0000",
-      "after_entry": "100644 blob 3a6ceb153d0c746a60cbb4185107a535cdf1db59\tmathematics/information-and-inquiry.md\u0000"
+      "after_entry": "100644 blob 237718be0e351abaf205cb994274e9c90b9661ff\tmathematics/information-and-inquiry.md\u0000"
     },
     {
       "path": "mathematics/measure-computability-and-finite-warrant.md",
       "before_entry": "100644 blob 194d23bed7613b48e7ccdecb823bdb4bd6b6f712\tmathematics/measure-computability-and-finite-warrant.md\u0000",
-      "after_entry": "100644 blob 1d68532d1633d4eb61c23c31971294a4a41ff628\tmathematics/measure-computability-and-finite-warrant.md\u0000"
+      "after_entry": "100644 blob 68fca6aff081332efb8c1476604e9c83c7144972\tmathematics/measure-computability-and-finite-warrant.md\u0000"
     },
     {
       "path": "mathematics/physical-realisation-and-continuation.md",
       "before_entry": "100644 blob a51c8d74f3c09368a50ea5c8a8213a2339f366c8\tmathematics/physical-realisation-and-continuation.md\u0000",
-      "after_entry": "100644 blob 0bc18d0ebca62a18b1b1f9fe920a8c718d89dccc\tmathematics/physical-realisation-and-continuation.md\u0000"
+      "after_entry": "100644 blob c547f0d962bec6f8d8ddd1bb893746b22ef922ef\tmathematics/physical-realisation-and-continuation.md\u0000"
     },
     {
       "path": "mathematics/tensor-moments-and-corrective-dynamics.md",
       "before_entry": "100644 blob 03efeffe49c72abda647b601df1925f08c8f2f4d\tmathematics/tensor-moments-and-corrective-dynamics.md\u0000",
-      "after_entry": "100644 blob e37bbd79775c8ca73c5788020db72757545cf87b\tmathematics/tensor-moments-and-corrective-dynamics.md\u0000"
+      "after_entry": "100644 blob 91ba7568c84eb8f2ae09599a63acd98d7c8ddcf1\tmathematics/tensor-moments-and-corrective-dynamics.md\u0000"
     },
     {
       "path": "research/t20-v6-20261012/research-v6/early_remaining/REPORT.md",
@@ -3754,28 +3754,28 @@
     {
       "path": "scripts/check_reader_pilot.py",
       "before_entry": "100644 blob 3751ad6673f466d9ae9e7dd62616a4f4b1a12259\tscripts/check_reader_pilot.py\u0000",
-      "after_entry": "100644 blob 2f36801a93222b95856ec75553637ea5111ad93a\tscripts/check_reader_pilot.py\u0000"
+      "after_entry": "100644 blob bc4ec82e427b8e6608d9461d453174483d92dee3\tscripts/check_reader_pilot.py\u0000"
     },
     {
       "path": "scripts/resolve_t20_v6_source.py",
       "before_entry": "100644 blob 0e5259b1654c827116223c69b1bea0a2bda3da70\tscripts/resolve_t20_v6_source.py\u0000",
-      "after_entry": "100644 blob b984d0383c893eb8ee9d5073bf38ee3c56391906\tscripts/resolve_t20_v6_source.py\u0000"
+      "after_entry": "100644 blob 128c61ed0ec271c8536614d81b816d4bcd8a9bdf\tscripts/resolve_t20_v6_source.py\u0000"
     },
     {
       "path": "scripts/source_alias_absence_reader.py",
       "before_entry": "100644 blob 77564f9afc8aae49fef24c1e43deff350d68567a\tscripts/source_alias_absence_reader.py\u0000",
-      "after_entry": "100644 blob 707173c631bd774c23689353b6e59c3efa398851\tscripts/source_alias_absence_reader.py\u0000"
+      "after_entry": "100644 blob 48c112cf3f888068f164d8401b50f99cba1ab3d9\tscripts/source_alias_absence_reader.py\u0000"
     },
     {
       "path": "scripts/validate_internal_references.py",
       "before_entry": "100644 blob 3a033d345dd348e14cd1827a971a24ec76ccda2d\tscripts/validate_internal_references.py\u0000",
-      "after_entry": "100644 blob 93f479ad358740130ff2ecf76e3d0e8e2fcc99b4\tscripts/validate_internal_references.py\u0000"
+      "after_entry": "100644 blob 81f4df3992142a06f59a714087cd6fda13028610\tscripts/validate_internal_references.py\u0000"
     },
     {
       "path": "scripts/validate_t20_v6_projection.py",
       "before_entry": "100644 blob df171f05b9bb6858a462779a8ab99687df818a08\tscripts/validate_t20_v6_projection.py\u0000",
-      "after_entry": "100644 blob 4d43458ccd146219cf669133f66f6ccc2ce1aa8d\tscripts/validate_t20_v6_projection.py\u0000"
+      "after_entry": "100644 blob 24660de9a40dcc43ca193bf391d21c1c7a3f01c2\tscripts/validate_t20_v6_projection.py\u0000"
     }
   ],
-  "independent_review_sha256": "32fd152ef0c7dfd779372b876833645f281b5d7080167d961abf20041bb29bf4"
+  "independent_review_sha256": "1f52dd2eb331cd0d4fa23c59d9c5d5f9c81762f5168106d786522894378978d0"
 }
