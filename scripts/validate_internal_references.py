@@ -54,6 +54,7 @@ from resolve_t20_v6_source import (
     AFTER3634_PATHS, after3634_bytes,
     AFTER3884_PATHS, after3884_bytes,
     AFTER4134_PATHS, after4134_bytes,
+    AFTER4384_PATHS, after4384_bytes,
     SUCCESSOR_REMAINDER_BATCH_PATHS, successor_remainder_batch_bytes,
     SUCCESSOR_CALCULUS_MAP, successor_calculus_map_bytes,
     GENERATED_FIXTURE_PATHS, generated_fixture_bytes,
@@ -612,7 +613,32 @@ def _after4134_reference(src, cited):
             return False
     return True
 
+def _after4384_reference(src, cited):
+    # Candidate spelling is checked before normalization; unsafe selected spellings
+    # fail terminally rather than gaining an ordinary-existence exemption.
+    if not isinstance(cited, str):
+        return None
+    candidates = [cited]
+    directory = os.path.dirname(src)
+    while directory:
+        candidates.append(directory + '/' + cited)
+        directory = os.path.dirname(directory)
+    selected = [p for p in candidates if os.path.normpath(p.replace("\\", "/")) in AFTER4384_PATHS]
+    if not selected:
+        return None
+    for path in selected:
+        if any(c in path for c in ('\\', '\0', ':')) or path.startswith('/') or any(x in ('', '.', '..') for x in path.split('/')):
+            return False
+        try:
+            after4384_bytes(ROOT, path)
+        except (ValueError, OSError):
+            return False
+    return True
+
 def _resolves(src, cited):
+    after4384 = _after4384_reference(src, cited)
+    if after4384 is not None:
+        return after4384
     after4134 = _after4134_reference(src, cited)
     if after4134 is not None:
         return after4134

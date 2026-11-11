@@ -2,9 +2,9 @@
   "verdict": "ACCEPT_FINITE_FALLBACK_EVIDENCE",
   "receipt": {
     "identity": [
-      "8129449abc8c3f55fba60db54895e8ab1d803b84",
-      "9a9b2e7d8a42a86b3fed69a0938dc700258a0efe004eb2c60ffa59c40c113fc5",
-      6722267
+      "b2827815acad59743b15ad2597113477adbe8796",
+      "6877b784cef40f93672951d5430e8f599712d08b557f0479ac417467c1ca2808",
+      7098267
     ],
     "origin": "reviewed_receipt",
     "path": "docs/provenance/r0002-next250-receiver/FALLBACK-REACHABILITY.json",
@@ -33832,8 +33832,8 @@
     "consumer_contexts": {
       "crosswalk": {
         "identity": [
-          "54250755bc2e15d471d3a981ba6e128ba5663ab0",
-          "81ea9ec916f661353a36e4c423e99e3d3bbb2616d648818c46cac5319131315a",
+          "0fe0c76d60427c1a9ff7b62bb7f1e4457138206e",
+          "4f3eb39d5c88eb9d2ec1890b418b9eeab770bef5ebb25b4b29e88484f7f49594",
           2142889
         ],
         "origin": "qualified_provisional",
@@ -33842,8 +33842,8 @@
       },
       "owner_map": {
         "identity": [
-          "67c10610c143fdc729ec103eb14cd0c6b5518b2f",
-          "b0c6219c392046c3c338c832fcc5dd422c5f9e7ec74888bbc93461c24ddd971f",
+          "399b7bed2f7f67bd547d423cb04c8c4029edc1a3",
+          "6bd77e3229ea612d15c589640beec2f93ab0d32619379424fa8d00c821567fee",
           70256
         ],
         "origin": "qualified_provisional",
@@ -33861,7 +33861,7 @@
         "role": "consumer_context"
       }
     },
-    "provisional_tree": "af4b50b4a2e417e090a300ae7933c83909584964"
+    "provisional_tree": "144cb7522e425c7fa4b58f9f4e10b5b6a8c5a245"
   },
-  "consumer_logic_sha256": "03ee65656b0fb0f04f1b060818e8178d3588182fc852cf88387d437bcb87b416"
+  "consumer_logic_sha256": "eea536cacab6c9cd19e257f7cc782dcdaff683aaeb53a23edcca53824d9696ce"
 }

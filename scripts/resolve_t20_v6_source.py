@@ -36650,18 +36650,18 @@ class FiniteSourceProvider:
             raise ValueError('NEXT250 reader key/path/hash/scope differs')
         return self.source_bytes(root, path)
 
-NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092e',
-                      '277a561048b25027b9c645813a39e346c08ef21b02de5f1e709b4f610f385bd9',
-                      2255345],
+NEXT250_BINDING = {'catalog_identity': ['f8e7c08024276f1f0f284ba09e3570f634e067f6',
+                      'd374b96f885ea51aa42fd6c83dff1a66810a8cd0d39c4107d40de02ec6a79e4b',
+                      2308764],
  'catalog_path': 'docs/provenance/r0002-next250-receiver/CATALOG.json',
- 'consumer_contexts': {'crosswalk': {'identity': ['54250755bc2e15d471d3a981ba6e128ba5663ab0',
-                                                  '81ea9ec916f661353a36e4c423e99e3d3bbb2616d648818c46cac5319131315a',
+ 'consumer_contexts': {'crosswalk': {'identity': ['0fe0c76d60427c1a9ff7b62bb7f1e4457138206e',
+                                                  '4f3eb39d5c88eb9d2ec1890b418b9eeab770bef5ebb25b4b29e88484f7f49594',
                                                   2142889],
                                      'origin': 'qualified_provisional',
                                      'path': 'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json',
                                      'role': 'consumer_context'},
-                       'owner_map': {'identity': ['67c10610c143fdc729ec103eb14cd0c6b5518b2f',
-                                                  'b0c6219c392046c3c338c832fcc5dd422c5f9e7ec74888bbc93461c24ddd971f',
+                       'owner_map': {'identity': ['399b7bed2f7f67bd547d423cb04c8c4029edc1a3',
+                                                  '6bd77e3229ea612d15c589640beec2f93ab0d32619379424fa8d00c821567fee',
                                                   70256],
                                      'origin': 'qualified_provisional',
                                      'path': 'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json',
@@ -36672,10 +36672,10 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                         'origin': 'published',
                                         'path': 'research/t20-v6-20261012/CURRENT_SOURCE_GRAPH.json',
                                         'role': 'consumer_context'}},
- 'consumer_logic_sha256': '03ee65656b0fb0f04f1b060818e8178d3588182fc852cf88387d437bcb87b416',
- 'fallback_reachability': {'identity': ['8129449abc8c3f55fba60db54895e8ab1d803b84',
-                                        '9a9b2e7d8a42a86b3fed69a0938dc700258a0efe004eb2c60ffa59c40c113fc5',
-                                        6722267],
+ 'consumer_logic_sha256': 'eea536cacab6c9cd19e257f7cc782dcdaff683aaeb53a23edcca53824d9696ce',
+ 'fallback_reachability': {'identity': ['b2827815acad59743b15ad2597113477adbe8796',
+                                        '6877b784cef40f93672951d5430e8f599712d08b557f0479ac417467c1ca2808',
+                                        7098267],
                            'origin': 'reviewed_receipt',
                            'path': 'docs/provenance/r0002-next250-receiver/FALLBACK-REACHABILITY.json',
                            'role': 'fallback_reachability'},
@@ -41575,7 +41575,7 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                             'role': 'consumer_context'},
                      'research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json': {'origin': 'published',
                                                                                   'role': 'source_universe'}},
- 'provisional_input': {'expected_document': {'independent_review_sha256': '90d0d2990633ff75cd4450bed862873a37263dcf7ed7cb20bcd2244c725a6d0e',
+ 'provisional_input': {'expected_document': {'independent_review_sha256': '1a788478650510305df7e7441bd48dd29edfad44b06be9c2c660ea103a823df1',
                                              'permitted_changes': [{'after_entry': '100644 blob '
                                                                                    '95a8280b070ac0babbefb477f25fa7f1f5ed3c6d\t'
                                                                                    '.gitattributes\x00',
@@ -41584,50 +41584,50 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                                     '.gitattributes\x00',
                                                                     'path': '.gitattributes'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   '8c80d40bec5078b999da3b30f1fcca49c8f4f979\t'
+                                                                                   '2b17bc324a8f75468e362bc4df8d38ae1e71b990\t'
                                                                                    'docs/current-state.yaml\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '6a3c85e8efe6aa0940a5c8b8f38047468c7ecd18\t'
                                                                                     'docs/current-state.yaml\x00',
                                                                     'path': 'docs/current-state.yaml'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   '54250755bc2e15d471d3a981ba6e128ba5663ab0\t'
+                                                                                   '0fe0c76d60427c1a9ff7b62bb7f1e4457138206e\t'
                                                                                    'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     'e49086822ee0890afe1ff69ffa51420535057f18\t'
                                                                                     'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json\x00',
                                                                     'path': 'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   '67c10610c143fdc729ec103eb14cd0c6b5518b2f\t'
+                                                                                   '399b7bed2f7f67bd547d423cb04c8c4029edc1a3\t'
                                                                                    'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     'b66252a9172042969b378b3f61d5e44aaea9a579\t'
                                                                                     'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json\x00',
                                                                     'path': 'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   'c66181e1036345cc0c2eca1ea869bf74d01f58e6\t'
+                                                                                   'd72e24324e0e8585e46bb35b22a15571e9434d00\t'
                                                                                    'docs/provenance/RELEASE-MANIFEST.sha256\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     'ae8284a18197dcbe7257f505facdd605eca6c569\t'
                                                                                     'docs/provenance/RELEASE-MANIFEST.sha256\x00',
                                                                     'path': 'docs/provenance/RELEASE-MANIFEST.sha256'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   '49c74a04f9bc166ff9dabfefed39a1d812e3c3eb\t'
+                                                                                   '0cec315ae366775d432cce6703173d8adff4092e\t'
                                                                                    'docs/provenance/r0002-next250-receiver/CATALOG.json\x00',
                                                                     'before_entry': '',
                                                                     'path': 'docs/provenance/r0002-next250-receiver/CATALOG.json'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   'df3a8e82eb6af509bc765c88123a5cd0e2fa1ee1\t'
+                                                                                   '4d0db929f421b512823673bd8d8d2adf6920e770\t'
                                                                                    'docs/provenance/r0002-next250-receiver/FALLBACK-ACCEPTANCE.json\x00',
                                                                     'before_entry': '',
                                                                     'path': 'docs/provenance/r0002-next250-receiver/FALLBACK-ACCEPTANCE.json'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   '8ceebcb0f9c37f9850578c790a3f0ce614d4fa16\t'
+                                                                                   '8129449abc8c3f55fba60db54895e8ab1d803b84\t'
                                                                                    'docs/provenance/r0002-next250-receiver/FALLBACK-REACHABILITY.json\x00',
                                                                     'before_entry': '',
                                                                     'path': 'docs/provenance/r0002-next250-receiver/FALLBACK-REACHABILITY.json'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   'f6e5dc3e092dc419b11726e385be698da100239a\t'
+                                                                                   '6181f57109be426789f2971dedd96889669558f7\t'
                                                                                    'docs/provenance/r0002-next250-receiver/PROVISIONAL-QUALIFICATION.json\x00',
                                                                     'before_entry': '',
                                                                     'path': 'docs/provenance/r0002-next250-receiver/PROVISIONAL-QUALIFICATION.json'},
@@ -41637,77 +41637,77 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'before_entry': '',
                                                                     'path': 'docs/provenance/r0002-next250-receiver/RECEIVER.bin'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   'a6561f66f114e06fdc5558bb236c7d947d16edda\t'
+                                                                                   '6aee724bc8408eaac40dcff0c3ab8e2a094673be\t'
                                                                                    'docs/scientific-consolidation-review.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '51f428e66251a856688ddde9dde31d6edccbf0b5\t'
                                                                                     'docs/scientific-consolidation-review.md\x00',
                                                                     'path': 'docs/scientific-consolidation-review.md'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   'e717662ee4eed06b0f98855e0890c6454f664e3a\t'
+                                                                                   '2c4b3f8fdfa445d58cbfd1561ccc4f48051d7919\t'
                                                                                    'epistemology/recognition-warrant-and-restoration.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '2f3f67292ca7eac2db192dcf366e91f7818b7058\t'
                                                                                     'epistemology/recognition-warrant-and-restoration.md\x00',
                                                                     'path': 'epistemology/recognition-warrant-and-restoration.md'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   'edbf43a9a11cac953e343f8d7747308457b6dc64\t'
+                                                                                   'b7eed9613aa8bda55f972a037c9266a50d409e5f\t'
                                                                                    'foundations/objective-normativity-and-corrective-cognition.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '6079b7b3bc922546aa0ac6157eda79cb1baa8a30\t'
                                                                                     'foundations/objective-normativity-and-corrective-cognition.md\x00',
                                                                     'path': 'foundations/objective-normativity-and-corrective-cognition.md'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   '6eb41c89075c567d44edbc6a4bd77e17f58976a0\t'
+                                                                                   'c219b9151e9e17ea9b6db137a078b7689187ca5f\t'
                                                                                    'foundations/received-actuality-and-intrinsic-necessity.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     'c6ce79cbcda9cdbea001c0b2ee070d03aacd5e6d\t'
                                                                                     'foundations/received-actuality-and-intrinsic-necessity.md\x00',
                                                                     'path': 'foundations/received-actuality-and-intrinsic-necessity.md'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   '4de39401942204f7742029d9aee53e0152ea82c4\t'
+                                                                                   'bc3b3c8a5dde0d34f423cf498c464d38d3fad416\t'
                                                                                    'logic/encodings-and-witnesses.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '4b2512d85b428a4dcf0387aa979789220271dbba\t'
                                                                                     'logic/encodings-and-witnesses.md\x00',
                                                                     'path': 'logic/encodings-and-witnesses.md'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   '55d226fde58ba76aacd204ec9f626c4dff21e015\t'
+                                                                                   'e703b649685607b57ee793fb7f8997211cb0087b\t'
                                                                                    'mathematics/collective-inquiry-and-strategic-coordination.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '43abe9e55cd41a464e04e4e8c9780b7c6c7cbdf8\t'
                                                                                     'mathematics/collective-inquiry-and-strategic-coordination.md\x00',
                                                                     'path': 'mathematics/collective-inquiry-and-strategic-coordination.md'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   '03fd860649fb0c1a30038250ea182350f8ecd753\t'
+                                                                                   '80ff13a843290744784a60c82322cf25437f39b8\t'
                                                                                    'mathematics/common-repair-and-geometric-obstructions.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '3c9a25aa339821fb6e2f95941872bdfb17fd2f7a\t'
                                                                                     'mathematics/common-repair-and-geometric-obstructions.md\x00',
                                                                     'path': 'mathematics/common-repair-and-geometric-obstructions.md'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   'b69278a7c131ca0a4e5c8f61db9f6afb78a4f22b\t'
+                                                                                   'fe5dfa810a4602369254fe804c1aea78df561a9a\t'
                                                                                    'mathematics/information-and-inquiry.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '08d11adf48d2ef9742b30517d786c15f7b3ca05f\t'
                                                                                     'mathematics/information-and-inquiry.md\x00',
                                                                     'path': 'mathematics/information-and-inquiry.md'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   '68c7c4b57355fcf9cac68863f27998f4429362f5\t'
+                                                                                   '3a59bd462f6dca9b81d921b97edd1b5fbe4ecf72\t'
                                                                                    'mathematics/measure-computability-and-finite-warrant.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '194d23bed7613b48e7ccdecb823bdb4bd6b6f712\t'
                                                                                     'mathematics/measure-computability-and-finite-warrant.md\x00',
                                                                     'path': 'mathematics/measure-computability-and-finite-warrant.md'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   '329244a76eae2e3f12b70c54445cb49f7f9a4737\t'
+                                                                                   'a14c668e8e51a000f990d0d76dfa07851c8562fd\t'
                                                                                    'mathematics/physical-realisation-and-continuation.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     'a51c8d74f3c09368a50ea5c8a8213a2339f366c8\t'
                                                                                     'mathematics/physical-realisation-and-continuation.md\x00',
                                                                     'path': 'mathematics/physical-realisation-and-continuation.md'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   '44ba567c636478ee0f72a11c23be3f271ebfedff\t'
+                                                                                   '8b129c98baa126b6f377b9443716eb8afe55baaf\t'
                                                                                    'mathematics/tensor-moments-and-corrective-dynamics.md\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '03efeffe49c72abda647b601df1925f08c8f2f4d\t'
@@ -41738,6 +41738,11 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                                     '665c99954fbd5d033900d4806d715ae7ce5d09c5\t'
                                                                                     'research/t20-v6-20261012/research-v6/early_remaining/t4_recovered/REPORT.md\x00',
                                                                     'path': 'research/t20-v6-20261012/research-v6/early_remaining/t4_recovered/REPORT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '224448040387f2cfbc333a7666170c6bd8b8bdb1\t'
+                                                                                    'research/t20-v6-20261012/research-v6/foundations/a_ap_structured/REPORT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/research-v6/foundations/a_ap_structured/REPORT.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '22f855b44b881c79482f3f6501c09fc839a5f1de\t'
@@ -41780,6 +41785,16 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/research-v6/privacy-qualified/20261008_SUCCESSOR_PRIORITY.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    'cecf3d44152045a3c37e603cfa63a298b32679f9\t'
+                                                                                    'research/t20-v6-20261012/research-v6/privacy-qualified/CANDIDATE_ECOLOGY_AVENUES.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/research-v6/privacy-qualified/CANDIDATE_ECOLOGY_AVENUES.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '75f6369e6116726c78e340c1b375b737dafa31b3\t'
+                                                                                    'research/t20-v6-20261012/research-v6/privacy-qualified/RESEARCH_ACCOUNTING_POLICY.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/research-v6/privacy-qualified/RESEARCH_ACCOUNTING_POLICY.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     '7da567f4de1bfeb5b60aa44bf99d7b5ec45c545f\t'
                                                                                     'research/t20-v6-20261012/research-v6/privacy-qualified/SOURCE_USE_RECONCILIATION_v4.md\x00',
                                                                     'path': 'research/t20-v6-20261012/research-v6/privacy-qualified/SOURCE_USE_RECONCILIATION_v4.md'},
@@ -41815,6 +41830,11 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/research-v6/root_math/minhaj_dar_study9/REPORT.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '3a0e22a8a7c832b9ce1d5f15dd8eb0618fba1473\t'
+                                                                                    'research/t20-v6-20261012/research-v6/root_math/terminal_annex_prose65/REPORT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/research-v6/root_math/terminal_annex_prose65/REPORT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     '31a70e6dafb5f8ee891a24cc0e646b8332c57c2a\t'
                                                                                     'research/t20-v6-20261012/research-v6/root_math/u_series_prose/REPORT.md\x00',
                                                                     'path': 'research/t20-v6-20261012/research-v6/root_math/u_series_prose/REPORT.md'},
@@ -41828,6 +41848,11 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                                     '41adf8401a4d59961f942142d20d1800887b9172\t'
                                                                                     'research/t20-v6-20261012/research-v6/synthesis/T21_CONTINUATION_CHARTER.md\x00',
                                                                     'path': 'research/t20-v6-20261012/research-v6/synthesis/T21_CONTINUATION_CHARTER.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '0c3842f0a4295ebd9511f6dbd8759f855b9987dc\t'
+                                                                                    'research/t20-v6-20261012/research-v6/type_collective/JOINT_COMPLETENESS_BOUNDARY.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/research-v6/type_collective/JOINT_COMPLETENESS_BOUNDARY.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     'cd11fde7851ebc8a9494976141848be02c95962f\t'
@@ -44905,9 +44930,34 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/3af59a3bc61edd9a25b7418077ea1a9d07549ae94df0e09bd79b6167f0b2eb17/FiniteTypeCodeCompilation.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '993bee39026718753a6754e331e291a23367772d\t'
+                                                                                    'research/t20-v6-20261012/sources/3b1b9359a8ba7a258a85ecb457dfd77c403c207d079b17e114bd55bacc37d4b0/REPORT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3b1b9359a8ba7a258a85ecb457dfd77c403c207d079b17e114bd55bacc37d4b0/REPORT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'ad49657d0d277785640cc155b6707a89078ed4e8\t'
+                                                                                    'research/t20-v6-20261012/sources/3b21c3d10c53dbe39307eb28c7385032ae4a9e28cd757adf17743d66cfba59c8/REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3b21c3d10c53dbe39307eb28c7385032ae4a9e28cd757adf17743d66cfba59c8/REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'fd6469d4c01fd758b1feb40f211b77aed4534d9d\t'
+                                                                                    'research/t20-v6-20261012/sources/3b2feaa079d82f3b8946a45e0a602c5ab06993e13ac0853d70c407e9d13d1a00/RESULT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3b2feaa079d82f3b8946a45e0a602c5ab06993e13ac0853d70c407e9d13d1a00/RESULT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     'cfa77d8011d5e055e57e4d693261cae503515810\t'
                                                                                     'research/t20-v6-20261012/sources/3b440e95ad268f4025f3515eaeb4c81d0430dba773e48813be68e19b5f8b8e4f/ImportManifest.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/3b440e95ad268f4025f3515eaeb4c81d0430dba773e48813be68e19b5f8b8e4f/ImportManifest.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '2c6e5429cbeb076199de28b62188b94676ca716e\t'
+                                                                                    'research/t20-v6-20261012/sources/3b55fa93bdfc680be53ebc80cc30308f4db9bddb8a8ffae65898200e97a69c4c/RESULT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3b55fa93bdfc680be53ebc80cc30308f4db9bddb8a8ffae65898200e97a69c4c/RESULT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '03fd0da82d40f93af66d57801c8a57a864bd428d\t'
+                                                                                    'research/t20-v6-20261012/sources/3b606990f7c1cbecdfb409068e201e307e7b6a3f42a3967c4ecab9e32321e97e/Orthemology_T20_Codex_Prompt_v4_20261011.txt\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3b606990f7c1cbecdfb409068e201e307e7b6a3f42a3967c4ecab9e32321e97e/Orthemology_T20_Codex_Prompt_v4_20261011.txt'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '134af6cda5cd1e5c97d58d1f2ecac6cf65868216\t'
@@ -44920,9 +44970,34 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/3b6bbb780b092407089122ae93e51f381fe40e4f350778bdab15253b990f2fad/JointMixedSubstitution.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    'f8642c4e799f803c30ec3140ccc09198757b5c01\t'
+                                                                                    'research/t20-v6-20261012/sources/3b7300e64938d8ca64049d8001008f9663a910940a240a706a847496aa110556/REPORT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3b7300e64938d8ca64049d8001008f9663a910940a240a706a847496aa110556/REPORT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '436e2d9fddcd625ffd70ec47675755e9ebce85d4\t'
+                                                                                    'research/t20-v6-20261012/sources/3b7f36af7ed6f54fd418dd458fba64e5ad1dae22652598e3e67c6398419c95f7/Q8_REFINEMENT_SCOPE.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3b7f36af7ed6f54fd418dd458fba64e5ad1dae22652598e3e67c6398419c95f7/Q8_REFINEMENT_SCOPE.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     '80e499c5eb958056a712dae096f6fce58e7e0fd4\t'
                                                                                     'research/t20-v6-20261012/sources/3b849a572962cd499d17e8916b869cf9d5f7fc278bcf9cccf7e4aa430af61af1/CertificateDescriptions.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/3b849a572962cd499d17e8916b869cf9d5f7fc278bcf9cccf7e4aa430af61af1/CertificateDescriptions.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'c0275a112155e6a52a2b9deb10c023faf3898157\t'
+                                                                                    'research/t20-v6-20261012/sources/3b9e88d275bc4e9fb75b04349dc7c55c11ea8e25b5db183d3961ba4f54a0cd03/MODE_OWNER_NOTE.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3b9e88d275bc4e9fb75b04349dc7c55c11ea8e25b5db183d3961ba4f54a0cd03/MODE_OWNER_NOTE.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '08869452de81b9d5c04561fdf642c2c2dd288cb4\t'
+                                                                                    'research/t20-v6-20261012/sources/3b9fa4bdaa6e6ac453aa94b5432b5bb6ece4d90cf05aa98bc58881093d12039d/INPUTS_AND_BOUNDARIES.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3b9fa4bdaa6e6ac453aa94b5432b5bb6ece4d90cf05aa98bc58881093d12039d/INPUTS_AND_BOUNDARIES.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'dd0da557b534e56c8eb3f100a711f8123642b74e\t'
+                                                                                    'research/t20-v6-20261012/sources/3bb1d04eaae4aa7de3c8d5077ab2d137ba7fe22287e0b8c1a96033ed85ec0984/README.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3bb1d04eaae4aa7de3c8d5077ab2d137ba7fe22287e0b8c1a96033ed85ec0984/README.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '4d9ddbf722ba346f64292d0deb1ff881fc1424ef\t'
@@ -44940,6 +45015,11 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/3bec6bd8256b980a259ab168d9b413e612f7fdfcc599c9c40a869bd39d1c18b2/IgnoreFiniteSupport.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    'f3a468697accbab2ad63a9760ce44193970c86cb\t'
+                                                                                    'research/t20-v6-20261012/sources/3c2f84856f36d5c46d90ec65520db41e58d817d5042d232f00b0ac5a87bd3c8c/CONTROL.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3c2f84856f36d5c46d90ec65520db41e58d817d5042d232f00b0ac5a87bd3c8c/CONTROL.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     '3fd9df931be83136c4e8b38f6fce8115068946ab\t'
                                                                                     'research/t20-v6-20261012/sources/3c74aa0a40b726d361f4df1ab28cca66eb0de5e041ab48b352c84e0f64c9f052/IndependentNative001.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/3c74aa0a40b726d361f4df1ab28cca66eb0de5e041ab48b352c84e0f64c9f052/IndependentNative001.lean'},
@@ -44948,6 +45028,21 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                                     '8d8e331ec397e4eb08b86fbb21322e5347ed4885\t'
                                                                                     'research/t20-v6-20261012/sources/3c835b3a235c0bf8c7e2f17cd30993789bb379f89c538e8f85bb69112975e3d2/IndependentSourceControls.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/3c835b3a235c0bf8c7e2f17cd30993789bb379f89c538e8f85bb69112975e3d2/IndependentSourceControls.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'd8477824e9e798c87d2c1d374ff3b2e2e2bdc94d\t'
+                                                                                    'research/t20-v6-20261012/sources/3c872f3a0ddd817de718be4a74722090e67b610915f40beeb6b52b9f8f6848f2/REVIEW_SCOPE.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3c872f3a0ddd817de718be4a74722090e67b610915f40beeb6b52b9f8f6848f2/REVIEW_SCOPE.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'c979ee3a3b53a041fbbbb29d34b498daaedd3249\t'
+                                                                                    'research/t20-v6-20261012/sources/3c8d68caf46ce73ba78019e91dfbd05ae4e90479c4c20ef449c0b953c8715934/TELESCOPE_REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3c8d68caf46ce73ba78019e91dfbd05ae4e90479c4c20ef449c0b953c8715934/TELESCOPE_REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '4a255c687f7de9c77ae6b72e57194be5c0466f6f\t'
+                                                                                    'research/t20-v6-20261012/sources/3ca0dd42eb066da481ad07cfad5a79dc4d665ad3f1d4aa305acc3cd953afd771/heat-review.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3ca0dd42eb066da481ad07cfad5a79dc4d665ad3f1d4aa305acc3cd953afd771/heat-review.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '40d385cf97c5a8d6ef0ec5abc27e6147ad4fa384\t'
@@ -44965,6 +45060,11 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/3cf4645641d47b036c8b7172dba3c2ead2e927c775713a186a90b6f641f5ce2a/SourceFoldContract.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '6707d602960e4cbd7fbedb491c6e5c4d1605e3d2\t'
+                                                                                    'research/t20-v6-20261012/sources/3cf9fff26c516b3a889875ac34bcf8ab002b04cabe4d14a48c6c5cef60e1c6e1/REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3cf9fff26c516b3a889875ac34bcf8ab002b04cabe4d14a48c6c5cef60e1c6e1/REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     '216aec60945bb385ff3b752ac5ad0a8a9e83fef2\t'
                                                                                     'research/t20-v6-20261012/sources/3d3d2bff2dc3d83deace29aafe51cf23fbea5488f285156c219b67a5b9fd8778/PolyCertImageRule.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/3d3d2bff2dc3d83deace29aafe51cf23fbea5488f285156c219b67a5b9fd8778/PolyCertImageRule.lean'},
@@ -44978,6 +45078,11 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                                     'c71a58245b3f005476c72ae30b9a7008a35aa0c0\t'
                                                                                     'research/t20-v6-20261012/sources/3d40b7a0afb3f604000a584f8c5a52bf77a42e3e71c15a41aa56776bf5f50413/DropGuard.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/3d40b7a0afb3f604000a584f8c5a52bf77a42e3e71c15a41aa56776bf5f50413/DropGuard.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '41a5e943d06f174024b9d61ace468f4e506f919b\t'
+                                                                                    'research/t20-v6-20261012/sources/3d446f93452f8cd9845c6895a26a5ca436dfdc36fc6437dd66afd8e84a9b2047/CLAIMS.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3d446f93452f8cd9845c6895a26a5ca436dfdc36fc6437dd66afd8e84a9b2047/CLAIMS.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     'fe96cd128ab4745fcf42f583b4b7d7678ed85337\t'
@@ -45000,6 +45105,16 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/3d7e1278b69457ed8649581a8ea9af78311ef756fd4dad9eb607e24732d7e6c0/FullTypesAxioms.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '60b1eb0779d2242e6a3ceb223a183e14e54866ca\t'
+                                                                                    'research/t20-v6-20261012/sources/3d84bca98867d77a3c2478883e07a42e456b48404edb1ba4b90fa5e788a1788a/RESULT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3d84bca98867d77a3c2478883e07a42e456b48404edb1ba4b90fa5e788a1788a/RESULT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'c4ee95dc171ca6d9c4007505819dbc0fc8337234\t'
+                                                                                    'research/t20-v6-20261012/sources/3d8c5e8780bf3cb8f0edb62367f1562131a5d9c0c5f43e7c6863ae631322b88e/PLAIN_LANGUAGE_FIELD_GUIDE.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3d8c5e8780bf3cb8f0edb62367f1562131a5d9c0c5f43e7c6863ae631322b88e/PLAIN_LANGUAGE_FIELD_GUIDE.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     'df102fe8a698e905879929ea99ef1d49539b607a\t'
                                                                                     'research/t20-v6-20261012/sources/3dad72f8ccaeea327d322974e92905bfe146b1607fb5bcc0a65a0aa4220581de/WinningContinuation.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/3dad72f8ccaeea327d322974e92905bfe146b1607fb5bcc0a65a0aa4220581de/WinningContinuation.lean'},
@@ -45013,6 +45128,11 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                                     '5556c239932def9b34c9dd12f0bcc45d653f27cb\t'
                                                                                     'research/t20-v6-20261012/sources/3dd9e69a145559ab2077bdf587090caa6fa517bf2bf377d4f64e1818052b16a8/DeterministicContinuation.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/3dd9e69a145559ab2077bdf587090caa6fa517bf2bf377d4f64e1818052b16a8/DeterministicContinuation.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '68f4843458a2454fb6927acc7300f5daba12aaab\t'
+                                                                                    'research/t20-v6-20261012/sources/3de6fc30e0084b321c7d1f5651f949d66cfd2ddd050234aa8bcf1c5d6068e21a/REPORT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3de6fc30e0084b321c7d1f5651f949d66cfd2ddd050234aa8bcf1c5d6068e21a/REPORT.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     'fd193edd5e29a15fa594775a18a4b0ec55265db8\t'
@@ -45030,9 +45150,44 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/3e3e4bcbea2c19c58df20cb7f83c7e5e9a41e7a4c9dcfab6085e09fc2025987a/SourceTransport.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    'c5482a35f696b39eb3130edcdf17cb1433e4b0ad\t'
+                                                                                    'research/t20-v6-20261012/sources/3e45b3f3291e4df4927ff331969cc3f1f16cd0f91e54d6e6f5ab7e20b9b5bc70/FOUNDATIONAL_WARRANT_CROSSWALK.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3e45b3f3291e4df4927ff331969cc3f1f16cd0f91e54d6e6f5ab7e20b9b5bc70/FOUNDATIONAL_WARRANT_CROSSWALK.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '9a7388858a1409721cfe2abc275cc214c4d1a4a3\t'
+                                                                                    'research/t20-v6-20261012/sources/3e5f6d57fdc101da4d59c2a9bf3b4d6935aa2a7f13ede12c41f70ae58e228148/REVIEW_REPLAY_RECIPE.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3e5f6d57fdc101da4d59c2a9bf3b4d6935aa2a7f13ede12c41f70ae58e228148/REVIEW_REPLAY_RECIPE.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'da0f563e369aa8dc6428d0fca75f596838f32ba2\t'
+                                                                                    'research/t20-v6-20261012/sources/3e63844b6dd431d18b7a33b723728a59a7f76923a89cd43ff9f33da8ed951e21/CHECKPOINT_REPORT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3e63844b6dd431d18b7a33b723728a59a7f76923a89cd43ff9f33da8ed951e21/CHECKPOINT_REPORT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '3dae06314bf6c50064af5d2a4dba55030e5de4ab\t'
+                                                                                    'research/t20-v6-20261012/sources/3e76c2918000c4cb77d0885f260c1e07e7241da824c596fd9af7dee8d8594948/README.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3e76c2918000c4cb77d0885f260c1e07e7241da824c596fd9af7dee8d8594948/README.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     'e2c7b525d155c382e6bf67657f1197d86434c62c\t'
                                                                                     'research/t20-v6-20261012/sources/3e874909e830380dd11658f2f1bf8b7c090c970acfe4a3eef350fe96ae911ad8/IndependentControls.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/3e874909e830380dd11658f2f1bf8b7c090c970acfe4a3eef350fe96ae911ad8/IndependentControls.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'd894a67be4d21e166609b0df8958ae7762c62d1e\t'
+                                                                                    'research/t20-v6-20261012/sources/3e8a28f7404a060614ebc557a63f5053e20abfdc54a4e568ae5602d9a63aa346/stdout.txt\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3e8a28f7404a060614ebc557a63f5053e20abfdc54a4e568ae5602d9a63aa346/stdout.txt'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'ad0897debefabb3d63f364402438bc5ab7037a83\t'
+                                                                                    'research/t20-v6-20261012/sources/3e960f1aeb4c67077dfc90d2683edf459f564e867ada3c94639208323a81a9a9/SYNTHESIS_AND_RECOVERY_STATUS.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3e960f1aeb4c67077dfc90d2683edf459f564e867ada3c94639208323a81a9a9/SYNTHESIS_AND_RECOVERY_STATUS.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '5d6e3d45f678d3f5f1a7d63603e18e53aeee1780\t'
+                                                                                    'research/t20-v6-20261012/sources/3ea1f8ad6ceeb009e45804d707d8dbcdfe8bbf887f04a60cf031c0d3e4e7b1e2/03_future.tex\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3ea1f8ad6ceeb009e45804d707d8dbcdfe8bbf887f04a60cf031c0d3e4e7b1e2/03_future.tex'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     'f33438f229f0d056db97b076886be612321bfac7\t'
@@ -45045,9 +45200,34 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/3ec947139d4a49672622220662d647fb32e220e3d68121e392a6af7b85af3e50/PruningKernel.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '49ea768d027188bab65665cf038e8822b4498b14\t'
+                                                                                    'research/t20-v6-20261012/sources/3ecdbf36dfad5ed5109841aae076e1f1122f9607212277ee8d822abbb6f57503/PROJECTION_REPORT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3ecdbf36dfad5ed5109841aae076e1f1122f9607212277ee8d822abbb6f57503/PROJECTION_REPORT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'a7944a8a0907746380db3fcd150db5149481db64\t'
+                                                                                    'research/t20-v6-20261012/sources/3eddb6d66fe12841b42309e1d204b1f4f21ae55203763fc20a5954fbbfb2e58d/REPRODUCING.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3eddb6d66fe12841b42309e1d204b1f4f21ae55203763fc20a5954fbbfb2e58d/REPRODUCING.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '445fdcd8e9b979baee59212b1ab47ae80db0471c\t'
+                                                                                    'research/t20-v6-20261012/sources/3efcb8935588fddd8c586dce52e79f1d0579a4229f15de43fc57e98b7a77117b/RETAINED_SOURCE_FINDING.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3efcb8935588fddd8c586dce52e79f1d0579a4229f15de43fc57e98b7a77117b/RETAINED_SOURCE_FINDING.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     '8013722e3dfe04792eaa5bffcf00c44586bf557d\t'
                                                                                     'research/t20-v6-20261012/sources/3f2c5a9bf0d9fa9c8e694dfb5abbe0d9171c72f9810a20238db5ead0748f47d8/DescriptorReviewControls.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/3f2c5a9bf0d9fa9c8e694dfb5abbe0d9171c72f9810a20238db5ead0748f47d8/DescriptorReviewControls.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'c2c7b11826a125f2729569af5fa0461f646478d8\t'
+                                                                                    'research/t20-v6-20261012/sources/3f4c8a9fb53dedc6ecb8a4f435df0b75d99bd24d2a6f537acc8589f3aff3cd2c/FINAL_INTEGRITY.txt\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3f4c8a9fb53dedc6ecb8a4f435df0b75d99bd24d2a6f537acc8589f3aff3cd2c/FINAL_INTEGRITY.txt'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'f7f5c84638b8351306eaa165732eddaa723e1b82\t'
+                                                                                    'research/t20-v6-20261012/sources/3f5d226a9df8c179a044ccf862819345651c0be3414f08d7a1e3ff38d7ec3f15/READING_RECORD.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3f5d226a9df8c179a044ccf862819345651c0be3414f08d7a1e3ff38d7ec3f15/READING_RECORD.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     'de1e85d39621ad016382eb10ee5edcb1d6ce1c0a\t'
@@ -45058,6 +45238,11 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                                     '87f1675baf4d2d515dd6d3e8e270e5d07a09aca6\t'
                                                                                     'research/t20-v6-20261012/sources/3faa5056e47d7d5f94718928e3936c45960fe1cce7a4474013733e0a57031164/MECOracle.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/3faa5056e47d7d5f94718928e3936c45960fe1cce7a4474013733e0a57031164/MECOracle.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'd2aeaf2472ccf401a6fec28838448418c2ddc2ca\t'
+                                                                                    'research/t20-v6-20261012/sources/3fbc9bb3a23586dce33450f6c5937cd083215b6f432f9b16ba37eede72f53018/REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3fbc9bb3a23586dce33450f6c5937cd083215b6f432f9b16ba37eede72f53018/REVIEW.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '93fe57e2d17bf8f7698d1c2505205f3edc3ca43a\t'
@@ -45073,6 +45258,21 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                                     '76207f6139a150f78b113d26913c43c97cf30711\t'
                                                                                     'research/t20-v6-20261012/sources/3fd121ca64cd6040b3115c37e8e8874be104cfc79f47e8f076f29941cea52926/StepCertImageRule.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/3fd121ca64cd6040b3115c37e8e8874be104cfc79f47e8f076f29941cea52926/StepCertImageRule.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'e85dbb88bfdf8e7cebcde03cd37bc6a4dfa01d13\t'
+                                                                                    'research/t20-v6-20261012/sources/3fddcf33db3281bf8e12dcaee58c6787b042f72ca54cfe61916dae984e7f29e3/inference-boundary.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/3fddcf33db3281bf8e12dcaee58c6787b042f72ca54cfe61916dae984e7f29e3/inference-boundary.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'c3eb64d3c5d6146e6992120e2eedc01da6b439cd\t'
+                                                                                    'research/t20-v6-20261012/sources/404139cefd8eabc21a197d88d07564b29f7e8b6334c8d0e6a520fb927ebd0e78/REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/404139cefd8eabc21a197d88d07564b29f7e8b6334c8d0e6a520fb927ebd0e78/REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'f931a658088666cc74faccc37d6cdff3cd1d9f4c\t'
+                                                                                    'research/t20-v6-20261012/sources/4047d245aec15e6018adc361fcb7f35eded9404cff5515933aec64cb4a3e903b/continuation_information.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4047d245aec15e6018adc361fcb7f35eded9404cff5515933aec64cb4a3e903b/continuation_information.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '6e1963f8a3429ebb24f520f3293503f8fdb3eac1\t'
@@ -45095,6 +45295,11 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/408d8039de050dde3147ff8c7c4a390bbb8a4bae01edc57a8f6f53b943cada71/DependentBranchApplication.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '70114a53b39041218a3103df52b7c1c4e17a65ea\t'
+                                                                                    'research/t20-v6-20261012/sources/40ab92e313e1d2a4fa199ffb56c6952b14a2a634678e3d3d26b061cde25d6954/T20_Consolidation_and_T21_Continuation_Prompt.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/40ab92e313e1d2a4fa199ffb56c6952b14a2a634678e3d3d26b061cde25d6954/T20_Consolidation_and_T21_Continuation_Prompt.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     'b201232df38ce69ebeacb5406e7b9963c6d77a37\t'
                                                                                     'research/t20-v6-20261012/sources/40c7420baf52365a6ab2d02c6e3b6921f49b2f52557d39a40213bab49abef4d4/Audit.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/40c7420baf52365a6ab2d02c6e3b6921f49b2f52557d39a40213bab49abef4d4/Audit.lean'},
@@ -45115,6 +45320,16 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/40f74e22148aa9814c4453c5688c1859ffb7fafd8315d8370a54c9416e102fff/Audit.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    'c17d54acf9a76d55f64f7be6c6440ad7401eb36c\t'
+                                                                                    'research/t20-v6-20261012/sources/40facbdb23929492ba3b2b4cb88b34086361fc35ad80d9d1fcaf32d52f8a0a43/REPORT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/40facbdb23929492ba3b2b4cb88b34086361fc35ad80d9d1fcaf32d52f8a0a43/REPORT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '71ce8693f6a29b0ede1d3d82bc0bdc65d4c8faae\t'
+                                                                                    'research/t20-v6-20261012/sources/40fbcf8f7eb19e4d23563f3ff51fccbe7d74e229f92f3d5dd3977a92ac00b2a7/SOURCES.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/40fbcf8f7eb19e4d23563f3ff51fccbe7d74e229f92f3d5dd3977a92ac00b2a7/SOURCES.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     'f8474729815bb3ccea62aa2388dfdf3de495c5d6\t'
                                                                                     'research/t20-v6-20261012/sources/4132e0ebb3628905145ec24808fb8238a5856b512fb6a0dd7962856c9e393938/CodeWrongLookupChild.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/4132e0ebb3628905145ec24808fb8238a5856b512fb6a0dd7962856c9e393938/CodeWrongLookupChild.lean'},
@@ -45125,9 +45340,39 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/415336d97fa18e256f1c77100f628f4dbc68e6b99c5d46e98b429a7c5214f298/P01SystemF.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '598250d469db8c64b7914b721816718df7f1602b\t'
+                                                                                    'research/t20-v6-20261012/sources/418b97a74ef0294a28cbb45c52718ad0c43dd0f7346272aadb0541d0784d2e2d/MATHEMATICAL_SYNTHESIS.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/418b97a74ef0294a28cbb45c52718ad0c43dd0f7346272aadb0541d0784d2e2d/MATHEMATICAL_SYNTHESIS.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '6871bc085b245e664f2ecc032e29721c84de0611\t'
+                                                                                    'research/t20-v6-20261012/sources/4192d9c6bd5020a34b5da8f307531effb8fd7d46a2371f836a77e14d962c9528/RESULT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4192d9c6bd5020a34b5da8f307531effb8fd7d46a2371f836a77e14d962c9528/RESULT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '137d381a9c457f34c15a568c9e3e7707f6df84ea\t'
+                                                                                    'research/t20-v6-20261012/sources/419af37bae6ec7c806e9deb60915e7dcfe2baa69d5ed443f1eaaa7cd38dfaecb/README.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/419af37bae6ec7c806e9deb60915e7dcfe2baa69d5ed443f1eaaa7cd38dfaecb/README.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '0742f5637f3bb54de506eb4013091395258cdc22\t'
+                                                                                    'research/t20-v6-20261012/sources/41c2629f4c34dd9c88afe0f657c71167e684c4da2813197ed56a23ba77da543f/README.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/41c2629f4c34dd9c88afe0f657c71167e684c4da2813197ed56a23ba77da543f/README.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '9e8a550b19cc05b9bf9f386ed437dad90e02ff14\t'
+                                                                                    'research/t20-v6-20261012/sources/41d1343f00006d5e97d6a0b09264cc1d99ee2dd23a13ba5caaf2169afce63fa4/RESULT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/41d1343f00006d5e97d6a0b09264cc1d99ee2dd23a13ba5caaf2169afce63fa4/RESULT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     '815ec0f4573e5df149a09b43913f05e4dae9aa10\t'
                                                                                     'research/t20-v6-20261012/sources/41d5acaad4c88b718a9834224746c55ee204c4476e4d465871ecec2d7dddc28b/IndependentTransportControls.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/41d5acaad4c88b718a9834224746c55ee204c4476e4d465871ecec2d7dddc28b/IndependentTransportControls.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '037997b7d2406203f7ee9d2c446caf3fe7ab3e14\t'
+                                                                                    'research/t20-v6-20261012/sources/41e99cd7d537b40f33210d1e4b937e5f6acbfcff31e57344ba323f8560e9876f/CODEX_KICKOFF_PROMPT.txt\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/41e99cd7d537b40f33210d1e4b937e5f6acbfcff31e57344ba323f8560e9876f/CODEX_KICKOFF_PROMPT.txt'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '8dde1447ea31b7044459b544ac8f63032e10c643\t'
@@ -45140,9 +45385,24 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/4204ba26af1c7ce0a48ad954843ffad0080c01c1be616250150c6055474bc839/Saturation.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    'b232f583c22a77e6d0f7658dcf8c808166f7b2bb\t'
+                                                                                    'research/t20-v6-20261012/sources/42135d0a85f2820f057c1045ee1063ddfb2059e39d619bbe699bf010853a60e4/REPORT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/42135d0a85f2820f057c1045ee1063ddfb2059e39d619bbe699bf010853a60e4/REPORT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '562cd6337286d7a218e6ae88e0b3b9d96d05e3c5\t'
+                                                                                    'research/t20-v6-20261012/sources/424a8541b0c3f68f411e2e6224754612d760d6a5fd42d02a9ecb03ad62b08e60/REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/424a8541b0c3f68f411e2e6224754612d760d6a5fd42d02a9ecb03ad62b08e60/REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     'b0cfcb1a32b0a00553abe410276a236c8c85b436\t'
                                                                                     'research/t20-v6-20261012/sources/424c688cbde763cfeae7614a3223831e14383413621d1744c6a3b4e0bf994358/strict_attempt_bound.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/424c688cbde763cfeae7614a3223831e14383413621d1744c6a3b4e0bf994358/strict_attempt_bound.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'c1c6ecee27d730e333c186e256be73bf0703f782\t'
+                                                                                    'research/t20-v6-20261012/sources/42588a35fb8bc1fd2ea442e5d4327f06ebbe3668fba9db11fabfb60ac8300cfd/CLAIM_AND_PREMISE_LEDGER.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/42588a35fb8bc1fd2ea442e5d4327f06ebbe3668fba9db11fabfb60ac8300cfd/CLAIM_AND_PREMISE_LEDGER.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '340f606710d590330e0c71838661936cb72ead43\t'
@@ -45165,14 +45425,34 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/428dc2d2f37c4dca9470994f4fb9bdfdb332fd626fd2a0677017e861a376e69d/Terminal.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '64b882d3136b4b86f5c97870a7d2c8b9ec2f81e0\t'
+                                                                                    'research/t20-v6-20261012/sources/428dd9be66f5cd9abc9c46778af039bfa38bb75e33ac6343eafab72863b62a9e/PINNED_FORMAL_PLAN.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/428dd9be66f5cd9abc9c46778af039bfa38bb75e33ac6343eafab72863b62a9e/PINNED_FORMAL_PLAN.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     '6c45cdf2715caf32454b9705b66d079a776efa39\t'
                                                                                     'research/t20-v6-20261012/sources/42a86b32692f8e4a283367008d790ea7e01ca2c651ca888c1eb972958cc6cda7/FiniteSidecarControls.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/42a86b32692f8e4a283367008d790ea7e01ca2c651ca888c1eb972958cc6cda7/FiniteSidecarControls.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    'f2720be702d33b24ec27a635523b1ec5d7114ab5\t'
+                                                                                    'research/t20-v6-20261012/sources/42b470a6d2ab3ee2b4e05e03791497c009406a9f44e6af627487499d348b3e17/before_right_derivative_precision.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/42b470a6d2ab3ee2b4e05e03791497c009406a9f44e6af627487499d348b3e17/before_right_derivative_precision.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '5e900f68dd8fb002541a8ba14552856978f8ea60\t'
+                                                                                    'research/t20-v6-20261012/sources/42b7a8b0da080ec2637191086ba5f9a7e23efedf5ba3bcf959142aa4d2f1a070/V11-taqlid-transition.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/42b7a8b0da080ec2637191086ba5f9a7e23efedf5ba3bcf959142aa4d2f1a070/V11-taqlid-transition.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     '3d020f9cf81158d07cbe92b14a77aedd223e4abd\t'
                                                                                     'research/t20-v6-20261012/sources/42ce79353d5c0b60da9535aa9e558a60f6b17267a7bf1d2046e76751297df80e/Initiality.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/42ce79353d5c0b60da9535aa9e558a60f6b17267a7bf1d2046e76751297df80e/Initiality.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '48e217a1854d74dc35d28231b82f10f0d3bd78f9\t'
+                                                                                    'research/t20-v6-20261012/sources/42d73619e6f84f904662990b7babd12af2c180cd7c8cfefa3ab2eb756056cae2/WITNESS_FIELD_CLARIFICATION.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/42d73619e6f84f904662990b7babd12af2c180cd7c8cfefa3ab2eb756056cae2/WITNESS_FIELD_CLARIFICATION.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '46e4cad898367420dc03cbe3b3cf41157acb9bef\t'
@@ -45185,14 +45465,39 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/42eb109d5604c8fa18af85669f1734cec9fcc5083ff3cbc5cc88481d2d28d8d2/Readback.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    'e5719ef76277739975110d15e6e043d4a6c661cb\t'
+                                                                                    'research/t20-v6-20261012/sources/42f0f0d15a9d8e1bafa64d499e84182d17aaf9c2c8aaa453a810f6492db5f7f6/CONTINUATION_BOUNDARY.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/42f0f0d15a9d8e1bafa64d499e84182d17aaf9c2c8aaa453a810f6492db5f7f6/CONTINUATION_BOUNDARY.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     '8a3251d559cd044bfa819511c50ce920a05d256a\t'
                                                                                     'research/t20-v6-20261012/sources/430b0c2180360cacc1910264615aaccd23ea0d8e3431ab35b2c6e8a3d1bc1db9/PortableReadback.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/430b0c2180360cacc1910264615aaccd23ea0d8e3431ab35b2c6e8a3d1bc1db9/PortableReadback.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '6a5750f8f4d7768e0ae42b809f1c1f7a410e4ec6\t'
+                                                                                    'research/t20-v6-20261012/sources/4334eed4ca756d6c3be5fa24c7881cb60d7ed01ba9213c4a8fa8e142a93596e6/REVIEW_SUMMARY.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4334eed4ca756d6c3be5fa24c7881cb60d7ed01ba9213c4a8fa8e142a93596e6/REVIEW_SUMMARY.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '437fcf7101f4afd93a2bba675d10618b3610462f\t'
+                                                                                    'research/t20-v6-20261012/sources/43411d3ab8a37573b9648179699e3c1e11b01761e9d286cae99a09fabeae61c6/RELATED_WORK.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/43411d3ab8a37573b9648179699e3c1e11b01761e9d286cae99a09fabeae61c6/RELATED_WORK.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'd46f16ea42e11e145482446bc1af84f6b53a31fe\t'
+                                                                                    'research/t20-v6-20261012/sources/43538cf7e217237371802bb61655be95d481d68ad94e6367ada8181578fd46a9/README.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/43538cf7e217237371802bb61655be95d481d68ad94e6367ada8181578fd46a9/README.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     'cebb40741a3df28cd7490d9cf925b9652ecbae7b\t'
                                                                                     'research/t20-v6-20261012/sources/436672c1d11da168fe02423e2e3e34f75bf7dc526a239029243301c69b4d187b/CaptureFiniteAllE.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/436672c1d11da168fe02423e2e3e34f75bf7dc526a239029243301c69b4d187b/CaptureFiniteAllE.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '8749ec32031e89675e0b60aac85f9454fa3ce890\t'
+                                                                                    'research/t20-v6-20261012/sources/4371a5831b6308fea9d5f632f9b9143a0aab0b7a1068d15b7c680cf6d518e788/LANE_DEPENDENCIES.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4371a5831b6308fea9d5f632f9b9143a0aab0b7a1068d15b7c680cf6d518e788/LANE_DEPENDENCIES.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '900b1698eccce6e972677e8058025c47729a0f47\t'
@@ -45205,9 +45510,54 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/43794be51a1853e046a097e119b3b6d92d3af6cd7966c161ebd858338e1c20ec/Readback.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    'f85347bb004b97dd2e93e4ba77c9e795c4202e62\t'
+                                                                                    'research/t20-v6-20261012/sources/437b9987fe65e280e46dc344b64f526d2ed533f76f3b0abb6eeaa99da08d675c/README.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/437b9987fe65e280e46dc344b64f526d2ed533f76f3b0abb6eeaa99da08d675c/README.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '549e98408e55e6ec68f21ecfbd59d9a338d840de\t'
+                                                                                    'research/t20-v6-20261012/sources/43ba1c10919ae7967474863db57231fb6e42ec9525f931e23718de18975b6110/AVAILABILITY_IFF_PRE_REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/43ba1c10919ae7967474863db57231fb6e42ec9525f931e23718de18975b6110/AVAILABILITY_IFF_PRE_REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '5d2fa17a4bacfabb727e9e62a6abd07a40301dc1\t'
+                                                                                    'research/t20-v6-20261012/sources/43bf5cda12ca4d0573ffa5471fd743bdebe8d1ea9cbfaa4912f5e461dcc18c46/continuation_lines_001_320.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/43bf5cda12ca4d0573ffa5471fd743bdebe8d1ea9cbfaa4912f5e461dcc18c46/continuation_lines_001_320.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     'fec720057ad96d72d807e1b28806cff7a90f73f7\t'
                                                                                     'research/t20-v6-20261012/sources/43c96e6e17b02f1f44d796188b6d98592206ec984bb5ce2172a8e88f75c1787b/DropUnusedImagesJ.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/43c96e6e17b02f1f44d796188b6d98592206ec984bb5ce2172a8e88f75c1787b/DropUnusedImagesJ.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'd83ebf76807e41e131ed158df10ff70356359e11\t'
+                                                                                    'research/t20-v6-20261012/sources/43caa943b097d70f3ca2245d1d5f4ff4428bc831e6b3ba762f484554c3916092/READER_SUMMARY.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/43caa943b097d70f3ca2245d1d5f4ff4428bc831e6b3ba762f484554c3916092/READER_SUMMARY.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'bf8cd74323da581faebb7e9795c1da14a015832c\t'
+                                                                                    'research/t20-v6-20261012/sources/43d1d6e6c6d391a178976f64e8c0bfd1c9b065569e9622b8ed5e30a9cef2d20f/PROJECTION_REPORT_V2.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/43d1d6e6c6d391a178976f64e8c0bfd1c9b065569e9622b8ed5e30a9cef2d20f/PROJECTION_REPORT_V2.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '15212b5713780b84e99693af67878096a3522257\t'
+                                                                                    'research/t20-v6-20261012/sources/43e2e95c3d268cb2a44d551511e6b20d67b847c5ff6a9e4a8cb5a583eaf8a26e/REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/43e2e95c3d268cb2a44d551511e6b20d67b847c5ff6a9e4a8cb5a583eaf8a26e/REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '5d9387f098920c6828b0dd87cfcc4dd61151f993\t'
+                                                                                    'research/t20-v6-20261012/sources/43ee0d1e52a15019f1846ac242c2e640efc1460d46b3e7b53e69b32652c21453/hadith-authentication-epistemology.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/43ee0d1e52a15019f1846ac242c2e640efc1460d46b3e7b53e69b32652c21453/hadith-authentication-epistemology.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'debd0bbd3dd66854114362515ac2674d34ee9557\t'
+                                                                                    'research/t20-v6-20261012/sources/43f0b18b05df7371f0a35425a543a87b5fce49e07624907a15fe30aee52879a0/INDEPENDENT_REVIEW_v1.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/43f0b18b05df7371f0a35425a543a87b5fce49e07624907a15fe30aee52879a0/INDEPENDENT_REVIEW_v1.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'af601ebfc9215860d220bc01c7c5baa489820b91\t'
+                                                                                    'research/t20-v6-20261012/sources/4409cb547456ffa1f7ec26f44e63b521c36fe667d9cc9e8a940a764fd1f2602b/PROOF_REVIEW_NOTES.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4409cb547456ffa1f7ec26f44e63b521c36fe667d9cc9e8a940a764fd1f2602b/PROOF_REVIEW_NOTES.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '2fb37a3064e325c0ac7fbeb9d2439fdce70cd6c2\t'
@@ -45220,6 +45570,16 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/4412b2ceac5e8810a111279357046ad58d79cfa1e732599d9c17cd92a3ed193c/SourceSidecarController.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    'e20141efbf52dd32e5680106f5df377f38f7c164\t'
+                                                                                    'research/t20-v6-20261012/sources/44169acdeed8a016aca1a958e17dbdc0858dc8483ab005cc5d554cb417dd6283/ATTEMPTS.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/44169acdeed8a016aca1a958e17dbdc0858dc8483ab005cc5d554cb417dd6283/ATTEMPTS.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '537b0fee70e197f90ed3dac3d65c994982d2fdc5\t'
+                                                                                    'research/t20-v6-20261012/sources/4420b915d684ca6f6021604b4c366bd42997b9b5e7e37617118db02887b2c905/verification.txt\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4420b915d684ca6f6021604b4c366bd42997b9b5e7e37617118db02887b2c905/verification.txt'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     'ef2ad8deb2cc4dda37c67fab59b8f963d54b2dc7\t'
                                                                                     'research/t20-v6-20261012/sources/4452221dbc0666ddf29c9a302b7ea881fee3b4c2a97578fca39b8d8dfa579e4a/SourceCheckerAudit.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/4452221dbc0666ddf29c9a302b7ea881fee3b4c2a97578fca39b8d8dfa579e4a/SourceCheckerAudit.lean'},
@@ -45228,6 +45588,11 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                                     'ec6fd2bffdc9d1fe0ff2d94ded503a0ac71118df\t'
                                                                                     'research/t20-v6-20261012/sources/446de3c94bc35024d376d36e30074235151e951e83146dbd452538470d30c4cf/RuleSideCode.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/446de3c94bc35024d376d36e30074235151e951e83146dbd452538470d30c4cf/RuleSideCode.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'e06136b35c496d47532d11ffd11dc51370ea9d59\t'
+                                                                                    'research/t20-v6-20261012/sources/4480caaadd1a98796c4beb9dd02b5d26293556dde94ba8b32ed80623b8aa3b48/VERIFICATION.txt\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4480caaadd1a98796c4beb9dd02b5d26293556dde94ba8b32ed80623b8aa3b48/VERIFICATION.txt'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '3e6460565a4a1dc322d7f559d8cd0d95697ad1f6\t'
@@ -45240,14 +45605,34 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/448f65c6cdc05eccaba97fe1cca07318d30fce2eb5b0b4414c7e327270ea2633/Sigma2ThresholdRealisation.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '9ce9c17d55cfa79140cb92c2d51c1e1901ca2840\t'
+                                                                                    'research/t20-v6-20261012/sources/4493d66dffc488a5a53b67ada78719addaf917c25783ba5efa9abc21144ffaa1/template.tex\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4493d66dffc488a5a53b67ada78719addaf917c25783ba5efa9abc21144ffaa1/template.tex'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     '4d758be711514ea6bb8b22c035e9629e88fbb5f5\t'
                                                                                     'research/t20-v6-20261012/sources/4493f0465f178eac1acc5807bc4a90914db58bb8499d764a3639e8e3529c914e/WrongBoundMustFail.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/4493f0465f178eac1acc5807bc4a90914db58bb8499d764a3639e8e3529c914e/WrongBoundMustFail.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '00ae13b6023fec031e4f85bb32da52462a6e25dc\t'
+                                                                                    'research/t20-v6-20261012/sources/449b1c64c6867f95c6bff41b8ade57c411e1f9a94e22b79baf5529c1b8a211c6/REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/449b1c64c6867f95c6bff41b8ade57c411e1f9a94e22b79baf5529c1b8a211c6/REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '2a44c23d24606181eb299fdfc59a010408680e21\t'
+                                                                                    'research/t20-v6-20261012/sources/449ec45460f154dee326e82f8086532e7a70976529fc5217b87a1dc6c73b476e/NOTE.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/449ec45460f154dee326e82f8086532e7a70976529fc5217b87a1dc6c73b476e/NOTE.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     'd84a9c4bd37321f0d981c7face2829c61757d401\t'
                                                                                     'research/t20-v6-20261012/sources/44e0af0aff22b70c66bdb23b1990cd8d0fffac98a1f87cd5c6123809cb2589df/Composition.batch-red.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/44e0af0aff22b70c66bdb23b1990cd8d0fffac98a1f87cd5c6123809cb2589df/Composition.batch-red.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '0ff5d88dd4bb82f3d78df9937bd7eb46078605da\t'
+                                                                                    'research/t20-v6-20261012/sources/44fa1a83e4aecf5daa2d1da2a3d49f5d01808e7ad39474f2856ce54f14c0a1c3/CODEX_HANDOFF.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/44fa1a83e4aecf5daa2d1da2a3d49f5d01808e7ad39474f2856ce54f14c0a1c3/CODEX_HANDOFF.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '32fc01429446a6f958e5e6ef187e83f43bdcec84\t'
@@ -45260,9 +45645,54 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/4585df3f78ef14f329c1bf9fad7d5d4390915a7d6a77a15a4f7785ced8ac7262/SourceControls.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '01f95549068e5fb9d52efbda4a3742eed00b2045\t'
+                                                                                    'research/t20-v6-20261012/sources/45f3eab0d8e94c34b2f8ae5923968fa67e191f3ade97ae6e6b9b3ca6a6520976/README.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/45f3eab0d8e94c34b2f8ae5923968fa67e191f3ade97ae6e6b9b3ca6a6520976/README.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     '7fc239171e7acc8cb7eecf13dfc81b468d11a104\t'
                                                                                     'research/t20-v6-20261012/sources/463c15dd52a18e24461582e91060aff958bf342486b4ae3693e6c42de7efe501/IndependentInstantiationComposition.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/463c15dd52a18e24461582e91060aff958bf342486b4ae3693e6c42de7efe501/IndependentInstantiationComposition.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '7cd8d6a59c01276978d76b3a2a9d442bd6b59c98\t'
+                                                                                    'research/t20-v6-20261012/sources/464725de814fd6b83ff181c20722e8877b1d3658497f30c5734207ca5fdea2ba/READING_BOUNDARIES.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/464725de814fd6b83ff181c20722e8877b1d3658497f30c5734207ca5fdea2ba/READING_BOUNDARIES.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '75514b2fa726fa2cd038fb504cd7c49035423dfd\t'
+                                                                                    'research/t20-v6-20261012/sources/467e85082d597e4f120c658f735c3826f19b3400edb54e7a9b46af3277f4f37a/MATH_ASSESSMENT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/467e85082d597e4f120c658f735c3826f19b3400edb54e7a9b46af3277f4f37a/MATH_ASSESSMENT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'f7ed66059246a4bb1dd20d47e7868972b85c9b9e\t'
+                                                                                    'research/t20-v6-20261012/sources/468dac5cdd3c4368c12cb7db2bb6cc7f5267b7dee8035d65911962e40042950d/candidate-RESULT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/468dac5cdd3c4368c12cb7db2bb6cc7f5267b7dee8035d65911962e40042950d/candidate-RESULT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'f281ba1159fb4b2e3e31b26b9e4df65554229fbe\t'
+                                                                                    'research/t20-v6-20261012/sources/46a5b901bab53909610df8709e87a441db10745c5b9185f8e3d8fd71c4b84f7f/DIRECT_TILT_EFFECTIVITY.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/46a5b901bab53909610df8709e87a441db10745c5b9185f8e3d8fd71c4b84f7f/DIRECT_TILT_EFFECTIVITY.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '0cd971b66e44e64315560145ba44c4df8858984d\t'
+                                                                                    'research/t20-v6-20261012/sources/46b5469d9d9c4880423bb4192d14889bb90ffe355dfa5c87feede78f91fe5be2/lean-readback-first.txt\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/46b5469d9d9c4880423bb4192d14889bb90ffe355dfa5c87feede78f91fe5be2/lean-readback-first.txt'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '83756ebf4b177960fc492504efddfaf532c4fb07\t'
+                                                                                    'research/t20-v6-20261012/sources/46b5535b8931de2871cb9ce65b6c28f9bd0b86634372cbe758c7a32b59935da5/T20_V4_OUTPUT_GUARD_SUCCESSOR_v5.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/46b5535b8931de2871cb9ce65b6c28f9bd0b86634372cbe758c7a32b59935da5/T20_V4_OUTPUT_GUARD_SUCCESSOR_v5.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '2f9b80f11452d8bcfe7ca038b85b7205560b0a93\t'
+                                                                                    'research/t20-v6-20261012/sources/470b3b58e4f4b2afcc7d3b7a31701fd44d5e674c5f66df86f34b2c527810eac8/REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/470b3b58e4f4b2afcc7d3b7a31701fd44d5e674c5f66df86f34b2c527810eac8/REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '58ea0b5de8634e33ed16140da3b1c64797c7094c\t'
+                                                                                    'research/t20-v6-20261012/sources/470c32630baad4b42a5ce960b73de9bf5c6e5cad0a1e32cf1d3f964a5373967d/RESULT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/470c32630baad4b42a5ce960b73de9bf5c6e5cad0a1e32cf1d3f964a5373967d/RESULT.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '575a4201c25fb773a5ab756552d129f8c44da43d\t'
@@ -45273,6 +45703,16 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                                     '11b5bca528be1ad1d56d8a09dfb6b8c859b674a7\t'
                                                                                     'research/t20-v6-20261012/sources/47589560eb803f067198d8450184eb8aadee45adf8c6062043c1d5ff67832323/NativeCross000.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/47589560eb803f067198d8450184eb8aadee45adf8c6062043c1d5ff67832323/NativeCross000.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '13fe397e7358a6de825982f53a46b58480249374\t'
+                                                                                    'research/t20-v6-20261012/sources/477b75c8887e768f130b475f9e07516584e5780ce78f93d7a291c9fa0423d492/REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/477b75c8887e768f130b475f9e07516584e5780ce78f93d7a291c9fa0423d492/REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '5d43ca2345448dbb67fd2e25c3f3d284011a07fd\t'
+                                                                                    'research/t20-v6-20261012/sources/477c977f7867038274453d09032d78278d41cc3022879c56b792aefa7aefdb73/INDEPENDENT_REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/477c977f7867038274453d09032d78278d41cc3022879c56b792aefa7aefdb73/INDEPENDENT_REVIEW.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '39acd6a3809ea01e7cf84ac674ff7f1608f5e19d\t'
@@ -45290,6 +45730,11 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/47b3355312f02f1eee8a6b57e7c8012a4fe190b1ddff4243eee57f1fc5c547fe/Exports001.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    'e8ac8c1678a35e83b444bd975d5a9d0ef2367961\t'
+                                                                                    'research/t20-v6-20261012/sources/47b97d502705270d11d955af5b82fcec8fcacf5196bc8dab767e896f52eed80b/REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/47b97d502705270d11d955af5b82fcec8fcacf5196bc8dab767e896f52eed80b/REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     'afd1a947f335b880fa0569925a1ac5b6297631e8\t'
                                                                                     'research/t20-v6-20261012/sources/47c734235aa3191ee0aef51c81a541a8c3f0abe90cdf7231444c2c15ea1c8cc8/IndependentNative008.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/47c734235aa3191ee0aef51c81a541a8c3f0abe90cdf7231444c2c15ea1c8cc8/IndependentNative008.lean'},
@@ -45300,14 +45745,49 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/480520d76d4bef1f080bd4ef925e13840ab81efa4a6ead7cae533eb67166ec11/ResetContinuation.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '9db74a8ce955e8b639f7e04b6c9be6f8c55aa6f0\t'
+                                                                                    'research/t20-v6-20261012/sources/481e4b9e604b57f13b56dfac825b62e318dcb3645ac21c982b6e2e99ebf7b46f/README.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/481e4b9e604b57f13b56dfac825b62e318dcb3645ac21c982b6e2e99ebf7b46f/README.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     'f303b6c5bad73c46b86972d3c6e912632b9a9df8\t'
                                                                                     'research/t20-v6-20261012/sources/484f329192693d50c6ea433f22ee957c344eff7c090f187a58cccedb6c6e16cb/RejectMissingDistinctness.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/484f329192693d50c6ea433f22ee957c344eff7c090f187a58cccedb6c6e16cb/RejectMissingDistinctness.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '3f0974794ef47c02a87c50bb823cd79b1a61e706\t'
+                                                                                    'research/t20-v6-20261012/sources/4852d9be1400cf54fe5911268bef810ef48a8898a350135b44a4b4f498b255cb/REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4852d9be1400cf54fe5911268bef810ef48a8898a350135b44a4b4f498b255cb/REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '0109269e7ebf41ba2b3fd02e784521db81a199d7\t'
+                                                                                    'research/t20-v6-20261012/sources/4889214d7b7bbbc777fa3091611d16555a38b6221714be520e4578e5adeb01d7/I3-physical-1-62.txt\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4889214d7b7bbbc777fa3091611d16555a38b6221714be520e4578e5adeb01d7/I3-physical-1-62.txt'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '2085399d47b8bd8ce6201b174e9552b0724073a8\t'
+                                                                                    'research/t20-v6-20261012/sources/4897ff6a6dfceb9b6dd4071dd4950c5f4cba7ff65cffedd3fe03dfd045b121e7/Orthemology_New_Chat_Handoff_v3_20261008.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4897ff6a6dfceb9b6dd4071dd4950c5f4cba7ff65cffedd3fe03dfd045b121e7/Orthemology_New_Chat_Handoff_v3_20261008.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '88a4a132194e1795ebf50b53d629a0ce2b26c895\t'
+                                                                                    'research/t20-v6-20261012/sources/48ccf45d90a9d92bbe42dcf7cecfc3871c4c119367edbaa1654d84f1edd1b728/08_Type_Completion_and_Formal_Compiler.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/48ccf45d90a9d92bbe42dcf7cecfc3871c4c119367edbaa1654d84f1edd1b728/08_Type_Completion_and_Formal_Compiler.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     'd5d8e1ec0f9c11373d4cc308a642db6782862f07\t'
                                                                                     'research/t20-v6-20261012/sources/48d1a0fac6eb54dc7977cee9c798df4ee5e199de3df41cd9efb87ba864b3b0ba/ExcludedUpperTestMustFail.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/48d1a0fac6eb54dc7977cee9c798df4ee5e199de3df41cd9efb87ba864b3b0ba/ExcludedUpperTestMustFail.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'd14cebcc4469dbeede735e6e7679803ae98d5a68\t'
+                                                                                    'research/t20-v6-20261012/sources/4913e8508c35e12eeb8be5455cc351204deccb08bdb88307609bd7118338db65/orthemology_consolidation_stage2_report.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4913e8508c35e12eeb8be5455cc351204deccb08bdb88307609bd7118338db65/orthemology_consolidation_stage2_report.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '782ab65e5e0e95913a15989fc931eec2d586bd01\t'
+                                                                                    'research/t20-v6-20261012/sources/491868bbe980aeda7dae527c9b342c9258d9f7c6ef0bb7df0850deb6905bda35/F1-physical-1-125.txt\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/491868bbe980aeda7dae527c9b342c9258d9f7c6ef0bb7df0850deb6905bda35/F1-physical-1-125.txt'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '7a3e190f6015ee007291900e30a650c34e03111e\t'
@@ -45318,6 +45798,11 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                                     'e2de434f9a60cadb39f87e9b78df6d518618fd41\t'
                                                                                     'research/t20-v6-20261012/sources/495ed6e77340d6c93aee9dcd807859b16b371a3074fc57086ec8034ea66ee98a/JointDependentControls.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/495ed6e77340d6c93aee9dcd807859b16b371a3074fc57086ec8034ea66ee98a/JointDependentControls.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '72afb9d2ff43e2643f6d2d8eacd8abb0ee55c82e\t'
+                                                                                    'research/t20-v6-20261012/sources/499c4098872b38d4b1892ba08deb1e80a129f9b8bb15c4a26901bfd8bba5900e/READ_FIRST.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/499c4098872b38d4b1892ba08deb1e80a129f9b8bb15c4a26901bfd8bba5900e/READ_FIRST.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '67526340099c4f3b8eba2d3a17b7997243c72bdf\t'
@@ -45340,9 +45825,49 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/49d1b84cf0f5e345b8d59db5971d4c97a85de1a1126839510196dcac1dc7bace/P01Audit.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '60dc027453dbe195f5f7be0679fe75d0f235dcdf\t'
+                                                                                    'research/t20-v6-20261012/sources/49dc2ad616e9f0ce5d4bf27389e550320acc373543f8174b5818826858867489/EXPECTED_THEOREMS.txt\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/49dc2ad616e9f0ce5d4bf27389e550320acc373543f8174b5818826858867489/EXPECTED_THEOREMS.txt'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     'd8346ff663586f5d8bd7d61f8896d995eebfc3da\t'
                                                                                     'research/t20-v6-20261012/sources/49e09e35bc6f2e528a17a4ba31388f8f2f56eda4bc7e5f036969ed54e53157da/WrongNestedTCCapture.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/49e09e35bc6f2e528a17a4ba31388f8f2f56eda4bc7e5f036969ed54e53157da/WrongNestedTCCapture.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '7437ab1e2d85ac43ff8fa6bc06351ac07c6d8caa\t'
+                                                                                    'research/t20-v6-20261012/sources/49eab5af85d39eb2ddaedb4777065440604862a635c5c60154748734c91044cb/RESULT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/49eab5af85d39eb2ddaedb4777065440604862a635c5c60154748734c91044cb/RESULT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '0e268593a343d576362951d8fa31e0c01e88c25e\t'
+                                                                                    'research/t20-v6-20261012/sources/49f701fd59cd65e07c51ab3ed647bd128884a88adea7afbb3a32ec59ac37b02e/REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/49f701fd59cd65e07c51ab3ed647bd128884a88adea7afbb3a32ec59ac37b02e/REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'd9b3190a410491b0a9df4c52dba153c574564a43\t'
+                                                                                    'research/t20-v6-20261012/sources/4a263faf699b48e91a318334cef5af8fe46e09088259cdd6848916a94733ba1d/04_Evidence_and_Credal_Coupling.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4a263faf699b48e91a318334cef5af8fe46e09088259cdd6848916a94733ba1d/04_Evidence_and_Credal_Coupling.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'a068cd3048fba9ba645f7505d660696af7f62511\t'
+                                                                                    'research/t20-v6-20261012/sources/4a3849b466de49c7b38c585f719b155deaaa82e79cd90eb23bca04b85b5cb338/reviewed_SPEC.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4a3849b466de49c7b38c585f719b155deaaa82e79cd90eb23bca04b85b5cb338/reviewed_SPEC.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'd2afc0cf0f47241c4aee4ee4c8cabf95effe5449\t'
+                                                                                    'research/t20-v6-20261012/sources/4a3b52d5c1959d85c9e1ea8e6fd5a6813db8e202c821152312848755d274bd7c/report-review.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4a3b52d5c1959d85c9e1ea8e6fd5a6813db8e202c821152312848755d274bd7c/report-review.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '4f5d169f8ccf17991e989f0ec201a409bc98d188\t'
+                                                                                    'research/t20-v6-20261012/sources/4a588689003672a35bf04a5360bec9b7f17e5aaeaeef1e22e7408b9b4a947b9c/README.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4a588689003672a35bf04a5360bec9b7f17e5aaeaeef1e22e7408b9b4a947b9c/README.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '1228cefb9ac445f7e51fb6a06169a295666081de\t'
+                                                                                    'research/t20-v6-20261012/sources/4a5d6ef71c958b01324dce7494f9f3bf2173d46f88821f968b13fcb1771a7564/Foundational_Synthesis.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4a5d6ef71c958b01324dce7494f9f3bf2173d46f88821f968b13fcb1771a7564/Foundational_Synthesis.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     'de77f024f9f3757650776b71c66d9f9724c4eb6c\t'
@@ -45350,9 +45875,24 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/4a920ea752d0acef94e7df84c64e86755dc2732c9e4cf90f8197e7d808ec8234/RejectGeneralPi.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    'aaed4222ad45627561311f74a17b7a056afc1d3a\t'
+                                                                                    'research/t20-v6-20261012/sources/4a94fd94ed382841bf7557998026a3c2378f6fcbfb0807458021a97bd0d1256f/FINAL_REVIEW_V1.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4a94fd94ed382841bf7557998026a3c2378f6fcbfb0807458021a97bd0d1256f/FINAL_REVIEW_V1.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '865f1da22f3cc151e2b7f1e2ecf63e7c45cbbeaa\t'
+                                                                                    'research/t20-v6-20261012/sources/4a97f58924d6542a95251875241cda38d8ac4b758f7ccb37d5f7311477b39d14/README.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4a97f58924d6542a95251875241cda38d8ac4b758f7ccb37d5f7311477b39d14/README.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     '4a150feee3daf6a930eb6bd18ce1f4c572088877\t'
                                                                                     'research/t20-v6-20261012/sources/4aa321371591d7f6506de3ac91e8e787c296b4582b352236cc6d7a18183d2f2c/FullEUniformSection.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/4aa321371591d7f6506de3ac91e8e787c296b4582b352236cc6d7a18183d2f2c/FullEUniformSection.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'c1ef78b56a0c7621cd0b1cc81e9fed17caa065f4\t'
+                                                                                    'research/t20-v6-20261012/sources/4acffc94e0c53e7513996ed166c04f6c9dcc484b1fc8c2d763826c1dbeec790f/research.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4acffc94e0c53e7513996ed166c04f6c9dcc484b1fc8c2d763826c1dbeec790f/research.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '9cc0943db6e475f8cd8fc16ba30740e6337f08a7\t'
@@ -45360,9 +45900,29 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/4aefb592968abd48d87aa45d1191d0ae7f47d191758f467123f21f2e076f0c99/JointMixedAlgebra.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    'c28fd1b3fcd6c1767fdf6d89ef6edd2bc920d09d\t'
+                                                                                    'research/t20-v6-20261012/sources/4af059c42e5f0a556a73dd16b2e873dd9546d8949c7115ddce83d8795eb80f37/FINAL_REPORT_DIFF.txt\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4af059c42e5f0a556a73dd16b2e873dd9546d8949c7115ddce83d8795eb80f37/FINAL_REPORT_DIFF.txt'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '5b80be4a394615ebf3fe3ad866a92696953a999b\t'
+                                                                                    'research/t20-v6-20261012/sources/4af9972613d06517afc55c1c3db7ab6c7e06cc630b45267953bbf79737610f60/REPORT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4af9972613d06517afc55c1c3db7ab6c7e06cc630b45267953bbf79737610f60/REPORT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     '71ec17661470afcd81ea7a332d82cbe50c62c8d5\t'
                                                                                     'research/t20-v6-20261012/sources/4b07f75d48c0325d9353551ed5665d0bdc9306b98a2b9ebbb6c8e876f5c19ecf/WrongTypeBinder.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/4b07f75d48c0325d9353551ed5665d0bdc9306b98a2b9ebbb6c8e876f5c19ecf/WrongTypeBinder.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'eafce25751829bf18ad64451b2797399c34ce6d4\t'
+                                                                                    'research/t20-v6-20261012/sources/4b17bf1bcf6a21b198b14a74c78c52820a029bb027f54c967128bd0bb5727a21/independent-verification.txt\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4b17bf1bcf6a21b198b14a74c78c52820a029bb027f54c967128bd0bb5727a21/independent-verification.txt'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'd868248ea84e226caf49cf3387005bac585d4f58\t'
+                                                                                    'research/t20-v6-20261012/sources/4b27ce14544ced5d86d966d7882fb4aa03f4a5c01a9ffabc57e10247015d98d5/RESULT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4b27ce14544ced5d86d966d7882fb4aa03f4a5c01a9ffabc57e10247015d98d5/RESULT.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     '8eda1e02e63db849424bcdfae7464045927319f6\t'
@@ -45375,9 +45935,44 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/4b3f04ccd54bc262871e2c013deeecfe71559ca09a7b5e4559a12b8cb658d533/cannot_accept_overlong_varint.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '219b5875d1b4fb6961045d6ef2da7d999974b58d\t'
+                                                                                    'research/t20-v6-20261012/sources/4b83e721f22e53c123ae060bed7cb10a39d5165fcb1d3cf7996fe1232488d23e/REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4b83e721f22e53c123ae060bed7cb10a39d5165fcb1d3cf7996fe1232488d23e/REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'b3b268862eb5bf2ededddfdab67dfcd11b0c1c62\t'
+                                                                                    'research/t20-v6-20261012/sources/4b857beb4a51698704fd703bc94dbf18c59dfe8d83807d4eccd9dd9beb32b908/INDEPENDENT_ANALYSIS.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4b857beb4a51698704fd703bc94dbf18c59dfe8d83807d4eccd9dd9beb32b908/INDEPENDENT_ANALYSIS.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '431afd1525d6982344992e97cd85587d51486950\t'
+                                                                                    'research/t20-v6-20261012/sources/4b98e91b2e5ee067e19e8525571df41fbc1b1d718fe87270f1aa8c236829869b/FIELD_GUIDE.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4b98e91b2e5ee067e19e8525571df41fbc1b1d718fe87270f1aa8c236829869b/FIELD_GUIDE.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '9a334af79348533f229cdbe611127b9ade08762f\t'
+                                                                                    'research/t20-v6-20261012/sources/4bab4d2608e98c19fe832c2831facad1fe1188516eacc70c830196247a683119/DERIVATION.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4bab4d2608e98c19fe832c2831facad1fe1188516eacc70c830196247a683119/DERIVATION.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     '987eb48ad5e13fd935f2e94eb7fd0415a52c82b6\t'
                                                                                     'research/t20-v6-20261012/sources/4be7c1abac6dceb3bd1a746fd52a69ea08b16d8cc3a4dd9f1b7ed1f0c27e65fe/BoundaryControls.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/4be7c1abac6dceb3bd1a746fd52a69ea08b16d8cc3a4dd9f1b7ed1f0c27e65fe/BoundaryControls.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '27cf0fde58cc31165db35b07503713262539b782\t'
+                                                                                    'research/t20-v6-20261012/sources/4bfdbfda33420acc2efc53f7ad3f353b9d7cd763d00b21b8b2860f4805aee47b/RESULT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4bfdbfda33420acc2efc53f7ad3f353b9d7cd763d00b21b8b2860f4805aee47b/RESULT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '551c881db7f21d130c8df97cdd6b1df034ae53cb\t'
+                                                                                    'research/t20-v6-20261012/sources/4c0f6b17e2a7fae25ba9330a5112add9e1ddbfee0cc8d413766a624425928369/PREMISE_AND_NOVELTY_LEDGER.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4c0f6b17e2a7fae25ba9330a5112add9e1ddbfee0cc8d413766a624425928369/PREMISE_AND_NOVELTY_LEDGER.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '302b869ab39de12f8a20921fd7acd799ee2ab97d\t'
+                                                                                    'research/t20-v6-20261012/sources/4c23853b32a631093bc3097c3295b81b75a002d728bd2721120c3cb7ffd9e289/VERIFICATION.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4c23853b32a631093bc3097c3295b81b75a002d728bd2721120c3cb7ffd9e289/VERIFICATION.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     'ffeb05eb7df5171aee9c710a08a78138ed35465b\t'
@@ -45385,14 +45980,104 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'research/t20-v6-20261012/sources/4c4d3bc2170f243fa3c9ca655f4c93a202f8d24af5e8bf6b92108874df5be18c/ControlSlice.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '18a2f805284e8674a2890855c41510f490d46e88\t'
+                                                                                    'research/t20-v6-20261012/sources/4c6462489d9babc81bec4cbf08a625cf0d7c1bd83ee3f1e2879047f80f422369/PUBLIC_SOURCE_V3_REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4c6462489d9babc81bec4cbf08a625cf0d7c1bd83ee3f1e2879047f80f422369/PUBLIC_SOURCE_V3_REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'f7e1a0f9eb7fecc30b7824ea2f111920558dad99\t'
+                                                                                    'research/t20-v6-20261012/sources/4c66f44461ebc91cc4d8ea10feea78be8867681898efb9af9d579ad0a213d7b5/CONTEXT_OBSERVATION.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4c66f44461ebc91cc4d8ea10feea78be8867681898efb9af9d579ad0a213d7b5/CONTEXT_OBSERVATION.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'bb4e7c76489ef25815a55e0b682d7c1944783fd8\t'
+                                                                                    'research/t20-v6-20261012/sources/4c8aa3670f0f989d9f3e6bf9d7c7528305e1b191af3e1e63884e5a994d532f10/PRIOR_ART_NOTE.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4c8aa3670f0f989d9f3e6bf9d7c7528305e1b191af3e1e63884e5a994d532f10/PRIOR_ART_NOTE.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '8be8c697682b46da613e26229060b1746d7ae323\t'
+                                                                                    'research/t20-v6-20261012/sources/4ca25730288055aa3f9041cfc14183bbbedfdb4492f9a2d2731ffbafd9fbefce/RECOVERY_START_HERE.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4ca25730288055aa3f9041cfc14183bbbedfdb4492f9a2d2731ffbafd9fbefce/RECOVERY_START_HERE.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '74bf740f26450def6ed3bf3151c213273fcb9dc3\t'
+                                                                                    'research/t20-v6-20261012/sources/4ca7ee95f7211da1872857e5836cd00458f9c0d5806bb0f7d519226fbcf32b63/REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4ca7ee95f7211da1872857e5836cd00458f9c0d5806bb0f7d519226fbcf32b63/REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '1bef8e08ac61a3ba85a4c6aead24f89fb6ec32c3\t'
+                                                                                    'research/t20-v6-20261012/sources/4cc4e118f2d3015c51216e4519fc2ab2de245a3dfac1264d3a4bf84516c8ec06/RESULT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4cc4e118f2d3015c51216e4519fc2ab2de245a3dfac1264d3a4bf84516c8ec06/RESULT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     '7e96fe1cb875dbbbbec9ebbcbb074848cbee8589\t'
                                                                                     'research/t20-v6-20261012/sources/4cd9a18b12b32c758448f35d006edde8213ab1aa144da716ded928146c9dc435/IndependentInterimReadback-4cd9a18b12b32c758448f35d006edde8213ab1aa144da716ded928146c9dc435.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/4cd9a18b12b32c758448f35d006edde8213ab1aa144da716ded928146c9dc435/IndependentInterimReadback-4cd9a18b12b32c758448f35d006edde8213ab1aa144da716ded928146c9dc435.lean'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
+                                                                                    '0efb308097edd26e19bbc9446675da440f922977\t'
+                                                                                    'research/t20-v6-20261012/sources/4d7ec338a2f91449278256cceabdc8c8ab2a2531fd9a486f66457cd6e63f48e2/CHECKPOINT_REPORT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4d7ec338a2f91449278256cceabdc8c8ab2a2531fd9a486f66457cd6e63f48e2/CHECKPOINT_REPORT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '3091fab29b195d8f15331d76a57f8bc4b92e6898\t'
+                                                                                    'research/t20-v6-20261012/sources/4d8e15008c8ea5f9decfb02ee147f79aee4c85ead3c98c20e3c58bb547b92012/refusal-diagnostics.txt\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4d8e15008c8ea5f9decfb02ee147f79aee4c85ead3c98c20e3c58bb547b92012/refusal-diagnostics.txt'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'c9f9885f991f1e7208e44780925a2c903c4356a8\t'
+                                                                                    'research/t20-v6-20261012/sources/4d97ec3f646114f68e2b626edb1fd5276deae4a34fea6086f875e9a917d5993c/REPORT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4d97ec3f646114f68e2b626edb1fd5276deae4a34fea6086f875e9a917d5993c/REPORT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
                                                                                     '39a1fc0b13d5e150dad3b99a03b059f8add854e6\t'
                                                                                     'research/t20-v6-20261012/sources/4db5a4bc24f4ce6b7a39f867d091389aea280fbdac28fb2165993879716a0398/PortableReadback.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/4db5a4bc24f4ce6b7a39f867d091389aea280fbdac28fb2165993879716a0398/PortableReadback.lean'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '5b1f80cdf03dd6c6c791b1d973239f08328a41bf\t'
+                                                                                    'research/t20-v6-20261012/sources/4dc1f91212364a5ae909dbf6f8ef13f90dc4cf0d64d7a74df80530b57e99d068/RESULT.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4dc1f91212364a5ae909dbf6f8ef13f90dc4cf0d64d7a74df80530b57e99d068/RESULT.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'f130b0bbebcc0e47521b805132446cfa16aec8e2\t'
+                                                                                    'research/t20-v6-20261012/sources/4dd5c23467e537fed562d3211797305b6a46940772e32a076afd70060e7e181d/T20_Resumed_Research_Intermediate_Checkpoint24_20261009.READ_FIRST.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4dd5c23467e537fed562d3211797305b6a46940772e32a076afd70060e7e181d/T20_Resumed_Research_Intermediate_Checkpoint24_20261009.READ_FIRST.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '8c1074ea0496eb2348b0a45a5210fdbb536e20d1\t'
+                                                                                    'research/t20-v6-20261012/sources/4e1f2b10011e097876469781d6c9850c8f88a01cac383a631675f02bc353ba4c/REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4e1f2b10011e097876469781d6c9850c8f88a01cac383a631675f02bc353ba4c/REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'aa87e598d3e8f746b00d6c377fe88e8aa2da0f35\t'
+                                                                                    'research/t20-v6-20261012/sources/4e24f4caaa166dd850f4405d416371707b48137cc7aa5db33815ce41f24fb3b5/README.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4e24f4caaa166dd850f4405d416371707b48137cc7aa5db33815ce41f24fb3b5/README.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '6ffa91fe86f473d922c52fe24a694e24e45af412\t'
+                                                                                    'research/t20-v6-20261012/sources/4e7238ea6bcd022d924673169d80515b94ee804db14bbbdacff1e5790a0309db/INDEX.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4e7238ea6bcd022d924673169d80515b94ee804db14bbbdacff1e5790a0309db/INDEX.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '9b204da0c3661d19e9a2fcd3d100266050c344b3\t'
+                                                                                    'research/t20-v6-20261012/sources/4e92269717d736024be8e9d66e6edc549e654d3c27274aed4e3d4ce7e7d6782c/REVIEW.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4e92269717d736024be8e9d66e6edc549e654d3c27274aed4e3d4ce7e7d6782c/REVIEW.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'a86effe706ecfa4f2de3c82c8c236a2a810cfec8\t'
+                                                                                    'research/t20-v6-20261012/sources/4ecaa3df4e176eac5946f25e6cdd2791aef8edffc30f31c5ade5f5550d2f7bde/REPORT.prior-v1.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4ecaa3df4e176eac5946f25e6cdd2791aef8edffc30f31c5ade5f5550d2f7bde/REPORT.prior-v1.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    'b2c75e429debda91e447e0fceb13ff30435c993e\t'
+                                                                                    'research/t20-v6-20261012/sources/4ee07a744043871d623d105a0df3678ce970b72e6ab07dd174bba6a8fcfd9329/README.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4ee07a744043871d623d105a0df3678ce970b72e6ab07dd174bba6a8fcfd9329/README.md'},
+                                                                   {'after_entry': '',
+                                                                    'before_entry': '100644 blob '
+                                                                                    '11b9a2921357073c6273c9e92eaa224188878af2\t'
+                                                                                    'research/t20-v6-20261012/sources/4ef9d2a92f79dce3505eac645e16356591b0ec60ec9dc2f088ae705cf85017d8/READER_SUMMARY.md\x00',
+                                                                    'path': 'research/t20-v6-20261012/sources/4ef9d2a92f79dce3505eac645e16356591b0ec60ec9dc2f088ae705cf85017d8/READER_SUMMARY.md'},
                                                                    {'after_entry': '',
                                                                     'before_entry': '100644 blob '
                                                                                     'b940d442594f8d3256f31bb6e4ee8a0c219e8e05\t'
@@ -46089,35 +46774,35 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                                     'research/t20-v6-20261012/sources/fc9b35a2bc786902630ee7fc0eff94a5e7d3253889d2d27ccd46f541e6ae5328/TargetTypes.lean\x00',
                                                                     'path': 'research/t20-v6-20261012/sources/fc9b35a2bc786902630ee7fc0eff94a5e7d3253889d2d27ccd46f541e6ae5328/TargetTypes.lean'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   '90f65c26abec98f1899d0b99f6e88f883fde1304\t'
+                                                                                   '10e8e38226350f628a7393bd72414e279a70aae0\t'
                                                                                    'scripts/check_reader_pilot.py\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '3751ad6673f466d9ae9e7dd62616a4f4b1a12259\t'
                                                                                     'scripts/check_reader_pilot.py\x00',
                                                                     'path': 'scripts/check_reader_pilot.py'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   '80df693a7e377e1d24d6f3669f8f541cee7f5b94\t'
+                                                                                   '223ca6c7643033dde34089d3e6fa8d45dc69a837\t'
                                                                                    'scripts/resolve_t20_v6_source.py\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '0e5259b1654c827116223c69b1bea0a2bda3da70\t'
                                                                                     'scripts/resolve_t20_v6_source.py\x00',
                                                                     'path': 'scripts/resolve_t20_v6_source.py'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   '61acc2a8e551680568d803e07fdde7c02661ed20\t'
+                                                                                   '0255299d06364b501b339f13a99d19bdcf9e866d\t'
                                                                                    'scripts/source_alias_absence_reader.py\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '77564f9afc8aae49fef24c1e43deff350d68567a\t'
                                                                                     'scripts/source_alias_absence_reader.py\x00',
                                                                     'path': 'scripts/source_alias_absence_reader.py'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   '792593af0f46b10d088b271b6bf4e8810af742bb\t'
+                                                                                   '5ad448907c735fce0b2123a67cab25bf8462d9b9\t'
                                                                                    'scripts/validate_internal_references.py\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     '3a033d345dd348e14cd1827a971a24ec76ccda2d\t'
                                                                                     'scripts/validate_internal_references.py\x00',
                                                                     'path': 'scripts/validate_internal_references.py'},
                                                                    {'after_entry': '100644 blob '
-                                                                                   'f1dd7941f6cc6bae8eb1d6c4d86c77b4d09a87c9\t'
+                                                                                   '06626b769d6f841cc876b2da730a68bc6cd6b152\t'
                                                                                    'scripts/validate_t20_v6_projection.py\x00',
                                                                     'before_entry': '100644 blob '
                                                                                     'df171f05b9bb6858a462779a8ab99687df818a08\t'
@@ -46125,19 +46810,19 @@ NEXT250_BINDING = {'catalog_identity': ['0cec315ae366775d432cce6703173d8adff4092
                                                                     'path': 'scripts/validate_t20_v6_projection.py'}],
                                              'published_base': {'commit': 'cdbb59bab4859e2046b3add9ae69f0b976741374',
                                                                 'tree': 'be2c04c112093404492cd2c69f252bd956d7bf2f'},
-                                             'tree': 'af4b50b4a2e417e090a300ae7933c83909584964',
+                                             'tree': '144cb7522e425c7fa4b58f9f4e10b5b6a8c5a245',
                                              'verdict': 'QUALIFIED_PROVISIONAL_INPUT'},
-                       'qualification': {'identity': ['6181f57109be426789f2971dedd96889669558f7',
-                                                      '6fdfea18ccd36404e6d2a044f53fbfbe3bfab5ca28663e23b75adaed09272f5b',
-                                                      334376],
+                       'qualification': {'identity': ['5c2c3e0317b581b44f2c35e682eab7e09a96c36f',
+                                                      'c82007d3ba08bf8b4aa1d6306a79770852560a2547ccf91d3d12a736ae3586c7',
+                                                      385055],
                                          'origin': 'reviewed_receipt',
                                          'path': 'docs/provenance/r0002-next250-receiver/PROVISIONAL-QUALIFICATION.json',
                                          'role': 'provisional_qualification'},
-                       'tree': 'af4b50b4a2e417e090a300ae7933c83909584964'},
+                       'tree': '144cb7522e425c7fa4b58f9f4e10b5b6a8c5a245'},
  'published_base': {'commit': 'cdbb59bab4859e2046b3add9ae69f0b976741374',
                     'tree': 'be2c04c112093404492cd2c69f252bd956d7bf2f'},
- 'reachability_acceptance': {'identity': ['4d0db929f421b512823673bd8d8d2adf6920e770',
-                                          '1efb41a7433c26b12eb38042495270dd775b8032c07bd815a033453374fddbb2',
+ 'reachability_acceptance': {'identity': ['5f6ddc863390a5794b87225fd90a7f727168be5a',
+                                          'e3dc116a174c21e7404299f6fcc71e211bff4f869229e0401bc8f7a31b89c0c6',
                                           1659113],
                              'origin': 'reviewed_receipt',
                              'path': 'docs/provenance/r0002-next250-receiver/FALLBACK-ACCEPTANCE.json',
@@ -60596,7 +61281,116 @@ def after4134_public_bytes(root, row):
         raise ValueError('After4134 complete original public role/projection row differs')
     return after4134_bytes(root, row['repository_path'])
 
+AFTER4384_BASE = 'cdbb59bab4859e2046b3add9ae69f0b976741374'
+AFTER4384_TREE = 'be2c04c112093404492cd2c69f252bd956d7bf2f'
+AFTER4384_MEMBERS = (('research/t20-v6-20261012/sources/4f2b29057b6a11a094f11b92e3869349a2df43c55a690ccd44ae77f53beb15b1/SOURCE_CHECKS.txt', '100644', '2687eef83e5dbd9aaed9ad37cb15e92f1d84ef73', '4f2b29057b6a11a094f11b92e3869349a2df43c55a690ccd44ae77f53beb15b1', 433, 'ADD_EXACT', 'aa71782631d3ce7209402f2db3f4ddb609cf9aa5dd2b14f65010726dfaf01719'), ('research/t20-v6-20261012/sources/4f31113f0caf0da7154eceec9c2d548bb71227ec99a5d6b58e204e785226b1d0/README.md', '100644', '957a610ae553027a6c1ca24ac1928cfb7a01727f', '4f31113f0caf0da7154eceec9c2d548bb71227ec99a5d6b58e204e785226b1d0', 5933, 'ADD_EXACT', 'ae03c5a10ddda088df7a74180b4ac85cf7c3f6fdb0142691252ed902ecbcfc1f'), ('research/t20-v6-20261012/sources/4f393b2edb2d4adff95fdaef8689e0944069f94155019b2ea81f21c6b66048ac/MATHEMATICAL_CONSTRUCTION.md', '100644', '0f69bc31658d6675d17e5ae343856f2fabf752f9', '4f393b2edb2d4adff95fdaef8689e0944069f94155019b2ea81f21c6b66048ac', 21758, 'ADD_EXACT', '4426b9ba751e34d13a5168e84a4e4dc900947ab217984f7f24e253807a3e4ecf'), ('research/t20-v6-20261012/sources/4f3f90b84d1d854721c8a4a07934df67b256fac7de85252ba89cd167cee8ce57/INTEGRATION_REVIEW_v2.md', '100644', '16f656e656da269008ea80cb68680d833b8f4a97', '4f3f90b84d1d854721c8a4a07934df67b256fac7de85252ba89cd167cee8ce57', 6235, 'ADD_EXACT', '8a6f8fe762b1e5ea59bbecb835147221f3b361aecfe41dc42e0370ad59e59431'), ('research/t20-v6-20261012/sources/4f41143b4e4a529952468de8c599c81aa3c6a1737159794cf80080f700e280a9/RESULT.md', '100644', '6f3b44c69ec7b26a6589956f0db74394482bc9e1', '4f41143b4e4a529952468de8c599c81aa3c6a1737159794cf80080f700e280a9', 6169, 'ADD_EXACT', 'f26e3af6dfb5cbd43272091102fefce8693429d2a5c2039872541fec8c6fbcdc'), ('research/t20-v6-20261012/sources/4f449bff3a38d2e7ac13c49b4ffc207f09d188196a9a88f4b67e2b42ea964b43/PROPOSED_EXACT_SOURCE_ATTRIBUTES.txt', '100644', '8654d0c22ce25bc35e385e2df02f7a1dfee02730', '4f449bff3a38d2e7ac13c49b4ffc207f09d188196a9a88f4b67e2b42ea964b43', 3559, 'ADD_EXACT', '7839fb41472b3ec02a0a1b954231d115dda350da4b5339dcd693f7d262e5e40c'), ('research/t20-v6-20261012/research-v6/early_remaining/final_coverage_review/REPORT.md', '100644', '88b630ed56f8d42452a1687fb14187df7bea3ed5', '4f6caf9307077e098bb4511cd9442c175db35908e741da893d6de3c63633cd80', 8019, 'ADD_EXACT', 'b9cbd3868856df52cc1c080a980e9e0ab2570a1492f26b1b40d7e40efa6911a9'), ('research/t20-v6-20261012/sources/4f7cc32b801d2fd3ad5eca353d6f7bb4a5a403295386c7fa1bab4bbef54ac989/REVIEW.md', '100644', 'c2bf79fa499a8849c10c43e78752faf336a05e81', '4f7cc32b801d2fd3ad5eca353d6f7bb4a5a403295386c7fa1bab4bbef54ac989', 12253, 'ADD_EXACT', '9cfab285663d4e249a9bf254eff796ea4118693245a696f7dc6a53b916d476c7'), ('research/t20-v6-20261012/research-v6/type_collective/multivalued_reset_review/REVIEW.md', '100644', '2175c3db19196c47dddb3737097bafd0a7cf8397', '4f7e8f10293095580255e78b0691da7ad1a37721a22bf3b52e824df747c46896', 3883, 'ADD_EXACT', 'e98fc824ef18b18debf42be06a7c884c0b6ec7b940c9ef6dbb3c0a86271d9ce1'), ('research/t20-v6-20261012/sources/4f950cf89931c8fb95ddf9c33f70d8bdf940c087765f65587ee9d009af5f6603/RESEARCH_BRIEF.md', '100644', 'cc33b31601a89e3ac0fad57513da934f36b2b16f', '4f950cf89931c8fb95ddf9c33f70d8bdf940c087765f65587ee9d009af5f6603', 2134, 'ADD_EXACT', 'ec38d809715b69daabbd435e32f356291cfa3943a589107ab75da6ec8140d24b'), ('research/t20-v6-20261012/sources/4f9f8e403a29298d5e2c1b83e97e5b1fea57789e66189f36ab3d1fbc1d4f4803/CP03__t20-next-frontier-20261008__fitrah-warrant-bridge__warranting-basis-addendum__CLARIFICATION.md', '100644', 'ac3686bcf1477b721602dacd185e98f6cc8216a5', '4f9f8e403a29298d5e2c1b83e97e5b1fea57789e66189f36ab3d1fbc1d4f4803', 3893, 'ADD_EXACT', '6ff6f1efc881305d3fcc354e09150f9160b91e8b25b4de2bae3962b94771502b'), ('research/t20-v6-20261012/sources/4fbe9503b4101468da6e62fe10014a1f3ab4e1511d28519e5028daa0f0ab9fb4/REPORT.md', '100644', '675ae19deb56b097c8518acf290e8206196cb279', '4fbe9503b4101468da6e62fe10014a1f3ab4e1511d28519e5028daa0f0ab9fb4', 11574, 'ADD_EXACT', '0566706e5f593258010172688a38704d76e1faa959c73ef9b91a4fe91f7dddf6'), ('research/t20-v6-20261012/sources/4fe61d255b866b36524db720b94971b7e93666cd2895dccdc904c000a0d3b650/FOLLOW_ON_SCOPE.md', '100644', 'ea47057d19dcabb10081a01d8da78be463728f93', '4fe61d255b866b36524db720b94971b7e93666cd2895dccdc904c000a0d3b650', 4825, 'ADD_EXACT', 'ac2ea84b0af899b89df80161eaeaac199bf38950a648e4dfc49035a9deee1231'), ('research/t20-v6-20261012/sources/4ff76e4e0c8c140cb5195f319c88a64b0bf2ea80dd73e18516b250df15096adf/do-second-loop.md', '100644', '159aaf9477a943b65433484967181a5aabb044a7', '4ff76e4e0c8c140cb5195f319c88a64b0bf2ea80dd73e18516b250df15096adf', 49482, 'ADD_EXACT', '767b29e8e83bad2bb464372d6bd12352974d03ef4d5b79f14aea656a5a9a1dd2'), ('research/t20-v6-20261012/sources/50410cd5e44bee1dc50087ebaf160471c67336c32135cfaa181e9efa6a0f6e5a/SUBSTANTIVE_REVIEW_v1.md', '100644', '4c974048137eade3be44d6a739a6df3069d0e176', '50410cd5e44bee1dc50087ebaf160471c67336c32135cfaa181e9efa6a0f6e5a', 15174, 'ADD_EXACT', '90fa7d383faed40a4ffe17bcabe0379ae72f62efe949313d53cd5eb7fd7638f8'), ('research/t20-v6-20261012/sources/506cb9e88e543ff807b8b3b46ec1e43ceddff5bb9f0d41bf762563da74efe1eb/VERIFICATION.txt', '100644', '020f52b9c4ff53237f4f69e1f0cda991499fa25f', '506cb9e88e543ff807b8b3b46ec1e43ceddff5bb9f0d41bf762563da74efe1eb', 608, 'ADD_EXACT', 'c49d08128696c2671c1d1dbc97fc214a74bbb24225ba512bb62c444764cfa93a'), ('research/t20-v6-20261012/sources/50750d587e4c424498bdbd4411d8b4a546edce7f0b49bc9c0503aa2fb5b7a603/SOURCE_REVIEW.md', '100644', 'be75f2f4e9e55d368d137e780da682e6f64c46bd', '50750d587e4c424498bdbd4411d8b4a546edce7f0b49bc9c0503aa2fb5b7a603', 8355, 'ADD_EXACT', 'ff4720a2318e161691da056082376444bb96780586d1de0f2b1337b179b293f0'), ('research/t20-v6-20261012/sources/5075451bdda6f8ca187e2462bb6ee07ae13b4e5f5687366a2fc39cb13efd9792/START_HERE.md', '100644', '8697242aa7172c77af50756735a0f3988c5d7b8c', '5075451bdda6f8ca187e2462bb6ee07ae13b4e5f5687366a2fc39cb13efd9792', 4738, 'ADD_EXACT', '82df2d4faafe7d21c8e75e100c4fa578ba26e24c1619372c908f5a04ca5d2b3a'), ('research/t20-v6-20261012/sources/5092a5e8eaa1ee4d856aeb279b1ea6192c3bcc6121a40766a1125756b0928b27/ENVELOPE_DIAMETER.md', '100644', '42cab12d2ce91d44f261b91574515fd3ef7e1961', '5092a5e8eaa1ee4d856aeb279b1ea6192c3bcc6121a40766a1125756b0928b27', 4608, 'ADD_EXACT', '1740368653968cde5210b8d20327279895cc2dfe23e7b5afe4005e8648b8860d'), ('research/t20-v6-20261012/sources/5099c935738ae310d69656d87020fcbdb0d61393bf22ec4d119c172f1305545f/AE_LICENSING_SCOPE.md', '100644', '1cd060719e3e6e457ca43ce524f0b3a8ed5e420f', '5099c935738ae310d69656d87020fcbdb0d61393bf22ec4d119c172f1305545f', 5867, 'ADD_EXACT', '81b11782304c25e00de2e13d5096b007fbeacd2c453e00255fad8d795394eabd'), ('research/t20-v6-20261012/sources/5099deaec23494bfc716da1a416d06b3285127ab5494950edb351298c8c0003b/putinar-schmudgen-p24.txt', '100644', 'f388dfcbd3b89e8016e0512c278ba7c3f142f76d', '5099deaec23494bfc716da1a416d06b3285127ab5494950edb351298c8c0003b', 2860, 'ADD_EXACT', 'a16357a127f494f93f23347d6de46f31a2720a19f89716c74f73a7cecb04f9c1'), ('research/t20-v6-20261012/sources/50a0407740b183f6ec3c7505584088d148fce3acde4108f3384f0dddd920daa6/README.md', '100644', 'f70405c44aa56a81bcdf633e3ecf2e4d4df0a7a9', '50a0407740b183f6ec3c7505584088d148fce3acde4108f3384f0dddd920daa6', 1404, 'ADD_EXACT', '4d3489b7d9fd4a9b3c50dbd48a1043d4e4982f6e4398f3066d34af40599dbb9d'), ('research/t20-v6-20261012/sources/50e05cfde2ff11cb8fe262b8bc85bc9f9432d3d302274fc84b8d1f5500917d7c/README.md', '100644', 'd955b2c24e37e4ba1ed16e37d8835b663fc63ebd', '50e05cfde2ff11cb8fe262b8bc85bc9f9432d3d302274fc84b8d1f5500917d7c', 314, 'ADD_EXACT', '29852bfb2be08936bd516523db6903a8da638bc1e2c169af46ed649aad329cf1'), ('research/t20-v6-20261012/sources/510755fc65d394b83138a12b8149fb22576d811d5fca46eac8a36eef2d113a86/REVIEW.md', '100644', '75439ce75740a4efdfcb1651e3420a90531dd702', '510755fc65d394b83138a12b8149fb22576d811d5fca46eac8a36eef2d113a86', 10805, 'ADD_EXACT', '7fd734f125f5db04b1f199da4d81177054cc4662b8431480cbc59856f2b7ebc9'), ('research/t20-v6-20261012/sources/515f87f579c74ca14218b63fa95c56d9e1502890d68553ea566dadbf019ad855/CHECKPOINT_REPORT.md', '100644', '61ac9126dffbc93c8aa9270807451f3bc9c2ad9f', '515f87f579c74ca14218b63fa95c56d9e1502890d68553ea566dadbf019ad855', 3684, 'ADD_EXACT', '040c2265453062e2ffdd60bf143532b1d0ebe72fd41ba27700526a84c54f0f03'), ('research/t20-v6-20261012/sources/515fdde7029f4e277266c447611fadb182d4ccf00d03bf1f308beef61c93dd0b/REVIEW.md', '100644', 'fd0787386b73bb9b56b2a619e5e188193608566c', '515fdde7029f4e277266c447611fadb182d4ccf00d03bf1f308beef61c93dd0b', 2191, 'ADD_EXACT', '3a3293afc1050839e9d4a5e5238b99bcfdf2baf8b775aa74663b4eb5689ac18e'), ('research/t20-v6-20261012/sources/518e4acd6eb55f169cf7700b8f5b09f428143f8305e25386fd91891d3be3ecca/orthemology_consolidation_stage1_report.md', '100644', '0f80ee9d56eb4ff2a331c4cd34e2c04b1ae57d91', '518e4acd6eb55f169cf7700b8f5b09f428143f8305e25386fd91891d3be3ecca', 55848, 'ADD_EXACT', '88c690ade4bdd11bd65dfe9d54fa0b78a57c6e4b9ee79c75e4d74ce43d592e30'), ('research/t20-v6-20261012/sources/51dcbf4b8be3cfbbb957a053dad43b0412b3cbbccc3a849c18749f9fa4f5233a/README.md', '100644', 'a6c31768378d8026ba7ef1e7f6c7f4f9c05762bb', '51dcbf4b8be3cfbbb957a053dad43b0412b3cbbccc3a849c18749f9fa4f5233a', 1867, 'ADD_EXACT', 'e9a104066361da4aee64f58033fe4ba6cca08f94cbd74bd3932360a929fc9192'), ('research/t20-v6-20261012/research-v6/root_math/JOINT_COMPLETENESS_REVIEW.md', '100644', '1432ce5fc70ff63c9b42ed9cfe9a2b82f2208301', '51e69bb16149b4f2dfffb1f60734ec1389a426965dc53a1eb00f5e05a5c4aaa0', 2498, 'ADD_EXACT', '0bf486d85587ccce2e0c28cadd026f3d2d8d59972061f47c4ab47ac04f49b7cc'), ('research/t20-v6-20261012/sources/5224d97927cac1c8763de65c13bcc1ecd0523d5e173b96c73c6f8c6217972bc0/DO_NOT_REOPEN.md', '100644', 'bc1f8f9ac8d24486a0b3f623ada8cc2500f12ca7', '5224d97927cac1c8763de65c13bcc1ecd0523d5e173b96c73c6f8c6217972bc0', 2245, 'ADD_EXACT', 'ad9108289119d4124f34c55f1133d62b5f95f59338234a7df26a3f44b3ba91ba'), ('research/t20-v6-20261012/research-v6/type_collective/implementation_residue/REPORT.md', '100644', '293ff4907608c0f2880ff3a395ab44a44c1629a6', '523d6050a9b81e4b590fb53ea64471fc1830df1ba0f34befa9980d47ecfb0fc2', 5892, 'ADD_EXACT', 'a5f8521f3f73e2303a273233f8e9f001310b127f501774dbfd3eb0bac0c76d6f'), ('research/t20-v6-20261012/sources/526b1c96515b2293eae1a4b5a44b60f0863586a16ac72a01a52908eb692a518d/BASELINE_AUDIT.md', '100644', '4e1fe4e8c173b62ccb349b639529e6953bdfc2db', '526b1c96515b2293eae1a4b5a44b60f0863586a16ac72a01a52908eb692a518d', 29828, 'ADD_EXACT', '4dba1701fe0e1c4cc192cdee3d1a3f7b7859f1f1e1d8816a9a631eaa0668c1ae'), ('research/t20-v6-20261012/sources/527f3006c4ff5b14580b85000f5eb82f7d018371aab1d869ec53bfb5d2a75634/PRIOR_ART_ADDENDUM.md', '100644', '822e64a5e16ae72d41c7358ce3f537033361088c', '527f3006c4ff5b14580b85000f5eb82f7d018371aab1d869ec53bfb5d2a75634', 2444, 'ADD_EXACT', 'c55873ca01f9392ebe76939864e8ab993b244d1798286bc76599cdb0133b5ed7'), ('research/t20-v6-20261012/sources/528d856568046789c31a7fbbfa688b897f5623ee6e51bf5860c6f443fe001f37/CODEX_ONE_SHOT_PROMPT.md', '100644', '9ed5a0428ff611ad69a2aca6f6813f9d3596ef1c', '528d856568046789c31a7fbbfa688b897f5623ee6e51bf5860c6f443fe001f37', 3820, 'ADD_EXACT', 'd99cc37f7f35ee31cbfe691ce9d2158482816e48b14842207f2264cfcf169cb0'), ('research/t20-v6-20261012/sources/52b7c52a2601dd569b9a628f3e847695d1dd306eb1a6205d14d087a38a255114/CONSTRUCTIVE_NOTES.md', '100644', '2d5bf4193a64d3fd1e410a419f9bb31a829d6a1c', '52b7c52a2601dd569b9a628f3e847695d1dd306eb1a6205d14d087a38a255114', 4852, 'ADD_EXACT', '3c368c139859cccdc7a05a9d6858fc1d856d792f24b0c25fcddc425fd72419b6'), ('research/t20-v6-20261012/sources/52c1a84151bcd8004670ff0edec865a6593c972ed48aa98ed4a36e802dcd20a3/CHECKPOINT_REPORT.md', '100644', 'dac0297f04e125c99212e4c6c719b813cd1f8935', '52c1a84151bcd8004670ff0edec865a6593c972ed48aa98ed4a36e802dcd20a3', 3786, 'ADD_EXACT', '9593bd3ccf080a1f8e796a295867ac1bc5f833cadd8ed2d8d8cb8a2b463cd29c'), ('research/t20-v6-20261012/sources/52e278a0288975cd0234987ed0767372a8d7b038bab70f8723c0dd727ec9f224/START_HERE.md', '100644', 'aa7de54cb8560fc0191a84173e8cec784d1db910', '52e278a0288975cd0234987ed0767372a8d7b038bab70f8723c0dd727ec9f224', 870, 'ADD_EXACT', '06fc65724d758d56b48923d61ed80480cfe9a94a7ce71b19d6b92ccae3e6a1d2'), ('research/t20-v6-20261012/sources/52eef8ece5af6995a4a151e5ddff0d3755f6485fefa90b2c029d6a0d07008c3d/DESIGN.md', '100644', 'e84b9ba505210f67405344575b6216414df41c29', '52eef8ece5af6995a4a151e5ddff0d3755f6485fefa90b2c029d6a0d07008c3d', 1841, 'ADD_EXACT', 'fc82b69871b986c213747eb944f8c38fe8943217f60cb1944f675af6875f0ff3'), ('research/t20-v6-20261012/sources/52fbe080e7bd57f6c06e695a28428052463702d3ccce72bf2c7ba6ad493250d0/SOURCE_RETURN.md', '100644', 'a1cb97d5e3fd6df59bc0f17220c723f8fc7f11d0', '52fbe080e7bd57f6c06e695a28428052463702d3ccce72bf2c7ba6ad493250d0', 15782, 'ADD_EXACT', 'f156b939429a0920db048166a1c12665cb83b2b56bf372b7b917366a00d49784'), ('research/t20-v6-20261012/sources/53048652eb15b7e9b38a1e97627b407c192138b769d62e0fa7e5e34e797587b1/RESULT.md', '100644', '788141d586bce7e4e4962479275b506e9d9911ae', '53048652eb15b7e9b38a1e97627b407c192138b769d62e0fa7e5e34e797587b1', 8624, 'ADD_EXACT', '9e68498946d4b55c087d78d858716f266a89a02b45803f4b9a9aca863a8c1314'), ('research/t20-v6-20261012/sources/533a7f14b610caef541def519210f26b42585e9c26448c249e9c80425b0312b5/README.md', '100644', 'bf2385bb252389c7da9b5702a369cca5c1bf3330', '533a7f14b610caef541def519210f26b42585e9c26448c249e9c80425b0312b5', 3262, 'ADD_EXACT', 'e6806b3d0de4cf00086c3d78a0c3c23b28f2ecc97d5f4e54f2a711abf5cf8ee8'), ('research/t20-v6-20261012/sources/5391aeba43fe7a822a34ba653ac3900a6a122793acfa8ea8b0d9b1e693b3cd8b/source_ascent_integration.md', '100644', 'ba4d01132fed29bf6698154a3424aae2412ff4c6', '5391aeba43fe7a822a34ba653ac3900a6a122793acfa8ea8b0d9b1e693b3cd8b', 8781, 'ADD_EXACT', '062a749e4113d7e6c69fafc83e181beb86b71bd55c3ff28d18ef43ef4fb29b2e'), ('research/t20-v6-20261012/research-v6/operational_successors/intrinsic_testimony_implementation/RESULT.md', '100644', '9cf8ab4d68c4542aa5b96ece50456e813c4264ae', '539aab8e243f01bff45bb97164a0f6266b95b97ebe60e581a1392784fafd716a', 4934, 'ADD_EXACT', '05dd4a87668ac60695f346573cd2e30273cc26cb52dd1e929743d6fc7f3b1d51'), ('research/t20-v6-20261012/sources/53a18c9944984f7bbdd35641e4fb457a500e59abfd33c71e5120400ee1cc5e25/RESULT.md', '100644', '8abc57ba9d311e8ffbeaa3dddb497a34571f4b17', '53a18c9944984f7bbdd35641e4fb457a500e59abfd33c71e5120400ee1cc5e25', 24328, 'ADD_EXACT', '4243d6e015ac9dbc7176b332aeeb5af1a61837d7f91306512c971ccdc792e688'), ('research/t20-v6-20261012/research-v6/type_collective/deep_aa_ap_checkers/REPORT.md', '100644', 'abdacc38641c486eca56cbb193c4619f625ce3ea', '53d03ffea4768fed9761c95100556824d380cbcf65c7b49302ee66dcd1e7d4b2', 12440, 'ADD_EXACT', '4c4ebf1c726c1bb7633069ab5761d80ef56e08e1820c3e24ff85cb950c33c84b'), ('research/t20-v6-20261012/sources/53e195505ed07d2cb5f9243e8d1e908ad6c769c799a0f2f39a42eeb7e358da91/REVIEW.md', '100644', '08b3b5194b10b2c3c0553c2fceeb5c54bc567b8f', '53e195505ed07d2cb5f9243e8d1e908ad6c769c799a0f2f39a42eeb7e358da91', 6069, 'ADD_EXACT', '4e24d06ae10e8736b622d94748793729ec835cfb7a8a53f3d16160cbc10a2972'), ('research/t20-v6-20261012/sources/53e82d771e5db676a03df5cfe45a0e795b255924c404ddf61ad7d0dd95ebc8ba/ACTUAL_READING_AND_REPLAY.md', '100644', 'e647c737686a231d1a3ef0b9060fbf7ff41f5a39', '53e82d771e5db676a03df5cfe45a0e795b255924c404ddf61ad7d0dd95ebc8ba', 4294, 'ADD_EXACT', 'e87e62d16712c1d5d7df007e0b04f65e261eef37a67a4f03a1753d777c054326'), ('research/t20-v6-20261012/sources/54110afa11f6392dee0338bc1aa2ff024e912dfa1fd84442e96b2b2e69bf601f/unit_49_green.txt', '100644', '562d92b8970b668e72b0cbc7fcebc05a4cf841a2', '54110afa11f6392dee0338bc1aa2ff024e912dfa1fd84442e96b2b2e69bf601f', 4498, 'ADD_EXACT', 'dcb70ad3fe629761b5a1c2be419d90f547a67bb6f35b5fed31397d636c9d40d5'), ('research/t20-v6-20261012/sources/542b6a690f24d785d04e009fa839c0c88f13d8907b44a0625a03422e47b45fe6/Orthemology_Dot_Tensor_Riemannian_Context_Brief_20261007.md', '100644', 'd08b58606a70873d98cc03a97f1dadaba2fb47ce', '542b6a690f24d785d04e009fa839c0c88f13d8907b44a0625a03422e47b45fe6', 18248, 'ADD_EXACT', 'df8a4875b97b6d17dc56beb01e1be967ef4375b3344cd0f847b7018f5125f788'), ('research/t20-v6-20261012/sources/547593798c1db2f21bbabed1c6b70f4cdd49a19a89080f405c570639c0484487/README.md', '100644', 'b859918b299b890f9c3472d99e5493b9e8f7c008', '547593798c1db2f21bbabed1c6b70f4cdd49a19a89080f405c570639c0484487', 1745, 'ADD_EXACT', '6152fcabce61651880df5a507fd4ed8d98622f24ca912194c58dc27ba9efe57c'), ('research/t20-v6-20261012/sources/547818609c4b56992a4d47b01f89a3315c03b18dae4518afacabbc1c9eaac007/REVIEW.md', '100644', 'e2361d0c44af17e383d0b887b0eef5459baf2ea7', '547818609c4b56992a4d47b01f89a3315c03b18dae4518afacabbc1c9eaac007', 9339, 'ADD_EXACT', 'cf29b1cb91cc3be6650925dd6ddab30f47d02846ca620e0f145c07e55008de6d'), ('research/t20-v6-20261012/sources/54ae0e0da5e0482dc31e59933847c78aa000f3b992ef15d28ed17d6b3493bd62/CHECKPOINT_REPORT.md', '100644', '87640ffd9130533d16118a18a12d0ed621538a51', '54ae0e0da5e0482dc31e59933847c78aa000f3b992ef15d28ed17d6b3493bd62', 2256, 'ADD_EXACT', '20c71e2ba8a6f1878e9d97212760145907710d20ffc993f95cee88916d727388'), ('research/t20-v6-20261012/sources/54c3019709241dd68789c1c40f0587250977f9112b69e5e5f12aac44d62e721a/REMAINING_OBLIGATIONS_AND_OWNERS.md', '100644', 'f1b8ee3bd5118c5bfe7f17bb76f65247182c667b', '54c3019709241dd68789c1c40f0587250977f9112b69e5e5f12aac44d62e721a', 3137, 'ADD_EXACT', 'abe1b555e6b930ecca5a13316819a0cb8335a3f95caae81786f0a39b5eb1d2a2'), ('research/t20-v6-20261012/sources/54df8e28e3fcbe8470c6f8ad9d4160da35b23f182b01dbfaa587138b0ea04712/INDEPENDENT_FIVE_FRONT_SOURCE_SUPPLEMENT.md', '100644', '54d0201c2dd09802a91f21ac676aa8cb4007c072', '54df8e28e3fcbe8470c6f8ad9d4160da35b23f182b01dbfaa587138b0ea04712', 51345, 'ADD_EXACT', '0df3c8363aa77d065481e93a2261180c42d34b95c5f747968a964aac051d6dbd'), ('research/t20-v6-20261012/sources/551e1e7feab939c52ba5030a4f7817e1e0f772f49922cd597fe58b368002b917/references.tex', '100644', '83b3204c411fe3d6c044bae8755ded3ed1afda99', '551e1e7feab939c52ba5030a4f7817e1e0f772f49922cd597fe58b368002b917', 5668, 'ADD_EXACT', '156924d9a21f18528b3b4abfba767c589a4215bb8dacec2ace8b43613fd491e0'), ('research/t20-v6-20261012/sources/5541689bfa243c3fd13d5c69f92de3b277257d60760f0acd90720331f6305c3a/START_HERE.md', '100644', 'c828b08617597075934cf54f034805560948ef39', '5541689bfa243c3fd13d5c69f92de3b277257d60760f0acd90720331f6305c3a', 4221, 'ADD_EXACT', '14b0908fef920334fbd92b4b70f04b966c56199ad86bc4043cf0a60830ae78d6'), ('research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md', '100644', 'd7fa4425d014225940cbbbe86983f8d9a3dc3da5', '55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810', 49338, 'ADD_EXACT', 'c16dbe7662abdd1f58e91d05f401b1b1a4bc58049faa0ca6fae9c7d58647cf32'), ('research/t20-v6-20261012/sources/55ddc54ebb887cf063f7bc2b4a07c5a90010c0458dbcdfc33328772cdf3cd24d/PRO_EXECUTION_PROMPT.md', '100644', '968d6cbe0db537e22904098e7c735e71eac8b52f', '55ddc54ebb887cf063f7bc2b4a07c5a90010c0458dbcdfc33328772cdf3cd24d', 3927, 'ADD_EXACT', '07ac77bdcbf7dcea9f5631c846fe891ee0a307958f762e7fd0fd47cd0a77b6f8'), ('research/t20-v6-20261012/sources/55e884ee3ce94c9c6b523404e56cd58d286061d6bb591b104615c384754e5863/README.md', '100644', '706825f8df01748ec87cc460949f69d3947889e1', '55e884ee3ce94c9c6b523404e56cd58d286061d6bb591b104615c384754e5863', 1978, 'ADD_EXACT', '94e95a0377c9928759ac188bcb483ab86ed1d4f73d82d00b10231bd925e2f294'), ('research/t20-v6-20261012/sources/560dbebf766c7b8a1685498e41ab34bce3760e29ce95e4166c52d991d033f4a2/PORTABLE_REPLAY.md', '100644', 'eada28a81027a9140767c580792fc3ce2562d7f6', '560dbebf766c7b8a1685498e41ab34bce3760e29ce95e4166c52d991d033f4a2', 3384, 'ADD_EXACT', 'a33792c35272ddcff7362a7d40021d8a52765b4c8ff65a20e6c39bf4d8ba20ec'), ('research/t20-v6-20261012/sources/5618aa57c4096b425fbe6937b9f11d6f9b47378f528390bedad9373f078406c8/putinar-schmudgen-p29-31.txt', '100644', 'd74581aa2f8ab4005c3b2cdd3a64be4efd8d78c2', '5618aa57c4096b425fbe6937b9f11d6f9b47378f528390bedad9373f078406c8', 9106, 'ADD_EXACT', '99407d16f11aa2f1b717f263316c265089fe866458bef6ea438d4a65a1d92195'), ('research/t20-v6-20261012/sources/561b2764ccceeba464460dedb3fe7e07ba29700e9fea865f7b74ec401124f072/RESULT.md', '100644', '92aa0e2ea0fe00b6dd20b1c3d982148e445d86b2', '561b2764ccceeba464460dedb3fe7e07ba29700e9fea865f7b74ec401124f072', 19825, 'ADD_EXACT', '3268bea8a6493680518ebd84119ef29e7ef851ce3c86a78d24cf073e852f8fd8'), ('research/t20-v6-20261012/sources/563026fa980b8c53de5bb59469ce3098c67fdc41677a1c77f9609095a5d21f6d/template.tex', '100644', 'd2933e00e8f0c4c1d3df753fdb245a8a30827710', '563026fa980b8c53de5bb59469ce3098c67fdc41677a1c77f9609095a5d21f6d', 3918, 'ADD_EXACT', '3fc8284181641a5a535062b8196dc5b18bf37871aad37a23aafd830c89e44b79'), ('research/t20-v6-20261012/sources/5636ab441a57a5b88b065eb1c6bd62a2a8cd32bfb886d7229da4e3c3b6b11300/REPORT.md', '100644', '6838a63e0f11df40bee2455ec8a5900c40e7b784', '5636ab441a57a5b88b065eb1c6bd62a2a8cd32bfb886d7229da4e3c3b6b11300', 9718, 'ADD_EXACT', '7f76bd65c3e6e92ca0c642d051c11a74b8c405572689123b6ee91708a7886d71'), ('research/t20-v6-20261012/sources/563af3800ae72f705e054ae6b22db515cd064809deea8413d71049d0e5b8d7ce/RESULT.md', '100644', 'df7d9b858cfd8e9d295aecf7ff4307fd5631cf83', '563af3800ae72f705e054ae6b22db515cd064809deea8413d71049d0e5b8d7ce', 5249, 'ADD_EXACT', 'bfb743e071f22c0427e2eb3d2236470ace954aa5792e54edb2c8be836f41f793'), ('research/t20-v6-20261012/research-v6/foundations/sourcehood_lineage/REPORT.md', '100644', 'f70423d65ff6d90f2d0f9386a0582c94490191ff', '565c452674e0ff85cf2e35e723e5f8b180c14f5e9c0f4d939a8f39a5fad0b2b4', 16317, 'ADD_EXACT', '2884dc0e10652fbdc2b7b3c2365a7504b61b7403ac99bbe1276f152bb7f936b9'), ('research/t20-v6-20261012/sources/56b3c2b27c7a87aba6aa967201bb47dfd9dd9ff5223eb061dfb3c68cdc3a1545/README.md', '100644', '813fb5e8a874a3a6e80bc00d2c4a318fc8bf34c3', '56b3c2b27c7a87aba6aa967201bb47dfd9dd9ff5223eb061dfb3c68cdc3a1545', 8363, 'ADD_EXACT', '24662a9a608cbfabbbe7b4dd9b85326771f17a4582670637a5e7a31377155741'), ('research/t20-v6-20261012/sources/56bad0dd8cb57b485318db7649fa930c543c95039210ff80e986188f72d8c105/REVIEW.md', '100644', 'fd80fbf9b625d3cd5b19a4b875563a397d2e5cc5', '56bad0dd8cb57b485318db7649fa930c543c95039210ff80e986188f72d8c105', 7627, 'ADD_EXACT', 'cbfc0d9e0964da68d317add015f8097c4ee2a15c90a3c0f5894ba2c7bbdea938'), ('research/t20-v6-20261012/sources/56bc970de5f62ef58f144fa155f8e0dfa52a46874863df44a3457e7395f1795a/02_UNITY_SOVEREIGNTY_AND_CAUSATION.md', '100644', '02ff9d44f33cf2d9c1a65aeb4fc5e3dc79cd004a', '56bc970de5f62ef58f144fa155f8e0dfa52a46874863df44a3457e7395f1795a', 11805, 'ADD_EXACT', '5cc51313984444e2d3af6394b94556acff09c3eeba89975a04f11e9ee98b7189'), ('research/t20-v6-20261012/sources/56c38a8d24319da36ac1d7e9373cffcf50c829bc1765908890eaa09fba197faa/07_APPLICATIONS_AND_ASSESSMENT.md', '100644', 'ff238dbffb79a27fe02719f2d18d73c0d7c8f025', '56c38a8d24319da36ac1d7e9373cffcf50c829bc1765908890eaa09fba197faa', 12035, 'ADD_EXACT', 'ff175f471958c420531f651ff0f28c13ac23e968dff249371a6172d62a72e4e0'), ('research/t20-v6-20261012/sources/56df217acf465850428cb315262370de1e778d738aef7aaee97099e0ceba3d63/triage-70.txt', '100644', '4d03becf85b9c7965d1a3c2b2779bf29a0b61f9e', '56df217acf465850428cb315262370de1e778d738aef7aaee97099e0ceba3d63', 31914, 'ADD_EXACT', '709ef58d3ccaf3fbd7de9a433dfef13c322d10c209abda3115373b8385dd03e5'), ('research/t20-v6-20261012/sources/56e3fa5eeaeef76900924caf382588e1104adb8a663d11452f35a2524df65899/REVIEW.md', '100644', '8ce8668d739605d277eac9752a3f787ef0ad6e61', '56e3fa5eeaeef76900924caf382588e1104adb8a663d11452f35a2524df65899', 7697, 'ADD_EXACT', '4ac5d8334200eb9b9083ad843dd244ed823f26fda65b904194b1b5f6798b7eeb'), ('research/t20-v6-20261012/sources/56f60b2a915cb18425a29d6d79398904bf6173196191b7773b3d5b8fb77cd665/RESULT.md', '100644', '3b99bdfd1e2cf52e792daf45550a3ffdad34f8b5', '56f60b2a915cb18425a29d6d79398904bf6173196191b7773b3d5b8fb77cd665', 6140, 'ADD_EXACT', 'db341c65f57b2e3d5399c87449b3604fe73ef31aa7ce6114499b88799c973bab'), ('research/t20-v6-20261012/sources/571d64fe9d91c72c84d056b593b79784149f685fd3a0837dbf63db89351e4a6c/RESULT.md', '100644', '0894d5ce9a95fc17a4898174ebb042f47384079b', '571d64fe9d91c72c84d056b593b79784149f685fd3a0837dbf63db89351e4a6c', 25720, 'ADD_EXACT', '2b11a03ce52349efda7954f49a19e409428c4b0aa8d3f4a0caa4ef6cac66b561'), ('research/t20-v6-20261012/sources/572d535332d3ba47a391bcf700dfca712addc3268e2d55f8fe33a9202ef7c3fc/VERIFICATION.md', '100644', 'f8caae7bf9d1cfbe1734b54ec9695b7c56605dbb', '572d535332d3ba47a391bcf700dfca712addc3268e2d55f8fe33a9202ef7c3fc', 2379, 'ADD_EXACT', 'b2896dfc28cf9f1d57d3fabc602bd87c0d860e8327502c4ae7ad899a8f8e9c93'), ('research/t20-v6-20261012/sources/5734b27e31d4ed010ca938db9949e739a6126b4f4919c1b748eb051e6b1330a6/CUMULATIVE_PROGRAMME_CROSSWALK.md', '100644', 'bb334a75231dcc3334cda268de34c577498d79c7', '5734b27e31d4ed010ca938db9949e739a6126b4f4919c1b748eb051e6b1330a6', 41610, 'ADD_EXACT', 'c22d23c259657f4a1a954a7fd2119c21ba9f549e461552f8a04f9e9692f8303b'), ('research/t20-v6-20261012/sources/5772e471c95bfec31819cef58edf9ce63558fa84538df92b6f77487200e69f0e/ARCHITECTURE_CHECK.md', '100644', '5d0b382f4ff10fdb6cf71203339bccb3f4b65d2a', '5772e471c95bfec31819cef58edf9ce63558fa84538df92b6f77487200e69f0e', 2847, 'ADD_EXACT', 'b40054603fe37eab015507bcc77020954e8e3f976dd254eff67468ed151521bc'), ('research/t20-v6-20261012/sources/57ac1d4afbea798eafb7342ccb486518851e0830dc339cec84bcaca58120a7ff/clean-build-start.txt', '100644', 'cc3d03803957901ac81d4440e4e2a3c7eb787c98', '57ac1d4afbea798eafb7342ccb486518851e0830dc339cec84bcaca58120a7ff', 66, 'ADD_EXACT', '642c37ec80a92ffa6437387caa477a62c372e0952482a414f30c8d5969a81190'), ('research/t20-v6-20261012/sources/57dabfae414cfa3e6c3f69d8f02a1d68b04e7930c830ef0959ea5f713b034a2f/README.md', '100644', 'ad98ecd22bb76444c36b1d91929e978b6d725474', '57dabfae414cfa3e6c3f69d8f02a1d68b04e7930c830ef0959ea5f713b034a2f', 2520, 'ADD_EXACT', '2fd0bc2f0bfcedfbb2e357f543845d6bbef8ac842795454b62600b06ac682f93'), ('research/t20-v6-20261012/sources/5884cd860da86bcce082dce5c99d30a6e85fd84c6a7504d0bd899435f50ea510/orthemology_consolidation_stage2_continue.md', '100644', 'b6380b7efed63c98927be5cf8f99d1e42c0305c4', '5884cd860da86bcce082dce5c99d30a6e85fd84c6a7504d0bd899435f50ea510', 5491, 'ADD_EXACT', '6bad5d976b7e8676b6a9a5d02cca61ae53b28d71197db91bff166fd8cecc1211'), ('research/t20-v6-20261012/research-v6/early_remaining/graph_continuation/APPROXIMATE_GRAPH_APPLICATION.md', '100644', 'b7fa47ca2503d28e682b903a933b26387057ce31', '5893c883f6e9fa0e30333c5aa10c4952e63d87c0ee3c4252b77285b4a21de568', 4662, 'ADD_EXACT', 'b72589987bad54b8a75eae13a2b09ac8ea8fdb55c6019ee42454407f442350cb'), ('research/t20-v6-20261012/sources/58bc0e7d5a794d72ea466e41f8f562f04f73f48900d6e85f84eda779942c74e9/BRIDGE_GUARDS.md', '100644', 'dacc35e50fd5eafbef046b0be5527318bbe71a34', '58bc0e7d5a794d72ea466e41f8f562f04f73f48900d6e85f84eda779942c74e9', 4268, 'ADD_EXACT', '51ecb9ef312ed63ad82dc770bc3e76f6b68058621c8b4ec8aac77519a33d6236'), ('research/t20-v6-20261012/sources/58ecd04a35c316edfa1fda69feccf8e78fbf11c1fab9a92115f4503842bb1aaf/INDEX.md', '100644', 'df70755ece7f6568902ab9e6b5921527ad5ad22a', '58ecd04a35c316edfa1fda69feccf8e78fbf11c1fab9a92115f4503842bb1aaf', 1316, 'ADD_EXACT', '8373e7496f38041b692cf630a891fb425b03f23fa70440f6a350b6f2a6f2941c'), ('research/t20-v6-20261012/sources/58ee1dfa1adc712445713b641432a61c4a44eff8f5285f35f221586384edc6bc/DESIGN.md', '100644', 'dd66f4066d244c616d68ea190572f262fd468c41', '58ee1dfa1adc712445713b641432a61c4a44eff8f5285f35f221586384edc6bc', 2330, 'ADD_EXACT', '62c842a0bc28bafe89fd3c26599dfd44d3534ee24b3fc1f0bfaa82a0cec6f477'), ('research/t20-v6-20261012/sources/5905da8fadb69aaf0619260f6742449de7eb20f7e88ad00a73ea9771159b29ee/REPORT.md', '100644', 'bebe846f6a921ed66ef07d67e182f41132bc432c', '5905da8fadb69aaf0619260f6742449de7eb20f7e88ad00a73ea9771159b29ee', 13550, 'ADD_EXACT', '1e4e25c67a89291b4e37d107bf656b38d6a131cb9edea00ac8866654bec196e9'), ('research/t20-v6-20261012/sources/5911079f0cd76d821fc935c5533f3c7113f4b87e316bc9a9ffcd2b6b28ca89ed/MIXED_KERNEL_SCOPE.md', '100644', '5962182dcf601c1daab94bfd5a73fff3afe2405b', '5911079f0cd76d821fc935c5533f3c7113f4b87e316bc9a9ffcd2b6b28ca89ed', 4746, 'ADD_EXACT', 'c5ae5ffaf1ab7c6096a9eaacbc8fb409002cebe6df663e4c27f456c3ad3c31b7'), ('research/t20-v6-20261012/sources/591273ed1f67312f188fb766095eb0f561abb4bb92bb279326f876469455da14/READ_FIRST.md', '100644', 'f8563e888222839b664243d11fbdc29d1283020d', '591273ed1f67312f188fb766095eb0f561abb4bb92bb279326f876469455da14', 2634, 'ADD_EXACT', '8d79d0567f64e355d16c19c3e0afd3c3377e9e813adf53128e6f1261dc791184'), ('research/t20-v6-20261012/sources/594ad92a8951bbbd1c607d5dc826c02526801482f12a861c7f8c1da86d80eaa0/ROOT_APPRAISAL.md', '100644', '0d767874513426ff90b6e254ebbef1c65a3306d2', '594ad92a8951bbbd1c607d5dc826c02526801482f12a861c7f8c1da86d80eaa0', 2452, 'ADD_EXACT', 'f0e50e81c2ebe65ec02f59005ded9fd1d8a9bbb0975912ae54f61fa096fe7309'), ('research/t20-v6-20261012/sources/594b0627139c7dc8cdb7a75c3ecbc3fc85ec4e2bdfd54988abd9c1bc131cc339/README.md', '100644', '48c7242b04286217a345aba44b36e1ed7dbaf426', '594b0627139c7dc8cdb7a75c3ecbc3fc85ec4e2bdfd54988abd9c1bc131cc339', 3553, 'ADD_EXACT', '7badfee610892619300fbfb07d1f27bec4bde2010f57cdc7a5beb8c4692e4058'), ('research/t20-v6-20261012/sources/59643f825a88914fea7b92bff8154281556fb76eeb8713c5ea1e5e64a6c14550/README.md', '100644', '354979be05e4933fb14256796e4d921847c571cd', '59643f825a88914fea7b92bff8154281556fb76eeb8713c5ea1e5e64a6c14550', 1602, 'ADD_EXACT', '0da6744d5a9ee09d1cbb8c25504da67a550bf08b13664abf96e1423744ac3d9d'), ('research/t20-v6-20261012/research-v6/synthesis/OWNER_REVIEW_CASE_DRAFT.md', '100644', '0acd64e9632deb7c14a3a7cc41e443423538bfc5', '596998cd09b6ec396e5ed07f14c7c5536ce737435fb7d9e913374b240e513bde', 11137, 'ADD_EXACT', '5a40037083e61bf76046b7f639393653e0c19eb4e59f7dcd0cbc51baa633e333'), ('research/t20-v6-20261012/sources/5971704cf6f14bb10cd3bd7b8cd179fe36bf889f06d80f2a7741bec3de64dacb/REVIEW.md', '100644', 'ff8cf20816f9bdde28baa3a3a08a671dcd1260dd', '5971704cf6f14bb10cd3bd7b8cd179fe36bf889f06d80f2a7741bec3de64dacb', 5554, 'ADD_EXACT', '3d654b9303544058c97978368edc858d9ffa68d48d06977d18f177fc019a2adc'), ('research/t20-v6-20261012/research-v6/root_math/safadiyya_excerpt_review/REPORT.md', '100644', '5be0ced6b6b0a0435a86a7f463ad648d9e6c15ae', '59848aa3dfa8f510ba9c5183a00a793d102f56c22dbab119abfdb4aa4d1153f8', 4422, 'ADD_EXACT', 'c38aa748bee67fb67f8f1bc397dfeb83e286482ff4a9eac887db13e1f5b8af5c'), ('research/t20-v6-20261012/sources/59d41a9afee2fb3d8ee0fccaa19abe6e1ba1f2a957701623e62cc90fbb4dd699/README.txt', '100644', 'c3dd17c08bc50f866b971d2286bba576c22193cb', '59d41a9afee2fb3d8ee0fccaa19abe6e1ba1f2a957701623e62cc90fbb4dd699', 1105, 'ADD_EXACT', '63f372a0d7d27b7e47304b7995970284c7116b546d8529209d0678b9032be9e6'), ('research/t20-v6-20261012/sources/59d9c86326a8011b45cad03171606d542a31cc7a180fa42d9188783a6eb4f2a5/REVIEW.md', '100644', '7a5e1442ddfb68a65845b7678a9163987eece772', '59d9c86326a8011b45cad03171606d542a31cc7a180fa42d9188783a6eb4f2a5', 8183, 'ADD_EXACT', '3786f7e3369c9e3139af74590ad2c5d52a97c965ddd0970a548ae5d852b5926c'), ('research/t20-v6-20261012/sources/59e319d456de31657819e7d2c6a66908eb37e758568a187e5ae6112a673c5f9a/manuscript_flattened.tex', '100644', '648c3699b0b05318513962832e18495d456b9344', '59e319d456de31657819e7d2c6a66908eb37e758568a187e5ae6112a673c5f9a', 155183, 'ADD_EXACT', 'a1ff8d30dbe3d744d73b05ba96ad302a038fdbc353f390a698db6b39510e0d49'), ('research/t20-v6-20261012/sources/5a2aabc65c8cc624b354bd2aaed55a77f7595b12bc24abd4e4d5d26888b92f40/split-primary-comparison.md', '100644', 'c3e65e55cd96d9d705a76cb0c15cea3c86164fee', '5a2aabc65c8cc624b354bd2aaed55a77f7595b12bc24abd4e4d5d26888b92f40', 9333, 'ADD_EXACT', '62c053d8e5d834c989a7cdc0a9578e28ad58cd58c12b359eba320bdc08b0d217'), ('research/t20-v6-20261012/sources/5a37c0b9a3d68d486599d5a9e42854a3c55110361073676f267906c43f6cc4c9/RESULT.md', '100644', '2c245e11324db1b73e9f7d8212d1fdf5d430e3a6', '5a37c0b9a3d68d486599d5a9e42854a3c55110361073676f267906c43f6cc4c9', 4830, 'ADD_EXACT', 'e12c50cda898861aff8a34b1b51518e9cbef3d210302ba50f785ba289ccc99c4'), ('research/t20-v6-20261012/sources/5a424cd3017abc1c7e05e207119e52d4a91d4d252ef00168ddbdabaf296f67d0/FIBRE_ARGUMENT.txt', '100644', '8600f3bd1febf0269fbec0aab5ab2218ef96a719', '5a424cd3017abc1c7e05e207119e52d4a91d4d252ef00168ddbdabaf296f67d0', 4030, 'ADD_EXACT', '7ccd537e08d71235bb437b4012f6a356e94933f60a241b0cc498c097e0b919dc'), ('research/t20-v6-20261012/sources/5a6006d65dccffcc5e0c0ac5f76f1aa819701c4e64ba62df25b022d642fc59d1/REVIEW.md', '100644', 'abda2d944910eb6503db6a32312bd9a15802a30f', '5a6006d65dccffcc5e0c0ac5f76f1aa819701c4e64ba62df25b022d642fc59d1', 4291, 'ADD_EXACT', '882d4796fad7e0b53babbad209359c64e42292548793f995aad1d70f993a8f52'), ('research/t20-v6-20261012/sources/5a6983eaeadb281736db29657b73145337e7194a2ceec017d436acb3d8d1ff7a/RESULT.md', '100644', '3c23c3c9372c1134a3924ffb327bf1c5c2657f43', '5a6983eaeadb281736db29657b73145337e7194a2ceec017d436acb3d8d1ff7a', 25542, 'ADD_EXACT', '493bc2679bc2bf18b98b061e59a19d2799de2c12d336119ee644466a52204c8d'), ('research/t20-v6-20261012/sources/5a6ef63866689bf1bc2882d1c989254fb2cddae28797d501b3566b9ca868e656/RESULT.md', '100644', '3651467a6fefea087049bc6016e8a25001454a6e', '5a6ef63866689bf1bc2882d1c989254fb2cddae28797d501b3566b9ca868e656', 46175, 'ADD_EXACT', '5d8eb93933f1a20ff6322b8e259935f47d0b4ce57f9fba53737fb96c948ac404'), ('research/t20-v6-20261012/sources/5a9247b178ffe0c6fe0207a69d30550c97724250b426cc501f2fa6b124aae18f/EARLY_MATHEMATICS_REPORT.md', '100644', '00a1f0b818102dd7696b5cd52572aee375876cd3', '5a9247b178ffe0c6fe0207a69d30550c97724250b426cc501f2fa6b124aae18f', 15790, 'ADD_EXACT', '2055386423d2f1ab9c49ec38419398b954a32b662e9b966a34904a200577659d'), ('research/t20-v6-20261012/sources/5aa3e5cd0a76ea8e38d656ee20062a9cc34d05ffafc6ff3b1dde00a614390918/REPORT.md', '100644', '18b9b6aec3a628ff242e94e3e9372722743daa9b', '5aa3e5cd0a76ea8e38d656ee20062a9cc34d05ffafc6ff3b1dde00a614390918', 16183, 'ADD_EXACT', '48375e4f7762cbaa70c0677e94efe2b3eb51d81682c3810df9d1b01218a60c0a'), ('research/t20-v6-20261012/sources/5ab09566f7273a19072397742fb492506f9ec8f8972fff6292cd75baa24da779/P14_DEPENDENCY_CONTRACT.md', '100644', 'd9b25d5529887a2882411614d451652d0550c8a0', '5ab09566f7273a19072397742fb492506f9ec8f8972fff6292cd75baa24da779', 2214, 'ADD_EXACT', 'ebe092a5d2c5272c4412aa2db9c9c3428c03086147c345dd97425ca4920748b4'), ('research/t20-v6-20261012/sources/5abd2b15a94e8c6ef253a131f1567eca3a066d8cb6708dcadd07d979c805abcb/RETURN_TO_CODEX.txt', '100644', '17e95e7afd9556c9d4a6c30e9329e38adaeed91f', '5abd2b15a94e8c6ef253a131f1567eca3a066d8cb6708dcadd07d979c805abcb', 3711, 'ADD_EXACT', '56d20297f9f479b1080abfb09f2b8fc3459f1e02f3121007ec8d5db4869ba125'), ('research/t20-v6-20261012/sources/5acace19bb0f47fcc719c1d7c68bbcc9742a5530588bca487323919f1625e616/HISTORICAL_CROSS_FRONT_SYNTHESIS.md', '100644', '29e78cd26cc4e899cf6083708e04f54802df69d8', '5acace19bb0f47fcc719c1d7c68bbcc9742a5530588bca487323919f1625e616', 17005, 'ADD_EXACT', '0bb424e615ac6dbf9d40ea42f355b5c4ae40dd34de5d3fc667065e7218f23aa1'), ('research/t20-v6-20261012/sources/5b352454afd1e7638a01ef68f72e652e9eb49499b4f80386ebbf23ecbb5da202/RESULT.md', '100644', '9d813191d406eb63053b4c69ecf9bb7eeea47a7b', '5b352454afd1e7638a01ef68f72e652e9eb49499b4f80386ebbf23ecbb5da202', 22705, 'ADD_EXACT', '63e5cd625c09e268d653199d70942f2b6b4171d02f86a7bacbb3acc56755f84d'), ('research/t20-v6-20261012/sources/5b3e397f25ce09f46b2bf8dd274625545c838a4a817515e72545eec3ce7da900/RESULT.md', '100644', 'b5edee97986487b440519c54ac401228443e8661', '5b3e397f25ce09f46b2bf8dd274625545c838a4a817515e72545eec3ce7da900', 7034, 'ADD_EXACT', '104d9d74c951bbf33dadb750c6f1f916ccad93eff39c2a038f276acc48f55277'), ('research/t20-v6-20261012/sources/5b5e6f61ef47dcafa2a5a4b245751b8911c8da836daa29980aebdb5888497bdf/README.md', '100644', '93343b7de6a25e33151d2f11f91cdd1e20e6dd7a', '5b5e6f61ef47dcafa2a5a4b245751b8911c8da836daa29980aebdb5888497bdf', 3702, 'ADD_EXACT', 'be0431df91878c1b608cf8a3c5cc489eee351c242ad7440304d839d5f9dfcfa5'), ('research/t20-v6-20261012/sources/5bb21aa5aa388b3dff9a42cb48ad5e62a5b2c4da42971030a197caff583a980d/RESULT.md', '100644', '92d10bc57fdd32fef66ee9bfe878891a6a33f4f3', '5bb21aa5aa388b3dff9a42cb48ad5e62a5b2c4da42971030a197caff583a980d', 5936, 'ADD_EXACT', 'bd233549f0e3109238c6422a03cad3648fcabb3afcbcd2da890e738be26c3a0e'), ('research/t20-v6-20261012/sources/5c2fbe1c5aaa852cdaf2802b22f283845301b2f56ec36d1b4ec9864eb1516fcb/PROOF_TYPE_INQUIRY_SYNTHESIS.md', '100644', 'e5ccae632b2f6f469e061cbca27d1050582e2873', '5c2fbe1c5aaa852cdaf2802b22f283845301b2f56ec36d1b4ec9864eb1516fcb', 30694, 'ADD_EXACT', '2d77da8c0987988f7de9e9b70e7730e419318776cedf9c2ada3a9faa70630406'), ('research/t20-v6-20261012/sources/5c37a33c8dde21eb9c40d27fa71ebfbfcf32d2cbfcc5a88aab64140bddbe4fe4/CHECKPOINT_REPORT.md', '100644', '75d80b6e97dae19d5a148f79718742b6095936b4', '5c37a33c8dde21eb9c40d27fa71ebfbfcf32d2cbfcc5a88aab64140bddbe4fe4', 3397, 'ADD_EXACT', 'd8f43c6a99726950b8644e40aaf1f274536f2cb17f6142f9bc9f58c626c20e6e'), ('research/t20-v6-20261012/sources/5c6f78a1ac7231704b015ff9e0a998cec3f7a74ab88bb678622ed52969c3fd2b/INDEX.md', '100644', '636027577dd56c13f475dd0fc1c4c54643f7e783', '5c6f78a1ac7231704b015ff9e0a998cec3f7a74ab88bb678622ed52969c3fd2b', 1315, 'ADD_EXACT', '13e15b93fad682aa1159be70079c4a43ccea92198e5425403d235f7ff488104b'), ('research/t20-v6-20261012/sources/5c74c7086c038dce1be0e9098b42fce9cc4c7aee8670fe0ba682b50d780af5c0/RESULT.md', '100644', 'a57146981a43a8e7e89fdd5d105b3277b85d0b4e', '5c74c7086c038dce1be0e9098b42fce9cc4c7aee8670fe0ba682b50d780af5c0', 28972, 'ADD_EXACT', '409d62a66078708332b61fc211c9e6d6510cab9dcaf13722f81bed1af891d8cd'), ('research/t20-v6-20261012/sources/5c77228b906bee22b3248885012edb3cb5a2f96e954287c7ff930bea162c7115/FINAL_DISPOSITION.md', '100644', '1ffd112bed35d3f62787a5cbec4c9c8645550677', '5c77228b906bee22b3248885012edb3cb5a2f96e954287c7ff930bea162c7115', 10698, 'ADD_EXACT', '239e1350c87b1fe5b674ec737e3e4ca3f670ead34695b1809fd67cdae7d7ea4c'), ('research/t20-v6-20261012/sources/5c795603143517b37cf23a5014255175ba75e72c63deed0563cdb0e1b95483d4/research.md', '100644', '778620e3e6bf18b692aa667e73a6be7f87e0fa22', '5c795603143517b37cf23a5014255175ba75e72c63deed0563cdb0e1b95483d4', 16746, 'ADD_EXACT', '3b882d7ba92a1d00acdc7b3e645892eefd17540840fe80280b93c9f4b94a0cef'), ('research/t20-v6-20261012/sources/5ccaf69ac4c3b5b74471bdea10be494482bfd121c05233a8bc67810bdf0bbf56/RESULT.md', '100644', 'd3a13f2a85344b7ea322f345515c67ad7375f77e', '5ccaf69ac4c3b5b74471bdea10be494482bfd121c05233a8bc67810bdf0bbf56', 18508, 'ADD_EXACT', '3b8813985cd27d17670a2bb8a964e30720a1efce73a0468a71dc8aea05a692d4'), ('research/t20-v6-20261012/sources/5ce54702491ebc4568841d8e198b0db2cd0fcc9f5b14b785e7be8a5a656a1624/scalar-projectability.md', '100644', '634e9638a5a443e2998d56a52ad10b5eb9481c67', '5ce54702491ebc4568841d8e198b0db2cd0fcc9f5b14b785e7be8a5a656a1624', 15252, 'ADD_EXACT', 'c8179f0a0af6b3380c245b1d4cd23f2bc40eb840e09265f23f3198cee1d86e36'), ('research/t20-v6-20261012/sources/5d0e97c5f4e50ac7981765292b6aa161076a4d0b6af7fbc46aa18e40bd89c2b2/DIAGNOSTIC.md', '100644', 'c488d2b0090dc71bb7e3d7500f99f5820d9597c9', '5d0e97c5f4e50ac7981765292b6aa161076a4d0b6af7fbc46aa18e40bd89c2b2', 2882, 'ADD_EXACT', '07b59146095c1d21982ce2a5a47108dd1e24a8eb96ad12448d89acb627c93b8a'), ('research/t20-v6-20261012/sources/5d3b74f7e30e3a5535a54a0e6eed527de62afcd0bbdd814bb646dee6a212ddd4/FILTERED_OPERATOR_NOTE.before-explicit-linearity.md', '100644', '6b389d0067b466a8c09b2d60c81d611410be02ba', '5d3b74f7e30e3a5535a54a0e6eed527de62afcd0bbdd814bb646dee6a212ddd4', 3712, 'ADD_EXACT', '494c738dfdefb8e6ac0ab4a0af9bded5fd3043e5476fab3372c463bcf1736de1'), ('research/t20-v6-20261012/sources/5d5bfeb158dcf9bd8a4e43d9b3246cb26338a0203bdbb6f05ac372b6008ccfc8/READBACK_NOTES.md', '100644', '486e455cbdfd97af26a0f1007a00a946ca94b28c', '5d5bfeb158dcf9bd8a4e43d9b3246cb26338a0203bdbb6f05ac372b6008ccfc8', 1269, 'ADD_EXACT', 'ef7ec253c0bb60556751ea895e6ff12fffc8d5ef03e6e6a55bc9385aea0f3ab4'), ('research/t20-v6-20261012/sources/5d5f1cfe900f703d020cea25a8d0b31ff14451dde1fef035dd7959eb4868460d/DESIGN.md', '100644', '32f7cf68c17181679678f31721a6c1f5b9381c5b', '5d5f1cfe900f703d020cea25a8d0b31ff14451dde1fef035dd7959eb4868460d', 1765, 'ADD_EXACT', '3a6b0c25b919c894869f1233c7dadae53766da26b4c1b8a6620517f7e06f115b'), ('research/t20-v6-20261012/research-v6/empirical_occurrence/early_pmr_variants/RESULT.md', '100644', 'e3ea9905f0fa03bf5eb5a1ffe16911fd81ad4a4c', '5d6bc61665a36953a8c1685d59c1ec9e9e5c5bde0f25d0cf837a8004c7357eab', 9211, 'ADD_EXACT', '90dac5cfc9037708219358e02d3155afe7119518f68bc803a48e66cb39aee7c2'), ('research/t20-v6-20261012/research-v6/type_collective/final_reader_copy_review/REPORT.md', '100644', 'd4031da0025e128cd011b5a99c70bf41dd130d29', '5d749e94394a510439b80678677638df2b27048a220fedf1b71641fe64b717e4', 2038, 'ADD_EXACT', 'afaf5a084063de713904c1d6902825b33b665283ec8e267f77dbda678d8dec1f'), ('research/t20-v6-20261012/sources/5d8680fd3677c20a07503b09fdbb098dabdf8c845b1cd4246ab6a484887cb7e8/medium.txt', '100644', 'ac37878cb579c4bc283ef070e658e782163b530a', '5d8680fd3677c20a07503b09fdbb098dabdf8c845b1cd4246ab6a484887cb7e8', 161, 'ADD_EXACT', '63aefc509aeb07279831657c184af029dbb70f15d1149d23837f5a283b56145d'), ('research/t20-v6-20261012/sources/5d950aac5454a65a4873a1f46c256e10a95e9e6dff306e182978a6dd38c8bdda/README.md', '100644', 'b487ce92257ab765e017099dfd7bb50ed5d13b04', '5d950aac5454a65a4873a1f46c256e10a95e9e6dff306e182978a6dd38c8bdda', 1130, 'ADD_EXACT', '7ed27381fd7389591870998bfbdfdad5bffff880842830bd5560a165f81504ce'), ('research/t20-v6-20261012/sources/5d9f7b13d92f4aaaea35b22a5af25b104d3a9d37da56d923111725fab1e6916b/PRO_EXECUTION_PROMPT.md', '100644', '6ebb92b7acedb8bfe0f176fa87bcb904ab70c9a8', '5d9f7b13d92f4aaaea35b22a5af25b104d3a9d37da56d923111725fab1e6916b', 9351, 'ADD_EXACT', 'a0a885142796a96ba313e9e6da8f3c7ec7b87a2e0747f1379de7e40cc40c0a83'), ('research/t20-v6-20261012/sources/5da8660613e600fd7b43683af1c5ac916c2747a02a56e3b50259d496f22ca224/REPOSITORIES_AND_PUBLICATION.md', '100644', '922aea8b6f75c21490312cb77677b3131e7432e4', '5da8660613e600fd7b43683af1c5ac916c2747a02a56e3b50259d496f22ca224', 3563, 'ADD_EXACT', '16e7548f91fe51b1431500ba30d5fef59def21dbccafef14f28bc8262864382d'), ('research/t20-v6-20261012/sources/5dbef0804c046b9388c1adcbd98ef8c91502f8dfb27ae030a4657061c62dd4a5/PREDECESSOR_README.md', '100644', 'a14c212e861f85c6379f20898b2ee4139b00fbe1', '5dbef0804c046b9388c1adcbd98ef8c91502f8dfb27ae030a4657061c62dd4a5', 7459, 'ADD_EXACT', 'cd88705c61c20efa32c328a6cdc49913357aaa7413fbf7c4a9c241ee96d2ac06'), ('research/t20-v6-20261012/sources/5dc2e30ba48b6ad4207e21332ff661ac3271db9d836c8308a0fdffe14d488204/REPLAY.md', '100644', '815b4b88f85f0910abe69b4fa2f895e4cddc6b2c', '5dc2e30ba48b6ad4207e21332ff661ac3271db9d836c8308a0fdffe14d488204', 1612, 'ADD_EXACT', 'a336e9ab2d856c586b34d41cbd613e22ecaf6160bb64d565dd273048fdefab52'), ('research/t20-v6-20261012/sources/5e0404c6884e3565ed7483eee81424551f518083a1f0cd042e2be645e99a29ce/ACTUAL_BATCH_STANDALONE_REVIEW.md', '100644', 'fe18883acf3c71575d7c0cf7bdb18a1cd2c69555', '5e0404c6884e3565ed7483eee81424551f518083a1f0cd042e2be645e99a29ce', 8414, 'ADD_EXACT', '6a5ab2fdaef5700cf368cb5b715a45b13f198bb2b54cea4aba15aa601eb9e25f'), ('research/t20-v6-20261012/sources/5e1fbc561c7bbd330eb59e5f9f183009f3c921211b15c10441095c29495a0f31/source-04', '100644', '696977e962e5116deebd92d684b4816f7f3f8ba9', '5e1fbc561c7bbd330eb59e5f9f183009f3c921211b15c10441095c29495a0f31', 46787, 'ADD_EXACT', 'd1607d3ca5368913a3a6625e421179eef73814a61fd283c984386f869971e3b4'), ('research/t20-v6-20261012/sources/5e24f31c7606c5d3c27e848123d4571e311962a64c5804a859514f6a4e91860f/01_NECESSITY_AND_EXPLANATION.md', '100644', '5b668b849b1eae6de859377da8fe1e27a776a550', '5e24f31c7606c5d3c27e848123d4571e311962a64c5804a859514f6a4e91860f', 11144, 'ADD_EXACT', 'a57564fa982ba00a782a52b1586a9dbe589d7023e74903965bc8fc9f66d32a4b'), ('research/t20-v6-20261012/sources/5e298740a0538bacb4bb0322ef3fd6cc2e2692c54c4b9c0a66ba9a18dbb3a3ba/REVIEW.md', '100644', 'e9576b0b97cdd663a7b5109a622070f99ce75fc6', '5e298740a0538bacb4bb0322ef3fd6cc2e2692c54c4b9c0a66ba9a18dbb3a3ba', 10467, 'ADD_EXACT', '8ea81eb5389270c0208ef92c252bf2c69f40a9a2c19d17a6a293c550d4d8ebc1'), ('research/t20-v6-20261012/sources/5e2cb3a33de295922a6ebfcc4fd40581ae1b8b888ca7707c0070f02903a8ce2a/SOURCES.md', '100644', 'ca8d53fad468839156d6f32b5a236e35abcf46c0', '5e2cb3a33de295922a6ebfcc4fd40581ae1b8b888ca7707c0070f02903a8ce2a', 8839, 'ADD_EXACT', 'cb78d94e79e43f347afa087b64bcec77bf1f7619abf05b033c5a3fada2e4d973'), ('research/t20-v6-20261012/sources/5e7f610d273cf53867b27b7f0fcb9dc6bb60300ac578ba82ebd885606f0c0dfb/REPORT.md', '100644', '4989e49f2994e1473bcd159863713d634bd3620f', '5e7f610d273cf53867b27b7f0fcb9dc6bb60300ac578ba82ebd885606f0c0dfb', 20905, 'ADD_EXACT', 'dc078771da9e0464f9953d4536b579b7838a695c8e9d0eb1c68f4bb145ec21b3'), ('research/t20-v6-20261012/sources/5e87ef0e1521a70c68eea8d791ccad4b4e878b8e8df726031d739d6327c48fe7/causal_adequacy_scope_and_subjecthood.md', '100644', 'e9579ceb14856d6054ce8454d04e7d4fdddf0eeb', '5e87ef0e1521a70c68eea8d791ccad4b4e878b8e8df726031d739d6327c48fe7', 7880, 'ADD_EXACT', '50f291037dd45bce97d489e40fcee2baaaba4075e388d58174703bfc88b5843f'), ('research/t20-v6-20261012/sources/5e98cce6eaf518ef6d8c4ff243ad059518202464b4694b4507a752a4fadd936a/READING_NOTE.md', '100644', 'fdfcf35753b813add72f782970f84ad12b29cc42', '5e98cce6eaf518ef6d8c4ff243ad059518202464b4694b4507a752a4fadd936a', 1297, 'ADD_EXACT', 'f1895b20654cfa60a82697d5d04b575a59d6ee605edd2ba26b5e1dcc0c8da9e7'), ('research/t20-v6-20261012/sources/5eaf9809d47daec8015b14d5af00adc355911978e62f89a923dc42df96f705a2/README.md', '100644', '3339c0130940c3e04098f5ae1f245ca61ced5fe9', '5eaf9809d47daec8015b14d5af00adc355911978e62f89a923dc42df96f705a2', 5274, 'ADD_EXACT', '0b947f2547130d14531b0ac97e2752472d45c80398272a1dfe9f93175d85dac9'), ('research/t20-v6-20261012/sources/5ec00af3906233ada8fca2713a29943f7c882c0a81b63bf4db072ba478c41a88/RESULT.md', '100644', '38c1b1f753b54da1b5462eebd2d88e1529ed8583', '5ec00af3906233ada8fca2713a29943f7c882c0a81b63bf4db072ba478c41a88', 2418, 'ADD_EXACT', 'c82a8807890ca7bc0352349596bcc16acbef2f458bed1ab8d9f5cb7b5e76ed5c'), ('research/t20-v6-20261012/sources/5ede11e0a87ec8ce8583b839f1780ed044988612fa243a3c0f739642ac7ae4d6/SOURCE_BRIDGE.md', '100644', '1915fabdd9adb6c2356f12510dfb607430459364', '5ede11e0a87ec8ce8583b839f1780ed044988612fa243a3c0f739642ac7ae4d6', 4150, 'ADD_EXACT', '3836a44550076bc947f6c664c2b5356c67dd1d4071e6f194aa59bda43612b0f8'), ('research/t20-v6-20261012/sources/5f13ef66606277002522651b4e60f278ed7ca7bd0a4d6271aa7e62d0a788ac59/REPORT.md', '100644', '9d46aa45fd30602727b2fa7f0b4c3ded89d8c4ad', '5f13ef66606277002522651b4e60f278ed7ca7bd0a4d6271aa7e62d0a788ac59', 21385, 'ADD_EXACT', '0979f876e1fb744c46caea4e4c00f9910371d0470b08bacbe5caab639b44786f'), ('research/t20-v6-20261012/sources/5f180b2a38f018d5da23800d8514ed13aadf0bdad3a69393a8239443f3723a8d/REPORT.md', '100644', '719bf94f12fb2269662bcfe512287e246f4f498f', '5f180b2a38f018d5da23800d8514ed13aadf0bdad3a69393a8239443f3723a8d', 3734, 'ADD_EXACT', '41d700475dc1af7357525fb44a6ee4edfef9dc9fbef637e79ac9d186d099fb2f'), ('research/t20-v6-20261012/research-v6/operational_successors/preservation_wrappers/REPORT.md', '100644', '7871404170697ad47b3e7e56c9ac44e0efc49361', '5f57c4757ffe2e63049a2cc90de4facc7394cd39106d2bc502d03556781e69cd', 6032, 'ADD_EXACT', 'dd324fc94273b0b3d125764d88f1e2a8648e7bb8a160cdb9fd4a768eadd2646a'), ('research/t20-v6-20261012/sources/5f6f84b1af7e5049139a381142a791eb7aeebdb57ebf9095e14fa49cfc652fcf/RESULT.md', '100644', '72ed171f8216e11ae9dc4972fbf55823fc521442', '5f6f84b1af7e5049139a381142a791eb7aeebdb57ebf9095e14fa49cfc652fcf', 7623, 'ADD_EXACT', '9cc4d500e81b80268b839dd387f8b1662ac7d7a595a13561a6645d10d1a4e7fe'))
+AFTER4384_MEMBERS_SHA256 = '58e64402f48d561521be861e5882049684d432f9541517f09d92e248da3cc8c6'
+AFTER4384_PATHS = frozenset(row[0] for row in AFTER4384_MEMBERS)
+
+def _after4384_catalog():
+    _formal_tuple_binding(AFTER4384_MEMBERS, 146, AFTER4384_MEMBERS_SHA256)
+    members = {path: (mode, blob, identity, size, disposition, public_row)
+               for path, mode, blob, identity, size, disposition, public_row in AFTER4384_MEMBERS}
+    if (len(members) != 146 or frozenset(members) != AFTER4384_PATHS
+            or any(value[4] != 'ADD_EXACT' for value in members.values())):
+        raise ValueError('After4384 finite population differs')
+    for path, (mode, blob, identity, size, disposition, public_row) in members.items():
+        relative = pathlib.PurePosixPath(path)
+        if (relative.is_absolute() or '..' in relative.parts or relative.as_posix() != path
+                or '\\' in path or ':' in path or mode != '100644'
+                or not isinstance(size, int) or isinstance(size, bool) or size < 0
+                or disposition not in ('ADD_EXACT', 'REUSE')
+                or not re.fullmatch('[0-9a-f]{40}', blob)
+                or not re.fullmatch('[0-9a-f]{64}', identity)
+                or not re.fullmatch('[0-9a-f]{64}', public_row)):
+            raise ValueError('After4384 original path/mode/identity differs')
+    return members
+
+def after4384_bytes(root, path):
+    """Authenticate one complete original coordinate before admitting absence."""
+    members = _after4384_catalog()
+    if not isinstance(path, str) or path not in members:
+        raise ValueError('path is outside the finite After4384 source class')
+    if AFTER4384_BASE is None or AFTER4384_TREE is None:
+        raise ValueError('After4384 actual public-base receiving is pending')
+    root = _digest_record_root(root).absolute()
+    mode, blob, identity, size, _, _ = members[path]
+    node = _successor_input_path(root, path)
+    present = os.path.lexists(node)
+    witness = None
+    if present:
+        body, witness = _successor_input_regular(root, path)
+        oid = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
+        if (oid, digest(body), len(body)) != (blob, identity, size):
+            raise ValueError('After4384 present original bytes differ: ' + path)
+    arguments = ('ls-files', '--stage', '-z', '--', path)
+    before_index = _administrative_git(root, *arguments)
+    if before_index not in (b'', (mode + ' ' + blob + ' 0\t' + path + '\0').encode()):
+        raise ValueError('After4384 staged original mode/blob/stage differs: ' + path)
+    revision = AFTER4384_BASE
+    if not re.fullmatch('[0-9a-f]{40}', revision):
+        raise ValueError('After4384 pinned original revision differs')
+    try:
+        commit = _administrative_git(root, 'cat-file', 'commit', revision)
+        if hashlib.sha1(b'commit ' + str(len(commit)).encode() + b'\0' + commit).hexdigest() != revision:
+            raise ValueError('After4384 native commit identity differs')
+        if commit.split(b'\n', 1)[0] != ('tree ' + AFTER4384_TREE).encode():
+            raise ValueError('After4384 native commit tree differs')
+        expected = (mode + ' blob ' + blob + '\t' + path + '\0').encode()
+        if _administrative_git(root, 'ls-tree', '-z', revision, '--', path) != expected:
+            raise ValueError('After4384 original path/mode/blob differs')
+        original = _administrative_git(root, 'cat-file', 'blob', blob)
+    except (OSError, ValueError) as exc:
+        raise ValueError('After4384 pinned public Git prerequisite unavailable or changed: ' + path) from exc
+    oid = hashlib.sha1(b'blob ' + str(len(original)).encode() + b'\0' + original).hexdigest()
+    if (oid, digest(original), len(original)) != (blob, identity, size):
+        raise ValueError('After4384 historical original bytes differ: ' + path)
+    if _administrative_git(root, *arguments) != before_index:
+        raise ValueError('After4384 original index changed during qualification')
+    node = _successor_input_path(root, path)
+    if present:
+        fields = ('st_dev', 'st_ino', 'st_mode', 'st_nlink', 'st_size', 'st_mtime_ns', 'st_ctime_ns')
+        if tuple(getattr(node.lstat(), field) for field in fields) != witness:
+            raise ValueError('After4384 present original changed during qualification')
+    elif os.path.lexists(node):
+        raise ValueError('After4384 original absence changed during qualification')
+    return original
+
+def after4384_absences(root):
+    """Only authenticated physical absences qualify; M/T/A never qualify."""
+    root = _digest_record_root(root).absolute()
+    result = set()
+    arguments = ('ls-files', '--stage', '-z', '--', *sorted(AFTER4384_PATHS))
+    before_index = _administrative_git(root, *arguments)
+    for path in _after4384_catalog():
+        after4384_bytes(root, path)
+        if not os.path.lexists(_successor_input_path(root, path)):
+            result.add(path)
+    if _administrative_git(root, *arguments) != before_index:
+        raise ValueError('After4384 finite original index changed during qualification')
+    if any(os.path.lexists(_successor_input_path(root, path)) for path in result):
+        raise ValueError('After4384 finite original absence changed during qualification')
+    return result
+
+def after4384_public_bytes(root, row):
+    members = _after4384_catalog()
+    if not isinstance(row, dict) or row.get('repository_path') not in members:
+        raise ValueError('public row is outside the finite After4384 class')
+    _, _, identity, size, disposition, public_row = members[row['repository_path']]
+    if (row.get('disposition') != disposition            or row.get('repository_revision') is not None
+            or row.get('source_sha256') != identity or row.get('public_sha256') != identity
+            or row.get('source_bytes') != size or row.get('public_bytes') != size
+            or _formal_row_digest(row) != public_row):
+        raise ValueError('After4384 complete original public role/projection row differs')
+    return after4384_bytes(root, row['repository_path'])
+
 def source_bytes(root, row):
+    raw_after4384 = row.get('repository_path')
+    if (isinstance(raw_after4384, str)
+            and os.path.normpath(raw_after4384.replace('\\', '/')) in AFTER4384_PATHS):
+        if raw_after4384 not in AFTER4384_PATHS:
+            raise ValueError('unsafe After4384 source alias')
+        return after4384_public_bytes(root, row)
     raw_after4134 = row.get('repository_path')
     if (isinstance(raw_after4134, str)
             and os.path.normpath(raw_after4134.replace('\\', '/')) in AFTER4134_PATHS):
