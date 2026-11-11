@@ -13,6 +13,7 @@ from resolve_t20_v6_source import AFTER3634_PATHS, after3634_absences
 from resolve_t20_v6_source import AFTER3884_PATHS, after3884_absences
 from resolve_t20_v6_source import AFTER4134_PATHS, after4134_absences
 from resolve_t20_v6_source import AFTER4384_PATHS, after4384_absences
+from resolve_t20_v6_source import AFTER4634_PATHS, after4634_absences
 
 from resolve_t20_v6_source import (NEW250_PATHS, new250_absences, new250_provider_additions, new250_reader_sources)
 
@@ -2346,6 +2347,7 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                 ("after3884", AFTER3884_PATHS, after3884_absences),
                 ("after4134", AFTER4134_PATHS, after4134_absences),
                 ("after4384", AFTER4384_PATHS, after4384_absences),
+                ("after4634", AFTER4634_PATHS, after4634_absences),
                 ("checkpoint-public", CHECKPOINT_PUBLIC_COPY_PATHS, checkpoint_public_duplicate_paths),
                 ("checkpoint-copy", set(CHECKPOINT_COPY_PATHS) - CHECKPOINT_PUBLIC_COPY_PATHS, checkpoint_duplicate_paths),
                 ("checkpoint-record", set(CHECKPOINT_RECORD_COPY_PATHS) - CHECKPOINT_PUBLIC_COPY_PATHS, checkpoint_record_duplicate_paths),

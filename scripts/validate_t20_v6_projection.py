@@ -47,6 +47,7 @@ from resolve_t20_v6_source import (
     AFTER3884_PATHS, after3884_absences,
     AFTER4134_PATHS, after4134_absences,
     AFTER4384_PATHS, after4384_absences,
+    AFTER4634_PATHS, after4634_absences,
     SUCCESSOR_REMAINDER_BATCH_PATHS, successor_remainder_batch_absences,
 )
 
@@ -174,6 +175,7 @@ def check_object(root, row):
                 or relative.as_posix() in AFTER3884_PATHS
                 or relative.as_posix() in AFTER4134_PATHS
                 or relative.as_posix() in AFTER4384_PATHS
+                or relative.as_posix() in AFTER4634_PATHS
                 or relative.as_posix() in FIRST50_ASSURANCE_PATHS
                 or relative.as_posix() in SUCCESSOR_READ_BATCH_PATHS
                 or relative.as_posix() in SUCCESSOR_REMAINDER_BATCH_PATHS
@@ -551,6 +553,19 @@ def check_public_inventory(root, rows, controls):
             expected -= missing_after4384
         except (KeyError, OSError, ValueError, TypeError):
             return ['public inventory has an unqualified After4384 absence']
+    missing_after4634 = (expected - actual) & AFTER4634_PATHS
+    if missing_after4634:
+        try:
+            qualified = after4634_absences(root)
+            for path in sorted(missing_after4634):
+                selected = [r for r in rows if r.get('repository_path') == path]
+                if (len(selected) != 1 or selected[0].get('disposition') != 'ADD_EXACT'
+                        or path not in qualified):
+                    raise ValueError('After4634 absence lacks its exact additive row')
+                source_bytes(root, selected[0])
+            expected -= missing_after4634
+        except (KeyError, OSError, ValueError, TypeError):
+            return ['public inventory has an unqualified After4634 absence']
     expected -= next_absent
     if actual != expected:
         return ['public inventory differs: ' + str(sorted(actual ^ expected)[:10])]

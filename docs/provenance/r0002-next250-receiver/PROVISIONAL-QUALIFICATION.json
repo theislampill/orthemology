@@ -4,7 +4,7 @@
     "commit": "cdbb59bab4859e2046b3add9ae69f0b976741374",
     "tree": "be2c04c112093404492cd2c69f252bd956d7bf2f"
   },
-  "tree": "144cb7522e425c7fa4b58f9f4e10b5b6a8c5a245",
+  "tree": "9a3e6cc7975b5de22a02e972718a509573b8fb9b",
   "permitted_changes": [
     {
       "path": ".gitattributes",
@@ -14,42 +14,42 @@
     {
       "path": "docs/current-state.yaml",
       "before_entry": "100644 blob 6a3c85e8efe6aa0940a5c8b8f38047468c7ecd18\tdocs/current-state.yaml\u0000",
-      "after_entry": "100644 blob 2b17bc324a8f75468e362bc4df8d38ae1e71b990\tdocs/current-state.yaml\u0000"
+      "after_entry": "100644 blob 3f36afbf805acdbe1175c5cefe86d9010a22932e\tdocs/current-state.yaml\u0000"
     },
     {
       "path": "docs/project-closure/reader-refactor-issue-35/CROSSWALK.json",
       "before_entry": "100644 blob e49086822ee0890afe1ff69ffa51420535057f18\tdocs/project-closure/reader-refactor-issue-35/CROSSWALK.json\u0000",
-      "after_entry": "100644 blob 0fe0c76d60427c1a9ff7b62bb7f1e4457138206e\tdocs/project-closure/reader-refactor-issue-35/CROSSWALK.json\u0000"
+      "after_entry": "100644 blob 40c57e6fc15d0ccfcb4f90d8c23bb653abab8c47\tdocs/project-closure/reader-refactor-issue-35/CROSSWALK.json\u0000"
     },
     {
       "path": "docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json",
       "before_entry": "100644 blob b66252a9172042969b378b3f61d5e44aaea9a579\tdocs/project-closure/reader-refactor-issue-35/OWNER-MAP.json\u0000",
-      "after_entry": "100644 blob 399b7bed2f7f67bd547d423cb04c8c4029edc1a3\tdocs/project-closure/reader-refactor-issue-35/OWNER-MAP.json\u0000"
+      "after_entry": "100644 blob fcdd9d633b156544410b1cc179faba3cfede31fd\tdocs/project-closure/reader-refactor-issue-35/OWNER-MAP.json\u0000"
     },
     {
       "path": "docs/provenance/RELEASE-MANIFEST.sha256",
       "before_entry": "100644 blob ae8284a18197dcbe7257f505facdd605eca6c569\tdocs/provenance/RELEASE-MANIFEST.sha256\u0000",
-      "after_entry": "100644 blob d72e24324e0e8585e46bb35b22a15571e9434d00\tdocs/provenance/RELEASE-MANIFEST.sha256\u0000"
+      "after_entry": "100644 blob b8d766e180fb5f14d4b18be7ad979fa2fd20f4a8\tdocs/provenance/RELEASE-MANIFEST.sha256\u0000"
     },
     {
       "path": "docs/provenance/r0002-next250-receiver/CATALOG.json",
       "before_entry": "",
-      "after_entry": "100644 blob 0cec315ae366775d432cce6703173d8adff4092e\tdocs/provenance/r0002-next250-receiver/CATALOG.json\u0000"
+      "after_entry": "100644 blob f8e7c08024276f1f0f284ba09e3570f634e067f6\tdocs/provenance/r0002-next250-receiver/CATALOG.json\u0000"
     },
     {
       "path": "docs/provenance/r0002-next250-receiver/FALLBACK-ACCEPTANCE.json",
       "before_entry": "",
-      "after_entry": "100644 blob 4d0db929f421b512823673bd8d8d2adf6920e770\tdocs/provenance/r0002-next250-receiver/FALLBACK-ACCEPTANCE.json\u0000"
+      "after_entry": "100644 blob 5f6ddc863390a5794b87225fd90a7f727168be5a\tdocs/provenance/r0002-next250-receiver/FALLBACK-ACCEPTANCE.json\u0000"
     },
     {
       "path": "docs/provenance/r0002-next250-receiver/FALLBACK-REACHABILITY.json",
       "before_entry": "",
-      "after_entry": "100644 blob 8129449abc8c3f55fba60db54895e8ab1d803b84\tdocs/provenance/r0002-next250-receiver/FALLBACK-REACHABILITY.json\u0000"
+      "after_entry": "100644 blob b2827815acad59743b15ad2597113477adbe8796\tdocs/provenance/r0002-next250-receiver/FALLBACK-REACHABILITY.json\u0000"
     },
     {
       "path": "docs/provenance/r0002-next250-receiver/PROVISIONAL-QUALIFICATION.json",
       "before_entry": "",
-      "after_entry": "100644 blob 6181f57109be426789f2971dedd96889669558f7\tdocs/provenance/r0002-next250-receiver/PROVISIONAL-QUALIFICATION.json\u0000"
+      "after_entry": "100644 blob 5c2c3e0317b581b44f2c35e682eab7e09a96c36f\tdocs/provenance/r0002-next250-receiver/PROVISIONAL-QUALIFICATION.json\u0000"
     },
     {
       "path": "docs/provenance/r0002-next250-receiver/RECEIVER.bin",
@@ -59,57 +59,57 @@
     {
       "path": "docs/scientific-consolidation-review.md",
       "before_entry": "100644 blob 51f428e66251a856688ddde9dde31d6edccbf0b5\tdocs/scientific-consolidation-review.md\u0000",
-      "after_entry": "100644 blob 6aee724bc8408eaac40dcff0c3ab8e2a094673be\tdocs/scientific-consolidation-review.md\u0000"
+      "after_entry": "100644 blob 1d286caffd4f7c9e43be100d31ae7ee3eb21f5d3\tdocs/scientific-consolidation-review.md\u0000"
     },
     {
       "path": "epistemology/recognition-warrant-and-restoration.md",
       "before_entry": "100644 blob 2f3f67292ca7eac2db192dcf366e91f7818b7058\tepistemology/recognition-warrant-and-restoration.md\u0000",
-      "after_entry": "100644 blob 2c4b3f8fdfa445d58cbfd1561ccc4f48051d7919\tepistemology/recognition-warrant-and-restoration.md\u0000"
+      "after_entry": "100644 blob 82e4730b244cd47c9593bdd9caceb024c3b52a45\tepistemology/recognition-warrant-and-restoration.md\u0000"
     },
     {
       "path": "foundations/objective-normativity-and-corrective-cognition.md",
       "before_entry": "100644 blob 6079b7b3bc922546aa0ac6157eda79cb1baa8a30\tfoundations/objective-normativity-and-corrective-cognition.md\u0000",
-      "after_entry": "100644 blob b7eed9613aa8bda55f972a037c9266a50d409e5f\tfoundations/objective-normativity-and-corrective-cognition.md\u0000"
+      "after_entry": "100644 blob 6504ed73e7d8bd2f037adb5062a049d19aebaf09\tfoundations/objective-normativity-and-corrective-cognition.md\u0000"
     },
     {
       "path": "foundations/received-actuality-and-intrinsic-necessity.md",
       "before_entry": "100644 blob c6ce79cbcda9cdbea001c0b2ee070d03aacd5e6d\tfoundations/received-actuality-and-intrinsic-necessity.md\u0000",
-      "after_entry": "100644 blob c219b9151e9e17ea9b6db137a078b7689187ca5f\tfoundations/received-actuality-and-intrinsic-necessity.md\u0000"
+      "after_entry": "100644 blob 9c0b4386ed0913097664ff9611d48f8aff57dc23\tfoundations/received-actuality-and-intrinsic-necessity.md\u0000"
     },
     {
       "path": "logic/encodings-and-witnesses.md",
       "before_entry": "100644 blob 4b2512d85b428a4dcf0387aa979789220271dbba\tlogic/encodings-and-witnesses.md\u0000",
-      "after_entry": "100644 blob bc3b3c8a5dde0d34f423cf498c464d38d3fad416\tlogic/encodings-and-witnesses.md\u0000"
+      "after_entry": "100644 blob e35bd681cbb1bf480cdf4874699b01c2621cb05f\tlogic/encodings-and-witnesses.md\u0000"
     },
     {
       "path": "mathematics/collective-inquiry-and-strategic-coordination.md",
       "before_entry": "100644 blob 43abe9e55cd41a464e04e4e8c9780b7c6c7cbdf8\tmathematics/collective-inquiry-and-strategic-coordination.md\u0000",
-      "after_entry": "100644 blob e703b649685607b57ee793fb7f8997211cb0087b\tmathematics/collective-inquiry-and-strategic-coordination.md\u0000"
+      "after_entry": "100644 blob 72d6d8d184056698382810814f604d3ce9831637\tmathematics/collective-inquiry-and-strategic-coordination.md\u0000"
     },
     {
       "path": "mathematics/common-repair-and-geometric-obstructions.md",
       "before_entry": "100644 blob 3c9a25aa339821fb6e2f95941872bdfb17fd2f7a\tmathematics/common-repair-and-geometric-obstructions.md\u0000",
-      "after_entry": "100644 blob 80ff13a843290744784a60c82322cf25437f39b8\tmathematics/common-repair-and-geometric-obstructions.md\u0000"
+      "after_entry": "100644 blob 40369b478f722286c116c9fd14f810412095f4e3\tmathematics/common-repair-and-geometric-obstructions.md\u0000"
     },
     {
       "path": "mathematics/information-and-inquiry.md",
       "before_entry": "100644 blob 08d11adf48d2ef9742b30517d786c15f7b3ca05f\tmathematics/information-and-inquiry.md\u0000",
-      "after_entry": "100644 blob fe5dfa810a4602369254fe804c1aea78df561a9a\tmathematics/information-and-inquiry.md\u0000"
+      "after_entry": "100644 blob 8955098ce3bdc971455276c08956e2fb14db688f\tmathematics/information-and-inquiry.md\u0000"
     },
     {
       "path": "mathematics/measure-computability-and-finite-warrant.md",
       "before_entry": "100644 blob 194d23bed7613b48e7ccdecb823bdb4bd6b6f712\tmathematics/measure-computability-and-finite-warrant.md\u0000",
-      "after_entry": "100644 blob 3a59bd462f6dca9b81d921b97edd1b5fbe4ecf72\tmathematics/measure-computability-and-finite-warrant.md\u0000"
+      "after_entry": "100644 blob e60d4f45cff69835ab0450ad4e2f0aa64f29ed78\tmathematics/measure-computability-and-finite-warrant.md\u0000"
     },
     {
       "path": "mathematics/physical-realisation-and-continuation.md",
       "before_entry": "100644 blob a51c8d74f3c09368a50ea5c8a8213a2339f366c8\tmathematics/physical-realisation-and-continuation.md\u0000",
-      "after_entry": "100644 blob a14c668e8e51a000f990d0d76dfa07851c8562fd\tmathematics/physical-realisation-and-continuation.md\u0000"
+      "after_entry": "100644 blob c3caa23281bd92e85ae9e9a12faf7f546d43874e\tmathematics/physical-realisation-and-continuation.md\u0000"
     },
     {
       "path": "mathematics/tensor-moments-and-corrective-dynamics.md",
       "before_entry": "100644 blob 03efeffe49c72abda647b601df1925f08c8f2f4d\tmathematics/tensor-moments-and-corrective-dynamics.md\u0000",
-      "after_entry": "100644 blob 8b129c98baa126b6f377b9443716eb8afe55baaf\tmathematics/tensor-moments-and-corrective-dynamics.md\u0000"
+      "after_entry": "100644 blob 24f1c5e8a0966f34e6e9506b6062716d7d9ec3e8\tmathematics/tensor-moments-and-corrective-dynamics.md\u0000"
     },
     {
       "path": "research/t20-v6-20261012/research-v5/FIELD_GUIDE.md",
@@ -119,6 +119,11 @@
     {
       "path": "research/t20-v6-20261012/research-v6/early_remaining/REPORT.md",
       "before_entry": "100644 blob 2da5a29b9c2a52665ce4911e56afe2c796714e8d\tresearch/t20-v6-20261012/research-v6/early_remaining/REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/research-v6/early_remaining/final_coverage_review/REPORT.md",
+      "before_entry": "100644 blob 88b630ed56f8d42452a1687fb14187df7bea3ed5\tresearch/t20-v6-20261012/research-v6/early_remaining/final_coverage_review/REPORT.md\u0000",
       "after_entry": ""
     },
     {
@@ -132,8 +137,18 @@
       "after_entry": ""
     },
     {
+      "path": "research/t20-v6-20261012/research-v6/early_remaining/graph_continuation/APPROXIMATE_GRAPH_APPLICATION.md",
+      "before_entry": "100644 blob b7fa47ca2503d28e682b903a933b26387057ce31\tresearch/t20-v6-20261012/research-v6/early_remaining/graph_continuation/APPROXIMATE_GRAPH_APPLICATION.md\u0000",
+      "after_entry": ""
+    },
+    {
       "path": "research/t20-v6-20261012/research-v6/early_remaining/t4_recovered/REPORT.md",
       "before_entry": "100644 blob 665c99954fbd5d033900d4806d715ae7ce5d09c5\tresearch/t20-v6-20261012/research-v6/early_remaining/t4_recovered/REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/research-v6/empirical_occurrence/early_pmr_variants/RESULT.md",
+      "before_entry": "100644 blob e3ea9905f0fa03bf5eb5a1ffe16911fd81ad4a4c\tresearch/t20-v6-20261012/research-v6/empirical_occurrence/early_pmr_variants/RESULT.md\u0000",
       "after_entry": ""
     },
     {
@@ -157,6 +172,11 @@
       "after_entry": ""
     },
     {
+      "path": "research/t20-v6-20261012/research-v6/foundations/sourcehood_lineage/REPORT.md",
+      "before_entry": "100644 blob f70423d65ff6d90f2d0f9386a0582c94490191ff\tresearch/t20-v6-20261012/research-v6/foundations/sourcehood_lineage/REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
       "path": "research/t20-v6-20261012/research-v6/operational_successors/MODAL_FRONTIER_IMPLEMENTATION_SCOPE.md",
       "before_entry": "100644 blob c6d9ba9bba096e89231c10479414b3e5dff27b9a\tresearch/t20-v6-20261012/research-v6/operational_successors/MODAL_FRONTIER_IMPLEMENTATION_SCOPE.md\u0000",
       "after_entry": ""
@@ -167,6 +187,11 @@
       "after_entry": ""
     },
     {
+      "path": "research/t20-v6-20261012/research-v6/operational_successors/intrinsic_testimony_implementation/RESULT.md",
+      "before_entry": "100644 blob 9cf8ab4d68c4542aa5b96ece50456e813c4264ae\tresearch/t20-v6-20261012/research-v6/operational_successors/intrinsic_testimony_implementation/RESULT.md\u0000",
+      "after_entry": ""
+    },
+    {
       "path": "research/t20-v6-20261012/research-v6/operational_successors/package_assurance/REPORT.md",
       "before_entry": "100644 blob 0083b37f09d50e0667ffd74e3140df7b7922b750\tresearch/t20-v6-20261012/research-v6/operational_successors/package_assurance/REPORT.md\u0000",
       "after_entry": ""
@@ -174,6 +199,11 @@
     {
       "path": "research/t20-v6-20261012/research-v6/operational_successors/package_selection/final_handoff_review/REPORT.md",
       "before_entry": "100644 blob e30b5d1ab78de9b45f3ce310184cecd7ddbf4d32\tresearch/t20-v6-20261012/research-v6/operational_successors/package_selection/final_handoff_review/REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/research-v6/operational_successors/preservation_wrappers/REPORT.md",
+      "before_entry": "100644 blob 7871404170697ad47b3e7e56c9ac44e0efc49361\tresearch/t20-v6-20261012/research-v6/operational_successors/preservation_wrappers/REPORT.md\u0000",
       "after_entry": ""
     },
     {
@@ -194,6 +224,11 @@
     {
       "path": "research/t20-v6-20261012/research-v6/privacy-qualified/SOURCE_USE_RECONCILIATION_v4.md",
       "before_entry": "100644 blob 7da567f4de1bfeb5b60aa44bf99d7b5ec45c545f\tresearch/t20-v6-20261012/research-v6/privacy-qualified/SOURCE_USE_RECONCILIATION_v4.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/research-v6/root_math/JOINT_COMPLETENESS_REVIEW.md",
+      "before_entry": "100644 blob 1432ce5fc70ff63c9b42ed9cfe9a2b82f2208301\tresearch/t20-v6-20261012/research-v6/root_math/JOINT_COMPLETENESS_REVIEW.md\u0000",
       "after_entry": ""
     },
     {
@@ -227,6 +262,11 @@
       "after_entry": ""
     },
     {
+      "path": "research/t20-v6-20261012/research-v6/root_math/safadiyya_excerpt_review/REPORT.md",
+      "before_entry": "100644 blob 5be0ced6b6b0a0435a86a7f463ad648d9e6c15ae\tresearch/t20-v6-20261012/research-v6/root_math/safadiyya_excerpt_review/REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
       "path": "research/t20-v6-20261012/research-v6/root_math/terminal_annex_prose65/REPORT.md",
       "before_entry": "100644 blob 3a0e22a8a7c832b9ce1d5f15dd8eb0618fba1473\tresearch/t20-v6-20261012/research-v6/root_math/terminal_annex_prose65/REPORT.md\u0000",
       "after_entry": ""
@@ -239,6 +279,11 @@
     {
       "path": "research/t20-v6-20261012/research-v6/synthesis/INDEPENDENT_MATH_REVIEW.md",
       "before_entry": "100644 blob 9caf82c2f9964b24c9d78219d5dc08c26ae9d788\tresearch/t20-v6-20261012/research-v6/synthesis/INDEPENDENT_MATH_REVIEW.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/research-v6/synthesis/OWNER_REVIEW_CASE_DRAFT.md",
+      "before_entry": "100644 blob 0acd64e9632deb7c14a3a7cc41e443423538bfc5\tresearch/t20-v6-20261012/research-v6/synthesis/OWNER_REVIEW_CASE_DRAFT.md\u0000",
       "after_entry": ""
     },
     {
@@ -267,13 +312,33 @@
       "after_entry": ""
     },
     {
+      "path": "research/t20-v6-20261012/research-v6/type_collective/deep_aa_ap_checkers/REPORT.md",
+      "before_entry": "100644 blob abdacc38641c486eca56cbb193c4619f625ce3ea\tresearch/t20-v6-20261012/research-v6/type_collective/deep_aa_ap_checkers/REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
       "path": "research/t20-v6-20261012/research-v6/type_collective/deep_aa_ap_checkers/am_signature_review/REVIEW.md",
       "before_entry": "100644 blob 6140be0fc35ae31dd4fcfbba5b51d36f1f322408\tresearch/t20-v6-20261012/research-v6/type_collective/deep_aa_ap_checkers/am_signature_review/REVIEW.md\u0000",
       "after_entry": ""
     },
     {
+      "path": "research/t20-v6-20261012/research-v6/type_collective/final_reader_copy_review/REPORT.md",
+      "before_entry": "100644 blob d4031da0025e128cd011b5a99c70bf41dd130d29\tresearch/t20-v6-20261012/research-v6/type_collective/final_reader_copy_review/REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/research-v6/type_collective/implementation_residue/REPORT.md",
+      "before_entry": "100644 blob 293ff4907608c0f2880ff3a395ab44a44c1629a6\tresearch/t20-v6-20261012/research-v6/type_collective/implementation_residue/REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
       "path": "research/t20-v6-20261012/research-v6/type_collective/joint_hull_review/REVIEW.md",
       "before_entry": "100644 blob 80fc19d33c56fce5f672dbeee4d14e7d3305a3e5\tresearch/t20-v6-20261012/research-v6/type_collective/joint_hull_review/REVIEW.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/research-v6/type_collective/multivalued_reset_review/REVIEW.md",
+      "before_entry": "100644 blob 2175c3db19196c47dddb3737097bafd0a7cf8397\tresearch/t20-v6-20261012/research-v6/type_collective/multivalued_reset_review/REVIEW.md\u0000",
       "after_entry": ""
     },
     {
@@ -4477,8 +4542,138 @@
       "after_entry": ""
     },
     {
+      "path": "research/t20-v6-20261012/sources/4f2b29057b6a11a094f11b92e3869349a2df43c55a690ccd44ae77f53beb15b1/SOURCE_CHECKS.txt",
+      "before_entry": "100644 blob 2687eef83e5dbd9aaed9ad37cb15e92f1d84ef73\tresearch/t20-v6-20261012/sources/4f2b29057b6a11a094f11b92e3869349a2df43c55a690ccd44ae77f53beb15b1/SOURCE_CHECKS.txt\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/4f31113f0caf0da7154eceec9c2d548bb71227ec99a5d6b58e204e785226b1d0/README.md",
+      "before_entry": "100644 blob 957a610ae553027a6c1ca24ac1928cfb7a01727f\tresearch/t20-v6-20261012/sources/4f31113f0caf0da7154eceec9c2d548bb71227ec99a5d6b58e204e785226b1d0/README.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/4f393b2edb2d4adff95fdaef8689e0944069f94155019b2ea81f21c6b66048ac/MATHEMATICAL_CONSTRUCTION.md",
+      "before_entry": "100644 blob 0f69bc31658d6675d17e5ae343856f2fabf752f9\tresearch/t20-v6-20261012/sources/4f393b2edb2d4adff95fdaef8689e0944069f94155019b2ea81f21c6b66048ac/MATHEMATICAL_CONSTRUCTION.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/4f3f90b84d1d854721c8a4a07934df67b256fac7de85252ba89cd167cee8ce57/INTEGRATION_REVIEW_v2.md",
+      "before_entry": "100644 blob 16f656e656da269008ea80cb68680d833b8f4a97\tresearch/t20-v6-20261012/sources/4f3f90b84d1d854721c8a4a07934df67b256fac7de85252ba89cd167cee8ce57/INTEGRATION_REVIEW_v2.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/4f41143b4e4a529952468de8c599c81aa3c6a1737159794cf80080f700e280a9/RESULT.md",
+      "before_entry": "100644 blob 6f3b44c69ec7b26a6589956f0db74394482bc9e1\tresearch/t20-v6-20261012/sources/4f41143b4e4a529952468de8c599c81aa3c6a1737159794cf80080f700e280a9/RESULT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/4f449bff3a38d2e7ac13c49b4ffc207f09d188196a9a88f4b67e2b42ea964b43/PROPOSED_EXACT_SOURCE_ATTRIBUTES.txt",
+      "before_entry": "100644 blob 8654d0c22ce25bc35e385e2df02f7a1dfee02730\tresearch/t20-v6-20261012/sources/4f449bff3a38d2e7ac13c49b4ffc207f09d188196a9a88f4b67e2b42ea964b43/PROPOSED_EXACT_SOURCE_ATTRIBUTES.txt\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/4f7cc32b801d2fd3ad5eca353d6f7bb4a5a403295386c7fa1bab4bbef54ac989/REVIEW.md",
+      "before_entry": "100644 blob c2bf79fa499a8849c10c43e78752faf336a05e81\tresearch/t20-v6-20261012/sources/4f7cc32b801d2fd3ad5eca353d6f7bb4a5a403295386c7fa1bab4bbef54ac989/REVIEW.md\u0000",
+      "after_entry": ""
+    },
+    {
       "path": "research/t20-v6-20261012/sources/4f8206e7a36d90a687d2c08e513c7af0742da971c1071c28b617e83769a39543/InspectTypeCode2.lean",
       "before_entry": "100644 blob b940d442594f8d3256f31bb6e4ee8a0c219e8e05\tresearch/t20-v6-20261012/sources/4f8206e7a36d90a687d2c08e513c7af0742da971c1071c28b617e83769a39543/InspectTypeCode2.lean\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/4f950cf89931c8fb95ddf9c33f70d8bdf940c087765f65587ee9d009af5f6603/RESEARCH_BRIEF.md",
+      "before_entry": "100644 blob cc33b31601a89e3ac0fad57513da934f36b2b16f\tresearch/t20-v6-20261012/sources/4f950cf89931c8fb95ddf9c33f70d8bdf940c087765f65587ee9d009af5f6603/RESEARCH_BRIEF.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/4f9f8e403a29298d5e2c1b83e97e5b1fea57789e66189f36ab3d1fbc1d4f4803/CP03__t20-next-frontier-20261008__fitrah-warrant-bridge__warranting-basis-addendum__CLARIFICATION.md",
+      "before_entry": "100644 blob ac3686bcf1477b721602dacd185e98f6cc8216a5\tresearch/t20-v6-20261012/sources/4f9f8e403a29298d5e2c1b83e97e5b1fea57789e66189f36ab3d1fbc1d4f4803/CP03__t20-next-frontier-20261008__fitrah-warrant-bridge__warranting-basis-addendum__CLARIFICATION.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/4fbe9503b4101468da6e62fe10014a1f3ab4e1511d28519e5028daa0f0ab9fb4/REPORT.md",
+      "before_entry": "100644 blob 675ae19deb56b097c8518acf290e8206196cb279\tresearch/t20-v6-20261012/sources/4fbe9503b4101468da6e62fe10014a1f3ab4e1511d28519e5028daa0f0ab9fb4/REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/4fe61d255b866b36524db720b94971b7e93666cd2895dccdc904c000a0d3b650/FOLLOW_ON_SCOPE.md",
+      "before_entry": "100644 blob ea47057d19dcabb10081a01d8da78be463728f93\tresearch/t20-v6-20261012/sources/4fe61d255b866b36524db720b94971b7e93666cd2895dccdc904c000a0d3b650/FOLLOW_ON_SCOPE.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/4ff76e4e0c8c140cb5195f319c88a64b0bf2ea80dd73e18516b250df15096adf/do-second-loop.md",
+      "before_entry": "100644 blob 159aaf9477a943b65433484967181a5aabb044a7\tresearch/t20-v6-20261012/sources/4ff76e4e0c8c140cb5195f319c88a64b0bf2ea80dd73e18516b250df15096adf/do-second-loop.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/50410cd5e44bee1dc50087ebaf160471c67336c32135cfaa181e9efa6a0f6e5a/SUBSTANTIVE_REVIEW_v1.md",
+      "before_entry": "100644 blob 4c974048137eade3be44d6a739a6df3069d0e176\tresearch/t20-v6-20261012/sources/50410cd5e44bee1dc50087ebaf160471c67336c32135cfaa181e9efa6a0f6e5a/SUBSTANTIVE_REVIEW_v1.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/506cb9e88e543ff807b8b3b46ec1e43ceddff5bb9f0d41bf762563da74efe1eb/VERIFICATION.txt",
+      "before_entry": "100644 blob 020f52b9c4ff53237f4f69e1f0cda991499fa25f\tresearch/t20-v6-20261012/sources/506cb9e88e543ff807b8b3b46ec1e43ceddff5bb9f0d41bf762563da74efe1eb/VERIFICATION.txt\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/50750d587e4c424498bdbd4411d8b4a546edce7f0b49bc9c0503aa2fb5b7a603/SOURCE_REVIEW.md",
+      "before_entry": "100644 blob be75f2f4e9e55d368d137e780da682e6f64c46bd\tresearch/t20-v6-20261012/sources/50750d587e4c424498bdbd4411d8b4a546edce7f0b49bc9c0503aa2fb5b7a603/SOURCE_REVIEW.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5075451bdda6f8ca187e2462bb6ee07ae13b4e5f5687366a2fc39cb13efd9792/START_HERE.md",
+      "before_entry": "100644 blob 8697242aa7172c77af50756735a0f3988c5d7b8c\tresearch/t20-v6-20261012/sources/5075451bdda6f8ca187e2462bb6ee07ae13b4e5f5687366a2fc39cb13efd9792/START_HERE.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5092a5e8eaa1ee4d856aeb279b1ea6192c3bcc6121a40766a1125756b0928b27/ENVELOPE_DIAMETER.md",
+      "before_entry": "100644 blob 42cab12d2ce91d44f261b91574515fd3ef7e1961\tresearch/t20-v6-20261012/sources/5092a5e8eaa1ee4d856aeb279b1ea6192c3bcc6121a40766a1125756b0928b27/ENVELOPE_DIAMETER.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5099c935738ae310d69656d87020fcbdb0d61393bf22ec4d119c172f1305545f/AE_LICENSING_SCOPE.md",
+      "before_entry": "100644 blob 1cd060719e3e6e457ca43ce524f0b3a8ed5e420f\tresearch/t20-v6-20261012/sources/5099c935738ae310d69656d87020fcbdb0d61393bf22ec4d119c172f1305545f/AE_LICENSING_SCOPE.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5099deaec23494bfc716da1a416d06b3285127ab5494950edb351298c8c0003b/putinar-schmudgen-p24.txt",
+      "before_entry": "100644 blob f388dfcbd3b89e8016e0512c278ba7c3f142f76d\tresearch/t20-v6-20261012/sources/5099deaec23494bfc716da1a416d06b3285127ab5494950edb351298c8c0003b/putinar-schmudgen-p24.txt\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/50a0407740b183f6ec3c7505584088d148fce3acde4108f3384f0dddd920daa6/README.md",
+      "before_entry": "100644 blob f70405c44aa56a81bcdf633e3ecf2e4d4df0a7a9\tresearch/t20-v6-20261012/sources/50a0407740b183f6ec3c7505584088d148fce3acde4108f3384f0dddd920daa6/README.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/50e05cfde2ff11cb8fe262b8bc85bc9f9432d3d302274fc84b8d1f5500917d7c/README.md",
+      "before_entry": "100644 blob d955b2c24e37e4ba1ed16e37d8835b663fc63ebd\tresearch/t20-v6-20261012/sources/50e05cfde2ff11cb8fe262b8bc85bc9f9432d3d302274fc84b8d1f5500917d7c/README.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/510755fc65d394b83138a12b8149fb22576d811d5fca46eac8a36eef2d113a86/REVIEW.md",
+      "before_entry": "100644 blob 75439ce75740a4efdfcb1651e3420a90531dd702\tresearch/t20-v6-20261012/sources/510755fc65d394b83138a12b8149fb22576d811d5fca46eac8a36eef2d113a86/REVIEW.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/515f87f579c74ca14218b63fa95c56d9e1502890d68553ea566dadbf019ad855/CHECKPOINT_REPORT.md",
+      "before_entry": "100644 blob 61ac9126dffbc93c8aa9270807451f3bc9c2ad9f\tresearch/t20-v6-20261012/sources/515f87f579c74ca14218b63fa95c56d9e1502890d68553ea566dadbf019ad855/CHECKPOINT_REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/515fdde7029f4e277266c447611fadb182d4ccf00d03bf1f308beef61c93dd0b/REVIEW.md",
+      "before_entry": "100644 blob fd0787386b73bb9b56b2a619e5e188193608566c\tresearch/t20-v6-20261012/sources/515fdde7029f4e277266c447611fadb182d4ccf00d03bf1f308beef61c93dd0b/REVIEW.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/518e4acd6eb55f169cf7700b8f5b09f428143f8305e25386fd91891d3be3ecca/orthemology_consolidation_stage1_report.md",
+      "before_entry": "100644 blob 0f80ee9d56eb4ff2a331c4cd34e2c04b1ae57d91\tresearch/t20-v6-20261012/sources/518e4acd6eb55f169cf7700b8f5b09f428143f8305e25386fd91891d3be3ecca/orthemology_consolidation_stage1_report.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/51dcbf4b8be3cfbbb957a053dad43b0412b3cbbccc3a849c18749f9fa4f5233a/README.md",
+      "before_entry": "100644 blob a6c31768378d8026ba7ef1e7f6c7f4f9c05762bb\tresearch/t20-v6-20261012/sources/51dcbf4b8be3cfbbb957a053dad43b0412b3cbbccc3a849c18749f9fa4f5233a/README.md\u0000",
       "after_entry": ""
     },
     {
@@ -4487,8 +4682,228 @@
       "after_entry": ""
     },
     {
+      "path": "research/t20-v6-20261012/sources/5224d97927cac1c8763de65c13bcc1ecd0523d5e173b96c73c6f8c6217972bc0/DO_NOT_REOPEN.md",
+      "before_entry": "100644 blob bc1f8f9ac8d24486a0b3f623ada8cc2500f12ca7\tresearch/t20-v6-20261012/sources/5224d97927cac1c8763de65c13bcc1ecd0523d5e173b96c73c6f8c6217972bc0/DO_NOT_REOPEN.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/526b1c96515b2293eae1a4b5a44b60f0863586a16ac72a01a52908eb692a518d/BASELINE_AUDIT.md",
+      "before_entry": "100644 blob 4e1fe4e8c173b62ccb349b639529e6953bdfc2db\tresearch/t20-v6-20261012/sources/526b1c96515b2293eae1a4b5a44b60f0863586a16ac72a01a52908eb692a518d/BASELINE_AUDIT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/527f3006c4ff5b14580b85000f5eb82f7d018371aab1d869ec53bfb5d2a75634/PRIOR_ART_ADDENDUM.md",
+      "before_entry": "100644 blob 822e64a5e16ae72d41c7358ce3f537033361088c\tresearch/t20-v6-20261012/sources/527f3006c4ff5b14580b85000f5eb82f7d018371aab1d869ec53bfb5d2a75634/PRIOR_ART_ADDENDUM.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/528d856568046789c31a7fbbfa688b897f5623ee6e51bf5860c6f443fe001f37/CODEX_ONE_SHOT_PROMPT.md",
+      "before_entry": "100644 blob 9ed5a0428ff611ad69a2aca6f6813f9d3596ef1c\tresearch/t20-v6-20261012/sources/528d856568046789c31a7fbbfa688b897f5623ee6e51bf5860c6f443fe001f37/CODEX_ONE_SHOT_PROMPT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/52b7c52a2601dd569b9a628f3e847695d1dd306eb1a6205d14d087a38a255114/CONSTRUCTIVE_NOTES.md",
+      "before_entry": "100644 blob 2d5bf4193a64d3fd1e410a419f9bb31a829d6a1c\tresearch/t20-v6-20261012/sources/52b7c52a2601dd569b9a628f3e847695d1dd306eb1a6205d14d087a38a255114/CONSTRUCTIVE_NOTES.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/52c1a84151bcd8004670ff0edec865a6593c972ed48aa98ed4a36e802dcd20a3/CHECKPOINT_REPORT.md",
+      "before_entry": "100644 blob dac0297f04e125c99212e4c6c719b813cd1f8935\tresearch/t20-v6-20261012/sources/52c1a84151bcd8004670ff0edec865a6593c972ed48aa98ed4a36e802dcd20a3/CHECKPOINT_REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
       "path": "research/t20-v6-20261012/sources/52de1a1191fde5d32d928b8b85c9246359078d7311f5cd2eadb4c91cdc87e5d3/Readback.lean",
       "before_entry": "100644 blob 7d710bf43d1f47f7cac24354295e2fe523ddf36d\tresearch/t20-v6-20261012/sources/52de1a1191fde5d32d928b8b85c9246359078d7311f5cd2eadb4c91cdc87e5d3/Readback.lean\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/52e278a0288975cd0234987ed0767372a8d7b038bab70f8723c0dd727ec9f224/START_HERE.md",
+      "before_entry": "100644 blob aa7de54cb8560fc0191a84173e8cec784d1db910\tresearch/t20-v6-20261012/sources/52e278a0288975cd0234987ed0767372a8d7b038bab70f8723c0dd727ec9f224/START_HERE.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/52eef8ece5af6995a4a151e5ddff0d3755f6485fefa90b2c029d6a0d07008c3d/DESIGN.md",
+      "before_entry": "100644 blob e84b9ba505210f67405344575b6216414df41c29\tresearch/t20-v6-20261012/sources/52eef8ece5af6995a4a151e5ddff0d3755f6485fefa90b2c029d6a0d07008c3d/DESIGN.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/52fbe080e7bd57f6c06e695a28428052463702d3ccce72bf2c7ba6ad493250d0/SOURCE_RETURN.md",
+      "before_entry": "100644 blob a1cb97d5e3fd6df59bc0f17220c723f8fc7f11d0\tresearch/t20-v6-20261012/sources/52fbe080e7bd57f6c06e695a28428052463702d3ccce72bf2c7ba6ad493250d0/SOURCE_RETURN.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/53048652eb15b7e9b38a1e97627b407c192138b769d62e0fa7e5e34e797587b1/RESULT.md",
+      "before_entry": "100644 blob 788141d586bce7e4e4962479275b506e9d9911ae\tresearch/t20-v6-20261012/sources/53048652eb15b7e9b38a1e97627b407c192138b769d62e0fa7e5e34e797587b1/RESULT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/533a7f14b610caef541def519210f26b42585e9c26448c249e9c80425b0312b5/README.md",
+      "before_entry": "100644 blob bf2385bb252389c7da9b5702a369cca5c1bf3330\tresearch/t20-v6-20261012/sources/533a7f14b610caef541def519210f26b42585e9c26448c249e9c80425b0312b5/README.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5391aeba43fe7a822a34ba653ac3900a6a122793acfa8ea8b0d9b1e693b3cd8b/source_ascent_integration.md",
+      "before_entry": "100644 blob ba4d01132fed29bf6698154a3424aae2412ff4c6\tresearch/t20-v6-20261012/sources/5391aeba43fe7a822a34ba653ac3900a6a122793acfa8ea8b0d9b1e693b3cd8b/source_ascent_integration.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/53a18c9944984f7bbdd35641e4fb457a500e59abfd33c71e5120400ee1cc5e25/RESULT.md",
+      "before_entry": "100644 blob 8abc57ba9d311e8ffbeaa3dddb497a34571f4b17\tresearch/t20-v6-20261012/sources/53a18c9944984f7bbdd35641e4fb457a500e59abfd33c71e5120400ee1cc5e25/RESULT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/53e195505ed07d2cb5f9243e8d1e908ad6c769c799a0f2f39a42eeb7e358da91/REVIEW.md",
+      "before_entry": "100644 blob 08b3b5194b10b2c3c0553c2fceeb5c54bc567b8f\tresearch/t20-v6-20261012/sources/53e195505ed07d2cb5f9243e8d1e908ad6c769c799a0f2f39a42eeb7e358da91/REVIEW.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/53e82d771e5db676a03df5cfe45a0e795b255924c404ddf61ad7d0dd95ebc8ba/ACTUAL_READING_AND_REPLAY.md",
+      "before_entry": "100644 blob e647c737686a231d1a3ef0b9060fbf7ff41f5a39\tresearch/t20-v6-20261012/sources/53e82d771e5db676a03df5cfe45a0e795b255924c404ddf61ad7d0dd95ebc8ba/ACTUAL_READING_AND_REPLAY.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/54110afa11f6392dee0338bc1aa2ff024e912dfa1fd84442e96b2b2e69bf601f/unit_49_green.txt",
+      "before_entry": "100644 blob 562d92b8970b668e72b0cbc7fcebc05a4cf841a2\tresearch/t20-v6-20261012/sources/54110afa11f6392dee0338bc1aa2ff024e912dfa1fd84442e96b2b2e69bf601f/unit_49_green.txt\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/542b6a690f24d785d04e009fa839c0c88f13d8907b44a0625a03422e47b45fe6/Orthemology_Dot_Tensor_Riemannian_Context_Brief_20261007.md",
+      "before_entry": "100644 blob d08b58606a70873d98cc03a97f1dadaba2fb47ce\tresearch/t20-v6-20261012/sources/542b6a690f24d785d04e009fa839c0c88f13d8907b44a0625a03422e47b45fe6/Orthemology_Dot_Tensor_Riemannian_Context_Brief_20261007.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/547593798c1db2f21bbabed1c6b70f4cdd49a19a89080f405c570639c0484487/README.md",
+      "before_entry": "100644 blob b859918b299b890f9c3472d99e5493b9e8f7c008\tresearch/t20-v6-20261012/sources/547593798c1db2f21bbabed1c6b70f4cdd49a19a89080f405c570639c0484487/README.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/547818609c4b56992a4d47b01f89a3315c03b18dae4518afacabbc1c9eaac007/REVIEW.md",
+      "before_entry": "100644 blob e2361d0c44af17e383d0b887b0eef5459baf2ea7\tresearch/t20-v6-20261012/sources/547818609c4b56992a4d47b01f89a3315c03b18dae4518afacabbc1c9eaac007/REVIEW.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/54ae0e0da5e0482dc31e59933847c78aa000f3b992ef15d28ed17d6b3493bd62/CHECKPOINT_REPORT.md",
+      "before_entry": "100644 blob 87640ffd9130533d16118a18a12d0ed621538a51\tresearch/t20-v6-20261012/sources/54ae0e0da5e0482dc31e59933847c78aa000f3b992ef15d28ed17d6b3493bd62/CHECKPOINT_REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/54c3019709241dd68789c1c40f0587250977f9112b69e5e5f12aac44d62e721a/REMAINING_OBLIGATIONS_AND_OWNERS.md",
+      "before_entry": "100644 blob f1b8ee3bd5118c5bfe7f17bb76f65247182c667b\tresearch/t20-v6-20261012/sources/54c3019709241dd68789c1c40f0587250977f9112b69e5e5f12aac44d62e721a/REMAINING_OBLIGATIONS_AND_OWNERS.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/54df8e28e3fcbe8470c6f8ad9d4160da35b23f182b01dbfaa587138b0ea04712/INDEPENDENT_FIVE_FRONT_SOURCE_SUPPLEMENT.md",
+      "before_entry": "100644 blob 54d0201c2dd09802a91f21ac676aa8cb4007c072\tresearch/t20-v6-20261012/sources/54df8e28e3fcbe8470c6f8ad9d4160da35b23f182b01dbfaa587138b0ea04712/INDEPENDENT_FIVE_FRONT_SOURCE_SUPPLEMENT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/551e1e7feab939c52ba5030a4f7817e1e0f772f49922cd597fe58b368002b917/references.tex",
+      "before_entry": "100644 blob 83b3204c411fe3d6c044bae8755ded3ed1afda99\tresearch/t20-v6-20261012/sources/551e1e7feab939c52ba5030a4f7817e1e0f772f49922cd597fe58b368002b917/references.tex\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5541689bfa243c3fd13d5c69f92de3b277257d60760f0acd90720331f6305c3a/START_HERE.md",
+      "before_entry": "100644 blob c828b08617597075934cf54f034805560948ef39\tresearch/t20-v6-20261012/sources/5541689bfa243c3fd13d5c69f92de3b277257d60760f0acd90720331f6305c3a/START_HERE.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md",
+      "before_entry": "100644 blob d7fa4425d014225940cbbbe86983f8d9a3dc3da5\tresearch/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/55ddc54ebb887cf063f7bc2b4a07c5a90010c0458dbcdfc33328772cdf3cd24d/PRO_EXECUTION_PROMPT.md",
+      "before_entry": "100644 blob 968d6cbe0db537e22904098e7c735e71eac8b52f\tresearch/t20-v6-20261012/sources/55ddc54ebb887cf063f7bc2b4a07c5a90010c0458dbcdfc33328772cdf3cd24d/PRO_EXECUTION_PROMPT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/55e884ee3ce94c9c6b523404e56cd58d286061d6bb591b104615c384754e5863/README.md",
+      "before_entry": "100644 blob 706825f8df01748ec87cc460949f69d3947889e1\tresearch/t20-v6-20261012/sources/55e884ee3ce94c9c6b523404e56cd58d286061d6bb591b104615c384754e5863/README.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/560dbebf766c7b8a1685498e41ab34bce3760e29ce95e4166c52d991d033f4a2/PORTABLE_REPLAY.md",
+      "before_entry": "100644 blob eada28a81027a9140767c580792fc3ce2562d7f6\tresearch/t20-v6-20261012/sources/560dbebf766c7b8a1685498e41ab34bce3760e29ce95e4166c52d991d033f4a2/PORTABLE_REPLAY.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5618aa57c4096b425fbe6937b9f11d6f9b47378f528390bedad9373f078406c8/putinar-schmudgen-p29-31.txt",
+      "before_entry": "100644 blob d74581aa2f8ab4005c3b2cdd3a64be4efd8d78c2\tresearch/t20-v6-20261012/sources/5618aa57c4096b425fbe6937b9f11d6f9b47378f528390bedad9373f078406c8/putinar-schmudgen-p29-31.txt\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/561b2764ccceeba464460dedb3fe7e07ba29700e9fea865f7b74ec401124f072/RESULT.md",
+      "before_entry": "100644 blob 92aa0e2ea0fe00b6dd20b1c3d982148e445d86b2\tresearch/t20-v6-20261012/sources/561b2764ccceeba464460dedb3fe7e07ba29700e9fea865f7b74ec401124f072/RESULT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/563026fa980b8c53de5bb59469ce3098c67fdc41677a1c77f9609095a5d21f6d/template.tex",
+      "before_entry": "100644 blob d2933e00e8f0c4c1d3df753fdb245a8a30827710\tresearch/t20-v6-20261012/sources/563026fa980b8c53de5bb59469ce3098c67fdc41677a1c77f9609095a5d21f6d/template.tex\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5636ab441a57a5b88b065eb1c6bd62a2a8cd32bfb886d7229da4e3c3b6b11300/REPORT.md",
+      "before_entry": "100644 blob 6838a63e0f11df40bee2455ec8a5900c40e7b784\tresearch/t20-v6-20261012/sources/5636ab441a57a5b88b065eb1c6bd62a2a8cd32bfb886d7229da4e3c3b6b11300/REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/563af3800ae72f705e054ae6b22db515cd064809deea8413d71049d0e5b8d7ce/RESULT.md",
+      "before_entry": "100644 blob df7d9b858cfd8e9d295aecf7ff4307fd5631cf83\tresearch/t20-v6-20261012/sources/563af3800ae72f705e054ae6b22db515cd064809deea8413d71049d0e5b8d7ce/RESULT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/56b3c2b27c7a87aba6aa967201bb47dfd9dd9ff5223eb061dfb3c68cdc3a1545/README.md",
+      "before_entry": "100644 blob 813fb5e8a874a3a6e80bc00d2c4a318fc8bf34c3\tresearch/t20-v6-20261012/sources/56b3c2b27c7a87aba6aa967201bb47dfd9dd9ff5223eb061dfb3c68cdc3a1545/README.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/56bad0dd8cb57b485318db7649fa930c543c95039210ff80e986188f72d8c105/REVIEW.md",
+      "before_entry": "100644 blob fd80fbf9b625d3cd5b19a4b875563a397d2e5cc5\tresearch/t20-v6-20261012/sources/56bad0dd8cb57b485318db7649fa930c543c95039210ff80e986188f72d8c105/REVIEW.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/56bc970de5f62ef58f144fa155f8e0dfa52a46874863df44a3457e7395f1795a/02_UNITY_SOVEREIGNTY_AND_CAUSATION.md",
+      "before_entry": "100644 blob 02ff9d44f33cf2d9c1a65aeb4fc5e3dc79cd004a\tresearch/t20-v6-20261012/sources/56bc970de5f62ef58f144fa155f8e0dfa52a46874863df44a3457e7395f1795a/02_UNITY_SOVEREIGNTY_AND_CAUSATION.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/56c38a8d24319da36ac1d7e9373cffcf50c829bc1765908890eaa09fba197faa/07_APPLICATIONS_AND_ASSESSMENT.md",
+      "before_entry": "100644 blob ff238dbffb79a27fe02719f2d18d73c0d7c8f025\tresearch/t20-v6-20261012/sources/56c38a8d24319da36ac1d7e9373cffcf50c829bc1765908890eaa09fba197faa/07_APPLICATIONS_AND_ASSESSMENT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/56df217acf465850428cb315262370de1e778d738aef7aaee97099e0ceba3d63/triage-70.txt",
+      "before_entry": "100644 blob 4d03becf85b9c7965d1a3c2b2779bf29a0b61f9e\tresearch/t20-v6-20261012/sources/56df217acf465850428cb315262370de1e778d738aef7aaee97099e0ceba3d63/triage-70.txt\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/56e3fa5eeaeef76900924caf382588e1104adb8a663d11452f35a2524df65899/REVIEW.md",
+      "before_entry": "100644 blob 8ce8668d739605d277eac9752a3f787ef0ad6e61\tresearch/t20-v6-20261012/sources/56e3fa5eeaeef76900924caf382588e1104adb8a663d11452f35a2524df65899/REVIEW.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/56f60b2a915cb18425a29d6d79398904bf6173196191b7773b3d5b8fb77cd665/RESULT.md",
+      "before_entry": "100644 blob 3b99bdfd1e2cf52e792daf45550a3ffdad34f8b5\tresearch/t20-v6-20261012/sources/56f60b2a915cb18425a29d6d79398904bf6173196191b7773b3d5b8fb77cd665/RESULT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/571d64fe9d91c72c84d056b593b79784149f685fd3a0837dbf63db89351e4a6c/RESULT.md",
+      "before_entry": "100644 blob 0894d5ce9a95fc17a4898174ebb042f47384079b\tresearch/t20-v6-20261012/sources/571d64fe9d91c72c84d056b593b79784149f685fd3a0837dbf63db89351e4a6c/RESULT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/572d535332d3ba47a391bcf700dfca712addc3268e2d55f8fe33a9202ef7c3fc/VERIFICATION.md",
+      "before_entry": "100644 blob f8caae7bf9d1cfbe1734b54ec9695b7c56605dbb\tresearch/t20-v6-20261012/sources/572d535332d3ba47a391bcf700dfca712addc3268e2d55f8fe33a9202ef7c3fc/VERIFICATION.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5734b27e31d4ed010ca938db9949e739a6126b4f4919c1b748eb051e6b1330a6/CUMULATIVE_PROGRAMME_CROSSWALK.md",
+      "before_entry": "100644 blob bb334a75231dcc3334cda268de34c577498d79c7\tresearch/t20-v6-20261012/sources/5734b27e31d4ed010ca938db9949e739a6126b4f4919c1b748eb051e6b1330a6/CUMULATIVE_PROGRAMME_CROSSWALK.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5772e471c95bfec31819cef58edf9ce63558fa84538df92b6f77487200e69f0e/ARCHITECTURE_CHECK.md",
+      "before_entry": "100644 blob 5d0b382f4ff10fdb6cf71203339bccb3f4b65d2a\tresearch/t20-v6-20261012/sources/5772e471c95bfec31819cef58edf9ce63558fa84538df92b6f77487200e69f0e/ARCHITECTURE_CHECK.md\u0000",
       "after_entry": ""
     },
     {
@@ -4497,8 +4912,323 @@
       "after_entry": ""
     },
     {
+      "path": "research/t20-v6-20261012/sources/57ac1d4afbea798eafb7342ccb486518851e0830dc339cec84bcaca58120a7ff/clean-build-start.txt",
+      "before_entry": "100644 blob cc3d03803957901ac81d4440e4e2a3c7eb787c98\tresearch/t20-v6-20261012/sources/57ac1d4afbea798eafb7342ccb486518851e0830dc339cec84bcaca58120a7ff/clean-build-start.txt\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/57dabfae414cfa3e6c3f69d8f02a1d68b04e7930c830ef0959ea5f713b034a2f/README.md",
+      "before_entry": "100644 blob ad98ecd22bb76444c36b1d91929e978b6d725474\tresearch/t20-v6-20261012/sources/57dabfae414cfa3e6c3f69d8f02a1d68b04e7930c830ef0959ea5f713b034a2f/README.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5884cd860da86bcce082dce5c99d30a6e85fd84c6a7504d0bd899435f50ea510/orthemology_consolidation_stage2_continue.md",
+      "before_entry": "100644 blob b6380b7efed63c98927be5cf8f99d1e42c0305c4\tresearch/t20-v6-20261012/sources/5884cd860da86bcce082dce5c99d30a6e85fd84c6a7504d0bd899435f50ea510/orthemology_consolidation_stage2_continue.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/58bc0e7d5a794d72ea466e41f8f562f04f73f48900d6e85f84eda779942c74e9/BRIDGE_GUARDS.md",
+      "before_entry": "100644 blob dacc35e50fd5eafbef046b0be5527318bbe71a34\tresearch/t20-v6-20261012/sources/58bc0e7d5a794d72ea466e41f8f562f04f73f48900d6e85f84eda779942c74e9/BRIDGE_GUARDS.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/58ecd04a35c316edfa1fda69feccf8e78fbf11c1fab9a92115f4503842bb1aaf/INDEX.md",
+      "before_entry": "100644 blob df70755ece7f6568902ab9e6b5921527ad5ad22a\tresearch/t20-v6-20261012/sources/58ecd04a35c316edfa1fda69feccf8e78fbf11c1fab9a92115f4503842bb1aaf/INDEX.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/58ee1dfa1adc712445713b641432a61c4a44eff8f5285f35f221586384edc6bc/DESIGN.md",
+      "before_entry": "100644 blob dd66f4066d244c616d68ea190572f262fd468c41\tresearch/t20-v6-20261012/sources/58ee1dfa1adc712445713b641432a61c4a44eff8f5285f35f221586384edc6bc/DESIGN.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5905da8fadb69aaf0619260f6742449de7eb20f7e88ad00a73ea9771159b29ee/REPORT.md",
+      "before_entry": "100644 blob bebe846f6a921ed66ef07d67e182f41132bc432c\tresearch/t20-v6-20261012/sources/5905da8fadb69aaf0619260f6742449de7eb20f7e88ad00a73ea9771159b29ee/REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5911079f0cd76d821fc935c5533f3c7113f4b87e316bc9a9ffcd2b6b28ca89ed/MIXED_KERNEL_SCOPE.md",
+      "before_entry": "100644 blob 5962182dcf601c1daab94bfd5a73fff3afe2405b\tresearch/t20-v6-20261012/sources/5911079f0cd76d821fc935c5533f3c7113f4b87e316bc9a9ffcd2b6b28ca89ed/MIXED_KERNEL_SCOPE.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/591273ed1f67312f188fb766095eb0f561abb4bb92bb279326f876469455da14/READ_FIRST.md",
+      "before_entry": "100644 blob f8563e888222839b664243d11fbdc29d1283020d\tresearch/t20-v6-20261012/sources/591273ed1f67312f188fb766095eb0f561abb4bb92bb279326f876469455da14/READ_FIRST.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/594ad92a8951bbbd1c607d5dc826c02526801482f12a861c7f8c1da86d80eaa0/ROOT_APPRAISAL.md",
+      "before_entry": "100644 blob 0d767874513426ff90b6e254ebbef1c65a3306d2\tresearch/t20-v6-20261012/sources/594ad92a8951bbbd1c607d5dc826c02526801482f12a861c7f8c1da86d80eaa0/ROOT_APPRAISAL.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/594b0627139c7dc8cdb7a75c3ecbc3fc85ec4e2bdfd54988abd9c1bc131cc339/README.md",
+      "before_entry": "100644 blob 48c7242b04286217a345aba44b36e1ed7dbaf426\tresearch/t20-v6-20261012/sources/594b0627139c7dc8cdb7a75c3ecbc3fc85ec4e2bdfd54988abd9c1bc131cc339/README.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/59643f825a88914fea7b92bff8154281556fb76eeb8713c5ea1e5e64a6c14550/README.md",
+      "before_entry": "100644 blob 354979be05e4933fb14256796e4d921847c571cd\tresearch/t20-v6-20261012/sources/59643f825a88914fea7b92bff8154281556fb76eeb8713c5ea1e5e64a6c14550/README.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5971704cf6f14bb10cd3bd7b8cd179fe36bf889f06d80f2a7741bec3de64dacb/REVIEW.md",
+      "before_entry": "100644 blob ff8cf20816f9bdde28baa3a3a08a671dcd1260dd\tresearch/t20-v6-20261012/sources/5971704cf6f14bb10cd3bd7b8cd179fe36bf889f06d80f2a7741bec3de64dacb/REVIEW.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/59d41a9afee2fb3d8ee0fccaa19abe6e1ba1f2a957701623e62cc90fbb4dd699/README.txt",
+      "before_entry": "100644 blob c3dd17c08bc50f866b971d2286bba576c22193cb\tresearch/t20-v6-20261012/sources/59d41a9afee2fb3d8ee0fccaa19abe6e1ba1f2a957701623e62cc90fbb4dd699/README.txt\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/59d9c86326a8011b45cad03171606d542a31cc7a180fa42d9188783a6eb4f2a5/REVIEW.md",
+      "before_entry": "100644 blob 7a5e1442ddfb68a65845b7678a9163987eece772\tresearch/t20-v6-20261012/sources/59d9c86326a8011b45cad03171606d542a31cc7a180fa42d9188783a6eb4f2a5/REVIEW.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/59e319d456de31657819e7d2c6a66908eb37e758568a187e5ae6112a673c5f9a/manuscript_flattened.tex",
+      "before_entry": "100644 blob 648c3699b0b05318513962832e18495d456b9344\tresearch/t20-v6-20261012/sources/59e319d456de31657819e7d2c6a66908eb37e758568a187e5ae6112a673c5f9a/manuscript_flattened.tex\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5a2aabc65c8cc624b354bd2aaed55a77f7595b12bc24abd4e4d5d26888b92f40/split-primary-comparison.md",
+      "before_entry": "100644 blob c3e65e55cd96d9d705a76cb0c15cea3c86164fee\tresearch/t20-v6-20261012/sources/5a2aabc65c8cc624b354bd2aaed55a77f7595b12bc24abd4e4d5d26888b92f40/split-primary-comparison.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5a37c0b9a3d68d486599d5a9e42854a3c55110361073676f267906c43f6cc4c9/RESULT.md",
+      "before_entry": "100644 blob 2c245e11324db1b73e9f7d8212d1fdf5d430e3a6\tresearch/t20-v6-20261012/sources/5a37c0b9a3d68d486599d5a9e42854a3c55110361073676f267906c43f6cc4c9/RESULT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5a424cd3017abc1c7e05e207119e52d4a91d4d252ef00168ddbdabaf296f67d0/FIBRE_ARGUMENT.txt",
+      "before_entry": "100644 blob 8600f3bd1febf0269fbec0aab5ab2218ef96a719\tresearch/t20-v6-20261012/sources/5a424cd3017abc1c7e05e207119e52d4a91d4d252ef00168ddbdabaf296f67d0/FIBRE_ARGUMENT.txt\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5a6006d65dccffcc5e0c0ac5f76f1aa819701c4e64ba62df25b022d642fc59d1/REVIEW.md",
+      "before_entry": "100644 blob abda2d944910eb6503db6a32312bd9a15802a30f\tresearch/t20-v6-20261012/sources/5a6006d65dccffcc5e0c0ac5f76f1aa819701c4e64ba62df25b022d642fc59d1/REVIEW.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5a6983eaeadb281736db29657b73145337e7194a2ceec017d436acb3d8d1ff7a/RESULT.md",
+      "before_entry": "100644 blob 3c23c3c9372c1134a3924ffb327bf1c5c2657f43\tresearch/t20-v6-20261012/sources/5a6983eaeadb281736db29657b73145337e7194a2ceec017d436acb3d8d1ff7a/RESULT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5a6ef63866689bf1bc2882d1c989254fb2cddae28797d501b3566b9ca868e656/RESULT.md",
+      "before_entry": "100644 blob 3651467a6fefea087049bc6016e8a25001454a6e\tresearch/t20-v6-20261012/sources/5a6ef63866689bf1bc2882d1c989254fb2cddae28797d501b3566b9ca868e656/RESULT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5a9247b178ffe0c6fe0207a69d30550c97724250b426cc501f2fa6b124aae18f/EARLY_MATHEMATICS_REPORT.md",
+      "before_entry": "100644 blob 00a1f0b818102dd7696b5cd52572aee375876cd3\tresearch/t20-v6-20261012/sources/5a9247b178ffe0c6fe0207a69d30550c97724250b426cc501f2fa6b124aae18f/EARLY_MATHEMATICS_REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5aa3e5cd0a76ea8e38d656ee20062a9cc34d05ffafc6ff3b1dde00a614390918/REPORT.md",
+      "before_entry": "100644 blob 18b9b6aec3a628ff242e94e3e9372722743daa9b\tresearch/t20-v6-20261012/sources/5aa3e5cd0a76ea8e38d656ee20062a9cc34d05ffafc6ff3b1dde00a614390918/REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
       "path": "research/t20-v6-20261012/sources/5aa67d05f7259a0522e83e0d4983b785f1a4097c454e37740537de574a0c2070/TargetReadback.lean",
       "before_entry": "100644 blob f3377a364abdef0d9879c8979cf58311d364518c\tresearch/t20-v6-20261012/sources/5aa67d05f7259a0522e83e0d4983b785f1a4097c454e37740537de574a0c2070/TargetReadback.lean\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5ab09566f7273a19072397742fb492506f9ec8f8972fff6292cd75baa24da779/P14_DEPENDENCY_CONTRACT.md",
+      "before_entry": "100644 blob d9b25d5529887a2882411614d451652d0550c8a0\tresearch/t20-v6-20261012/sources/5ab09566f7273a19072397742fb492506f9ec8f8972fff6292cd75baa24da779/P14_DEPENDENCY_CONTRACT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5abd2b15a94e8c6ef253a131f1567eca3a066d8cb6708dcadd07d979c805abcb/RETURN_TO_CODEX.txt",
+      "before_entry": "100644 blob 17e95e7afd9556c9d4a6c30e9329e38adaeed91f\tresearch/t20-v6-20261012/sources/5abd2b15a94e8c6ef253a131f1567eca3a066d8cb6708dcadd07d979c805abcb/RETURN_TO_CODEX.txt\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5acace19bb0f47fcc719c1d7c68bbcc9742a5530588bca487323919f1625e616/HISTORICAL_CROSS_FRONT_SYNTHESIS.md",
+      "before_entry": "100644 blob 29e78cd26cc4e899cf6083708e04f54802df69d8\tresearch/t20-v6-20261012/sources/5acace19bb0f47fcc719c1d7c68bbcc9742a5530588bca487323919f1625e616/HISTORICAL_CROSS_FRONT_SYNTHESIS.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5b352454afd1e7638a01ef68f72e652e9eb49499b4f80386ebbf23ecbb5da202/RESULT.md",
+      "before_entry": "100644 blob 9d813191d406eb63053b4c69ecf9bb7eeea47a7b\tresearch/t20-v6-20261012/sources/5b352454afd1e7638a01ef68f72e652e9eb49499b4f80386ebbf23ecbb5da202/RESULT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5b3e397f25ce09f46b2bf8dd274625545c838a4a817515e72545eec3ce7da900/RESULT.md",
+      "before_entry": "100644 blob b5edee97986487b440519c54ac401228443e8661\tresearch/t20-v6-20261012/sources/5b3e397f25ce09f46b2bf8dd274625545c838a4a817515e72545eec3ce7da900/RESULT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5b5e6f61ef47dcafa2a5a4b245751b8911c8da836daa29980aebdb5888497bdf/README.md",
+      "before_entry": "100644 blob 93343b7de6a25e33151d2f11f91cdd1e20e6dd7a\tresearch/t20-v6-20261012/sources/5b5e6f61ef47dcafa2a5a4b245751b8911c8da836daa29980aebdb5888497bdf/README.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5bb21aa5aa388b3dff9a42cb48ad5e62a5b2c4da42971030a197caff583a980d/RESULT.md",
+      "before_entry": "100644 blob 92d10bc57fdd32fef66ee9bfe878891a6a33f4f3\tresearch/t20-v6-20261012/sources/5bb21aa5aa388b3dff9a42cb48ad5e62a5b2c4da42971030a197caff583a980d/RESULT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5c2fbe1c5aaa852cdaf2802b22f283845301b2f56ec36d1b4ec9864eb1516fcb/PROOF_TYPE_INQUIRY_SYNTHESIS.md",
+      "before_entry": "100644 blob e5ccae632b2f6f469e061cbca27d1050582e2873\tresearch/t20-v6-20261012/sources/5c2fbe1c5aaa852cdaf2802b22f283845301b2f56ec36d1b4ec9864eb1516fcb/PROOF_TYPE_INQUIRY_SYNTHESIS.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5c37a33c8dde21eb9c40d27fa71ebfbfcf32d2cbfcc5a88aab64140bddbe4fe4/CHECKPOINT_REPORT.md",
+      "before_entry": "100644 blob 75d80b6e97dae19d5a148f79718742b6095936b4\tresearch/t20-v6-20261012/sources/5c37a33c8dde21eb9c40d27fa71ebfbfcf32d2cbfcc5a88aab64140bddbe4fe4/CHECKPOINT_REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5c6f78a1ac7231704b015ff9e0a998cec3f7a74ab88bb678622ed52969c3fd2b/INDEX.md",
+      "before_entry": "100644 blob 636027577dd56c13f475dd0fc1c4c54643f7e783\tresearch/t20-v6-20261012/sources/5c6f78a1ac7231704b015ff9e0a998cec3f7a74ab88bb678622ed52969c3fd2b/INDEX.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5c74c7086c038dce1be0e9098b42fce9cc4c7aee8670fe0ba682b50d780af5c0/RESULT.md",
+      "before_entry": "100644 blob a57146981a43a8e7e89fdd5d105b3277b85d0b4e\tresearch/t20-v6-20261012/sources/5c74c7086c038dce1be0e9098b42fce9cc4c7aee8670fe0ba682b50d780af5c0/RESULT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5c77228b906bee22b3248885012edb3cb5a2f96e954287c7ff930bea162c7115/FINAL_DISPOSITION.md",
+      "before_entry": "100644 blob 1ffd112bed35d3f62787a5cbec4c9c8645550677\tresearch/t20-v6-20261012/sources/5c77228b906bee22b3248885012edb3cb5a2f96e954287c7ff930bea162c7115/FINAL_DISPOSITION.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5c795603143517b37cf23a5014255175ba75e72c63deed0563cdb0e1b95483d4/research.md",
+      "before_entry": "100644 blob 778620e3e6bf18b692aa667e73a6be7f87e0fa22\tresearch/t20-v6-20261012/sources/5c795603143517b37cf23a5014255175ba75e72c63deed0563cdb0e1b95483d4/research.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5ccaf69ac4c3b5b74471bdea10be494482bfd121c05233a8bc67810bdf0bbf56/RESULT.md",
+      "before_entry": "100644 blob d3a13f2a85344b7ea322f345515c67ad7375f77e\tresearch/t20-v6-20261012/sources/5ccaf69ac4c3b5b74471bdea10be494482bfd121c05233a8bc67810bdf0bbf56/RESULT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5ce54702491ebc4568841d8e198b0db2cd0fcc9f5b14b785e7be8a5a656a1624/scalar-projectability.md",
+      "before_entry": "100644 blob 634e9638a5a443e2998d56a52ad10b5eb9481c67\tresearch/t20-v6-20261012/sources/5ce54702491ebc4568841d8e198b0db2cd0fcc9f5b14b785e7be8a5a656a1624/scalar-projectability.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5d0e97c5f4e50ac7981765292b6aa161076a4d0b6af7fbc46aa18e40bd89c2b2/DIAGNOSTIC.md",
+      "before_entry": "100644 blob c488d2b0090dc71bb7e3d7500f99f5820d9597c9\tresearch/t20-v6-20261012/sources/5d0e97c5f4e50ac7981765292b6aa161076a4d0b6af7fbc46aa18e40bd89c2b2/DIAGNOSTIC.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5d3b74f7e30e3a5535a54a0e6eed527de62afcd0bbdd814bb646dee6a212ddd4/FILTERED_OPERATOR_NOTE.before-explicit-linearity.md",
+      "before_entry": "100644 blob 6b389d0067b466a8c09b2d60c81d611410be02ba\tresearch/t20-v6-20261012/sources/5d3b74f7e30e3a5535a54a0e6eed527de62afcd0bbdd814bb646dee6a212ddd4/FILTERED_OPERATOR_NOTE.before-explicit-linearity.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5d5bfeb158dcf9bd8a4e43d9b3246cb26338a0203bdbb6f05ac372b6008ccfc8/READBACK_NOTES.md",
+      "before_entry": "100644 blob 486e455cbdfd97af26a0f1007a00a946ca94b28c\tresearch/t20-v6-20261012/sources/5d5bfeb158dcf9bd8a4e43d9b3246cb26338a0203bdbb6f05ac372b6008ccfc8/READBACK_NOTES.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5d5f1cfe900f703d020cea25a8d0b31ff14451dde1fef035dd7959eb4868460d/DESIGN.md",
+      "before_entry": "100644 blob 32f7cf68c17181679678f31721a6c1f5b9381c5b\tresearch/t20-v6-20261012/sources/5d5f1cfe900f703d020cea25a8d0b31ff14451dde1fef035dd7959eb4868460d/DESIGN.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5d8680fd3677c20a07503b09fdbb098dabdf8c845b1cd4246ab6a484887cb7e8/medium.txt",
+      "before_entry": "100644 blob ac37878cb579c4bc283ef070e658e782163b530a\tresearch/t20-v6-20261012/sources/5d8680fd3677c20a07503b09fdbb098dabdf8c845b1cd4246ab6a484887cb7e8/medium.txt\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5d950aac5454a65a4873a1f46c256e10a95e9e6dff306e182978a6dd38c8bdda/README.md",
+      "before_entry": "100644 blob b487ce92257ab765e017099dfd7bb50ed5d13b04\tresearch/t20-v6-20261012/sources/5d950aac5454a65a4873a1f46c256e10a95e9e6dff306e182978a6dd38c8bdda/README.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5d9f7b13d92f4aaaea35b22a5af25b104d3a9d37da56d923111725fab1e6916b/PRO_EXECUTION_PROMPT.md",
+      "before_entry": "100644 blob 6ebb92b7acedb8bfe0f176fa87bcb904ab70c9a8\tresearch/t20-v6-20261012/sources/5d9f7b13d92f4aaaea35b22a5af25b104d3a9d37da56d923111725fab1e6916b/PRO_EXECUTION_PROMPT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5da8660613e600fd7b43683af1c5ac916c2747a02a56e3b50259d496f22ca224/REPOSITORIES_AND_PUBLICATION.md",
+      "before_entry": "100644 blob 922aea8b6f75c21490312cb77677b3131e7432e4\tresearch/t20-v6-20261012/sources/5da8660613e600fd7b43683af1c5ac916c2747a02a56e3b50259d496f22ca224/REPOSITORIES_AND_PUBLICATION.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5dbef0804c046b9388c1adcbd98ef8c91502f8dfb27ae030a4657061c62dd4a5/PREDECESSOR_README.md",
+      "before_entry": "100644 blob a14c212e861f85c6379f20898b2ee4139b00fbe1\tresearch/t20-v6-20261012/sources/5dbef0804c046b9388c1adcbd98ef8c91502f8dfb27ae030a4657061c62dd4a5/PREDECESSOR_README.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5dc2e30ba48b6ad4207e21332ff661ac3271db9d836c8308a0fdffe14d488204/REPLAY.md",
+      "before_entry": "100644 blob 815b4b88f85f0910abe69b4fa2f895e4cddc6b2c\tresearch/t20-v6-20261012/sources/5dc2e30ba48b6ad4207e21332ff661ac3271db9d836c8308a0fdffe14d488204/REPLAY.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5e0404c6884e3565ed7483eee81424551f518083a1f0cd042e2be645e99a29ce/ACTUAL_BATCH_STANDALONE_REVIEW.md",
+      "before_entry": "100644 blob fe18883acf3c71575d7c0cf7bdb18a1cd2c69555\tresearch/t20-v6-20261012/sources/5e0404c6884e3565ed7483eee81424551f518083a1f0cd042e2be645e99a29ce/ACTUAL_BATCH_STANDALONE_REVIEW.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5e1fbc561c7bbd330eb59e5f9f183009f3c921211b15c10441095c29495a0f31/source-04",
+      "before_entry": "100644 blob 696977e962e5116deebd92d684b4816f7f3f8ba9\tresearch/t20-v6-20261012/sources/5e1fbc561c7bbd330eb59e5f9f183009f3c921211b15c10441095c29495a0f31/source-04\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5e24f31c7606c5d3c27e848123d4571e311962a64c5804a859514f6a4e91860f/01_NECESSITY_AND_EXPLANATION.md",
+      "before_entry": "100644 blob 5b668b849b1eae6de859377da8fe1e27a776a550\tresearch/t20-v6-20261012/sources/5e24f31c7606c5d3c27e848123d4571e311962a64c5804a859514f6a4e91860f/01_NECESSITY_AND_EXPLANATION.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5e298740a0538bacb4bb0322ef3fd6cc2e2692c54c4b9c0a66ba9a18dbb3a3ba/REVIEW.md",
+      "before_entry": "100644 blob e9576b0b97cdd663a7b5109a622070f99ce75fc6\tresearch/t20-v6-20261012/sources/5e298740a0538bacb4bb0322ef3fd6cc2e2692c54c4b9c0a66ba9a18dbb3a3ba/REVIEW.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5e2cb3a33de295922a6ebfcc4fd40581ae1b8b888ca7707c0070f02903a8ce2a/SOURCES.md",
+      "before_entry": "100644 blob ca8d53fad468839156d6f32b5a236e35abcf46c0\tresearch/t20-v6-20261012/sources/5e2cb3a33de295922a6ebfcc4fd40581ae1b8b888ca7707c0070f02903a8ce2a/SOURCES.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5e7f610d273cf53867b27b7f0fcb9dc6bb60300ac578ba82ebd885606f0c0dfb/REPORT.md",
+      "before_entry": "100644 blob 4989e49f2994e1473bcd159863713d634bd3620f\tresearch/t20-v6-20261012/sources/5e7f610d273cf53867b27b7f0fcb9dc6bb60300ac578ba82ebd885606f0c0dfb/REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5e87ef0e1521a70c68eea8d791ccad4b4e878b8e8df726031d739d6327c48fe7/causal_adequacy_scope_and_subjecthood.md",
+      "before_entry": "100644 blob e9579ceb14856d6054ce8454d04e7d4fdddf0eeb\tresearch/t20-v6-20261012/sources/5e87ef0e1521a70c68eea8d791ccad4b4e878b8e8df726031d739d6327c48fe7/causal_adequacy_scope_and_subjecthood.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5e98cce6eaf518ef6d8c4ff243ad059518202464b4694b4507a752a4fadd936a/READING_NOTE.md",
+      "before_entry": "100644 blob fdfcf35753b813add72f782970f84ad12b29cc42\tresearch/t20-v6-20261012/sources/5e98cce6eaf518ef6d8c4ff243ad059518202464b4694b4507a752a4fadd936a/READING_NOTE.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5eaf9809d47daec8015b14d5af00adc355911978e62f89a923dc42df96f705a2/README.md",
+      "before_entry": "100644 blob 3339c0130940c3e04098f5ae1f245ca61ced5fe9\tresearch/t20-v6-20261012/sources/5eaf9809d47daec8015b14d5af00adc355911978e62f89a923dc42df96f705a2/README.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5ec00af3906233ada8fca2713a29943f7c882c0a81b63bf4db072ba478c41a88/RESULT.md",
+      "before_entry": "100644 blob 38c1b1f753b54da1b5462eebd2d88e1529ed8583\tresearch/t20-v6-20261012/sources/5ec00af3906233ada8fca2713a29943f7c882c0a81b63bf4db072ba478c41a88/RESULT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5ede11e0a87ec8ce8583b839f1780ed044988612fa243a3c0f739642ac7ae4d6/SOURCE_BRIDGE.md",
+      "before_entry": "100644 blob 1915fabdd9adb6c2356f12510dfb607430459364\tresearch/t20-v6-20261012/sources/5ede11e0a87ec8ce8583b839f1780ed044988612fa243a3c0f739642ac7ae4d6/SOURCE_BRIDGE.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5f13ef66606277002522651b4e60f278ed7ca7bd0a4d6271aa7e62d0a788ac59/REPORT.md",
+      "before_entry": "100644 blob 9d46aa45fd30602727b2fa7f0b4c3ded89d8c4ad\tresearch/t20-v6-20261012/sources/5f13ef66606277002522651b4e60f278ed7ca7bd0a4d6271aa7e62d0a788ac59/REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5f180b2a38f018d5da23800d8514ed13aadf0bdad3a69393a8239443f3723a8d/REPORT.md",
+      "before_entry": "100644 blob 719bf94f12fb2269662bcfe512287e246f4f498f\tresearch/t20-v6-20261012/sources/5f180b2a38f018d5da23800d8514ed13aadf0bdad3a69393a8239443f3723a8d/REPORT.md\u0000",
+      "after_entry": ""
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/5f6f84b1af7e5049139a381142a791eb7aeebdb57ebf9095e14fa49cfc652fcf/RESULT.md",
+      "before_entry": "100644 blob 72ed171f8216e11ae9dc4972fbf55823fc521442\tresearch/t20-v6-20261012/sources/5f6f84b1af7e5049139a381142a791eb7aeebdb57ebf9095e14fa49cfc652fcf/RESULT.md\u0000",
       "after_entry": ""
     },
     {
@@ -5174,28 +5904,28 @@
     {
       "path": "scripts/check_reader_pilot.py",
       "before_entry": "100644 blob 3751ad6673f466d9ae9e7dd62616a4f4b1a12259\tscripts/check_reader_pilot.py\u0000",
-      "after_entry": "100644 blob 10e8e38226350f628a7393bd72414e279a70aae0\tscripts/check_reader_pilot.py\u0000"
+      "after_entry": "100644 blob 828780754a50fd698f693599305d4ec52aaa5fd4\tscripts/check_reader_pilot.py\u0000"
     },
     {
       "path": "scripts/resolve_t20_v6_source.py",
       "before_entry": "100644 blob 0e5259b1654c827116223c69b1bea0a2bda3da70\tscripts/resolve_t20_v6_source.py\u0000",
-      "after_entry": "100644 blob 223ca6c7643033dde34089d3e6fa8d45dc69a837\tscripts/resolve_t20_v6_source.py\u0000"
+      "after_entry": "100644 blob c3775984ea8647df8c0aa58777f1a9e8a047ca6d\tscripts/resolve_t20_v6_source.py\u0000"
     },
     {
       "path": "scripts/source_alias_absence_reader.py",
       "before_entry": "100644 blob 77564f9afc8aae49fef24c1e43deff350d68567a\tscripts/source_alias_absence_reader.py\u0000",
-      "after_entry": "100644 blob 0255299d06364b501b339f13a99d19bdcf9e866d\tscripts/source_alias_absence_reader.py\u0000"
+      "after_entry": "100644 blob 2ff0e3c8c67c4af3fdff02c26eb0ca2a3ae4ce5e\tscripts/source_alias_absence_reader.py\u0000"
     },
     {
       "path": "scripts/validate_internal_references.py",
       "before_entry": "100644 blob 3a033d345dd348e14cd1827a971a24ec76ccda2d\tscripts/validate_internal_references.py\u0000",
-      "after_entry": "100644 blob 5ad448907c735fce0b2123a67cab25bf8462d9b9\tscripts/validate_internal_references.py\u0000"
+      "after_entry": "100644 blob 85ee461cc58c5a60eb485fea4587325c8bbe8a8b\tscripts/validate_internal_references.py\u0000"
     },
     {
       "path": "scripts/validate_t20_v6_projection.py",
       "before_entry": "100644 blob df171f05b9bb6858a462779a8ab99687df818a08\tscripts/validate_t20_v6_projection.py\u0000",
-      "after_entry": "100644 blob 06626b769d6f841cc876b2da730a68bc6cd6b152\tscripts/validate_t20_v6_projection.py\u0000"
+      "after_entry": "100644 blob fa15815271e8b78e76b6fea639ebfce8a68d2fe5\tscripts/validate_t20_v6_projection.py\u0000"
     }
   ],
-  "independent_review_sha256": "1a788478650510305df7e7441bd48dd29edfad44b06be9c2c660ea103a823df1"
+  "independent_review_sha256": "64f0baab0cf21c2d879910b3203d309804b444c669b9f010681f3a4115099b00"
 }
