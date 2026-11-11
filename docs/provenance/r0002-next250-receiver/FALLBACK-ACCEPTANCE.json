@@ -2,53 +2,29 @@
   "verdict": "ACCEPT_FINITE_FALLBACK_EVIDENCE",
   "receipt": {
     "identity": [
-      "bccd23dc45a9bf578f7fbd38b0652814f366abd1",
-      "d912b3a3fbda797fa17f4aabfd05c353d45d305118a8a2d6fe0a869df175dd2a",
-      5160267
+      "e30a8252afd757d07ad2228e53607ab12aa217de",
+      "4eb4b738a01d922146e7ea457517e9757d5b35a9c306777b671892dc524e0d34",
+      5977267
     ],
     "origin": "reviewed_receipt",
     "path": "docs/provenance/r0002-next250-receiver/FALLBACK-REACHABILITY.json",
     "role": "fallback_reachability"
   },
   "input_edition": {
-    "consumer_contexts": {
-      "crosswalk": {
-        "identity": [
-          "a1512460c35d029a6313f6dd88dca50678ebf628",
-          "23d32ed8e273ad29d61769910ece47cfd12f85937f128c05d8b9d28c48c03203",
-          2142889
-        ],
-        "origin": "qualified_provisional",
-        "path": "docs/project-closure/reader-refactor-issue-35/CROSSWALK.json",
-        "role": "consumer_context"
-      },
-      "owner_map": {
-        "identity": [
-          "c90d6da0dc3a44d380889cb1d3b3e3299e15afc5",
-          "7853252cad4959c088eaac90f2b41d54cf8515d1056f397999dd63fca81486e6",
-          70256
-        ],
-        "origin": "qualified_provisional",
-        "path": "docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json",
-        "role": "consumer_context"
-      },
-      "source_graph": {
-        "identity": [
-          "f6f7691f7f73abe581d72d438e74c5cb724bb4d6",
-          "ce15fabe3966d210aadbbf51b0d1213c45d6f9397a3dfebbaa66257afc32b5ff",
-          239538
-        ],
-        "origin": "published",
-        "path": "research/t20-v6-20261012/CURRENT_SOURCE_GRAPH.json",
-        "role": "consumer_context"
-      }
-    },
-    "provisional_tree": "27be793db5cd6f563814fadf87d5a52cf9836b86",
     "published_base": {
       "commit": "cdbb59bab4859e2046b3add9ae69f0b976741374",
       "tree": "be2c04c112093404492cd2c69f252bd956d7bf2f"
     },
-    "reader_rows": {},
+    "source_universe": {
+      "identity": [
+        "e624734077cfc35f00fa4a3a50bd4d784c6dfd94",
+        "6d9d981ae798d03900eba0191e417d2909d3bc0d2a88c394962afd49d69b5a45",
+        14280273
+      ],
+      "origin": "published",
+      "path": "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json",
+      "role": "source_universe"
+    },
     "separation_profiles": {
       "current250": {
         "metadata_inputs": [
@@ -33852,16 +33828,40 @@
         ]
       }
     },
-    "source_universe": {
-      "identity": [
-        "e624734077cfc35f00fa4a3a50bd4d784c6dfd94",
-        "6d9d981ae798d03900eba0191e417d2909d3bc0d2a88c394962afd49d69b5a45",
-        14280273
-      ],
-      "origin": "published",
-      "path": "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json",
-      "role": "source_universe"
-    }
+    "reader_rows": {},
+    "consumer_contexts": {
+      "crosswalk": {
+        "identity": [
+          "4ce3e404d53d2209a29b71e7d227b0ed981aea2f",
+          "b7fa1288224f55e6791ba56b96b1ee755fc1d9e099f07a93ceff84fde1e25e65",
+          2142889
+        ],
+        "origin": "qualified_provisional",
+        "path": "docs/project-closure/reader-refactor-issue-35/CROSSWALK.json",
+        "role": "consumer_context"
+      },
+      "owner_map": {
+        "identity": [
+          "b5c4204951b99f539c59285248a764bb101d7fb8",
+          "b2f2e31a1d48b8898863aca40b917d24cfc4e9d1cf5e34bc627173862dfda947",
+          70256
+        ],
+        "origin": "qualified_provisional",
+        "path": "docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json",
+        "role": "consumer_context"
+      },
+      "source_graph": {
+        "identity": [
+          "f6f7691f7f73abe581d72d438e74c5cb724bb4d6",
+          "ce15fabe3966d210aadbbf51b0d1213c45d6f9397a3dfebbaa66257afc32b5ff",
+          239538
+        ],
+        "origin": "published",
+        "path": "research/t20-v6-20261012/CURRENT_SOURCE_GRAPH.json",
+        "role": "consumer_context"
+      }
+    },
+    "provisional_tree": "2212e4da16c3c54589727f490151cd35bdd4ef51"
   },
-  "consumer_logic_sha256": "23053d63903133a3fcaf25b8743b8935dd68f42c6b735735fe2cc802c9f5f2eb"
+  "consumer_logic_sha256": "9c44e5010664c7d5c1df85bf9d24b341318808752ad894566dae843fd0bfa930"
 }
