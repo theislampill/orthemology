@@ -24,6 +24,7 @@ jobs:
           PYTHONDONTWRITEBYTECODE: "1"
         run: |
           python -B tests/test_source_alias_absence_population.py
+          python -B tests/test_source_alias_current_checkout.py
           PUBLIC123_REVISION_RESOURCES="$(mktemp -d "$RUNNER_TEMP/r0002-public123-boundary.XXXXXX")" python -B tests/test_source_alias_absence_boundary.py
           PUBLIC123_REVISION_RESOURCES="$(mktemp -d "$RUNNER_TEMP/r0002-public123-evidence.XXXXXX")" python -B tests/test_source_alias_absence_evidence.py
       - name: Previously failed continuation receipt controls
@@ -37,7 +38,7 @@ jobs:
         if: github.event_name == 'pull_request'
         env:
           PYTHONDONTWRITEBYTECODE: "1"
-        run: setsid --wait python -B scripts/check_source_alias_absence.py run
+        run: setsid --wait python -B scripts/check_source_alias_absence.py run-current
       - name: Receive bounded source-alias evidence
         if: ${{ always() && github.event_name == 'pull_request' && steps.source_alias_absence.outcome != 'skipped' }}
         env:

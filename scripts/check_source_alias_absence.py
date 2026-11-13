@@ -525,6 +525,33 @@ def class_rows(state):
     return rows
 
 
+def trial_partition(prepared, before, classes):
+    """Bind the claimed trial profile to the authenticated pre-trial vector."""
+    aliases = {row['alias'] for row in classes}
+    present = aliases & {row['path'] for row in before['rows']}
+    retired = aliases - present
+    profile = prepared.get('profile', 'historical-all-present1180-v1')
+    require(profile in ('historical-all-present1180-v1', 'current-checkout1180-v1'),
+            'Unknown alias trial profile')
+    require(profile != 'historical-all-present1180-v1' or not retired,
+            'Historical profile cannot contain initially absent aliases')
+    require(prepared.get('initially_absent_aliases', []) == sorted(retired)
+            and prepared.get('trial_removed_aliases', sorted(aliases)) == sorted(present),
+            'Prepared current alias partition differs')
+    require(prepared['expected_absent_tracked'] == len(before['rows']) - len(present)
+            and prepared['preimage_paths'] == len(present)
+                + len({row['canonical'] for row in classes}) + len(GENERATED),
+            'Current trial denominator or backup count differs')
+    return {'profile': profile, 'historical_aliases_observed': len(aliases),
+            'planned_trial_removals': len(present), 'previously_absent_aliases': len(retired)}
+
+
+def require_retired_absence(repo, prepared):
+    require(all(not os.path.lexists(Path(repo) / path)
+                for path in prepared.get('initially_absent_aliases', [])),
+            'Previously absent alias reappeared; preserve for inspection, restoration blocked')
+
+
 def runtime():
     import importlib.metadata
     require(sys.version_info[:3] == (3, 11, 9) and __debug__, 'Exact normal CPython3.11.9 required')
@@ -546,11 +573,12 @@ def authenticate_state(repo, state):
     require(admit_hosted_checkout(repo, state, fresh=False, saved=True) == prepared['admission'], 'Hosted run admission changed')
     before = json.loads(before_body)
     validate_backups(state, prepared)
+    trial_partition(prepared, before, class_rows(state))
     require(runtime() == prepared['runtime'], 'Runtime changed')
     return prepared, before
 
 
-def prepare(repo, state):
+def prepare(repo, state, *, current_checkout=False):
     runtime_record = runtime()
     admission = admit_hosted_checkout(repo, state, fresh=True)
     mkdir_durable(state)
@@ -579,7 +607,8 @@ def prepare(repo, state):
         boundary = helper_module(state, 'boundary.py', 'hosted_prepared_boundary')
         context = helper_module(state, 'context.py', 'hosted_prepared_context')
         originals = population.original_tree(repo)
-        require(set(originals) <= set(stage), 'Original census is not completely present before the trial')
+        if not current_checkout:
+            require(set(originals) <= set(stage), 'Original census is not completely present before the trial')
         manifest = {}
         for line in (repo / GENERATED[2]).read_text().splitlines():
             digest, relative = line.split('  ', 1)
@@ -590,7 +619,8 @@ def prepare(repo, state):
         received['inputs/hold.json'] = identity((state / 'inputs/hold.json').read_bytes())
         held, guard = install_guard(repo, state)
         protected = {row['path'] for row in held}
-        classes = population.derive_classes(repo)
+        classes = (population.derive_classes(repo, current_stage=stage) if current_checkout
+                   else population.derive_classes(repo))
         require(not protected & {row[key] for row in classes for key in ('alias', 'canonical')}, 'Protected member selected')
         required = population.derive_required(repo, classes)
         required_rows = []
@@ -616,17 +646,24 @@ def prepare(repo, state):
                 and before['tree'] == git(repo, 'rev-parse', 'HEAD^{tree}').decode().strip(),
                 'Current complete checkout differs from the admitted hosted commit')
         rows = {row['path']: row for row in before['rows']}
+        trial_aliases = {row['alias'] for row in classes if row['alias'] in rows}
+        retired_aliases = {row['alias'] for row in classes} - trial_aliases
+        require(current_checkout or not retired_aliases, 'Historical trial requires all aliases present')
+        require(all(not os.path.lexists(repo / path) for path in retired_aliases),
+                'Retired alias is not absent before trial')
         for row in classes:
             for key in ('alias', 'canonical'):
+                if key == 'alias' and row[key] in retired_aliases:
+                    continue
                 current = rows[row[key]]
                 require((current['sha256'], current['bytes'], current['git_blob'], current['index_mode'], current['mode']) ==
                         (row['sha256'], row['bytes'], row['blob'], row['mode'], 0o644), 'Finite public source differs')
         save(state / 'before.json', before)
         save(state / 'classes.json', classes)
         received['classes.json'] = identity((state / 'classes.json').read_bytes())
-        preimages = save_preimages(repo, state, {row[key] for row in classes for key in ('alias', 'canonical')}
-                                  | set(GENERATED), protected)
-        require(len(preimages) == 2265, 'Restoration preimage count differs')
+        preimages = save_preimages(repo, state, trial_aliases
+                                  | {row['canonical'] for row in classes} | set(GENERATED), protected)
+        require(len(preimages) == 2265 - len(retired_aliases), 'Restoration preimage count differs')
         require((repo / '.git/index').read_bytes() == (state / 'original-index').read_bytes(), 'Index changed during backup')
         require(vector(repo, state, held) == before and guard.denials == 0, 'Preparation observation or boundary drift')
         info = repo.stat()
@@ -636,8 +673,10 @@ def prepare(repo, state):
             'harness': identity(harness), 'input_files': received, 'before': identity((state / 'before.json').read_bytes()),
             'preimages': identity((state / 'preimages.json').read_bytes()),
             'raw_index': identity((state / 'original-index').read_bytes()), 'original_census_paths': len(originals),
-            'originals': 1180, 'unique_canonicals': 1082, 'preimage_paths': 2265,
-            'tracked_before': len(before['rows']), 'expected_absent_tracked': len(before['rows']) - 1180,
+            'originals': 1180, 'unique_canonicals': 1082, 'preimage_paths': len(preimages),
+            'profile': 'current-checkout1180-v1' if current_checkout else 'historical-all-present1180-v1',
+            'initially_absent_aliases': sorted(retired_aliases), 'trial_removed_aliases': sorted(trial_aliases),
+            'tracked_before': len(before['rows']), 'expected_absent_tracked': len(before['rows']) - len(trial_aliases),
             'held_denials': guard.denials, 'held_worktree_body_integrity': 'UNKNOWN', 'index_lock_before': 'ABSENT'}
         save(state / 'PREPARED.json', prepared)
         print(json.dumps({'status': prepared['status'], 'preimages': len(preimages),
@@ -656,6 +695,7 @@ def restore(repo, state, *, held=None, guard=None):
     save(attempt / 'START.json', {'mode': 'RECOVER_ONLY', 'prepared': identity((state / 'PREPARED.json').read_bytes())})
     try:
         recover_native_boundary(repo, state, prepared, attempt)
+        require_retired_absence(repo, prepared)
         restore_preimages(repo, state, prepared, before, {r['path'] for r in held})
         after = vector(repo, state, held, expected_paths={r['path'] for r in before['rows']})
         require(after == before, 'Complete restored public/index/tree/directory/held-metadata vector differs')
@@ -787,26 +827,33 @@ def execute(repo, state):
         require(vector(repo, state, held) == before, 'Prepared trial changed')
         classes = class_rows(state)
         aliases = {r['alias'] for r in classes}
+        trial_aliases = aliases & {row['path'] for row in before['rows']}
+        require(sorted(aliases - trial_aliases) == prepared.get('initially_absent_aliases', [])
+                and sorted(trial_aliases) == prepared.get('trial_removed_aliases', sorted(aliases)),
+                'Prepared current alias partition differs')
+        require(all(not os.path.lexists(repo / path) for path in aliases - trial_aliases),
+                'Previously retired alias reappeared')
         save(state / 'EXECUTION-START.json', {'prepared': identity((state / 'PREPARED.json').read_bytes()), 'process': process_identity(),
                                            'intended_absences': sorted(aliases), 'status': 'STARTED_NOT_TERMINAL'})
-        result = {'status': 'RUNNING', 'phases': [], 'held_worktree_body_integrity': 'UNKNOWN'}
+        result = {'status': 'RUNNING', 'phases': [], 'held_worktree_body_integrity': 'UNKNOWN',
+                  'trial_scope': trial_partition(prepared, before, classes)}
         failure = None
         try:
-            for relative in sorted(aliases):
+            for relative in sorted(trial_aliases):
                 path = safe_path(repo, relative, protected={r['path'] for r in held}, allow_missing=False)
                 path.unlink()
                 fsync_dir(path.parent)
             observation = observe_absence(repo, aliases)
             save(state / 'ABSENCE-AFTER-UNLINK.json', observation)
             require(observation['complete'], 'Complete absence after unlink is required')
-            git(repo, 'update-index', '--force-remove', '--', *sorted(aliases), state=state)
+            git(repo, 'update-index', '--force-remove', '--', *sorted(trial_aliases), state=state)
             with (repo / '.git/index').open('rb') as stream:
                 os.fsync(stream.fileno())
             fsync_dir(repo / '.git')
             observation = observe_absence(repo, aliases)
             save(state / 'ABSENCE-AFTER-INDEX.json', observation)
             require(observation['complete'], 'Complete absence after index removal is required')
-            removed = prune_empty_parents(repo, aliases)
+            removed = prune_empty_parents(repo, trial_aliases)
             observation = observe_absence(repo, aliases)
             save(state / 'ABSENCE-AFTER-PRUNE.json', observation)
             require(observation['complete'], 'Complete absence after pruning is required')
@@ -1036,6 +1083,7 @@ def bounded_phase(repo, state, phase, token, identity_fd):
     boundary = None
     try:
         classes = class_rows(state)
+        receipt['trial_scope'] = trial_partition(prepared, before, classes)
         aliases = {r['alias'] for r in classes}
         observation = observe_absence(repo, aliases)
         save(out / 'ABSENCE-CHILD-ENTRY.json', observation)
@@ -2431,7 +2479,7 @@ def execute_public_fixtures(repo, state, received):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', choices=('run', 'restore', 'export', '_phase', 'run-fixtures', 'restore-fixtures', 'export-fixtures', '_fixture-phase'))
+    parser.add_argument('command', choices=('run', 'run-current', 'restore', 'export', '_phase', 'run-fixtures', 'restore-fixtures', 'export-fixtures', '_fixture-phase'))
     parser.add_argument('--repo', type=Path, default=Path(os.environ.get('GITHUB_WORKSPACE', '.')))
     parser.add_argument('--state', type=Path,
                         default=Path(os.environ.get('RUNNER_TEMP', '.')) / 'r0002-source-alias-absence')
@@ -2479,8 +2527,8 @@ def main():
         raise KeyboardInterrupt('Hosted runner interrupted by signal ' + str(signum))
     signal.signal(signal.SIGTERM, interrupted)
     signal.signal(signal.SIGHUP, interrupted)
-    if args.command == 'run':
-        prepare(repo, state)
+    if args.command in ('run', 'run-current'):
+        prepare(repo, state, current_checkout=args.command == 'run-current')
         execute(repo, state)
     elif args.command == 'restore':
         admit_hosted_checkout(repo, state, fresh=False, saved=True)

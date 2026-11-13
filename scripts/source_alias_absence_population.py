@@ -60,7 +60,18 @@ def public_consumers(repo):
         result.append(module)
     return result
 
-def derive_classes(repo: Path) -> list[dict]:
+def current_alias_present(repo, alias, canonical, identity, stage):
+    """Current index partition only; canonical body was independently authenticated."""
+    expected = (identity['mode'], identity['blob'])
+    require(stage.get(canonical) == expected, 'Current retained index identity differs')
+    if alias not in stage:
+        require(not os.path.lexists(Path(repo) / alias), 'Retired alias remains in worktree')
+        return False
+    require(stage.get(alias) == expected, 'Current alias index identity differs')
+    return True
+
+
+def derive_classes(repo: Path, *, current_stage=None) -> list[dict]:
     repo = Path(repo).resolve()
     snapshot, source = public_consumers(repo)
     originals = original_tree(repo)
@@ -78,8 +89,9 @@ def derive_classes(repo: Path) -> list[dict]:
             require(originals.get(alias) == originals.get(canonical) and alias in originals,
                     'Alias and retained original tree identities differ')
             identity = public_identity(repo, canonical, originals[alias])
-            require(public_identity(repo, alias, originals[alias]) == identity,
-                    'Present original and retained identities differ')
+            if current_stage is None or current_alias_present(repo, alias, canonical, identity, current_stage):
+                require(public_identity(repo, alias, originals[alias]) == identity,
+                        'Present original and retained identities differ')
             if cohort == '824':
                 expected = deep[alias.removeprefix(snapshot.PMR007_DEEP_PREFIX + '/')]
             elif cohort == '98':
