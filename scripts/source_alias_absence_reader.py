@@ -171,8 +171,9 @@ class HeldReaderDiffBoundary:
         The received census is a summary, not a complete sized entry vector.
         Its digest is bound to the owner map but is not recomputed here. Native
         tree membership is authenticated by the pinned commit/tree. Only the
-        existing reader's finite original-identity maps supply logical sizes;
-        no Git object size query or held-body read is performed.
+        existing reader's finite original-identity maps and authenticated public
+        source-map edition supply logical sizes; no Git object size query
+        or held-body read is performed.
         """
         if hashlib.sha256(census_body).hexdigest() != CENSUS_SHA256:
             raise RuntimeError("Reader census differs from received public metadata")
@@ -218,6 +219,40 @@ class HeldReaderDiffBoundary:
                         or row["bytes"] not in (None, size)):
                     raise RuntimeError("Pinned public context identity differs: " + path)
                 row["bytes"] = size
+        # The current source-map edition supplies public formal-original sizes.
+        # Do not use ls-tree -l or open historical/held bodies to obtain them.
+        source_map_path = "docs/provenance/v5-research-continuations/SOURCE_MAP.json"
+        if source_map_path in reader.CONTINUATION_OWNER_ORIGINAL:
+            expected = reader.CONTINUATION_OWNER_CURRENT[source_map_path]
+            if source_map_path in self.held or expected[0] in held_oids:
+                raise RuntimeError("Held identity cannot enter a sized public context")
+            source_map = reader.safe_path(self.root, source_map_path).read_bytes()
+            identity = (hashlib.sha1(b"blob " + str(len(source_map)).encode() + b"\0" + source_map).hexdigest(),
+                        hashlib.sha256(source_map).hexdigest(), len(source_map))
+            if identity == expected:
+                for source in json.loads(source_map)["sources"]:
+                    path = source.get("path")
+                    if not isinstance(path, str) or not path.startswith("formal/type-theory/"):
+                        continue
+                    sha, size = source.get("sha256"), source.get("bytes")
+                    if (not isinstance(sha, str) or len(sha) != 64
+                            or any(c not in "0123456789abcdef" for c in sha)
+                            or type(size) is not int or size <= 0
+                            or source.get("projection") != "EXACT" or source.get("derivation") is not None
+                            or source.get("original_sha256") != sha
+                            or type(source.get("original_bytes")) is not int
+                            or source["original_bytes"] != size):
+                        raise RuntimeError("Pinned public provider metadata differs")
+                    original = reader.CONTINUATION_COPY_ROOT + sha + ".lean"
+                    row = indexed.get(original)
+                    if original in self.held or (row is not None and row["git_oid"] in held_oids):
+                        raise RuntimeError("Held identity cannot enter a sized public context")
+                    if row is None:
+                        continue  # The production provider validator reports missing originals.
+                    if ((row["mode"], row["kind"]) != ("100644", "blob")
+                            or row["bytes"] not in (None, size)):
+                        raise RuntimeError("Pinned public provider baseline differs: " + original)
+                    row["bytes"] = size
         return indexed
 
     def receipt(self):

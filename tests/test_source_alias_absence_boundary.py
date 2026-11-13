@@ -884,6 +884,28 @@ class PublicFixtureAuthenticatedCurrentnessControls(unittest.TestCase):
             old, new = ('original owner '+str(n)+'\n').encode(), ('current owner '+str(n)+'\n').encode()
             self.write(path, old)
             self.original[path], self.current[path] = self.edition(old), self.edition(new)
+        # Finite artificial continuation providers, with exact original Git
+        # identities. Exercise the real 206-ID / 39-provider contract.
+        self.continuation_bodies = {}
+        continuation_rows = []
+        for n in range(39):
+            body = ('-- artificial continuation provider '+str(n)+'\n').encode()
+            sha = hashlib.sha256(body).hexdigest()
+            original = self.reader.CONTINUATION_COPY_ROOT + sha + '.lean'
+            current = 'formal/type-theory/artificial-provider-'+str(n)+'.lean'
+            self.write(original, body)
+            self.continuation_bodies[current] = body
+        providers = list(self.continuation_bodies.items())
+        for n in range(206):
+            path, body = providers[n % 39]
+            sha = hashlib.sha256(body).hexdigest()
+            continuation_rows.append({'id': 'artificial-source-'+str(n), 'path': path,
+                'sha256': sha, 'bytes': len(body), 'projection': 'EXACT',
+                'derivation': None, 'original_sha256': sha, 'original_bytes': len(body)})
+        self.continuation_map_body = runner.json_bytes({'sources': continuation_rows})
+        self.current[self.reader.CONTINUATION_OWNER_PATHS[2]] = self.edition(self.continuation_map_body)
+        self.write('research/artificial-new250-original.md', b'Artificial NEW250 exact original.\n')
+        self.write('research/t20-v6-20261012/CURRENT_SOURCE_GRAPH.json', runner.json_bytes({'artificial_fixture': True}))
         self.base_path = str(Path('docs')/'context-base.md')
         self.write(self.base_path, b'An artificial original public source.\n')
         self.git('add', '--all')
@@ -912,6 +934,29 @@ class PublicFixtureAuthenticatedCurrentnessControls(unittest.TestCase):
         for path in self.original:
             n = sorted(self.original).index(path)
             self.write(path, ('current owner '+str(n)+'\n').encode())
+        self.write(self.reader.CONTINUATION_OWNER_PATHS[2], self.continuation_map_body)
+        for path, body in self.continuation_bodies.items():
+            self.write(path, body)
+        # NEW250 uses one authentic artificial original and the unchanged
+        # production snapshot/schema/index/byte validators, not an empty mock.
+        packed = b'Artificial NEW250 exact original.\n'
+        member_path = 'research/artificial-new250-original.md'
+        blob, sha, size = self.edition(packed)
+        member = {'path': member_path, 'offset': 0, 'bytes': size, 'sha256': sha,
+            'blob': blob, 'public': {'repository_path': member_path,
+                'public_sha256': sha, 'public_bytes': size}, 'continuations': [],
+            'original': {'blob': blob, 'commit': self.baseline, 'tree': tree,
+                'mode': '100644', 'path': member_path, 'all_blob_aliases': [member_path],
+                'type': 'blob', 'evidence_type': 'finite artificial original'}}
+        catalog = runner.json_bytes({'version': 1,
+            'receiver': {'blob': blob, 'sha256': sha, 'bytes': size}, 'members': [member]})
+        (self.repo/member_path).unlink()
+        self.write(self.source.NEW250_CATALOG, catalog)
+        self.write(self.source.NEW250_RECEIVER, packed)
+        for name, value in {'NEW250_MEMBERS': (member,), 'NEW250_PATHS': frozenset({member_path}),
+                'NEW250_CATALOG_IDENTITY': self.edition(catalog)}.items():
+            self.enterContext(patch.object(self.source, name, value))
+        self.enterContext(patch.object(self.reader, 'NEW250_PATHS', frozenset({member_path})))
         for name, values in [('FIXTURE_CONSUMER_ORIGINAL', self.original),
                              ('FIXTURE_CONSUMER_CURRENT', self.current)]:
             self.enterContext(patch.object(self.reader, name, {p: values[p] for p in fixture_paths}))
@@ -943,6 +988,80 @@ class PublicFixtureAuthenticatedCurrentnessControls(unittest.TestCase):
         self.sync_metadata()
         (self.state/'inputs/hold.json').write_text(json.dumps({'held': self.held}))
         self.git('add', '--all')
+        self.install_artificial_next250()
+
+    def install_artificial_next250(self):
+        # Artificial receipt-shaped inputs for validator tests only. These are
+        # not actual research reviews, historical receipts or production evidence.
+        prefix = 'docs/provenance/r0002-next250-receiver/'
+        path = 'research/artificial-next250-original.md'
+        body = b'Artificial finite NEXT250 member; no scientific claim.\n'
+        oid, sha, size = self.edition(body)
+        public = {'repository_path': path, 'source_sha256': sha, 'public_sha256': sha,
+                  'source_bytes': size, 'public_bytes': size, 'role': 'authored_proof', 'disposition': 'ADD_EXACT'}
+        member = {'path': path, 'blob': oid, 'sha256': sha, 'bytes': size, 'offset': 0, 'public': public}
+        universe = 'research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json'
+        graph = 'research/t20-v6-20261012/CURRENT_SOURCE_GRAPH.json'
+        self.write(universe, runner.json_bytes({'objects': [public]}))
+        self.write(graph, runner.json_bytes({'artificial_fixture': True}))
+        self.git('add', '--all')
+        provisional_tree = self.git('write-tree').decode().strip()
+        base = {'commit': self.baseline, 'tree': self.owner['baseline']['tree']}
+        self.git('update-ref', 'HEAD', self.baseline)
+        policy = {}
+        def spec(p, role, origin='qualified_provisional'):
+            out = {'path': p, 'identity': list(self.edition((self.repo/p).read_bytes())), 'role': role, 'origin': origin}
+            policy[p] = {'role': role, 'origin': origin}
+            return out
+        changed = self.git('diff-tree', '--no-commit-id', '--no-renames', '-r', '--name-only', '-z', base['tree'], provisional_tree).decode().rstrip('\0').split('\0')
+        changed = [] if changed == [''] else changed
+        changes = [{'path': p, 'before_entry': self.git('ls-tree','-z',base['tree'],'--',p).decode(),
+                    'after_entry': self.git('ls-tree','-z',provisional_tree,'--',p).decode()} for p in sorted(changed)]
+        qualification = {'verdict':'QUALIFIED_PROVISIONAL_INPUT', 'published_base':base,
+            'tree':provisional_tree, 'permitted_changes':changes,
+            'independent_review_sha256':self.hashlib.sha256(b'artificial fixture review token, not a real review').hexdigest()}
+        self.write(prefix+'PROVISIONAL-QUALIFICATION.json',runner.json_bytes(qualification))
+        qspec = spec(prefix+'PROVISIONAL-QUALIFICATION.json','provisional_qualification','reviewed_receipt')
+        uspec = spec(universe,'source_universe')
+        profiles = {}
+        for name,count in [('original1180',1180),('public123',123),('current250',250),('historical_providers',1)]:
+            profiles[name] = {'metadata_inputs':[uspec], 'rows':[
+                {'key':name+str(i), 'paths':['research/artificial-profile/'+name+'/'+str(i)+'.md'],
+                 'source_identities':[self.hashlib.sha256((name+str(i)).encode()).hexdigest()]} for i in range(count)]}
+        contexts = {k:spec(p,'consumer_context') for k,p in {
+            'crosswalk':str(self.metadata_root/'CROSSWALK.json'), 'owner_map':str(self.metadata_root/'OWNER-MAP.json'), 'source_graph':graph}.items()}
+        logic = self.hashlib.sha256(b'artificial finite fixture consumer edition').hexdigest()
+        edition = {'published_base':base,'provisional_tree':provisional_tree,'source_universe':uspec,
+            'separation_profiles':profiles,'consumer_contexts':contexts,'reader_rows':{}}
+        receipt = {'status':'INDEPENDENTLY_VERIFIED_FALLBACK_ONLY','paths':[path],
+            'consumers':['resolver','projection','reader','references'], 'input_edition':edition,
+            'consumer_logic_sha256':logic,'evidence':[{'path':path,'consumer':c,
+            'predicate_record':'Artificial test predicate record, not research evidence',
+            'context_record':'Artificial test context record, not historical provenance'} for c in ['resolver','projection','reader','references']]}
+        self.write(prefix+'FALLBACK-REACHABILITY.json',runner.json_bytes(receipt))
+        rspec = spec(prefix+'FALLBACK-REACHABILITY.json','fallback_reachability','reviewed_receipt')
+        acceptance = {'verdict':'ACCEPT_FINITE_FALLBACK_EVIDENCE','receipt':rspec,
+                      'input_edition':edition,'consumer_logic_sha256':logic}
+        self.write(prefix+'FALLBACK-ACCEPTANCE.json',runner.json_bytes(acceptance))
+        aspec = spec(prefix+'FALLBACK-ACCEPTANCE.json','reachability_acceptance','reviewed_receipt')
+        binding = {'status':'BOUND','members':[member],'published_base':base,
+            'catalog_path':prefix+'CATALOG.json','receiver_path':prefix+'RECEIVER.bin',
+            'receiver_identity':list(self.edition(body)),'source_universe':uspec,
+            'separation_profiles':profiles,'fallback_reachability':rspec,
+            'provisional_input':{'tree':provisional_tree,'qualification':qspec,'expected_document':qualification},
+            'metadata_policy':policy,'consumer_logic_sha256':logic,'reachability_acceptance':aspec,
+            'consumer_contexts':contexts,'reader_rows':{}}
+        catalog = {'version':1,**{k:binding[k] for k in ['members','receiver_identity','published_base',
+            'source_universe','separation_profiles','fallback_reachability','provisional_input',
+            'metadata_policy','consumer_logic_sha256','reachability_acceptance','consumer_contexts','reader_rows']}}
+        self.write(binding['catalog_path'],runner.json_bytes(catalog));self.write(binding['receiver_path'],body)
+        binding['catalog_identity'] = list(self.edition(runner.json_bytes(catalog)))
+        provider = self.source.FiniteSourceProvider(binding,self.source._New250Walk,self.source._new250_path,
+                                                   self.source._new250_identity,self.source._new250_json)
+        self.enterContext(patch.object(self.source,'NEXT250',provider))
+        self.enterContext(patch.object(self.source,'NEXT250_PATHS',provider.paths))
+        self.enterContext(patch.object(self.reader,'NEXT250',provider))
+        self.git('add','--all')
 
     def git(self, *args, input=None):
         return subprocess.run(['git', '--no-replace-objects', *args], cwd=self.repo,
