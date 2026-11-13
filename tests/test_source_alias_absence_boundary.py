@@ -1119,14 +1119,14 @@ class PublicFixtureReconciliationCommandControls(unittest.TestCase):
         # path read or an empty catalogue. No resolver module is imported.
         resolver_path = source_path.with_name('resolve_t20_v6_source.py')
         resolver_constants = {'DIGEST_RECORD_BASE', 'DIGEST_RECORD_TREE_SHA256',
-                              'DIGEST_RECORD_GROUPS', 'DIGEST_RECORD_PATHS'}
+                              'DIGEST_RECORD_GROUPS', 'DIGEST_RECORD_PATHS', 'ADMISSION_RECORD_ROUNDS_PATH', 'ADMISSION_RECORD_MEMBERS', 'ADMISSION_RECORD_MEMBERS_SHA256', 'ADMISSION_RECORD_PATHS'}
         resolver_functions = {
             'digest', '_administrative_git', '_binding_record_root',
             '_binding_record_present', '_binding_record_current_state',
             '_digest_record_root', '_digest_record_state',
             '_digest_record_current_bytes', '_digest_record_bound_bytes',
             '_digest_record_read', '_digest_record_catalog',
-            '_digest_record_view_binding', 'digest_record_view_bytes',
+            '_digest_record_view_binding', 'digest_record_view_bytes', 'admission_record_bytes',
         }
         resolver_selected, resolver_found = [], set()
         for node in ast.parse(resolver_path.read_bytes(), filename=str(resolver_path)).body:
@@ -1139,9 +1139,11 @@ class PublicFixtureReconciliationCommandControls(unittest.TestCase):
         if resolver_found != resolver_constants | resolver_functions:
             raise AssertionError('Exact digest custody dependency population changed')
         resolver_namespace = {'pathlib': pathlib, 'hashlib': hashlib, 're': re,
-                              'os': os, 'stat': stat, 'subprocess': types.SimpleNamespace()}
+                              'os': os, 'stat': stat, 'json': json, 'subprocess': types.SimpleNamespace()}
         exec(compile(ast.Module(body=resolver_selected, type_ignores=[]),
                      str(resolver_path), 'exec'), resolver_namespace)
+        namespace['ADMISSION_RECORD_ROUNDS_PATH'] = resolver_namespace['ADMISSION_RECORD_ROUNDS_PATH']
+        namespace['admission_record_bytes'] = resolver_namespace['admission_record_bytes']
         namespace['DIGEST_RECORD_PATHS'] = resolver_namespace['DIGEST_RECORD_PATHS']
         namespace['digest_record_view_bytes'] = resolver_namespace['digest_record_view_bytes']
         exec(compile(ast.Module(body=selected, type_ignores=[]), str(source_path), 'exec'), namespace)
