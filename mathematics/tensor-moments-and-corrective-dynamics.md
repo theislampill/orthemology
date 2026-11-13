@@ -1123,6 +1123,30 @@ For any polynomial $`P`$ nonnegative on all of $`\mathbb R^d`$, the fibre repres
 
 The first scalar Hamburger step is not already a joint representation. Nor is uniqueness of an existing joint measure a substitute for this existence step. The proof preserves both distinctions.
 
+**Static corollary (unweighted energy bounds).** Let $`L`$ be a normalized square-positive functional on $`\mathbb R[x_1,\ldots,x_d]`$, and let $`H`$ be a coercive SOS polynomial. Suppose, for $`M\ge1`$ and $`a>0`$,
+```math
+L(H^n)\le M n!a^n\qquad(n\ge0).
+```
+Then $`L`$ has a unique representing probability $`\mu`$, all polynomials are absolutely integrable, and
+```math
+\int e^{sH}\,d\mu\le\frac{M}{1-as}\qquad(0\le s<1/a).
+```
+This is a static statement: no hierarchy, initial representing measure, coordinate Carleman condition or radial SOS-domination certificate is assumed.
+
+Indeed, polynomial-functional Cauchy–Schwarz and $`\binom{4n}{2n}\le2^{4n}`$ give
+```math
+0\le L(q^2H^{2n})
+ \le\sqrt{L(q^4)L(H^{4n})}
+ \le\sqrt{M L(q^4)}\,(2n)!(2a)^{2n}.
+```
+Thus Lemma 11 applies with the same $`b=1/(2a)`$ for every $`q`$, including when $`L(q^4)=0`$; no division by that value is made. Only after representation is obtained do nonnegativity of $`H`$ and monotone convergence justify the exponential-series bound. Any two representatives have these exponential energy tails. Their signed energy pushforwards weighted by each polynomial have zero moments and exponential absolute tails, hence vanish. Their restrictions to every compact sublevel $`\{H\le R\}`$ therefore agree on polynomials; polynomial density and exhaustion give uniqueness.
+
+The existence and uniqueness conclusion also holds for an arbitrary coercive real polynomial $`H`$ if only the even bounds $`L(H^{2n})\le M(2n)!a^{2n}`$ are supplied. The same Cauchy–Schwarz estimate gives existence; the cosh series then gives exponential $`|H|`$ integrability at every rate below $`1/a`$, sufficient for the same uniqueness proof. This variant does not assert the displayed nonnegative-energy bound for signed $`H`$.
+
+The zero-bound case is separate. If $`L(H^2)=0`$, Cauchy–Schwarz gives $`L(Hp)=0`$ for every polynomial $`p`$. For coercive $`H`$, the compact algebraic-set theorem represents $`L`$ on $`\{H=0\}`$; compact-support determinacy gives uniqueness. If that set is empty, no such normalized functional exists.
+
+This corollary and its factorial comparison are incorporated from the [original energy-moment clarification](https://github.com/theislampill/orthemology/blob/eb3cfed15f2b4462959d6e7345d23e27559bdeb6/research/t20-v6-20261012/sources/1c2ded55709895926aae286819634756d9c0a223523bb9e610ad624f0bf576cf/RESULT.md). They apply inherited representation and determinacy arguments, rather than supplying a new representation theorem or independent review. Static determinacy alone does not justify a transport PDE or a polynomial-to-smooth-test passage. The source's primary-reading and finite-control reports remain historical reports; neither was rerun here.
+
 ### 5.4 The arbitrary coercive theorem
 
 **Theorem 12 (coercive square-positivity theorem).** Let $`h\in\mathbb R[x_1,\ldots,x_d]`$ be coercive, meaning $`h(x)\to+\infty`$ as $`|x|\to\infty`$. Every normalized coordinatewise $`C^1`$ square-positive solution of (1) is the full moment path of $`\mathcal T_t^h\mu`$ for a unique $`\mu\in\mathcal P_\infty(\mathbb R^d)`$. Its record is determinate at every positive time. For each valid initial record, its square-positive hierarchy paths are in bijection with its initial representing laws; every such path has a unique global continuation.
