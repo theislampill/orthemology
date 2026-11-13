@@ -155,9 +155,9 @@ authored:
     meniscus: MENISCUS_NOT_REACHED
     natural_closure: NATURAL_CLOSURE_NOT_REACHED
 derived:
-  source_tree_digest: 1816a4f80569871fa805842349f673fc0a6a2dca01ee8498fb0ecf249d7cf36a
+  source_tree_digest: 47854727d1fe852f063b2c058ac14bbad0be93511c2dd78b8bef87d659356dec
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 12781
+  tracked_files: 12778
   decision_ids:
   - '0001'
   - '0002'
