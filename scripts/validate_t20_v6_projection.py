@@ -30,6 +30,7 @@ from resolve_t20_v6_source import (
     CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths,
     CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_duplicate_paths,
     FORMAL_COPY_PATHS, formal_duplicate_paths,
+    FORMAL_PROVIDER_PATHS, formal_provider_absences,
     CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_duplicate_paths,
     CONTINUATION_REGISTRY_PATH, SUCCESSOR_INPUT_PATHS, GENERATED_FIXTURE_PATHS,
     SUCCESSOR_INPUT_REGISTRY, successor_input_registry_document, successor_input_absences,
@@ -277,6 +278,7 @@ def check_preserved_roots(root, objects):
     record_authenticated = None
     package_authenticated = None
     formal_authenticated = None
+    formal_providers_authenticated = None
     code_authenticated = None
     digest_authenticated = None
     input_registry_authenticated = None
@@ -340,6 +342,10 @@ def check_preserved_roots(root, objects):
                     status == 'D' and path in FORMAL_COPY_PATHS
                     for status, path in zip(changes[::2], changes[1::2])):
                 formal_authenticated = formal_duplicate_paths(root)
+            if formal_providers_authenticated is None and any(
+                    status == 'D' and path in FORMAL_PROVIDER_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                formal_providers_authenticated = formal_provider_absences(root)
             if code_authenticated is None and any(
                     status == 'D' and path in CHECKPOINT_CODE_COPY_PATHS
                     for status, path in zip(changes[::2], changes[1::2])):
@@ -422,6 +428,7 @@ def check_preserved_roots(root, objects):
                         (status == 'D' and path in (binding_absences_authenticated or ())) or
                         (status == 'D' and path in (package_authenticated or ())) or
                         (status == 'D' and path in (formal_authenticated or ())) or
+                        (status == 'D' and path in (formal_providers_authenticated or ())) or
                         (status == 'D' and path in (code_authenticated or ())) or
                         (status == 'D' and path in (digest_authenticated or ())) or
                         (status == 'D' and path in (input_absences_authenticated or ())) or
