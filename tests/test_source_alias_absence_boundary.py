@@ -240,9 +240,22 @@ print(json.dumps(result, sort_keys=True))
             (state / 'preimages.json').write_bytes(preimages)
             index = b'artificial index identity fixture\n'
             (state / 'original-index').write_bytes(index)
-            before = runner.json_bytes({'artificial_fixture': True})
+            # Complete artificial finite membership, not source-body or hosted proof.
+            classes = [dict(alias=f'alias/{i}', canonical=f'canonical/{i}', cohort='824')
+                       for i in range(824)]
+            classes += [dict(alias=f'alias/{824+i}', canonical=f'canonical/{824+i}', cohort='258')
+                        for i in range(258)]
+            classes += [dict(alias=f'alias/{1082+i}', canonical=f'canonical/{i}', cohort='98')
+                        for i in range(98)]
+            class_body = runner.json_bytes(classes)
+            (state / 'classes.json').write_bytes(class_body)
+            before = runner.json_bytes({'artificial_fixture': True,
+                'rows': [{'path': path} for path in sorted(
+                    {row['alias'] for row in classes} | {row['canonical'] for row in classes})]})
             (state / 'before.json').write_bytes(before)
             prepared = json.loads((state / 'PREPARED.json').read_bytes())
+            prepared['input_files']['classes.json'] = runner.identity(class_body)
+            prepared.update(expected_absent_tracked=1082, preimage_paths=2265)
             info = self.repo.stat()
             prepared.update(repo=str(self.repo), state=str(state), repo_inode=[info.st_dev, info.st_ino],
                 harness=runner.identity(Path(runner.__file__).read_bytes()), before=runner.identity(before),
@@ -252,9 +265,10 @@ print(json.dumps(result, sort_keys=True))
         with patch.object(runner, 'admit_hosted_checkout', return_value={}), patch.object(runner, 'runtime', return_value={}):
             valid, body_path = fixture('valid-authentication')
             _, before = runner.authenticate_state(self.repo, valid)
-            self.assertEqual(before, {'artificial_fixture': True})
+            self.assertTrue(before['artificial_fixture'])
+            self.assertEqual(len(before['rows']), 2262)
             selected = ['PREPARED.json', 'inputs/SOURCE-IDENTITIES.json', 'inputs/boundary.py',
-                        'before.json', 'preimages.json', 'original-index', body_path]
+                        'classes.json', 'before.json', 'preimages.json', 'original-index', body_path]
             read_bytes = Path.read_bytes
             for number, (relative, kind) in enumerate((r, k) for r in selected for k in ('symlink', 'hardlink')):
                 with self.subTest(relative=relative, kind=kind):

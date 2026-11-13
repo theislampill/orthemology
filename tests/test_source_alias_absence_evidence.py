@@ -323,4 +323,47 @@ class PublicFixtureControlReaderGraphRevisionTests(unittest.TestCase):
         (self.root/'GRAMMAR-ONLY.json').write_text(json.dumps({'negative_cases':len(variants),'actual_hosted_execution':False}))
 
 
+class CurrentEvidence(unittest.TestCase):
+ def setUp(self):
+  self.classes=[{'alias':f'a{i}','canonical':f'c{i%1082}'} for i in range(1180)]
+  self.before={'rows':[{'path':f'a{i}'} for i in range(114,1180)]+[{'path':f'c{i}'} for i in range(1082)]+[{'path':f'g{i}'} for i in range(3)]}
+  self.prepared={'profile':'current-checkout1180-v1','initially_absent_aliases':[f'a{i}' for i in range(114)],'trial_removed_aliases':[f'a{i}' for i in range(114,1180)],'preimage_paths':2151,'expected_absent_tracked':1085}
+  for k in ('initially_absent_aliases','trial_removed_aliases'):self.prepared[k].sort()
+ def test_current(self):self.assertEqual(evidence.prepared_alias_scope(self.prepared,self.before,self.classes)['planned_trial_removals'],1066)
+ def test_legacy(self):
+  self.before['rows'] += [{'path':f'a{i}'} for i in range(114)];self.prepared={'preimage_paths':2265,'expected_absent_tracked':1085};self.assertEqual(evidence.prepared_alias_scope(self.prepared,self.before,self.classes)['previously_absent_aliases'],0)
+ def test_relabelled_current_fails(self):
+  self.prepared['profile']='historical-all-present1180-v1';self.assertRaises(RuntimeError,evidence.prepared_alias_scope,self.prepared,self.before,self.classes)
+ def test_wrong_backup_count(self):
+  self.prepared['preimage_paths']=2265;self.assertRaises(RuntimeError,evidence.prepared_alias_scope,self.prepared,self.before,self.classes)
+ def test_wrong_partition(self):
+  self.prepared['initially_absent_aliases'].pop();self.assertRaises(RuntimeError,evidence.prepared_alias_scope,self.prepared,self.before,self.classes)
+ def test_missing_canonical(self):
+  self.before['rows']=[r for r in self.before['rows'] if r['path']!='c0'];self.assertRaises(RuntimeError,evidence.prepared_alias_scope,self.prepared,self.before,self.classes)
+
+class CurrentReceiverEarlyRejection(unittest.TestCase):
+    setUp = CurrentEvidence.setUp
+    def check_receiver(self, wrong_scope):
+        from unittest.mock import patch
+        before_body = json.dumps(self.before).encode()
+        self.prepared.update(held_denials=0, originals=1180, unique_canonicals=1082,
+            original_census_paths=16103, input_files={}, before=evidence.identity(before_body),
+            preimages=evidence.identity(b'[]'))
+        scope = evidence.prepared_alias_scope(self.prepared, self.before, self.classes)
+        terminal = {'trial_scope': {} if wrong_scope else scope}
+        data = {'EXECUTION-TERMINAL.json': terminal, 'PREPARED.json': self.prepared,
+                'classes.json': self.classes}
+        # Isolate receiving checks after the unchanged terminal gate. This does
+        # not construct or claim a successful hosted thirteen-phase packet.
+        with patch.object(evidence, 'terminal_complete', return_value=True), \
+             patch.object(evidence, 'read_json', side_effect=lambda state, name: data[name]), \
+             patch.object(evidence, 'read', side_effect=lambda state, name: before_body if name=='before.json' else b'[]'):
+            result = evidence.receive_execution(Path('/unused'), PHASES)
+        self.assertFalse(result['qualified'])
+        self.assertIn('Current terminal trial scope differs' if wrong_scope else 'Current preimage membership differs', result['error'])
+    def test_receiver_rejects_wrong_scope(self): self.check_receiver(True)
+    def test_receiver_rejects_wrong_preimage_membership(self): self.check_receiver(False)
+
+
 if __name__ == '__main__': unittest.main()
+

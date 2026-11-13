@@ -81,6 +81,29 @@ def whitelisted_files(state, phases):
                 names.add(f'{category}/{path.name}')
     return [ordinary_source(state, name) for name in sorted(names) if os.path.lexists(state / name)]
 
+def prepared_alias_scope(prepared, before, classes):
+    """Receive historical/current scope from authenticated identities, not labels."""
+    aliases = {row['alias'] for row in classes}
+    retained = {row['canonical'] for row in classes}
+    paths = {row['path'] for row in before['rows']}
+    require(len(classes) == len(aliases) == 1180 and len(retained) == 1082
+            and not aliases & retained and retained <= paths, 'Complete retained population differs')
+    require(len(paths) == len(before['rows']), 'Repeated before-vector path')
+    present, retired = aliases & paths, aliases - paths
+    profile = prepared.get('profile', 'historical-all-present1180-v1')
+    require(profile in ('historical-all-present1180-v1', 'current-checkout1180-v1'), 'Unknown alias profile')
+    require(profile != 'historical-all-present1180-v1' or not retired,
+            'Historical scope cannot claim previously absent aliases')
+    require(prepared.get('initially_absent_aliases', []) == sorted(retired)
+            and prepared.get('trial_removed_aliases', sorted(aliases)) == sorted(present),
+            'Prepared alias partition differs from original current vector')
+    require(prepared['preimage_paths'] == len(present) + len(retained) + 3
+            and prepared['expected_absent_tracked'] == len(paths) - len(present),
+            'Prepared current backup or absent denominator differs')
+    return {'profile': profile, 'historical_aliases_observed': 1180,
+            'planned_trial_removals': len(present), 'previously_absent_aliases': len(retired)}
+
+
 def receive_execution(state, phases):
     state = Path(state).absolute()
     try:
@@ -88,13 +111,28 @@ def receive_execution(state, phases):
         require(terminal_complete(record, phases), 'Execution is failed, incomplete, denied or unrestored')
         prepared = read_json(state, 'PREPARED.json')
         require(prepared['held_denials'] == 0 and prepared['originals'] == 1180
-                and prepared['unique_canonicals'] == 1082 and prepared['preimage_paths'] == 2265
+                and prepared['unique_canonicals'] == 1082
                 and prepared['original_census_paths'] == 16103, 'Prepared population or boundary differs')
         for relative, expected in prepared['input_files'].items():
             require(identity(read(state, relative)) == expected, 'Frozen input changed: ' + relative)
         classes = read_json(state, 'classes.json')
         aliases = {row['alias'] for row in classes}
         require(len(classes) == len(aliases) == 1180, 'Complete alias vector is required')
+        before_body = read(state, 'before.json')
+        require(identity(before_body) == prepared['before'], 'Authenticated before vector differs')
+        scope = prepared_alias_scope(prepared, json.loads(before_body), classes)
+        if prepared.get('profile') == 'current-checkout1180-v1':
+            require(record.get('trial_scope') == scope, 'Current terminal trial scope differs')
+            preimage_body = read(state, 'preimages.json')
+            require(identity(preimage_body) == prepared['preimages'], 'Current preimage map changed')
+            preimages = json.loads(preimage_body)
+            expected_backup = (set(prepared['trial_removed_aliases'])
+                | {row['canonical'] for row in classes}
+                | {'docs/project-closure/ar8r-v11/SHA256SUMS', 'docs/current-state.yaml',
+                   'docs/provenance/RELEASE-MANIFEST.sha256'})
+            require(len(preimages) == len(expected_backup) == prepared['preimage_paths']
+                    and {row['path'] for row in preimages} == expected_backup,
+                    'Current preimage membership differs')
         for phase, process in zip(phases, record['phases']):
             prefix = 'phases/' + phase + '/'
             terminal_bytes = read(state, prefix + 'TERMINAL.json')
@@ -138,7 +176,7 @@ def receive_execution(state, phases):
         require(read_json(state, 'QUIESCENCE-BEFORE-RESTORE.json')['quiescent'] is True,
                 'Restoration did not receive owned process quiescence')
         return {'qualified': True, 'status': 'COMPLETE_PHASES_AND_EXACT_RESTORATION', 'phases': len(phases),
-                'aliases': 1180, 'head': prepared['head'], 'tree': prepared['tree'],
+                'aliases': 1180, 'head': prepared['head'], 'tree': prepared['tree'], 'trial_scope': scope,
                 'held_worktree_body_integrity': 'UNKNOWN', 'retirement_credit': 'NOT_GRANTED_BY_THIS_PROGRAM'}
     except (OSError, ValueError, KeyError, TypeError, RuntimeError) as error:
         return {'qualified': False, 'status': 'FAILED_INCOMPLETE_OR_INCONSISTENT', 'error': repr(error),
