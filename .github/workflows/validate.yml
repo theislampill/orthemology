@@ -18,6 +18,10 @@ jobs:
         run: python scripts/provision_ci_infrastructure.py
       - name: Install exact version-locked dependencies (requirements-ci.lock.txt; no live web checks anywhere in CI)
         run: pip install --quiet -r requirements-ci.lock.txt
+      - name: Provision authenticated NEXT250 provisional tree (metadata only)
+        run: |
+          python -B tests/test_provision_next250_tree.py
+          python -B scripts/provision_next250_tree.py
       - name: Source-alias admission and evidence controls
         env:
           PYTHONPATH: scripts
