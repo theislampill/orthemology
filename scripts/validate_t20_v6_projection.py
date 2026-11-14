@@ -20,6 +20,7 @@ from functools import lru_cache
 import validate_v5_successors as continuation_owners
 
 from resolve_t20_v6_source import (
+    _administrative_git, _regular_current_bytes,
     HISTORICAL_PROSE, HISTORICAL_PROSE_PUBLIC_PATHS, HISTORICAL_PROSE_REVISION,
     historical_source_bytes, source_bytes, MEDIATOR_GUIDE, mediator_guide_source_bytes,
     HISTORICAL_PROSE_REVISIONS, MEDIATOR_APPROXIMATION, FISHER_AUDIT, readonly_git_diff,
@@ -224,6 +225,43 @@ def check_object(root, row):
     return errors
 
 
+T10_NAVIGATION_GUIDE = 'experiments/orthemology-v5-successors/groups/t10-technical/README.md'
+
+
+def t10_navigation_edition(root):
+    """Admit only the two exact immutable-link replacements in this public guide."""
+    path = T10_NAVIGATION_GUIDE
+    original_blob = '662300a336a3d462c78e512ae7ea66babb72ea91'
+    original_sha = 'ac506060a6447fc0082b8e3dd98331d634c6fba4d3447ba1f5a8e9f5abc6063f'
+    target_revision = '27c25b4dc30b1a8b3cb97588aba61482d1d8dcca'
+    target_path = ('experiments/orthemology-v5-successors/source-store/'
+                   'cdff07e133a38347c1a0f5b31787af914c50f3023e6690a42a356ec97ab4e74e/VERIFICATION_NOTE.md')
+    target_blob = '0b70eebb1bce10f70bdc955e7f1e3284e1f99058'
+    for revision, name, blob in ((BASE, path, original_blob), (target_revision, target_path, target_blob)):
+        expected = ('100644 blob ' + blob + '\t' + name + '\0').encode()
+        if _administrative_git(root, 'ls-tree', '-z', revision, '--', name) != expected:
+            raise ValueError('T10 navigation original or target coordinate differs')
+    original = _administrative_git(root, 'cat-file', 'blob', original_blob)
+    if (len(original) != 34757 or hashlib.sha256(original).hexdigest() != original_sha
+            or hashlib.sha1(b'blob 34757\0' + original).hexdigest() != original_blob):
+        raise ValueError('T10 navigation original identity differs')
+    old = ('../../source-store/' + target_path.split('/source-store/', 1)[1]).encode()
+    new = ('https://github.com/theislampill/orthemology/blob/' + target_revision + '/' + target_path).encode()
+    if original.count(old) != 2:
+        raise ValueError('T10 navigation original occurrence count differs')
+    adapted = original.replace(old, new)
+    adapted_blob = hashlib.sha1(b'blob ' + str(len(adapted)).encode() + b'\0' + adapted).hexdigest()
+    if (len(adapted) != 35001 or adapted_blob != 'c7b04b22bcfe5f3e9f3872fb7c6a9daae1fa5e90'
+            or hashlib.sha256(adapted).hexdigest() != 'ac4229c82b9b1a8267af09e7aa6548ac22f7912179b708c80f824e9c59429bcb'):
+        raise ValueError('T10 navigation derived edition differs')
+    expected_index = ('100644 ' + adapted_blob + ' 0\t' + path + '\0').encode()
+    if _administrative_git(root, 'ls-files', '--stage', '-z', '--', path) != expected_index:
+        raise ValueError('T10 navigation staged edition differs')
+    if _regular_current_bytes(root, path) != adapted:
+        raise ValueError('T10 navigation current wording or links differ')
+    return {path}
+
+
 def check_preserved_roots(root, objects):
     """Keep every protected baseline obligation and its finite typed changes.
 
@@ -266,6 +304,11 @@ def check_preserved_roots(root, objects):
             administrative_guides_authenticated.add(path)
         except (ValueError, OSError):
             pass  # A changed, missing or unsafe guide receives no allowance.
+    navigation_authenticated = set()
+    try:
+        navigation_authenticated = t10_navigation_edition(root)
+    except (ValueError, OSError):
+        pass  # No M allowance without the exact staged and current link edition.
     protected = ['experiments/orthemology-v5', 'experiments/orthemology-v5-continuations',
                  'experiments/orthemology-v5-successors', 'docs/provenance/v5-consolidation',
                  'docs/provenance/v5-research-continuations', 'docs/provenance/v5-successors',
@@ -436,6 +479,7 @@ def check_preserved_roots(root, objects):
                         (status == 'D' and path in (remainder_batch_absences_authenticated or ())) or
                         (status == 'D' and path in (calculus_absences_authenticated or ())) or
                         (status == 'M' and path in calculus_guides_authenticated) or
+                        (status == 'M' and path in navigation_authenticated) or
                         (status == 'M' and path == SUCCESSOR_INPUT_REGISTRY
                          and input_registry_authenticated) or
                         (status == 'M' and path == MEDIATOR_GUIDE and guide_authenticated) or

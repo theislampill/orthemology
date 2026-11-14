@@ -29,6 +29,7 @@ jobs:
         run: |
           python -B tests/test_source_alias_absence_population.py
           python -B tests/test_source_alias_current_checkout.py
+          python -B tests/test_t10_navigation_edition.py
           PUBLIC123_REVISION_RESOURCES="$(mktemp -d "$RUNNER_TEMP/r0002-public123-boundary.XXXXXX")" python -B tests/test_source_alias_absence_boundary.py
           PUBLIC123_REVISION_RESOURCES="$(mktemp -d "$RUNNER_TEMP/r0002-public123-evidence.XXXXXX")" python -B tests/test_source_alias_absence_evidence.py
       - name: Previously failed continuation receipt controls
