@@ -35,6 +35,35 @@ def current_legacy_sources(rows, expected, held_paths):
     return selected
 
 
+def public_graph_error_summary(errors):
+    """Expose fixed public validator categories/counts, never error payloads."""
+    allowed = {
+        'qualified current source graph differs',
+        'duplicate current source node',
+        'custom import module binding differs',
+        'required current source unavailable',
+        'unqualified official import',
+        'current formal source must retain exact original bytes',
+        'actual import declarations differ',
+        'missing or changed current source',
+        'import parent absent from source graph',
+        'unsafe suite module name',
+        'isolated suite coverage differs',
+        'isolated suite module binding differs',
+        'isolated suite imports a different variant',
+        'current source graph contains missing or unrooted nodes',
+        'ordinary proof support unavailable',
+        'ordinary proof evidence binding differs',
+        'ordinary proof parent unavailable',
+    }
+    counts = {}
+    for error in errors:
+        label = error.split(': ', 1)[0] if isinstance(error, str) else 'OTHER'
+        category = label if label in allowed else 'OTHER'
+        counts[category] = counts.get(category, 0) + 1
+    return {'total': len(errors), 'categories': counts}
+
+
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--repo', type=Path, required=True)
 parser.add_argument('--expected-head', required=True)
@@ -148,7 +177,9 @@ try:
         reads = {objects[row['source_sha256']]['repository_path'] for row in graph['nodes']}
         reads |= {objects[row['parent_sha256']]['repository_path'] for row in graph['ordinary_proof_dependencies']}
         assert not reads & held_paths
-        assert source.validate_graph(repo, objects) == []
+        graph_errors = source.validate_graph(repo, objects)
+        record['graph_error_summary'] = public_graph_error_summary(graph_errors)
+        assert graph_errors == []
         assert projection.check_preserved_roots(repo, objects) == []
         affected = {row['sha256'] for row in expected.values()} & {row['source_sha256'] for row in graph['nodes']}
         assert len(affected) == 26
