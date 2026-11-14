@@ -374,7 +374,7 @@ Preserved obligation associations: `U14`. Reverse permission implication fails; 
 
 Scientific narrative: [RESULTS.md](../../source-store/0ca71bec66a49f143354ad9107b31068766ff4bdfaaffd5f2143b347048dca44/RESULTS.md).
 
-Original scoped review: [TYPED_V1_REVIEW.md](../../source-store/a59f02cfc93afbf8655b4345a72d0d2102f3be6f013b8ffbe9a44421ad68f1c4/TYPED_V1_REVIEW.md), [PUBLIC_ACCEPTANCE.md](../../source-store/8d0d5c3934128136fbd69b70b8a0669fe055e5eb005797e25269a69157361657/PUBLIC_ACCEPTANCE.md). These links identify the original review objects; this guide performs no new independent correctness review.
+Original scoped review: [TYPED_V1_REVIEW.md](../../source-store/a59f02cfc93afbf8655b4345a72d0d2102f3be6f013b8ffbe9a44421ad68f1c4/TYPED_V1_REVIEW.md), [PUBLIC_ACCEPTANCE.md](https://github.com/theislampill/orthemology/blob/27c25b4dc30b1a8b3cb97588aba61482d1d8dcca/experiments/orthemology-v5-successors/source-store/8d0d5c3934128136fbd69b70b8a0669fe055e5eb005797e25269a69157361657/PUBLIC_ACCEPTANCE.md). These links identify the original review objects; this guide performs no new independent correctness review.
 
 Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **QUALIFIED_DECLARED_SUITE**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
 
