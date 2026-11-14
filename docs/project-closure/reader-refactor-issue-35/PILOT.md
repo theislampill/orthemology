@@ -156,7 +156,7 @@ Before C02 can close: finish the owner/collection reconciliation (including pred
 [multi]: ../../../theory/orthemic-multi-actor-conflict-note.md
 [profile]: ../../publication-profile.yaml
 [lineage]: ../../../theory/lineages/h-ics-v5/README.md
-[coordination]: ../../../experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md
+[coordination]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md
 [twelfth]: ../../../experiments/orthemology-v5-successors/groups/t12-written/README.md
 [sound]: ../../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../../companion/CONCRETE-AND-SOUND-REASON.md

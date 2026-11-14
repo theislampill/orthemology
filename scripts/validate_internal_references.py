@@ -23,14 +23,48 @@ ends once the path exists.
 
 Deterministic; offline.
 """
+
+from resolve_t20_v6_source import DIGEST_RECORD_PATHS, digest_record_bytes, NEW250_PATHS, new250_source_bytes
+
+from validate_ar8r_reconciliation import _pmr007_deep_member_bytes
+
 import io
 import json
 import hashlib
+from functools import lru_cache
+from pathlib import Path
 
 from validate_repo import (load_source_map, original_packet_locator,
                            load_successor_source_map, successor_packet_locator,
                            successor_origin_document, markdown_link_targets,
                            strip_markdown_math)
+from resolve_t20_v6_source import (
+    HISTORICAL_PROSE, HISTORICAL_PROSE_REVISIONS, historical_source_bytes, HISTORICAL_PROSE_REVISION,
+    CONTINUATION_COPY_ROOT, continuation_copy_bytes,
+    CHECKPOINT_COPY_PATHS, checkpoint_copy_bytes,
+    CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_copy_bytes,
+    CHECKPOINT_PACKAGE_COPY_PATHS, checkpoint_package_copy_bytes,
+    FORMAL_COPY_PATHS, formal_copy_bytes, CONTINUATION_FORMAL_RETARGET_PATHS,
+    ADMIN_RECORD_PATHS, administrative_record_bytes,
+    CHECKPOINT_CODE_COPY_PATHS, checkpoint_code_copy_bytes,
+    SUCCESSOR_INPUT_PATHS, successor_input_bytes,
+    SUCCESSOR_READ_BATCH_PATHS, successor_read_batch_bytes,
+    FIRST50_ASSURANCE_PATHS, first50_assurance_bytes,
+    AFTER3384_PATHS, after3384_bytes,
+    AFTER3634_PATHS, after3634_bytes,
+    AFTER3884_PATHS, after3884_bytes,
+    AFTER4134_PATHS, after4134_bytes,
+    AFTER4384_PATHS, after4384_bytes,
+    AFTER4634_PATHS, after4634_bytes,
+    SUCCESSOR_REMAINDER_BATCH_PATHS, successor_remainder_batch_bytes,
+    SUCCESSOR_CALCULUS_MAP, successor_calculus_map_bytes,
+    GENERATED_FIXTURE_PATHS, generated_fixture_bytes,
+    is_binding_record, binding_record_bytes,
+)
+from validate_ar8r_reconciliation import (
+    PMR007_DEEP_PREFIX, _pmr007_deep_original_members,
+    _pmr007_deep_duplicate_map, _pmr007_deep_regular_file,
+)
 import os
 import re
 import subprocess
@@ -53,6 +87,17 @@ PATH_PATTERN = (
     r"[A-Za-z0-9._/\\-]+\.(?:py|jsonl?|yaml|yml|md|bib|txt)(?![A-Za-z0-9._/\\-])"
 )
 PATH_RE = re.compile(PATH_PATTERN)
+AFTER3134_LOCAL_CITATION_PATHS = ('research/t20-v6-20261012/sources/00886c74d7ac5ff0f278e737bb58141bd6097be134dbba2f728cd2aae5565882/runtime-evidence-report.md',
+ 'research/t20-v6-20261012/sources/00c38a528d3d8030627eb4dd8e11aa44bb6abfa122efd2da26ece4e8e93a8a58/RESULT.md',
+ 'research/t20-v6-20261012/sources/01b1232252abaaa24a2f90914962d0ad1120528822fcb62cf15e8d0432efb2d7/INTEGRATION_SCOPE_NOTE.md',
+ 'research/t20-v6-20261012/sources/03e404e76236427cd39283618483ecfc5df9424beb0ebfeb2ffbef0b1620676b/PointAtomBoundary.md',
+ 'research/t20-v6-20261012/sources/03f4349692c72952bd2fe5d84dba33c4193826e42859870061b07c3f87f4db6c/REVIEW.md',
+ 'research/t20-v6-20261012/sources/04a4223bc4666a986b8c3a3c085913715a4a02ea7adb47b92dfbe5fd764f5930/REVIEW.md')
+AFTER3134_LOCAL_CITATION_RE = re.compile(
+    r"(?<![A-Za-z0-9._/\\-])(?:"
+    + "|".join(re.escape(path) for path in AFTER3134_LOCAL_CITATION_PATHS)
+    + r")(?![A-Za-z0-9._/\\-])"
+)
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)#\s]+)(?:#[^)]*)?\)")
 CREATE_LINE_RE = re.compile(
     rf"^\s*-\s+Create:\s+(?:`{PATH_PATTERN}`|{PATH_PATTERN})\s*$"
@@ -70,7 +115,7 @@ def _original_driver_members(src, text):
     """
     pins = {
         'scripts/replay_v5_successors.py': (
-            '5b4c1b7f0ced9af2599b980fd25fd1a15b819357853753319798b2965fc540ef',
+            'e114a43548dc2d5d747b9eb1147d471a82b6a5cda833ae322353dfc91dc58c27',
             [('scripts', 'verify-inputs.py'), ('scripts', 'verify-sources.py')]),
         'scripts/v5_d04_assets/v5_d04_normalizers_translated.py': (
             '46133c72f1332efeeec42530cd26ce224decf617e55e7fb79bd5d486b9a28fcd',
@@ -178,11 +223,528 @@ def _committed_plans():
     return {path for path in paths if PLAN_RE.fullmatch(path)}
 
 
-def _resolves(src, cited):
-    if os.path.exists(os.path.join(ROOT, cited)):
+PROJECTION_MANIFEST = "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json"
+
+
+@lru_cache(maxsize=1)
+def _projection_reference_rows(body):
+    """Cache parsing by complete immutable bytes, never a filesystem verdict."""
+    def unique(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError("duplicate projection metadata key")
+            result[key] = value
+        return result
+    document = json.loads(body, object_pairs_hook=unique)
+    rows = {}
+    for row in document["objects"]:
+        rows.setdefault(row.get("repository_path"), []).append(row)
+    return rows
+
+
+def _historical_projection_reference(src, cited):
+    """Resolve one original-coordinate field through its exact retained body.
+
+    This does not make an ordinary reader link elsewhere resolve through Git.
+    The reader and T20 gates independently preserve the complete manifest's
+    source universe, roles and authority; this gate authenticates the cited body.
+    """
+    if src != PROJECTION_MANIFEST or not cited.startswith(PMR007_DEEP_PREFIX + "/"):
+        return None
+    try:
+        root = Path(ROOT)
+        members = _pmr007_deep_original_members(root)
+        duplicates = _pmr007_deep_duplicate_map(members)
+        if cited not in duplicates:
+            return None  # Distinct original metadata retains ordinary path rules.
+        manifest = _pmr007_deep_regular_file(root, PROJECTION_MANIFEST)
+        selected = _projection_reference_rows(manifest.read_bytes()).get(cited, [])
+        if len(selected) != 1:
+            return False
+        row = selected[0]
+        identity = members[cited.removeprefix(PMR007_DEEP_PREFIX + "/")]
+        if (row.get("disposition") != "REUSE"
+                or row.get("repository_revision") != HISTORICAL_PROSE_REVISION
+                or row.get("source_sha256") != identity or row.get("public_sha256") != identity
+                or row.get("publication_basis") !=
+                   "exact_existing_public_git_blob; retained_counterpart_qualified_by_snapshot_validator"):
+            return False
+        body = _pmr007_deep_member_bytes(root, duplicates[cited])
+        blob = hashlib.sha1(b"blob " + str(len(body)).encode() + b"\0" + body).hexdigest()
+        if (hashlib.sha256(body).hexdigest() != identity
+                or row.get("source_bytes") != len(body) or row.get("public_bytes") != len(body)
+                or row.get("git_blob") != blob):
+            return False
+        original = subprocess.run(
+            ["git", "--no-replace-objects", "cat-file", "blob", HISTORICAL_PROSE_REVISION + ":" + cited],
+            cwd=root, capture_output=True, check=False)
+        if original.returncode or original.stdout != body:
+            return False
+        target = root
+        for part in cited.split("/"):
+            target = target / part
+            if target.is_symlink():
+                return False
+        if target.exists() and (not target.is_file() or target.stat().st_mode & 0o111
+                                or target.read_bytes() != body):
+            return False
         return True
+    except (KeyError, TypeError, ValueError, OSError):
+        return False
+
+
+def _checkpoint_reference(src, cited):
+    """Authenticate a finite root/source-relative coordinate before exists()."""
+    candidates = [os.path.normpath(cited)]
     directory = os.path.dirname(src)
     while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for candidate in candidates:
+        if candidate in FORMAL_COPY_PATHS or candidate in CONTINUATION_FORMAL_RETARGET_PATHS:
+            try:
+                if candidate in FORMAL_COPY_PATHS:
+                    formal_copy_bytes(ROOT, candidate)
+                else:
+                    continuation_copy_bytes(ROOT, candidate)
+                return True
+            except (ValueError, OSError):
+                return False
+        if candidate in CHECKPOINT_CODE_COPY_PATHS:
+            try:
+                checkpoint_code_copy_bytes(ROOT, candidate)
+                return True
+            except (ValueError, OSError):
+                return False
+        if candidate in CHECKPOINT_PACKAGE_COPY_PATHS:
+            try:
+                checkpoint_package_copy_bytes(ROOT, candidate)
+                return True
+            except (ValueError, OSError):
+                return False
+        if candidate in CHECKPOINT_RECORD_COPY_PATHS:
+            try:
+                checkpoint_record_copy_bytes(ROOT, candidate)
+                return True
+            except (ValueError, OSError):
+                return False
+        if candidate in CHECKPOINT_COPY_PATHS:
+            try:
+                checkpoint_copy_bytes(ROOT, candidate)
+                return True
+            except (ValueError, OSError):
+                return False
+    return None
+
+
+def _administrative_reference(src, cited):
+    """Resolve only enumerated frozen contracts/receipts before current exists()."""
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for path in candidates:
+        if path in ADMIN_RECORD_PATHS:
+            try:
+                administrative_record_bytes(ROOT, path)
+                return True
+            except (ValueError, OSError):
+                return False
+    return None
+
+
+def _successor_input_reference(src, cited):
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for path in candidates:
+        if path in SUCCESSOR_INPUT_PATHS or path == SUCCESSOR_CALCULUS_MAP:
+            try:
+                if path == SUCCESSOR_CALCULUS_MAP:
+                    successor_calculus_map_bytes(ROOT)
+                else:
+                    successor_input_bytes(ROOT, path)
+                return True
+            except (ValueError, OSError):
+                return False
+    return None
+
+
+def _generated_fixture_reference(src, cited):
+    """Original public fixture citations use exact live owners before exists()."""
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for path in candidates:
+        if path in GENERATED_FIXTURE_PATHS:
+            try:
+                generated_fixture_bytes(ROOT, path)
+                return True
+            except (ValueError, OSError):
+                return False
+    return None
+
+
+def _binding_record_reference(src, cited):
+    """Keep original record namespaces; authenticate before ordinary exists()."""
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for path in candidates:
+        try:
+            if is_binding_record(ROOT, path):
+                binding_record_bytes(ROOT, path)
+                return True
+        except (ValueError, OSError):
+            return False
+    return None
+
+
+def _digest_record_reference(src, cited):
+    """Resolve only enumerated original checksum records before current exists()."""
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for path in candidates:
+        if path in DIGEST_RECORD_PATHS:
+            try:
+                digest_record_bytes(ROOT, path)
+                return True
+            except (ValueError, OSError):
+                return False
+    return None
+
+
+def _successor_read_batch_reference(src, cited):
+    """Resolve finite preserved source coordinates before ordinary exists()."""
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for path in candidates:
+        if path in SUCCESSOR_READ_BATCH_PATHS:
+            try:
+                successor_read_batch_bytes(ROOT, path)
+                return True
+            except (ValueError, OSError):
+                return False
+    return None
+
+
+def _successor_remainder_batch_reference(src, cited):
+    """Resolve finite preserved source coordinates before ordinary exists()."""
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for path in candidates:
+        if path in SUCCESSOR_REMAINDER_BATCH_PATHS:
+            try:
+                successor_remainder_batch_bytes(ROOT, path)
+                return True
+            except (ValueError, OSError):
+                return False
+    return None
+
+
+
+def _new250_reference(src, cited):
+    # Candidate spelling is checked before normalization; unsafe selected spellings
+    # fail terminally rather than gaining an ordinary-existence exemption.
+    if not isinstance(cited, str):
+        return None
+    candidates = [cited]
+    directory = os.path.dirname(src)
+    while directory:
+        candidates.append(directory + '/' + cited)
+        directory = os.path.dirname(directory)
+    selected = [p for p in candidates if os.path.normpath(p) in NEW250_PATHS]
+    if not selected:
+        return None
+    for path in selected:
+        if any(c in path for c in ('\\', '\0', ':')) or path.startswith('/') or any(x in ('', '.', '..') for x in path.split('/')):
+            return False
+        try:
+            new250_source_bytes(ROOT, path)
+        except (ValueError, OSError):
+            return False
+    return True
+
+
+from resolve_t20_v6_source import NEXT250
+
+
+def _after3134_reference(src, cited):
+    # Candidate spelling is checked before normalization; unsafe selected spellings
+    # fail terminally rather than gaining an ordinary-existence exemption.
+    if not isinstance(cited, str):
+        return None
+    candidates = [cited]
+    directory = os.path.dirname(src)
+    while directory:
+        candidates.append(directory + '/' + cited)
+        directory = os.path.dirname(directory)
+    selected = [p for p in candidates if os.path.normpath(p) in FIRST50_ASSURANCE_PATHS]
+    if not selected:
+        return None
+    for path in selected:
+        if any(c in path for c in ('\\', '\0', ':')) or path.startswith('/') or any(x in ('', '.', '..') for x in path.split('/')):
+            return False
+        try:
+            first50_assurance_bytes(ROOT, path)
+        except (ValueError, OSError):
+            return False
+    return True
+
+
+
+def _after3384_reference(src, cited):
+    # Candidate spelling is checked before normalization; unsafe selected spellings
+    # fail terminally rather than gaining an ordinary-existence exemption.
+    if not isinstance(cited, str):
+        return None
+    candidates = [cited]
+    directory = os.path.dirname(src)
+    while directory:
+        candidates.append(directory + '/' + cited)
+        directory = os.path.dirname(directory)
+    selected = [p for p in candidates if os.path.normpath(p.replace("\\", "/")) in AFTER3384_PATHS]
+    if not selected:
+        return None
+    for path in selected:
+        if any(c in path for c in ('\\', '\0', ':')) or path.startswith('/') or any(x in ('', '.', '..') for x in path.split('/')):
+            return False
+        try:
+            after3384_bytes(ROOT, path)
+        except (ValueError, OSError):
+            return False
+    return True
+
+def _after3634_reference(src, cited):
+    # Candidate spelling is checked before normalization; unsafe selected spellings
+    # fail terminally rather than gaining an ordinary-existence exemption.
+    if not isinstance(cited, str):
+        return None
+    candidates = [cited]
+    directory = os.path.dirname(src)
+    while directory:
+        candidates.append(directory + '/' + cited)
+        directory = os.path.dirname(directory)
+    selected = [p for p in candidates if os.path.normpath(p.replace("\\", "/")) in AFTER3634_PATHS]
+    if not selected:
+        return None
+    for path in selected:
+        if any(c in path for c in ('\\', '\0', ':')) or path.startswith('/') or any(x in ('', '.', '..') for x in path.split('/')):
+            return False
+        try:
+            after3634_bytes(ROOT, path)
+        except (ValueError, OSError):
+            return False
+    return True
+
+def _after3884_reference(src, cited):
+    # Candidate spelling is checked before normalization; unsafe selected spellings
+    # fail terminally rather than gaining an ordinary-existence exemption.
+    if not isinstance(cited, str):
+        return None
+    candidates = [cited]
+    directory = os.path.dirname(src)
+    while directory:
+        candidates.append(directory + '/' + cited)
+        directory = os.path.dirname(directory)
+    selected = [p for p in candidates if os.path.normpath(p.replace("\\", "/")) in AFTER3884_PATHS]
+    if not selected:
+        return None
+    for path in selected:
+        if any(c in path for c in ('\\', '\0', ':')) or path.startswith('/') or any(x in ('', '.', '..') for x in path.split('/')):
+            return False
+        try:
+            after3884_bytes(ROOT, path)
+        except (ValueError, OSError):
+            return False
+    return True
+
+def _after4134_reference(src, cited):
+    # Candidate spelling is checked before normalization; unsafe selected spellings
+    # fail terminally rather than gaining an ordinary-existence exemption.
+    if not isinstance(cited, str):
+        return None
+    candidates = [cited]
+    directory = os.path.dirname(src)
+    while directory:
+        candidates.append(directory + '/' + cited)
+        directory = os.path.dirname(directory)
+    selected = [p for p in candidates if os.path.normpath(p.replace("\\", "/")) in AFTER4134_PATHS]
+    if not selected:
+        return None
+    for path in selected:
+        if any(c in path for c in ('\\', '\0', ':')) or path.startswith('/') or any(x in ('', '.', '..') for x in path.split('/')):
+            return False
+        try:
+            after4134_bytes(ROOT, path)
+        except (ValueError, OSError):
+            return False
+    return True
+
+def _after4384_reference(src, cited):
+    # Candidate spelling is checked before normalization; unsafe selected spellings
+    # fail terminally rather than gaining an ordinary-existence exemption.
+    if not isinstance(cited, str):
+        return None
+    candidates = [cited]
+    directory = os.path.dirname(src)
+    while directory:
+        candidates.append(directory + '/' + cited)
+        directory = os.path.dirname(directory)
+    selected = [p for p in candidates if os.path.normpath(p.replace("\\", "/")) in AFTER4384_PATHS]
+    if not selected:
+        return None
+    for path in selected:
+        if any(c in path for c in ('\\', '\0', ':')) or path.startswith('/') or any(x in ('', '.', '..') for x in path.split('/')):
+            return False
+        try:
+            after4384_bytes(ROOT, path)
+        except (ValueError, OSError):
+            return False
+    return True
+
+def _after4634_reference(src, cited):
+    # Candidate spelling is checked before normalization; unsafe selected spellings
+    # fail terminally rather than gaining an ordinary-existence exemption.
+    if not isinstance(cited, str):
+        return None
+    candidates = [cited]
+    directory = os.path.dirname(src)
+    while directory:
+        candidates.append(directory + '/' + cited)
+        directory = os.path.dirname(directory)
+    selected = [p for p in candidates if os.path.normpath(p.replace("\\", "/")) in AFTER4634_PATHS]
+    if not selected:
+        return None
+    for path in selected:
+        if any(c in path for c in ('\\', '\0', ':')) or path.startswith('/') or any(x in ('', '.', '..') for x in path.split('/')):
+            return False
+        try:
+            after4634_bytes(ROOT, path)
+        except (ValueError, OSError):
+            return False
+    return True
+
+def _resolves(src, cited):
+    after4634 = _after4634_reference(src, cited)
+    if after4634 is not None:
+        return after4634
+    after4384 = _after4384_reference(src, cited)
+    if after4384 is not None:
+        return after4384
+    after4134 = _after4134_reference(src, cited)
+    if after4134 is not None:
+        return after4134
+    after3884 = _after3884_reference(src, cited)
+    if after3884 is not None:
+        return after3884
+    after3634 = _after3634_reference(src, cited)
+    if after3634 is not None:
+        return after3634
+    after3384 = _after3384_reference(src, cited)
+    if after3384 is not None:
+        return after3384
+    new250 = _new250_reference(src, cited)
+    if new250 is not None:
+        return new250
+    after3134 = _after3134_reference(src, cited)
+    if after3134 is not None:
+        return after3134
+    read_batch = _successor_read_batch_reference(src, cited)
+    if read_batch is not None:
+        return read_batch
+    remainder_batch = _successor_remainder_batch_reference(src, cited)
+    if remainder_batch is not None:
+        return remainder_batch
+    historical_digest = _digest_record_reference(src, cited)
+    if historical_digest is not None:
+        return historical_digest
+    binding = _binding_record_reference(src, cited)
+    if binding is not None:
+        return binding
+    inputs = _successor_input_reference(src, cited)
+    if inputs is not None:
+        return inputs
+    generated = _generated_fixture_reference(src, cited)
+    if generated is not None:
+        return generated
+    administrative = _administrative_reference(src, cited)
+    if administrative is not None:
+        return administrative
+    # These exact incorporated originals retain immutable provenance/evidence
+    # references. Authenticate history and any present copy before ordinary
+    # existence checks; no unrelated path obtains a missing-body exemption.
+    candidates = [os.path.normpath(cited)]
+    directory = os.path.dirname(src)
+    while True:
+        candidates.append(os.path.normpath(os.path.join(directory, cited)))
+        if not directory:
+            break
+        directory = os.path.dirname(directory)
+    for candidate in candidates:
+        if candidate in HISTORICAL_PROSE:
+            try:
+                historical_source_bytes(ROOT, candidate, HISTORICAL_PROSE_REVISIONS[candidate],
+                                        HISTORICAL_PROSE[candidate][0])
+                return True
+            except (ValueError, OSError):
+                return False
+    checkpoint = _checkpoint_reference(src, cited)
+    if checkpoint is not None:
+        return checkpoint
+    historical = _historical_projection_reference(src, cited)
+    if historical is not None:
+        return historical
+    next250 = NEXT250.reference_candidate(ROOT, cited)
+    if next250 is not None:
+        return next250
+    if os.path.exists(os.path.join(ROOT, cited)):
+        return True
+    if cited.startswith(CONTINUATION_COPY_ROOT) and cited.endswith('.lean'):
+        try:
+            continuation_copy_bytes(ROOT, cited)
+            return True
+        except (ValueError, OSError):
+            return False
+    directory = os.path.dirname(src)
+    while True:
+        raw_candidate = os.path.join(directory, cited) if directory else cited
+        next250 = NEXT250.reference_candidate(ROOT, raw_candidate)
+        if next250 is not None:
+            return next250
         if os.path.exists(os.path.normpath(os.path.join(ROOT, directory, cited))):
             return True
         if not directory:
@@ -223,6 +785,8 @@ def _citation_occurrences(src, text, *, root=None, successor_sources=None):
         field = re.fullmatch(r'\s*"source_path":\s*("(?:[^"\\]|\\.)*")\s*,?\s*', line)
         if field and json.loads(field.group(1)) in selectors:
             continue
+        for cited in AFTER3134_LOCAL_CITATION_RE.findall(line):
+            yield cited, line
         for cited in PATH_RE.findall(line):
             if cited.replace("\\", "/") in original_driver_members:
                 continue
@@ -282,14 +846,34 @@ def main():
     packet_locators = set()
     successor_locators = set()
     missing = {}
-    corpus_text = {}
+    stream_liveness = all(p and "\n" not in p for p in exempt)
+    liveness_counts = {p: 0 for p in exempt}
+    corpus_text = None if stream_liveness else {}
     for src in corpus:
         try:
             text = io.open(os.path.join(ROOT, src), encoding="utf-8").read()
         except (UnicodeDecodeError, OSError):
             continue
-        corpus_text[src] = text
+        if stream_liveness:
+            normalized_liveness_text = text.replace("\\", "/")
+            for p in exempt:
+                liveness_counts[p] += (normalized_liveness_text.count(p)
+                                       - normalized_liveness_text.count("- " + p)
+                                       - normalized_liveness_text.count("  - path: " + p))
+            del normalized_liveness_text
+        else:
+            corpus_text[src] = text
         for cited, line in _citation_occurrences(src, text, root=ROOT, successor_sources=successor_sources):
+            new250 = _new250_reference(src, cited)
+            if new250 is not None:
+                if not new250:
+                    missing.setdefault(cited + ' (invalid NEW250 provider)', set()).add(src)
+                continue
+            after3134 = _after3134_reference(src, cited)
+            if after3134 is not None:
+                if not after3134:
+                    missing.setdefault(cited + ' (invalid After3134 provider)', set()).add(src)
+                continue
             if cited in exempt:
                 continue
             if cited.startswith(".."):
@@ -323,9 +907,10 @@ def main():
           "; ".join("%s <- %s" % (p, sorted(s)[:2]) for p, s in sorted(missing.items())[:6]))
 
     # exemptions must stay live: an exemption nobody cites any more is stale state
-    blob = "\n".join(corpus_text.values()).replace("\\", "/")
+    blob = None if stream_liveness else "\n".join(corpus_text.values()).replace("\\", "/")
     for p in sorted(exempt):
-        others = blob.count(p) - blob.count("- " + p) - blob.count("  - path: " + p)
+        others = (liveness_counts[p] if stream_liveness else
+                  blob.count(p) - blob.count("- " + p) - blob.count("  - path: " + p))
         check("exemption %s is still actually cited somewhere" % p, others > 0,
               "no document cites it any more — remove the stale exemption")
 

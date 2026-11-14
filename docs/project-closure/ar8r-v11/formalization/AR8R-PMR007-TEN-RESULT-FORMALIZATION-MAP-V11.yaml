@@ -16,7 +16,7 @@ results:
   - <<: *common_defaults
     result_id: PMR-007-MLT-1
     round_version: R11_V1
-    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND11_MODAL_LINEAGE_TRANSPORT_AND_HOLONOMY_V1.md
+    source_path: post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND11_MODAL_LINEAGE_TRANSPORT_AND_HOLONOMY_V1.md
     pure_declaration: ModalLineageTransport.holonomy_fixed_anchor_iff_section
     application_declaration: NONE
     pure_dependencies: [TRANSPORT_BIJECTIONS, CONNECTED_FINITE_BUNDLE]
@@ -27,7 +27,7 @@ results:
   - <<: *common_defaults
     result_id: PMR-007-SMRB-1
     round_version: R12_V1
-    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND12_STRUCTURE_PRESERVING_MODAL_ROOT_BUNDLE_V1.md
+    source_path: post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND12_STRUCTURE_PRESERVING_MODAL_ROOT_BUNDLE_V1.md
     pure_declaration: StructurePreservingModalRoot.unique_root_section
     application_declaration: NONE
     pure_dependencies: [PMR-007-MLT-1]
@@ -38,7 +38,7 @@ results:
   - <<: *common_defaults
     result_id: PMR-007-FRLA-1
     round_version: R13_V1
-    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND13_FAULT_ROBUST_LOCAL_AGREEMENT_AND_RESTORATION_V1.md
+    source_path: post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND13_FAULT_ROBUST_LOCAL_AGREEMENT_AND_RESTORATION_V1.md
     pure_declaration: FaultRobustLocalAgreement.component_intersection_iff_protocol
     application_declaration: NONE
     pure_dependencies: [FINITE_LOCAL_VIEW_COMPONENTS, COMPLETE_OUTPUT_SETS]
@@ -49,7 +49,7 @@ results:
   - <<: *common_defaults
     result_id: PMR-007-COB-1
     round_version: R14_V2
-    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND14_LOCAL_PROTOCOL_REACH_AND_STAY_FIXED_POINT_V2.md
+    source_path: post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND14_LOCAL_PROTOCOL_REACH_AND_STAY_FIXED_POINT_V2.md
     pure_declaration: CoBuchiRestoration.nested_fixed_point_characterization
     application_declaration: CoBuchiRestoration.local_action_wrapper
     pure_dependencies: [FINITE_PERFECT_INFORMATION_GAME, CONTROLLABLE_PREDECESSOR]
@@ -60,7 +60,7 @@ results:
   - <<: *common_defaults
     result_id: PMR-007-TRC-1
     round_version: R15_V2
-    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND15_DAEE_TEMPORAL_CERTIFICATE_ARCHITECTURE_V2.md
+    source_path: post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND15_DAEE_TEMPORAL_CERTIFICATE_ARCHITECTURE_V2.md
     pure_declaration: TemporalCertificate.model_bound_certificate
     application_declaration: TemporalCertificate.daee_event_local_nonimplication
     pure_dependencies: [PMR-007-COB-1]
@@ -71,7 +71,7 @@ results:
   - <<: *common_defaults
     result_id: PMR-007-VCT-1
     round_version: R16_V2
-    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND16_VERSION_CUSTODY_TRANSPORT_AND_TEMPORAL_ELIGIBILITY_V2.md
+    source_path: post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND16_VERSION_CUSTODY_TRANSPORT_AND_TEMPORAL_ELIGIBILITY_V2.md
     pure_declaration: VersionCustodyTransport.guarded_reason_dag_composition
     application_declaration: VersionCustodyTransport.temporal_eligibility_wrapper
     pure_dependencies: [FINITE_REASON_DAG, VERSION_INVALIDATORS]
@@ -82,7 +82,7 @@ results:
   - <<: *common_defaults
     result_id: PMR-007-RSD-1
     round_version: R17_V2
-    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND17_ROLE_SECTION_DESCENT_COMMON_BEARER_AND_R5_V2.md
+    source_path: post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND17_ROLE_SECTION_DESCENT_COMMON_BEARER_AND_R5_V2.md
     pure_declaration: RoleSectionDescent.no_same_fibre_collision_iff_descent
     application_declaration: RoleSectionDescent.r5_common_bearer_control
     pure_dependencies: [PMR-007-MLT-1, TRANSPORT_ORBIT_RELATION]
@@ -93,7 +93,7 @@ results:
   - <<: *common_defaults
     result_id: PMR-007-ORTC-V4
     round_version: R18_V4
-    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND18_CERTIFICATE_OBJECT_REFINEMENT_AND_TEMPORAL_SELECTOR_V4.md
+    source_path: post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND18_CERTIFICATE_OBJECT_REFINEMENT_AND_TEMPORAL_SELECTOR_V4.md
     pure_declaration: ObservationRefinement.certificate_refinement_number
     application_declaration: ObservationRefinement.temporal_selector_wrapper
     pure_dependencies: [FINITE_SET_COVER, OBSERVATION_PARTITION]
@@ -104,7 +104,7 @@ results:
   - <<: *common_defaults
     result_id: PMR-007-PRQT-1
     round_version: R19_V2
-    source_path: post-merge-proposals/pmr007-rounds11-20/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND19_PROVENANCE_ROOT_THRESHOLD_QUERY_COMPLEXITY_V2.md
+    source_path: post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_FRONTIER_ROUND19_PROVENANCE_ROOT_THRESHOLD_QUERY_COMPLEXITY_V2.md
     pure_declaration: ProvenanceRootThreshold.authenticated_label_query_bound
     application_declaration: ProvenanceRootThreshold.candidate1_authenticated_lift
     pure_dependencies: [CANDIDATE_1_HIDDEN_PARTIAL_MATCHING]

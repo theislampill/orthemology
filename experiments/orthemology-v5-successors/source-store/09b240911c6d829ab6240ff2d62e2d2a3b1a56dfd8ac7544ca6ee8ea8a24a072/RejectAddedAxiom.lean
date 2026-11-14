@@ -1,4 +1,0 @@
-import UnaryCertificateSoundness
-import RuntimeBoundaryInventory
-axiom unsoundHasCShortcut : False
-#audit_safe_closure unsoundHasCShortcut

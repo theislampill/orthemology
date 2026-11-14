@@ -6,7 +6,7 @@ These are candidate research records in the same Orthemology v5 programme. Origi
 
 | Suite | Recorded stages | Checked Lean targets | Source-bound controls |
 | --- | ---: | ---: | ---: |
-| [t14-identity](../../suites/t14-identity.json) | 89 | 5 | 14 |
+| [t14-identity](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/t14-identity.json) | 89 | 5 | 14 |
 
 ## All-rule I/SKK noninhabitation in HAS
 
@@ -20,7 +20,7 @@ Every polynomial r fails the exact closed I/SKK identity typing in HAS despite t
 
 **Evidence.** FORMAL at COMPONENT scope, UNBOUNDED_MODEL domain. Original status: VERIFIED_LOCAL_DELIVERABLES. Fresh status: QUALIFIED_DECLARED_SUITE.
 
-Scientific sources: [IntensionalIdentityTheorems.lean](../../source-store/48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c/IntensionalIdentityTheorems.lean), [Intensional_Identity_Separation_and_Closed_Identity_Conversion.md](../../source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md).
+Scientific sources: [IntensionalIdentityTheorems.lean](../../source-store/48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c/IntensionalIdentityTheorems.lean), [Intensional_Identity_Separation_and_Closed_Identity_Conversion.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md).
 
 Inherited review: [Orthemology_Fourteenth_Completion_Verification_v1_20261005.json](../../source-store/e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb/Orthemology_Fourteenth_Completion_Verification_v1_20261005.json). Inherited source-specific internal review reported by the exact delivery receipt. Receipt custody and source statements are preserved; no new independent kernel or human-specialist review is asserted.
 
@@ -38,7 +38,7 @@ Every polynomial r fails the exact closed I/SKK identity typing in PLUS despite 
 
 **Evidence.** FORMAL at COMPONENT scope, UNBOUNDED_MODEL domain. Original status: VERIFIED_LOCAL_DELIVERABLES. Fresh status: QUALIFIED_DECLARED_SUITE.
 
-Scientific sources: [IntensionalIdentityTheorems.lean](../../source-store/48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c/IntensionalIdentityTheorems.lean), [Intensional_Identity_Separation_and_Closed_Identity_Conversion.md](../../source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md).
+Scientific sources: [IntensionalIdentityTheorems.lean](../../source-store/48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c/IntensionalIdentityTheorems.lean), [Intensional_Identity_Separation_and_Closed_Identity_Conversion.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md).
 
 Inherited review: [Orthemology_Fourteenth_Completion_Verification_v1_20261005.json](../../source-store/e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb/Orthemology_Fourteenth_Completion_Verification_v1_20261005.json). Inherited source-specific internal review reported by the exact delivery receipt. Receipt custody and source statements are preserved; no new independent kernel or human-specialist review is asserted.
 
@@ -56,7 +56,7 @@ Existence of any closed-target identity inhabitant, the atom(I) identity certifi
 
 **Evidence.** FORMAL at COMPONENT scope, UNBOUNDED_MODEL domain. Original status: VERIFIED_LOCAL_DELIVERABLES. Fresh status: QUALIFIED_DECLARED_SUITE.
 
-Scientific sources: [IntensionalIdentityTheorems.lean](../../source-store/48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c/IntensionalIdentityTheorems.lean), [Intensional_Identity_Separation_and_Closed_Identity_Conversion.md](../../source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md).
+Scientific sources: [IntensionalIdentityTheorems.lean](../../source-store/48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c/IntensionalIdentityTheorems.lean), [Intensional_Identity_Separation_and_Closed_Identity_Conversion.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md).
 
 Inherited review: [Orthemology_Fourteenth_Completion_Verification_v1_20261005.json](../../source-store/e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb/Orthemology_Fourteenth_Completion_Verification_v1_20261005.json). Inherited source-specific internal review reported by the exact delivery receipt. Receipt custody and source statements are preserved; no new independent kernel or human-specialist review is asserted.
 
@@ -90,7 +90,7 @@ Bare derivability and inhabitation are semidecidable; raw Conv many-one reduces 
 
 **Evidence.** ORDINARY at WHOLE_RESULT scope, BARE_INPUT domain. Original status: REVIEWED_CHECKPOINT_NOT_COMPLETED_TRANCHE. Fresh status: NOT_RUN.
 
-Scientific sources: [Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md](../../source-store/2c16dbf40f6a945785b51ddc230a0e1f78004fe716a0412492b4345be8c95734/Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md), [Intensional_Identity_Separation_and_Closed_Identity_Conversion.md](../../source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md).
+Scientific sources: [Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md](../../source-store/2c16dbf40f6a945785b51ddc230a0e1f78004fe716a0412492b4345be8c95734/Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md), [Intensional_Identity_Separation_and_Closed_Identity_Conversion.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md).
 
 Inherited review: [Orthemology_Fourteenth_Checkpoint_Verification_v1_20261005.json](../../source-store/996107254670edb11d47dddc03ce0b6dd4fe045ae41b6d73b2079f3c827862f1/Orthemology_Fourteenth_Checkpoint_Verification_v1_20261005.json). Inherited source-specific internal review reported by the exact delivery receipt. Receipt custody and source statements are preserved; no new independent kernel or human-specialist review is asserted.
 
@@ -122,7 +122,7 @@ Bare derivability and inhabitation are semidecidable; raw Conv many-one reduces 
 
 **Evidence.** ORDINARY at WHOLE_RESULT scope, BARE_INPUT domain. Original status: REVIEWED_CHECKPOINT_NOT_COMPLETED_TRANCHE. Fresh status: NOT_RUN.
 
-Scientific sources: [Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md](../../source-store/2c16dbf40f6a945785b51ddc230a0e1f78004fe716a0412492b4345be8c95734/Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md), [Intensional_Identity_Separation_and_Closed_Identity_Conversion.md](../../source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md).
+Scientific sources: [Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md](../../source-store/2c16dbf40f6a945785b51ddc230a0e1f78004fe716a0412492b4345be8c95734/Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md), [Intensional_Identity_Separation_and_Closed_Identity_Conversion.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md).
 
 Inherited review: [Orthemology_Fourteenth_Checkpoint_Verification_v1_20261005.json](../../source-store/996107254670edb11d47dddc03ce0b6dd4fe045ae41b6d73b2079f3c827862f1/Orthemology_Fourteenth_Checkpoint_Verification_v1_20261005.json). Inherited source-specific internal review reported by the exact delivery receipt. Receipt custody and source statements are preserved; no new independent kernel or human-specialist review is asserted.
 

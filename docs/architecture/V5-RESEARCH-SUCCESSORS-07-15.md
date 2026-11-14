@@ -58,7 +58,7 @@ not create independent scientific evidence.
 
 ## Scientific distinctions
 
-The [calculus map](../provenance/v5-successors/CALCULUS_MAP.json) preserves the
+The [result statements](../provenance/v5-successors/RESULT_STATUS.json) preserve the
 following owners and does not adopt a replacement operational judgement:
 
 | Judgement | Scope in this integration |
