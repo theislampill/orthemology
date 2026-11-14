@@ -18,6 +18,23 @@ from pathlib import Path
 import subprocess
 import sys
 
+def current_legacy_sources(rows, expected, held_paths):
+    """Select unchanged source identities even after an authorised public relocation."""
+    identities = {row['sha256']: row for row in expected.values()}
+    assert len(identities) == 258
+    selected = {key: row for key, row in rows.items() if row['sha256'] in identities}
+    assert len(selected) == 2772
+    assert {row['sha256'] for row in selected.values()} == set(identities)
+    assert not {row['path'] for row in selected.values()} & held_paths
+    for row in selected.values():
+        original = identities[row['sha256']]
+        assert row['bytes'] == original['bytes']
+        assert row['projection'] == 'EXACT' and row['derivation'] is None
+        assert row['original_sha256'] == row['sha256']
+        assert row['original_bytes'] == row['bytes']
+    return selected
+
+
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--repo', type=Path, required=True)
 parser.add_argument('--expected-head', required=True)
@@ -98,8 +115,7 @@ try:
     elif args.phase == 'legacy_suites':
         registry = legacy.read_json(repo / legacy.AREA / 'registry.json')
         rows = legacy.indexed(legacy.read_json(repo / registry['source_map'])['sources'], 'id')
-        selected = {key: row for key, row in rows.items() if row['path'] in expected}
-        assert len(selected) == 2772
+        selected = current_legacy_sources(rows, expected, held_paths)
         seen = set()
         for row in selected.values():
             if row['path'] not in seen:
@@ -113,7 +129,9 @@ try:
                 legacy.validate_suite(suite, rows, repo, parsed)
                 suites.append(suite['id'])
         assert len(suites) == 96 and len(seen) == 258
-        record.update(source_ids=2772, source_paths=258, affected_suites=suites)
+        record.update(source_ids=2772, source_paths=258, affected_suites=suites,
+                      selection_basis='exact_public_content_identity',
+                      relocated_source_ids=sum(row['path'] not in expected for row in selected.values()))
     elif args.phase == 'preservation':
         import validate_v5_successors as successor
         registry = successor.read_json(repo / successor.AREA / 'registry.json')
