@@ -262,6 +262,128 @@ def t10_navigation_edition(root):
     return {path}
 
 
+FOUNDATIONS_LINK_EDITION = {'guides': {'experiments/orthemology-v5-successors/groups/foundations-t07-t15/CURRENT_SELECTION.md': {'adapted': ['7d6a66cb0ce2418caf368666cb14d1ec1aa0f641',
+                                                                                                                  '2535a8a7b739f1f183671d71a4741793893ae336f4131c80914c282c7a41417c',
+                                                                                                                  29462],
+                                                                                                      'original': ['a634519250c6cbed6077a871a340fa2e47e3ec0b',
+                                                                                                                   '1091333b016f7c5fb38df6db1f5172f8c6a90e6912349f41905afcd9779a5748',
+                                                                                                                   28486],
+                                                                                                      'replacements': [['../../source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md',
+                                                                                                                        'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md',
+                                                                                                                        1],
+                                                                                                                       ['../../source-store/6506838ecede1e4c967a75f855ad7121c722bcfcf3b6e1404a7b81062100ac41/PARTICULAR_POWERS_AND_MODAL_WARRANT.md',
+                                                                                                                        'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/6506838ecede1e4c967a75f855ad7121c722bcfcf3b6e1404a7b81062100ac41/PARTICULAR_POWERS_AND_MODAL_WARRANT.md',
+                                                                                                                        1],
+                                                                                                                       ['../../source-store/e22ffbc983d49d1d715094786868286587e07e54c00a41dc4d149f1077104a0d/SOURCE_INTEGRITY_ARGUMENT.md',
+                                                                                                                        'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/e22ffbc983d49d1d715094786868286587e07e54c00a41dc4d149f1077104a0d/SOURCE_INTEGRITY_ARGUMENT.md',
+                                                                                                                        1],
+                                                                                                                       ['../../source-store/e4cff3bc77242a99b97a2a79f7cb24c38b4806d75f3c22d4f1b4980f27e567ac/SOURCE_INTEGRITY_ARGUMENT.md',
+                                                                                                                        'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/e4cff3bc77242a99b97a2a79f7cb24c38b4806d75f3c22d4f1b4980f27e567ac/SOURCE_INTEGRITY_ARGUMENT.md',
+                                                                                                                        1],
+                                                                                                                       ['../../source-store/db13534ffd5446b81eb82353f6d5761701d77a3987f4c7dfd2ec390f8f84ccdc/SOURCE_INTEGRITY_WARRANT.md',
+                                                                                                                        'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/db13534ffd5446b81eb82353f6d5761701d77a3987f4c7dfd2ec390f8f84ccdc/SOURCE_INTEGRITY_WARRANT.md',
+                                                                                                                        1],
+                                                                                                                       ['../../source-store/38c7069030f02d68a0e8d4c03d0d06c93634f6bbe1a797a9d8660aacafabc14e/JOINT_EXISTENTIAL_COVERAGE.md',
+                                                                                                                        'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/38c7069030f02d68a0e8d4c03d0d06c93634f6bbe1a797a9d8660aacafabc14e/JOINT_EXISTENTIAL_COVERAGE.md',
+                                                                                                                        1],
+                                                                                                                       ['../../source-store/5ccacdb8203921877d4351a2ff93f65be23c6c41eabaf7eddde42e78b3ff4da7/ACTUAL_POWER_ROUTE.md',
+                                                                                                                        'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/5ccacdb8203921877d4351a2ff93f65be23c6c41eabaf7eddde42e78b3ff4da7/ACTUAL_POWER_ROUTE.md',
+                                                                                                                        1],
+                                                                                                                       ['../../source-store/5b7a727360f14084796c836d3e6131379873ba10c0d70660fe61382dee3b0c6f/ORIGINAL_GOVERNANCE_AND_RELIANCE.md',
+                                                                                                                        'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/5b7a727360f14084796c836d3e6131379873ba10c0d70660fe61382dee3b0c6f/ORIGINAL_GOVERNANCE_AND_RELIANCE.md',
+                                                                                                                        1]]},
+            'experiments/orthemology-v5-successors/groups/foundations-t07-t15/RESEARCH_MAP.md': {'adapted': ['e3ca04d02067ab7c65f3026d9331a00b6233b1ad',
+                                                                                                             'ddbfdf6c3b8199a1db515cbcf19c308ecdfcd7a50d664555b86191abdaf9a11f',
+                                                                                                             103993],
+                                                                                                 'original': ['931225854bebedc259b7c96b69ba32b315a978df',
+                                                                                                              '6f75be623e77461b7f65a1c51fd443eb7e5a83459e4f2d88987aec622e659345',
+                                                                                                              102041],
+                                                                                                 'replacements': [['../../source-store/6506838ecede1e4c967a75f855ad7121c722bcfcf3b6e1404a7b81062100ac41/PARTICULAR_POWERS_AND_MODAL_WARRANT.md',
+                                                                                                                   'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/6506838ecede1e4c967a75f855ad7121c722bcfcf3b6e1404a7b81062100ac41/PARTICULAR_POWERS_AND_MODAL_WARRANT.md',
+                                                                                                                   1],
+                                                                                                                  ['../../source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md',
+                                                                                                                   'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md',
+                                                                                                                   4],
+                                                                                                                  ['../../source-store/e4cff3bc77242a99b97a2a79f7cb24c38b4806d75f3c22d4f1b4980f27e567ac/SOURCE_INTEGRITY_ARGUMENT.md',
+                                                                                                                   'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/e4cff3bc77242a99b97a2a79f7cb24c38b4806d75f3c22d4f1b4980f27e567ac/SOURCE_INTEGRITY_ARGUMENT.md',
+                                                                                                                   1],
+                                                                                                                  ['../../source-store/e22ffbc983d49d1d715094786868286587e07e54c00a41dc4d149f1077104a0d/SOURCE_INTEGRITY_ARGUMENT.md',
+                                                                                                                   'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/e22ffbc983d49d1d715094786868286587e07e54c00a41dc4d149f1077104a0d/SOURCE_INTEGRITY_ARGUMENT.md',
+                                                                                                                   1],
+                                                                                                                  ['../../source-store/db13534ffd5446b81eb82353f6d5761701d77a3987f4c7dfd2ec390f8f84ccdc/SOURCE_INTEGRITY_WARRANT.md',
+                                                                                                                   'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/db13534ffd5446b81eb82353f6d5761701d77a3987f4c7dfd2ec390f8f84ccdc/SOURCE_INTEGRITY_WARRANT.md',
+                                                                                                                   1],
+                                                                                                                  ['../../source-store/862647d884a5fd610a81379dddca917ba9eacae41267e85b12450e77e81170fc/EXISTENTIAL_EXPLANATION_PAPER.md',
+                                                                                                                   'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/862647d884a5fd610a81379dddca917ba9eacae41267e85b12450e77e81170fc/EXISTENTIAL_EXPLANATION_PAPER.md',
+                                                                                                                   1],
+                                                                                                                  ['../../source-store/364049cd984b87375073d7f6c9217bb35e25a0651c8e6eada52f4b514b5ec770/KIND_PRIORITY_PAPER.md',
+                                                                                                                   'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/364049cd984b87375073d7f6c9217bb35e25a0651c8e6eada52f4b514b5ec770/KIND_PRIORITY_PAPER.md',
+                                                                                                                   1],
+                                                                                                                  ['../../source-store/3440e70623c3495870aa70ef3753c4885bf34216f9e547b67a12096ec2a771a5/TRANSFER_WARRANT_PAPER.md',
+                                                                                                                   'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/3440e70623c3495870aa70ef3753c4885bf34216f9e547b67a12096ec2a771a5/TRANSFER_WARRANT_PAPER.md',
+                                                                                                                   1],
+                                                                                                                  ['../../source-store/72babb9ad740dfdaf4446cd435d8a0e6eeddfc7566b5a9f1189d070f60033705/ACTUAL_POWERS_AND_HISTORY.md',
+                                                                                                                   'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/72babb9ad740dfdaf4446cd435d8a0e6eeddfc7566b5a9f1189d070f60033705/ACTUAL_POWERS_AND_HISTORY.md',
+                                                                                                                   1],
+                                                                                                                  ['../../source-store/38c7069030f02d68a0e8d4c03d0d06c93634f6bbe1a797a9d8660aacafabc14e/JOINT_EXISTENTIAL_COVERAGE.md',
+                                                                                                                   'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/38c7069030f02d68a0e8d4c03d0d06c93634f6bbe1a797a9d8660aacafabc14e/JOINT_EXISTENTIAL_COVERAGE.md',
+                                                                                                                   1],
+                                                                                                                  ['../../source-store/5ccacdb8203921877d4351a2ff93f65be23c6c41eabaf7eddde42e78b3ff4da7/ACTUAL_POWER_ROUTE.md',
+                                                                                                                   'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/5ccacdb8203921877d4351a2ff93f65be23c6c41eabaf7eddde42e78b3ff4da7/ACTUAL_POWER_ROUTE.md',
+                                                                                                                   1],
+                                                                                                                  ['../../source-store/5b7a727360f14084796c836d3e6131379873ba10c0d70660fe61382dee3b0c6f/ORIGINAL_GOVERNANCE_AND_RELIANCE.md',
+                                                                                                                   'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/5b7a727360f14084796c836d3e6131379873ba10c0d70660fe61382dee3b0c6f/ORIGINAL_GOVERNANCE_AND_RELIANCE.md',
+                                                                                                                   1],
+                                                                                                                  ['../../source-store/2fbc076a5699cd2b459626d213c77b1a5ac561d0e58187812159679e60db8cfc/ORIGINAL_PRACTICAL_PERFECTION.md',
+                                                                                                                   'https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/2fbc076a5699cd2b459626d213c77b1a5ac561d0e58187812159679e60db8cfc/ORIGINAL_PRACTICAL_PERFECTION.md',
+                                                                                                                   1]]}},
+ 'revision': '5f97e8c22a63e80a566ef85e4d152054e9cee0ff',
+ 'targets': {'experiments/orthemology-v5-successors/source-store/2fbc076a5699cd2b459626d213c77b1a5ac561d0e58187812159679e60db8cfc/ORIGINAL_PRACTICAL_PERFECTION.md': '32620f45c89451c913955bccdeefdd68a1daa80c',
+             'experiments/orthemology-v5-successors/source-store/3440e70623c3495870aa70ef3753c4885bf34216f9e547b67a12096ec2a771a5/TRANSFER_WARRANT_PAPER.md': '7450f4b816e342b743b2b938c5adc0cc0a20318f',
+             'experiments/orthemology-v5-successors/source-store/364049cd984b87375073d7f6c9217bb35e25a0651c8e6eada52f4b514b5ec770/KIND_PRIORITY_PAPER.md': '41134641472b67d420622895138f45eff1eff9ab',
+             'experiments/orthemology-v5-successors/source-store/38c7069030f02d68a0e8d4c03d0d06c93634f6bbe1a797a9d8660aacafabc14e/JOINT_EXISTENTIAL_COVERAGE.md': 'f3b30eead85e1db638a60f783fabb26c9a23b484',
+             'experiments/orthemology-v5-successors/source-store/5b7a727360f14084796c836d3e6131379873ba10c0d70660fe61382dee3b0c6f/ORIGINAL_GOVERNANCE_AND_RELIANCE.md': '57c83f31ad9f261dc8aaf33fb3f0f92ad9b55de5',
+             'experiments/orthemology-v5-successors/source-store/5ccacdb8203921877d4351a2ff93f65be23c6c41eabaf7eddde42e78b3ff4da7/ACTUAL_POWER_ROUTE.md': 'fc09aced2f6075ebabae06e24b63dee5c90798e7',
+             'experiments/orthemology-v5-successors/source-store/6506838ecede1e4c967a75f855ad7121c722bcfcf3b6e1404a7b81062100ac41/PARTICULAR_POWERS_AND_MODAL_WARRANT.md': 'd8d3da976941c4c51c6132ba5fd814e50f19f295',
+             'experiments/orthemology-v5-successors/source-store/72babb9ad740dfdaf4446cd435d8a0e6eeddfc7566b5a9f1189d070f60033705/ACTUAL_POWERS_AND_HISTORY.md': '7c692cfe84fa5640ad0a3fd020740c5f2d68e6ce',
+             'experiments/orthemology-v5-successors/source-store/862647d884a5fd610a81379dddca917ba9eacae41267e85b12450e77e81170fc/EXISTENTIAL_EXPLANATION_PAPER.md': 'f428506616637deef28e176ca22e489e19be3f24',
+             'experiments/orthemology-v5-successors/source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md': 'ce46d1f010ffbb1896c42a50cef748f4e68308bf',
+             'experiments/orthemology-v5-successors/source-store/db13534ffd5446b81eb82353f6d5761701d77a3987f4c7dfd2ec390f8f84ccdc/SOURCE_INTEGRITY_WARRANT.md': 'a7e1c1a62e02ca38db224317a8211d060cb75b66',
+             'experiments/orthemology-v5-successors/source-store/e22ffbc983d49d1d715094786868286587e07e54c00a41dc4d149f1077104a0d/SOURCE_INTEGRITY_ARGUMENT.md': '9c95040b24fd8a808ff6d553b35d455acf238901',
+             'experiments/orthemology-v5-successors/source-store/e4cff3bc77242a99b97a2a79f7cb24c38b4806d75f3c22d4f1b4980f27e567ac/SOURCE_INTEGRITY_ARGUMENT.md': 'a7b6ff38970e9018df738a532bcea3d76d6f5082'}}
+
+def foundations_navigation_edition(root):
+    """Authenticate only 24 exact historical citations in two public guides."""
+    binding = FOUNDATIONS_LINK_EDITION
+    revision = binding['revision']
+    targets = dict(binding['targets'])
+    targets.update({path: row['original'][0] for path, row in binding['guides'].items()})
+    for path, blob in targets.items():
+        expected = ('100644 blob ' + blob + '\t' + path + '\0').encode()
+        if _administrative_git(root, 'ls-tree', '-z', revision, '--', path) != expected:
+            raise ValueError('foundations navigation immutable target or guide differs')
+    def identity(body):
+        return [hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest(),
+                hashlib.sha256(body).hexdigest(), len(body)]
+    for path, row in binding['guides'].items():
+        original = _administrative_git(root, 'cat-file', 'blob', row['original'][0])
+        if identity(original) != row['original']:
+            raise ValueError('foundations navigation original identity differs')
+        adapted = original
+        for old, new, count in row['replacements']:
+            if adapted.count(old.encode()) != count:
+                raise ValueError('foundations navigation literal occurrence differs')
+            adapted = adapted.replace(old.encode(), new.encode())
+        if identity(adapted) != row['adapted']:
+            raise ValueError('foundations navigation derived edition differs')
+        expected = ('100644 ' + row['adapted'][0] + ' 0\t' + path + '\0').encode()
+        if _administrative_git(root, 'ls-files', '--stage', '-z', '--', path) != expected:
+            raise ValueError('foundations navigation staged edition differs')
+        if _regular_current_bytes(root, path) != adapted:
+            raise ValueError('foundations navigation current wording or links differ')
+    return set(binding['guides'])
+
+
 def check_preserved_roots(root, objects):
     """Keep every protected baseline obligation and its finite typed changes.
 
@@ -309,6 +431,11 @@ def check_preserved_roots(root, objects):
         navigation_authenticated = t10_navigation_edition(root)
     except (ValueError, OSError):
         pass  # No M allowance without the exact staged and current link edition.
+    foundations_authenticated = set()
+    try:
+        foundations_authenticated = foundations_navigation_edition(root)
+    except (ValueError, OSError):
+        pass  # Both exact staged/current editions are required; no partial admission.
     protected = ['experiments/orthemology-v5', 'experiments/orthemology-v5-continuations',
                  'experiments/orthemology-v5-successors', 'docs/provenance/v5-consolidation',
                  'docs/provenance/v5-research-continuations', 'docs/provenance/v5-successors',
@@ -490,6 +617,7 @@ def check_preserved_roots(root, objects):
                         (status == 'D' and path in (calculus_absences_authenticated or ())) or
                         (status == 'M' and path in calculus_guides_authenticated) or
                         (status == 'M' and path in navigation_authenticated) or
+                        (status == 'M' and path in foundations_authenticated) or
                         (status == 'M' and path == SUCCESSOR_INPUT_REGISTRY
                          and input_registry_authenticated) or
                         (status == 'M' and path == MEDIATOR_GUIDE and guide_authenticated) or

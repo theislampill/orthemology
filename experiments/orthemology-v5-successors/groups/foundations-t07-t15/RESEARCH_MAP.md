@@ -37,7 +37,7 @@ All fresh-evidence fields currently read NOT_RUN. Inherited finite controls, wri
 
 **Source and review scope.** Main §§1–7; PUBLIC_SCIENTIFIC_PRESERVATION. Inherited review only at the source-declared scope; no independent external endorsement.
 
-- [D15-SRC-T07-MODAL](../../source-store/6506838ecede1e4c967a75f855ad7121c722bcfcf3b6e1404a7b81062100ac41/PARTICULAR_POWERS_AND_MODAL_WARRANT.md)
+- [D15-SRC-T07-MODAL](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/6506838ecede1e4c967a75f855ad7121c722bcfcf3b6e1404a7b81062100ac41/PARTICULAR_POWERS_AND_MODAL_WARRANT.md)
 - Review LIMITED: [D15-SRC-REVIEW-T07-MODAL](../../source-store/c30db871552783f4eb63858db034c762747d8337afd51c7df421a37e1ce97b34/PUBLIC_SCIENTIFIC_PRESERVATION.md)
 
 **Disposition.** **Pass for bounded scientific preservation.** The second public projection preserves the accepted continuation's new primary-source arguments, inference assessment and stated limits. Its publication edits add no theorem or research result. No mandatory scientific correction is required.
@@ -54,7 +54,7 @@ All fresh-evidence fields currently read NOT_RUN. Inherited finite controls, wri
 
 **Source and review scope.** SOURCE_TRUTHFULNESS_WARRANT §§3–5; mixed rival and positive pressure tests; frozen integration review. Inherited review only at the source-declared scope; no independent external endorsement.
 
-- [D15-SRC-T07-TRUTHFUL](../../source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md)
+- [D15-SRC-T07-TRUTHFUL](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md)
 - Review REVIEWED_AT_SCOPE: [D15-SRC-REVIEW-T07-TRUTHFUL](../../source-store/79098e5546c76eeaf098819d6ccb0f6de9d8c12811099b6a790d8703c3eb78aa/FROZEN_WARRANT_INTEGRATION_NOTE.md)
 
 **Disposition.** **The integration passes as a bounded philosophical research report. No new blocking overclaim, circular inference or substantive misjoining was found.** The prior blockers to essential T0 and actual warranted restoration remain in force and are expressly preserved. This note certifies the integration at the stated hash, not the truth of every metaphysical premise, an actual trustworthy revelation, the dynamic theorem, or a completed modal countermodel.
@@ -71,7 +71,7 @@ All fresh-evidence fields currently read NOT_RUN. Inherited finite controls, wri
 
 **Source and review scope.** Main exact-purpose lemma; PURPOSE_LINKAGE_ERRATUM; frozen integration review points 4 and 6. Inherited review only at the source-declared scope; no independent external endorsement.
 
-- [D15-SRC-T07-TRUTHFUL](../../source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md)
+- [D15-SRC-T07-TRUTHFUL](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md)
 - Review REVIEWED_AT_SCOPE: [D15-SRC-REVIEW-T07-TRUTHFUL](../../source-store/79098e5546c76eeaf098819d6ccb0f6de9d8c12811099b6a790d8703c3eb78aa/FROZEN_WARRANT_INTEGRATION_NOTE.md)
 
 **Disposition.** **The integration passes as a bounded philosophical research report. No new blocking overclaim, circular inference or substantive misjoining was found.** The prior blockers to essential T0 and actual warranted restoration remain in force and are expressly preserved. This note certifies the integration at the stated hash, not the truth of every metaphysical premise, an actual trustworthy revelation, the dynamic theorem, or a completed modal countermodel.
@@ -88,7 +88,7 @@ All fresh-evidence fields currently read NOT_RUN. Inherited finite controls, wri
 
 **Source and review scope.** Main §§6–10; Asfahani source-scope addendum §§1–6; frozen integration review. Inherited review only at the source-declared scope; no independent external endorsement.
 
-- [D15-SRC-T07-TRUTHFUL](../../source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md)
+- [D15-SRC-T07-TRUTHFUL](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md)
 - Review REVIEWED_AT_SCOPE: [D15-SRC-REVIEW-T07-TRUTHFUL](../../source-store/79098e5546c76eeaf098819d6ccb0f6de9d8c12811099b6a790d8703c3eb78aa/FROZEN_WARRANT_INTEGRATION_NOTE.md)
 
 **Disposition.** **The integration passes as a bounded philosophical research report. No new blocking overclaim, circular inference or substantive misjoining was found.** The prior blockers to essential T0 and actual warranted restoration remain in force and are expressly preserved. This note certifies the integration at the stated hash, not the truth of every metaphysical premise, an actual trustworthy revelation, the dynamic theorem, or a completed modal countermodel.
@@ -105,7 +105,7 @@ All fresh-evidence fields currently read NOT_RUN. Inherited finite controls, wri
 
 **Source and review scope.** Main norm and purpose analysis; NORM_AND_PURPOSE_SCOPE; frozen integration review. Inherited review only at the source-declared scope; no independent external endorsement.
 
-- [D15-SRC-T07-TRUTHFUL](../../source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md)
+- [D15-SRC-T07-TRUTHFUL](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md)
 - Review REVIEWED_AT_SCOPE: [D15-SRC-REVIEW-T07-TRUTHFUL](../../source-store/79098e5546c76eeaf098819d6ccb0f6de9d8c12811099b6a790d8703c3eb78aa/FROZEN_WARRANT_INTEGRATION_NOTE.md)
 
 **Disposition.** **The integration passes as a bounded philosophical research report. No new blocking overclaim, circular inference or substantive misjoining was found.** The prior blockers to essential T0 and actual warranted restoration remain in force and are expressly preserved. This note certifies the integration at the stated hash, not the truth of every metaphysical premise, an actual trustworthy revelation, the dynamic theorem, or a completed modal countermodel.
@@ -141,8 +141,8 @@ All fresh-evidence fields currently read NOT_RUN. Inherited finite controls, wri
 
 **Source and review scope.** SOURCE_INTEGRITY_ARGUMENT; PUBLIC_ACCEPTANCE. Inherited review only at the source-declared scope; no independent external endorsement. The original full paper and the condensed reader are separately identified; preservation is not a fresh scientific acceptance.
 
-- [D15-SRC-T08-INTEGRITY](../../source-store/e4cff3bc77242a99b97a2a79f7cb24c38b4806d75f3c22d4f1b4980f27e567ac/SOURCE_INTEGRITY_ARGUMENT.md)
-- [D15-SRC-T08-INTEGRITY-ORIGINAL](../../source-store/e22ffbc983d49d1d715094786868286587e07e54c00a41dc4d149f1077104a0d/SOURCE_INTEGRITY_ARGUMENT.md)
+- [D15-SRC-T08-INTEGRITY](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/e4cff3bc77242a99b97a2a79f7cb24c38b4806d75f3c22d4f1b4980f27e567ac/SOURCE_INTEGRITY_ARGUMENT.md)
+- [D15-SRC-T08-INTEGRITY-ORIGINAL](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/e22ffbc983d49d1d715094786868286587e07e54c00a41dc4d149f1077104a0d/SOURCE_INTEGRITY_ARGUMENT.md)
 - Review LIMITED: [D15-SRC-REVIEW-T08-PRESERVATION](../../source-store/98ffee2a0432543f8f79e0563720a1ccbcd0594baa8b5c8e8213b66b2ecc2e85/PUBLIC_ACCEPTANCE.md)
 
 **Disposition.** PASS for the two exact reader copies identified below. Independent comparison verifies that the condensation preserves the accepted arguments, conclusions and qualifications. It establishes no new scientific or foundational result. The original publications remain unchanged and separately identified.
@@ -211,7 +211,7 @@ All fresh-evidence fields currently read NOT_RUN. Inherited finite controls, wri
 
 **Source and review scope.** Warrant paper and LOGICAL_APPENDIX; acceptance v3. Inherited review only at the source-declared scope; no independent external endorsement.
 
-- [D15-SRC-T09-INTEGRITY](../../source-store/db13534ffd5446b81eb82353f6d5761701d77a3987f4c7dfd2ec390f8f84ccdc/SOURCE_INTEGRITY_WARRANT.md)
+- [D15-SRC-T09-INTEGRITY](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/db13534ffd5446b81eb82353f6d5761701d77a3987f4c7dfd2ec390f8f84ccdc/SOURCE_INTEGRITY_WARRANT.md)
 - [D15-SRC-T09-INTEGRITY-LOGIC](../../source-store/f6c2e9326b71333e27c1156667a95c62a9b18e587740ccdda8461959f6478967/LOGICAL_APPENDIX.md)
 - Review REVIEWED_AT_SCOPE: [D15-SRC-REVIEW-T09-INTEGRITY](../../source-store/a9f1e7565232c07b60dbb31449e5410ad4f75931c29a51ce319230cbea026f3b/PUBLIC_ACCEPTANCE.md)
 
@@ -263,7 +263,7 @@ All fresh-evidence fields currently read NOT_RUN. Inherited finite controls, wri
 
 **Source and review scope.** EXISTENTIAL_EXPLANATION_PAPER; revision acceptance; later correction belongs to separately scoped D09 suite. Inherited review only at the source-declared scope; no independent external endorsement.
 
-- [D15-SRC-T10-EXISTENTIAL](../../source-store/862647d884a5fd610a81379dddca917ba9eacae41267e85b12450e77e81170fc/EXISTENTIAL_EXPLANATION_PAPER.md)
+- [D15-SRC-T10-EXISTENTIAL](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/862647d884a5fd610a81379dddca917ba9eacae41267e85b12450e77e81170fc/EXISTENTIAL_EXPLANATION_PAPER.md)
 - Review LIMITED: [D15-SRC-REVIEW-T10-EXISTENTIAL](../../source-store/aa5e85d45661b8ad133b31d8321c7491f41404b65fc15e2df28c66764e7ea8fe/REVISION_ACCEPTANCE.md)
 
 **Disposition.** The revised philosophical paper and claim ledger resolve the six integration requests in `INDEPENDENT_REVIEW_v1.md` §7. Accept their narrow research conclusions and stated ceilings. No new actual-world original-source, necessary-participant, or programme closure is certified.
@@ -280,7 +280,7 @@ All fresh-evidence fields currently read NOT_RUN. Inherited finite controls, wri
 
 **Source and review scope.** KIND_PRIORITY_PAPER §§2–6; kind-priority acceptance. Inherited review only at the source-declared scope; no independent external endorsement.
 
-- [D15-SRC-T10-KIND](../../source-store/364049cd984b87375073d7f6c9217bb35e25a0651c8e6eada52f4b514b5ec770/KIND_PRIORITY_PAPER.md)
+- [D15-SRC-T10-KIND](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/364049cd984b87375073d7f6c9217bb35e25a0651c8e6eada52f4b514b5ec770/KIND_PRIORITY_PAPER.md)
 - Review REVIEWED_AT_SCOPE: [D15-SRC-REVIEW-T10-KIND](../../source-store/56d3b61c9749fdffacecdd3026e4f4b25de10ab7207ec85510b36fb95469dad0/ACCEPTANCE.md)
 
 **Disposition.** **Accept the specified candidate as a bounded research contribution.** This is internal model-assisted philosophical assessment, not external specialist validation or acceptance of an actual necessary-source conclusion.
@@ -297,7 +297,7 @@ All fresh-evidence fields currently read NOT_RUN. Inherited finite controls, wri
 
 **Source and review scope.** TRANSFER_WARRANT_PAPER §§2–8; final independent review R1–R3 and prior-ownership resolution. Inherited review only at the source-declared scope; no independent external endorsement.
 
-- [D15-SRC-T10-TRANSFER](../../source-store/3440e70623c3495870aa70ef3753c4885bf34216f9e547b67a12096ec2a771a5/TRANSFER_WARRANT_PAPER.md)
+- [D15-SRC-T10-TRANSFER](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/3440e70623c3495870aa70ef3753c4885bf34216f9e547b67a12096ec2a771a5/TRANSFER_WARRANT_PAPER.md)
 - Review REVIEWED_AT_SCOPE: [D15-SRC-REVIEW-T10-TRANSFER](../../source-store/090de82a7c61c7538d355d6c3a3ac429b58c571661e157398ba9a8bdbc0cbf22/INDEPENDENT_REVIEW_v1.md)
 
 **Disposition.** **Accept the paper and claim ledger at their expressly bounded philosophical status. No blocking philosophical issue remains in the inspected version.**
@@ -314,7 +314,7 @@ All fresh-evidence fields currently read NOT_RUN. Inherited finite controls, wri
 
 **Source and review scope.** ACTUAL_POWERS_AND_HISTORY §§2–8; exact ACCEPTANCE_v1 controls the historical pending header only at its scope. Inherited review only at the source-declared scope; no independent external endorsement.
 
-- [D15-SRC-T10-POWERS](../../source-store/72babb9ad740dfdaf4446cd435d8a0e6eeddfc7566b5a9f1189d070f60033705/ACTUAL_POWERS_AND_HISTORY.md)
+- [D15-SRC-T10-POWERS](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/72babb9ad740dfdaf4446cd435d8a0e6eeddfc7566b5a9f1189d070f60033705/ACTUAL_POWERS_AND_HISTORY.md)
 - Review REVIEWED_AT_SCOPE: [D15-SRC-REVIEW-T10-POWERS](../../source-store/6d1289c04a1e351f05d93f49822ee850d513f0c256b8eb151481b900e2636249/ACCEPTANCE_v1.md)
 
 **Disposition.** **Accept candidate-v1 as a bounded philosophical contribution.** The assessment gives positive rational credit to the local generative route while correctly withholding an unconditional actual necessary-resource result. Its criticism addresses the content and scope of specific inferences. It neither dismisses strong premises merely because they are disputed nor grants their actual application merely because they appear in a developed theory.
@@ -331,8 +331,8 @@ All fresh-evidence fields currently read NOT_RUN. Inherited finite controls, wri
 
 **Source and review scope.** Candidate-v2 papers; retention-clarification-v2 and its separate acceptance; prior v1 defects retained as resolved history. Inherited review only at the source-declared scope; no independent external endorsement.
 
-- [D15-SRC-T10-JOINT](../../source-store/38c7069030f02d68a0e8d4c03d0d06c93634f6bbe1a797a9d8660aacafabc14e/JOINT_EXISTENTIAL_COVERAGE.md)
-- [D15-SRC-T10-POWER-ROUTE](../../source-store/5ccacdb8203921877d4351a2ff93f65be23c6c41eabaf7eddde42e78b3ff4da7/ACTUAL_POWER_ROUTE.md)
+- [D15-SRC-T10-JOINT](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/38c7069030f02d68a0e8d4c03d0d06c93634f6bbe1a797a9d8660aacafabc14e/JOINT_EXISTENTIAL_COVERAGE.md)
+- [D15-SRC-T10-POWER-ROUTE](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/5ccacdb8203921877d4351a2ff93f65be23c6c41eabaf7eddde42e78b3ff4da7/ACTUAL_POWER_ROUTE.md)
 - [D15-SRC-T10-RP5](../../source-store/ee348e6c8f6fa6709163319bedd349028b31dc236a51227fae4647373691bf1e/RP5_RETENTION_CLARIFICATION.md)
 - Review REVIEWED_AT_SCOPE: [D15-SRC-REVIEW-T10-JOINT](../../source-store/3283a5954c5aca18e2ce627c3e3cf619bcd34ef637f50bbd920ba59cf5c1e60e/ACCEPTANCE_v2.md)
 - Review REVIEWED_AT_SCOPE: [D15-SRC-REVIEW-T10-RP5](../../source-store/6b1e03be3d7b9111acfc000f87300f75c1e5537236d2f9d64115312c440ee034/ACCEPTANCE.md)
@@ -351,7 +351,7 @@ All fresh-evidence fields currently read NOT_RUN. Inherited finite controls, wri
 
 **Source and review scope.** Research-v3 §§2–5 and final disposition; v2/v1 remain predecessors. Inherited review only at the source-declared scope; no independent external endorsement.
 
-- [D15-SRC-T10-CARE](../../source-store/5b7a727360f14084796c836d3e6131379873ba10c0d70660fe61382dee3b0c6f/ORIGINAL_GOVERNANCE_AND_RELIANCE.md)
+- [D15-SRC-T10-CARE](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/5b7a727360f14084796c836d3e6131379873ba10c0d70660fe61382dee3b0c6f/ORIGINAL_GOVERNANCE_AND_RELIANCE.md)
 - Review REVIEWED_AT_SCOPE: [D15-SRC-REVIEW-T10-CARE](../../source-store/1f7a799e53f6adfe131d0b0ae6590c98b0905282808c2adf521b0aabc44ae4d0/FINAL_DISPOSITION_v3.md)
 
 **Disposition.** **Verdict unchanged: credit the bounded intermediate due-care result.** Actively organising another subject's legitimate bounded reliance can supply a special, defeasible reason for proportionate protective and transitional care. The reason can persist after a purpose change and apply before an assurance. Its ground is the organiser's attributable arrangement of a real recipient's exposure, not the bare title original source, a promissory definition, or superior ability.
@@ -385,7 +385,7 @@ All fresh-evidence fields currently read NOT_RUN. Inherited finite controls, wri
 
 **Source and review scope.** Research-v2 paper §§2–8 and independent review. Inherited review only at the source-declared scope; no independent external endorsement.
 
-- [D15-SRC-T10-PERFECTION](../../source-store/2fbc076a5699cd2b459626d213c77b1a5ac561d0e58187812159679e60db8cfc/ORIGINAL_PRACTICAL_PERFECTION.md)
+- [D15-SRC-T10-PERFECTION](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/2fbc076a5699cd2b459626d213c77b1a5ac561d0e58187812159679e60db8cfc/ORIGINAL_PRACTICAL_PERFECTION.md)
 - Review REVIEWED_AT_SCOPE: [D15-SRC-REVIEW-T10-PERFECTION](../../source-store/c94ed9168e136824eaaedefc1b6591d2be1652fc52da4d44cd9b43c43e729b68/INDEPENDENT_REVIEW.md)
 
 **Disposition.** Accept the candidate at its stated scope. It preserves the serious positive case for original practical integration and supplies a modest new application to complete-profile comparison. Two alleged compensating advantages of an unfaithful exercise are excluded under the specified facts: avoiding a responsibility already incurred, and retaining an authority that the care relation never established. Neither exclusion establishes an eligible repair, the absence of all other losses, actual nondomination N, or essential nondomination.

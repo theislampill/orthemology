@@ -16,7 +16,7 @@ The immutable checkpoint report 8732858ea75e2373952cb1533763c536b2b43ea68643f51e
 
 The repair adds the exact means-linked token condition; it does not withdraw the valid narrower implication or promote essential T0. The checkpoint is historical rather than an alternative current selector.
 
-Sources: [D15-SRC-T07-PURPOSE-ERRATUM](../../source-store/bb42c3c60363ec5e2905e41d501bcb58efef3e8d7c1043e736118f1937f0b3cc/PURPOSE_LINKAGE_ERRATUM.md), [D15-SRC-T07-TRUTHFUL](../../source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md), [D15-SRC-REVIEW-T07-TRUTHFUL](../../source-store/79098e5546c76eeaf098819d6ccb0f6de9d8c12811099b6a790d8703c3eb78aa/FROZEN_WARRANT_INTEGRATION_NOTE.md)
+Sources: [D15-SRC-T07-PURPOSE-ERRATUM](../../source-store/bb42c3c60363ec5e2905e41d501bcb58efef3e8d7c1043e736118f1937f0b3cc/PURPOSE_LINKAGE_ERRATUM.md), [D15-SRC-T07-TRUTHFUL](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md), [D15-SRC-REVIEW-T07-TRUTHFUL](../../source-store/79098e5546c76eeaf098819d6ccb0f6de9d8c12811099b6a790d8703c3eb78aa/FROZEN_WARRANT_INTEGRATION_NOTE.md)
 
 ## D15-CURRENTNESS-T07-MODAL
 
@@ -24,7 +24,7 @@ The accepted original main 8dc3412ffe2d46a708b722ce1a1b8d22057c44493339a3a499417
 
 This is projection succession with no scientific conclusion change and no additional novelty credit.
 
-Sources: [D15-SRC-T07-MODAL](../../source-store/6506838ecede1e4c967a75f855ad7121c722bcfcf3b6e1404a7b81062100ac41/PARTICULAR_POWERS_AND_MODAL_WARRANT.md), [D15-SRC-REVIEW-T07-MODAL](../../source-store/c30db871552783f4eb63858db034c762747d8337afd51c7df421a37e1ce97b34/PUBLIC_SCIENTIFIC_PRESERVATION.md), [D15-SRC-T07-MODAL-LOCUS](../../source-store/ff44cc66086a65c65ddf3dd36c1fd4e21c238ed0987ab83b9a7fe47457521c08/LOCUS_AND_INCREMENT_NOTES.md)
+Sources: [D15-SRC-T07-MODAL](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/6506838ecede1e4c967a75f855ad7121c722bcfcf3b6e1404a7b81062100ac41/PARTICULAR_POWERS_AND_MODAL_WARRANT.md), [D15-SRC-REVIEW-T07-MODAL](../../source-store/c30db871552783f4eb63858db034c762747d8337afd51c7df421a37e1ce97b34/PUBLIC_SCIENTIFIC_PRESERVATION.md), [D15-SRC-T07-MODAL-LOCUS](../../source-store/ff44cc66086a65c65ddf3dd36c1fd4e21c238ed0987ab83b9a7fe47457521c08/LOCUS_AND_INCREMENT_NOTES.md)
 
 ## D15-CURRENTNESS-T08-NECESSARY
 
@@ -40,7 +40,7 @@ D15-SRC-T08-INTEGRITY-ORIGINAL (SHA-256 e22ffbc983d49d1d715094786868286587e07e54
 
 Both text identities remain available. The original scientific status and reader preservation acceptance are different evidence; no research result is counted twice.
 
-Sources: [D15-SRC-T08-INTEGRITY-ORIGINAL](../../source-store/e22ffbc983d49d1d715094786868286587e07e54c00a41dc4d149f1077104a0d/SOURCE_INTEGRITY_ARGUMENT.md), [D15-SRC-T08-INTEGRITY](../../source-store/e4cff3bc77242a99b97a2a79f7cb24c38b4806d75f3c22d4f1b4980f27e567ac/SOURCE_INTEGRITY_ARGUMENT.md), [D15-SRC-T08-INTEGRITY-PROJECTION](../../source-store/307520309b22867197859562183b7cabe064ac6a2f5a4a95392b55e837c6c1f9/PROJECTION_BINDING.json), [D15-SRC-REVIEW-T08-PRESERVATION](../../source-store/98ffee2a0432543f8f79e0563720a1ccbcd0594baa8b5c8e8213b66b2ecc2e85/PUBLIC_ACCEPTANCE.md)
+Sources: [D15-SRC-T08-INTEGRITY-ORIGINAL](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/e22ffbc983d49d1d715094786868286587e07e54c00a41dc4d149f1077104a0d/SOURCE_INTEGRITY_ARGUMENT.md), [D15-SRC-T08-INTEGRITY](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/e4cff3bc77242a99b97a2a79f7cb24c38b4806d75f3c22d4f1b4980f27e567ac/SOURCE_INTEGRITY_ARGUMENT.md), [D15-SRC-T08-INTEGRITY-PROJECTION](../../source-store/307520309b22867197859562183b7cabe064ac6a2f5a4a95392b55e837c6c1f9/PROJECTION_BINDING.json), [D15-SRC-REVIEW-T08-PRESERVATION](../../source-store/98ffee2a0432543f8f79e0563720a1ccbcd0594baa8b5c8e8213b66b2ecc2e85/PUBLIC_ACCEPTANCE.md)
 
 ## D15-CURRENTNESS-T09-NECESSITY
 
@@ -56,7 +56,7 @@ Current paired nexus/rival and integrity-v3 selectors bind D15-SRC-T09-NEXUS (SH
 
 Earlier unbound candidate bodies are not fabricated or credited as current. Separate architectures do not become a completed MEN8 common model.
 
-Sources: [D15-SRC-T09-NEXUS](../../source-store/a7246a9f23a039adb3ec153dcd83064f7bde9d8329e493f3afd7115cf30bc951/RESEARCH_NOTE.md), [D15-SRC-T09-RIVAL](../../source-store/93a31ad11ea5e2ac4d47c8cc38fdb77563f3999bcc219a14622b1cdc64ae37b2/JOINT_ARCHITECTURE_AND_FAILURE_ASSESSMENT.md), [D15-SRC-T09-INTEGRITY](../../source-store/db13534ffd5446b81eb82353f6d5761701d77a3987f4c7dfd2ec390f8f84ccdc/SOURCE_INTEGRITY_WARRANT.md), [D15-SRC-T09-INTEGRITY-LOGIC](../../source-store/f6c2e9326b71333e27c1156667a95c62a9b18e587740ccdda8461959f6478967/LOGICAL_APPENDIX.md), [D15-SRC-REVIEW-T09-NEXUS](../../source-store/d47051a18938d791d97ec728553192b1fd6943068445c93d201c1b87318d5a7e/ACCEPTANCE.md), [D15-SRC-REVIEW-T09-INTEGRITY](../../source-store/a9f1e7565232c07b60dbb31449e5410ad4f75931c29a51ce319230cbea026f3b/PUBLIC_ACCEPTANCE.md)
+Sources: [D15-SRC-T09-NEXUS](../../source-store/a7246a9f23a039adb3ec153dcd83064f7bde9d8329e493f3afd7115cf30bc951/RESEARCH_NOTE.md), [D15-SRC-T09-RIVAL](../../source-store/93a31ad11ea5e2ac4d47c8cc38fdb77563f3999bcc219a14622b1cdc64ae37b2/JOINT_ARCHITECTURE_AND_FAILURE_ASSESSMENT.md), [D15-SRC-T09-INTEGRITY](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/db13534ffd5446b81eb82353f6d5761701d77a3987f4c7dfd2ec390f8f84ccdc/SOURCE_INTEGRITY_WARRANT.md), [D15-SRC-T09-INTEGRITY-LOGIC](../../source-store/f6c2e9326b71333e27c1156667a95c62a9b18e587740ccdda8461959f6478967/LOGICAL_APPENDIX.md), [D15-SRC-REVIEW-T09-NEXUS](../../source-store/d47051a18938d791d97ec728553192b1fd6943068445c93d201c1b87318d5a7e/ACCEPTANCE.md), [D15-SRC-REVIEW-T09-INTEGRITY](../../source-store/a9f1e7565232c07b60dbb31449e5410ad4f75931c29a51ce319230cbea026f3b/PUBLIC_ACCEPTANCE.md)
 
 ## D15-CURRENTNESS-T10-JOINT
 
@@ -64,7 +64,7 @@ Candidate-v1 manifest b57e02b476848377364f230512490561f791d44def9256f5a2194ae877
 
 RP5 applies actual relevant occurrence and F-instantiation retention to both selected x=s and x=r. The immutable main paper is read with the sidecar; pending header text does not override the later scoped acceptance.
 
-Sources: [D15-SRC-T10-JOINT](../../source-store/38c7069030f02d68a0e8d4c03d0d06c93634f6bbe1a797a9d8660aacafabc14e/JOINT_EXISTENTIAL_COVERAGE.md), [D15-SRC-T10-POWER-ROUTE](../../source-store/5ccacdb8203921877d4351a2ff93f65be23c6c41eabaf7eddde42e78b3ff4da7/ACTUAL_POWER_ROUTE.md), [D15-SRC-T10-JOINT-BINDING](../../source-store/11505da0afafd1b61f7f8f3f03fa898c3fcbb4f5834be6e45bfefc7eebb8ba4b/INPUT_BINDING.json), [D15-SRC-REVIEW-T10-JOINT](../../source-store/3283a5954c5aca18e2ce627c3e3cf619bcd34ef637f50bbd920ba59cf5c1e60e/ACCEPTANCE_v2.md), [D15-SRC-T10-RP5](../../source-store/ee348e6c8f6fa6709163319bedd349028b31dc236a51227fae4647373691bf1e/RP5_RETENTION_CLARIFICATION.md), [D15-SRC-T10-RP5-BINDING](../../source-store/8c58a15d8d41b6679c7b538f0bd6d473ea7c2810088cd49bc5f3fdf20eb7d085/INPUT_BINDING.json), [D15-SRC-REVIEW-T10-RP5](../../source-store/6b1e03be3d7b9111acfc000f87300f75c1e5537236d2f9d64115312c440ee034/ACCEPTANCE.md)
+Sources: [D15-SRC-T10-JOINT](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/38c7069030f02d68a0e8d4c03d0d06c93634f6bbe1a797a9d8660aacafabc14e/JOINT_EXISTENTIAL_COVERAGE.md), [D15-SRC-T10-POWER-ROUTE](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/5ccacdb8203921877d4351a2ff93f65be23c6c41eabaf7eddde42e78b3ff4da7/ACTUAL_POWER_ROUTE.md), [D15-SRC-T10-JOINT-BINDING](../../source-store/11505da0afafd1b61f7f8f3f03fa898c3fcbb4f5834be6e45bfefc7eebb8ba4b/INPUT_BINDING.json), [D15-SRC-REVIEW-T10-JOINT](../../source-store/3283a5954c5aca18e2ce627c3e3cf619bcd34ef637f50bbd920ba59cf5c1e60e/ACCEPTANCE_v2.md), [D15-SRC-T10-RP5](../../source-store/ee348e6c8f6fa6709163319bedd349028b31dc236a51227fae4647373691bf1e/RP5_RETENTION_CLARIFICATION.md), [D15-SRC-T10-RP5-BINDING](../../source-store/8c58a15d8d41b6679c7b538f0bd6d473ea7c2810088cd49bc5f3fdf20eb7d085/INPUT_BINDING.json), [D15-SRC-REVIEW-T10-RP5](../../source-store/6b1e03be3d7b9111acfc000f87300f75c1e5537236d2f9d64115312c440ee034/ACCEPTANCE.md)
 
 ## D15-CURRENTNESS-T10-CARE
 
@@ -72,7 +72,7 @@ The v1 review requests material corrections; the v2 disposition accepts paper dc
 
 Current due-care content is proportionate conduct, not guaranteed outcome. Historical criticisms are not current blockers after the exact repair, and their closure gives no authority over the recipient or source-wide integrity.
 
-Sources: [D15-SRC-T10-CARE](../../source-store/5b7a727360f14084796c836d3e6131379873ba10c0d70660fe61382dee3b0c6f/ORIGINAL_GOVERNANCE_AND_RELIANCE.md), [D15-SRC-T10-CARE-INITIAL-REVIEW](../../source-store/2499c662c51c2c388b44fe67b60520ebedb434947e7dc46056d38fae69061b53/ARGUMENT_REVIEW_v1.md), [D15-SRC-T10-CARE-REVISED-REVIEW](../../source-store/252fd2900231403f662714b44618ce19d2384429bb42c1ec0244306edf1c40da/REVISED_ARGUMENT_DISPOSITION_v2.md), [D15-SRC-REVIEW-T10-CARE](../../source-store/1f7a799e53f6adfe131d0b0ae6590c98b0905282808c2adf521b0aabc44ae4d0/FINAL_DISPOSITION_v3.md)
+Sources: [D15-SRC-T10-CARE](https://github.com/theislampill/orthemology/blob/5f97e8c22a63e80a566ef85e4d152054e9cee0ff/experiments/orthemology-v5-successors/source-store/5b7a727360f14084796c836d3e6131379873ba10c0d70660fe61382dee3b0c6f/ORIGINAL_GOVERNANCE_AND_RELIANCE.md), [D15-SRC-T10-CARE-INITIAL-REVIEW](../../source-store/2499c662c51c2c388b44fe67b60520ebedb434947e7dc46056d38fae69061b53/ARGUMENT_REVIEW_v1.md), [D15-SRC-T10-CARE-REVISED-REVIEW](../../source-store/252fd2900231403f662714b44618ce19d2384429bb42c1ec0244306edf1c40da/REVISED_ARGUMENT_DISPOSITION_v2.md), [D15-SRC-REVIEW-T10-CARE](../../source-store/1f7a799e53f6adfe131d0b0ae6590c98b0905282808c2adf521b0aabc44ae4d0/FINAL_DISPOSITION_v3.md)
 
 ## D15-CURRENTNESS-T11-ADMISSION
 
