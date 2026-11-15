@@ -6,7 +6,7 @@ publication boundary and current-record binding, not mathematical acceptance.
 """
 from __future__ import annotations
 
-from resolve_t20_v6_source import DIGEST_RECORD_PATHS, digest_record_absences, NEW250_PATHS, new250_validate_rows
+from resolve_t20_v6_source import DIGEST_RECORD_PATHS, digest_record_absences, NEW250_PATHS, new250_validate_rows, new250_absences
 
 import collections
 import hashlib
@@ -330,6 +330,7 @@ def check_preserved_roots(root, objects):
     remainder_batch_absences_authenticated = None
     calculus_absences_authenticated = None
     binding_absences_authenticated = None
+    new250_absences_authenticated = None
     calculus_guides_authenticated = set()
     for cached in (True, False):
         result = readonly_git_diff(root,
@@ -365,6 +366,14 @@ def check_preserved_roots(root, objects):
                     status == 'D' and binding_record_candidate(path)
                     for status, path in zip(changes[::2], changes[1::2])):
                 binding_absences_authenticated = binding_record_absences(root)
+            if new250_absences_authenticated is None and any(
+                    status == 'D' and path in NEW250_PATHS
+                    for status, path in zip(changes[::2], changes[1::2])):
+                new250_absences_authenticated = set()
+                try:
+                    new250_absences_authenticated = new250_absences(root)
+                except (ValueError, OSError):
+                    pass  # No D allowance without the complete exact receiver snapshot.
             if copy_authenticated is None and any(
                     status == 'D' and path.startswith(CONTINUATION_COPY_ROOT)
                     for status, path in zip(changes[::2], changes[1::2])):
@@ -465,6 +474,7 @@ def check_preserved_roots(root, objects):
             if any(not ((status == 'D' and path in authenticated) or
                         (status == 'D' and path in status_absences_authenticated) or
                         (status == 'M' and path in status_owners_authenticated) or
+                        (status == 'D' and path in (new250_absences_authenticated or ())) or
                         (status == 'D' and path in (copy_authenticated or ())) or
                         (status == 'D' and path in (checkpoint_authenticated or ())) or
                         (status == 'D' and path in (record_authenticated or ())) or
