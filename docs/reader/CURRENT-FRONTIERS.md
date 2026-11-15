@@ -211,11 +211,11 @@ The [experimental programme](../../mathematics/physical-realisation-and-continua
 [recovery]: ../../research/t20-v6-20261012/SOURCE_RECOVERY.md
 [owner-map]: ../project-closure/reader-refactor-issue-35/OWNER-MAP.json
 
-[t12-fresh]: ../../experiments/orthemology-v5-successors/source-store/09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab/FRESH_HISTORIES_BOUNDED_OBSERVATION_AND_ORIGINAL_SUPPORT_v4.md
-[t12-access]: ../../experiments/orthemology-v5-successors/source-store/c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942/BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md
+[t12-fresh]: ../../mathematics/collective-inquiry-and-strategic-coordination.md#66-finite-additive-concentration-and-the-weakest-capture-contradiction
+[t12-access]: ../../mathematics/collective-inquiry-and-strategic-coordination.md#69-operational-capture-and-a-law-specific-diachronic-test
 [t12-integer]: ../../experiments/orthemology-v5-successors/source-store/6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md
-[t12-clarification]: ../../experiments/orthemology-v5-successors/source-store/32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68/OBSERVATION_ROUTE_CLARIFICATION_v1.md
-[t12-chain]: ../../experiments/orthemology-v5-successors/source-store/0cfd5385fed9e21656d5e724c3e78e7ac5ca53ed45801fe7e81f77a7e3b3b96b/PUBLIC_CANDIDATE_v1.md
+[t12-clarification]: ../../mathematics/collective-inquiry-and-strategic-coordination.md#a-total-integer-reporter-separates-computation-from-maintained-resources
+[t12-chain]: ../../foundations/received-actuality-and-intrinsic-necessity.md#a-local-conditional-route-to-an-original-participant
 
 [app-operators]: ../../applications/daee-epistemics/SEMANTIC-OPERATOR-CONTRACT.yaml
 [app-runtime]: ../../applications/daee-epistemics/CURRENT-RUNTIME-BOUNDARY.md

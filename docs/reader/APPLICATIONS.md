@@ -273,9 +273,9 @@ First identify future-behaviour classes conditional on retained side information
 [agentic]: ../../applications/agentic-runtime/README.md
 [recovery]: ../../research/t20-v6-20261012/SOURCE_RECOVERY.md
 
-[t12-access]: ../../experiments/orthemology-v5-successors/source-store/c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942/BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md
+[t12-access]: ../../mathematics/collective-inquiry-and-strategic-coordination.md#69-operational-capture-and-a-law-specific-diachronic-test
 [t12-integer]: ../../experiments/orthemology-v5-successors/source-store/6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md
-[t12-clarification]: ../../experiments/orthemology-v5-successors/source-store/32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68/OBSERVATION_ROUTE_CLARIFICATION_v1.md
+[t12-clarification]: ../../mathematics/collective-inquiry-and-strategic-coordination.md#a-total-integer-reporter-separates-computation-from-maintained-resources
 
 [app-targets]: ../../applications/daee-epistemics/MULTI-TARGET-NOETIC-ORTHING.md
 [app-claims]: ../../applications/daee-epistemics/NOETIC-CLAIM.example.json
