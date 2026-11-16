@@ -19,7 +19,8 @@ def probe(source, status='D', authenticated=True, declared=True):
               readonly_git_diff=lambda *a: types.SimpleNamespace(returncode=0, stdout=(status+'\0'+path+'\0').encode()),
               status_record_candidate=lambda p: False, binding_record_candidate=lambda p: False,
               mediator_guide_source_bytes=lambda *a, **k: None,
-              t10_navigation_edition=lambda *a: set(), foundations_navigation_edition=lambda *a: set())
+              t10_navigation_edition=lambda *a: set(), foundations_navigation_edition=lambda *a: set(),
+              t08_navigation_edition=lambda *a: set())
     calls=[]
     def authenticate(root):
         calls.append(True)
