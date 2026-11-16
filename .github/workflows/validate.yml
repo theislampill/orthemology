@@ -29,6 +29,7 @@ jobs:
         run: |
           python -B tests/test_source_alias_absence_population.py
           python -B tests/test_source_alias_current_checkout.py
+          python -B tests/test_t08_navigation_edition.py
           python -B tests/test_t10_navigation_edition.py
           python -B tests/test_new250_preserved_roots.py
           python -B tests/test_foundations_navigation_edition.py

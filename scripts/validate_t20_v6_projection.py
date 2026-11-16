@@ -25,7 +25,7 @@ from resolve_t20_v6_source import (
     historical_source_bytes, source_bytes, MEDIATOR_GUIDE, mediator_guide_source_bytes,
     HISTORICAL_PROSE_REVISIONS, MEDIATOR_APPROXIMATION, FISHER_AUDIT, readonly_git_diff,
     TYPED_GUIDES, typed_guide_source_bytes,
-    ADMIN_GUIDES, administrative_guide_source_bytes,
+    ADMIN_GUIDES, administrative_guide_source_bytes, administrative_guide_adaptation,
     CONTINUATION_COPY_ROOT, continuation_duplicate_paths,
     CHECKPOINT_COPY_PATHS, checkpoint_duplicate_paths,
     CHECKPOINT_RECORD_COPY_PATHS, checkpoint_record_duplicate_paths,
@@ -223,6 +223,47 @@ def check_object(root, row):
         except UnicodeDecodeError:
             errors.append('unqualified binary source')
     return errors
+
+
+T08_NAVIGATION_GUIDE = 'experiments/orthemology-v5-successors/groups/t08-history/README.md'
+
+
+def t08_navigation_edition(root):
+    """Admit only the exact public acceptance permalink atop the admin edition."""
+    path = T08_NAVIGATION_GUIDE
+    original_blob = 'a49fbf2d3e0691495f5884e3a13ec475aafb1293'
+    target_revision = '27c25b4dc30b1a8b3cb97588aba61482d1d8dcca'
+    target_path = ('experiments/orthemology-v5-successors/source-store/'
+                   '8d0d5c3934128136fbd69b70b8a0669fe055e5eb005797e25269a69157361657/PUBLIC_ACCEPTANCE.md')
+    target_blob = '8e998b9d54173e1c38885b1d459e765a57a1bf3e'
+    for revision, name, blob in ((BASE, path, original_blob), (target_revision, target_path, target_blob)):
+        expected = ('100644 blob ' + blob + '\t' + name + '\0').encode()
+        if _administrative_git(root, 'ls-tree', '-z', revision, '--', name) != expected:
+            raise ValueError('T08 navigation original or target coordinate differs')
+    original = _administrative_git(root, 'cat-file', 'blob', original_blob)
+    if (len(original) != 45079
+            or hashlib.sha256(original).hexdigest() != 'fb21186d2568c38564e0bf23f94df81d05fbad8fe39dcab23b6fd83b0291f7d1'
+            or hashlib.sha1(b'blob 45079\0' + original).hexdigest() != original_blob):
+        raise ValueError('T08 navigation original identity differs')
+    earlier = administrative_guide_adaptation(path, original)
+    if (len(earlier) != 46543
+            or hashlib.sha256(earlier).hexdigest() != '03841b61bf9ab932a68642719c486669a289d357da5dd57bc99f5be1beb8ec9d'):
+        raise ValueError('T08 navigation administrative edition differs')
+    old = ('../../source-store/' + target_path.split('/source-store/', 1)[1]).encode()
+    new = ('https://github.com/theislampill/orthemology/blob/' + target_revision + '/' + target_path).encode()
+    if earlier.count(old) != 1:
+        raise ValueError('T08 navigation original occurrence count differs')
+    adapted = earlier.replace(old, new)
+    adapted_blob = hashlib.sha1(b'blob ' + str(len(adapted)).encode() + b'\0' + adapted).hexdigest()
+    if (len(adapted) != 46665 or adapted_blob != '30f7b0905c99312d67c5394b0c8c50d767fe1eb4'
+            or hashlib.sha256(adapted).hexdigest() != '21785fb5872a366c143243b436b0eb26cbdd6c3cf568e41108cd9deec0fe6eaf'):
+        raise ValueError('T08 navigation derived edition differs')
+    expected_index = ('100644 ' + adapted_blob + ' 0\t' + path + '\0').encode()
+    if _administrative_git(root, 'ls-files', '--stage', '-z', '--', path) != expected_index:
+        raise ValueError('T08 navigation staged edition differs')
+    if _regular_current_bytes(root, path) != adapted:
+        raise ValueError('T08 navigation current wording or links differ')
+    return {path}
 
 
 T10_NAVIGATION_GUIDE = 'experiments/orthemology-v5-successors/groups/t10-technical/README.md'
@@ -436,6 +477,12 @@ def check_preserved_roots(root, objects, diagnostic=None):
         except (ValueError, OSError):
             note('receiver:administrative_guide_source_bytes')
             pass  # A changed, missing or unsafe guide receives no allowance.
+    t08_authenticated = set()
+    try:
+        t08_authenticated = t08_navigation_edition(root)
+    except (ValueError, OSError):
+        note('receiver:t08_navigation_edition')
+        pass  # Only the exact complete staged/current edition admits M.
     navigation_authenticated = set()
     try:
         navigation_authenticated = t10_navigation_edition(root)
@@ -638,6 +685,7 @@ def check_preserved_roots(root, objects, diagnostic=None):
                         (status == 'D' and path in (remainder_batch_absences_authenticated or ())) or
                         (status == 'D' and path in (calculus_absences_authenticated or ())) or
                         (status == 'M' and path in calculus_guides_authenticated) or
+                        (status == 'M' and path in t08_authenticated) or
                         (status == 'M' and path in navigation_authenticated) or
                         (status == 'M' and path in foundations_authenticated) or
                         (status == 'M' and path == SUCCESSOR_INPUT_REGISTRY
