@@ -1,2 +1,0 @@
-import LiteralShiftCorrect
-#print axioms P02.LiteralShift.compileShift_correct

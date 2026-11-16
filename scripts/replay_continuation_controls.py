@@ -77,7 +77,7 @@ def main():
     ap.add_argument('--suite',required=True);ap.add_argument('--out',type=Path,required=True)
     args=ap.parse_args();root=args.root.resolve();v.validate(root)
     registry=v.read_json(root/v.AREA/'registry.json')
-    suites={v.read_json(root/p)['id']:v.read_json(root/p) for p in registry.get('native_suites',[])}
+    suites={v.read_record(root,p)['id']:v.read_record(root,p) for p in registry.get('native_suites',[])}
     v.require(args.suite in suites,'Unknown native suite')
     sources=v.indexed(v.read_json(root/registry['source_map'])['sources'],'id')
     result=replay(root,suites[args.suite],sources,args.out)

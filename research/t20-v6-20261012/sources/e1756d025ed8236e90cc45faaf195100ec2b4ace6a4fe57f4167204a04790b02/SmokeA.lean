@@ -1,2 +1,0 @@
-import JointInductionLaws
-#check JointCompletion.InductionComputation.induction_extensionality

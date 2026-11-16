@@ -135,10 +135,9 @@ def derive():
             fixtures[key] = len(items)
     neg = os.path.join(ROOT, "tests", "schema-negative", "NEGATIVE-FIXTURES.json")
     if os.path.exists(neg):
-        fixtures["negative"] = len(json.load(open(neg, encoding="utf-8"))["fixtures"])
-    inv = os.path.join(ROOT, "tests", "invalid")
-    if os.path.isdir(inv):
-        fixtures["invalid_records"] = len([f for f in os.listdir(inv) if f.endswith(".json")])
+        negative_corpus = json.load(open(neg, encoding="utf-8"))
+        fixtures["negative"] = len(negative_corpus["fixtures"])
+        fixtures["invalid_records"] = len(negative_corpus["invalid_fixtures"])
 
     return {
         "source_tree_digest": source_tree_digest(),

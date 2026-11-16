@@ -105,7 +105,7 @@ def replay(root, suite_id, lean_bin, mathlib, output, timeout=300):
     contract.validate(root)
     registry=contract.read_json(root/contract.AREA/'registry.json')
     sources=contract.indexed(contract.read_json(root/registry['source_map'])['sources'],'id')
-    matches=[(root/rel,contract.read_json(root/rel)) for rel in registry['suites'] if contract.read_json(root/rel)['id']==suite_id]
+    matches=[(root/rel,contract.read_record(root,rel)) for rel in registry['suites'] if contract.read_record(root,rel)['id']==suite_id]
     contract.require(len(matches)==1,'Unknown suite ID')
     suite_path,suite=matches[0]
     hashes={m['module']:sources[m['source_id']]['sha256'] for m in suite['modules']}
@@ -113,7 +113,7 @@ def replay(root, suite_id, lean_bin, mathlib, output, timeout=300):
     logs=output/'logs';logs.mkdir()
     receipt={'status':'RUNNING','exit_code':None,'kernel_verified':False,'suite_id':suite_id,
              'runner_sha256':contract.sha(Path(__file__)),'validator_sha256':contract.sha(Path(contract.__file__)),
-             'suite_sha256':contract.sha(suite_path),'source_hashes':hashes,'post_source_hashes':{},
+             'suite_sha256':contract.sha(suite_path,root=root),'source_hashes':hashes,'post_source_hashes':{},
              'pins':suite['pins'],'modules':[],'readbacks':{},'original_controls':'NOT_RUN',
              'started_utc':datetime.now(timezone.utc).isoformat(),
              'scope':'Cold custom source components and exact type/axiom readbacks; official caches trusted. No total family, runtime, empirical, normative or adoption claim.'}
@@ -128,10 +128,10 @@ def replay(root, suite_id, lean_bin, mathlib, output, timeout=300):
         rows={r['module']:r for r in suite['modules']};fingerprints={}
         official={r['module']:r for r in suite['official_imports']}
         for name in suite['module_order']:
-            row=rows[name];original=root/sources[row['source_id']]['path']
-            contract.require(contract.sha(original)==hashes[name],'Source changed before staging')
+            row=rows[name];body=contract.source_bytes(root,sources[row['source_id']])
+            contract.require(hashlib.sha256(body).hexdigest()==hashes[name],'Source changed before staging')
             relative=Path(*name.split('.')).with_suffix('.lean')
-            staged=src/relative;staged.parent.mkdir(parents=True,exist_ok=True);staged.write_bytes(original.read_bytes())
+            staged=src/relative;staged.parent.mkdir(parents=True,exist_ok=True);staged.write_bytes(body)
             obj=(build/relative).with_suffix('.olean');obj.parent.mkdir(parents=True,exist_ok=True)
             dependencies={d:fingerprints[d] if d in rows else official[d] for d in row['imports']}
             fp=hashlib.sha256(json.dumps({'module':name,'source':hashes[name],'dependencies':dependencies,'pins':suite['pins']},sort_keys=True).encode()).hexdigest()
@@ -149,10 +149,10 @@ def replay(root, suite_id, lean_bin, mathlib, output, timeout=300):
         text=run_process([lean,'-j1','--root='+str(src),audit],src,env,logs/'readback.log',timeout)
         receipt['readbacks']=parse_readback(text,targets)
         receipt['readback_log_sha256']=contract.sha(logs/'readback.log')
-        receipt['post_source_hashes']={m['module']:contract.sha(root/sources[m['source_id']]['path']) for m in suite['modules']}
-        contract.require(hashes==receipt['post_source_hashes'] and receipt['suite_sha256']==contract.sha(suite_path),'Inputs changed during replay')
+        receipt['post_source_hashes']={m['module']:hashlib.sha256(contract.source_bytes(root,sources[m['source_id']])).hexdigest() for m in suite['modules']}
+        contract.require(hashes==receipt['post_source_hashes'] and receipt['suite_sha256']==contract.sha(suite_path,root=root),'Inputs changed during replay')
         receipt.update(status='FRESH_KERNEL_COMPONENTS',exit_code=0,kernel_verified=True)
-        contract.validate_receipt(receipt,suite,suite_path,sources)
+        contract.validate_receipt(receipt,suite,suite_path,sources,root=root)
     except FileNotFoundError as exc:
         receipt.update(status='BLOCKED',exit_code=2,error=str(exc))
     except (OSError,ValueError,subprocess.SubprocessError) as exc:

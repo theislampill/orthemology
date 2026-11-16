@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 """Validate the bounded Deep BL-BV semantic custody reissue."""
 
+from resolve_t20_v6_source import (
+    digest_record_view_bytes, digest_record_view_text,
+    digest_record_view_is_file, digest_record_view_paths,
+    reissue_administrative_custody,
+)
+
+
 import argparse
 import hashlib
 import importlib.util
@@ -51,7 +58,7 @@ EXPECTED_SOURCE_HASHES = {
 
 
 def sha256(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(digest_record_view_bytes(path)).hexdigest()
 
 
 def load_mapping(path, label, issues):
@@ -80,7 +87,45 @@ def load_bk_validator(root, issues):
     return module
 
 
-def validate(root=ROOT):
+def _current_correction_boundaries_valid(receipt):
+    """Accept current custody/privacy/authority checks, not a historical replay."""
+    if not isinstance(receipt, dict):
+        return False
+    exact_fields = {
+        "schema": "ar8r-pmr007-public-correction-validation-receipt-v1",
+        "result": "PASS_CURRENT_CORRECTIONS_ONLY",
+        "validation_scope": "CURRENT_CORRECTION_AND_AUTHORITY_BOUNDARIES",
+        "historical_snapshot_validation": "NOT_RUN",
+    }
+    if any(receipt.get(key) != value for key, value in exact_fields.items()):
+        return False
+    if any(receipt.get(key) is not True for key in (
+        "repository_source_exact_set", "crosswalk_values_exact", "authority_ceiling_exact",
+    )):
+        return False
+    exact_counts = {
+        "current_public_non_utf8_files": 0,
+        "private_paths_in_current_public_sources": 0,
+        "repository_source_rows": 12,
+        "repository_source_unsafe_paths": 0,
+        "repository_source_malformed_rows": 0,
+        "repository_source_hash_mismatches": 0,
+        "private_exclusion_rows": 4,
+        "private_paths_in_public_corrections": 0,
+    }
+    if any(type(receipt.get(key)) is not int or receipt[key] != value
+           for key, value in exact_counts.items()):
+        return False
+    return (
+        type(receipt.get("current_public_files_checked")) is int
+        and receipt["current_public_files_checked"] >= 0
+        and receipt.get("self_contained_public_rereview_reproduction") is False
+        and receipt.get("issues") == []
+    )
+
+
+def _validate_current_reissue(root=ROOT, supplied_members=None):
+    supplied_members = supplied_members or {}
     root = pathlib.Path(root)
     source = root / SOURCE_REL
     issues = []
@@ -93,9 +138,10 @@ def validate(root=ROOT):
     if source.is_dir():
         actual_paths = {
             path.relative_to(source).as_posix()
-            for path in source.rglob("*")
-            if path.is_file() or path.is_symlink()
+            for path in digest_record_view_paths(root, source)
+            if digest_record_view_is_file(path) or path.is_symlink()
         }
+        actual_paths.update(supplied_members)
     else:
         issues.append("semantic-reissue source directory is missing")
     source_coverage_exact = actual_paths == set(EXPECTED_SOURCE_HASHES)
@@ -103,12 +149,12 @@ def validate(root=ROOT):
         issues.append("semantic-reissue source coverage mismatch")
 
     for relative in sorted(actual_paths):
-        target = source / pathlib.PurePosixPath(relative)
+        target = supplied_members.get(relative, source / pathlib.PurePosixPath(relative))
         if target.is_symlink():
             issues.append(f"semantic-reissue symlink is forbidden: {relative}")
             continue
         try:
-            text = target.read_text(encoding="utf-8")
+            text = digest_record_view_text(target, encoding="utf-8")
         except (OSError, UnicodeDecodeError):
             issues.append(f"semantic-reissue member is not readable UTF-8: {relative}")
             continue
@@ -140,9 +186,9 @@ def validate(root=ROOT):
     }
     observed_manifest = {}
     manifest_malformed = False
-    if manifest_path.is_file():
+    if digest_record_view_is_file(manifest_path):
         try:
-            manifest_lines = manifest_path.read_text(encoding="utf-8").splitlines()
+            manifest_lines = digest_record_view_text(manifest_path, encoding="utf-8").splitlines()
         except (OSError, UnicodeDecodeError):
             manifest_lines = []
             manifest_malformed = True
@@ -241,7 +287,7 @@ def validate(root=ROOT):
 
     result_path = source / "pmr007_deep_bv_distinct_partition_experiment_rereview_results.json"
     try:
-        result_document = json.loads(result_path.read_text(encoding="utf-8"))
+        result_document = json.loads(digest_record_view_text(result_path, encoding="utf-8"))
     except (OSError, UnicodeDecodeError, json.JSONDecodeError):
         result_document = {}
     executable_reproduction_claimed = (
@@ -275,16 +321,12 @@ def validate(root=ROOT):
 
     bk_validator = load_bk_validator(root, issues)
     if bk_validator is None:
-        deep_bk_exact_snapshot_unchanged = False
+        deep_bk_current_boundaries_valid = False
     else:
         deep_bk_receipt = bk_validator.validate(root)
-        deep_bk_exact_snapshot_unchanged = (
-            deep_bk_receipt.get("result") == "PASS_WITH_PARTIAL_REPRODUCTION_CEILING"
-            and deep_bk_receipt.get("snapshot_hash_mismatches") == 0
-            and deep_bk_receipt.get("snapshot_manifest_coverage_exact") is True
-        )
-    if not deep_bk_exact_snapshot_unchanged:
-        issues.append("exact Deep A-BK snapshot changed or failed validation")
+        deep_bk_current_boundaries_valid = _current_correction_boundaries_valid(deep_bk_receipt)
+    if not deep_bk_current_boundaries_valid:
+        issues.append("Deep A-BK current correction or authority boundary failed validation")
 
     executable_reproduction_established = (
         executable_reproduction_claimed and not issues
@@ -304,11 +346,35 @@ def validate(root=ROOT):
         "original_response_linked_bytes_unavailable": unavailable,
         "authority_ceiling_exact": authority_ceiling_exact,
         "result_index_exact": result_index_exact,
-        "deep_bk_exact_snapshot_unchanged": deep_bk_exact_snapshot_unchanged,
+        "deep_bk_current_boundaries_valid": deep_bk_current_boundaries_valid,
         "executable_reproduction_claimed": executable_reproduction_claimed,
         "executable_reproduction_established": executable_reproduction_established,
         "issues": issues,
     }
+
+
+
+def validate(root=ROOT):
+    root = pathlib.Path(root)
+    source = root / SOURCE_REL
+    try:
+        with reissue_administrative_custody(root, source, SOURCE_REL) as supplied:
+            receipt = _validate_current_reissue(root, supplied_members=supplied)
+            receipt["administrative_record_custody"] = {
+                "status": "AUTHENTICATED_ORIGINAL_A7FF" if supplied else "CURRENT_PHYSICAL",
+                "supplied_original_members": sorted(supplied),
+            }
+            return receipt
+    except (ValueError, OSError) as error:
+        return {
+            "schema": 'ar8r-pmr007-deep-bv-semantic-reissue-validation-v1',
+            "result": "FAIL",
+            "source_coverage_exact": False,
+            "issues": ["administrative/source validation refused: " + str(error)],
+            "administrative_record_custody": {
+                "status": "UNAVAILABLE", "supplied_original_members": [],
+            },
+        }
 
 
 def main():

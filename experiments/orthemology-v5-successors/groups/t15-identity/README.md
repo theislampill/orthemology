@@ -6,10 +6,10 @@ These are candidate research records in the same Orthemology v5 programme. Origi
 
 | Suite | Recorded stages | Checked Lean targets | Source-bound controls |
 | --- | ---: | ---: | ---: |
-| [t15-identity](../../suites/t15-identity.json) | 223 | 18 | 101 |
-| [t15-json-reference](../../suites/t15-json-reference.json) | 4 | 0 | 0 |
-| [t15-univariate-reference](../../suites/t15-univariate-reference.json) | 2 | 0 | 0 |
-| [t15-runtime-agreement](../../suites/t15-runtime-agreement.json) | 80 | 0 | 0 |
+| [t15-identity](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/t15-identity.json) | 223 | 18 | 101 |
+| [t15-json-reference](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/t15-json-reference.json) | 4 | 0 | 0 |
+| [t15-univariate-reference](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/t15-univariate-reference.json) | 2 | 0 | 0 |
+| [t15-runtime-agreement](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/t15-runtime-agreement.json) | 80 | 0 | 0 |
 
 The original project-wide audit covered 88 root modules, 2750 theorem roots and 12311 reachable declarations, with no unsafe or partial declarations in those proof closures. Its separate declaration inventory contains 6713 declarations. The original source-mutation driver completed its fifteen prescribed checks in normal Python mode; that aggregate completion is separate from the 80 exact compiler-rejection fixtures.
 

@@ -1,9 +1,18 @@
 #!/usr/bin/env python3
-"""Validate immutable six-lane V14 proposal custody and correction overlays."""
+"""Validate current six-lane boundaries and Specialist A/B source custody."""
 
 from __future__ import annotations
 
+from resolve_t20_v6_source import (
+    digest_record_view_bytes, digest_record_view_text,
+    digest_record_view_is_file, digest_record_view_paths,
+    DIGEST_RECORD_BASE, _administrative_git, _digest_record_root,
+    _binding_record_present, _digest_record_bound_bytes,
+)
+
+
 import argparse
+from contextlib import contextmanager
 import hashlib
 import json
 import os
@@ -22,11 +31,6 @@ INTAKE_REL = pathlib.Path(
     "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake"
 )
 PACKAGES = {
-    "central": {
-        "manifest": "SHA256SUMS",
-        "manifest_sha256": "161bba2290408e313d08fa19e38adaec2b4c54ae36be2c37662a9398248ede81",
-        "files": 178,
-    },
     "specialist-a": {
         "manifest": "SHA256SUMS",
         "manifest_sha256": "f19fb30506f0d91cd0ababbe48c2f39ab0d075d5ae9b683fdf87717e26cf371f",
@@ -79,16 +83,16 @@ def contains_ready_to_run(value) -> bool:
 
 
 def sha256(path: pathlib.Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(digest_record_view_bytes(path)).hexdigest()
 
 
 def parse_manifest(path: pathlib.Path, expected_digest: str, issues: list[str]):
     expected: dict[str, str] = {}
-    if not path.is_file() or sha256(path) != expected_digest:
+    if not digest_record_view_is_file(path) or sha256(path) != expected_digest:
         issues.append(f"source manifest mismatch: {path}")
         return expected
     malformed = False
-    for raw in path.read_text(encoding="utf-8").splitlines():
+    for raw in digest_record_view_text(path, encoding="utf-8").splitlines():
         if not raw.strip():
             continue
         parts = raw.split(None, 1)
@@ -124,10 +128,18 @@ def parse_structured(root: pathlib.Path, issues: list[str]):
     return parsed
 
 
+def prepare_specialist_a_inputs(source: pathlib.Path, destination: pathlib.Path):
+    """Stage the original package, including its exact historical manifest."""
+    shutil.copytree(source, destination)
+    manifest = destination / "SHA256SUMS"
+    if not manifest.exists():
+        manifest.write_bytes(digest_record_view_bytes(source / "SHA256SUMS"))
+
+
 def rerun_specialist_a(source: pathlib.Path, issues: list[str]) -> bool:
     with tempfile.TemporaryDirectory() as temporary:
         work = pathlib.Path(temporary) / "specialist-a"
-        shutil.copytree(source, work)
+        prepare_specialist_a_inputs(source, work)
         for result in (work / "results").glob("*.json"):
             result.unlink()
         fresh = work / "audit/FRESH_REREVIEW.json"
@@ -189,7 +201,91 @@ def rerun_specialist_a(source: pathlib.Path, issues: list[str]) -> bool:
         return exact
 
 
+@contextmanager
+def specialist_b_source_custody(root, intake):
+    """Require the exact original B29 when its entire current directory is absent.
+
+    Present or partial current custody is never replaced. Historical transport
+    is the existing local native a7ff/176 gate, not a private archive or network.
+    The yielded original directory is temporary ordinary input to every existing
+    content, parse, privacy and original/repair acceptance check.
+    """
+    root = pathlib.Path(root).absolute()
+    intake = pathlib.Path(intake).absolute()
+    source = intake / "specialist-b/source-files"
+    if source.is_symlink():
+        raise ValueError("Specialist B source directory is a symlink")
+    if source.exists():
+        _digest_record_root(source.parent)
+        yield source
+        return
+    if intake != root / INTAKE_REL:
+        raise ValueError("Specialist B original custody requires the exact intake root")
+    root = _digest_record_root(root)
+    relative_root = (INTAKE_REL / "specialist-b/source-files").as_posix()
+    if _binding_record_present(root, relative_root):
+        raise ValueError("Specialist B current source node changed")
+    contract = PACKAGES["specialist-b"]
+    issues = []
+    # The absent original manifest uses the unchanged mandatory a7ff/176
+    # catalogue and native body/index checks. Its pinned bytes are not optional.
+    expected = parse_manifest(source / contract["manifest"], contract["manifest_sha256"], issues)
+    if issues or len(expected) + 1 != contract["files"]:
+        raise ValueError("Specialist B original manifest is unavailable or differs")
+    raw = _administrative_git(root, "ls-tree", "-rz", "--full-tree", DIGEST_RECORD_BASE,
+                              "--", relative_root)
+    bindings = {}
+    for entry in raw.split(b"\0"):
+        if not entry:
+            continue
+        metadata, encoded_path = entry.split(b"\t", 1)
+        mode, kind, blob = metadata.decode("ascii").split()
+        path = encoded_path.decode("utf-8")
+        relative = path.removeprefix(relative_root + "/")
+        if (not path.startswith(relative_root + "/") or mode != "100644"
+                or kind != "blob" or not re.fullmatch(r"[0-9a-f]{40}", blob)
+                or relative in bindings or relative not in set(expected) | {contract["manifest"]}
+                or ".." in pathlib.PurePosixPath(relative).parts or "\\" in relative):
+            raise ValueError("Specialist B original tree coordinate differs")
+        bindings[relative] = blob
+    if set(bindings) != set(expected) | {contract["manifest"]}:
+        raise ValueError("Specialist B original tree membership differs")
+    bodies = {}
+    for relative, blob in sorted(bindings.items()):
+        body = _digest_record_bound_bytes(root, relative_root + "/" + relative, blob, None)
+        wanted = contract["manifest_sha256"] if relative == contract["manifest"] else expected[relative]
+        if hashlib.sha256(body).hexdigest() != wanted:
+            raise ValueError("Specialist B original member hash differs")
+        bodies[relative] = body
+    if _binding_record_present(root, relative_root):
+        raise ValueError("Specialist B current source appeared during authentication")
+    with tempfile.TemporaryDirectory(prefix="specialist-b-original-") as temporary:
+        supplied = pathlib.Path(temporary) / "source-files"
+        supplied.mkdir()
+        for relative, body in bodies.items():
+            target = supplied / pathlib.PurePosixPath(relative)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            with target.open("xb") as stream:
+                stream.write(body)
+            target.chmod(0o644)
+        yield supplied
+        if _binding_record_present(root, relative_root):
+            raise ValueError("Specialist B current source appeared during validation")
+
+
 def validate(root=ROOT, intake_override=None):
+    root = pathlib.Path(root)
+    intake = pathlib.Path(intake_override) if intake_override else root / INTAKE_REL
+    with specialist_b_source_custody(root, intake) as supplied:
+        receipt = _validate_current_intake(root, intake_override, supplied)
+        receipt["specialist_b_source_custody"] = (
+            "CURRENT_PHYSICAL" if supplied == intake.absolute() / "specialist-b/source-files"
+            else "AUTHENTICATED_ORIGINAL_A7FF"
+        )
+        return receipt
+
+
+def _validate_current_intake(root, intake_override, b_source_directory):
     root = pathlib.Path(root)
     intake = pathlib.Path(intake_override) if intake_override else root / INTAKE_REL
     issues: list[str] = []
@@ -198,13 +294,15 @@ def validate(root=ROOT, intake_override=None):
     private_path_findings = 0
 
     for lane, contract in PACKAGES.items():
-        source = intake / lane / "source-files"
+        source = b_source_directory if lane == "specialist-b" else intake / lane / "source-files"
         manifest = source / contract["manifest"]
         expected = parse_manifest(manifest, contract["manifest_sha256"], issues)
         actual_paths = {
             path.relative_to(source).as_posix()
-            for path in source.rglob("*")
-            if path.is_file() or path.is_symlink()
+            for path in (source.rglob("*") if source == b_source_directory
+                         and source != intake.absolute() / "specialist-b/source-files"
+                         else digest_record_view_paths(root, source))
+            if digest_record_view_is_file(path) or path.is_symlink()
         } if source.is_dir() else set()
         counts[lane] = len(actual_paths)
         expected_paths = set(expected) | {contract["manifest"]}
@@ -221,22 +319,33 @@ def validate(root=ROOT, intake_override=None):
     if source_hash_mismatches:
         issues.append("source hash mismatch")
 
-    for path in intake.rglob("*"):
-        if not path.is_file():
-            continue
-        try:
-            text = path.read_text(encoding="utf-8")
-        except UnicodeDecodeError:
-            issues.append(f"non-UTF-8 public intake member: {path.relative_to(intake)}")
-            continue
-        private_path_findings += len(PRIVATE_PATTERN.findall(text))
+    # Both current intake and authenticated original input receive physical scans.
+    scan_roots = [intake]
+    if b_source_directory != intake.absolute() / "specialist-b/source-files":
+        scan_roots.append(b_source_directory)
+    for scan_root in scan_roots:
+        for path in scan_root.rglob("*"):
+            if path.is_symlink():
+                issues.append(f"symlink forbidden in current intake: {path.relative_to(scan_root)}")
+                continue
+            if not path.is_file():
+                continue
+            try:
+                text = path.read_text(encoding="utf-8")
+            except UnicodeDecodeError:
+                issues.append(f"non-UTF-8 public intake member: {path.relative_to(scan_root)}")
+                continue
+            except OSError:
+                issues.append(f"unreadable public intake member: {path.relative_to(scan_root)}")
+                continue
+            private_path_findings += len(PRIVATE_PATTERN.findall(text))
     if private_path_findings:
         issues.append("private path, browser locator, or token-like text leaked into intake")
 
-    structured_files_parsed = parse_structured(intake, issues)
+    structured_files_parsed = sum(parse_structured(scan_root, issues) for scan_root in scan_roots)
 
     try:
-        ledger = yaml.safe_load((intake / "AR8R-SIX-LANE-V14-INTEGRATION-LEDGER.yaml").read_text(encoding="utf-8"))
+        ledger = yaml.safe_load(digest_record_view_text(intake / "AR8R-SIX-LANE-V14-INTEGRATION-LEDGER.yaml", encoding="utf-8"))
     except (OSError, UnicodeDecodeError, yaml.YAMLError):
         ledger = {}
     lanes = ledger.get("lanes", []) if isinstance(ledger, dict) else []
@@ -258,8 +367,8 @@ def validate(root=ROOT, intake_override=None):
     a_receipt_path = intake / "specialist-a/intake-review/LEAN_INTAKE_RECEIPT.json"
     b_receipt_path = intake / "specialist-b/intake-review/LEAN_INTAKE_RECEIPT.json"
     try:
-        a_receipt = json.loads(a_receipt_path.read_text(encoding="utf-8"))
-        b_receipt = json.loads(b_receipt_path.read_text(encoding="utf-8"))
+        a_receipt = json.loads(digest_record_view_text(a_receipt_path, encoding="utf-8"))
+        b_receipt = json.loads(digest_record_view_text(b_receipt_path, encoding="utf-8"))
     except (OSError, UnicodeDecodeError, json.JSONDecodeError):
         a_receipt, b_receipt = {}, {}
 
@@ -304,7 +413,7 @@ def validate(root=ROOT, intake_override=None):
     if not specialist_a_repaired_lean_receipts_exact:
         issues.append("Specialist A repaired Lean receipt mismatch")
 
-    b_source = intake / "specialist-b/source-files/SpecialistBBridgeSignatures.lean"
+    b_source = b_source_directory / "SpecialistBBridgeSignatures.lean"
     b_repaired = intake / "specialist-b/intake-review/lean/SpecialistBBridgeSignatures.repaired.lean"
     specialist_b_original_lean_failure_recorded = (
         sha256(b_source) == "e18b1e03b970b4d355008eb64ba3f502a23e9c36797ecb009d6487e923c97015"
@@ -323,15 +432,15 @@ def validate(root=ROOT, intake_override=None):
 
     evidence_path = intake / "external-evidence/AR8R-DEEP-RESEARCH-20-22-INTAKE-V14.yaml"
     try:
-        evidence = yaml.safe_load(evidence_path.read_text(encoding="utf-8"))
+        evidence = yaml.safe_load(digest_record_view_text(evidence_path, encoding="utf-8"))
     except (OSError, UnicodeDecodeError, yaml.YAMLError):
         evidence = {}
 
     external_evidence_root = intake / "external-evidence"
     external_evidence_files = {
         path.relative_to(external_evidence_root).as_posix()
-        for path in external_evidence_root.rglob("*")
-        if path.is_file()
+        for path in digest_record_view_paths(root, external_evidence_root)
+        if digest_record_view_is_file(path)
     } if external_evidence_root.is_dir() else set()
     reports = evidence.get("reports", []) if isinstance(evidence, dict) else []
     report_copy_flags_exact = (
@@ -364,7 +473,7 @@ def validate(root=ROOT, intake_override=None):
 
     protocols = {row.get("id"): row for row in evidence.get("empirical_and_protocol_intake", [])}
     tensor = protocols.get("DR22-TENSOR-ARM-ONTOLOGY", {})
-    tensor_program = (root / "docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md").read_text(encoding="utf-8")
+    tensor_program = digest_record_view_text(root / "docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md", encoding="utf-8")
     tensor_arm_specification_blocked = (
         tensor.get("representation_candidates_in_current_charter") == 6
         and tensor.get("legacy_gate_description") == "120 observations and five arms"
@@ -398,8 +507,9 @@ def validate(root=ROOT, intake_override=None):
         )
 
     return {
-        "schema": "ar8r-six-lane-v14-intake-validation-v1",
-        "result": "FAIL" if issues else "PASS_PROPOSAL_CUSTODY_AND_BOUNDED_SOURCE_INTAKE",
+        "schema": "ar8r-six-lane-v14-current-intake-validation-v1",
+        "result": "FAIL" if issues else "PASS_CURRENT_INTAKE_AND_SPECIALIST_CUSTODY",
+        "historical_central_snapshot_validation": "NOT_RUN",
         "lane_count": lane_count,
         "source_file_counts": counts,
         "source_hash_mismatches": source_hash_mismatches,

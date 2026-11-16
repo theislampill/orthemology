@@ -28,7 +28,7 @@ This group preserves the Tenth technical papers and exact component/report maps.
 | [Collation witness identities](../../source-store/6e963f40255715052c776b40a8ec48240433969ca4bc566a09da4313ef5f83d8/SOURCE_IDENTITIES.json) | Exact historical capture metadata and page locators; captures excluded. |
 | [Collation method receipt](../../source-store/05f00f5678a39cc0e608b3ded1184321a2a42112150b7c1841a9a345ad701fbf/REVIEW_RECEIPT.md) | Inherited model-assisted inspection boundary. |
 | [Collation acceptance](../../source-store/9b7bc71bcdc7497efd5a0d11ddbb7d5ae4f3134e2c58f687d20f5dab375e52f0/ACCEPTANCE.json) | Original date, scope, checked categories and accepted byte identities. |
-| [Explanatory source/version verification](../../source-store/cdff07e133a38347c1a0f5b31787af914c50f3023e6690a42a356ec97ab4e74e/VERIFICATION_NOTE.md) | Complete dated S2 bibliographic check and unresolved proof-witness finality. |
+| [Explanatory source/version verification](https://github.com/theislampill/orthemology/blob/27c25b4dc30b1a8b3cb97588aba61482d1d8dcca/experiments/orthemology-v5-successors/source-store/cdff07e133a38347c1a0f5b31787af914c50f3023e6690a42a356ec97ab4e74e/VERIFICATION_NOTE.md) | Complete dated S2 bibliographic check and unresolved proof-witness finality. |
 | [Version-check identity manifest](../../source-store/c39d66e66d470c11cea130594ddc90708424a7d6d4028f20d371889ab3743124/MANIFEST.sha256) | Historical metadata identities; no unacquired PDF hash. |
 | [Final component acceptance](../../source-store/98e7b7bb644746bd4b58ec59ab074690ba402c8de9243887df442b6cf28f1d86/COMPONENT_ACCEPTANCE.json) | Complete source scope and current review ownership. |
 | [Final report claim map](../../source-store/ab2e2d3ac98c2e9209768d4ad4b875c24dee3cf653e5c368f4424eb4d4d6821f/REPORT_CLAIM_MAP.json) | Exact source/review declarations and report block locators. |
@@ -294,4 +294,4 @@ The inherited check verifies the bibliographic identity while leaving finality a
 - Formula typography, footnotes, visual domain qualifications and a changed qualification in a final text remain unverified. Mathematical correction applies at its inspected statement/domain, not as a refutation of every final version or the author’s whole philosophical position.
 - This is the component’s own bounded verification note, not a new independent scientific review or fresh online check.
 
-**Exact sources:** [T10-SOURCE-VERSION-VERIFICATION](../../source-store/cdff07e133a38347c1a0f5b31787af914c50f3023e6690a42a356ec97ab4e74e/VERIFICATION_NOTE.md).
+**Exact sources:** [T10-SOURCE-VERSION-VERIFICATION](https://github.com/theislampill/orthemology/blob/27c25b4dc30b1a8b3cb97588aba61482d1d8dcca/experiments/orthemology-v5-successors/source-store/cdff07e133a38347c1a0f5b31787af914c50f3023e6690a42a356ec97ab4e74e/VERIFICATION_NOTE.md).

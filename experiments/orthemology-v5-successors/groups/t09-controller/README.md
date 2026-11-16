@@ -10,10 +10,10 @@ One physical suite may support several explicitly bound families. Repeated impor
 
 | Result | Evidence form | Fresh evidence | Physical suite |
 | --- | --- | --- | --- |
-| [T09-FINITE-PRIMITIVES](#t09-finite-primitives) | MIXED / REFERENCE_EXECUTION | FRESH_KERNEL_COMPONENTS | [D07-T09-CONTROLLER-ORIGINAL](../../suites/D07-T09-CONTROLLER-ORIGINAL.json) |
-| [T09-FINITE-HISTORY-REP](#t09-finite-history-rep) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D07-T09-CONTROLLER-ORIGINAL](../../suites/D07-T09-CONTROLLER-ORIGINAL.json) |
-| [T09-ORDERED-INITIAL](#t09-ordered-initial) | MIXED / REFERENCE_EXECUTION | FRESH_KERNEL_COMPONENTS | [D07-T09-CONTROLLER-ORIGINAL](../../suites/D07-T09-CONTROLLER-ORIGINAL.json) |
-| [T09-WHOLE-COMMAND-TRANSPORT](#t09-whole-command-transport) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D07-T09-TRANSPORT-ORIGINAL](../../suites/D07-T09-TRANSPORT-ORIGINAL.json) |
+| [T09-FINITE-PRIMITIVES](#t09-finite-primitives) | MIXED / REFERENCE_EXECUTION | FRESH_KERNEL_COMPONENTS | [D07-T09-CONTROLLER-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D07-T09-CONTROLLER-ORIGINAL.json) |
+| [T09-FINITE-HISTORY-REP](#t09-finite-history-rep) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D07-T09-CONTROLLER-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D07-T09-CONTROLLER-ORIGINAL.json) |
+| [T09-ORDERED-INITIAL](#t09-ordered-initial) | MIXED / REFERENCE_EXECUTION | FRESH_KERNEL_COMPONENTS | [D07-T09-CONTROLLER-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D07-T09-CONTROLLER-ORIGINAL.json) |
+| [T09-WHOLE-COMMAND-TRANSPORT](#t09-whole-command-transport) | FORMAL / UNBOUNDED_MODEL | QUALIFIED_DECLARED_SUITE | [D07-T09-TRANSPORT-ORIGINAL](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/suites/D07-T09-TRANSPORT-ORIGINAL.json) |
 
 ## Replay evidence and representation
 

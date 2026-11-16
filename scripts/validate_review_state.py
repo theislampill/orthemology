@@ -295,6 +295,33 @@ def task16_record_claim_issues(text):
     return issues
 
 
+def candidate_history_issues(history):
+    """Keep candidate-era history from claiming adoption; no file reads.
+
+    This is the existing candidate validator's broad prefix/status predicate,
+    now owned by the review validator that already consumes the history index.
+    Malformed-shape refusal here is not a whole-review-validator guarantee.
+    """
+    if isinstance(history, list):
+        rules = history
+    elif isinstance(history, dict):
+        rules = history.get("rules", history.get("entries", []))
+    else:
+        return ["historical status index must be a mapping or list"]
+    if not isinstance(rules, list):
+        return ["historical status rules must be a list"]
+    issues = []
+    for rule in rules:
+        if not isinstance(rule, dict):
+            issues.append("historical status rule must be a mapping")
+            continue
+        prefix = str(rule.get("prefix", ""))
+        status = str(rule.get("status", ""))
+        if prefix.startswith("docs/project-closure/r7") and status in ("merged", "adopted", "adopted-merged"):
+            issues.append("%s=%s" % (prefix, status))
+    return issues
+
+
 def main():
     state = yaml.safe_load(read("docs/current-state.yaml"))
     a = state["authored"]
@@ -379,6 +406,9 @@ def main():
 
     # 6. historical index coverage + classifications
     idx = yaml.safe_load(read("docs/project-closure/HISTORICAL-STATUS-INDEX.yaml"))
+    history_issues = candidate_history_issues(idx)
+    check("no R7 candidate closure artifact is marked merged/adopted",
+          not history_issues, "; ".join(history_issues))
     path_rules = {r["path"]: r for r in idx["rules"] if "path" in r}
     prefix_rules = [r for r in idx["rules"] if "prefix" in r]
 

@@ -16,7 +16,7 @@ Equal evaluations of the specified exposed p and opaque q do not force the same 
 
 **Evidence.** ORDINARY at WHOLE_RESULT scope, UNBOUNDED_MODEL domain. Original status: Ordinary written proofs; independently reviewed against the specified definitions. Fresh status: NOT_RUN.
 
-Scientific sources: [OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md](../../source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md).
+Scientific sources: [OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md).
 
 Inherited review: [Orthemology_Thirteenth_Research_Verification_v1_20261004.json](../../source-store/24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a/Orthemology_Thirteenth_Research_Verification_v1_20261004.json). Inherited source-specific internal review reported by the exact delivery receipt. Receipt custody and source statements are preserved; no new independent kernel or human-specialist review is asserted.
 
@@ -32,7 +32,7 @@ One added polynomial-conversion bridge, used by the copied identityIntro and con
 
 **Evidence.** ORDINARY at WHOLE_RESULT scope, UNBOUNDED_MODEL domain. Original status: Ordinary written proofs; independently reviewed against the specified definitions. Fresh status: NOT_RUN.
 
-Scientific sources: [HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md](../../source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md).
+Scientific sources: [HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md).
 
 Inherited review: [Orthemology_Thirteenth_Research_Verification_v1_20261004.json](../../source-store/24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a/Orthemology_Thirteenth_Research_Verification_v1_20261004.json). Inherited source-specific internal review reported by the exact delivery receipt. Receipt custody and source statements are preserved; no new independent kernel or human-specialist review is asserted.
 
@@ -48,7 +48,7 @@ The exact closed target is formed and has a full old F/G witness; the delivered 
 
 **Evidence.** ORDINARY at WHOLE_RESULT scope, UNBOUNDED_MODEL domain. Original status: semantic candidate established; syntactic nonderivability unresolved. Fresh status: NOT_RUN.
 
-Scientific sources: [RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md](../../source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md).
+Scientific sources: [RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md).
 
 Inherited review: [Orthemology_Thirteenth_Research_Verification_v1_20261004.json](../../source-store/24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a/Orthemology_Thirteenth_Research_Verification_v1_20261004.json). Inherited source-specific internal review reported by the exact delivery receipt. Receipt custody and source statements are preserved; no new independent kernel or human-specialist review is asserted.
 
@@ -64,7 +64,7 @@ The exact closed target is formed and has a full old F/G witness; the delivered 
 
 **Evidence.** ORDINARY at WHOLE_RESULT scope, UNBOUNDED_MODEL domain. Original status: semantic candidate established; syntactic nonderivability unresolved. Fresh status: NOT_RUN.
 
-Scientific sources: [RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md](../../source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md).
+Scientific sources: [RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md).
 
 Inherited review: [Orthemology_Thirteenth_Research_Verification_v1_20261004.json](../../source-store/24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a/Orthemology_Thirteenth_Research_Verification_v1_20261004.json). Inherited source-specific internal review reported by the exact delivery receipt. Receipt custody and source statements are preserved; no new independent kernel or human-specialist review is asserted.
 

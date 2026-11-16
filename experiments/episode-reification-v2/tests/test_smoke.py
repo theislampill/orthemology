@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """ER-2 deterministic smoke + isolation tests. NOT an experiment.
 
-1. committed fixtures+keys equal seeded regeneration;
+1. public renderings are deterministic; the separate scoring key still equals
+   seeded regeneration in the full (non-public-only) smoke;
 2. fact-atom parity: both arm renderings carry exactly the same fact IDs
    (information match, audit H2);
 3. label-free payloads: harness payloads contain no KEYS token, archetype
@@ -10,6 +11,7 @@
    closure scores wrong), semantic traceability, semantic E5;
 5. full mock end-to-end with no adjudicated outcome.
 """
+import argparse
 import io
 import json
 import os
@@ -22,7 +24,7 @@ PKT = os.path.dirname(HERE)
 FIX = os.path.join(PKT, "fixtures")
 FAILS = []
 
-LABEL_TOKENS = ["stopped-clock", "justified rare miss", "defective binding",
+LABEL_TOKENS = ["KEYS", "stopped-clock", "justified rare miss", "defective binding",
                 "metamorphic", "binding_defect", "reliability_note", "archetype",
                 "closure_legitimate", "defect_category", "A1", "A2", "A3", "A4", "A5",
                 "out-of-date", "wrong-edition", "resolution-limit"]
@@ -34,59 +36,61 @@ def check(name, ok, detail=""):
         FAILS.append(name)
 
 
-def snapshot():
-    out = {}
-    for base, _d, fns in os.walk(FIX):
-        for fn in fns:
-            p = os.path.join(base, fn)
-            out[os.path.relpath(p, FIX)] = io.open(p, encoding="utf-8").read()
-    return out
-
-
 def main():
-    before = snapshot()
-    subprocess.check_call([sys.executable, os.path.join(PKT, "scripts", "generate_cases.py")],
-                          stdout=subprocess.DEVNULL)
-    after = snapshot()
-    check("committed fixtures+keys equal seeded regeneration", before == after)
-    if before != after:
-        for rel, c in before.items():
-            io.open(os.path.join(FIX, rel), "w", encoding="utf-8", newline="").write(c)
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--public-only", action="store_true",
+                    help="check public rendering/payloads without keys, scorer or adapters")
+    args = ap.parse_args()
+    sys.path.insert(0, os.path.join(PKT, "scripts"))
+    from generate_cases import public_cases, public_files, scoring_keys
+    canonical = public_cases()
+    rendered = public_files()
+    check("seeded public rendering is deterministic", rendered == public_files())
+    check("complete 20-case public population", sorted(canonical) == ["C%02d" % n for n in range(1, 21)]
+          and len(rendered) == 60)
+    check("no scoring key is returned as public material", "KEYS.json" not in rendered)
+    for cid, facts in canonical.items():
+        log = rendered[cid + "/baseline-record.md"]
+        treatment = json.loads(rendered[cid + "/treatment-record.json"])
+        carried = {a["fact_id"]: a["text"] for section in treatment["sections"].values() for a in section}
+        check("%s: both arms carry every fact atom" % cid,
+              carried == {a["id"]: a["text"] for a in facts}
+              and all("[" + a["id"] + "] " + a["text"] in log for a in facts))
 
-    keys = json.load(io.open(os.path.join(FIX, "KEYS.json"), encoding="utf-8"))["keys"]
-    check("20 cases, 5 archetypes x 4 variants",
-          len(keys) == 20 and len({k["archetype"] for k in keys}) == 5)
-
-    # fact-atom parity: both renderings mention every fact id
-    for k in keys:
-        cid = k["case"]
-        facts = json.load(io.open(os.path.join(FIX, cid, "facts.json"), encoding="utf-8"))["facts"]
-        ids = [a["id"] for a in facts]
-        log = io.open(os.path.join(FIX, cid, "baseline-record.md"), encoding="utf-8").read()
-        treat = json.dumps(json.load(io.open(os.path.join(FIX, cid, "treatment-record.json"),
-                                             encoding="utf-8")))
-        log_ok = all(fid in log for fid in ids)
-        treat_ok = all(fid in treat for fid in ids)
-        check("%s: both arms carry every fact atom" % cid, log_ok and treat_ok,
-              "log=%s treat=%s" % (log_ok, treat_ok))
-
-    # label-free renderings
     bad = []
-    for k in keys:
-        cid = k["case"]
+    for cid in canonical:
         for arm_file in ("baseline-record.md", "treatment-record.json"):
-            txt = io.open(os.path.join(FIX, cid, arm_file), encoding="utf-8").read()
+            txt = rendered[cid + "/" + arm_file]
             for tok in LABEL_TOKENS:
                 if tok in txt:
                     bad.append("%s/%s: %s" % (cid, arm_file, tok))
     check("runner-visible renderings are label-free", not bad, str(bad[:4]))
+    sys.path.insert(0, os.path.join(PKT, "harness"))
+    from run_er import cases, payload
+    check("harness uses the complete seeded public population", cases() == sorted(canonical))
+    pbad = []
+    for cid in canonical:
+        for arm in ("baseline", "treatment"):
+            material = payload(cid, arm).split("Answer about the case record above", 1)[0]
+            pbad.extend("%s/%s: %s" % (cid, arm, tok) for tok in LABEL_TOKENS if tok in material)
+    check("no KEYS/label token in assembled case material", not pbad, str(pbad[:3]))
+    if args.public_only:
+        print("TOTAL: %d failures; public rendering only, no experiment" % len(FAILS))
+        sys.exit(1 if FAILS else 0)
+
+    key_text = io.open(os.path.join(FIX, "KEYS.json"), encoding="utf-8").read()
+    check("separate scoring key equals seeded regeneration", key_text == scoring_keys())
+    keys = json.loads(key_text)["keys"]
+    check("20 cases, 5 archetypes x 4 variants",
+          len(keys) == 20 and len({k["archetype"] for k in keys}) == 5)
+    check("scoring and public cases have identical identities",
+          {k["case"] for k in keys} == set(canonical))
 
     # corrected scoring: E1 equality + semantic traceability + semantic E5
     sys.path.insert(0, os.path.join(PKT, "analysis"))
     from analyze_er2 import score
     a1 = next(k for k in keys if k["archetype"] == "A1")
-    facts_a1 = {a["id"] for a in json.load(io.open(os.path.join(FIX, a1["case"], "facts.json"),
-                                                   encoding="utf-8"))["facts"]}
+    facts_a1 = {a["id"] for a in canonical[a1["case"]]}
     endorse = {"case_id": a1["case"], "arm": "treatment", "parsed_ok": True,
                "answers": {"defect_category": "none", "grounding_fact_ids": list(a1["supporting"]),
                            "remedy_category": "none", "endorse_completion": True}}
@@ -103,8 +107,7 @@ def main():
     check("traceability rejects a non-existent grounding id", score(inv, a1, facts_a1)["traceability"] == 0.0)
     # E5 semantic
     a5 = next(k for k in keys if k["archetype"] == "A5")
-    facts_a5 = {a["id"] for a in json.load(io.open(os.path.join(FIX, a5["case"], "facts.json"),
-                                                   encoding="utf-8"))["facts"]}
+    facts_a5 = {a["id"] for a in canonical[a5["case"]]}
     good_e5 = {"case_id": a5["case"], "arm": "treatment", "parsed_ok": True,
                "answers": {"defect_category": a5["defect_category"],
                            "grounding_fact_ids": list(a5["supporting"]),
@@ -143,7 +146,7 @@ def main():
         subprocess.check_call([sys.executable, os.path.join(PKT, "analysis", "analyze_er2.py"),
                                "--runs", runs, "--manifest", man,
                                "--keys", os.path.join(FIX, "KEYS.json"),
-                               "--facts-root", FIX, "--out", rep], stdout=subprocess.DEVNULL)
+                               "--out", rep], stdout=subprocess.DEVNULL)
         report = json.load(io.open(rep, encoding="utf-8"))
     check("mock end-to-end traverses harness->parser->analysis", report["n_records"] == 40)
     check("synthetic traversal stamped + unadjudicated",

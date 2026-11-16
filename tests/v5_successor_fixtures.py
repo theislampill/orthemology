@@ -55,7 +55,6 @@ def documents(bundle):
                             'legacy_endpoints': bundle['legacy_endpoints']},
             'OBLIGATION_CROSSWALK': {'obligations': bundle['obligations']},
             'TWELVE_AVENUES': {'avenues': bundle['avenues']},
-            'CALCULUS_MAP': {'results': bundle['calculus']},
             'EMPIRICAL_SCOPE': {'results': bundle['empirical']},
             'PUBLIC_PROJECTION': {'reviews': bundle['projection_reviews'], 'allowlist': bundle['public_allowlist']},
             **bundle['supplementary']}
@@ -145,8 +144,6 @@ def make_bundle(root):
               'obligations': [], 'avenues': [{'number': n, 'result_ids': [result['id']] if n == 1 else [],
                   'disposition': 'SCOPED_SUCCESSORS' if n == 1 else 'NO_NEW_RESULT',
                   'scope': 'Synthetic fixture scope.'} for n in range(1, 13)],
-              'calculus': [{'id': result['id'], 'calculus': 'NONE', 'operational_model': result['operational_model'],
-                           'canonical_adoption': 'NOT_ADOPTED'}],
               'empirical': [], 'supplementary': {}, 'projection_reviews': [],
               'public_allowlist': [{'path': s['public_path'], 'sha256': s['public_sha256'], 'bytes': s['public_bytes'],
                                     'kind': 'SOURCE', 'source_ids': [s['id']]} for s in [src, rev]]}

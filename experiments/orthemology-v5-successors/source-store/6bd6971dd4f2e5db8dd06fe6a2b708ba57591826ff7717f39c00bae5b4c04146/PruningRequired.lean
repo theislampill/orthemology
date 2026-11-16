@@ -1,4 +1,0 @@
-import PrunedWitness
-#check EffectiveRenewal.Pruning.enumerable_pruned_extracts_path
-#check EffectiveRenewal.Pruning.computable_path_iff_decidable_pruned
-#check EffectiveRenewal.Pruning.computable_path_iff_enumerable_pruned

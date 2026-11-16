@@ -34,7 +34,7 @@ not counts of independent theorems or independent reviews.
 | [SUPERSESSION](SUPERSESSION.json) | Statement-specific successor edges and current selectors, retaining predecessors |
 | [OBLIGATION_CROSSWALK](OBLIGATION_CROSSWALK.json) | Exact original obligation and criticism owners with remaining scope |
 | [TWELVE_AVENUES](TWELVE_AVENUES.json) | The original twelve avenues and their scoped successors or remaining frontier |
-| [CALCULUS_MAP](CALCULUS_MAP.json) | Separate public P01DF, current Has, HasPlus, HasE and operational-model owners |
+| Calculus and operational model in [RESULT_STATUS](RESULT_STATUS.json) | Separate public P01DF, current Has, HasPlus, HasE and operational-model owners; no adoption |
 | [FOUNDATIONAL_FRONTIER](FOUNDATIONAL_FRONTIER.json) | Affirmative local arguments, their substantive premises and unresolved bridges |
 | [EMPIRICAL_SCOPE](EMPIRICAL_SCOPE.json) | Reference computations, sense review, reanalysis and unrun experiments |
 | [PUBLIC_PROJECTION](PUBLIC_PROJECTION.json) and [SOURCE_USE](SOURCE_USE.json) | Publication allowlist, original-to-derived review and external-source use |

@@ -1,5 +1,0 @@
-import IndexedCoverage
-open OrthemicCertificate.Signed
-#check indexedCheck_indices
-#check indexedCheck_sound
-#check indexedCandidate_correct

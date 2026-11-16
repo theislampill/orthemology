@@ -6,6 +6,9 @@ resource-inconclusive run; 2 means a missing prerequisite. No network or shell.
 """
 from __future__ import annotations
 
+from resolve_t20_v6_source import DIGEST_RECORD_PATHS, digest_record_successor_bytes
+
+
 import argparse
 import ast
 from datetime import datetime, timezone
@@ -312,14 +315,29 @@ def extract_source_zip(source, destination):
     return {name: sha(data) for name, data in rows}
 
 
+import resolve_t20_v6_source as _formal_sources
+
+
 def public_bytes(root, source):
     expected = digest(source['public_sha256'])
     name = relative(source['public_path'])
     require(name.startswith('experiments/orthemology-v5-successors/source-store/' + expected + '/'), 'Source is not content-addressed')
     require(type(source['public_bytes']) is int and source['public_bytes'] >= 0, 'Invalid source length')
-    path = path_in(root, name)
-    require(path.is_file(), 'Missing projected source')
-    data = path.read_bytes()
+    from resolve_t20_v6_source import SUCCESSOR_INPUT_PATHS, successor_input_source_bytes
+    if name in _formal_sources.SUCCESSOR_READ_BATCH_PATHS:
+        data = _formal_sources.successor_read_batch_source_bytes(root, source)
+    elif name in _formal_sources.SUCCESSOR_REMAINDER_BATCH_PATHS:
+        data = _formal_sources.successor_remainder_batch_source_bytes(root, source)
+    elif name in DIGEST_RECORD_PATHS:
+        data = digest_record_successor_bytes(root, source)
+    elif name in _formal_sources.FORMAL_SUCCESSOR_PATHS:
+        data = _formal_sources.successor_formal_source_bytes(root, source)
+    elif name in SUCCESSOR_INPUT_PATHS:
+        data = successor_input_source_bytes(root, source)
+    else:
+        path = path_in(root, name)
+        require(path.is_file(), 'Missing projected source')
+        data = path.read_bytes()
     require(len(data) == source['public_bytes'] and sha(data) == expected, 'Source bytes/hash changed')
     return data
 

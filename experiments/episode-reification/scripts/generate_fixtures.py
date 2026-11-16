@@ -5,14 +5,13 @@ For each case E1-E5 (+ E5 neighbors), renders ONE canonical fact set into the
 two arm forms: an ordinary chronological audit log (baseline-log.md) and an
 explicit episode/verdict record (treatment-episode.json). Both forms carry
 every fact atom (tests/test_smoke.py checks coverage), so information content
-is matched by construction. Committed fixtures must equal regeneration.
+is matched by construction. public_files() renders in memory; the CLI writes
+only to an explicitly selected output directory.
 """
+import argparse
 import io
 import json
 import os
-
-HERE = os.path.dirname(os.path.abspath(__file__))
-FIX = os.path.join(HERE, "..", "fixtures")
 
 # fact atoms: (key, log sentence, episode field path, episode value)
 CASES = {
@@ -80,33 +79,43 @@ CASES = {
 }
 
 
-def render(case_id, spec):
-    d = os.path.join(FIX, case_id)
-    os.makedirs(d, exist_ok=True)
+def render_case(case_id, spec):
+    """Return the three original public forms without reading or writing files."""
     facts_lines = ["schema: orthemology-er-facts-v1", "case: " + case_id,
                    "title: " + spec["title"], "fact_keys:"]
     for key, _s, _p, _v in spec["facts"]:
         facts_lines.append("- " + key)
-    io.open(os.path.join(d, "facts.yaml"), "w", encoding="utf-8", newline="\n").write(
-        "\n".join(facts_lines) + "\n")
 
     log = ["# Audit log — case %s (%s)" % (spec["occurrence"][0], spec["title"]), ""]
     for i, (_k, sentence, _p, _v) in enumerate(spec["facts"], 1):
         log.append("%d. %s" % (i, sentence))
     log.append("")
-    io.open(os.path.join(d, "baseline-log.md"), "w", encoding="utf-8", newline="\n").write(
-        "\n".join(log))
 
     ep = {"schema": "orthemology-er-episode-v1", "case": case_id, "title": spec["title"]}
     for _k, _s, path, value in spec["facts"]:
         ep[path] = value
-    io.open(os.path.join(d, "treatment-episode.json"), "w", encoding="utf-8", newline="\n").write(
-        json.dumps(ep, indent=2, ensure_ascii=False) + "\n")
+    return {"facts.yaml": "\n".join(facts_lines) + "\n",
+            "baseline-log.md": "\n".join(log),
+            "treatment-episode.json": json.dumps(ep, indent=2, ensure_ascii=False) + "\n"}
+
+
+def public_files():
+    """Render the five cases, retaining all original premises and counterexamples."""
+    return {case_id + "/" + name: text
+            for case_id, spec in CASES.items()
+            for name, text in render_case(case_id, spec).items()}
 
 
 def main():
-    for cid, spec in CASES.items():
-        render(cid, spec)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output-dir", required=True,
+                        help="explicit destination for the generated public renderings")
+    args = parser.parse_args()
+    for relative, text in public_files().items():
+        path = os.path.join(args.output_dir, relative)
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with io.open(path, "w", encoding="utf-8", newline="\n") as stream:
+            stream.write(text)
     print("rendered %d cases" % len(CASES))
 
 

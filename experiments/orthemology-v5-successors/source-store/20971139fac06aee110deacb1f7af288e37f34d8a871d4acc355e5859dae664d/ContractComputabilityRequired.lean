@@ -1,5 +1,0 @@
-import EffectiveRenewalBoundary
-#check EffectiveRenewal.Contract.execute_primrec
-#check EffectiveRenewal.Contract.migrate_primrec
-#check EffectiveRenewal.Contract.request_primrec
-#check EffectiveRenewal.Contract.finiteProcess_primrec

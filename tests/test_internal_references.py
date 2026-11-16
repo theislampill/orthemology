@@ -23,7 +23,7 @@ SENTINEL = DOCS + "/future/SYNTHETIC-PLANNED-OUTPUT.json"
 PLAN = Path(DOCS) / "superpowers/plans/synthetic-internal-reference-plan.md"
 
 
-def run_command(command, cwd, *, check=True):
+def run_command(command, cwd, *, check=True, env=None):
     return subprocess.run(
         command,
         cwd=cwd,
@@ -31,6 +31,7 @@ def run_command(command, cwd, *, check=True):
         encoding="utf-8",
         capture_output=True,
         check=check,
+        env=env,
     )
 
 
@@ -102,6 +103,10 @@ def run_validator(root=ROOT):
         [sys.executable, str(validator)],
         root,
         check=False,
+        # Supply the unchanged production resolver as an import dependency.
+        # The fixture-local validator and validate_repo remain first on sys.path;
+        # dependency source files are not added to the miniature citation corpus.
+        env={**os.environ, "PYTHONPATH": str(ROOT / "scripts")},
     )
 
 
@@ -111,6 +116,95 @@ def assert_failure(test, result, cited, source=None):
     test.assertIn(cited, output)
     if source is not None:
         test.assertIn(str(source).replace("\\", "/"), output)
+
+
+class HistoricalProjectionReferenceTests(unittest.TestCase):
+    """Original-coordinate resolution is finite, exact and owner-specific."""
+    @classmethod
+    def setUpClass(cls):
+        from test_ar8r_v11_reconciliation import Pmr007DuplicateAliasTests
+        cls.fixture_type = Pmr007DuplicateAliasTests
+        cls.fixture_type.setUpClass()
+        cls.addClassCleanup(cls.fixture_type.doClassCleanups)
+
+    def setUp(self):
+        import importlib.util
+        from unittest import mock
+        import hashlib
+        import json
+        self.fixture = self.fixture_type('test_exact_canonical_copies_admit_the_entire_finite_batch')
+        self.fixture.setUp()
+        self.addCleanup(self.fixture.doCleanups)
+        spec = importlib.util.spec_from_file_location('projection_reference_fixture', VALIDATOR)
+        self.refs = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(self.refs)
+        patch = mock.patch.multiple(self.refs, ROOT=str(self.fixture.repo),
+                                    HISTORICAL_PROSE_REVISION=self.fixture.baseline)
+        patch.start(); self.addCleanup(patch.stop)
+        self.alias = self.fixture.selection[0]['alias']
+        self.canonical = self.fixture.repo / self.fixture.selection[0]['canonical']
+        self.body = self.canonical.read_bytes()
+        identity = hashlib.sha256(self.body).hexdigest()
+        self.row = {'repository_path':self.alias, 'disposition':'REUSE',
+            'repository_revision':self.fixture.baseline, 'source_sha256':identity,
+            'public_sha256':identity, 'source_bytes':len(self.body), 'public_bytes':len(self.body),
+            'git_blob':hashlib.sha1(b'blob '+str(len(self.body)).encode()+b'\0'+self.body).hexdigest(),
+            'publication_basis':'exact_existing_public_git_blob; retained_counterpart_qualified_by_snapshot_validator'}
+        self.manifest = self.fixture.repo / self.refs.PROJECTION_MANIFEST
+        self.manifest.parent.mkdir(parents=True)
+        self.write_row(self.row)
+        (self.fixture.repo / self.alias).unlink()
+
+    def write_row(self, row):
+        import json
+        self.manifest.write_text(json.dumps({'objects':[row]}))
+
+    def resolves(self):
+        return self.refs._resolves(self.refs.PROJECTION_MANIFEST,self.alias)
+
+    def test_exact_original_route_and_metadata_changes_do_not_leak_to_other_owners(self):
+        self.assertTrue(self.resolves())
+        self.assertFalse(self.refs._resolves('README.md',self.alias))
+        for field,value in (('source_sha256','0'*64),('public_sha256','0'*64),
+                ('source_bytes',1),('public_bytes',1),('git_blob','0'*40),
+                ('repository_revision','HEAD'),('disposition','PROJECT'),
+                ('publication_basis','unreviewed')):
+            with self.subTest(field=field):
+                self.write_row(dict(self.row,**{field:value}))
+                self.assertFalse(self.resolves())
+                self.write_row(self.row)
+                self.assertTrue(self.resolves())
+        selected={r['alias'] for r in self.fixture.selection}
+        excluded=next(p for p in self.fixture.bodies if p.startswith(self.fixture.prefix+'/') and p not in selected)
+        (self.fixture.repo/excluded).unlink()
+        self.assertFalse(self.refs._resolves(self.refs.PROJECTION_MANIFEST,excluded))
+
+    def test_current_copy_and_present_alias_cannot_fall_through_to_exists(self):
+        self.assertTrue(self.resolves())
+        for target in (self.canonical,self.fixture.repo/self.alias):
+            with self.subTest(path=str(target.relative_to(self.fixture.repo))):
+                target.write_bytes(self.body+b'changed')
+                self.assertFalse(self.resolves())
+                target.write_bytes(self.body);target.chmod(0o755)
+                self.assertFalse(self.resolves())
+                target.chmod(0o644);target.unlink();target.symlink_to(self.manifest)
+                self.assertFalse(self.resolves())
+                target.unlink();target.write_bytes(self.body)
+                self.assertTrue(self.resolves())
+
+    def test_same_size_corrupt_original_git_object_cannot_borrow_current_copy(self):
+        import zlib
+        self.assertTrue(self.resolves())
+        oid=self.row['git_blob']
+        target=self.fixture.repo/'.git/objects'/oid[:2]/oid[2:]
+        original=target.read_bytes();mode=target.stat().st_mode&0o777
+        corrupt=b'x'*len(self.body)
+        try:
+            target.unlink();target.write_bytes(zlib.compress(b'blob '+str(len(corrupt)).encode()+b'\0'+corrupt))
+            self.assertFalse(self.resolves())
+        finally:
+            target.unlink();target.write_bytes(original);target.chmod(mode)
+        self.assertTrue(self.resolves())
 
 
 class InternalReferenceTests(unittest.TestCase):

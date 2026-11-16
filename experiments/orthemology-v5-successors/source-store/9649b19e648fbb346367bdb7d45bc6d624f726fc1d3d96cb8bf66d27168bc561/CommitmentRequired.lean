@@ -1,3 +1,0 @@
-import CommittedOutput
-#check EffectiveRenewal.committed_path_extraction
-#check EffectiveRenewal.no_effective_committed_renewal
