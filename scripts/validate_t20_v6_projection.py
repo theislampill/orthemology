@@ -384,7 +384,7 @@ def foundations_navigation_edition(root):
     return set(binding['guides'])
 
 
-def check_preserved_roots(root, objects):
+def check_preserved_roots(root, objects, diagnostic=None):
     """Keep every protected baseline obligation and its finite typed changes.
 
     The original bodies and both proof occurrences authenticate before an
@@ -393,6 +393,12 @@ def check_preserved_roots(root, objects):
     A complete authenticated current continuation-owner edition has its
     separate M-only admission; its original public bodies remain pinned.
     """
+    # This optional output contains only static labels and integer counts.
+    # It never changes an authentication result or carries an error payload.
+    def note(category):
+        if diagnostic is not None:
+            diagnostic[category] = diagnostic.get(category, 0) + 1
+
     errors, authenticated = [], set()
     for path, (blob, identity, size) in HISTORICAL_PROSE.items():
         try:
@@ -405,12 +411,14 @@ def check_preserved_roots(root, objects):
                 historical_source_bytes(root, path, HISTORICAL_PROSE_REVISIONS[path], blob)
             authenticated.add(path)
         except (KeyError, OSError, ValueError, subprocess.CalledProcessError) as exc:
+            note('historical-prose-authentication')
             errors.append('historical prose: ' + path + ': ' + str(exc))
     guide_authenticated = False
     try:
         mediator_guide_source_bytes(root, allow_original=True)
         guide_authenticated = True
     except (ValueError, OSError):
+        note('receiver:mediator_guide_source_bytes')
         pass  # A guide change is never excused when this finite check fails.
     typed_guides_authenticated = set()
     for path in TYPED_GUIDES:
@@ -418,6 +426,7 @@ def check_preserved_roots(root, objects):
             typed_guide_source_bytes(root, path, allow_original=True)
             typed_guides_authenticated.add(path)
         except (ValueError, OSError):
+            note('receiver:typed_guide_source_bytes')
             pass  # No exception for a changed, missing or unsafe guide.
     administrative_guides_authenticated = set()
     for path in ADMIN_GUIDES:
@@ -425,16 +434,19 @@ def check_preserved_roots(root, objects):
             administrative_guide_source_bytes(root, path, allow_original=True)
             administrative_guides_authenticated.add(path)
         except (ValueError, OSError):
+            note('receiver:administrative_guide_source_bytes')
             pass  # A changed, missing or unsafe guide receives no allowance.
     navigation_authenticated = set()
     try:
         navigation_authenticated = t10_navigation_edition(root)
     except (ValueError, OSError):
+        note('receiver:t10_navigation_edition')
         pass  # No M allowance without the exact staged and current link edition.
     foundations_authenticated = set()
     try:
         foundations_authenticated = foundations_navigation_edition(root)
     except (ValueError, OSError):
+        note('receiver:foundations_navigation_edition')
         pass  # Both exact staged/current editions are required; no partial admission.
     protected = ['experiments/orthemology-v5', 'experiments/orthemology-v5-continuations',
                  'experiments/orthemology-v5-successors', 'docs/provenance/v5-consolidation',
@@ -480,6 +492,7 @@ def check_preserved_roots(root, objects):
                         root, original_status_owners,
                         {'commit': STATUS_RECORD_OWNER_BASE, 'tree': STATUS_RECORD_OWNER_TREE}))
                 except (ValueError, OSError):
+                    note('receiver:status_owner_edition')
                     pass  # Only the complete authenticated owner edition admits M.
             status_absences_authenticated = set()
             status_requests = {path for status, path in zip(changes[::2], changes[1::2])
@@ -488,6 +501,7 @@ def check_preserved_roots(root, objects):
                 try:
                     status_absences_authenticated = status_record_absences(root, status_requests)
                 except (ValueError, OSError):
+                    note('receiver:status_record_absences')
                     pass  # A missing or invalid proof cannot admit any selected D.
             if binding_absences_authenticated is None and any(
                     status == 'D' and binding_record_candidate(path)
@@ -500,6 +514,7 @@ def check_preserved_roots(root, objects):
                 try:
                     new250_absences_authenticated = new250_absences(root)
                 except (ValueError, OSError):
+                    note('receiver:new250_absences')
                     pass  # No D allowance without the complete exact receiver snapshot.
             if copy_authenticated is None and any(
                     status == 'D' and path.startswith(CONTINUATION_COPY_ROOT)
@@ -541,6 +556,7 @@ def check_preserved_roots(root, objects):
                     successor_input_registry_document(root)
                     input_registry_authenticated = True
                 except (ValueError, OSError):
+                    note('receiver:successor_input_registry_document')
                     pass  # No allowance for a changed or unsafe registry edition.
             if input_absences_authenticated is None and any(
                     status == 'D' and path in SUCCESSOR_INPUT_PATHS
@@ -549,6 +565,7 @@ def check_preserved_roots(root, objects):
                 try:
                     input_absences_authenticated = successor_input_absences(root)
                 except (ValueError, OSError):
+                    note('receiver:successor_input_absences')
                     pass  # Only authenticated physically absent originals qualify.
             if read_batch_absences_authenticated is None and any(
                     status == 'D' and path in SUCCESSOR_READ_BATCH_PATHS
@@ -557,6 +574,7 @@ def check_preserved_roots(root, objects):
                 try:
                     read_batch_absences_authenticated = successor_read_batch_absences(root)
                 except (ValueError, OSError):
+                    note('receiver:successor_read_batch_absences')
                     pass  # No exception without all original native identities.
             if remainder_batch_absences_authenticated is None and any(
                     status == 'D' and path in SUCCESSOR_REMAINDER_BATCH_PATHS
@@ -565,6 +583,7 @@ def check_preserved_roots(root, objects):
                 try:
                     remainder_batch_absences_authenticated = successor_remainder_batch_absences(root)
                 except (ValueError, OSError):
+                    note('receiver:successor_remainder_batch_absences')
                     pass  # No exception without all original native identities.
             if calculus_absences_authenticated is None and any(
                     status == 'D' and path == SUCCESSOR_CALCULUS_MAP
@@ -573,6 +592,7 @@ def check_preserved_roots(root, objects):
                 try:
                     calculus_absences_authenticated = successor_calculus_map_absences(root)
                 except (ValueError, OSError):
+                    note('receiver:successor_calculus_map_absences')
                     pass  # Only the exact historical view may be absent.
             for path in SUCCESSOR_CALCULUS_GUIDES:
                 if any(status == 'M' and changed == path
@@ -581,6 +601,7 @@ def check_preserved_roots(root, objects):
                         successor_calculus_guide_source_bytes(root, path)
                         calculus_guides_authenticated.add(path)
                     except (ValueError, OSError):
+                        note('receiver:successor_calculus_guide_source_bytes')
                         pass  # No broad allowance for edited provenance text.
             if owner_authenticated is None and any(
                     status == 'M' and path in continuation_owners.PRESERVATION_OWNER_PATHS
@@ -597,8 +618,9 @@ def check_preserved_roots(root, objects):
                     owner_authenticated = set(
                         continuation_owners._preservation_owner_bytes(root, original_owners))
                 except (ValueError, OSError):
+                    note('receiver:preservation_owner_bytes')
                     pass  # No modification allowance for an unqualified edition.
-            if any(not ((status == 'D' and path in authenticated) or
+            if any(unadmitted := [not ((status == 'D' and path in authenticated) or
                         (status == 'D' and path in status_absences_authenticated) or
                         (status == 'M' and path in status_owners_authenticated) or
                         (status == 'D' and path in (new250_absences_authenticated or ())) or
@@ -624,9 +646,15 @@ def check_preserved_roots(root, objects):
                         (status == 'M' and path in typed_guides_authenticated) or
                         (status == 'M' and path in administrative_guides_authenticated) or
                         (status == 'M' and path in (owner_authenticated or ())))
-                   for status, path in zip(changes[::2], changes[1::2])):
+                   for status, path in zip(changes[::2], changes[1::2])]):
+                if diagnostic is not None:
+                    for status, rejected in zip(changes[::2], unadmitted):
+                        if rejected:
+                            category = status if status in {"A", "D", "M", "T", "R", "C", "U"} else "other"
+                            note(("cached:" if cached else "worktree:") + category)
                 errors.append('preserved v5 or prior T20 baseline changed')
         except (ValueError, UnicodeError):
+            note('baseline-comparison-unavailable')
             errors.append('preserved v5 or prior T20 baseline comparison unavailable')
 
     return list(dict.fromkeys(errors))

@@ -180,7 +180,11 @@ try:
         graph_errors = source.validate_graph(repo, objects)
         record['graph_error_summary'] = public_graph_error_summary(graph_errors)
         assert graph_errors == []
-        assert projection.check_preserved_roots(repo, objects) == []
+        preserved_diagnostic = {}
+        record['preserved_root_summary'] = {'categories': preserved_diagnostic}
+        preserved_errors = projection.check_preserved_roots(repo, objects, preserved_diagnostic)
+        record['preserved_root_summary']['total'] = len(preserved_errors)
+        assert preserved_errors == []
         affected = {row['sha256'] for row in expected.values()} & {row['source_sha256'] for row in graph['nodes']}
         assert len(affected) == 26
         suite = next(row for row in graph['suites'] if row['id'] == 'FamilyComputability')
